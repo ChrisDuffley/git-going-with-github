@@ -395,7 +395,7 @@ Line two on the next line, same paragraph.
 
 ### GFM Authoring Checklist for Accessible Documents
 
-```
+```text
 [ ] Every image has descriptive alt text (not just the filename)
 [ ] Headings form a logical hierarchy (no jumping from h2 to h4)
 [ ] Tables have header cells with scope attributes

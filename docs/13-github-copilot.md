@@ -541,7 +541,7 @@ See [Chapter 16: Accessibility Agents](16-accessibility-agents.md) for complete 
 
 ### Comparison Table
 
-| | Custom Instructions | Custom Agent |
+| Feature | Custom Instructions | Custom Agent |
 |---|---|---|
 | **When active** | Background - every interaction | On-demand - you type `@agent-name` |
 | **Defined in** | `.github/copilot-instructions.md` | `.github/agents/[name].agent.md` |
@@ -604,7 +604,7 @@ DeprecatedButton SHOULD NOT be used; use NewAccessibleButton instead.
 
 Lists provide clear guardrails - Copilot follows them step by step:
 
-```
+```text
 ## Checklist for evaluating 1.3.1 Info and Relationships
 - [ ] role="presentation" MUST NOT be applied to semantic elements.
 - [ ] Error messages MUST be programmatically associated with inputs.

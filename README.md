@@ -8,7 +8,7 @@ License: CC BY 4.0 | [Site](https://community-access.github.io/git-going-with-gi
 >
 > **About Community Access:** [Community Access](https://community-access.github.io) is a community of blind and low vision technology professionals. Visit [community-access.github.io](https://community-access.github.io) to learn more.
 
-| | |
+| Detail | Information |
 |---|---|
 | **Workshop site** | [community-access.github.io/git-going-with-github](https://community-access.github.io/git-going-with-github/) |
 | **Register** | [Sign up now](https://community-access.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |

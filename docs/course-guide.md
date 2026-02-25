@@ -200,7 +200,7 @@ If you get stuck at any point during the workshop, these resources are always av
 
 ## Workshop at a Glance
 
-| | Day 1 | Day 2 |
+| Aspect | Day 1 | Day 2 |
 |---|-------|-------|
 | **Focus** | GitHub web interface | VS Code + Accessibility Agents |
 | **Tools** | Browser, screen reader | VS Code, Copilot, Accessibility Agents |

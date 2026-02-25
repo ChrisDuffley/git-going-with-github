@@ -140,7 +140,7 @@ Every commit you make includes a message describing what changed. Good commit me
 
 ### The commit message format:
 
-```
+```text
 <type>: <short summary in imperative mood>
 
 <optional body: more detailed explanation>

@@ -261,7 +261,7 @@ New contributors often confuse these two. They appear next to each other on ever
 
 ### Starring a Repository
 
-| | |
+| Feature | Description |
 |---|---|
 | **What it does** | Bookmarks the repository to your Stars list at `github.com/stars` |
 | **Notifications** | **None.** Starring never sends you any notifications |
@@ -273,7 +273,7 @@ Starring is GitHub's equivalent of a bookmark + public endorsement. The star cou
 
 ### Watching a Repository
 
-| | |
+| Feature | Description |
 |---|---|
 | **What it does** | Subscribes you to notifications from that repository |
 | **Notifications** | Sends notifications based on your chosen level (see below) |

@@ -23,6 +23,14 @@ renderer.code = function(code, infostring, escaped) {
   return `<pre><code${cls}>${highlighted}</code></pre>\n`;
 };
 
+// Add scope="col" to all <th> elements for WCAG 1.3.1
+renderer.tablecell = function(content, flags) {
+  const tag = flags.header ? 'th' : 'td';
+  const align = flags.align ? ` style="text-align:${flags.align}"` : '';
+  const scope = flags.header ? ' scope="col"' : '';
+  return `<${tag}${align}${scope}>${content}</${tag}>\n`;
+};
+
 marked.setOptions({
   breaks: false,
   gfm: true,
@@ -74,7 +82,7 @@ const htmlTemplate = (content, title, relativePath) => {
   <main id="main-content" class="markdown-body">
     ${content}
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
+  <footer role="contentinfo" class="site-footer">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>
@@ -216,9 +224,12 @@ body {
 }
 
 /* Improve focus visibility for keyboard navigation */
-a:focus,
-button:focus,
-summary:focus {
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   outline: 2px solid #0969da;
   outline-offset: 2px;
 }
@@ -252,9 +263,51 @@ summary:focus {
   .markdown-body {
     color: #ffffff;
   }
+  .markdown-body a {
+    color: #6db3f2;
+    text-decoration: underline;
+  }
+  .markdown-body blockquote {
+    border-left-color: #ffffff;
+    color: #ffffff;
+  }
+  .markdown-body table,
+  .markdown-body table th,
+  .markdown-body table td {
+    border-color: #ffffff;
+  }
+  .markdown-body table th {
+    background-color: #1a1a1a;
+  }
+  .markdown-body code,
+  .markdown-body pre {
+    background-color: #1a1a1a;
+    border-color: #ffffff;
+  }
+  .markdown-body hr {
+    background-color: #ffffff;
+  }
+  .breadcrumb {
+    color: #ffffff;
+  }
+  .breadcrumb a {
+    color: #6db3f2;
+  }
+  .site-footer {
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+  .site-footer a {
+    color: #6db3f2;
+  }
   .skip-link {
     background: #ffffff;
     color: #000000;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible {
+    outline-color: #ffffff;
   }
 }
 
@@ -268,17 +321,29 @@ summary:focus {
     color: #e6edf3;
   }
   .breadcrumb {
-    color: #8b949e;
+    color: #9ca3af;
   }
   .breadcrumb a {
     color: #58a6ff;
   }
-  footer {
-    border-color: #30363d !important;
-    color: #8b949e;
+  .site-footer {
+    border-color: #30363d;
+    color: #9ca3af;
   }
-  footer a {
+  .site-footer a {
     color: #58a6ff;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  summary:focus-visible {
+    outline-color: #58a6ff;
+  }
+  .skip-link {
+    background: #58a6ff;
+    color: #0d1117;
+  }
+  .skip-link:focus {
+    outline-color: #e6edf3;
   }
 }
 
@@ -315,13 +380,44 @@ summary:focus {
 }
 
 .markdown-body summary::before {
-  content: '';
+  content: '▶ ';
   font-size: 0.75em;
   vertical-align: middle;
 }
 
 .markdown-body details[open] > summary::before {
   content: '▼ ';
+}
+
+/* Site footer */
+.site-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 1px solid var(--borderColor-default, #d0d7de);
+  color: #57606a;
+  font-size: 0.875rem;
+}
+
+.site-footer a {
+  color: #0969da;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Print styles */

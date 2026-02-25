@@ -173,9 +173,9 @@ Fixes <span class="hljs-comment">#42</span></code></pre>
 <table>
 <thead>
 <tr>
-<th>Strategy</th>
-<th>What It Does</th>
-<th>When Used</th>
+<th scope="col">Strategy</th>
+<th scope="col">What It Does</th>
+<th scope="col">When Used</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -197,136 +197,178 @@ Fixes <span class="hljs-comment">#42</span></code></pre>
 <hr>
 <h3>Merge Conflict</h3>
 <p>A merge conflict happens when two branches have both changed the same part of the same file in different ways. Git doesn&#39;t know which version to keep, so it pauses and asks you to resolve it manually.</p>
-<h1>Conflict markers look like this in a file:
-```
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-The current content on your branch</h1>
-<p>The incoming content from the other branch</p>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>feature/other-branch</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<pre><code class="hljs">
-You resolve a <span class="hljs-keyword">conflict</span> <span class="hljs-keyword">by</span> editing the file <span class="hljs-keyword">to</span> have the correct final content, removing the <span class="hljs-keyword">conflict</span> markers, <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> committing.
-
-See [Merge Conflicts Guide](<span class="hljs-number">06</span>-merge-conflicts.md) <span class="hljs-keyword">for</span> step-<span class="hljs-keyword">by</span>-step instructions.
-
-<span class="hljs-comment">---</span>
-
-### Upstream
-
-Upstream refers <span class="hljs-keyword">to</span> the original repository that you forked <span class="hljs-keyword">from</span>. <span class="hljs-keyword">When</span> the upstream project has <span class="hljs-built_in">new</span> changes that you want <span class="hljs-keyword">to</span> bring <span class="hljs-keyword">into</span> your fork, you &quot;sync&quot; your fork <span class="hljs-keyword">with</span> upstream.
-</code></pre>
-<p>Your Fork → upstream → Original Repo
-Your changes flow this way: Original Repo ← Pull Request ← Your Fork</p>
-<pre><code class="hljs">
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">### Label</span>
-
-<span class="hljs-attr">Labels are colored tags applied to issues and PRs to categorize them. Common labels:</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">`bug`</span> <span class="hljs-bullet">-</span> <span class="hljs-string">something</span> <span class="hljs-string">isn&#x27;t</span> <span class="hljs-string">working</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">`enhancement`</span> <span class="hljs-bullet">-</span> <span class="hljs-string">new</span> <span class="hljs-string">feature</span> <span class="hljs-string">or</span> <span class="hljs-string">request</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">`documentation`</span> <span class="hljs-bullet">-</span> <span class="hljs-string">documentation-only</span> <span class="hljs-string">change</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">`good</span> <span class="hljs-string">first</span> <span class="hljs-string">issue`</span> <span class="hljs-bullet">-</span> <span class="hljs-string">good</span> <span class="hljs-string">for</span> <span class="hljs-string">newcomers</span> <span class="hljs-string">(look</span> <span class="hljs-string">for</span> <span class="hljs-string">this</span> <span class="hljs-string">when</span> <span class="hljs-string">finding</span> <span class="hljs-string">your</span> <span class="hljs-string">first</span> <span class="hljs-string">contribution!)</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">`help</span> <span class="hljs-string">wanted`</span> <span class="hljs-bullet">-</span> <span class="hljs-string">maintainers</span> <span class="hljs-string">want</span> <span class="hljs-string">community</span> <span class="hljs-string">help</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">`accessibility`</span> <span class="hljs-bullet">-</span> <span class="hljs-string">accessibility-related</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">### Milestone</span>
-
-<span class="hljs-attr">A milestone groups issues and PRs toward a goal or deadline. For example:</span> <span class="hljs-string">&quot;v2.0 Release&quot;</span> <span class="hljs-string">or</span> <span class="hljs-string">&quot;Hackathon Day 1.&quot;</span> <span class="hljs-string">Milestones</span> <span class="hljs-string">show</span> <span class="hljs-string">progress</span> <span class="hljs-string">as</span> <span class="hljs-string">a</span> <span class="hljs-string">percentage</span> <span class="hljs-string">of</span> <span class="hljs-string">closed</span> <span class="hljs-string">versus</span> <span class="hljs-string">open</span> <span class="hljs-string">items.</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">### Project (GitHub Projects)</span>
-
-<span class="hljs-string">A</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">Project</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">flexible</span> <span class="hljs-string">board</span> <span class="hljs-string">for</span> <span class="hljs-string">tracking</span> <span class="hljs-string">work.</span> <span class="hljs-string">It</span> <span class="hljs-string">can</span> <span class="hljs-string">show</span> <span class="hljs-string">issues</span> <span class="hljs-string">and</span> <span class="hljs-string">PRs</span> <span class="hljs-string">in</span> <span class="hljs-string">table</span> <span class="hljs-string">view,</span> <span class="hljs-string">board</span> <span class="hljs-string">view</span> <span class="hljs-string">(kanban),</span> <span class="hljs-string">or</span> <span class="hljs-string">roadmap</span> <span class="hljs-string">view.</span> <span class="hljs-string">Projects</span> <span class="hljs-string">are</span> <span class="hljs-string">especially</span> <span class="hljs-string">useful</span> <span class="hljs-string">for</span> <span class="hljs-string">hackathon-style</span> <span class="hljs-string">coordination.</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">## Part 3: People and Roles</span>
-
-<span class="hljs-comment">### Maintainer</span>
-
-<span class="hljs-string">A</span> <span class="hljs-string">maintainer</span> <span class="hljs-string">is</span> <span class="hljs-string">someone</span> <span class="hljs-string">with</span> <span class="hljs-string">write</span> <span class="hljs-string">or</span> <span class="hljs-string">admin</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">repository.</span> <span class="hljs-string">Maintainers</span> <span class="hljs-string">review</span> <span class="hljs-string">PRs,</span> <span class="hljs-string">triage</span> <span class="hljs-string">issues,</span> <span class="hljs-string">manage</span> <span class="hljs-string">releases,</span> <span class="hljs-string">and</span> <span class="hljs-string">make</span> <span class="hljs-string">decisions</span> <span class="hljs-string">about</span> <span class="hljs-string">the</span> <span class="hljs-string">project&#x27;s</span> <span class="hljs-string">direction.</span> <span class="hljs-string">Most</span> <span class="hljs-string">open</span> <span class="hljs-string">source</span> <span class="hljs-string">projects</span> <span class="hljs-string">have</span> <span class="hljs-string">between</span> <span class="hljs-string">one</span> <span class="hljs-string">and</span> <span class="hljs-string">five</span> <span class="hljs-string">core</span> <span class="hljs-string">maintainers.</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">### Contributor</span>
-
-<span class="hljs-string">Anyone</span> <span class="hljs-string">who</span> <span class="hljs-string">contributes</span> <span class="hljs-string">to</span> <span class="hljs-string">an</span> <span class="hljs-string">open</span> <span class="hljs-string">source</span> <span class="hljs-string">project</span> <span class="hljs-string">is</span> <span class="hljs-string">a</span> <span class="hljs-string">contributor.</span> <span class="hljs-string">Contributing</span> <span class="hljs-string">includes</span> <span class="hljs-string">code,</span> <span class="hljs-string">documentation,</span> <span class="hljs-string">design,</span> <span class="hljs-string">testing,</span> <span class="hljs-string">translation,</span> <span class="hljs-string">issue</span> <span class="hljs-string">triage,</span> <span class="hljs-string">and</span> <span class="hljs-string">community</span> <span class="hljs-string">support.</span> <span class="hljs-string">You</span> <span class="hljs-string">do</span> <span class="hljs-string">not</span> <span class="hljs-string">need</span> <span class="hljs-string">commit</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">contribute.</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">### Triage</span>
-
-<span class="hljs-string">Triaging</span> <span class="hljs-string">issues</span> <span class="hljs-string">means</span> <span class="hljs-string">reviewing</span> <span class="hljs-string">new</span> <span class="hljs-string">issues</span> <span class="hljs-string">to</span> <span class="hljs-string">categorize</span> <span class="hljs-string">them,</span> <span class="hljs-string">add</span> <span class="hljs-string">labels,</span> <span class="hljs-string">assign</span> <span class="hljs-string">them,</span> <span class="hljs-string">close</span> <span class="hljs-string">duplicates,</span> <span class="hljs-string">and</span> <span class="hljs-string">communicate</span> <span class="hljs-string">with</span> <span class="hljs-string">the</span> <span class="hljs-string">reporter.</span> <span class="hljs-string">Triage</span> <span class="hljs-string">is</span> <span class="hljs-string">an</span> <span class="hljs-string">important</span> <span class="hljs-string">contribution</span> <span class="hljs-string">that</span> <span class="hljs-string">doesn&#x27;t</span> <span class="hljs-string">require</span> <span class="hljs-string">coding</span> <span class="hljs-string">skills.</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">### Collaborator</span>
-
-<span class="hljs-string">A</span> <span class="hljs-string">collaborator</span> <span class="hljs-string">is</span> <span class="hljs-string">someone</span> <span class="hljs-string">who</span> <span class="hljs-string">has</span> <span class="hljs-string">been</span> <span class="hljs-string">explicitly</span> <span class="hljs-string">granted</span> <span class="hljs-string">write</span> <span class="hljs-string">access</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">repository.</span> <span class="hljs-string">Collaborators</span> <span class="hljs-string">can</span> <span class="hljs-string">commit</span> <span class="hljs-string">directly</span> <span class="hljs-string">to</span> <span class="hljs-string">the</span> <span class="hljs-string">repo</span> <span class="hljs-string">without</span> <span class="hljs-string">forking</span> <span class="hljs-string">(though</span> <span class="hljs-string">good</span> <span class="hljs-string">practice</span> <span class="hljs-string">is</span> <span class="hljs-string">still</span> <span class="hljs-string">to</span> <span class="hljs-string">use</span> <span class="hljs-string">branches</span> <span class="hljs-string">and</span> <span class="hljs-string">PRs).</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">## Part 4: Common Abbreviations and Slang</span>
-
-<span class="hljs-string">These</span> <span class="hljs-string">abbreviations</span> <span class="hljs-string">appear</span> <span class="hljs-string">frequently</span> <span class="hljs-string">in</span> <span class="hljs-string">GitHub</span> <span class="hljs-string">comments,</span> <span class="hljs-string">PR</span> <span class="hljs-string">descriptions,</span> <span class="hljs-attr">and commit messages:</span>
-
-<span class="hljs-string">|</span> <span class="hljs-string">Term</span> <span class="hljs-string">|</span> <span class="hljs-string">Stands</span> <span class="hljs-string">For</span> <span class="hljs-string">|</span> <span class="hljs-string">Meaning</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|------|-----------|---------|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**LGTM**</span> <span class="hljs-string">|</span> <span class="hljs-string">Looks</span> <span class="hljs-string">Good</span> <span class="hljs-string">To</span> <span class="hljs-string">Me</span> <span class="hljs-string">|</span> <span class="hljs-string">Informal</span> <span class="hljs-string">approval</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;I reviewed it and it looks correct&quot;</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**WIP**</span> <span class="hljs-string">|</span> <span class="hljs-string">Work</span> <span class="hljs-string">In</span> <span class="hljs-string">Progress</span> <span class="hljs-string">|</span> <span class="hljs-string">This</span> <span class="hljs-string">PR</span> <span class="hljs-string">is</span> <span class="hljs-string">not</span> <span class="hljs-string">ready</span> <span class="hljs-string">for</span> <span class="hljs-string">review</span> <span class="hljs-string">yet</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**nit**</span> <span class="hljs-string">|</span> <span class="hljs-string">Nitpick</span> <span class="hljs-string">|</span> <span class="hljs-string">A</span> <span class="hljs-string">minor,</span> <span class="hljs-string">optional</span> <span class="hljs-string">suggestion</span> <span class="hljs-bullet">-</span> <span class="hljs-string">&quot;not a blocker&quot;</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**RFC**</span> <span class="hljs-string">|</span> <span class="hljs-string">Request</span> <span class="hljs-string">For</span> <span class="hljs-string">Comments</span> <span class="hljs-string">|</span> <span class="hljs-string">Seeking</span> <span class="hljs-string">broad</span> <span class="hljs-string">feedback</span> <span class="hljs-string">on</span> <span class="hljs-string">an</span> <span class="hljs-string">idea</span> <span class="hljs-string">or</span> <span class="hljs-string">approach</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**PTAL**</span> <span class="hljs-string">|</span> <span class="hljs-string">Please</span> <span class="hljs-string">Take</span> <span class="hljs-string">A</span> <span class="hljs-string">Look</span> <span class="hljs-string">|</span> <span class="hljs-string">Asking</span> <span class="hljs-string">someone</span> <span class="hljs-string">to</span> <span class="hljs-string">review</span> <span class="hljs-string">something</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**IMO</span> <span class="hljs-string">/</span> <span class="hljs-string">IMHO**</span> <span class="hljs-string">|</span> <span class="hljs-string">In</span> <span class="hljs-string">My</span> <span class="hljs-string">(Humble)</span> <span class="hljs-string">Opinion</span> <span class="hljs-string">|</span> <span class="hljs-string">Softening</span> <span class="hljs-string">a</span> <span class="hljs-string">suggestion</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**AFAICT**</span> <span class="hljs-string">|</span> <span class="hljs-string">As</span> <span class="hljs-string">Far</span> <span class="hljs-string">As</span> <span class="hljs-string">I</span> <span class="hljs-string">Can</span> <span class="hljs-string">Tell</span> <span class="hljs-string">|</span> <span class="hljs-string">&quot;Based on what I can see...&quot;</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**TIL**</span> <span class="hljs-string">|</span> <span class="hljs-string">Today</span> <span class="hljs-string">I</span> <span class="hljs-string">Learned</span> <span class="hljs-string">|</span> <span class="hljs-string">Sharing</span> <span class="hljs-string">a</span> <span class="hljs-string">discovery</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**FYI**</span> <span class="hljs-string">|</span> <span class="hljs-string">For</span> <span class="hljs-string">Your</span> <span class="hljs-string">Information</span> <span class="hljs-string">|</span> <span class="hljs-string">Sharing</span> <span class="hljs-string">information,</span> <span class="hljs-literal">no</span> <span class="hljs-string">action</span> <span class="hljs-string">needed</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**EOD</span> <span class="hljs-string">/</span> <span class="hljs-string">EOW**</span> <span class="hljs-string">|</span> <span class="hljs-string">End</span> <span class="hljs-string">of</span> <span class="hljs-string">Day</span> <span class="hljs-string">/</span> <span class="hljs-string">Week</span> <span class="hljs-string">|</span> <span class="hljs-string">Deadline</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**Closes</span> <span class="hljs-comment">#42** | - | When merged, this PR closes issue #42 (automatic linking) |</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**Fixes</span> <span class="hljs-comment">#42** | - | Same as Closes - use when the PR fixes a bug |</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**Resolves</span> <span class="hljs-comment">#42** | - | Same as Closes - general resolution |</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**Refs</span> <span class="hljs-comment">#42** | References #42 | Links to the issue without closing it |</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**cc</span> <span class="hljs-string">@username**</span> <span class="hljs-string">|</span> <span class="hljs-string">Carbon</span> <span class="hljs-string">copy</span> <span class="hljs-string">|</span> <span class="hljs-string">Notifying</span> <span class="hljs-string">someone</span> <span class="hljs-string">without</span> <span class="hljs-string">requiring</span> <span class="hljs-string">their</span> <span class="hljs-string">action</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**/cc**</span> <span class="hljs-string">|</span> <span class="hljs-string">Same</span> <span class="hljs-string">as</span> <span class="hljs-string">cc</span> <span class="hljs-string">|</span> <span class="hljs-string">Alternative</span> <span class="hljs-string">form</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**stale**</span> <span class="hljs-string">|</span> <span class="hljs-bullet">-</span> <span class="hljs-string">|</span> <span class="hljs-string">An</span> <span class="hljs-string">issue</span> <span class="hljs-string">or</span> <span class="hljs-string">PR</span> <span class="hljs-string">with</span> <span class="hljs-literal">no</span> <span class="hljs-string">recent</span> <span class="hljs-string">activity</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**WONTFIX**</span> <span class="hljs-string">|</span> <span class="hljs-bullet">-</span> <span class="hljs-string">|</span> <span class="hljs-string">The</span> <span class="hljs-string">project</span> <span class="hljs-string">won&#x27;t</span> <span class="hljs-string">address</span> <span class="hljs-string">this</span> <span class="hljs-string">issue</span> <span class="hljs-string">(it&#x27;s</span> <span class="hljs-string">not</span> <span class="hljs-string">a</span> <span class="hljs-string">bug,</span> <span class="hljs-string">or</span> <span class="hljs-string">by</span> <span class="hljs-string">design)</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**upstream**</span> <span class="hljs-string">|</span> <span class="hljs-bullet">-</span> <span class="hljs-string">|</span> <span class="hljs-string">The</span> <span class="hljs-string">original</span> <span class="hljs-string">repo</span> <span class="hljs-string">you</span> <span class="hljs-string">forked</span> <span class="hljs-string">from</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**downstream**</span> <span class="hljs-string">|</span> <span class="hljs-bullet">-</span> <span class="hljs-string">|</span> <span class="hljs-string">A</span> <span class="hljs-string">fork</span> <span class="hljs-string">or</span> <span class="hljs-string">project</span> <span class="hljs-string">that</span> <span class="hljs-string">depends</span> <span class="hljs-string">on</span> <span class="hljs-string">this</span> <span class="hljs-string">one</span> <span class="hljs-string">|</span>
-<span class="hljs-string">|</span> <span class="hljs-string">**breaking</span> <span class="hljs-string">change**</span> <span class="hljs-string">|</span> <span class="hljs-bullet">-</span> <span class="hljs-string">|</span> <span class="hljs-string">A</span> <span class="hljs-string">change</span> <span class="hljs-string">that</span> <span class="hljs-string">will</span> <span class="hljs-string">break</span> <span class="hljs-string">existing</span> <span class="hljs-string">functionality</span> <span class="hljs-string">for</span> <span class="hljs-string">users</span> <span class="hljs-string">|</span>
-
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">## Part 5: Technical GitHub Concepts</span>
-
-<span class="hljs-comment">### HEAD</span>
-
-<span class="hljs-string">`HEAD`</span> <span class="hljs-string">is</span> <span class="hljs-string">Git&#x27;s</span> <span class="hljs-string">way</span> <span class="hljs-string">of</span> <span class="hljs-string">saying</span> <span class="hljs-string">&quot;where you are right now.&quot;</span> <span class="hljs-string">It&#x27;s</span> <span class="hljs-string">a</span> <span class="hljs-string">pointer</span> <span class="hljs-string">to</span> <span class="hljs-string">the</span> <span class="hljs-string">current</span> <span class="hljs-string">commit</span> <span class="hljs-string">on</span> <span class="hljs-string">the</span> <span class="hljs-string">current</span> <span class="hljs-string">branch.</span>
-
-<span class="hljs-bullet">-</span> <span class="hljs-string">When</span> <span class="hljs-string">you&#x27;re</span> <span class="hljs-string">on</span> <span class="hljs-string">`main`,</span> <span class="hljs-string">`HEAD`</span> <span class="hljs-string">points</span> <span class="hljs-string">to</span> <span class="hljs-string">the</span> <span class="hljs-string">latest</span> <span class="hljs-string">commit</span> <span class="hljs-string">on</span> <span class="hljs-string">`main`</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">When</span> <span class="hljs-string">you</span> <span class="hljs-string">switch</span> <span class="hljs-string">branches,</span> <span class="hljs-string">`HEAD`</span> <span class="hljs-string">moves</span> <span class="hljs-string">to</span> <span class="hljs-string">that</span> <span class="hljs-string">branch</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">`HEAD^`</span> <span class="hljs-string">or</span> <span class="hljs-string">`HEAD~1`</span> <span class="hljs-string">means</span> <span class="hljs-string">&quot;the commit before HEAD&quot;</span>
-
-<span class="hljs-string">You&#x27;ll</span> <span class="hljs-attr">see HEAD referenced in commands like:</span>
-<span class="hljs-string">```bash</span>
-<span class="hljs-string">git</span> <span class="hljs-string">reset</span> <span class="hljs-string">HEAD~1</span>  <span class="hljs-comment"># Undo the last commit</span>
-<span class="hljs-string">git</span> <span class="hljs-string">diff</span> <span class="hljs-string">HEAD</span>     <span class="hljs-comment"># Show uncommitted changes</span></code></pre>
+<p>Conflict markers look like this in a file:</p>
+<pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+The current content on your branch
+=======
+The incoming content from the other branch
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/other-branch</code></pre>
+<p>You resolve a conflict by editing the file to have the correct final content, removing the conflict markers, and then committing.</p>
+<p>See <a href="06-merge-conflicts.md">Merge Conflicts Guide</a> for step-by-step instructions.</p>
+<hr>
+<h3>Upstream</h3>
+<p>Upstream refers to the original repository that you forked from. When the upstream project has new changes that you want to bring into your fork, you &quot;sync&quot; your fork with upstream.</p>
+<pre><code class="hljs">Your Fork → upstream → Original Repo
+Your changes flow <span class="hljs-keyword">this</span> way: Original Repo ← Pull Request ← Your Fork</code></pre>
+<hr>
+<h3>Label</h3>
+<p>Labels are colored tags applied to issues and PRs to categorize them. Common labels:</p>
+<ul>
+<li><code>bug</code> - something isn&#39;t working</li>
+<li><code>enhancement</code> - new feature or request</li>
+<li><code>documentation</code> - documentation-only change</li>
+<li><code>good first issue</code> - good for newcomers (look for this when finding your first contribution!)</li>
+<li><code>help wanted</code> - maintainers want community help</li>
+<li><code>accessibility</code> - accessibility-related</li>
+</ul>
+<hr>
+<h3>Milestone</h3>
+<p>A milestone groups issues and PRs toward a goal or deadline. For example: &quot;v2.0 Release&quot; or &quot;Hackathon Day 1.&quot; Milestones show progress as a percentage of closed versus open items.</p>
+<hr>
+<h3>Project (GitHub Projects)</h3>
+<p>A GitHub Project is a flexible board for tracking work. It can show issues and PRs in table view, board view (kanban), or roadmap view. Projects are especially useful for hackathon-style coordination.</p>
+<hr>
+<h2>Part 3: People and Roles</h2>
+<h3>Maintainer</h3>
+<p>A maintainer is someone with write or admin access to a repository. Maintainers review PRs, triage issues, manage releases, and make decisions about the project&#39;s direction. Most open source projects have between one and five core maintainers.</p>
+<hr>
+<h3>Contributor</h3>
+<p>Anyone who contributes to an open source project is a contributor. Contributing includes code, documentation, design, testing, translation, issue triage, and community support. You do not need commit access to contribute.</p>
+<hr>
+<h3>Triage</h3>
+<p>Triaging issues means reviewing new issues to categorize them, add labels, assign them, close duplicates, and communicate with the reporter. Triage is an important contribution that doesn&#39;t require coding skills.</p>
+<hr>
+<h3>Collaborator</h3>
+<p>A collaborator is someone who has been explicitly granted write access to a repository. Collaborators can commit directly to the repo without forking (though good practice is still to use branches and PRs).</p>
+<hr>
+<h2>Part 4: Common Abbreviations and Slang</h2>
+<p>These abbreviations appear frequently in GitHub comments, PR descriptions, and commit messages:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Term</th>
+<th scope="col">Stands For</th>
+<th scope="col">Meaning</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>LGTM</strong></td>
+<td>Looks Good To Me</td>
+<td>Informal approval - &quot;I reviewed it and it looks correct&quot;</td>
+</tr>
+<tr>
+<td><strong>WIP</strong></td>
+<td>Work In Progress</td>
+<td>This PR is not ready for review yet</td>
+</tr>
+<tr>
+<td><strong>nit</strong></td>
+<td>Nitpick</td>
+<td>A minor, optional suggestion - &quot;not a blocker&quot;</td>
+</tr>
+<tr>
+<td><strong>RFC</strong></td>
+<td>Request For Comments</td>
+<td>Seeking broad feedback on an idea or approach</td>
+</tr>
+<tr>
+<td><strong>PTAL</strong></td>
+<td>Please Take A Look</td>
+<td>Asking someone to review something</td>
+</tr>
+<tr>
+<td><strong>IMO / IMHO</strong></td>
+<td>In My (Humble) Opinion</td>
+<td>Softening a suggestion</td>
+</tr>
+<tr>
+<td><strong>AFAICT</strong></td>
+<td>As Far As I Can Tell</td>
+<td>&quot;Based on what I can see...&quot;</td>
+</tr>
+<tr>
+<td><strong>TIL</strong></td>
+<td>Today I Learned</td>
+<td>Sharing a discovery</td>
+</tr>
+<tr>
+<td><strong>FYI</strong></td>
+<td>For Your Information</td>
+<td>Sharing information, no action needed</td>
+</tr>
+<tr>
+<td><strong>EOD / EOW</strong></td>
+<td>End of Day / Week</td>
+<td>Deadline</td>
+</tr>
+<tr>
+<td><strong>Closes #42</strong></td>
+<td>-</td>
+<td>When merged, this PR closes issue #42 (automatic linking)</td>
+</tr>
+<tr>
+<td><strong>Fixes #42</strong></td>
+<td>-</td>
+<td>Same as Closes - use when the PR fixes a bug</td>
+</tr>
+<tr>
+<td><strong>Resolves #42</strong></td>
+<td>-</td>
+<td>Same as Closes - general resolution</td>
+</tr>
+<tr>
+<td><strong>Refs #42</strong></td>
+<td>References #42</td>
+<td>Links to the issue without closing it</td>
+</tr>
+<tr>
+<td><strong>cc @username</strong></td>
+<td>Carbon copy</td>
+<td>Notifying someone without requiring their action</td>
+</tr>
+<tr>
+<td><strong>/cc</strong></td>
+<td>Same as cc</td>
+<td>Alternative form</td>
+</tr>
+<tr>
+<td><strong>stale</strong></td>
+<td>-</td>
+<td>An issue or PR with no recent activity</td>
+</tr>
+<tr>
+<td><strong>WONTFIX</strong></td>
+<td>-</td>
+<td>The project won&#39;t address this issue (it&#39;s not a bug, or by design)</td>
+</tr>
+<tr>
+<td><strong>upstream</strong></td>
+<td>-</td>
+<td>The original repo you forked from</td>
+</tr>
+<tr>
+<td><strong>downstream</strong></td>
+<td>-</td>
+<td>A fork or project that depends on this one</td>
+</tr>
+<tr>
+<td><strong>breaking change</strong></td>
+<td>-</td>
+<td>A change that will break existing functionality for users</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Part 5: Technical GitHub Concepts</h2>
+<h3>HEAD</h3>
+<p><code>HEAD</code> is Git&#39;s way of saying &quot;where you are right now.&quot; It&#39;s a pointer to the current commit on the current branch.</p>
+<ul>
+<li>When you&#39;re on <code>main</code>, <code>HEAD</code> points to the latest commit on <code>main</code></li>
+<li>When you switch branches, <code>HEAD</code> moves to that branch</li>
+<li><code>HEAD^</code> or <code>HEAD~1</code> means &quot;the commit before HEAD&quot;</li>
+</ul>
+<p>You&#39;ll see HEAD referenced in commands like:</p>
+<pre><code class="hljs language-bash">git reset HEAD~1  <span class="hljs-comment"># Undo the last commit</span>
+git diff HEAD     <span class="hljs-comment"># Show uncommitted changes</span></code></pre>
 <hr>
 <h3>Detached HEAD</h3>
 <p>A &quot;detached HEAD&quot; occurs when you check out a specific commit instead of a branch. You&#39;re no longer &quot;on&quot; a branch - just looking at a snapshot in time.</p>
@@ -478,8 +520,8 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <table>
 <thead>
 <tr>
-<th>File</th>
-<th>Purpose</th>
+<th scope="col">File</th>
+<th scope="col">Purpose</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -520,8 +562,8 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <table>
 <thead>
 <tr>
-<th>Term</th>
-<th>Definition</th>
+<th scope="col">Term</th>
+<th scope="col">Definition</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -755,7 +797,7 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <em>See also: <a href="appendix-b-screen-reader-cheatsheet.md">Screen Reader Cheat Sheet</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
+  <footer role="contentinfo" class="site-footer">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

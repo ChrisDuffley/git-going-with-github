@@ -24,13 +24,13 @@
 
 GitHub Pages is a static site hosting service built into GitHub. It serves files directly from a branch or folder in your repository at a URL of the form:
 
-```
+```text
 https://<username>.github.io/<repository-name>/
 ```
 
 For organization accounts and user profile repositories (`<username>/<username>.github.io`), the URL becomes:
 
-```
+```text
 https://<username>.github.io/
 ```
 

@@ -8,7 +8,7 @@
 
 Sponsored by [Community Access](https://community-access.github.io) in partnership with [GitHub](https://github.com).
 
-| | |
+| Detail | Information |
 |---|---|
 | **Dates** | Saturday, March 7 & Sunday, March 8, 2026 |
 | **Time** | 12:00 PM - 8:00 PM Eastern (both days) |

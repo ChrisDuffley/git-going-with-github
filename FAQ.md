@@ -368,7 +368,8 @@ Navigate between tabs using your screen reader's heading navigation or landmark 
 
 ### Q: How do I recognize a merge conflict?
 **A:** Git marks the conflicting sections with these markers:
-```
+
+```text
 <<<<<<< HEAD
 Your changes
 =======

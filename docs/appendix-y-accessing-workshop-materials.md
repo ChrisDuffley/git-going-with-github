@@ -22,7 +22,7 @@
 
 If the facilitator has enabled GitHub Pages for this repository, the workshop materials are available as a website at a URL like:
 
-```
+```text
 https://<organization>.github.io/Learning-Room/
 ```
 

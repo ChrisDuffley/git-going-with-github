@@ -71,10 +71,10 @@
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Color</th>
-<th>Icon</th>
-<th>Use When...</th>
+<th scope="col">Type</th>
+<th scope="col">Color</th>
+<th scope="col">Icon</th>
+<th scope="col">Use When...</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -190,9 +190,9 @@ flowchart LR
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Keyword</th>
-<th>Use Case</th>
+<th scope="col">Type</th>
+<th scope="col">Keyword</th>
+<th scope="col">Use Case</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -310,8 +310,8 @@ You can also use named footnotes[^accessibility-note].
 <table>
 <thead>
 <tr>
-<th>Heading Text</th>
-<th>Generated Anchor</th>
+<th scope="col">Heading Text</th>
+<th scope="col">Generated Anchor</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -397,8 +397,8 @@ Line two on the next line, same paragraph.
 <table>
 <thead>
 <tr>
-<th>Element</th>
-<th>Accessibility requirement</th>
+<th scope="col">Element</th>
+<th scope="col">Accessibility requirement</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -424,9 +424,9 @@ Line two on the next line, same paragraph.
 <table>
 <thead>
 <tr>
-<th>Feature</th>
-<th>Screen Reader Behavior</th>
-<th>Author Responsibility</th>
+<th scope="col">Feature</th>
+<th scope="col">Screen Reader Behavior</th>
+<th scope="col">Author Responsibility</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -481,16 +481,16 @@ Line two on the next line, same paragraph.
 </tr>
 </tbody></table>
 <h3>GFM Authoring Checklist for Accessible Documents</h3>
-<pre><code class="hljs"><span class="hljs-selector-attr">[ ]</span> Every <span class="hljs-selector-tag">image</span> has descriptive alt <span class="hljs-selector-tag">text</span> (not just the filename)
-<span class="hljs-selector-attr">[ ]</span> Headings <span class="hljs-selector-tag">form</span> <span class="hljs-selector-tag">a</span> logical hierarchy (no jumping <span class="hljs-selector-tag">from</span> <span class="hljs-selector-tag">h2</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">h4</span>)
-<span class="hljs-selector-attr">[ ]</span> Tables have <span class="hljs-selector-tag">header</span> cells with scope attributes
-<span class="hljs-selector-attr">[ ]</span> <span class="hljs-selector-tag">Code</span> blocks <span class="hljs-selector-tag">use</span> language identifiers for syntax highlighting
-<span class="hljs-selector-attr">[ ]</span> Mermaid diagrams have <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">text</span> equivalent above or below them
-<span class="hljs-selector-attr">[ ]</span> &lt;<span class="hljs-selector-tag">details</span>&gt; <span class="hljs-selector-tag">summary</span> <span class="hljs-selector-tag">text</span> makes sense without expanding
-<span class="hljs-selector-attr">[ ]</span> Alert block type matches the urgency of the <span class="hljs-attribute">content</span>
-<span class="hljs-selector-attr">[ ]</span> Links <span class="hljs-selector-tag">use</span> descriptive <span class="hljs-selector-tag">text</span> (not bare URLs or &quot;click here&quot;)
-<span class="hljs-selector-attr">[ ]</span> <span class="hljs-attribute">Color</span> is never the only way information is conveyed
-<span class="hljs-selector-attr">[ ]</span> Task list items describe the task, not just say &quot;item <span class="hljs-number">1</span>&quot;</code></pre>
+<pre><code class="hljs language-text">[ ] Every image has descriptive alt text (not just the filename)
+[ ] Headings form a logical hierarchy (no jumping from h2 to h4)
+[ ] Tables have header cells with scope attributes
+[ ] Code blocks use language identifiers for syntax highlighting
+[ ] Mermaid diagrams have a text equivalent above or below them
+[ ] &lt;details&gt; summary text makes sense without expanding
+[ ] Alert block type matches the urgency of the content
+[ ] Links use descriptive text (not bare URLs or &quot;click here&quot;)
+[ ] Color is never the only way information is conveyed
+[ ] Task list items describe the task, not just say &quot;item 1&quot;</code></pre>
 <hr>
 <h2>11. GFM Quick-Reference Card</h2>
 <pre><code class="hljs language-markdown"><span class="hljs-quote">&gt; [!NOTE]</span>
@@ -528,7 +528,7 @@ $$</p>
 <span class="hljs-attr">*Return to:</span> [<span class="hljs-string">Resources</span>]<span class="hljs-string">(appendix-u-resources.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">B</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Screen</span> <span class="hljs-string">Reader</span> <span class="hljs-string">Cheat</span> <span class="hljs-string">Sheet</span>]<span class="hljs-string">(appendix-b-screen-reader-cheatsheet.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">A</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Glossary</span>]<span class="hljs-string">(appendix-a-glossary.md)*</span></code></pre>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
+  <footer role="contentinfo" class="site-footer">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

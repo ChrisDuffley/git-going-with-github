@@ -193,7 +193,8 @@ The content coming from the OTHER branch (or main)
 ```
 
 **After two conflicting changes:**
-```
+
+```text
 <<<<<<< HEAD
 <button aria-label="Submit form">Submit</button>
 =======
@@ -267,7 +268,7 @@ GitHub has a built-in conflict editor that you can use without any local tools.
 
 When the conflict editor opens, your screen reader will announce a text editor. In Focus Mode, navigate with arrow keys. The content reads:
 
-```
+```text
 <  <  <  <  <  <  <  H  E  A  D
 <button aria-label="Submit form">Submit</button>
 =  =  =  =  =  =  =

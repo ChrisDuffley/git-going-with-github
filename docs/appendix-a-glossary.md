@@ -220,7 +220,8 @@ Merging is combining changes from one branch into another. When a PR is approved
 A merge conflict happens when two branches have both changed the same part of the same file in different ways. Git doesn't know which version to keep, so it pauses and asks you to resolve it manually.
 
 Conflict markers look like this in a file:
-```
+
+```text
 <<<<<<< HEAD
 The current content on your branch
 =======
