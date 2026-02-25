@@ -94,7 +94,7 @@ Your screen reader and keyboard are the only tools you need. Everything happens 
 
 You will also work through [GitHub Skills](https://skills.github.com/) modules - interactive, bot-guided courses that run in your own GitHub account. A bot named Mona creates real issues and pull requests for you, verifies your actions, and guides you through each step. It is the same mechanism used by real open source projects.
 
-### [Day 2 - From Contributor to Product Maker (VS Code + Agent Forge)](https://community-access.github.io/git-going-with-github/COMING_SOON.html)
+### [Day 2 - From Contributor to Product Maker (VS Code + Accessibility Agents)](https://community-access.github.io/git-going-with-github/COMING_SOON.html)
 
 You earned the tools. Now you wield them.
 
@@ -107,7 +107,7 @@ You earned the tools. Now you wield them.
 | **[Ship Your Contribution](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
 | **Design the Future** | Collaborative speccing session - what should the next version of these tools look like? Your ideas, on the record. |
 
-The central project is **[Agent Forge](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands for accessible repository management. You will fork it, understand it, improve it, and personalize it.
+The central project is **[Accessibility Agents](https://community-access.github.io/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands for accessible repository management. You will fork it, understand it, improve it, and personalize it.
 
 ---
 
