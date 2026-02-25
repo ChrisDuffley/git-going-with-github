@@ -121,7 +121,16 @@ function ensureDir(dirPath) {
 function convertMarkdownFile(mdPath, outputDir) {
   try {
     const content = fs.readFileSync(mdPath, 'utf-8');
-    const htmlContent = marked.parse(content);
+    let htmlContent = marked.parse(content);
+    
+    // Add aria-label to GFM task list checkboxes (WCAG 1.3.1 / 4.1.2)
+    htmlContent = htmlContent.replace(
+      /<input disabled="" type="checkbox"(?: checked="")?>\s*([^<]+)/g,
+      (match, label) => {
+        const trimmed = label.trim();
+        return match.replace('<input ', `<input aria-label="${trimmed.replace(/"/g, '&quot;')}" `);
+      }
+    );
     
     // Determine output path
     const relativePath = path.relative(process.cwd(), mdPath);
