@@ -94,7 +94,7 @@ Your screen reader and keyboard are the only tools you need. Everything happens 
 
 You will also work through [GitHub Skills](https://skills.github.com/) modules - interactive, bot-guided courses that run in your own GitHub account. A bot named Mona creates real issues and pull requests for you, verifies your actions, and guides you through each step. It is the same mechanism used by real open source projects.
 
-### [Day 2 - From Contributor to Product Maker (VS Code + Accessibility Agents)](https://community-access.github.io/git-going-with-github/COMING_SOON.html)
+### [Day 2 - From Contributor to Product Maker](https://community-access.github.io/git-going-with-github/COMING_SOON.html) (VS Code + [Accessibility Agents](https://community-access.github.io/accessibility-agents))
 
 You earned the tools. Now you wield them.
 
