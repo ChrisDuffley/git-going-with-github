@@ -9,7 +9,7 @@ This reference lists keyboard shortcuts for navigating GitHub with a screen read
 
 NVDA is a free, open source screen reader for Windows. Download it from [nvaccess.org](https://nvaccess.org).
 
-#### Single-Key Navigation (Browse Mode)
+### Single-Key Navigation (Browse Mode)
 
 Use these keys to jump to specific element types on any GitHub page.
 
@@ -26,14 +26,14 @@ Use these keys to jump to specific element types on any GitHub page.
 | L | Next list |
 | I | Next list item |
 
-#### Switching Modes
+### Switching Modes
 
 | Key | Action |
 |-----|--------|
 | Insert+Space | Toggle between Browse Mode and Focus Mode |
 | Insert+F7 | Elements list (links, headings, form fields, buttons) |
 
-#### Reading Commands
+### Reading Commands
 
 | Key | Action |
 |-----|--------|
@@ -47,7 +47,7 @@ Use these keys to jump to specific element types on any GitHub page.
 
 JAWS (Job Access With Speech) is a professional screen reader for Windows made by Freedom Scientific.
 
-#### Single-Key Navigation (Virtual Cursor)
+### Single-Key Navigation (Virtual Cursor)
 
 | Key | Moves to |
 |-----|----------|
@@ -61,7 +61,7 @@ JAWS (Job Access With Speech) is a professional screen reader for Windows made b
 | T | Next table |
 | R | Next landmark region |
 
-#### Switching Modes
+### Switching Modes
 
 | Key | Action |
 |-----|--------|
@@ -69,7 +69,7 @@ JAWS (Job Access With Speech) is a professional screen reader for Windows made b
 | Insert+Z | Toggle Virtual PC Cursor |
 | Num Pad Plus | Open PC Cursor (exit forms mode) |
 
-#### Reading Commands
+### Reading Commands
 
 | Key | Action |
 |-----|--------|
@@ -85,13 +85,13 @@ VoiceOver is the built-in screen reader on macOS. Activate it with Command+F5.
 
 The VoiceOver modifier key (VO key) is Control+Option.
 
-#### Rotor Navigation
+### Rotor Navigation
 
 The Rotor is VoiceOver's navigation hub. Open it with VO+U, then use ←/→ to switch between element types, and ↑/↓ to navigate within a type.
 
 Element types available in the Rotor: Headings, Links, Form Controls, Tables, Landmarks, Web Spots.
 
-#### VO Commands for GitHub
+### VO Commands for GitHub
 
 | Command | Action |
 |---------|--------|
