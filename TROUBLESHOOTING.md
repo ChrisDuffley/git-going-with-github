@@ -24,7 +24,7 @@
 - [VoiceOver-Specific Issues](#voiceover-specific-issues)
 - [GitHub Copilot](#github-copilot)
 - [Copilot Chat](#copilot-chat)
-- [Agent Forge](#agent-forge)
+- [Accessibility Agents](#accessibility-agents)
 - [Exercises and the Learning Room](#exercises-and-the-learning-room)
 - [HTML Build System](#html-build-system)
 - [GitHub Pages and Online Access](#github-pages-and-online-access)
@@ -961,7 +961,7 @@ See [Appendix M (VS Code Accessibility Reference)](docs/appendix-m-vscode-access
 
 ---
 
-## Agent Forge
+## Accessibility Agents
 
 ### Problem: Cannot find an agent (e.g., @template-builder)
 **Symptoms:** Typing `@template-builder` in Copilot Chat does not autocomplete or does not trigger the agent.

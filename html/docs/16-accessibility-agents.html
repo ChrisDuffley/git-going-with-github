@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
-  <title>Agent Forge - GIT Going with GitHub</title>
+  <title>Accessibility Agents - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -26,15 +26,15 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Agent Forge</span>
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Accessibility Agents</span>
   </nav>
   <main id="main-content" class="markdown-body">
-    <h1>Agent Forge</h1>
+    <h1>Accessibility Agents</h1>
 <h2>Custom AI Agents for GitHub Workflows</h2>
 <blockquote>
 <p><strong>Day 2, Block 3 Material</strong></p>
 <p><strong>Before you read this guide:</strong></p>
-<p>Agent Forge covers six AI-powered agents and 28 slash commands. These are Day 2, Block 3 material. They are not where you start.</p>
+<p>Accessibility Agents covers six AI-powered agents and 28 slash commands. These are Day 2, Block 3 material. They are not where you start.</p>
 <p><strong>The agents are only useful if you have already done the work manually.</strong> An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff is useless to someone who has never read a diff. The agent does not teach you the skill - it multiplies a skill you already have.</p>
 <p>Day 1 built those skills. This chapter shows how to amplify them with automation.</p>
 </blockquote>
@@ -102,7 +102,7 @@
 </ol>
 <hr>
 <h2>1. The Principle: Skill First, Agent Second</h2>
-<p>Agent Forge is not a way to skip learning GitHub. It is a way to amplify skills you have already built through deliberate practice.</p>
+<p>Accessibility Agents is not a way to skip learning GitHub. It is a way to amplify skills you have already built through deliberate practice.</p>
 <p>Every agent automates a sequence of steps you learned to do manually on Day 1. If you do not know those steps by hand, you cannot:</p>
 <ul>
 <li>Verify that the agent&#39;s output is correct</li>
@@ -159,8 +159,8 @@
 <h2>2. Setup and Configuration</h2>
 <h3>First-Time Setup</h3>
 <ol>
-<li><strong>Fork</strong> <a href="https://github.com/accesswatch/agent-forge">agent-forge</a> to your GitHub account (you did this on Day 1 or Day 2 morning)</li>
-<li><strong>Clone</strong> your fork:<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[your-username]/agent-forge.git</code></pre>
+<li><strong>Fork</strong> <a href="https://github.com/community-access/accessibility-agents">accessibility-agents</a> to your GitHub account (you did this on Day 1 or Day 2 morning)</li>
+<li><strong>Clone</strong> your fork:<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[your-username]/accessibility-agents.git</code></pre>
 </li>
 <li><strong>Open in VS Code</strong>: navigate to the folder → <code>code .</code> (or File → Open Folder)</li>
 <li><strong>Open Copilot Chat</strong>: <code>Ctrl+Shift+I</code></li>
@@ -180,19 +180,19 @@
 <li>Any agents installed globally on your machine</li>
 <li>Agents defined by extensions</li>
 </ol>
-<p>The six Agent Forge agents come from <code>.github/agents/</code> in your fork of the <code>agent-forge</code> repository.</p>
+<p>The six Accessibility Agents agents come from <code>.github/agents/</code> in your fork of the <code>accessibility-agents</code> repository.</p>
 <h3>Optional: Personalize Your Instance</h3>
 <p>Copy the example preferences file:</p>
 <pre><code class="hljs language-bash"><span class="hljs-built_in">cp</span> .github/agents/preferences.example.md .github/agents/preferences.md</code></pre>
 <p>Open <code>preferences.md</code> in VS Code and edit:</p>
-<pre><code class="hljs language-markdown"><span class="hljs-section"># My Agent Forge Preferences</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section"># My Accessibility Agents Preferences</span>
 
 <span class="hljs-section">## My GitHub Username</span>
 [your-username]
 
 <span class="hljs-section">## Repositories I Work On Most</span>
 <span class="hljs-bullet">-</span> [your-org]/[your-repo]
-<span class="hljs-bullet">-</span> accesswatch/agent-forge
+<span class="hljs-bullet">-</span> community-access/accessibility-agents
 
 <span class="hljs-section">## Preferred Output Format</span>
 Long-form with sections and headings (screen reader optimized)
@@ -202,14 +202,14 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 <p>Commit <code>preferences.md</code> to your fork. Now the agents know who you are and what you care about most.</p>
 <p><strong>Note:</strong> <code>preferences.md</code> is in <code>.gitignore</code> in the upstream repo - your personal preferences will not be included if you submit a PR. They stay in your fork only.</p>
 <h3>How Agents Travel with Your Repo</h3>
-<p>When you fork <code>agent-forge</code>, the <code>.github/agents/</code> folder comes with it. This means:</p>
+<p>When you fork <code>accessibility-agents</code>, the <code>.github/agents/</code> folder comes with it. This means:</p>
 <ul>
 <li>Any collaborator who clones your fork gets the same six agents</li>
 <li>You can customize the agents for your specific project by editing the <code>.agent.md</code> files in your fork</li>
 <li>Any project can have agents - you could create a <code>.github/agents/</code> folder in any repository and add <code>.agent.md</code> files using the same pattern</li>
 </ul>
 <h3>Invoking Agents on GitHub.com</h3>
-<p>Agent Forge agents run in VS Code. But the same <code>.agent.md</code> files can also be invoked directly on GitHub.com - no VS Code, no local clone required.</p>
+<p>Accessibility Agents agents run in VS Code. But the same <code>.agent.md</code> files can also be invoked directly on GitHub.com - no VS Code, no local clone required.</p>
 <p><strong>Option 1: Copilot Chat with Task mode</strong></p>
 <details>
 <summary>Visual / mouse users</summary>
@@ -316,7 +316,7 @@ Copilot response appears below <span class="hljs-keyword">the</span> button; use
 <li>Use the code sample generator to get API code for your chosen model</li>
 <li>All free with a GitHub account (rate-limited for free tier)</li>
 </ul>
-<p><strong>Why it matters for Agent Forge:</strong> When you build custom agents and prompts, you can test your system prompts and prompt templates in GitHub Models before adding them to your <code>.prompt.md</code> files - rapid iteration without burning API credits.</p>
+<p><strong>Why it matters for Accessibility Agents:</strong> When you build custom agents and prompts, you can test your system prompts and prompt templates in GitHub Models before adding them to your <code>.prompt.md</code> files - rapid iteration without burning API credits.</p>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -336,7 +336,7 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 
 <h4>Copilot-Drafted Release Notes</h4>
 <p>When creating a release (Releases tab → Draft a new release), GitHub provides a <strong>&quot;Generate release notes&quot;</strong> button. It scans merged PRs since the last release and drafts categorized release notes automatically.</p>
-<p>This directly connects to the <code>/draft-release</code> slash command in Agent Forge - use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.</p>
+<p>This directly connects to the <code>/draft-release</code> slash command in Accessibility Agents - use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.</p>
 <hr>
 <h2>3. The Six Agents - Complete Reference</h2>
 <p>Open each agent file in VS Code to read its full instructions before using it: <code>.github/agents/[name].agent.md</code></p>
@@ -362,17 +362,17 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <p><strong>Example commands:</strong></p>
 <pre><code class="hljs"><span class="hljs-variable">@daily-briefing</span> morning briefing
 
-<span class="hljs-variable">@daily-briefing</span> what needs my attention today in agent-forge?
+<span class="hljs-variable">@daily-briefing</span> what needs my attention today in accessibility-agents?
 
-<span class="hljs-variable">@daily-briefing</span> summarize activity in accesswatch/agent-forge from the last week</code></pre>
+<span class="hljs-variable">@daily-briefing</span> summarize activity in community-access/accessibility-agents from the last week</code></pre>
 <p><strong>Screen reader tip:</strong> The briefing output uses heading level 2 for each section. Use <code>H</code> key (NVDA/JAWS virtual mode) or <code>VO+Command+H</code> (VoiceOver) to jump between: Open Issues, Review Requests, CI Status, Security Alerts, Community Activity.</p>
 <p><strong>Output format:</strong></p>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Issues Opened (Last 24 Hours)</span>
-<span class="hljs-bullet">-</span> #42 [agent-forge] Add Timeline View documentation (opened 3 hours ago)
-<span class="hljs-bullet">-</span> #41 [agent-forge] Fix heading hierarchy in GUIDE.md (opened 18 hours ago)
+<span class="hljs-bullet">-</span> #42 [accessibility-agents] Add Timeline View documentation (opened 3 hours ago)
+<span class="hljs-bullet">-</span> #41 [accessibility-agents] Fix heading hierarchy in GUIDE.md (opened 18 hours ago)
 
 <span class="hljs-section">## Pull Requests Awaiting Your Review</span>
-<span class="hljs-bullet">-</span> #14 [agent-forge] Improve screen reader navigation guide (jeffb, 2 days old)
+<span class="hljs-bullet">-</span> #14 [accessibility-agents] Improve screen reader navigation guide (jeffb, 2 days old)
 
 <span class="hljs-section">## CI Failures on Your Branches</span>
 <span class="hljs-bullet">-</span> feature/add-timeline-guide - Tests failing on line 42 of timeline-test.md
@@ -400,7 +400,7 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 
 <span class="hljs-variable">@issue-tracker</span> find accessibility issues across all my repos
 
-<span class="hljs-variable">@issue-tracker</span> is there a duplicate of issue #<span class="hljs-number">42</span> in agent-forge?
+<span class="hljs-variable">@issue-tracker</span> is there a duplicate of issue #<span class="hljs-number">42</span> in accessibility-agents?
 
 <span class="hljs-variable">@issue-tracker</span> draft a reply to issue #<span class="hljs-number">15</span> acknowledging it <span class="hljs-keyword">and</span> asking for more context</code></pre>
 <p><strong>Important:</strong> The agent can draft a reply. You review the tone against the <a href="07-culture-etiquette.md">Culture &amp; Etiquette guide</a> before posting. Your name goes on it.</p>
@@ -408,12 +408,12 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Open Issues Labeled &quot;good-first-issue&quot;</span>
 
 <span class="hljs-section">### High Priority</span>
-<span class="hljs-bullet">-</span> #45 [agent-forge] Add NVDA-specific navigation tips (3 comments, opened 5 days ago)
+<span class="hljs-bullet">-</span> #45 [accessibility-agents] Add NVDA-specific navigation tips (3 comments, opened 5 days ago)
 <span class="hljs-bullet">  -</span> Priority Score: 8/10 (high community interest, clear scope, no assignee)
 <span class="hljs-bullet">  -</span> Recommended for: First-time contributors familiar with screen readers
 
 <span class="hljs-section">### Medium Priority</span>
-<span class="hljs-bullet">-</span> #38 [agent-forge] Improve commit message examples (1 comment, opened 2 weeks ago)
+<span class="hljs-bullet">-</span> #38 [accessibility-agents] Improve commit message examples (1 comment, opened 2 weeks ago)
 <span class="hljs-bullet">  -</span> Priority Score: 5/10 (useful addition, low urgency)
 
 <span class="hljs-section">## Draft Reply for Issue #15</span>
@@ -443,7 +443,7 @@ This will help us diagnose the issue faster.
 <li>Suggested inline review comments with line number references</li>
 </ul>
 <p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@pr-review</span> review PR #<span class="hljs-number">14</span> in agent-forge
+<pre><code class="hljs"><span class="hljs-variable">@pr-review</span> review PR #<span class="hljs-number">14</span> in accessibility-agents
 
 <span class="hljs-variable">@pr-review</span> what is the risk level of PR #<span class="hljs-number">8</span>?
 
@@ -512,16 +512,16 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <li>Workload distribution across contributors</li>
 </ul>
 <p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@analytics</span> team velocity in agent-forge this month
+<pre><code class="hljs"><span class="hljs-variable">@analytics</span> team velocity in accessibility-agents this month
 
-<span class="hljs-variable">@analytics</span> who are the most active contributors to agent-forge?
+<span class="hljs-variable">@analytics</span> who are the most active contributors to accessibility-agents?
 
-<span class="hljs-variable">@analytics</span> which files are changed most often in agent-forge?
+<span class="hljs-variable">@analytics</span> which files are changed most often in accessibility-agents?
 
-<span class="hljs-variable">@analytics</span> how long does PR review take on average in agent-forge?</code></pre>
-<p><strong>Accessibility use case:</strong> After Day 2&#39;s contribution wave, run <code>@analytics team velocity in agent-forge today</code> to see the hackathon&#39;s collective output. A moment of real-time team celebration.</p>
+<span class="hljs-variable">@analytics</span> how long does PR review take on average in accessibility-agents?</code></pre>
+<p><strong>Accessibility use case:</strong> After Day 2&#39;s contribution wave, run <code>@analytics team velocity in accessibility-agents today</code> to see the hackathon&#39;s collective output. A moment of real-time team celebration.</p>
 <p><strong>Output example:</strong></p>
-<pre><code class="hljs language-markdown"><span class="hljs-section">## Team Velocity - agent-forge (January 2026)</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section">## Team Velocity - accessibility-agents (January 2026)</span>
 
 <span class="hljs-section">### Contribution Summary</span>
 <span class="hljs-bullet">-</span> <span class="hljs-strong">**Total Commits:**</span> 47
@@ -562,14 +562,14 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <li>Tracks link text quality (flags bare URLs, non-descriptive labels)</li>
 </ul>
 <p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@insiders-a11y-tracker</span> check recent changes in agent-forge
+<pre><code class="hljs"><span class="hljs-variable">@insiders-a11y-tracker</span> check recent changes in accessibility-agents
 
 <span class="hljs-variable">@insiders-a11y-tracker</span> review my PR #<span class="hljs-number">14</span> for accessibility impact
 
 <span class="hljs-variable">@insiders-a11y-tracker</span> are there any accessibility regressions in the last <span class="hljs-number">5</span> commits?</code></pre>
 <p><strong>Day 2 workflow:</strong> Run this before submitting any PR. If the agent flags an issue, fix it before requesting review - not after.</p>
 <p><strong>Output example:</strong></p>
-<pre><code class="hljs language-markdown"><span class="hljs-section">## Accessibility Changes - agent-forge (Last 5 Commits)</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section">## Accessibility Changes - accessibility-agents (Last 5 Commits)</span>
 
 <span class="hljs-section">### Issues Found: 2</span>
 
@@ -736,7 +736,7 @@ Slash commands are simpler than agents - they&#x27;re single-purpose prompts def
 <p><strong>This is how you learn to write your own.</strong> Copy an existing file, edit the instructions, save it with a new name - you have just created a new slash command for your fork.</p>
 <hr>
 <h2>5. Building Your Own Agent</h2>
-<p>The six Agent Forge agents and 28 slash commands are starting points. The <code>.agent.md</code> format is open - you can create your own agents for any repeatable workflow.</p>
+<p>The six Accessibility Agents agents and 28 slash commands are starting points. The <code>.agent.md</code> format is open - you can create your own agents for any repeatable workflow.</p>
 <blockquote>
 <p>Source: <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents/</a></p>
 </blockquote>
@@ -895,8 +895,8 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <ul>
 <li>Complete Chapters 15-16 (especially Exercise D - designing your own template)</li>
 <li>VS Code is installed and GitHub Copilot is active</li>
-<li>You have forked <code>agent-forge</code> to your GitHub account</li>
-<li>You have cloned your fork locally: <code>git clone https://github.com/[your-username]/agent-forge.git</code></li>
+<li>You have forked <code>accessibility-agents</code> to your GitHub account</li>
+<li>You have cloned your fork locally: <code>git clone https://github.com/[your-username]/accessibility-agents.git</code></li>
 </ul>
 <hr>
 <h4>Exercise 1: Generate a Template with the Agent</h4>
@@ -907,9 +907,9 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <p><strong>What to do:</strong></p>
 <ol>
 <li>Open VS Code</li>
-<li><strong>File</strong> → <strong>Open Folder</strong> → select your locally cloned <code>agent-forge</code> folder</li>
+<li><strong>File</strong> → <strong>Open Folder</strong> → select your locally cloned <code>accessibility-agents</code> folder</li>
 <li>The folder tree appears on the left showing the repository structure</li>
-<li><strong>Verify you&#39;re in the right place:</strong> The folder name should be <code>agent-forge</code> at the top of the sidebar</li>
+<li><strong>Verify you&#39;re in the right place:</strong> The folder name should be <code>accessibility-agents</code> at the top of the sidebar</li>
 </ol>
 <p><strong>What you should see:</strong></p>
 <ul>
@@ -1441,12 +1441,12 @@ git push origin main</code></pre>
 <li>Use <code>@daily-briefing</code> to summarize your daily activity (manual → agent → refine)</li>
 </ul>
 <p>Each agent follows the same pattern: <strong>you know the manual way, the agent suggests, you refine and decide.</strong></p>
-<p>That&#39;s Agent Forge&#39;s promise: not to replace your thinking, but to amplify your skills.</p>
+<p>That&#39;s Accessibility Agents&#39; promise: not to replace your thinking, but to amplify your skills.</p>
 <hr>
 <h2>6. The Cloud Extension: Agents Beyond VS Code</h2>
-<p>Agent Forge&#39;s agents run on your machine, in your editor, when you ask for them. That is one scope.</p>
+<p>Accessibility Agents&#39; agents run on your machine, in your editor, when you ask for them. That is one scope.</p>
 <p>The same Markdown-authored pattern extends further:</p>
-<h3>Scope 1: Your Editor (Agent Forge)</h3>
+<h3>Scope 1: Your Editor (Accessibility Agents)</h3>
 <ul>
 <li><strong>File lives in:</strong> <code>.github/agents/[name].agent.md</code> in your workspace</li>
 <li><strong>Triggered by:</strong> You, when you type <code>@[agent-name]</code> in Copilot Chat</li>
@@ -1460,7 +1460,7 @@ git push origin main</code></pre>
 <li><strong>Runs on:</strong> Their machine, using their Copilot subscription</li>
 <li><strong>Reaches:</strong> Their GitHub account&#39;s repositories</li>
 </ul>
-<p>When you fork <code>agent-forge</code>, the agents come with it. You can edit them for your project&#39;s context. You can add new ones. You can share them with every contributor who clones your fork.</p>
+<p>When you fork <code>accessibility-agents</code>, the agents come with it. You can edit them for your project&#39;s context. You can add new ones. You can share them with every contributor who clones your fork.</p>
 <h3>Scope 3: The Cloud (GitHub Agentic Workflows)</h3>
 <ul>
 <li><strong>File lives in:</strong> <code>.github/workflows/[name].md</code> (same folder as standard Actions YAML)</li>
@@ -1469,7 +1469,7 @@ git push origin main</code></pre>
 <li><strong>Reaches:</strong> The repository where the workflow is defined</li>
 </ul>
 <p>No VS Code required. No local machine required. The workflow runs whether or not anyone is watching - when an issue is opened at 3am, the agentic response fires.</p>
-<p><strong>The link between Agent Forge and Agentic Workflows:</strong> Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Agent Forge pattern <em>is</em> a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.</p>
+<p><strong>The link between Accessibility Agents and Agentic Workflows:</strong> Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Accessibility Agents pattern <em>is</em> a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.</p>
 <p><strong>Example: Auto-triage accessibility issues</strong></p>
 <p>File: <code>.github/workflows/auto-triage-a11y.md</code></p>
 <pre><code class="hljs language-markdown">---
@@ -1545,7 +1545,7 @@ Suggestion: git <span class="hljs-built_in">log</span> --since=<span class="hljs
 
 Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 <hr>
-<h2>Keyboard Shortcuts - Agent Forge Quick Reference</h2>
+<h2>Keyboard Shortcuts - Accessibility Agents Quick Reference</h2>
 <table>
 <thead>
 <tr>
@@ -1608,10 +1608,10 @@ Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 <li>Try typing the full command name (autocomplete may be incomplete)</li>
 </ol>
 <hr>
-<p><em>Back: <a href="15-issue-templates.md">Issue Templates</a></em><br><em>Reference: <a href="appendix-v-agent-forge-reference.md">Appendix V: Agent Forge Reference</a></em><br><em>Related: <a href="07-culture-etiquette.md">Culture &amp; Etiquette</a> | <a href="04-working-with-issues.md">Working with Issues</a> | <a href="appendix-m-vscode-accessibility-reference.md">Appendix M: VS Code Accessibility Reference</a></em></p>
+<p><em>Back: <a href="15-issue-templates.md">Issue Templates</a></em><br><em>Reference: <a href="appendix-v-accessibility-agents-reference.md">Appendix V: Accessibility Agents Reference</a></em><br><em>Related: <a href="07-culture-etiquette.md">Culture &amp; Etiquette</a> | <a href="04-working-with-issues.md">Working with Issues</a> | <a href="appendix-m-vscode-accessibility-reference.md">Appendix M: VS Code Accessibility Reference</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

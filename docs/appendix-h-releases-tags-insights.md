@@ -16,7 +16,7 @@
 5. [Reading Release Notes](#5-reading-release-notes)
 6. [For Maintainers: Creating a Release](#6-for-maintainers-creating-a-release)
 7. [Draft and Pre-Release States](#7-draft-and-pre-release-states)
-8. [Agent Forge: `/draft-release`](#8-agent-forge-draft-release)
+8. [Accessibility Agents: `/draft-release`](#8-accessibility-agents-draft-release)
 
 **Part 2 - Repository Insights**
 
@@ -30,7 +30,7 @@
 16. [Network and Forks](#16-network-and-forks)
 17. [Community Standards](#17-community-standards)
 18. [Screen Reader Navigation Reference](#18-screen-reader-navigation-reference)
-19. [Agent Forge: `/my-stats` and `/team-dashboard`](#19-agent-forge-my-stats-and-team-dashboard)
+19. [Accessibility Agents: `/my-stats` and `/team-dashboard`](#19-accessibility-agents-my-stats-and-team-dashboard)
 
 ---
 
@@ -181,9 +181,9 @@ This section is relevant if you become a maintainer or contribute to a project t
 8. **Draft toggle:** Save as draft to prepare without publishing immediately
 9. **Publish release**
 
-### Using Agent Forge for Release Notes
+### Using Accessibility Agents for Release Notes
 
-The `/draft-release` command generates structured release notes automatically from your merged PRs - much faster and more consistent than writing them manually. See [Section 8](#8-agent-forge-draft-release).
+The `/draft-release` command generates structured release notes automatically from your merged PRs - much faster and more consistent than writing them manually. See [Section 8](#8-accessibility-agents-draft-release).
 
 ---
 
@@ -197,7 +197,7 @@ The `/draft-release` command generates structured release notes automatically fr
 
 ---
 
-## 8. Agent Forge: `/draft-release`
+## 8. Accessibility Agents: `/draft-release`
 
 The `/draft-release` command automates release note generation from your merged pull requests.
 
@@ -228,7 +228,7 @@ The `/draft-release` command automates release note generation from your merged 
 ### Dependencies
 - Update github-mcp-server to v3.0.1 (#55)
 
-**Full Changelog:** https://github.com/accesswatch/agent-forge/compare/v2.0.0...v2.1.0
+**Full Changelog:** https://github.com/community-access/accessibility-agents/compare/v2.0.0...v2.1.0
 ```
 
 > **See also:** The `/release-prep` command runs a complete pre-release checklist (milestone status, open PRs, CI health, security, and then generates release notes) - useful when preparing a release from scratch rather than just generating notes.
@@ -400,7 +400,7 @@ The **Community Standards** view (found in the Insights sidebar or in the main r
 | Pull request template | PR checklist | ✓ or ✗ |
 | Security policy | How to report vulnerabilities | ✓ or ✗ |
 
-A fully green checklist signals a well-maintained project. For agent-forge contributors, **adding a missing community health file is always a welcome `good first issue` contribution.**
+A fully green checklist signals a well-maintained project. For accessibility-agents contributors, **adding a missing community health file is always a welcome `good first issue` contribution.**
 
 **Screen reader:**
 ```
@@ -472,9 +472,9 @@ K → Links to each item
 
 ---
 
-## 19. Agent Forge: `/my-stats` and `/team-dashboard`
+## 19. Accessibility Agents: `/my-stats` and `/team-dashboard`
 
-Instead of navigating GitHub's chart-heavy Insights UI, Agent Forge provides two commands that deliver the same data in text form directly in VS Code.
+Instead of navigating GitHub's chart-heavy Insights UI, Accessibility Agents provides two commands that deliver the same data in text form directly in VS Code.
 
 ### `/my-stats`
 
@@ -483,7 +483,7 @@ Shows your personal contribution statistics across all tracked repos:
 ```
 /my-stats
 /my-stats last 30 days
-/my-stats org:accesswatch
+/my-stats org:community-access
 ```
 
 Output includes:
@@ -499,7 +499,7 @@ Shows team-wide activity across tracked repos - who contributed what, response t
 
 ```
 /team-dashboard
-/team-dashboard org:accesswatch
+/team-dashboard org:community-access
 /team-dashboard sprint
 ```
 

@@ -174,16 +174,16 @@ Reference/Advanced: Infrastructure & Process
 17. GitHub Actions & Workflows☆
     └─ Dependency: 05 (PRs trigger workflows) + 14 (Copilot context)
        Skills: YAML syntax, triggers, status checks, CI/CD basics
-       Prerequisite for: Understanding Agent Forge cloud workflows
+       Prerequisite for: Understanding Accessibility Agents cloud workflows
        Amplifies: Real automation examples
 
 Expert: Agentic Automation Synthesis
-18. Agent Forge: Five Agents + Cloud
+18. Accessibility Agents: Five Agents + Cloud
     └─ Dependency: 14 (must understand Copilot) + 15 (code review to automate)
        Skills: Custom agents, slash commands, async cloud workflows, code review automation
        Prerequisite for: Nothing (advanced optional amplification)
        Why last: Shows how to automate everything learned in 14-17; complete synthesis chapter
-       Pedagogical arc: FINISH - "Agent Forge does not replace what you learn. It amplifies it."
+       Pedagogical arc: FINISH - "Accessibility Agents does not replace what you learn. It amplifies it."
        Quote from README: This is the final synthesis showing automation of all manual skills
 
 ---
@@ -225,7 +225,7 @@ G. Resources
 | 15 | Code Review (culminating skill) | Builds on 05, 12, 13, 14; master manual deep skill before automation |
 | 16 | Templates | Reference material; can read anytime |
 | 17 | GitHub Actions | Builds on 05 (PRs) + 14 (understanding automation) |
-| 18 | Agent Forge (agentic automation) | Builds on 14 (Copilot) + 15 (code review mastery); FINAL synthesis |
+| 18 | Accessibility Agents (agentic automation) | Builds on 14 (Copilot) + 15 (code review mastery); FINAL synthesis |
 
 ---
 
@@ -308,7 +308,7 @@ SKILL AMPLIFICATION (Same Skills, New Tool) - DAY 2
     ↓
    16 Issue Templates (optional)
     ↓
-   17 Agent Forge (automate everything you've mastered)
+   17 Accessibility Agents (automate everything you've mastered)
     ↓
    ================================
    
@@ -351,7 +351,7 @@ Then build:
   ◆ 14: Copilot (new skill)
   ◆ 15: Code Review (culminating skill - master the manual deep skill)
   ◆ 16: Issue Templates (optional advanced)
-  → 17: Agent Forge (automate what you've mastered in 15)
+  → 17: Accessibility Agents (automate what you've mastered in 15)
   
 Optional post-workshop:
   Appendix E: GitHub Actions (infrastructure deep-dive)
@@ -383,7 +383,7 @@ Optional post-workshop:
 - **PASS** - 13 (PR extension) comes after 12 (git state); extension depends on git
 - **PASS** - 14 (Copilot) comes after 11 (setup); Copilot runs in VS Code
 - **PASS** - 15 (Code Review) comes after 14 (Copilot context) + 05,12,13 (foundational skills)
-- **PASS** - 17 (Agent Forge) comes after 14 (Copilot) + 15 (mastery of code review); automates what students have learned
+- **PASS** - 17 (Accessibility Agents) comes after 14 (Copilot) + 15 (mastery of code review); automates what students have learned
 - **PASS** - Appendix F (GitHub Actions) is heavy infrastructure, appropriately moved to optional post-workshop reference
 
 ### Criterion 3: No Jumps or Leaps
@@ -400,7 +400,7 @@ Optional post-workshop:
 - **PASS** - Chapter 07 (culture) comes AFTER 03-06 (students have experience)
 - **PASS** - Chapter 08 (organization) comes AFTER 07 (assumes team coordination)
 - **PASS** - Chapter 14 (code review) comes BEFORE Chapter 16 (students learn manual skill first, then automation)
-- **PASS** - Chapter 16 (Agent Forge) is FINAL (student mastery of all prior skills gets automated and amplified)
+- **PASS** - Chapter 16 (Accessibility Agents) is FINAL (student mastery of all prior skills gets automated and amplified)
 
 ---
 
@@ -428,13 +428,13 @@ Optional post-workshop:
 
 GitHub Actions is infrastructure-heavy (YAML, triggers, CI/CD) and doesn't belong in an introductory workshop curriculum. Instead:
 
-1. **Core chapters end at 17:** Agent Forge synthesis (final culminating chapter)
+1. **Core chapters end at 17:** Accessibility Agents synthesis (final culminating chapter)
 2. **GitHub Actions moves to Appendix E:** Available as optional post-workshop reference for advanced practitioners
 3. **Resources stays as Appendix O:** Final appendix with links and tools (17 appendices A-Q, no M)
 
 **Benefits of This Reordering:**
 - **Lighter path for intro students**: No heavy infrastructure learning before they ship their first code
-- **Agent Forge becomes the natural finale**: Students master code review (Ch 15) → then see it automated (Ch 17)
+- **Accessibility Agents becomes the natural finale**: Students master code review (Ch 15) → then see it automated (Ch 17)
 - **Smart optional learning**: GitHub Actions available for students who want deeper automation knowledge post-workshop
 - **Clear boundaries**: Main curriculum (00-17) vs. Advanced References (Appendices A-Q)
 - **Security coverage**: New Appendix N covers Dependabot, secret scanning, code scanning, and private vulnerability reporting
@@ -505,7 +505,7 @@ These are "nice to have" - not necessary, since the structure is already progres
 | 14 | Copilot | | 11 | 15, 17 | 2 | AI |
 | 15 | Code Review | | 05 + 12 + 13 + 14 | None | 2 | Expert |
 | 16 | Issue Templates | | 04 | None | 2 | Advanced |
-| 17 | Agent Forge | | 14 + 15 | None | 2 | Expert |
+| 17 | Accessibility Agents | | 14 + 15 | None | 2 | Expert |
 | G | GitHub Actions | | 05 + 14 | None | Appendix | Reference |
 | H | GitHub Projects | | 08 | None | Appendix | Reference |
 | I | GitHub Discussions | | 07 | None | Appendix | Reference |

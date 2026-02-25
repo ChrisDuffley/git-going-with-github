@@ -601,7 +601,7 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 <h4>Step 1: Navigate to the Pull Request</h4>
 <p><strong>What to do:</strong></p>
 <ol>
-<li>Open GitHub in your browser and navigate to the workshop repository (<code>github.com/[your-fork]/[workshop-repo]</code> or <code>accesswatch/agent-forge</code>)</li>
+<li>Open GitHub in your browser and navigate to the workshop repository (<code>github.com/[your-fork]/[workshop-repo]</code> or <code>community-access/accessibility-agents</code>)</li>
 <li>Click the <strong>Pull Requests</strong> tab (top navigation)</li>
 <li>Look for a PR titled &quot;Add screen reader tips to the setup guide&quot; - click it to open</li>
 <li>You should now see the PR page with sections: Conversation, Commits, Files Changed</li>
@@ -800,7 +800,7 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 <li><strong>Would you have caught this without the exercise prompt?</strong> If you were a real reviewer not specifically looking for heading issues, would the diff have been obvious?</li>
 <li><strong>Why does screen reader navigation matter?</strong> In one sentence, explain why a screen reader user&#39;s ability to jump through heading levels is important for this document.</li>
 </ol>
-<p>Keep your answers - you&#39;ll need them for Chapter 16&#39;s Agent Forge exercise to compare manual review with agent-assisted review.</p>
+<p>Keep your answers - you&#39;ll need them for Chapter 16&#39;s Accessibility Agents exercise to compare manual review with agent-assisted review.</p>
 <hr>
 <h3>Exercise B - Use the VS Code Accessible Diff Viewer</h3>
 <p><strong>Scenario:</strong> Review the same pull request from Exercise A, this time entirely in VS Code. You&#39;ll compare the browser experience with the VS Code experience.</p>
@@ -1182,7 +1182,7 @@ The heading hierarchy skip <span class="hljs-keyword">in</span> the published do
 <hr>
 <h3>What Comes Next</h3>
 <p>Your manual code review skills - identifying heading issues, catching link text problems, understanding screen reader navigation - are the <strong>foundation</strong> for understanding automated review.</p>
-<p>In <strong>Chapter 16 (Agent Forge)</strong>, you&#39;ll use the <code>@pr-review</code> agent to generate a <em>draft</em> review of this same PR. The agent will:</p>
+<p>In <strong>Chapter 16 (Accessibility Agents)</strong>, you&#39;ll use the <code>@pr-review</code> agent to generate a <em>draft</em> review of this same PR. The agent will:</p>
 <ul>
 <li>Suggest changes automatically</li>
 <li>Identify accessibility issues</li>
@@ -1197,12 +1197,12 @@ The heading hierarchy skip <span class="hljs-keyword">in</span> the published do
 <p>That&#39;s the power of &quot;manual skill first, agent second.&quot; You&#39;re building that skill right now.</p>
 <hr>
 <blockquote>
-<h3>Day 2 Amplifier - Agent Forge: <code>@pr-review</code></h3>
+<h3>Day 2 Amplifier - Accessibility Agents: <code>@pr-review</code></h3>
 <p><strong>Review at least two pull requests manually - using the techniques in this guide - before running <code>@pr-review</code>.</strong> The agent generates a first-draft review: a line-numbered diff map, risk assessment, before/after snapshots, and suggested inline comments. Your job as reviewer is to read that draft, correct it, enrich it with context the diff cannot contain, and decide what is actually worth saying to the author.</p>
 <p>Once you have that manual foundation:</p>
 <ul>
 <li><strong>In VS Code</strong> - <code>@pr-review review PR #N</code> produces a structured, annotated review draft</li>
-<li><strong>In your repo</strong> - Agent Forge&#39;s review capabilities work in any repository you can access; fork <code>agent-forge</code> and those capabilities travel with your project</li>
+<li><strong>In your repo</strong> - Accessibility Agents&#39; review capabilities work in any repository you can access; fork <code>accessibility-agents</code> and those capabilities travel with your project</li>
 <li><strong>In the cloud</strong> - GitHub Agentic Workflows can auto-post PR summaries and accessibility impact assessments the moment a PR is opened, without anyone being online</li>
 </ul>
 <p><em>The Accessible Diff Viewer teaches you to hear changes. The agent drafts the notes. You bring the judgment.</em></p>
@@ -1213,7 +1213,7 @@ The heading hierarchy skip <span class="hljs-keyword">in</span> the published do
 <em>Related: <a href="appendix-b-screen-reader-cheatsheet.md">Screen Reader Cheat Sheet</a> | <a href="06-merge-conflicts.md">Merge Conflicts</a> | <a href="11-git-source-control.md">Git &amp; Source Control in VS Code</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

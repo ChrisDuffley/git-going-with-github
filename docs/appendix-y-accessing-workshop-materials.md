@@ -66,7 +66,7 @@ Cloning gives you a full copy of the repository that you can update later with `
 
 ```bash
 # Clone the repository
-git clone https://github.com/accesswatch/Learning-Room.git
+git clone https://github.com/community-access/Learning-Room.git
 
 # Move into the folder
 cd Learning-Room

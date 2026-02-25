@@ -50,7 +50,7 @@ By default, GitHub searches across all of GitHub. Scope modifiers restrict resul
 | `in:body` | Only matches in the body field |
 | `in:comments` | Only matches in comments |
 
-**Example:** `repo:accesswatch/agent-forge in:title keyboard` finds issues/PRs whose titles mention "keyboard" in the agent-forge repo.
+**Example:** `repo:community-access/accessibility-agents in:title keyboard` finds issues/PRs whose titles mention "keyboard" in the accessibility-agents repo.
 
 ---
 
@@ -113,7 +113,7 @@ GitHub's issue/PR search is at `github.com/issues` (your issues) or `github.com/
 
 **Find all unassigned, open accessibility issues across an org:**
 ```
-org:accesswatch is:issue is:open label:accessibility no:assignee
+org:community-access is:issue is:open label:accessibility no:assignee
 ```
 
 **Find good first issues in any language:**
@@ -164,7 +164,7 @@ repo:owner/name symbol:handleKeyDown
 
 **Find a pattern across all repos in an org:**
 ```
-org:accesswatch aria-hidden="true"
+org:community-access aria-hidden="true"
 ```
 
 **Code search qualifiers:**
@@ -247,19 +247,19 @@ type:org topic:accessibility
 
 Bookmark these for use during the hackathon:
 
-**Find open contributions you can make right now in agent-forge:**
+**Find open contributions you can make right now in accessibility-agents:**
 ```
-repo:accesswatch/agent-forge is:issue is:open label:"good first issue" no:assignee
+repo:community-access/accessibility-agents is:issue is:open label:"good first issue" no:assignee
 ```
 
 **Check whether your issue is already filed:**
 ```
-repo:accesswatch/agent-forge is:issue keyboard navigation
+repo:community-access/accessibility-agents is:issue keyboard navigation
 ```
 
 **Find all accessibility-related issues in a project:**
 ```
-repo:accesswatch/agent-forge is:issue label:accessibility is:open
+repo:community-access/accessibility-agents is:issue label:accessibility is:open
 ```
 
 **See all your merged PRs (proof of contribution):**
@@ -269,7 +269,7 @@ is:pr is:merged author:@me
 
 **Find recent discussions about a topic:**
 ```
-repo:accesswatch/agent-forge in:discussions screen reader
+repo:community-access/accessibility-agents in:discussions screen reader
 ```
 
 ---
@@ -280,7 +280,7 @@ GitHub does not have a built-in saved-search feature, but you can:
 
 1. **Bookmark the URL** - every search result page has the query in the URL. Bookmark it in your browser for instant re-run.
 2. **Pin in notifications** - if you're watching a repo, set up notification filters
-3. **Agent Forge** - use `/my-issues` and `/my-prs` for your personal saved-search equivalents without leaving VS Code
+3. **Accessibility Agents** - use `/my-issues` and `/my-prs` for your personal saved-search equivalents without leaving VS Code
 
 **Example bookmarkable URL:**
 ```

@@ -1,7 +1,7 @@
 # Appendix L: GitHub Security Features
 ## Dependabot, Secret Scanning, Code Scanning, and Private Advisories
 
-> **Who this is for:** Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in `accesswatch/agent-forge`.
+> **Who this is for:** Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in `community-access/accessibility-agents`.
 
 ---
 
@@ -15,7 +15,7 @@
 6. [The SECURITY.md File](#6-the-securitymd-file)
 7. [Software Bill of Materials (SBOM)](#7-software-bill-of-materials-sbom)
 8. [Screen Reader Navigation of the Security Tab](#8-screen-reader-navigation-of-the-security-tab)
-9. [Security and Agent Forge](#9-security-and-agent-forge)
+9. [Security and Accessibility Agents](#9-security-and-accessibility-agents)
 
 ---
 
@@ -240,7 +240,7 @@ A `SECURITY.md` file at the repository root defines the project's security polic
 - **Response timeline:** How quickly maintainers aim to respond
 - **Disclosure policy:** When the project will publish a fix publicly
 
-**Agent-forge's security policy:** `accesswatch/agent-forge` has a `SECURITY.md` that points to GitHub's private advisory form. If you find a security issue in agent-forge - even a potential one - use the private advisory form rather than opening a public issue.
+**accessibility-agents's security policy:** `community-access/accessibility-agents` has a `SECURITY.md` that points to GitHub's private advisory form. If you find a security issue in accessibility-agents - even a potential one - use the private advisory form rather than opening a public issue.
 
 ### Navigating to a Repository's SECURITY.md
 
@@ -319,9 +319,9 @@ Submit: Tab → "Submit report" button → Enter
 
 ---
 
-## 9. Security and Agent Forge
+## 9. Security and Accessibility Agents
 
-Agent Forge's `/security-dashboard` slash command gives you a quick security overview without visiting the Security tab in the browser:
+Accessibility Agents' `/security-dashboard` slash command gives you a quick security overview without visiting the Security tab in the browser:
 
 ```
 /security-dashboard
@@ -330,7 +330,7 @@ Agent Forge's `/security-dashboard` slash command gives you a quick security ove
 **Sample output:**
 
 ```
-## Security Dashboard - accesswatch/agent-forge
+## Security Dashboard - community-access/accessibility-agents
 
 ### Dependabot Alerts
 - 0 Critical
@@ -351,7 +351,7 @@ Agent Forge's `/security-dashboard` slash command gives you a quick security ove
 Action needed: Review PR #47 (5 minutes - single file change)
 ```
 
-**Workshop exercise:** Run `/security-dashboard` on your fork after Day 2. Review any Dependabot PRs open on the upstream `accesswatch/agent-forge` - merging one is a real security contribution.
+**Workshop exercise:** Run `/security-dashboard` on your fork after Day 2. Review any Dependabot PRs open on the upstream `community-access/accessibility-agents` - merging one is a real security contribution.
 
 ---
 

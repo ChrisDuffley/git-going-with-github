@@ -16,7 +16,7 @@
 7. [Polls](#7-polls)
 8. [Screen Reader Navigation Reference](#8-screen-reader-navigation-reference)
 9. [Organization-Level Discussions](#9-organization-level-discussions)
-10. [Agent Forge: What's Different Here](#10-agent-forge-whats-different-here)
+10. [Accessibility Agents: What's Different Here](#10-accessibility-agents-whats-different-here)
 
 ---
 
@@ -237,9 +237,9 @@ Find them at `github.com/ORGANIZATION/discussions`.
 
 ---
 
-## 10. Agent Forge: What's Different Here
+## 10. Accessibility Agents: What's Different Here
 
-Agent Forge prompts currently operate on **issues, PRs, and code** - not directly on Discussions. If you want to respond to a discussion using Agent Forge:
+Accessibility Agents prompts currently operate on **issues, PRs, and code** - not directly on Discussions. If you want to respond to a discussion using Accessibility Agents:
 
 1. Copy the discussion URL or content
 2. Use `/issue-reply` with the content pasted in: the agent will draft a thoughtful, accessible response

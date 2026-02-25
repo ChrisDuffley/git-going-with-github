@@ -47,7 +47,7 @@
 <li><a href="#8-views-and-filters">Views and Filters</a></li>
 <li><a href="#9-cross-repository-projects">Cross-Repository Projects</a></li>
 <li><a href="#10-screen-reader-navigation-reference">Screen Reader Navigation Reference</a></li>
-<li><a href="#11-agent-forge-project-status">Agent Forge: <code>/project-status</code></a></li>
+<li><a href="#11-accessibility-agents-project-status">Accessibility Agents: <code>/project-status</code></a></li>
 <li><a href="#12-exercises">Exercises</a></li>
 </ol>
 <hr>
@@ -418,8 +418,8 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 </ol>
 <h3>Using the Repository Field</h3>
 <p>When a project spans multiple repos, the <strong>&quot;Repository&quot;</strong> field lets you see - and filter by - which repo each item belongs to:</p>
-<pre><code class="hljs"><span class="hljs-keyword">Filter</span>: repo:accesswatch<span class="hljs-operator">/</span>agent<span class="hljs-operator">-</span>forge
-→ <span class="hljs-keyword">Show</span> <span class="hljs-keyword">only</span> agent<span class="hljs-operator">-</span>forge issues <span class="hljs-keyword">in</span> this <span class="hljs-keyword">cross</span><span class="hljs-operator">-</span>repo project</code></pre>
+<pre><code class="hljs"><span class="hljs-keyword">Filter</span>: repo:community-<span class="hljs-keyword">access</span>/accessibility-agents
+→ <span class="hljs-keyword">Show</span> <span class="hljs-keyword">only</span> accessibility-agents issues <span class="hljs-keyword">in</span> this <span class="hljs-keyword">cross</span>-repo project</code></pre>
 <p><strong>Common use case:</strong> An organization project tracking all accessibility bugs across every repo, labeled <code>accessibility</code>, with Auto-add enabled.</p>
 <hr>
 <h2>10. Screen Reader Navigation Reference</h2>
@@ -455,10 +455,10 @@ Enter/Space → Activate a field editor
 Backspace → <span class="hljs-built_in">Remove</span> last<span class="hljs-built_in"> filter </span>token
 Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-built_in"> filter </span>bar</code></pre>
 <hr>
-<h2>11. Agent Forge: <code>/project-status</code></h2>
-<p>The <strong><code>/project-status</code></strong> command from Agent Forge gives you a live project board overview directly in VS Code Copilot Chat, without opening a browser.</p>
+<h2>11. Accessibility Agents: <code>/project-status</code></h2>
+<p>The <strong><code>/project-status</code></strong> command from Accessibility Agents gives you a live project board overview directly in VS Code Copilot Chat, without opening a browser.</p>
 <h3>What It Shows</h3>
-<pre><code class="hljs">/project-status accesswatch/agent-forge</code></pre>
+<pre><code class="hljs">/project-status community-access/accessibility-agents</code></pre>
 <ul>
 <li>Items per column (Todo, In Progress, Done, etc.) with assignees and average age</li>
 <li>Blocked items (labeled &quot;blocked&quot; or flagged with a field value)</li>
@@ -468,7 +468,7 @@ Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-b
 <li>Sprint/iteration progress if an Iteration field is configured</li>
 </ul>
 <h3>Example Output</h3>
-<pre><code class="hljs"><span class="hljs-variable">GitHub</span> <span class="hljs-variable">Project</span><span class="hljs-operator">:</span> <span class="hljs-variable">Agent</span> <span class="hljs-variable">Forge</span> <span class="hljs-variable">Roadmap</span> <span class="hljs-punctuation">(</span><span class="hljs-number">3</span> <span class="hljs-variable">active</span> <span class="hljs-variable">views</span><span class="hljs-punctuation">)</span>
+<pre><code class="hljs"><span class="hljs-variable">GitHub</span> <span class="hljs-variable">Project</span><span class="hljs-operator">:</span> <span class="hljs-variable">Accessibility</span> <span class="hljs-variable">Agents</span> <span class="hljs-variable">Roadmap</span> <span class="hljs-punctuation">(</span><span class="hljs-number">3</span> <span class="hljs-variable">active</span> <span class="hljs-variable">views</span><span class="hljs-punctuation">)</span>
 
 <span class="hljs-built_in">Column</span> <span class="hljs-variable">Breakdown</span><span class="hljs-operator">:</span>
 ┌─────────────┬───────┬──────────────────┬─────────┬──────────────┐
@@ -499,7 +499,7 @@ Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-b
 <li>Create a new project at the organization level: name it &quot;My Workshop Contributions&quot;</li>
 <li>Add the <strong>Board</strong> layout</li>
 <li>Add a custom <strong>Priority</strong> field with options: P0, P1, P2</li>
-<li>Add your fork of <code>agent-forge</code> as a linked repository</li>
+<li>Add your fork of <code>accessibility-agents</code> as a linked repository</li>
 <li>Add any open issue you&#39;ve filed to the project</li>
 </ol>
 <h3>Exercise 2: Set Up Automation</h3>
@@ -530,7 +530,7 @@ Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-b
 <p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-a-glossary.md">Glossary</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

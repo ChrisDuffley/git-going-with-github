@@ -2,7 +2,7 @@
 
 Thank you for helping improve this workshop. Whether you are a participant who found a typo, someone who wants to add a new exercise, or an educator adapting these materials for your own community - your contribution is meaningful and welcome.
 
-This guide covers contributing to **this workshop learning repository**. For contributing to Agent Forge itself (the project you work on during Day 2), see [Agent Forge's CONTRIBUTING.md](https://github.com/accesswatch/agent-forge/blob/main/CONTRIBUTING.md).
+This guide covers contributing to **this workshop learning repository**. For contributing to Accessibility Agents itself (the project you work on during Day 2), see [Accessibility Agents' CONTRIBUTING.md](https://github.com/community-access/accessibility-agents/blob/main/CONTRIBUTING.md).
 
 ---
 

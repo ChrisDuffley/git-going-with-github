@@ -153,7 +153,7 @@ docs/
 ├── 05-working-with-pull-requests.md     ← Review PRs
 ├── 14-accessible-code-review.md         ← Day 2 manual skill
 ├── 15-issue-templates.md                ← Design templates (manual)
-├── 16-agent-forge.md                    ← Automate with agents
+├── 16-accessibility-agents.md                    ← Automate with agents
 └── appendix-a-glossary.md               ← Term definitions
 ```
 

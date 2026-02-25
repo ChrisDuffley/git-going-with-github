@@ -191,7 +191,7 @@ This workflow triggers on every push to `master`, rebuilds the HTML, and deploys
 
 ## 5. Custom Domains
 
-GitHub Pages supports custom domains (e.g. `learning.accesswatch.org` instead of `accesswatch.github.io/Learning-Room`).
+GitHub Pages supports custom domains (e.g. `learning.community-access.org` instead of `community-access.github.io/Learning-Room`).
 
 ### Setting up a custom domain
 
@@ -201,8 +201,8 @@ GitHub Pages supports custom domains (e.g. `learning.accesswatch.org` instead of
 
 | Domain type | DNS record type | Value |
 |-------------|----------------|-------|
-| Subdomain (e.g. `learning.accesswatch.org`) | CNAME | `accesswatch.github.io` |
-| Apex domain (e.g. `accesswatch.org`) | A records (×4) | GitHub's IP addresses (see below) |
+| Subdomain (e.g. `learning.community-access.org`) | CNAME | `community-access.github.io` |
+| Apex domain (e.g. `community-access.org`) | A records (×4) | GitHub's IP addresses (see below) |
 
 **GitHub's current A record IPs for apex domains:**
 ```

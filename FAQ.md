@@ -20,7 +20,7 @@
 - [VS Code](#vs-code)
 - [Git and Source Control in VS Code](#git-and-source-control-in-vs-code)
 - [GitHub Copilot](#github-copilot)
-- [Agent Forge](#agent-forge)
+- [Accessibility Agents](#accessibility-agents)
 - [Issue Templates](#issue-templates)
 - [Code Review](#code-review)
 - [The Learning Room](#the-learning-room)
@@ -50,10 +50,10 @@
 **A:** You can do most of the workshop solo. The chapters, exercises, and appendices are self-contained. A few exercises in the Learning Room (Chapter 3) involve peer review and are designed for groups, but you can still practice the individual challenges on your own.
 
 ### Q: What is the difference between Day 1 and Day 2?
-**A:** Day 1 uses the GitHub web interface only - everything happens in your browser. Day 2 moves to VS Code on the desktop and introduces GitHub Copilot and Agent Forge. Day 1 skills are prerequisite for Day 2 - the agents only make sense when you understand what they automate.
+**A:** Day 1 uses the GitHub web interface only - everything happens in your browser. Day 2 moves to VS Code on the desktop and introduces GitHub Copilot and Accessibility Agents. Day 1 skills are prerequisite for Day 2 - the agents only make sense when you understand what they automate.
 
 ### Q: Is there a certificate or badge for completing this workshop?
-**A:** The GitHub Skills modules (used during Day 1) award completion badges on your GitHub profile. These are visible to anyone who visits your profile. The workshop itself does not issue a separate certificate, but your merged PR to `accesswatch/agent-forge` on Day 2 is permanent proof of contribution.
+**A:** The GitHub Skills modules (used during Day 1) award completion badges on your GitHub profile. These are visible to anyone who visits your profile. The workshop itself does not issue a separate certificate, but your merged PR to `community-access/accessibility-agents` on Day 2 is permanent proof of contribution.
 
 ### Q: Where can I find the course outline and table of contents?
 **A:** See the [Course Guide](docs/course-guide.md) for the full table of contents, chapter sequence, timing, and exercises at a glance.
@@ -69,7 +69,7 @@
 **A:** Yes. [Chapter 4 (Working with Issues)](docs/04-working-with-issues.md) and [Chapter 5 (Working with Pull Requests)](docs/05-working-with-pull-requests.md) will deepen your understanding. Then jump to [Chapter 14 (Accessible Code Review)](docs/14-accessible-code-review.md) for best practices.
 
 ### Q: I am a maintainer of an open-source project. What should I read?
-**A:** [Chapter 8 (Labels, Milestones & Projects)](docs/08-labels-milestones-projects.md) → [Chapter 15 (Issue Templates)](docs/15-issue-templates.md) → [Chapter 16 (Agent Forge)](docs/16-agent-forge.md). These focus on organizing projects and automating common tasks.
+**A:** [Chapter 8 (Labels, Milestones & Projects)](docs/08-labels-milestones-projects.md) → [Chapter 15 (Issue Templates)](docs/15-issue-templates.md) → [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md). These focus on organizing projects and automating common tasks.
 
 ### Q: I am teaching GitHub to a group. Do I need to know everything?
 **A:** Yes, read the full curriculum first. Also read [FACILITATOR.md](FACILITATOR.md), [DAY1_AGENDA.md](DAY1_AGENDA.md), and [DAY2_AGENDA.md](DAY2_AGENDA.md) for lesson plans and pacing tips.
@@ -632,7 +632,7 @@ See [Chapter 13 (GitHub Copilot)](docs/13-github-copilot.md).
 - `@workspace` - Ask about your entire project
 - `@vscode` - Ask about VS Code settings and commands
 - `@terminal` - Ask about terminal commands
-- Agent names like `@daily-briefing` - Use a specific Agent Forge agent
+- Agent names like `@daily-briefing` - Use a specific Accessibility Agents agent
 
 ### Q: What are slash commands in Copilot Chat?
 **A:** Commands starting with `/` that trigger specific behaviors:
@@ -640,7 +640,7 @@ See [Chapter 13 (GitHub Copilot)](docs/13-github-copilot.md).
 - `/fix` - Suggest a fix for the selected code
 - `/tests` - Generate tests
 - `/doc` - Generate documentation
-- Custom commands from Agent Forge (28 available)
+- Custom commands from Accessibility Agents (28 available)
 
 Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-copilot-reference.md)
 
@@ -652,10 +652,10 @@ Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-c
 
 ---
 
-## Agent Forge
+## Accessibility Agents
 
-### Q: What is Agent Forge?
-**A:** A set of six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It is an MIT-licensed open-source project at `accesswatch/agent-forge` that you will fork, use, and contribute to during the workshop. See [Chapter 16 (Agent Forge)](docs/16-agent-forge.md).
+### Q: What is Accessibility Agents?
+**A:** A set of six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It is an MIT-licensed open-source project at `community-access/accessibility-agents` that you will fork, use, and contribute to during the workshop. See [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md).
 
 ### Q: What are the six agents?
 **A:**
@@ -669,7 +669,7 @@ Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-c
 | `@template-builder` | Interactive wizard for creating GitHub issue templates |
 
 ### Q: Do I need to install anything to use agents?
-**A:** No separate installation. Agents are defined as `.agent.md` files in your repository's `.github/agents/` folder. When you fork `agent-forge`, the agents come with it. You need GitHub Copilot (paid subscription) for agents to function.
+**A:** No separate installation. Agents are defined as `.agent.md` files in your repository's `.github/agents/` folder. When you fork `accessibility-agents`, the agents come with it. You need GitHub Copilot (paid subscription) for agents to function.
 
 ### Q: Can I use agents without understanding GitHub first?
 **A:** The agents automate skills you learn in the workshop. Using them without understanding what they do is like using a calculator without understanding math - you cannot tell when it is wrong. That is why Day 1 comes first.
@@ -678,7 +678,7 @@ Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-c
 **A:** Copy `.github/agents/preferences.example.md` to `.github/agents/preferences.md` and edit it with your GitHub username, preferred repositories, and output format preferences.
 
 ### Q: Can I create my own agents?
-**A:** Yes. Create a new `.agent.md` file in `.github/agents/` following the existing file format. The file is plain Markdown with YAML frontmatter. See [Appendix V (Agent Forge Reference)](docs/appendix-v-agent-forge-reference.md).
+**A:** Yes. Create a new `.agent.md` file in `.github/agents/` following the existing file format. The file is plain Markdown with YAML frontmatter. See [Appendix V (Accessibility Agents Reference)](docs/appendix-v-accessibility-agents-reference.md).
 
 ---
 
@@ -700,7 +700,7 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) → "Template not showing in GitHub
 **A:** YAML is a simple format for writing structured data - easier to read than JSON or XML. GitHub uses it for issue form templates because it is human-readable and supports validation. You do not need to be an expert - [Chapter 15](docs/15-issue-templates.md) teaches you everything you need.
 
 ### Q: Can I use the @template-builder agent to create templates?
-**A:** Yes. The `@template-builder` agent in Copilot Chat walks you through creating templates interactively. It asks questions and generates the YAML for you. See [Chapter 16 (Agent Forge)](docs/16-agent-forge.md).
+**A:** Yes. The `@template-builder` agent in Copilot Chat walks you through creating templates interactively. It asks questions and generates the YAML for you. See [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md).
 
 ---
 
@@ -794,7 +794,7 @@ Details in `learning-room/docs/CHALLENGES.md` and `learning-room/docs/GROUP_CHAL
 ### Q: How do I keep my fork up to date?
 **A:**
 ```bash
-git remote add upstream https://github.com/accesswatch/learning-room.git
+git remote add upstream https://github.com/community-access/learning-room.git
 git fetch upstream
 git checkout main
 git merge upstream/main

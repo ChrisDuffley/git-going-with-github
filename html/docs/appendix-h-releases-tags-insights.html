@@ -45,7 +45,7 @@
 <li><a href="#5-reading-release-notes">Reading Release Notes</a></li>
 <li><a href="#6-for-maintainers-creating-a-release">For Maintainers: Creating a Release</a></li>
 <li><a href="#7-draft-and-pre-release-states">Draft and Pre-Release States</a></li>
-<li><a href="#8-agent-forge-draft-release">Agent Forge: <code>/draft-release</code></a></li>
+<li><a href="#8-accessibility-agents-draft-release">Accessibility Agents: <code>/draft-release</code></a></li>
 </ol>
 <p><strong>Part 2 - Repository Insights</strong></p>
 <ol start="9">
@@ -59,7 +59,7 @@
 <li><a href="#16-network-and-forks">Network and Forks</a></li>
 <li><a href="#17-community-standards">Community Standards</a></li>
 <li><a href="#18-screen-reader-navigation-reference">Screen Reader Navigation Reference</a></li>
-<li><a href="#19-agent-forge-my-stats-and-team-dashboard">Agent Forge: <code>/my-stats</code> and <code>/team-dashboard</code></a></li>
+<li><a href="#19-accessibility-agents-my-stats-and-team-dashboard">Accessibility Agents: <code>/my-stats</code> and <code>/team-dashboard</code></a></li>
 </ol>
 <hr>
 <h2>Part 1 - Releases and Tags</h2>
@@ -217,15 +217,15 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <li><strong>Draft toggle:</strong> Save as draft to prepare without publishing immediately</li>
 <li><strong>Publish release</strong></li>
 </ol>
-<h3>Using Agent Forge for Release Notes</h3>
-<p>The <code>/draft-release</code> command generates structured release notes automatically from your merged PRs - much faster and more consistent than writing them manually. See <a href="#8-agent-forge-draft-release">Section 8</a>.</p>
+<h3>Using Accessibility Agents for Release Notes</h3>
+<p>The <code>/draft-release</code> command generates structured release notes automatically from your merged PRs - much faster and more consistent than writing them manually. See <a href="#8-accessibility-agents-draft-release">Section 8</a>.</p>
 <hr>
 <h2>7. Draft and Pre-Release States</h2>
 <p><strong>Draft release:</strong> Saved but not published. Only visible to repository collaborators. Use drafts to prepare release notes in advance.</p>
 <p><strong>Pre-release:</strong> Published and visible, but not marked &quot;Latest.&quot; Users who look for the latest stable version won&#39;t be directed to it automatically. Use for alpha/beta/RC versions.</p>
 <p><strong>Latest release:</strong> The most recent non-pre-release, non-draft release. This is what GitHub highlights in the sidebar and what <code>github.com/owner/repo/releases/latest</code> redirects to.</p>
 <hr>
-<h2>8. Agent Forge: <code>/draft-release</code></h2>
+<h2>8. Accessibility Agents: <code>/draft-release</code></h2>
 <p>The <code>/draft-release</code> command automates release note generation from your merged pull requests.</p>
 <p><strong>Usage:</strong></p>
 <pre><code class="hljs">/draft-release v2.1.0
@@ -251,7 +251,7 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <span class="hljs-section">### Dependencies</span>
 <span class="hljs-bullet">-</span> Update github-mcp-server to v3.0.1 (#55)
 
-<span class="hljs-strong">**Full Changelog:**</span> https://github.com/accesswatch/agent-forge/compare/v2.0.0...v2.1.0</code></pre>
+<span class="hljs-strong">**Full Changelog:**</span> https://github.com/community-access/accessibility-agents/compare/v2.0.0...v2.1.0</code></pre>
 <blockquote>
 <p><strong>See also:</strong> The <code>/release-prep</code> command runs a complete pre-release checklist (milestone status, open PRs, CI health, security, and then generates release notes) - useful when preparing a release from scratch rather than just generating notes.</p>
 </blockquote>
@@ -447,7 +447,7 @@ K → Links <span class="hljs-keyword">to</span> <span class="hljs-keyword">each
 <td>✓ or ✗</td>
 </tr>
 </tbody></table>
-<p>A fully green checklist signals a well-maintained project. For agent-forge contributors, <strong>adding a missing community health file is always a welcome <code>good first issue</code> contribution.</strong></p>
+<p>A fully green checklist signals a well-maintained project. For accessibility-agents contributors, <strong>adding a missing community health file is always a welcome <code>good first issue</code> contribution.</strong></p>
 <p><strong>Screen reader:</strong></p>
 <pre><code class="hljs">H / <span class="hljs-number">2</span> → <span class="hljs-string">&quot;Community Standards&quot;</span> section heading
 Tab → Each checklist <span class="hljs-keyword">item</span> (links <span class="hljs-built_in">to</span> <span class="hljs-built_in">add</span> missing <span class="hljs-built_in">files</span>)</code></pre>
@@ -487,13 +487,13 @@ H → <span class="hljs-selector-tag">Section</span> headings
 <span class="hljs-number">3</span> → Individual PR/issue titles
 K → Links <span class="hljs-built_in">to</span> <span class="hljs-keyword">each</span> <span class="hljs-keyword">item</span></code></pre>
 <hr>
-<h2>19. Agent Forge: <code>/my-stats</code> and <code>/team-dashboard</code></h2>
-<p>Instead of navigating GitHub&#39;s chart-heavy Insights UI, Agent Forge provides two commands that deliver the same data in text form directly in VS Code.</p>
+<h2>19. Accessibility Agents: <code>/my-stats</code> and <code>/team-dashboard</code></h2>
+<p>Instead of navigating GitHub&#39;s chart-heavy Insights UI, Accessibility Agents provides two commands that deliver the same data in text form directly in VS Code.</p>
 <h3><code>/my-stats</code></h3>
 <p>Shows your personal contribution statistics across all tracked repos:</p>
 <pre><code class="hljs">/<span class="hljs-keyword">my</span>-stats
 /<span class="hljs-keyword">my</span>-stats <span class="hljs-keyword">last</span> <span class="hljs-number">30</span> days
-/<span class="hljs-keyword">my</span>-stats org:accesswatch</code></pre>
+/<span class="hljs-keyword">my</span>-stats org:community-access</code></pre>
 <p>Output includes:</p>
 <ul>
 <li>PRs opened and merged</li>
@@ -504,9 +504,9 @@ K → Links <span class="hljs-built_in">to</span> <span class="hljs-keyword">eac
 </ul>
 <h3><code>/team-dashboard</code></h3>
 <p>Shows team-wide activity across tracked repos - who contributed what, response times, review coverage:</p>
-<pre><code class="hljs">/team-dashboard
-/team-dashboard org:accesswatch
-/team-dashboard sprint</code></pre>
+<pre><code class="hljs">/<span class="hljs-built_in">team</span>-dashboard
+/<span class="hljs-built_in">team</span>-dashboard org:community-<span class="hljs-keyword">access</span>
+/<span class="hljs-built_in">team</span>-dashboard sprint</code></pre>
 <p>Output includes:</p>
 <ul>
 <li>Per-person contribution summary</li>
@@ -519,7 +519,7 @@ K → Links <span class="hljs-built_in">to</span> <span class="hljs-keyword">eac
 <p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-a-glossary.md">Glossary</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

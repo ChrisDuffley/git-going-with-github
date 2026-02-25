@@ -418,7 +418,7 @@ jobs:
 
 **The job name `copilot-setup-steps` is required** - GitHub won't recognize any other name for agent environment preparation.
 
-**Connection to Section 13 of the VS Code guide:** This is the infrastructure that enables Scope 3 (cloud execution) of the three-layer Agent Forge model. The same agent you run in VS Code with `@markdown-accessibility-assistant` can run on GitHub.com automatically - but only if the environment is prepared with this workflow.
+**Connection to Section 13 of the VS Code guide:** This is the infrastructure that enables Scope 3 (cloud execution) of the three-layer Accessibility Agents model. The same agent you run in VS Code with `@markdown-accessibility-assistant` can run on GitHub.com automatically - but only if the environment is prepared with this workflow.
 
 ---
 
@@ -495,7 +495,7 @@ When you are ready to go deeper, these are the best places to start:
 > The three layers, in sequence - each builds on the one before it:
 >
 > 1. **Standard GitHub Actions** - YAML files in `.github/workflows/`; define triggers and structured shell steps; what you mastered in this guide
-> 2. **Agent Forge in VS Code** - `.agent.md` files in `.github/agents/`; define behavior in plain English; GitHub Copilot Chat executes them on demand in your editor - same `.github/` folder, plain text, no YAML required
+> 2. **Accessibility Agents in VS Code** - `.agent.md` files in `.github/agents/`; define behavior in plain English; GitHub Copilot Chat executes them on demand in your editor - same `.github/` folder, plain text, no YAML required
 > 3. **GitHub Agentic Workflows in the cloud** - `.md` files in `.github/workflows/`; define intent in plain Markdown frontmatter; a coding agent (Copilot CLI, Claude Code, OpenAI Codex) executes them inside GitHub Actions on any trigger - no VS Code, no local setup required
 >
 > All three live in `.github/`. All three are plain text. All three run on your behalf. The only difference is where they run and how sophisticated their executor is.

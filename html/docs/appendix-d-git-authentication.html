@@ -204,7 +204,7 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <h2>Commit Signing - Verified Badges and Vigilant Mode</h2>
 <p>When you push commits to GitHub, each commit shows a small badge: <strong>Verified</strong> or <strong>Unverified</strong>. This badge tells anyone viewing the commit history whether the commit was cryptographically signed - proving it came from you and was not tampered with.</p>
 <h3>Why It Matters</h3>
-<p>Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to <code>agent-forge</code> and your commits show &quot;Unverified,&quot; a maintainer may ask you to sign them before the PR can be merged.</p>
+<p>Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to <code>accessibility-agents</code> and your commits show &quot;Unverified,&quot; a maintainer may ask you to sign them before the PR can be merged.</p>
 <h3>Two Methods for Signing Commits</h3>
 <h4>SSH Signing (simpler - reuses your existing SSH key)</h4>
 <p>If you already have an SSH key set up for authentication, you can use it for signing too.</p>
@@ -259,7 +259,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <li>NVDA/JAWS: the badge is inside the commit row; use <code>↓</code> to read through each row and the badge text is read inline</li>
 <li>VoiceOver: use <code>VO+Right</code> through the commit row; the badge is read as a button with the text &quot;Verified&quot; (clicking it shows the certificate)</li>
 </ul>
-<p><strong>Workshop recommendation:</strong> SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to agent-forge will show as Verified.</p>
+<p><strong>Workshop recommendation:</strong> SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to accessibility-agents will show as Verified.</p>
 <hr>
 <h2>For This Workshop</h2>
 <p><strong>Recommended approach:</strong></p>
@@ -274,7 +274,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <p><em>Return to: <a href="00-pre-workshop-setup.md">Pre-Workshop Setup</a> | <a href="appendix-u-resources.md">Resources</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

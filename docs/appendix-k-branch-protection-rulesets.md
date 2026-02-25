@@ -274,13 +274,13 @@ Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitH
 | Admin | Yes | Yes - full control |
 | Org admin | Yes | Yes - including org-level rulesets |
 
-As a workshop participant, you are typically a **contributor** to the main `accesswatch/agent-forge` repo and an **admin** of your own fork. On your fork, you can configure branch protection however you like - including disabling it entirely for practice purposes.
+As a workshop participant, you are typically a **contributor** to the main `community-access/accessibility-agents` repo and an **admin** of your own fork. On your fork, you can configure branch protection however you like - including disabling it entirely for practice purposes.
 
 ---
 
 ## 8. Workshop Repository Configuration Reference
 
-The `accesswatch/agent-forge` repository uses the following branch protection configuration on `main`:
+The `community-access/accessibility-agents` repository uses the following branch protection configuration on `main`:
 
 | Rule | Setting |
 |------|---------|
@@ -291,7 +291,7 @@ The `accesswatch/agent-forge` repository uses the following branch protection co
 | Signed commits | No (to reduce friction for workshop participants) |
 | Restrict direct pushes | Yes - all changes must come through PRs |
 
-**Workshop tip:** Your personal fork of `agent-forge` has no branch protection by default. If you want to practice the full "review before merge" workflow with a partner, you can add branch protection to your fork:
+**Workshop tip:** Your personal fork of `accessibility-agents` has no branch protection by default. If you want to practice the full "review before merge" workflow with a partner, you can add branch protection to your fork:
 
 ```
 Your fork → Settings → Branches → Add branch protection rule

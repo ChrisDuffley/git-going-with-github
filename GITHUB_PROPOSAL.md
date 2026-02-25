@@ -82,7 +82,7 @@ Chapters 14-16 teach accessible code review, issue templates, and AI agent autom
 |---------|----------|-------|-------------|
 | 14 | 1 hr + 3 exercises | Accessible code review | Keyboard-only, screen readers, diff navigation (NVDA/JAWS/VoiceOver) |
 | 15 | 1.5 hrs + 4 exercises | Issue templates | YAML, form fields, WCAG compliance, template design |
-| 16 | 1.5 hrs + 3 exercises | Agent Forge | 6 AI agents, 28 slash commands, Template Builder wizard |
+| 16 | 1.5 hrs + 3 exercises | Accessibility Agents | 6 AI agents, 28 slash commands, Template Builder wizard |
 
 **AI Agent Integration:**
 - **6 Agents:** Automate issue triage, PR review, analytics, accessibility tracking, daily briefings, template building
@@ -249,7 +249,7 @@ Accessibility is woven into every chapter.
 ## Implementation & Deployment
 
 ### Current Assets
-- **34 Markdown documents** (16 core chapters + 1 setup guide + 16 appendices A-Q + Agent Forge)
+- **34 Markdown documents** (16 core chapters + 1 setup guide + 16 appendices A-Q + Accessibility Agents)
 - **6 AI agents** fully defined and integrated
 - **10 hands-on exercises** with detailed walkthroughs
 - **4 supporting guides** (Quick Reference, Troubleshooting, Resources, FAQ)
@@ -437,7 +437,7 @@ Open curriculum invites contributions:
     - J: Advanced Search, K: Releases & Tags, L: Repository Insights
     - N: GitHub Flavored Markdown [NEW], O: GitHub Security [NEW]
     - P: Branch Protection [NEW], Q: Resources
-  - Agent Forge (Chapter 16 + 28 slash commands)
+  - Accessibility Agents (Chapter 16 + 28 slash commands)
 - **6 AI agents** (fully documented, ready to use)
   - Integrated throughout curriculum
   - 28 slash commands total
@@ -446,7 +446,7 @@ Open curriculum invites contributions:
   - 2 exercises in Chapter 5 (Pull Requests)
   - 3 exercises in Chapter 14 (Accessible Code Review)
   - 4 exercises in Chapter 15 (Issue Templates)
-  - 3 exercises in Chapter 16 (Agent Forge)
+  - 3 exercises in Chapter 16 (Accessibility Agents)
   - All include checkpoints, screen reader guidance, troubleshooting
 - **7 supporting guides** (HTML + Markdown formats)
   - QUICK_REFERENCE.md - 1-page cheat sheet

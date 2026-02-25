@@ -49,7 +49,7 @@ Your complete GitHub Learning Curriculum is now ready for deployment. Here's wha
    - Chapter 16 with updated prerequisites checklist + Day 2 Amplifier section
    - Size: ~172KB HTML (largest chapter)
 
-10. **docs/17-agent-forge.md** → `docs/17-agent-forge.html`
+10. **docs/17-accessibility-agents.md** → `docs/17-accessibility-agents.html`
     - Chapter 16 with updated prerequisites checklist + 6 agents + all exercises
     - Size: ~112KB HTML
 
@@ -142,7 +142,7 @@ Root/
     ├── 00-17-core-chapters.md
     ├── 15-accessible-code-review.html (converted)
     ├── 16-issue-templates.html (converted)
-    ├── 17-agent-forge.html (converted)
+    ├── 17-accessibility-agents.html (converted)
     └── appendix-a-appendix-h.md
 ```
 
@@ -225,7 +225,7 @@ Root/
 - [x] GITHUB_PROPOSAL.html (34 KB)
 - [x] docs/15-accessible-code-review.html (54 KB)
 - [x] docs/16-issue-templates.html (172 KB)
-- [x] docs/17-agent-forge.html (112 KB)
+- [x] docs/17-accessibility-agents.html (112 KB)
 - [x] index.html (24 KB)
 
 **Total HTML size:** ~545 KB (parseable, readable, web-friendly)

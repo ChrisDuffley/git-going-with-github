@@ -350,13 +350,13 @@ Go to the Learning Room repository and do two things:
 
 ---
 
-> ### Day 2 Amplifier - Agent Forge: `@issue-tracker` with Labels
+> ### Day 2 Amplifier - Accessibility Agents: `@issue-tracker` with Labels
 >
 > **Apply labels and milestones manually in today's exercises before using any agent.** Labels are the language that automation uses to filter, route, and prioritize work. If you have not designed and applied them yourself, you cannot configure them correctly for automated use - and you cannot tell when automation is applying the wrong ones.
 >
 > Once you have mastered manual organization:
 > - **In VS Code** - `@issue-tracker find open issues labeled accessibility, severity-high` uses the exact label vocabulary you configured today, delivering prioritized cross-repository results with community engagement and release-impact scoring
-> - **In your repo** - Agent Forge forks carry the label schema in `.github/ISSUE_TEMPLATE/`; your project's organizational language travels with every clone and does not require manual recreation
+> - **In your repo** - Accessibility Agents forks carry the label schema in `.github/ISSUE_TEMPLATE/`; your project's organizational language travels with every clone and does not require manual recreation
 > - **In the cloud** - GitHub Agentic Workflows apply labels automatically when issues are opened, routing work into the right milestone and Project view without manual triage on every item - but only if your labels were designed with clear, consistent intent
 >
 > *Labeling today is not overhead. It is configuring the input layer that every agent downstream depends on.*

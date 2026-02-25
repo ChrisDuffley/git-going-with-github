@@ -22,7 +22,7 @@ learning-room/                  ← workshop repository root
 │   │   ├── accessibility-bug.yml ← accessibility bug report YAML form
 │   │   └── feature-request.yml ← feature/improvement request YAML form
 │   ├── PULL_REQUEST_TEMPLATE.md ← PR template with accessibility checklist
-│   ├── agents/                 ← Agent Forge - six Copilot agents
+│   ├── agents/                 ← Accessibility Agents - six Copilot agents
 │   │   ├── daily-briefing.agent.md
 │   │   ├── issue-tracker.agent.md
 │   │   ├── pr-review.agent.md
@@ -37,7 +37,7 @@ learning-room/                  ← workshop repository root
 │       ├── explain-code.prompt.md
 │       ├── review-pr.prompt.md
 │       ├── triage.prompt.md
-│       └── ... (22 more - see docs/appendix-w-agent-forge-reference.md)
+│       └── ... (22 more - see docs/appendix-w-accessibility-agents-reference.md)
 ├── docs/                       ← full workshop curriculum (16 chapters + appendices A-X)
 │   ├── 00-pre-workshop-setup.md
 │   ├── 01-understanding-github-web-structure.md
@@ -55,7 +55,7 @@ learning-room/                  ← workshop repository root
 │   ├── 13-github-copilot.md
 │   ├── 14-accessible-code-review.md
 │   ├── 15-issue-templates.md
-│   ├── 16-agent-forge.md
+│   ├── 16-accessibility-agents.md
 │   ├── appendix-a-glossary.md              ← every term explained
 │   ├── appendix-b-screen-reader-cheatsheet.md ← full shortcut reference
 │   ├── appendix-c through appendix-x      ← deep-dive references (C-X)
@@ -237,9 +237,9 @@ Test each module at least 3 days before the workshop:
 - [ ] VS Code installed on any shared/demo machine
 - [ ] GitHub Copilot Chat extension installed and authenticated
 - [ ] GitHub Pull Requests extension installed
-- [ ] Agent Forge agents verified: open Copilot Chat → type `@daily-briefing morning briefing` → confirm a response
+- [ ] Accessibility Agents agents verified: open Copilot Chat → type `@daily-briefing morning briefing` → confirm a response
 - [ ] Slash commands verified: type `/find-issues good first issue` → confirm a response
-- [ ] Each participant's upstream PR target ready (if doing the agent-forge contribution)
+- [ ] Each participant's upstream PR target ready (if doing the accessibility-agents contribution)
 
 ---
 

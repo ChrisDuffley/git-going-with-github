@@ -584,13 +584,13 @@ These completions are yours permanently. They travel to every GitHub profile pag
 Tomorrow we move from the browser to **Visual Studio Code**. Here is what is coming:
 
 - **VS Code Screen Reader Mode** - Accessible Help (`Alt+H`), Accessible View (`Alt+F2`), Accessible Diff Viewer (`F7`)
-- **Agent Forge** - your earned reward for completing Day 1. Five AI agents that amplify the exact skills you built today. Every agent corresponds to something you did manually today.
-- **Ship a real PR upstream** - `accesswatch/agent-forge` is a live repository. Your name in its commit history is the Day 2 capstone.
+- **Accessibility Agents** - your earned reward for completing Day 1. Five AI agents that amplify the exact skills you built today. Every agent corresponds to something you did manually today.
+- **Ship a real PR upstream** - `community-access/accessibility-agents` is a live repository. Your name in its commit history is the Day 2 capstone.
 
 **Tonight (optional):**
 - Install VS Code and the GitHub Copilot Chat extension (see [Pre-Workshop Setup](docs/00-pre-workshop-setup.md))
 - Complete any Markdown Skills module steps you didn't finish
-- Fork [agent-forge](https://github.com/accesswatch/agent-forge) - it will be ready and waiting when you open VS Code tomorrow
+- Fork [accessibility-agents](https://github.com/community-access/accessibility-agents) - it will be ready and waiting when you open VS Code tomorrow
 
 ---
 

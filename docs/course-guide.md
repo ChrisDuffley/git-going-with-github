@@ -14,8 +14,8 @@ This is a two-day workshop built around one idea: **you will make real contribut
 **Day 1 - GitHub Foundations (Browser)**
 You learn GitHub's web interface using only your keyboard and screen reader. By the end of Day 1, you will have filed issues, opened pull requests, reviewed someone else's work, and resolved a merge conflict - all in the browser.
 
-**Day 2 - VS Code + Agent Forge (Desktop)**
-You move to Visual Studio Code, learn GitHub Copilot, and activate Agent Forge - six AI agents that amplify every skill you built on Day 1. By the end of Day 2, your name is in the commit history of a real open source accessibility project.
+**Day 2 - VS Code + Accessibility Agents (Desktop)**
+You move to Visual Studio Code, learn GitHub Copilot, and activate Accessibility Agents - six AI agents that amplify every skill you built on Day 1. By the end of Day 2, your name is in the commit history of a real open source accessibility project.
 
 ### The Journey Arc
 
@@ -30,7 +30,7 @@ github.dev - VS Code on the web, no install needed
 
      ↓  (you've earned the desktop - now it makes sense)
 
-Day 2 - Deepen with VS Code + Agent Forge
+Day 2 - Deepen with VS Code + Accessibility Agents
   VS Code basics → Copilot inline → Copilot Chat
   @daily-briefing → @issue-tracker → @pr-review → @analytics → ship upstream
 ```
@@ -74,7 +74,7 @@ These chapters are designed to be read and practiced in order. Each builds on th
 
 ---
 
-## Day 2: VS Code + Agent Forge
+## Day 2: VS Code + Accessibility Agents
 
 Day 2 moves you from the browser to the desktop. Every skill maps directly to what you learned on Day 1.
 
@@ -86,7 +86,7 @@ Day 2 moves you from the browser to the desktop. Every skill maps directly to wh
 | [13](13-github-copilot.md) | **VS Code: GitHub Copilot** | Inline suggestions, Copilot Chat, effective prompting, custom instructions | 1 hr |
 | [14](14-accessible-code-review.md) | **Accessible Code Review** | Navigate diffs and review PRs with a screen reader - the culminating skill before automation | 1.5 hrs |
 | [15](15-issue-templates.md) | **Issue Templates** | Create and customize GitHub issue templates with YAML | 1.5 hrs |
-| [16](16-agent-forge.md) | **Agent Forge** | Six agents, 28 slash commands, building custom agents, agentic workflows | 1.5 hrs |
+| [16](16-accessibility-agents.md) | **Accessibility Agents** | Six agents, 28 slash commands, building custom agents, agentic workflows | 1.5 hrs |
 
 **Day 2 Total:** ~8 hours of structured time
 
@@ -124,7 +124,7 @@ Open these at any time during the workshop. They are not part of the chapter seq
 |----------|----------|---------------|
 | [M](appendix-m-vscode-accessibility-reference.md) | **VS Code Accessibility Reference** | All accessibility settings, audio signals, diff viewer, screen reader configs |
 | [N](appendix-n-github-codespaces.md) | **GitHub Codespaces** | Cloud development environments, accessibility setup, screen reader usage |
-| [V](appendix-v-agent-forge-reference.md) | **Agent Forge Reference** | Six agents, 28 slash commands, customization, workspace configuration |
+| [V](appendix-v-accessibility-agents-reference.md) | **Accessibility Agents Reference** | Six agents, 28 slash commands, customization, workspace configuration |
 | [W](appendix-w-github-copilot-reference.md) | **Copilot Reference** | Copilot features, chat participants, slash commands, MCP servers |
 | [X](appendix-x-copilot-models.md) | **Copilot AI Models** | Model comparison, strengths, plan availability, selection guidance |
 
@@ -171,7 +171,7 @@ The workshop includes 24 structured exercises across the curriculum. Every exerc
 | **Ch 14** | Exercise A | Complete a web-based PR review using screen reader navigation |
 | **Ch 14** | Exercise B | Use the VS Code Accessible Diff Viewer on the same PR |
 | **Ch 14** | Exercise C | Compare web vs. VS Code review and document findings |
-| **Ch 15** | Exercise A | Use an existing issue template in Agent Forge |
+| **Ch 15** | Exercise A | Use an existing issue template in Accessibility Agents |
 | **Ch 15** | Exercise B | Create an accessibility bug report template locally |
 | **Ch 15** | Exercise C | Submit your template upstream via a real PR |
 | **Ch 15** | Exercise D | Design a custom template for your own project |
@@ -202,8 +202,8 @@ If you get stuck at any point during the workshop, these resources are always av
 
 | | Day 1 | Day 2 |
 |---|-------|-------|
-| **Focus** | GitHub web interface | VS Code + Agent Forge |
-| **Tools** | Browser, screen reader | VS Code, Copilot, Agent Forge |
+| **Focus** | GitHub web interface | VS Code + Accessibility Agents |
+| **Tools** | Browser, screen reader | VS Code, Copilot, Accessibility Agents |
 | **Skills** | Navigate, Issue, PR, Review, Merge | Git in VS Code, Copilot Chat, Agents, Ship |
 | **Outcome** | You can use GitHub independently | Your name is in a real project's commit history |
 | **Time** | ~7.5 hours | ~8 hours |

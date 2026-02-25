@@ -1,11 +1,11 @@
-# Agent Forge
+# Accessibility Agents
 ## Custom AI Agents for GitHub Workflows
 
 > **Day 2, Block 3 Material**
 >
 > **Before you read this guide:**
 >
-> Agent Forge covers six AI-powered agents and 28 slash commands. These are Day 2, Block 3 material. They are not where you start.
+> Accessibility Agents covers six AI-powered agents and 28 slash commands. These are Day 2, Block 3 material. They are not where you start.
 >
 > **The agents are only useful if you have already done the work manually.** An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff is useless to someone who has never read a diff. The agent does not teach you the skill - it multiplies a skill you already have.
 >
@@ -52,7 +52,7 @@
 
 ## 1. The Principle: Skill First, Agent Second
 
-Agent Forge is not a way to skip learning GitHub. It is a way to amplify skills you have already built through deliberate practice.
+Accessibility Agents is not a way to skip learning GitHub. It is a way to amplify skills you have already built through deliberate practice.
 
 Every agent automates a sequence of steps you learned to do manually on Day 1. If you do not know those steps by hand, you cannot:
 
@@ -84,10 +84,10 @@ That question is not rhetorical. Answer it before running the agent. If you cann
 
 ### First-Time Setup
 
-1. **Fork** [agent-forge](https://github.com/accesswatch/agent-forge) to your GitHub account (you did this on Day 1 or Day 2 morning)
+1. **Fork** [accessibility-agents](https://github.com/community-access/accessibility-agents) to your GitHub account (you did this on Day 1 or Day 2 morning)
 2. **Clone** your fork:
    ```bash
-   git clone https://github.com/[your-username]/agent-forge.git
+   git clone https://github.com/[your-username]/accessibility-agents.git
    ```
 3. **Open in VS Code**: navigate to the folder → `code .` (or File → Open Folder)
 4. **Open Copilot Chat**: `Ctrl+Shift+I`
@@ -109,7 +109,7 @@ When you type `@` in Copilot Chat, VS Code scans:
 2. Any agents installed globally on your machine
 3. Agents defined by extensions
 
-The six Agent Forge agents come from `.github/agents/` in your fork of the `agent-forge` repository.
+The six Accessibility Agents agents come from `.github/agents/` in your fork of the `accessibility-agents` repository.
 
 ### Optional: Personalize Your Instance
 
@@ -122,14 +122,14 @@ cp .github/agents/preferences.example.md .github/agents/preferences.md
 Open `preferences.md` in VS Code and edit:
 
 ```markdown
-# My Agent Forge Preferences
+# My Accessibility Agents Preferences
 
 ## My GitHub Username
 [your-username]
 
 ## Repositories I Work On Most
 - [your-org]/[your-repo]
-- accesswatch/agent-forge
+- community-access/accessibility-agents
 
 ## Preferred Output Format
 Long-form with sections and headings (screen reader optimized)
@@ -144,7 +144,7 @@ Commit `preferences.md` to your fork. Now the agents know who you are and what y
 
 ### How Agents Travel with Your Repo
 
-When you fork `agent-forge`, the `.github/agents/` folder comes with it. This means:
+When you fork `accessibility-agents`, the `.github/agents/` folder comes with it. This means:
 
 - Any collaborator who clones your fork gets the same six agents
 - You can customize the agents for your specific project by editing the `.agent.md` files in your fork
@@ -152,7 +152,7 @@ When you fork `agent-forge`, the `.github/agents/` folder comes with it. This me
 
 ### Invoking Agents on GitHub.com
 
-Agent Forge agents run in VS Code. But the same `.agent.md` files can also be invoked directly on GitHub.com - no VS Code, no local clone required.
+Accessibility Agents agents run in VS Code. But the same `.agent.md` files can also be invoked directly on GitHub.com - no VS Code, no local clone required.
 
 **Option 1: Copilot Chat with Task mode**
 
@@ -277,7 +277,7 @@ Copilot response appears below the button; use H to navigate to it
 - Use the code sample generator to get API code for your chosen model
 - All free with a GitHub account (rate-limited for free tier)
 
-**Why it matters for Agent Forge:** When you build custom agents and prompts, you can test your system prompts and prompt templates in GitHub Models before adding them to your `.prompt.md` files - rapid iteration without burning API credits.
+**Why it matters for Accessibility Agents:** When you build custom agents and prompts, you can test your system prompts and prompt templates in GitHub Models before adding them to your `.prompt.md` files - rapid iteration without burning API credits.
 
 <details>
 <summary>Visual / mouse users</summary>
@@ -304,7 +304,7 @@ Response appears below the Send button; use H to find the response section headi
 
 When creating a release (Releases tab → Draft a new release), GitHub provides a **"Generate release notes"** button. It scans merged PRs since the last release and drafts categorized release notes automatically.
 
-This directly connects to the `/draft-release` slash command in Agent Forge - use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.
+This directly connects to the `/draft-release` slash command in Accessibility Agents - use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.
 
 ---
 
@@ -346,9 +346,9 @@ Sweeps every repository you have access to and builds a prioritized dashboard:
 ```
 @daily-briefing morning briefing
 
-@daily-briefing what needs my attention today in agent-forge?
+@daily-briefing what needs my attention today in accessibility-agents?
 
-@daily-briefing summarize activity in accesswatch/agent-forge from the last week
+@daily-briefing summarize activity in community-access/accessibility-agents from the last week
 ```
 
 **Screen reader tip:** The briefing output uses heading level 2 for each section. Use `H` key (NVDA/JAWS virtual mode) or `VO+Command+H` (VoiceOver) to jump between: Open Issues, Review Requests, CI Status, Security Alerts, Community Activity.
@@ -357,11 +357,11 @@ Sweeps every repository you have access to and builds a prioritized dashboard:
 
 ```markdown
 ## Issues Opened (Last 24 Hours)
-- #42 [agent-forge] Add Timeline View documentation (opened 3 hours ago)
-- #41 [agent-forge] Fix heading hierarchy in GUIDE.md (opened 18 hours ago)
+- #42 [accessibility-agents] Add Timeline View documentation (opened 3 hours ago)
+- #41 [accessibility-agents] Fix heading hierarchy in GUIDE.md (opened 18 hours ago)
 
 ## Pull Requests Awaiting Your Review
-- #14 [agent-forge] Improve screen reader navigation guide (jeffb, 2 days old)
+- #14 [accessibility-agents] Improve screen reader navigation guide (jeffb, 2 days old)
 
 ## CI Failures on Your Branches
 - feature/add-timeline-guide - Tests failing on line 42 of timeline-test.md
@@ -398,7 +398,7 @@ Finds, prioritizes, and helps you manage issues across all your repositories:
 
 @issue-tracker find accessibility issues across all my repos
 
-@issue-tracker is there a duplicate of issue #42 in agent-forge?
+@issue-tracker is there a duplicate of issue #42 in accessibility-agents?
 
 @issue-tracker draft a reply to issue #15 acknowledging it and asking for more context
 ```
@@ -411,12 +411,12 @@ Finds, prioritizes, and helps you manage issues across all your repositories:
 ## Open Issues Labeled "good-first-issue"
 
 ### High Priority
-- #45 [agent-forge] Add NVDA-specific navigation tips (3 comments, opened 5 days ago)
+- #45 [accessibility-agents] Add NVDA-specific navigation tips (3 comments, opened 5 days ago)
   - Priority Score: 8/10 (high community interest, clear scope, no assignee)
   - Recommended for: First-time contributors familiar with screen readers
 
 ### Medium Priority
-- #38 [agent-forge] Improve commit message examples (1 comment, opened 2 weeks ago)
+- #38 [accessibility-agents] Improve commit message examples (1 comment, opened 2 weeks ago)
   - Priority Score: 5/10 (useful addition, low urgency)
 
 ## Draft Reply for Issue #15
@@ -455,7 +455,7 @@ Generates full review documents for pull requests:
 **Example commands:**
 
 ```
-@pr-review review PR #14 in agent-forge
+@pr-review review PR #14 in accessibility-agents
 
 @pr-review what is the risk level of PR #8?
 
@@ -538,21 +538,21 @@ Surfaces team contribution patterns, velocity metrics, and bottleneck detection:
 **Example commands:**
 
 ```
-@analytics team velocity in agent-forge this month
+@analytics team velocity in accessibility-agents this month
 
-@analytics who are the most active contributors to agent-forge?
+@analytics who are the most active contributors to accessibility-agents?
 
-@analytics which files are changed most often in agent-forge?
+@analytics which files are changed most often in accessibility-agents?
 
-@analytics how long does PR review take on average in agent-forge?
+@analytics how long does PR review take on average in accessibility-agents?
 ```
 
-**Accessibility use case:** After Day 2's contribution wave, run `@analytics team velocity in agent-forge today` to see the hackathon's collective output. A moment of real-time team celebration.
+**Accessibility use case:** After Day 2's contribution wave, run `@analytics team velocity in accessibility-agents today` to see the hackathon's collective output. A moment of real-time team celebration.
 
 **Output example:**
 
 ```markdown
-## Team Velocity - agent-forge (January 2026)
+## Team Velocity - accessibility-agents (January 2026)
 
 ### Contribution Summary
 - **Total Commits:** 47
@@ -602,7 +602,7 @@ Monitors accessibility-sensitive changes across configured repositories:
 **Example commands:**
 
 ```
-@insiders-a11y-tracker check recent changes in agent-forge
+@insiders-a11y-tracker check recent changes in accessibility-agents
 
 @insiders-a11y-tracker review my PR #14 for accessibility impact
 
@@ -614,7 +614,7 @@ Monitors accessibility-sensitive changes across configured repositories:
 **Output example:**
 
 ```markdown
-## Accessibility Changes - agent-forge (Last 5 Commits)
+## Accessibility Changes - accessibility-agents (Last 5 Commits)
 
 ### Issues Found: 2
 
@@ -829,7 +829,7 @@ Load accessibility tracking configuration from `.github/agents/preferences.md`
 
 ## 5. Building Your Own Agent
 
-The six Agent Forge agents and 28 slash commands are starting points. The `.agent.md` format is open - you can create your own agents for any repeatable workflow.
+The six Accessibility Agents agents and 28 slash commands are starting points. The `.agent.md` format is open - you can create your own agents for any repeatable workflow.
 
 > Source: [accessibility.github.com/documentation/guide/getting-started-with-agents/](https://accessibility.github.com/documentation/guide/getting-started-with-agents/)
 
@@ -996,8 +996,8 @@ You've built templates manually (Chapters 15-16) and seen them in action. Now se
 **Prerequisites:**
 - Complete Chapters 15-16 (especially Exercise D - designing your own template)
 - VS Code is installed and GitHub Copilot is active
-- You have forked `agent-forge` to your GitHub account
-- You have cloned your fork locally: `git clone https://github.com/[your-username]/agent-forge.git`
+- You have forked `accessibility-agents` to your GitHub account
+- You have cloned your fork locally: `git clone https://github.com/[your-username]/accessibility-agents.git`
 
 ---
 
@@ -1013,9 +1013,9 @@ You've built templates manually (Chapters 15-16) and seen them in action. Now se
 
 **What to do:**
 1. Open VS Code
-2. **File** → **Open Folder** → select your locally cloned `agent-forge` folder
+2. **File** → **Open Folder** → select your locally cloned `accessibility-agents` folder
 3. The folder tree appears on the left showing the repository structure
-4. **Verify you're in the right place:** The folder name should be `agent-forge` at the top of the sidebar
+4. **Verify you're in the right place:** The folder name should be `accessibility-agents` at the top of the sidebar
 
 **What you should see:**
 - Left sidebar showing: `.github/`, `docs/`, `learning-room/`, `README.md`, etc.
@@ -1568,17 +1568,17 @@ Your next step: use these skills for other agents.
 
 Each agent follows the same pattern: **you know the manual way, the agent suggests, you refine and decide.**
 
-That's Agent Forge's promise: not to replace your thinking, but to amplify your skills.
+That's Accessibility Agents' promise: not to replace your thinking, but to amplify your skills.
 
 ---
 
 ## 6. The Cloud Extension: Agents Beyond VS Code
 
-Agent Forge's agents run on your machine, in your editor, when you ask for them. That is one scope.
+Accessibility Agents' agents run on your machine, in your editor, when you ask for them. That is one scope.
 
 The same Markdown-authored pattern extends further:
 
-### Scope 1: Your Editor (Agent Forge)
+### Scope 1: Your Editor (Accessibility Agents)
 
 - **File lives in:** `.github/agents/[name].agent.md` in your workspace
 - **Triggered by:** You, when you type `@[agent-name]` in Copilot Chat
@@ -1592,7 +1592,7 @@ The same Markdown-authored pattern extends further:
 - **Runs on:** Their machine, using their Copilot subscription
 - **Reaches:** Their GitHub account's repositories
 
-When you fork `agent-forge`, the agents come with it. You can edit them for your project's context. You can add new ones. You can share them with every contributor who clones your fork.
+When you fork `accessibility-agents`, the agents come with it. You can edit them for your project's context. You can add new ones. You can share them with every contributor who clones your fork.
 
 ### Scope 3: The Cloud (GitHub Agentic Workflows)
 
@@ -1603,7 +1603,7 @@ When you fork `agent-forge`, the agents come with it. You can edit them for your
 
 No VS Code required. No local machine required. The workflow runs whether or not anyone is watching - when an issue is opened at 3am, the agentic response fires.
 
-**The link between Agent Forge and Agentic Workflows:** Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Agent Forge pattern *is* a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.
+**The link between Accessibility Agents and Agentic Workflows:** Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Accessibility Agents pattern *is* a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.
 
 **Example: Auto-triage accessibility issues**
 
@@ -1719,7 +1719,7 @@ Run this command? (Y/n)
 
 ---
 
-## Keyboard Shortcuts - Agent Forge Quick Reference
+## Keyboard Shortcuts - Accessibility Agents Quick Reference
 
 | Action | Shortcut |
 |--------|----------|
@@ -1767,5 +1767,5 @@ Run this command? (Y/n)
 ---
 
 *Back: [Issue Templates](15-issue-templates.md)*  
-*Reference: [Appendix V: Agent Forge Reference](appendix-v-agent-forge-reference.md)*  
+*Reference: [Appendix V: Accessibility Agents Reference](appendix-v-accessibility-agents-reference.md)*  
 *Related: [Culture & Etiquette](07-culture-etiquette.md) | [Working with Issues](04-working-with-issues.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md)*

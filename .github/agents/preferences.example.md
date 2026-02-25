@@ -1,4 +1,4 @@
-# My Agent Forge Preferences
+# My Accessibility Agents Preferences
 
 > Copy this file to `preferences.md` (same folder) and fill it in.
 > `preferences.md` is in `.gitignore` - your personal settings stay in your fork only.
@@ -11,8 +11,8 @@ your-username
 ## Repositories I Work On Most
 
 <!-- List the repositories you want agents to prioritize, one per line -->
-- accesswatch/agent-forge
-- accesswatch/learning-room
+- community-access/accessibility-agents
+- community-access/learning-room
 
 ## Preferred Output Format
 

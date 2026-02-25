@@ -1,7 +1,7 @@
-# Appendix V: Agent Forge Reference
+# Appendix V: Accessibility Agents Reference
 ## Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats
 
-> This is your comprehensive reference for Agent Forge and the full VS Code Copilot customization system. For the lesson, see [Chapter 16: Agent Forge](16-agent-forge.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
+> This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. For the lesson, see [Chapter 16: Accessibility Agents](16-accessibility-agents.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
 
 ---
 
@@ -17,7 +17,7 @@
 8. [.prompt.md - Complete Format Reference](#8-promptmd--complete-format-reference)
 9. [Agent Skills (SKILL.md) - Complete Format Reference](#9-agent-skills-skillmd--complete-format-reference)
 10. [Hooks (.json) - Lifecycle Automation](#10-hooks-json--lifecycle-automation)
-11. [preferences.md - Agent Forge Personal Settings](#11-preferencesmd--agent-forge-personal-settings)
+11. [preferences.md - Accessibility Agents Personal Settings](#11-preferencesmd--accessibility-agents-personal-settings)
 12. [Diagnostics and Troubleshooting](#12-diagnostics-and-troubleshooting)
 13. [Further Reading](#13-further-reading)
 
@@ -47,7 +47,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 | Example Command | What It Does |
 |----------------|-------------|
 | `@daily-briefing morning briefing` | Full prioritized situation report |
-| `@daily-briefing what needs my attention today in agent-forge?` | Repo-scoped briefing |
+| `@daily-briefing what needs my attention today in accessibility-agents?` | Repo-scoped briefing |
 | `@daily-briefing summarize activity from the last week` | Weekly digest |
 
 **Output sections (H2 headings - navigate with `H`):**
@@ -108,7 +108,7 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 | Example Command | What It Does |
 |----------------|-------------|
-| `@analytics team velocity in agent-forge this month` | Contribution pace |
+| `@analytics team velocity in accessibility-agents this month` | Contribution pace |
 | `@analytics who are the most active contributors?` | Top contributors by commits and reviews |
 | `@analytics which files are changed most often?` | Code hotspot detection |
 | `@analytics how long does PR review take on average?` | Review turnaround time |
@@ -221,7 +221,7 @@ Before creating any file, choose the right primitive for the job. Each primitive
 | **Agent Skills** | `SKILL.md` in a named folder | Multi-step workflow with bundled scripts and reference files - testing, deployment, auditing |
 | **Custom Agents** | `*.agent.md` | Specialized persona with tool restrictions - orchestrates tasks, can invoke subagents |
 | **Hooks** | `*.json` | Deterministic lifecycle automation - block dangerous commands, run formatters, enforce policy |
-| **Personal Preferences** | `preferences.md` | Agent Forge fork-local personal settings - repos, output format, timezone |
+| **Personal Preferences** | `preferences.md` | Accessibility Agents fork-local personal settings - repos, output format, timezone |
 
 ### Choosing Between Primitives
 
@@ -311,7 +311,7 @@ Always-on instructions are automatically included in every chat request. You nev
 **File structure:** Plain Markdown. No frontmatter required.
 
 ```markdown
-# Copilot Instructions for agent-forge
+# Copilot Instructions for accessibility-agents
 
 ## Accessibility Standards
 - Include semantic HTML elements in generated markup
@@ -979,20 +979,20 @@ Permission decisions: `"allow"` | `"ask"` (prompt user) | `"deny"` (block the to
 
 ---
 
-## 11. `preferences.md` - Agent Forge Personal Settings
+## 11. `preferences.md` - Accessibility Agents Personal Settings
 
 Copy `.github/agents/preferences.example.md` to `.github/agents/preferences.md`. The file is in `.gitignore` - your private settings stay only in your local fork.
 
 ### Full File Template
 
 ```markdown
-# My Agent Forge Preferences
+# My Accessibility Agents Preferences
 
 ## My GitHub Username
 your-github-username
 
 ## Repositories I Work On Most
-- accesswatch/agent-forge
+- community-access/accessibility-agents
 - your-org/your-repo
 
 ## Preferred Output Format
@@ -1095,7 +1095,7 @@ This shows: which files were found, which were loaded, which have errors, and fr
 
 ---
 
-## Agent Forge Keyboard Shortcuts
+## Accessibility Agents Keyboard Shortcuts
 
 | Action | Shortcut |
 |--------|----------|
@@ -1126,5 +1126,5 @@ For the broader ecosystem - the community plugin marketplace, MCP server integra
 
 ---
 
-*Chapter: [Agent Forge](16-agent-forge.md)*
+*Chapter: [Accessibility Agents](16-accessibility-agents.md)*
 *Related: [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md) | [Issue Templates](15-issue-templates.md) | [Chapter 13: GitHub Copilot](13-github-copilot.md)*

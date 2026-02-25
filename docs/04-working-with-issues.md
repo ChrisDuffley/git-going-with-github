@@ -675,13 +675,13 @@ Go to the Learning Room repository and file a real issue:
 
 ---
 
-> ### Day 2 Amplifier - Agent Forge: `@issue-tracker`
+> ### Day 2 Amplifier - Accessibility Agents: `@issue-tracker`
 >
 > **File, read, comment on, and triage real issues manually before using any agent.** If you have not done the triage work yourself - reading descriptions, assigning labels, identifying duplicates - you cannot evaluate whether an agent's priority scoring is correct. The skill must exist before the amplifier is useful.
 >
 > Once you have mastered manual issue management:
 > - **In VS Code** - `@issue-tracker find open issues labeled good-first-issue` searches cross-repository with community sentiment scoring, release-awareness prioritization, and batch-reply capability across every repo you have access to
-> - **In your repo** - The issue templates in `agent-forge/.github/ISSUE_TEMPLATE/` structure both human filing and automated triage; fork `agent-forge` and that structure travels into any project you lead
+> - **In your repo** - The issue templates in `accessibility-agents/.github/ISSUE_TEMPLATE/` structure both human filing and automated triage; fork `accessibility-agents` and that structure travels into any project you lead
 > - **In the cloud** - GitHub Agentic Workflows triage new issues the moment they are opened: applying labels, posting first-response comments, adding to Project boards - the same triage actions you practiced manually today, running at scale
 >
 > *Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.*

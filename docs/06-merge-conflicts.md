@@ -437,7 +437,7 @@ Answer these three questions:
 >
 > Once you have mastered manual conflict resolution:
 > - **In VS Code** - Copilot Chat (`Ctrl+Shift+I`) can explain a conflict in plain language - *"Person A renamed the button to 'Submit Form'; Person B renamed it to 'Send Message'. Which intent should take priority?"* - but you decide what survives
-> - **In your repo** - Agent Forge's `@pr-review` can identify high-risk overlapping changes before a conflict occurs, flagging when two contributors are editing the same file area and giving you time to coordinate before it escalates
+> - **In your repo** - Accessibility Agents' `@pr-review` can identify high-risk overlapping changes before a conflict occurs, flagging when two contributors are editing the same file area and giving you time to coordinate before it escalates
 > - **In the cloud** - GitHub Agentic Workflows can detect stale PRs diverging from `main` and automatically notify contributors with a suggested rebase checklist - preventing the conflict before it is ever introduced
 >
 > *Understanding conflict markers is not a stepping stone to letting AI handle conflicts. It is the skill that tells you when AI got it wrong.*

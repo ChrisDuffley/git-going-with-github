@@ -37,7 +37,7 @@
 1. Open Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
 2. Type "git clone"
 3. Select "Git: Clone"
-4. Paste the repository URL (example: `https://github.com/accesswatch/agent-forge.git`)
+4. Paste the repository URL (example: `https://github.com/community-access/accessibility-agents.git`)
 5. Press `Enter`
 6. Choose a local folder where the repository should be cloned
 7. VS Code asks: "Would you like to open the cloned repository?" - select "Open"
@@ -465,9 +465,9 @@ Step 4: Verify:
   → You should now see both "origin" (your fork) and "upstream" (original)
 ```
 
-**Example for Agent Forge:**
+**Example for Accessibility Agents:**
 ```bash
-git remote add upstream https://github.com/accesswatch/agent-forge.git
+git remote add upstream https://github.com/community-access/accessibility-agents.git
 ```
 
 ### Fetching and Merging Upstream Changes

@@ -33,7 +33,7 @@
 <h2>From Contributor to Product Maker - Igniting the Forge</h2>
 <blockquote>
 <p><strong>The premise of Day 2:</strong> You spent Day 1 learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You resolved a real merge conflict. Those skills are yours now.</p>
-<p>Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Agent Forge - a live, public accessibility project built by your facilitator - not as a shortcut around the skills you learned, but as a <strong>product you can understand, evaluate, critique, and improve</strong> because you now know exactly what it is doing and why.</p>
+<p>Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Accessibility Agents - a live, public accessibility project built by your facilitator - not as a shortcut around the skills you learned, but as a <strong>product you can understand, evaluate, critique, and improve</strong> because you now know exactly what it is doing and why.</p>
 <p>You will leave with your name in the commit history of a real open source project and a set of tools you can use on any GitHub repository you ever work on.</p>
 </blockquote>
 <hr>
@@ -54,7 +54,7 @@
 <tr>
 <td>9:30-10:30</td>
 <td>Block 1 - VS Code Setup</td>
-<td>Screen reader mode, Agent Forge as workspace, navigation</td>
+<td>Screen reader mode, Accessibility Agents as workspace, navigation</td>
 </tr>
 <tr>
 <td>10:30-10:45</td>
@@ -89,7 +89,7 @@
 <tr>
 <td>15:15-16:15</td>
 <td>Block 5 - Ship Your Contribution</td>
-<td>Real PR upstream to <code>accesswatch/agent-forge</code></td>
+<td>Real PR upstream to <code>community-access/accessibility-agents</code></td>
 </tr>
 <tr>
 <td>16:15-17:00</td>
@@ -116,7 +116,7 @@
 <h3>Day 2 Goal-Setting</h3>
 <p>Each participant states one contribution goal for the day. Examples:</p>
 <ul>
-<li><em>&quot;I want to add a new slash command to agent-forge for tracking accessibility issues.&quot;</em></li>
+<li><em>&quot;I want to add a new slash command to accessibility-agents for tracking accessibility issues.&quot;</em></li>
 <li><em>&quot;I want to improve the screen reader output of the <code>@daily-briefing</code> report.&quot;</em></li>
 <li><em>&quot;I want to write documentation for the <code>@insiders-a11y-tracker</code> agent.&quot;</em></li>
 </ul>
@@ -128,17 +128,17 @@
 <p>This block builds on <a href="docs/10-vscode-basics.md">VS Code: Setup &amp; Accessibility Basics</a>, <a href="docs/11-git-source-control.md">Git &amp; Source Control in VS Code</a>, and <a href="docs/12-github-pull-requests-extension.md">GitHub Pull Requests Extension</a> for full reference.</p>
 </blockquote>
 <h3>Purpose</h3>
-<p>Move from browser-based GitHub to VS Code as your contribution environment. Set up screen reader mode. Open <code>agent-forge</code> as a workspace. Understand what you are looking at before any agent runs.</p>
+<p>Move from browser-based GitHub to VS Code as your contribution environment. Set up screen reader mode. Open <code>accessibility-agents</code> as a workspace. Understand what you are looking at before any agent runs.</p>
 <h3>Step 0 - Bridge: Try github.dev Before Installing Anything</h3>
 <p>Before touching the desktop install, spend five minutes in github.dev. This is VS Code - running in your browser - with no install required. The keyboard shortcuts and screen reader mode are identical to the desktop app.</p>
 <ol>
-<li>Open <a href="https://github.dev/accesswatch/agent-forge">github.dev/accesswatch/agent-forge</a> in your browser</li>
+<li>Open <a href="https://github.dev/community-access/accessibility-agents">github.dev/community-access/accessibility-agents</a> in your browser</li>
 <li>Press <code>Shift+Alt+F1</code> to enable screen reader mode inside github.dev</li>
 <li>Press <code>Ctrl+Shift+E</code> - the Explorer panel opens with the full file tree</li>
 <li>Navigate to <code>.github/agents/daily-briefing.agent.md</code> and press <code>Enter</code> to open it</li>
 <li>Press <code>Ctrl+Shift+P</code> and type <code>markdown preview</code> - select &quot;Markdown: Open Preview&quot;</li>
 </ol>
-<p>You just used VS Code. The desktop is the same experience. The only differences: github.dev has no terminal, no Copilot, and no Agent Forge. Those are precisely what the desktop adds - and why the desktop is worth installing.</p>
+<p>You just used VS Code. The desktop is the same experience. The only differences: github.dev has no terminal, no Copilot, and no Accessibility Agents. Those are precisely what the desktop adds - and why the desktop is worth installing.</p>
 <blockquote>
 <p>All keyboard shortcuts you practice here (<code>Ctrl+Shift+E</code>, <code>Ctrl+P</code>, <code>Ctrl+Shift+P</code>, <code>Ctrl+G</code>, <code>F3</code>) will work identically on the desktop. There is no ramp-up - you are already there.</p>
 </blockquote>
@@ -166,12 +166,12 @@
 </tbody></table>
 <p><strong>Verify it is active:</strong> Open the Command Palette (<code>Ctrl+Shift+P</code>) → type <code>accessibility</code> → you should see &quot;Toggle Screen Reader Accessibility Mode&quot; with a checkmark.</p>
 <p><strong>Key setting to check:</strong> Open Settings (<code>Ctrl+,</code>) → search <code>accessibility support</code> → confirm it shows <code>on</code>.</p>
-<h3>Step 2 - Open Agent Forge as a Workspace</h3>
+<h3>Step 2 - Open Accessibility Agents as a Workspace</h3>
 <ol>
 <li>Open a terminal (<code>Ctrl+Backtick</code>)</li>
-<li>Navigate to wherever you cloned your fork: <code>cd path/to/agent-forge</code></li>
+<li>Navigate to wherever you cloned your fork: <code>cd path/to/accessibility-agents</code></li>
 <li>Open VS Code in that folder: <code>code .</code></li>
-<li>VS Code opens with the <code>agent-forge</code> repository as your workspace</li>
+<li>VS Code opens with the <code>accessibility-agents</code> repository as your workspace</li>
 </ol>
 <p><strong>What to navigate first (with screen reader):</strong></p>
 <table>
@@ -226,10 +226,10 @@
 <h2>Block 2 - Deep Contribution with Copilot</h2>
 <p><strong>10:45-12:00</strong></p>
 <h3>Purpose</h3>
-<p>Make a richer contribution to your fork of <code>agent-forge</code> using Copilot as a writing partner - not a replacement for your judgment. Copilot helps you articulate ideas you already have. The idea - the product intention - is yours.</p>
+<p>Make a richer contribution to your fork of <code>accessibility-agents</code> using Copilot as a writing partner - not a replacement for your judgment. Copilot helps you articulate ideas you already have. The idea - the product intention - is yours.</p>
 <h3>What &quot;Product Maker&quot; Means Here</h3>
 <p>A product maker does not just report bugs or fix typos. A product maker looks at something that exists, understands what it is for, identifies a gap, and proposes a meaningful improvement.</p>
-<p>In the context of <code>agent-forge</code>, that might be:</p>
+<p>In the context of <code>accessibility-agents</code>, that might be:</p>
 <ul>
 <li>A new slash command (a <code>.md</code> file in <code>.github/prompts/</code>)</li>
 <li>An improvement to an existing agent&#39;s output format for screen reader users</li>
@@ -271,13 +271,13 @@
 </tbody></table>
 <h3>Hands-On Activity: Draft Your Contribution</h3>
 <ol>
-<li>Identify one file in <code>agent-forge</code> you want to improve</li>
+<li>Identify one file in <code>accessibility-agents</code> you want to improve</li>
 <li>Read the file completely using your screen reader before suggesting any changes</li>
 <li>Use Copilot Chat to help you draft your improvement</li>
 <li>Review Copilot&#39;s output critically - edit, improve, make it yours</li>
 <li>Commit the change to your branch: <code>git add .</code> → <code>git commit -m &quot;your message&quot;</code></li>
 </ol>
-<p><strong>Branch naming:</strong> Follow the <code>agent-forge</code> contributing conventions:</p>
+<p><strong>Branch naming:</strong> Follow the <code>accessibility-agents</code> contributing conventions:</p>
 <ul>
 <li>Features: <code>feature/your-description</code></li>
 <li>Fixes: <code>fix/what-you-fixed</code></li>
@@ -357,7 +357,7 @@
 <hr>
 <h3>4. <code>@insiders-a11y-tracker</code> - Accessibility Change Monitoring</h3>
 <p><strong>What the agent does:</strong> Monitors accessibility-relevant changes across your configured repositories - WCAG/ARIA cross-referenced, tracking anything that touches keyboard navigation, ARIA attributes, focus management, color contrast, or screen reader labels.</p>
-<p><strong>Hands-on:</strong> Run <code>@insiders-a11y-tracker check recent changes in agent-forge</code>. Look at the HTML output files. Does your Day 2 contribution affect any accessibility-sensitive areas? If yes, the agent flags it. If no, confirm that is accurate.</p>
+<p><strong>Hands-on:</strong> Run <code>@insiders-a11y-tracker check recent changes in accessibility-agents</code>. Look at the HTML output files. Does your Day 2 contribution affect any accessibility-sensitive areas? If yes, the agent flags it. If no, confirm that is accurate.</p>
 <p>This agent is quality assurance for the accessibility quality of your own contribution - before you submit it for review.</p>
 <hr>
 <h2>Block 4 - GitHub Agentic Workflows</h2>
@@ -367,9 +367,9 @@
 </blockquote>
 <h3>The Cloud Extension: What Agentic Workflows Are</h3>
 <p>Everything in Block 3 ran in VS Code - on your machine, on demand, when you asked for it. GitHub Agentic Workflows run in the cloud, inside GitHub Actions, on any trigger you define: when an issue is opened, on a schedule, when a PR is created.</p>
-<p>The <code>.agent.md</code> pattern in Agent Forge and the GitHub Agentic Workflows <code>.md</code> pattern share the same philosophy: describe your intent in plain language, let a coding agent execute it. Both are plain text files in <code>.github/</code>. Both travel with every fork.</p>
+<p>The <code>.agent.md</code> pattern in Accessibility Agents and the GitHub Agentic Workflows <code>.md</code> pattern share the same philosophy: describe your intent in plain language, let a coding agent execute it. Both are plain text files in <code>.github/</code>. Both travel with every fork.</p>
 <h3>Reading a Workflow File - Step by Step</h3>
-<p>Open <code>agent-forge/.github/</code> in VS Code Explorer. If a <code>.github/workflows/</code> directory exists, navigate to it. The facilitator will walk through an example agentic workflow file.</p>
+<p>Open <code>accessibility-agents/.github/</code> in VS Code Explorer. If a <code>.github/workflows/</code> directory exists, navigate to it. The facilitator will walk through an example agentic workflow file.</p>
 <p><strong>Anatomy of a GitHub Agentic Workflow:</strong></p>
 <pre><code class="hljs language-markdown">---
 on:
@@ -451,12 +451,12 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
 </thead>
 <tbody><tr>
 <td>Your editor, on demand</td>
-<td>Agent Forge in VS Code</td>
+<td>Accessibility Agents in VS Code</td>
 <td>Your machine</td>
 </tr>
 <tr>
 <td>Your repo, travels with forks</td>
-<td>Agent Forge <code>.github/agents/</code></td>
+<td>Accessibility Agents <code>.github/agents/</code></td>
 <td>Any contributor&#39;s machine</td>
 </tr>
 <tr>
@@ -474,14 +474,14 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
 <h2>Block 5 - Ship Your Contribution</h2>
 <p><strong>15:15-16:15</strong></p>
 <h3>Purpose</h3>
-<p>Polish and submit your real pull request upstream to <code>accesswatch/agent-forge</code>. Not to your fork - to the original. This is the moment the product maker mindset becomes tangible.</p>
+<p>Polish and submit your real pull request upstream to <code>community-access/accessibility-agents</code>. Not to your fork - to the original. This is the moment the product maker mindset becomes tangible.</p>
 <h3>Pre-Submission Checklist</h3>
 <p>Before opening the PR, run through this with your screen reader:</p>
 <pre><code class="hljs">□ My branch has a <span class="hljs-keyword">clear</span> descriptive <span class="hljs-built_in">name</span> (feature/, fix/, <span class="hljs-keyword">or</span> docs/)
 □ I committed with a <span class="hljs-keyword">clear</span>, present-tense message
 □ I read my changes back using VS <span class="hljs-built_in">Code</span>&#x27;s diff <span class="hljs-built_in">view</span> (Ctrl+Shift+G → <span class="hljs-built_in">select</span> file)
 □ I ran <span class="hljs-comment">@insiders-a11y-tracker to confirm no accessibility regressions
-□ I filled in the agent-forge PR template completely:
+□ I filled in the accessibility-agents PR template completely:
     □ Description: what this adds or fixes and why
     □ Type of change: feature / fix / documentation
     □ Testing: how to verify the improvement
@@ -489,13 +489,13 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
     □ Related issue: linked to the issue I filed (if applicable)
 □ I reviewed my PR description tone against the Culture &amp; Etiquette guide
 □ I requested a review from the repo maintainer</span></code></pre>
-<h3>Opening the PR to <code>accesswatch/agent-forge</code></h3>
+<h3>Opening the PR to <code>community-access/accessibility-agents</code></h3>
 <p><strong>Option A - from your browser:</strong></p>
 <ol>
 <li>Navigate to your fork on GitHub</li>
-<li>GitHub will show a yellow banner: &quot;Your branch is N commits ahead of <code>accesswatch:main</code>&quot;</li>
+<li>GitHub will show a yellow banner: &quot;Your branch is N commits ahead of <code>community-access:main</code>&quot;</li>
 <li>Activate &quot;Contribute&quot; → &quot;Open a pull request&quot;</li>
-<li>Confirm the base repository is <code>accesswatch/agent-forge</code> and base branch is <code>main</code></li>
+<li>Confirm the base repository is <code>community-access/accessibility-agents</code> and base branch is <code>main</code></li>
 <li>Fill in the PR template</li>
 <li>Submit</li>
 </ol>
@@ -504,7 +504,7 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
 <li>Open the Source Control panel (<code>Ctrl+Shift+G</code>)</li>
 <li>Navigate to &quot;Pull Requests&quot; in the sidebar</li>
 <li>Activate &quot;Create Pull Request&quot;</li>
-<li>Select base: <code>accesswatch/agent-forge</code> → <code>main</code></li>
+<li>Select base: <code>community-access/accessibility-agents</code> → <code>main</code></li>
 <li>Fill in the title and description</li>
 <li>Submit</li>
 </ol>
@@ -523,12 +523,12 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
 <blockquote>
 <p><strong>What is Spec-Driven Development?</strong> It is the practice of writing the <em>intent</em> of a feature before anyone builds it. The specification becomes the source of truth - AI uses it to plan tasks, contributors use it to stay aligned, and the community uses it to evaluate whether the feature actually delivered what was intended.</p>
 </blockquote>
-<h3>The Exercise: Specify the Next Version of Agent Forge</h3>
+<h3>The Exercise: Specify the Next Version of Accessibility Agents</h3>
 <p>The facilitator opens Copilot Chat and types <code>/specify</code> to initiate a spec session. The group collaborates to answer:</p>
 <ul>
-<li><em>What is missing from Agent Forge that would make it more useful for screen reader users?</em></li>
+<li><em>What is missing from Accessibility Agents that would make it more useful for screen reader users?</em></li>
 <li><em>What would a <code>@meetings</code> agent look like? What would <code>@accessibility-audit</code> do?</em></li>
-<li><em>What if Agent Forge had a searchable web interface - what accessibility requirements would it need on day one?</em></li>
+<li><em>What if Accessibility Agents had a searchable web interface - what accessibility requirements would it need on day one?</em></li>
 </ul>
 <p><strong>How to participate (no typing required):</strong>
 Speak your requirements aloud. The facilitator types them. Copilot helps convert them into a structured specification.</p>
@@ -540,11 +540,11 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <li>The web interface must work with NVDA, JAWS, and VoiceOver tested</li>
 <li>Color must not be the only means of communicating status</li>
 </ul>
-<p><strong>The output:</strong> A <code>spec.md</code> file committed to <code>agent-forge</code>. A record of what the community intended. Anyone who wants to build it next week has a starting point.</p>
+<p><strong>The output:</strong> A <code>spec.md</code> file committed to <code>accessibility-agents</code>. A record of what the community intended. Anyone who wants to build it next week has a starting point.</p>
 <p><strong>The Spec Kit toolkit</strong> (for self-directed use after the workshop):</p>
 <ul>
 <li>Repo: <a href="https://github.com/github/spec-kit">github.com/github/spec-kit</a></li>
-<li>Init command: <code>uvx --from git+https://github.com/github/spec-kit.git specify init agent-forge-v2</code></li>
+<li>Init command: <code>uvx --from git+https://github.com/github/spec-kit.git specify init accessibility-agents-v2</code></li>
 <li>Slash commands: <code>/specify</code> → <code>/plan</code> → <code>/tasks</code> → implement</li>
 </ul>
 <hr>
@@ -552,7 +552,7 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <p><strong>17:00-17:30</strong></p>
 <h3>The Moment: Find Your Name in History</h3>
 <ol>
-<li>Navigate to <code>https://github.com/accesswatch/agent-forge</code></li>
+<li>Navigate to <code>https://github.com/community-access/accessibility-agents</code></li>
 <li>Go to the Insights tab → Contributors</li>
 <li>Or: navigate to the commit history of the file you contributed to</li>
 <li>Find your username in the list</li>
@@ -568,13 +568,13 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 </tr>
 </thead>
 <tbody><tr>
-<td>Your fork of <code>agent-forge</code></td>
-<td><code>github.com/[your-username]/agent-forge</code></td>
+<td>Your fork of <code>accessibility-agents</code></td>
+<td><code>github.com/[your-username]/accessibility-agents</code></td>
 <td>Use it on any GitHub repo - <code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@pr-review</code>, <code>@analytics</code>, <code>@insiders-a11y-tracker</code></td>
 </tr>
 <tr>
 <td>Your name in the upstream commit history</td>
-<td><code>github.com/accesswatch/agent-forge</code></td>
+<td><code>github.com/community-access/accessibility-agents</code></td>
 <td>Share it - it is a real open source contribution to an accessibility project</td>
 </tr>
 <tr>
@@ -588,13 +588,13 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <td>Navigate any repo, file any issue, open any PR - without an agent doing it for you</td>
 </tr>
 <tr>
-<td>Agent Forge as a model</td>
+<td>Accessibility Agents as a model</td>
 <td>Your thinking</td>
 <td>Know that any project can have agents in <code>.github/agents/</code> - and you know how to write them</td>
 </tr>
 </tbody></table>
-<h3>Personalizing Agent Forge After the Workshop</h3>
-<p>Agent Forge is designed to be personalized. In <code>.github/agents/preferences.example.md</code>:</p>
+<h3>Personalizing Accessibility Agents After the Workshop</h3>
+<p>Accessibility Agents is designed to be personalized. In <code>.github/agents/preferences.example.md</code>:</p>
 <ol>
 <li>Copy it to <code>.github/agents/preferences.md</code></li>
 <li>Add your GitHub username and the repositories you care about most</li>
@@ -616,7 +616,7 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <h2>Facilitator Notes - Day 2</h2>
 <h3>Pre-Day Setup</h3>
 <ul>
-<li>Clone <code>agent-forge</code> to a demo machine where the facilitator is signed into a GitHub account</li>
+<li>Clone <code>accessibility-agents</code> to a demo machine where the facilitator is signed into a GitHub account</li>
 <li>Configure <code>preferences.md</code> with the facilitator&#39;s account and the demo repository</li>
 <li>Pre-create one issue in the demo repo with an intentional gap for the agentic workflow to triage</li>
 <li>Test all 5 agent commands the day before - especially <code>@daily-briefing</code> and <code>@pr-review</code></li>
@@ -642,7 +642,7 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <em>Related: <a href="DAY1_AGENDA.md">Day 1 Agenda</a> | <a href="docs/appendix-q-github-actions-workflows.md">GitHub Actions &amp; Workflows</a> | <a href="docs/appendix-u-resources.md">Resources</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

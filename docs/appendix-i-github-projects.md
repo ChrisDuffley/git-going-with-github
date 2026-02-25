@@ -17,7 +17,7 @@
 8. [Views and Filters](#8-views-and-filters)
 9. [Cross-Repository Projects](#9-cross-repository-projects)
 10. [Screen Reader Navigation Reference](#10-screen-reader-navigation-reference)
-11. [Agent Forge: `/project-status`](#11-agent-forge-project-status)
+11. [Accessibility Agents: `/project-status`](#11-accessibility-agents-project-status)
 12. [Exercises](#12-exercises)
 
 ---
@@ -344,8 +344,8 @@ A single project can track issues and PRs from **multiple repositories** - inclu
 When a project spans multiple repos, the **"Repository"** field lets you see - and filter by - which repo each item belongs to:
 
 ```
-Filter: repo:accesswatch/agent-forge
-→ Show only agent-forge issues in this cross-repo project
+Filter: repo:community-access/accessibility-agents
+→ Show only accessibility-agents issues in this cross-repo project
 ```
 
 **Common use case:** An organization project tracking all accessibility bugs across every repo, labeled `accessibility`, with Auto-add enabled.
@@ -414,14 +414,14 @@ Escape → Clear focus from filter bar
 
 ---
 
-## 11. Agent Forge: `/project-status`
+## 11. Accessibility Agents: `/project-status`
 
-The **`/project-status`** command from Agent Forge gives you a live project board overview directly in VS Code Copilot Chat, without opening a browser.
+The **`/project-status`** command from Accessibility Agents gives you a live project board overview directly in VS Code Copilot Chat, without opening a browser.
 
 ### What It Shows
 
 ```
-/project-status accesswatch/agent-forge
+/project-status community-access/accessibility-agents
 ```
 
 - Items per column (Todo, In Progress, Done, etc.) with assignees and average age
@@ -434,7 +434,7 @@ The **`/project-status`** command from Agent Forge gives you a live project boar
 ### Example Output
 
 ```
-GitHub Project: Agent Forge Roadmap (3 active views)
+GitHub Project: Accessibility Agents Roadmap (3 active views)
 
 Column Breakdown:
 ┌─────────────┬───────┬──────────────────┬─────────┬──────────────┐
@@ -469,7 +469,7 @@ After the overview: "Want to see a specific column or check a team member's work
 1. Create a new project at the organization level: name it "My Workshop Contributions"
 2. Add the **Board** layout
 3. Add a custom **Priority** field with options: P0, P1, P2
-4. Add your fork of `agent-forge` as a linked repository
+4. Add your fork of `accessibility-agents` as a linked repository
 5. Add any open issue you've filed to the project
 
 ### Exercise 2: Set Up Automation

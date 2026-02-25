@@ -1,7 +1,7 @@
 # Appendix W: GitHub Copilot & Agentic Reference
 ## Keyboard Shortcuts, Chat, Screen Reader Workflow, Plugin Ecosystem, and GitHub Agentic Workflows
 
-> Quick-reference card for GitHub Copilot in VS Code and the broader agentic ecosystem - plugins, MCP servers, and cloud-based automation. For the Copilot lesson, see [Chapter 13: GitHub Copilot](13-github-copilot.md). For Agent Forge specifically, see [Appendix V: Agent Forge Reference](appendix-v-agent-forge-reference.md).
+> Quick-reference card for GitHub Copilot in VS Code and the broader agentic ecosystem - plugins, MCP servers, and cloud-based automation. For the Copilot lesson, see [Chapter 13: GitHub Copilot](13-github-copilot.md). For Accessibility Agents specifically, see [Appendix V: Accessibility Agents Reference](appendix-v-accessibility-agents-reference.md).
 
 ---
 
@@ -82,7 +82,7 @@ Type these in the Copilot Chat input to give Copilot context from a specific sou
 ```
 @workspace find all places where heading hierarchy is documented
 
-@github search accesswatch/agent-forge for issues labeled accessibility
+@github search community-access/accessibility-agents for issues labeled accessibility
 
 @terminal what did the last command output mean?
 ```
@@ -131,7 +131,7 @@ Type `/` in Copilot Chat to see the available built-in commands.
 | `/init` | Analyzes your workspace and auto-generates a `.github/copilot-instructions.md` tailored to your project | `/init` |
 | `/savePrompt` | Saves the current chat conversation as a reusable `.prompt.md` slash command file | After a useful exchange, type `/savePrompt` |
 
-**Note:** These are Copilot's built-in chat slash commands. Agent Forge adds 28 additional workspace-level slash commands from `.github/prompts/` - see [Appendix V](appendix-v-agent-forge-reference.md) for the full list.
+**Note:** These are Copilot's built-in chat slash commands. Accessibility Agents adds 28 additional workspace-level slash commands from `.github/prompts/` - see [Appendix V](appendix-v-accessibility-agents-reference.md) for the full list.
 
 ### Using Slash Commands for Documentation Work
 
@@ -182,7 +182,7 @@ GitHub Copilot supports multiple ways to provide custom instructions. They diffe
 **Format:** Plain Markdown - no frontmatter, no special syntax required.
 
 ```markdown
-# Copilot Instructions for agent-forge
+# Copilot Instructions for accessibility-agents
 
 ## Accessibility Standards
 - Include semantic HTML elements in generated markup
@@ -918,9 +918,9 @@ Install in VS Code by clicking the button at `https://aka.ms/awesome-copilot/mcp
 
 ---
 
-### awesome-copilot vs. Agent Forge
+### awesome-copilot vs. Accessibility Agents
 
-| Feature | Agent Forge (`.github/agents/`) | awesome-copilot |
+| Feature | Accessibility Agents (`.github/agents/`) | awesome-copilot |
 |---------|--------------------------------|----------------|
 | **Scope** | Your repo and fork | Community-wide ecosystem |
 | **Distribution** | Clone the repo; agents travel with it | Plugin marketplace - install on demand |
@@ -1051,9 +1051,9 @@ gh aw compile .github/workflows/daily-report.md
 | Community feedback & discussion | `github.com/orgs/community/discussions/186451` |
 | Changelog announcement (Feb 13, 2026) | `github.blog/changelog/2026-02-13-github-agentic-workflows-are-now-in-technical-preview` |
 
-> **Relationship to Agent Forge:** Agent Forge agents (`.agent.md` files) are designed for interactive use inside VS Code. GitHub Agentic Workflows are a separate, cloud-native system that uses its own Markdown workflow format and the `gh aw` CLI - they are complementary tools, not the same mechanism. See [Appendix V](appendix-v-agent-forge-reference.md) for the full Agent Forge reference.
+> **Relationship to Accessibility Agents:** Accessibility Agents agents (`.agent.md` files) are designed for interactive use inside VS Code. GitHub Agentic Workflows are a separate, cloud-native system that uses its own Markdown workflow format and the `gh aw` CLI - they are complementary tools, not the same mechanism. See [Appendix V](appendix-v-accessibility-agents-reference.md) for the full Accessibility Agents reference.
 
 ---
 
 *Chapter: [GitHub Copilot](13-github-copilot.md)*
-*Related: [Appendix V: Agent Forge Reference](appendix-v-agent-forge-reference.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix X: AI Models Reference](appendix-x-copilot-models.md)*
+*Related: [Appendix V: Accessibility Agents Reference](appendix-v-accessibility-agents-reference.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix X: AI Models Reference](appendix-x-copilot-models.md)*

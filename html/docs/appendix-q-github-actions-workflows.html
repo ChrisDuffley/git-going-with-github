@@ -474,7 +474,7 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
         <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span> <span class="hljs-string">-g</span> <span class="hljs-string">@axe-core/cli</span> <span class="hljs-string">markdownlint-cli2</span></code></pre>
 <p><strong>What this does:</strong> Before a Copilot coding agent begins working, GitHub runs this job to prepare the environment. Without it, an agent that needs <code>markdownlint-cli2</code> (for the Markdown Accessibility Assistant) or <code>@axe-core/cli</code> (for WCAG scanning) will fail because those tools are not present.</p>
 <p><strong>The job name <code>copilot-setup-steps</code> is required</strong> - GitHub won&#39;t recognize any other name for agent environment preparation.</p>
-<p><strong>Connection to Section 13 of the VS Code guide:</strong> This is the infrastructure that enables Scope 3 (cloud execution) of the three-layer Agent Forge model. The same agent you run in VS Code with <code>@markdown-accessibility-assistant</code> can run on GitHub.com automatically - but only if the environment is prepared with this workflow.</p>
+<p><strong>Connection to Section 13 of the VS Code guide:</strong> This is the infrastructure that enables Scope 3 (cloud execution) of the three-layer Accessibility Agents model. The same agent you run in VS Code with <code>@markdown-accessibility-assistant</code> can run on GitHub.com automatically - but only if the environment is prepared with this workflow.</p>
 <hr>
 <h2>12. Hands-On Activity</h2>
 <h3>Activity: Explore a Workflow in This Repository</h3>
@@ -592,7 +592,7 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 <p>The three layers, in sequence - each builds on the one before it:</p>
 <ol>
 <li><strong>Standard GitHub Actions</strong> - YAML files in <code>.github/workflows/</code>; define triggers and structured shell steps; what you mastered in this guide</li>
-<li><strong>Agent Forge in VS Code</strong> - <code>.agent.md</code> files in <code>.github/agents/</code>; define behavior in plain English; GitHub Copilot Chat executes them on demand in your editor - same <code>.github/</code> folder, plain text, no YAML required</li>
+<li><strong>Accessibility Agents in VS Code</strong> - <code>.agent.md</code> files in <code>.github/agents/</code>; define behavior in plain English; GitHub Copilot Chat executes them on demand in your editor - same <code>.github/</code> folder, plain text, no YAML required</li>
 <li><strong>GitHub Agentic Workflows in the cloud</strong> - <code>.md</code> files in <code>.github/workflows/</code>; define intent in plain Markdown frontmatter; a coding agent (Copilot CLI, Claude Code, OpenAI Codex) executes them inside GitHub Actions on any trigger - no VS Code, no local setup required</li>
 </ol>
 <p>All three live in <code>.github/</code>. All three are plain text. All three run on your behalf. The only difference is where they run and how sophisticated their executor is.</p>
@@ -603,7 +603,7 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 <em>Related: <a href="../DAY1_AGENDA.md">Day 1 Agenda</a> | <a href="../DAY2_AGENDA.md">Day 2 Agenda</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

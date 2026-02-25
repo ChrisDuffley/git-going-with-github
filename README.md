@@ -18,13 +18,13 @@ License: CC BY 4.0 | [Site](https://community-access.github.io/git-going-with-gi
 
 ---
 
-> **The Central Project: Agent Forge**
+> **The Central Project: Accessibility Agents**
 >
-> This workshop is built around a real, live open source project: **[Agent Forge](https://github.com/accesswatch/agent-forge)** - six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It was built by your facilitator and is MIT-licensed.
+> This workshop is built around a real, live open source project: **[Accessibility Agents](https://github.com/community-access/accessibility-agents)** - six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It was built by your facilitator and is MIT-licensed.
 >
 > You will fork it, understand it, contribute to it, and personalize it. By the end of Day 2, your name is in its commit history.
 >
-> **Agent Forge does not replace what you learn on Day 1. It amplifies it.** The agents only make sense when you already understand the skills they automate. That is why Day 1 comes first - and why every guide in this repository shows you the manual path before it shows you the agent path.
+> **Accessibility Agents does not replace what you learn on Day 1. It amplifies it.** The agents only make sense when you already understand the skills they automate. That is why Day 1 comes first - and why every guide in this repository shows you the manual path before it shows you the agent path.
 
 ---
 
@@ -58,7 +58,7 @@ You do **not** need to know how to code to participate and contribute meaningful
 | Day | Focus | What You Will Do |
 |-----|-------|-----------------|
 | **Day 1** | GitHub Foundations | Set up your environment, learn GitHub navigation with your screen reader, file your first issue, open your first pull request |
-| **Day 2** | VS Code + Agent Forge | Bridge from the browser to **github.dev** (VS Code in your browser - no install needed), then step into **Visual Studio Code** on the desktop, learn VS Code basics, use GitHub Copilot, activate the six Agent Forge agents, run agentic workflows in the cloud, and ship a real PR upstream to `accesswatch/agent-forge` |
+| **Day 2** | VS Code + Accessibility Agents | Bridge from the browser to **github.dev** (VS Code in your browser - no install needed), then step into **Visual Studio Code** on the desktop, learn VS Code basics, use GitHub Copilot, activate the six Accessibility Agents agents, run agentic workflows in the cloud, and ship a real PR upstream to `community-access/accessibility-agents` |
 
 ### The Journey Arc
 
@@ -76,17 +76,17 @@ github.dev - VS Code on the web, no install needed
 
      ↓  (you've earned the desktop - now it makes sense)
 
-Day 2 - Deepen with VS Code + Agent Forge
+Day 2 - Deepen with VS Code + Accessibility Agents
   Learn VS Code basics → Copilot inline → Copilot Chat
   @daily-briefing → @issue-tracker → @pr-review → @analytics → ship upstream
 ```
 
-Every skill you build on Day 1 maps directly to an Agent Forge command on Day 2. The agent is not a shortcut - it is a multiplier. You have to understand what it is doing to know when it is wrong.
+Every skill you build on Day 1 maps directly to an Accessibility Agents command on Day 2. The agent is not a shortcut - it is a multiplier. You have to understand what it is doing to know when it is wrong.
 
 **By the end of Day 2, you will have:**
-- A fork of `agent-forge` with your personalized preferences
+- A fork of `accessibility-agents` with your personalized preferences
 - At least one merged PR in a real open source project
-- Your name in the commit history of `accesswatch/agent-forge`
+- Your name in the commit history of `community-access/accessibility-agents`
 - A working set of six AI agents that travel with your fork to any repository you apply them to
 
 ---
@@ -121,7 +121,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 | [13](docs/13-github-copilot.md) | **VS Code: GitHub Copilot** | Inline suggestions, Copilot Chat, effective prompting for documentation work, custom instructions vs custom agents, Accessible View workflow |
 | [14](docs/14-accessible-code-review.md) | **Accessible Code Review** | Navigating diffs and conducting PR reviews with a screen reader, on GitHub and in VS Code - culminating skill before automation |
 | [15](docs/15-issue-templates.md) | **Issue Templates** | Creating and using GitHub issue templates |
-| [16](docs/16-agent-forge.md) | **Agent Forge** | Six agents (@daily-briefing, @issue-tracker, @pr-review, @analytics, @insiders-a11y-tracker, @template-builder), 28 slash commands, building custom agents, cloud extension - agentic flow after all learning complete |
+| [16](docs/16-accessibility-agents.md) | **Accessibility Agents** | Six agents (@daily-briefing, @issue-tracker, @pr-review, @analytics, @insiders-a11y-tracker, @template-builder), 28 slash commands, building custom agents, cloud extension - agentic flow after all learning complete |
 
 **Workshop Agendas** - For facilitators only (not part of learner sequence)
 
@@ -155,17 +155,17 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 | [S](docs/appendix-s-github-organizations-templates.md) | **Organizations, Templates, and Repository Settings** | Organizations, repository templates, visibility, archiving, and contributor-relevant settings |
 | [T](docs/appendix-t-contributing-to-open-source.md) | **Contributing to Open Source** | A first-timer's guide: finding issues, scoping contributions, writing PRs, and building a contribution habit |
 | [U](docs/appendix-u-resources.md) | **Resources** | Every link, tool, and reference from this event |
-| [V](docs/appendix-v-agent-forge-reference.md) | **Agent Forge Reference** | Six agents, 28 slash commands, customization system, and workspace configuration |
+| [V](docs/appendix-v-accessibility-agents-reference.md) | **Accessibility Agents Reference** | Six agents, 28 slash commands, customization system, and workspace configuration |
 | [W](docs/appendix-w-github-copilot-reference.md) | **GitHub Copilot Reference** | Copilot features, chat participants, slash commands, MCP servers, and agentic ecosystem |
 | [X](docs/appendix-x-copilot-models.md) | **GitHub Copilot AI Models** | Model comparison, strengths, plan availability, and selection guidance |
 | [Y](docs/appendix-y-accessing-workshop-materials.md) | **Accessing and Downloading Workshop Materials** | GitHub Pages, GitHub.com, cloning, ZIP download, offline reading, folder guide |
-> **Each guide from Lesson 03 onward includes a "Day 2 Amplifier" callout** that shows how Agent Forge extends that skill across three scopes: your VS Code editor → your repository (travels with every fork) → the cloud (GitHub Agentic Workflows running without VS Code). **Learn the manual skill first (Chapter 14), then see how it's automated (Chapter 16).**
+> **Each guide from Lesson 03 onward includes a "Day 2 Amplifier" callout** that shows how Accessibility Agents extends that skill across three scopes: your VS Code editor → your repository (travels with every fork) → the cloud (GitHub Agentic Workflows running without VS Code). **Learn the manual skill first (Chapter 14), then see how it's automated (Chapter 16).**
 
 ---
 
 ## This Repository's Structure
 
-> **One repository, everything included.** Clone or fork this repo and you have the complete workshop - all curriculum guides, Agent Forge agents and slash commands, YAML issue forms, PR template, and a practice contribution target in `learning-room/`. GitHub Skills modules cannot be bundled here (each participant activates their own copy on their own account), but links are in `.github/ISSUE_TEMPLATE/config.yml`.
+> **One repository, everything included.** Clone or fork this repo and you have the complete workshop - all curriculum guides, Accessibility Agents agents and slash commands, YAML issue forms, PR template, and a practice contribution target in `learning-room/`. GitHub Skills modules cannot be bundled here (each participant activates their own copy on their own account), but links are in `.github/ISSUE_TEMPLATE/config.yml`.
 
 ```
 [repo root]/
@@ -182,7 +182,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 │   │   ├── accessibility-bug.yml        ← Structured accessibility bug form (YAML)
 │   │   └── feature-request.yml         ← Feature/improvement request form (YAML)
 │   ├── PULL_REQUEST_TEMPLATE.md        ← PR checklist with accessibility section
-│   ├── agents/                          ← Agent Forge: six Copilot Chat agents
+│   ├── agents/                          ← Accessibility Agents: six Copilot Chat agents
 │   │   ├── daily-briefing.agent.md
 │   │   ├── issue-tracker.agent.md
 │   │   ├── pr-review.agent.md
@@ -196,7 +196,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 │       ├── daily-briefing.prompt.md
 │       ├── review-pr.prompt.md
 │       ├── triage.prompt.md
-│       └── ... (23 more - see appendix-v-agent-forge-reference.md)
+│       └── ... (23 more - see appendix-v-accessibility-agents-reference.md)
 ├── learning-room/                       ← Practice target for the contribution sprint
 │   ├── README.md
 │   └── docs/
@@ -207,21 +207,21 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
     ├── course-guide.md                           ← Student landing page: day-by-day overview, exercises, help
     ├── 00-pre-workshop-setup.md
     ├── 01-understanding-github-web-structure.md  ← How GitHub is organized (start here)
-    ├── 02-navigating-repositories.md  ← Agent Forge: @daily-briefing
+    ├── 02-navigating-repositories.md  ← Accessibility Agents: @daily-briefing
     ├── 03-the-learning-room.md        ← Read this early: your shared space and PR workflow
-    ├── 04-working-with-issues.md      ← Agent Forge: @issue-tracker
-    ├── 05-working-with-pull-requests.md ← Agent Forge: @pr-review
-    ├── 06-merge-conflicts.md          ← Agent Forge: Copilot conflict prevention
-    ├── 07-culture-etiquette.md        ← Agent Forge: output responsibility
-    ├── 08-labels-milestones-projects.md ← Agent Forge: @issue-tracker + labels
-    ├── 09-notifications.md            ← Agent Forge: @daily-briefing + inbox
+    ├── 04-working-with-issues.md      ← Accessibility Agents: @issue-tracker
+    ├── 05-working-with-pull-requests.md ← Accessibility Agents: @pr-review
+    ├── 06-merge-conflicts.md          ← Accessibility Agents: Copilot conflict prevention
+    ├── 07-culture-etiquette.md        ← Accessibility Agents: output responsibility
+    ├── 08-labels-milestones-projects.md ← Accessibility Agents: @issue-tracker + labels
+    ├── 09-notifications.md            ← Accessibility Agents: @daily-briefing + inbox
     ├── 10-vscode-basics.md            ← VS Code setup, github.dev, screen reader mode, accessibility basics
     ├── 11-git-source-control.md       ← Git operations in VS Code: clone, branch, commit, merge, stash
     ├── 12-github-pull-requests-extension.md ← GitHub PR extension: view, review, create, merge PRs
     ├── 13-github-copilot.md           ← GitHub Copilot: inline suggestions, Chat, prompting, custom agents
     ├── 14-accessible-code-review.md   ← Reviewer mechanics: diffs, comments, Accessible Diff Viewer - final culminating skill
     ├── 15-issue-templates.md          ← Creating GitHub issue templates
-    ├── 16-agent-forge.md              ← Agent Forge: six agents, 28 commands, agentic workflows - automate everything you learned
+    ├── 16-accessibility-agents.md              ← Accessibility Agents: six agents, 28 commands, agentic workflows - automate everything you learned
     ├── appendix-a-glossary.md                    ← A: Every term explained (look up any time)
     ├── appendix-b-screen-reader-cheatsheet.md    ← B: Full shortcut reference, per-screen-reader tables (keep open)
     ├── appendix-c-accessibility-standards.md     ← C: WCAG 2.2, ARIA, PR checklist
@@ -243,7 +243,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
     ├── appendix-s-github-organizations-templates.md ← S: Organizations, templates, repository settings
     ├── appendix-t-contributing-to-open-source.md ← T: First contribution guide
     ├── appendix-u-resources.md                   ← U: Every link, tool, and reference (lookup anytime)
-    ├── appendix-v-agent-forge-reference.md       ← V: Agent Forge agents, commands, and customization
+    ├── appendix-v-accessibility-agents-reference.md       ← V: Accessibility Agents agents, commands, and customization
     ├── appendix-w-github-copilot-reference.md    ← W: Copilot features, chat, MCP servers, agentic ecosystem
     ├── appendix-x-copilot-models.md              ← X: AI model comparison and selection guide
     └── appendix-y-accessing-workshop-materials.md ← Y: How to get, download, and read these materials

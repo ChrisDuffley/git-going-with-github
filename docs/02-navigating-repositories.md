@@ -523,7 +523,7 @@ Quick way to check the project description, website link, and topics:
 
 **Time:** 3 minutes | **What you need:** Browser with screen reader, signed in to GitHub
 
-Navigate to [github.com/accesswatch/agent-forge](https://github.com/accesswatch/agent-forge) and do this:
+Navigate to [github.com/community-access/accessibility-agents](https://github.com/community-access/accessibility-agents) and do this:
 
 1. **Code tab** - Press `D` to the "Repository navigation" landmark, then `K` to find "Code". Press `Enter`. You're on the file list.
 2. **Issues tab** - Press `G` then `I` (Focus Mode first: `NVDA+Space`). How many open issues are there? Press `3` to jump through issue titles.
@@ -537,13 +537,13 @@ Navigate to [github.com/accesswatch/agent-forge](https://github.com/accesswatch/
 
 ---
 
-> ### Day 2 Amplifier - Agent Forge: `@daily-briefing`
+> ### Day 2 Amplifier - Accessibility Agents: `@daily-briefing`
 >
-> **Navigate every folder of `agent-forge` manually today before using any agent.** Find `.github/agents/`, open a `.agent.md` file, and read it - that file is how an agent knows what to do. You must understand the structure before you can evaluate whether an agent understood it correctly.
+> **Navigate every folder of `accessibility-agents` manually today before using any agent.** Find `.github/agents/`, open a `.agent.md` file, and read it - that file is how an agent knows what to do. You must understand the structure before you can evaluate whether an agent understood it correctly.
 >
 > Once you have mastered manual repository navigation:
 > - **In VS Code** - `@daily-briefing morning briefing` sweeps every repository you have access to and delivers one prioritized document: open issues, PR status, CI results, security alerts, community reactions - all without opening a browser tab
-> - **In your repo** - Fork [agent-forge](https://github.com/accesswatch/agent-forge) and the `.github/agents/` folder travels with every clone; every collaborator on your fork has access to the same agents you do
+> - **In your repo** - Fork [accessibility-agents](https://github.com/community-access/accessibility-agents) and the `.github/agents/` folder travels with every clone; every collaborator on your fork has access to the same agents you do
 > - **In the cloud** - GitHub Agentic Workflows can generate daily status reports on a schedule, running inside GitHub Actions and posting digests to a designated issue thread - no VS Code, no local setup required
 >
 > *An agent's output only makes sense when you already know what it is describing. You are building that knowledge right now.*

@@ -63,7 +63,7 @@
 <li>Open Command Palette: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;git clone&quot;</li>
 <li>Select &quot;Git: Clone&quot;</li>
-<li>Paste the repository URL (example: <code>https://github.com/accesswatch/agent-forge.git</code>)</li>
+<li>Paste the repository URL (example: <code>https://github.com/community-access/accessibility-agents.git</code>)</li>
 <li>Press <code>Enter</code></li>
 <li>Choose a local folder where the repository should be cloned</li>
 <li>VS Code asks: &quot;Would you like to open the cloned repository?&quot; - select &quot;Open&quot;</li>
@@ -507,8 +507,8 @@ Fixes <span class="hljs-meta">#42</span></code></pre>
 <span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Verify:
   git remote -v
   → You should now see both <span class="hljs-string">&quot;origin&quot;</span> (your fork) and <span class="hljs-string">&quot;upstream&quot;</span> (original)</code></pre>
-<p><strong>Example for Agent Forge:</strong></p>
-<pre><code class="hljs language-bash">git remote add upstream https://github.com/accesswatch/agent-forge.git</code></pre>
+<p><strong>Example for Accessibility Agents:</strong></p>
+<pre><code class="hljs language-bash">git remote add upstream https://github.com/community-access/accessibility-agents.git</code></pre>
 <h3>Fetching and Merging Upstream Changes</h3>
 <p>Once your upstream remote is configured:</p>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># 1. Fetch all updates from upstream (does not change your files yet)</span>
@@ -975,7 +975,7 @@ git <span class="hljs-built_in">log</span>                        <span class="h
 <p><em>Next: <a href="12-github-pull-requests-extension.md">GitHub Pull Requests Extension</a></em><br><em>Back: <a href="10-vscode-basics.md">VS Code Setup &amp; Accessibility Basics</a></em><br><em>Related: <a href="06-merge-conflicts.md">Merge Conflicts</a> | <a href="07-culture-etiquette.md">Culture &amp; Etiquette</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

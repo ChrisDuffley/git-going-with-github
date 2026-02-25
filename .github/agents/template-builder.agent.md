@@ -158,7 +158,7 @@ The Template Builder agent itself can be extended. Students in the workshop can:
 
 ---
 
-## Integration with Agent Forge
+## Integration with Accessibility Agents
 
 The Template Builder works alongside the five core agents:
 
@@ -176,7 +176,7 @@ The Template Builder works alongside the five core agents:
 
 ## Day 2 Amplifier: From Manual to Magical
 
-| Day 1 | Day 2 in Browser | Day 2 in VS Code | Agent Forge |
+| Day 1 | Day 2 in Browser | Day 2 in VS Code | Accessibility Agents |
 |-------|------------------|------------------|------------|
 | Learn to identify accessibility issues in code review | Learn to design templates that prevent those issues | Use Template Builder to generate templates interactively | Agent automates the entire cycle |
 | (Chapter 14) | (Chapter 15) | (Chapter 16) | (Capstone) |

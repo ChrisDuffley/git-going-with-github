@@ -7,7 +7,7 @@
 
 ## Table of Contents
 
-1. [The Central Project - Agent Forge](#1-the-central-project--agent-forge)
+1. [The Central Project - Accessibility Agents](#1-the-central-project--accessibility-agents)
 2. [GitHub Accessibility Guides](#2-github-accessibility-guides)
 3. [GitHub Skills Learning Modules](#3-github-skills-learning-modules)
 4. [Screen Reader Downloads and Documentation](#4-screen-reader-downloads-and-documentation)
@@ -26,30 +26,30 @@
 
 ---
 
-## 1. The Central Project - Agent Forge
+## 1. The Central Project - Accessibility Agents
 
 The project you forked, contributed to, and carry home.
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| **Agent Forge - Main Repo** | [github.com/accesswatch/agent-forge](https://github.com/accesswatch/agent-forge) | The upstream - your contributions go here |
-| Getting Started Guide | [agent-forge/Documentation/GETTING-STARTED.md](https://github.com/accesswatch/agent-forge/blob/main/Documentation/GETTING-STARTED.md) | Your first hour with the agents |
-| Full Reference Guide | [agent-forge/Documentation/GUIDE.md](https://github.com/accesswatch/agent-forge/blob/main/Documentation/GUIDE.md) | Complete agent and command reference |
-| Setup Guide | [agent-forge/SETUP.md](https://github.com/accesswatch/agent-forge/blob/main/SETUP.md) | Configuration and preferences |
-| Contributing Guide | [agent-forge/CONTRIBUTING.md](https://github.com/accesswatch/agent-forge/blob/main/CONTRIBUTING.md) | How to submit improvements |
-| Security Policy | [agent-forge/SECURITY.md](https://github.com/accesswatch/agent-forge/blob/main/SECURITY.md) | Responsible disclosure instructions |
-| MIT License | [agent-forge/LICENSE](https://github.com/accesswatch/agent-forge/blob/main/LICENSE) | Fork it, use it, make it yours |
+| **Accessibility Agents - Main Repo** | [github.com/community-access/accessibility-agents](https://github.com/community-access/accessibility-agents) | The upstream - your contributions go here |
+| Getting Started Guide | [accessibility-agents/Documentation/GETTING-STARTED.md](https://github.com/community-access/accessibility-agents/blob/main/Documentation/GETTING-STARTED.md) | Your first hour with the agents |
+| Full Reference Guide | [accessibility-agents/Documentation/GUIDE.md](https://github.com/community-access/accessibility-agents/blob/main/Documentation/GUIDE.md) | Complete agent and command reference |
+| Setup Guide | [accessibility-agents/SETUP.md](https://github.com/community-access/accessibility-agents/blob/main/SETUP.md) | Configuration and preferences |
+| Contributing Guide | [accessibility-agents/CONTRIBUTING.md](https://github.com/community-access/accessibility-agents/blob/main/CONTRIBUTING.md) | How to submit improvements |
+| Security Policy | [accessibility-agents/SECURITY.md](https://github.com/community-access/accessibility-agents/blob/main/SECURITY.md) | Responsible disclosure instructions |
+| MIT License | [accessibility-agents/LICENSE](https://github.com/community-access/accessibility-agents/blob/main/LICENSE) | Fork it, use it, make it yours |
 
 ### Your Personal Fork
 
 After the workshop, your fork lives at:
 ```
-https://github.com/[your-username]/agent-forge
+https://github.com/[your-username]/accessibility-agents
 ```
 
 **Quick access from VS Code:**
-1. Clone your fork: `git clone https://github.com/[your-username]/agent-forge.git`
-2. Open in VS Code: `cd agent-forge && code .`
+1. Clone your fork: `git clone https://github.com/[your-username]/accessibility-agents.git`
+2. Open in VS Code: `cd accessibility-agents && code .`
 3. Open Copilot Chat: `Ctrl+Shift+I`
 4. Type: `@daily-briefing morning briefing`
 
@@ -125,7 +125,7 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 | **Hello GitHub Actions** | [github.com/skills/hello-github-actions](https://github.com/skills/hello-github-actions) | < 30 min | Introduction to GitHub | Workflow files, triggers, jobs, run steps, merge |
 | **Write JavaScript Actions** | [github.com/skills/write-javascript-actions](https://github.com/skills/write-javascript-actions) | < 1 hour | Hello GitHub Actions | Custom action metadata (action.yml), writing steps, composing workflows |
 
-**Relationship to this workshop:** The introduction and PR courses reinforce everything you practiced here. The GitHub Actions course is the foundation for understanding the CI/CD workflows that run inside agent-forge.
+**Relationship to this workshop:** The introduction and PR courses reinforce everything you practiced here. The GitHub Actions course is the foundation for understanding the CI/CD workflows that run inside accessibility-agents.
 
 ---
 
@@ -230,7 +230,7 @@ GitHub Agentic Workflows are in **technical preview** as of February 2026. Acces
 
 During the workshop, you learned:
 1. Standard GitHub Actions (YAML workflows - triggers, jobs, steps)
-2. Agent Forge agents (`.agent.md` files - plain English instructions, Copilot Chat executor)
+2. Accessibility Agents agents (`.agent.md` files - plain English instructions, Copilot Chat executor)
 3. GitHub Agentic Workflows (`.md` files in `.github/workflows/` - plain English instructions, cloud-based coding agent executor)
 
 All three live in `.github/`. All three are plain text. The only difference is where they run and how sophisticated their executor is.
@@ -738,12 +738,12 @@ Not sure where to start after the workshop? Use these suggested paths.
 | GitHub Accessibility Feedback | [github.com/github-community/community/discussions/categories/accessibility](https://github.com/github-community/community/discussions/categories/accessibility) |
 | GitHub Accessibility Team (public presence) | [accessibility.github.com](https://accessibility.github.com) |
 
-### Agent Forge Community
+### Accessibility Agents Community
 
 | Resource | URL |
 |----------|-----|
-| Agent Forge Issues (bug reports, ideas) | [github.com/accesswatch/agent-forge/issues](https://github.com/accesswatch/agent-forge/issues) |
-| Agent Forge Discussions | [github.com/accesswatch/agent-forge/discussions](https://github.com/accesswatch/agent-forge/discussions) |
+| Accessibility Agents Issues (bug reports, ideas) | [github.com/community-access/accessibility-agents/issues](https://github.com/community-access/accessibility-agents/issues) |
+| Accessibility Agents Discussions | [github.com/community-access/accessibility-agents/discussions](https://github.com/community-access/accessibility-agents/discussions) |
 | Security concerns | jeff@jeffbishop.com (do not open public issues for vulnerabilities) |
 
 ### Open Source Accessibility Community
@@ -761,10 +761,10 @@ Not sure where to start after the workshop? Use these suggested paths.
 Every guide from this workshop lives in your fork. Clone your fork once and the complete documentation works offline - no internet required.
 
 ```bash
-git clone https://github.com/[your-username]/agent-forge.git
+git clone https://github.com/[your-username]/accessibility-agents.git
 ```
 
-The documentation set is in the `docs/` folder of this learning repository (separate from the `agent-forge` fork). If your workshop facilitator shared a repository link for the learning materials, clone that too.
+The documentation set is in the `docs/` folder of this learning repository (separate from the `accessibility-agents` fork). If your workshop facilitator shared a repository link for the learning materials, clone that too.
 
 ### Quick Navigation
 
@@ -788,7 +788,7 @@ The documentation set is in the `docs/` folder of this learning repository (sepa
 | VS Code: GitHub Copilot | [docs/13-github-copilot.md](13-github-copilot.md) |
 | Accessible Code Review | [docs/14-accessible-code-review.md](14-accessible-code-review.md) |
 | Issue Templates | [docs/15-issue-templates.md](15-issue-templates.md) |
-| VS Code: Agent Forge | [docs/16-agent-forge.md](16-agent-forge.md) |
+| VS Code: Accessibility Agents | [docs/16-accessibility-agents.md](16-accessibility-agents.md) |
 | Resources (this file) | [docs/appendix-u-resources.md](appendix-u-resources.md) |
 | **Appendix A:** GitHub Concepts Glossary | [docs/appendix-a-glossary.md](appendix-a-glossary.md) |
 | **Appendix B:** Screen Reader Cheat Sheet | [docs/appendix-b-screen-reader-cheatsheet.md](appendix-b-screen-reader-cheatsheet.md) |
@@ -811,7 +811,7 @@ The documentation set is in the `docs/` folder of this learning repository (sepa
 | **Appendix S:** Organizations, Templates, and Repository Settings | [docs/appendix-s-github-organizations-templates.md](appendix-s-github-organizations-templates.md) |
 | **Appendix T:** Contributing to Open Source | [docs/appendix-t-contributing-to-open-source.md](appendix-t-contributing-to-open-source.md) |
 | **Appendix U:** Resources (this file) | [docs/appendix-u-resources.md](appendix-u-resources.md) |
-| **Appendix V:** Agent Forge Reference | [docs/appendix-v-agent-forge-reference.md](appendix-v-agent-forge-reference.md) |
+| **Appendix V:** Accessibility Agents Reference | [docs/appendix-v-accessibility-agents-reference.md](appendix-v-accessibility-agents-reference.md) |
 | **Appendix W:** GitHub Copilot Reference | [docs/appendix-w-github-copilot-reference.md](appendix-w-github-copilot-reference.md) |
 | **Appendix X:** GitHub Copilot AI Models | [docs/appendix-x-copilot-models.md](appendix-x-copilot-models.md) |
 

@@ -31,10 +31,10 @@ GitHub's browser interface is excellent for reviewing, discussing, and triaging.
 | Edit a file | Web editor | Full text editor with Copilot |
 | Review a diff | Files Changed tab | Three-way merge view with navigation |
 | Get AI help while writing | Not available | Copilot inline + Chat |
-| Run Agent Forge agents | Not available | Copilot Chat with agent files |
+| Run Accessibility Agents agents | Not available | Copilot Chat with agent files |
 | See errors in your contribution | After push | Real-time as you type |
 
-For Markdown contributions (which is most of what `agent-forge` needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow - with less tab switching and with agents available on every file you open.
+For Markdown contributions (which is most of what `accessibility-agents` needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow - with less tab switching and with agents available on every file you open.
 
 ---
 
@@ -117,7 +117,7 @@ Everything in the list below works **exactly like desktop VS Code**:
 
 **No terminal** - can't run shell commands, npm, git CLI  
 **No GitHub Copilot** - Copilot requires the desktop app or a Codespace  
-**No Agent Forge agents** - agents rely on extensions that need desktop VS Code  
+**No Accessibility Agents agents** - agents rely on extensions that need desktop VS Code  
 **No extension installation** - extensions are disabled in github.dev  
 **No debugger** - debugging requires a local environment  
 **No live server or preview** - except Markdown preview, which does work
@@ -143,7 +143,7 @@ These limitations are why **desktop VS Code exists**. github.dev is for quick ed
 
 **Use desktop VS Code when:**
 - You need Copilot inline suggestions
-- You want to run Agent Forge agents
+- You want to run Accessibility Agents agents
 - You're making multi-file changes that benefit from AI assistance
 - You need a terminal for git commands or running scripts
 
@@ -185,7 +185,7 @@ These limitations are why **desktop VS Code exists**. github.dev is for quick ed
 
 Before reading the rest of this guide:
 
-1. Open [github.com/accesswatch/agent-forge](https://github.com/accesswatch/agent-forge) in your browser
+1. Open [github.com/community-access/accessibility-agents](https://github.com/community-access/accessibility-agents) in your browser
 2. Press `.` (period key)
 3. github.dev opens
 4. Press `Shift+Alt+F1` (Mac: `Shift+Option+F1`) to enable screen reader mode
@@ -333,7 +333,7 @@ The global Search panel has a rich filtering system - all keyboard-accessible:
 **Glob pattern examples for this workshop:**
 ```
 docs/*.md          → all Markdown files in the docs folder
-*.agent.md         → all Agent Forge agent definition files
+*.agent.md         → all Accessibility Agents agent definition files
 .github/**         → everything inside the .github folder
 !node_modules/**   → exclude the node_modules folder from results
 ```
@@ -379,7 +379,7 @@ In any Markdown file, `Ctrl+Shift+O` opens a symbol picker populated by every he
 - `Up/Down Arrow` → move through results
 - `Enter` → jump to the selected heading
 
-For navigating `agent-forge`'s longer reference documents, this is faster than heading-by-heading screen reader navigation.
+For navigating `accessibility-agents`'s longer reference documents, this is faster than heading-by-heading screen reader navigation.
 
 ### Explorer (File Tree) Navigation
 

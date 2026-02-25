@@ -567,13 +567,13 @@ Notice: same feedback, completely different experience for the person receiving 
 
 ---
 
-> ### Day 2 Amplifier - Agent Forge Outputs Are Your Responsibility
+> ### Day 2 Amplifier - Accessibility Agents Outputs Are Your Responsibility
 >
 > **Every communication principle in this guide applies with extra force when agents are involved.** When `@pr-review` generates review comments, *you* are responsible for their tone before you post them. When `@issue-tracker` drafts a triage reply, *your* name appears on it in the repository's public history. The agent writes - the contributor publishes.
 >
 > As you work with agents on Day 2, use this guide as your editing checklist:
 > - **In VS Code** - Review every agent-generated comment against the "anatomy of helpful feedback" section before posting; use the "phrases that work" table to refine anything that reads as automated, generic, or cold
-> - **In your repo** - Agent Forge outputs are first drafts, not final words; the community you contribute to experiences your judgment, not the agent's draft
+> - **In your repo** - Accessibility Agents outputs are first drafts, not final words; the community you contribute to experiences your judgment, not the agent's draft
 > - **In the cloud** - GitHub Agentic Workflow comments must be designed with the same care as human comments: clear purpose, respectful language, and a transparent signal that automation posted them
 >
 > *A community's culture is shaped by every message posted in its name - including the ones an agent wrote for you.*

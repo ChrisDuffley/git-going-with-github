@@ -244,7 +244,7 @@ When you push commits to GitHub, each commit shows a small badge: **Verified** o
 
 ### Why It Matters
 
-Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to `agent-forge` and your commits show "Unverified," a maintainer may ask you to sign them before the PR can be merged.
+Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to `accessibility-agents` and your commits show "Unverified," a maintainer may ask you to sign them before the PR can be merged.
 
 ### Two Methods for Signing Commits
 
@@ -317,7 +317,7 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 - NVDA/JAWS: the badge is inside the commit row; use `↓` to read through each row and the badge text is read inline
 - VoiceOver: use `VO+Right` through the commit row; the badge is read as a button with the text "Verified" (clicking it shows the certificate)
 
-**Workshop recommendation:** SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to agent-forge will show as Verified.
+**Workshop recommendation:** SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to accessibility-agents will show as Verified.
 
 ---
 

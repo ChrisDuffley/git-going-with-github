@@ -1,7 +1,7 @@
 # Issue Templates
 ## Structuring Contributions for Clarity and Quality
 
-> Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in `agent-forge`, and how to create your own - including an accessibility-specific bug report template.
+> Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in `accessibility-agents`, and how to create your own - including an accessibility-specific bug report template.
 
 ---
 
@@ -15,7 +15,7 @@
 - [ ] A GitHub repository where you have write access (your fork or personal repo)
 - [ ] Terminal/Command line basic comfort (Chapter 5 mentions git workflows)
 
-**Day 2 Amplifier:** In [Chapter 16 (Agent Forge)](16-agent-forge.md), you'll use `@template-builder` to automate template creation. Complete this chapter first, then come back to Chapter 16.
+**Day 2 Amplifier:** In [Chapter 16 (Accessibility Agents)](16-accessibility-agents.md), you'll use `@template-builder` to automate template creation. Complete this chapter first, then come back to Chapter 16.
 
 **Estimated time for this chapter:** 1.5 hours (including exercises)
 
@@ -26,7 +26,7 @@
 1. [What Is an Issue Template?](#1-what-is-an-issue-template)
 2. [How Templates Work on GitHub](#2-how-templates-work-on-github)
 3. [Navigating the Template Picker](#3-navigating-the-template-picker)
-4. [The Agent Forge Issue Templates](#4-the-agent-forge-issue-templates)
+4. [The Accessibility Agents Issue Templates](#4-the-accessibility-agents-issue-templates)
 5. [Creating a New Template - Step by Step](#5-creating-a-new-template--step-by-step)
 6. [YAML Form-Based Templates](#6-yaml-form-based-templates)
 7. [Building an Accessibility Bug Report Template](#7-building-an-accessibility-bug-report-template)
@@ -86,10 +86,10 @@ For accessibility projects, `config.yml` is important: disabling the blank issue
 blank_issues_enabled: false
 contact_links:
   - name: Community Discussion
-    url: https://github.com/accesswatch/agent-forge/discussions
+    url: https://github.com/community-access/accessibility-agents/discussions
     about: For questions and general discussion - not bugs
   - name: Security Vulnerability
-    url: https://github.com/accesswatch/agent-forge/security/advisories/new
+    url: https://github.com/community-access/accessibility-agents/security/advisories/new
     about: Please use private reporting for security issues
 ```
 
@@ -146,9 +146,9 @@ If you want to file an issue without using a template:
 
 ---
 
-## 4. The Agent Forge Issue Templates
+## 4. The Accessibility Agents Issue Templates
 
-Agent Forge uses templates to structure contributions. Navigate to `.github/ISSUE_TEMPLATE/` in the repository to read them.
+Accessibility Agents uses templates to structure contributions. Navigate to `.github/ISSUE_TEMPLATE/` in the repository to read them.
 
 <details>
 <summary>Visual / mouse users</summary>
@@ -392,7 +392,7 @@ Screen reader and browser information is especially important for us to reproduc
 <details>
 <summary>Visual / mouse users</summary>
 
-1. Navigate to your fork of `agent-forge` on GitHub
+1. Navigate to your fork of `accessibility-agents` on GitHub
 2. Click the **Settings** tab
 3. Scroll to the "Features" section → click the checkmark next to "Issues" → click **"Set up templates"**
 4. Or navigate directly to `.github/ISSUE_TEMPLATE/` in your fork → click the `+` button → "Create new file"
@@ -405,7 +405,7 @@ Screen reader and browser information is especially important for us to reproduc
 <details>
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
-1. Navigate to your fork of `agent-forge` on GitHub
+1. Navigate to your fork of `accessibility-agents` on GitHub
 2. Go to the Settings tab (press `T` from the tabs landmark, then navigate to "Settings")
 3. Scroll to the "Features" section → find "Issues" → activate "Set up templates"
 
@@ -422,7 +422,7 @@ Screen reader and browser information is especially important for us to reproduc
 
 ### Creating Markdown Templates: The VS Code Workflow
 
-1. Open your `agent-forge` fork in VS Code
+1. Open your `accessibility-agents` fork in VS Code
 2. Navigate in Explorer to `.github/ISSUE_TEMPLATE/`
 3. Create a new file: `Ctrl+N` → save as `your-template-name.md` in that folder
 4. Add frontmatter first (between `---` delimiters), then the body
@@ -491,7 +491,7 @@ body:                             # Array of form fields
 
 ```yaml
 name: Accessibility Bug Report
-description: Report an accessibility issue in Agent Forge's output or interface
+description: Report an accessibility issue in Accessibility Agents' output or interface
 title: "[A11Y] "
 labels: ["accessibility", "needs-triage"]
 body:
@@ -720,7 +720,7 @@ A group of checkboxes. Contributors can select multiple options or use as a veri
 
 ## 7. Building an Accessibility Bug Report Template
 
-This is the hands-on activity. You will create a YAML form template specifically for accessibility bug reports in `agent-forge`.
+This is the hands-on activity. You will create a YAML form template specifically for accessibility bug reports in `accessibility-agents`.
 
 ### Full Template
 
@@ -728,7 +728,7 @@ Save this as `.github/ISSUE_TEMPLATE/accessibility-bug.yml` in your fork:
 
 ```yaml
 name: Accessibility Bug Report
-description: Report an issue where Agent Forge output or behavior is not accessible to screen reader users or keyboard-only users
+description: Report an issue where Accessibility Agents output or behavior is not accessible to screen reader users or keyboard-only users
 title: "[A11Y] "
 labels: ["accessibility", "needs-triage"]
 body:
@@ -853,7 +853,7 @@ body:
       label: Steps to Reproduce
       description: Numbered steps to reproduce the issue
       placeholder: |
-        1. Navigate to agent-forge on GitHub
+        1. Navigate to accessibility-agents on GitHub
         2. Activate "New issue"
         3. On the template chooser, Tab to "Accessibility Bug Report"
         4. Activate "Get started"
@@ -924,7 +924,7 @@ Save as `.github/ISSUE_TEMPLATE/feature-request.yml`:
 
 ```yaml
 name: Feature Request
-description: Suggest a new agent, slash command, or improvement to Agent Forge
+description: Suggest a new agent, slash command, or improvement to Accessibility Agents
 title: "[FEAT] "
 labels: ["enhancement", "needs-triage"]
 body:
@@ -940,7 +940,7 @@ body:
     id: feature-area
     attributes:
       label: Feature Area
-      description: Which part of Agent Forge does this relate to?
+      description: Which part of Accessibility Agents does this relate to?
       options:
         - New agent
         - New slash command
@@ -1020,7 +1020,7 @@ A pull request template appears as the default body of every new PR in your repo
 
 **File location:** `.github/pull_request_template.md` (singular - only one PR template per repo)
 
-### Reading the Agent Forge PR Template
+### Reading the Accessibility Agents PR Template
 
 Open `.github/pull_request_template.md` in VS Code. You will see the standard sections the project expects:
 
@@ -1061,11 +1061,11 @@ Open `.github/pull_request_template.md` in VS Code. You will see the standard se
 
 ---
 
-#### Step 1: Navigate to the Agent Forge Issues Section
+#### Step 1: Navigate to the Accessibility Agents Issues Section
 
 **What to do:**
 1. Open GitHub in your browser
-2. Navigate to the `accesswatch/agent-forge` repository (or your fork)
+2. Navigate to the `community-access/accessibility-agents` repository (or your fork)
 3. Click the **Issues** tab (top navigation, between Pull Requests and Discussions)
 4. You should see a list of existing issues
 
@@ -1076,7 +1076,7 @@ Open `.github/pull_request_template.md` in VS Code. You will see the standard se
 5. Click the **"New issue"** button
 
 **If you can't find it:**
-- Go directly to: `https://github.com/accesswatch/agent-forge/issues/new`
+- Go directly to: `https://github.com/community-access/accessibility-agents/issues/new`
 - This opens the issue template chooser
 
 ---
@@ -1216,7 +1216,7 @@ After submitting, answer:
 
 **Prerequisites:**
 - You have already read Section 7 thoroughly (Building an Accessibility Bug Report Template)
-- You have a fork of `agent-forge` (created on Day 1)
+- You have a fork of `accessibility-agents` (created on Day 1)
 - VS Code is installed on your machine
 - Git is installed and configure with your GitHub credentials
 
@@ -1233,18 +1233,18 @@ After submitting, answer:
    (Or wherever you keep code projects)
 3. Clone your fork:
    ```bash
-   git clone https://github.com/[YOUR-USERNAME]/agent-forge.git
+   git clone https://github.com/[YOUR-USERNAME]/accessibility-agents.git
    ```
    Replace `[YOUR-USERNAME]` with your actual GitHub username
 4. Wait for the clone to complete (should take 10-30 seconds)
 5. Navigate into the folder:
    ```bash
-   cd agent-forge
+   cd accessibility-agents
    ```
 
 **What you should see:**
 - The terminal shows the folder structure being downloaded
-- Once complete, the prompt returns to `agent-forge $` or similar
+- Once complete, the prompt returns to `accessibility-agents $` or similar
 - You are now inside your local fork
 
 **If you get an error:**
@@ -1256,7 +1256,7 @@ After submitting, answer:
 #### Step 2: Open Your Fork in VS Code
 
 **What to do:**
-1. From the terminal, while in your `agent-forge` folder, type:
+1. From the terminal, while in your `accessibility-agents` folder, type:
    ```bash
    code .
    ```
@@ -1265,11 +1265,11 @@ After submitting, answer:
 
 **What you should see:**
 - VS Code opens a new window
-- The left sidebar shows the folder structure of `agent-forge`
-- At the top, you see the folder name: `agent-forge`
+- The left sidebar shows the folder structure of `accessibility-agents`
+- At the top, you see the folder name: `accessibility-agents`
 
 **If `code .` doesn't work:**
-- Use VS Code's File menu: **File** → **Open Folder** → navigate to your `agent-forge` folder
+- Use VS Code's File menu: **File** → **Open Folder** → navigate to your `accessibility-agents` folder
 
 ---
 
@@ -1347,7 +1347,7 @@ After submitting, answer:
 
 **What to do:**
 1. Open the terminal in VS Code: **Terminal** → **New Terminal** (or `Ctrl+` ` on Windows)
-2. You should be in the `agent-forge` folder already
+2. You should be in the `accessibility-agents` folder already
 3. Create a new branch for this change:
    ```bash
    git checkout -b feat/add-accessibility-template
@@ -1370,7 +1370,7 @@ After submitting, answer:
 - You're ready to test the template in the next step
 
 **If you get errors:**
-- "Not a git repository" → Make sure you opened the `agent-forge` folder in VS Code
+- "Not a git repository" → Make sure you opened the `accessibility-agents` folder in VS Code
 - "Permission denied" → Make sure you authenticated with GitHub (see Prerequisites)
 
 ---
@@ -1379,7 +1379,7 @@ After submitting, answer:
 
 **What to do:**
 1. Open GitHub in your browser
-2. Go to your fork: `https://github.com/[YOUR-USERNAME]/agent-forge`
+2. Go to your fork: `https://github.com/[YOUR-USERNAME]/accessibility-agents`
 3. You should see a notification or purple bar saying **"Compare & pull request"** (your new branch)
 4. But instead of opening a PR, click the **Issues** tab
 5. Click **New issue**
@@ -1447,7 +1447,7 @@ You're ready for Exercise C!
 
 ### Exercise C - Submit It Upstream
 
-**Your Mission:** Contribute your tested template to the upstream `accesswatch/agent-forge` repository. This is a real open source contribution!
+**Your Mission:** Contribute your tested template to the upstream `community-access/accessibility-agents` repository. This is a real open source contribution!
 
 **What You'll Learn:** The PR process for submitting contributions upstream, working with maintainers, and seeing your code merged into an open source project.
 
@@ -1491,8 +1491,8 @@ Before submitting upstream, make sure your template is production-ready:
    - Select your branch (`feat/add-accessibility-template`)
    - Click **"New pull request"** to the right
 4. A PR creation page opens showing:
-   - **Base:** `accesswatch/agent-forge` / `main` (the upstream repo)
-   - **Head:** `[your-username]/agent-forge` / `feat/add-accessibility-template` (your fork/branch)
+   - **Base:** `community-access/accessibility-agents` / `main` (the upstream repo)
+   - **Head:** `[your-username]/accessibility-agents` / `feat/add-accessibility-template` (your fork/branch)
 5. Confirm this is correct - you're sending your branch to the upstream repository
 
 **What you should see:**
@@ -1580,7 +1580,7 @@ Closes #[issue number] (if there is an open issue requesting this feature)
 - Repository maintainers will review your PR
 - They may leave comments asking for changes
 - You can push additional commits to your branch to address feedback
-- Once approved, a maintainer will merge your template into `accesswatch/agent-forge`
+- Once approved, a maintainer will merge your template into `community-access/accessibility-agents`
 
 **What success looks like:**
 - Your PR appears in the upstream repository's PR list
@@ -1623,7 +1623,7 @@ Closes #[issue number] (if there is an open issue requesting this feature)
 **When your PR is merged:**
 
 1. You'll see the PR status change to "Merged"
-2. Your template is now part of the `accesswatch/agent-forge` repository
+2. Your template is now part of the `community-access/accessibility-agents` repository
 3. Everyone who forks that repo will get your template
 4. You can claim this as a real open source contribution
 
@@ -2013,13 +2013,13 @@ You now:
 3. Know how to contribute upstream (Exercise C)
 4. Can design templates with real thinking behind them (Exercise D)
 
-In **Chapter 16 (Agent Forge)**, you'll see how the `@template-builder` agent automates the YAML writing part - but *you* bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.
+In **Chapter 16 (Accessibility Agents)**, you'll see how the `@template-builder` agent automates the YAML writing part - but *you* bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.
 
 ---
 
 ## 10. Day 2 Amplifier: The Template Builder Agent
 
-Everything you just learned - field types, YAML structure, accessibility testing - is core GitHub knowledge. Now see how Agent Forge amplifies it.
+Everything you just learned - field types, YAML structure, accessibility testing - is core GitHub knowledge. Now see how Accessibility Agents amplifies it.
 
 Our 6th agent, **@template-builder**, is an interactive wizard that generates issue templates guided by your answers to simple questions. Instead of writing YAML by hand, you answer prompts and the agent produces a production-ready template in seconds.
 
@@ -2054,12 +2054,12 @@ The Template Builder does not teach you to design templates - Section 5 taught y
 
 **Prerequisite:** Complete Exercise D above. You should understand what fields you want to ask for and why.
 
-**Chapter 16 Exercise (Agent Forge):** Use `@template-builder` to generate a template for a real project, then customize or extend it. See [Agent Forge: Building Your Own Agent](16-agent-forge.md#5-building-your-own-agent).
+**Chapter 16 Exercise (Accessibility Agents):** Use `@template-builder` to generate a template for a real project, then customize or extend it. See [Accessibility Agents: Building Your Own Agent](16-accessibility-agents.md#5-building-your-own-agent).
 
-**After the Workshop:** Any repetitive GitHub task - templates, checklists, workflows - can be Agent Forged. The Template Builder shows how.
+**After the Workshop:** Any repetitive GitHub task - templates, checklists, workflows - can be built with Accessibility Agents. The Template Builder shows how.
 
 ---
 
-*Next: [Agent Forge](16-agent-forge.md)*
+*Next: [Accessibility Agents](16-accessibility-agents.md)*
 *Back: [Accessible Code Review](14-accessible-code-review.md)*
-*Related: [Working with Issues](04-working-with-issues.md) | [Culture & Etiquette](07-culture-etiquette.md) | [Agent Forge](16-agent-forge.md)*
+*Related: [Working with Issues](04-working-with-issues.md) | [Culture & Etiquette](07-culture-etiquette.md) | [Accessibility Agents](16-accessibility-agents.md)*

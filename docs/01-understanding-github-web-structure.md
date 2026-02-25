@@ -32,13 +32,13 @@ Level 1: Your Account / Profile
 
 Level 2: An Organization or User's Space
    github.com/microsoft
-   github.com/accesswatch
+   github.com/community-access
    github.com/github
 
 Level 3: A Repository - where all the work happens
-   github.com/accesswatch/agent-forge
-   github.com/accesswatch/agent-forge/issues
-   github.com/accesswatch/agent-forge/pull/42
+   github.com/community-access/accessibility-agents
+   github.com/community-access/accessibility-agents/issues
+   github.com/community-access/accessibility-agents/pull/42
 ```
 
 **Most of this workshop happens at Level 3.** Issues, pull requests, code, and actions all live inside a repository. When someone says "go to the repo," they mean Level 3.
@@ -492,7 +492,7 @@ You are never lost. You always have these three fallbacks.
 
 **Time:** 1 minute | **What you need:** A browser with your screen reader running
 
-Open any GitHub repository - try [github.com/accesswatch/agent-forge](https://github.com/accesswatch/agent-forge) - and prove to yourself that the mental model works:
+Open any GitHub repository - try [github.com/community-access/accessibility-agents](https://github.com/community-access/accessibility-agents) - and prove to yourself that the mental model works:
 
 1. Press `1` - your screen reader announces the repo name. You know where you are.
 2. Press `D` - you hear the first landmark. Press `D` again to hear the next one. You now know the rooms on this floor.
@@ -507,7 +507,7 @@ Open any GitHub repository - try [github.com/accesswatch/agent-forge](https://gi
 
 ## Day 2 Amplifier
 
-> Once you have this mental model solid, the Agent Forge agents make more sense. The `@daily-briefing` agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.
+> Once you have this mental model solid, the Accessibility Agents agents make more sense. The `@daily-briefing` agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.
 
 ---
 

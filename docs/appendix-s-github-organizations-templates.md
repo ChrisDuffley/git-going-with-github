@@ -18,7 +18,7 @@ These are two very different actions that both appear near the "Code" button:
 
 GitHub Skills courses use **"Use this template"** - you start fresh with the course scaffold but your copy has no upstream connection.
 
-Agent-forge could serve as a template if you want to build your own agent suite starting from its structure without forking.
+accessibility-agents could serve as a template if you want to build your own agent suite starting from its structure without forking.
 
 ### Creating a Template Repository
 
@@ -48,7 +48,7 @@ B → navigate buttons → find "Use this template" → Enter
 
 ### What Is an Organization?
 
-A GitHub organization is an account that multiple people share. Instead of `github.com/username/repo`, organization repos live at `github.com/org-name/repo`. The workshop's central project lives at `github.com/accesswatch/agent-forge` - `accesswatch` is an organization.
+A GitHub organization is an account that multiple people share. Instead of `github.com/username/repo`, organization repos live at `github.com/org-name/repo`. The workshop's central project lives at `github.com/community-access/accessibility-agents` - `community-access` is an organization.
 
 | Personal Account | Organization Account |
 |-----------------|---------------------|
@@ -71,22 +71,22 @@ You can also be a **public contributor** to an org repo without being a member -
 - By default, your org membership is **private** (only you and org owners can see it)
 - You can set it to **public** in your organization membership settings
 - Public membership appears on your GitHub profile under "Organizations"
-- For `accesswatch`: if you become a member, set your membership public to show your contribution publicly on your profile
+- For `community-access`: if you become a member, set your membership public to show your contribution publicly on your profile
 
 ### Teams Inside Organizations
 
-Organizations can create **teams** (e.g., `@accesswatch/accessibility-reviewers`). When you see a team mentioned in a PR or issue, that `@mention` notifies everyone on that team. As a contributor, you don't need to create teams - just understand why you see them.
+Organizations can create **teams** (e.g., `@community-access/accessibility-reviewers`). When you see a team mentioned in a PR or issue, that `@mention` notifies everyone on that team. As a contributor, you don't need to create teams - just understand why you see them.
 
 ### Navigating an Organization Profile Page
 
-At `github.com/accesswatch`:
+At `github.com/community-access`:
 ```
 H → headings: org name, People, Repositories, Projects sections
 1 → jumps to the org name heading
 Links → navigate to individual repositories, members, and projects
 ```
 
-Organization-level Projects (like the `accesswatch` project board) appear in the org's Projects tab, not inside any single repository.
+Organization-level Projects (like the `community-access` project board) appear in the org's Projects tab, not inside any single repository.
 
 ---
 

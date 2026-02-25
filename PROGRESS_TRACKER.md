@@ -249,7 +249,7 @@
 
 ---
 
-## Chapter 16: Agent Forge
+## Chapter 16: Accessibility Agents
 **Time:** 1.5 hours + Exercises  |  **What You'll Do:** Automate with Copilot agents
 
 ### The Six Agents
@@ -320,7 +320,7 @@ The workshop includes structured exercises in the following chapters. Use this t
 | **Ch 14** | Exercise A | Complete a web-based PR review using screen reader navigation | |
 | **Ch 14** | Exercise B | Use the VS Code Accessible Diff Viewer on the same PR | |
 | **Ch 14** | Exercise C | Compare web vs. VS Code review and document findings | |
-| **Ch 15** | Exercise A | Use an existing issue template in Agent Forge | |
+| **Ch 15** | Exercise A | Use an existing issue template in Accessibility Agents | |
 | **Ch 15** | Exercise B | Create an accessibility bug report template locally | |
 | **Ch 15** | Exercise C | Submit your template upstream via a real PR | |
 | **Ch 15** | Exercise D | Design a custom template for your own project | |
@@ -363,7 +363,7 @@ The workshop includes structured exercises in the following chapters. Use this t
 3. Ch 4 (Issues) - 1 hr
 4. Ch 5 (PRs) - 1 hr
 5. Ch 14 (Accessible Review) - 1.5 hrs
-6. Ch 16 (Agent Forge) - 1.5 hrs
+6. Ch 16 (Accessibility Agents) - 1.5 hrs
 
 **Total: ~6.5 hours**
 
@@ -373,7 +373,7 @@ The workshop includes structured exercises in the following chapters. Use this t
 2. Ch 8 (Labels/Milestones) - 45 min
 3. Ch 15 (Issue Templates) - 1.5 hrs
 4. Ch 14 (Accessible Code Review) - 1.5 hrs
-5. Ch 16 (Agent Forge) - 1.5 hrs
+5. Ch 16 (Accessibility Agents) - 1.5 hrs
 
 **Total: ~5.5 hours**
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
-  <title>Appendix V: Agent Forge Reference - GIT Going with GitHub</title>
+  <title>Appendix V: Accessibility Agents Reference - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -26,13 +26,13 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix V: Agent Forge Reference</span>
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix V: Accessibility Agents Reference</span>
   </nav>
   <main id="main-content" class="markdown-body">
-    <h1>Appendix V: Agent Forge Reference</h1>
+    <h1>Appendix V: Accessibility Agents Reference</h1>
 <h2>Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats</h2>
 <blockquote>
-<p>This is your comprehensive reference for Agent Forge and the full VS Code Copilot customization system. For the lesson, see <a href="16-agent-forge.md">Chapter 16: Agent Forge</a>. For Copilot keyboard shortcuts and Chat features, see <a href="appendix-w-github-copilot-reference.md">Appendix W: GitHub Copilot Reference</a>.</p>
+<p>This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. For the lesson, see <a href="16-accessibility-agents.md">Chapter 16: Accessibility Agents</a>. For Copilot keyboard shortcuts and Chat features, see <a href="appendix-w-github-copilot-reference.md">Appendix W: GitHub Copilot Reference</a>.</p>
 </blockquote>
 <hr>
 <h2>Table of Contents</h2>
@@ -47,7 +47,7 @@
 <li><a href="#8-promptmd--complete-format-reference">.prompt.md - Complete Format Reference</a></li>
 <li><a href="#9-agent-skills-skillmd--complete-format-reference">Agent Skills (SKILL.md) - Complete Format Reference</a></li>
 <li><a href="#10-hooks-json--lifecycle-automation">Hooks (.json) - Lifecycle Automation</a></li>
-<li><a href="#11-preferencesmd--agent-forge-personal-settings">preferences.md - Agent Forge Personal Settings</a></li>
+<li><a href="#11-preferencesmd--accessibility-agents-personal-settings">preferences.md - Accessibility Agents Personal Settings</a></li>
 <li><a href="#12-diagnostics-and-troubleshooting">Diagnostics and Troubleshooting</a></li>
 <li><a href="#13-further-reading">Further Reading</a></li>
 </ol>
@@ -116,7 +116,7 @@
 <td>Full prioritized situation report</td>
 </tr>
 <tr>
-<td><code>@daily-briefing what needs my attention today in agent-forge?</code></td>
+<td><code>@daily-briefing what needs my attention today in accessibility-agents?</code></td>
 <td>Repo-scoped briefing</td>
 </tr>
 <tr>
@@ -217,7 +217,7 @@
 </tr>
 </thead>
 <tbody><tr>
-<td><code>@analytics team velocity in agent-forge this month</code></td>
+<td><code>@analytics team velocity in accessibility-agents this month</code></td>
 <td>Contribution pace</td>
 </tr>
 <tr>
@@ -521,7 +521,7 @@
 <tr>
 <td><strong>Personal Preferences</strong></td>
 <td><code>preferences.md</code></td>
-<td>Agent Forge fork-local personal settings - repos, output format, timezone</td>
+<td>Accessibility Agents fork-local personal settings - repos, output format, timezone</td>
 </tr>
 </tbody></table>
 <h3>Choosing Between Primitives</h3>
@@ -680,7 +680,7 @@
 <pre><code class="hljs"><span class="hljs-title">.github/</span>
 <span class="hljs-code">  copilot-instructions.md   ← lives here</span></code></pre>
 <p><strong>File structure:</strong> Plain Markdown. No frontmatter required.</p>
-<pre><code class="hljs language-markdown"><span class="hljs-section"># Copilot Instructions for agent-forge</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section"># Copilot Instructions for accessibility-agents</span>
 
 <span class="hljs-section">## Accessibility Standards</span>
 <span class="hljs-bullet">-</span> Include semantic HTML elements in generated markup
@@ -1479,16 +1479,16 @@ name: a11y-audit
 <li>Other - non-blocking warning</li>
 </ul>
 <hr>
-<h2>11. <code>preferences.md</code> - Agent Forge Personal Settings</h2>
+<h2>11. <code>preferences.md</code> - Accessibility Agents Personal Settings</h2>
 <p>Copy <code>.github/agents/preferences.example.md</code> to <code>.github/agents/preferences.md</code>. The file is in <code>.gitignore</code> - your private settings stay only in your local fork.</p>
 <h3>Full File Template</h3>
-<pre><code class="hljs language-markdown"><span class="hljs-section"># My Agent Forge Preferences</span>
+<pre><code class="hljs language-markdown"><span class="hljs-section"># My Accessibility Agents Preferences</span>
 
 <span class="hljs-section">## My GitHub Username</span>
 your-github-username
 
 <span class="hljs-section">## Repositories I Work On Most</span>
-<span class="hljs-bullet">-</span> accesswatch/agent-forge
+<span class="hljs-bullet">-</span> community-access/accessibility-agents
 <span class="hljs-bullet">-</span> your-org/your-repo
 
 <span class="hljs-section">## Preferred Output Format</span>
@@ -1579,7 +1579,7 @@ I <span class="hljs-keyword">use</span> TalkBack <span class="hljs-keyword">on</
 <li>File must use <code>.prompt.md</code> extension (not just <code>.md</code>)</li>
 </ol>
 <hr>
-<h2>Agent Forge Keyboard Shortcuts</h2>
+<h2>Accessibility Agents Keyboard Shortcuts</h2>
 <table>
 <thead>
 <tr>
@@ -1653,11 +1653,11 @@ I <span class="hljs-keyword">use</span> TalkBack <span class="hljs-keyword">on</
 </tr>
 </tbody></table>
 <hr>
-<p><em>Chapter: <a href="16-agent-forge.md">Agent Forge</a></em>
+<p><em>Chapter: <a href="16-accessibility-agents.md">Accessibility Agents</a></em>
 <em>Related: <a href="appendix-w-github-copilot-reference.md">Appendix W: GitHub Copilot Reference</a> | <a href="15-issue-templates.md">Issue Templates</a> | <a href="13-github-copilot.md">Chapter 13: GitHub Copilot</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

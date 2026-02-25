@@ -624,7 +624,7 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 #### Step 1: Navigate to the Pull Request
 
 **What to do:**
-1. Open GitHub in your browser and navigate to the workshop repository (`github.com/[your-fork]/[workshop-repo]` or `accesswatch/agent-forge`)
+1. Open GitHub in your browser and navigate to the workshop repository (`github.com/[your-fork]/[workshop-repo]` or `community-access/accessibility-agents`)
 2. Click the **Pull Requests** tab (top navigation)
 3. Look for a PR titled "Add screen reader tips to the setup guide" - click it to open
 4. You should now see the PR page with sections: Conversation, Commits, Files Changed
@@ -820,7 +820,7 @@ After submitting, answer:
 2. **Would you have caught this without the exercise prompt?** If you were a real reviewer not specifically looking for heading issues, would the diff have been obvious?
 3. **Why does screen reader navigation matter?** In one sentence, explain why a screen reader user's ability to jump through heading levels is important for this document.
 
-Keep your answers - you'll need them for Chapter 16's Agent Forge exercise to compare manual review with agent-assisted review.
+Keep your answers - you'll need them for Chapter 16's Accessibility Agents exercise to compare manual review with agent-assisted review.
 
 ---
 
@@ -1225,7 +1225,7 @@ If you can answer all three, you're ready for the next chapter.
 
 Your manual code review skills - identifying heading issues, catching link text problems, understanding screen reader navigation - are the **foundation** for understanding automated review.
 
-In **Chapter 16 (Agent Forge)**, you'll use the `@pr-review` agent to generate a *draft* review of this same PR. The agent will:
+In **Chapter 16 (Accessibility Agents)**, you'll use the `@pr-review` agent to generate a *draft* review of this same PR. The agent will:
 - Suggest changes automatically
 - Identify accessibility issues
 - Create a review checklist
@@ -1239,13 +1239,13 @@ That's the power of "manual skill first, agent second." You're building that ski
 
 ---
 
-> ### Day 2 Amplifier - Agent Forge: `@pr-review`
+> ### Day 2 Amplifier - Accessibility Agents: `@pr-review`
 >
 > **Review at least two pull requests manually - using the techniques in this guide - before running `@pr-review`.** The agent generates a first-draft review: a line-numbered diff map, risk assessment, before/after snapshots, and suggested inline comments. Your job as reviewer is to read that draft, correct it, enrich it with context the diff cannot contain, and decide what is actually worth saying to the author.
 >
 > Once you have that manual foundation:
 > - **In VS Code** - `@pr-review review PR #N` produces a structured, annotated review draft
-> - **In your repo** - Agent Forge's review capabilities work in any repository you can access; fork `agent-forge` and those capabilities travel with your project
+> - **In your repo** - Accessibility Agents' review capabilities work in any repository you can access; fork `accessibility-agents` and those capabilities travel with your project
 > - **In the cloud** - GitHub Agentic Workflows can auto-post PR summaries and accessibility impact assessments the moment a PR is opened, without anyone being online
 >
 > *The Accessible Diff Viewer teaches you to hear changes. The agent drafts the notes. You bring the judgment.*

@@ -471,7 +471,7 @@ Copilot remembers the conversation context - just say what to change.
 
 ## 6. Custom Instructions vs Custom Agents
 
-Two distinct tools shape how Copilot behaves. Understanding the difference is critical for working with Agent Forge (see [Chapter 16: Agent Forge](16-agent-forge.md)).
+Two distinct tools shape how Copilot behaves. Understanding the difference is critical for working with Accessibility Agents (see [Chapter 16: Accessibility Agents](16-accessibility-agents.md)).
 
 ### Custom Instructions
 
@@ -488,7 +488,7 @@ Two distinct tools shape how Copilot behaves. Understanding the difference is cr
 **Example `.github/copilot-instructions.md`:**
 
 ```markdown
-# Copilot Instructions for agent-forge
+# Copilot Instructions for accessibility-agents
 
 ## Accessibility Standards
 - Include semantic HTML elements in generated markup
@@ -537,7 +537,7 @@ Two distinct tools shape how Copilot behaves. Understanding the difference is cr
 
 **When active:** Only when you type `@agent-name` in Copilot Chat
 
-See [Chapter 16: Agent Forge](16-agent-forge.md) for complete agent documentation.
+See [Chapter 16: Accessibility Agents](16-accessibility-agents.md) for complete agent documentation.
 
 ### Comparison Table
 

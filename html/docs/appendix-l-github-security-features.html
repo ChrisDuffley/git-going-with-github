@@ -32,7 +32,7 @@
     <h1>Appendix L: GitHub Security Features</h1>
 <h2>Dependabot, Secret Scanning, Code Scanning, and Private Advisories</h2>
 <blockquote>
-<p><strong>Who this is for:</strong> Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in <code>accesswatch/agent-forge</code>.</p>
+<p><strong>Who this is for:</strong> Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in <code>community-access/accessibility-agents</code>.</p>
 </blockquote>
 <hr>
 <h2>Quick Navigation</h2>
@@ -45,7 +45,7 @@
 <li><a href="#6-the-securitymd-file">The SECURITY.md File</a></li>
 <li><a href="#7-software-bill-of-materials-sbom">Software Bill of Materials (SBOM)</a></li>
 <li><a href="#8-screen-reader-navigation-of-the-security-tab">Screen Reader Navigation of the Security Tab</a></li>
-<li><a href="#9-security-and-agent-forge">Security and Agent Forge</a></li>
+<li><a href="#9-security-and-accessibility-agents">Security and Accessibility Agents</a></li>
 </ol>
 <hr>
 <h2>1. The Security Tab - What It Contains</h2>
@@ -237,7 +237,7 @@ Details:
 <li><strong>Response timeline:</strong> How quickly maintainers aim to respond</li>
 <li><strong>Disclosure policy:</strong> When the project will publish a fix publicly</li>
 </ul>
-<p><strong>Agent-forge&#39;s security policy:</strong> <code>accesswatch/agent-forge</code> has a <code>SECURITY.md</code> that points to GitHub&#39;s private advisory form. If you find a security issue in agent-forge - even a potential one - use the private advisory form rather than opening a public issue.</p>
+<p><strong>accessibility-agents&#39;s security policy:</strong> <code>community-access/accessibility-agents</code> has a <code>SECURITY.md</code> that points to GitHub&#39;s private advisory form. If you find a security issue in accessibility-agents - even a potential one - use the private advisory form rather than opening a public issue.</p>
 <h3>Navigating to a Repository&#39;s SECURITY.md</h3>
 <p>From the repository:</p>
 <ol>
@@ -291,11 +291,11 @@ Inside <span class="hljs-keyword">the</span> alert:
 <span class="hljs-variable">Describe</span> <span class="hljs-variable">field</span><span class="hljs-operator">:</span> <span class="hljs-variable">NVDA</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> → <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> → <span class="hljs-variable">type</span> → <span class="hljs-variable">NVDA</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> <span class="hljs-variable">to</span> <span class="hljs-variable">leave</span>
 <span class="hljs-variable">Submit</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Tab</span> → <span class="hljs-string">&quot;Submit report&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span></code></pre>
 <hr>
-<h2>9. Security and Agent Forge</h2>
-<p>Agent Forge&#39;s <code>/security-dashboard</code> slash command gives you a quick security overview without visiting the Security tab in the browser:</p>
+<h2>9. Security and Accessibility Agents</h2>
+<p>Accessibility Agents&#39; <code>/security-dashboard</code> slash command gives you a quick security overview without visiting the Security tab in the browser:</p>
 <pre><code class="hljs">/security-dashboard</code></pre>
 <p><strong>Sample output:</strong></p>
-<pre><code class="hljs">## Security Dashboard - accesswatch/agent-forge
+<pre><code class="hljs">## Security Dashboard - community-access/accessibility-agents
 
 ### Dependabot Alerts
 - <span class="hljs-number">0</span> Critical
@@ -314,12 +314,12 @@ Inside <span class="hljs-keyword">the</span> alert:
 
 ### Recommendation
 Action needed: Review PR #<span class="hljs-number">47</span> (<span class="hljs-number">5</span> minutes - single file change)</code></pre>
-<p><strong>Workshop exercise:</strong> Run <code>/security-dashboard</code> on your fork after Day 2. Review any Dependabot PRs open on the upstream <code>accesswatch/agent-forge</code> - merging one is a real security contribution.</p>
+<p><strong>Workshop exercise:</strong> Run <code>/security-dashboard</code> on your fork after Day 2. Review any Dependabot PRs open on the upstream <code>community-access/accessibility-agents</code> - merging one is a real security contribution.</p>
 <hr>
 <p><em>Return to: <a href="appendix-u-resources.md">Resources</a> | <a href="appendix-q-github-actions-workflows.md">Appendix Q - GitHub Actions</a> | <a href="appendix-k-branch-protection-rulesets.md">Appendix K - Branch Protection</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

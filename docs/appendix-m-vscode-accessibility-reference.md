@@ -775,5 +775,5 @@ This prevents overlapping announcements.
 
 ---
 
-*Back to: [VS Code Setup & Accessibility Basics](10-vscode-basics.md) | [GitHub Copilot](13-github-copilot.md) | [Agent Forge](16-agent-forge.md)*  
+*Back to: [VS Code Setup & Accessibility Basics](10-vscode-basics.md) | [GitHub Copilot](13-github-copilot.md) | [Accessibility Agents](16-accessibility-agents.md)*  
 *Related: [Appendix B: Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md)*

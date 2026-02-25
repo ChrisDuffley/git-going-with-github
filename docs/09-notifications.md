@@ -299,7 +299,7 @@ This immediately reduces notifications from that repository to only threads you 
 
 | Repository | Recommended Watch Level |
 |---|---|
-| `accesswatch/agent-forge` | **Participating and @mentions** - you contribute there, you only need to hear back when someone replies to you |
+| `community-access/accessibility-agents` | **Participating and @mentions** - you contribute there, you only need to hear back when someone replies to you |
 | Your own fork | **All Activity** - this is your fork; know everything |
 | Very busy popular repos | **Ignore** or **Participating** - do not watch for All Activity |
 | Repos you're evaluating | **Star only** - save without subscribing |
@@ -354,13 +354,13 @@ Go to [github.com/notifications](https://github.com/notifications) and practice:
 
 ---
 
-> ### Day 2 Amplifier - Agent Forge: `@daily-briefing`
+> ### Day 2 Amplifier - Accessibility Agents: `@daily-briefing`
 >
 > **Manage your notification inbox manually before using any agent.** The signal-versus-noise judgment you develop - what to act on, what to watch, what to mute - is the same judgment the agent applies when prioritizing its output. Without that judgment, you cannot evaluate whether the agent's prioritization is correct or whether it surfaced the things that actually matter to you.
 >
 > Once you have mastered manual notification management:
 > - **In VS Code** - `@daily-briefing morning briefing` delivers the same information as your notification inbox, organized by priority and actionability, with the ability to reply, close, and merge from inside Copilot Chat
-> - **In your repo** - Fork `agent-forge` and every collaborator on your project can run `@daily-briefing` against your shared repository; the whole team stays aligned from a single command with no inbox required
+> - **In your repo** - Fork `accessibility-agents` and every collaborator on your project can run `@daily-briefing` against your shared repository; the whole team stays aligned from a single command with no inbox required
 > - **In the cloud** - GitHub Agentic Workflows can run on a schedule and post a team digest to a designated issue each morning, surfacing what needs attention before anyone opens their notifications
 >
 > *Your notification discipline today becomes the standard the agent enforces at scale tomorrow.*

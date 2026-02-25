@@ -49,7 +49,7 @@
 │   │   ├── accessibility-bug<span class="hljs-selector-class">.yml</span> ← accessibility bug report YAML <span class="hljs-selector-tag">form</span>
 │   │   └── feature-request<span class="hljs-selector-class">.yml</span> ← feature/improvement request YAML <span class="hljs-selector-tag">form</span>
 │   ├── PULL_REQUEST_TEMPLATE<span class="hljs-selector-class">.md</span> ← PR template with accessibility checklist
-│   ├── agents/                 ← Agent Forge - six Copilot agents
+│   ├── agents/                 ← Accessibility Agents - six Copilot agents
 │   │   ├── daily-briefing<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
 │   │   ├── issue-tracker<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
 │   │   ├── pr-review<span class="hljs-selector-class">.agent</span><span class="hljs-selector-class">.md</span>
@@ -64,7 +64,7 @@
 │       ├── explain-<span class="hljs-selector-tag">code</span><span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
 │       ├── review-pr<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
 │       ├── triage<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
-│       └── ... (<span class="hljs-number">22</span> more - see docs/appendix-w-agent-forge-reference.md)
+│       └── ... (<span class="hljs-number">22</span> more - see docs/appendix-w-accessibility-agents-reference.md)
 ├── docs/                       ← full workshop curriculum (<span class="hljs-number">16</span> chapters + appendices A-X)
 │   ├── <span class="hljs-number">00</span>-pre-workshop-setup<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">01</span>-understanding-github-web-structure<span class="hljs-selector-class">.md</span>
@@ -82,7 +82,7 @@
 │   ├── <span class="hljs-number">13</span>-github-copilot<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">14</span>-accessible-code-review<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">15</span>-issue-templates<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">16</span>-agent-forge<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">16</span>-accessibility-agents<span class="hljs-selector-class">.md</span>
 │   ├── appendix-a-glossary<span class="hljs-selector-class">.md</span>              ← every term explained
 │   ├── appendix-b-screen-reader-cheatsheet<span class="hljs-selector-class">.md</span> ← full shortcut reference
 │   ├── appendix-c through appendix-<span class="hljs-attribute">x</span>      ← deep-dive references (C-X)
@@ -318,9 +318,9 @@ Description: Use the PR template. Fill in all fields.</p>
 <li><input disabled="" type="checkbox"> VS Code installed on any shared/demo machine</li>
 <li><input disabled="" type="checkbox"> GitHub Copilot Chat extension installed and authenticated</li>
 <li><input disabled="" type="checkbox"> GitHub Pull Requests extension installed</li>
-<li><input disabled="" type="checkbox"> Agent Forge agents verified: open Copilot Chat → type <code>@daily-briefing morning briefing</code> → confirm a response</li>
+<li><input disabled="" type="checkbox"> Accessibility Agents agents verified: open Copilot Chat → type <code>@daily-briefing morning briefing</code> → confirm a response</li>
 <li><input disabled="" type="checkbox"> Slash commands verified: type <code>/find-issues good first issue</code> → confirm a response</li>
-<li><input disabled="" type="checkbox"> Each participant&#39;s upstream PR target ready (if doing the agent-forge contribution)</li>
+<li><input disabled="" type="checkbox"> Each participant&#39;s upstream PR target ready (if doing the accessibility-agents contribution)</li>
 </ul>
 <hr>
 <h2>GitHub Skills - Facilitator Script</h2>
@@ -599,7 +599,7 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 <p><em>Questions about facilitation? Open an issue with the <code>question</code> label.</em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>

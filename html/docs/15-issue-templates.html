@@ -32,7 +32,7 @@
     <h1>Issue Templates</h1>
 <h2>Structuring Contributions for Clarity and Quality</h2>
 <blockquote>
-<p>Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in <code>agent-forge</code>, and how to create your own - including an accessibility-specific bug report template.</p>
+<p>Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in <code>accessibility-agents</code>, and how to create your own - including an accessibility-specific bug report template.</p>
 </blockquote>
 <hr>
 <h2>Prerequisites Checklist</h2>
@@ -44,7 +44,7 @@
 <li><input disabled="" type="checkbox"> A GitHub repository where you have write access (your fork or personal repo)</li>
 <li><input disabled="" type="checkbox"> Terminal/Command line basic comfort (Chapter 5 mentions git workflows)</li>
 </ul>
-<p><strong>Day 2 Amplifier:</strong> In <a href="16-agent-forge.md">Chapter 16 (Agent Forge)</a>, you&#39;ll use <code>@template-builder</code> to automate template creation. Complete this chapter first, then come back to Chapter 16.</p>
+<p><strong>Day 2 Amplifier:</strong> In <a href="16-accessibility-agents.md">Chapter 16 (Accessibility Agents)</a>, you&#39;ll use <code>@template-builder</code> to automate template creation. Complete this chapter first, then come back to Chapter 16.</p>
 <p><strong>Estimated time for this chapter:</strong> 1.5 hours (including exercises)</p>
 <hr>
 <h2>Table of Contents</h2>
@@ -52,7 +52,7 @@
 <li><a href="#1-what-is-an-issue-template">What Is an Issue Template?</a></li>
 <li><a href="#2-how-templates-work-on-github">How Templates Work on GitHub</a></li>
 <li><a href="#3-navigating-the-template-picker">Navigating the Template Picker</a></li>
-<li><a href="#4-the-agent-forge-issue-templates">The Agent Forge Issue Templates</a></li>
+<li><a href="#4-the-accessibility-agents-issue-templates">The Accessibility Agents Issue Templates</a></li>
 <li><a href="#5-creating-a-new-template--step-by-step">Creating a New Template - Step by Step</a></li>
 <li><a href="#6-yaml-form-based-templates">YAML Form-Based Templates</a></li>
 <li><a href="#7-building-an-accessibility-bug-report-template">Building an Accessibility Bug Report Template</a></li>
@@ -97,10 +97,10 @@
 <pre><code class="hljs language-yaml"><span class="hljs-attr">blank_issues_enabled:</span> <span class="hljs-literal">false</span>
 <span class="hljs-attr">contact_links:</span>
   <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Community</span> <span class="hljs-string">Discussion</span>
-    <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/accesswatch/agent-forge/discussions</span>
+    <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/community-access/accessibility-agents/discussions</span>
     <span class="hljs-attr">about:</span> <span class="hljs-string">For</span> <span class="hljs-string">questions</span> <span class="hljs-string">and</span> <span class="hljs-string">general</span> <span class="hljs-string">discussion</span> <span class="hljs-bullet">-</span> <span class="hljs-string">not</span> <span class="hljs-string">bugs</span>
   <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Security</span> <span class="hljs-string">Vulnerability</span>
-    <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/accesswatch/agent-forge/security/advisories/new</span>
+    <span class="hljs-attr">url:</span> <span class="hljs-string">https://github.com/community-access/accessibility-agents/security/advisories/new</span>
     <span class="hljs-attr">about:</span> <span class="hljs-string">Please</span> <span class="hljs-string">use</span> <span class="hljs-string">private</span> <span class="hljs-string">reporting</span> <span class="hljs-string">for</span> <span class="hljs-string">security</span> <span class="hljs-string">issues</span></code></pre>
 <p>With <code>blank_issues_enabled: false</code>, the &quot;Open a blank issue&quot; link disappears from the template chooser. Contributors must use one of your structured templates or one of the contact links. This is one of the most effective ways to improve the quality of incoming issues in any project you maintain.</p>
 <hr>
@@ -152,8 +152,8 @@
 <li>Activate &quot;Open a blank issue&quot;</li>
 </ul>
 <hr>
-<h2>4. The Agent Forge Issue Templates</h2>
-<p>Agent Forge uses templates to structure contributions. Navigate to <code>.github/ISSUE_TEMPLATE/</code> in the repository to read them.</p>
+<h2>4. The Accessibility Agents Issue Templates</h2>
+<p>Accessibility Agents uses templates to structure contributions. Navigate to <code>.github/ISSUE_TEMPLATE/</code> in the repository to read them.</p>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -409,7 +409,7 @@ Screen reader and browser information is especially important for us to reproduc
 <summary>Visual / mouse users</summary>
 
 <ol>
-<li>Navigate to your fork of <code>agent-forge</code> on GitHub</li>
+<li>Navigate to your fork of <code>accessibility-agents</code> on GitHub</li>
 <li>Click the <strong>Settings</strong> tab</li>
 <li>Scroll to the &quot;Features&quot; section → click the checkmark next to &quot;Issues&quot; → click <strong>&quot;Set up templates&quot;</strong></li>
 <li>Or navigate directly to <code>.github/ISSUE_TEMPLATE/</code> in your fork → click the <code>+</code> button → &quot;Create new file&quot;</li>
@@ -423,7 +423,7 @@ Screen reader and browser information is especially important for us to reproduc
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
 <ol>
-<li><p>Navigate to your fork of <code>agent-forge</code> on GitHub</p>
+<li><p>Navigate to your fork of <code>accessibility-agents</code> on GitHub</p>
 </li>
 <li><p>Go to the Settings tab (press <code>T</code> from the tabs landmark, then navigate to &quot;Settings&quot;)</p>
 </li>
@@ -446,7 +446,7 @@ Screen reader and browser information is especially important for us to reproduc
 
 <h3>Creating Markdown Templates: The VS Code Workflow</h3>
 <ol>
-<li>Open your <code>agent-forge</code> fork in VS Code</li>
+<li>Open your <code>accessibility-agents</code> fork in VS Code</li>
 <li>Navigate in Explorer to <code>.github/ISSUE_TEMPLATE/</code></li>
 <li>Create a new file: <code>Ctrl+N</code> → save as <code>your-template-name.md</code> in that folder</li>
 <li>Add frontmatter first (between <code>---</code> delimiters), then the body</li>
@@ -500,7 +500,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ul>
 <hr>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Bug</span> <span class="hljs-string">Report</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">Report</span> <span class="hljs-string">an</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">issue</span> <span class="hljs-string">in</span> <span class="hljs-string">Agent</span> <span class="hljs-string">Forge&#x27;s</span> <span class="hljs-string">output</span> <span class="hljs-string">or</span> <span class="hljs-string">interface</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">Report</span> <span class="hljs-string">an</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">issue</span> <span class="hljs-string">in</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Agents&#x27;</span> <span class="hljs-string">output</span> <span class="hljs-string">or</span> <span class="hljs-string">interface</span>
 <span class="hljs-attr">title:</span> <span class="hljs-string">&quot;[A11Y] &quot;</span>
 <span class="hljs-attr">labels:</span> [<span class="hljs-string">&quot;accessibility&quot;</span>, <span class="hljs-string">&quot;needs-triage&quot;</span>]
 <span class="hljs-attr">body:</span>
@@ -735,11 +735,11 @@ Screen reader and browser information is especially important for us to reproduc
 </ul>
 <hr>
 <h2>7. Building an Accessibility Bug Report Template</h2>
-<p>This is the hands-on activity. You will create a YAML form template specifically for accessibility bug reports in <code>agent-forge</code>.</p>
+<p>This is the hands-on activity. You will create a YAML form template specifically for accessibility bug reports in <code>accessibility-agents</code>.</p>
 <h3>Full Template</h3>
 <p>Save this as <code>.github/ISSUE_TEMPLATE/accessibility-bug.yml</code> in your fork:</p>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Bug</span> <span class="hljs-string">Report</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">Report</span> <span class="hljs-string">an</span> <span class="hljs-string">issue</span> <span class="hljs-string">where</span> <span class="hljs-string">Agent</span> <span class="hljs-string">Forge</span> <span class="hljs-string">output</span> <span class="hljs-string">or</span> <span class="hljs-string">behavior</span> <span class="hljs-string">is</span> <span class="hljs-string">not</span> <span class="hljs-string">accessible</span> <span class="hljs-string">to</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">users</span> <span class="hljs-string">or</span> <span class="hljs-string">keyboard-only</span> <span class="hljs-string">users</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">Report</span> <span class="hljs-string">an</span> <span class="hljs-string">issue</span> <span class="hljs-string">where</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Agents</span> <span class="hljs-string">output</span> <span class="hljs-string">or</span> <span class="hljs-string">behavior</span> <span class="hljs-string">is</span> <span class="hljs-string">not</span> <span class="hljs-string">accessible</span> <span class="hljs-string">to</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">users</span> <span class="hljs-string">or</span> <span class="hljs-string">keyboard-only</span> <span class="hljs-string">users</span>
 <span class="hljs-attr">title:</span> <span class="hljs-string">&quot;[A11Y] &quot;</span>
 <span class="hljs-attr">labels:</span> [<span class="hljs-string">&quot;accessibility&quot;</span>, <span class="hljs-string">&quot;needs-triage&quot;</span>]
 <span class="hljs-attr">body:</span>
@@ -864,7 +864,7 @@ Screen reader and browser information is especially important for us to reproduc
       <span class="hljs-attr">label:</span> <span class="hljs-string">Steps</span> <span class="hljs-string">to</span> <span class="hljs-string">Reproduce</span>
       <span class="hljs-attr">description:</span> <span class="hljs-string">Numbered</span> <span class="hljs-string">steps</span> <span class="hljs-string">to</span> <span class="hljs-string">reproduce</span> <span class="hljs-string">the</span> <span class="hljs-string">issue</span>
       <span class="hljs-attr">placeholder:</span> <span class="hljs-string">|
-        1. Navigate to agent-forge on GitHub
+        1. Navigate to accessibility-agents on GitHub
         2. Activate &quot;New issue&quot;
         3. On the template chooser, Tab to &quot;Accessibility Bug Report&quot;
         4. Activate &quot;Get started&quot;
@@ -928,7 +928,7 @@ Screen reader and browser information is especially important for us to reproduc
 <p>The bug report template above is specific to accessibility issues. Once you understand the pattern, you can create templates for any contribution type. Here is a Feature Request template you can add to your own projects - it follows the exact same YAML structure.</p>
 <p>Save as <code>.github/ISSUE_TEMPLATE/feature-request.yml</code>:</p>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Feature</span> <span class="hljs-string">Request</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">Suggest</span> <span class="hljs-string">a</span> <span class="hljs-string">new</span> <span class="hljs-string">agent,</span> <span class="hljs-string">slash</span> <span class="hljs-string">command,</span> <span class="hljs-string">or</span> <span class="hljs-string">improvement</span> <span class="hljs-string">to</span> <span class="hljs-string">Agent</span> <span class="hljs-string">Forge</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">Suggest</span> <span class="hljs-string">a</span> <span class="hljs-string">new</span> <span class="hljs-string">agent,</span> <span class="hljs-string">slash</span> <span class="hljs-string">command,</span> <span class="hljs-string">or</span> <span class="hljs-string">improvement</span> <span class="hljs-string">to</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Agents</span>
 <span class="hljs-attr">title:</span> <span class="hljs-string">&quot;[FEAT] &quot;</span>
 <span class="hljs-attr">labels:</span> [<span class="hljs-string">&quot;enhancement&quot;</span>, <span class="hljs-string">&quot;needs-triage&quot;</span>]
 <span class="hljs-attr">body:</span>
@@ -944,7 +944,7 @@ Screen reader and browser information is especially important for us to reproduc
     <span class="hljs-attr">id:</span> <span class="hljs-string">feature-area</span>
     <span class="hljs-attr">attributes:</span>
       <span class="hljs-attr">label:</span> <span class="hljs-string">Feature</span> <span class="hljs-string">Area</span>
-      <span class="hljs-attr">description:</span> <span class="hljs-string">Which</span> <span class="hljs-string">part</span> <span class="hljs-string">of</span> <span class="hljs-string">Agent</span> <span class="hljs-string">Forge</span> <span class="hljs-string">does</span> <span class="hljs-string">this</span> <span class="hljs-string">relate</span> <span class="hljs-string">to?</span>
+      <span class="hljs-attr">description:</span> <span class="hljs-string">Which</span> <span class="hljs-string">part</span> <span class="hljs-string">of</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Agents</span> <span class="hljs-string">does</span> <span class="hljs-string">this</span> <span class="hljs-string">relate</span> <span class="hljs-string">to?</span>
       <span class="hljs-attr">options:</span>
         <span class="hljs-bullet">-</span> <span class="hljs-string">New</span> <span class="hljs-string">agent</span>
         <span class="hljs-bullet">-</span> <span class="hljs-string">New</span> <span class="hljs-string">slash</span> <span class="hljs-string">command</span>
@@ -1009,7 +1009,7 @@ Screen reader and browser information is especially important for us to reproduc
 <h2>8. Pull Request Templates</h2>
 <p>A pull request template appears as the default body of every new PR in your repository.</p>
 <p><strong>File location:</strong> <code>.github/pull_request_template.md</code> (singular - only one PR template per repo)</p>
-<h3>Reading the Agent Forge PR Template</h3>
+<h3>Reading the Accessibility Agents PR Template</h3>
 <p>Open <code>.github/pull_request_template.md</code> in VS Code. You will see the standard sections the project expects:</p>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Description</span>
 &lt;!-- What does this PR add or fix? Why? --&gt;
@@ -1038,11 +1038,11 @@ Screen reader and browser information is especially important for us to reproduc
 <p><strong>Your Mission:</strong> File your first issue using a structured template. You&#39;ll experience the template as an end-user, which teaches you what good template design feels like.</p>
 <p><strong>What You&#39;ll Learn:</strong> How templates guide contributors, what fields are required vs optional, and whether screen reader announced all fields clearly.</p>
 <hr>
-<h4>Step 1: Navigate to the Agent Forge Issues Section</h4>
+<h4>Step 1: Navigate to the Accessibility Agents Issues Section</h4>
 <p><strong>What to do:</strong></p>
 <ol>
 <li>Open GitHub in your browser</li>
-<li>Navigate to the <code>accesswatch/agent-forge</code> repository (or your fork)</li>
+<li>Navigate to the <code>community-access/accessibility-agents</code> repository (or your fork)</li>
 <li>Click the <strong>Issues</strong> tab (top navigation, between Pull Requests and Discussions)</li>
 <li>You should see a list of existing issues</li>
 </ol>
@@ -1057,7 +1057,7 @@ Screen reader and browser information is especially important for us to reproduc
 </ol>
 <p><strong>If you can&#39;t find it:</strong></p>
 <ul>
-<li>Go directly to: <code>https://github.com/accesswatch/agent-forge/issues/new</code></li>
+<li>Go directly to: <code>https://github.com/community-access/accessibility-agents/issues/new</code></li>
 <li>This opens the issue template chooser</li>
 </ul>
 <hr>
@@ -1206,7 +1206,7 @@ Screen reader and browser information is especially important for us to reproduc
 <p><strong>Prerequisites:</strong></p>
 <ul>
 <li>You have already read Section 7 thoroughly (Building an Accessibility Bug Report Template)</li>
-<li>You have a fork of <code>agent-forge</code> (created on Day 1)</li>
+<li>You have a fork of <code>accessibility-agents</code> (created on Day 1)</li>
 <li>VS Code is installed on your machine</li>
 <li>Git is installed and configure with your GitHub credentials</li>
 </ul>
@@ -1217,16 +1217,16 @@ Screen reader and browser information is especially important for us to reproduc
 <li>Open a terminal (PowerShell on Windows, Terminal on macOS/Linux)</li>
 <li>Navigate to a folder where you want to store the project:<pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> ~/projects</code></pre>
 (Or wherever you keep code projects)</li>
-<li>Clone your fork:<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[YOUR-USERNAME]/agent-forge.git</code></pre>
+<li>Clone your fork:<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[YOUR-USERNAME]/accessibility-agents.git</code></pre>
 Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <li>Wait for the clone to complete (should take 10-30 seconds)</li>
-<li>Navigate into the folder:<pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> agent-forge</code></pre>
+<li>Navigate into the folder:<pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> accessibility-agents</code></pre>
 </li>
 </ol>
 <p><strong>What you should see:</strong></p>
 <ul>
 <li>The terminal shows the folder structure being downloaded</li>
-<li>Once complete, the prompt returns to <code>agent-forge $</code> or similar</li>
+<li>Once complete, the prompt returns to <code>accessibility-agents $</code> or similar</li>
 <li>You are now inside your local fork</li>
 </ul>
 <p><strong>If you get an error:</strong></p>
@@ -1238,7 +1238,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <h4>Step 2: Open Your Fork in VS Code</h4>
 <p><strong>What to do:</strong></p>
 <ol>
-<li>From the terminal, while in your <code>agent-forge</code> folder, type:<pre><code class="hljs language-bash">code .</code></pre>
+<li>From the terminal, while in your <code>accessibility-agents</code> folder, type:<pre><code class="hljs language-bash">code .</code></pre>
 </li>
 <li>Press Enter</li>
 <li>VS Code opens with your fork loaded</li>
@@ -1246,12 +1246,12 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <p><strong>What you should see:</strong></p>
 <ul>
 <li>VS Code opens a new window</li>
-<li>The left sidebar shows the folder structure of <code>agent-forge</code></li>
-<li>At the top, you see the folder name: <code>agent-forge</code></li>
+<li>The left sidebar shows the folder structure of <code>accessibility-agents</code></li>
+<li>At the top, you see the folder name: <code>accessibility-agents</code></li>
 </ul>
 <p><strong>If <code>code .</code> doesn&#39;t work:</strong></p>
 <ul>
-<li>Use VS Code&#39;s File menu: <strong>File</strong> → <strong>Open Folder</strong> → navigate to your <code>agent-forge</code> folder</li>
+<li>Use VS Code&#39;s File menu: <strong>File</strong> → <strong>Open Folder</strong> → navigate to your <code>accessibility-agents</code> folder</li>
 </ul>
 <hr>
 <h4>Step 3: Navigate to the Templates Folder</h4>
@@ -1331,7 +1331,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <p><strong>What to do:</strong></p>
 <ol>
 <li>Open the terminal in VS Code: <strong>Terminal</strong> → <strong>New Terminal</strong> (or <code>Ctrl+</code> ` on Windows)</li>
-<li>You should be in the <code>agent-forge</code> folder already</li>
+<li>You should be in the <code>accessibility-agents</code> folder already</li>
 <li>Create a new branch for this change:<pre><code class="hljs language-bash">git checkout -b feat/add-accessibility-template</code></pre>
 </li>
 <li>Add the file to git:<pre><code class="hljs language-bash">git add .github/ISSUE_TEMPLATE/accessibility-bug.yml</code></pre>
@@ -1348,7 +1348,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 </ul>
 <p><strong>If you get errors:</strong></p>
 <ul>
-<li>&quot;Not a git repository&quot; → Make sure you opened the <code>agent-forge</code> folder in VS Code</li>
+<li>&quot;Not a git repository&quot; → Make sure you opened the <code>accessibility-agents</code> folder in VS Code</li>
 <li>&quot;Permission denied&quot; → Make sure you authenticated with GitHub (see Prerequisites)</li>
 </ul>
 <hr>
@@ -1356,7 +1356,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 <p><strong>What to do:</strong></p>
 <ol>
 <li>Open GitHub in your browser</li>
-<li>Go to your fork: <code>https://github.com/[YOUR-USERNAME]/agent-forge</code></li>
+<li>Go to your fork: <code>https://github.com/[YOUR-USERNAME]/accessibility-agents</code></li>
 <li>You should see a notification or purple bar saying <strong>&quot;Compare &amp; pull request&quot;</strong> (your new branch)</li>
 <li>But instead of opening a PR, click the <strong>Issues</strong> tab</li>
 <li>Click <strong>New issue</strong></li>
@@ -1427,7 +1427,7 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 </ol>
 <p>You&#39;re ready for Exercise C!</p>
 <h3>Exercise C - Submit It Upstream</h3>
-<p><strong>Your Mission:</strong> Contribute your tested template to the upstream <code>accesswatch/agent-forge</code> repository. This is a real open source contribution!</p>
+<p><strong>Your Mission:</strong> Contribute your tested template to the upstream <code>community-access/accessibility-agents</code> repository. This is a real open source contribution!</p>
 <p><strong>What You&#39;ll Learn:</strong> The PR process for submitting contributions upstream, working with maintainers, and seeing your code merged into an open source project.</p>
 <p><strong>Prerequisites:</strong></p>
 <ul>
@@ -1472,8 +1472,8 @@ Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
 </ul>
 </li>
 <li>A PR creation page opens showing:<ul>
-<li><strong>Base:</strong> <code>accesswatch/agent-forge</code> / <code>main</code> (the upstream repo)</li>
-<li><strong>Head:</strong> <code>[your-username]/agent-forge</code> / <code>feat/add-accessibility-template</code> (your fork/branch)</li>
+<li><strong>Base:</strong> <code>community-access/accessibility-agents</code> / <code>main</code> (the upstream repo)</li>
+<li><strong>Head:</strong> <code>[your-username]/accessibility-agents</code> / <code>feat/add-accessibility-template</code> (your fork/branch)</li>
 </ul>
 </li>
 <li>Confirm this is correct - you&#39;re sending your branch to the upstream repository</li>
@@ -1558,7 +1558,7 @@ Closes <span class="hljs-comment">#[issue number] (if there is an open issue req
 <li>Repository maintainers will review your PR</li>
 <li>They may leave comments asking for changes</li>
 <li>You can push additional commits to your branch to address feedback</li>
-<li>Once approved, a maintainer will merge your template into <code>accesswatch/agent-forge</code></li>
+<li>Once approved, a maintainer will merge your template into <code>community-access/accessibility-agents</code></li>
 </ul>
 <p><strong>What success looks like:</strong></p>
 <ul>
@@ -1597,7 +1597,7 @@ in commit <span class="hljs-comment">[commit hash]</span>. The template now incl
 <p><strong>When your PR is merged:</strong></p>
 <ol>
 <li>You&#39;ll see the PR status change to &quot;Merged&quot;</li>
-<li>Your template is now part of the <code>accesswatch/agent-forge</code> repository</li>
+<li>Your template is now part of the <code>community-access/accessibility-agents</code> repository</li>
 <li>Everyone who forks that repo will get your template</li>
 <li>You can claim this as a real open source contribution</li>
 </ol>
@@ -1988,10 +1988,10 @@ Why it <span class="hljs-params">helped:</span> [what improved<span class="hljs-
 <li>Know how to contribute upstream (Exercise C)</li>
 <li>Can design templates with real thinking behind them (Exercise D)</li>
 </ol>
-<p>In <strong>Chapter 16 (Agent Forge)</strong>, you&#39;ll see how the <code>@template-builder</code> agent automates the YAML writing part - but <em>you</em> bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.</p>
+<p>In <strong>Chapter 16 (Accessibility Agents)</strong>, you&#39;ll see how the <code>@template-builder</code> agent automates the YAML writing part - but <em>you</em> bring the design thinking from this exercise. The agent generates YAML; you decide what questions to ask.</p>
 <hr>
 <h2>10. Day 2 Amplifier: The Template Builder Agent</h2>
-<p>Everything you just learned - field types, YAML structure, accessibility testing - is core GitHub knowledge. Now see how Agent Forge amplifies it.</p>
+<p>Everything you just learned - field types, YAML structure, accessibility testing - is core GitHub knowledge. Now see how Accessibility Agents amplifies it.</p>
 <p>Our 6th agent, <strong>@template-builder</strong>, is an interactive wizard that generates issue templates guided by your answers to simple questions. Instead of writing YAML by hand, you answer prompts and the agent produces a production-ready template in seconds.</p>
 <h3>How It Works</h3>
 <p><strong>In VS Code:</strong></p>
@@ -2037,15 +2037,15 @@ Why it <span class="hljs-params">helped:</span> [what improved<span class="hljs-
 <p>The Template Builder does not teach you to design templates - Section 5 taught you that. It automates the mechanical part: translating your decisions into working YAML.</p>
 <h3>Using the Template Builder</h3>
 <p><strong>Prerequisite:</strong> Complete Exercise D above. You should understand what fields you want to ask for and why.</p>
-<p><strong>Chapter 16 Exercise (Agent Forge):</strong> Use <code>@template-builder</code> to generate a template for a real project, then customize or extend it. See <a href="16-agent-forge.md#5-building-your-own-agent">Agent Forge: Building Your Own Agent</a>.</p>
-<p><strong>After the Workshop:</strong> Any repetitive GitHub task - templates, checklists, workflows - can be Agent Forged. The Template Builder shows how.</p>
+<p><strong>Chapter 16 Exercise (Accessibility Agents):</strong> Use <code>@template-builder</code> to generate a template for a real project, then customize or extend it. See <a href="16-accessibility-agents.md#5-building-your-own-agent">Accessibility Agents: Building Your Own Agent</a>.</p>
+<p><strong>After the Workshop:</strong> Any repetitive GitHub task - templates, checklists, workflows - can be built with Accessibility Agents. The Template Builder shows how.</p>
 <hr>
-<p><em>Next: <a href="16-agent-forge.md">Agent Forge</a></em>
+<p><em>Next: <a href="16-accessibility-agents.md">Accessibility Agents</a></em>
 <em>Back: <a href="14-accessible-code-review.md">Accessible Code Review</a></em>
-<em>Related: <a href="04-working-with-issues.md">Working with Issues</a> | <a href="07-culture-etiquette.md">Culture &amp; Etiquette</a> | <a href="16-agent-forge.md">Agent Forge</a></em></p>
+<em>Related: <a href="04-working-with-issues.md">Working with Issues</a> | <a href="07-culture-etiquette.md">Culture &amp; Etiquette</a> | <a href="16-accessibility-agents.md">Accessibility Agents</a></em></p>
 
   </main>
-  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid #d0d7de;">
+  <footer role="contentinfo" style="text-align: center; margin-top: 3rem; padding: 2rem; border-top: 1px solid var(--borderColor-default, #d0d7de);">
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.github.io">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.github.io">community-access.github.io</a></p>
   </footer>
