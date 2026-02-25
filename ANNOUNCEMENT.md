@@ -46,6 +46,14 @@ This workshop exists because open source software powers the world - and the peo
 
 ---
 
+## Powered by [Accessibility Agents](https://community-access.github.io/accessibility-agents)
+
+On Day 2, you will work with **[Accessibility Agents](https://community-access.github.io/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands built for accessible software development, project management, and community collaboration. Daily briefings, issue triage, PR review, accessibility monitoring, analytics - all driven by AI, all designed for screen reader users.
+
+You will fork it, understand it, improve it, and personalize it. By the end of the workshop, your name is in its commit history.
+
+---
+
 ## Who Should Attend?
 
 This workshop is designed for:
@@ -106,8 +114,6 @@ You earned the tools. Now you wield them.
 | **[Activate the Agents](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Run six AI agents that amplify every skill you built on Day 1 - daily briefings, issue triage, PR review, accessibility monitoring |
 | **[Ship Your Contribution](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
 | **Design the Future** | Collaborative speccing session - what should the next version of these tools look like? Your ideas, on the record. |
-
-The central project is **[Accessibility Agents](https://community-access.github.io/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands for accessible software development, project management, and community collaboration. You will fork it, understand it, improve it, and personalize it.
 
 ---
 
