@@ -1,6 +1,6 @@
 # Register for GIT Going with GitHub
 
-[Back to Home](https://bits-acb.github.io/git-going-with-github/) | [Discussion Forum](https://github.com/BITS-ACB/git-going-with-github/discussions) | [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html)
+[Back to Home](https://community-access.github.io/git-going-with-github/) | [Discussion Forum](https://github.com/community-access/git-going-with-github/discussions) | [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html)
 
 Registration requires two steps. Both steps are required.
 
@@ -16,7 +16,7 @@ Registered: <span id="registration-count" aria-live="polite">loading...</span> o
 
 ---
 
-> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 7. It walks you through GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver.
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://community-access.github.io/git-going-with-github/COMING_SOON.html) before March 7. It walks you through GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver.
 
 ---
 
@@ -49,7 +49,7 @@ If you do not have a GitHub account yet, follow these steps:
 3. Create a **password** (at least 8 characters, 15+ recommended) and continue
 4. Choose a **username** - lowercase letters, numbers, and hyphens only. Keep it professional; it represents you in the open source community. GitHub will tell you immediately if the name is taken
 5. Choose whether to receive product updates by email (y or n)
-6. **Human verification step** - GitHub presents a CAPTCHA puzzle. Screen reader users: look for an "Audio" or "Try an audio challenge" button. If neither is accessible, contact [support@bits-acb.org](mailto:support@bits-acb.org) and we will help
+6. **Human verification step** - GitHub presents a CAPTCHA puzzle. Screen reader users: look for an "Audio" or "Try an audio challenge" button. If neither is accessible, [file an issue](https://github.com/community-access/git-going-with-github/issues) and we will help
 7. Activate **Create account**
 8. GitHub sends a **launch code** to your email - copy it, return to the browser, and type it into the verification field. Check your spam folder if it does not arrive within a few minutes
 9. You will see a "Welcome to GitHub" personalization page - you can skip it
@@ -62,7 +62,7 @@ After creating your account, check your email for a message from GitHub with the
 
 **Important:** You must be signed into your GitHub account before clicking the link below. If you are not signed in, go to [github.com](https://github.com) and sign in first.
 
-> [**Start Step 2 - File your registration issue**](https://github.com/BITS-ACB/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026)
+> [**Start Step 2 - File your registration issue**](https://github.com/community-access/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026)
 
 **Note:** The issue title is pre-filled and required by GitHub. You do not need to change it - just fill out the form fields below it and submit.
 
@@ -85,14 +85,14 @@ Once you have completed both steps:
 
 1. You will receive a Zoom confirmation email (Step 1)
 2. You will see a confirmation comment on your GitHub issue (Step 2)
-3. Complete the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) before March 7 - it covers GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot)
-4. Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org)
+3. Complete the [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html) before March 7 - it covers GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot)
+4. Questions? [File an issue](https://github.com/community-access/git-going-with-github/issues) in the workshop repository
 
 ---
 
 ## While You Wait
 
-- [**Join the Discussion Forum**](https://github.com/BITS-ACB/git-going-with-github/discussions) - introduce yourself, ask questions, and connect with fellow participants before Day 1
-- [**Pre-Workshop Setup Guide**](https://bits-acb.github.io/git-going-with-github/COMING_SOON.html) - get your GitHub account, screen reader, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) ready ahead of time
-- [**Workshop Home Page**](https://bits-acb.github.io/git-going-with-github/) - full agenda, prerequisites, and everything you need to know
-- **Email:** [support@bits-acb.org](mailto:support@bits-acb.org) - we are here to help with anything
+- [**Join the Discussion Forum**](https://github.com/community-access/git-going-with-github/discussions) - introduce yourself, ask questions, and connect with fellow participants before Day 1
+- [**Pre-Workshop Setup Guide**](https://community-access.github.io/git-going-with-github/COMING_SOON.html) - get your GitHub account, screen reader, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) ready ahead of time
+- [**Workshop Home Page**](https://community-access.github.io/git-going-with-github/) - full agenda, prerequisites, and everything you need to know
+- **Need help?** [File an issue](https://github.com/community-access/git-going-with-github/issues) - we are here to help with anything

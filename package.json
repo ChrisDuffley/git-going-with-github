@@ -1,7 +1,7 @@
 {
   "name": "git-going-with-github",
   "version": "1.0.0",
-  "description": "GIT Going with GitHub - Accessible open source workshop by BITS (Blind Information Technology Solutions)",
+  "description": "GIT Going with GitHub - Accessible open source workshop by Community Access",
   "scripts": {
     "build:html": "node scripts/build-html.js",
     "watch:html": "node scripts/build-html.js --watch",

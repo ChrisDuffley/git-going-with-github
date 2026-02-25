@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: "Register for GIT Going with GitHub (March 7-8, 2026)"
-    url: https://bits-acb.github.io/git-going-with-github/REGISTER.html
+    url: https://community-access.github.io/git-going-with-github/REGISTER.html
     about: Two-step registration (GitHub issue + Zoom). Free, online, 75 seats.
   - name: GitHub Skills - Introduction to GitHub
     url: https://github.com/skills/introduction-to-github
@@ -13,8 +13,8 @@ contact_links:
     url: https://github.com/skills/review-pull-requests
     about: Interactive module - Mona creates a real PR in your account for you to review.
   - name: Workshop Documentation
-    url: https://bits-acb.github.io/git-going-with-github/
+    url: https://community-access.github.io/git-going-with-github/
     about: Full workshop guide - start here if you are new to this repository.
   - name: Discussion Forum - Questions, Introductions, Ideas
-    url: https://github.com/BITS-ACB/git-going-with-github/discussions
+    url: https://github.com/community-access/git-going-with-github/discussions
     about: Ask questions, connect with other participants, and share ideas before, during, and after the workshop.

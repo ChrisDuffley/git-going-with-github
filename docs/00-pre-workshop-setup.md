@@ -1,9 +1,9 @@
 # Pre-Workshop Setup - GIT Going with GitHub
 ## Everything You Need Before Day 1 Begins
 
-> **A [BITS (Blind Information Technology Solutions)](https://www.joinbits.org) workshop.**
+> **A [Community Access](https://community-access.github.io) workshop.**
 >
-> **Please complete this guide at least one day before the workshop.** If you run into any issues, email [support@bits-acb.org](mailto:support@bits-acb.org) so we can help - we want Day 1 to start with everyone ready to go, not troubleshooting.
+> **Please complete this guide at least one day before the workshop.** If you run into any issues, [file an issue](https://github.com/community-access/git-going-with-github/issues) so we can help - we want Day 1 to start with everyone ready to go, not troubleshooting.
 
 ---
 
@@ -761,7 +761,7 @@ We are not covering Git commands in this workshop. If you want to learn Git, the
 
 If you cannot complete any step in this guide before the workshop:
 
-1. **Email BITS support** - [support@bits-acb.org](mailto:support@bits-acb.org) - we will help you get set up
+1. **File an issue** - [community-access/git-going-with-github](https://github.com/community-access/git-going-with-github/issues) - we will help you get set up
 2. **File an issue in this repository** - describe exactly what step you are on and what is not working
 3. **Join the GitHub Accessibility Discussions** - [github.com/orgs/community/discussions/categories/accessibility](https://github.com/orgs/community/discussions/categories/accessibility) - the community is helpful and welcoming
 

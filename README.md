@@ -1,19 +1,19 @@
 # GIT Going with GitHub
 
-License: CC BY 4.0 | [Site](https://bits-acb.github.io/git-going-with-github/) | [Discussions](https://github.com/BITS-ACB/git-going-with-github/discussions)
+License: CC BY 4.0 | [Site](https://community-access.github.io/git-going-with-github/) | [Discussions](https://github.com/community-access/git-going-with-github/discussions)
 
-## A Workshop by [BITS (Blind Information Technology Solutions)](https://www.joinbits.org)
+## A Workshop by [Community Access](https://community-access.github.io)
 
 > **Welcome.** This repository is your complete guide and companion for the two-day GIT Going with GitHub workshop. Every document here is written to be read with or without a screen reader. All steps are keyboard-accessible. You belong here.
 >
-> **About BITS:** [Blind Information Technology Solutions](https://www.joinbits.org) is a community of blind and low vision technology professionals. Visit [joinbits.org](https://www.joinbits.org) to learn more.
+> **About Community Access:** [Community Access](https://community-access.github.io) is a community of blind and low vision technology professionals. Visit [community-access.github.io](https://community-access.github.io) to learn more.
 
 | | |
 |---|---|
-| **Workshop site** | [bits-acb.github.io/git-going-with-github](https://bits-acb.github.io/git-going-with-github/) |
-| **Register** | [Sign up now](https://bits-acb.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
-| **Discussions** | [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) |
-| **Email** | [support@bits-acb.org](mailto:support@bits-acb.org) |
+| **Workshop site** | [community-access.github.io/git-going-with-github](https://community-access.github.io/git-going-with-github/) |
+| **Register** | [Sign up now](https://community-access.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
+| **Discussions** | [Join the conversation](https://github.com/community-access/git-going-with-github/discussions) |
+| **Support** | [File an issue](https://github.com/community-access/git-going-with-github/issues) |
 | **Dates** | March 7-8, 2026 · 12-8 PM Eastern |
 
 ---
@@ -291,8 +291,7 @@ And by the end of Day 2, you will not just be a learner. You will be a product m
 
 ## Questions Before the Event?
 
-- **Discussion Forum:** [Join the conversation](https://github.com/BITS-ACB/git-going-with-github/discussions) - ask questions, connect with fellow participants, share ideas
-- **Email:** [support@bits-acb.org](mailto:support@bits-acb.org)
+- **Discussion Forum:** [Join the conversation](https://github.com/community-access/git-going-with-github/discussions) - ask questions, connect with fellow participants, share ideas
 - **File an issue** in this repository if something in these docs is unclear
 - **Community:** [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility)
 
@@ -305,4 +304,4 @@ All workshop documentation is licensed under [CC BY 4.0](https://creativecommons
 ---
 
 *Last reviewed: February 2026*
-*A [BITS (Blind Information Technology Solutions)](https://www.joinbits.org) initiative.*
+*A [Community Access](https://community-access.github.io) initiative.*

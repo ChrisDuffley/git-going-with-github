@@ -62,7 +62,7 @@ jobs:
 
             We have closed this issue since your original registration is already on file. If you need to update your details, please comment on your original issue #${originalIssue}.
 
-            Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org).`
+            Questions? [File an issue](https://github.com/community-access/git-going-with-github/issues) in the workshop repository.`
             });
 
             await github.rest.issues.addLabels({
@@ -129,7 +129,7 @@ jobs:
 
             We have added you to the waitlist. If a spot opens up, we will let you know right here on this issue.
 
-            Questions? Email [support@bits-acb.org](mailto:support@bits-acb.org).`
+            Questions? [File an issue](https://github.com/community-access/git-going-with-github/issues) in the workshop repository.`
             });
 
             await github.rest.issues.addLabels({
@@ -154,9 +154,9 @@ jobs:
 
             Your registration is confirmed. Please register for the Zoom session here: [Register on Zoom](https://us06web.zoom.us/meeting/register/YdAAvwzAQUCYpPpNtAlG3g)
 
-            In the meantime, you can get a head start with the [Pre-Workshop Setup Guide](https://bits-acb.github.io/git-going-with-github/docs/00-pre-workshop-setup.html).
+            In the meantime, you can get a head start with the [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/docs/00-pre-workshop-setup.html).
 
-            If you have any questions, email us at [support@bits-acb.org](mailto:support@bits-acb.org).
+            If you have any questions, [file an issue](https://github.com/community-access/git-going-with-github/issues) in the workshop repository.
 
             See you on March 7!`
             });
