@@ -107,7 +107,7 @@ You earned the tools. Now you wield them.
 | **[Ship Your Contribution](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
 | **Design the Future** | Collaborative speccing session - what should the next version of these tools look like? Your ideas, on the record. |
 
-The central project is **[Accessibility Agents](https://community-access.github.io/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands for accessible repository management. You will fork it, understand it, improve it, and personalize it.
+The central project is **[Accessibility Agents](https://community-access.github.io/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands for accessible software development, project management, and community collaboration. You will fork it, understand it, improve it, and personalize it.
 
 ---
 
