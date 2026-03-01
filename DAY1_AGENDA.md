@@ -713,14 +713,23 @@ These completions are yours permanently. They travel to every GitHub profile pag
 Tomorrow we move from the browser to **Visual Studio Code**. Here is what is coming:
 
 - **VS Code Screen Reader Mode** - Accessible Help (`Alt+H`), Accessible View (`Alt+F2`), Accessible Diff Viewer (`F7`)
-- **Accessibility Agents** - your earned reward for completing Day 1. Six AI agents that amplify the exact skills you built today. Every agent corresponds to something you did manually today.
+- **Accessibility Agents** - your earned reward for completing Day 1. An ecosystem of **55 AI agents across 3 teams and 5 platforms** that amplify the exact skills you built today. During the workshop, you will use six of these hands-on - but the full ecosystem is yours to explore, use, and contribute to.
 - **Ship a real PR upstream** - `community-access/accessibility-agents` is a live repository. Your name in its commit history is the Day 2 capstone.
+
+> **Start thinking now:** Accessibility Agents has 26 agents for accessibility auditing (web, documents, mobile, ePub), 12 for GitHub workflows, and 6 for developer tools. As you reflect on today's experience - navigating repositories, filing issues, reviewing PRs by hand - ask yourself:
+>
+> - What took the longest? What was repetitive?
+> - What would be easier if an AI agent could handle the mechanical parts?
+> - What accessibility problem have you encountered that no tool addresses well?
+>
+> Tomorrow you will see the agents in action and have the opportunity to **contribute new agents, improve existing ones, or shape the project's roadmap**. The best contributions come from people who have done the manual work first - and that is exactly what you did today.
 
 **Tonight (optional):**
 - Install VS Code and the GitHub Copilot Chat extension (see [Pre-Workshop Setup](docs/00-pre-workshop-setup.md))
 - Complete any Markdown Skills module steps you didn't finish
 - Explore [docs/GROUP_CHALLENGES.md](learning-room/docs/GROUP_CHALLENGES.md) - 7 collaborative exercises your study group can tackle together
 - Fork [accessibility-agents](https://github.com/community-access/accessibility-agents) - it will be ready and waiting when you open VS Code tomorrow
+- Browse the [55 agents by team](docs/16-accessibility-agents.md#3-the-ecosystem-55-agents-3-teams-5-platforms) - which ones spark ideas for you?
 
 ---
 

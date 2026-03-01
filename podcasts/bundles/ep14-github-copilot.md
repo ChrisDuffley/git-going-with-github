@@ -77,6 +77,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # GitHub Copilot
+> **Listen to Episode 14:** [GitHub Copilot](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## AI-Powered Code Assistance in VS Code
 
 > **Day 2, Block 2-3 Material**
@@ -917,6 +919,8 @@ When Copilot suggests code or Markdown:
 ### Supplementary: Copilot Reference - features, participants, commands
 
 # Appendix W: GitHub Copilot & Agentic Reference
+> **Listen to Episode 40:** [GitHub Copilot - Complete Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Keyboard Shortcuts, Chat, Screen Reader Workflow, Plugin Ecosystem, and GitHub Agentic Workflows
 
 > Quick-reference card for GitHub Copilot in VS Code and the broader agentic ecosystem - plugins, MCP servers, and cloud-based automation. For the Copilot lesson, see [Chapter 13: GitHub Copilot](13-github-copilot.md). For Accessibility Agents specifically, see [Appendix V: Accessibility Agents Reference](appendix-v-accessibility-agents-reference.md).
@@ -1982,6 +1986,8 @@ gh aw compile .github/workflows/daily-report.md
 ### Supplementary: Copilot AI Models - model comparison
 
 # Appendix X: GitHub Copilot AI Models Reference
+> **Listen to Episode 41:** [Copilot AI Models](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 
 <!-- TOC -->
 - [Overview](#1-overview)

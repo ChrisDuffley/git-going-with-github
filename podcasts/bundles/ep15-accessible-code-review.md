@@ -76,6 +76,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Accessible Code Review
+> **Listen to Episode 15:** [Accessible Code Review](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Conducting Pull Request Reviews with a Screen Reader
 
 > This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).
@@ -1376,6 +1378,8 @@ That's the power of "manual skill first, agent second." You're building that ski
 ### Supplementary: Screen Reader Cheat Sheet - diff navigation keys
 
 # Appendix B: Screen Reader Cheat Sheet
+> **Listen to Episode 19:** [Screen Reader Cheat Sheet](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## GitHub Navigation with NVDA, JAWS, and VoiceOver
 
 > **How to use this sheet:** Keep it open in a second window or print it. Commands are organized by task so you can find what you need quickly while you work. All commands are keyboard-only - no mouse required.

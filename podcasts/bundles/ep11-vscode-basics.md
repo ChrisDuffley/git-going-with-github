@@ -75,6 +75,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # VS Code Setup & Accessibility Basics
+> **Listen to Episode 11:** [VS Code Setup and Accessibility](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Your Accessible Development Environment - Part 1: Foundation
 
 > **Day 2, Block 1 Material**
@@ -647,6 +649,8 @@ Add this to your VS Code `settings.json` (Command Palette → "Open User Setting
 ### Supplementary: VS Code Accessibility Reference - all settings
 
 # Appendix M: VS Code Accessibility Reference
+> **Listen to Episode 30:** [VS Code Accessibility Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Complete Technical Reference for Screen Reader Users
 
 > **Purpose:** This appendix provides comprehensive technical documentation for all VS Code accessibility features, settings, and keyboard shortcuts. The main chapters cover essentials; this appendix is your complete reference manual.

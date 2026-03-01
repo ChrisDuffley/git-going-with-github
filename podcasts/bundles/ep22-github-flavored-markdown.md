@@ -60,6 +60,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 ### Primary Source Material
 
 # Appendix E: GitHub Flavored Markdown - Advanced Reference
+> **Listen to Episode 22:** [GitHub Flavored Markdown](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Beyond the Basics: Tables, Alerts, Diagrams, Math, and Accessibility
 
 > **Who this is for:** You know how to write basic Markdown (bold, italic, links, code blocks). This appendix covers the GitHub-specific extensions and features you will encounter in real repositories - the things that make a file look polished but that aren't documented in standard Markdown guides.

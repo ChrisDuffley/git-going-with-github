@@ -51,6 +51,9 @@ node_modules/
 podcasts/audio/
 *.mp3
 
+# Environment variables (API keys)
+.env
+
 # macOS system files
 .DS_Store
 .AppleDouble

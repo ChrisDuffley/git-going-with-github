@@ -111,8 +111,8 @@ Before you can work on Accessibility Agents locally, you need your own copy (a f
 | VS Code Area | Key | What You Hear |
 |-------------|-----|---------------|
 | Explorer sidebar | `Ctrl+Shift+E` | File and folder tree |
-| `.github/agents/` folder | `Arrow keys` | Six `.agent.md` files |
-| `.github/prompts/` folder | `Arrow keys` | 28 slash command template files |
+| `.github/agents/` folder | `Arrow keys` | 55 `.agent.md` files across three teams |
+| `.github/prompts/` folder | `Arrow keys` | 54+ slash command template files |
 | `Documentation/` folder | `Arrow keys` | `GETTING-STARTED.md`, `GUIDE.md` |
 | `ai-instructions/` folder | `Arrow keys` | Copilot, Claude, OpenAI integration guides |
 
@@ -439,8 +439,9 @@ While your PR is awaiting review, review a forge partner's PR:
 
 The facilitator opens Copilot Chat and types `/specify` to initiate a spec session. The group collaborates to answer:
 
-- *What is missing from Accessibility Agents that would make it more useful for screen reader users?*
-- *What would a `@meetings` agent look like? What would `@accessibility-audit` do?*
+- *What is missing from the 55 agents that would make the ecosystem more useful for screen reader users?*
+- *Which of the three teams (Accessibility, GitHub Workflow, Developer Tools) has the biggest gap?*
+- *The roadmap lists mobile native agents and document remediation - what would you prioritize?*
 - *What if Accessibility Agents had a searchable web interface - what accessibility requirements would it need on day one?*
 
 **How to participate (no typing required):**
@@ -478,11 +479,11 @@ This is real. This is permanent. This is yours.
 
 | Artifact | Where It Lives | What You Can Do With It |
 |----------|---------------|------------------------|
-| Your fork of `accessibility-agents` | `github.com/[your-username]/accessibility-agents` | Use it on any GitHub repo - `@daily-briefing`, `@issue-tracker`, `@pr-review`, `@analytics`, `@insiders-a11y-tracker` |
+| Your fork of `accessibility-agents` | `github.com/[your-username]/accessibility-agents` | 55 agents across 3 teams - use them on any GitHub repo, on 5 platforms |
 | Your name in the upstream commit history | `github.com/community-access/accessibility-agents` | Share it - it is a real open source contribution to an accessibility project |
 | VS Code + Copilot setup | Your machine | The development environment is configured; use it on your next contribution |
 | The GitHub skill set from Day 1 | Your knowledge | Navigate any repo, file any issue, open any PR - without an agent doing it for you |
-| Accessibility Agents as a model | Your thinking | Know that any project can have agents in `.github/agents/` - and you know how to write them |
+| Accessibility Agents as a model | Your thinking | Know that any project can have agents in `.github/agents/` - and you know how to write, improve, and contribute them |
 
 ### Personalizing Accessibility Agents After the Workshop
 

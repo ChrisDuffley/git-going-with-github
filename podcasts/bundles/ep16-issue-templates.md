@@ -65,6 +65,8 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 ### Primary Source Material
 
 # Issue Templates
+> **Listen to Episode 16:** [Issue Templates](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Structuring Contributions for Clarity and Quality
 
 > Issue templates turn a blank text box into a guided form. They help contributors provide the information maintainers need, reduce back-and-forth, and make every issue immediately actionable. This guide teaches you what templates are, how to use the ones in `accessibility-agents`, and how to create your own - including an accessibility-specific bug report template.

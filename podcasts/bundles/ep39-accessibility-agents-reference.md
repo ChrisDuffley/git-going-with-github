@@ -60,44 +60,123 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 ### Primary Source Material
 
 # Appendix V: Accessibility Agents Reference
+> **Listen to Episode 39:** [Accessibility Agents - Complete Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats
 
-> This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. For the lesson, see [Chapter 16: Accessibility Agents](16-accessibility-agents.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
+> This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. The ecosystem includes **55 agents** across **3 teams** and **5 platforms**, plus 54+ slash commands, 17 skills, and 6 instruction files. For the lesson, see [Chapter 16: Accessibility Agents](16-accessibility-agents.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
 
 ---
 
 ## Table of Contents
 
-1. [The Six Agents](#1-the-six-agents)
-2. [The 28 Slash Commands](#2-the-28-slash-commands)
-3. [Customization Primitives - Decision Guide](#3-customization-primitives--decision-guide)
-4. [Scope and Priority - All Levels](#4-scope-and-priority--all-levels)
-5. [Always-On Instructions - All File Types](#5-always-on-instructions--all-file-types)
-6. [File-Based Instructions (.instructions.md)](#6-file-based-instructions-instructionsmd)
-7. [.agent.md - Complete Format Reference](#7-agentmd--complete-format-reference)
-8. [.prompt.md - Complete Format Reference](#8-promptmd--complete-format-reference)
-9. [Agent Skills (SKILL.md) - Complete Format Reference](#9-agent-skills-skillmd--complete-format-reference)
-10. [Hooks (.json) - Lifecycle Automation](#10-hooks-json--lifecycle-automation)
-11. [preferences.md - Accessibility Agents Personal Settings](#11-preferencesmd--accessibility-agents-personal-settings)
-12. [Diagnostics and Troubleshooting](#12-diagnostics-and-troubleshooting)
-13. [Further Reading](#13-further-reading)
+1. [The Full Agent Ecosystem](#1-the-full-agent-ecosystem)
+2. [Workshop Agents - Quick Reference](#2-workshop-agents--quick-reference)
+3. [Slash Commands and Prompts](#3-slash-commands-and-prompts)
+4. [Customization Primitives - Decision Guide](#4-customization-primitives--decision-guide)
+5. [Scope and Priority - All Levels](#5-scope-and-priority--all-levels)
+6. [Always-On Instructions - All File Types](#6-always-on-instructions--all-file-types)
+7. [File-Based Instructions (.instructions.md)](#7-file-based-instructions-instructionsmd)
+8. [.agent.md - Complete Format Reference](#8-agentmd--complete-format-reference)
+9. [.prompt.md - Complete Format Reference](#9-promptmd--complete-format-reference)
+10. [Agent Skills (SKILL.md) - Complete Format Reference](#10-agent-skills-skillmd--complete-format-reference)
+11. [Hooks (.json) - Lifecycle Automation](#11-hooks-json--lifecycle-automation)
+12. [preferences.md - Accessibility Agents Personal Settings](#12-preferencesmd--accessibility-agents-personal-settings)
+13. [Diagnostics and Troubleshooting](#13-diagnostics-and-troubleshooting)
+14. [Further Reading](#14-further-reading)
 
 ---
 
-## 1. The Six Agents
+## 1. The Full Agent Ecosystem
+
+Accessibility Agents includes 55 agents organized into three specialized teams, available on five platforms.
+
+### Platforms
+
+| Platform | Agent Format | Installation |
+|----------|-------------|-------------|
+| **GitHub Copilot** (VS Code) | `.github/agents/*.agent.md` | Fork repo or run installer |
+| **Claude Code** | Per-agent CLAUDE.md + hook enforcement | One-liner installer auto-detects |
+| **Gemini CLI** | Gemini skill files | One-liner installer auto-detects |
+| **Claude Desktop** | MCP server integration | One-liner installer auto-detects |
+| **Codex CLI** | Codex agent files | One-liner installer auto-detects |
+
+### Team 1: Accessibility (26 agents)
+
+| Agent | Type | What It Does |
+|-------|------|-------------|
+| `@accessibility-lead` | Orchestrator | Delegates multi-agent accessibility audits to specialist agents |
+| `@aria-specialist` | Task | ARIA roles, states, properties, widget patterns (modals, tabs, comboboxes) |
+| `@modal-specialist` | Task | Dialog focus trapping, escape behavior, screen reader overlay announcements |
+| `@contrast-master` | Task | Color contrast ratios, focus indicators, dark mode, visual presentation |
+| `@keyboard-navigator` | Task | Tab order, focus management, keyboard shortcuts, skip links, focus traps |
+| `@live-region-controller` | Task | Live region announcements, dynamic content, toasts, loading states |
+| `@forms-specialist` | Task | Form labels, error handling, validation, autocomplete, field grouping |
+| `@alt-text-headings` | Task | Alt text quality, heading hierarchy, document outline, landmark structure |
+| `@tables-specialist` | Task | Table markup, scope, caption, headers, sortable columns, ARIA grid |
+| `@link-checker` | Informational | Link text quality, ambiguous links, WCAG 2.4.4 and 2.4.9 compliance |
+| `@web-accessibility-wizard` | Orchestrator | Full guided WCAG audit - severity scoring, remediation tracking, action plan |
+| `@testing-coach` | Informational | NVDA/JAWS/VoiceOver testing guidance, automated test setup (axe-core, Playwright) |
+| `@wcag-guide` | Informational | WCAG 2.2 AA reference, success criteria explanations, conformance levels |
+| `@word-accessibility` | Task | Microsoft Word document accessibility auditing and remediation |
+| `@excel-accessibility` | Task | Microsoft Excel spreadsheet accessibility auditing and remediation |
+| `@powerpoint-accessibility` | Task | Microsoft PowerPoint presentation accessibility auditing |
+| `@office-scan-config` | Informational | Office document scan configuration and rule management |
+| `@pdf-accessibility` | Task | PDF accessibility auditing (PDF/UA, tagged PDF structure) |
+| `@pdf-scan-config` | Informational | PDF scan configuration and rule management |
+| `@document-accessibility-wizard` | Orchestrator | Guided document audit wizard for Word, Excel, PowerPoint, and PDF |
+| `@cognitive-accessibility` | Informational | Cognitive accessibility, plain language, reading level, content clarity |
+| `@mobile-accessibility` | Task | iOS VoiceOver and Android TalkBack native app accessibility |
+| `@design-system-auditor` | Task | Design system component accessibility review and pattern library audit |
+| `@markdown-a11y-assistant` | Task | Markdown headings, links, alt text, tables, emoji, structure enforcement |
+| `@epub-accessibility` | Task | ePub and digital publication accessibility auditing |
+| `@epub-scan-config` | Informational | ePub scan configuration and rule management |
+
+### Team 2: GitHub Workflow (12 agents)
+
+| Agent | Type | What It Does |
+|-------|------|-------------|
+| `@daily-briefing` | Informational | Morning situation report - issues, PRs, CI, security, community activity |
+| `@issue-tracker` | Both | Find, prioritize, triage, draft replies to issues across repositories |
+| `@pr-review` | Both | Structured PR reviews with risk assessment, change maps, inline suggestions |
+| `@analytics` | Informational | Contribution velocity, review turnaround, code hotspots, workload distribution |
+| `@insiders-a11y-tracker` | Both | Monitor accessibility-sensitive changes - WCAG/ARIA, headings, links, keyboard |
+| `@template-builder` | Guided | Interactive issue template wizard via VS Code Ask Questions |
+| `@github-hub` | Both | Central hub for all GitHub operations and repository management |
+| `@repo-admin` | Task | Repository settings, branch protection rules, and rulesets |
+| `@team-manager` | Task | Team membership, permissions, organization management |
+| `@contributions-hub` | Informational | Contribution tracking, contributor recognition, community metrics |
+| `@repo-manager` | Task | Multi-repository operations and cross-repo workflow coordination |
+| `@nexus` | Orchestrator | Cross-agent orchestration - coordinates multiple agents for complex workflows |
+
+### Team 3: Developer Tools (6 agents)
+
+| Agent | Type | What It Does |
+|-------|------|-------------|
+| `@developer-hub` | Both | Central hub for developer tool operations and project scaffolding |
+| `@python-specialist` | Task | Python accessibility patterns, Django/Flask a11y, best practices |
+| `@wxpython-specialist` | Task | wxPython GUI accessibility - keyboard, focus, screen reader support |
+| `@desktop-a11y-specialist` | Task | Desktop application accessibility across Windows, macOS, and Linux |
+| `@desktop-a11y-testing-coach` | Informational | Desktop accessibility testing guidance and automation setup |
+| `@a11y-tool-builder` | Task | Build custom accessibility testing tools, linters, and CI checks |
+
+### Supporting Resources
+
+| Resource | Count | Location |
+|----------|-------|---------|
+| Copilot prompts | 54+ | `.github/prompts/*.prompt.md` |
+| Copilot skills | 17 | `.github/skills/*/SKILL.md` |
+| Copilot instructions | 6 | `.github/instructions/*.instructions.md` |
+| Claude Code hooks | 3 | `.claude/hooks/` |
+| Example violations | 20+ | `example/` directory |
+
+---
+
+## 2. Workshop Agents - Quick Reference
+
+These six agents from the GitHub Workflow team are used hands-on during Day 2, Block 3.
 
 Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
-
-### Quick Reference
-
-| Agent | Type | Invoke With | What It Does |
-|-------|------|-------------|-------------|
-| `@daily-briefing` | Informational | `@daily-briefing morning briefing` | Prioritized sweep of issues, review requests, CI failures, @mentions |
-| `@issue-tracker` | Informational + Task | `@issue-tracker find accessibility issues` | Find, prioritize, triage, and draft replies to issues |
-| `@pr-review` | Informational + Task | `@pr-review review PR #14` | Generate structured PR review documents with risk assessment and inline comment suggestions |
-| `@analytics` | Informational | `@analytics team velocity this month` | Contribution velocity, review turnaround, code hotspots, workload distribution |
-| `@insiders-a11y-tracker` | Informational + Task | `@insiders-a11y-tracker check recent changes` | Monitor accessibility-sensitive changes: WCAG/ARIA, heading hierarchy, link quality, keyboard patterns |
-| `@template-builder` | Informational (guided) | `@template-builder create accessibility template` | Interactive wizard that generates GitHub issue template YAML via Ask Questions |
 
 ---
 
@@ -219,11 +298,11 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-## 2. The 28 Slash Commands
+## 3. Slash Commands and Prompts
 
-Type `/` in Copilot Chat to open the command menu. Each command corresponds to a `.prompt.md` file in `.github/prompts/`.
+The repository includes 54+ slash commands. Type `/` in Copilot Chat to open the command menu. Each command corresponds to a `.prompt.md` file in `.github/prompts/`.
 
-### Quick Reference
+### Workshop Quick Reference
 
 | Command | What It Does |
 |---------|-------------|
@@ -270,7 +349,7 @@ Type `/` in Copilot Chat to open the command menu. Each command corresponds to a
 
 ---
 
-## 3. Customization Primitives - Decision Guide
+## 4. Customization Primitives - Decision Guide
 
 Before creating any file, choose the right primitive for the job. Each primitive is a different file type with a different purpose, scope, and trigger.
 
@@ -300,7 +379,7 @@ Before creating any file, choose the right primitive for the job. Each primitive
 
 ---
 
-## 4. Scope and Priority - All Levels
+## 5. Scope and Priority - All Levels
 
 Every customization file exists at one of three scopes. VS Code combines all matching files from all scopes and sends them to the model.
 
@@ -356,7 +435,7 @@ VS Code collects **all** matching instruction files from all scopes and includes
 
 ---
 
-## 5. Always-On Instructions - All File Types
+## 6. Always-On Instructions - All File Types
 
 Always-on instructions are automatically included in every chat request. You never invoke them - Copilot simply follows them.
 
@@ -495,7 +574,7 @@ Organization instructions are the lowest priority - workspace and user instructi
 
 ---
 
-## 6. File-Based Instructions (`.instructions.md`)
+## 7. File-Based Instructions (`.instructions.md`)
 
 File-based instructions load conditionally - either when the files you are editing match a glob pattern, or when the agent determines the instruction is relevant to the current task.
 
@@ -595,7 +674,7 @@ Type `/instructions` in the Chat input to open the Configure Instructions menu.
 
 ---
 
-## 7. `.agent.md` - Complete Format Reference
+## 8. `.agent.md` - Complete Format Reference
 
 ### File Locations
 
@@ -747,7 +826,7 @@ When asked to [task]:
 
 ---
 
-## 8. `.prompt.md` - Complete Format Reference
+## 9. `.prompt.md` - Complete Format Reference
 
 ### File Locations
 
@@ -848,7 +927,7 @@ For each finding include:
 
 ---
 
-## 9. Agent Skills (`SKILL.md`) - Complete Format Reference
+## 10. Agent Skills (`SKILL.md`) - Complete Format Reference
 
 A Skill is a folder - not a single file. The folder contains `SKILL.md` plus any scripts, templates, and reference documents the skill needs.
 
@@ -940,7 +1019,7 @@ description: "Audit Markdown files for accessibility violations. Use for heading
 
 ---
 
-## 10. Hooks (`.json`) - Lifecycle Automation
+## 11. Hooks (`.json`) - Lifecycle Automation
 
 Hooks execute shell commands at specific points in an agent's lifecycle. They are deterministic - they run regardless of what the agent was prompted to do.
 
@@ -1040,7 +1119,7 @@ Permission decisions: `"allow"` | `"ask"` (prompt user) | `"deny"` (block the to
 
 ---
 
-## 11. `preferences.md` - Accessibility Agents Personal Settings
+## 12. `preferences.md` - Accessibility Agents Personal Settings
 
 Copy `.github/agents/preferences.example.md` to `.github/agents/preferences.md`. The file is in `.gitignore` - your private settings stay only in your local fork.
 
@@ -1121,7 +1200,7 @@ I use TalkBack on Android.
 
 ---
 
-## 12. Diagnostics and Troubleshooting
+## 13. Diagnostics and Troubleshooting
 
 ### View All Loaded Customizations
 
@@ -1173,7 +1252,7 @@ This shows: which files were found, which were loaded, which have errors, and fr
 
 ---
 
-## 13. Further Reading
+## 14. Further Reading
 
 For the broader ecosystem - the community plugin marketplace, MCP server integrations, and running agents in the cloud via GitHub Actions - see [Appendix W: GitHub Copilot & Agentic Reference](appendix-w-github-copilot-reference.md).
 

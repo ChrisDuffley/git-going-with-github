@@ -50,7 +50,7 @@ This workshop exists because open source software powers the world - and the peo
 
 ## Powered by [Accessibility Agents](https://community-access.org/accessibility-agents)
 
-On Day 2, you will work with **[Accessibility Agents](https://community-access.org/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands built for accessible software development, project management, and community collaboration. Daily briefings, issue triage, PR review, accessibility monitoring, analytics - all driven by AI, all designed for screen reader users.
+On Day 2, you will work with **[Accessibility Agents](https://community-access.org/accessibility-agents)** - a real, MIT-licensed open source project with 55 AI agents across 3 teams and 5 platforms, built for accessible software development, project management, and community collaboration. Daily briefings, issue triage, PR review, accessibility monitoring, analytics - all driven by AI, all designed for screen reader users.
 
 You will fork it, understand it, improve it, and personalize it. By the end of the workshop, your name is in its commit history.
 
@@ -78,7 +78,7 @@ By the end of this workshop, you will have:
 - Opened, reviewed, and merged real pull requests
 - Your name permanently in the commit history of a public accessibility project
 - Hands-on instruction in basic [Visual Studio Code](https://code.visualstudio.com/) usage as it relates to GitHub - navigation, source control, extensions, and screen reader configuration
-- A working [VS Code](https://code.visualstudio.com/) setup with [GitHub Copilot](https://github.com/features/copilot) and six AI agents configured
+- A working [VS Code](https://code.visualstudio.com/) setup with [GitHub Copilot](https://github.com/features/copilot) and 55 AI agents configured
 - The confidence to navigate any GitHub repository with your screen reader
 - A network of peers who understand the intersection of accessibility and open source
 
@@ -113,7 +113,7 @@ You earned the tools. Now you wield them.
 | **Day 1 Debrief** | Celebrate what shipped, surface questions, set your Day 2 goal |
 | **[VS Code Setup](https://community-access.org/git-going-with-github/docs/10-vscode-basics.html)** | Screen reader mode, workspace navigation, the bridge from browser to editor |
 | **[Deep Contribution with Copilot](https://community-access.org/git-going-with-github/docs/13-github-copilot.html)** | Use [GitHub Copilot](https://github.com/features/copilot) as a writing partner - draft improvements, review your own work, commit with confidence |
-| **[Activate the Agents](https://community-access.org/git-going-with-github/docs/16-accessibility-agents.html)** | Run six AI agents that amplify every skill you built on Day 1 - daily briefings, issue triage, PR review, accessibility monitoring |
+| **[Activate the Agents](https://community-access.org/git-going-with-github/docs/16-accessibility-agents.html)** | Explore 55 AI agents across 3 teams that amplify every skill you built on Day 1 - daily briefings, issue triage, PR review, accessibility monitoring |
 | **[Ship Your Contribution](https://community-access.org/git-going-with-github/docs/14-accessible-code-review.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
 | **Design the Future** | Collaborative speccing session - what should the next version of these tools look like? Your ideas, on the record. |
 

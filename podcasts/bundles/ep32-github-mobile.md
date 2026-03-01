@@ -56,6 +56,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 ### Primary Source Material
 
 # Appendix O: GitHub Mobile
+> **Listen to Episode 32:** [GitHub Mobile](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Accessibility Guide for iOS and Android
 
 > GitHub Mobile brings issues, pull requests, notifications, and code review to your iPhone, iPad, or Android device. This appendix covers setup, VoiceOver and TalkBack usage, and the tasks best suited to mobile.

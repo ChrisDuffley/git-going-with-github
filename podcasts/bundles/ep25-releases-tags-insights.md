@@ -59,6 +59,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 ### Primary Source Material
 
 # Appendix H: Releases, Tags, and Repository Insights
+> **Listen to Episode 25:** [Releases, Tags, and Insights](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Understanding Versioned Releases and Repository Activity
 
 > Two things help you understand a repository's health and your place in it: **releases** (the versioned snapshots your contributions land in) and **insights** (the activity metrics that show how a project grows). This appendix covers both.

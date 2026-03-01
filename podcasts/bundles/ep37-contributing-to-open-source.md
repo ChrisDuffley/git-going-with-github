@@ -65,6 +65,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Appendix T: Contributing to Open Source
+> **Listen to Episode 37:** [Contributing to Open Source](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## A Guide for First-Time Contributors
 
 > You do not need to be a professional developer to contribute to open source. Documentation, accessibility improvements, and bug reports are among the most valuable contributions any project can receive.
@@ -232,6 +234,8 @@ The hardest part of open source contribution is starting. Once you have one merg
 ### Supplementary: GitHub Skills Catalog - continued learning
 
 # Appendix Z: GitHub Skills - Complete Course Catalog
+> **Listen to Episode 43:** [GitHub Skills - Complete Course Catalog](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 
 GitHub Skills is GitHub's free, self-paced interactive learning platform. Every course runs entirely inside GitHub - no external site, no separate login, no video. You copy a course repository to your own account, and an automated bot named Mona teaches you through real issues and pull requests.
 

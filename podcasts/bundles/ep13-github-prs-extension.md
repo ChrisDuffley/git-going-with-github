@@ -77,6 +77,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # GitHub Pull Requests Extension
+> **Listen to Episode 13:** [The GitHub Pull Requests Extension](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Managing Pull Requests from VS Code
 
 > **Day 2, Block 2 Material**
@@ -850,6 +852,8 @@ gh pr merge 42 --auto --squash
 ### Supplementary: Working with Pull Requests (web) - Ch 05
 
 # Working with Pull Requests
+> **Listen to Episode 6:** [Working with Pull Requests](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Creating, Reviewing, and Merging Pull Requests with a Screen Reader
 
 > Pull requests are where your work becomes a contribution. This guide takes you through the full pull request workflow - from opening one to participating in review - using only your keyboard and screen reader.
