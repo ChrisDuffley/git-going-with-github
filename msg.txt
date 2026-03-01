@@ -1,0 +1,17 @@
+docs: add execution-path accordions across chapters
+
+Adds <details>/<summary> accordions throughout the curriculum so
+students can choose their preferred execution path:
+
+- Ch 02: gh repo clone / git clone alternatives for cloning
+- Ch 04: gh issue list/create/comment/close/edit CLI alternatives
+- Ch 05: gh pr list/create/review/merge/draft CLI alternatives
+- Ch 06: git CLI conflict resolution + gh pr checks/diff
+- Ch 08: gh label list/create, gh issue edit for labels/milestones
+- Ch 09: gh CLI notification status alternatives
+- Ch 11: web editing alternatives + git CLI for staging/commit/push
+- Ch 12: web + gh CLI alternatives for viewing/creating/reviewing/merging PRs
+- Ch 14: gh CLI review from terminal section
+
+Each accordion is collapsed by default so readers skip content for
+tools they don't use - choosing web, git CLI, or gh CLI paths.

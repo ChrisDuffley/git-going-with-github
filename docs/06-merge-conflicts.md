@@ -382,6 +382,56 @@ both modified: src/index.html
 
 These are normal outputs. The conflict markers are inserted into the file by Git - open the file and follow the steps above.
 
+<details>
+<summary>Git CLI alternative - resolving conflicts in the terminal</summary>
+
+Resolve merge conflicts entirely from the command line:
+
+```bash
+# 1. Start the merge that causes the conflict
+git merge main
+
+# 2. See which files have conflicts
+git status
+# Look for "both modified:" entries
+
+# 3. Open each conflicted file in your editor
+# Edit the file: remove <<<<<<, =======, >>>>>> markers
+# Keep the content you want
+
+# 4. After editing, mark the file as resolved
+git add src/index.html
+
+# 5. Complete the merge
+git commit
+# Git auto-fills the merge commit message
+
+# Check the result
+git log --oneline -3
+```
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - checking PR conflict status</summary>
+
+Check whether a PR has conflicts without opening a browser:
+
+```bash
+# View PR status (shows merge state)
+gh pr view 42
+
+# Check all PR checks and merge readiness
+gh pr checks 42
+
+# View the diff to understand what changed
+gh pr diff 42
+```
+
+If conflicts exist, the `gh pr view` output shows "This branch has conflicts that must be resolved." Resolve locally using `git merge` (above) then push, or use the web editor.
+
+</details>
+
 ---
 
 ## Summary Checklist

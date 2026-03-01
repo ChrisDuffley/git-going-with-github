@@ -63,6 +63,27 @@ Click the **Issues** tab in the repository navigation bar below the repository n
 
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+List open issues directly from your terminal:
+
+```bash
+gh issue list
+```
+
+Filter by label, assignee, or state:
+
+```bash
+gh issue list --label "good first issue"
+gh issue list --assignee @me
+gh issue list --state closed
+```
+
+**Setup:** Install the GitHub CLI from [cli.github.com](https://cli.github.com) and authenticate with `gh auth login`. See [Appendix D](appendix-d-git-authentication.md) for details.
+
+</details>
+
 ### Direct URL
 
 Navigate directly: `https://github.com/[owner]/[repo]/issues`
@@ -176,6 +197,27 @@ The filter bar sits above the issue list. Click **Label**, **Milestone**, or **A
 
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - filtering</summary>
+
+Filter issues by label, milestone, or assignee without navigating dropdown menus:
+
+```bash
+# Filter by label
+gh issue list --label "accessibility"
+
+# Combine filters
+gh issue list --label "good first issue" --assignee @me
+
+# Filter by milestone
+gh issue list --milestone "Hackathon Day 1"
+
+# Search with keywords
+gh issue list --search "screen reader"
+```
+
+</details>
+
 ### Open vs Closed filter
 
 The two state links "Open" and "Closed" appear near the top of the issue list. Press `K` to navigate links until you find them, or look for them as buttons near the search bar.
@@ -226,6 +268,26 @@ When you open an issue, the page structure is:
 > **Browse Mode recommended:** The issue detail page is primarily text-based. Stay in **Browse Mode** (not Focus Mode) for reading - it gives you full heading (`H`), section (`D`), and link (`K`) navigation throughout the page. Only switch to Focus Mode when you need to type in a comment box.
 
 Markdown in the description renders as proper HTML: headings become actual headings, bullets become lists, code blocks become `<code>` elements with the text "code block" announced.
+
+<details>
+<summary>GitHub CLI (gh) alternative - reading an issue</summary>
+
+View an issue's full content in your terminal:
+
+```bash
+# View issue in terminal (renders Markdown)
+gh issue view 42
+
+# Open the issue in your browser instead
+gh issue view 42 --web
+
+# View just the comments
+gh issue view 42 --comments
+```
+
+The terminal output includes the title, state, labels, assignees, body, and comments. Markdown renders as plain text - headings use `#` symbols, lists use `-`, and code blocks are preserved.
+
+</details>
 
 ### Reading comments and activity
 
@@ -278,6 +340,21 @@ To close the issue while commenting: click the arrow on the **Close issue** butt
 3. Type your comment (plain text or Markdown)
 4. To preview: `VO+Shift+Up` to stop interacting, then `Tab` to the **Preview** button and `VO+Space`
 5. Submit: press `Cmd+Return` from inside the text area, OR `VO+Shift+Up` → `Tab` to the **Comment** button → `VO+Space`
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - commenting</summary>
+
+Leave a comment from your terminal:
+
+```bash
+# Interactive: opens your default editor ($EDITOR) to write the comment
+gh issue comment 42
+
+# Inline: provide the comment text directly
+gh issue comment 42 --body "Thanks for reporting this. I can reproduce the issue with NVDA + Chrome."
+```
 
 </details>
 
@@ -452,6 +529,29 @@ In the right sidebar, click the gear icon () next to **Labels**. A dropdown open
 1. Tab to "Submit new issue" button
 2. Press `Enter`
 
+<details>
+<summary>GitHub CLI (gh) alternative - filing a new issue</summary>
+
+Create an issue from your terminal:
+
+```bash
+# Interactive: prompts for title, body, labels, and assignees
+gh issue create
+
+# Inline: provide everything on the command line
+gh issue create --title "Screen reader announces wrong count on Issues list" \
+  --body "## What happened\n\nThe count says 14 but only 12 issues are visible." \
+  --label "bug,accessibility" \
+  --assignee @me
+
+# Use a template (if the repo has issue templates)
+gh issue create --template "bug_report.md"
+```
+
+The interactive mode walks you step-by-step through title, body (opens your editor), labels, and assignees - fully usable from a terminal with a screen reader.
+
+</details>
+
 ---
 
 ## Cross-Referencing Issues
@@ -572,6 +672,28 @@ Scroll to the bottom of the issue page. Click the **Close issue** button next to
 
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - closing and reopening</summary>
+
+Close or reopen an issue from your terminal:
+
+```bash
+# Close an issue
+gh issue close 42
+
+# Close with a reason
+gh issue close 42 --reason "completed"
+gh issue close 42 --reason "not planned"
+
+# Close with a comment
+gh issue close 42 --comment "Fixed in PR #45."
+
+# Reopen a closed issue
+gh issue reopen 42
+```
+
+</details>
+
 ### Reopening a closed issue
 If an issue is Closed, the "Close issue" button becomes "Reopen issue" - navigate and activate to reopen.
 
@@ -581,6 +703,27 @@ From the issue sidebar:
 2. Activate the gear/plus button
 3. Type a username in the search field
 4. Select from the dropdown
+
+<details>
+<summary>GitHub CLI (gh) alternative - assigning and labeling</summary>
+
+Manage assignments and labels from your terminal:
+
+```bash
+# Assign yourself
+gh issue edit 42 --add-assignee @me
+
+# Add labels
+gh issue edit 42 --add-label "accessibility,in progress"
+
+# Remove a label
+gh issue edit 42 --remove-label "needs triage"
+
+# Set a milestone
+gh issue edit 42 --milestone "Hackathon Day 1"
+```
+
+</details>
 
 ### Changing labels
 From the issue sidebar:

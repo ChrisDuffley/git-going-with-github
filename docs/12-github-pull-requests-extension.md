@@ -103,6 +103,41 @@ The GitHub view opens, showing:
 
 </details>
 
+<details>
+<summary>Web alternative (github.com)</summary>
+
+View pull requests directly on GitHub without VS Code:
+
+1. Navigate to the repository on GitHub.com
+2. Click the **Pull requests** tab
+3. Click any PR title to view its conversation, commits, and changed files
+4. Use the **Files changed** tab to review diffs
+
+See [Working with Pull Requests](05-working-with-pull-requests.md) for the full web-based PR workflow.
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+View PRs from your terminal:
+
+```bash
+# List open PRs
+gh pr list
+
+# View a specific PR
+gh pr view 42
+
+# Open a PR in your browser
+gh pr view 42 --web
+
+# Filter PRs waiting for your review
+gh pr list --search "review-requested:@me"
+```
+
+</details>
+
 **Method 2: Explorer Section**
 
 1. Open Explorer: `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`)
@@ -369,6 +404,40 @@ The form has these fields:
 
 VS Code creates the PR on GitHub and shows a success message. The PR link appears in the notification - click it to open the PR on GitHub, or open it in the GitHub Pull Requests panel.
 
+<details>
+<summary>Web alternative (github.com) - creating a PR</summary>
+
+Create a PR from your browser after pushing your branch:
+
+1. Navigate to the repository on GitHub
+2. If you recently pushed, a yellow banner "Compare & pull request" appears - click it
+3. Otherwise: click **Pull requests** tab, then **New pull request**, then select your branch
+4. Fill in the title and description
+5. Click **Create pull request**
+
+See [Working with Pull Requests - Opening a PR](05-working-with-pull-requests.md#opening-a-pull-request) for detailed screen reader steps.
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - creating a PR</summary>
+
+```bash
+# Interactive: prompts for title, body, base branch
+gh pr create
+
+# Inline: provide details directly
+gh pr create --title "Add Timeline View documentation" --body "Fixes #42"
+
+# Create as draft
+gh pr create --draft
+
+# Open the form in your browser
+gh pr create --web
+```
+
+</details>
+
 ---
 
 ## 6. Pull Request Description Templates
@@ -481,6 +550,43 @@ When you've reviewed all files:
 - Your review status appears on the PR (Approved / Changes Requested / Commented)
 - If you requested changes, the PR cannot merge until you approve it
 
+<details>
+<summary>Web alternative (github.com) - reviewing</summary>
+
+Review PRs directly on GitHub.com:
+
+1. Open the PR and click the **Files changed** tab
+2. Read through each file's diff
+3. Click the blue **+** button on any line to add an inline comment
+4. Choose **Start a review** to batch comments
+5. Click **Review changes** (top right) to select Comment / Approve / Request changes
+6. Click **Submit review**
+
+See [Accessible Code Review](14-accessible-code-review.md) for detailed screen reader steps.
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - reviewing</summary>
+
+```bash
+# View the PR diff in your terminal
+gh pr diff 42
+
+# Approve
+gh pr review 42 --approve --body "Looks good."
+
+# Request changes
+gh pr review 42 --request-changes --body "Heading hierarchy needs fixing."
+
+# Comment-only (no verdict)
+gh pr review 42 --comment --body "A few suggestions."
+```
+
+**Note:** For inline comments on specific lines, use the web interface or VS Code.
+
+</details>
+
 ---
 
 ## 8. Merging Pull Requests
@@ -558,6 +664,35 @@ After merging, the feature branch is no longer needed:
 4. Choose the merged branch
 
 This deletes the branch locally. To delete it on GitHub too:
+
+<details>
+<summary>Web alternative (github.com) - merging</summary>
+
+Merge a PR directly on GitHub.com:
+
+1. Open the PR's **Conversation** tab
+2. Scroll to the merge button at the bottom
+3. Click the dropdown arrow to choose a merge strategy (Squash, Rebase, or Merge commit)
+4. Click **Merge pull request**, then **Confirm merge**
+5. Click **Delete branch** to clean up
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - merging</summary>
+
+```bash
+# Merge with default strategy
+gh pr merge 42
+
+# Squash and merge, then delete the branch
+gh pr merge 42 --squash --delete-branch
+
+# Enable auto-merge (merges when checks pass)
+gh pr merge 42 --auto --squash
+```
+
+</details>
 
 1. `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
 2. Type "git push"

@@ -123,6 +123,36 @@
 </ul>
 </details>
 
+<details>
+<summary>Web alternative (github.com)</summary>
+
+<p>View pull requests directly on GitHub without VS Code:</p>
+<ol>
+<li>Navigate to the repository on GitHub.com</li>
+<li>Click the <strong>Pull requests</strong> tab</li>
+<li>Click any PR title to view its conversation, commits, and changed files</li>
+<li>Use the <strong>Files changed</strong> tab to review diffs</li>
+</ol>
+<p>See <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> for the full web-based PR workflow.</p>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+<p>View PRs from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># List open PRs</span>
+gh <span class="hljs-built_in">pr</span> list
+
+<span class="hljs-comment"># View a specific PR</span>
+gh <span class="hljs-built_in">pr</span> view 42
+
+<span class="hljs-comment"># Open a PR in your browser</span>
+gh <span class="hljs-built_in">pr</span> view 42 --web
+
+<span class="hljs-comment"># Filter PRs waiting for your review</span>
+gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string">&quot;review-requested:@me&quot;</span></code></pre>
+</details>
+
 <p><strong>Method 2: Explorer Section</strong></p>
 <ol>
 <li>Open Explorer: <code>Ctrl+Shift+E</code> (Mac: <code>Cmd+Shift+E</code>)</li>
@@ -372,6 +402,36 @@ The tree organizes PRs by repository. Expand a repo to see its PRs.</p>
 <li>Press <code>Enter</code></li>
 </ol>
 <p>VS Code creates the PR on GitHub and shows a success message. The PR link appears in the notification - click it to open the PR on GitHub, or open it in the GitHub Pull Requests panel.</p>
+<details>
+<summary>Web alternative (github.com) - creating a PR</summary>
+
+<p>Create a PR from your browser after pushing your branch:</p>
+<ol>
+<li>Navigate to the repository on GitHub</li>
+<li>If you recently pushed, a yellow banner &quot;Compare &amp; pull request&quot; appears - click it</li>
+<li>Otherwise: click <strong>Pull requests</strong> tab, then <strong>New pull request</strong>, then select your branch</li>
+<li>Fill in the title and description</li>
+<li>Click <strong>Create pull request</strong></li>
+</ol>
+<p>See <a href="05-working-with-pull-requests.html#opening-a-pull-request">Working with Pull Requests - Opening a PR</a> for detailed screen reader steps.</p>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - creating a PR</summary>
+
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Interactive: prompts for title, body, base branch</span>
+gh <span class="hljs-built_in">pr</span> create
+
+<span class="hljs-comment"># Inline: provide details directly</span>
+gh <span class="hljs-built_in">pr</span> create --title <span class="hljs-string">&quot;Add Timeline View documentation&quot;</span> --body <span class="hljs-string">&quot;Fixes #42&quot;</span>
+
+<span class="hljs-comment"># Create as draft</span>
+gh <span class="hljs-built_in">pr</span> create --draft
+
+<span class="hljs-comment"># Open the form in your browser</span>
+gh <span class="hljs-built_in">pr</span> create --web</code></pre>
+</details>
+
 <hr>
 <h2>6. Pull Request Description Templates</h2>
 <p>Many repositories include a <strong>PR template</strong> - a Markdown file that pre-fills the PR description with a checklist or structure.</p>
@@ -473,6 +533,38 @@ The tree organizes PRs by repository. Expand a repo to see its PRs.</p>
 <li>Your review status appears on the PR (Approved / Changes Requested / Commented)</li>
 <li>If you requested changes, the PR cannot merge until you approve it</li>
 </ul>
+<details>
+<summary>Web alternative (github.com) - reviewing</summary>
+
+<p>Review PRs directly on GitHub.com:</p>
+<ol>
+<li>Open the PR and click the <strong>Files changed</strong> tab</li>
+<li>Read through each file&#39;s diff</li>
+<li>Click the blue <strong>+</strong> button on any line to add an inline comment</li>
+<li>Choose <strong>Start a review</strong> to batch comments</li>
+<li>Click <strong>Review changes</strong> (top right) to select Comment / Approve / Request changes</li>
+<li>Click <strong>Submit review</strong></li>
+</ol>
+<p>See <a href="14-accessible-code-review.html">Accessible Code Review</a> for detailed screen reader steps.</p>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - reviewing</summary>
+
+<pre><code class="hljs language-bash"><span class="hljs-comment"># View the PR diff in your terminal</span>
+gh <span class="hljs-built_in">pr</span> diff 42
+
+<span class="hljs-comment"># Approve</span>
+gh <span class="hljs-built_in">pr</span> review 42 --approve --body <span class="hljs-string">&quot;Looks good.&quot;</span>
+
+<span class="hljs-comment"># Request changes</span>
+gh <span class="hljs-built_in">pr</span> review 42 --request-changes --body <span class="hljs-string">&quot;Heading hierarchy needs fixing.&quot;</span>
+
+<span class="hljs-comment"># Comment-only (no verdict)</span>
+gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class="hljs-string">&quot;A few suggestions.&quot;</span></code></pre>
+<p><strong>Note:</strong> For inline comments on specific lines, use the web interface or VS Code.</p>
+</details>
+
 <hr>
 <h2>8. Merging Pull Requests</h2>
 <p><strong>Who can merge:</strong> Repository maintainers, or contributors with write access.</p>
@@ -555,6 +647,32 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <li>Choose the merged branch</li>
 </ol>
 <p>This deletes the branch locally. To delete it on GitHub too:</p>
+<details>
+<summary>Web alternative (github.com) - merging</summary>
+
+<p>Merge a PR directly on GitHub.com:</p>
+<ol>
+<li>Open the PR&#39;s <strong>Conversation</strong> tab</li>
+<li>Scroll to the merge button at the bottom</li>
+<li>Click the dropdown arrow to choose a merge strategy (Squash, Rebase, or Merge commit)</li>
+<li>Click <strong>Merge pull request</strong>, then <strong>Confirm merge</strong></li>
+<li>Click <strong>Delete branch</strong> to clean up</li>
+</ol>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - merging</summary>
+
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Merge with default strategy</span>
+gh <span class="hljs-built_in">pr</span> merge 42
+
+<span class="hljs-comment"># Squash and merge, then delete the branch</span>
+gh <span class="hljs-built_in">pr</span> merge 42 --squash --delete-branch
+
+<span class="hljs-comment"># Enable auto-merge (merges when checks pass)</span>
+gh <span class="hljs-built_in">pr</span> merge 42 --auto --squash</code></pre>
+</details>
+
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;git push&quot;</li>

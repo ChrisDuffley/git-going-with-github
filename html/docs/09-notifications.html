@@ -132,6 +132,24 @@
 <h2>The Notifications Inbox</h2>
 <p>Navigate to your inbox: <code>https://github.com/notifications</code> or press <code>G</code> then <code>N</code> (GitHub keyboard shortcut).</p>
 <p><strong>Screen reader note:</strong> The <code>G N</code> shortcut uses two sequential key presses (not simultaneous). Press <code>G</code>, release it, then press <code>N</code>. This works in Browse Mode.</p>
+<details>
+<summary>GitHub CLI (gh) alternative - notifications</summary>
+
+<p>View and manage your GitHub notification status from the terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Check your notification status (opens the GitHub notification inbox)</span>
+gh api notifications --jq <span class="hljs-string">&#x27;.[].subject.title&#x27;</span> | <span class="hljs-built_in">head</span> -20
+
+<span class="hljs-comment"># View PRs that need your review (most common notification reason)</span>
+gh search prs --review-requested @me --state open
+
+<span class="hljs-comment"># View issues assigned to you</span>
+gh issue list --assignee @me --state open
+
+<span class="hljs-comment"># Check PR status for a specific notification</span>
+gh <span class="hljs-built_in">pr</span> view 42 --repo owner/repo</code></pre>
+<p><strong>Note:</strong> The GitHub CLI does not have a first-class <code>gh notifications</code> command. For full inbox management (mark as read, mute, archive), use the web interface at <code>github.com/notifications</code>. The <code>gh</code> CLI is most useful for quickly checking PR review requests and issue assignments that generate notifications.</p>
+</details>
+
 <h3>Page structure</h3>
 <pre><code class="hljs">[Filters sidebar <span class="hljs-keyword">on</span> <span class="hljs-keyword">left</span>]     ← Unread / Participating / @Mentions / Assigned / etc.
 [Notification <span class="hljs-keyword">list</span> in <span class="hljs-keyword">center</span>] ← Each notification <span class="hljs-keyword">is</span> <span class="hljs-keyword">a</span> row

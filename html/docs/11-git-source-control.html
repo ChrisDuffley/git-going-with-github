@@ -92,6 +92,33 @@
 <li>Choose destination → Open</li>
 </ol>
 <p><strong>Why HTTPS over SSH for this workshop:</strong> HTTPS works immediately with no setup. SSH requires key generation and configuration (see <a href="appendix-d-git-authentication.html">Appendix D: Git Authentication</a> for SSH setup).</p>
+<details>
+<summary>Web alternative (github.com)</summary>
+
+<p>If you prefer not to clone locally, you can work entirely on GitHub.com:</p>
+<ol>
+<li>Navigate to the repository on GitHub</li>
+<li>Click any file to view it, then click the <strong>pencil icon</strong> (Edit) to modify it directly in the browser</li>
+<li>GitHub automatically creates a branch and commit for your edit</li>
+<li>When you save, GitHub prompts you to open a pull request</li>
+</ol>
+<p>This approach requires no local tools - just a browser. It works well for documentation changes and small edits. For larger changes, cloning to VS Code gives you a full editor with multi-file editing, Git staging, and the Accessible Diff Viewer.</p>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+<p>Clone a repository with one command:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Clone using owner/name (no URL needed)</span>
+gh repo <span class="hljs-built_in">clone</span> community-access/learning-room
+
+<span class="hljs-comment"># Clone and cd into the folder</span>
+gh repo <span class="hljs-built_in">clone</span> community-access/learning-room &amp;&amp; <span class="hljs-built_in">cd</span> learning-room
+
+<span class="hljs-comment"># Open the cloned repo in VS Code</span>
+gh repo <span class="hljs-built_in">clone</span> community-access/learning-room &amp;&amp; code learning-room</code></pre>
+</details>
+
 <hr>
 <h2>2. The Source Control Panel - Complete Walkthrough</h2>
 <p>The Source Control panel (<code>Ctrl+Shift+G</code> - Mac: <code>Cmd+Shift+G</code>) is where all Git operations happen in VS Code. This section provides a complete screen reader walkthrough of every interactive element.</p>
@@ -272,6 +299,37 @@
 <li>Avoid spaces and special characters</li>
 <li>Be descriptive: <code>fix/heading-hierarchy</code> not <code>fix1</code></li>
 </ul>
+<details>
+<summary>Web alternative (github.com) - branch management</summary>
+
+<p>Create and switch branches without leaving your browser:</p>
+<ol>
+<li>On the repository page, click the <strong>branch dropdown</strong> (shows &quot;main&quot; by default)</li>
+<li>Type a new branch name in the search field</li>
+<li>Click <strong>&quot;Create branch: your-branch-name from main&quot;</strong></li>
+<li>GitHub switches to the new branch immediately</li>
+<li>Any file edits you make in the browser will be on this branch</li>
+</ol>
+<p>To switch between branches, click the branch dropdown and select the branch you want.</p>
+</details>
+
+<details>
+<summary>Git CLI alternative - branch management</summary>
+
+<p>Manage branches from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Create and switch to a new branch</span>
+git checkout -b feature/improve-docs
+
+<span class="hljs-comment"># List all branches</span>
+git branch -a
+
+<span class="hljs-comment"># Switch to an existing branch</span>
+git checkout main
+
+<span class="hljs-comment"># Delete a branch (after merging)</span>
+git branch -d feature/improve-docs</code></pre>
+</details>
+
 <h3>Switching Between Branches</h3>
 <p><strong>Command Palette method:</strong></p>
 <ol>
@@ -376,6 +434,40 @@ git branch -a       <span class="hljs-comment"># All branches (including remote)
 <li>Then stage the new section, commit with message &quot;docs: add Timeline View guide&quot;</li>
 </ul>
 <p><strong>Screen reader tip:</strong> In the diff view, press <code>Alt+H</code> to see Accessible Help for diff-specific keyboard shortcuts.</p>
+<details>
+<summary>Web alternative (github.com) - editing files</summary>
+
+<p>On GitHub.com, there is no staging step. When you edit a file in the browser:</p>
+<ol>
+<li>Click the <strong>pencil icon</strong> on any file to open the web editor</li>
+<li>Make your changes</li>
+<li>Click <strong>&quot;Commit changes&quot;</strong> - GitHub creates the commit directly</li>
+<li>Choose to commit to the current branch or create a new branch and PR</li>
+</ol>
+<p>This is the simplest workflow if you are making a focused change to one file. For multi-file changes, VS Code&#39;s staging system gives you more control.</p>
+</details>
+
+<details>
+<summary>Git CLI alternative - staging</summary>
+
+<p>Stage files from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Stage a specific file</span>
+git add docs/GUIDE.md
+
+<span class="hljs-comment"># Stage all changes</span>
+git add .
+
+<span class="hljs-comment"># Stage specific lines interactively</span>
+git add -p docs/GUIDE.md
+<span class="hljs-comment"># Git shows each change hunk and asks: stage this? (y/n/s/e)</span>
+
+<span class="hljs-comment"># Unstage a file</span>
+git restore --staged docs/GUIDE.md
+
+<span class="hljs-comment"># Check what is staged vs unstaged</span>
+git status</code></pre>
+</details>
+
 <h3>Unstaging Files</h3>
 <p><strong>Reverse the process:</strong></p>
 <ol>
@@ -424,6 +516,20 @@ Fixes <span class="hljs-meta">#42</span></code></pre>
 <li>Optional footer: &quot;Fixes #123&quot; to link to issue</li>
 </ul>
 <p><strong>Common types:</strong> <code>feat:</code>, <code>fix:</code>, <code>docs:</code>, <code>style:</code>, <code>refactor:</code>, <code>test:</code>, <code>chore:</code></p>
+<details>
+<summary>Git CLI alternative - committing</summary>
+
+<p>Commit from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Commit staged changes with a message</span>
+git commit -m <span class="hljs-string">&quot;fix: correct heading hierarchy in GUIDE.md&quot;</span>
+
+<span class="hljs-comment"># Commit with a multi-line message (opens your editor)</span>
+git commit
+
+<span class="hljs-comment"># Stage all tracked files and commit in one step</span>
+git commit -am <span class="hljs-string">&quot;docs: update screen reader instructions&quot;</span></code></pre>
+</details>
+
 <h3>What Happens After Commit</h3>
 <ul>
 <li>The &quot;Staged Changes&quot; section clears</li>
@@ -452,6 +558,31 @@ Fixes <span class="hljs-meta">#42</span></code></pre>
 <li>NVDA/JAWS: Status bar announces &quot;Pushing...&quot; then &quot;Pushed successfully&quot; or an error message</li>
 <li>Check the Source Control panel for any error messages (they appear as banner notifications)</li>
 </ul>
+<details>
+<summary>Git CLI alternative - push and pull</summary>
+
+<p>Push and pull from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Push commits to GitHub</span>
+git push
+
+<span class="hljs-comment"># Push a new branch for the first time</span>
+git push -u origin feature/improve-docs
+
+<span class="hljs-comment"># Pull changes from GitHub</span>
+git pull
+
+<span class="hljs-comment"># Fetch without merging (see what changed first)</span>
+git fetch
+git <span class="hljs-built_in">log</span> HEAD..origin/main --oneline</code></pre>
+</details>
+
+<details>
+<summary>Web alternative (github.com) - push and pull</summary>
+
+<p>On GitHub.com, there is no push/pull step - your commits are saved directly to GitHub when you use the web editor. If you edited on a branch, your changes are already on GitHub. Simply open a pull request from that branch.</p>
+<p>If your branch is behind <code>main</code>, look for the <strong>&quot;Update branch&quot;</strong> button on your PR page to pull in the latest changes.</p>
+</details>
+
 <p><strong>What to do if push fails:</strong></p>
 <ul>
 <li><strong>Error: &quot;No upstream branch&quot;</strong> → You need to publish the branch first (Command Palette → &quot;Git: Publish Branch&quot;)</li>

@@ -244,6 +244,21 @@ Step <span class="hljs-number">6</span>: Press Escape <span class="hljs-built_in
 </blockquote>
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+<p>Clone a repository with one command using the GitHub CLI:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Clone using the repo&#x27;s owner/name (no URL needed)</span>
+gh repo <span class="hljs-built_in">clone</span> community-access/learning-room
+
+<span class="hljs-comment"># Clone and cd into the folder</span>
+gh repo <span class="hljs-built_in">clone</span> community-access/learning-room &amp;&amp; <span class="hljs-built_in">cd</span> learning-room</code></pre>
+<p><strong>Or with standard Git:</strong></p>
+<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/community-access/learning-room.git
+<span class="hljs-built_in">cd</span> learning-room</code></pre>
+<p><strong>Setup:</strong> Install the GitHub CLI from <a href="https://cli.github.com">cli.github.com</a> and authenticate with <code>gh auth login</code>. See <a href="appendix-d-git-authentication.html">Appendix D</a> for details.</p>
+</details>
+
 <hr>
 <h2>Watching, Starring, and Forking</h2>
 <p>These three actions let you follow, bookmark, or copy a repository.</p>

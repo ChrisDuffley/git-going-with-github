@@ -31,6 +31,35 @@ You can review pull requests in two places - each with different strengths:
 
 Both environments give you full keyboard and screen reader access. Your choice depends on context, not accessibility.
 
+<details>
+<summary>GitHub CLI (gh) alternative - review from your terminal</summary>
+
+The GitHub CLI offers a third path for reviewing PRs - especially useful for reading diffs and submitting verdicts:
+
+```bash
+# View the full PR diff in your terminal
+gh pr diff 42
+
+# View PR details (description, status, checks)
+gh pr view 42
+
+# Checkout the PR branch locally for testing
+gh pr checkout 42
+
+# Approve the PR
+gh pr review 42 --approve --body "Heading hierarchy looks correct. LGTM."
+
+# Request changes
+gh pr review 42 --request-changes --body "The alt text on line 34 needs to describe the image."
+
+# Leave a comment-only review
+gh pr review 42 --comment --body "A few observations - see details below."
+```
+
+**Best for:** Quickly reading diffs, approving/rejecting PRs, and checking out branches for local testing. For inline comments on specific lines, use the web interface or VS Code.
+
+</details>
+
 ---
 
 ## Part 1 - Reviewing on GitHub.com

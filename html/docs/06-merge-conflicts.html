@@ -347,6 +347,47 @@ Automatic merge failed; fix conflicts <span class="hljs-keyword">and</span> <spa
 <p>And <code>git status</code> will show:</p>
 <pre><code class="hljs"><span class="hljs-keyword">both</span> modified: src/<span class="hljs-keyword">index</span>.html</code></pre>
 <p>These are normal outputs. The conflict markers are inserted into the file by Git - open the file and follow the steps above.</p>
+<details>
+<summary>Git CLI alternative - resolving conflicts in the terminal</summary>
+
+<p>Resolve merge conflicts entirely from the command line:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># 1. Start the merge that causes the conflict</span>
+git merge main
+
+<span class="hljs-comment"># 2. See which files have conflicts</span>
+git status
+<span class="hljs-comment"># Look for &quot;both modified:&quot; entries</span>
+
+<span class="hljs-comment"># 3. Open each conflicted file in your editor</span>
+<span class="hljs-comment"># Edit the file: remove &lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt; markers</span>
+<span class="hljs-comment"># Keep the content you want</span>
+
+<span class="hljs-comment"># 4. After editing, mark the file as resolved</span>
+git add src/index.html
+
+<span class="hljs-comment"># 5. Complete the merge</span>
+git commit
+<span class="hljs-comment"># Git auto-fills the merge commit message</span>
+
+<span class="hljs-comment"># Check the result</span>
+git <span class="hljs-built_in">log</span> --oneline -3</code></pre>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - checking PR conflict status</summary>
+
+<p>Check whether a PR has conflicts without opening a browser:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># View PR status (shows merge state)</span>
+gh <span class="hljs-built_in">pr</span> view 42
+
+<span class="hljs-comment"># Check all PR checks and merge readiness</span>
+gh <span class="hljs-built_in">pr</span> checks 42
+
+<span class="hljs-comment"># View the diff to understand what changed</span>
+gh <span class="hljs-built_in">pr</span> diff 42</code></pre>
+<p>If conflicts exist, the <code>gh pr view</code> output shows &quot;This branch has conflicts that must be resolved.&quot; Resolve locally using <code>git merge</code> (above) then push, or use the web editor.</p>
+</details>
+
 <hr>
 <h2>Summary Checklist</h2>
 <pre><code class="hljs">Before you <span class="hljs-keyword">start</span>:

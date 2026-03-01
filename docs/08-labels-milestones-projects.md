@@ -58,6 +58,21 @@ Go to the **Issues** tab, then click the **Labels** link/button (it’s in the f
 
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - viewing labels</summary>
+
+List all labels in a repository from your terminal:
+
+```bash
+# List all labels with descriptions
+gh label list
+
+# List labels in a specific format
+gh label list --json name,description
+```
+
+</details>
+
 ### Applying a Label to an Issue or PR
 
 From an open issue or PR:
@@ -88,6 +103,27 @@ In the right sidebar, click the gear icon () next to **Labels**. A dropdown open
 3. Dropdown opens: `VO+Down` or arrow keys to navigate labels
 4. `VO+Space` to select or deselect; type to filter
 5. `Escape` to close - selections save automatically
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - applying labels</summary>
+
+Apply labels to issues or PRs from your terminal:
+
+```bash
+# Add a label to an issue
+gh issue edit 42 --add-label "accessibility"
+
+# Add multiple labels at once
+gh issue edit 42 --add-label "bug,good first issue"
+
+# Remove a label
+gh issue edit 42 --remove-label "needs triage"
+
+# Add a label to a PR
+gh pr edit 42 --add-label "accessibility"
+```
 
 </details>
 
@@ -123,6 +159,27 @@ In the right sidebar, click the gear icon () next to **Labels**. A dropdown open
 
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - filtering by label</summary>
+
+Filter issues by label from your terminal:
+
+```bash
+# List issues with a specific label
+gh issue list --label "accessibility"
+
+# Combine multiple labels
+gh issue list --label "accessibility" --label "good first issue"
+
+# Combine with state filter
+gh issue list --label "accessibility" --state closed
+
+# Search across labels
+gh issue list --search "label:accessibility label:\"good first issue\""
+```
+
+</details>
+
 ### Creating a New Label
 
 If you have write access:
@@ -130,6 +187,21 @@ If you have write access:
 2. Tab to "New label" button → Enter
 3. Fill in: Label name (F for form field), Color (use the color picker or hex code), Description
 4. Tab to "Create label" button → Enter
+
+<details>
+<summary>GitHub CLI (gh) alternative - creating labels</summary>
+
+Create labels from your terminal:
+
+```bash
+# Create a new label
+gh label create "accessibility" --description "Accessibility-related issue" --color "0075ca"
+
+# Create with a specific color
+gh label create "in progress" --description "Being actively worked on" --color "e4e669"
+```
+
+</details>
 
 **Accessibility note for color:** Labels have color, but they also have a text name and description - the color is supplementary information. Screen readers announce the label name, not the color, so labels are fully accessible.
 
@@ -187,6 +259,30 @@ From the open issue, find the **Milestone** section in the right sidebar and cli
 2. Quick Nav `B` to find and activate the Milestone gear button (`VO+Space`)
 3. Select a milestone from the dropdown (`VO+Down` or arrow keys → `VO+Space`)
 4. `Esc` to close
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - milestones</summary>
+
+Manage milestones from your terminal:
+
+```bash
+# Assign an issue to a milestone
+gh issue edit 42 --milestone "Hackathon Day 1"
+
+# Remove from a milestone
+gh issue edit 42 --milestone ""
+
+# List issues in a milestone
+gh issue list --milestone "Hackathon Day 1"
+```
+
+**Note:** Creating milestones requires the web interface or the GitHub API - the `gh` CLI does not have a `milestone create` command. Use `gh api` for advanced operations:
+
+```bash
+gh api repos/{owner}/{repo}/milestones -f title="Hackathon Day 1" -f description="Day 1 deliverables"
+```
 
 </details>
 
