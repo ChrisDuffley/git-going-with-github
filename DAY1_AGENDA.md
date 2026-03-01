@@ -105,11 +105,26 @@ Establish a shared navigation foundation AND set up the Introduction to GitHub S
 4. Open Elements List - how many links are on the page?
 
 **Navigate the learning-room repo (group):**
-1. Go to `github.com/[org]/learning-room`
+1. Go to `github.com/Community-Access/learning-room`
 2. Find the repo name with `1` (h1)
 3. Find the tab bar (Issues, Pull Requests, etc.) with `D` → repository navigation landmark
 4. Navigate the files table with `T` then `Ctrl+Alt+↓`
-5. Open `README.md`
+5. Open `README.md` - read the "What Is in This Repository" table
+
+**Explore the practice files:**
+The `docs/` folder contains three files with intentional issues that you will fix during today's contribution sprint:
+
+| File | What it contains | What students will fix |
+|------|------------------|----------------------|
+| `docs/welcome.md` | Introduction to open source contribution | Three `[TODO]` sections to complete (contributor backgrounds, evaluating issues, GitHub profile impact) |
+| `docs/keyboard-shortcuts.md` | NVDA, JAWS, and VoiceOver shortcut tables | Intentional errors in keyboard shortcut references |
+| `docs/setup-guide.md` | Step-by-step GitHub setup instructions | Broken links and incomplete steps |
+
+6. Open `docs/welcome.md` - navigate with `H` to read the headings. Find the `[TODO]` markers - these are the sections you will complete later today
+7. Open `docs/keyboard-shortcuts.md` - press `T` to navigate to the first table. This is the NVDA shortcut reference. Can you spot any errors?
+8. Open `docs/setup-guide.md` - press `K` to navigate links. Are all links working?
+
+> **Key insight:** These files are intentionally imperfect. Finding and fixing issues in documentation is one of the most valuable contributions in open source. The challenges in [docs/CHALLENGES.md](docs/CHALLENGES.md) map directly to these files.
 
 ### Part B - Set Up Your First GitHub Skills Repository
 
@@ -177,22 +192,32 @@ Now practice the same navigation skills in the shared group repo.
 
 **Activity 2A - Repo Exploration:**
 Find the answers to these questions using keyboard navigation in `learning-room`:
-1. How many files are in the root of the repo?
+1. How many files are in the `docs/` folder?
 2. What is the description of the repo?
 3. Who opened the last commit?
-4. When was README.md last edited?
+4. When was `docs/welcome.md` last edited?
 5. How many branches exist?
 
-**Activity 2B - Reading a Commit:**
+**Activity 2B - Reading Practice File Content:**
+1. Open `docs/keyboard-shortcuts.md`
+2. Navigate to the NVDA section using `2` (H2 headings)
+3. Find the "Single-Key Navigation" table with `T`
+4. Read through the table rows - how many shortcuts are listed for NVDA?
+5. Navigate to the VoiceOver section - what is the VoiceOver modifier key combination?
+6. Open `docs/CHALLENGES.md` - navigate to "Beginner Challenges" with `2`
+7. Read Challenge 1 - which file does it ask you to fix, and what is the issue?
+
+**Activity 2C - Reading a Commit:**
 1. Navigate to the Commits tab
 2. Find the most recent commit - read its message aloud
 3. Open that commit - navigate the diff with your screen reader
 4. What file(s) changed, and what specifically changed?
 
-**Activity 2C - Branch Navigation:**
+**Activity 2D - Branch Navigation:**
 1. Open the branch dropdown (find the "main" button)
 2. Switch to the `day1-practice` branch
-3. Find how the files differ from `main`
+3. Navigate to `docs/` - do any files differ from `main`?
+4. Switch back to `main`
 
 ### Reference Document
 [Navigating Repositories](docs/02-navigating-repositories.md)
@@ -276,26 +301,38 @@ Getting started with open source AT contributions.
 
 ### Part D - Issues Practice in learning-room (20 min)
 
-**Activity 3A - Find and read an issue:**
+**Activity 3A - Find and read a challenge issue:**
 1. Navigate to `learning-room` Issues tab
-2. Filter by `good first issue` label
+2. Filter by `good first issue` label: type `is:open label:"good first issue"` in the filter bar
 3. Open issue #1 - "Welcome! Introduce yourself"
 4. Read the full issue description with your screen reader
 
-**Activity 3B - Leave a comment:**
+**Activity 3B - Leave a comment on the welcome issue:**
 1. Navigate to the comment box (`D` → "Add a comment" landmark or region)
 2. Switch to Focus Mode - type your introduction using Markdown:
-   - Use `##` for a heading
-   - Bold your screen reader name with `**NVDA**`
-   - Add a task list with `- [ ]` of things you want to learn
+   - Use `##` for a heading with your name
+   - Bold your screen reader name with `**NVDA**` or `**JAWS**` or `**VoiceOver**`
+   - Add a task list of things you want to learn:
+     ```markdown
+     - [ ] Fix a broken link in setup-guide.md
+     - [ ] Complete a [TODO] section in welcome.md
+     - [ ] Add a keyboard shortcut to keyboard-shortcuts.md
+     ```
 3. Submit with `Ctrl+Enter`
 
-**Activity 3C - File a new issue:**
+**Activity 3C - File a new issue based on what you found:**
 1. Navigate to Issues → New issue
-2. Choose the "Accessibility Bug Report" template
-3. Navigate through the form fields - notice how labeled fields are announced
-4. Fill in a real (or practice) accessibility observation from GitHub
-5. Submit - note the issue number
+2. Choose the "Beginner Challenge" template (this maps to Challenge 1, 2, or 3 from CHALLENGES.md)
+3. In the title, be specific: "Fix broken link in docs/welcome.md" or "Add missing NVDA shortcut to keyboard-shortcuts.md"
+4. In the description, reference the file and line where you found the issue:
+   ```markdown
+   ## What I found
+   In `docs/setup-guide.md`, the link to the accessibility settings page appears to be broken.
+   
+   ## Which challenge
+   Challenge 1: Fix Broken Link (from CHALLENGES.md)
+   ```
+5. Submit - note the issue number. You will use `Closes #XX` in your PR during Block 5
 
 ### Reference Document
 [Working with Issues](docs/04-working-with-issues.md) | [GitHub Concepts Glossary](docs/appendix-a-glossary.md)
@@ -379,56 +416,98 @@ Every participant makes at least one real contribution to the `learning-room` re
 > 
 > Both are valuable. Both are part of professional open source development.
 
+### Merge Conflicts: What to Expect (10 min)
+
+When multiple contributors edit the same file at the same time, Git cannot automatically combine the changes. This is called a **merge conflict**. During this sprint, conflicts are likely because several participants will be editing `docs/welcome.md` simultaneously.
+
+**Before you start your challenge**, read the conflict prevention strategies and resolution steps in [Chapter 6: Merge Conflicts](docs/06-merge-conflicts.md). Key points:
+
+- **Communicate with your team.** If two people are both working on `docs/welcome.md`, coordinate who edits which `[TODO]` section.
+- **Pull before you push.** Always sync with the latest `main` before opening a PR.
+- **If you see conflict markers** (`<<<<<<<`, `=======`, `>>>>>>>`), do not panic. The markers show both versions. Keep the correct content, delete the markers, and commit.
+
+The facilitator will walk through a live conflict resolution if one occurs during the sprint.
+
 ### Setup
-The `learning-room` repo has a `docs/` folder with several intentionally incomplete or slightly inaccurate documents. Each participant will:
-1. Find their assigned issue
-2. Edit the file on GitHub
+The `learning-room` repo has a `docs/` folder with three intentionally imperfect practice files. Each participant will work on one of the first three challenges from [docs/CHALLENGES.md](learning-room/docs/CHALLENGES.md):
+
+| Challenge | File | What to fix | Difficulty |
+|-----------|------|-------------|-----------|
+| Challenge 1: Fix Broken Link | `docs/welcome.md` | Find and repair the broken internal link | 10-15 min |
+| Challenge 2: Add Keyboard Shortcut | `docs/keyboard-shortcuts.md` | Add a missing shortcut to the correct table | 15-20 min |
+| Challenge 3: Complete Welcome Guide | `docs/welcome.md` | Fill in the three `[TODO]` sections | 20-30 min |
+
+Each participant will:
+1. Find their assigned issue (which maps to one of these challenges)
+2. Edit the practice file on GitHub
 3. Commit, branch, and open a PR
-4. **Wait for bot feedback** (watch for comment within ~30 seconds)
+4. **Wait for bot feedback** (watch for comment within 30 seconds)
 5. Address bot feedback if needed
 6. Request review from another participant
 7. Review someone else's PR
 
 ### Full Workflow
 
+**Example walkthrough: Challenge 3 - Complete the welcome guide**
+
+This example shows the full workflow for filling in `[TODO]` sections in `docs/welcome.md`. Your actual challenge may differ.
+
 ```
 Step 1: Find your issue
   Issues tab → filter by Assignee: me
-  Open the issue, read the full description
+  Open the issue - it says: "Complete the [TODO] sections in docs/welcome.md"
+  Read the full description - it references Challenge 3 from CHALLENGES.md
 
 Step 2: Navigate to the file
-  Use the file path in the issue description
-  Navigate via the file tree OR use "Go to file" (F to find the search box)
+  Code tab → docs/ folder → welcome.md
+  Read the file - find the [TODO] markers:
+    • "Who Can Contribute?" section: [TODO: Add a paragraph explaining 
+      that contributors come from all backgrounds...]
+    • "Finding Something to Work On" section: [TODO: Add two or three 
+      sentences about how to read an issue...]
+    • "After Your Contribution Is Merged" section: [TODO: Add a sentence
+      or two about what this means for someone's GitHub profile...]
 
 Step 3: Edit the file on GitHub
   Find the edit pencil button (B for buttons → "Edit this file")
-  Switch to Focus Mode → make your changes
-  Use Markdown formatting
+  Switch to Focus Mode → replace each [TODO] with real content
+  Example for the first [TODO]:
+    "Contributors come from all backgrounds, skill levels, and 
+    countries. Using assistive technology is not a barrier to 
+    contribution - in fact, AT users bring a perspective that 
+    improves projects for everyone."
 
 Step 4: Commit and branch
   Commit changes → select "Create a new branch"
-  Name: fix/[your-name]-[issue-number]
+  Name: fix/[your-name]-issue-[number]
   "Propose changes"
 
 Step 5: Open the Pull Request
-  Fill in the PR description using the template
-  Add "Closes #[your-issue-number]"
-  Submit
+  Fill in the PR description using the template:
+    ## What Changed
+    Completed the three [TODO] sections in docs/welcome.md
+    
+    ## Related Issue
+    Closes #[your-issue-number]
+    
+    ## Checklist
+    - [x] All [TODO] markers removed
+    - [x] Content matches the style of existing sections
+    - [x] Heading hierarchy is correct (H1 → H2 → H3)
 
 WAIT FOR BOT (30 seconds)
-  A bot will automatically comment on your PR
+  The Learning Room bot will automatically comment on your PR
   Read the comment carefully - it checks for:
-    • Broken links
-    • Heading hierarchy problems
-    • Missing image descriptions
-    • Document structure
-    • Accessibility issues
+    • Issue reference (did you include "Closes #XX"?)
+    • File location (are changes in docs/ only?)
+    • Heading hierarchy (no H1→H3 skips)
+    • Link text quality (no "click here")
+    • [TODO] markers (did you remove them all?)
   The bot explains WHY each issue matters and links to resources
 
 Step 6: Fix bot issues (if any)
-  Address any required checks
-  Make additional changes if the feedback is helpful
-  Push your changes - the bot will re-check
+  Address any required checks the bot flagged
+  Push your changes to the same branch - the bot re-checks automatically
 
 Step 7: Request human review
   Click "Reviewers" → select another participant
@@ -436,12 +515,19 @@ Step 7: Request human review
   You need both: bot technical feedback + human judgment
 
 Step 8: Review someone else's PR
-  Find the PR opened by the person seated next to you
-  Leave a constructive comment addressing both:
+  Find the PR opened by another participant
+  Leave a constructive comment addressing:
     • The issues the bot flagged (did they fix them well?)
-    • Higher-level improvements (clarity, completeness, accessibility)
+    • Content quality (is the writing clear and inclusive?)
+    • Accessibility (do headings, links, and structure work for screen readers?)
   Approve if it looks good
 ```
+
+**Other challenge examples:**
+
+**Challenge 1 (Fix Broken Link):** Open `docs/welcome.md`, find the broken internal link, determine the correct file path, and update the link. The bot will verify the link resolves correctly.
+
+**Challenge 2 (Add Keyboard Shortcut):** Open `docs/keyboard-shortcuts.md`, find the appropriate screen reader section (NVDA, JAWS, or VoiceOver), add a missing shortcut to the table using proper Markdown table syntax. The bot checks that table formatting is preserved.
 
 ### What the Bot Checks
 The automation bot validates these things:
@@ -460,12 +546,27 @@ The automation bot validates these things:
 
 **See:** [Learning Room Automation Guide](learning-room/AUTOMATION.md) for detailed explanation of bot feedback
 
-### What to look for in the docs folder
-- Broken links and incorrect keyboard shortcuts
-- Missing alt text descriptions in documentation
-- Incomplete sections marked with `[TODO]`
-- Heading hierarchy violations (H1→H3 skips)
-- Spelling and grammar issues
+### What to look for in each practice file
+
+**`docs/welcome.md`** (Challenges 1 and 3):
+- Three `[TODO]` sections that need real content (see "Who Can Contribute?", "Finding Something to Work On", "After Your Contribution Is Merged")
+- A broken internal link to verify and fix
+- Heading hierarchy to check (H1 → H2 flow)
+
+**`docs/keyboard-shortcuts.md`** (Challenge 2):
+- NVDA, JAWS, and VoiceOver shortcut tables
+- Intentional errors in some shortcut references
+- Missing shortcuts that should be added
+- Table formatting that must be preserved
+
+**`docs/setup-guide.md`** (Advanced challenges):
+- Broken links to GitHub settings pages
+- Incomplete setup steps
+- A note at the bottom referencing `[TODO]` items
+
+**`docs/CHALLENGES.md`** lists all 12 challenges with success criteria for each. When reviewing a peer's PR, check their work against the success criteria listed for their challenge.
+
+**`docs/GROUP_CHALLENGES.md`** has 7 collaborative exercises if your study group wants to tackle something together after individual challenges.
 
 ---
 
@@ -481,11 +582,25 @@ Participants understand the human side of open source: how to communicate well, 
 **Hands-on:** Navigate the community health files in `learning-room`:
 1. Read `CODE_OF_CONDUCT.md` - what does it commit to?
 2. Read `CONTRIBUTING.md` - what does the project ask of contributors?
-3. Read the Issue Template - what information does it require and why?
+3. Read the Issue Templates - navigate to `.github/ISSUE_TEMPLATE/` and open the beginner challenge template. What information does it require and why?
+4. Read `AUTOMATION.md` - find the "Common Validation Issues and Fixes" section. This explains every bot feedback message you might see.
 
 **Key insight:** These files exist to lower barriers AND set expectations. A project with these files sends a signal of maturity and intention.
 
-### Part 6B - Language, Tone, and Inclusive Culture (20 min)
+### Part 6B - Group Challenges Preview (10 min)
+
+**Activity:** Open `docs/GROUP_CHALLENGES.md` in the learning-room. Navigate the available group exercises:
+
+| Exercise | Difficulty | What it practices |
+|----------|-----------|------------------|
+| Documentation Sprint | Beginner-Intermediate | Parallel collaboration, avoiding merge conflicts |
+| Peer Review Circle | Intermediate | Structured review rotation, giving/receiving feedback |
+| Accessibility Workshop | Intermediate-Advanced | Deep-dive on one a11y topic, teaching others |
+| Challenge Creation Sprint | Advanced-Expert | Instructional design, writing clear instructions |
+
+**If your study group has time:** Pick one group challenge to start after individual work. The "Documentation Sprint" is a great first choice - divide `docs/welcome.md` sections among group members and coordinate your PRs.
+
+### Part 6C - Language, Tone, and Inclusive Culture (20 min)
 
 **Discussion points:**
 - The asynchronous nature of open source - your comment will be read out of context, by many people, over a long time
@@ -501,7 +616,7 @@ Participants understand the human side of open source: how to communicate well, 
 3. "Great job! But this is terrible." *(contradictory feedback)*
 4. "Fix this before EOD."
 
-### Part 6C - Commenting and Review Etiquette (20 min)
+### Part 6D - Commenting and Review Etiquette (20 min)
 
 **The anatomy of a good review comment:**
 
@@ -521,7 +636,7 @@ Example:
 
 **Exercise:** Write a review comment for the change: "A PR removes the `<main>` landmark element from a page."
 
-### Part 6D - Notifications: Taking Control of Your Inbox (15 min)
+### Part 6E - Notifications: Taking Control of Your Inbox (15 min)
 
 **Concepts:**
 - GitHub Notifications inbox: `github.com/notifications`
@@ -542,7 +657,7 @@ Example:
 - `E` marks a notification as Done from the list
 - `Shift+I` marks as read
 
-### Part 6E - Labels, Milestones, and Cross-References (20 min)
+### Part 6F - Labels, Milestones, and Cross-References (20 min)
 
 **Labels - organizing intent:**
 - Creating a label: Issues → Labels → New label
@@ -584,7 +699,7 @@ These completions are yours permanently. They travel to every GitHub profile pag
 Tomorrow we move from the browser to **Visual Studio Code**. Here is what is coming:
 
 - **VS Code Screen Reader Mode** - Accessible Help (`Alt+H`), Accessible View (`Alt+F2`), Accessible Diff Viewer (`F7`)
-- **Accessibility Agents** - your earned reward for completing Day 1. Five AI agents that amplify the exact skills you built today. Every agent corresponds to something you did manually today.
+- **Accessibility Agents** - your earned reward for completing Day 1. Six AI agents that amplify the exact skills you built today. Every agent corresponds to something you did manually today.
 - **Ship a real PR upstream** - `community-access/accessibility-agents` is a live repository. Your name in its commit history is the Day 2 capstone.
 
 **Tonight (optional):**
@@ -602,32 +717,45 @@ Create the `learning-room` repo in your org with the following:
 
 **Pre-seeded issues:**
 - `#1` - "Welcome! Introduce yourself" (open, labeled `good first issue`, no assignee)
-- `#2` through `#N` - pre-assigned to each participant, each pointing to a specific file or section to improve
+- `#2` through `#N` - pre-assigned to each participant, each mapping to a specific challenge from `docs/CHALLENGES.md`:
+  - Challenges 1-3 (Beginner): Fix broken link in `welcome.md`, add shortcut to `keyboard-shortcuts.md`, complete `[TODO]` sections in `welcome.md`
+  - Challenges 4-6 (Intermediate): Fix heading hierarchy, improve link text, add alt text across docs
+  - Advanced challenges for faster students: review, documentation creation, mentoring
 - Several unlabeled "triage practice" issues for Part 6E
 - One issue labeled `accessibility` with a realistic AT-related bug report for reference
 
 **Pre-seeded PR:**
-- "Add alt text to hero images" - a clean PR against a dummy HTML file, with a meaningful diff, at least two commits, and active status checks
+- "Fix typo in keyboard-shortcuts.md" - a clean PR fixing a minor error in the NVDA shortcuts table, with a meaningful diff, at least two commits, and active status checks. This is the PR students examine in Block 4.
 
-**Pre-created branch:** `day1-practice` with 2-3 files that differ from `main`
+**Pre-created branch:** `day1-practice` with edits to `docs/welcome.md` and `docs/setup-guide.md` that differ from `main` (used in Block 2 Activity 2D)
 
-**Files to include:**
+**Files included in learning-room repo:**
 ```
 learning-room/
-├── README.md
+├── README.md                           ← Getting started guide with file inventory
+├── AUTOMATION.md                       ← Bot feedback guide with fix examples
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── accessibility-bug.md
-│   │   └── feature-request.md
-│   └── PULL_REQUEST_TEMPLATE.md
+│   │   ├── config.yml
+│   │   ├── beginner-challenge.yml
+│   │   ├── intermediate-challenge.yml
+│   │   └── advanced-challenge.yml
+│   ├── PULL_REQUEST_TEMPLATE.md        ← Checklist template students fill out
+│   ├── workflows/
+│   │   ├── learning-room-pr-bot.yml    ← PR validation + educational feedback
+│   │   ├── skills-progression.yml      ← Progress tracking + badge awards
+│   │   └── student-grouping.yml        ← Auto-assigns peer reviewers
+│   └── scripts/
+│       └── validate-pr.js              ← Validation logic (checks headings, links, TODOs)
 ├── docs/
-│   ├── welcome.md             ← intentional [TODO] incomplete sections
-│   ├── keyboard-shortcuts.md  ← a few intentional errors
-│   └── setup-guide.md         ← a couple broken links
-└── src/
-    └── index.html             ← missing alt texts (for the PR exercise)
+│   ├── CHALLENGES.md                   ← 12 challenges: Beginner → Expert
+│   ├── GROUP_CHALLENGES.md             ← 7 collaborative exercises
+│   ├── welcome.md                      ← 3 [TODO] sections + broken link (Challenges 1, 3)
+│   ├── keyboard-shortcuts.md           ← NVDA/JAWS/VO tables with errors (Challenge 2)
+│   └── setup-guide.md                  ← Broken links + incomplete steps (Advanced)
+└── [GITHUB_SKILLS.md]                  ← Self-paced GitHub Skills module reference
 ```
 
 ### Pacing Tips for Skills Modules

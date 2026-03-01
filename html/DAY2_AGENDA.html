@@ -32,7 +32,7 @@
     <h1>Day 2 Agenda</h1>
 <h2>From Contributor to Product Maker - Igniting the Forge</h2>
 <blockquote>
-<p><strong>The premise of Day 2:</strong> You spent Day 1 learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You resolved a real merge conflict. Those skills are yours now.</p>
+<p><strong>The premise of Day 2:</strong> You spent Day 1 learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You reviewed someone else&#39;s work. Those skills are yours now.</p>
 <p>Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Accessibility Agents - a live, public accessibility project built by your facilitator - not as a shortcut around the skills you learned, but as a <strong>product you can understand, evaluate, critique, and improve</strong> because you now know exactly what it is doing and why.</p>
 <p>You will leave with your name in the commit history of a real open source project and a set of tools you can use on any GitHub repository you ever work on.</p>
 </blockquote>
@@ -166,13 +166,28 @@
 </tbody></table>
 <p><strong>Verify it is active:</strong> Open the Command Palette (<code>Ctrl+Shift+P</code>) → type <code>accessibility</code> → you should see &quot;Toggle Screen Reader Accessibility Mode&quot; with a checkmark.</p>
 <p><strong>Key setting to check:</strong> Open Settings (<code>Ctrl+,</code>) → search <code>accessibility support</code> → confirm it shows <code>on</code>.</p>
-<h3>Step 2 - Open Accessibility Agents as a Workspace</h3>
+<h3>Step 2 - Fork, Clone, and Open Accessibility Agents</h3>
+<p>Before you can work on Accessibility Agents locally, you need your own copy (a fork) and a local clone of that fork.</p>
+<p><strong>Fork the repository (browser - a Day 1 skill):</strong></p>
 <ol>
-<li>Open a terminal (<code>Ctrl+Backtick</code>)</li>
-<li>Navigate to wherever you cloned your fork: <code>cd path/to/accessibility-agents</code></li>
+<li>Navigate to <a href="https://github.com/community-access/accessibility-agents">github.com/community-access/accessibility-agents</a></li>
+<li>Find and activate the <strong>Fork</strong> button (<code>B</code> to navigate buttons)</li>
+<li>Keep the defaults and activate <strong>Create fork</strong></li>
+<li>GitHub redirects you to your fork: <code>github.com/[your-username]/accessibility-agents</code></li>
+</ol>
+<p><strong>Clone the fork (VS Code terminal - your first Git command):</strong></p>
+<ol>
+<li>Open a terminal in VS Code (<code>Ctrl+Backtick</code>)</li>
+<li>Navigate to where you want to store projects: <code>cd ~/Documents</code> (or your preferred folder)</li>
+<li>Clone your fork:<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[your-username]/accessibility-agents.git</code></pre>
+</li>
+<li>Enter the project folder: <code>cd accessibility-agents</code></li>
 <li>Open VS Code in that folder: <code>code .</code></li>
 <li>VS Code opens with the <code>accessibility-agents</code> repository as your workspace</li>
 </ol>
+<blockquote>
+<p><strong>Screen reader note:</strong> The <code>git clone</code> command prints progress messages. When you hear the terminal go quiet, it is done. The folder now exists on your machine.</p>
+</blockquote>
 <p><strong>What to navigate first (with screen reader):</strong></p>
 <table>
 <thead>
@@ -190,7 +205,7 @@
 <tr>
 <td><code>.github/agents/</code> folder</td>
 <td><code>Arrow keys</code></td>
-<td>Five <code>.agent.md</code> files</td>
+<td>Six <code>.agent.md</code> files</td>
 </tr>
 <tr>
 <td><code>.github/prompts/</code> folder</td>
@@ -225,6 +240,24 @@
 <hr>
 <h2>Block 2 - Deep Contribution with Copilot</h2>
 <p><strong>10:45-12:00</strong></p>
+<h3>Copilot Orientation (15 min)</h3>
+<p>Before diving into contributions, get familiar with how Copilot works as a writing partner.</p>
+<p><strong>Inline suggestions (<code>Ctrl+I</code>):</strong></p>
+<ol>
+<li>Open any <code>.md</code> file in the workspace</li>
+<li>Place your cursor at the end of a line and press <code>Ctrl+I</code></li>
+<li>Type a prompt: <code>Add a sentence explaining why this agent uses heading navigation</code></li>
+<li>Copilot suggests text inline. Press <code>Tab</code> to accept, <code>Escape</code> to dismiss</li>
+<li><strong>Screen reader note:</strong> NVDA announces &quot;Inline suggestion&quot; when one appears. Press <code>Alt+]</code> to read the suggestion before accepting</li>
+</ol>
+<p><strong>Chat as a thinking partner:</strong></p>
+<ol>
+<li>Open Chat (<code>Ctrl+Shift+I</code>) if not already open</li>
+<li>Type: <code>Explain what the daily-briefing agent does in plain English</code></li>
+<li>Read the response. Use <code>H</code> (heading navigation) to jump between sections</li>
+<li>Try: <code>What are three ways I could improve this agent for screen reader users?</code></li>
+</ol>
+<p><strong>Key principle:</strong> Copilot drafts. You decide. Every suggestion should be read, evaluated, and edited before committing. Your name goes on the commit.</p>
 <h3>Purpose</h3>
 <p>Make a richer contribution to your fork of <code>accessibility-agents</code> using Copilot as a writing partner - not a replacement for your judgment. Copilot helps you articulate ideas you already have. The idea - the product intention - is yours.</p>
 <h3>What &quot;Product Maker&quot; Means Here</h3>
@@ -323,7 +356,7 @@
 <td>4</td>
 <td><code>@insiders-a11y-tracker</code></td>
 <td>Filing accessibility bugs and applying WCAG labels</td>
-<td><a href="docs/04-working-with-issues.html">Working with Issues</a> + <a href="docs/15-issue-templates.html">Issue Templates</a></td>
+<td><a href="docs/04-working-with-issues.html">Working with Issues</a> + <a href="docs/08-labels-milestones-projects.html">Labels &amp; Milestones</a></td>
 </tr>
 </tbody></table>
 <p><code>@analytics</code> is available as an extension if Block 3 runs ahead of schedule - it requires understanding contribution graphs and activity history.</p>

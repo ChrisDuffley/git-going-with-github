@@ -9,22 +9,22 @@
 
 ## Table of Contents
 
-1. [What You Will Need](#1-what-you-will-need)
-2. [Step 1 - Create Your GitHub Account](#2-step-1--create-your-github-account)
-3. [Step 1.5 - Configure Git Identity (If Using Git Locally)](#3-step-15--configure-git-identity-if-using-git-locally)
-4. [Step 2 - Configure GitHub Accessibility Settings](#4-step-2--configure-github-accessibility-settings)
-5. [Step 3 - Configure Your Profile](#5-step-3--configure-your-profile)
-6. [Step 4 - Verify Modern GitHub Interface](#6-step-4--verify-modern-github-interface)
-7. [Step 5 - Test Your Screen Reader on GitHub](#7-step-5--test-your-screen-reader-on-github)
-8. [Step 6 - Install Git and Visual Studio Code](#8-step-6--install-git-and-visual-studio-code-day-2)
-9. [Step 7 - Install GitHub Copilot in VS Code](#9-step-7--install-github-copilot-in-vs-code-day-2)
-10. [Step 8 - Verification Checklist](#10-step-8--verification-checklist)
-11. [Other GitHub Access Methods (Reference Only)](#11-other-github-access-methods-reference-only)
-12. [Getting Help Before the Event](#12-getting-help-before-the-event)
+1. [What You Will Need](#what-you-will-need)
+2. [Step 1 - Create Your GitHub Account](#step-1-create-your-github-account)
+3. [Step 2 - Configure GitHub Accessibility Settings](#step-2-configure-github-accessibility-settings)
+4. [Step 3 - Configure Your Profile](#step-3-configure-your-profile)
+5. [Step 4 - Check GitHub Feature Preview Settings](#step-4-check-github-feature-preview-settings)
+6. [Step 5 - Set Up Your Screen Reader and Browser](#step-5-set-up-your-screen-reader-browser)
+7. [Step 6 - Install Git and Visual Studio Code](#step-6-install-git-and-visual-studio-code)
+8. [Step 7 - Configure Git Identity](#step-7-configure-git-identity)
+9. [Step 8 - Install VS Code Extensions](#step-8-install-vs-code-extensions)
+10. [Step 9 - Verification Checklist](#step-9-verification-checklist)
+11. [Other GitHub Access Methods (Reference Only)](#other-github-access-methods-reference-only)
+12. [Getting Help Before the Event](#getting-help-before-the-event)
 
 ---
 
-## 1. What You Will Need
+## What You Will Need
 
 ### Hardware
 - A computer running Windows or macOS
@@ -59,9 +59,9 @@ You only need **one** of these. Use whichever you are most comfortable with.
 
 ---
 
-## 2. Step 1 - Create Your GitHub Account
+## Step 1 - Create Your GitHub Account
 
-If you already have a GitHub account, skip to [Step 2](#4-step-2--configure-github-accessibility-settings).
+If you already have a GitHub account, skip to [Step 2](#step-2-configure-github-accessibility-settings).
 
 > **Before you begin:** Have your email address and a chosen password ready. The signup form is a single-page form with several fields - your screen reader will encounter a verification puzzle partway through (see note below).
 
@@ -182,66 +182,7 @@ Copy-ready paragraph for `CONTRIBUTING.md` / registration forms
 
 ---
 
-## 3. Step 1.5 - Configure Git Identity (If Using Git Locally)
-
-> **Important:** Complete this step after installing Git (Step 6) and before the workshop begins. Git must know who you are before you can make your first commit.
-
-Git needs to know who you are so every commit you make is attributed to you. This affects how your name appears in project history.
-
-### Configure in VS Code (Recommended for This Workshop)
-
-1. Open **Visual Studio Code**
-2. Open the integrated terminal:
-   - Menu: **Terminal → New Terminal**
-   - Keyboard: `` Ctrl+` `` (Windows) or `` Cmd+` `` (Mac)
-3. Type the following commands, replacing with your information:
-
-```bash
-git config --global user.name "Your Name"
-git config --global user.email "your-email@example.com"
-```
-
-**What to use:**
-- **user.name:** Your real name or the name you want shown on commits (e.g., "Jane Smith")
-- **user.email:** The email address associated with your GitHub account (must match exactly)
-
-**Screen reader note:** The terminal in VS Code is accessible with all major screen readers. Press `` Ctrl+` `` to move focus to the terminal, type your commands, and press `Enter`.
-
-### Why This Matters
-
-Every commit you make includes:
-- Your name
-- Your email address  
-- A timestamp
-- The commit message
-
-If Git isn't configured, it will either:
-- Use a default name like "Unknown" (looks unprofessional in project history)
-- Refuse to create commits with an error message
-
-### Verify Your Configuration
-
-Run this command to see your current settings:
-
-```bash
-git config --global --list
-```
-
-You should see:
-```
-user.name=Your Name
-user.email=your-email@example.com
-```
-
-### Using the Correct Email
-
-Use the same email you registered with GitHub. If you're concerned about privacy, GitHub offers a no-reply email you can use: `username@users.noreply.github.com` - find it in [Settings → Emails](https://github.com/settings/emails).
-
-**When to configure this:** Before your first commit in VS Code. You can skip it on Day 1 if you're only working through the GitHub web interface.
-
----
-
-## 4. Step 2 - Configure GitHub Accessibility Settings
+## Step 2 - Configure GitHub Accessibility Settings
 
 These settings make GitHub significantly more usable with a screen reader. **Do not skip this section** - one setting in particular (hovercards) adds significant noise to every page if left on.
 
@@ -347,7 +288,7 @@ Theme is on a separate page: [GitHub Appearance Settings](https://github.com/set
 
 ---
 
-## 5. Step 3 - Configure Your Profile
+## Step 3 - Configure Your Profile
 
 Your GitHub profile is your public identity in the open source community. Setting it up properly helps maintainers know who you are.
 
@@ -372,7 +313,7 @@ A profile picture humanizes your contributions. It can be a photo or any image. 
 
 ---
 
-## 6. Step 4 - Check GitHub Feature Preview Settings
+## Step 4 - Check GitHub Feature Preview Settings
 
 GitHub continuously rolls out improvements to its interface. Some enhancements start as opt-in Feature Previews before becoming the standard experience. Two features matter most for screen reader users working through this workshop:
 
@@ -450,7 +391,7 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 ---
 
-## 7. Step 5 - Set Up Your Screen Reader & Browser
+## Step 5 - Set Up Your Screen Reader & Browser
 
 ### NVDA (Windows)
 
@@ -522,7 +463,7 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 ---
 
-## 8. Step 6 - Install Git and Visual Studio Code
+## Step 6 - Install Git and Visual Studio Code
 
 ### Install Git First
 
@@ -550,7 +491,7 @@ Git is often already present via Xcode Command Line Tools. To check:
 - PowerShell is accessible with all screen readers via Browse Mode or Forms Mode
 - Type `git --version`, press `Enter`, then press `↑` to re-read the output line
 
-Once Git is installed, proceed to [Step 1.5](#3-step-15--configure-git-identity-if-using-git-locally) to configure your name and email before your first commit.
+Once Git is installed, you will configure your Git identity in Step 7 after VS Code is set up.
 
 ---
 
@@ -612,7 +553,56 @@ If VS Code did **not** prompt you automatically, enable it manually:
 
 ---
 
-## 9. Step 7 - Install VS Code Extensions
+## Step 7 - Configure Git Identity
+
+Now that Git is installed, tell it who you are. Git embeds your name and email in every commit you make, and this affects how your contributions appear in project history.
+
+### Configure in VS Code
+
+1. Open **Visual Studio Code**
+2. Open the integrated terminal:
+   - Menu: **Terminal → New Terminal**
+   - Keyboard: `` Ctrl+` `` (Windows) or `` Cmd+` `` (Mac)
+3. Type the following commands, replacing with your information:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+**What to use:**
+- **user.name:** Your real name or the name you want shown on commits (e.g., "Jane Smith")
+- **user.email:** The email address associated with your GitHub account (must match exactly)
+
+**Screen reader note:** The terminal in VS Code is accessible with all major screen readers. Press `` Ctrl+` `` to move focus to the terminal, type your commands, and press `Enter`.
+
+### Why This Matters
+
+If Git isn't configured, it will either:
+- Use a default name like "Unknown" (looks unprofessional in project history)
+- Refuse to create commits with an error message
+
+### Verify Your Configuration
+
+Run this command to see your current settings:
+
+```bash
+git config --global --list
+```
+
+You should see:
+```
+user.name=Your Name
+user.email=your-email@example.com
+```
+
+### Using the Correct Email
+
+Use the same email you registered with GitHub. If you're concerned about privacy, GitHub offers a no-reply email you can use: `username@users.noreply.github.com` - find it in [Settings → Emails](https://github.com/settings/emails).
+
+---
+
+## Step 8 - Install VS Code Extensions
 
 This workshop uses two VS Code extensions. Both are published by GitHub and are free. Install them in the order shown below.
 
@@ -703,7 +693,7 @@ For this workshop, Free tier is sufficient. If you want unlimited access, paid p
 
 ---
 
-## 10. Step 8 - Verification Checklist
+## Step 9 - Verification Checklist
 
 Work through this checklist before Day 1. Check off each item:
 
@@ -742,7 +732,7 @@ GIT & VS CODE (required before the workshop)
 
 ---
 
-## 11. Other GitHub Access Methods (Reference Only)
+## Other GitHub Access Methods (Reference Only)
 
 This workshop focuses entirely on GitHub.com in the browser and VS Code. However, you should be aware that other ways to work with GitHub exist. We list them here for your reference - we will not be teaching these in depth.
 
@@ -799,7 +789,7 @@ We are not covering Git commands in this workshop. If you want to learn Git, the
 
 ---
 
-## 12. Getting Help Before the Event
+## Getting Help Before the Event
 
 If you cannot complete any step in this guide before the workshop:
 

@@ -90,9 +90,9 @@ git merge origin/main
 <h3>3. <strong>Communicate with your team</strong></h3>
 <p>Let others know what files you&#39;re working on. Use issue comments:</p>
 <blockquote>
-<p>&quot;Heads up: I&#39;m refactoring <code>auth.js</code> in my PR for #42. If you&#39;re touching that file, let&#39;s coordinate.&quot;</p>
+<p>&quot;Heads up: I&#39;m working on the <code>[TODO]</code> sections in <code>docs/welcome.md</code> for Challenge 3. If you&#39;re also editing welcome.md, let&#39;s coordinate so we don&#39;t conflict.&quot;</p>
 </blockquote>
-<p>Prevents two people from heavily editing the same file simultaneously.</p>
+<p>In the Learning Room, this is especially important because multiple students may claim challenges that touch the same file. Challenges 1 and 3 both modify <code>docs/welcome.md</code> - if two students work on both simultaneously without coordinating, a merge conflict will occur.</p>
 <h3>4. <strong>Avoid mass reformatting</strong></h3>
 <p>Running a formatter on an entire file creates conflicts with anyone else editing that file. If you must:</p>
 <ul>
@@ -183,19 +183,21 @@ The content coming from the OTHER branch (or main)
 <li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</code> - the end of the INCOMING version (from the branch being merged in)</li>
 </ul>
 <h3>Example in a real file</h3>
-<p><strong>Original file (before conflict):</strong></p>
-<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">button</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-<p><strong>After two conflicting changes:</strong></p>
+<p><strong>Original file (<code>docs/keyboard-shortcuts.md</code>) before conflict:</strong></p>
+<pre><code class="hljs language-markdown">| Insert+Space | Toggle between Browse Mode and Focus Mode |</code></pre>
+<p><strong>After two students both added a shortcut to the same table row:</strong></p>
 <pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-&lt;button aria-label=&quot;Submit form&quot;&gt;Submit&lt;/button&gt;
+| Insert+Space | Toggle between Browse Mode and Focus Mode |
+| Insert+F5 | List elements by type |
 =======
-&lt;button type=&quot;submit&quot;&gt;Send message&lt;/button&gt;
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/form-improvements</code></pre>
+| Insert+Space | Toggle between Browse Mode and Focus Mode |
+| Insert+F7 | Elements list (links, headings, form fields) |
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; add-nvda-shortcut</code></pre>
 <p><strong>Resolution options:</strong></p>
 <ol>
-<li>Keep your version: <code>&lt;button aria-label=&quot;Submit form&quot;&gt;Submit&lt;/button&gt;</code></li>
-<li>Keep their version: <code>&lt;button type=&quot;submit&quot;&gt;Send message&lt;/button&gt;</code></li>
-<li>Keep both changes: <code>&lt;button type=&quot;submit&quot; aria-label=&quot;Submit form&quot;&gt;Submit&lt;/button&gt;</code> ← often the right answer</li>
+<li>Keep your version: add only <code>Insert+F5</code></li>
+<li>Keep their version: add only <code>Insert+F7</code></li>
+<li>Keep both rows: add both shortcuts to the table (often the right answer when two students added different valid shortcuts)</li>
 </ol>
 <hr>
 <h2>Resolving Conflicts on GitHub (Web Editor)</h2>

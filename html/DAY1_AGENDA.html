@@ -195,12 +195,46 @@
 </ol>
 <p><strong>Navigate the learning-room repo (group):</strong></p>
 <ol>
-<li>Go to <code>github.com/[org]/learning-room</code></li>
+<li>Go to <code>github.com/Community-Access/learning-room</code></li>
 <li>Find the repo name with <code>1</code> (h1)</li>
 <li>Find the tab bar (Issues, Pull Requests, etc.) with <code>D</code> → repository navigation landmark</li>
 <li>Navigate the files table with <code>T</code> then <code>Ctrl+Alt+↓</code></li>
-<li>Open <code>README.md</code></li>
+<li>Open <code>README.md</code> - read the &quot;What Is in This Repository&quot; table</li>
 </ol>
+<p><strong>Explore the practice files:</strong>
+The <code>docs/</code> folder contains three files with intentional issues that you will fix during today&#39;s contribution sprint:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">File</th>
+<th scope="col">What it contains</th>
+<th scope="col">What students will fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>docs/welcome.md</code></td>
+<td>Introduction to open source contribution</td>
+<td>Three <code>[TODO]</code> sections to complete (contributor backgrounds, evaluating issues, GitHub profile impact)</td>
+</tr>
+<tr>
+<td><code>docs/keyboard-shortcuts.md</code></td>
+<td>NVDA, JAWS, and VoiceOver shortcut tables</td>
+<td>Intentional errors in keyboard shortcut references</td>
+</tr>
+<tr>
+<td><code>docs/setup-guide.md</code></td>
+<td>Step-by-step GitHub setup instructions</td>
+<td>Broken links and incomplete steps</td>
+</tr>
+</tbody></table>
+<ol start="6">
+<li>Open <code>docs/welcome.md</code> - navigate with <code>H</code> to read the headings. Find the <code>[TODO]</code> markers - these are the sections you will complete later today</li>
+<li>Open <code>docs/keyboard-shortcuts.md</code> - press <code>T</code> to navigate to the first table. This is the NVDA shortcut reference. Can you spot any errors?</li>
+<li>Open <code>docs/setup-guide.md</code> - press <code>K</code> to navigate links. Are all links working?</li>
+</ol>
+<blockquote>
+<p><strong>Key insight:</strong> These files are intentionally imperfect. Finding and fixing issues in documentation is one of the most valuable contributions in open source. The challenges in <a href="docs/CHALLENGES.html">docs/CHALLENGES.md</a> map directly to these files.</p>
+</blockquote>
 <h3>Part B - Set Up Your First GitHub Skills Repository</h3>
 <blockquote>
 <p><strong>Magic Moment #1:</strong> You are about to copy a real repository to your own GitHub account. When you complete this, you will have made your first GitHub action - and Mona will respond automatically.</p>
@@ -265,24 +299,35 @@
 <p><strong>Activity 2A - Repo Exploration:</strong>
 Find the answers to these questions using keyboard navigation in <code>learning-room</code>:</p>
 <ol>
-<li>How many files are in the root of the repo?</li>
+<li>How many files are in the <code>docs/</code> folder?</li>
 <li>What is the description of the repo?</li>
 <li>Who opened the last commit?</li>
-<li>When was README.md last edited?</li>
+<li>When was <code>docs/welcome.md</code> last edited?</li>
 <li>How many branches exist?</li>
 </ol>
-<p><strong>Activity 2B - Reading a Commit:</strong></p>
+<p><strong>Activity 2B - Reading Practice File Content:</strong></p>
+<ol>
+<li>Open <code>docs/keyboard-shortcuts.md</code></li>
+<li>Navigate to the NVDA section using <code>2</code> (H2 headings)</li>
+<li>Find the &quot;Single-Key Navigation&quot; table with <code>T</code></li>
+<li>Read through the table rows - how many shortcuts are listed for NVDA?</li>
+<li>Navigate to the VoiceOver section - what is the VoiceOver modifier key combination?</li>
+<li>Open <code>docs/CHALLENGES.md</code> - navigate to &quot;Beginner Challenges&quot; with <code>2</code></li>
+<li>Read Challenge 1 - which file does it ask you to fix, and what is the issue?</li>
+</ol>
+<p><strong>Activity 2C - Reading a Commit:</strong></p>
 <ol>
 <li>Navigate to the Commits tab</li>
 <li>Find the most recent commit - read its message aloud</li>
 <li>Open that commit - navigate the diff with your screen reader</li>
 <li>What file(s) changed, and what specifically changed?</li>
 </ol>
-<p><strong>Activity 2C - Branch Navigation:</strong></p>
+<p><strong>Activity 2D - Branch Navigation:</strong></p>
 <ol>
 <li>Open the branch dropdown (find the &quot;main&quot; button)</li>
 <li>Switch to the <code>day1-practice</code> branch</li>
-<li>Find how the files differ from <code>main</code></li>
+<li>Navigate to <code>docs/</code> - do any files differ from <code>main</code>?</li>
+<li>Switch back to <code>main</code></li>
 </ol>
 <h3>Reference Document</h3>
 <p><a href="docs/02-navigating-repositories.html">Navigating Repositories</a></p>
@@ -355,31 +400,39 @@ Getting started with open source AT contributions.</code></pre>
 <p><strong>Magic Moment #2:</strong> Mona will respond to your PR within seconds. Navigate to the Conversations tab of your new PR. Mona has left a comment - read it with your screen reader. This is automated feedback on your real GitHub action, from an actual GitHub Actions workflow running in your repository.</p>
 </blockquote>
 <h3>Part D - Issues Practice in learning-room (20 min)</h3>
-<p><strong>Activity 3A - Find and read an issue:</strong></p>
+<p><strong>Activity 3A - Find and read a challenge issue:</strong></p>
 <ol>
 <li>Navigate to <code>learning-room</code> Issues tab</li>
-<li>Filter by <code>good first issue</code> label</li>
+<li>Filter by <code>good first issue</code> label: type <code>is:open label:&quot;good first issue&quot;</code> in the filter bar</li>
 <li>Open issue #1 - &quot;Welcome! Introduce yourself&quot;</li>
 <li>Read the full issue description with your screen reader</li>
 </ol>
-<p><strong>Activity 3B - Leave a comment:</strong></p>
+<p><strong>Activity 3B - Leave a comment on the welcome issue:</strong></p>
 <ol>
 <li>Navigate to the comment box (<code>D</code> → &quot;Add a comment&quot; landmark or region)</li>
 <li>Switch to Focus Mode - type your introduction using Markdown:<ul>
-<li>Use <code>##</code> for a heading</li>
-<li>Bold your screen reader name with <code>**NVDA**</code></li>
-<li>Add a task list with <code>- [ ]</code> of things you want to learn</li>
+<li>Use <code>##</code> for a heading with your name</li>
+<li>Bold your screen reader name with <code>**NVDA**</code> or <code>**JAWS**</code> or <code>**VoiceOver**</code></li>
+<li>Add a task list of things you want to learn:<pre><code class="hljs language-markdown"><span class="hljs-bullet">-</span> [ ] Fix a broken link in setup-guide.md
+<span class="hljs-bullet">-</span> [ ] Complete a [TODO] section in welcome.md
+<span class="hljs-bullet">-</span> [ ] Add a keyboard shortcut to keyboard-shortcuts.md</code></pre>
+</li>
 </ul>
 </li>
 <li>Submit with <code>Ctrl+Enter</code></li>
 </ol>
-<p><strong>Activity 3C - File a new issue:</strong></p>
+<p><strong>Activity 3C - File a new issue based on what you found:</strong></p>
 <ol>
 <li>Navigate to Issues → New issue</li>
-<li>Choose the &quot;Accessibility Bug Report&quot; template</li>
-<li>Navigate through the form fields - notice how labeled fields are announced</li>
-<li>Fill in a real (or practice) accessibility observation from GitHub</li>
-<li>Submit - note the issue number</li>
+<li>Choose the &quot;Beginner Challenge&quot; template (this maps to Challenge 1, 2, or 3 from CHALLENGES.md)</li>
+<li>In the title, be specific: &quot;Fix broken link in docs/welcome.md&quot; or &quot;Add missing NVDA shortcut to keyboard-shortcuts.md&quot;</li>
+<li>In the description, reference the file and line where you found the issue:<pre><code class="hljs language-markdown"><span class="hljs-section">## What I found</span>
+In <span class="hljs-code">`docs/setup-guide.md`</span>, the link to the accessibility settings page appears to be broken.
+
+<span class="hljs-section">## Which challenge</span>
+Challenge 1: Fix Broken Link (from CHALLENGES.md)</code></pre>
+</li>
+<li>Submit - note the issue number. You will use <code>Closes #XX</code> in your PR during Block 5</li>
 </ol>
 <h3>Reference Document</h3>
 <p><a href="docs/04-working-with-issues.html">Working with Issues</a> | <a href="docs/appendix-a-glossary.html">GitHub Concepts Glossary</a></p>
@@ -459,67 +512,129 @@ Getting started with open source AT contributions.</code></pre>
 </ol>
 <p>Both are valuable. Both are part of professional open source development.</p>
 </blockquote>
+<h3>Merge Conflicts: What to Expect (10 min)</h3>
+<p>When multiple contributors edit the same file at the same time, Git cannot automatically combine the changes. This is called a <strong>merge conflict</strong>. During this sprint, conflicts are likely because several participants will be editing <code>docs/welcome.md</code> simultaneously.</p>
+<p><strong>Before you start your challenge</strong>, read the conflict prevention strategies and resolution steps in <a href="docs/06-merge-conflicts.html">Chapter 6: Merge Conflicts</a>. Key points:</p>
+<ul>
+<li><strong>Communicate with your team.</strong> If two people are both working on <code>docs/welcome.md</code>, coordinate who edits which <code>[TODO]</code> section.</li>
+<li><strong>Pull before you push.</strong> Always sync with the latest <code>main</code> before opening a PR.</li>
+<li><strong>If you see conflict markers</strong> (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>), do not panic. The markers show both versions. Keep the correct content, delete the markers, and commit.</li>
+</ul>
+<p>The facilitator will walk through a live conflict resolution if one occurs during the sprint.</p>
 <h3>Setup</h3>
-<p>The <code>learning-room</code> repo has a <code>docs/</code> folder with several intentionally incomplete or slightly inaccurate documents. Each participant will:</p>
+<p>The <code>learning-room</code> repo has a <code>docs/</code> folder with three intentionally imperfect practice files. Each participant will work on one of the first three challenges from <a href="learning-room/docs/CHALLENGES.html">docs/CHALLENGES.md</a>:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Challenge</th>
+<th scope="col">File</th>
+<th scope="col">What to fix</th>
+<th scope="col">Difficulty</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Challenge 1: Fix Broken Link</td>
+<td><code>docs/welcome.md</code></td>
+<td>Find and repair the broken internal link</td>
+<td>10-15 min</td>
+</tr>
+<tr>
+<td>Challenge 2: Add Keyboard Shortcut</td>
+<td><code>docs/keyboard-shortcuts.md</code></td>
+<td>Add a missing shortcut to the correct table</td>
+<td>15-20 min</td>
+</tr>
+<tr>
+<td>Challenge 3: Complete Welcome Guide</td>
+<td><code>docs/welcome.md</code></td>
+<td>Fill in the three <code>[TODO]</code> sections</td>
+<td>20-30 min</td>
+</tr>
+</tbody></table>
+<p>Each participant will:</p>
 <ol>
-<li>Find their assigned issue</li>
-<li>Edit the file on GitHub</li>
+<li>Find their assigned issue (which maps to one of these challenges)</li>
+<li>Edit the practice file on GitHub</li>
 <li>Commit, branch, and open a PR</li>
-<li><strong>Wait for bot feedback</strong> (watch for comment within ~30 seconds)</li>
+<li><strong>Wait for bot feedback</strong> (watch for comment within 30 seconds)</li>
 <li>Address bot feedback if needed</li>
 <li>Request review from another participant</li>
 <li>Review someone else&#39;s PR</li>
 </ol>
 <h3>Full Workflow</h3>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Find your issue
-  Issues tab → filter <span class="hljs-keyword">by</span> Assignee: <span class="hljs-keyword">me</span>
-  Open the issue, read the full description
+<p><strong>Example walkthrough: Challenge 3 - Complete the welcome guide</strong></p>
+<p>This example shows the full workflow for filling in <code>[TODO]</code> sections in <code>docs/welcome.md</code>. Your actual challenge may differ.</p>
+<pre><code class="hljs">Step <span class="hljs-number">1</span>: Find your issue
+  Issues <span class="hljs-literal">tab</span> → filter <span class="hljs-keyword">by</span> Assignee: <span class="hljs-keyword">me</span>
+  Open <span class="hljs-keyword">the</span> issue - <span class="hljs-keyword">it</span> says: <span class="hljs-string">&quot;Complete the [TODO] sections in docs/welcome.md&quot;</span>
+  Read <span class="hljs-keyword">the</span> full description - <span class="hljs-keyword">it</span> references Challenge <span class="hljs-number">3</span> <span class="hljs-keyword">from</span> CHALLENGES.md
 
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: Navigate <span class="hljs-keyword">to</span> the file
-  Use the file path <span class="hljs-keyword">in</span> the issue description
-  Navigate via the file tree <span class="hljs-built_in">OR</span> use <span class="hljs-string">&quot;Go to file&quot;</span> (F <span class="hljs-keyword">to</span> find the search box)
+Step <span class="hljs-number">2</span>: Navigate <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span>
+  Code <span class="hljs-literal">tab</span> → docs/ folder → welcome.md
+  Read <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> - find <span class="hljs-keyword">the</span> [TODO] markers:
+    • <span class="hljs-string">&quot;Who Can Contribute?&quot;</span> section: [TODO: Add a <span class="hljs-built_in">paragraph</span> explaining 
+      <span class="hljs-keyword">that</span> contributors come <span class="hljs-keyword">from</span> all backgrounds...]
+    • <span class="hljs-string">&quot;Finding Something to Work On&quot;</span> section: [TODO: Add two <span class="hljs-keyword">or</span> three 
+      sentences <span class="hljs-keyword">about</span> how <span class="hljs-keyword">to</span> <span class="hljs-built_in">read</span> an issue...]
+    • <span class="hljs-string">&quot;After Your Contribution Is Merged&quot;</span> section: [TODO: Add a sentence
+      <span class="hljs-keyword">or</span> two <span class="hljs-keyword">about</span> what this means <span class="hljs-keyword">for</span> someone&#x27;s GitHub profile...]
 
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: Edit the file <span class="hljs-keyword">on</span> GitHub
-  Find the edit pencil button (B <span class="hljs-keyword">for</span> buttons → <span class="hljs-string">&quot;Edit this file&quot;</span>)
-  Switch <span class="hljs-keyword">to</span> Focus Mode → make your changes
-  Use Markdown formatting
+Step <span class="hljs-number">3</span>: Edit <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> <span class="hljs-keyword">on</span> GitHub
+  Find <span class="hljs-keyword">the</span> edit pencil button (B <span class="hljs-keyword">for</span> buttons → <span class="hljs-string">&quot;Edit this file&quot;</span>)
+  Switch <span class="hljs-keyword">to</span> Focus Mode → replace each [TODO] <span class="hljs-keyword">with</span> <span class="hljs-built_in">real</span> content
+  Example <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> [TODO]:
+    <span class="hljs-string">&quot;Contributors come from all backgrounds, skill levels, and 
+    countries. Using assistive technology is not a barrier to 
+    contribution - in fact, AT users bring a perspective that 
+    improves projects for everyone.&quot;</span>
 
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Commit <span class="hljs-built_in">and</span> branch
-  Commit changes → <span class="hljs-keyword">select</span> <span class="hljs-string">&quot;Create a new branch&quot;</span>
-  Name: fix/[your-name]-[issue-number]
+Step <span class="hljs-number">4</span>: Commit <span class="hljs-keyword">and</span> branch
+  Commit changes → select <span class="hljs-string">&quot;Create a new branch&quot;</span>
+  Name: fix/[your-<span class="hljs-built_in">name</span>]-issue-[<span class="hljs-built_in">number</span>]
   <span class="hljs-string">&quot;Propose changes&quot;</span>
 
-<span class="hljs-keyword">Step</span> <span class="hljs-number">5</span>: Open the Pull Request
-  Fill <span class="hljs-keyword">in</span> the PR description <span class="hljs-keyword">using</span> the template
-  Add <span class="hljs-string">&quot;Closes #[your-issue-number]&quot;</span>
-  Submit
+Step <span class="hljs-number">5</span>: Open <span class="hljs-keyword">the</span> Pull Request
+  Fill <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> PR description using <span class="hljs-keyword">the</span> template:
+    <span class="hljs-comment">## What Changed</span>
+    Completed <span class="hljs-keyword">the</span> three [TODO] sections <span class="hljs-keyword">in</span> docs/welcome.md
+    
+    <span class="hljs-comment">## Related Issue</span>
+    Closes <span class="hljs-comment">#[your-issue-number]</span>
+    
+    <span class="hljs-comment">## Checklist</span>
+    - [x] All [TODO] markers removed
+    - [x] Content matches <span class="hljs-keyword">the</span> style <span class="hljs-keyword">of</span> existing sections
+    - [x] Heading hierarchy <span class="hljs-keyword">is</span> correct (H1 → H2 → H3)
 
-WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</span> seconds)
-  A bot will automatically comment <span class="hljs-keyword">on</span> your PR
-  Read the comment carefully - it checks <span class="hljs-keyword">for</span>:
-    • Broken links
-    • Heading hierarchy problems
-    • Missing image descriptions
-    • Document <span class="hljs-keyword">structure</span>
-    • Accessibility issues
-  The bot explains WHY <span class="hljs-keyword">each</span> issue matters <span class="hljs-built_in">and</span> links <span class="hljs-keyword">to</span> resources
+WAIT FOR BOT (<span class="hljs-number">30</span> seconds)
+  The Learning Room bot will automatically comment <span class="hljs-keyword">on</span> your PR
+  Read <span class="hljs-keyword">the</span> comment carefully - <span class="hljs-keyword">it</span> checks <span class="hljs-keyword">for</span>:
+    • Issue <span class="hljs-keyword">reference</span> (did you include <span class="hljs-string">&quot;Closes #XX&quot;</span>?)
+    • File location (are changes <span class="hljs-keyword">in</span> docs/ only?)
+    • Heading hierarchy (no H1→H3 skips)
+    • Link <span class="hljs-built_in">text</span> quality (no <span class="hljs-string">&quot;click here&quot;</span>)
+    • [TODO] markers (did you remove them all?)
+  The bot explains WHY each issue matters <span class="hljs-keyword">and</span> links <span class="hljs-keyword">to</span> resources
 
-<span class="hljs-keyword">Step</span> <span class="hljs-number">6</span>: Fix bot issues (<span class="hljs-keyword">if</span> any)
-  Address any required checks
-  Make additional changes <span class="hljs-keyword">if</span> the feedback <span class="hljs-built_in">is</span> helpful
-  Push your changes - the bot will re-check
+Step <span class="hljs-number">6</span>: Fix bot issues (<span class="hljs-keyword">if</span> any)
+  Address any required checks <span class="hljs-keyword">the</span> bot flagged
+  Push your changes <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> same branch - <span class="hljs-keyword">the</span> bot re-checks automatically
 
-<span class="hljs-keyword">Step</span> <span class="hljs-number">7</span>: Request human review
-  Click <span class="hljs-string">&quot;Reviewers&quot;</span> → <span class="hljs-keyword">select</span> another participant
-  THE BOT <span class="hljs-built_in">IS</span> <span class="hljs-built_in">NOT</span> A SUBSTITUTE <span class="hljs-keyword">FOR</span> HUMAN REVIEW
+Step <span class="hljs-number">7</span>: Request human review
+  Click <span class="hljs-string">&quot;Reviewers&quot;</span> → select another participant
+  THE BOT IS NOT A SUBSTITUTE FOR HUMAN REVIEW
   You need both: bot technical feedback + human judgment
 
-<span class="hljs-keyword">Step</span> <span class="hljs-number">8</span>: Review someone <span class="hljs-keyword">else</span><span class="hljs-comment">&#x27;s PR</span>
-  Find the PR opened <span class="hljs-keyword">by</span> the person seated <span class="hljs-keyword">next</span> <span class="hljs-keyword">to</span> you
-  Leave a constructive comment addressing both:
-    • The issues the bot flagged (did they fix them well?)
-    • Higher-level improvements (clarity, completeness, accessibility)
-  Approve <span class="hljs-keyword">if</span> it looks good</code></pre>
+Step <span class="hljs-number">8</span>: Review someone <span class="hljs-keyword">else</span>&#x27;s PR
+  Find <span class="hljs-keyword">the</span> PR opened <span class="hljs-keyword">by</span> another participant
+  Leave a constructive comment addressing:
+    • The issues <span class="hljs-keyword">the</span> bot flagged (did they fix them well?)
+    • Content quality (<span class="hljs-keyword">is</span> <span class="hljs-keyword">the</span> writing clear <span class="hljs-keyword">and</span> inclusive?)
+    • Accessibility (do headings, links, <span class="hljs-keyword">and</span> structure work <span class="hljs-keyword">for</span> screen readers?)
+  Approve <span class="hljs-keyword">if</span> <span class="hljs-keyword">it</span> looks good</code></pre>
+<p><strong>Other challenge examples:</strong></p>
+<p><strong>Challenge 1 (Fix Broken Link):</strong> Open <code>docs/welcome.md</code>, find the broken internal link, determine the correct file path, and update the link. The bot will verify the link resolves correctly.</p>
+<p><strong>Challenge 2 (Add Keyboard Shortcut):</strong> Open <code>docs/keyboard-shortcuts.md</code>, find the appropriate screen reader section (NVDA, JAWS, or VoiceOver), add a missing shortcut to the table using proper Markdown table syntax. The bot checks that table formatting is preserved.</p>
 <h3>What the Bot Checks</h3>
 <p>The automation bot validates these things:</p>
 <ul>
@@ -538,14 +653,28 @@ WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</sp
 <li>Links to learning resources</li>
 </ul>
 <p><strong>See:</strong> <a href="learning-room/AUTOMATION.html">Learning Room Automation Guide</a> for detailed explanation of bot feedback</p>
-<h3>What to look for in the docs folder</h3>
+<h3>What to look for in each practice file</h3>
+<p><strong><code>docs/welcome.md</code></strong> (Challenges 1 and 3):</p>
 <ul>
-<li>Broken links and incorrect keyboard shortcuts</li>
-<li>Missing alt text descriptions in documentation</li>
-<li>Incomplete sections marked with <code>[TODO]</code></li>
-<li>Heading hierarchy violations (H1→H3 skips)</li>
-<li>Spelling and grammar issues</li>
+<li>Three <code>[TODO]</code> sections that need real content (see &quot;Who Can Contribute?&quot;, &quot;Finding Something to Work On&quot;, &quot;After Your Contribution Is Merged&quot;)</li>
+<li>A broken internal link to verify and fix</li>
+<li>Heading hierarchy to check (H1 → H2 flow)</li>
 </ul>
+<p><strong><code>docs/keyboard-shortcuts.md</code></strong> (Challenge 2):</p>
+<ul>
+<li>NVDA, JAWS, and VoiceOver shortcut tables</li>
+<li>Intentional errors in some shortcut references</li>
+<li>Missing shortcuts that should be added</li>
+<li>Table formatting that must be preserved</li>
+</ul>
+<p><strong><code>docs/setup-guide.md</code></strong> (Advanced challenges):</p>
+<ul>
+<li>Broken links to GitHub settings pages</li>
+<li>Incomplete setup steps</li>
+<li>A note at the bottom referencing <code>[TODO]</code> items</li>
+</ul>
+<p><strong><code>docs/CHALLENGES.md</code></strong> lists all 12 challenges with success criteria for each. When reviewing a peer&#39;s PR, check their work against the success criteria listed for their challenge.</p>
+<p><strong><code>docs/GROUP_CHALLENGES.md</code></strong> has 7 collaborative exercises if your study group wants to tackle something together after individual challenges.</p>
 <hr>
 <h2>Block 6 - Community: Culture, Etiquette, Labels, and Notifications (3:00 PM, 90 min)</h2>
 <h3>Purpose</h3>
@@ -556,10 +685,43 @@ WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</sp
 <ol>
 <li>Read <code>CODE_OF_CONDUCT.md</code> - what does it commit to?</li>
 <li>Read <code>CONTRIBUTING.md</code> - what does the project ask of contributors?</li>
-<li>Read the Issue Template - what information does it require and why?</li>
+<li>Read the Issue Templates - navigate to <code>.github/ISSUE_TEMPLATE/</code> and open the beginner challenge template. What information does it require and why?</li>
+<li>Read <code>AUTOMATION.md</code> - find the &quot;Common Validation Issues and Fixes&quot; section. This explains every bot feedback message you might see.</li>
 </ol>
 <p><strong>Key insight:</strong> These files exist to lower barriers AND set expectations. A project with these files sends a signal of maturity and intention.</p>
-<h3>Part 6B - Language, Tone, and Inclusive Culture (20 min)</h3>
+<h3>Part 6B - Group Challenges Preview (10 min)</h3>
+<p><strong>Activity:</strong> Open <code>docs/GROUP_CHALLENGES.md</code> in the learning-room. Navigate the available group exercises:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Exercise</th>
+<th scope="col">Difficulty</th>
+<th scope="col">What it practices</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Documentation Sprint</td>
+<td>Beginner-Intermediate</td>
+<td>Parallel collaboration, avoiding merge conflicts</td>
+</tr>
+<tr>
+<td>Peer Review Circle</td>
+<td>Intermediate</td>
+<td>Structured review rotation, giving/receiving feedback</td>
+</tr>
+<tr>
+<td>Accessibility Workshop</td>
+<td>Intermediate-Advanced</td>
+<td>Deep-dive on one a11y topic, teaching others</td>
+</tr>
+<tr>
+<td>Challenge Creation Sprint</td>
+<td>Advanced-Expert</td>
+<td>Instructional design, writing clear instructions</td>
+</tr>
+</tbody></table>
+<p><strong>If your study group has time:</strong> Pick one group challenge to start after individual work. The &quot;Documentation Sprint&quot; is a great first choice - divide <code>docs/welcome.md</code> sections among group members and coordinate your PRs.</p>
+<h3>Part 6C - Language, Tone, and Inclusive Culture (20 min)</h3>
 <p><strong>Discussion points:</strong></p>
 <ul>
 <li>The asynchronous nature of open source - your comment will be read out of context, by many people, over a long time</li>
@@ -576,7 +738,7 @@ WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</sp
 <li>&quot;Great job! But this is terrible.&quot; <em>(contradictory feedback)</em></li>
 <li>&quot;Fix this before EOD.&quot;</li>
 </ol>
-<h3>Part 6C - Commenting and Review Etiquette (20 min)</h3>
+<h3>Part 6D - Commenting and Review Etiquette (20 min)</h3>
 <p><strong>The anatomy of a good review comment:</strong></p>
 <p>A useful comment includes:</p>
 <ol>
@@ -596,7 +758,7 @@ WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</sp
 <li>Marking your review as &quot;Comment&quot; when you&#39;re not sure whether something is a blocker</li>
 </ul>
 <p><strong>Exercise:</strong> Write a review comment for the change: &quot;A PR removes the <code>&lt;main&gt;</code> landmark element from a page.&quot;</p>
-<h3>Part 6D - Notifications: Taking Control of Your Inbox (15 min)</h3>
+<h3>Part 6E - Notifications: Taking Control of Your Inbox (15 min)</h3>
 <p><strong>Concepts:</strong></p>
 <ul>
 <li>GitHub Notifications inbox: <code>github.com/notifications</code></li>
@@ -619,7 +781,7 @@ WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</sp
 <li><code>E</code> marks a notification as Done from the list</li>
 <li><code>Shift+I</code> marks as read</li>
 </ul>
-<h3>Part 6E - Labels, Milestones, and Cross-References (20 min)</h3>
+<h3>Part 6F - Labels, Milestones, and Cross-References (20 min)</h3>
 <p><strong>Labels - organizing intent:</strong></p>
 <ul>
 <li>Creating a label: Issues → Labels → New label</li>
@@ -662,7 +824,7 @@ WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</sp
 <p>Tomorrow we move from the browser to <strong>Visual Studio Code</strong>. Here is what is coming:</p>
 <ul>
 <li><strong>VS Code Screen Reader Mode</strong> - Accessible Help (<code>Alt+H</code>), Accessible View (<code>Alt+F2</code>), Accessible Diff Viewer (<code>F7</code>)</li>
-<li><strong>Accessibility Agents</strong> - your earned reward for completing Day 1. Five AI agents that amplify the exact skills you built today. Every agent corresponds to something you did manually today.</li>
+<li><strong>Accessibility Agents</strong> - your earned reward for completing Day 1. Six AI agents that amplify the exact skills you built today. Every agent corresponds to something you did manually today.</li>
 <li><strong>Ship a real PR upstream</strong> - <code>community-access/accessibility-agents</code> is a live repository. Your name in its commit history is the Day 2 capstone.</li>
 </ul>
 <p><strong>Tonight (optional):</strong></p>
@@ -678,31 +840,46 @@ WAIT <span class="hljs-keyword">FOR</span> BOT (<span class="hljs-number">30</sp
 <p><strong>Pre-seeded issues:</strong></p>
 <ul>
 <li><code>#1</code> - &quot;Welcome! Introduce yourself&quot; (open, labeled <code>good first issue</code>, no assignee)</li>
-<li><code>#2</code> through <code>#N</code> - pre-assigned to each participant, each pointing to a specific file or section to improve</li>
+<li><code>#2</code> through <code>#N</code> - pre-assigned to each participant, each mapping to a specific challenge from <code>docs/CHALLENGES.md</code>:<ul>
+<li>Challenges 1-3 (Beginner): Fix broken link in <code>welcome.md</code>, add shortcut to <code>keyboard-shortcuts.md</code>, complete <code>[TODO]</code> sections in <code>welcome.md</code></li>
+<li>Challenges 4-6 (Intermediate): Fix heading hierarchy, improve link text, add alt text across docs</li>
+<li>Advanced challenges for faster students: review, documentation creation, mentoring</li>
+</ul>
+</li>
 <li>Several unlabeled &quot;triage practice&quot; issues for Part 6E</li>
 <li>One issue labeled <code>accessibility</code> with a realistic AT-related bug report for reference</li>
 </ul>
 <p><strong>Pre-seeded PR:</strong></p>
 <ul>
-<li>&quot;Add alt text to hero images&quot; - a clean PR against a dummy HTML file, with a meaningful diff, at least two commits, and active status checks</li>
+<li>&quot;Fix typo in keyboard-shortcuts.md&quot; - a clean PR fixing a minor error in the NVDA shortcuts table, with a meaningful diff, at least two commits, and active status checks. This is the PR students examine in Block 4.</li>
 </ul>
-<p><strong>Pre-created branch:</strong> <code>day1-practice</code> with 2-3 files that differ from <code>main</code></p>
-<p><strong>Files to include:</strong></p>
+<p><strong>Pre-created branch:</strong> <code>day1-practice</code> with edits to <code>docs/welcome.md</code> and <code>docs/setup-guide.md</code> that differ from <code>main</code> (used in Block 2 Activity 2D)</p>
+<p><strong>Files included in learning-room repo:</strong></p>
 <pre><code class="hljs">learning-room/
-├── README<span class="hljs-selector-class">.md</span>
+├── README<span class="hljs-selector-class">.md</span>                           ← Getting started guide with file inventory
+├── AUTOMATION<span class="hljs-selector-class">.md</span>                       ← Bot feedback guide with fix examples
 ├── CODE_OF_CONDUCT<span class="hljs-selector-class">.md</span>
 ├── CONTRIBUTING<span class="hljs-selector-class">.md</span>
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── accessibility-bug<span class="hljs-selector-class">.md</span>
-│   │   └── feature-request<span class="hljs-selector-class">.md</span>
-│   └── PULL_REQUEST_TEMPLATE<span class="hljs-selector-class">.md</span>
+│   │   ├── config<span class="hljs-selector-class">.yml</span>
+│   │   ├── beginner-challenge<span class="hljs-selector-class">.yml</span>
+│   │   ├── intermediate-challenge<span class="hljs-selector-class">.yml</span>
+│   │   └── advanced-challenge<span class="hljs-selector-class">.yml</span>
+│   ├── PULL_REQUEST_TEMPLATE<span class="hljs-selector-class">.md</span>        ← Checklist template students <span class="hljs-attribute">fill</span> out
+│   ├── workflows/
+│   │   ├── learning-room-pr-bot<span class="hljs-selector-class">.yml</span>    ← PR validation + educational feedback
+│   │   ├── skills-progression<span class="hljs-selector-class">.yml</span>      ← Progress tracking + badge awards
+│   │   └── student-grouping<span class="hljs-selector-class">.yml</span>        ← Auto-assigns peer reviewers
+│   └── scripts/
+│       └── validate-pr<span class="hljs-selector-class">.js</span>              ← Validation logic (checks headings, links, TODOs)
 ├── docs/
-│   ├── welcome<span class="hljs-selector-class">.md</span>             ← intentional <span class="hljs-selector-attr">[TODO]</span> incomplete sections
-│   ├── keyboard-shortcuts<span class="hljs-selector-class">.md</span>  ← <span class="hljs-selector-tag">a</span> few intentional errors
-│   └── setup-guide<span class="hljs-selector-class">.md</span>         ← <span class="hljs-selector-tag">a</span> couple broken links
-└── <span class="hljs-attribute">src</span>/
-    └── index<span class="hljs-selector-class">.html</span>             ← missing alt texts (<span class="hljs-keyword">for</span> the PR exercise)</code></pre>
+│   ├── CHALLENGES<span class="hljs-selector-class">.md</span>                   ← <span class="hljs-number">12</span> challenges: Beginner → Expert
+│   ├── GROUP_CHALLENGES<span class="hljs-selector-class">.md</span>             ← <span class="hljs-number">7</span> collaborative exercises
+│   ├── welcome<span class="hljs-selector-class">.md</span>                      ← <span class="hljs-number">3</span> <span class="hljs-selector-attr">[TODO]</span> sections + broken link (Challenges <span class="hljs-number">1</span>, <span class="hljs-number">3</span>)
+│   ├── keyboard-shortcuts<span class="hljs-selector-class">.md</span>           ← NVDA/JAWS/VO tables with errors (Challenge <span class="hljs-number">2</span>)
+│   └── setup-guide<span class="hljs-selector-class">.md</span>                  ← Broken links + incomplete steps (Advanced)
+└── <span class="hljs-selector-attr">[GITHUB_SKILLS.md]</span>                  ← Self-paced GitHub Skills module reference</code></pre>
 <h3>Pacing Tips for Skills Modules</h3>
 <ul>
 <li><strong>Block 1, Part B:</strong> Allow 10 minutes for every participant to copy the Skills repo and see Mona&#39;s first message. If someone does not see Mona&#39;s response within 2 minutes, check: was the repo created as public? (Mona requires public visibility on the free tier.)</li>

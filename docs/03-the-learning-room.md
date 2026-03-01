@@ -92,17 +92,87 @@ learning-room/
 
 ---
 
+## The Practice Files: What You Will Work On
+
+The `docs/` folder contains three practice files with intentional issues. These are the files you will edit, fix, and submit pull requests for during the contribution sprint. Here is exactly what you will encounter in each file.
+
+### docs/welcome.md - Introduction to Open Source Contribution
+
+This file introduces newcomers to open source. It has **three [TODO] sections** where content is missing:
+
+**[TODO] 1 - "Who Can Contribute?" section:**
+> [TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
+
+**[TODO] 2 - "Finding Something to Work On" section:**
+> [TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]
+
+**[TODO] 3 - "After Your Contribution Is Merged" section:**
+> [TODO: Add a sentence or two about what this means for someone's GitHub profile and open source portfolio.]
+
+It also has a broken internal link that needs to be found and fixed. **Challenges 1 and 3** from CHALLENGES.md map directly to this file.
+
+### docs/keyboard-shortcuts.md - Screen Reader Shortcut Reference
+
+This is a comprehensive reference with tables for NVDA, JAWS, and VoiceOver shortcuts. It contains **intentional errors** in some shortcut references that students need to find and fix.
+
+The file has three major sections:
+- **NVDA (Windows)** - Single-key navigation, mode switching, reading commands
+- **JAWS (Windows)** - Virtual cursor navigation, mode switching, reading commands
+- **VoiceOver (macOS)** - Rotor navigation, VO commands for GitHub
+
+Plus cross-platform shortcuts for GitHub pages and common workarounds.
+
+**Challenge 2** asks you to add a missing shortcut to the correct table. When you edit this file, you must preserve the Markdown table formatting. The bot validates that tables remain well-formed.
+
+### docs/setup-guide.md - Getting Ready to Contribute
+
+This step-by-step guide walks through GitHub account setup, accessibility settings, screen reader configuration, and repository forking. It contains **broken links** that point to incorrect URLs and **incomplete steps**.
+
+Look for:
+- Links to GitHub settings pages that may have changed
+- A `[TODO]` note at the bottom referencing items for facilitators
+- Steps that reference forking a "workshop repository" without providing the actual URL
+
+This file is used for **intermediate and advanced challenges** (Challenges 4-6) where students fix heading hierarchy, improve link text, and add missing descriptions.
+
+### docs/CHALLENGES.md - Your Challenge Menu
+
+This file lists all 12 challenges organized by skill level:
+
+| Level | Challenges | Requirement |
+|-------|-----------|-------------|
+| Beginner (1-3) | Fix broken link, add shortcut, complete welcome guide | 0+ merged PRs |
+| Intermediate (4-6) | Fix heading hierarchy, improve link text, add alt text | 1+ merged PRs |
+| Advanced (7-9) | Accessibility review, create documentation, mentor a peer | 3+ merged PRs |
+| Expert (10-12) | Design a challenge, full accessibility audit, create issue template | 5+ merged PRs |
+
+Each challenge lists the file(s) to edit, estimated time, skills practiced, success criteria, and a link to detailed instructions.
+
+### docs/GROUP_CHALLENGES.md - Collaborative Exercises
+
+Seven group exercises for study groups, ranging from a Documentation Sprint (divide `docs/welcome.md` among group members) to a Full Repository Audit (each person audits a section of the workshop documentation). Groups of 2-6 students work together with coordinated PRs and cross-review.
+
+---
+
 ## How PR Sharing Works
 
 ### Step 1: Student Opens a PR
 
-**Student A (in the workshop):**
+**Student A (working on Challenge 3: Complete Welcome Guide):**
 1. Finds their assigned issue (Issues tab → filter `Assignee:@me`)
-2. Edits the practice file on GitHub
+2. Opens `docs/welcome.md` and edits the three `[TODO]` sections
 3. Commits to a new branch: `fix/studentA-issue12`
-4. Opens a pull request
-5. Fills in PR description using the template
-6. **Submits the PR**
+4. Opens a pull request with description:
+   ```markdown
+   ## What Changed
+   Completed the three [TODO] sections in docs/welcome.md:
+   - Added contributor backgrounds paragraph
+   - Added guidance on evaluating issues
+   - Added note about GitHub profile impact
+   
+   Closes #12
+   ```
+5. **Submits the PR**
 
 **Visibility:** The PR immediately appears in the repo's Pull Requests tab. All students can see it.
 
@@ -111,12 +181,12 @@ learning-room/
 **Bot (`.github/workflows/learning-room-pr-bot.yml`):**
 - Runs within 30 seconds
 - Checks:
-  - Issue reference (does PR link to issue with `Closes #XX`?)
-  - File location (only `learning-room/` allowed?)
+  - Issue reference (does PR link to issue with `Closes #12`?)
+  - File location (only `docs/` directory files changed?)
   - Markdown accessibility (headings, links, alt text, broken links)
-  - [TODO] markers (all completed?)
+  - [TODO] markers (all three removed from welcome.md?)
 - Posts a comprehensive comment with:
-  - Required checks (must pass) /
+  - Required checks (must pass)
   - Suggestions (optional improvements)
   - Accessibility analysis (detailed issues + fixes)
   - Learning resources (links to docs)
@@ -139,9 +209,10 @@ learning-room/
   
   ### For @studentC:
   This is a great opportunity to practice code review skills! Here's what to look for:
-  - Content quality...
-  - Accessibility...
-  - Etiquette...
+  - Did all three [TODO] sections get completed in welcome.md?
+  - Does the new content match the style of existing sections?
+  - Is the heading hierarchy correct (H1 → H2)?
+  - Does the bot report pass all required checks?
   ```
 
 **Visibility:**
@@ -151,17 +222,18 @@ learning-room/
 
 ### Step 4: Reviewer Reads and Comments
 
-**Student C (the assigned reviewer):**
+**Student C (the assigned reviewer reviewing the welcome.md changes):**
 1. Receives notification: "PR review requested"
 2. Navigates to the PR in the Learning Room repo
 3. Reads:
-   - PR title and description
-   - Bot feedback comment
-   - The actual file changes (Files Changed tab)
+   - PR title: "Complete [TODO] sections in welcome.md"
+   - PR description: lists which sections were completed
+   - Bot feedback: checks that all `[TODO]` markers are removed, heading hierarchy is valid
+   - The actual file changes (Files Changed tab): sees the diff showing old `[TODO]` markers replaced with new content
 4. Leaves review comments:
-   - Inline comments on specific lines
-   - Overall comment on the PR
-5. Submits review (Comment / Approve / Request Changes)
+   - Inline comment on the "Who Can Contribute?" paragraph: "Great addition - I especially like the point about AT users bringing valuable perspective."
+   - Overall comment: "The content reads well and all TODOs are resolved. One suggestion: the 'Finding Something to Work On' section could mention checking if an issue already has an assignee."
+5. Submits review: **Approve** (or **Request Changes** if a `[TODO]` marker was missed)
 
 **Visibility:**
 - Student A (PR author) gets notification: "Your PR has a new review"

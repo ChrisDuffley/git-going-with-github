@@ -302,7 +302,7 @@ GitHub Feature Previews are opt-in UI improvements. For screen reader users, two
 | Check if a feature is enabled | Toggle announces **"checked"** = enabled; **"unchecked"** = disabled |
 | Enable a feature | `VO+Space` on an unchecked toggle |
 
-> See [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#6-step-4--check-github-feature-preview-settings) for full details on what each feature enables and why it matters for screen reader users.
+> See [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4-check-github-feature-preview-settings) for full details on what each feature enables and why it matters for screen reader users.
 
 ---
 

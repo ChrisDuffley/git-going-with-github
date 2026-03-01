@@ -2,6 +2,8 @@
 ## Conducting Pull Request Reviews with a Screen Reader
 
 > This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).
+>
+> **Learning Room connection:** The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify `docs/keyboard-shortcuts.md` (shortcut tables with intentional errors), `docs/setup-guide.md` (broken links and incomplete steps), and `docs/welcome.md` (`[TODO]` sections to complete). These are the same files you work on during the Day 1 contribution sprint.
 
 ---
 
@@ -467,7 +469,7 @@ Press F7 → Accessible Diff Viewer opens as a panel below the diff
 The Accessible Diff Viewer reads each change as a structured block:
 
 ```
-"Changed lines 14 to 14 in keyboard-shortcuts.md
+"Changed lines 14 to 14 in docs/keyboard-shortcuts.md
 [Change 1 of 3]
 
 Removed:
@@ -476,6 +478,8 @@ Removed:
 Added:
     ### NVDA Single-Key Navigation"
 ```
+
+This example is from a real Learning Room scenario: a contributor fixing the heading hierarchy in `docs/keyboard-shortcuts.md` by changing a level-4 heading to level-3, which is exactly what you look for when reviewing Challenge 2 PRs.
 
 **Navigation:**
 - `F7` - jump to next change (next hunk)
@@ -513,14 +517,14 @@ A comment that helps the author is:
 2. **Educational** - say *why* something matters, not just what to change
 3. **Graduated** - signal whether this is blocking, or a preference
 
-**Blocking example:**
-> "The heading on line 34 jumps from `##` (level 2) to `####` (level 4), skipping heading level 3. Screen reader users who navigate by heading level will miss any content between those two levels. Please change `####` to `###` before this merges."
+**Blocking example (reviewing a PR for `docs/keyboard-shortcuts.md`):**
+> "The heading on line 34 uses `####` (level 4) directly after `##` (level 2), skipping heading level 3. Screen reader users who navigate by heading level will miss any content between those two levels. Please change `####` to `###` before this merges."
 
-**Non-blocking (nit) example:**
-> "nit: The link text on line 22 reads 'click here for more information.' Screen reader users who navigate links out of context will hear only 'click here' with no destination. 'See the accessibility setup guide' would be clearer. Not blocking."
+**Non-blocking (nit) example (reviewing a PR for `docs/welcome.md`):**
+> "nit: The link text in the 'Getting Help' section reads 'click here for more information.' Screen reader users who navigate links out of context will hear only 'click here' with no destination. Consider 'See the accessibility setup guide' instead. Not blocking."
 
-**Question example:**
-> "The PR description says this improves keyboard navigation of the shortcut table, but I only see a heading change in the diff. Am I missing a related file, or is the keyboard improvement a side effect of fixing the heading? Happy to re-review once I understand."
+**Question example (reviewing a PR for `docs/setup-guide.md`):**
+> "The PR description says this fixes broken links in the setup guide, but the link on line 12 still points to `/docs/old-setup`. Am I reading the diff correctly, or was this link intentionally left? Happy to re-review once I understand."
 
 ### Prefixes That Set Expectations
 
@@ -573,19 +577,23 @@ There is no hard limit, but quantity without prioritization is noise. If you hav
 
 ### "I want to verify the PR only changes what it claims"
 
+**Example:** A PR says "Challenge 2: Add NVDA shortcut" but the file tree shows changes to both `docs/keyboard-shortcuts.md` and `docs/welcome.md`.
+
 ```
 1. File tree → count the files, read the names
 2. 3 → navigate each file heading → listen to the stats line (N additions, N deletions)
-3. For each file: skim with T → Focus Mode → ↓ through lines
-4. If a file feels unrelated: leave a comment on the first line of that file
+3. For keyboard-shortcuts.md: T → Focus Mode → ↓ through lines → verify the new shortcut row
+4. For welcome.md: check if the change is related → if unrelated, leave a comment on the first line
 ```
 
 ### "I want to find all changes to one specific section"
 
+**Example:** A PR for Challenge 3 modified `docs/welcome.md`. You want to verify the `[TODO]` in the "Who Can Contribute?" section was filled in correctly.
+
 ```
-1. In VS Code: open the file → Ctrl+G → jump to the section's line number
-2. F7 → Accessible Diff Viewer → listen for changes near that line
-3. Or on GitHub: file tree → expand that file → T → navigate the diff table
+1. In VS Code: open docs/welcome.md → Ctrl+G → jump to the "Who Can Contribute?" section
+2. F7 → Accessible Diff Viewer → listen for changes near that heading
+3. Or on GitHub: file tree → expand welcome.md → T → navigate the diff table to the [TODO] line
 ```
 
 ### "I agreed but then the author made more changes - did anything new appear?"

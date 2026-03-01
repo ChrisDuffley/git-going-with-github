@@ -59,9 +59,9 @@ git merge origin/main
 
 Let others know what files you're working on. Use issue comments:
 
-> "Heads up: I'm refactoring `auth.js` in my PR for #42. If you're touching that file, let's coordinate."
+> "Heads up: I'm working on the `[TODO]` sections in `docs/welcome.md` for Challenge 3. If you're also editing welcome.md, let's coordinate so we don't conflict."
 
-Prevents two people from heavily editing the same file simultaneously.
+In the Learning Room, this is especially important because multiple students may claim challenges that touch the same file. Challenges 1 and 3 both modify `docs/welcome.md` - if two students work on both simultaneously without coordinating, a merge conflict will occur.
 
 ### 4. **Avoid mass reformatting**
 
@@ -187,25 +187,27 @@ The content coming from the OTHER branch (or main)
 
 ### Example in a real file
 
-**Original file (before conflict):**
-```html
-<button>Submit</button>
+**Original file (`docs/keyboard-shortcuts.md`) before conflict:**
+```markdown
+| Insert+Space | Toggle between Browse Mode and Focus Mode |
 ```
 
-**After two conflicting changes:**
+**After two students both added a shortcut to the same table row:**
 
 ```text
 <<<<<<< HEAD
-<button aria-label="Submit form">Submit</button>
+| Insert+Space | Toggle between Browse Mode and Focus Mode |
+| Insert+F5 | List elements by type |
 =======
-<button type="submit">Send message</button>
->>>>>>> feature/form-improvements
+| Insert+Space | Toggle between Browse Mode and Focus Mode |
+| Insert+F7 | Elements list (links, headings, form fields) |
+>>>>>>> add-nvda-shortcut
 ```
 
 **Resolution options:**
-1. Keep your version: `<button aria-label="Submit form">Submit</button>`
-2. Keep their version: `<button type="submit">Send message</button>`
-3. Keep both changes: `<button type="submit" aria-label="Submit form">Submit</button>` ← often the right answer
+1. Keep your version: add only `Insert+F5`
+2. Keep their version: add only `Insert+F7`
+3. Keep both rows: add both shortcuts to the table (often the right answer when two students added different valid shortcuts)
 
 ---
 

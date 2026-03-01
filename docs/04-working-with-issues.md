@@ -10,7 +10,7 @@
 > - If listed but **not Pressed** (or **"Enable"**) - activate the toggle to enable it
 > - If not listed at all - the feature has graduated to the standard interface; it is active automatically
 >
-> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#6-step-4--check-github-feature-preview-settings).
+> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4-check-github-feature-preview-settings).
 >
 > **Browse vs Focus Mode (NVDA):** Toggle between modes with `NVDA+Space` (NVDA key = `Insert` or `Caps Lock`). Use **Browse Mode** (the default) for reading lists, headings, and issue content. Switch to **Focus Mode** when typing in text fields and search boxes. Use `NVDA+F7` at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page - this is your orientation tool.
 
@@ -27,6 +27,8 @@ An issue is a discussion thread attached to a repository. Issues are used for:
 - **Accessibility reports** - "The infinite scroll carousel is not keyboard accessible"
 
 Every issue has a **number** (`#42`), a **state** (Open or Closed), a **title**, a **description**, and a **comment thread**. Issues are public by default on public repositories.
+
+> **Learning Room connection:** In the `learning-room` repo, every challenge from `docs/CHALLENGES.md` becomes an issue. For example, Challenge 1 ("Fix Broken Link") is filed as an issue pointing to `docs/welcome.md`, describing the broken link and linking to the challenge success criteria. When you open a PR to fix it, you reference the issue with `Closes #XX` to automatically close it on merge.
 
 ---
 

@@ -92,7 +92,7 @@ Day 2 moves you from the browser to the desktop. Every skill maps directly to wh
 
 **Day 2 Total:** ~8 hours of structured time
 
----
+> **Note on Chapters 14 and 15:** These chapters do not have dedicated agenda blocks. Their content is woven into the Day 2 agenda: Chapter 14 (Accessible Code Review) skills are practiced in Blocks 2 and 5 when you review diffs and submit PRs. Chapter 15 (Issue Templates) is reference material you can consult when filing issues or building your own templates. Read them as needed rather than in sequence.
 
 ## Appendices - Reference Material
 

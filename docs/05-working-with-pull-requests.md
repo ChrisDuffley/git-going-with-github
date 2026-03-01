@@ -10,7 +10,7 @@
 > - If listed but **not Pressed** (or **"Enable"**) - activate the toggle to enable it
 > - If not listed at all - the feature has graduated to the standard interface; it is active automatically
 >
-> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#6-step-4--check-github-feature-preview-settings).
+> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4-check-github-feature-preview-settings).
 >
 > **Browse vs Focus Mode (NVDA):** Use **Browse Mode** (the default) for reading PR conversations, navigating headings, and reviewing diffs. Switch to **Focus Mode** (`NVDA+Space`) only when you need to type in comment boxes or search fields. Switch back to Browse Mode to resume navigation. Maximize your browser window for consistent landmark layout.
 
@@ -30,6 +30,8 @@ A PR shows:
 - **Why** it changed - your PR description
 - **Conversation** - comments, reviews, and discussion
 - **Status** - automated checks (CI/CD) and review status
+
+> **Learning Room connection:** In the Learning Room repository, every hands-on contribution follows this pattern. For example, when you complete Challenge 3 (filling the `[TODO]` sections in `docs/welcome.md`), you open a PR that shows your added content as green `+` lines in the diff, your description explains which TODOs you completed and why, and the validation bot posts automated check results. The scenarios in this chapter use Learning Room files so you can follow along with real content.
 
 ---
 
@@ -425,6 +427,33 @@ Closes #42
 [Include if relevant - with descriptive alt text for any images]
 ```
 
+> **Learning Room example:** In the Learning Room repository, a PR template is provided for you. Here is what a completed PR looks like for Challenge 3 (Complete Welcome Guide):
+>
+> ```markdown
+> ## Description
+>
+> Completed three [TODO] sections in docs/welcome.md:
+> - Added paragraph about contributors from all backgrounds
+> - Added guidance on evaluating issues before starting
+> - Added note about GitHub profile and portfolio impact
+>
+> ## Related Issue
+>
+> Closes #12
+>
+> ## Type of change
+>
+> - [x] Documentation update
+>
+> ## Accessibility checklist
+>
+> - [x] Heading levels follow a logical hierarchy
+> - [x] Link text is descriptive (no "click here")
+> - [x] No images added (or alt text provided)
+> ```
+>
+> The `Closes #12` line tells GitHub to automatically close issue 12 when this PR merges. The validation bot checks that this line is present and that your description is at least 50 characters long.
+
 **Setting a Draft PR:**
 If your work is not finished, open as a Draft:
 1. After filling in the form, find the dropdown arrow next to "Create pull request"
@@ -698,22 +727,27 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 
 ### Scenario A: "I want to review an assigned PR"
 
+**Example:** You are assigned to review a PR titled "Add missing NVDA shortcut to keyboard-shortcuts.md." The PR modifies `docs/keyboard-shortcuts.md` in the Learning Room repository and references Challenge 2.
+
 ```
 1. Notifications → open the PR notification
 2. D → PR tabs → Files changed tab
 3. T → enter the first diff table → navigate lines with arrow keys
-4. For each concern: activate the line comment button → type comment → Start a review
-5. D → PR tabs → Conversation → scroll to bottom
-6. B → "Review changes" button → type summary → select verdict → Submit review
+4. Check: does the new shortcut appear in the correct NVDA table? Is the table formatting preserved?
+5. For each concern: activate the line comment button → type comment → Start a review
+6. D → PR tabs → Conversation → scroll to bottom
+7. B → "Review changes" button → type summary → select verdict → Submit review
 ```
 
 ### Scenario B: "I want to respond to review feedback on my PR"
 
+**Example:** Your PR for Challenge 3 (Complete Welcome Guide) received a review comment: "The [TODO] about evaluating issues is good, but the paragraph could mention checking if the issue is already assigned." The validation bot also flagged a link text issue.
+
 ```
 1. Open your PR (Notifications → PR link, or find it in PR list)
 2. 3 to navigate review comments
-3. For each comment: read it → Tab to "Reply" → Focus Mode → type response
-4. If you made a fix in code: reference the commit in your reply
+3. For the reviewer's comment: read it → Tab to "Reply" → Focus Mode → type "Good point - I will add a sentence about checking assignees. Pushing a fix now."
+4. For the bot's link text flag: fix the link in docs/welcome.md, commit, and push
 5. When all addressed: Tab to "Re-request review" button → Enter
 ```
 
@@ -749,9 +783,9 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 
 1. Navigate to Pull Requests (`G` then `P` in Focus Mode)
 2. Open the first PR in the list (press `Enter` on its title)
-3. **Read the description** - press `2` to jump to the first section heading, then arrow down to read
-4. **Check the conversation** - press `3` to jump between comments. Read what the reviewer said and how the author responded.
-5. **Look at the diff** - press `D` to the "Pull request tabs" landmark, then navigate to "Files changed" and press `Enter`. Press `H` to scan the changed file headings.
+3. **Read the description** - press `2` to jump to the first section heading, then arrow down to read. Look for: which file was changed (`docs/welcome.md`, `docs/keyboard-shortcuts.md`, or `docs/setup-guide.md`)? Which challenge was this PR solving? Does the description reference `Closes #XX`?
+4. **Check the conversation** - press `3` to jump between comments. Read what the validation bot reported - did the bot find any accessibility issues like broken headings or non-descriptive links? How did the author respond?
+5. **Look at the diff** - press `D` to the "Pull request tabs" landmark, then navigate to "Files changed" and press `Enter`. Press `H` to scan the changed file headings. If the PR touched `docs/welcome.md`, you should see `+` lines where the `[TODO]` sections were filled in. If it touched `docs/keyboard-shortcuts.md`, you should see new rows added to a shortcut table.
 
 **You're done.** You just read a complete PR - description, conversation, and code changes.
 

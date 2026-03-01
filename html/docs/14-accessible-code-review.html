@@ -33,6 +33,7 @@
 <h2>Conducting Pull Request Reviews with a Screen Reader</h2>
 <blockquote>
 <p>This guide is focused entirely on the <strong>reviewer experience</strong> - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see <a href="05-working-with-pull-requests.html">Working with Pull Requests</a>.</p>
+<p><strong>Learning Room connection:</strong> The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify <code>docs/keyboard-shortcuts.md</code> (shortcut tables with intentional errors), <code>docs/setup-guide.md</code> (broken links and incomplete steps), and <code>docs/welcome.md</code> (<code>[TODO]</code> sections to complete). These are the same files you work on during the Day 1 contribution sprint.</p>
 </blockquote>
 <hr>
 <h2>Prerequisites Checklist</h2>
@@ -407,7 +408,7 @@ Step <span class="hljs-number">3</span>: This re-notifies the reviewer that yo<s
 <p>From any open diff editor:</p>
 <pre><code class="hljs">Press F7 → Accessible Diff Viewer opens <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> panel below <span class="hljs-keyword">the</span> diff</code></pre>
 <p>The Accessible Diff Viewer reads each change as a structured block:</p>
-<pre><code class="hljs">&quot;Changed lines<span class="hljs-number"> 14 </span>to<span class="hljs-number"> 14 </span>in keyboard-shortcuts.md
+<pre><code class="hljs">&quot;Changed lines<span class="hljs-number"> 14 </span>to<span class="hljs-number"> 14 </span>in docs/keyboard-shortcuts.md
 [Change<span class="hljs-number"> 1 </span>of 3]
 
 Removed:
@@ -415,6 +416,7 @@ Removed:
 
 Added:
     <span class="hljs-comment">### NVDA Single-Key Navigation&quot;</span></code></pre>
+<p>This example is from a real Learning Room scenario: a contributor fixing the heading hierarchy in <code>docs/keyboard-shortcuts.md</code> by changing a level-4 heading to level-3, which is exactly what you look for when reviewing Challenge 2 PRs.</p>
 <p><strong>Navigation:</strong></p>
 <ul>
 <li><code>F7</code> - jump to next change (next hunk)</li>
@@ -446,17 +448,17 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 <li><strong>Educational</strong> - say <em>why</em> something matters, not just what to change</li>
 <li><strong>Graduated</strong> - signal whether this is blocking, or a preference</li>
 </ol>
-<p><strong>Blocking example:</strong></p>
+<p><strong>Blocking example (reviewing a PR for <code>docs/keyboard-shortcuts.md</code>):</strong></p>
 <blockquote>
-<p>&quot;The heading on line 34 jumps from <code>##</code> (level 2) to <code>####</code> (level 4), skipping heading level 3. Screen reader users who navigate by heading level will miss any content between those two levels. Please change <code>####</code> to <code>###</code> before this merges.&quot;</p>
+<p>&quot;The heading on line 34 uses <code>####</code> (level 4) directly after <code>##</code> (level 2), skipping heading level 3. Screen reader users who navigate by heading level will miss any content between those two levels. Please change <code>####</code> to <code>###</code> before this merges.&quot;</p>
 </blockquote>
-<p><strong>Non-blocking (nit) example:</strong></p>
+<p><strong>Non-blocking (nit) example (reviewing a PR for <code>docs/welcome.md</code>):</strong></p>
 <blockquote>
-<p>&quot;nit: The link text on line 22 reads &#39;click here for more information.&#39; Screen reader users who navigate links out of context will hear only &#39;click here&#39; with no destination. &#39;See the accessibility setup guide&#39; would be clearer. Not blocking.&quot;</p>
+<p>&quot;nit: The link text in the &#39;Getting Help&#39; section reads &#39;click here for more information.&#39; Screen reader users who navigate links out of context will hear only &#39;click here&#39; with no destination. Consider &#39;See the accessibility setup guide&#39; instead. Not blocking.&quot;</p>
 </blockquote>
-<p><strong>Question example:</strong></p>
+<p><strong>Question example (reviewing a PR for <code>docs/setup-guide.md</code>):</strong></p>
 <blockquote>
-<p>&quot;The PR description says this improves keyboard navigation of the shortcut table, but I only see a heading change in the diff. Am I missing a related file, or is the keyboard improvement a side effect of fixing the heading? Happy to re-review once I understand.&quot;</p>
+<p>&quot;The PR description says this fixes broken links in the setup guide, but the link on line 12 still points to <code>/docs/old-setup</code>. Am I reading the diff correctly, or was this link intentionally left? Happy to re-review once I understand.&quot;</p>
 </blockquote>
 <h3>Prefixes That Set Expectations</h3>
 <p>Using shorthand prefixes helps authors parse many comments quickly:</p>
@@ -573,14 +575,16 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 <hr>
 <h2>Common Review Scenarios</h2>
 <h3>&quot;I want to verify the PR only changes what it claims&quot;</h3>
+<p><strong>Example:</strong> A PR says &quot;Challenge 2: Add NVDA shortcut&quot; but the file tree shows changes to both <code>docs/keyboard-shortcuts.md</code> and <code>docs/welcome.md</code>.</p>
 <pre><code class="hljs"><span class="hljs-number">1.</span> File tree → count <span class="hljs-keyword">the</span> <span class="hljs-built_in">files</span>, <span class="hljs-built_in">read</span> <span class="hljs-keyword">the</span> names
 <span class="hljs-number">2.</span> <span class="hljs-number">3</span> → navigate <span class="hljs-keyword">each</span> <span class="hljs-built_in">file</span> heading → listen <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> stats <span class="hljs-built_in">line</span> (N additions, N deletions)
-<span class="hljs-number">3.</span> For <span class="hljs-keyword">each</span> <span class="hljs-built_in">file</span>: skim <span class="hljs-keyword">with</span> T → Focus Mode → ↓ through <span class="hljs-keyword">lines</span>
-<span class="hljs-number">4.</span> If <span class="hljs-keyword">a</span> <span class="hljs-built_in">file</span> feels unrelated: leave <span class="hljs-keyword">a</span> comment <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">first</span> <span class="hljs-title">line</span> <span class="hljs-title">of</span> <span class="hljs-title">that</span> <span class="hljs-title">file</span></code></pre>
+<span class="hljs-number">3.</span> For keyboard-shortcuts.md: T → Focus Mode → ↓ through <span class="hljs-keyword">lines</span> → verify <span class="hljs-keyword">the</span> <span class="hljs-built_in">new</span> shortcut row
+<span class="hljs-number">4.</span> For welcome.md: check <span class="hljs-keyword">if</span> <span class="hljs-keyword">the</span> change is related → <span class="hljs-keyword">if</span> unrelated, leave <span class="hljs-keyword">a</span> comment <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">first</span> <span class="hljs-title">line</span></code></pre>
 <h3>&quot;I want to find all changes to one specific section&quot;</h3>
-<pre><code class="hljs">1. <span class="hljs-keyword">In</span> VS Code: <span class="hljs-keyword">open</span> the <span class="hljs-keyword">file</span> → Ctrl+<span class="hljs-keyword">G</span> → jump to the section&#x27;s <span class="hljs-keyword">line</span> number
-2. F7 → Accessible Diff Viewer → listen <span class="hljs-keyword">for</span> changes near that <span class="hljs-keyword">line</span>
-3. Or <span class="hljs-keyword">on</span> GitHub: <span class="hljs-keyword">file</span> tree → <span class="hljs-keyword">expand</span> that <span class="hljs-keyword">file</span> → T → navigate the diff <span class="hljs-keyword">table</span></code></pre>
+<p><strong>Example:</strong> A PR for Challenge 3 modified <code>docs/welcome.md</code>. You want to verify the <code>[TODO]</code> in the &quot;Who Can Contribute?&quot; section was filled in correctly.</p>
+<pre><code class="hljs"><span class="hljs-number">1</span>. In VS Code: <span class="hljs-keyword">open</span> docs/welcome.md → Ctrl+G → jump <span class="hljs-keyword">to</span> the <span class="hljs-string">&quot;Who Can Contribute?&quot;</span> section
+<span class="hljs-number">2</span>. F7 → Accessible Diff Viewer → listen <span class="hljs-keyword">for</span> <span class="hljs-keyword">changes</span> near that heading
+<span class="hljs-number">3</span>. Or <span class="hljs-keyword">on</span> GitHub: <span class="hljs-keyword">file</span> tree → <span class="hljs-built_in">expand</span> welcome.md → T → navigate the diff table <span class="hljs-keyword">to</span> the [TODO] <span class="hljs-built_in">line</span></code></pre>
 <h3>&quot;I agreed but then the author made more changes - did anything new appear?&quot;</h3>
 <pre><code class="hljs"><span class="hljs-number">1.</span> Go <span class="hljs-keyword">to</span> the Commits tab (D → PR tabs → &quot;Commits&quot; → Enter)
 <span class="hljs-number">2.</span> <span class="hljs-number">3</span> <span class="hljs-keyword">to</span> navigate commits - find <span class="hljs-keyword">any</span> commits <span class="hljs-keyword">after</span> your last review

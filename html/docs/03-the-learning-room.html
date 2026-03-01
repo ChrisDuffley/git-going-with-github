@@ -100,15 +100,92 @@ Mona verifies your <span class="hljs-keyword">step</span>         Human peer rev
 │   └── setup-guide<span class="hljs-selector-class">.md</span>                  ← Has broken links
 └── <span class="hljs-selector-attr">[other files for practice]</span></code></pre>
 <hr>
+<h2>The Practice Files: What You Will Work On</h2>
+<p>The <code>docs/</code> folder contains three practice files with intentional issues. These are the files you will edit, fix, and submit pull requests for during the contribution sprint. Here is exactly what you will encounter in each file.</p>
+<h3>docs/welcome.md - Introduction to Open Source Contribution</h3>
+<p>This file introduces newcomers to open source. It has <strong>three [TODO] sections</strong> where content is missing:</p>
+<p><strong>[TODO] 1 - &quot;Who Can Contribute?&quot; section:</strong></p>
+<blockquote>
+<p>[TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]</p>
+</blockquote>
+<p><strong>[TODO] 2 - &quot;Finding Something to Work On&quot; section:</strong></p>
+<blockquote>
+<p>[TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]</p>
+</blockquote>
+<p><strong>[TODO] 3 - &quot;After Your Contribution Is Merged&quot; section:</strong></p>
+<blockquote>
+<p>[TODO: Add a sentence or two about what this means for someone&#39;s GitHub profile and open source portfolio.]</p>
+</blockquote>
+<p>It also has a broken internal link that needs to be found and fixed. <strong>Challenges 1 and 3</strong> from CHALLENGES.md map directly to this file.</p>
+<h3>docs/keyboard-shortcuts.md - Screen Reader Shortcut Reference</h3>
+<p>This is a comprehensive reference with tables for NVDA, JAWS, and VoiceOver shortcuts. It contains <strong>intentional errors</strong> in some shortcut references that students need to find and fix.</p>
+<p>The file has three major sections:</p>
+<ul>
+<li><strong>NVDA (Windows)</strong> - Single-key navigation, mode switching, reading commands</li>
+<li><strong>JAWS (Windows)</strong> - Virtual cursor navigation, mode switching, reading commands</li>
+<li><strong>VoiceOver (macOS)</strong> - Rotor navigation, VO commands for GitHub</li>
+</ul>
+<p>Plus cross-platform shortcuts for GitHub pages and common workarounds.</p>
+<p><strong>Challenge 2</strong> asks you to add a missing shortcut to the correct table. When you edit this file, you must preserve the Markdown table formatting. The bot validates that tables remain well-formed.</p>
+<h3>docs/setup-guide.md - Getting Ready to Contribute</h3>
+<p>This step-by-step guide walks through GitHub account setup, accessibility settings, screen reader configuration, and repository forking. It contains <strong>broken links</strong> that point to incorrect URLs and <strong>incomplete steps</strong>.</p>
+<p>Look for:</p>
+<ul>
+<li>Links to GitHub settings pages that may have changed</li>
+<li>A <code>[TODO]</code> note at the bottom referencing items for facilitators</li>
+<li>Steps that reference forking a &quot;workshop repository&quot; without providing the actual URL</li>
+</ul>
+<p>This file is used for <strong>intermediate and advanced challenges</strong> (Challenges 4-6) where students fix heading hierarchy, improve link text, and add missing descriptions.</p>
+<h3>docs/CHALLENGES.md - Your Challenge Menu</h3>
+<p>This file lists all 12 challenges organized by skill level:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Level</th>
+<th scope="col">Challenges</th>
+<th scope="col">Requirement</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Beginner (1-3)</td>
+<td>Fix broken link, add shortcut, complete welcome guide</td>
+<td>0+ merged PRs</td>
+</tr>
+<tr>
+<td>Intermediate (4-6)</td>
+<td>Fix heading hierarchy, improve link text, add alt text</td>
+<td>1+ merged PRs</td>
+</tr>
+<tr>
+<td>Advanced (7-9)</td>
+<td>Accessibility review, create documentation, mentor a peer</td>
+<td>3+ merged PRs</td>
+</tr>
+<tr>
+<td>Expert (10-12)</td>
+<td>Design a challenge, full accessibility audit, create issue template</td>
+<td>5+ merged PRs</td>
+</tr>
+</tbody></table>
+<p>Each challenge lists the file(s) to edit, estimated time, skills practiced, success criteria, and a link to detailed instructions.</p>
+<h3>docs/GROUP_CHALLENGES.md - Collaborative Exercises</h3>
+<p>Seven group exercises for study groups, ranging from a Documentation Sprint (divide <code>docs/welcome.md</code> among group members) to a Full Repository Audit (each person audits a section of the workshop documentation). Groups of 2-6 students work together with coordinated PRs and cross-review.</p>
+<hr>
 <h2>How PR Sharing Works</h2>
 <h3>Step 1: Student Opens a PR</h3>
-<p><strong>Student A (in the workshop):</strong></p>
+<p><strong>Student A (working on Challenge 3: Complete Welcome Guide):</strong></p>
 <ol>
 <li>Finds their assigned issue (Issues tab → filter <code>Assignee:@me</code>)</li>
-<li>Edits the practice file on GitHub</li>
+<li>Opens <code>docs/welcome.md</code> and edits the three <code>[TODO]</code> sections</li>
 <li>Commits to a new branch: <code>fix/studentA-issue12</code></li>
-<li>Opens a pull request</li>
-<li>Fills in PR description using the template</li>
+<li>Opens a pull request with description:<pre><code class="hljs language-markdown"><span class="hljs-section">## What Changed</span>
+Completed the three [TODO] sections in docs/welcome.md:
+<span class="hljs-bullet">-</span> Added contributor backgrounds paragraph
+<span class="hljs-bullet">-</span> Added guidance on evaluating issues
+<span class="hljs-bullet">-</span> Added note about GitHub profile impact
+
+Closes #12</code></pre>
+</li>
 <li><strong>Submits the PR</strong></li>
 </ol>
 <p><strong>Visibility:</strong> The PR immediately appears in the repo&#39;s Pull Requests tab. All students can see it.</p>
@@ -117,14 +194,14 @@ Mona verifies your <span class="hljs-keyword">step</span>         Human peer rev
 <ul>
 <li>Runs within 30 seconds</li>
 <li>Checks:<ul>
-<li>Issue reference (does PR link to issue with <code>Closes #XX</code>?)</li>
-<li>File location (only <code>learning-room/</code> allowed?)</li>
+<li>Issue reference (does PR link to issue with <code>Closes #12</code>?)</li>
+<li>File location (only <code>docs/</code> directory files changed?)</li>
 <li>Markdown accessibility (headings, links, alt text, broken links)</li>
-<li>[TODO] markers (all completed?)</li>
+<li>[TODO] markers (all three removed from welcome.md?)</li>
 </ul>
 </li>
 <li>Posts a comprehensive comment with:<ul>
-<li>Required checks (must pass) /</li>
+<li>Required checks (must pass)</li>
 <li>Suggestions (optional improvements)</li>
 <li>Accessibility analysis (detailed issues + fixes)</li>
 <li>Learning resources (links to docs)</li>
@@ -146,9 +223,10 @@ Hi @studentA! Your PR has been automatically paired <span class="hljs-keyword">w
 
 <span class="hljs-comment">### For @studentC:
 This is a great opportunity to practice code review skills! Here&#x27;s what to look for:
-- Content quality...
-- Accessibility...
-- Etiquette...</span></code></pre>
+- Did all three [TODO] sections get completed in welcome.md?
+- Does the new content match the style of existing sections?
+- Is the heading hierarchy correct (H1 → H2)?
+- Does the bot report pass all required checks?</span></code></pre>
 </li>
 </ul>
 <p><strong>Visibility:</strong></p>
@@ -158,22 +236,23 @@ This is a great opportunity to practice code review skills! Here&#x27;s what to 
 <li>All students see the assignment comment in the PR thread</li>
 </ul>
 <h3>Step 4: Reviewer Reads and Comments</h3>
-<p><strong>Student C (the assigned reviewer):</strong></p>
+<p><strong>Student C (the assigned reviewer reviewing the welcome.md changes):</strong></p>
 <ol>
 <li>Receives notification: &quot;PR review requested&quot;</li>
 <li>Navigates to the PR in the Learning Room repo</li>
 <li>Reads:<ul>
-<li>PR title and description</li>
-<li>Bot feedback comment</li>
-<li>The actual file changes (Files Changed tab)</li>
+<li>PR title: &quot;Complete [TODO] sections in welcome.md&quot;</li>
+<li>PR description: lists which sections were completed</li>
+<li>Bot feedback: checks that all <code>[TODO]</code> markers are removed, heading hierarchy is valid</li>
+<li>The actual file changes (Files Changed tab): sees the diff showing old <code>[TODO]</code> markers replaced with new content</li>
 </ul>
 </li>
 <li>Leaves review comments:<ul>
-<li>Inline comments on specific lines</li>
-<li>Overall comment on the PR</li>
+<li>Inline comment on the &quot;Who Can Contribute?&quot; paragraph: &quot;Great addition - I especially like the point about AT users bringing valuable perspective.&quot;</li>
+<li>Overall comment: &quot;The content reads well and all TODOs are resolved. One suggestion: the &#39;Finding Something to Work On&#39; section could mention checking if an issue already has an assignee.&quot;</li>
 </ul>
 </li>
-<li>Submits review (Comment / Approve / Request Changes)</li>
+<li>Submits review: <strong>Approve</strong> (or <strong>Request Changes</strong> if a <code>[TODO]</code> marker was missed)</li>
 </ol>
 <p><strong>Visibility:</strong></p>
 <ul>

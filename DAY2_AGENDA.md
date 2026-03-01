@@ -1,7 +1,7 @@
 # Day 2 Agenda
 ## From Contributor to Product Maker - Igniting the Forge
 
-> **The premise of Day 2:** You spent Day 1 learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You resolved a real merge conflict. Those skills are yours now.
+> **The premise of Day 2:** You spent Day 1 learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You reviewed someone else's work. Those skills are yours now.
 >
 > Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Accessibility Agents - a live, public accessibility project built by your facilitator - not as a shortcut around the skills you learned, but as a **product you can understand, evaluate, critique, and improve** because you now know exactly what it is doing and why.
 >
@@ -83,18 +83,35 @@ VS Code has a dedicated screen reader accessibility mode that adjusts verbosity,
 
 **Key setting to check:** Open Settings (`Ctrl+,`) → search `accessibility support` → confirm it shows `on`.
 
-### Step 2 - Open Accessibility Agents as a Workspace
-1. Open a terminal (`Ctrl+Backtick`)
-2. Navigate to wherever you cloned your fork: `cd path/to/accessibility-agents`
-3. Open VS Code in that folder: `code .`
-4. VS Code opens with the `accessibility-agents` repository as your workspace
+### Step 2 - Fork, Clone, and Open Accessibility Agents
+
+Before you can work on Accessibility Agents locally, you need your own copy (a fork) and a local clone of that fork.
+
+**Fork the repository (browser - a Day 1 skill):**
+1. Navigate to [github.com/community-access/accessibility-agents](https://github.com/community-access/accessibility-agents)
+2. Find and activate the **Fork** button (`B` to navigate buttons)
+3. Keep the defaults and activate **Create fork**
+4. GitHub redirects you to your fork: `github.com/[your-username]/accessibility-agents`
+
+**Clone the fork (VS Code terminal - your first Git command):**
+1. Open a terminal in VS Code (`Ctrl+Backtick`)
+2. Navigate to where you want to store projects: `cd ~/Documents` (or your preferred folder)
+3. Clone your fork:
+   ```bash
+   git clone https://github.com/[your-username]/accessibility-agents.git
+   ```
+4. Enter the project folder: `cd accessibility-agents`
+5. Open VS Code in that folder: `code .`
+6. VS Code opens with the `accessibility-agents` repository as your workspace
+
+> **Screen reader note:** The `git clone` command prints progress messages. When you hear the terminal go quiet, it is done. The folder now exists on your machine.
 
 **What to navigate first (with screen reader):**
 
 | VS Code Area | Key | What You Hear |
 |-------------|-----|---------------|
 | Explorer sidebar | `Ctrl+Shift+E` | File and folder tree |
-| `.github/agents/` folder | `Arrow keys` | Five `.agent.md` files |
+| `.github/agents/` folder | `Arrow keys` | Six `.agent.md` files |
 | `.github/prompts/` folder | `Arrow keys` | 28 slash command template files |
 | `Documentation/` folder | `Arrow keys` | `GETTING-STARTED.md`, `GUIDE.md` |
 | `ai-instructions/` folder | `Arrow keys` | Copilot, Claude, OpenAI integration guides |
@@ -123,6 +140,25 @@ Press `Ctrl+Shift+I` to open the Chat panel.
 
 ## Block 2 - Deep Contribution with Copilot
 **10:45-12:00**
+
+### Copilot Orientation (15 min)
+
+Before diving into contributions, get familiar with how Copilot works as a writing partner.
+
+**Inline suggestions (`Ctrl+I`):**
+1. Open any `.md` file in the workspace
+2. Place your cursor at the end of a line and press `Ctrl+I`
+3. Type a prompt: `Add a sentence explaining why this agent uses heading navigation`
+4. Copilot suggests text inline. Press `Tab` to accept, `Escape` to dismiss
+5. **Screen reader note:** NVDA announces "Inline suggestion" when one appears. Press `Alt+]` to read the suggestion before accepting
+
+**Chat as a thinking partner:**
+1. Open Chat (`Ctrl+Shift+I`) if not already open
+2. Type: `Explain what the daily-briefing agent does in plain English`
+3. Read the response. Use `H` (heading navigation) to jump between sections
+4. Try: `What are three ways I could improve this agent for screen reader users?`
+
+**Key principle:** Copilot drafts. You decide. Every suggestion should be read, evaluated, and edited before committing. Your name goes on the commit.
 
 ### Purpose
 Make a richer contribution to your fork of `accessibility-agents` using Copilot as a writing partner - not a replacement for your judgment. Copilot helps you articulate ideas you already have. The idea - the product intention - is yours.
@@ -182,7 +218,7 @@ Agents are run in a specific sequence - from broadest to most specific, from obs
 | 1 | `@daily-briefing` | Reading your notification inbox and activity summary | [Navigating Repos](docs/02-navigating-repositories.md) + [Notifications](docs/09-notifications.md) |
 | 2 | `@issue-tracker` | Triaging and prioritizing issues manually | [Working with Issues](docs/04-working-with-issues.md) + [Labels & Milestones](docs/08-labels-milestones-projects.md) |
 | 3 | `@pr-review` | Manually reviewing a PR diff and writing inline comments | [Working with Pull Requests](docs/05-working-with-pull-requests.md) |
-| 4 | `@insiders-a11y-tracker` | Filing accessibility bugs and applying WCAG labels | [Working with Issues](docs/04-working-with-issues.md) + [Issue Templates](docs/15-issue-templates.md) |
+| 4 | `@insiders-a11y-tracker` | Filing accessibility bugs and applying WCAG labels | [Working with Issues](docs/04-working-with-issues.md) + [Labels & Milestones](docs/08-labels-milestones-projects.md) |
 
 `@analytics` is available as an extension if Block 3 runs ahead of schedule - it requires understanding contribution graphs and activity history.
 
