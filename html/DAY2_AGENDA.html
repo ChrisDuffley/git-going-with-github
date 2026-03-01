@@ -316,6 +316,13 @@
 <li>Fixes: <code>fix/what-you-fixed</code></li>
 <li>Documentation: <code>docs/what-you-documented</code></li>
 </ul>
+<h3>Contribution Checkpoint (before lunch)</h3>
+<p>Before leaving for lunch, check your progress:</p>
+<ul>
+<li><strong>On pace:</strong> You have at least one commit on a named branch. You are ready for Block 3.</li>
+<li><strong>Almost there:</strong> You have identified a file and started drafting but have not committed yet. Use the first 10 minutes after lunch to finalize your commit before the agent demonstrations begin.</li>
+<li><strong>Still exploring:</strong> You have not yet identified a file to improve. During lunch, read through the <code>.github/agents/</code> files and pick one. When Block 3 starts, the facilitator will demo agents on the repository - watching those demos will help you see where improvements are needed.</li>
+</ul>
 <hr>
 <h2>Block 3 - Activate the Agents</h2>
 <p><strong>13:00-14:00</strong></p>
@@ -392,6 +399,8 @@
 <p><strong>What the agent does:</strong> Monitors accessibility-relevant changes across your configured repositories - WCAG/ARIA cross-referenced, tracking anything that touches keyboard navigation, ARIA attributes, focus management, color contrast, or screen reader labels.</p>
 <p><strong>Hands-on:</strong> Run <code>@insiders-a11y-tracker check recent changes in accessibility-agents</code>. Look at the HTML output files. Does your Day 2 contribution affect any accessibility-sensitive areas? If yes, the agent flags it. If no, confirm that is accurate.</p>
 <p>This agent is quality assurance for the accessibility quality of your own contribution - before you submit it for review.</p>
+<h3>Stand and Stretch (5 min)</h3>
+<p>The agents are running. Step away from the screen for five minutes. Screen reader listening for an hour after lunch is demanding. When you return, Block 4 shows you how these same agents run in the cloud - without you pressing a key.</p>
 <hr>
 <h2>Block 4 - GitHub Agentic Workflows</h2>
 <p><strong>14:00-15:00</strong></p>
@@ -508,6 +517,14 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
 <p><strong>15:15-16:15</strong></p>
 <h3>Purpose</h3>
 <p>Polish and submit your real pull request upstream to <code>community-access/accessibility-agents</code>. Not to your fork - to the original. This is the moment the product maker mindset becomes tangible.</p>
+<h3>If Your Contribution Is Still in Progress</h3>
+<p>If you did not finish your commit during Block 2, use the first 15 minutes of this block to finalize:</p>
+<ol>
+<li>Open the file you were working on in VS Code</li>
+<li>Use Copilot (<code>Ctrl+I</code>) to help you finish any incomplete sections</li>
+<li>Commit: <code>git add .</code> then <code>git commit -m &quot;your message&quot;</code></li>
+<li>Then proceed to the Pre-Submission Checklist below</li>
+</ol>
 <h3>Pre-Submission Checklist</h3>
 <p>Before opening the PR, run through this with your screen reader:</p>
 <pre><code class="hljs">□ My branch has a <span class="hljs-keyword">clear</span> descriptive <span class="hljs-built_in">name</span> (feature/, fix/, <span class="hljs-keyword">or</span> docs/)

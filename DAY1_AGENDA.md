@@ -39,13 +39,14 @@ Three modules run across Day 1. You will set each one up during the block where 
 |-------|------|-------|--------------|
 | 0 | 9:00 AM | Welcome, setup verification, and introductions | - |
 | 1 | 9:30 AM | Screen reader orientation to GitHub | Introduction to GitHub (setup) |
-| 2 | 10:15 AM | Navigating repositories | Introduction to GitHub (Steps 1-2) |
+| 2 | 10:10 AM | Navigating repositories and Markdown module setup | Introduction to GitHub (Steps 1-2) + Communicate Using Markdown (setup) |
 | - | 11:00 AM | **Break** | - |
-| 3 | 11:15 AM | Working with Issues and Markdown | Introduction to GitHub (Steps 3-4) + Communicate Using Markdown |
-| 4 | 12:15 PM | Understanding Pull Requests | Review Pull Requests |
+| 3 | 11:15 AM | Working with Issues and Pull Requests | Introduction to GitHub (Steps 2-4) |
+| 4 | 12:10 PM | Pull Request review and merge | Review Pull Requests |
 | - | 1:00 PM | **Lunch** | - |
 | 5 | 2:00 PM | Your first real contribution sprint | `learning-room` (group) |
-| 6 | 3:00 PM | Community: culture, etiquette, labels, and notifications | `learning-room` (group) |
+| - | 3:00 PM | **Break** | - |
+| 6 | 3:15 PM | Community: culture, etiquette, labels, and notifications | `learning-room` (group) |
 | - | 4:30 PM | Wrap-up, completions, and Day 2 preview | - |
 
 **Total:** ~7.5 hours of structured time
@@ -84,7 +85,7 @@ Make participants comfortable, set expectations, verify setups, and create a psy
 
 ---
 
-## Block 1 - Screen Reader Orientation to GitHub (9:30 AM, 45 min)
+## Block 1 - Screen Reader Orientation to GitHub (9:30 AM, 40 min)
 
 ### Purpose
 Establish a shared navigation foundation AND set up the Introduction to GitHub Skills module. Every participant leaves this block with a real repository in their own account and a message from Mona waiting for them.
@@ -120,11 +121,9 @@ The `docs/` folder contains three files with intentional issues that you will fi
 | `docs/keyboard-shortcuts.md` | NVDA, JAWS, and VoiceOver shortcut tables | Intentional errors in keyboard shortcut references |
 | `docs/setup-guide.md` | Step-by-step GitHub setup instructions | Broken links and incomplete steps |
 
-6. Open `docs/welcome.md` - navigate with `H` to read the headings. Find the `[TODO]` markers - these are the sections you will complete later today
-7. Open `docs/keyboard-shortcuts.md` - press `T` to navigate to the first table. This is the NVDA shortcut reference. Can you spot any errors?
-8. Open `docs/setup-guide.md` - press `K` to navigate links. Are all links working?
+6. Open `docs/welcome.md` - navigate with `H` to read the headings. Notice the `[TODO]` markers. You will fix these during the contribution sprint in Block 5.
 
-> **Key insight:** These files are intentionally imperfect. Finding and fixing issues in documentation is one of the most valuable contributions in open source. The challenges in [docs/CHALLENGES.md](docs/CHALLENGES.md) map directly to these files.
+> **Key insight:** These files are intentionally imperfect. You will explore them in detail during Block 5 when you are ready to contribute. For now, notice the structure - headings, tables, links - and how your screen reader announces each one.
 
 ### Part B - Set Up Your First GitHub Skills Repository
 
@@ -155,7 +154,7 @@ The `docs/` folder contains three files with intentional issues that you will fi
 
 ---
 
-## Block 2 - Navigating Repositories (10:15 AM, 45 min)
+## Block 2 - Navigating Repositories (10:10 AM, 50 min)
 
 ### Purpose
 Participants can confidently explore any GitHub repository using only their screen reader and keyboard - both your own (Skills repo) and others.
@@ -219,6 +218,17 @@ Find the answers to these questions using keyboard navigation in `learning-room`
 3. Navigate to `docs/` - do any files differ from `main`?
 4. Switch back to `main`
 
+### Part C - Set Up Communicate Using Markdown Skills Module (10 min)
+
+> **The Markdown module** runs alongside everything else you do today. Every comment you write, every issue you file, every PR description - you are practicing Markdown in real GitHub contexts.
+
+1. Navigate to the [Communicate Using Markdown skills course](https://github.com/skills/communicate-using-markdown)
+2. "Start course" → create the repo in your account
+3. Wait for Mona to create Issue #1 with Step 1 instructions
+4. Read the instructions - Mona will walk you through: headers, emphasis, images, code blocks, task lists, and tables
+
+You will work through each Markdown step during the natural pauses in Blocks 3 and 4. Your facilitator will call out when to switch.
+
 ### Reference Document
 [Navigating Repositories](docs/02-navigating-repositories.md)
 
@@ -230,10 +240,14 @@ Encourage participants to stand, stretch, and rest their ears. Screen reader lis
 
 ---
 
-## Block 3 - Working with Issues and Markdown (11:15 AM, 60 min)
+## Block 3 - Working with Issues and Pull Requests (11:15 AM, 55 min)
 
 ### Purpose
-Participants can file, read, respond to, and navigate issues - and write clear, accessible Markdown in comments and descriptions.
+Participants can file, read, respond to, and navigate issues - and open their first pull request.
+
+### Catch-Up Buffer (5 min)
+
+If you are still completing a Skills module step from Block 2, finish it now. If you are on pace, start a Communicate Using Markdown step - you will use Markdown in every activity from this point forward.
 
 ### Key Concepts Covered
 - What issues are and why they matter
@@ -242,7 +256,6 @@ Participants can file, read, respond to, and navigate issues - and write clear, 
 - Commenting with Markdown - headings, bold, links, code, task lists
 - @mentions and cross-references
 - `good first issue` label
-- Communicate Using Markdown Skills module
 
 ### Part A - Introduction to GitHub: Step 2 - Add a File (15 min)
 
@@ -265,18 +278,7 @@ I am contributing to open source because...
 
 Mona detects your commit and responds with Step 3 instructions: open a pull request.
 
-### Part B - Set Up Communicate Using Markdown Skills Module (10 min)
-
-> **The Markdown module** runs alongside everything else you do today. Every comment you write, every issue you file, every PR description - you are practicing Markdown in real GitHub contexts.
-
-1. Navigate to the [Communicate Using Markdown skills course](https://github.com/skills/communicate-using-markdown)
-2. "Start course" → create the repo in your account
-3. Wait for Mona to create Issue #1 with Step 1 instructions
-4. Read the instructions - Mona will walk you through: headers, emphasis, images, code blocks, task lists, and tables
-
-You will work through each Markdown step during the natural pauses in this block. Your facilitator will call out when to switch.
-
-### Part C - Introduction to GitHub: Step 3 - Open a Pull Request (15 min)
+### Part B - Introduction to GitHub: Step 3 - Open a Pull Request (15 min)
 
 Return to your `introduction-to-github` Skills repo. Mona has asked you to open a pull request from `my-first-branch` into `main`.
 
@@ -299,7 +301,7 @@ Getting started with open source AT contributions.
 
 > **Magic Moment #2:** Mona will respond to your PR within seconds. Navigate to the Conversations tab of your new PR. Mona has left a comment - read it with your screen reader. This is automated feedback on your real GitHub action, from an actual GitHub Actions workflow running in your repository.
 
-### Part D - Issues Practice in learning-room (20 min)
+### Part C - Issues Practice in learning-room (20 min)
 
 **Activity 3A - Find and read a challenge issue:**
 1. Navigate to `learning-room` Issues tab
@@ -339,10 +341,14 @@ Getting started with open source AT contributions.
 
 ---
 
-## Block 4 - Understanding Pull Requests (12:15 PM, 45 min)
+## Block 4 - Understanding Pull Requests (12:10 PM, 50 min)
 
 ### Purpose
 Participants understand what pull requests are, how to read one, and how to participate in a review - by reviewing a PR that Mona creates specifically for them.
+
+### Catch-Up Buffer (5 min)
+
+If you are still completing Step 2 or Step 3 from the Introduction to GitHub module, finish your current step now. If you are on pace, work through a Communicate Using Markdown step.
 
 ### Key Concepts Covered
 - Anatomy of a PR (title, description, base/compare branches)
@@ -436,7 +442,28 @@ The `learning-room` repo has a `docs/` folder with three intentionally imperfect
 | Challenge 1: Fix Broken Link | `docs/welcome.md` | Find and repair the broken internal link | 10-15 min |
 | Challenge 2: Add Keyboard Shortcut | `docs/keyboard-shortcuts.md` | Add a missing shortcut to the correct table | 15-20 min |
 | Challenge 3: Complete Welcome Guide | `docs/welcome.md` | Fill in the three `[TODO]` sections | 20-30 min |
+### Know Your File Before You Fix It (5 min)
 
+Before starting your challenge, explore the file you will be editing. This is the reconnaissance you previewed in Block 1 - now with purpose.
+
+**If your challenge targets `docs/welcome.md` (Challenges 1 and 3):**
+1. Open `docs/welcome.md` - press `H` to navigate through all headings
+2. Find the `[TODO]` markers - these are the sections you will complete
+3. Press `K` to check the internal links - is there a broken one?
+4. Note the heading hierarchy: H1, H2, H3. Your additions must follow this pattern.
+
+**If your challenge targets `docs/keyboard-shortcuts.md` (Challenge 2):**
+1. Open `docs/keyboard-shortcuts.md` - press `2` to navigate H2 sections (NVDA, JAWS, VoiceOver)
+2. Press `T` to navigate into the shortcut tables
+3. Read through the table rows - can you spot the intentional errors?
+4. Check: does every screen reader section have the same set of shortcuts?
+
+**If your challenge targets `docs/setup-guide.md` (Advanced):**
+1. Open `docs/setup-guide.md` - press `K` to navigate all links
+2. Which links are broken? Where should they point?
+3. Read the step-by-step instructions - which steps are incomplete?
+
+The challenges in [docs/CHALLENGES.md](learning-room/docs/CHALLENGES.md) map directly to these files and list success criteria for each.
 Each participant will:
 1. Find their assigned issue (which maps to one of these challenges)
 2. Edit the practice file on GitHub
@@ -570,7 +597,13 @@ The automation bot validates these things:
 
 ---
 
-## Block 6 - Community: Culture, Etiquette, Labels, and Notifications (3:00 PM, 90 min)
+## Break (3:00 PM, 15 min)
+
+Stand, stretch, and rest your ears. The contribution sprint demands focus. The final block is discussion-centered and lower intensity.
+
+---
+
+## Block 6 - Community: Culture, Etiquette, Labels, and Notifications (3:15 PM, 75 min)
 
 ### Purpose
 Participants understand the human side of open source: how to communicate well, how to stay organized, and how to manage their GitHub notification experience.
@@ -587,38 +620,19 @@ Participants understand the human side of open source: how to communicate well, 
 
 **Key insight:** These files exist to lower barriers AND set expectations. A project with these files sends a signal of maturity and intention.
 
-### Part 6B - Group Challenges Preview (10 min)
+### Part 6B - Communication and Review Culture (30 min)
 
-**Activity:** Open `docs/GROUP_CHALLENGES.md` in the learning-room. Navigate the available group exercises:
+**Discussion: How to communicate in open source (10 min)**
 
-| Exercise | Difficulty | What it practices |
-|----------|-----------|------------------|
-| Documentation Sprint | Beginner-Intermediate | Parallel collaboration, avoiding merge conflicts |
-| Peer Review Circle | Intermediate | Structured review rotation, giving/receiving feedback |
-| Accessibility Workshop | Intermediate-Advanced | Deep-dive on one a11y topic, teaching others |
-| Challenge Creation Sprint | Advanced-Expert | Instructional design, writing clear instructions |
+Open source communication is asynchronous. Your comment will be read out of context, by many people, over a long time. These principles matter:
 
-**If your study group has time:** Pick one group challenge to start after individual work. The "Documentation Sprint" is a great first choice - divide `docs/welcome.md` sections among group members and coordinate your PRs.
-
-### Part 6C - Language, Tone, and Inclusive Culture (20 min)
-
-**Discussion points:**
-- The asynchronous nature of open source - your comment will be read out of context, by many people, over a long time
 - Clarity and precision: "I noticed X, which might cause Y" vs "This is wrong"
 - The difference between critiquing code and critiquing people
 - Handling disagreement: "I see it differently because..." rather than "No, that's incorrect"
 - Acknowledging effort: starting with what's working before identifying problems
 - Avoiding jargon and acronyms that exclude newcomers
 
-**Exercise:** Rewrite these comments to be more inclusive:
-1. "This is obviously wrong - anyone can see it doesn't handle nulls."
-2. "LGTM but TBH this feels like over-engineering IMO."
-3. "Great job! But this is terrible." *(contradictory feedback)*
-4. "Fix this before EOD."
-
-### Part 6D - Commenting and Review Etiquette (20 min)
-
-**The anatomy of a good review comment:**
+**The anatomy of a good review comment (10 min)**
 
 A useful comment includes:
 1. **What** you noticed
@@ -629,35 +643,21 @@ Example:
 > "The `alt` attribute on line 42 is empty. Screen readers will skip this image entirely, which means blind users miss the chart. A description like 'Bar chart showing monthly downloads from January to June' would help. Happy to help draft one if useful!"
 
 **Practices to demonstrate:**
-- Separating factual observations from preferences (`"This might be a typo"` vs `"I personally prefer single quotes"`)
+- Separating factual observations from preferences ("This might be a typo" vs "I personally prefer single quotes")
 - Using `nit:` to signal non-blocking suggestions
 - Asking clarifying questions instead of assuming intent
-- Marking your review as "Comment" when you're not sure whether something is a blocker
+- Marking your review as "Comment" when you are not sure whether something is a blocker
 
-**Exercise:** Write a review comment for the change: "A PR removes the `<main>` landmark element from a page."
+**Exercise: Rewrite and write (10 min)**
 
-### Part 6E - Notifications: Taking Control of Your Inbox (15 min)
+Rewrite these comments to be more inclusive:
+1. "This is obviously wrong - anyone can see it doesn't handle nulls."
+2. "LGTM but TBH this feels like over-engineering IMO."
+3. "Fix this before EOD."
 
-**Concepts:**
-- GitHub Notifications inbox: `github.com/notifications`
-- Subscribed vs Participating vs @mentioned
-- Notification preferences per repository
-- Filtering: unread, assigned to me, @mentioned, participating
-- The "Done" button
+Then write a review comment for this change: "A PR removes the `<main>` landmark element from a page."
 
-**Hands-on:**
-1. Navigate to your Notifications inbox
-2. Find the notification from your PR comment
-3. Mark it as Done
-4. Change `learning-room` Watch settings to "Participating and @mentions only"
-
-**Screen reader tips:**
-- `H` to navigate between notification groups
-- `K` to move between notifications
-- `E` marks a notification as Done from the list
-- `Shift+I` marks as read
-
-### Part 6F - Labels, Milestones, and Cross-References (20 min)
+### Part 6C - Labels, Milestones, and Cross-References (20 min)
 
 **Labels - organizing intent:**
 - Creating a label: Issues → Labels → New label
@@ -674,6 +674,20 @@ Example:
 - From a PR description: `Closes #42` auto-closes the issue on merge
 - Referencing across repos: `owner/repo#42`
 - From comments: type `#` and a number
+
+### Part 6D - Notifications: Taking Control of Your Inbox (10 min)
+
+**Concepts:**
+- GitHub Notifications inbox: `github.com/notifications`
+- Subscribed vs Participating vs @mentioned
+- Notification preferences per repository
+- The "Done" button
+
+**Hands-on:**
+1. Navigate to your Notifications inbox
+2. Find the notification from your PR comment
+3. Mark it as Done
+4. Change `learning-room` Watch settings to "Participating and @mentions only"
 
 ---
 
@@ -705,6 +719,7 @@ Tomorrow we move from the browser to **Visual Studio Code**. Here is what is com
 **Tonight (optional):**
 - Install VS Code and the GitHub Copilot Chat extension (see [Pre-Workshop Setup](docs/00-pre-workshop-setup.md))
 - Complete any Markdown Skills module steps you didn't finish
+- Explore [docs/GROUP_CHALLENGES.md](learning-room/docs/GROUP_CHALLENGES.md) - 7 collaborative exercises your study group can tackle together
 - Fork [accessibility-agents](https://github.com/community-access/accessibility-agents) - it will be ready and waiting when you open VS Code tomorrow
 
 ---

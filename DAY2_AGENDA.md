@@ -200,6 +200,14 @@ Open the file you want to improve. Press `Ctrl+I` to open inline chat.
 - Fixes: `fix/what-you-fixed`
 - Documentation: `docs/what-you-documented`
 
+### Contribution Checkpoint (before lunch)
+
+Before leaving for lunch, check your progress:
+
+- **On pace:** You have at least one commit on a named branch. You are ready for Block 3.
+- **Almost there:** You have identified a file and started drafting but have not committed yet. Use the first 10 minutes after lunch to finalize your commit before the agent demonstrations begin.
+- **Still exploring:** You have not yet identified a file to improve. During lunch, read through the `.github/agents/` files and pick one. When Block 3 starts, the facilitator will demo agents on the repository - watching those demos will help you see where improvements are needed.
+
 ---
 
 ## Block 3 - Activate the Agents
@@ -276,6 +284,10 @@ Edit the agent's output before posting any of it. Your name goes on it.
 **Hands-on:** Run `@insiders-a11y-tracker check recent changes in accessibility-agents`. Look at the HTML output files. Does your Day 2 contribution affect any accessibility-sensitive areas? If yes, the agent flags it. If no, confirm that is accurate.
 
 This agent is quality assurance for the accessibility quality of your own contribution - before you submit it for review.
+
+### Stand and Stretch (5 min)
+
+The agents are running. Step away from the screen for five minutes. Screen reader listening for an hour after lunch is demanding. When you return, Block 4 shows you how these same agents run in the cloud - without you pressing a key.
 
 ---
 
@@ -362,6 +374,14 @@ Do not close the issue. Do not merge anything. Do not modify any files.
 
 ### Purpose
 Polish and submit your real pull request upstream to `community-access/accessibility-agents`. Not to your fork - to the original. This is the moment the product maker mindset becomes tangible.
+
+### If Your Contribution Is Still in Progress
+
+If you did not finish your commit during Block 2, use the first 15 minutes of this block to finalize:
+1. Open the file you were working on in VS Code
+2. Use Copilot (`Ctrl+I`) to help you finish any incomplete sections
+3. Commit: `git add .` then `git commit -m "your message"`
+4. Then proceed to the Pre-Submission Checklist below
 
 ### Pre-Submission Checklist
 Before opening the PR, run through this with your screen reader:
