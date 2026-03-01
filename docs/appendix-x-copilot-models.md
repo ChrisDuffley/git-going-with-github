@@ -1,4 +1,6 @@
 # Appendix X: GitHub Copilot AI Models Reference
+> **Listen to Episode 41:** [Copilot AI Models](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 
 <!-- TOC -->
 - [Overview](#1-overview)

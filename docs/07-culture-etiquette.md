@@ -1,4 +1,6 @@
 # Culture, Etiquette, and Community Standards
+> **Listen to Episode 8:** [Open Source Culture and Etiquette](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## How to Be an Effective and Respectful Open Source Contributor
 
 > Technical skills get your code into a project. Communication skills keep you welcomed in the community. This guide covers the human side of open source.

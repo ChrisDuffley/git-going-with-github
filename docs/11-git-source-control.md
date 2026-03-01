@@ -1,4 +1,6 @@
 # Git & Source Control in VS Code
+> **Listen to Episode 12:** [Git and Source Control in VS Code](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Managing Repositories, Branches, and Changes Accessibly
 
 > **Day 2, Block 1-2 Material**

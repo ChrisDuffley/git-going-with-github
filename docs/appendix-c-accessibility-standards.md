@@ -1,4 +1,6 @@
 # Appendix C: Accessibility Standards Reference
+> **Listen to Episode 20:** [Accessibility Standards Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## WCAG, ARIA, and What They Mean for Your Contributions
 
 > This appendix gives you a working understanding of the accessibility standards that govern the web, GitHub's interface, and the projects you will contribute to. You do not need to memorize these - use this as a lookup when a PR review mentions a specific standard or success criterion.

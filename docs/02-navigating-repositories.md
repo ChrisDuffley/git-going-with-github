@@ -1,4 +1,6 @@
 # Navigating Repositories
+> **Listen to Episode 3:** [Navigating Repositories](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## A Screen Reader Guide to GitHub Repositories
 
 > This guide covers everything you need to explore a GitHub repository using your keyboard and screen reader. No mouse required.

@@ -1,4 +1,6 @@
 # Appendix R: GitHub Profile, Sponsors, and Wikis
+> **Listen to Episode 35:** [Profile, Sponsors, and Wikis](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Building Your Community Presence on GitHub
 
 > This appendix covers three community-facing GitHub features: your profile README (how the world sees you), GitHub Sponsors (financially supporting the people whose work you depend on), and GitHub Wikis (community-editable documentation inside a repository).

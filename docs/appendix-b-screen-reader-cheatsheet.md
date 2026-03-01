@@ -1,4 +1,6 @@
 # Appendix B: Screen Reader Cheat Sheet
+> **Listen to Episode 19:** [Screen Reader Cheat Sheet](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## GitHub Navigation with NVDA, JAWS, and VoiceOver
 
 > **How to use this sheet:** Keep it open in a second window or print it. Commands are organized by task so you can find what you need quickly while you work. All commands are keyboard-only - no mouse required.

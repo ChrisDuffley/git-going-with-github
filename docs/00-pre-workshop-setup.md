@@ -1,4 +1,6 @@
 # Pre-Workshop Setup - GIT Going with GitHub
+> **Listen to Episode 1:** [Pre-Workshop Setup](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Everything You Need Before Day 1 Begins
 
 > **A [Community Access](https://community-access.org) workshop.**

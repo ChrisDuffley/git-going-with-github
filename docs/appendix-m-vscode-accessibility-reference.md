@@ -1,4 +1,6 @@
 # Appendix M: VS Code Accessibility Reference
+> **Listen to Episode 30:** [VS Code Accessibility Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Complete Technical Reference for Screen Reader Users
 
 > **Purpose:** This appendix provides comprehensive technical documentation for all VS Code accessibility features, settings, and keyboard shortcuts. The main chapters cover essentials; this appendix is your complete reference manual.

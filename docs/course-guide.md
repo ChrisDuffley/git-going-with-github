@@ -1,4 +1,6 @@
 # Course Guide
+> **Listen to Episode 0:** [Welcome to Git Going with GitHub](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## GitHub Learning Room - Your Complete Workshop Companion
 
 > **Welcome.** You are about to begin a two-day journey into open source collaboration using GitHub, VS Code, and GitHub Copilot - all designed for screen reader and keyboard-only navigation. This guide is your starting point and table of contents for everything in this workshop.
@@ -52,6 +54,16 @@ Complete everything in **[Chapter 0: Pre-Workshop Setup](00-pre-workshop-setup.m
 - Verifying everything works
 
 **Time needed:** About 30 minutes.
+
+---
+
+## Companion Audio Series
+
+Every chapter and appendix has a companion podcast episode - a conversational two-host overview that previews or reviews the key concepts. Listen before reading a chapter to know what to expect, or after to reinforce what you learned.
+
+- **[Browse all 44 episodes](../PODCASTS.md)** with HTML5 audio players
+- **[Subscribe via RSS](https://community-access.org/git-going-with-github/podcasts/feed.xml)** in your preferred podcast app
+- Episodes are 8-18 minutes each - perfect for commutes, walks, or screen reader breaks
 
 ---
 

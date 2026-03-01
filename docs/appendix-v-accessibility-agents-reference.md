@@ -1,4 +1,6 @@
 # Appendix V: Accessibility Agents Reference
+> **Listen to Episode 39:** [Accessibility Agents - Complete Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats
 
 > This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. For the lesson, see [Chapter 16: Accessibility Agents](16-accessibility-agents.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).

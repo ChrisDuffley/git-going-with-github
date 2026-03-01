@@ -1,4 +1,6 @@
 # Appendix T: Contributing to Open Source
+> **Listen to Episode 37:** [Contributing to Open Source](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## A Guide for First-Time Contributors
 
 > You do not need to be a professional developer to contribute to open source. Documentation, accessibility improvements, and bug reports are among the most valuable contributions any project can receive.

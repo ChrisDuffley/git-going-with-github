@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:itunes="http://www.itunes.apple.com/dtds/podcast-1.0.dtd"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git Going with GitHub - Audio Series</title>
+    <link>https://community-access.org/git-going-with-github</link>
+    <atom:link href="https://community-access.org/git-going-with-github/podcasts/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Companion audio episodes for the Git Going with GitHub workshop. Conversational overviews of every chapter and appendix, designed for blind and low-vision developers learning GitHub and open source collaboration.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Mar 2026 20:17:28 GMT</lastBuildDate>
+    <itunes:author>Community Access</itunes:author>
+    <itunes:summary>44 companion audio episodes for the Git Going with GitHub workshop - a two-day course teaching blind and low-vision developers to collaborate on GitHub using screen readers, VS Code, and accessibility agents.</itunes:summary>
+    <itunes:owner>
+      <itunes:name>Community Access</itunes:name>
+    </itunes:owner>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Technology" />
+    <itunes:category text="Education">
+      <itunes:category text="How To" />
+    </itunes:category>
+    <itunes:type>serial</itunes:type>
+    <item>
+      <title>Episode 0: Welcome to Git Going with GitHub</title>
+      <description>A tour of the workshop structure, the two-day arc, and what you will accomplish.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep00</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep00-welcome.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>1</itunes:episode>
+      <itunes:title>Welcome to Git Going with GitHub</itunes:title>
+      <itunes:summary>A tour of the workshop structure, the two-day arc, and what you will accomplish.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 1: Pre-Workshop Setup</title>
+      <description>Creating your GitHub account, installing Git and VS Code, configuring your screen reader.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep01</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep01-pre-workshop-setup.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>2</itunes:episode>
+      <itunes:title>Pre-Workshop Setup</itunes:title>
+      <itunes:summary>Creating your GitHub account, installing Git and VS Code, configuring your screen reader.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 2: Understanding GitHub on the Web</title>
+      <description>How GitHub organizes its web pages, heading structure, landmarks, and keyboard shortcuts.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep02</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep02-github-web-structure.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>3</itunes:episode>
+      <itunes:title>Understanding GitHub on the Web</itunes:title>
+      <itunes:summary>How GitHub organizes its web pages, heading structure, landmarks, and keyboard shortcuts.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 3: Navigating Repositories</title>
+      <description>Exploring a repository: tabs, files, README, branches, and commit history.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep03</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep03-navigating-repositories.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>4</itunes:episode>
+      <itunes:title>Navigating Repositories</itunes:title>
+      <itunes:summary>Exploring a repository: tabs, files, README, branches, and commit history.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 4: The Learning Room</title>
+      <description>Your shared practice environment: challenges, PR workflow, bot feedback, peer review.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep04</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep04-the-learning-room.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>5</itunes:episode>
+      <itunes:title>The Learning Room</itunes:title>
+      <itunes:summary>Your shared practice environment: challenges, PR workflow, bot feedback, peer review.</itunes:summary>
+      <itunes:duration>8-10 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 5: Working with Issues</title>
+      <description>Filing, searching, filtering, commenting on, and managing GitHub issues.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep05</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep05-working-with-issues.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>6</itunes:episode>
+      <itunes:title>Working with Issues</itunes:title>
+      <itunes:summary>Filing, searching, filtering, commenting on, and managing GitHub issues.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 6: Working with Pull Requests</title>
+      <description>Creating, reviewing, commenting on, and merging pull requests.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep06</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep06-working-with-pull-requests.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>7</itunes:episode>
+      <itunes:title>Working with Pull Requests</itunes:title>
+      <itunes:summary>Creating, reviewing, commenting on, and merging pull requests.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 7: Merge Conflicts Are Not Scary</title>
+      <description>Why conflicts happen, how to read conflict markers, and resolving them confidently.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep07</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep07-merge-conflicts.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>8</itunes:episode>
+      <itunes:title>Merge Conflicts Are Not Scary</itunes:title>
+      <itunes:summary>Why conflicts happen, how to read conflict markers, and resolving them confidently.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 8: Open Source Culture and Etiquette</title>
+      <description>Communication norms, code review etiquette, inclusive language, and asking questions.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep08</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep08-culture-and-etiquette.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>9</itunes:episode>
+      <itunes:title>Open Source Culture and Etiquette</itunes:title>
+      <itunes:summary>Communication norms, code review etiquette, inclusive language, and asking questions.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 9: Labels, Milestones, and Projects</title>
+      <description>Organizing and tracking work with labels, milestones, and GitHub Projects.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep09</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep09-labels-milestones-projects.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>10</itunes:episode>
+      <itunes:title>Labels, Milestones, and Projects</itunes:title>
+      <itunes:summary>Organizing and tracking work with labels, milestones, and GitHub Projects.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 10: Notifications and Mentions</title>
+      <description>Managing your notification inbox, @mentions, and strategies for avoiding overload.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep10</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep10-notifications.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>11</itunes:episode>
+      <itunes:title>Notifications and Mentions</itunes:title>
+      <itunes:summary>Managing your notification inbox, @mentions, and strategies for avoiding overload.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 11: VS Code Setup and Accessibility</title>
+      <description>Screen reader mode, Command Palette, sidebar navigation, and accessibility settings.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep11</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep11-vscode-basics.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>12</itunes:episode>
+      <itunes:title>VS Code Setup and Accessibility</itunes:title>
+      <itunes:summary>Screen reader mode, Command Palette, sidebar navigation, and accessibility settings.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 12: Git and Source Control in VS Code</title>
+      <description>Cloning, branching, staging, committing, pushing, and pulling from VS Code.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep12</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep12-git-source-control.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>13</itunes:episode>
+      <itunes:title>Git and Source Control in VS Code</itunes:title>
+      <itunes:summary>Cloning, branching, staging, committing, pushing, and pulling from VS Code.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 13: The GitHub Pull Requests Extension</title>
+      <description>Viewing, creating, reviewing, and merging PRs from inside VS Code.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep13</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep13-github-prs-extension.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>14</itunes:episode>
+      <itunes:title>The GitHub Pull Requests Extension</itunes:title>
+      <itunes:summary>Viewing, creating, reviewing, and merging PRs from inside VS Code.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 14: GitHub Copilot</title>
+      <description>Inline suggestions, Copilot Chat, prompting strategies, and custom instructions.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep14</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep14-github-copilot.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>15</itunes:episode>
+      <itunes:title>GitHub Copilot</itunes:title>
+      <itunes:summary>Inline suggestions, Copilot Chat, prompting strategies, and custom instructions.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 15: Accessible Code Review</title>
+      <description>Navigating diffs with a screen reader, reviewing PRs in browser and VS Code.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep15</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep15-accessible-code-review.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>16</itunes:episode>
+      <itunes:title>Accessible Code Review</itunes:title>
+      <itunes:summary>Navigating diffs with a screen reader, reviewing PRs in browser and VS Code.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 16: Issue Templates</title>
+      <description>Creating YAML-based issue templates for bug reports, features, and custom forms.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep16</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep16-issue-templates.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>17</itunes:episode>
+      <itunes:title>Issue Templates</itunes:title>
+      <itunes:summary>Creating YAML-based issue templates for bug reports, features, and custom forms.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 17: Accessibility Agents</title>
+      <description>Six agents, 28 slash commands, custom agents, and agentic accessibility workflows.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep17</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep17-accessibility-agents.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>18</itunes:episode>
+      <itunes:title>Accessibility Agents</itunes:title>
+      <itunes:summary>Six agents, 28 slash commands, custom agents, and agentic accessibility workflows.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 18: Glossary of Terms</title>
+      <description>Comprehensive glossary: Git, GitHub, open source, and accessibility terminology.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep18</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep18-glossary.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>19</itunes:episode>
+      <itunes:title>Glossary of Terms</itunes:title>
+      <itunes:summary>Comprehensive glossary: Git, GitHub, open source, and accessibility terminology.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 19: Screen Reader Cheat Sheet</title>
+      <description>NVDA, JAWS, and VoiceOver commands for GitHub and VS Code.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep19</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep19-screen-reader-cheatsheet.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>20</itunes:episode>
+      <itunes:title>Screen Reader Cheat Sheet</itunes:title>
+      <itunes:summary>NVDA, JAWS, and VoiceOver commands for GitHub and VS Code.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 20: Accessibility Standards Reference</title>
+      <description>WCAG 2.2, ARIA roles, and the PR accessibility checklist.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep20</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep20-accessibility-standards.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>21</itunes:episode>
+      <itunes:title>Accessibility Standards Reference</itunes:title>
+      <itunes:summary>WCAG 2.2, ARIA roles, and the PR accessibility checklist.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 21: Git Authentication</title>
+      <description>Personal access tokens, SSH keys, credential storage, and commit signing.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep21</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep21-git-authentication.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>22</itunes:episode>
+      <itunes:title>Git Authentication</itunes:title>
+      <itunes:summary>Personal access tokens, SSH keys, credential storage, and commit signing.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 22: GitHub Flavored Markdown</title>
+      <description>Markdown syntax, GitHub extensions, and writing accessible documentation.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep22</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep22-github-flavored-markdown.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>23</itunes:episode>
+      <itunes:title>GitHub Flavored Markdown</itunes:title>
+      <itunes:summary>Markdown syntax, GitHub extensions, and writing accessible documentation.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 23: GitHub Gists</title>
+      <description>Lightweight code sharing: creating, editing, forking, and embedding Gists.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep23</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep23-github-gists.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>24</itunes:episode>
+      <itunes:title>GitHub Gists</itunes:title>
+      <itunes:summary>Lightweight code sharing: creating, editing, forking, and embedding Gists.</itunes:summary>
+      <itunes:duration>8-10 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 24: GitHub Discussions</title>
+      <description>Forum-style conversations, Q&amp;A, polls, and navigation with screen readers.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep24</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep24-github-discussions.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>25</itunes:episode>
+      <itunes:title>GitHub Discussions</itunes:title>
+      <itunes:summary>Forum-style conversations, Q&amp;A, polls, and navigation with screen readers.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 25: Releases, Tags, and Insights</title>
+      <description>Semantic versioning, GitHub Releases, and repository analytics.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep25</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep25-releases-tags-insights.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>26</itunes:episode>
+      <itunes:title>Releases, Tags, and Insights</itunes:title>
+      <itunes:summary>Semantic versioning, GitHub Releases, and repository analytics.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 26: GitHub Projects Deep Dive</title>
+      <description>Project boards, table and roadmap views, custom fields, cross-repo management.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep26</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep26-github-projects.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>27</itunes:episode>
+      <itunes:title>GitHub Projects Deep Dive</itunes:title>
+      <itunes:summary>Project boards, table and roadmap views, custom fields, cross-repo management.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 27: Advanced Search</title>
+      <description>GitHub search query language, qualifiers, and filtering for issues, PRs, and code.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep27</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep27-advanced-search.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>28</itunes:episode>
+      <itunes:title>Advanced Search</itunes:title>
+      <itunes:summary>GitHub search query language, qualifiers, and filtering for issues, PRs, and code.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 28: Branch Protection and Rulesets</title>
+      <description>Required reviews, status checks, rulesets, and diagnosing blocked merges.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep28</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep28-branch-protection.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>29</itunes:episode>
+      <itunes:title>Branch Protection and Rulesets</itunes:title>
+      <itunes:summary>Required reviews, status checks, rulesets, and diagnosing blocked merges.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 29: GitHub Security Features</title>
+      <description>Dependabot, secret scanning, code scanning, and private security advisories.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep29</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep29-security-features.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>30</itunes:episode>
+      <itunes:title>GitHub Security Features</itunes:title>
+      <itunes:summary>Dependabot, secret scanning, code scanning, and private security advisories.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 30: VS Code Accessibility Reference</title>
+      <description>Complete accessibility settings, audio signals, diff viewer, and screen reader configs.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep30</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep30-vscode-accessibility-reference.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>31</itunes:episode>
+      <itunes:title>VS Code Accessibility Reference</itunes:title>
+      <itunes:summary>Complete accessibility settings, audio signals, diff viewer, and screen reader configs.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 31: GitHub Codespaces</title>
+      <description>Cloud dev environments, accessibility setup, and screen reader usage.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep31</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep31-github-codespaces.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>32</itunes:episode>
+      <itunes:title>GitHub Codespaces</itunes:title>
+      <itunes:summary>Cloud dev environments, accessibility setup, and screen reader usage.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 32: GitHub Mobile</title>
+      <description>VoiceOver and TalkBack guide for iOS and Android GitHub apps.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep32</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep32-github-mobile.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>33</itunes:episode>
+      <itunes:title>GitHub Mobile</itunes:title>
+      <itunes:summary>VoiceOver and TalkBack guide for iOS and Android GitHub apps.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 33: Publishing with GitHub Pages</title>
+      <description>Free static site hosting, custom domains, HTTPS, and accessibility.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep33</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep33-github-pages.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>34</itunes:episode>
+      <itunes:title>Publishing with GitHub Pages</itunes:title>
+      <itunes:summary>Free static site hosting, custom domains, HTTPS, and accessibility.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 34: GitHub Actions and Workflows</title>
+      <description>Workflow YAML structure, CI/CD, automation, and the Actions marketplace.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep34</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep34-github-actions.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>35</itunes:episode>
+      <itunes:title>GitHub Actions and Workflows</itunes:title>
+      <itunes:summary>Workflow YAML structure, CI/CD, automation, and the Actions marketplace.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 35: Profile, Sponsors, and Wikis</title>
+      <description>Profile README, GitHub Sponsors, and repository Wikis.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep35</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep35-profile-sponsors-wikis.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>36</itunes:episode>
+      <itunes:title>Profile, Sponsors, and Wikis</itunes:title>
+      <itunes:summary>Profile README, GitHub Sponsors, and repository Wikis.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 36: Organizations and Templates</title>
+      <description>GitHub Organizations, repository templates, visibility, and archiving.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep36</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep36-organizations-templates.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>37</itunes:episode>
+      <itunes:title>Organizations and Templates</itunes:title>
+      <itunes:summary>GitHub Organizations, repository templates, visibility, and archiving.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 37: Contributing to Open Source</title>
+      <description>Finding issues, scoping contributions, the fork-to-PR workflow, and building habits.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep37</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep37-contributing-to-open-source.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>38</itunes:episode>
+      <itunes:title>Contributing to Open Source</itunes:title>
+      <itunes:summary>Finding issues, scoping contributions, the fork-to-PR workflow, and building habits.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 38: Resources and Links</title>
+      <description>Tools, references, communities, and continued learning paths.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep38</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep38-resources.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>39</itunes:episode>
+      <itunes:title>Resources and Links</itunes:title>
+      <itunes:summary>Tools, references, communities, and continued learning paths.</itunes:summary>
+      <itunes:duration>8-10 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 39: Accessibility Agents - Complete Reference</title>
+      <description>All six agents, all 28 slash commands, customization, and troubleshooting.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep39</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep39-accessibility-agents-reference.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>40</itunes:episode>
+      <itunes:title>Accessibility Agents - Complete Reference</itunes:title>
+      <itunes:summary>All six agents, all 28 slash commands, customization, and troubleshooting.</itunes:summary>
+      <itunes:duration>15-18 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 40: GitHub Copilot - Complete Reference</title>
+      <description>All Copilot features, chat participants, slash commands, and MCP servers.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep40</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep40-copilot-reference.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>41</itunes:episode>
+      <itunes:title>GitHub Copilot - Complete Reference</itunes:title>
+      <itunes:summary>All Copilot features, chat participants, slash commands, and MCP servers.</itunes:summary>
+      <itunes:duration>12-15 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 41: Copilot AI Models</title>
+      <description>Model comparison, strengths, plan availability, and selection guidance.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep41</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep41-copilot-models.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>42</itunes:episode>
+      <itunes:title>Copilot AI Models</itunes:title>
+      <itunes:summary>Model comparison, strengths, plan availability, and selection guidance.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 42: Accessing Workshop Materials</title>
+      <description>Downloading the repository, reading offline, keeping updated, audio format.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep42</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep42-accessing-workshop-materials.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>43</itunes:episode>
+      <itunes:title>Accessing Workshop Materials</itunes:title>
+      <itunes:summary>Downloading the repository, reading offline, keeping updated, audio format.</itunes:summary>
+      <itunes:duration>8-10 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Episode 43: GitHub Skills - Complete Course Catalog</title>
+      <description>All 36 GitHub Skills modules organized into six learning paths.</description>
+      <link>https://community-access.org/git-going-with-github/PODCASTS.html</link>
+      <guid isPermaLink="false">git-going-ep43</guid>
+      <pubDate>Sun, 01 Mar 2026 20:17:28 GMT</pubDate>
+      <enclosure url="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep43-github-skills-catalog.mp3" type="audio/mpeg" length="0" />
+      <itunes:episode>44</itunes:episode>
+      <itunes:title>GitHub Skills - Complete Course Catalog</itunes:title>
+      <itunes:summary>All 36 GitHub Skills modules organized into six learning paths.</itunes:summary>
+      <itunes:duration>10-12 min</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

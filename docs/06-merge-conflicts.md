@@ -1,4 +1,6 @@
 # Merge Conflicts
+> **Listen to Episode 7:** [Merge Conflicts Are Not Scary](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Understanding, Preventing, and Resolving Conflicts
 
 > Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them - step by step.

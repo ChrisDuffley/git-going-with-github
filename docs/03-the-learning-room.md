@@ -1,4 +1,6 @@
 # The Learning Room: Shared Practice Repository
+> **Listen to Episode 4:** [The Learning Room](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 
 ## What Is the Learning Room?
 

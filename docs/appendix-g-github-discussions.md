@@ -1,4 +1,6 @@
 # Appendix G: GitHub Discussions
+> **Listen to Episode 24:** [GitHub Discussions](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Forum-Style Conversations Beyond Issues and Pull Requests
 
 > GitHub Discussions is a built-in community forum for repositories and organizations. It's where open-ended conversations live - questions, ideas, announcements, polls, and community Q&A - separate from the action-oriented world of issues and pull requests.

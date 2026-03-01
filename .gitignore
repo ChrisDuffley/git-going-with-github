@@ -47,6 +47,10 @@ REGISTRATION-ADMIN.md
 # Node.js dependencies
 node_modules/
 
+# Podcast audio files — hosted on GitHub Releases, not in the repo
+podcasts/audio/
+*.mp3
+
 # macOS system files
 .DS_Store
 .AppleDouble

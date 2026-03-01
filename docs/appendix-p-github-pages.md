@@ -1,4 +1,6 @@
 # Appendix P: Publishing with GitHub Pages
+> **Listen to Episode 33:** [Publishing with GitHub Pages](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## How to Deploy a Static Website Directly from Your Repository
 
 > GitHub Pages lets you publish a static website straight from a GitHub repository - no server, no hosting bill, no deployment pipeline required for simple sites. This appendix explains how to enable it, what it can publish, and how to ensure the published site meets the same accessibility standards as your source code.

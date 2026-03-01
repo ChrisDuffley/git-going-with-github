@@ -97,6 +97,8 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 
 > **HTML Version Available:** All markdown documentation is automatically converted to HTML format. After cloning the repository, you can browse the `html/` directory for web-formatted versions of every document. See [BUILD.md](BUILD.md) for details.
 
+> **Audio Series Available:** Every chapter and appendix has a companion podcast episode - a conversational two-host overview perfect for previewing concepts or reducing screen reader fatigue. [Browse all 44 episodes](PODCASTS.md) or [subscribe via RSS](https://community-access.org/git-going-with-github/podcasts/feed.xml).
+
 ### Quick Navigation
 
 > **Looking for a student-friendly table of contents?** See the [Course Guide](docs/course-guide.md) - a single page with day-by-day chapter tables, grouped appendices, all 24 exercises at a glance, and where to get help.
@@ -204,7 +206,15 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 │       ├── welcome.md                   ← Has [TODO] sections for you to complete
 │       ├── keyboard-shortcuts.md        ← Has intentional accessibility issues to find and fix
 │       └── setup-guide.md              ← Has a broken link to find and fix
-└── docs/                               ← Full workshop curriculum (17 lessons + 25 appendices A-Y)
+├── PODCASTS.md                          ← Audio player page (44 episodes, HTML5 audio)
+├── podcasts/                            ← Podcast production pipeline
+│   ├── build-bundles.js                 ← Generates NotebookLM source bundles
+│   ├── generate-site.js                 ← Generates PODCASTS.md and RSS feed from manifest
+│   ├── manifest.json                    ← Episode manifest (status, metadata)
+│   ├── feed.xml                         ← RSS 2.0 podcast feed
+│   ├── README.md                        ← Production guide
+│   └── bundles/                         ← 44 generated episode source bundles
+└── docs/                               ← Full workshop curriculum (17 lessons + 26 appendices A-Z)
     ├── course-guide.md                           ← Student landing page: day-by-day overview, exercises, help
     ├── 00-pre-workshop-setup.md
     ├── 01-understanding-github-web-structure.md  ← How GitHub is organized (start here)

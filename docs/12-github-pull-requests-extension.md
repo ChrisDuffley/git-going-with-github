@@ -1,4 +1,6 @@
 # GitHub Pull Requests Extension
+> **Listen to Episode 13:** [The GitHub Pull Requests Extension](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Managing Pull Requests from VS Code
 
 > **Day 2, Block 2 Material**

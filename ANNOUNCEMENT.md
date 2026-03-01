@@ -223,7 +223,7 @@ Every step in this workshop is written three ways - for NVDA, for JAWS, and for 
 
 And the goal is not just "learn GitHub." The goal is to move you from **user** to **maker**. From someone who encounters accessibility barriers to someone who files the issue, proposes the fix, reviews the pull request, and ships the solution. That arc - from observer to contributor to product maker - is what the two days are designed to deliver.
 
-The curriculum includes [17 chapters](https://community-access.org/git-going-with-github/docs/course-guide.html), [26 reference appendices](https://community-access.org/git-going-with-github/docs/course-guide.html), 24 hands-on exercises, a shared practice repository with automated feedback bots, three [GitHub Skills](https://skills.github.com/) modules with a bot that verifies your work in real time, and a live open source project where your contributions are merged on Day 2.
+The curriculum includes [17 chapters](https://community-access.org/git-going-with-github/docs/course-guide.html), [26 reference appendices](https://community-access.org/git-going-with-github/docs/course-guide.html), [44 companion podcast episodes](https://community-access.org/git-going-with-github/PODCASTS.html), 24 hands-on exercises, a shared practice repository with automated feedback bots, three [GitHub Skills](https://skills.github.com/) modules with a bot that verifies your work in real time, and a live open source project where your contributions are merged on Day 2.
 
 All of it is open source. All of it is yours to keep, fork, and share.
 

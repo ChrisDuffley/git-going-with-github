@@ -1,4 +1,6 @@
 # Appendix K: Branch Protection Rules and Repository Rulesets
+> **Listen to Episode 28:** [Branch Protection and Rulesets](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## How Merging Rules Work and Why Your PR May Be Blocked
 
 > **Who this is for:** Contributors who have submitted a PR and are wondering why it cannot be merged yet, as well as workshop facilitators who configure branch protection for practice repositories.

@@ -4,6 +4,10 @@
   "description": "GIT Going with GitHub - Accessible open source workshop by Community Access",
   "scripts": {
     "build:html": "node scripts/build-html.js",
+    "build:podcasts": "node podcasts/build-bundles.js && node podcasts/generate-site.js",
+    "build:podcast-bundles": "node podcasts/build-bundles.js",
+    "build:podcast-site": "node podcasts/generate-site.js",
+    "build": "npm run build:podcasts && npm run build:html",
     "watch:html": "node scripts/build-html.js --watch",
     "clean": "node -e \"require('fs').rmSync('html', {recursive: true, force: true})\""
   },

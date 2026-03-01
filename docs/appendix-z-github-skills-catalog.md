@@ -1,4 +1,6 @@
 # Appendix Z: GitHub Skills - Complete Course Catalog
+> **Listen to Episode 43:** [GitHub Skills - Complete Course Catalog](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 
 GitHub Skills is GitHub's free, self-paced interactive learning platform. Every course runs entirely inside GitHub - no external site, no separate login, no video. You copy a course repository to your own account, and an automated bot named Mona teaches you through real issues and pull requests.
 
