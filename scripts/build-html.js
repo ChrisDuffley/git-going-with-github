@@ -124,6 +124,18 @@ function convertMarkdownFile(mdPath, outputDir) {
     const content = fs.readFileSync(mdPath, 'utf-8');
     let htmlContent = marked.parse(content);
     
+    // Rewrite internal .md links to .html (href="...md" and href="...md#anchor")
+    htmlContent = htmlContent.replace(
+      /href="(?!https?:\/\/|mailto:)([^"]*?)\.md(#[^"]*)?"/g,
+      (match, filePart, anchor) => {
+        // ANNOUNCEMENT.md at root level becomes index.html
+        const rewritten = filePart.replace(/(?:^|\/)ANNOUNCEMENT$/, (m) =>
+          m.startsWith('/') ? '/index' : 'index'
+        );
+        return `href="${rewritten}.html${anchor || ''}"`;
+      }
+    );
+
     // Add aria-label to GFM task list checkboxes (WCAG 1.3.1 / 4.1.2)
     htmlContent = htmlContent.replace(
       /<input disabled="" type="checkbox"(?: checked="")?>\s*([^<]+)/g,
