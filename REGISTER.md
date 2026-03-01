@@ -1,6 +1,6 @@
 # Register for GIT Going with GitHub
 
-[Back to Home](https://community-access.github.io/git-going-with-github/) | [Discussion Forum](https://github.com/community-access/git-going-with-github/discussions) | [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html)
+[Back to Home](https://community-access.org/git-going-with-github/) | [Discussion Forum](https://github.com/community-access/git-going-with-github/discussions) | [Pre-Workshop Setup Guide](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html)
 
 Registration requires two steps. Both steps are required.
 
@@ -16,7 +16,7 @@ Registered: <span id="registration-count" aria-live="polite">loading...</span> o
 
 ---
 
-> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://community-access.github.io/git-going-with-github/COMING_SOON.html) before March 7. It walks you through GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver.
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) before March 7. It walks you through GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver.
 
 ---
 
@@ -87,7 +87,7 @@ Once you have completed both steps:
 
 1. You will receive a Zoom confirmation email (Step 1)
 2. You will see a confirmation comment on your GitHub issue (Step 2)
-3. Complete the [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html) before March 7 - it covers GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot)
+3. Complete the [Pre-Workshop Setup Guide](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) before March 7 - it covers GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot)
 4. Questions? [File an issue](https://github.com/community-access/git-going-with-github/issues) in the workshop repository
 
 ---
@@ -95,6 +95,6 @@ Once you have completed both steps:
 ## While You Wait
 
 - [**Join the Discussion Forum**](https://github.com/community-access/git-going-with-github/discussions) - introduce yourself, ask questions, and connect with fellow participants before Day 1
-- [**Pre-Workshop Setup Guide**](https://community-access.github.io/git-going-with-github/COMING_SOON.html) - get your GitHub account, screen reader, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) ready ahead of time
-- [**Workshop Home Page**](https://community-access.github.io/git-going-with-github/) - full agenda, prerequisites, and everything you need to know
+- [**Pre-Workshop Setup Guide**](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) - get your GitHub account, screen reader, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) ready ahead of time
+- [**Workshop Home Page**](https://community-access.org/git-going-with-github/) - full agenda, prerequisites, and everything you need to know
 - **Need help?** [File an issue](https://github.com/community-access/git-going-with-github/issues) - we are here to help with anything

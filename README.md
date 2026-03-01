@@ -1,17 +1,17 @@
 # GIT Going with GitHub
 
-License: CC BY 4.0 | [Site](https://community-access.github.io/git-going-with-github/) | [Discussions](https://github.com/community-access/git-going-with-github/discussions)
+License: CC BY 4.0 | [Site](https://community-access.org/git-going-with-github/) | [Discussions](https://github.com/community-access/git-going-with-github/discussions)
 
-## A Workshop by [Community Access](https://community-access.github.io)
+## A Workshop by [Community Access](https://community-access.org)
 
 > **Welcome.** This repository is your complete guide and companion for the two-day GIT Going with GitHub workshop. Every document here is written to be read with or without a screen reader. All steps are keyboard-accessible. You belong here.
 >
-> **About Community Access:** [Community Access](https://community-access.github.io) is a community of blind and low vision technology professionals. Visit [community-access.github.io](https://community-access.github.io) to learn more.
+> **About Community Access:** [Community Access](https://community-access.org) is a community of blind and low vision technology professionals. Visit [community-access.org](https://community-access.org) to learn more.
 
 | Detail | Information |
 |---|---|
-| **Workshop site** | [community-access.github.io/git-going-with-github](https://community-access.github.io/git-going-with-github/) |
-| **Register** | [Register for the workshop](https://community-access.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
+| **Workshop site** | [community-access.org/git-going-with-github](https://community-access.org/git-going-with-github/) |
+| **Register** | [Register for the workshop](https://community-access.org/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
 | **Discussions** | [Join the conversation](https://github.com/community-access/git-going-with-github/discussions) |
 | **Support** | [File an issue](https://github.com/community-access/git-going-with-github/issues) |
 | **Dates** | March 7-8, 2026 · 12-8 PM Eastern |
@@ -304,4 +304,4 @@ All workshop documentation is licensed under [CC BY 4.0](https://creativecommons
 ---
 
 *Last reviewed: February 2026*
-*A [Community Access](https://community-access.github.io) initiative.*
+*A [Community Access](https://community-access.org) initiative.*

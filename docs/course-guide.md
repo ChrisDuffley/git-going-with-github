@@ -3,6 +3,8 @@
 
 > **Welcome.** You are about to begin a two-day journey into open source collaboration using GitHub, VS Code, and GitHub Copilot - all designed for screen reader and keyboard-only navigation. This guide is your starting point and table of contents for everything in this workshop.
 
+> **Note:** Workshop content is being actively refined during the week of March 7, 2026. Students should expect updates to materials leading up to and during the course.
+
 ---
 
 ## How This Course Works
