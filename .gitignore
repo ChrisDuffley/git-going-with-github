@@ -46,7 +46,6 @@ REGISTRATION-ADMIN.md
 
 # Node.js dependencies
 node_modules/
-package-lock.json
 
 # macOS system files
 .DS_Store
