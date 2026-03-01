@@ -147,6 +147,7 @@ Open these at any time during the workshop. They are not part of the chapter seq
 | [T](appendix-t-contributing-to-open-source.md) | **Contributing to Open Source** | Finding issues, scoping contributions, writing PRs, building a habit |
 | [U](appendix-u-resources.md) | **Resources** | Every link, tool, and reference from this event |
 | [Y](appendix-y-accessing-workshop-materials.md) | **Accessing Workshop Materials** | How to download, read offline, and keep updated |
+| [Z](appendix-z-github-skills-catalog.md) | **GitHub Skills - Complete Course Catalog** | All 36 modules in six learning paths with links and prerequisites |
 
 ---
 

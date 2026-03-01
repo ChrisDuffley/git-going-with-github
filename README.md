@@ -159,6 +159,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 | [W](docs/appendix-w-github-copilot-reference.md) | **GitHub Copilot Reference** | Copilot features, chat participants, slash commands, MCP servers, and agentic ecosystem |
 | [X](docs/appendix-x-copilot-models.md) | **GitHub Copilot AI Models** | Model comparison, strengths, plan availability, and selection guidance |
 | [Y](docs/appendix-y-accessing-workshop-materials.md) | **Accessing and Downloading Workshop Materials** | GitHub Pages, GitHub.com, cloning, ZIP download, offline reading, folder guide |
+| [Z](docs/appendix-z-github-skills-catalog.md) | **GitHub Skills - Complete Course Catalog** | All 36 GitHub Skills modules organized into six learning paths, with links, prerequisites, and integration guidance |
 > **Each guide from Lesson 03 onward includes a "Day 2 Amplifier" callout** that shows how Accessibility Agents extends that skill across three scopes: your VS Code editor → your repository (travels with every fork) → the cloud (GitHub Agentic Workflows running without VS Code). **Learn the manual skill first (Chapter 14), then see how it's automated (Chapter 16).**
 
 ---
@@ -246,7 +247,8 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
     ├── appendix-v-accessibility-agents-reference.md       ← V: Accessibility Agents agents, commands, and customization
     ├── appendix-w-github-copilot-reference.md    ← W: Copilot features, chat, MCP servers, agentic ecosystem
     ├── appendix-x-copilot-models.md              ← X: AI model comparison and selection guide
-    └── appendix-y-accessing-workshop-materials.md ← Y: How to get, download, and read these materials
+    ├── appendix-y-accessing-workshop-materials.md ← Y: How to get, download, and read these materials
+    └── appendix-z-github-skills-catalog.md  ← Z: All 36 GitHub Skills modules with learning paths
 
 > *Note: Appendices were renumbered during a February 2026 review. If you encounter external references to "Appendix D" or later letters, subtract one letter (e.g., the former Appendix D is now [Appendix C](docs/appendix-c-accessibility-standards.md)).*
 

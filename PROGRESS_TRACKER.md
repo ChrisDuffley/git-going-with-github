@@ -289,6 +289,7 @@ Know what each does (read Chapter 16 for details):
   - [ ] Saved link or printed for reference
 - [ ] **Appendix B: Screen Reader Cheatsheet** - Bookmark this!
 - [ ] **Appendix Y: Accessing Workshop Materials** - How to download, read offline, and keep updated
+- [ ] **Appendix Z: GitHub Skills Catalog** - All 36 modules organized into six learning paths
   - [ ] NVDA commands bookmarked
   - [ ] JAWS commands bookmarked
   - [ ] VoiceOver commands bookmarked
