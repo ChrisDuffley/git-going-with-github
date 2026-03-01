@@ -1,0 +1,277 @@
+[ALEX]
+Welcome to Git Going with GitHub. I am Alex, and this is episode 17, Accessibility Agents. Today, we are talking about how to multiply your skills by bringing specialized AI assistants into your daily workflow. 
+
+[JAMIE]
+And I am Jamie. I have to say, Alex, I am very excited about this one. We spent episode 14 learning how to talk to GitHub Copilot Chat, and episode 11 getting our VS Code extensions set up. But today feels like we are graduating to the next level. 
+
+[ALEX]
+We absolutely are. If episode 14 was about learning to drive, today is about building a fleet of vehicles customized for exactly where you want to go. The Accessibility Agents ecosystem is an open-source project that gives you specialized AI assistants for accessibility auditing, GitHub workflows, and developer tools. 
+
+[JAMIE]
+So how is an accessibility agent different from just regular GitHub Copilot? Because I already use Copilot to help me write code and explain error messages.
+
+[ALEX]
+That is a great question. Think of standard GitHub Copilot as a highly skilled general contractor. They know how to build a house, they understand the blueprints, and they can do a bit of everything. But an accessibility agent is like hiring a specialized subcontractor, like a master electrician or a master plumber. They have deep, specific domain expertise. 
+
+[JAMIE]
+Oh, I love that analogy. So the general contractor can wire a plug, but the master electrician knows the exact safety codes for every single county. 
+
+[ALEX]
+Exactly. Agents extend GitHub Copilot by giving it specific instructions, specific constraints, and specific tools to do one job perfectly. But before we get into the tools, we need to talk about the golden rule of Accessibility Agents. It is a principle we call Skill First, Agent Second.
+
+[PAUSE]
+
+[JAMIE]
+Skill First, Agent Second. That sounds like you are going to tell me I have to do things the hard way before I get to use the robot. 
+
+[ALEX]
+You caught me. But it is true. The agents are only useful if you have already done the work manually. An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff, which is the exact line-by-line comparison of what changed in the code, is useless to someone who has never read a diff manually. 
+
+[JAMIE]
+Right, because if I do not know what a good pull request review looks like, how can I possibly know if the AI gave me a good summary or a hallucinated mess? 
+
+[ALEX]
+Precisely. The agent does not teach you the skill. It multiplies a skill you already have. So before you run any agent we discuss today, I want you to ask yourself, could I do this task manually right now? If the answer is no, learn the manual skill first. 
+
+[JAMIE]
+That makes perfect sense. I remember when I first started using GitHub about two years ago, the interface felt overwhelming. I am glad I learned to navigate the issues tab and the pull requests manually with my screen reader before trying to automate it. So, assuming we have our foundational skills, what exactly is in this ecosystem? 
+
+[ALEX]
+It is massive, and it is growing. Currently, the ecosystem includes 55 distinct agents. They are organized into three specialized teams, and they run across five different AI platforms. 
+
+[JAMIE]
+Wait, 55 agents? Three teams? Five platforms? That is a lot of numbers. Let us break that down. What are the five platforms?
+
+[ALEX]
+The agents work in GitHub Copilot inside VS Code, which is what we will focus on today. But they also work on Claude Code, the Gemini Command Line Interface, Claude Desktop, and the Codex Command Line Interface. The exact same agent personalities travel across all those platforms.
+
+[JAMIE]
+That is incredibly flexible. So if I switch from VS Code to a command line tool, my specialized agents come with me. What about the three teams? How are those 55 agents divided up?
+
+[ALEX]
+The three teams are Accessibility, GitHub Workflow, and Developer Tools. Let us start with Team 1, the Accessibility team. This is the largest group, with 26 specialized agents designed to audit, fix, and enforce accessibility across web, document, and mobile platforms. 
+
+[JAMIE]
+Can you give me an example of an agent on that team? 
+
+[ALEX]
+Sure. We have the ARIA specialist. ARIA stands for Accessible Rich Internet Applications, which are the attributes we add to HTML to make custom controls work with screen readers. If you are building a complex custom dropdown, you can invoke the ARIA specialist to ensure your states and properties are perfectly compliant with the standards. 
+
+[JAMIE]
+Oh, that is amazing. Writing ARIA attributes from scratch always makes me nervous because getting one state wrong can completely break the experience for another screen reader user. What else is on the Accessibility team?
+
+[ALEX]
+We have the Contrast Master for checking color contrast ratios, the Keyboard Navigator for auditing tab order and focus traps, and even document specialists like the Word Accessibility agent and the PDF Accessibility agent. 
+
+[JAMIE]
+So if I am writing a guide in Microsoft Word, I can have an agent specifically trained in Word accessibility check my document structure?
+
+[ALEX]
+Exactly. And for complete coverage, there is an orchestrator agent called the Web Accessibility Wizard. It actually guides you through a full Web Content Accessibility Guidelines audit, delegating tasks to the other specialized agents behind the scenes. 
+
+[PAUSE]
+
+[JAMIE]
+Okay, so Team 1 is all about accessibility compliance. What is Team 2?
+
+[ALEX]
+Team 2 is the GitHub Workflow team. These 12 agents automate operations like issue triage, pull request review, and repository management. They build directly on the navigation skills we learned on day one of the workshop.
+
+[JAMIE]
+I definitely need help with issue triage. Sometimes I wake up, check my notifications, and there are twenty different conversations happening across three different repositories. It is a lot to parse with a screen reader.
+
+[ALEX]
+Then you will love the Daily Briefing agent. It sweeps every repository you have access to and builds a prioritized dashboard just for you. It groups things by issues opened in the last 24 hours, pull requests waiting for your review, and continuous integration failures on your branches. 
+
+[JAMIE]
+That sounds brilliant. How do I actually read the output when it gives me that briefing? Is it easy to navigate?
+
+[ALEX]
+It is heavily optimized for screen readers. The briefing output uses standard heading level two for each major section. So if you are using NVDA or JAWS, you just press the letter H to jump quickly between Open Issues, Review Requests, and Security Alerts. It completely eliminates the need to manually navigate through different browser tabs on the GitHub website.
+
+[JAMIE]
+I love that. It brings the information to me in a structured way. Are there other agents on the Workflow team?
+
+[ALEX]
+Yes, another powerful one is the Pull Request Review agent. You invoke it, tell it which pull request to look at, and it generates a structured review document. It creates a change map, assesses the risk level of the changes, and even suggests inline comments with specific line numbers. 
+
+[JAMIE]
+Wait, it suggests the comments for me? Can I just tell it to post the review automatically? 
+
+[ALEX]
+You could, but you should not. This goes back to our limitations. Agents suggest, but humans decide and verify. The agent produces a starting point. It does not know the project history, the contributor's background, or the subtle community standards the way you do. You must read the agent's review, edit it, make it yours, and then post it. 
+
+[JAMIE]
+That is a really important distinction. The agent is a drafter, not an autonomous publisher. My name goes on the review, so I need to stand behind what it says. 
+
+[ALEX]
+Exactly. Now, to round out the ecosystem, Team 3 is Developer Tools. These 6 agents support accessible application development. There is a Python Specialist, a Desktop Accessibility Specialist for Windows, Mac, and Linux applications, and an agent that helps you build custom accessibility testing tools.
+
+[PAUSE]
+
+[JAMIE]
+Okay, so we have 55 agents across three teams. How do I actually get them onto my computer? Is there a massive installation process? 
+
+[ALEX]
+It is actually incredibly simple. The project ships with a one-liner installation script. If you are on Mac or Linux, you run a single curl command in your terminal. If you are on Windows, you run a single command in PowerShell. The installer detects which AI tools you have on your system and configures all the agents automatically. No API keys to manage, no complex configuration files. 
+
+[JAMIE]
+That is a relief. But what if I want to contribute to the project, or customize the agents for my own repository?
+
+[ALEX]
+Then you use the fork and clone method, which is what we recommend for the workshop. You navigate to the community dash access slash accessibility dash agents repository on GitHub. You fork it to your own account, and then you clone it to your local machine. 
+
+[JAMIE]
+And when I open that cloned folder in VS Code, the agents are just there?
+
+[ALEX]
+Exactly. When you open the folder, VS Code scans a specific directory called dot github slash agents. It finds all the agent files there and automatically loads them into Copilot Chat. 
+
+[JAMIE]
+So how do I actually talk to one? Let us say I want to use that Daily Briefing agent we talked about.
+
+[ALEX]
+First, you open Copilot Chat. The keyboard shortcut is Control plus Shift plus I on Windows and Linux, or Command plus Shift plus I on Mac. Once your focus is in the chat input box, you type the at symbol, just like you are tagging someone on social media. 
+
+[JAMIE]
+So I type at symbol, and then daily dash briefing?
+
+[ALEX]
+Yes. As you type the at symbol, a list box appears with all available agents. You can use your up and down arrow keys to navigate the list, or just finish typing at daily dash briefing and press Space. Then you type your request, like, morning briefing, and press Enter.
+
+[PAUSE]
+
+[JAMIE]
+Okay, so the at symbol brings up the conversational agents. But earlier I heard you mention slash commands. What is the difference between an at symbol agent and a slash command?
+
+[ALEX]
+That is a great distinction. Think of an agent, using the at symbol, as a personal shopper. You have a conversation with them, they ask you questions, they adapt to what you need, and they can coordinate multiple steps. A slash command is more like a button on a vending machine. You press it, and you get one specific, predefined outcome immediately.
+
+[JAMIE]
+So slash commands are for single, repeatable tasks. How many of those are there?
+
+[ALEX]
+The repository includes more than 54 slash commands, organized by workflow. You invoke them by typing a forward slash in the chat input. 
+
+[JAMIE]
+What are some of the most useful slash commands for a beginner?
+
+[ALEX]
+If you type forward slash my dash issues, it instantly lists all your open issues with priority signals. If you type forward slash triage followed by an issue number, it reads the issue and suggests labels and priority levels. There is also forward slash draft dash release, which reads all your recently merged pull requests and automatically generates categorized release notes.
+
+[JAMIE]
+I wish I had known about that release notes command a year ago! Formatting release notes manually takes me hours of jumping between different pull request tabs. 
+
+[ALEX]
+It is a massive time saver. And the beauty of both the agents and the slash commands is that their behavior is entirely controlled by instruction files. Which brings us to how you can customize them.
+
+[PAUSE]
+
+[JAMIE]
+Okay, that sounds like a lot of steps. Am I going to have to learn a new programming language just to customize an AI? 
+
+[ALEX]
+It does sound intimidating, but here is the thing. You have already done most of this. Customizing an agent does not require writing code. You are literally just writing a plain text document, usually in Markdown. 
+
+[JAMIE]
+Wait, seriously? An AI agent is just a text file?
+
+[ALEX]
+Yes! An agent is defined by a file that ends in dot agent dot md. That file has two parts. The top part is called YAML frontmatter, which is just a fancy term for a list of metadata, like the agent's name, a short description, and a list of tools it is allowed to use. 
+
+[JAMIE]
+Like giving it permission to read files, or search GitHub, or run terminal commands?
+
+[ALEX]
+Exactly. Restricting tool access is a security best practice. A reporting agent only needs read access. A fixing agent needs edit access. 
+
+[JAMIE]
+And what is the second part of the file?
+
+[ALEX]
+The second part is the system prompt. This is just plain English text where you define the agent's identity, its domain knowledge, and its step-by-step behavioral rules. It is exactly like writing a job description for a human employee. 
+
+[JAMIE]
+Let me see if I have this right. If I wanted to build a custom agent for my team's specific CSS styling rules, I would just create a file called CSS dash expert dot agent dot md. I would give it a name in the frontmatter, and then write a plain English list of rules, like, never use pixel values for font sizes, always use rem units. 
+
+[ALEX]
+You nailed it. That is exactly how you build a custom agent. You save that file in the dot github slash agents folder of your repository, you press Control plus Shift plus P to open the command palette, you type Reload Window to refresh VS Code, and boom. You can now type at CSS dash expert in your chat, and it will enforce your rules.
+
+[JAMIE]
+That is incredibly empowering. It means the AI is not a black box that Microsoft or GitHub controls. It is a system I can shape to match exactly how my brain works and how my team operates. 
+
+[ALEX]
+That is the entire philosophy behind the Accessibility Agents project. The 55 agents that exist today were built by contributors who saw a gap and filled it. You can build agents to enforce your team's specific plain language guidelines, or your specific testing frameworks. The files travel with your repository, so if a new blind developer joins your open source project, they instantly get all your custom agents just by cloning the repo.
+
+[PAUSE]
+
+[JAMIE]
+I love the idea of sharing these tools. But earlier you mentioned orchestrator agents, and something called agentic workflows where they chain together. How does that work in practice?
+
+[ALEX]
+Agentic workflows happen when you chain multiple agents together to complete a complex sequence of tasks. Because agents are specialized, no single agent covers an entire workflow. But they can talk to each other, or you can pass the output of one agent to the input of another. 
+
+[JAMIE]
+Can you walk me through a real-world example of how I might chain agents together during a typical morning?
+
+[ALEX]
+Absolutely. Let us say you start your day by invoking the Daily Briefing agent. It reads your notifications and tells you that a colleague opened a pull request that updates the main navigation menu of your website. 
+
+[JAMIE]
+Okay, so the Daily Briefing agent surfaced the event. What next?
+
+[ALEX]
+Next, you invoke the Pull Request Review agent. You ask it to summarize the changes. It tells you that the colleague replaced standard HTML links with custom button elements. 
+
+[JAMIE]
+Oh, my accessibility alarm bells are ringing. Custom buttons usually mean someone forgot to manage keyboard focus. 
+
+[ALEX]
+Exactly! Your manual skills are kicking in. So, for the third step, you invoke the Insiders Accessibility Tracker agent, or the ARIA Specialist agent. You ask it to review that specific pull request for keyboard navigation and ARIA state regressions. 
+
+[JAMIE]
+And the ARIA specialist agent comes back and says, hey, they added an on-mouse-down event, but they forgot to add a keyboard equivalent, and they are missing the aria-expanded attribute. 
+
+[ALEX]
+Yes! And finally, you switch to a task-oriented agent from the Developer Tools team. You ask it to generate the code to fix the missing keyboard event handler, you review the code it suggests, and you push the commit. 
+
+[JAMIE]
+That is incredible. Four different agents, each doing their specialized part of the job. But I noticed something in your example. I was the one directing traffic. I decided to call the PR reviewer, and I decided to call the ARIA specialist because I recognized the risk of a custom button. 
+
+[ALEX]
+That is the most profound takeaway of this entire episode, Jamie. The agents did not replace you. They amplified you. If you did not know that custom buttons were an accessibility risk, you would not have known which agent to call, or what to ask it to look for. 
+
+[JAMIE]
+Skill First, Agent Second. It always comes back to that. The AI is fast, but I have the context and the domain knowledge to direct it. 
+
+[PAUSE]
+
+[ALEX]
+Before we wrap up, we need to talk about configuring your personal preferences. The agents need to know who you are to be truly helpful. 
+
+[JAMIE]
+Oh, like telling it which screen reader I use so it gives me relevant testing instructions? 
+
+[ALEX]
+Exactly. In the dot github slash agents folder, there is an example preferences file. You copy it, rename it to preferences dot md, and fill it out. You can specify your GitHub username, the repositories you care about most, and your accessibility context. For example, you can write, I use NVDA with Chrome on Windows 11. 
+
+[JAMIE]
+And because it is a markdown file, the agents just read my plain English preferences and adapt their output? 
+
+[ALEX]
+Yes. You can even set a preferred output format. If you tell it, my preferred output format is screen-reader-optimized, the agents will automatically use heavy heading structures, avoid complex markdown tables which can be tedious to navigate, and provide explicit empty-state messages so you are never left guessing if a section just failed to load. 
+
+[JAMIE]
+That is so thoughtful. I am definitely setting that up first thing. So, to summarize what we have learned today. Takeaway number one: Accessibility Agents are specialized AI assistants that live in your repository and extend GitHub Copilot. Takeaway number two: the ecosystem has 55 agents and over 54 slash commands, covering accessibility, GitHub workflows, and developer tools.
+
+[ALEX]
+Takeaway number three is the golden rule: Skill First, Agent Second. Never use an agent to automate a task you do not know how to do manually, because you must be able to review and verify the agent's output. And takeaway number four: customizing agents is as simple as writing plain text instructions in a dot agent dot md file. You do not need to be a machine learning engineer to build your own AI assistant. 
+
+[JAMIE]
+I feel like a whole new world just opened up. I am going to go build an agent that politely reminds my coworkers to add alt text to their pull request images. 
+
+[ALEX]
+I think your coworkers will appreciate the polite reminder! That wraps up episode 17. In our next episode, we are diving into advanced Markdown accessibility, where we will look at how to structure documentation so it is perfectly navigable for every assistive technology. Until then, keep practicing your manual skills, and let the agents handle the heavy lifting. 
+
+[JAMIE]
+Thanks for listening, everyone. Happy coding!

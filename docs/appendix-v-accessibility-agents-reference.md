@@ -10,7 +10,7 @@
 ## Table of Contents
 
 1. [The Full Agent Ecosystem](#1-the-full-agent-ecosystem)
-2. [Workshop Agents - Quick Reference](#2-workshop-agents--quick-reference)
+2. [GitHub Workflow Agents - Quick Reference](#2-github-workflow-agents--quick-reference)
 3. [Slash Commands and Prompts](#3-slash-commands-and-prompts)
 4. [Customization Primitives - Decision Guide](#4-customization-primitives--decision-guide)
 5. [Scope and Priority - All Levels](#5-scope-and-priority--all-levels)
@@ -111,11 +111,9 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 
 ---
 
-## 2. Workshop Agents - Quick Reference
+## 2. GitHub Workflow Agents - Quick Reference
 
-These six agents from the GitHub Workflow team are used hands-on during Day 2, Block 3.
-
-Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
+The GitHub Workflow team includes 12 agents that automate common repository operations. These are good starting points if you have completed the Day 1 skills - but explore any agent in the ecosystem that matches your workflow.\n\nInvoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 

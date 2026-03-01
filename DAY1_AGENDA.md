@@ -713,7 +713,7 @@ These completions are yours permanently. They travel to every GitHub profile pag
 Tomorrow we move from the browser to **Visual Studio Code**. Here is what is coming:
 
 - **VS Code Screen Reader Mode** - Accessible Help (`Alt+H`), Accessible View (`Alt+F2`), Accessible Diff Viewer (`F7`)
-- **Accessibility Agents** - your earned reward for completing Day 1. An ecosystem of **55 AI agents across 3 teams and 5 platforms** that amplify the exact skills you built today. During the workshop, you will use six of these hands-on - but the full ecosystem is yours to explore, use, and contribute to.
+- **Accessibility Agents** - your earned reward for completing Day 1. An ecosystem of **55 AI agents across 3 teams and 5 platforms** that amplify the exact skills you built today. Explore the agents that match your interests and workflows - there is no fixed subset you are required to use.
 - **Ship a real PR upstream** - `community-access/accessibility-agents` is a live repository. Your name in its commit history is the Day 2 capstone.
 
 > **Start thinking now:** Accessibility Agents has 26 agents for accessibility auditing (web, documents, mobile, ePub), 12 for GitHub workflows, and 6 for developer tools. As you reflect on today's experience - navigating repositories, filing issues, reviewing PRs by hand - ask yourself:

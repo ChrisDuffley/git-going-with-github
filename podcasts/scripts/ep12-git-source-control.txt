@@ -1,0 +1,266 @@
+[ALEX]
+Welcome back to Git Going with GitHub. This is episode twelve, Git and Source Control in VS Code. I am Alex, and I am here to guide you through making GitHub work for you.
+
+[JAMIE]
+And I am Jamie. I am here to ask all the questions you might be thinking, because I was in your shoes not that long ago. Learning Git felt like trying to defuse a bomb with a blindfold on.
+
+[ALEX]
+That is a very common feeling! But today, we are going to take the blindfold off, so to speak, and build a solid mental model. In episode eleven, we covered the VS Code interface and the Command Palette. In episode three, we talked about the core concepts of repositories, branches, and commits. Today, we bring all of that together. We are going to use VS Code to actually manage our code. 
+
+[JAMIE]
+I am ready. Where do we start? Do we need to download something?
+
+[ALEX]
+Exactly. We need to get the repository from GitHub onto your computer. This is called cloning. Cloning a repository means downloading a complete copy of the project, including its entire history, to your local machine. 
+
+[JAMIE]
+Okay, so how do we clone a repository accessibly in VS Code? 
+
+[ALEX]
+The most reliable way for screen reader users is through the Command Palette. You press Control plus Shift plus P to open the palette, type Git Clone, and press Enter. VS Code will ask you to paste the URL of the GitHub repository. You paste it, press Enter, and then a standard folder dialog opens so you can choose where to save it on your computer.
+
+[JAMIE]
+That sounds pretty straightforward. But I have also heard people talk about using the terminal to clone. Is that different?
+
+[ALEX]
+It does the exact same thing, just through a different interface. You have three main ways to clone. First is the VS Code Command Palette we just discussed. Second is the standard Git command line interface. If you open your terminal, you can type git space clone followed by the URL. Third is the GitHub CLI, which is a specialized command line tool. With that, you type g h space repo space clone, followed by just the owner and repository name, like community dash access slash learning dash room. You do not even need the full URL.
+
+[JAMIE]
+So if I use the Command Palette, or git clone, or g h repo clone, I end up with the exact same folder on my computer?
+
+[ALEX]
+Spot on. It is just a matter of preference. For this workshop, we recommend the Command Palette because it keeps you right inside VS Code and automatically asks if you want to open the folder once it is done downloading. 
+
+[PAUSE]
+
+[JAMIE]
+Alright, we have cloned the repository. I have the files on my computer. Before I start changing things, I want to make sure I understand how Git tracks what I am doing. I know we talked about commits before, but what is actually happening locally?
+
+[ALEX]
+This is the perfect time to talk about the three areas of Git. If you understand this mental model, everything else makes sense. The three areas are the working tree, the staging area, and the repository. 
+
+[JAMIE]
+Okay, lay it on me. I love a good analogy.
+
+[ALEX]
+Imagine you are working in a warehouse. The working tree is your personal workbench. It is where you cut wood, paint things, and make a mess. Every file you edit in VS Code is sitting on your workbench. Git is watching, but it is not permanently recording anything yet. 
+
+[JAMIE]
+Makes sense. Workbench is the working tree. 
+
+[ALEX]
+Next is the staging area. Think of this as a cardboard shipping box sitting next to your workbench. When you finish a piece of work, you pack it into the box. You can put one thing in the box, or five things. You can even reach in and take something out if you change your mind. But the box is just a temporary holding area.
+
+[JAMIE]
+So staging is packing the box. And the repository?
+
+[ALEX]
+The repository is the permanent warehouse vault. When your box is packed exactly how you want it, you seal it, write a label on it, and slide it into the vault. That action of sealing the box and putting it in the vault is a commit. Once it is in the vault, it is part of the permanent history.
+
+[JAMIE]
+I love that. Workbench is the working tree, the box is the staging area, and the vault is the repository. 
+
+[ALEX]
+Exactly. And because of these three areas, a file can be in one of three states. First, untracked. This means you brought a brand new piece of material to your workbench, and Git has never seen it before. Second, modified. This means Git knows about the file, but you have changed it since the last time you put it in the vault. And third, staged. This means you have packed the file into the shipping box, ready for the next commit.
+
+[JAMIE]
+Untracked is new, modified is changed, staged is packed in the box. That actually makes the staging step make sense. I always wondered why I had to stage files before committing. Why not just commit directly?
+
+[ALEX]
+Because sometimes your workbench is a mess! Let us say you spent three hours working. You fixed a typo in a documentation file, and you also wrote a massive new feature in a code file. Those are two completely different thoughts. Git lets you stage just the documentation file, seal that box with a label that says fixed typo, and put it in the vault. Then, you can stage the code file, seal a second box labeled added new feature, and put that in the vault. The staging area gives you control over what goes into each commit.
+
+[PAUSE]
+
+[JAMIE]
+Okay, before I start making a mess on my workbench, I probably should not be working directly on the main branch, right? I should create my own branch. 
+
+[ALEX]
+Yes, always create a branch for your work. In VS Code, this is very easy. Open the Command Palette with Control plus Shift plus P. Type Git Create Branch, and select it from the list. It will ask for a name. Type something descriptive, like feature slash improve dash documentation, and press Enter.
+
+[JAMIE]
+And VS Code switches me to that new branch automatically?
+
+[ALEX]
+It does. Your working tree stays exactly the same, but now Git knows that any new commits you make will belong to this new branch. 
+
+[JAMIE]
+What if I need to switch back to the main branch? 
+
+[ALEX]
+You go back to the Command Palette, type Git Checkout, and select Git Checkout to. A list of all your branches will appear. You can use your Up and Down Arrow keys to find main, and press Enter. Checkout is Git terminology for updating your working tree to match a specific branch. When you switch branches, VS Code automatically updates all the files on your computer to match that branch.
+
+[JAMIE]
+It is like instantly swapping out the entire workbench. 
+
+[ALEX]
+Exactly. And if you prefer the terminal, the Git CLI alternative is typing git space checkout space dash b followed by your new branch name to create and switch, or just git space checkout space main to switch back. 
+
+[PAUSE]
+
+[JAMIE]
+Alright, I am on my new branch. I have opened a file, made some changes, and saved it. How do I actually stage and commit this using VS Code? Where is this shipping box?
+
+[ALEX]
+The shipping box is managed in the Source Control view. To open it, press Control plus Shift plus G. G stands for Git. 
+
+[JAMIE]
+Control plus Shift plus G. Okay, what does that view look like to a screen reader?
+
+[ALEX]
+It opens as a sidebar panel on the left. It is built like a web tree view. At the top, there is a multi line text input where you will eventually type your commit message. Below that, there are two main collapsible sections. One is called Changes, and the other is called Staged Changes.
+
+[JAMIE]
+Let me guess. The Changes section is my workbench, showing the modified and untracked files. And the Staged Changes section is my shipping box.
+
+[ALEX]
+You nailed it. When you press Control plus Shift plus G, focus usually lands in the commit message input or on the first file in the Changes list. You can use your Up and Down Arrow keys to navigate through the files. Your screen reader will announce the file name and its state, for example, read me dot m d, Modified. 
+
+[JAMIE]
+So how do I move a file from Changes into Staged Changes? How do I pack the box?
+
+[ALEX]
+When your focus is on a file in the Changes list, you can simply press Control plus Enter. That file immediately moves down into the Staged Changes list. You can also press Shift plus F10 to open the context menu for that file, use your arrow keys to find Stage Changes, and press Enter.
+
+[JAMIE]
+What if I have ten files and I want to stage all of them at once? Pressing Control plus Enter ten times seems tedious.
+
+[ALEX]
+You can move your focus up to the section header that says Changes. If you press Shift plus F10 there, the context menu will have an option called Stage All Changes. That sweeps everything off your workbench and into the box in one move. If you are using the terminal alternative, that would be typing git space add space period.
+
+[JAMIE]
+Okay, earlier you mentioned that I could fix a typo and write a new feature in different files and stage them separately. But what if I fixed a typo and wrote a new feature in the exact same file? Can I stage just one part of a file? 
+
+[ALEX]
+Yes, and this is one of the most powerful features of VS Code. You can stage individual lines, sometimes called chunks or hunks. 
+
+[JAMIE]
+Oh, that is clever! How do I do that without a mouse?
+
+[ALEX]
+In the Source Control view, navigate to the modified file in the Changes list. Instead of pressing Control plus Enter to stage the whole file, just press Enter. This opens a diff view in the editor, showing you exactly what lines changed. 
+
+[JAMIE]
+A diff view. So it compares the old version and the new version.
+
+[ALEX]
+Right. And to navigate through those changes accessibly, you press F7. F7 jumps your cursor directly to the first changed block of text. Once your cursor is on the change you want to pack in the box, press Shift plus F10 to open the context menu, and select Stage Selected Ranges. Only those specific lines go into the Staged Changes box. The rest of the file stays in the Changes list.
+
+[JAMIE]
+I wish I had known that when I started. I used to make a copy of my file, delete the feature I was not ready to commit, commit the typo fix, and then paste the feature back in. It was a nightmare. 
+
+[ALEX]
+You are definitely not alone in doing that! But yes, staging specific lines is a game changer. And the Git CLI alternative for that is git space add space dash p, which stands for patch. It prompts you line by line in the terminal, asking if you want to stage each change.
+
+[PAUSE]
+
+[JAMIE]
+Okay, our box is packed. Files are in the Staged Changes list. Now we need to seal the box and put it in the vault. We need to commit. 
+
+[ALEX]
+To commit, you navigate to the commit message input at the top of the Source Control view. If you are using NVDA or JAWS, this will trigger forms mode or focus mode. You just start typing your message. 
+
+[JAMIE]
+What should I write? Just a description of what I did?
+
+[ALEX]
+Yes, but there are strong conventions for writing a good commit message. The subject line should be short, fifty characters or less. It should start with a prefix that explains the type of change, followed by a colon, a space, and a summary. For example, fix colon space correct heading hierarchy. Or docs colon space add setup instructions. 
+
+[JAMIE]
+Fix colon correct heading hierarchy. That makes it really easy to read the history later. 
+
+[ALEX]
+Exactly. If you need to add more detail, you can press Enter to start a new line, leave a blank line, and then type a longer paragraph explaining why you made the change. 
+
+[JAMIE]
+And when I am done typing, how do I actually create the commit? If I press Enter, it just adds a new line to the message.
+
+[ALEX]
+Right. To finalize the commit, press Control plus Enter while you are in the message box. VS Code will take everything in your Staged Changes list, bundle it with your message, and permanently save it to your local repository. Your Staged Changes list will clear out, because the box has been shipped to the vault.
+
+[JAMIE]
+And the terminal alternative for this?
+
+[ALEX]
+You would type git space commit space dash m, followed by your message in quotes. 
+
+[JAMIE]
+Okay, what if I am just making a tiny change, like fixing a broken link in a read me file? Do I really need to clone the repo, make a branch, open VS Code, stage, and commit? 
+
+[ALEX]
+Not necessarily. There is a web alternative. If you are on github dot com, you can navigate to any file and activate the Edit button, which visually looks like a pencil icon. You can make your changes right there in the browser text box. When you are done, you activate the Commit Changes button. GitHub skips the staging area entirely. It just prompts you for a commit message and commits your edit directly to a branch. It is perfect for quick documentation fixes. But for serious coding, you will want the power of VS Code.
+
+[PAUSE]
+
+[JAMIE]
+So we have committed our changes in VS Code. They are in our local vault. But GitHub does not know about them yet, right? My team cannot see my work.
+
+[ALEX]
+Correct. Your commits are purely local right now. To send them to GitHub, we need to push. Pushing means uploading your local commits to the remote repository on GitHub. 
+
+[JAMIE]
+How do I push? 
+
+[ALEX]
+The easiest way accessibly is the Command Palette. Press Control plus Shift plus P, type Git Push, and press Enter. VS Code will quietly upload your commits. If you listen to your screen reader, the status bar will announce Pushing, and then Pushed successfully. 
+
+[JAMIE]
+And in the terminal, that is just typing git space push. 
+
+[ALEX]
+Exactly. Now, pushing sends data up to GitHub. But what happens when someone else on your team merges a pull request, and you need to get their new code onto your computer? 
+
+[JAMIE]
+I assume that is pulling? 
+
+[ALEX]
+Yes. Pulling means downloading new commits from GitHub and merging them into your current local branch. You do this from the Command Palette by typing Git Pull. Or in the terminal, git space pull. 
+
+[JAMIE]
+This is where my mental model gets a little fuzzy. How does my computer know what is on GitHub versus what is local? 
+
+[ALEX]
+That is a great question. It works through something called a remote tracking branch. When you clone a repository, Git does not just copy the main branch to your computer. It also creates a hidden bookmark called a remote tracking branch. Think of it like a ghost car in a racing video game. It shows you exactly where GitHub was the last time your computer talked to the server. 
+
+[JAMIE]
+Oh, so when I push, I am advancing my local branch, and then telling the remote tracking branch, or the ghost car, to catch up to me on GitHub's server?
+
+[ALEX]
+Exactly. And when you pull, you are asking GitHub where its car is, updating your local ghost car to match, and then fast forwarding your actual local branch to catch up to the ghost car.
+
+[JAMIE]
+That ghost car analogy helps a lot. But what if we crash? What if I made local commits, and my teammate made commits to the exact same file on GitHub, and then I try to pull their changes down?
+
+[ALEX]
+Then you get a merge conflict. Git downloads their commits, looks at your commits, and says, I cannot automatically combine these. You both edited line forty two. You have to tell me which version to keep. 
+
+[JAMIE]
+Merge conflicts terrify me. How do we handle them in VS Code?
+
+[ALEX]
+When a pull results in a conflict, your Source Control view will show a new section called Merge Changes. If you open a conflicted file, Git has injected conflict markers into the text. They look like a row of less than signs, followed by your local code, then a row of equals signs, followed by the incoming code from GitHub, and finally a row of greater than signs.
+
+[JAMIE]
+Right, I have seen those. Finding those markers manually with a screen reader is really tedious.
+
+[ALEX]
+It is. That is why you should use the Accessible Diff Viewer. When you have the conflicted file open, press F7. Just like when you were staging lines, F7 jumps you directly to the conflict. Then, press Alt plus F2 to open the Accessible View. This will present the two conflicting versions cleanly, without you having to hunt for the equals signs. You review the changes, press Escape to go back to the editor, delete the version you do not want, and delete the marker symbols. 
+
+[JAMIE]
+And once I fix the text, how do I tell Git the conflict is resolved?
+
+[ALEX]
+You save the file, go to your Source Control panel, and stage it using Control plus Enter. Staging a conflicted file is how you tell Git, I have fixed this. Once all conflicted files are staged, you just commit to finalize the merge.
+
+[JAMIE]
+Okay, so pulling can create these messy merge commits if our histories diverged. Is there a way to avoid that? I have heard people mention rebasing. 
+
+[ALEX]
+Yes. When you pull, you can use a terminal command called git space pull space dash dash rebase. Instead of smashing the two histories together in a merge commit, rebase does something elegant. It temporarily unplugs your local commits and sets them aside. Then it fast forwards your branch to match GitHub perfectly. Finally, it plugs your local commits back in on top of the new history. It creates a perfectly straight, clean timeline. 
+
+[JAMIE]
+Unplug my changes, update the branch, plug my changes back in on top. That sounds much cleaner. I will have to try git pull dash dash rebase next time.
+
+[PAUSE]
+
+[JAMIE]
+So

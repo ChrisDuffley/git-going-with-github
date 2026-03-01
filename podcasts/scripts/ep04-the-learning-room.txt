@@ -1,0 +1,7 @@
+[ALEX] Welcome to Git Going with GitHub, the audio learning series designed specifically for blind and low-vision developers who are learning GitHub and open source collaboration. This is episode four, titled The Learning Room. I am your host, Alex.
+[JAMIE] And I am Jamie! I am so ready for this episode. We have been doing a lot of setup, a lot of exploring, and I think today is the day we actually start getting our hands dirty and contributing.
+[ALEX] We absolutely are. Before we dive in, let us do a quick recap. In episode three, we talked about repository structure and how to navigate a project using your screen reader. We learned how to move through the file tree, locate the Read Me file, and get a general understanding of how a repository is organized.
+[JAMIE] Right. That was all about exploring a repository on your own. It felt a bit like walking through a house by yourself, using your cane to find the walls, locate the doors, and figure out where the kitchen is. You are just building a mental map of the space.
+[ALEX] That is a great way to put it. But open source software development is rarely a solitary activity. You are almost never in that house alone. Today, we are moving from your private workspace into what we call the Learning Room.
+[JAMIE] The Learning Room. It sounds like a classroom.
+[ALEX] It is a classroom, but a very hands-on one. In this episode, we are going to cover what this shared repository

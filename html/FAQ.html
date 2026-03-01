@@ -668,41 +668,34 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <hr>
 <h2>Accessibility Agents</h2>
 <h3>Q: What is Accessibility Agents?</h3>
-<p><strong>A:</strong> A set of six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It is an MIT-licensed open-source project at <code>community-access/accessibility-agents</code> that you will fork, use, and contribute to during the workshop. See <a href="docs/16-accessibility-agents.html">Chapter 16 (Accessibility Agents)</a>.</p>
-<h3>Q: What are the six agents?</h3>
-<p><strong>A:</strong></p>
+<p><strong>A:</strong> An ecosystem of <strong>55 AI-powered agents</strong> organized into three teams (Accessibility, GitHub Workflow, Developer Tools), running on five platforms. It includes 54+ slash commands and is an MIT-licensed open-source project at <code>community-access/accessibility-agents</code> that you will fork, use, and contribute to during the workshop. See <a href="docs/16-accessibility-agents.html">Chapter 16 (Accessibility Agents)</a>.</p>
+<h3>Q: What agents are available?</h3>
+<p><strong>A:</strong> The ecosystem spans three teams:</p>
 <table>
 <thead>
 <tr>
-<th scope="col">Agent</th>
-<th scope="col">What It Does</th>
+<th scope="col">Team</th>
+<th scope="col">Agents</th>
+<th scope="col">Focus</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>@daily-briefing</code></td>
-<td>Summarizes your daily GitHub activity across all repos</td>
+<td>Accessibility</td>
+<td>26</td>
+<td>Web, document, mobile, ePub auditing and remediation</td>
 </tr>
 <tr>
-<td><code>@issue-tracker</code></td>
-<td>Helps triage, prioritize, and manage issues</td>
+<td>GitHub Workflow</td>
+<td>12</td>
+<td>Issue triage, PR review, analytics, templates, repo management</td>
 </tr>
 <tr>
-<td><code>@pr-review</code></td>
-<td>Generates structured PR reviews with accessibility checks</td>
-</tr>
-<tr>
-<td><code>@analytics</code></td>
-<td>Reports on repository metrics and contribution patterns</td>
-</tr>
-<tr>
-<td><code>@insiders-a11y-tracker</code></td>
-<td>Monitors accessibility-relevant changes with WCAG cross-referencing</td>
-</tr>
-<tr>
-<td><code>@template-builder</code></td>
-<td>Interactive wizard for creating GitHub issue templates</td>
+<td>Developer Tools</td>
+<td>6</td>
+<td>Python, desktop, wxPython accessibility patterns</td>
 </tr>
 </tbody></table>
+<p>See <a href="docs/appendix-v-accessibility-agents-reference.html">Appendix V</a> for the complete list of all 55 agents.</p>
 <h3>Q: Do I need to install anything to use agents?</h3>
 <p><strong>A:</strong> No separate installation. Agents are defined as <code>.agent.md</code> files in your repository&#39;s <code>.github/agents/</code> folder. When you fork <code>accessibility-agents</code>, the agents come with it. You need GitHub Copilot (paid subscription) for agents to function.</p>
 <h3>Q: Can I use agents without understanding GitHub first?</h3>

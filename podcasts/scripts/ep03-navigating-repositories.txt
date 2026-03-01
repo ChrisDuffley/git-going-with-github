@@ -1,0 +1,267 @@
+[ALEX]
+Welcome back to Git Going with GitHub, the audio learning series for blind and low-vision developers. I am Alex, and today we are diving into Episode Three, titled Navigating Repositories.
+
+[JAMIE]
+And I am Jamie. I am so ready for this one. In our last episode, we talked about the overall structure of a GitHub page, using the D key to jump through landmarks, and how to navigate using headings. But today, we are zooming in on the main event. The repository. 
+
+[ALEX]
+Exactly. If GitHub is a city, the repositories are the individual buildings where all the actual work happens. By the end of this episode, you will know exactly what a repository is, how to navigate its tab bar, how to read the file tree, and how to get a copy of the code onto your own computer. 
+
+[JAMIE]
+And just a quick reminder for everyone listening. If you have not heard Episode Two yet, you might want to go back and check it out. We cover a lot of the baseline keyboard shortcuts that we will be using today. 
+
+[ALEX]
+Good call. So, let us start at the very beginning. Jamie, when you first started learning GitHub two years ago, how did you make sense of the word repository?
+
+[JAMIE]
+Honestly, I thought it sounded like a dusty underground vault. It is a very formal word. But once I actually started using it, I realized it is just a project folder. It is a folder that holds all your code, your documentation, your images, whatever you need for that specific project.
+
+[ALEX]
+That is exactly what it is. It is a project folder, but with one crucial superpower. It is tracked by Git. And Git is the version control system that powers GitHub. 
+
+[JAMIE]
+Right, and my favorite analogy for Git tracking is that it is like a project folder with a built-in time machine. It does not just hold your current files. It holds every single version of every single file going all the way back to the day the project was created.
+
+[ALEX]
+I love the time machine analogy. That is spot on. When you navigate to a repository on GitHub, say, the Accessibility Agents repository we use in the workshop, you are landing on the main page for that project. 
+
+[PAUSE]
+
+[ALEX]
+Let us walk through what happens when you load that page. First, your screen reader will announce the page title. It usually reads the owner name, a slash, the repository name, and then a short description. 
+
+[JAMIE]
+And my first move on any new repository is always to press the number 1 key. That jumps me straight to the Heading Level 1, which is the name of the repository. It is a great way to orient yourself and confirm you are in the right place.
+
+[ALEX]
+That is a perfect habit. Once you are at that heading, the next major structure you want to find is the tab bar. This is how you move between the different areas of the project. To get there, you can press the D key to navigate through your landmarks until you hear, Repository navigation.
+
+[JAMIE]
+The repository navigation landmark is my best friend. Once I am there, I just press the K key, or the Tab key, to move through the different links in the bar. 
+
+[ALEX]
+Let us talk about what those tabs are. The first one is the Code tab, which is where you land by default. This holds the actual files. 
+
+[JAMIE]
+Next is the Issues tab. I spend a lot of time here. Issues are where the community reports bugs, requests new features, or just asks questions. It is basically the to-do list and discussion board for the project.
+
+[ALEX]
+Then we have the Pull Requests tab. And Jamie, I love that name because you are literally requesting that the project maintainers pull your changes into their project. When you write some code and want to contribute it, you open a pull request. This tab lists all the pending proposals from contributors.
+
+[JAMIE]
+And I will admit, pull requests used to terrify me. I felt like I was handing my homework in to be graded by the entire internet. But it is really just a conversation. It is a space where people can review your code, leave comments, and help you get it ready to merge. 
+
+[ALEX]
+Absolutely. It is a collaborative space, not a test. Moving along the tab bar, you might also find the Actions tab. This is where GitHub runs automated robots. Whenever someone submits a pull request, Actions might run automated accessibility checks or software tests to make sure nothing is broken. 
+
+[JAMIE]
+There are a few other tabs you might find, like Discussions or Wiki, depending on what the repository owner has enabled. And if you are a maintainer of the project, you will also find a Settings tab at the very end. 
+
+[PAUSE]
+
+[ALEX]
+So that is the tab bar. But let us go back to the first tab, the Code tab, because that is where the magic happens. When you are on the Code tab, the most important element on the page is the files table. 
+
+[JAMIE]
+Yes, the files table. This is the core of the repository. It lists every file and folder in the project. To find it, I just press the T key to jump to the next table on the page. My screen reader usually announces something like, Table with twenty rows and three columns.
+
+[ALEX]
+Let us break down those three columns. The first column is the Name. This is the name of the file or folder. The second column is the Message. This shows the most recent commit message for that specific file. And the third column is the Age, which tells you how long ago that file was last changed.
+
+[JAMIE]
+Navigating this table efficiently is a game changer. If you are using N V D A or JAWS, you can hold down Control and Alt, and use your arrow keys. Pressing Control plus Alt plus Down arrow moves you to the next row, which is the next file. Pressing Control plus Alt plus Right arrow moves you across the columns, so you can read the commit message and the age.
+
+[ALEX]
+And if you are using VoiceOver on a Mac, the concept is the same, but the keys are different. You hold down the VoiceOver keys, which are Control and Option, plus the Shift key, and then use your arrow keys to navigate the grid. 
+
+[JAMIE]
+When you find a file you want to open, you just make sure you are in the Name column, and press Enter. The page will load the contents of that file. If you press Enter on a folder, the table updates to show the contents of that folder.
+
+[ALEX]
+One very important thing to note about the Code tab. Right below the files table, GitHub automatically renders the Read Me file. The Read Me is the instruction manual for the project. It tells you what the project does and how to get started.
+
+[JAMIE]
+And because it is rendered as a proper web page, you do not have to open the file to read it. You can just navigate past the files table, and use the H key to jump through the headings inside the Read Me. It is actually its own separate landmark region, which makes it very easy to find.
+
+[PAUSE]
+
+[ALEX]
+Now, before we move away from the files table, we need to talk about the button sitting right above it. The branch selector. 
+
+[JAMIE]
+Ah, branches. This was another concept that took me a minute to wrap my head around. What exactly is a branch, Alex?
+
+[ALEX]
+Think of a branch as a parallel timeline. Let us say you have a stable, working project. But you want to build a risky new feature, and you do not want to accidentally break the working version while you experiment. 
+
+[JAMIE]
+Oh, I know this one. It is the multiverse analogy! 
+
+[ALEX]
+Exactly. You create a branch. This creates an alternate universe that is an exact copy of your code at that exact moment. You can safely switch to this new branch, make your changes, break things, fix them, and save your work. Meanwhile, the original version of the code is perfectly safe in its own timeline. 
+
+[JAMIE]
+And that original, stable timeline is usually called the default branch. On most modern GitHub repositories, the default branch is named main. Sometimes on older projects, you might hear it called master. But main is the trunk of the tree. It is the source of truth.
+
+[ALEX]
+Right. When you first navigate to a repository, you are viewing the main branch. But if you want to see the code on someone else's experimental branch, you can use the branch selector button. 
+
+[JAMIE]
+To find it, I usually jump to the repository navigation landmark, and then press the B key to move to the next button. It will usually announce something like, main branch button. 
+
+[ALEX]
+When you activate that button, a dropdown opens. It contains a search field where you can type the name of the branch you are looking for. You can press the Tab key to move into the list of results, use your Up and Down arrows to find the right branch, and press Enter to switch to it. The whole page will reload, and the files table will now show the code from that alternate timeline.
+
+[PAUSE]
+
+[JAMIE]
+Okay, so we have talked about files and branches. But earlier, you mentioned that the files table has a column for the most recent commit message. We should probably define what a commit is.
+
+[ALEX]
+A commit is a saved snapshot of your changes at a specific moment in time. When you finish working on a file, you do not just hit save. You create a commit. And every commit requires a commit message, which is a short sentence explaining what you changed and why.
+
+[JAMIE]
+Like, fix typo in accessibility guide, or, add new color contrast automated test. 
+
+[ALEX]
+Exactly. Because Git is a time machine, it keeps a log of every single commit ever made. You can view this by finding the History button. If you are reading a specific file, you can press the B key to find the buttons above the code, and activate the History button. 
+
+[JAMIE]
+The history page is great. It lists the commits in chronological order. I usually press the number 3 key, or the H key, to navigate by date headings, because GitHub groups the commits by the day they were made. Then I can just use my Up and Down arrows to read the messages.
+
+[ALEX]
+And there is another incredibly powerful button next to History, called the Blame button. 
+
+[JAMIE]
+I always laugh at that name. Blame. It sounds so accusatory. 
+
+[ALEX]
+It does, but it is actually a diagnostic tool. When you activate the Blame button on a file, it loads a data table. On the right side, it shows the code, line by line. On the left side, it shows exactly who wrote that specific line, what commit they did it in, and how long ago. 
+
+[JAMIE]
+It is like a highly detailed receipt. If I find a line of code that I do not understand, I can use the Blame view to find out who wrote it three years ago, and read the exact commit message they wrote when they added it. It gives you so much context.
+
+[PAUSE]
+
+[JAMIE]
+Alright, we have explored the Code tab, the files, the branches, and the history. But what if I just want a quick summary of what the project is, without reading the whole Read Me? 
+
+[ALEX]
+For that, you want the About section. On desktop browsers, this lives in the sidebar on the right side of the page. 
+
+[JAMIE]
+And to reach it with a screen reader, I press the D key until I reach the Main landmark. Then I press the number 2 key, or the H key, to navigate through the level two headings. The very first one after the Read Me is usually the About heading.
+
+[ALEX]
+Under the About heading, you will find the project description, a link to their official website if they have one, and a list of topics. Topics are just keywords, like accessibility, or python, or machine-learning, that help people find the project.
+
+[JAMIE]
+You will also find the software license here. The license is very important because it tells you legally what you are allowed to do with the code. If you keep pressing the H key to move down the sidebar, you will also find a heading for Releases, which has links to the latest published versions of the software, and a heading for Contributors, showing the people who have helped build it.
+
+[PAUSE]
+
+[JAMIE]
+Okay, Alex. This sounds like a lot of steps. And a lot of things to remember. If someone is feeling intimidated right now, what would you tell them?
+
+[ALEX]
+I would say, normalize that feeling. It is a lot! But here is the thing. You have already done most of this workflow on Day One of your programming journey. You already know how to open folders, read files, and save changes. It is the exact same workflow, just with version control handling the heavy lifting. Right now, we are just learning the geography of the GitHub website. 
+
+[JAMIE]
+That makes sense. It is just learning where the buttons are. Speaking of buttons, how do I actually get the code out of this website and onto my own computer so I can work on it?
+
+[ALEX]
+That brings us to the difference between forking and cloning. These are two fundamental concepts in open source. 
+
+[JAMIE]
+Yes! Let us talk about forking first. 
+
+[ALEX]
+When you find an open source repository, you usually do not have permission to edit their files directly. To make changes, you have to create a Fork. A fork is a personal copy of their repository that lives inside your own GitHub account. 
+
+[JAMIE]
+My favorite analogy for this is the reference library. Imagine the original repository is a master recipe book sitting in a reference library. You are not allowed to write in the margins of the library book. But, you can take that book to the photocopier, and make a complete copy for yourself. That copy still lives in the library, but it is in your personal locker. That is a fork. It is a cloud copy.
+
+[ALEX]
+That is a brilliant analogy. To fork a repository, you press the D key to go to the Main landmark, then press the L key to navigate through the lists at the top of the page. Use the I key to move through the list items until you find the button that says, Fork your own copy. Press Enter, and GitHub will create your personal cloud copy.
+
+[JAMIE]
+But a fork still lives on the GitHub servers. I cannot open it in VS Code yet. That is where cloning comes in.
+
+[ALEX]
+Exactly. Cloning is the process of downloading the repository from GitHub down to your local computer. 
+
+[JAMIE]
+Going back to the analogy, cloning is when you take that photocopied recipe book out of your locker at the library, and bring it home to your own kitchen. Now you have all your tools, your editor, your screen reader customized exactly how you like it, and you can actually start cooking. 
+
+[ALEX]
+Perfect. Now, there are a few ways to clone a repository. The traditional way is to navigate to the repository page, find the Code button, and activate it. 
+
+[JAMIE]
+I usually press the B key to jump through buttons until I hear, Code. When I press Enter, a flyout panel opens. 
+
+[ALEX]
+Inside that panel, there are tabs for H T T P S and S S H. These are just different security protocols for downloading the code. You pick one, press the Tab key to find the Copy URL to clipboard button, and press Enter. Then you open your computer terminal, type git clone, and paste that URL.
+
+[JAMIE]
+But Alex, there is an even easier way now, right? The GitHub CLI.
+
+[ALEX]
+Yes, the GitHub Command Line Interface, or G H for short. It is absolute magic. If you have the GitHub CLI installed, you do not even need to copy the URL. You just open your terminal and type G H space repo space clone, followed by the owner name, a slash, and the repository name. 
+
+[JAMIE]
+So if I want to clone our training project, I just type G H repo clone community-access slash learning-room. I do not have to touch the browser at all. I wish I had known that when I started. It saves so much time.
+
+[ALEX]
+It really does. Now, there is one third option in that Code button dropdown. You might hear a button that says Download Z I P. 
+
+[JAMIE]
+Oh, I used to do that all the time before I understood Git. 
+
+[ALEX]
+It is tempting! Downloading the Z I P file gives you a standard compressed folder of all the code. But there is a massive catch. It does not include the Git tracking. 
+
+[JAMIE]
+Right. You get the files, but you lose the time machine. You cannot make commits, you cannot switch branches, and you cannot easily push your changes back to GitHub. Download Z I P is fine if you just want to read the code once, but if you want to collaborate, you must use git clone or G H repo clone.
+
+[PAUSE]
+
+[JAMIE]
+Before we wrap up, I want to share one screen reader pro-tip that tripped me up for a long time. It is about the Go To File shortcut.
+
+[ALEX]
+Oh, the keyboard shortcut conflict. This is a crucial tip. 
+
+[JAMIE]
+Yes! GitHub has a built-in keyboard shortcut. If you press the T key on a repository page, it is supposed to open a brilliant search box that lets you instantly find any file by typing its name. 
+
+[ALEX]
+But there is a problem.
+
+[JAMIE]
+A big problem. As we discussed earlier, if you are using N V D A or JAWS in their default browse mode, pressing the T key jumps to the next data table. So when you press T, instead of opening the file search, your screen reader just drops you into the files table. 
+
+[ALEX]
+So how do you get around that?
+
+[JAMIE]
+You have two options. Option one is to switch your screen reader into Focus Mode, or Forms Mode. For N V D A, you press N V D A plus Space. For JAWS, you press Insert plus Z. This tells your screen reader to pass your keystrokes directly to the website. Once you are in Focus Mode, pressing T will open the GitHub file search perfectly.
+
+[ALEX]
+And option two?
+
+[JAMIE]
+Option two is to just use the F key. The F key jumps to the next form field or edit box. If you press F a few times on the Code tab, you will land right on the edit box labeled Go to file, and you can just start typing. No mode switching required.
+
+[ALEX]
+That is a fantastic workaround. It is so important to understand the difference between screen reader shortcuts and website shortcuts.
+
+[PAUSE]
+
+[ALEX]
+Alright, we have covered a massive amount of ground today. Let us summarize the concrete takeaways. First, a repository is a project folder with a built-in time machine, tracking every change ever made.
+
+[JAMIE]
+Second, to navigate a repository quickly, press D to find the repository navigation tabs, and press T to jump straight into the files table. 
+
+[ALEX]
+Third, understand the difference between forking and cloning. Forking creates a personal cloud copy on GitHub. Cloning downloads a local copy to your computer so you

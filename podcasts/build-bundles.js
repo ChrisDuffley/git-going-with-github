@@ -129,7 +129,7 @@ const episodes = [
       'The two-day workshop structure: Day 1 (browser) and Day 2 (VS Code + agents)',
       'The learning philosophy: manual skill first, then automation',
       'What a repository, issue, pull request, and merge are (high-level preview)',
-      'The six accessibility agents and what they will do on Day 2',
+      'The 55 accessibility agents across 3 teams and what they do on Day 2',
       'How the chapters, appendices, and exercises fit together',
       'The exercise pattern: Try It, You are done when, What success feels like',
       'Encouragement for learners who are new to the command line or Git'
@@ -693,11 +693,11 @@ const episodes = [
     number: 17,
     slug: 'accessibility-agents',
     title: 'Accessibility Agents',
-    description: 'Six agents, 28 slash commands, custom agents, and agentic accessibility workflows.',
+    description: '55 agents across 3 teams and 5 platforms, 54+ slash commands, custom agents, and agentic accessibility workflows.',
     duration: '15-18 min',
     sources: ['16-accessibility-agents.md'],
     crossRefs: [
-      { label: 'Accessibility Agents Reference - all 28 commands', file: 'appendix-v-accessibility-agents-reference.md' }
+      { label: 'Accessibility Agents Reference - all 54+ commands', file: 'appendix-v-accessibility-agents-reference.md' }
     ],
     prerequisites: [
       { ep: 14, concept: 'Copilot Chat and how to interact with it' },
@@ -706,8 +706,11 @@ const episodes = [
     concepts: [
       'What accessibility agents are: specialized AI assistants for a11y tasks',
       'How agents extend GitHub Copilot with domain expertise',
-      'The six agents and their roles (name each one)',
-      'Slash commands: the 28 commands organized by agent',
+      'The full ecosystem: 55 agents, 3 teams, 5 platforms',
+      'Team 1 - Accessibility (26 agents): web, document, mobile auditing',
+      'Team 2 - GitHub Workflow (12 agents): issues, PRs, analytics, templates',
+      'Team 3 - Developer Tools (6 agents): Python, desktop, custom tools',
+      'Slash commands: 54+ commands organized by workflow',
       'How to invoke an agent in Copilot Chat',
       'Installing and configuring agents from .github config files',
       'Agent instruction files and how they customize behavior',
@@ -718,8 +721,9 @@ const episodes = [
       'Limitations: agents suggest, humans decide and verify'
     ],
     focus: `- What accessibility agents are and how they extend Copilot
-- The six agents and what each one does
-- Slash commands: the 28 commands and when to use them
+- The full ecosystem: 55 agents across 3 teams and 5 platforms
+- The three teams: Accessibility (26), GitHub Workflow (12), Developer Tools (6)
+- Slash commands: the 54+ commands and when to use them
 - Installing and configuring the agents
 - Building custom agents for your own projects
 - How agents amplify every skill learned in this workshop`
@@ -1265,15 +1269,15 @@ const episodes = [
     number: 39,
     slug: 'accessibility-agents-reference',
     title: 'Accessibility Agents - Complete Reference',
-    description: 'All six agents, all 28 slash commands, customization, and troubleshooting.',
+    description: 'All 55 agents, all 54+ slash commands, customization, and troubleshooting.',
     duration: '15-18 min',
     sources: ['appendix-v-accessibility-agents-reference.md'],
     prerequisites: [
       { ep: 17, concept: 'Agent overview from Chapter 16' }
     ],
     concepts: [
-      'Complete documentation for each of the six agents',
-      'All 28 slash commands with detailed usage examples',
+      'Complete documentation for the 55 agents across 3 teams (Accessibility, GitHub Workflow, Developer Tools)',
+      'All 54+ slash commands with detailed usage examples',
       'Agent input and output formats',
       'Customization: agent instruction files and settings',
       'Workspace configuration for agent behavior',
@@ -1281,8 +1285,8 @@ const episodes = [
       'Building on the agent system for custom domain-specific agents',
       'Version compatibility and update patterns'
     ],
-    focus: `- Detailed documentation for all six accessibility agents
-- The complete list of 28 slash commands with usage examples
+    focus: `- Detailed documentation for all 55 accessibility agents across 3 teams
+- The complete list of 54+ slash commands with usage examples
 - Customization options and workspace configuration
 - Troubleshooting agent issues
 - Building on the agent system for your own projects`

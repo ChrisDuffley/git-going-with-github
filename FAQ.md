@@ -658,18 +658,18 @@ Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-c
 ## Accessibility Agents
 
 ### Q: What is Accessibility Agents?
-**A:** A set of six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It is an MIT-licensed open-source project at `community-access/accessibility-agents` that you will fork, use, and contribute to during the workshop. See [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md).
+**A:** An ecosystem of **55 AI-powered agents** organized into three teams (Accessibility, GitHub Workflow, Developer Tools), running on five platforms. It includes 54+ slash commands and is an MIT-licensed open-source project at `community-access/accessibility-agents` that you will fork, use, and contribute to during the workshop. See [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md).
 
-### Q: What are the six agents?
-**A:**
-| Agent | What It Does |
-|-------|-------------|
-| `@daily-briefing` | Summarizes your daily GitHub activity across all repos |
-| `@issue-tracker` | Helps triage, prioritize, and manage issues |
-| `@pr-review` | Generates structured PR reviews with accessibility checks |
-| `@analytics` | Reports on repository metrics and contribution patterns |
-| `@insiders-a11y-tracker` | Monitors accessibility-relevant changes with WCAG cross-referencing |
-| `@template-builder` | Interactive wizard for creating GitHub issue templates |
+### Q: What agents are available?
+**A:** The ecosystem spans three teams:
+
+| Team | Agents | Focus |
+|------|--------|-------|
+| Accessibility | 26 | Web, document, mobile, ePub auditing and remediation |
+| GitHub Workflow | 12 | Issue triage, PR review, analytics, templates, repo management |
+| Developer Tools | 6 | Python, desktop, wxPython accessibility patterns |
+
+See [Appendix V](docs/appendix-v-accessibility-agents-reference.md) for the complete list of all 55 agents.
 
 ### Q: Do I need to install anything to use agents?
 **A:** No separate installation. Agents are defined as `.agent.md` files in your repository's `.github/agents/` folder. When you fork `accessibility-agents`, the agents come with it. You need GitHub Copilot (paid subscription) for agents to function.

@@ -1,0 +1,257 @@
+[ALEX]
+Welcome to Git Going with GitHub. This is episode 37, called Contributing to Open Source. I am Alex, and as always, I am joined by my co-host Jamie.
+
+[JAMIE]
+Hello everyone. I have been looking forward to this episode for the entire series, but I have a confession to make. I am also slightly terrified.
+
+[ALEX]
+That is the exact right combination of emotions, Jamie. Today, we are taking everything you have learned in the workshop so far and turning it outward. We are going to talk about how you can start contributing to open source projects. Before we dive in, let us quickly remind everyone of the prerequisites. We will be building heavily on the core workflow we covered in Day 1 of the workshop. So, you should be comfortable with creating a branch, making a commit, and opening a pull request.
+
+[JAMIE]
+Right. The bread and butter of GitHub. But when I hear the phrase open source contribution, my brain immediately pictures a team of genius developers who have been coding for twenty years, writing complex algorithms in the dark. It feels like a very exclusive club.
+
+[ALEX]
+That is such a common misconception, and it is the very first thing we need to unlearn today. Let us define what open source actually means. Open source software is simply software where the source code is publicly available. Anyone can navigate to the repository, read the code, use it, and in most cases, contribute to it.
+
+[JAMIE]
+But what actually counts as a contribution? Do I need to be writing those complex algorithms?
+
+[ALEX]
+Not at all. Think of an open source project like a community garden. You do not need to be a master botanist to help the garden thrive. Yes, some people are planting new, exotic seeds, which is like writing new features. But the garden also needs people to pull weeds, which is like fixing bugs. It needs people to paint the signs so visitors know what is growing, which is like writing documentation. And it needs people to report that the garden gate is broken, which is like filing an issue.
+
+[JAMIE]
+I love that analogy. So writing documentation counts as a real contribution?
+
+[ALEX]
+Absolutely. In fact, maintainers will tell you that documentation, testing, and bug reports are often the most valuable contributions a project can receive. And as blind and low-vision developers, you have a massive superpower here. Assistive technology users bring a perspective that most sighted, mouse-first developers simply do not have.
+
+[JAMIE]
+Oh, that is so true. I cannot tell you how many times I have navigated an open source tool and realized the heading structure is completely broken, or a submit button has no accessible name.
+
+[ALEX]
+Exactly. When you notice that a form cannot be completed with a keyboard, or you test a feature with your screen reader and find a trap, reporting that or fixing it is a high-value contribution. You are improving the project for everyone. You do not need permission to start. If a repository has public issues, you can suggest an improvement today.
+
+[PAUSE]
+
+[JAMIE]
+Okay, I am convinced. The community garden needs me. But how do I find a garden that actually wants my help? I imagine some communities are more welcoming to newcomers than others.
+
+[ALEX]
+That is a great point. Finding communities that welcome new contributors is crucial. The first thing you want to do is evaluate a project before you invest your time in it. You can do this by checking a few specific signals on the repository page.
+
+[JAMIE]
+What kind of signals?
+
+[ALEX]
+First, check the activity. Navigate to the commit history or the pull requests section. Are people actively working on it? If the last commit was four years ago, the maintainers might have moved on. Second, look for responsiveness. Open a few recent issues or pull requests. Do the maintainers reply to people? Are the replies polite and constructive?
+
+[JAMIE]
+That makes sense. It is like checking if a restaurant is actually open and has customers inside before you walk in and try to order food.
+
+[ALEX]
+Exactly. You should also navigate to the root of the repository and look for a file called Code of Conduct. A Code of Conduct outlines the expected behavior in the community and how harassment or issues are handled. A project that has taken the time to establish a Code of Conduct is usually signaling that they care about creating a safe, welcoming environment.
+
+[JAMIE]
+And what about the rules for actually doing the work? Every project seems to have different naming conventions or testing steps.
+
+[ALEX]
+That brings us to another critical file you should always look for. It is called CONTRIBUTING dot md. Almost every well-maintained project has one. Reading this file is essential because every project has different expectations. It will tell you how to set up the project on your machine, how to run their tests, and how they want you to format your pull requests.
+
+[JAMIE]
+So the Code of Conduct is like the park rules, and the contributing file is the volunteer handbook. It tells you where the shovels are kept and what time the shift starts.
+
+[ALEX]
+Precisely. Never start writing code or making changes until you have read the contributing file. It will save you and the maintainers a lot of frustration.
+
+[PAUSE]
+
+[JAMIE]
+Alright, I have found an active project. I have read the volunteer handbook. Now I need to find a specific task to work on. Where do I begin?
+
+[ALEX]
+Maintainers know that large codebases are intimidating, so they use a system of labels to help you find your way. When you navigate to the Issues section of a repository, you can filter the list by labels. The two most important labels to search for are good first issue, and help wanted.
+
+[JAMIE]
+Good first issue. That is very literal. I appreciate that.
+
+[ALEX]
+It is. When a maintainer adds the good first issue label, they are explicitly saying that this task does not require deep knowledge of the entire project. The help wanted label is similar, meaning the core team does not have time to fix it and they are asking the community to step in. You might also find labels specifically called documentation or accessibility.
+
+[JAMIE]
+So I just find an issue with one of those labels and start typing code?
+
+[ALEX]
+Not quite yet. You need to evaluate the issue itself. Read the description carefully. Is it clear enough to act on? If you are not sure what the problem is, it is perfectly fine to leave a comment asking a clarifying question. Also, check the comments to see if anyone else is already working on it. You do not want to duplicate someone else's effort.
+
+[JAMIE]
+That has happened to me. I spent three hours fixing a typo only to realize someone else had opened a pull request for it two days prior.
+
+[ALEX]
+It is a rite of passage! To prevent that, if the issue looks right for you, leave a brief comment saying, I would like to work on this, I will open a draft pull request shortly.
+
+[JAMIE]
+I want to ask about the size of the task. Sometimes I see a good first issue, but when I read it, they want to redesign an entire settings page.
+
+[ALEX]
+That is a great callout, and it brings us to the concept of scoping your contribution. Scoping means defining exactly what you will and will not change. For your first contribution, you must start small. Pick one single thing.
+
+[JAMIE]
+How small is small?
+
+[ALEX]
+Fixing a broken link. Correcting a typo. Adding alt text to one image. A good first contribution addresses one problem clearly, and it does not try to fix everything at once. One pull request equals one problem.
+
+[JAMIE]
+I like that rule. One pull request, one problem. It is like, if you volunteer to fix a leaky faucet in the community garden, you do not also decide to replumb the entire irrigation system while you are there. Just fix the faucet.
+
+[ALEX]
+Exactly. If your pull request touches more than three or four files, or if you feel like you need to understand the entire architecture of the software just to make your change, the scope is too large for a first attempt. A well-executed, tiny contribution is infinitely more valuable than a massive contribution that the maintainers cannot merge because it changes too many things at once.
+
+[PAUSE]
+
+[JAMIE]
+Okay, Alex. We have arrived at the part that usually trips me up. The actual contribution workflow. Let us say I have found my issue, I claimed it, and it is perfectly scoped. I want to fix a broken link in their documentation. But I do not work for this project. I do not have permissions to just edit their files. How do I make the change?
+
+[ALEX]
+This is where the magic of the open source workflow happens. Because you do not have write access to their repository, you are going to use a feature called a Fork.
+
+[JAMIE]
+A fork. Like the utensil?
+
+[ALEX]
+Like a fork in the road. Forking a repository creates an exact, personal copy of their project, but it lives under your own GitHub account. You have full control over this copy. You can make branches, delete files, and break things, and it will not affect the original project at all.
+
+[JAMIE]
+Oh, that is clever. So if the original project is a recipe card in a famous chef's cookbook, a fork is me taking that recipe card to a photocopy machine, making a duplicate, and putting it in my own private binder.
+
+[ALEX]
+That is a brilliant analogy. Yes. You navigate to the original repository, activate the Fork button, and within seconds, GitHub creates your photocopy. But right now, that photocopy only exists on the GitHub servers. To actually work on it, you need to bring it down to your own computer.
+
+[JAMIE]
+And that is what cloning is, right?
+
+[ALEX]
+Exactly. You clone your fork. Using your recipe analogy, cloning is taking that photocopied recipe out of the binder and bringing it into your physical kitchen so you can actually start cooking. You open your terminal, and you type git clone followed by the URL of your forked repository.
+
+[JAMIE]
+Okay, so I have forked it to my account, and I have cloned it to my computer. Now I just make the change?
+
+[ALEX]
+First, create a branch. Never work directly on the main branch. Give your branch a descriptive name, like fix dash broken dash link dash setup dash guide. Then, you make your change. You open the file in your editor, fix the link, save the file, and verify that it works.
+
+[JAMIE]
+Verifying is crucial. If it is a documentation change, I always navigate through it with my screen reader to make sure it reads correctly before I go any further.
+
+[ALEX]
+That is a best practice. Once you have verified the change, you commit it with a clear message. Something like, Fix broken link in setup guide line 34. Then, you push that branch back up to your fork on GitHub.
+
+[JAMIE]
+Okay, that sounds like a lot of steps. Fork, clone, branch, commit, push.
+
+[ALEX]
+It does! But here is the thing, Jamie. You have already done most of this on Day 1. The only new step is the fork. Once you have the code on your machine, it is the exact same branch, commit, and push workflow you have been doing all along.
+
+[JAMIE]
+You are right. It is just the standard workflow, but with a photocopy instead of the original. So, how do I get my fixed recipe back to the famous chef?
+
+[ALEX]
+You open a pull request. And I love that name because you are literally requesting that the maintainer pull your changes from your fork into their original project. When you navigate to your fork on GitHub after pushing a new branch, GitHub will usually show a banner asking if you want to compare and pull request.
+
+[PAUSE]
+
+[JAMIE]
+Let us talk about that pull request. When I open it, there is usually a big empty text box for the description. What should I be writing there? I usually just write, Fixed the link, and hit submit.
+
+[ALEX]
+We can definitely improve on that! Writing a pull request description that maintainers appreciate is an art form. You want to answer three questions. What did you change? Why was the change needed? And how did you verify it works?
+
+[JAMIE]
+What, why, and how. That makes sense. It is like dropping off a car at the mechanic. You do not just hand them the keys and run away. You leave a note explaining that you changed the oil, you did it because the engine was making a weird noise, and you verified it by driving around the block.
+
+[ALEX]
+Exactly. So instead of just saying Fixed the link, you might write, Fixed a broken link on line 34 of the setup guide. The link previously pointed to an old setup file which no longer exists. I updated it to point to the new pre-workshop setup file. I verified the target file exists and that the screen reader reads the link text clearly.
+
+[JAMIE]
+If I am a maintainer reading that, I am approving it instantly. It shows you did your homework.
+
+[ALEX]
+It builds trust. Now, what happens after you submit it? Often, a maintainer will review your pull request and they might ask for changes. They might say, Hey, thanks for this, but can you also update the link on line 82?
+
+[JAMIE]
+I will admit, the first time a maintainer requested changes on my pull request, I felt completely crushed. I thought I had failed and they were rejecting my work.
+
+[ALEX]
+That is such a normal reaction, but it is important to reframe it. Responding to review feedback is not a rejection. It is a natural part of the collaboration process. Think of it like an editor working with an author. The editor does not hate the book, they just want to make the chapter a little tighter.
+
+[JAMIE]
+That is a much healthier way to look at it. So if they ask for a change, I just go back to my computer, make the change on the same branch, commit it, and push it again?
+
+[ALEX]
+Exactly right. You do not need to open a new pull request. When you push to that same branch on your fork, the existing pull request updates automatically. And once everyone is happy, the maintainer will merge your pull request.
+
+[JAMIE]
+And then my name is in the project history forever?
+
+[ALEX]
+Permanently. The issue is closed, and you are officially listed as a contributor on the repository. That record becomes part of your GitHub profile, demonstrating to anyone who looks that you know how to scope a problem, communicate with a team, address feedback, and ship a solution.
+
+[PAUSE]
+
+[JAMIE]
+Okay, so I have done it once. How do I build a sustainable contribution habit after this workshop ends? I feel like I might just do one and then forget about it.
+
+[ALEX]
+The hardest part of open source is starting. Once you have one merged pull request, the next one is significantly easier because you know the workflow and you have navigated the social dynamics. To build a habit, I recommend keeping a running list of the open source projects and tools you already use every day.
+
+[JAMIE]
+Like the screen reader plugins I use, or the markdown editor I like?
+
+[ALEX]
+Exactly. You already understand what those tools do, which makes you a perfect candidate to contribute to them. Set a very low bar for yourself. A fixed typo that gets merged into a project used by thousands of people is vastly more valuable than a massive, perfect feature that you never actually finish or submit.
+
+[JAMIE]
+I really like that. Small and consistent. But what if I want to practice these skills in a safe environment before I go out into the real world? The appendix mentions something called GitHub Skills. What is that?
+
+[ALEX]
+GitHub Skills is an incredible resource for continued structured learning. It is GitHub's free, self-paced interactive learning platform. And the best part is that it runs entirely inside GitHub. There is no external site, no separate login, and no videos that are hard to follow.
+
+[JAMIE]
+How does it work if there are no videos?
+
+[ALEX]
+It is driven by an automated bot named Mona. When you start a course, GitHub copies a course repository into your account. Within about twenty seconds, Mona opens an issue with your first set of instructions.
+
+[JAMIE]
+Oh, so it feels like working with a real maintainer.
+
+[ALEX]
+Exactly. It is like a flight simulator for developers. You are using the real controls in a safe environment. Mona might ask you to create a branch and turn on GitHub Pages. You do the task, and Mona automatically detects your action, validates it, and posts the next step as a new comment.
+
+[JAMIE]
+That is amazing. And because it is all just standard GitHub issues and pull requests, all the screen reader navigation skills we have been practicing work perfectly. I can just navigate by heading to find Mona's instructions.
+
+[ALEX]
+Precisely. The appendix catalogs all thirty-six available courses, broken down into learning paths. There is a Git Fundamentals path if you want to get deeper into the command line. There is a Collaboration path that covers repository management. There are paths for GitHub Actions, Security, and even GitHub Copilot.
+
+[JAMIE]
+So if I want to learn how to write a custom action, I do not have to just read a manual. I can have Mona walk me through it step by step in a real repository.
+
+[ALEX]
+Yes. If you are ever unsure what to learn next, open the GitHub Skills catalog from the appendix and pick one course. They usually take about thirty to sixty minutes. It is the perfect way to build your muscle memory without the pressure of a real open source maintainer waiting on you.
+
+[PAUSE]
+
+[ALEX]
+We have covered a massive amount of ground today. Let us wrap up with a few concrete takeaways. First, open source contribution is not just about complex code. Documentation, bug reports, and accessibility testing with your screen reader are incredibly high-value contributions.
+
+[JAMIE]
+Second, always read the room. Check the project's activity, read their Code of Conduct, and study the contributing file before you start. And look for the good first issue labels.
+
+[ALEX]
+Third, remember the workflow. You fork to make a copy, clone to bring it local, branch to make your change, commit, push, and open a pull request. One pull request equals one problem.
+
+[JAMIE]
+And finally, use your pull request description to explain what you changed, why you changed it, and how you tested it. Do not just drop off the car without leaving a note for the mechanic!
+
+[ALEX]
+Perfectly said. Thank you all for joining us for this episode. Up next, in episode 38, we are going to dive into GitHub Pages and learn how to turn your repository into a live, published website for free. You will not want to miss it. Until then, keep practicing, and happy coding.

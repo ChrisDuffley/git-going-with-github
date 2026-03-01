@@ -1,0 +1,237 @@
+[ALEX]
+Welcome to Git Going with GitHub. This is episode 27, Advanced Search. I am Alex, and as always, I am joined by my co-host, Jamie. 
+
+[JAMIE]
+Hello everyone! I am so excited for this one. When I first started learning GitHub about two years ago, I spent so much time tabbing through endless dropdown menus and checking little filter boxes just to find a single pull request. It was exhausting.
+
+[ALEX]
+It really is. And that is exactly why we are doing this episode. For blind and low-vision developers, using a screen reader to navigate complex visual filter menus is often tedious. But GitHub has an incredibly powerful text-based search engine. Once you understand the search query language, typing a specific phrase into the search bar is infinitely faster and far more accessible than interacting with those complex visual menus. 
+
+[JAMIE]
+That sounds like magic. Before we dive in, we should mention that listeners should be familiar with the basic concepts of GitHub we have covered in previous episodes. You should know what a repository, an issue, and a pull request are. If you need a refresher, episodes 5, 12, and 15 are great places to review. 
+
+[ALEX]
+Perfect. So, let us start with the very first thing you need to know, which is how to access the search bar. You do not need to navigate through the page landmarks to find it. From almost anywhere on the GitHub website, you can simply press the forward slash key. 
+
+[JAMIE]
+Yes, the forward slash key is my best friend. When you press it, your screen reader will instantly say something like, Search or jump to, edit. It pulls your focus directly into the search input field, no matter where you are on the page.
+
+[ALEX]
+Exactly. Now, there is a crucial distinction we need to make right away between global search and in-repository search. If you are on the GitHub homepage and you press forward slash, you are using the global search. You are searching across all millions of public projects on GitHub. 
+
+[JAMIE]
+But if I am already inside a specific project, like our community access repository, and I press forward slash, the search behaves differently, right?
+
+[ALEX]
+It does. GitHub tries to be helpful by being context-aware. If you are inside a repository, the search bar defaults to searching only within that specific repository. 
+
+[JAMIE]
+I like to think of this like visiting a massive library. Global search is like walking up to the main front desk and asking the librarian to find a book anywhere in the entire building. But in-repository search is like walking into the science fiction aisle first, and then asking the librarian to only look on the shelves right in front of you. 
+
+[ALEX]
+That is a brilliant analogy. And just like a library, GitHub categorizes its information into different areas. We call these search scopes. When you perform a search, GitHub groups the results into these scopes. The primary scopes are repositories, code, issues, pull requests, users, and topics. 
+
+[JAMIE]
+Let us define those really quickly for anyone new. Repositories are the actual project folders. Code refers to the literal text inside the files of those projects. Issues are the to-do list items or bug reports. Pull requests, or PRs, are the proposed changes to the code. Users are the individual accounts of developers. And topics are the category tags applied to projects, like accessibility or screen reader. 
+
+[ALEX]
+Exactly. When you submit a search, you navigate to a results page where you can filter by these scopes. But instead of submitting a broad search and filtering later, we can use GitHub's qualifier syntax to be highly specific right from the start.
+
+[PAUSE]
+
+[ALEX]
+This brings us to the core of advanced search, the key-value pair syntax. This is how you tell GitHub exactly what you want. 
+
+[JAMIE]
+Right. A key-value pair is just a category, followed by a colon, followed by the specific thing you want. The most important rule to remember here is that there are no spaces around the colon. 
+
+[ALEX]
+That is a very common trap. If you type the word label, then a colon, then a space, and then the word bug, GitHub will get confused. It will literally search for the word label and the word bug separately. You must type label, colon, bug, all as one continuous string with no spaces. 
+
+[JAMIE]
+My favorite way to think about this is ordering at a custom coffee shop. You do not just walk up and yell, coffee! You give them a list of specific modifiers. You might say, size colon large, temperature colon iced, milk colon oat. You are giving a key, which is the category, and a value, which is your choice. GitHub search works exactly the same way. 
+
+[ALEX]
+I love that. Let us apply your coffee shop logic to searching for issues. An issue, as a reminder, is a tracker for bugs, tasks, or feature requests. Let us say you want to find issues that are currently open. You would type the word is, followed by a colon, followed by the word open. So, is colon open. 
+
+[JAMIE]
+And if I wanted closed issues, it would just be is colon closed. 
+
+[ALEX]
+Exactly. Now, let us say you want to find issues with a specific label. You use the label qualifier. You type label, colon, and then the name of the label. For example, label colon accessibility. 
+
+[JAMIE]
+What if the label has a space in it? Like the good first issue label? We just said we cannot use spaces in our key-value pairs. 
+
+[ALEX]
+Great question. If your value has a space in it, you wrap the value in double quotation marks. So you would type label, colon, quote, good first issue, unquote. 
+
+[JAMIE]
+Oh, that makes perfect sense. What about finding issues related to specific people? Like, what if I want to find issues that I created?
+
+[ALEX]
+For that, you use the author qualifier. You type author, colon, and then a username. But GitHub has a fantastic shortcut. Instead of typing your own username, you can just type the at sign followed by the word me. So, author colon at sign me will always find issues created by whoever is currently logged in. 
+
+[JAMIE]
+That is so convenient. And if I want to find issues that I am supposed to be working on, the ones assigned to me, I assume I use the assignee qualifier? 
+
+[ALEX]
+You got it. Assignee, colon, at sign me. Or assignee, colon, and a specific username if you are looking for your teammate's work. 
+
+[JAMIE]
+There is one more issue qualifier on our checklist, which is the milestone qualifier. A milestone is just a way to group issues together for a specific release or goal. So I would type milestone, colon, and then the name of the milestone, using quotes if it has spaces, right?
+
+[ALEX]
+Spot on. Milestone, colon, quote, beta release, unquote, would find all issues attached to that milestone. 
+
+[PAUSE]
+
+[JAMIE]
+Okay, that sounds like a lot of steps to remember. I am not going to lie, when I first heard all these colons and quotes, I felt a little intimidated. 
+
+[ALEX]
+It does feel like learning a new language! But here is the thing, you have already done most of this mentally on day one of your job. When you think, I need to find the open bugs assigned to me, you are already using these categories. Same workflow, just with a specific syntax handling the heavy lifting. And the beauty is, once you learn these qualifiers for issues, they apply almost identically to pull requests. 
+
+[JAMIE]
+Let us talk about pull requests next. A pull request, and I love that name because you are literally requesting that someone pull your changes into their project, has its own specific qualifiers. 
+
+[ALEX]
+Yes. Just like we used is colon issue, we can use is colon p r to explicitly tell GitHub we only want pull requests. 
+
+[JAMIE]
+And PRs have some unique states. For example, sometimes I push up a pull request but I am not ready for anyone to review it yet. I mark it as a draft. How do I search for those?
+
+[ALEX]
+You use the draft qualifier. You type draft colon true. Or if you want to exclude drafts and only see PRs ready for review, you type draft colon false. 
+
+[JAMIE]
+What about finding PRs that have already been reviewed and approved? I am always hunting for those so I can merge them. 
+
+[ALEX]
+For that, you use the review qualifier. Type review colon approved. It is incredibly satisfying to run that search and see a list of work that is ready to cross the finish line. 
+
+[JAMIE]
+There are two more PR qualifiers on our list that I always used to get confused by. Head and base. Head colon, and base colon. Can you break those down?
+
+[ALEX]
+Absolutely. In Git, every pull request takes code from one branch and proposes merging it into another branch. The branch where your new changes live is called the head branch. The branch you want to merge those changes into is called the base branch. 
+
+[JAMIE]
+Okay, let me try an analogy here. Think of a train traveling between two cities. The head branch is your departure city, where you are coming from. The base branch is your destination city, where you are going. 
+
+[ALEX]
+That is a fantastic way to picture it. So, if you want to find all pull requests that are trying to merge changes into your main branch, you are looking for trains heading to the destination of main. You would type base colon main. 
+
+[JAMIE]
+And if I want to find pull requests that are coming from a branch named feature dash login, I am looking for trains departing from that station. So I type head colon feature dash login. 
+
+[ALEX]
+Exactly. That is incredibly useful when you are managing a large repository with hundreds of branches and you need to track down a specific set of changes.
+
+[PAUSE]
+
+[JAMIE]
+So we have covered searching issues and PRs, which is mostly searching the metadata of a project. But what if I need to find a specific piece of code? Like, I know we use a certain function somewhere, but I cannot remember which file it is in. 
+
+[ALEX]
+That brings us to code search, which requires a slightly different mindset. When you search for code, you are asking GitHub to literally open up every text file in a repository and read the contents. 
+
+[JAMIE]
+Searching code is like trying to find a specific sentence inside a massive encyclopedia, rather than just searching for the title of the book. 
+
+[ALEX]
+Right. And because that is such a massive undertaking, GitHub provides specific qualifiers to narrow down where it looks. The most common one is the language qualifier. If you are looking for a python function, you do not need GitHub searching through all your markdown documentation files. You would type language colon python. 
+
+[JAMIE]
+Or language colon javascript, or language colon html. That saves so much time. What if I only want to search inside a specific folder? Like, I only want to look inside the source folder. 
+
+[ALEX]
+For that, you use the path qualifier. You type path colon, followed by the directory name. So, path colon s r c forward slash. That restricts the search to only files inside the source directory. 
+
+[JAMIE]
+I also use the extension qualifier a lot. If I only want to find changes in my style files, I type extension colon c s s. 
+
+[ALEX]
+That is a great tip. Now, if you are doing a global code search, you absolutely must use the organization or repository qualifiers, otherwise you will get millions of results from random public projects. 
+
+[JAMIE]
+Oh yes, I have made that mistake. My screen reader just starts reading out code from a project halfway across the world. How do I restrict it?
+
+[ALEX]
+You use org colon, followed by the organization name, or repo colon, followed by the specific repository path. So if we wanted to search for the phrase aria dash hidden inside our community access organization, we would type org colon community dash access, followed by a space, and then our search term, aria dash hidden. 
+
+[JAMIE]
+That brings up a good point. When we are searching for the actual text in the file, like aria dash hidden, we do not use a key-value pair for that part. We just type the raw text we are looking for alongside our qualifiers. 
+
+[ALEX]
+Exactly. The qualifiers set the boundaries, and the raw text is what you are hunting for inside those boundaries.
+
+[PAUSE]
+
+[JAMIE]
+Let us talk about time. Sometimes I need to find an issue that was created a long time ago, or a pull request that was updated recently. How do we filter by dates?
+
+[ALEX]
+GitHub uses date range qualifiers, specifically the created qualifier and the updated qualifier. And this is where we get to use mathematical symbols. 
+
+[JAMIE]
+Oh boy, math. Just kidding, it is actually pretty straightforward. We use the greater than sign and the less than sign. 
+
+[ALEX]
+Yes. And GitHub expects dates to be formatted in the standard ISO format. That means a four digit year, a dash, a two digit month, a dash, and a two digit day. 
+
+[JAMIE]
+So January first, 2025, would be 2025 dash 01 dash 01. 
+
+[ALEX]
+Correct. So, let us say you want to find issues created after January first, 2025. You type created, colon, the greater than sign, 2025 dash 01 dash 01. 
+
+[JAMIE]
+And if I wanted to find issues that were updated before January first, 2026, I would use the less than sign. So, updated, colon, the less than sign, 2026 dash 01 dash 01. 
+
+[ALEX]
+Exactly. It is just like filtering bank transactions to find purchases made after a certain date. 
+
+[JAMIE]
+Once we have all these results, they can still be a bit messy. The screen reader just reads them out in whatever default order GitHub chooses. Can we control the sorting? 
+
+[ALEX]
+Yes, we can, using the sort qualifier. You can force the results to be ordered chronologically. The syntax here is sort, colon, the field you want to sort by, a dash, and then either a s c for ascending, or d e s c for descending. 
+
+[JAMIE]
+Let me make sure I have this right. Ascending means going up, so from oldest to newest. Descending means going down, so from newest to oldest. 
+
+[ALEX]
+Spot on. So if you want to see the most recently created issues first, you would type sort colon created dash d e s c. That puts the newest items right at the top of the list, saving you from having to navigate past older, irrelevant items. It is like organizing a filing cabinet so the files you just worked on are right in the front drawer.
+
+[PAUSE]
+
+[JAMIE]
+Okay, so we have all these individual building blocks. Issue qualifiers, pull request qualifiers, code qualifiers, dates, and sorting. The real power comes from combining them, right?
+
+[ALEX]
+Absolutely. You combine qualifiers simply by typing a space between them. GitHub treats the space as an implicit AND operator. It means a result must match every single qualifier you provide. 
+
+[JAMIE]
+Let us build a mega query together to show how this works. Let us say I am a new contributor looking for something to work on in our accessibility agents repository. 
+
+[ALEX]
+Alright, let us build it step by step. First, we restrict the search to the specific repository. So we type repo colon community dash access forward slash accessibility dash agents. 
+
+[JAMIE]
+Then, I only want to look at issues, not pull requests. So I press space, and type is colon issue. 
+
+[ALEX]
+Good. Next, you only want issues that are still active, so you press space, and type is colon open. 
+
+[JAMIE]
+I want beginner-friendly tasks, so I press space, and type label colon quote good first issue quote. 
+
+[ALEX]
+And finally, you do not want to step on anyone's toes, so you only want issues that nobody else is working on. For this, you can use the no qualifier. You press space, and type no colon assignee. 
+
+[JAMIE]
+Wow. So the final query is repo colon community dash access forward slash accessibility dash agents, space, is colon issue, space, is colon open, space, label colon quote good first issue quote, space, no colon assignee. 
+
+[ALEX]
+It sounds like a mouthful

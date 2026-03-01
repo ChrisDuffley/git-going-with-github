@@ -29,8 +29,8 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 
 **Episode focus:**
 
-- Detailed documentation for all six accessibility agents
-- The complete list of 28 slash commands with usage examples
+- Detailed documentation for all 55 accessibility agents across 3 teams
+- The complete list of 54+ slash commands with usage examples
 - Customization options and workspace configuration
 - Troubleshooting agent issues
 - Building on the agent system for your own projects
@@ -42,8 +42,8 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.
 
-- [ ] **Complete documentation for each of the six agents**
-- [ ] **All 28 slash commands with detailed usage examples**
+- [ ] **Complete documentation for the 55 agents across 3 teams (Accessibility, GitHub Workflow, Developer Tools)**
+- [ ] **All 54+ slash commands with detailed usage examples**
 - [ ] **Agent input and output formats**
 - [ ] **Customization: agent instruction files and settings**
 - [ ] **Workspace configuration for agent behavior**
@@ -71,7 +71,7 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 ## Table of Contents
 
 1. [The Full Agent Ecosystem](#1-the-full-agent-ecosystem)
-2. [Workshop Agents - Quick Reference](#2-workshop-agents--quick-reference)
+2. [GitHub Workflow Agents - Quick Reference](#2-github-workflow-agents--quick-reference)
 3. [Slash Commands and Prompts](#3-slash-commands-and-prompts)
 4. [Customization Primitives - Decision Guide](#4-customization-primitives--decision-guide)
 5. [Scope and Priority - All Levels](#5-scope-and-priority--all-levels)
@@ -172,11 +172,9 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 
 ---
 
-## 2. Workshop Agents - Quick Reference
+## 2. GitHub Workflow Agents - Quick Reference
 
-These six agents from the GitHub Workflow team are used hands-on during Day 2, Block 3.
-
-Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
+The GitHub Workflow team includes 12 agents that automate common repository operations. These are good starting points if you have completed the Day 1 skills - but explore any agent in the ecosystem that matches your workflow.\n\nInvoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 

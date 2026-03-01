@@ -1,0 +1,217 @@
+[ALEX]
+Welcome to Git Going with GitHub. This is episode 15, Accessible Code Review. I am Alex, and as always, I am joined by my co-host, Jamie. 
+
+[JAMIE]
+Hello everyone! I am so excited for this episode. I feel like code review was the single most intimidating part of learning GitHub for me two years ago. 
+
+[ALEX]
+It is a very common hurdle. Up until this point in the series, we have focused heavily on writing your own code. In Episode 6, we introduced the concept of a pull request. So a pull request - and I love that name because you are literally requesting that someone pull your changes into their project - is your way of saying, here is my work, please review it. 
+
+[JAMIE]
+Right, and in Episode 11, we set up all our VS Code accessibility features so we could write that code efficiently. But today, we are flipping the script. Today, we are the ones doing the reviewing. 
+
+[ALEX]
+Exactly. When someone opens a pull request, someone else needs to read those changes, verify they work, and approve them. This is what we call code review. And I want to start by talking about why we do this. It is not just a rubber stamp to get code merged. 
+
+[JAMIE]
+It definitely is not. Honestly, reviewing other people's pull requests is how I actually learned to code. When you review someone else's work, you see new ways to solve problems. You see functions you did not know existed. It is a massive learning opportunity. 
+
+[ALEX]
+That is such a great point. Code review is fundamentally about code quality and learning. We are looking for four main things. First, correctness. Does the code actually do what the pull request claims it does? Second, clarity. Is the code easy to understand for the next person who reads it? Third, style. Does it match the formatting rules of the project? And fourth, which is especially important for our community, accessibility. 
+
+[JAMIE]
+Like making sure they did not skip a heading level in the documentation, or forget to add alternative text to an image. 
+
+[ALEX]
+Spot on. If you want to become a better developer, you need to build a habit of reviewing others' work regularly. Set aside fifteen minutes every morning just to read a pull request. 
+
+[JAMIE]
+I like to think of it like peer editing an essay in school. You learn just as much from reading your classmate's paper and suggesting edits as you do from writing your own essay. You start noticing structural things you would have completely missed in your own writing. 
+
+[ALEX]
+That is a perfect analogy. So, how do we actually do it? There are two primary environments for conducting a code review. The first is the web browser, directly on GitHub. The second is right inside your code editor, using VS Code. 
+
+[JAMIE]
+How do you decide which one to use? 
+
+[ALEX]
+It depends on the complexity of the review. The web browser is fantastic for quick reviews, leaving inline comments, and spot-checking small changes. But if it is a massive pull request where you need to test the code locally, VS Code is much better. 
+
+[JAMIE]
+My analogy for this is that reviewing in the web browser is like having a quick chat with a coworker over coffee to review a memo. Reviewing in VS Code is like taking their architectural blueprints back to your desk, where you have all your tools, rulers, and reference books spread out. 
+
+[ALEX]
+I love that. And we should also mention there is technically a third path for our command line fans. You can use the GitHub Command Line Interface, or GH CLI. 
+
+[JAMIE]
+Oh yes! I use this sometimes when I am already in my terminal. You can type gh space pr space diff to read the changes right in your console, or gh space pr space review dash dash approve to approve it instantly. It is super fast if you do not need to leave inline comments on specific lines. 
+
+[ALEX]
+Exactly. But for deep, interactive reviews, you will want the browser or VS Code. Let us start with the web browser experience. 
+
+[PAUSE]
+
+[ALEX]
+When you navigate to a pull request page on GitHub, you will find a landmark called "Pull request navigation tabs". Inside this landmark, there are tabs for Conversation, Commits, and Files Changed. 
+
+[JAMIE]
+To get there with NVDA or JAWS, I usually press the letter D to jump through landmarks until I hear "Pull request navigation tabs", then I press the right arrow key to find the "Files changed" link, and press Enter. 
+
+[ALEX]
+Perfect. VoiceOver users can use Control plus Option plus U to open the web rotor, navigate to Landmarks, and find it there. Once you activate the Files Changed tab, you are looking at the diff. 
+
+[JAMIE]
+Okay, let us define that word. Diff. It is short for difference, right? 
+
+[ALEX]
+Yes. A diff shows you exactly what changed between the old version of the file and the new version. Before you read the actual code, you should orient yourself using the file tree. 
+
+[JAMIE]
+Right, the file tree is a region on the page that lists every single file that was modified. I always scan this first. It tells me the scope of the pull request. If the title says "fix typo in readme" but the file tree lists twenty different configuration files, I know something weird happened. 
+
+[ALEX]
+Exactly. Once you are ready to read the changes, you can navigate into the main content area. GitHub organizes every changed file under its own heading. So, the fastest way to move between files is to use your screen reader's heading navigation. Just press the number 3 key. 
+
+[JAMIE]
+So if I press 3, my screen reader will announce the first file name, like "index dot HTML". If I press 3 again, it jumps to the next file, like "style dot CSS". 
+
+[ALEX]
+Precisely. Now, directly below that heading is the actual diff. GitHub uses what is called a unified diff format. It presents the changes as a data table. 
+
+[JAMIE]
+Unified meaning the old code and the new code are woven together into one continuous list, right? 
+
+[ALEX]
+Yes. Every row in that table is one line of code. There are three types of lines in a unified diff. Addition lines, deletion lines, and context lines. 
+
+[JAMIE]
+Addition lines are the new code being added. Your screen reader will announce a plus symbol, or the word "inserted", followed by the code. Deletion lines are the old code being removed. You will hear a minus symbol, or the word "deleted", followed by the code. 
+
+[ALEX]
+And context lines are the unchanged lines of code immediately before and after the changes. They do not have a plus or minus prefix. They are just there to help you understand where the change is happening in the file. 
+
+[JAMIE]
+My favorite analogy for this is a track-changes document in a word processor. If I change a sentence, the document does not just show you my new sentence in a vacuum. It shows the old sentence crossed out, the new sentence underlined, and the regular, unchanged paragraph around it so you know exactly where we are in the chapter. The context lines are the regular paragraph. 
+
+[ALEX]
+That is exactly how it works. Now, navigating this table requires a specific technique. Because it is a complex data table, you want to use your screen reader's table navigation commands. 
+
+[JAMIE]
+Right. First, I press the letter T to jump to the table. Then, and this is crucial, I switch to Focus Mode. If you are using NVDA, you press Insert plus Space. If you are using JAWS, you press Insert plus Z. For VoiceOver, you press Control plus Option plus Shift plus Down Arrow to interact with the table. 
+
+[ALEX]
+Once you are in Focus Mode, you can use your arrow keys to move up and down through the lines of code. If you want to read across the columns to hear the line number, the change type, and the code itself, you press Control plus Alt plus Right Arrow. 
+
+[JAMIE]
+Okay that sounds like a lot of steps. 
+
+[ALEX]
+It does! But here is the thing - you have already done most of this on Day 1 when you were reading files. It is the exact same table navigation workflow, just applied to a diff. Take your time, move row by row, and listen for those plus and minus prefixes. 
+
+[PAUSE]
+
+[JAMIE]
+So let us say I am arrowing down through this table, and I hear an addition line. The author added a heading, but they used four hash marks, which is a level four heading. But the context line right above it is a level two heading. They skipped level three entirely! 
+
+[ALEX]
+A classic accessibility bug. You need to tell the author to fix that. You do this by leaving an inline review comment on that specific line. 
+
+[JAMIE]
+How do I attach a comment to just that one row in the table? 
+
+[ALEX]
+While your screen reader focus is on that specific line in the diff table, you can press the Tab key, or press the letter B to jump to the next button. You are listening for a button labeled "Add a comment to this line". 
+
+[JAMIE]
+Oh, that is clever! So every line has its own hidden comment button that appears when you focus it. 
+
+[ALEX]
+Exactly. When you press Enter on that button, an inline comment box opens right there in the diff. You switch back into Focus Mode, and type your comment. 
+
+[JAMIE]
+And when I am done typing, I just hit submit, right? 
+
+[ALEX]
+Not quite. You have two options below the text box. "Add single comment" or "Start a review". You almost always want to choose "Start a review". 
+
+[JAMIE]
+Why is that? 
+
+[ALEX]
+If you choose "Add single comment", GitHub posts it immediately and sends an email notification to the author. If you are leaving ten comments on a pull request, you just sent them ten separate emails. 
+
+[JAMIE]
+Oh, no one wants that. 
+
+[ALEX]
+Right. But if you choose "Start a review", GitHub saves your comment as a draft. You can go through the rest of the file, leave as many draft comments as you want, and then submit them all at once at the very end. The author gets exactly one notification containing all your feedback. 
+
+[PAUSE]
+
+[ALEX]
+Now, the browser experience is very robust. But for many screen reader users, navigating that giant table with the plus and minus prefixes can be exhausting, especially on a large pull request. That is why I want to talk about our second environment: VS Code. 
+
+[JAMIE]
+Yes! This is my favorite feature. I wish I had known that when I started. 
+
+[ALEX]
+If you have the GitHub Pull Requests extension installed in VS Code, you can do your entire review without ever opening your web browser. You open the Command Palette by pressing Control plus Shift plus P, and type "GitHub Pull Requests: View Pull Request". 
+
+[JAMIE]
+You select the pull request, and VS Code opens the file tree right in your sidebar. You can navigate to any changed file and press Enter to open it. 
+
+[ALEX]
+When the file opens, you are in the diff editor. But we are not going to read the raw code. We are going to use a feature built specifically for screen reader users. It is called the Accessible Diff Viewer. 
+
+[JAMIE]
+To open it, you just press F7. 
+
+[ALEX]
+That is right. Pressing F7 opens a dedicated reading panel. Instead of making you navigate a complex table with columns and symbols, the Accessible Diff Viewer restructures the information into a linear, conversational format. 
+
+[JAMIE]
+It is amazing. When you press F7, it announces something like, "Changed lines 14 to 14. Change 1 of 3." So right away, you know exactly how many changes are in this file. 
+
+[ALEX]
+And then, it reads the change as a discrete block. It will say "Removed:" and read the old code. Then it will say "Added:" and read the new code. 
+
+[JAMIE]
+My analogy for this is baking. Imagine someone improved your chocolate chip cookie recipe. The browser diff is like handing you a giant list of ingredients with plus and minus signs scattered everywhere. You have to piece it together. The Accessible Diff Viewer is like an audiobook narrator saying, "Change 1 of 3. Removed: one cup of white sugar. Added: half a cup of brown sugar." It isolates the exact substitution for you. 
+
+[ALEX]
+That is a brilliant comparison. And navigating between these changes is incredibly fast. You press F7 to jump forward to the next change, and Shift plus F7 to jump backward to the previous change. 
+
+[JAMIE]
+And if I want to leave an inline comment while I am in VS Code? 
+
+[ALEX]
+You navigate to the line you want to comment on, open the Command Palette with Control plus Shift plus P, and type "GitHub Pull Requests: Add Comment". A text box opens, you type your feedback, and it synchronizes directly to GitHub. The author sees it exactly the same way they would if you had used the browser. 
+
+[PAUSE]
+
+[JAMIE]
+Okay, so we know how to navigate the diffs and where to type our comments. Let us talk about what we should actually write. Code review can feel very vulnerable for the person who wrote the code. 
+
+[ALEX]
+It absolutely can. A helpful review comment should be three things. Specific, educational, and graduated. 
+
+[JAMIE]
+Specific means linking your comment to the exact line of code, which we just learned how to do. Educational means explaining the "why", not just the "what". 
+
+[ALEX]
+Right. Do not just say "Change this heading to level three." Say, "Screen reader users navigate documents by heading level. Because you used a level four heading directly after a level two heading, they will think content is missing. Please change this to a level three heading." 
+
+[JAMIE]
+That is so much better. It turns a criticism into a learning moment. What did you mean by graduated? 
+
+[ALEX]
+Graduated means clearly signaling how important your comment is. Is this a critical bug that must be fixed, or just a stylistic preference? Using prefixes at the beginning of your comment is a great way to set expectations. 
+
+[JAMIE]
+Oh, I use these all the time! If I see a tiny formatting issue, I will start my comment with the word "nit", N I T, colon. Like, "nit: you have an extra space here." It tells the author, "I noticed this, but I am not going to block your work over it." 
+
+[ALEX]
+Exactly. You might use "question:" if you genuinely do not understand a piece of code and want them to explain it. Or, if it is a major issue, you can use "blocking:". Like, "blocking: This image does not have alternative text." 
+
+[JAMIE]
+Using prefixes makes the review so

@@ -252,14 +252,11 @@
 ## Chapter 16: Accessibility Agents
 **Time:** 1.5 hours + Exercises  |  **What You'll Do:** Automate with Copilot agents
 
-### The Six Agents
-Know what each does (read Chapter 16 for details):
-- [ ] `@daily-briefing` - Daily activity summary
-- [ ] `@issue-tracker` - Issue management
-- [ ] `@pr-review` - PR assistant
-- [ ] `@analytics` - Repository metrics
-- [ ] `@insiders-a11y-tracker` - Accessibility focus
-- [ ] `@template-builder` - Template wizard (NEW!)
+### Agents to Explore
+Browse the ecosystem and try agents that match your skills (read Chapter 16 for the full landscape):
+- [ ] **GitHub Workflow agents** - `@daily-briefing`, `@issue-tracker`, `@pr-review`, `@analytics`, `@insiders-a11y-tracker`, `@template-builder`
+- [ ] **Accessibility agents** - `@web-accessibility-wizard`, `@contrast-master`, `@keyboard-navigator`, `@markdown-a11y-assistant`
+- [ ] **Developer Tools agents** - `@python-specialist`, `@desktop-a11y-specialist`, `@a11y-tool-builder`
 
 ### Exercises
 - [ ] **Exercise 1:** Generate a template with @template-builder

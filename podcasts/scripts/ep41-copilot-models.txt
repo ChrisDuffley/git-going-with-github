@@ -1,0 +1,186 @@
+[ALEX]
+Welcome to Git Going with GitHub, the podcast for blind and low-vision developers navigating the world of open source collaboration. I'm Alex, your lead host.
+
+[JAMIE]
+And I'm Jamie, your co-host, ready to dive into the fascinating world of artificial intelligence models. This is Episode 41, and today we are going deep into Copilot AI Models.
+
+[ALEX]
+That's right, Jamie. In our previous episodes on GitHub Copilot, we’ve talked about what it is and how it helps you write code, explain code, and even debug. Today, we're pulling back the curtain on the actual AI brains behind Copilot. We'll discuss the different models available, what makes them unique, when to choose a particular model, and how your GitHub Copilot plan affects your access.
+
+[JAMIE]
+I'm so excited for this. When I first started using Copilot, I just assumed it was *one* big AI brain. Learning that there are different models, each with its own strengths, feels like unlocking a secret level!
+
+[ALEX]
+It really is. Think of it like this: if Copilot is your personal coding assistant, then it actually has a whole team of specialized assistants working behind the scenes. Each one is a different AI model, and they come from various providers like OpenAI, Anthropic, Google, and xAI.
+
+[JAMIE]
+So, not just one big brain, but a whole brain trust! That's a great analogy.
+
+[ALEX]
+Exactly. And just like any good team, these models have different characteristics. When we talk about AI models, there are a few key traits to consider: speed, quality, and what's called the "context window size."
+
+[JAMIE]
+Okay, let's break those down. Speed, I think I get. That's how fast it gives me an answer or a suggestion, right?
+
+[ALEX]
+Precisely. A faster model will give you almost instant inline suggestions or quick chat responses. This is super helpful for boilerplate code or when you just need a quick syntax check.
+
+[PAUSE]
+
+[ALEX]
+Then there's quality. This refers to how accurate, relevant, and comprehensive the model's output is. A higher quality model is generally better at understanding complex problems and generating more sophisticated or nuanced solutions.
+
+[JAMIE]
+And the "context window size"? That sounds a bit more technical.
+
+[ALEX]
+It does, but it's crucial. Imagine you're having a conversation with someone. The context window is like their short-term memory for your discussion. It's the amount of information—your code, your previous chat messages, files in your project—that the AI model can "remember" and consider when generating its response.
+
+[JAMIE]
+So, a larger context window means it can understand more of my project, or remember a longer conversation we've had?
+
+[ALEX]
+Spot on. If you're working on a complex feature that spans multiple files, or if you're trying to debug a tricky problem by providing a lot of code snippets and descriptions, a model with a larger context window will perform much better because it can take all that information into account. Think of it like a chef who can keep more ingredients, recipes, and your preferences in mind while preparing a meal. A small context window means they only remember the last few ingredients you mentioned, while a large one remembers everything in your pantry and every dish you've ever ordered.
+
+[PAUSE]
+
+[JAMIE]
+That's a fantastic analogy! So, knowing that, when would I choose a fast model versus a more powerful one with better quality or a larger context window?
+
+[ALEX]
+That's the million-dollar question, Jamie, and it really comes down to the task at hand. For general-purpose coding and writing—things like simple code completions, getting quick explanations for a function, refactoring a small code block, or generating documentation for a simple utility—you'll often want a fast model. Models like OpenAI's GPT-4.1 or GPT-5 mini are excellent defaults. They're quick, accurate, and crucially, they're often *free* models, meaning they don't consume what GitHub calls "premium requests."
+
+[JAMIE]
+Free models, that's music to my ears! So if I just need a quick snippet or a basic explanation, I should stick to those.
+
+[ALEX]
+Absolutely. Then, for faster help with simple or repetitive tasks, where speed is paramount, you might look at models like Anthropic's Claude Haiku 4.5 or Google's Gemini 3 Flash. They balance fast responses with good quality for lightweight explanations or boilerplate. These typically have a low cost multiplier, often around 0.33 times.
+
+[PAUSE]
+
+[ALEX]
+Now, for the really heavy lifting—deep reasoning and debugging—that's when you bring out the big guns. If you're facing complex problems, making architecture decisions, analyzing multiple files, or trying to understand an unfamiliar codebase, you'll want a more powerful model. OpenAI's GPT-5.2 or Anthropic's Claude Sonnet models, or even Claude Opus 4.6, are built for this. These models excel at complex reasoning and can provide more sophisticated solutions, though they might take a little longer to respond. They typically come with a standard 1x cost multiplier, or for Claude Opus, a 3x multiplier.
+
+[JAMIE]
+So, for the truly gnarly bugs or when I'm trying to design a whole new system, I should be thinking about those more powerful, deeper reasoning models. Got it.
+
+[ALEX]
+Exactly. And there's another specialized category: Agentic Software Development. This is when Copilot operates in "Agent mode," where it can take on multi-step tasks, write code, run terminal commands, and iterate without you having to guide it step-by-step. For these autonomous tasks, models like OpenAI's GPT-5.1-Codex-Max or GPT-5.2-Codex are specifically recommended because they're optimized for this kind of independent, multi-step execution.
+
+[JAMIE]
+That sounds incredibly powerful, like having a miniature robot developer working for me.
+
+[ALEX]
+It really is a step towards that. And finally, some models, like GPT-5 mini, Claude Sonnet, and Gemini 3 Pro, even support working with visuals. So, if you're able to paste an image, a screenshot, or a UI mockup into the chat, these models can analyze it and help you with tasks related to its content. This is especially useful for understanding UI components or diagrams.
+
+[PAUSE]
+
+[ALEX]
+Now, all this talk of "free" models and "cost multipliers" brings us to an important point: model availability. What models you can access, and how many "premium requests" you can make, depends on your GitHub Copilot plan.
+
+[JAMIE]
+Okay, so it's not a free-for-all. What are the different plans and what do they offer?
+
+[ALEX]
+There are generally four main plans: Copilot Free, Copilot Pro, Copilot Business, and Copilot Enterprise. If you're on the **Copilot Free** plan, you'll have access to models like GPT-4.1, GPT-5 mini, and Raptor mini. These are excellent, fast models for everyday use, and they come with a zero-times multiplier, meaning they never consume premium requests. You typically get a quota of 50 premium requests per month, but these free models don't count towards it.
+
+[JAMIE]
+So, even on the free plan, I still get some of those powerful models for my daily coding, which is great to know.
+
+[ALEX]
+Absolutely. If you're on **Copilot Pro** or **Copilot Business**, you get access to all the zero-times models, plus most of the other models like Claude Haiku, Gemini Flash, and the Claude Sonnet series, as well as the 1x Codex variants. These plans typically come with a higher monthly quota of premium requests, often around 300 per user.
+
+[JAMIE]
+And what about the big guns? The Claude Opus models?
+
+[ALEX]
+Those are generally reserved for **Copilot Pro Plus** and **Copilot Enterprise** plans, which give you unlimited access to all models, including the most powerful ones like Claude Opus 4.6, which has a 3x cost multiplier. This means if you send a message to Claude Opus, it counts as three premium requests against your quota, if you have one.
+
+[JAMIE]
+That makes sense. It's like a premium data plan where some actions use more data than others. So, if I'm on a plan with a limited number of premium requests, I should be mindful of which model I'm using.
+
+[ALEX]
+Exactly. For general questions or quick completions, always lean on those free models like GPT-4.1 or GPT-5 mini. Save the 1x models like Claude Sonnet or GPT-5.2 for when you truly need that deeper reasoning, and only bring out the 3x Claude Opus for the absolute most demanding, complex challenges.
+
+[PAUSE]
+
+[ALEX]
+Now, how do you actually switch between these models in VS Code? It's quite straightforward.
+
+[JAMIE]
+Oh, good! Because knowing all this but not how to use it would be frustrating.
+
+[ALEX]
+Right. If you're in the Copilot Chat panel, which you can open by pressing Control plus Shift plus I on Windows or Command plus Shift plus I on a Mac, navigate to the bottom of the chat input area. You'll find a button there that displays the current model name. It might say "Auto" or "Claude Sonnet 4.6" for example.
+
+[JAMIE]
+Okay, so I listen for that model name button.
+
+[ALEX]
+Yes. For screen reader users, you'll typically tab through the bottom toolbar of the chat panel. Listen for the model name announced; it usually appears between the "Attach" button and the "Send" button. Once you activate that button, either with Space or Enter, it will open a dropdown list of all the available models for your plan. You can then arrow through the list and press Enter to select your desired model. The chat input will announce the newly selected model once you've switched.
+
+[ALEX]
+The process is very similar if you're using an inline chat session, which you can open with Control plus I or Command plus I. The model picker will appear directly in the inline chat toolbar.
+
+[PAUSE]
+
+[ALEX]
+By default, Copilot often uses what's called "Auto mode." This is a fantastic feature that became generally available relatively recently. In Auto mode, Copilot intelligently chooses the best model for your request.
+
+[JAMIE]
+Oh, that's smart! So it does the heavy lifting for me?
+
+[ALEX]
+Exactly. For a simple question, it might route to a faster, lighter, and often free model. For complex code generation or debugging, it will automatically upgrade to a more capable, potentially premium, model. If you're using Agent mode, it will select an appropriate Codex model. You can even see which model was used after each response, which helps you learn.
+
+[JAMIE]
+That's brilliant for everyday use. But I imagine there are times I'd want to override Auto mode?
+
+[ALEX]
+Absolutely. There are a few key reasons. First, if you specifically need a model with certain unique capabilities—for instance, if you want to use vision input and need a model like Claude Sonnet 4 that supports images. Second, if you're on a plan with limited premium requests and you want to tightly manage your costs, you might explicitly choose a free model. Third, you might find that a particular model consistently gives you better results for your specific workflow or coding domain, and you want to stick with it. And finally, if you're doing complex agentic work, you might want to explicitly select a powerful agentic model like GPT-5.1-Codex-Max to ensure maximum capability.
+
+[JAMIE]
+So, Auto mode is great for convenience, but for specific needs or cost management, I can take the wheel. That's good control to have.
+
+[PAUSE]
+
+[ALEX]
+Now, a quick note about how model selection affects different Copilot features. When you switch models in the chat panel or inline chat, you're primarily affecting your *conversational* interactions with Copilot. For inline code suggestions—those quick bits of code that appear as you type—Copilot often uses highly optimized, very fast models like Raptor mini in the background. These are specifically tuned for rapid completions and might not be explicitly selectable in the chat picker, but they are working behind the scenes to give you those instant suggestions.
+
+[JAMIE]
+That's a key distinction. So my chat model selection doesn't necessarily change every single inline suggestion I get.
+
+[ALEX]
+Precisely. The systems are optimized for different types of interaction. And finally, remember that the world of AI models is constantly evolving. GitHub regularly updates its model roster. Newer, more capable versions are released, and older models are retired.
+
+[JAMIE]
+So, my favorite model today might not be around tomorrow?
+
+[ALEX]
+It's possible! When a model is retired, Copilot simply stops sending requests to it and falls back to newer, equivalent alternatives. To stay current with model additions and retirements, I always recommend keeping an eye on the GitHub Copilot changelog, which is usually found on the GitHub blog. It's the best place to get the latest updates.
+
+[PAUSE]
+
+[JAMIE]
+Wow, Alex, that was a lot to unpack, but it really clarifies so much about how Copilot works under the hood.
+
+[ALEX]
+I'm glad to hear it, Jamie. It truly empowers you to get more out of Copilot when you understand these distinctions.
+
+[JAMIE]
+Absolutely. So, to recap, what are our key takeaways for today?
+
+[ALEX]
+First, remember that GitHub Copilot uses a variety of AI models, each with different strengths in speed, quality, and context window size. Second, choose your model based on the task: fast, free models for simple tasks like completions or quick explanations, and more powerful, potentially premium models for deep reasoning, complex debugging, or agentic development. Third, your Copilot plan dictates your access to these models and your premium request quota, so be mindful of cost multipliers. Fourth, you can easily switch models in the Copilot Chat panel or inline chat in VS Code using the model picker button. And finally, Auto mode is your smart default, but you can override it for specific needs or cost management.
+
+[JAMIE]
+Fantastic summary! I feel much more equipped to steer my Copilot experience now.
+
+[ALEX]
+That's the goal! Join us next time for Episode 42, where we'll continue our exploration of Copilot with a deep dive into its overall reference guide, pulling together many of the concepts we've touched on in these recent episodes.
+
+[JAMIE]
+You won't want to miss it! Until then, happy coding!
+
+[ALEX]
+And keep on Git Going!

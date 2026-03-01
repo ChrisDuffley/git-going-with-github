@@ -82,12 +82,12 @@ Chapters 14-16 teach accessible code review, issue templates, and AI agent autom
 |---------|----------|-------|-------------|
 | 14 | 1 hr + 3 exercises | Accessible code review | Keyboard-only, screen readers, diff navigation (NVDA/JAWS/VoiceOver) |
 | 15 | 1.5 hrs + 4 exercises | Issue templates | YAML, form fields, WCAG compliance, template design |
-| 16 | 1.5 hrs + 3 exercises | Accessibility Agents | 6 AI agents, 28 slash commands, Template Builder wizard |
+| 16 | 1.5 hrs + 3 exercises | Accessibility Agents | 55 AI agents across 3 teams, 54+ slash commands, Template Builder wizard |
 
 **AI Agent Integration:**
-- **6 Agents:** Automate issue triage, PR review, analytics, accessibility tracking, daily briefings, template building
-- **28 Slash Commands:** Targeted invocations for specific workflows
-- **Template Builder (Agent 6 - NEW!):** Interactive wizard for guided template creation
+- **55 Agents across 3 Teams:** Accessibility (26), GitHub Workflow (12), Developer Tools (6) - automate auditing, issue triage, PR review, analytics, and more
+- **54+ Slash Commands:** Targeted invocations for specific workflows
+- **Template Builder:** Interactive wizard for guided template creation
 
 **Outcome:** Teams can design accessible workflows and automate GitHub processes with confidence.
 
@@ -437,10 +437,10 @@ Open curriculum invites contributions:
     - J: Advanced Search, K: Releases & Tags, L: Repository Insights
     - N: GitHub Flavored Markdown [NEW], O: GitHub Security [NEW]
     - P: Branch Protection [NEW], Q: Resources
-  - Accessibility Agents (Chapter 16 + 28 slash commands)
-- **6 AI agents** (fully documented, ready to use)
+  - Accessibility Agents (Chapter 16 + 54+ slash commands)
+- **55 AI agents** across 3 teams (fully documented, ready to use)
   - Integrated throughout curriculum
-  - 28 slash commands total
+  - 54+ slash commands total
 - **10+ detailed exercises** (300-900 lines each, hand-holding walkthroughs)
   - 2 exercises in Chapter 4 (Issues)
   - 2 exercises in Chapter 5 (Pull Requests)
@@ -483,7 +483,7 @@ Open curriculum invites contributions:
 | GitHub Goal | Curriculum Supports | How |
 |-------------|-------------------|-----|
 | Grow developer community | Onboarding for millions of new users | Clear, repeatable learning path |
-| Increase Copilot adoption | Show real-world agent use cases | 6 agents + 28 commands integrated throughout |
+| Increase Copilot adoption | Show real-world agent use cases | 55 agents + 54+ commands integrated throughout |
 | Lead in accessibility | Model best practices | WCAG 2.1 AA+, screen reader tested, keyboard-absolute |
 | Reduce support burden | Empower self-service learning | FAQ, Troubleshooting, Quick Reference guides |
 | Build partnerships | Ecosystem integration | Works with VS Code, GitHub CLI, Copilot, Actions |

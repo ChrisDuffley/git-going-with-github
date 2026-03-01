@@ -1,0 +1,267 @@
+[ALEX]
+Welcome to Git Going with GitHub. This is episode 9, Labels, Milestones, and Projects. I am your host, Alex.
+
+[JAMIE]
+And I am Jamie. I am so ready for this episode. Over the last few episodes, we have talked a lot about filing issues, submitting pull requests, and having conversations. Back in episode 5, we even noticed that some issues had extra information attached to them. But today, we are talking about how to organize all of that work.
+
+[ALEX]
+Exactly. If you have a repository with three open issues, you do not really need a project management system. You can just read the list. But what happens when you have three hundred issues? Or three thousand? 
+
+[JAMIE]
+Panic? Maybe a little bit of crying?
+
+[ALEX]
+Maybe a little panic at first. But GitHub provides three built in tools to turn that chaotic list of issues into a structured, prioritized, and easily navigable body of work. Those tools are labels, milestones, and projects.
+
+[JAMIE]
+When I started learning GitHub about two years ago, I just dumped everything into the issues tab. It was like throwing important papers into a giant desk drawer. Finding anything later was a nightmare. 
+
+[ALEX]
+That is a perfect analogy. Today, we are going to build a filing system for that desk drawer. Let us start with the first layer of organization, which is labels.
+
+[PAUSE]
+
+[ALEX]
+GitHub defines labels as color-coded tags for categorizing issues and pull requests. Now, as blind and low-vision developers, you might hear the phrase color-coded and immediately feel left out. But do not worry. Every label has a text name and a description. Your screen reader will announce the text name, which is the actual data. The color is just supplementary information for visual users.
+
+[JAMIE]
+That is a huge relief. So, what exactly is a label in practice? If the issues tab is a desk drawer, are labels like the sticky notes we put on the folders?
+
+[ALEX]
+Exactly. They communicate at a glance what category, priority, or status an item belongs to. When you scan the issue list with your screen reader, labels are announced right alongside each issue title. You might hear something like, Label bug, or Labels accessibility, good first issue.
+
+[JAMIE]
+I have definitely heard good first issue before. Are there standard labels that every repository uses?
+
+[ALEX]
+Yes, GitHub provides a default set of labels when you create a new repository. Some of the most common ones are bug, which means something is not working as expected. There is enhancement, which means a new feature request. There is documentation, for changes to the docs. And as you mentioned, good first issue, which means the maintainers think it is a great starting point for new contributors.
+
+[JAMIE]
+Another one I see a lot is help wanted. That usually means the core team does not have time to build it, but they would love it if a community member picked it up.
+
+[ALEX]
+Right. There are also labels for managing the triage process, like invalid, duplicate, or wontfix. 
+
+[JAMIE]
+Wontfix always sounds so aggressive to me. 
+
+[ALEX]
+It does sound blunt, but it just means the issue is out of scope for the project, or it is working as intended. It saves everyone time. So, how do we actually view all the labels in a repository?
+
+[JAMIE]
+If I am using the web interface, I navigate to the Issues tab. Then I press the letter K to navigate through the links until I hear Labels. It is usually right next to the Milestones link in the toolbar above the issue list. If I open that link, I get a page showing every label, along with its description.
+
+[ALEX]
+Perfect. And if you prefer the command line, you can open your terminal and type g h space label space list. That will print out all the labels and their descriptions right in your console. 
+
+[JAMIE]
+I love the GitHub CLI. It is so fast. But let us say I am on the GitHub website, and I have an open issue in front of me. How do I apply a label to it?
+
+[ALEX]
+When you are on an issue or a pull request page, the labels are managed in the right sidebar. If you are using a screen reader on Windows, like NVDA or JAWS, you can press the letter H or the number 3 to jump through the headings until you hear the Labels heading. 
+
+[JAMIE]
+And on VoiceOver for Mac, that would be VoiceOver plus Command plus H, or using the quick nav letter H. 
+
+[ALEX]
+Right. Once you are on the Labels heading, you want to navigate to the gear button, which is the edit button for labels. Press the letter B to jump to buttons until you hear Labels button, and press Enter. This opens a dropdown menu showing all the available labels. 
+
+[JAMIE]
+And I can just use my up and down arrow keys to navigate that list, right?
+
+[ALEX]
+Yes. You can arrow through the list and press Enter to select or deselect a label. You will hear if it is checked or unchecked. You can also just start typing to filter the list. For example, if you type access, it will filter down to the accessibility label. When you are done, just press Escape to close the dropdown. The changes are saved automatically.
+
+[JAMIE]
+OK that sounds like a lot of steps. Finding the heading, finding the button, opening the dropdown, searching, pressing Escape.
+
+[ALEX]
+It does! But here is the thing, you have already done most of this on Day 1 of your learning journey. This is the exact same workflow you use for almost every sidebar element on GitHub. Once you practice it a few times, jumping to the heading and pressing Enter on the gear button just becomes muscle memory.
+
+[JAMIE]
+That is true. And I can also do this from the terminal, right?
+
+[ALEX]
+Absolutely. You can type g h space issue space edit space 42 space dash dash add dash label space quote accessibility quote. That will add the accessibility label to issue number 42 instantly. 
+
+[JAMIE]
+That is so much faster for me. But why do we go through all this trouble to label things?
+
+[ALEX]
+Because of filtering. Labels are the foundation of searching. If you navigate to the search bar on the Issues page, you can type filters. For example, type is colon open space label colon accessibility. Press Enter, and you will only see open accessibility issues. You can even combine them. Type label colon accessibility space label colon quote good first issue quote. 
+
+[JAMIE]
+Oh, you need quotes if the label name has spaces in it. Good to know. And what if I need a label that does not exist yet? Like, maybe I want a label called blocked. 
+
+[ALEX]
+If you have write access to the repository, you can create custom labels. You navigate to the Labels page we mentioned earlier, find the New label button, and press Enter. You fill out a form with the label name, a brief description, and you can pick a color or enter a hex code. Then you submit the form. 
+
+[JAMIE]
+Again, I just ignore the color picker and type a random hex code, or just let it pick a default. The name and description are what matter for my screen reader. 
+
+[PAUSE]
+
+[ALEX]
+So that is labels. They tell us what kind of work an issue represents. But they do not tell us when that work needs to be finished. For that, we use Milestones.
+
+[JAMIE]
+I always think of a milestone as packing a shipping container. You have a bunch of individual boxes, which are your issues. You pack them all into one container because they all need to go out on the exact same ship, on the exact same date.
+
+[ALEX]
+That is a brilliant analogy. A milestone groups issues and pull requests together toward a shared goal or a deadline. It could be a software version release, like Version 2 point 0. It could be a sprint, like Sprint 42. Or it could be an event, like Hackathon Day 1 Deliverables. 
+
+[JAMIE]
+So how do I read a milestone accessibly? What does it sound like?
+
+[ALEX]
+If you navigate to the Milestones page, which is linked right next to the Labels page, you will find a list of all active milestones. Each one is a heading. Your screen reader will announce the title, the progress, and the due date. You will hear something like, Hackathon Day 1 Deliverables, 3 of 8 issues closed, due April 20.
+
+[JAMIE]
+I love that it does the math for me. Hearing 3 of 8 issues closed gives me an instant sense of how the team is doing. How do we create one?
+
+[ALEX]
+If you have write access, you activate the New milestone button on the Milestones page. It asks for a title, an optional description, and an optional due date. 
+
+[JAMIE]
+Wait, due dates usually mean date pickers. Date pickers are the absolute bane of my existence as a screen reader user. Half the time I get trapped in a grid of unlabelled calendar days.
+
+[ALEX]
+You are not alone in that frustration. Date pickers are notoriously inconsistent across different browsers and screen readers. But here is the best tip for GitHub. You do not have to use the calendar widget. When focus is on the due date field, just type the date directly using your keyboard. Type the four digit year, a dash, the two digit month, a dash, and the two digit day. It is the most reliable way to set the date.
+
+[JAMIE]
+Year dash month dash day. Got it. I will definitely do that. So once my milestone is created, how do I pack the shipping container? How do I put issues into it?
+
+[ALEX]
+It is exactly the same process as adding a label. From an open issue, you navigate to the right sidebar, press H or 3 to find the Milestone heading, and activate the gear button. A dropdown opens listing all the available milestones. You arrow down to the one you want, press Enter to select it, and press Escape to close. 
+
+[JAMIE]
+And from the command line?
+
+[ALEX]
+You use the edit command again. Type g h space issue space edit space 42 space dash dash milestone space quote Hackathon Day 1 quote. 
+
+[JAMIE]
+OK, so I have labeled my issue as a bug, and I have added it to the Hackathon milestone. As I complete the work and close the issues, does the milestone progress bar update automatically?
+
+[ALEX]
+Yes, it does. And this is a great time to talk about cross references. GitHub is very smart about connecting your work. If you open a pull request to fix that bug, you can type a special keyword in the pull request description. If you type the word Closes, followed by a space, and then the issue sign, which is the pound or hash symbol, and the issue number. For example, Closes pound 42.
+
+[JAMIE]
+Oh, I have seen this! When you type the pound symbol, a dropdown appears suggesting recent issues, right?
+
+[ALEX]
+Exactly. You can just arrow down and select the issue. Now, when that pull request is approved and merged, GitHub will automatically close issue 42 for you. And because issue 42 is in your milestone, the milestone progress automatically recalculates. You do not have to update anything manually. 
+
+[JAMIE]
+That is the dream. The system does the paperwork for me. 
+
+[PAUSE]
+
+[ALEX]
+So we have labels for categorizing what the work is, and milestones for grouping when the work happens. But what if you want to track the daily status of the work? Who is doing what right now? Is it in progress, is it blocked, is it in review? For that, we use GitHub Projects.
+
+[JAMIE]
+Projects are relatively new, right? I remember something called Projects v1, but everyone uses v2 now.
+
+[ALEX]
+Yes, Projects v2 is the current generation. Think of a project as an air traffic control tower. Labels and milestones usually live inside a single repository. But a project can pull in issues and pull requests from dozens of different repositories across your entire organization, and show them all in one unified view. 
+
+[JAMIE]
+Oh, that is powerful. So if I am managing an accessibility team, I can have one project board that shows me every accessibility bug across all fifty of our company repositories?
+
+[ALEX]
+Exactly. And Projects give you three different ways to look at that data, which they call layouts. There is the Table view, the Board view, and the Roadmap view.
+
+[JAMIE]
+Let us break those down. What is the Table view?
+
+[ALEX]
+The Table view is basically a giant spreadsheet. Each row is an issue or a pull request. The columns are fields like Title, Status, Assignee, Priority, and Repository. It is the default layout and it is fantastic for screen reader users because it is highly structured.
+
+[JAMIE]
+How do I navigate it?
+
+[ALEX]
+When you load a project, you can press the letter T to jump straight to the table data. Then, use Control plus Alt plus your arrow keys to move around. Use the down arrow to move row by row. Your screen reader will read the whole row, like, Add keyboard navigation, Status In Progress, Assignee Jamie, Priority High. You can use the left and right arrows to move between individual cells. If you want to see the full issue, just press Enter on its row and a detail panel opens up.
+
+[JAMIE]
+That sounds very familiar if you have ever used Excel or Google Sheets. What about the Board view? I hear people talk about Kanban boards all the time.
+
+[ALEX]
+The Board view organizes work into columns based on status. You usually have columns for Todo, In Progress, and Done. Visually, issues look like little index cards, and people drag and drop them from column to column as work progresses.
+
+[JAMIE]
+Wait, drag and drop? That is usually completely inaccessible for me. How do I move a card if I am using a screen reader?
+
+[ALEX]
+You do not have to drag and drop at all. The columns on the board are just visual representations of the Status field. To move a card, you just navigate to it using your arrow keys, and press Enter to open its detail panel. Navigate to the Status dropdown field, and change it from Todo to In Progress. Press Escape to close the panel, and the card instantly moves to the correct column on the board. 
+
+[JAMIE]
+Oh that is clever! I am just editing a database record, and the visual board updates itself. I do not need to worry about simulating mouse drags. 
+
+[ALEX]
+Exactly. The interface is completely decoupled from the data. The third layout is the Roadmap view, which is a timeline or Gantt chart. It is very visual, showing bars spanning across calendar dates. While the visual chart itself is complex, remember that the underlying data is exactly the same. You can always switch back to the Table view to read and edit the dates accessibly.
+
+[JAMIE]
+I love that. The data is the data, no matter how it is drawn on the screen. Now, I know you can add custom fields to projects, right? Like, if I want to track story points or a specific QA status?
+
+[ALEX]
+Yes. In the Table view, you can navigate to the add column button and create your own fields. You can make text fields, number fields, date fields, or single select dropdowns. It makes the project incredibly customizable. 
+
+[JAMIE]
+And I read in the course material about automations. Is it true I can set up a project so I never have to manually add issues to it?
+
+[ALEX]
+Yes. One of the best features for maintainers is the Auto-add workflow. In the project settings, you can define a filter. For example, you can tell the project, anytime a new issue is opened in these five repositories, if it has the label quote accessibility quote, automatically add it to this project and set its status to Todo.
+
+[JAMIE]
+That is amazing. The issue is filed, the label applies the category, and the project automation routes it directly to my team's to-do list. No manual triage required.
+
+[PAUSE]
+
+[ALEX]
+So let us bring this all together. Jamie, how would you summarize how labels, milestones, and projects work as a system?
+
+[JAMIE]
+OK, let me try. If I am working on an issue, I give it a label to say what kind of work it is, like a bug or documentation. I assign it to a milestone to say when it needs to be delivered, like the Hackathon Day 1 release. And I put it in a project to track its daily status, like In Progress or Blocked. 
+
+[ALEX]
+That is a flawless summary. You just described the complete organizational layer of GitHub. Labels are the what. Milestones are the when. Projects are the status.
+
+[JAMIE]
+I have one more question. In the source material, there was a mention of something called Accessibility Agents and a command called slash project dash status. What is that?
+
+[ALEX]
+Ah, yes. If you are using GitHub Copilot Chat in VS Code, and you have the Accessibility Agents extension installed, you can type slash project dash status followed by the name of your project. Copilot will reach out to GitHub, read the project board, and generate a plain text summary right in your editor. 
+
+[JAMIE]
+Wait, so I do not even have to open my browser?
+
+[ALEX]
+Nope. It will tell you how many items are in each column, who is assigned to them, and it will even flag issues that have been stuck in the In Progress column for too long. It is a fantastic way to get a snapshot of the board during a daily standup meeting, completely accessibly.
+
+[JAMIE]
+I wish I had known that when I started. It saves so much context switching between the editor and the browser.
+
+[ALEX]
+It really does. Labeling and organizing your work properly is not just busywork. It is configuring the input layer that all these automated tools and AI agents depend on. If you do not apply labels clearly, the automations cannot route your work correctly. 
+
+[JAMIE]
+Garbage in, garbage out. 
+
+[ALEX]
+Exactly. Let us wrap up with some concrete takeaways for our listeners. 
+
+First, labels categorize your work. They have colors, but your screen reader relies on their text names. Use them to filter and search your issues.
+
+[JAMIE]
+Second, milestones group your work toward a deadline. When you use the Closes keyword in your pull request, merging it will automatically update your milestone progress. And remember, when entering due dates, just type the date in year dash month dash day format to avoid the calendar widget.
+
+[ALEX]
+Third, GitHub Projects are the master control room. They can span multiple repositories. Use the Table view for highly accessible, structured navigation, and update the Status field to move items across the Kanban board without needing to drag and drop.
+
+[JAMIE]
+This has been incredibly helpful. My desk drawer is finally organized into a proper filing cabinet. What are we covering next time?
+
+[ALEX]
+Now that we have hundreds of issues organized across multiple projects, people are going to start commenting on them. And

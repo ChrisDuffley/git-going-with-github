@@ -22,7 +22,7 @@ learning-room/                  ← workshop repository root
 │   │   ├── accessibility-bug.yml ← accessibility bug report YAML form
 │   │   └── feature-request.yml ← feature/improvement request YAML form
 │   ├── PULL_REQUEST_TEMPLATE.md ← PR template with accessibility checklist
-│   ├── agents/                 ← Accessibility Agents - six Copilot agents
+│   ├── agents/                 ← Accessibility Agents - 55 Copilot agents across 3 teams
 │   │   ├── daily-briefing.agent.md
 │   │   ├── issue-tracker.agent.md
 │   │   ├── pr-review.agent.md
@@ -30,14 +30,14 @@ learning-room/                  ← workshop repository root
 │   │   ├── insiders-a11y-tracker.agent.md
 │   │   ├── template-builder.agent.md
 │   │   └── preferences.example.md
-│   └── prompts/                ← 28 slash commands for Copilot Chat
+│   └── prompts/                ← 54+ slash commands for Copilot Chat
 │       ├── a11y-update.prompt.md
 │       ├── create-issue.prompt.md
 │       ├── daily-briefing.prompt.md
 │       ├── explain-code.prompt.md
 │       ├── review-pr.prompt.md
 │       ├── triage.prompt.md
-│       └── ... (22 more - see docs/appendix-w-accessibility-agents-reference.md)
+│       └── ... (48 more - see docs/appendix-v-accessibility-agents-reference.md)
 ├── docs/                       ← full workshop curriculum (16 chapters + appendices A-X)
 │   ├── 00-pre-workshop-setup.md
 │   ├── 01-understanding-github-web-structure.md

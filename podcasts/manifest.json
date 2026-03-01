@@ -10,7 +10,7 @@
     ],
     "bundle": "ep00-welcome.md",
     "audio": "ep00-welcome.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 1,
@@ -224,14 +224,14 @@
     "number": 17,
     "slug": "accessibility-agents",
     "title": "Accessibility Agents",
-    "description": "Six agents, 28 slash commands, custom agents, and agentic accessibility workflows.",
+    "description": "55 agents across 3 teams and 5 platforms, 54+ slash commands, custom agents, and agentic accessibility workflows.",
     "duration": "15-18 min",
     "sources": [
       "16-accessibility-agents.md"
     ],
     "bundle": "ep17-accessibility-agents.md",
     "audio": "ep17-accessibility-agents.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 18,
@@ -510,14 +510,14 @@
     "number": 39,
     "slug": "accessibility-agents-reference",
     "title": "Accessibility Agents - Complete Reference",
-    "description": "All six agents, all 28 slash commands, customization, and troubleshooting.",
+    "description": "All 55 agents, all 54+ slash commands, customization, and troubleshooting.",
     "duration": "15-18 min",
     "sources": [
       "appendix-v-accessibility-agents-reference.md"
     ],
     "bundle": "ep39-accessibility-agents-reference.md",
     "audio": "ep39-accessibility-agents-reference.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 40,

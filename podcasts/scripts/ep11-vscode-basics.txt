@@ -1,0 +1,271 @@
+[ALEX]
+Welcome to Git Going with GitHub, the audio learning series for blind and low vision developers discovering the world of open source collaboration. I am Alex, and I am thrilled to be your guide.
+
+[JAMIE]
+And I am Jamie. I am here to ask the questions, share my own learning moments, and hopefully make this journey a little smoother for you. I learned GitHub about two years ago, and I still remember exactly what it felt like to encounter all of this for the first time. 
+
+[ALEX]
+Today we are diving into Episode 11, titled VS Code Setup and Accessibility. We have spent the last few episodes, and all of Day 1 of our workshop, exploring the GitHub browser interface. But today, we transition into our primary authoring environment. 
+
+[JAMIE]
+Before we get too far in, a quick reminder. Back in Episode 1, we asked everyone to install VS Code and Git on their machines. If you have not done that yet, you might want to revisit that first episode. But even if you have not installed anything, you can still follow along today, because we are going to start with a version of VS Code that requires absolutely no installation.
+
+[ALEX]
+That is exactly right. But let us start at the very beginning. What exactly is VS Code? VS Code, or Visual Studio Code, is a free, extensible code editor built by Microsoft. 
+
+[JAMIE]
+When you say extensible, you mean we can add things to it, right?
+
+[ALEX]
+Precisely. Think of VS Code as an empty, highly organized workbench. Out of the box, it gives you a solid surface to work on and some basic tools. But the real magic happens when you bring your own specialized tools to that workbench. In VS Code, those tools are called extensions. You can add extensions for Python, for Markdown, for GitHub integration, and for artificial intelligence assistance. 
+
+[JAMIE]
+I remember when I first opened it, it felt a bit overwhelming because it can do so much. But you really only use the parts you need. 
+
+[ALEX]
+Exactly. And the best way to get comfortable with it is to try it out in a low pressure environment. That brings us to our first major concept today, which is the github dot dev experience. 
+
+[PAUSE]
+
+[ALEX]
+GitHub provides a fully functional, web based version of VS Code that runs entirely in your browser. You do not need to install an application, you do not need to configure a local environment. It is a seamless bridge between the GitHub website and the VS Code editor.
+
+[JAMIE]
+And the way you open it is basically magic. I wish I had known this trick on my very first day. 
+
+[ALEX]
+It is my favorite keyboard shortcut on the entire internet. When you are on any GitHub repository page, any file page, or any pull request page, all you have to do is press the period key. Just the period. No modifier keys, no Control, no Alt. Just period.
+
+[JAMIE]
+When you press it, the entire webpage transforms. The URL changes from github dot com to github dot dev, and suddenly you are sitting inside VS Code, right there in your browser tab. 
+
+[ALEX]
+It is like a secret portal. Imagine you are standing in a massive public library, which is the GitHub website. You are browsing the shelves, looking at books. Pressing the period key is like stepping through a hidden door that takes you instantly into a private reading room where you have your own desk, your own highlighters, and your own notebook, with that exact book sitting open in front of you. 
+
+[JAMIE]
+That is a great analogy. So if this browser version is so good, why did we have everyone install the desktop version back in Episode 1? 
+
+[ALEX]
+Because the browser version has a few limitations. You cannot run a terminal in the browser, which means you cannot run local command line scripts. You also cannot run advanced extensions like GitHub Copilot or our Accessibility Agents. The browser version is for quick edits, reading code, and getting comfortable with the interface. The desktop version is for heavy lifting. But the beautiful thing is that the keyboard shortcuts, the navigation, and the screen reader experience are identical in both. 
+
+[PAUSE]
+
+[ALEX]
+Speaking of the screen reader experience, let us talk about how to optimize VS Code for your screen reader. VS Code is built with web technologies, but it has a dedicated screen reader mode that fundamentally changes how the application communicates with you.
+
+[JAMIE]
+What exactly does screen reader mode change? Does it just make things louder?
+
+[ALEX]
+Not at all. It is more like putting the editor into a specialized translation mode. In a visual interface, a lot of information is conveyed through layout. A red squiggly line under a word, a popup box that appears when you hover over a function, or a ghost text suggestion for auto complete. Screen reader mode takes all of that visual decoration and translates it into structured, accessible formats. It suppresses visual noise, it optimizes how keyboard focus moves, and it routes dynamic information into what are called ARIA live regions, so your screen reader announces them naturally.
+
+[JAMIE]
+How do we turn this mode on? 
+
+[ALEX]
+On Windows, you press Shift plus Alt plus F1. On a Mac, you press Shift plus Option plus F1. When you press this, VS Code will announce Screen Reader Optimized. 
+
+[JAMIE]
+I remember doing that. And if you are using NVDA or JAWS on Windows, or VoiceOver on a Mac, VS Code usually detects it and turns this mode on automatically. But it is always good to know the manual shortcut just in case. 
+
+[ALEX]
+Absolutely. And once you are in screen reader mode, you are going to want to know how to find your way around. VS Code is a complex application with many different panels. Sometimes you might land somewhere and think, what can I even do here? 
+
+[JAMIE]
+Oh, that happened to me all the time. I would get stuck in a panel and have no idea what keyboard commands were available to me. 
+
+[ALEX]
+That is why VS Code has a dedicated accessibility help dialog. You can open it by pressing Control plus Shift plus H. 
+
+[JAMIE]
+Control plus Shift plus H. What does that do?
+
+[ALEX]
+Think of it as a context aware tour guide. If you are focused inside the text editor and you press Control plus Shift plus H, a dialog opens that reads out a plain text list of all the keyboard shortcuts specifically meant for the editor. If you move your focus to the terminal and press Control plus Shift plus H, the dialog changes. Now it tells you the shortcuts for the terminal. It is completely tailored to exactly where your focus is at that exact moment.
+
+[JAMIE]
+That is brilliant. So you do not have to memorize a giant cheat sheet. You just ask the application what your options are right then and there. 
+
+[ALEX]
+Exactly. And there is a related feature called the Accessible View. While the help dialog tells you what commands you can use, the Accessible View helps you read dynamic content. If you trigger an auto complete suggestion, or an error message pops up, those can be hard to read if they disappear when you move your cursor. Pressing Alt plus F2 opens the Accessible View, which takes that fleeting message and puts it into a static, plain text document that you can read line by line at your own pace. 
+
+[PAUSE]
+
+[JAMIE]
+Okay, so we know how to ask for help, and we know how to read dynamic messages. But how do we actually tell VS Code to do things? There have to be hundreds of commands. 
+
+[ALEX]
+Thousands, actually. But you only need to memorize one keyboard shortcut to access all of them. It is the most important shortcut in the entire application. Control plus Shift plus P. Or Command plus Shift plus P on a Mac. This opens the Command Palette. 
+
+[JAMIE]
+The Command Palette is my absolute favorite feature. I like to think of it as the steering wheel, or maybe a universal remote control for the whole editor. 
+
+[ALEX]
+Universal remote is the perfect comparison. When you press Control plus Shift plus P, a search input field appears. You just type what you want to do in plain English. If you want to change your theme, you type the word theme. If you want to format your code, you type format. If you want to open your settings, you type settings. You use your up and down arrow keys to review the matching commands, and press Enter to execute one. 
+
+[JAMIE]
+The best part is that when you find a command in the list, it also announces the keyboard shortcut for that command if one exists. So by using the Command Palette, you slowly teach yourself the shortcuts for the things you do most often. 
+
+[ALEX]
+Exactly. It removes the burden of memorization. If you ever feel lost, just press Control plus Shift plus P and type what you are trying to achieve. 
+
+[PAUSE]
+
+[ALEX]
+Now let us talk about the structural layout of VS Code, so we understand how to navigate between its different areas. The interface is divided into a few primary regions. The most important one for navigation is called the Activity Bar. 
+
+[JAMIE]
+The Activity Bar. Is that like a main menu?
+
+[ALEX]
+Yes, think of the Activity Bar as the main hallway of your workshop, with doors leading to different specialized rooms. The Activity Bar contains several views. The main ones are the Explorer, Search, Source Control, and Extensions. 
+
+[JAMIE]
+Let us break those down. What is the Explorer?
+
+[ALEX]
+The Explorer is your file tree. It shows you all the folders and files in your current project. You open it by pressing Control plus Shift plus E. Once there, you use your up and down arrows to navigate through your files, right arrow to expand a folder, and left arrow to collapse it. Pressing Enter on a file opens it in the editor. 
+
+[JAMIE]
+Next in the Activity Bar is Search. 
+
+[ALEX]
+Right. You open Search with Control plus Shift plus F. This is a global search that looks through every single file in your entire project. You type a word, and it gives you a list of every file and line number where that word appears. 
+
+[JAMIE]
+Then we have Source Control. 
+
+[ALEX]
+You open Source Control with Control plus Shift plus G. The G stands for Git. This is where you review the changes you have made, stage your files, and write your commit messages. We will spend a lot of time here in the next episode.
+
+[JAMIE]
+And finally, the Extensions view. 
+
+[ALEX]
+You open the Extensions view with Control plus Shift plus X. This is the marketplace. It is where you search for new tools to add to your workbench. You just type the name of an extension, navigate to it in the list, and press Enter to install it. 
+
+[JAMIE]
+Okay, so that is four different shortcuts. Control plus Shift plus E for Explorer, F for Search, G for Git or Source Control, and X for Extensions. What happens after I open one of those and select a file? How do I get back to actually writing code?
+
+[ALEX]
+Great question. No matter where your focus is in VS Code, whether you are in the Explorer, the Search panel, or anywhere else, you can instantly move your focus back to your open file by pressing Control plus the number 1. 
+
+[JAMIE]
+Control plus 1. That is a lifesaver. It is like an emergency eject button that drops you right back into your text editor. 
+
+[ALEX]
+Exactly. Now, there is one more major area of the application we need to discuss, and that is the integrated terminal. 
+
+[JAMIE]
+Ah, the terminal. This is the part that used to intimidate me. 
+
+[ALEX]
+It is very normal to feel intimidated by the terminal, but it is incredibly powerful. You open the terminal by pressing Control plus the Backtick key. The Backtick is that little key usually located right above the Tab key on your keyboard. 
+
+[JAMIE]
+What exactly is a terminal, for those who might not have used one before?
+
+[ALEX]
+A terminal is a direct, text based phone line to your computer's operating system. Instead of navigating through folders and clicking buttons to run programs, you type commands directly. When we use Git to push our code to GitHub, or when we run scripts to test our Accessibility Agents, we will do that by typing commands into the terminal. 
+
+[JAMIE]
+And because it is integrated right into VS Code, you do not have to open a separate application. You can have your code open in the editor area, and your terminal open right below it, and just move your focus back and forth. 
+
+[ALEX]
+Exactly. Control plus 1 moves your focus to the editor. Control plus Backtick moves your focus to the terminal. You can toggle between them instantly. 
+
+[PAUSE]
+
+[JAMIE]
+Alex, there is something that tripped me up a lot when I was first starting. It is the difference between opening a file and opening a folder. 
+
+[ALEX]
+That is a very common point of confusion, and it is crucial to understand how VS Code handles this. 
+
+[JAMIE]
+I used to just find a file on my computer, press Enter to open it, and it would open in VS Code. But then my global search would not work, and my Git source control panel would be completely empty. 
+
+[ALEX]
+That happens because opening a single file is very different from opening a folder, which VS Code calls a workspace. Let us go back to our analogy of the filing cabinet. 
+
+[JAMIE]
+Okay, I am ready.
+
+[ALEX]
+Opening a single file is like walking up to a massive filing cabinet, pulling out one single sheet of paper, and setting it on your desk. You can read that paper. You can write on that paper. But you have no context about the rest of the project. You cannot search across other documents, because they are still locked inside the cabinet. 
+
+[JAMIE]
+That makes sense. So what is opening a folder?
+
+[ALEX]
+Opening a folder is like bringing the entire filing cabinet to your desk and unlocking all the drawers. When you open a folder in VS Code, it reads all the files inside. It understands the relationships between them. It activates the Source Control panel so you can track changes across the whole project. It allows the global search to scan everything at once. 
+
+[JAMIE]
+So the rule of thumb is, when you are working on a project, always open the top level folder for that project, rather than opening individual files one by one. 
+
+[ALEX]
+Exactly. You can do this from the Command Palette by typing Open Folder, or by using the File menu. Once the folder is open, you use the Explorer, with Control plus Shift plus E, to navigate to the individual files inside it. 
+
+[PAUSE]
+
+[ALEX]
+Let us move on to some specific accessibility settings that every screen reader user should know about. We already talked about turning screen reader mode on with Shift plus Alt plus F1. Behind the scenes, this changes a setting called editor dot accessibility support. 
+
+[JAMIE]
+Editor dot accessibility support. Are there other settings we should change?
+
+[ALEX]
+Yes. VS Code is incredibly customizable. You can control exactly how much it talks to you. For instance, there are settings that control whether it announces when you hover over a word, or whether it reads out the inline suggestions from Copilot. If you find the editor is being too chatty, you can open your settings and search for accessibility verbosity. You will find toggles to reduce the amount of spoken feedback for different areas.
+
+[JAMIE]
+What about non spoken feedback? I have noticed VS Code makes these little chiming sounds sometimes. 
+
+[ALEX]
+Those are called audio cues, or accessibility signals. They are one of the most powerful features for blind developers. Think of them like the sounds your car makes. 
+
+[JAMIE]
+Like the click of a turn signal, or the beep when you are reversing?
+
+[ALEX]
+Exactly. They give you environmental awareness without interrupting your screen reader's speech. For example, if you navigate to a line of code that contains an error, VS Code will play a specific, sharp audio tone. If you navigate to a line with a warning, it plays a slightly lower, softer tone. 
+
+[JAMIE]
+That is so much faster than waiting for the screen reader to announce line has error at the end of every sentence. 
+
+[ALEX]
+It is. And my favorite use of audio cues is during file comparisons, which brings us to our final major concept for today. The Accessible Diff Viewer. 
+
+[JAMIE]
+A diff is a record of what has changed in a file, right? Like what was added and what was deleted. 
+
+[ALEX]
+Yes. When you collaborate on open source, you spend a lot of time reviewing diffs. In a visual interface, a diff is usually presented as a side by side view. The original file is on the left, and the modified file is on the right. Deleted lines are highlighted in red, and added lines are highlighted in green. 
+
+[JAMIE]
+Which is essentially a visual spot the difference game. That sounds like a nightmare to navigate with a screen reader. 
+
+[ALEX]
+It can be very disorienting. That is why VS Code created the Accessible Diff Viewer. Instead of a side by side layout, it flattens the changes into a linear reading list. 
+
+[JAMIE]
+How do we open it? 
+
+[ALEX]
+When you have a diff open, you can either open the Command Palette and type Accessible Diff Viewer, or you can simply press F7. This drops you into the first block of changes. 
+
+[JAMIE]
+What does it actually sound like when you are reading it? 
+
+[ALEX]
+It is beautifully structured. It announces the line number, and then prefixes every line with its status. It will say Unchanged, followed by the text, to give you context. Then it will say Line removed, followed by the old text. Then Line added, followed by the new text. You just use your up and down arrows to read through the history of the file exactly as a story. 
+
+[JAMIE]
+And you mentioned audio cues play a role here too?
+
+[ALEX]
+Yes! If you have your diff audio cues turned on, as you arrow down through the changes, you will hear a high pitched chime when you land on an added line, and a low pitched chime when you land on a deleted line. You receive the change type information through sound before the screen reader even begins to speak the line text. 
+
+[JAMIE]
+That is incredible. It makes reviewing a pull request so much more efficient. 
+
+[PAUSE]

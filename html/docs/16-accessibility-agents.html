@@ -37,7 +37,7 @@
 <blockquote>
 <p><strong>Day 2, Block 3 Material</strong></p>
 <p><strong>Before you read this guide:</strong></p>
-<p><a href="https://github.com/community-access/accessibility-agents">Accessibility Agents</a> is a growing open source ecosystem: <strong>55 AI-powered agents</strong> organized into <strong>three teams</strong> (Accessibility, GitHub Workflow, and Developer Tools), running on <strong>five platforms</strong> (GitHub Copilot, Claude Code, Gemini CLI, Claude Desktop, and Codex CLI). During this workshop, you will use six of the GitHub Workflow agents hands-on. But the larger ecosystem is where your creative contribution matters.</p>
+<p><a href="https://github.com/community-access/accessibility-agents">Accessibility Agents</a> is a growing open source ecosystem: <strong>55 AI-powered agents</strong> organized into <strong>three teams</strong> (Accessibility, GitHub Workflow, and Developer Tools), running on <strong>five platforms</strong> (GitHub Copilot, Claude Code, Gemini CLI, Claude Desktop, and Codex CLI). This chapter introduces the full landscape. Explore the agents that match your interests and workflows - there is no fixed subset you are required to use.</p>
 <p><strong>The agents are only useful if you have already done the work manually.</strong> An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff is useless to someone who has never read a diff. The agent does not teach you the skill - it multiplies a skill you already have.</p>
 <p>Day 1 built those skills. This chapter shows how to amplify them with automation - and how you can contribute new agents, improve existing ones, and shape the project&#39;s future.</p>
 </blockquote>
@@ -51,48 +51,43 @@
 <li><input aria-label="GitHub Copilot subscription or organization access (classroom/free tier)" disabled="" type="checkbox"> GitHub Copilot subscription or organization access (classroom/free tier)</li>
 <li><input aria-label="" disabled="" type="checkbox"> <code>.github/agents/</code> folder exists in your repository (or will create custom agents)</li>
 </ul>
-<h3>Workshop Agent Prerequisites (Complete Before Using That Agent)</h3>
-<p>The workshop focuses on six agents from the GitHub Workflow team. Each has a manual skill you must do first.</p>
+<h3>Agent Prerequisites (The &quot;Skill First&quot; Principle)</h3>
+<p>Every agent automates a skill you should already know by hand. Before using any agent, verify you have done the corresponding manual work. This table maps common agent categories to the skills they require:</p>
 <table>
 <thead>
 <tr>
-<th scope="col">Agent</th>
+<th scope="col">Agent Category</th>
 <th scope="col">You Must Have Done First</th>
 <th scope="col">Reference</th>
 </tr>
 </thead>
 <tbody><tr>
-<td><code>@daily-briefing</code></td>
-<td>Navigated repository, read issues and PRs, understood notifications</td>
-<td><a href="02-navigating-repositories.html">Ch 2</a>, <a href="09-notifications.html">Ch 9</a></td>
+<td>GitHub Workflow agents (<code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@pr-review</code>, <code>@analytics</code>)</td>
+<td>Navigated repositories, filed issues, reviewed PRs, explored Insights</td>
+<td><a href="02-navigating-repositories.html">Ch 2</a>, <a href="04-working-with-issues.html">Ch 4</a>, <a href="05-working-with-pull-requests.html">Ch 5</a></td>
 </tr>
 <tr>
-<td><code>@issue-tracker</code></td>
-<td>Filed at least 2 issues, applied labels, triaged lists</td>
-<td><a href="04-working-with-issues.html">Ch 4</a>, <a href="08-labels-milestones-projects.html">Ch 8</a></td>
-</tr>
-<tr>
-<td><code>@pr-review</code></td>
-<td>Manually reviewed 1+ PR diff, left inline comments</td>
-<td><a href="05-working-with-pull-requests.html">Ch 5</a>, <a href="14-accessible-code-review.html">Ch 14</a></td>
-</tr>
-<tr>
-<td><code>@analytics</code></td>
-<td>Explored Insights tab, understand repo metrics</td>
-<td><a href="02-navigating-repositories.html">Ch 2</a></td>
-</tr>
-<tr>
-<td><code>@insiders-a11y-tracker</code></td>
-<td>Filed an accessibility bug, applied WCAG labels</td>
+<td>Accessibility monitoring (<code>@insiders-a11y-tracker</code>)</td>
+<td>Filed an accessibility bug, applied WCAG labels, checked heading hierarchy</td>
 <td><a href="04-working-with-issues.html">Ch 4</a>, <a href="15-issue-templates.html">Ch 15</a></td>
 </tr>
 <tr>
-<td><code>@template-builder</code></td>
-<td>Designed a template manually, tested locally</td>
+<td>Template creation (<code>@template-builder</code>)</td>
+<td>Designed a template manually, tested field types</td>
 <td><a href="15-issue-templates.html#7-building-an-accessibility-bug-report-template">Ch 15</a></td>
 </tr>
+<tr>
+<td>Web accessibility auditing (<code>@web-accessibility-wizard</code>, <code>@contrast-master</code>, <code>@keyboard-navigator</code>, etc.)</td>
+<td>Understand WCAG success criteria, tested pages with a screen reader</td>
+<td><a href="appendix-c-accessibility-standards.html">Appendix C</a></td>
+</tr>
+<tr>
+<td>Document accessibility (<code>@word-accessibility</code>, <code>@pdf-accessibility</code>, etc.)</td>
+<td>Reviewed a document for accessibility issues manually</td>
+<td><a href="appendix-c-accessibility-standards.html">Appendix C</a></td>
+</tr>
 </tbody></table>
-<p><strong>The full ecosystem</strong> includes 55 agents across three teams - you are not limited to these six. See <a href="#3-the-ecosystem-55-agents-3-teams-5-platforms">Section 3</a> for the complete landscape.</p>
+<p>This is not an exhaustive list - it illustrates the principle. Before running any agent, ask yourself: <em>could I do this task manually right now?</em> If the answer is no, learn the manual skill first.</p>
 <p><strong>Estimated time for this chapter:</strong> 1.5 hours (including exercises)</p>
 <hr>
 <h2>Table of Contents</h2>
@@ -100,16 +95,16 @@
 <li><a href="#1-the-principle-skill-first-agent-second">The Principle: Skill First, Agent Second</a></li>
 <li><a href="#2-setup-and-configuration">Setup and Configuration</a></li>
 <li><a href="#3-the-ecosystem-55-agents-3-teams-5-platforms">The Ecosystem: 55 Agents, 3 Teams, 5 Platforms</a></li>
-<li><a href="#4-your-workshop-agents--hands-on-reference">Your Workshop Agents - Hands-On Reference</a></li>
+<li><a href="#4-agents-in-detail--hands-on-reference">Agents in Detail - Hands-On Reference</a></li>
 <li><a href="#5-slash-commands-and-prompts">Slash Commands and Prompts</a></li>
 <li><a href="#6-contributing-to-the-ecosystem">Contributing to the Ecosystem</a></li>
-<li><a href="#7-the-cloud-extension-agents-beyond-vs-code">The Cloud Extension: Agents Beyond VS Code</a></li>
+<li><a href="#7-the-bigger-picture-teams-orchestration-and-beyond-vs-code">The Bigger Picture: Teams, Orchestration, and Beyond VS Code</a></li>
 <li><a href="#8-github-desktop-github-cli-and-copilot-cli">GitHub Desktop, GitHub CLI, and Copilot CLI</a></li>
 </ol>
 <hr>
 <h2>1. The Principle: Skill First, Agent Second</h2>
 <p>Accessibility Agents is not a way to skip learning GitHub. It is a way to amplify skills you have already built through deliberate practice.</p>
-<p>The ecosystem now includes 55 agents across three specialized teams, running on five different AI platforms. That scale makes this principle even more important: every agent automates a sequence of steps you learned to do manually on Day 1. If you do not know those steps by hand, you cannot:</p>
+<p>The ecosystem includes 55 agents across three specialized teams, running on five different AI platforms. That scale makes this principle critical: every agent automates a sequence of steps you should already know how to do manually. If you do not know those steps by hand, you cannot:</p>
 <ul>
 <li>Verify that the agent&#39;s output is correct</li>
 <li>Catch when the agent misses context that only you have</li>
@@ -117,54 +112,19 @@
 <li>Know when the agent is confidently wrong</li>
 </ul>
 <p><strong>Every agent has a manual prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it.</strong></p>
-<p>During the workshop, you will use six agents from the GitHub Workflow team hands-on:</p>
-<table>
-<thead>
-<tr>
-<th scope="col">Agent</th>
-<th scope="col">Skill You Must Have Done Manually First</th>
-<th scope="col">See</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>@daily-briefing</code></td>
-<td>Navigate repository activity, read notifications, understand issue and PR state</td>
-<td><a href="02-navigating-repositories.html">Navigating Repos</a>, <a href="09-notifications.html">Notifications</a></td>
-</tr>
-<tr>
-<td><code>@issue-tracker</code></td>
-<td>File at least one issue using the full manual process; apply labels; triage a list</td>
-<td><a href="04-working-with-issues.html">Working with Issues</a>, <a href="08-labels-milestones-projects.html">Labels &amp; Milestones</a></td>
-</tr>
-<tr>
-<td><code>@pr-review</code></td>
-<td>Manually review at least one PR diff in the browser - read changed lines, leave inline comments</td>
-<td><a href="05-working-with-pull-requests.html">Working with Pull Requests</a></td>
-</tr>
-<tr>
-<td><code>@analytics</code></td>
-<td>Explore Insights for a repository; understand what contribution velocity and churn mean</td>
-<td><a href="02-navigating-repositories.html">Navigating Repos</a>, <a href="04-working-with-issues.html">Working with Issues</a></td>
-</tr>
-<tr>
-<td><code>@insiders-a11y-tracker</code></td>
-<td>File an accessibility bug report; apply WCAG labels; manually check a Markdown file for heading hierarchy</td>
-<td><a href="04-working-with-issues.html">Working with Issues</a>, <a href="15-issue-templates.html">Issue Templates</a></td>
-</tr>
-<tr>
-<td><code>@template-builder</code></td>
-<td>Design a template manually (understand field types, YAML structure, testing); create a template for your own project</td>
-<td><a href="15-issue-templates.html#7-building-an-accessibility-bug-report-template">Issue Templates</a></td>
-</tr>
-</tbody></table>
-<p>But these are six out of 55. The other 49 agents - including 26 dedicated to accessibility auditing across web, document, and mobile platforms - follow the same principle. See <a href="#3-the-ecosystem-55-agents-3-teams-5-platforms">Section 3</a> for the full landscape.</p>
-<p>The facilitator introduces one agent at a time in Block 3, and always asks the same question before each one:</p>
+<p>This applies across all three teams and all 55 agents:</p>
+<ul>
+<li><strong>GitHub Workflow agents</strong> automate repository navigation, issue triage, PR review, and contribution analytics - skills you practiced on Day 1</li>
+<li><strong>Accessibility agents</strong> automate WCAG auditing, contrast checking, keyboard navigation review, and document scanning - knowledge from your accessibility training and the standards in <a href="appendix-c-accessibility-standards.html">Appendix C</a></li>
+<li><strong>Developer Tools agents</strong> automate accessible coding patterns for Python, wxPython, and desktop applications - skills from your development experience</li>
+</ul>
+<p>Before running any agent, the facilitator asks the same question:</p>
 <blockquote>
 <p><em>&quot;What would you do if you had to do this step manually right now?&quot;</em></p>
 </blockquote>
-<p>That question is not rhetorical. Answer it before running the agent. If you cannot answer it, read the referenced guide section first.</p>
+<p>That question is not rhetorical. Answer it before running the agent. If you cannot answer it, learn the manual skill first.</p>
 <blockquote>
-<p><strong>Innovation prompt:</strong> As you work through each agent, think about which of the other 49 agents in the ecosystem might help with workflows you encounter regularly. On Day 2, you will have the opportunity to contribute improvements, new patterns, or entirely new agents back to the project.</p>
+<p><strong>Exploration prompt:</strong> As you browse the <a href="#3-the-ecosystem-55-agents-3-teams-5-platforms">full agent ecosystem</a>, identify which agents match workflows you already do by hand. Those are your starting points. On Day 2, you will also have the opportunity to contribute improvements, new patterns, or entirely new agents back to the project.</p>
 </blockquote>
 <hr>
 <h2>2. Setup and Configuration</h2>
@@ -394,7 +354,7 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <p>This directly connects to the <code>/draft-release</code> slash command in Accessibility Agents - use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.</p>
 <hr>
 <h2>3. The Ecosystem: 55 Agents, 3 Teams, 5 Platforms</h2>
-<p>Before diving into the six agents you will use hands-on, step back and see the full landscape. Accessibility Agents is not six tools - it is an ecosystem of 55 specialized agents organized into three teams, each addressing a different dimension of accessible software development.</p>
+<p>Accessibility Agents is an ecosystem of 55 specialized agents organized into three teams, each addressing a different dimension of accessible software development. Browse all three teams below, then choose the agents that match your current skills and interests.</p>
 <h3>Team 1: Accessibility (26 agents)</h3>
 <p>These agents audit, fix, and enforce accessibility across web, document, and mobile platforms.</p>
 <table>
@@ -510,74 +470,61 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 </tr>
 </tbody></table>
 <h3>Team 2: GitHub Workflow (12 agents)</h3>
-<p>These agents automate GitHub operations - the six you use in this workshop plus six more.</p>
+<p>These agents automate GitHub operations - issue triage, PR review, contribution analytics, and repository management.</p>
 <table>
 <thead>
 <tr>
 <th scope="col">Agent</th>
 <th scope="col">What It Does</th>
-<th scope="col">Workshop Use</th>
 </tr>
 </thead>
 <tbody><tr>
 <td><code>@daily-briefing</code></td>
 <td>Morning situation report across all repositories</td>
-<td>Block 3 hands-on</td>
 </tr>
 <tr>
 <td><code>@issue-tracker</code></td>
 <td>Find, prioritize, triage, and draft replies to issues</td>
-<td>Block 3 hands-on</td>
 </tr>
 <tr>
 <td><code>@pr-review</code></td>
 <td>Generate structured PR reviews with risk assessment</td>
-<td>Block 3 hands-on</td>
 </tr>
 <tr>
 <td><code>@analytics</code></td>
 <td>Contribution velocity, review turnaround, code hotspots</td>
-<td>Block 3 hands-on</td>
 </tr>
 <tr>
 <td><code>@insiders-a11y-tracker</code></td>
 <td>Monitor accessibility-sensitive changes in repositories</td>
-<td>Block 3 hands-on</td>
 </tr>
 <tr>
 <td><code>@template-builder</code></td>
 <td>Interactive issue template wizard via Ask Questions</td>
-<td>Block 3 hands-on</td>
 </tr>
 <tr>
 <td><code>@github-hub</code></td>
 <td>Central hub for all GitHub operations</td>
-<td>-</td>
 </tr>
 <tr>
 <td><code>@repo-admin</code></td>
 <td>Repository settings, branch protection, rulesets</td>
-<td>-</td>
 </tr>
 <tr>
 <td><code>@team-manager</code></td>
 <td>Team membership, permissions, and organization management</td>
-<td>-</td>
 </tr>
 <tr>
 <td><code>@contributions-hub</code></td>
 <td>Contribution tracking and contributor recognition</td>
-<td>-</td>
 </tr>
 <tr>
 <td><code>@repo-manager</code></td>
 <td>Multi-repository operations and cross-repo workflows</td>
-<td>-</td>
 </tr>
 <tr>
 <td><code>@nexus</code></td>
 <td>Cross-agent orchestration and workflow coordination</td>
-<td>-</td>
 </tr>
 </tbody></table>
 <h3>Team 3: Developer Tools (6 agents)</h3>
@@ -687,8 +634,9 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 </ul>
 <p><strong>Your contribution could be the next item that ships.</strong> Every agent started as one person&#39;s idea and one pull request.</p>
 <hr>
-<h2>4. Your Workshop Agents - Hands-On Reference</h2>
-<p>Open each agent file in VS Code to read its full instructions before using it: <code>.github/agents/[name].agent.md</code></p>
+<h2>4. Agents in Detail - Hands-On Reference</h2>
+<p>This section walks through several agents in depth so you can see how they work, what they produce, and how to evaluate their output. These examples use GitHub Workflow agents because they build directly on Day 1 skills - but the same patterns apply to every agent in the ecosystem. After working through these examples, explore agents from any team that match your interests.</p>
+<p>Open any agent file in VS Code to read its full instructions: <code>.github/agents/[name].agent.md</code></p>
 <h3>Two Types of Agents</h3>
 <p>Before diving in, it helps to know that custom agents fall into two categories - this distinction affects what tool permissions they need and what they can do:</p>
 <p><strong>Informational agents</strong> search, analyze, and report. They respond in chat without modifying files. Examples: <code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@analytics</code>. These agents need only read and search tools (like <code>github/search_issues</code>, <code>github/issue_read</code>) - they are safer to trust with broad repository access and are simpler to build.</p>
@@ -1792,15 +1740,56 @@ git push origin main</code></pre>
 <ul>
 <li>Browse the <a href="#3-the-ecosystem-55-agents-3-teams-5-platforms">full agent list</a> - which agents solve problems you face regularly?</li>
 <li>Try an Accessibility team agent: <code>@contrast-master check this page</code> or <code>@alt-text-headings review this file</code></li>
+<li>Try a Developer Tools agent: <code>@python-specialist review this module for accessibility</code> or <code>@desktop-a11y-specialist audit this dialog</code></li>
 <li>Think about what is missing: what agent would you build if you could?</li>
-<li>Use <code>@pr-review</code> to draft code review comments (manual then agent then refine)</li>
-<li>Use <code>@issue-tracker</code> to find and prioritize issues (manual then agent then refine)</li>
-<li>Use <code>@daily-briefing</code> to summarize your daily activity (manual then agent then refine)</li>
+<li>Pick any agent that interests you and run it - the pattern is always the same: <strong>manual skill first, agent second, you refine and decide</strong></li>
 </ul>
-<p>Each agent follows the same pattern: <strong>you know the manual way, the agent suggests, you refine and decide.</strong></p>
-<p>That&#39;s Accessibility Agents&#39; promise: not to replace your thinking, but to amplify your skills - and to grow through the contributions of everyone who uses it.</p>
+<p>That is Accessibility Agents&#39; promise: not to replace your thinking, but to amplify your skills across all 55 agents - and to grow through the contributions of everyone who uses it.</p>
 <hr>
-<h2>7. The Cloud Extension: Agents Beyond VS Code</h2>
+<h2>7. The Bigger Picture: Teams, Orchestration, and Beyond VS Code</h2>
+<p>The 55 agents are not 55 independent tools. They are organized into three teams that work together, and several orchestrator agents exist specifically to coordinate multi-agent workflows.</p>
+<h3>How the Three Teams Connect</h3>
+<p>In practice, a single task often spans multiple teams:</p>
+<ul>
+<li>You ask <code>@daily-briefing</code> (GitHub Workflow) for your morning report. It flags a PR that changes ARIA attributes.</li>
+<li>You ask <code>@pr-review</code> (GitHub Workflow) to generate a structured review of that PR. The review notes potential accessibility impact.</li>
+<li>You invoke <code>@aria-specialist</code> (Accessibility) to deep-check the ARIA changes. It identifies a missing <code>aria-expanded</code> state on a disclosure widget.</li>
+<li>You fix the issue using patterns from <code>@desktop-a11y-specialist</code> (Developer Tools) if it is a desktop application, or directly in the HTML if it is a web project.</li>
+</ul>
+<p>No single agent covers the entire workflow. The teams complement each other: GitHub Workflow agents surface <em>what happened</em>, Accessibility agents evaluate <em>whether it is correct</em>, and Developer Tools agents help you <em>implement the fix</em>.</p>
+<h3>Orchestrator Agents</h3>
+<p>Four agents are specifically designed to coordinate others:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Agent</th>
+<th scope="col">Team</th>
+<th scope="col">What It Orchestrates</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>@nexus</code></td>
+<td>GitHub Workflow</td>
+<td>Cross-agent coordination for complex, multi-step workflows</td>
+</tr>
+<tr>
+<td><code>@accessibility-lead</code></td>
+<td>Accessibility</td>
+<td>Delegates multi-agent accessibility audits to specialist agents</td>
+</tr>
+<tr>
+<td><code>@web-accessibility-wizard</code></td>
+<td>Accessibility</td>
+<td>Guided WCAG audit that invokes contrast, keyboard, forms, and other specialists</td>
+</tr>
+<tr>
+<td><code>@document-accessibility-wizard</code></td>
+<td>Accessibility</td>
+<td>Guided document audit across Word, Excel, PowerPoint, and PDF</td>
+</tr>
+</tbody></table>
+<p>You do not need to use orchestrators to get value from individual agents. But when a task is complex enough to span multiple agents, orchestrators save you the work of manually chaining requests.</p>
+<h3>Running Agents Beyond VS Code</h3>
 <p>Accessibility Agents&#39; agents run on your machine, in your editor, when you ask for them. That is one scope.</p>
 <p>The same Markdown-authored pattern extends further:</p>
 <h3>Scope 1: Your Editor (Accessibility Agents)</h3>
@@ -1828,6 +1817,8 @@ git push origin main</code></pre>
 </ul>
 <p>No VS Code required. No local machine required. The workflow runs whether or not anyone is watching - when an issue is opened at 3am, the agentic response fires.</p>
 <p><strong>The link between Accessibility Agents and Agentic Workflows:</strong> Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Accessibility Agents pattern <em>is</em> a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.</p>
+<h3>Go Deeper</h3>
+<p>For full documentation on every agent, all 54+ slash commands, customization formats, and troubleshooting, see <a href="appendix-v-accessibility-agents-reference.html">Appendix V: Accessibility Agents Reference</a>. For the audio version, listen to <a href="../PODCASTS.html">Episode 39: Accessibility Agents - Complete Reference</a>.</p>
 <p><strong>Example: Auto-triage accessibility issues</strong></p>
 <p>File: <code>.github/workflows/auto-triage-a11y.md</code></p>
 <pre><code class="hljs language-markdown">---

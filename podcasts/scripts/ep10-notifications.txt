@@ -1,0 +1,303 @@
+[ALEX]
+Welcome to Git Going with GitHub. This is episode 10, titled Notifications and Mentions. I am your host, Alex, and as always, I am joined by my co-host, Jamie. 
+
+[JAMIE]
+Hi everyone! I am so ready for this one. We have been opening issues, we have been submitting pull requests, and now I am staring at my screen wondering, how do I actually know when someone replies to me? 
+
+[ALEX]
+That is exactly what we are covering today. In episode 5, we learned how to create issues and leave comments. In episode 6, we tackled pull requests and how to request code reviews. But open source collaboration is asynchronous. You do not just sit there waiting for a reply. You close the tab, you go do something else, and GitHub needs a way to tap you on the shoulder when it is your turn to act. 
+
+[JAMIE]
+And let me guess, that tap on the shoulder is a notification. 
+
+[ALEX]
+Spot on. Today we are going entirely into how GitHub generates notifications, the difference between participating in a conversation and just watching one, how to use mentions to get someone else's attention, and most importantly, how to manage your notification inbox so you do not get completely overwhelmed. 
+
+[JAMIE]
+Overwhelmed is the right word. When I first started using GitHub about two years ago, I somehow managed to subscribe to a massive project. I woke up to something like four hundred emails in one night. I thought I had broken the internet. 
+
+[ALEX]
+That is a rite of passage, Jamie! Almost every developer has done that. We are going to teach our listeners exactly how to avoid your four-hundred-email mistake. We will talk about email notifications versus web notifications, and we will even touch on how to use the g h command line interface for checking your alerts. 
+
+[PAUSE]
+
+[ALEX]
+Let us start with the basics. How does GitHub decide to send you a notification in the first place? Think of GitHub like a giant, busy post office. You only get mail in two scenarios. Scenario one, someone addresses a letter directly to you. Scenario two, you subscribed to a magazine. 
+
+[JAMIE]
+Okay, I like that. So what counts as a letter addressed directly to me? 
+
+[ALEX]
+There are a few specific triggers. The most common is a mention. This is when someone types the at symbol followed by your username in an issue, a pull request, or a discussion. 
+
+[JAMIE]
+So if my username is Jamie Codes, someone typing at Jamie Codes is literally tapping me on the shoulder in the middle of a crowded room. 
+
+[ALEX]
+Exactly. And I love that name because you are literally requesting their attention. Another trigger is a review request. If someone opens a pull request and adds you as a reviewer, GitHub notifies you. You also get notified if someone assigns an issue or a pull request directly to you. 
+
+[JAMIE]
+What about when my code fails? I have definitely gotten alerts for that. 
+
+[ALEX]
+Yes, that is a Continuous Integration status notification, or C I status. If you submit a pull request and the automated tests run and fail, GitHub sends you a notification so you know you need to go fix your code. 
+
+[JAMIE]
+So those are the letters addressed directly to me. Mentions, review requests, assignments, and test failures. What about the magazine subscriptions? 
+
+[ALEX]
+That brings us to the concept of subscription levels on GitHub. For every single repository on GitHub, you can choose your relationship to it. This is controlled by a setting called Watch. 
+
+[JAMIE]
+Ah, the Watch button. This is where my four-hundred-email disaster happened. 
+
+[ALEX]
+Let us break down why that happened. There are four main subscription levels you can choose for any repository. The default, and the one we recommend for almost everything, is called Participating and at mentions. 
+
+[JAMIE]
+So if I have that setting, I only hear about things if I am already involved. Like if I commented on the issue, or if someone specifically mentions my name. 
+
+[ALEX]
+Correct. It is like being at a party and only turning your head when someone says your name or speaks directly to the group you are standing with. 
+
+[JAMIE]
+That sounds peaceful. What are the other options? 
+
+[ALEX]
+The next level is All Activity. If you select this, you will receive a notification for every single issue opened, every comment posted, every pull request created, and every release published in that repository. 
+
+[JAMIE]
+Which is exactly what I did. I clicked Watch on a hugely popular open source project, and suddenly I was listening to every single conversation happening in the entire building. 
+
+[ALEX]
+Exactly. You should really only use the All Activity setting for your own personal repositories, or for a project where you are a core maintainer and it is literally your job to read everything. Otherwise, it is just too much noise. 
+
+[JAMIE]
+What if I want the opposite? What if a project is sending me too much stuff and I want it to stop entirely? 
+
+[ALEX]
+Then you choose the Ignore setting. This means you will not get any notifications from that repository at all, even if someone mentions you. And finally, there is a Custom setting, which lets you get really specific. You can say, I only want to be notified when a new release is published, but ignore all the issues and pull requests. 
+
+[JAMIE]
+How do I actually change these settings? Say I am on a repository page right now. 
+
+[ALEX]
+If you are using a screen reader, navigate to the top of the repository page. You want to use your quick navigation to find the buttons. Press B to move through the buttons until you hear Watch, or it might say Unwatch if you are already subscribed. 
+
+[JAMIE]
+Got it. B for buttons. 
+
+[ALEX]
+Press Enter to open the Watch dropdown menu. Then, you simply use your up and down arrow keys to move through the four subscription options we just talked about. When you hear the one you want, press Enter to select it. The button label will update immediately to confirm your choice. 
+
+[JAMIE]
+Before we move on, I want to ask about another button that is right next to the Watch button. The Star button. New developers ask me about this all the time. Are watching and starring the same thing? 
+
+[ALEX]
+They are completely different, and it is a very common point of confusion. Starring a repository does absolutely nothing to your notifications. Zero. 
+
+[JAMIE]
+So what does it do? 
+
+[ALEX]
+Starring is basically a public bookmark and a high-five to the creator. When you activate the Star button, it saves that project to a list on your profile so you can find it later. It also increases the star count on the project, which is how the community measures popularity. But it does not subscribe you to any alerts. 
+
+[JAMIE]
+I love that. Starring is just a high-five. Watching is a subscription. So if I find a cool project and I just want to remember it, I star it. If I actually need to track the work happening in it, I watch it. 
+
+[ALEX]
+Perfectly summarized. 
+
+[PAUSE]
+
+[ALEX]
+Now that we know how notifications are generated, let us talk about how you actually create one for someone else. We mentioned earlier that you can tap someone on the shoulder using an at mention. 
+
+[JAMIE]
+Right. Typing the at symbol and then their username. 
+
+[ALEX]
+Yes. And you can do this anywhere there is a text box on GitHub. In an issue description, in a comment, in a pull request summary. When you publish that comment, GitHub immediately sends that person a notification. 
+
+[JAMIE]
+I use this all the time when I am stuck. I will comment on my issue and write, at Alex, can you take a look at this error message? 
+
+[ALEX]
+And it works perfectly. But there is another kind of mention that is incredibly powerful, especially in larger organizations. Team mentions. 
+
+[JAMIE]
+Oh, like mentioning a whole group of people at once? 
+
+[ALEX]
+Exactly. Instead of mentioning just one person, you type the at symbol, then the organization name, a forward slash, and the team name. For example, at microsoft slash accessibility dash team. 
+
+[JAMIE]
+That is like pulling out a megaphone and calling for a specific department. 
+
+[ALEX]
+It really is. Everyone on that team gets a notification. It is incredibly useful when you do not know exactly who needs to answer your question, but you know which team is responsible for that area of the code. 
+
+[JAMIE]
+That is clever. I wish I had known that when I started. I used to just look up three different people on a team and mention them all individually. 
+
+[ALEX]
+Team mentions save a lot of time. Just use them respectfully, because you are pinging multiple people at once. 
+
+[PAUSE]
+
+[JAMIE]
+Okay, so people are mentioning me, they are assigning me things, and my code is failing its continuous integration tests. Where are all these notifications actually going? Because I know I can get them in my email, but I also see an inbox on GitHub itself. 
+
+[ALEX]
+This is a great question. By default, GitHub might send you emails, but relying purely on email for GitHub notifications can get messy very quickly. Emails are hard to filter, they clog up your personal or work inbox, and they detach you from the actual code. 
+
+[JAMIE]
+So what is the alternative? 
+
+[ALEX]
+The GitHub web inbox. Think of your email as having your mail forwarded to your house, where it gets mixed up with your bills and junk mail. The GitHub web inbox is like a dedicated post office box just for your code. It is located at github dot com slash notifications. 
+
+[JAMIE]
+How do I get there quickly using my keyboard? 
+
+[ALEX]
+GitHub has a fantastic built-in keyboard shortcut for this. You press the letter G, release it, and then press the letter N. 
+
+[JAMIE]
+G then N. Like Go to Notifications. 
+
+[ALEX]
+Exactly. Now, a quick note for our screen reader users. This is a sequential shortcut. You do not hold them down together. Just tap G, then tap N. Also, make sure you are in your screen reader's browse mode or reading mode, not forms mode, so the keystrokes pass through to the web page. 
+
+[JAMIE]
+Okay, I just pressed G then N and I am in the inbox. What is the layout here? 
+
+[ALEX]
+The page is divided into three main areas. On the left, there is a sidebar with filters. In the center, there is your main list of notifications, where each notification is a row. And on the right, there is a detail pane that previews the notification, though many people choose to hide that right pane to keep things simple. 
+
+[JAMIE]
+How do I navigate the main list? Should I use my arrow keys? 
+
+[ALEX]
+Actually, the most efficient way to navigate the notification list with a screen reader is using the Tab key. The inbox groups your notifications by date. So you will have headings for Today, Yesterday, This Week, and Older. You can press H to jump between those date headings. 
+
+[JAMIE]
+And then once I am under a heading like Today, I press Tab? 
+
+[ALEX]
+Yes. When you press Tab, focus moves to a single notification row. And GitHub has designed these rows very intentionally for accessibility. When you focus a row, your screen reader will announce all the critical information at once. 
+
+[JAMIE]
+What exactly does it say? 
+
+[ALEX]
+It will sound something like this. Microsoft slash VS Code. Add keyboard shortcut for accessible view. Jamie mentioned you. Two hours ago. 
+
+[JAMIE]
+Oh, wow. So it gives me the repository name, the title of the issue or pull request, the specific reason I am being notified, and the timestamp, all in one tab stop. That is incredibly efficient. 
+
+[ALEX]
+It really is. You do not have to dig around to figure out why you got the alert. Once you hear one you want to investigate, you just press Enter, and it opens that specific issue or pull request right where the new activity happened. 
+
+[PAUSE]
+
+[JAMIE]
+Okay, that sounds like a lot of steps to manage, but it is basically just an email client, right? I read something, and then I need to do something with it. 
+
+[ALEX]
+Exactly. And just like an email client, the GitHub inbox has keyboard shortcuts to process your list quickly. When you have focus on a notification row, you can press the letter E to mark it as done. 
+
+[JAMIE]
+E for done? That is an interesting choice. 
+
+[ALEX]
+Think of it as E for Erase or archive. When you press E, the notification is marked as done and it disappears from your active inbox. If you want to mark something as read but keep it in your inbox, you press Shift plus I. 
+
+[JAMIE]
+And if I open something, read it, and realize I need to deal with it tomorrow? 
+
+[ALEX]
+You can mark it as unread by pressing Shift plus U. Or, if it is really important, you can press the letter S to save it. Saving a notification acts like a pin, keeping it easily accessible in a special Saved filter. 
+
+[JAMIE]
+Okay, let me recap these because I want to memorize them. Tab to focus the row. Enter to open it. E to mark it as done and clear it out. Shift plus I to mark as read. Shift plus U to mark as unread. And S to save for later. 
+
+[ALEX]
+You got it. And I want to emphasize, you do not have to memorize all of these on day one. If you only remember one shortcut, remember the letter E. Read a notification, press E to mark it done, and move on to the next one. 
+
+[JAMIE]
+What happens if I get pulled into a conversation that I really do not care about? Like, someone mentions me by mistake, or I commented on an issue three years ago and suddenly people are arguing on it and my inbox is blowing up. 
+
+[ALEX]
+That is a perfect time to use the mute feature. 
+
+[JAMIE]
+Mute? Like walking away from a conversation at a party? 
+
+[ALEX]
+Exactly like that. If a thread is generating too much noise, you can unsubscribe from it. If you are in the inbox and your focus is on the notification row, you just press the letter M. M for mute. 
+
+[JAMIE]
+Oh, that is so satisfying. Just press M and the noise stops. 
+
+[ALEX]
+It is very satisfying. If you are already looking at the issue or pull request page, you can also navigate to the sidebar. Use your quick navigation to move to the section called Notifications, and activate the button called Unsubscribe. You will instantly stop receiving alerts for that specific thread, unless someone mentions you by name again. 
+
+[JAMIE]
+What if someone mentions me by name, but it was definitely a mistake? Like they meant to tag a different Jamie. 
+
+[ALEX]
+That happens all the time. The best etiquette there is to open the issue, read the context, and just leave a polite comment saying, I do not think this mention was meant for me, feel free to remove it. Then, activate that Unsubscribe button and go about your day. 
+
+[PAUSE]
+
+[JAMIE]
+Alex, earlier we talked about email notifications. I really prefer keeping my email clean. Can I just turn off GitHub emails completely and only use this web inbox? 
+
+[ALEX]
+Absolutely. And many professional developers do exactly that. To change this, you need to navigate to your global notification preferences. The web address is github dot com slash settings slash notifications. 
+
+[JAMIE]
+How is that page structured? 
+
+[ALEX]
+It is a standard settings page divided into sections. You can use the letter H to navigate to each section heading. You will find headings for Email delivery, Watching, and Organization alerts. Under each heading, use the letter F or the letter E to navigate through the form fields and checkboxes. 
+
+[JAMIE]
+So I could go to the Email delivery section and just uncheck everything? 
+
+[ALEX]
+You could. A good middle ground is to set your email delivery to Participating and at mentions only. That way, if someone calls your name specifically, you get an email. But for everything else, you just check your web inbox when you are ready. 
+
+[JAMIE]
+That sounds like a great strategy for managing the volume. Just check the web inbox on my own schedule instead of having my phone buzz all day. 
+
+[ALEX]
+Speaking of volume, let us talk about strategies for not missing important items when you have a lot going on. 
+
+[JAMIE]
+Yes, please. Because even with participating only, I can get twenty or thirty notifications a day across different projects. 
+
+[ALEX]
+One of the best habits you can build is the Mark All As Done workflow. Imagine you come back from a long weekend and you have sixty notifications. Do not try to read them all at once. 
+
+[JAMIE]
+What should I do instead? 
+
+[ALEX]
+Open your notifications inbox. Tab to the button called Mark all as done, and press Enter. 
+
+[JAMIE]
+Wait, just clear the whole inbox? Delete everything? That sounds terrifying. 
+
+[ALEX]
+It does! But here is the thing. It does not delete them permanently. It just moves them to the Done filter. You declare inbox bankruptcy. Then, you use the left sidebar filters to narrow down what actually matters. 
+
+[JAMIE]
+Oh, I see. What kind of filters are in that sidebar? 
+
+[ALEX]
+You can press the letter K, or just Tab, to reach the sidebar. You will find filters like At Mentioned, which shows only threads where someone explicitly typed your name. You will find Assigned, which shows only issues you are responsible for. And Review requested, which shows pull requests waiting for your approval. 
+
+[JAMIE]
+So I clear the inbox, take a deep breath, and then just click the Review requested filter. I handle those. Then I click the

@@ -47,7 +47,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 - [ ] **The two-day workshop structure: Day 1 (browser) and Day 2 (VS Code + agents)**
 - [ ] **The learning philosophy: manual skill first, then automation**
 - [ ] **What a repository, issue, pull request, and merge are (high-level preview)**
-- [ ] **The six accessibility agents and what they will do on Day 2**
+- [ ] **The 55 accessibility agents across 3 teams and what they do on Day 2**
 - [ ] **How the chapters, appendices, and exercises fit together**
 - [ ] **The exercise pattern: Try It, You are done when, What success feels like**
 - [ ] **Encouragement for learners who are new to the command line or Git**

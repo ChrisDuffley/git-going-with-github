@@ -1,0 +1,254 @@
+[ALEX]
+Welcome to Git Going with GitHub. I am Alex, and this is episode 39: Accessibility Agents - Complete Reference.
+
+[JAMIE]
+And I am Jamie! We are so glad you are joining us. If you are attending the two-day GitHub workshop, you are in the home stretch. Today, we are diving deep into the complete ecosystem of Accessibility Agents.
+
+[ALEX]
+Exactly. Now, you might remember way back in episode 17, we did a high-level overview of agents. We talked about what they are, basically AI assistants that live right inside your editor, and how they can automate repetitive tasks.
+
+[JAMIE]
+Right, that was a game changer for me. I learned GitHub about two years ago, and I remember feeling completely overwhelmed by all the manual steps required to check code, review pull requests, and format documentation. Discovering agents felt like suddenly having a team of experts sitting at my desk, ready to help.
+
+[ALEX]
+That is a perfect description. But in that early episode, we only scratched the surface. Today, we are opening the hood. We are going to cover the complete documentation for all fifty-five agents, the fifty-four plus slash commands, how to configure your workspace, how to build your own custom agents, and how to troubleshoot when things go wrong.
+
+[JAMIE]
+Fifty-five agents sounds like a lot to memorize. Let's normalize this right away: you do not need to memorize them. Even I do not know all of them by heart. It is more about knowing what categories exist, so you can call on the right help when you need it.
+
+[ALEX]
+That is absolutely right. Think of the agent ecosystem like a large hospital. You do not need to know the name of every doctor in the building. You just need to know that if you have a heart issue, you navigate to Cardiology, and if you break your arm, you navigate to the Emergency Room. The agents are divided into three specialized teams, or departments: the Accessibility team, the GitHub Workflow team, and the Developer Tools team.
+
+[PAUSE]
+
+[JAMIE]
+Let's start the tour of the hospital. Walk us through these three teams.
+
+[ALEX]
+Sure. The largest department is the Accessibility team, which has twenty-six agents. These are your deep specialists. You have agents like at-aria-specialist, which focuses entirely on ARIA roles, states, and widget patterns like comboboxes or tabs. You have at-modal-specialist, which checks for things like focus trapping and escape key behavior.
+
+[JAMIE]
+Oh, focus trapping is notoriously tricky. Having a dedicated agent just to double-check that your screen reader does not wander out of a dialog box is incredible.
+
+[ALEX]
+It really is. There is also the at-web-accessibility-wizard, which is an orchestrator agent. That means it can delegate tasks to other agents. You can ask it to run a full WCAG audit, and it will coordinate with the contrast agent, the keyboard navigator agent, and the link checker to give you a comprehensive report.
+
+[JAMIE]
+So that is the Accessibility team. What about the GitHub Workflow team?
+
+[ALEX]
+That team has twelve agents, and these are the ones you will probably use every single day. They automate repository operations. The MVP here is at-daily-briefing. You can invoke it first thing in the morning by pressing Control plus Shift plus I to open Copilot Chat, and then typing at-daily-briefing morning briefing.
+
+[JAMIE]
+I use that one every day. It gives you a prioritized situation report. It outputs a series of heading level two sections. I just press the letter H to jump through my screen reader. It reads out Needs Your Action, which includes pull requests waiting for my review, and then For Your Awareness, which lists new issues. It is so much faster than navigating through the GitHub website notifications.
+
+[ALEX]
+Exactly. Another huge one on the Workflow team is at-pr-review. You can type at-pr-review review PR number fourteen. It will generate a full risk assessment, list the files changed, and draft inline comments. It even categorizes comments with prefixes like nit, question, suggestion, or blocking.
+
+[JAMIE]
+I want to pause here and emphasize something important. The agent produces a starting point. It drafts the reply. But you post it. You always want to read the review, edit it to match your team's culture and etiquette, and then post it under your own name. Do not just blindly copy and paste AI output.
+
+[ALEX]
+A crucial rule. The last team is the Developer Tools team, which has six agents. These focus on project scaffolding and language-specific patterns, like the at-python-specialist or the at-desktop-a11y-specialist, which helps with Windows, Mac, and Linux native application accessibility.
+
+[PAUSE]
+
+[JAMIE]
+Okay, so we have fifty-five agents, and we invoke them by typing the at symbol followed by their name. But what about slash commands? The documentation says there are over fifty-four slash commands. What is the difference between an agent and a slash command?
+
+[ALEX]
+I like to use a vending machine analogy here. A slash command is like pressing a button on a vending machine. You press exactly one button, say, slash triage, and you get exactly one specific item back, like a list of suggested labels and priorities for a new issue. It is a single, repeatable task. An agent, on the other hand, is like hiring a personal assistant. You give them a goal, and they might use multiple tools, read multiple files, and take several steps to figure out the answer.
+
+[JAMIE]
+That makes so much sense. So if I want to just quickly check the status of my continuous integration tests, I would use the slash ci-status command. But if I want someone to investigate why the tests failed and suggest a fix, I would use an agent.
+
+[ALEX]
+Exactly. Some of the most useful slash commands for the workshop are slash my-issues, which lists your open issues with priority signals, and slash a11y-update, which grabs the latest accessibility improvements across your repositories and cross-references them with WCAG criteria.
+
+[JAMIE]
+I love slash draft-release. You just type slash draft-release v 2.0, and it reads all the merged pull requests and generates your release notes. When I started, that took me hours of manually copying and pasting issue titles.
+
+[ALEX]
+It is a huge time saver. And when you type a slash in the chat input, a menu pops up with all the available commands and a short description of what they do, so you do not have to memorize those either.
+
+[PAUSE]
+
+[JAMIE]
+Let's talk about input and output formats. When I ask an agent to do something, how does it talk back to me? As a screen reader user, I need predictable structure. If an agent replies with a giant wall of unformatted text, or worse, a visually complex table, I am going to have a bad time.
+
+[ALEX]
+That is a really valid concern. The good news is that these agents are built specifically for blind and low-vision developers. The output format is highly structured Markdown. Every major section uses a heading level two, and subsections use heading level three. This means you can use your screen reader's heading navigation commands to quickly skim the response.
+
+[JAMIE]
+And they are specifically instructed to avoid tables, right? I remember reading that in the documentation.
+
+[ALEX]
+Yes. Tables in chat interfaces can be very disorienting for screen readers because the column headers do not always announce correctly. The agents are instructed to use ordered and unordered lists instead. Another important feature is explicit empty states. If you ask the daily briefing agent for your tasks, and you have no pull requests waiting, it will not just skip that section. It will output a heading for Pull Requests, and underneath it will say, "No pull requests waiting for your review."
+
+[JAMIE]
+That is brilliant. Silence is the enemy of accessibility. If a section is just missing, I always wonder, did it break? Did it fail to load? Having it explicitly tell me it checked and found nothing gives me so much confidence.
+
+[ALEX]
+You can actually control this output format yourself using a file called preferences dot md.
+
+[JAMIE]
+Oh, I was just about to ask about customization. Like ordering a sandwich, right? I want to hand the agent a highly specific order form so it knows exactly how I like my responses built.
+
+[ALEX]
+Exactly. In your repository, under the dot github slash agents folder, you can create a file called preferences dot md. This file is ignored by git, so it stays entirely local to your machine. You can put your GitHub username in there, your time zone, and your preferred output format. You can explicitly set it to quote screen-reader-optimized unquote.
+
+[JAMIE]
+Can you also put your screen reader context in there? Like, telling the agent what setup you are using?
+
+[ALEX]
+Yes, and you absolutely should. You can write a line that says, "I use NVDA with Chrome on Windows 11," or "I use VoiceOver with Safari on macOS." Once you do that, the agents will tailor their troubleshooting advice to your specific screen reader. They won't suggest a Windows keyboard shortcut if they know you are on a Mac.
+
+[PAUSE]
+
+[JAMIE]
+Okay, so preferences dot md handles my personal setup. But what if I want to set rules for the whole project? Like, telling the agent that our team uses specific coding conventions, or that we want all our documentation written in a certain way.
+
+[ALEX]
+That brings us to Customization Primitives, specifically instruction files. There are two main types you need to know: Always-on instructions, and File-based instructions.
+
+[JAMIE]
+Let me try an analogy here. Always-on instructions are like the house rules. No matter what room you are in, the rule applies. Treat everyone with respect, lock the front door at night. File-based instructions are room-specific rules. No shoes in the living room, keep the refrigerator door closed in the kitchen.
+
+[ALEX]
+That is exactly how it works. Your house rules, the always-on instructions, live in a file called copilot-instructions dot md, located in your dot github folder. Everything you put in this file is automatically included in every single chat request. You never have to invoke it. This is where you put your project's tone guidelines, commit message formats, and universal accessibility standards.
+
+[JAMIE]
+And the room-specific rules?
+
+[ALEX]
+Those are your file-based instructions. They use the extension dot instructions dot md. You might have one called python-style dot instructions dot md. Inside it, you use a configuration at the top of the file called frontmatter. Frontmatter is just a block of text surrounded by three dashes. Inside that block, you define an applyTo field using a glob pattern.
+
+[JAMIE]
+Ah, a glob pattern. That is a technical term. Can you explain what a glob pattern is for folks who might not be familiar?
+
+[ALEX]
+Certainly. A glob pattern is a way to specify a group of files using wildcard characters. For example, if you set the applyTo field to asterisk asterisk slash asterisk dot py, that translates to: apply this rule to any file, in any folder, that ends with the dot py extension. So, whenever you have a Python file open in your editor, VS Code automatically grabs those specific instructions and feeds them to the agent.
+
+[JAMIE]
+That is so clean. So I do not have to clutter up my main house rules with Python stuff if I am currently working on a Markdown documentation file. The agent only gets the rules it needs for the room it is currently standing in.
+
+[ALEX]
+Precisely. This keeps the agent focused and prevents it from getting confused by irrelevant rules.
+
+[PAUSE]
+
+[JAMIE]
+So we have personal preferences, and we have project-level instructions. What happens if they disagree? Let's say the project's always-on instructions say "Use a formal tone," but my personal preferences say "Use a friendly tone." Who wins?
+
+[ALEX]
+That is a great question about Workspace Configuration and Scopes. There are three levels of scope: User, which is your personal profile; Workspace, which is the repository you have cloned; and Organization, which applies to your entire GitHub enterprise.
+
+[JAMIE]
+It is like federal, state, and local laws.
+
+[ALEX]
+Exactly. And the priority order works like this: Highest priority wins. Your personal User-level settings override everything. Workspace settings override Organization settings. Organization settings have the lowest priority.
+
+[JAMIE]
+That makes sense. My personal accessibility needs should always trump whatever the corporate standard is for output format. If the org says "give detailed prose," but I need "concise bullet points" for my screen reader, my local preference needs to win.
+
+[ALEX]
+And it will. Your user-level files live in your VS Code profile folder, and the beautiful thing is that they roam with your Settings Sync. If you turn on Settings Sync in VS Code by navigating to the Command Palette with Control plus Shift plus P and searching for Settings Sync, your personal prompts and instructions will automatically follow you to any new machine or device you log into.
+
+[PAUSE]
+
+[JAMIE]
+Okay, this next part is what I am most excited about. Building on the agent system. Let's say I have a very specific domain at my job. Maybe I work at a bank, and we have a massive legacy system with its own weird compliance rules. I want to build my own agent just for that. How do I do it?
+
+[ALEX]
+It is actually surprisingly straightforward. You are essentially writing a job description for a new employee. You create a new file in the dot github slash agents folder, and you name it something like compliance-checker dot agent dot md.
+
+[JAMIE]
+And it starts with that frontmatter block again, right? The three dashes?
+
+[ALEX]
+Yes. The frontmatter is crucial here. You need three main fields. First, the name field. This is what you will type after the at symbol in chat. Second, the description field. This needs to be extremely clear and keyword-rich, because this is how other agents know when to delegate tasks to your agent. If your description just says "A helpful banking agent," nobody will ever call it. But if it says "Use when auditing transaction logic for financial compliance," the orchestrator agents will know exactly when to hand off work to it.
+
+[JAMIE]
+That is a great tip. And what is the third field?
+
+[ALEX]
+The tools array. This defines what your agent is allowed to do. By default, agents can only chat. But if you want your agent to read files, you add quote read quote to the tools array. If you want it to search the repository, you add quote githubRepo quote.
+
+[JAMIE]
+So if I want my agent to be able to actually create new files or edit my code, I have to explicitly give it those tools in the job description.
+
+[ALEX]
+Exactly. It is a security feature. You might build an agent that is only allowed to read files and report back, which is very safe. Or you might build one that has the quote editFiles quote and quote execute quote tools, which means it can change your code and run terminal commands. You have complete control. Below the frontmatter, you just write the instructions in plain English Markdown. You define its constraints, its step-by-step behavior, and the exact output format you expect.
+
+[PAUSE]
+
+[JAMIE]
+I want to touch on version compatibility and update patterns. The documentation mentions Copilot, but it also mentions Claude Code, Gemini CLI, and Codex. How does all this instruction and agent stuff work if my team uses different AI platforms?
+
+[ALEX]
+That is the beauty of this standard. The formatting we are discussing, like the dot agent dot md files and the AGENTS dot md file, is an open standard. GitHub Copilot, Claude Code, and Gemini all recognize these files. So you write your instructions once, and regardless of which AI tool your teammates are using in their terminal or editor, the agent behaves consistently.
+
+[JAMIE]
+That is a huge relief. But what if I want to enforce behavior? Instructions are great for guiding the agent, but what if I absolutely need to make sure the code is formatted before the agent finishes, or I want to block the agent from ever running a specific dangerous terminal command?
+
+[ALEX]
+For enforcement, you use Hooks. Hooks are JSON files that execute shell commands at specific lifecycle events. Think of them like a building inspector who comes in at specific phases of construction to check your work.
+
+[JAMIE]
+Oh, I like that. So the inspector stops the work, checks the code, and either approves it or blocks it.
+
+[ALEX]
+Exactly. A hook is deterministic. It runs regardless of what the user prompted the agent to do. For example, there is an event called PreToolUse. You can set up a hook so that immediately before the agent uses a tool to edit a file, a shell script runs to validate the change. If the script fails, it returns an exit code of two, which acts as a blocking error and stops the agent completely. Another event is PostToolUse, which is perfect for automatically running a code formatter like Prettier immediately after the agent writes new code.
+
+[PAUSE]
+
+[JAMIE]
+This is all incredibly powerful, but what happens when it breaks? Sometimes I type at-daily-briefing and the chat just says "Agent not found." Or the agent starts hallucinating and completely ignores my instructions. How do I fix it?
+
+[ALEX]
+Troubleshooting is a normal part of the process. If your agent is not found, it is almost always checking the fuse box first: check the frontmatter. If you missed a quote, or your indentation is wrong in the YAML frontmatter, VS Code cannot parse the file, and the agent will not load.
+
+[JAMIE]
+I have definitely done that. Left off a trailing quote and spent twenty minutes wondering why my agent disappeared.
+
+[ALEX]
+We all have! Once you fix the typo, you need to reload the editor. Press Control plus Shift plus P to open the Command Palette, type "Reload Window", and hit Enter. That forces VS Code to rescan the agent folders.
+
+[JAMIE]
+What if the agent loads, but it is ignoring my dot instructions dot md file?
+
+[ALEX]
+Then you want to check the Diagnostics view. This is incredibly helpful. In the Copilot Chat view, you can navigate to the Configure Chat gear icon, or right-click in the chat window, and select Diagnostics. This view will show you exactly which instruction files were found, which ones were actually loaded into the current context, and if any of them have errors. It will tell you if your glob pattern missed the file you are currently working on.
+
+[JAMIE]
+That Diagnostics view is a lifesaver. It removes all the guesswork. Instead of wondering if the agent read the room rules, you can literally check the log and see, "Ah, it did not load the Python rules because I am currently in a JavaScript file."
+
+[ALEX]
+Exactly. It makes the invisible system visible.
+
+[PAUSE]
+
+[JAMIE]
+Wow. We have covered a massive amount of ground today. From the fifty-five agents across the hospital departments, to slash commands, customization, scopes, and building our own domain experts.
+
+[ALEX]
+It is a lot to take in, but remember, you do not have to learn it all at once. Let's wrap up with a few concrete takeaways. First, use your slash commands for single, repeatable tasks, and use the at-agents for complex, multi-step workflows.
+
+[JAMIE]
+Second takeaway: customize your experience. Copy the preferences dot md file into your dot github slash agents folder, and set your output format to screen-reader-optimized. Tell the agents what screen reader you use. It changes everything.
+
+[ALEX]
+And third, when you are ready, try building your own agent. Start small. Create an agent dot md file, give it a clear description, and grant it just the quote read quote and quote search quote tools. See how it responds to your project's specific needs.
+
+[JAMIE]
+And if it breaks, check your YAML syntax, reload the window, and check the Diagnostics view.
+
+[ALEX]
+Perfect. That wraps up episode 39. In our next episode, we are going to dive into the wonderful world of GitHub Codespaces, where we will learn how to spin up an entirely accessible, pre-configured development environment in the cloud in under a minute.
+
+[JAMIE]
+I cannot wait for that one. Thank you all for listening, and keep building!
+
+[ALEX]
+See you next time on Git Going with GitHub.
