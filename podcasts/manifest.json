@@ -23,7 +23,7 @@
     ],
     "bundle": "ep01-pre-workshop-setup.md",
     "audio": "ep01-pre-workshop-setup.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 2,
@@ -36,7 +36,7 @@
     ],
     "bundle": "ep02-github-web-structure.md",
     "audio": "ep02-github-web-structure.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 3,
@@ -49,7 +49,7 @@
     ],
     "bundle": "ep03-navigating-repositories.md",
     "audio": "ep03-navigating-repositories.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 4,
@@ -62,7 +62,7 @@
     ],
     "bundle": "ep04-the-learning-room.md",
     "audio": "ep04-the-learning-room.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 5,
@@ -75,7 +75,7 @@
     ],
     "bundle": "ep05-working-with-issues.md",
     "audio": "ep05-working-with-issues.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 6,
@@ -88,7 +88,7 @@
     ],
     "bundle": "ep06-working-with-pull-requests.md",
     "audio": "ep06-working-with-pull-requests.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 7,
@@ -101,7 +101,7 @@
     ],
     "bundle": "ep07-merge-conflicts.md",
     "audio": "ep07-merge-conflicts.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 8,
@@ -114,7 +114,7 @@
     ],
     "bundle": "ep08-culture-and-etiquette.md",
     "audio": "ep08-culture-and-etiquette.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 9,
@@ -127,7 +127,7 @@
     ],
     "bundle": "ep09-labels-milestones-projects.md",
     "audio": "ep09-labels-milestones-projects.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 10,
@@ -140,7 +140,7 @@
     ],
     "bundle": "ep10-notifications.md",
     "audio": "ep10-notifications.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 11,
@@ -153,7 +153,7 @@
     ],
     "bundle": "ep11-vscode-basics.md",
     "audio": "ep11-vscode-basics.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 12,
@@ -166,7 +166,7 @@
     ],
     "bundle": "ep12-git-source-control.md",
     "audio": "ep12-git-source-control.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 13,
@@ -179,7 +179,7 @@
     ],
     "bundle": "ep13-github-prs-extension.md",
     "audio": "ep13-github-prs-extension.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 14,
@@ -192,7 +192,7 @@
     ],
     "bundle": "ep14-github-copilot.md",
     "audio": "ep14-github-copilot.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 15,
@@ -205,7 +205,7 @@
     ],
     "bundle": "ep15-accessible-code-review.md",
     "audio": "ep15-accessible-code-review.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 16,
@@ -218,13 +218,13 @@
     ],
     "bundle": "ep16-issue-templates.md",
     "audio": "ep16-issue-templates.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 17,
     "slug": "accessibility-agents",
     "title": "Accessibility Agents",
-    "description": "55 agents across 3 teams and 5 platforms, 54+ slash commands, custom agents, and agentic accessibility workflows.",
+    "description": "Six agents, 28 slash commands, custom agents, and agentic accessibility workflows.",
     "duration": "15-18 min",
     "sources": [
       "16-accessibility-agents.md"
@@ -244,7 +244,7 @@
     ],
     "bundle": "ep18-glossary.md",
     "audio": "ep18-glossary.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 19,
@@ -257,7 +257,7 @@
     ],
     "bundle": "ep19-screen-reader-cheatsheet.md",
     "audio": "ep19-screen-reader-cheatsheet.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 20,
@@ -270,7 +270,7 @@
     ],
     "bundle": "ep20-accessibility-standards.md",
     "audio": "ep20-accessibility-standards.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 21,
@@ -283,7 +283,7 @@
     ],
     "bundle": "ep21-git-authentication.md",
     "audio": "ep21-git-authentication.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 22,
@@ -296,7 +296,7 @@
     ],
     "bundle": "ep22-github-flavored-markdown.md",
     "audio": "ep22-github-flavored-markdown.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 23,
@@ -309,7 +309,7 @@
     ],
     "bundle": "ep23-github-gists.md",
     "audio": "ep23-github-gists.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 24,
@@ -322,7 +322,7 @@
     ],
     "bundle": "ep24-github-discussions.md",
     "audio": "ep24-github-discussions.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 25,
@@ -335,7 +335,7 @@
     ],
     "bundle": "ep25-releases-tags-insights.md",
     "audio": "ep25-releases-tags-insights.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 26,
@@ -348,7 +348,7 @@
     ],
     "bundle": "ep26-github-projects.md",
     "audio": "ep26-github-projects.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 27,
@@ -361,7 +361,7 @@
     ],
     "bundle": "ep27-advanced-search.md",
     "audio": "ep27-advanced-search.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 28,
@@ -374,7 +374,7 @@
     ],
     "bundle": "ep28-branch-protection.md",
     "audio": "ep28-branch-protection.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 29,
@@ -387,7 +387,7 @@
     ],
     "bundle": "ep29-security-features.md",
     "audio": "ep29-security-features.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 30,
@@ -400,7 +400,7 @@
     ],
     "bundle": "ep30-vscode-accessibility-reference.md",
     "audio": "ep30-vscode-accessibility-reference.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 31,
@@ -413,7 +413,7 @@
     ],
     "bundle": "ep31-github-codespaces.md",
     "audio": "ep31-github-codespaces.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 32,
@@ -426,7 +426,7 @@
     ],
     "bundle": "ep32-github-mobile.md",
     "audio": "ep32-github-mobile.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 33,
@@ -439,7 +439,7 @@
     ],
     "bundle": "ep33-github-pages.md",
     "audio": "ep33-github-pages.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 34,
@@ -452,7 +452,7 @@
     ],
     "bundle": "ep34-github-actions.md",
     "audio": "ep34-github-actions.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 35,
@@ -465,7 +465,7 @@
     ],
     "bundle": "ep35-profile-sponsors-wikis.md",
     "audio": "ep35-profile-sponsors-wikis.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 36,
@@ -478,7 +478,7 @@
     ],
     "bundle": "ep36-organizations-templates.md",
     "audio": "ep36-organizations-templates.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 37,
@@ -491,7 +491,7 @@
     ],
     "bundle": "ep37-contributing-to-open-source.md",
     "audio": "ep37-contributing-to-open-source.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 38,
@@ -504,13 +504,13 @@
     ],
     "bundle": "ep38-resources.md",
     "audio": "ep38-resources.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 39,
     "slug": "accessibility-agents-reference",
     "title": "Accessibility Agents - Complete Reference",
-    "description": "All 55 agents, all 54+ slash commands, customization, and troubleshooting.",
+    "description": "All six agents, all 28 slash commands, customization, and troubleshooting.",
     "duration": "15-18 min",
     "sources": [
       "appendix-v-accessibility-agents-reference.md"
@@ -530,7 +530,7 @@
     ],
     "bundle": "ep40-copilot-reference.md",
     "audio": "ep40-copilot-reference.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 41,
@@ -543,7 +543,7 @@
     ],
     "bundle": "ep41-copilot-models.md",
     "audio": "ep41-copilot-models.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 42,
@@ -556,7 +556,7 @@
     ],
     "bundle": "ep42-accessing-workshop-materials.md",
     "audio": "ep42-accessing-workshop-materials.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   },
   {
     "number": 43,
@@ -569,6 +569,6 @@
     ],
     "bundle": "ep43-github-skills-catalog.md",
     "audio": "ep43-github-skills-catalog.mp3",
-    "status": "bundle-ready"
+    "status": "script-ready"
   }
 ]

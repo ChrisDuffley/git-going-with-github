@@ -33,9 +33,12 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - The full ecosystem: 55 agents across 3 teams and 5 platforms
 - The three teams: Accessibility (26), GitHub Workflow (12), Developer Tools (6)
 - Slash commands: the 54+ commands and when to use them
+- High-impact agents and slash commands to try first
+- Orchestrator agents and how teams work together
 - Installing and configuring the agents
 - Building custom agents for your own projects
 - How agents amplify every skill learned in this workshop
+- Cross-reference: Appendix V and Episode 39 for the complete reference
 
 ---
 
@@ -51,6 +54,10 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 - [ ] **Team 2 - GitHub Workflow (12 agents): issues, PRs, analytics, templates**
 - [ ] **Team 3 - Developer Tools (6 agents): Python, desktop, custom tools**
 - [ ] **Slash commands: 54+ commands organized by workflow**
+- [ ] **High-impact starting points: which agents and commands to try first**
+- [ ] **Slash commands that save time: /my-issues, /review-pr, /triage, /daily-briefing, /a11y-update**
+- [ ] **Orchestrator agents: @nexus, @accessibility-lead, @web-accessibility-wizard**
+- [ ] **How the three teams connect in multi-agent workflows**
 - [ ] **How to invoke an agent in Copilot Chat**
 - [ ] **Installing and configuring agents from .github config files**
 - [ ] **Agent instruction files and how they customize behavior**
@@ -59,6 +66,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 - [ ] **How agents amplify skills: the manual skill first, then the agent**
 - [ ] **Real-world examples of agent-assisted contributions**
 - [ ] **Limitations: agents suggest, humans decide and verify**
+- [ ] **Go deeper: Appendix V has all 54+ commands, Episode 39 walks through every agent**
 
 ### Prerequisites (briefly recap these)
 
@@ -1843,6 +1851,35 @@ Four agents are specifically designed to coordinate others:
 | `@document-accessibility-wizard` | Accessibility | Guided document audit across Word, Excel, PowerPoint, and PDF |
 
 You do not need to use orchestrators to get value from individual agents. But when a task is complex enough to span multiple agents, orchestrators save you the work of manually chaining requests.
+
+### High-Impact Agents to Try First
+
+Rather than exploring all 55 agents at once, start with the ones that deliver immediate value based on Day 1 skills you already have:
+
+| If You Can Already | Try This Agent | And This Command |
+|--------------------|----------------|------------------|
+| Read issues and write replies | `@issue-tracker` | `/triage`, `/issue-reply` |
+| Review a PR diff | `@pr-review` | `/review-pr`, `/address-comments` |
+| Check your contribution activity | `@analytics` | `/my-stats`, `/sprint-review` |
+| Write issue templates | `@template-builder` | `/create-issue` |
+| Track what changed overnight | `@daily-briefing` | `/daily-briefing` |
+| Scan a page for accessibility issues | `@web-accessibility-wizard` | `/onboard-repo` |
+| Check color contrast manually | `@contrast-master` | (invoke directly) |
+| Test keyboard navigation | `@keyboard-navigator` | (invoke directly) |
+
+### Slash Commands That Save the Most Time
+
+These commands work without invoking a full agent - type them directly in Copilot Chat:
+
+- **`/my-issues`** and **`/my-prs`** - Instant dashboard of your open work across all repos
+- **`/review-pr #14`** - Full AI-generated review with inline suggestions, replacing manual line-by-line reading
+- **`/triage #22`** - Label, priority, and assignment suggestions for any new issue
+- **`/daily-briefing`** - Morning snapshot of repository activity, PRs needing review, and stale issues
+- **`/a11y-update`** - Latest accessibility improvements with WCAG cross-references
+- **`/draft-release v2.0`** - Generate release notes from merged PRs
+- **`/onboard-repo`** - First-time scan of a repo with health assessment and recommended actions
+
+The full list of 54+ commands is in [Appendix V](appendix-v-accessibility-agents-reference.md), and [Episode 39](../PODCASTS.md) walks through all of them with examples.
 
 ### Running Agents Beyond VS Code
 

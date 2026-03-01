@@ -277,7 +277,7 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 ### Episode 17: Accessibility Agents
 
-55 agents across 3 teams and 5 platforms, 54+ slash commands, custom agents, and agentic accessibility workflows.
+Six agents, 28 slash commands, custom agents, and agentic accessibility workflows.
 
 Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
@@ -609,7 +609,7 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 ### Episode 39: Accessibility Agents - Complete Reference
 
-All 55 agents, all 54+ slash commands, customization, and troubleshooting.
+All six agents, all 28 slash commands, customization, and troubleshooting.
 
 Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-v-accessibility-agents-reference.md)
 

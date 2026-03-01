@@ -1,332 +1,180 @@
 [ALEX]
-Welcome back to "Git Going with GitHub," the audio learning series for blind and low-vision developers. I'm Alex.
+Welcome to Git Going with GitHub, the audio learning series for blind and low-vision developers. I am your host, Alex, and we are now on Episode 43, titled GitHub Skills, Complete Course Catalog. We are getting very close to the end of our two-day workshop material. 
 
 [JAMIE]
-And I'm Jamie! And I am so excited for this episode, Alex, because we are diving into something I wish I had known about when I first started my GitHub journey.
+I am Jamie, and I am so excited about this episode. Over the past two days, we have covered so much ground. We have talked about version control, pull requests, accessibility agents, and security. But a huge question that always comes up at the end of a workshop is, what do I do next? How do I keep practicing without breaking a real project?
 
 [ALEX]
-You got it, Jamie. This is Episode 43, and our topic today is "GitHub Skills: Your Complete Course Catalog." Think of this as your roadmap for continued learning after our two-day workshop. We are going to explore all 36 free, interactive courses offered by GitHub Skills, how they work, and, most importantly, how you can integrate them into your ongoing development journey to deepen your understanding of Git, collaboration, automation, and so much more.
+That is exactly what we are covering today. We are going to dive deep into Appendix Z of the workshop manual, which covers GitHub Skills. We will explain what GitHub Skills is, how the courses work, and we will walk through the entire catalog of thirty-six courses. We will break them down by the six learning paths, discuss prerequisites, and help you figure out exactly where to start based on your goals.
 
 [JAMIE]
-That sounds amazing. So, after the intensive workshop, we are not just left to figure it out on our own. We have a whole library of resources at our fingertips?
+Thirty-six courses! That is a lot of material. So let us start with the basics. What exactly is GitHub Skills? Because when I first heard the term, I imagined a traditional video learning platform with a separate login, maybe multiple-choice quizzes, and a lot of visual diagrams that do not work well with my screen reader.
 
 [ALEX]
-Exactly. And the best part is, these aren't just theoretical lessons. These are hands-on, practical exercises that you do right inside your own GitHub repository. It's truly learning by doing, which we know is so powerful.
+That is a very common assumption, but GitHub Skills is completely different. To put it simply, what GitHub Skills is, is a collection of free, interactive courses that run entirely inside your own repository. There is no external website, there are no separate logins, and most importantly, there are no videos. The entire learning experience happens directly within the standard GitHub interface.
+
+[JAMIE]
+Which is huge for accessibility. If you have spent the last two days learning how to navigate GitHub issues, pull requests, and file editors using your screen reader, you already know exactly how to use GitHub Skills. You are not learning a new interface. 
+
+[ALEX]
+Exactly. It uses the exact same workflow you use every day. So let us talk about how a GitHub Skills course works. It involves three main components, a template repository, an automated bot named Mona, and a self-paced structure. When you decide to take a course, GitHub copies a template repository directly into your personal account. It becomes your repository to experiment in.
+
+[JAMIE]
+And that is where Mona comes in. Mona is GitHub's automated learning bot. She acts as your personal instructor. The way she communicates with you is brilliant. She does not send you emails or pop-up messages. Instead, Mona opens an issue in your new repository.
+
+[ALEX]
+Right. You can think of Mona like a driving instructor sitting in the passenger seat of your car. She tells you what to do next, watches you do it, and then gives you the next instruction based on your actions. When you start a course, within about twenty seconds, Mona will open an issue with Step 1. You read her instructions, and she will ask you to complete a task. Maybe she asks you to create a branch, edit a file, or open a pull request. 
+
+[JAMIE]
+So to define a couple of those terms just in case someone is joining us out of order, a branch is a safe copy of your code where you can make changes without affecting the main project. And a pull request, and I love that name because you are literally requesting that someone pull your changes into their project, is how you propose those changes to the team. So Mona asks you to do something, you do it, and then what? Does she magically know you finished?
+
+[ALEX]
+She does. Behind the scenes, the repository is running GitHub Actions, which are automated scripts. When you complete the task, the GitHub Action detects your work, validates that you did it correctly, and then Mona either leaves a comment on your pull request or opens a new issue with Step 2. You just repeat this cycle until Mona closes the final issue with a congratulatory completion message. Because it is self-paced, you can take twenty minutes or two weeks to finish.
+
+[PAUSE]
+
+[JAMIE]
+OK, that sounds like a lot of steps to get started, though. Do I have to configure all these actions and bots myself?
+
+[ALEX]
+It does sound complex! But here is the thing, you have already done most of this on Day 1. It is the exact same workflow, just with GitHub handling the heavy lifting. All you do to start a course is navigate to the course URL, move to the section called Start course, and activate that link. GitHub handles the repository creation and the bot setup automatically. 
+
+[JAMIE]
+That is incredibly smooth. So let us talk about the courses themselves. The catalog has thirty-six modules organized into different learning paths. I see that the checklist breaks them down into categories like beginner path courses, collaborate path courses, automate path courses, secure path courses, manage path courses, and advanced path courses. How do these map to the six learning paths in the appendix?
+
+[ALEX]
+Great question. The appendix formally organizes the thirty-six courses into six numbered learning paths, plus a special category for the workshop courses. But conceptually, they fit perfectly into those descriptive categories you just mentioned. Let us start with the beginner path courses, which the appendix calls the Workshop Courses. There are three of them, Introduction to GitHub, Communicate Using Markdown, and Review Pull Requests. 
+
+[JAMIE]
+We actually covered these on Day 1 of the workshop. Introduction to GitHub is the absolute foundation. It teaches you how to create branches, make commits, which are like saving a snapshot of your work, and merge your code. Then there is Communicate Using Markdown. Markdown is a way to format plain text. It is kind of like writing stage directions for your text. Instead of pressing a bold button, you type specific characters to tell the system how the text should sound and structure itself.
+
+[ALEX]
+Exactly. And the third beginner course is Review Pull Requests, where you learn how to assign reviewers, leave comments, suggest changes, and approve code. If you are listening to this and you did not finish these three during the workshop, you must complete them first. They are the prerequisites for almost everything else.
+
+[PAUSE]
+
+[JAMIE]
+So once we have the basics down, where do we go next? The checklist mentions collaborate path courses, specifically reviewing pull requests and managing merge conflicts. 
+
+[ALEX]
+Yes, let us dive into Path 1, which is Git Fundamentals, and Path 2, which is GitHub Collaboration. These two paths really encompass what we think of as the collaborate and manage path courses. Path 1 focuses on the underlying Git version control system. It starts with Introduction to Git, which moves you away from the web interface and teaches you how to use the command line interface and visual studio code.
+
+[JAMIE]
+And then comes the course I wish I had taken two years ago, Resolve Merge Conflicts. A merge conflict happens when two people edit the exact same line in a file, and Git does not know which version to keep. It is like two people trying to write different sentences on the same line of a physical notebook. It used to terrify me.
+
+[ALEX]
+It terrifies everyone at first! But this course teaches you why they happen, how to read the conflict markers, and how to safely resolve them in the web editor. After that is Change Commit History. This is where you learn to amend commits, squash multiple commits into one, and reorder your history. It is a fantastic sandbox to practice these slightly dangerous commands without risking a real project.
+
+[JAMIE]
+Moving into the formal Collaboration path, which really aligns with those manage path courses you might need if you are a project maintainer. The first course here is Introduction to Repository Management. This covers branch protection rules, issue templates, and labels. It is basically how to set up your project so other people can easily contribute to it.
+
+[ALEX]
+Next is Connect the Dots, which is a quick, thirty-minute course on cross-referencing. You learn how to link issues and pull requests together. Then we have GitHub Pages. This is a brilliant feature where GitHub will host a website directly from your repository for free. The course walks you through deploying your first site. Finally, we have Release-Based Workflow, an advanced path course concept where you learn how to bundle your code into official versioned releases, like version one point zero.
+
+[PAUSE]
+
+[JAMIE]
+That covers the people side of things. But what about the robots? The checklist mentions automate path courses, including GitHub Actions, Pages, and script automation. 
+
+[ALEX]
+That brings us perfectly to Path 3, GitHub Actions and Automation. GitHub Actions is GitHub's continuous integration and continuous deployment platform. We call that CI CD for short. Think of it like an automated sous-chef in a kitchen. Every time you bring in a new ingredient, or in our case, new code, the sous-chef automatically chops it, cooks it, and tests it to make sure it tastes right before serving it to the customer.
+
+[JAMIE]
+I love that analogy. The path starts with Hello GitHub Actions, which is the prerequisite for the rest of the automation courses. It teaches you the basic vocabulary, what a workflow file is, what triggers are, and how jobs and steps work. 
+
+[ALEX]
+Once you understand the basics, you move on to Test with Actions, where you learn how to run automated software tests every time someone opens a pull request. Then there is Reusable Workflows, which teaches you how to write a script once and share it across dozens of repositories. 
+
+[JAMIE]
+And for the developers who want to build their own tools, there is Write JavaScript Actions. This course teaches you how to build custom actions from scratch using JavaScript. From there, the path branches out into specific technologies. There is Publish Docker Images. Docker is a technology that packages software into standardized units called containers, sort of like standardized shipping containers for cargo. There is also Deploy to Azure, which teaches you to send your code to Microsoft's cloud hosting platform.
+
+[ALEX]
+And GitHub recently added two new courses to this path, AI in Actions, and Create AI-Powered Actions. These teach you how to integrate artificial intelligence models directly into your automation scripts. So your automated sous-chef can actually use AI to analyze your code or generate reports.
+
+[PAUSE]
+
+[JAMIE]
+Speaking of AI, that leads us right into Path 4, GitHub Copilot. This path is massive. It has ten different courses. Where do we even begin?
+
+[ALEX]
+You begin with the prerequisite for the entire path, Getting Started with GitHub Copilot. Copilot is an AI pair programmer. This introductory course teaches you how to use code completion, how to ask questions in Copilot Chat, and how to get debugging assistance. 
+
+[JAMIE]
+Once you have the basics, you can jump into Build Applications with Copilot Agent Mode. Agent mode is fascinating. Instead of just auto-completing one line of code, you give Copilot a natural language prompt, and the agent plans and builds a multi-file application for you. Next is Copilot Code Review, where the AI helps you review pull requests and catch quality issues before merging.
+
+[ALEX]
+The path continues with Customize Your GitHub Copilot Experience, where you learn to create custom instructions so the AI understands your personal coding style. Then we have Expand Your Team with Copilot. This is incredibly accessible because it teaches you how to assign GitHub issues directly to Copilot right in the GitHub web interface. You do not even need to open a code editor.
+
+[JAMIE]
+There are some really advanced path courses here too. Integrate MCP with Copilot teaches you about the Model Context Protocol. This is a way to connect Copilot to external tools and databases. There is Scale Institutional Knowledge Using Copilot Spaces, which helps teams share context. And Create Applications with the Copilot CLI, which brings the AI directly into your command line terminal.
+
+[ALEX]
+We round out the Copilot path with Your First Extension for GitHub Copilot, where you build a custom plugin that teaches Copilot about your specific industry terminology. And finally, Modernize Your Legacy Code with GitHub Copilot. This is a two-hour course where you use AI to translate a legacy accounting system written in COBOL into modern JavaScript. It is a fantastic showcase of what the tool can do.
+
+[PAUSE]
+
+[JAMIE]
+I am exhausted just reading that list, but we still have two paths left! The checklist mentions secure path courses, including CodeQL, secret scanning, and supply chain. 
+
+[ALEX]
+Yes, Path 5 is all about Security. Security is everyone's responsibility, and GitHub provides tools to automate it. The recommended first course is the Secure Code Game. This is a really fun, gamified format where you hunt for real security vulnerabilities in sample code. It takes about an hour or two.
+
+[JAMIE]
+After that, we have Introduction to Secret Scanning. A secret is a password, an API key, or a digital token. You never want to accidentally publish these in your code. Secret scanning is like a bouncer at the door of your repository, checking everyone's pockets to make sure they are not accidentally carrying your passwords out into the public.
+
+[ALEX]
+Perfect analogy. Next is Secure Repository Supply Chain. Modern software relies on hundreds of open-source packages, which are your supply chain. If one of those packages has a vulnerability, your project is vulnerable. This course teaches you how to use a tool called Dependabot to automatically find and patch those vulnerabilities.
+
+[JAMIE]
+And then we get into CodeQL. There are two courses here, Introduction to CodeQL, and Configure CodeQL Language Matrix. CodeQL is a semantic code analysis engine. Basically, it reads your code and looks for logical flaws that hackers could exploit. The language matrix course teaches you how to run these scans across projects that use multiple programming languages at the same time.
 
 [PAUSE]
 
 [ALEX]
-So, let's start with the basics: What exactly *is* GitHub Skills?
+Our final path is Path 6, Cloud and Migration. This path is for developers who need to move existing projects to GitHub or want to develop entirely in the cloud. It starts with Code with Codespaces. 
 
 [JAMIE]
-Yeah, is it a separate website? Do I need another login? How does it work?
+I love Codespaces. A Codespace is basically renting a supercomputer in the cloud that already has all your development tools installed. You access it through your browser or connect to it from your local screen reader environment. This course teaches you how to set one up and configure it.
 
 [ALEX]
-Great questions. GitHub Skills is GitHub's free, self-paced interactive learning platform. And here's the key: it runs entirely inside GitHub. No external site, no separate login, no video lectures you have to navigate. It uses the same interface you've been practicing with throughout this workshop.
-
-[JAMIE]
-Oh, that's a relief! So, I don't have to learn a whole new environment just to learn *more* GitHub. That's fantastic for screen reader users.
-
-[ALEX]
-Absolutely. It's built on accessibility, using standard GitHub features. Here's how a course works: You navigate to a course URL and select "Start course." GitHub then copies that course's template repository to your own account. Think of it like getting a fresh workbook for a class.
-
-[JAMIE]
-Okay, so I have my own copy of the course material. What happens next?
-
-[ALEX]
-Within about 20 seconds, an automated bot named Mona — spelled M-O-N-A — opens an issue in your new repository with the instructions for Step 1.
-
-[JAMIE]
-Mona, the bot! I love that. So, she's like my personal, patient tutor?
-
-[ALEX]
-Exactly! Mona is your digital instructor. She'll give you a task, like "create a new branch," or "edit a specific file," or "open a pull request." You complete that task using the GitHub interface, just as you've learned.
-
-[JAMIE]
-And then Mona knows I've done it? How does that work?
-
-[ALEX]
-Mona detects your action, validates it to make sure you've completed it correctly, and then posts the next step as a comment within the same issue, or sometimes opens a brand new issue. You just repeat this process until Mona closes the final issue with a completion message. It’s a beautifully structured, step-by-step learning experience.
-
-[JAMIE]
-That's really clever! So, it's not just reading instructions; it's actively doing the thing and getting immediate feedback. It's like a code-along, but with a bot guiding you.
-
-[ALEX]
-Precisely. And because all interaction happens through GitHub's standard interface, the screen reader navigation skills you've practiced in this workshop – like heading navigation, landmark jumping, issue and pull request workflows – all apply directly. You're leveraging the muscle memory you've already built.
+The second course is Migrate ADO Repository. ADO stands for Azure DevOps. This course provides a sample Azure project and teaches you how to use the GitHub command line interface to migrate it over to GitHub. And the final course in the catalog is Idea to App with Spark. Spark is a tool that lets you build web applications using purely natural language, with no coding required.
 
 [PAUSE]
 
+[JAMIE]
+OK, we have officially covered all thirty-six courses across the six learning paths. We have talked about the beginner path courses, the collaborate path courses, the automate path courses, the secure path courses, the manage path courses, and the advanced path courses. But practically speaking, how do I integrate this into my learning journey? What is the recommended order?
+
 [ALEX]
-Now, as you know, we've actually integrated three GitHub Skills modules into Day 1 of our workshop. You've already started or completed them with our facilitators' guidance.
+The most important rule for prerequisites and recommended order within each path is to finish the three workshop courses first. Do not jump into building JavaScript actions if you do not know how a pull request works. Once you have the basics, pick one path that matches your current goal. 
 
 [JAMIE]
-Oh, I remember those! We did "Introduction to GitHub," which taught us about branches, commits, pull requests, and merging. That was the foundational stuff.
+Right. If you want to start contributing to open source, start with Path 2, Collaboration. If you want to speed up your coding, start with Path 4, Copilot. If you are moving into a DevOps role, start with Path 3, Actions. Work through one course at a time. They only take thirty to sixty minutes each, but spacing them out helps you retain the information.
 
 [ALEX]
-That's right. Then we also covered "Communicate Using Markdown," which was super helpful for learning how to format our comments and descriptions with headings, emphasis, links, and even task lists.
+Exactly. And while you are taking these courses, keep the workshop manual open. When Mona asks you to review a pull request, you can flip back to the workshop materials to find the exact screen reader keyboard shortcuts for navigating the pull request files tab.
 
 [JAMIE]
-And "Review Pull Requests" was huge for understanding how to assign reviewers, leave comments, suggest changes, and ultimately approve and merge someone else's work.
+One thing I noticed when I was looking through the GitHub Skills site is that there is no dashboard. How do I track my progress and know how to start a course and track your progress over time?
 
 [ALEX]
-If for any reason you didn't finish those three during the workshop, we strongly recommend completing them first. They really lay the groundwork for everything else.
+That is a great point. Because GitHub Skills runs entirely in your own account, there is no central dashboard with a progress bar. But there are a few strategies you can use. First, every course you start becomes a repository in your account. The template repositories always start with the prefix skills hyphen. So you can go to your repositories page and filter by the word skills to see everything you have started.
+
+[JAMIE]
+Oh, that is clever! I also like to bookmark Mona's final issue. When she posts that completion message, I save the link so I have a record of finishing it. And if you are really proud of a module, you can pin that repository directly to your GitHub public profile so employers can see what you have learned.
+
+[ALEX]
+The workshop manual also includes a personal completion checklist in Appendix Z. It lists all thirty-six courses with a checkbox next to each one. You can copy that plain text list into a personal GitHub issue, a notepad file, or whatever system you use, and check them off as you go.
 
 [PAUSE]
 
+[JAMIE]
+This has been incredibly comprehensive. Let us wrap up with some concrete takeaways for our listeners. First, GitHub Skills is completely free, screen reader accessible, and runs entirely in your own GitHub account through standard issues and pull requests. 
+
 [ALEX]
-Once you've got those foundations solid, GitHub Skills organizes its remaining courses into six learning paths. These paths build on the skills you've practiced and progress from introductory to more advanced topics.
+Second, do not try to learn everything at once. Complete the three workshop courses first, then pick a specific path like Git Fundamentals, Actions, or Copilot based on your immediate career goals. Follow the recommended order within that path.
 
 [JAMIE]
-Six paths? That sounds like a lot! Do I have to do all of them?
+And third, track your own progress. Use the repository filter to find your skills hyphen projects, and copy the checklist from Appendix Z to keep yourself organized. 
 
 [ALEX]
-Not at all, Jamie. The beauty of these paths is that you can choose the ones that align with your specific goals. If you want to contribute to open source, you might focus on one path. If you're interested in automating your projects, you'd pick another. It’s about tailoring your learning journey.
-
-[JAMIE]
-Okay, that makes sense. So, where should we start?
-
-[PAUSE]
-
-[ALEX]
-Let's dive into **Path 1: Git Fundamentals**. This path is all about deepening your understanding of Git version control, going beyond what we covered in the workshop.
-
-[JAMIE]
-So, getting into the nitty-gritty of Git itself, not just GitHub's interface?
-
-[ALEX]
-Exactly. The first course here is "Introduction to Git." This module, which takes less than an hour, focuses on the Git command-line interface and how to use Git within VS Code for branches, commits, and merges. It's a great complement if you want to work more directly with Git.
-
-[JAMIE]
-And what about those tricky situations? Like when two people edit the same line of code?
-
-[ALEX]
-That's where the next course comes in: "Resolve Merge Conflicts." This one is less than 30 minutes and builds on our "Introduction to GitHub" module. It teaches you why conflicts happen, how to read those intimidating conflict markers, and how to resolve them using GitHub's web editor. It’s like learning how to untangle two pieces of yarn that got knotted up.
-
-[JAMIE]
-Oh, I definitely need that one! Merge conflicts always feel like a puzzle.
-
-[ALEX]
-And for the more advanced Git users, there’s "Change Commit History." In less than an hour, this course teaches you how to amend commits, use interactive rebase to reorganize your history, squash multiple commits into one, and even reorder history. Think of it like editing your diary after you've written it, making sure it tells the most coherent story before you share it with others.
-
-[JAMIE]
-Wow, that's powerful stuff. So, Path 1 is all about mastering the underlying version control system.
-
-[PAUSE]
-
-[ALEX]
-Next up is **Path 2: GitHub Collaboration**. This path focuses on the features that power open source projects and team workflows.
-
-[JAMIE]
-This sounds like it's for people who want to be active contributors or even maintainers of projects.
-
-[ALEX]
-Precisely. It starts with "Introduction to Repository Management." This module, less than an hour, teaches you about branch protection – which is like putting a "do not enter without permission" sign on your main branch – as well as how to set up issue templates, labels, milestones, and other contributor-friendly settings. These are crucial for making your project welcoming and organized.
-
-[JAMIE]
-Branch protection sounds important. So, only certain people can merge directly into the main branch?
-
-[ALEX]
-That's the idea. It prevents accidental or unauthorized changes to your most stable code. Then there’s "Connect the Dots," a quick 30-minute course on cross-referencing issues and pull requests, and linking work across your repository. It helps you keep everything connected, like creating a web of related thoughts.
-
-[ALEX]
-"GitHub Pages" is another fantastic module here. In less than an hour, you learn how to deploy a website directly from your repository using GitHub Pages. It's an easy way to share documentation, portfolios, or simple web projects.
-
-[JAMIE]
-Oh, that's cool! So, I can host a website just from my GitHub repo? That's really convenient.
-
-[ALEX]
-It is! And finally, "Release-Based Workflow" teaches you how to create releases, tag versions, and manage a structured release process. This is vital for projects that ship software, ensuring users know exactly what version they're getting.
-
-[PAUSE]
-
-[ALEX]
-Our third path is **GitHub Actions and Automation**. This is where you learn to build automated workflows that test, build, and deploy your projects.
-
-[JAMIE]
-We got a taste of GitHub Actions in the workshop with the accessibility agents. So this path is about building our *own* automation?
-
-[ALEX]
-That’s right. It starts with "Hello GitHub Actions." In less than 30 minutes, you learn about workflow files, triggers, jobs, steps, and how to run your very first automated workflow. Think of GitHub Actions like having a little robot assistant that watches your project. Every time you make a change, this robot automatically runs tests, builds your code, and even deploys it to a website, all without you lifting a finger.
-
-[JAMIE]
-A robot assistant! I love that analogy.
-
-[ALEX]
-Then you move to "Test with Actions," which covers Continuous Integration, or CI. This is where you set up actions to run tests automatically on every push and pull request, ensuring your code always works. We also have "Reusable Workflows" for sharing workflows across multiple repositories, and "Write JavaScript Actions" if you want to build custom actions from scratch.
-
-[ALEX]
-For those working with containers, "Publish Docker Images" teaches you to build and publish Docker containers to GitHub Packages using Actions. And there are even modules like "Deploy to Azure" for cloud deployments, and more recent additions like "AI in Actions" and "Create AI-Powered Actions" for integrating artificial intelligence models into your workflows.
-
-[JAMIE]
-So, this path takes us from basic automation to full-blown CI/CD and even AI integration. That’s a powerful set of skills!
-
-[PAUSE]
-
-[ALEX]
-Moving on to **Path 4: GitHub Copilot**. This path is all about mastering AI-assisted development across various editors, the command-line interface, and GitHub itself.
-
-[JAMIE]
-We spent a good amount of time with Copilot during Day 2, using it for contributions and code review. This path sounds like it's going to go much deeper.
-
-[ALEX]
-It certainly does! It starts with "Getting Started with GitHub Copilot," which covers code completion, using Copilot Chat, debugging assistance, and completing your first AI-assisted project. This is your foundation for all things Copilot.
-
-[ALEX]
-Then it quickly moves into more advanced topics like "Build Applications with Copilot Agent Mode," where you use Copilot's agent capabilities to build multi-file applications from natural language descriptions. Imagine just telling Copilot what you want, and it starts scaffolding out your project!
-
-[JAMIE]
-That sounds like something out of a science fiction movie! Just describe it, and it starts building?
-
-[ALEX]
-It’s getting there! There's also "Copilot Code Review," which teaches you how to use Copilot to review pull requests, catch quality issues, and improve code *before* merging. And "Customize Your GitHub Copilot Experience" lets you tailor Copilot with custom instructions and prompt files for your specific workflows.
-
-[ALEX]
-You can even "Expand Your Team with Copilot" by assigning issues directly to Copilot on GitHub itself, without even needing an editor open. And for those deeply integrating it, there are modules on connecting to external tools with "Integrate MCP with Copilot" and organizing project knowledge with "Copilot Spaces."
-
-[ALEX]
-It also covers "Create Applications with the Copilot CLI" for command-line interaction, "Your First Extension for GitHub Copilot" if you want to teach Copilot about your specific industry or terminology, and even a longer, two-hour module called "Modernize Your Legacy Code with GitHub Copilot," which shows you how to use it to update older systems.
-
-[JAMIE]
-Wow, I had no idea Copilot could do so much! From simple code suggestions to building entire applications and even reviewing code. This path is clearly for anyone serious about leveraging AI in their development workflow.
-
-[PAUSE]
-
-[ALEX]
-Our fifth path is all about **Security**. This is where you learn to identify vulnerabilities, scan for secrets, and secure your software supply chain.
-
-[JAMIE]
-Security is so critical these days. I know we touched on some GitHub security features, but this sounds like hands-on practice.
-
-[ALEX]
-Exactly. It begins with the "Secure Code Game," a really engaging 1-2 hour module that’s gamified. You find and fix real security vulnerabilities in an interactive format. It's a fantastic way to build intuition for security issues.
-
-[JAMIE]
-A game for security? That sounds like a fun way to learn something so important.
-
-[ALEX]
-It really is. Then there’s "Introduction to Secret Scanning." This less-than-30-minute course teaches you how to enable secret scanning, detect leaked credentials, and prevent secrets – like API keys or passwords – from being accidentally committed to your repository. It's like having a digital security guard constantly checking your project's pockets to make sure you haven't left your house keys or wallet lying around where anyone can find them.
-
-[ALEX]
-"Secure Repository Supply Chain" helps you understand dependencies, find vulnerabilities in them using Dependabot, and patch those issues. And for more advanced code analysis, there's "Introduction to CodeQL," which teaches you how to enable code scanning to find security issues automatically. You can even "Configure CodeQL Language Matrix" for multi-language repositories.
-
-[JAMIE]
-So, this path covers everything from preventing accidental leaks to actively scanning code for vulnerabilities and managing third-party dependencies. That's a comprehensive approach to securing a project.
-
-[PAUSE]
-
-[ALEX]
-And finally, we have **Path 6: Cloud and Migration**. This path is for those looking to deploy to the cloud or migrate existing projects to GitHub.
-
-[JAMIE]
-Cloud environments can feel a bit abstract sometimes. How does GitHub Skills make that concrete?
-
-[ALEX]
-It starts with "Code with Codespaces." In less than an hour, you learn to create and configure cloud development environments with GitHub Codespaces. Think of Codespaces as a super-powered virtual development machine that lives in the cloud. Instead of setting up software on your own computer, you just open a web browser, and boom, you have a fully configured coding environment ready to go. This is especially fantastic for screen reader users, as it means you don't have to manage complex local installations.
-
-[JAMIE]
-Oh, that's incredibly useful! So, I could potentially develop without needing to install a huge development stack on my own machine? That simplifies so much.
-
-[ALEX]
-It really does, and it ensures a consistent environment for everyone on a team. Then there's "Migrate ADO Repository," which teaches you how to create a sample Azure DevOps project and migrate it to GitHub using the command-line interface. This is crucial for organizations looking to move their existing projects.
-
-[ALEX]
-And for those who are just starting out and want to build without deep coding knowledge, there's "Idea to App with Spark." This module, which surprisingly has no prerequisite beyond basic computer literacy, teaches you how to turn ideas into web applications by describing them in natural language – no coding required. It's a fantastic entry point for non-developers or for rapid prototyping.
-
-[JAMIE]
-"No coding required"? That's amazing! So, this path really covers the practicalities of working with cloud environments and bringing existing projects into the GitHub ecosystem.
-
-[PAUSE]
-
-[ALEX]
-So, you can see these paths offer a huge range of learning opportunities. Now, how do you integrate GitHub Skills into your learning journey *after* the workshop?
-
-[JAMIE]
-That's my next big question. It sounds like a lot to tackle.
-
-[ALEX]
-First, if you didn't finish any of the workshop courses – "Introduction to GitHub," "Communicate Using Markdown," or "Review Pull Requests" – go back and complete them. They are your essential building blocks.
-
-[JAMIE]
-Got it. Foundations first.
-
-[ALEX]
-Next, pick just *one* path that matches your immediate goals. Don't try to do everything at once. If you want to contribute to open source, start with Path 2, Collaboration. If you want to automate your workflow, go for Path 3, Actions. If you're keen on AI, jump into Path 4, Copilot. The idea is to focus your energy.
-
-[JAMIE]
-Okay, so pick a lane and stick to it for a bit. How long do these courses typically take?
-
-[ALEX]
-Most courses take between 30 to 60 minutes. Some, like the Secure Code Game or the legacy code modernization with Copilot, might take up to two hours. Work through one course at a time, and spreading them across multiple days helps with retention. No need to rush.
-
-[ALEX]
-And remember, you have all the workshop materials as reference. When a GitHub Skills course asks you to create a branch or open a pull request, you can always refer back to our chapter guides for screen reader instructions on those exact operations.
-
-[JAMIE]
-That's a great tip. So, we're not starting from scratch with the navigation; we're just applying what we already know.
-
-[PAUSE]
-
-[ALEX]
-One final practical point: tracking your progress. GitHub Skills doesn't have a central dashboard that shows all your completed courses.
-
-[JAMIE]
-Oh, that's a bummer. How do I know what I've done?
-
-[ALEX]
-Good question. There are a few strategies. First, completed courses appear as repositories in your GitHub account. You can even pin your favorites to your profile.
-
-[ALEX]
-Second, you can filter your repositories by the "skills-" prefix. Every course repository GitHub Skills creates for you starts with "skills-", so searching for that will show you all the courses you've started.
-
-[ALEX]
-Third, when you finish a course, Mona, our bot, posts a completion message in the final issue. You could bookmark that issue.
-
-[ALEX]
-But the most straightforward method, and one we highly recommend, is to simply copy the completion checklist from the workshop materials into a personal note, or even an issue in your own personal repository, and tick off courses as you complete them.
-
-[JAMIE]
-That's smart. A simple checklist can go a long way. This whole GitHub Skills platform sounds like an incredible resource for continuing our learning journey.
-
-[PAUSE]
-
-[ALEX]
-It truly is, Jamie. It’s free, it’s interactive, and it uses the very same interface you've become familiar with. It empowers you to keep building your GitHub proficiency at your own pace.
-
-[JAMIE]
-I'm already thinking about which path I'll start with. Probably the Git Fundamentals, just to really solidify those concepts.
-
-[ALEX]
-Excellent choice. So, let's recap some key takeaways for our listeners today.
-
-[ALEX]
-First, **GitHub Skills provides free, interactive, self-paced courses** that run entirely within your GitHub account. You don't need a separate login or a new interface to learn.
-
-[JAMIE]
-Second, **Mona, the bot, is your personal tutor**, guiding you step-by-step through real GitHub tasks in your own repository, giving you immediate feedback.
-
-[ALEX]
-Third, **the skills you learned in this workshop are directly applicable**. Screen reader navigation, issue workflows, pull request management – it all translates.
-
-[JAMIE]
-Fourth, **choose your own adventure with six learning paths**. Focus on what matters to you, whether it's Git fundamentals, collaboration, automation, Copilot, security, or cloud migration.
-
-[ALEX]
-And finally, **track your progress with a personal checklist** to stay motivated and see how far you've come.
-
-[ALEX]
-This brings us to the end of Episode 43, and what a journey it's been through the GitHub Skills catalog.
-
-[JAMIE]
-I feel like I have a whole new learning plan now!
-
-[ALEX]
-You do! And speaking of journeys, our next episode, Episode 44, is actually our final episode in the "Git Going with GitHub" series. We'll be looking back at everything we've learned, offering advice for finding open source projects to contribute to, and discussing how to continue growing as a developer within the open source community. It's going to be a big wrap-up!
-
-[JAMIE]
-I can't believe we're almost at the end! I'm already looking forward to it.
-
-[ALEX]
-We are too. Until then, keep practicing, keep exploring, and keep "Git Going with GitHub"!
-
-[JAMIE]
-See you next time!
+That brings us to the end of Episode 43. You now have a roadmap for years of continued learning. In our next and final episode, Episode 44, we will cover Appendix
