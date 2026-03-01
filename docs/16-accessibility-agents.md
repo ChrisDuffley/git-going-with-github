@@ -1765,6 +1765,35 @@ Four agents are specifically designed to coordinate others:
 
 You do not need to use orchestrators to get value from individual agents. But when a task is complex enough to span multiple agents, orchestrators save you the work of manually chaining requests.
 
+### High-Impact Agents to Try First
+
+Rather than exploring all 55 agents at once, start with the ones that deliver immediate value based on Day 1 skills you already have:
+
+| If You Can Already | Try This Agent | And This Command |
+|--------------------|----------------|------------------|
+| Read issues and write replies | `@issue-tracker` | `/triage`, `/issue-reply` |
+| Review a PR diff | `@pr-review` | `/review-pr`, `/address-comments` |
+| Check your contribution activity | `@analytics` | `/my-stats`, `/sprint-review` |
+| Write issue templates | `@template-builder` | `/create-issue` |
+| Track what changed overnight | `@daily-briefing` | `/daily-briefing` |
+| Scan a page for accessibility issues | `@web-accessibility-wizard` | `/onboard-repo` |
+| Check color contrast manually | `@contrast-master` | (invoke directly) |
+| Test keyboard navigation | `@keyboard-navigator` | (invoke directly) |
+
+### Slash Commands That Save the Most Time
+
+These commands work without invoking a full agent - type them directly in Copilot Chat:
+
+- **`/my-issues`** and **`/my-prs`** - Instant dashboard of your open work across all repos
+- **`/review-pr #14`** - Full AI-generated review with inline suggestions, replacing manual line-by-line reading
+- **`/triage #22`** - Label, priority, and assignment suggestions for any new issue
+- **`/daily-briefing`** - Morning snapshot of repository activity, PRs needing review, and stale issues
+- **`/a11y-update`** - Latest accessibility improvements with WCAG cross-references
+- **`/draft-release v2.0`** - Generate release notes from merged PRs
+- **`/onboard-repo`** - First-time scan of a repo with health assessment and recommended actions
+
+The full list of 54+ commands is in [Appendix V](appendix-v-accessibility-agents-reference.md), and [Episode 39](../PODCASTS.md) walks through all of them with examples.
+
 ### Running Agents Beyond VS Code
 
 Accessibility Agents' agents run on your machine, in your editor, when you ask for them. That is one scope.

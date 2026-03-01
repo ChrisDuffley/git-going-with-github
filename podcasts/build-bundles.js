@@ -711,6 +711,10 @@ const episodes = [
       'Team 2 - GitHub Workflow (12 agents): issues, PRs, analytics, templates',
       'Team 3 - Developer Tools (6 agents): Python, desktop, custom tools',
       'Slash commands: 54+ commands organized by workflow',
+      'High-impact starting points: which agents and commands to try first',
+      'Slash commands that save time: /my-issues, /review-pr, /triage, /daily-briefing, /a11y-update',
+      'Orchestrator agents: @nexus, @accessibility-lead, @web-accessibility-wizard',
+      'How the three teams connect in multi-agent workflows',
       'How to invoke an agent in Copilot Chat',
       'Installing and configuring agents from .github config files',
       'Agent instruction files and how they customize behavior',
@@ -718,15 +722,19 @@ const episodes = [
       'Agentic workflows: chaining multiple agents together',
       'How agents amplify skills: the manual skill first, then the agent',
       'Real-world examples of agent-assisted contributions',
-      'Limitations: agents suggest, humans decide and verify'
+      'Limitations: agents suggest, humans decide and verify',
+      'Go deeper: Appendix V has all 54+ commands, Episode 39 walks through every agent'
     ],
     focus: `- What accessibility agents are and how they extend Copilot
 - The full ecosystem: 55 agents across 3 teams and 5 platforms
 - The three teams: Accessibility (26), GitHub Workflow (12), Developer Tools (6)
 - Slash commands: the 54+ commands and when to use them
+- High-impact agents and slash commands to try first
+- Orchestrator agents and how teams work together
 - Installing and configuring the agents
 - Building custom agents for your own projects
-- How agents amplify every skill learned in this workshop`
+- How agents amplify every skill learned in this workshop
+- Cross-reference: Appendix V and Episode 39 for the complete reference`
   },
 
   // ---- Appendices ----

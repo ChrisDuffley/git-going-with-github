@@ -1,305 +1,239 @@
 [ALEX]
-Welcome to Git Going with GitHub, the podcast for blind and low-vision developers learning to master GitHub and open source collaboration. I'm Alex, your lead host, and I'm excited to dive into today's episode with you.
+Welcome to Git Going with GitHub, the audio learning series designed for blind and low-vision developers who are mastering GitHub and open source collaboration. I am Alex, and I am thrilled to be here with you.
 
 [JAMIE]
-And I'm Jamie, your co-host! I remember when I first started with GitHub a couple of years ago, and I often wish I had a resource like this. So, it's great to be here to ask all the questions our listeners are probably thinking.
+And I am Jamie! This is episode 40, which means we are getting close to the end of our journey, but we still have some incredibly powerful tools to cover. Today, we are doing a complete reference guide for GitHub Copilot. 
 
 [ALEX]
-That's exactly why you're here, Jamie! Today, we're on Episode 40, and it's a big one. We're doing a complete reference guide to GitHub Copilot. Think of this as your one-stop shop for everything Copilot, building on the basics we covered way back in Episode 14.
+That is right. Back in episode 14, we covered the absolute basics of Copilot. We talked about how it acts as an AI pair programmer, and we touched on inline suggestions. But today, we are zooming out to look at the entire Copilot ecosystem. We are going to cover the complete feature inventory, chat participants, slash commands, custom instructions, prompt files, model selection, the command line interface, and even Model Context Protocol servers. 
 
 [JAMIE]
-Oh, I remember that one! Episode 14, where we talked about the fundamentals of Copilot, like how it gives you code suggestions as you type. What are we going to tackle today that's *more* than that?
+Okay, that sounds like a lot of steps. And honestly, a lot of jargon. I remember when I first learned GitHub a couple of years ago, hearing all those terms at once would have made me want to close my laptop and walk away. 
 
 [ALEX]
-Today, we're peeling back all the layers. We'll cover the full inventory of Copilot features, dive deep into the various chat participants and slash commands, explore how to use Copilot right from your command line, talk about custom instructions for tailoring Copilot's behavior, and even touch on how Copilot fits into broader agentic workflows on GitHub.
+It does sound like a lot! But here is the thing, Jamie. You have already done most of this on day one of your programming journey. You already know how to ask questions, how to search your codebase, and how to write terminal commands. This is just the exact same workflow, but with VS Code handling the heavy lifting and fetching the context for you. We are going to break every single piece down and explain not just how it works, but why it matters.
 
 [JAMIE]
-Wow, that sounds like a lot! I'm ready. Let's get going!
+I love that. So where do we start with the complete feature inventory? When we say GitHub Copilot today, what exactly are we talking about?
+
+[ALEX]
+Copilot has grown far beyond just auto-completing your code. The complete feature inventory really consists of four main pillars. First, there are inline suggestions, which happen right inside your editor as you type. Second, there is Copilot Chat, which is a dedicated conversational interface inside VS Code. Third, there is Copilot in the command line interface, which brings AI assistance to your terminal. And fourth, there is Copilot for Pull Requests, which integrates directly into GitHub dot com to help you summarize and review code changes. 
+
+[JAMIE]
+Let us start with those inline suggestions, because that is where most people first encounter Copilot. When I am typing, Copilot will suggest code, which we often call ghost text. For a screen reader user, this can be a bit chaotic because the screen reader might try to announce things while you are still thinking.
+
+[ALEX]
+Exactly. And this is a great time to review the most important accessibility workflow for Copilot. When you are typing and a suggestion appears, your screen reader might announce that an inline suggestion is available, especially if you have your accessibility signals turned on in VS Code settings. The instinct is to just press Tab to accept it, or Escape to reject it. But if the suggestion is multiple lines long, you really need to read it first. 
+
+[JAMIE]
+And reading it word by word using Control plus Right Arrow is one way to do it. On a Mac, that would be Command plus Right Arrow. That lets you accept the suggestion one word at a time, which is great for short completions. But for a whole function, that gets tedious. 
+
+[ALEX]
+Right. Which is why the Accessible View is your best friend. Whenever a suggestion appears, do not press Tab immediately. Instead, press Alt plus F 2. On a Mac, that is Option plus F 2. This opens the Accessible View. 
+
+[JAMIE]
+I wish I had known about Alt plus F 2 when I started. Can you explain exactly what the Accessible View does? 
+
+[ALEX]
+Absolutely. Think of the Accessible View like taking a photograph of a moving object. When Copilot generates text, it streams it in token by token, piece by piece. If your screen reader tries to read that live stream, it sounds broken and fragmented, like someone shouting words at you one by one as they think of them. The Accessible View captures the complete, static response and puts it into a structured, read-only text pane. You can navigate it with your up and down arrow keys at your own pace. 
+
+[JAMIE]
+And the best part is, you do not even have to wait for the response to finish generating anymore. You can press Alt plus F 2 immediately after sending a prompt, and the Accessible View will dynamically update in a screen-reader-friendly way. Once you read the suggestion and decide you want it, you just press Control plus Slash, or Command plus Slash on Mac, and it inserts the code right at your cursor. You do not even have to close the panel first.
 
 [PAUSE]
 
 [ALEX]
-Alright, Jamie, let's start by reminding ourselves that Copilot is much more than just the inline code suggestions we first encountered. That "ghost text" that appears as you type, offering to complete your line or even an entire function, is just the tip of the iceberg.
+Now let us move to the second pillar: Copilot Chat. You open this panel by pressing Control plus Shift plus I, or Command plus Shift plus I on Mac. This is where you can ask open-ended questions. But the real power comes from Chat Participants.
 
 [JAMIE]
-Right, the thing that makes that satisfying little chime when it has an idea! I still use that all the time. But I know Copilot Chat has become a huge part of my workflow now too.
+Chat participants. I use these all the time, but I always explain them to people as inviting experts into a conference room. If I am in an empty room and I ask, why is this broken, nobody knows what I am talking about. But if I invite the database expert and the frontend expert into the room and ask the same question, they can look at my work and give me a specific answer.
 
 [ALEX]
-Exactly. Copilot Chat, which you can open in VS Code with Control plus Shift plus I, is where a lot of the advanced interaction happens. It's like having a coding assistant right there in your editor, ready to answer questions, explain code, or even generate new files.
+That is a perfect analogy. In Copilot Chat, you invite these experts by typing the at symbol, followed by their name. The most common one is at workspace. When you type at workspace before your question, Copilot searches your entire VS Code project for relevant context. It looks at your open files, your file structure, and the code itself. 
+
+[JAMIE]
+So if I want to know where we define our heading hierarchy for accessibility, I would type at workspace, followed by, find all places where heading hierarchy is documented.
+
+[ALEX]
+Exactly. Another great participant is at terminal. If you run a command and it spits out a huge, confusing error message, you can open Copilot Chat and type at terminal, what did that last command output mean? Copilot will read the buffer from your integrated terminal and explain the error. There is also at github, which lets you search issues, pull requests, and code across all of GitHub dot com right from your editor.
+
+[JAMIE]
+And alongside those at symbol participants, we have the hash symbol variables, right? Like hash file or hash selection. 
+
+[ALEX]
+Yes. If participants are the experts in the room, the hash variables are the specific documents you slide across the table for them to look at. If you type hash file, a file picker opens, allowing you to attach any specific file to your prompt. If you type hash selection, it attaches whatever text you currently have highlighted in your editor. 
+
+[JAMIE]
+So I could highlight a really messy block of code, open chat, and type, at workspace, please review hash selection for accessibility violations. 
+
+[ALEX]
+You absolutely could. And that actually leads us perfectly into our next topic: Slash Commands. 
 
 [PAUSE]
 
 [ALEX]
-One of the most powerful aspects of Copilot Chat is its ability to understand and respond within specific contexts. We do this using what GitHub calls "chat participants" and "variables."
+Slash commands are built-in shortcuts for the most common tasks you might want Copilot to do. Instead of typing out a long prompt, you just type a forward slash and a specific keyword.
 
 [JAMIE]
-Okay, chat participants. What are those? Are they like different hats Copilot can wear?
+I love slash commands. I think of them like the quick-dial buttons on a microwave. You could type out exactly how many minutes and seconds you want to heat up your popcorn, or you can just press the popcorn button. Slash commands are the popcorn buttons of Copilot.
 
 [ALEX]
-That's a great analogy, Jamie! You can think of them like specialized researchers you're directing. When you type an "at" symbol, `@`, in the chat input, you're telling Copilot to pull context from a specific source.
-
-[ALEX]
-For example, `@workspace` tells Copilot to search your entire VS Code workspace for relevant information. It's like telling your research assistant, "Look through all the files in our current project for an answer."
+That is exactly what they are. Let us go through the essential ones. First is slash explain. If you navigate to a complex block of code, select it, and type slash explain in the chat, Copilot will break down exactly what that code does in plain language. This is incredible when you are reading a new codebase. 
 
 [JAMIE]
-So, if I'm asking a question about a function I know is used across several files, I could say something like, "At workspace, how is the `renderAccessibilityTree` function used?"
+Then there is slash fix. If you have code with a bug or a syntax error, you select it, type slash fix, and Copilot will propose a correction. 
 
 [ALEX]
-Precisely. Then there's `@github`, which lets Copilot access data directly from GitHub.com. You can use it to search for issues, pull requests, or code across the platform. It's like telling your assistant, "Go check GitHub itself for related discussions or examples." For instance, `@github search community-access/accessibility-agents for issues labeled accessibility`.
+Next is slash tests. Selecting a function and typing slash tests will generate unit tests for that specific logic. And similarly, slash doc will generate documentation comments, like JS Doc strings, for your selected code. 
 
 [JAMIE]
-Oh, that's clever! So I don't have to open my browser and navigate to GitHub to search. Copilot can do it for me right in the chat.
+There is also slash new, which is fantastic for scaffolding. If I type slash new React component for notifications, Copilot will generate the file structure and the boilerplate code for me. It saves so much repetitive typing.
 
 [ALEX]
-Exactly. And for those times you're working in the integrated terminal in VS Code, there's `@terminal`. This provides context from your terminal, which is super useful for debugging. You could ask, "At terminal, what did the last command output mean?"
-
-[JAMIE]
-That's awesome. I'm always staring at a confusing error message in the terminal, wishing I had someone to explain it!
+And if you ever forget these, just type slash help. It will list all the available commands and participants. 
 
 [PAUSE]
 
-[ALEX]
-Beyond those broader participant scopes, we also have what are called "variables," which are even more specific. You access these by typing a hash symbol, `#`.
+[JAMIE]
+Okay, so built-in slash commands are great. But what if I want my own custom popcorn buttons? What if my team has very specific ways we write tests, or very specific accessibility rules we follow? I do not want to type those rules out every single time I ask Copilot to generate code.
 
 [ALEX]
-Variables let you attach very specific pieces of context. `#file`, for instance, opens a file picker, letting you attach any file from your workspace to your prompt. So you could say, "Explain what hash file does," and then pick a specific file.
+This is where Custom Instructions and Prompt Files come in, and they are total game changers. Let us talk about Custom Instructions first. You can create a file in your repository at the exact path dot github slash copilot dash instructions dot md. 
 
 [JAMIE]
-So, if I want Copilot to review a specific Markdown file for heading hierarchy problems, I could say, "Review hash file for heading hierarchy violations," and then select the Markdown file. That makes sense.
+And just to clarify, that is a folder named dot github, and inside it, a markdown file named copilot dash instructions. 
 
 [ALEX]
-Exactly. You can also use `#selection` to attach your currently selected text, which is great for targeted feedback. Or `#codebase` to search your full codebase for relevant snippets, which is a bit more focused than `@workspace`. And finally, `#terminalLastCommand` attaches both the last command you ran in the terminal and its output, making debugging even easier.
+Correct. This file is basically the employee handbook for Copilot. Whatever you write in this plain text markdown file will be quietly attached to every single request you make to Copilot in that workspace. You never have to invoke it manually. 
+
+[JAMIE]
+So what kind of things should go in the employee handbook?
+
+[ALEX]
+Project-wide conventions. You might write things like: Include semantic HTML elements in generated markup. Never use color as the only indicator of meaning. Write commit messages using the conventional commits format. Always use active voice in documentation. Once you save that file, Copilot just knows to follow those rules.
+
+[JAMIE]
+That is brilliant. And you can actually have VS Code generate a starting point for this file automatically, right? 
+
+[ALEX]
+Yes! If you open Copilot Chat and type slash init, it will analyze your workspace and create a tailored copilot dash instructions file for you. You can review it, tweak it, and commit it to your repository so everyone on your team gets the same consistent AI behavior.
+
+[JAMIE]
+Now, what if I have instructions that should only apply to specific files? Like, I only want my testing rules to apply when I am looking at test files.
+
+[ALEX]
+For that, you use Scoped Instructions. You create files with the extension dot instructions dot md. Inside these files, you can use a bit of configuration at the top called frontmatter to define when the file should activate. For example, you can set an applyTo property that tells Copilot, only use these instructions if the current file ends in dot test dot js.
+
+[JAMIE]
+That is so smart. It keeps the context window clean. The AI does not need to read the testing rules if I am just asking it to fix a CSS bug. And what about those custom popcorn buttons we mentioned? The reusable prompt files?
+
+[ALEX]
+Those are called Prompt Files. They live in a folder named dot github slash prompts, and they have the extension dot prompt dot md. If you create a file in there called review dot prompt dot md, you instantly get a new slash command in your chat called slash review. 
+
+[JAMIE]
+So I could write a prompt file that says, check the selected code against the Web Content Accessibility Guidelines level AA, and suggest fixes for any keyboard navigation issues. Then, anytime I want that check, I just type slash review. 
+
+[ALEX]
+Exactly. And there is a priority system here that is important to understand. You can have instructions at the Organization level, the Workspace level, and the User level. The User level refers to files stored in your personal VS Code profile folder. If there is ever a conflict, your personal User instructions always win. They override the Workspace, and the Workspace overrides the Organization. But mostly, they are additive. VS Code combines all the relevant instructions and sends them together.
 
 [PAUSE]
 
+[JAMIE]
+Let us talk about Model Selection. I noticed a dropdown menu at the bottom of the Copilot Chat input area. It lets me change the AI model. Why would I want to change it? 
+
 [ALEX]
-Now, let's talk about "slash commands." These are like quick, predefined instructions you can give Copilot in the chat. You type a forward slash, `/`, followed by the command name.
+Because different models have different strengths. Think of it like hiring different types of contractors. Sometimes you need a very fast junior developer to write a quick script or format some JSON. Other times, you need a deliberate, meticulous senior architect to design a complex system from scratch. 
 
 [JAMIE]
-Like saying "Hey Copilot, do this specific task right now"?
+So if I just need a quick explanation of a terminal command, I might use a smaller, faster model. But if I am asking Copilot to refactor an entire module and ensure it handles edge cases, I want to select the most powerful model available in that dropdown.
 
 [ALEX]
-Precisely. They're shortcuts for common actions. Some of the most frequently used ones include `/explain`, which explains selected code or text in plain language. If you have a complex block of code, select it and type `/explain`.
-
-[JAMIE]
-That's a lifesaver for quickly understanding a new codebase!
-
-[ALEX]
-Absolutely. Then there's `/fix`, which suggests fixes for problems in your selected code. If you have broken code, select it, type `/fix`, and Copilot will propose corrections.
-
-[ALEX]
-For generating code, we have `/tests` to generate unit tests for a selected function, and `/doc` to generate documentation, like JSDoc or docstrings, for your code. And `/new` can scaffold a new file or project structure, like `/new React component for notifications`.
-
-[JAMIE]
-So, `/explain`, `/fix`, `/tests`, `/doc`, and `/new` are like my go-to tools for common coding tasks. That's a good mental model.
-
-[ALEX]
-There are also a couple of really useful workspace management slash commands. `/init` analyzes your workspace and auto-generates a `.github/copilot-instructions.md` file tailored to your project. This is fantastic for setting up custom instructions, which we'll talk about next.
-
-[JAMIE]
-Wait, `/init` can *write* my instructions file for me? That sounds incredibly useful!
-
-[ALEX]
-It can give you a great starting point. And then, after a useful chat exchange, you can use `/savePrompt` to save the current conversation as a reusable prompt file, which becomes its own slash command. This is how you create your own custom, reusable prompt templates.
+Exactly. The interface lets you switch models on the fly depending on the complexity of the task. Keep in mind that as a screen reader user, you can navigate to this dropdown by tabbing through the bottom toolbar of the Chat view. Pressing Space or Enter will open the list of available models.
 
 [PAUSE]
 
+[JAMIE]
+Okay, so we have covered the editor extensively. But I spend a lot of time in the command line. Does Copilot exist outside of VS Code?
+
 [ALEX]
-Speaking of custom instructions, this is where Copilot really shines for tailoring its behavior to your specific needs or your team's standards. Copilot supports multiple ways to provide these instructions, each with different scopes and priorities.
+It absolutely does. If you have the GitHub CLI installed, which is the command line tool you run by typing g h, you can install the Copilot extension for it. Once you do, you get access to a feature that is like having a universal translator for your terminal.
 
 [JAMIE]
-Okay, so it's not just one file where I dump all my rules?
+I definitely need a translator for some of those complex Git commands or obscure shell scripts. How does it work?
 
 [ALEX]
-No, it's more sophisticated than that. The primary way to provide project-wide instructions is through a file called `.github/copilot-instructions.md`. This file lives at the root of your repository, inside the `.github` folder. Its content is automatically included in *every* chat request and inline suggestion context for that project. You never need to invoke it manually.
+There are two main commands. The first is g h copilot suggest. You type that, followed by what you want to do in plain English. For example, g h copilot suggest find all markdown files modified in the last three days. Copilot will generate the exact terminal command you need, and even offer to run it for you.
 
 [JAMIE]
-So, this is like the official style guide or rulebook for *this specific project* that Copilot always refers to?
+That is incredible. No more digging through manual pages to remember which flags to use for the find command. 
 
 [ALEX]
-Exactly. You'd put things in there like accessibility standards, documentation style guides, commit message formats, or coding standards. For example, "Always include semantic HTML elements in generated markup," or "Never skip heading levels." Remember that `/init` command we just discussed? That's what it helps you generate.
-
-[ALEX]
-Now, for teams that use multiple AI tools, or in large monorepos where different subdirectories have different rules, there's `AGENTS.md`. This is an open standard instruction file recognized by multiple AI tools, including Copilot. If you have this file at the root, or nested in subdirectories, it applies. The closest `AGENTS.md` file to your current directory wins.
-
-[JAMIE]
-So, `copilot-instructions.md` is for Copilot specifically, but `AGENTS.md` is more universal?
-
-[ALEX]
-That's the idea. You generally choose one or the other for your primary project instructions. There's also `CLAUDE.md`, for cross-tool compatibility if your team uses both Copilot and Claude Code. It follows a similar pattern for scope and priority.
+Exactly. And the second command is the reverse: g h copilot explain. If you come across a command in documentation that looks like alphabet soup, you can copy it, paste it after g h copilot explain, and it will break down exactly what every single flag and argument does.
 
 [PAUSE]
 
+[JAMIE]
+Alright, let us tackle the jargon I mentioned earlier. MCP Servers. I see this acronym everywhere now. Model Context Protocol. What is it, and why should I care?
+
 [ALEX]
-Then we have "conditional or scoped instructions." These are `.instructions.md` files that apply only when specific file types or folders are involved in the chat. These are more targeted.
+MCP is a breakthrough in how AI agents interact with the world. Think about it this way. By default, Copilot lives in a box. It can read your code, and it can write text. But it cannot directly browse the live internet, or query your company database, or run a Docker container. It does not have hands. 
 
 [JAMIE]
-Like a mini-rulebook for just the Python files, or just the documentation folder?
+So an MCP server gives it hands?
 
 [ALEX]
-Spot on. You create these files, often in a folder like `.github/instructions/`, and you add some metadata at the top called "frontmatter." In this frontmatter, you can specify an `applyTo` glob pattern. For instance, `applyTo: "**/*.py"` would make these instructions only active when you're working with Python files.
-
-[ALEX]
-So, you could have a file called `test-file-standards.instructions.md` with an `applyTo` glob of `**/*.test.{js,ts}`. Inside, you'd define rules like, "Use `describe`/`it` structure," or "Test names must describe behavior."
+Yes. An MCP server is like giving Copilot a secure API badge to access specific external tools. It is an open standard protocol. If your team builds an MCP server that connects to your internal bug tracker, you can plug that server into VS Code. Suddenly, Copilot can actually look up live ticket statuses when you ask it questions. 
 
 [JAMIE]
-That's incredibly powerful! So I can tell Copilot, "When you're helping me with a test file, remember these specific testing conventions."
+That makes so much sense. It is a standardized way to plug tools into the AI. I know GitHub has a community repository called awesome dash copilot, where people share these tools. You can actually install an MCP server from there that gives Copilot even more capabilities. 
 
 [ALEX]
-Exactly. These instructions can be triggered automatically when a matching file is in context, or Copilot can detect from the file's description that it's relevant to your task, or you can even manually select them from the chat panel.
-
-[ALEX]
-And for large organizations, there are "organization-level instructions." These are defined by GitHub Enterprise or Teams administrators and apply to all repositories in the organization. They act as a base layer of instructions, covering things like company-wide security policies or legal disclaimers.
-
-[JAMIE]
-So if my company has an accessibility policy, it could be built into Copilot at that level?
-
-[ALEX]
-Yes, exactly. It's the lowest priority, though, meaning your workspace-level and user-level instructions can override or add to them if there's a conflict. All non-conflicting instructions are combined.
-
-[ALEX]
-Just a quick note: there were "settings-based instructions" where you could put instructions directly into your VS Code `settings.json` for specific tasks like code generation or test generation. However, these are now deprecated, and the file-based approach is much preferred for new work.
+That is right. Awesome dash copilot is a curated ecosystem of plugins, prompts, and MCP servers. You can explore it right from your chat by typing slash plugin. It acts as a marketplace browser for community-built tools.
 
 [PAUSE]
 
+[JAMIE]
+We have one last pillar to cover from our feature inventory: Copilot for Pull Requests. This happens on GitHub dot com, not in VS Code, right?
+
 [ALEX]
-Let's talk about "model selection" next. At the bottom of the Copilot Chat input area, you'll find a control that allows you to choose the underlying AI model.
+Mostly, yes. When you are on GitHub dot com and you open a pull request, Copilot can help in two major ways. First, it can generate a PR summary. Instead of manually typing out a description of the twenty files you changed, Copilot reads the differences and generates a structured summary of the feature, the changes, and the impact. 
 
 [JAMIE]
-Oh, I've seen that! I always just leave it on the default. Does it make a big difference?
+I think of that like having a proofreader write an executive summary for your report. It saves the reviewer so much time because they get a high-level overview before they dive into the code. 
 
 [ALEX]
-It can, yes. Different models have different strengths and weaknesses. Some might be better at creative tasks, like generating documentation from scratch, while others might excel at more factual or logical tasks, like debugging or refactoring. Choosing a different model is like picking a different expert for a particular task. If you're not getting the results you expect, trying a different model can sometimes yield better outcomes. It impacts Copilot's overall behavior and the quality of its responses.
+Exactly. And the second feature is PR reviews. Reviewers can ask Copilot to explain specific changes in the pull request, or even ask it to generate review comments checking for common bugs. It is an incredible time saver for maintainers.
+
+[JAMIE]
+And speaking of automation on GitHub dot com, I read something in the reference material about GitHub Agentic Workflows. What is that?
+
+[ALEX]
+That is a technical preview feature that takes AI automation to the next level. Instead of interacting with an agent in your editor, you write a markdown file describing a goal, like, create a daily status report of all open issues. You push that file to your repository, and a cloud-based AI agent runs on a schedule, reads your repository, and completes the task automatically. It is like having a tireless project manager running in your GitHub Actions pipeline.
 
 [PAUSE]
 
+[JAMIE]
+Wow. We have covered a massive amount of ground today. From ghost text to cloud agents. How do we summarize all of this?
+
 [ALEX]
-Now, let's talk about something a bit more advanced: "MCP servers." MCP stands for Model Context Protocol. What they are, in essence, are Docker-based tool servers that extend Copilot's capabilities beyond just file-based customizations.
+Let us narrow it down to three concrete takeaways for our listeners to practice. 
+
+First, make Alt plus F 2 your default reflex. Whenever Copilot suggests inline code or responds in chat, open the Accessible View. It removes the streaming noise and gives your screen reader a clean, navigable structure.
 
 [JAMIE]
-Docker and servers? That sounds a bit intimidating, Alex.
+Second, leverage chat participants and slash commands. Do not just ask generic questions. Invite the experts by using at workspace or at terminal, and use slash explain or slash fix to skip the repetitive typing. 
 
 [ALEX]
-It does! But here's an analogy: Imagine Copilot is a chef in your kitchen. Normally, it uses the ingredients and tools you have on your counter, which are like your code files and custom instructions. An MCP server is like bringing in a specialized food truck parked outside your kitchen. This food truck has its own unique equipment and ingredients – external tools, databases, or specialized APIs – that your main kitchen doesn't have. Copilot can send requests to this food truck, get advanced processing done, and then bring the results back.
-
-[ALEX]
-This allows Copilot to integrate with a wider ecosystem of tools and services. A great example of this is `awesome-copilot`.
+And third, start building your project's employee handbook. Create a dot github slash copilot dash instructions dot md file in your workspace. Write down your accessibility standards and coding conventions in plain English. You will be amazed at how much better Copilot's suggestions become when it knows the rules of your specific house.
 
 [JAMIE]
-`awesome-copilot`? Is that another plugin?
+I am definitely going to set up an instructions file today. This has been such a helpful reference guide. What are we covering in the next episode?
 
 [ALEX]
-It's more than a plugin. `awesome-copilot` is a GitHub repository, `github/awesome-copilot`, that acts as GitHub's curated ecosystem of community-contributed Copilot plugins, prompts, instructions, agents, skills, and hooks. It's a vast collection of resources.
-
-[ALEX]
-You can browse and install resources from `awesome-copilot` directly from Copilot Chat by typing `/plugin`. This opens an interactive marketplace browser. You can install specific plugins, or even install the entire `awesome-copilot` collection to give your local Copilot access to all these extended capabilities.
+In episode 41, we are going to dive deep into a specific community toolset: Accessibility Agents. We will look at how to build and use custom agents specifically designed to catch accessibility violations before they ever leave your editor. It is going to be incredibly practical.
 
 [JAMIE]
-So, the MCP server is the *mechanism* that lets Copilot tap into these external tools and resources, and `awesome-copilot` is a *collection* of those external tools and resources that I can add?
+I cannot wait for that one. Thank you all for listening to Git Going with GitHub. 
 
 [ALEX]
-Exactly. It's about giving Copilot a broader range of abilities by connecting it to a richer environment.
-
-[PAUSE]
-
-[ALEX]
-Let's shift gears slightly and talk about "Copilot for pull requests." This is a cloud-based feature, often tied to GitHub's broader AI initiatives, that helps with the pull request workflow directly on GitHub.com.
-
-[JAMIE]
-Ah, so this isn't necessarily in VS Code, but on the GitHub website?
-
-[ALEX]
-That's right. One of the main uses is generating "PR summaries." When you create a pull request, Copilot can analyze the changes you've made and automatically draft a summary of what's in the PR, often highlighting key changes or components. This can save a lot of time and ensure important context isn't missed.
-
-[ALEX]
-It can also assist with "PR reviews." Copilot can act as an AI reviewer, providing initial feedback, suggesting improvements, or pointing out potential issues based on the changes in the pull request and the repository's established patterns or custom instructions. It's like having another pair of eyes, powered by AI, to give a first pass over your code.
-
-[JAMIE]
-That sounds incredibly helpful for making sure I don't miss anything before asking for a human review, especially for accessibility considerations.
-
-[PAUSE]
-
-[ALEX]
-And this leads us nicely into the broader concept of "GitHub Agentic Workflows." This is a technical preview feature that takes AI agents out of your local editor and runs them as part of GitHub Actions pipelines in the cloud.
-
-[JAMIE]
-Agents in the cloud? What does that even mean?
-
-[ALEX]
-Think of it this way: instead of you typing prompts to Copilot in VS Code, you're now writing automation goals in plain Markdown files in your repository. Then, a command-line interface, `gh aw`, compiles these Markdown files into standard GitHub Actions workflows. The AI agent then interprets your natural language description and executes the task autonomously in the cloud.
-
-[ALEX]
-The key differentiator here is that these agents can work autonomously, without you needing to be present in VS Code. They can be triggered by events like a new issue being opened, a push to your main branch, or even on a daily schedule.
-
-[JAMIE]
-So, it's like a robot assistant that lives in my GitHub repository and can perform tasks automatically based on instructions I give it in Markdown?
-
-[ALEX]
-Exactly! It's an automated robot assistant, but with very strict safety protocols. This enables things like auto-triaging, labeling, and assigning new issues, keeping your README and documentation in sync with code changes, or even generating automated refactoring pull requests.
-
-[ALEX]
-A critical part of this is the "security model" with "safe outputs." These workflows run read-only by default. Any write operations, like creating an issue or commenting on a pull request, must be explicitly declared in the frontmatter of your Markdown workflow file under `safe-outputs`. This acts as a security guardrail, ensuring the AI agent can only perform pre-approved, sanitized GitHub operations. It cannot push arbitrary code or delete branches unless you've explicitly configured it to do so through these safe outputs.
-
-[ALEX]
-So, you define your goal in a Markdown file, `gh aw` compiles it, and then the AI agent performs the task in GitHub Actions, with strict security measures in place.
-
-[PAUSE]
-
-[ALEX]
-Finally, Jamie, a crucial workflow for our listeners, and truly for anyone interacting with Copilot, is the "Accessible View workflow."
-
-[JAMIE]
-Oh, yes, please! Sometimes when Copilot Chat is streaming a response, my screen reader gets a bit overwhelmed, and it's hard to follow.
-
-[ALEX]
-You've hit on exactly why the Accessible View, accessed with Alt plus F2, is so vital. Copilot Chat responses stream in token by token, which can indeed fragment screen reader announcements. The Accessible View gives you a complete, static, and properly structured version of the response.
-
-[ALEX]
-Here's the recommended workflow for every Copilot interaction:
-First, open Copilot Chat with Control plus Shift plus I.
-Second, type your prompt and press Control plus Enter to send it.
-Third, immediately press Alt plus F2. The Accessible View will open and the response will stream directly into it, in real-time.
-
-[JAMIE]
-Immediately? Even before Copilot finishes generating the response?
-
-[ALEX]
-Yes, exactly. You don't have to wait. This ensures you get the full response in one readable pane, without the live region updates interrupting or overlapping. You can navigate it line by line with your arrow keys, and headings, code blocks, and lists are all properly structured. When you're done, just press Escape to close it.
-
-[ALEX]
-This workflow is also critical for inline suggestions. When a multi-line ghost text suggestion appears, don't accept it immediately. Press Alt plus F2 to open the Accessible View, read the complete suggestion at your own pace, then press Escape to close the view, and finally Tab to accept the suggestion or Escape again to dismiss it.
-
-[JAMIE]
-That really makes a difference. No more fragmented announcements, just clear, structured text that I can read at my own pace. I wish I had known that from day one!
-
-[PAUSE]
-
-[ALEX]
-Alright, Jamie, we've covered a tremendous amount of ground today. What are your biggest takeaways from this deep dive into Copilot?
-
-[JAMIE]
-Okay, so my three big takeaways are:
-First, Copilot is way more powerful than just inline suggestions. The chat participants like `@workspace` and variables like `#file` give it incredible context, making it a truly smart assistant.
-Second, custom instructions, especially the `.github/copilot-instructions.md` and the scoped `.instructions.md` files, are essential for tailoring Copilot to my project's specific needs, and `/init` can even help create them! It's like giving Copilot a personalized manual for *our* project.
-And third, the Accessible View with Alt plus F2 is an absolute game-changer for screen reader users. It transforms the chat experience from potentially chaotic to perfectly structured and navigable.
-
-[ALEX]
-Excellent summary, Jamie. I'd add a couple more. Fourth, understanding slash commands like `/explain`, `/fix`, and `/doc` allows you to direct Copilot for specific, immediate tasks, streamlining your workflow. And fifth, the emerging GitHub Agentic Workflows show us a future where AI assistants can work autonomously in the cloud, performing complex tasks within secure guardrails, which is fascinating and powerful.
-
-[ALEX]
-It's clear that Copilot is rapidly evolving into a comprehensive AI companion for developers, offering tools from immediate code suggestions to sophisticated, automated workflows.
-
-[JAMIE]
-It really is! It feels like having a whole team of assistants at my fingertips.
-
-[ALEX]
-Next time on Git Going with GitHub, we'll continue our exploration of advanced tools by diving into the GitHub CLI, or Command Line Interface. We'll learn how to manage your repositories, pull requests, and issues directly from your terminal, making your command-line workflow even more efficient.
-
-[JAMIE]
-I'm looking forward to that! The CLI always feels a bit like magic when you know the right commands.
-
-[ALEX]
-Indeed. So, until next time, keep coding, keep collaborating, and keep going with GitHub!
-
-[JAMIE]
-See you next episode!
+Keep exploring, keep coding, and we will see you in the next episode.

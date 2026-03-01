@@ -1789,6 +1789,69 @@ git push origin main</code></pre>
 </tr>
 </tbody></table>
 <p>You do not need to use orchestrators to get value from individual agents. But when a task is complex enough to span multiple agents, orchestrators save you the work of manually chaining requests.</p>
+<h3>High-Impact Agents to Try First</h3>
+<p>Rather than exploring all 55 agents at once, start with the ones that deliver immediate value based on Day 1 skills you already have:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">If You Can Already</th>
+<th scope="col">Try This Agent</th>
+<th scope="col">And This Command</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Read issues and write replies</td>
+<td><code>@issue-tracker</code></td>
+<td><code>/triage</code>, <code>/issue-reply</code></td>
+</tr>
+<tr>
+<td>Review a PR diff</td>
+<td><code>@pr-review</code></td>
+<td><code>/review-pr</code>, <code>/address-comments</code></td>
+</tr>
+<tr>
+<td>Check your contribution activity</td>
+<td><code>@analytics</code></td>
+<td><code>/my-stats</code>, <code>/sprint-review</code></td>
+</tr>
+<tr>
+<td>Write issue templates</td>
+<td><code>@template-builder</code></td>
+<td><code>/create-issue</code></td>
+</tr>
+<tr>
+<td>Track what changed overnight</td>
+<td><code>@daily-briefing</code></td>
+<td><code>/daily-briefing</code></td>
+</tr>
+<tr>
+<td>Scan a page for accessibility issues</td>
+<td><code>@web-accessibility-wizard</code></td>
+<td><code>/onboard-repo</code></td>
+</tr>
+<tr>
+<td>Check color contrast manually</td>
+<td><code>@contrast-master</code></td>
+<td>(invoke directly)</td>
+</tr>
+<tr>
+<td>Test keyboard navigation</td>
+<td><code>@keyboard-navigator</code></td>
+<td>(invoke directly)</td>
+</tr>
+</tbody></table>
+<h3>Slash Commands That Save the Most Time</h3>
+<p>These commands work without invoking a full agent - type them directly in Copilot Chat:</p>
+<ul>
+<li><strong><code>/my-issues</code></strong> and <strong><code>/my-prs</code></strong> - Instant dashboard of your open work across all repos</li>
+<li><strong><code>/review-pr #14</code></strong> - Full AI-generated review with inline suggestions, replacing manual line-by-line reading</li>
+<li><strong><code>/triage #22</code></strong> - Label, priority, and assignment suggestions for any new issue</li>
+<li><strong><code>/daily-briefing</code></strong> - Morning snapshot of repository activity, PRs needing review, and stale issues</li>
+<li><strong><code>/a11y-update</code></strong> - Latest accessibility improvements with WCAG cross-references</li>
+<li><strong><code>/draft-release v2.0</code></strong> - Generate release notes from merged PRs</li>
+<li><strong><code>/onboard-repo</code></strong> - First-time scan of a repo with health assessment and recommended actions</li>
+</ul>
+<p>The full list of 54+ commands is in <a href="appendix-v-accessibility-agents-reference.html">Appendix V</a>, and <a href="../PODCASTS.html">Episode 39</a> walks through all of them with examples.</p>
 <h3>Running Agents Beyond VS Code</h3>
 <p>Accessibility Agents&#39; agents run on your machine, in your editor, when you ask for them. That is one scope.</p>
 <p>The same Markdown-authored pattern extends further:</p>
