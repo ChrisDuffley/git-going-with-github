@@ -65,6 +65,29 @@ Click the **Pull requests** tab in the repository navigation bar. The tab shows 
 ### From a PR notification:
 If you received a notification about a PR, follow the notification link directly to the PR page.
 
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+List and view pull requests from your terminal:
+
+```bash
+# List open PRs
+gh pr list
+
+# Filter by review status
+gh pr list --search "review-requested:@me"
+
+# View a specific PR in the terminal
+gh pr view 42
+
+# Open a PR in your browser
+gh pr view 42 --web
+```
+
+**Setup:** Install the GitHub CLI from [cli.github.com](https://cli.github.com) and authenticate with `gh auth login`. See [Appendix D](appendix-d-git-authentication.md) for details.
+
+</details>
+
 ---
 
 ## The Pull Request List Page
@@ -495,6 +518,27 @@ Scroll to bottom of Conversation tab
 2. Look for the **"Convert to draft"** link (below the review status)
 3. Confirm in the dialog - this removes merge eligibility until you mark it ready again
 
+<details>
+<summary>GitHub CLI (gh) alternative - draft PR lifecycle</summary>
+
+Manage draft PRs from your terminal:
+
+```bash
+# Create a draft PR
+gh pr create --draft --title "WIP: Add carousel keyboard nav"
+
+# Mark a draft ready for review
+gh pr ready 42
+
+# Check PR status (shows draft state)
+gh pr view 42
+
+# List only draft PRs
+gh pr list --draft
+```
+
+</details>
+
 **Requesting reviewers:**
 From the sidebar Reviewers section:
 1. Navigate to "Reviewers" heading (`3` or `H`)
@@ -565,6 +609,32 @@ After adding your inline comments via “Start a review,” you must submit the 
 
 </details>
 > **Tip from accessibility.github.com:** If you submitted comments as "Add single comment" instead of "Start a review," each comment is already posted individually. The "Submit review" flow is only needed when you chose "Start a review" to batch comments together.
+
+<details>
+<summary>GitHub CLI (gh) alternative - reviewing a PR</summary>
+
+Review a pull request from your terminal:
+
+```bash
+# View the PR diff in your terminal
+gh pr diff 42
+
+# Approve a PR
+gh pr review 42 --approve
+
+# Approve with a comment
+gh pr review 42 --approve --body "Looks good - heading hierarchy is correct."
+
+# Request changes
+gh pr review 42 --request-changes --body "The alt text on line 34 needs to describe the image content."
+
+# Leave a comment-only review (no verdict)
+gh pr review 42 --comment --body "A few suggestions - see inline comments."
+```
+
+**Note:** `gh pr diff` outputs the full diff to your terminal, which a screen reader can read line by line. For inline comments on specific lines, use the web interface or VS Code.
+
+</details>
 
 ### GitHub shortcuts for pull requests
 
@@ -672,6 +742,30 @@ Step 3: A dropdown arrow next to the button offers strategy options:
 Step 4: Choose strategy → activate the button
 Step 5: Confirm in the dialog that appears
 ```
+
+<details>
+<summary>GitHub CLI (gh) alternative - merging a PR</summary>
+
+Merge a pull request from your terminal:
+
+```bash
+# Merge with default strategy (merge commit)
+gh pr merge 42
+
+# Squash and merge
+gh pr merge 42 --squash
+
+# Rebase and merge
+gh pr merge 42 --rebase
+
+# Delete the branch after merging
+gh pr merge 42 --squash --delete-branch
+
+# Enable auto-merge (merges when checks pass)
+gh pr merge 42 --auto --squash
+```
+
+</details>
 
 **After a PR is merged:**
 - The PR status badge changes to "Merged" (purple)

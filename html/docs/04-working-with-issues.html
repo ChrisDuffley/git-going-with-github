@@ -88,6 +88,18 @@
 </ol>
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+<p>List open issues directly from your terminal:</p>
+<pre><code class="hljs language-bash">gh issue list</code></pre>
+<p>Filter by label, assignee, or state:</p>
+<pre><code class="hljs language-bash">gh issue list --label <span class="hljs-string">&quot;good first issue&quot;</span>
+gh issue list --assignee @me
+gh issue list --state closed</code></pre>
+<p><strong>Setup:</strong> Install the GitHub CLI from <a href="https://cli.github.com">cli.github.com</a> and authenticate with <code>gh auth login</code>. See <a href="appendix-d-git-authentication.html">Appendix D</a> for details.</p>
+</details>
+
 <h3>Direct URL</h3>
 <p>Navigate directly: <code>https://github.com/[owner]/[repo]/issues</code></p>
 <hr>
@@ -186,6 +198,23 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 </ol>
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - filtering</summary>
+
+<p>Filter issues by label, milestone, or assignee without navigating dropdown menus:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Filter by label</span>
+gh issue list --label <span class="hljs-string">&quot;accessibility&quot;</span>
+
+<span class="hljs-comment"># Combine filters</span>
+gh issue list --label <span class="hljs-string">&quot;good first issue&quot;</span> --assignee @me
+
+<span class="hljs-comment"># Filter by milestone</span>
+gh issue list --milestone <span class="hljs-string">&quot;Hackathon Day 1&quot;</span>
+
+<span class="hljs-comment"># Search with keywords</span>
+gh issue list --search <span class="hljs-string">&quot;screen reader&quot;</span></code></pre>
+</details>
+
 <h3>Open vs Closed filter</h3>
 <p>The two state links &quot;Open&quot; and &quot;Closed&quot; appear near the top of the issue list. Press <code>K</code> to navigate links until you find them, or look for them as buttons near the search bar.</p>
 <hr>
@@ -250,6 +279,21 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <p><strong>Browse Mode recommended:</strong> The issue detail page is primarily text-based. Stay in <strong>Browse Mode</strong> (not Focus Mode) for reading - it gives you full heading (<code>H</code>), section (<code>D</code>), and link (<code>K</code>) navigation throughout the page. Only switch to Focus Mode when you need to type in a comment box.</p>
 </blockquote>
 <p>Markdown in the description renders as proper HTML: headings become actual headings, bullets become lists, code blocks become <code>&lt;code&gt;</code> elements with the text &quot;code block&quot; announced.</p>
+<details>
+<summary>GitHub CLI (gh) alternative - reading an issue</summary>
+
+<p>View an issue&#39;s full content in your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># View issue in terminal (renders Markdown)</span>
+gh issue view 42
+
+<span class="hljs-comment"># Open the issue in your browser instead</span>
+gh issue view 42 --web
+
+<span class="hljs-comment"># View just the comments</span>
+gh issue view 42 --comments</code></pre>
+<p>The terminal output includes the title, state, labels, assignees, body, and comments. Markdown renders as plain text - headings use <code>#</code> symbols, lists use <code>-</code>, and code blocks are preserved.</p>
+</details>
+
 <h3>Reading comments and activity</h3>
 <p>Each comment in the thread is marked as an h3. Navigate between them with <code>3</code>.</p>
 <p>Each comment announces:</p>
@@ -299,6 +343,17 @@ mentions:<span class="hljs-meta">@me</span>                        ← <span cla
 <li>To preview: <code>VO+Shift+Up</code> to stop interacting, then <code>Tab</code> to the <strong>Preview</strong> button and <code>VO+Space</code></li>
 <li>Submit: press <code>Cmd+Return</code> from inside the text area, OR <code>VO+Shift+Up</code> → <code>Tab</code> to the <strong>Comment</strong> button → <code>VO+Space</code></li>
 </ol>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - commenting</summary>
+
+<p>Leave a comment from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Interactive: opens your default editor ($EDITOR) to write the comment</span>
+gh issue comment 42
+
+<span class="hljs-comment"># Inline: provide the comment text directly</span>
+gh issue comment 42 --body <span class="hljs-string">&quot;Thanks for reporting this. I can reproduce the issue with NVDA + Chrome.&quot;</span></code></pre>
 </details>
 
 <h3>Markdown formatting while typing</h3>
@@ -527,6 +582,24 @@ Any other information, screenshots (with alt text), or links.</code></pre>
 <li>Tab to &quot;Submit new issue&quot; button</li>
 <li>Press <code>Enter</code></li>
 </ol>
+<details>
+<summary>GitHub CLI (gh) alternative - filing a new issue</summary>
+
+<p>Create an issue from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Interactive: prompts for title, body, labels, and assignees</span>
+gh issue create
+
+<span class="hljs-comment"># Inline: provide everything on the command line</span>
+gh issue create --title <span class="hljs-string">&quot;Screen reader announces wrong count on Issues list&quot;</span> \
+  --body <span class="hljs-string">&quot;## What happened\n\nThe count says 14 but only 12 issues are visible.&quot;</span> \
+  --label <span class="hljs-string">&quot;bug,accessibility&quot;</span> \
+  --assignee @me
+
+<span class="hljs-comment"># Use a template (if the repo has issue templates)</span>
+gh issue create --template <span class="hljs-string">&quot;bug_report.md&quot;</span></code></pre>
+<p>The interactive mode walks you step-by-step through title, body (opens your editor), labels, and assignees - fully usable from a terminal with a screen reader.</p>
+</details>
+
 <hr>
 <h2>Cross-Referencing Issues</h2>
 <p>Linking issues and PRs to each other creates a trail of context that helps everyone understand the project&#39;s history.</p>
@@ -676,6 +749,24 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 </ol>
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - closing and reopening</summary>
+
+<p>Close or reopen an issue from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Close an issue</span>
+gh issue close 42
+
+<span class="hljs-comment"># Close with a reason</span>
+gh issue close 42 --reason <span class="hljs-string">&quot;completed&quot;</span>
+gh issue close 42 --reason <span class="hljs-string">&quot;not planned&quot;</span>
+
+<span class="hljs-comment"># Close with a comment</span>
+gh issue close 42 --comment <span class="hljs-string">&quot;Fixed in PR #45.&quot;</span>
+
+<span class="hljs-comment"># Reopen a closed issue</span>
+gh issue reopen 42</code></pre>
+</details>
+
 <h3>Reopening a closed issue</h3>
 <p>If an issue is Closed, the &quot;Close issue&quot; button becomes &quot;Reopen issue&quot; - navigate and activate to reopen.</p>
 <h3>Assigning an issue</h3>
@@ -686,6 +777,23 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 <li>Type a username in the search field</li>
 <li>Select from the dropdown</li>
 </ol>
+<details>
+<summary>GitHub CLI (gh) alternative - assigning and labeling</summary>
+
+<p>Manage assignments and labels from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Assign yourself</span>
+gh issue edit 42 --add-assignee @me
+
+<span class="hljs-comment"># Add labels</span>
+gh issue edit 42 --add-label <span class="hljs-string">&quot;accessibility,in progress&quot;</span>
+
+<span class="hljs-comment"># Remove a label</span>
+gh issue edit 42 --remove-label <span class="hljs-string">&quot;needs triage&quot;</span>
+
+<span class="hljs-comment"># Set a milestone</span>
+gh issue edit 42 --milestone <span class="hljs-string">&quot;Hackathon Day 1&quot;</span></code></pre>
+</details>
+
 <h3>Changing labels</h3>
 <p>From the issue sidebar:</p>
 <ol>

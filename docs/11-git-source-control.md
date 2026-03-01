@@ -67,6 +67,38 @@
 
 **Why HTTPS over SSH for this workshop:** HTTPS works immediately with no setup. SSH requires key generation and configuration (see [Appendix D: Git Authentication](appendix-d-git-authentication.md) for SSH setup).
 
+<details>
+<summary>Web alternative (github.com)</summary>
+
+If you prefer not to clone locally, you can work entirely on GitHub.com:
+
+1. Navigate to the repository on GitHub
+2. Click any file to view it, then click the **pencil icon** (Edit) to modify it directly in the browser
+3. GitHub automatically creates a branch and commit for your edit
+4. When you save, GitHub prompts you to open a pull request
+
+This approach requires no local tools - just a browser. It works well for documentation changes and small edits. For larger changes, cloning to VS Code gives you a full editor with multi-file editing, Git staging, and the Accessible Diff Viewer.
+
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+Clone a repository with one command:
+
+```bash
+# Clone using owner/name (no URL needed)
+gh repo clone community-access/learning-room
+
+# Clone and cd into the folder
+gh repo clone community-access/learning-room && cd learning-room
+
+# Open the cloned repo in VS Code
+gh repo clone community-access/learning-room && code learning-room
+```
+
+</details>
+
 ---
 
 ## 2. The Source Control Panel - Complete Walkthrough
@@ -195,6 +227,42 @@ VS Code:
 - Avoid spaces and special characters
 - Be descriptive: `fix/heading-hierarchy` not `fix1`
 
+<details>
+<summary>Web alternative (github.com) - branch management</summary>
+
+Create and switch branches without leaving your browser:
+
+1. On the repository page, click the **branch dropdown** (shows "main" by default)
+2. Type a new branch name in the search field
+3. Click **"Create branch: your-branch-name from main"**
+4. GitHub switches to the new branch immediately
+5. Any file edits you make in the browser will be on this branch
+
+To switch between branches, click the branch dropdown and select the branch you want.
+
+</details>
+
+<details>
+<summary>Git CLI alternative - branch management</summary>
+
+Manage branches from your terminal:
+
+```bash
+# Create and switch to a new branch
+git checkout -b feature/improve-docs
+
+# List all branches
+git branch -a
+
+# Switch to an existing branch
+git checkout main
+
+# Delete a branch (after merging)
+git branch -d feature/improve-docs
+```
+
+</details>
+
 ### Switching Between Branches
 
 **Command Palette method:**
@@ -309,6 +377,45 @@ All modified files move to "Staged Changes."
 
 **Screen reader tip:** In the diff view, press `Alt+H` to see Accessible Help for diff-specific keyboard shortcuts.
 
+<details>
+<summary>Web alternative (github.com) - editing files</summary>
+
+On GitHub.com, there is no staging step. When you edit a file in the browser:
+
+1. Click the **pencil icon** on any file to open the web editor
+2. Make your changes
+3. Click **"Commit changes"** - GitHub creates the commit directly
+4. Choose to commit to the current branch or create a new branch and PR
+
+This is the simplest workflow if you are making a focused change to one file. For multi-file changes, VS Code's staging system gives you more control.
+
+</details>
+
+<details>
+<summary>Git CLI alternative - staging</summary>
+
+Stage files from your terminal:
+
+```bash
+# Stage a specific file
+git add docs/GUIDE.md
+
+# Stage all changes
+git add .
+
+# Stage specific lines interactively
+git add -p docs/GUIDE.md
+# Git shows each change hunk and asks: stage this? (y/n/s/e)
+
+# Unstage a file
+git restore --staged docs/GUIDE.md
+
+# Check what is staged vs unstaged
+git status
+```
+
+</details>
+
 ### Unstaging Files
 
 **Reverse the process:**
@@ -366,6 +473,24 @@ Fixes #42
 
 **Common types:** `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`
 
+<details>
+<summary>Git CLI alternative - committing</summary>
+
+Commit from your terminal:
+
+```bash
+# Commit staged changes with a message
+git commit -m "fix: correct heading hierarchy in GUIDE.md"
+
+# Commit with a multi-line message (opens your editor)
+git commit
+
+# Stage all tracked files and commit in one step
+git commit -am "docs: update screen reader instructions"
+```
+
+</details>
+
 ### What Happens After Commit
 
 - The "Staged Changes" section clears
@@ -397,6 +522,37 @@ Fixes #42
 **Screen reader feedback:**
 - NVDA/JAWS: Status bar announces "Pushing..." then "Pushed successfully" or an error message
 - Check the Source Control panel for any error messages (they appear as banner notifications)
+
+<details>
+<summary>Git CLI alternative - push and pull</summary>
+
+Push and pull from your terminal:
+
+```bash
+# Push commits to GitHub
+git push
+
+# Push a new branch for the first time
+git push -u origin feature/improve-docs
+
+# Pull changes from GitHub
+git pull
+
+# Fetch without merging (see what changed first)
+git fetch
+git log HEAD..origin/main --oneline
+```
+
+</details>
+
+<details>
+<summary>Web alternative (github.com) - push and pull</summary>
+
+On GitHub.com, there is no push/pull step - your commits are saved directly to GitHub when you use the web editor. If you edited on a branch, your changes are already on GitHub. Simply open a pull request from that branch.
+
+If your branch is behind `main`, look for the **"Update branch"** button on your PR page to pull in the latest changes.
+
+</details>
 
 **What to do if push fails:**
 - **Error: "No upstream branch"** → You need to publish the branch first (Command Palette → "Git: Publish Branch")

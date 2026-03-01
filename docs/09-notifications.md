@@ -72,6 +72,29 @@ Navigate to your inbox: `https://github.com/notifications` or press `G` then `N`
 
 **Screen reader note:** The `G N` shortcut uses two sequential key presses (not simultaneous). Press `G`, release it, then press `N`. This works in Browse Mode.
 
+<details>
+<summary>GitHub CLI (gh) alternative - notifications</summary>
+
+View and manage your GitHub notification status from the terminal:
+
+```bash
+# Check your notification status (opens the GitHub notification inbox)
+gh api notifications --jq '.[].subject.title' | head -20
+
+# View PRs that need your review (most common notification reason)
+gh search prs --review-requested @me --state open
+
+# View issues assigned to you
+gh issue list --assignee @me --state open
+
+# Check PR status for a specific notification
+gh pr view 42 --repo owner/repo
+```
+
+**Note:** The GitHub CLI does not have a first-class `gh notifications` command. For full inbox management (mark as read, mute, archive), use the web interface at `github.com/notifications`. The `gh` CLI is most useful for quickly checking PR review requests and issue assignments that generate notifications.
+
+</details>
+
 ### Page structure
 
 ```

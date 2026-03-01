@@ -221,6 +221,30 @@ Cloning copies the repository to your local machine so you can work with it in V
 
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+Clone a repository with one command using the GitHub CLI:
+
+```bash
+# Clone using the repo's owner/name (no URL needed)
+gh repo clone community-access/learning-room
+
+# Clone and cd into the folder
+gh repo clone community-access/learning-room && cd learning-room
+```
+
+**Or with standard Git:**
+
+```bash
+git clone https://github.com/community-access/learning-room.git
+cd learning-room
+```
+
+**Setup:** Install the GitHub CLI from [cli.github.com](https://cli.github.com) and authenticate with `gh auth login`. See [Appendix D](appendix-d-git-authentication.md) for details.
+
+</details>
+
 ---
 
 ## Watching, Starring, and Forking

@@ -92,6 +92,24 @@
 
 <h3>From a PR notification:</h3>
 <p>If you received a notification about a PR, follow the notification link directly to the PR page.</p>
+<details>
+<summary>GitHub CLI (gh) alternative</summary>
+
+<p>List and view pull requests from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># List open PRs</span>
+gh <span class="hljs-built_in">pr</span> list
+
+<span class="hljs-comment"># Filter by review status</span>
+gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string">&quot;review-requested:@me&quot;</span>
+
+<span class="hljs-comment"># View a specific PR in the terminal</span>
+gh <span class="hljs-built_in">pr</span> view 42
+
+<span class="hljs-comment"># Open a PR in your browser</span>
+gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
+<p><strong>Setup:</strong> Install the GitHub CLI from <a href="https://cli.github.com">cli.github.com</a> and authenticate with <code>gh auth login</code>. See <a href="appendix-d-git-authentication.html">Appendix D</a> for details.</p>
+</details>
+
 <hr>
 <h2>The Pull Request List Page</h2>
 <p>The PR list works identically to the Issues list:</p>
@@ -486,6 +504,23 @@ If your work is not finished, open as a Draft:</p>
 <li>Look for the <strong>&quot;Convert to draft&quot;</strong> link (below the review status)</li>
 <li>Confirm in the dialog - this removes merge eligibility until you mark it ready again</li>
 </ol>
+<details>
+<summary>GitHub CLI (gh) alternative - draft PR lifecycle</summary>
+
+<p>Manage draft PRs from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Create a draft PR</span>
+gh <span class="hljs-built_in">pr</span> create --draft --title <span class="hljs-string">&quot;WIP: Add carousel keyboard nav&quot;</span>
+
+<span class="hljs-comment"># Mark a draft ready for review</span>
+gh <span class="hljs-built_in">pr</span> ready 42
+
+<span class="hljs-comment"># Check PR status (shows draft state)</span>
+gh <span class="hljs-built_in">pr</span> view 42
+
+<span class="hljs-comment"># List only draft PRs</span>
+gh <span class="hljs-built_in">pr</span> list --draft</code></pre>
+</details>
+
 <p><strong>Requesting reviewers:</strong>
 From the sidebar Reviewers section:</p>
 <ol>
@@ -560,6 +595,27 @@ From the sidebar Reviewers section:</p>
 </ol>
 </details>
 > **Tip from accessibility.github.com:** If you submitted comments as "Add single comment" instead of "Start a review," each comment is already posted individually. The "Submit review" flow is only needed when you chose "Start a review" to batch comments together.
+
+<details>
+<summary>GitHub CLI (gh) alternative - reviewing a PR</summary>
+
+<p>Review a pull request from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># View the PR diff in your terminal</span>
+gh <span class="hljs-built_in">pr</span> diff 42
+
+<span class="hljs-comment"># Approve a PR</span>
+gh <span class="hljs-built_in">pr</span> review 42 --approve
+
+<span class="hljs-comment"># Approve with a comment</span>
+gh <span class="hljs-built_in">pr</span> review 42 --approve --body <span class="hljs-string">&quot;Looks good - heading hierarchy is correct.&quot;</span>
+
+<span class="hljs-comment"># Request changes</span>
+gh <span class="hljs-built_in">pr</span> review 42 --request-changes --body <span class="hljs-string">&quot;The alt text on line 34 needs to describe the image content.&quot;</span>
+
+<span class="hljs-comment"># Leave a comment-only review (no verdict)</span>
+gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class="hljs-string">&quot;A few suggestions - see inline comments.&quot;</span></code></pre>
+<p><strong>Note:</strong> <code>gh pr diff</code> outputs the full diff to your terminal, which a screen reader can read line by line. For inline comments on specific lines, use the web interface or VS Code.</p>
+</details>
 
 <h3>GitHub shortcuts for pull requests</h3>
 <p>These are the GitHub built-in shortcuts for PR pages. Enable Focus Mode first (NVDA: <code>NVDA+Space</code>, JAWS: <code>Insert+Z</code>) before using single-key shortcuts.</p>
@@ -715,138 +771,154 @@ Step 4: Choose strategy → activate the button
 Step 5: Confirm in the dialog that appears</li>
 </ul>
 <pre><code class="hljs">
-**After a PR <span class="hljs-keyword">is</span> merged:**
-- The PR status badge changes to <span class="hljs-string">&quot;Merged&quot;</span> (purple)
-- The source branch can be deleted - a <span class="hljs-string">&quot;Delete branch&quot;</span> button appears
-- <span class="hljs-type">Any</span> linked issues <span class="hljs-keyword">with</span> `Closes <span class="hljs-comment">#N` in the description are automatically closed</span>
+&lt;details&gt;
+&lt;summary&gt;GitHub CLI (gh) alternative - merging <span class="hljs-keyword">a</span> PR&lt;/summary&gt;
 
----
+Merge <span class="hljs-keyword">a</span> pull request <span class="hljs-built_in">from</span> your terminal:
 
-<span class="hljs-comment">## Auto-Merge - Merging When You Can&#x27;t Wait Around</span>
+```bash
+<span class="hljs-comment"># Merge with default strategy (merge commit)</span>
+gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span>
 
-**Auto-merge** lets you pre-authorize a PR to merge automatically the moment <span class="hljs-built_in">all</span> branch protection requirements are satisfied - required reviews approved, <span class="hljs-built_in">all</span> status checks passing, <span class="hljs-keyword">and</span> the branch up to date.
+<span class="hljs-comment"># Squash and merge</span>
+gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--squash</span>
 
-This <span class="hljs-keyword">is</span> especially useful when:
-- Yo<span class="hljs-string">u&#x27;ve addressed all review comments and are waiting for CI to finish
-- A maintainer has approved the PR but a required check is still running
-- You&#x27;</span>re <span class="hljs-keyword">in</span> a different time zone <span class="hljs-keyword">from</span> the reviewers
+<span class="hljs-comment"># Rebase and merge</span>
+gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--rebase</span>
 
-<span class="hljs-comment">### Enabling Auto-Merge on Your PR</span>
-</code></pre>
+<span class="hljs-comment"># Delete the branch after merging</span>
+gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--squash --delete-branch</span>
+
+<span class="hljs-comment"># Enable auto-merge (merges when checks pass)</span>
+gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--auto --squash</span></code></pre>
+</details>
+
+<p><strong>After a PR is merged:</strong></p>
+<ul>
+<li>The PR status badge changes to &quot;Merged&quot; (purple)</li>
+<li>The source branch can be deleted - a &quot;Delete branch&quot; button appears</li>
+<li>Any linked issues with <code>Closes #N</code> in the description are automatically closed</li>
+</ul>
+<hr>
+<h2>Auto-Merge - Merging When You Can&#39;t Wait Around</h2>
+<p><strong>Auto-merge</strong> lets you pre-authorize a PR to merge automatically the moment all branch protection requirements are satisfied - required reviews approved, all status checks passing, and the branch up to date.</p>
+<p>This is especially useful when:</p>
+<ul>
+<li>You&#39;ve addressed all review comments and are waiting for CI to finish</li>
+<li>A maintainer has approved the PR but a required check is still running</li>
+<li>You&#39;re in a different time zone from the reviewers</li>
+</ul>
+<h3>Enabling Auto-Merge on Your PR</h3>
+<pre><code class="hljs"><span class="hljs-number">1.</span> Open your PR → scroll <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span> box <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> bottom
+<span class="hljs-number">2.</span> Tab <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span> button dropdown arrow (next <span class="hljs-built_in">to</span> <span class="hljs-string">&quot;Merge pull request&quot;</span>)
+<span class="hljs-number">3.</span> Select <span class="hljs-string">&quot;Enable auto-merge&quot;</span>
+<span class="hljs-number">4.</span> Choose your <span class="hljs-built_in">merge</span> strategy (squash, rebase, <span class="hljs-keyword">or</span> <span class="hljs-built_in">merge</span> commit)
+<span class="hljs-number">5.</span> Confirm <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> dialog - <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span> box now shows <span class="hljs-string">&quot;Auto-merge enabled&quot;</span></code></pre>
+<p><strong>Screen reader path:</strong></p>
+<pre><code class="hljs"><span class="hljs-variable">Conversation</span> <span class="hljs-variable">tab</span> → <span class="hljs-built_in">End</span> <span class="hljs-variable">key</span> → <span class="hljs-variable">merge</span> <span class="hljs-variable">box</span> <span class="hljs-variable">region</span>
+<span class="hljs-built_in">Tab</span> → <span class="hljs-variable">dropdown</span> <span class="hljs-variable">button</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">announced</span> <span class="hljs-variable">as</span> <span class="hljs-string">&quot;Select merge method&quot;</span> <span class="hljs-variable">or</span> <span class="hljs-variable">similar</span><span class="hljs-punctuation">)</span>
+<span class="hljs-built_in">Enter</span> → <span class="hljs-variable">arrow</span> <span class="hljs-variable">keys</span> <span class="hljs-variable">through</span> <span class="hljs-variable">options</span> → <span class="hljs-string">&quot;Enable auto-merge&quot;</span> → <span class="hljs-built_in">Enter</span>
+<span class="hljs-built_in">Dialog</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Tab</span> → <span class="hljs-variable">confirm</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span></code></pre>
+<p><strong>What happens next:</strong></p>
+<ul>
+<li>The PR merge box changes to show &quot;Auto-merge enabled - merge will happen automatically&quot;</li>
+<li>When the last required check passes (or last required review arrives), GitHub merges the PR silently</li>
+<li>You receive a notification: &quot;Your PR was automatically merged&quot;</li>
+<li>If a reviewer requests changes after auto-merge is enabled, auto-merge is automatically cancelled (a new approval is required before it re-enables)</li>
+</ul>
+<h3>Cancelling Auto-Merge</h3>
+<pre><code class="hljs"><span class="hljs-built_in">Merge</span> <span class="hljs-variable">box</span> → <span class="hljs-built_in">Tab</span> → <span class="hljs-string">&quot;Disable auto-merge&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span></code></pre>
+<blockquote>
+<p><strong>Note:</strong> Auto-merge is only available if the repository administrator has enabled it in Settings → General. Many open source repos have it on; some do not.</p>
+</blockquote>
+<hr>
+<h2>Practical Scenarios</h2>
+<h3>Scenario A: &quot;I want to review an assigned PR&quot;</h3>
+<p><strong>Example:</strong> You are assigned to review a PR titled &quot;Add missing NVDA shortcut to keyboard-shortcuts.md.&quot; The PR modifies <code>docs/keyboard-shortcuts.md</code> in the Learning Room repository and references Challenge 2.</p>
+<pre><code class="hljs"><span class="hljs-number">1.</span> Notifications → <span class="hljs-keyword">open</span> the PR notification
+<span class="hljs-number">2.</span> D → PR tabs → Files changed tab
+<span class="hljs-number">3.</span> T → enter the first diff <span class="hljs-keyword">table</span> → navigate lines <span class="hljs-keyword">with</span> arrow keys
+<span class="hljs-number">4.</span> <span class="hljs-keyword">Check</span>: does the <span class="hljs-built_in">new</span> shortcut appear <span class="hljs-keyword">in</span> the correct NVDA <span class="hljs-keyword">table</span>? <span class="hljs-keyword">Is</span> the <span class="hljs-keyword">table</span> formatting preserved?
+<span class="hljs-number">5.</span> <span class="hljs-keyword">For</span> <span class="hljs-keyword">each</span> concern: activate the <span class="hljs-type">line</span> <span class="hljs-keyword">comment</span> button → <span class="hljs-keyword">type</span> <span class="hljs-keyword">comment</span> → <span class="hljs-keyword">Start</span> a review
+<span class="hljs-number">6.</span> D → PR tabs → Conversation → scroll <span class="hljs-keyword">to</span> bottom
+<span class="hljs-number">7.</span> B → &quot;Review changes&quot; button → <span class="hljs-keyword">type</span> <span class="hljs-keyword">summary</span> → <span class="hljs-keyword">select</span> verdict → Submit review</code></pre>
+<h3>Scenario B: &quot;I want to respond to review feedback on my PR&quot;</h3>
+<p><strong>Example:</strong> Your PR for Challenge 3 (Complete Welcome Guide) received a review comment: &quot;The [TODO] about evaluating issues is good, but the paragraph could mention checking if the issue is already assigned.&quot; The validation bot also flagged a link text issue.</p>
+<pre><code class="hljs"><span class="hljs-number">1.</span> Open your PR (Notifications → PR link, <span class="hljs-keyword">or</span> find it <span class="hljs-keyword">in</span> PR <span class="hljs-built_in">list</span>)
+<span class="hljs-number">2.</span> <span class="hljs-number">3</span> to navigate review comments
+<span class="hljs-number">3.</span> For the reviewe<span class="hljs-string">r&#x27;s comment: read it → Tab to &quot;Reply&quot; → Focus Mode → type &quot;Good point - I will add a sentence about checking assignees. Pushing a fix now.&quot;
+4. For the bot&#x27;</span>s link text flag: fix the link <span class="hljs-keyword">in</span> docs/welcome.md, commit, <span class="hljs-keyword">and</span> push
+<span class="hljs-number">5.</span> When <span class="hljs-built_in">all</span> addressed: Tab to <span class="hljs-string">&quot;Re-request review&quot;</span> button → Enter</code></pre>
+<h3>Scenario C: &quot;My PR has a merge conflict&quot;</h3>
+<pre><code class="hljs"><span class="hljs-number">1.</span> You will see a &quot;This branch has conflicts that must be resolved&quot; message near the bottom
+<span class="hljs-number">2.</span> Tab <span class="hljs-keyword">to</span> &quot;Resolve conflicts&quot; button → GitHub opens a web <span class="hljs-keyword">conflict</span> editor
+<span class="hljs-number">3.</span> The editor shows <span class="hljs-keyword">conflict</span> markers - see Merge Conflicts guide (<span class="hljs-number">06</span>-merge-conflicts.md)
+<span class="hljs-number">4.</span> Edit the file <span class="hljs-keyword">to</span> resolve → Mark <span class="hljs-keyword">as</span> resolved → <span class="hljs-keyword">Commit</span> merge</code></pre>
+<hr>
+<h2>Common PR Mistakes to Avoid</h2>
+<table>
+<thead>
+<tr>
+<th scope="col">Mistake</th>
+<th scope="col">Better Approach</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Opening a PR without an associated issue</td>
+<td>Link to or create an issue first; comment &quot;I&#39;d like to work on this&quot;</td>
+</tr>
+<tr>
+<td>A vague title like &quot;Fix things&quot;</td>
+<td>Be specific: &quot;Fix missing alt text on homepage hero image&quot;</td>
+</tr>
+<tr>
+<td>Missing the PR template sections</td>
+<td>Fill all sections - description, testing, related issues</td>
+</tr>
+<tr>
+<td>Pushing many unrelated changes in one PR</td>
+<td>One PR per logical change (smaller PRs get faster reviews)</td>
+</tr>
+<tr>
+<td>Not testing your own changes</td>
+<td>Test before requesting review</td>
+</tr>
+<tr>
+<td>Not responding to reviewer comments</td>
+<td>Acknowledge all comments, even if you disagree</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Try It: Read a Real Pull Request</h2>
+<p><strong>Time:</strong> 3 minutes | <strong>What you need:</strong> Browser, signed in to GitHub</p>
+<p>Go to the Learning Room repository&#39;s Pull Requests tab and find any open or recently closed PR:</p>
 <ol>
-<li>Open your PR → scroll to the merge box at the bottom</li>
-<li>Tab to the merge button dropdown arrow (next to &quot;Merge pull request&quot;)</li>
-<li>Select &quot;Enable auto-merge&quot;</li>
-<li>Choose your merge strategy (squash, rebase, or merge commit)</li>
-<li>Confirm in the dialog - the merge box now shows &quot;Auto-merge enabled&quot;</li>
+<li>Navigate to Pull Requests (<code>G</code> then <code>P</code> in Focus Mode)</li>
+<li>Open the first PR in the list (press <code>Enter</code> on its title)</li>
+<li><strong>Read the description</strong> - press <code>2</code> to jump to the first section heading, then arrow down to read. Look for: which file was changed (<code>docs/welcome.md</code>, <code>docs/keyboard-shortcuts.md</code>, or <code>docs/setup-guide.md</code>)? Which challenge was this PR solving? Does the description reference <code>Closes #XX</code>?</li>
+<li><strong>Check the conversation</strong> - press <code>3</code> to jump between comments. Read what the validation bot reported - did the bot find any accessibility issues like broken headings or non-descriptive links? How did the author respond?</li>
+<li><strong>Look at the diff</strong> - press <code>D</code> to the &quot;Pull request tabs&quot; landmark, then navigate to &quot;Files changed&quot; and press <code>Enter</code>. Press <code>H</code> to scan the changed file headings. If the PR touched <code>docs/welcome.md</code>, you should see <code>+</code> lines where the <code>[TODO]</code> sections were filled in. If it touched <code>docs/keyboard-shortcuts.md</code>, you should see new rows added to a shortcut table.</li>
 </ol>
-<pre><code class="hljs">
-<span class="hljs-strong">**Screen reader path:**</span></code></pre>
-<p>Conversation tab → End key → merge box region
-Tab → dropdown button (announced as &quot;Select merge method&quot; or similar)
-Enter → arrow keys through options → &quot;Enable auto-merge&quot; → Enter
-Dialog: Tab → confirm button → Enter</p>
-<pre><code class="hljs">
-**What happens next:**
-- The PR <span class="hljs-built_in">merge</span> box changes <span class="hljs-built_in">to</span> show <span class="hljs-string">&quot;Auto-merge enabled - merge will happen automatically&quot;</span>
-- When <span class="hljs-keyword">the</span> <span class="hljs-keyword">last</span> required check passes (<span class="hljs-keyword">or</span> <span class="hljs-keyword">last</span> required review arrives), GitHub merges <span class="hljs-keyword">the</span> PR silently
-- You receive <span class="hljs-keyword">a</span> notification: <span class="hljs-string">&quot;Your PR was automatically merged&quot;</span>
-- If <span class="hljs-keyword">a</span> reviewer requests changes <span class="hljs-keyword">after</span> auto-<span class="hljs-built_in">merge</span> is enabled, auto-<span class="hljs-built_in">merge</span> is automatically cancelled (<span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> approval is required <span class="hljs-keyword">before</span> <span class="hljs-keyword">it</span> re-enables)
-
-<span class="hljs-comment">### Cancelling Auto-Merge</span>
-</code></pre>
-<p>Merge box → Tab → &quot;Disable auto-merge&quot; button → Enter</p>
-<pre><code class="hljs">
-&gt; **Note:** Auto-<span class="hljs-built_in">merge</span> is only available <span class="hljs-keyword">if</span> <span class="hljs-keyword">the</span> repository administrator has enabled <span class="hljs-keyword">it</span> <span class="hljs-keyword">in</span> Settings → General. Many <span class="hljs-built_in">open</span> source repos have <span class="hljs-keyword">it</span> <span class="hljs-keyword">on</span>; <span class="hljs-title">some</span> <span class="hljs-title">do</span> <span class="hljs-title">not</span>.
-
-<span class="hljs-comment">---</span>
-
-<span class="hljs-comment">## Practical Scenarios</span>
-
-<span class="hljs-comment">### Scenario A: &quot;I want to review an assigned PR&quot;</span>
-
-**Example:** You are assigned <span class="hljs-built_in">to</span> review <span class="hljs-keyword">a</span> PR titled <span class="hljs-string">&quot;Add missing NVDA shortcut to keyboard-shortcuts.md.&quot;</span> The PR modifies `docs/keyboard-shortcuts.md` <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> Learning Room repository <span class="hljs-keyword">and</span> references Challenge <span class="hljs-number">2.</span>
-</code></pre>
-<ol>
-<li>Notifications → open the PR notification</li>
-<li>D → PR tabs → Files changed tab</li>
-<li>T → enter the first diff table → navigate lines with arrow keys</li>
-<li>Check: does the new shortcut appear in the correct NVDA table? Is the table formatting preserved?</li>
-<li>For each concern: activate the line comment button → type comment → Start a review</li>
-<li>D → PR tabs → Conversation → scroll to bottom</li>
-<li>B → &quot;Review changes&quot; button → type summary → select verdict → Submit review</li>
-</ol>
-<pre><code class="hljs">
-<span class="hljs-comment">### Scenario B: &quot;I want to respond to review feedback on my PR&quot;
-
-**Example:** Your PR for Challenge 3 (Complete Welcome Guide) received a review comment: &quot;The [TODO] about evaluating issues is good, but the paragraph could mention checking if the issue is already assigned.&quot; The validation bot also flagged a link text issue.
-</span></code></pre>
-<ol>
-<li>Open your PR (Notifications → PR link, or find it in PR list)</li>
-<li>3 to navigate review comments</li>
-<li>For the reviewer&#39;s comment: read it → Tab to &quot;Reply&quot; → Focus Mode → type &quot;Good point - I will add a sentence about checking assignees. Pushing a fix now.&quot;</li>
-<li>For the bot&#39;s link text flag: fix the link in docs/welcome.md, commit, and push</li>
-<li>When all addressed: Tab to &quot;Re-request review&quot; button → Enter</li>
-</ol>
-<pre><code class="hljs">
-### Scenario C: <span class="hljs-string">&quot;My PR has a merge conflict&quot;</span>
-</code></pre>
-<ol>
-<li>You will see a &quot;This branch has conflicts that must be resolved&quot; message near the bottom</li>
-<li>Tab to &quot;Resolve conflicts&quot; button → GitHub opens a web conflict editor</li>
-<li>The editor shows conflict markers - see Merge Conflicts guide (06-merge-conflicts.md)</li>
-<li>Edit the file to resolve → Mark as resolved → Commit merge</li>
-</ol>
-<pre><code class="hljs">
-<span class="hljs-comment">---</span>
-
-<span class="hljs-comment">## Common PR Mistakes to Avoid</span>
-
-| Mistake | Better Approach |
-|<span class="hljs-comment">---------|----------------|</span>
-| Opening a PR <span class="hljs-keyword">without</span> an associated issue | Link <span class="hljs-keyword">to</span> <span class="hljs-keyword">or</span> create an issue <span class="hljs-keyword">first</span>; comment <span class="hljs-string">&quot;I&#x27;d like to work on this&quot;</span> |
-| A vague title like <span class="hljs-string">&quot;Fix things&quot;</span> | Be specific: <span class="hljs-string">&quot;Fix missing alt text on homepage hero image&quot;</span> |
-| Missing <span class="hljs-keyword">the</span> PR template sections | Fill all sections - description, testing, related issues |
-| Pushing many unrelated changes <span class="hljs-keyword">in</span> one PR | One PR per logical change (smaller PRs <span class="hljs-keyword">get</span> faster reviews) |
-| Not testing your own changes | Test <span class="hljs-keyword">before</span> requesting review |
-| Not responding <span class="hljs-keyword">to</span> reviewer comments | Acknowledge all comments, even <span class="hljs-keyword">if</span> you disagree |
-
-<span class="hljs-comment">---</span>
-
-<span class="hljs-comment">## Try It: Read a Real Pull Request</span>
-
-**Time:** <span class="hljs-number">3</span> minutes | **What you need:** Browser, signed <span class="hljs-keyword">in</span> <span class="hljs-keyword">to</span> GitHub
-
-Go <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> Learning Room repository&#x27;s Pull Requests <span class="hljs-literal">tab</span> <span class="hljs-keyword">and</span> find any open <span class="hljs-keyword">or</span> recently closed PR:
-
-<span class="hljs-number">1.</span> Navigate <span class="hljs-keyword">to</span> Pull Requests (`G` <span class="hljs-keyword">then</span> `P` <span class="hljs-keyword">in</span> Focus Mode)
-<span class="hljs-number">2.</span> Open <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> PR <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">list</span> (press `Enter` <span class="hljs-keyword">on</span> <span class="hljs-keyword">its</span> title)
-<span class="hljs-number">3.</span> **Read <span class="hljs-keyword">the</span> description** - press `<span class="hljs-number">2</span>` <span class="hljs-keyword">to</span> jump <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> section heading, <span class="hljs-keyword">then</span> arrow down <span class="hljs-keyword">to</span> <span class="hljs-built_in">read</span>. Look <span class="hljs-keyword">for</span>: which <span class="hljs-built_in">file</span> was changed (`docs/welcome.md`, `docs/keyboard-shortcuts.md`, <span class="hljs-keyword">or</span> `docs/setup-guide.md`)? Which challenge was this PR solving? Does <span class="hljs-keyword">the</span> description <span class="hljs-keyword">reference</span> `Closes <span class="hljs-comment">#XX`?</span>
-<span class="hljs-number">4.</span> **Check <span class="hljs-keyword">the</span> conversation** - press `<span class="hljs-number">3</span>` <span class="hljs-keyword">to</span> jump <span class="hljs-keyword">between</span> comments. Read what <span class="hljs-keyword">the</span> validation bot reported - did <span class="hljs-keyword">the</span> bot find any accessibility issues like broken headings <span class="hljs-keyword">or</span> non-descriptive links? How did <span class="hljs-keyword">the</span> author respond?
-<span class="hljs-number">5.</span> **Look <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> diff** - press `D` <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;Pull request tabs&quot;</span> landmark, <span class="hljs-keyword">then</span> navigate <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Files changed&quot;</span> <span class="hljs-keyword">and</span> press `Enter`. Press `H` <span class="hljs-keyword">to</span> scan <span class="hljs-keyword">the</span> changed <span class="hljs-built_in">file</span> headings. If <span class="hljs-keyword">the</span> PR touched `docs/welcome.md`, you should see `+` lines <span class="hljs-keyword">where</span> <span class="hljs-keyword">the</span> `[TODO]` sections were filled <span class="hljs-keyword">in</span>. If <span class="hljs-keyword">it</span> touched `docs/keyboard-shortcuts.md`, you should see new rows added <span class="hljs-keyword">to</span> a shortcut table.
-
-**You&#x27;re done.** You just <span class="hljs-built_in">read</span> a complete PR - description, conversation, <span class="hljs-keyword">and</span> code changes.
-
-&gt; **What success feels like:** You followed a PR <span class="hljs-keyword">from</span> description <span class="hljs-keyword">to</span> diff using only headings <span class="hljs-keyword">and</span> landmarks. The next <span class="hljs-built_in">time</span> you open a PR - yours <span class="hljs-keyword">or</span> someone <span class="hljs-keyword">else</span>&#x27;s - you&#x27;ll know exactly <span class="hljs-keyword">where</span> everything <span class="hljs-keyword">is</span>.
-
-<span class="hljs-comment">---</span>
-
-&gt; <span class="hljs-comment">### Day 2 Amplifier - Accessibility Agents: `@pr-review`</span>
-&gt;
-&gt; **Review <span class="hljs-keyword">at</span> least two pull requests manually <span class="hljs-keyword">before</span> using any agent.** A review generated <span class="hljs-keyword">by</span> `@pr-review` <span class="hljs-keyword">is</span> only <span class="hljs-keyword">as</span> useful <span class="hljs-keyword">as</span> your ability <span class="hljs-keyword">to</span> <span class="hljs-built_in">read</span>, edit, <span class="hljs-keyword">and</span> challenge <span class="hljs-keyword">it</span>. The agent writes a <span class="hljs-keyword">first</span> draft - you supply <span class="hljs-keyword">the</span> context, <span class="hljs-keyword">the</span> history, <span class="hljs-keyword">and</span> <span class="hljs-keyword">the</span> final judgment <span class="hljs-keyword">that</span> no diff can <span class="hljs-keyword">contain</span>.
-&gt;
-&gt; Once you have mastered manual pull request review:
-&gt; - **In VS Code** - `@pr-review review PR <span class="hljs-comment">#N` generates line-numbered diffs with change maps, risk assessment, before/after snapshots, CI results, and suggested inline comments - a documented starting point for your own review, not a replacement for it</span>
-&gt; - **In your repo** - Accessibility Agents&#x27; review capabilities work across <span class="hljs-keyword">every</span> repository you have access <span class="hljs-keyword">to</span> <span class="hljs-keyword">by</span> default; fork `accessibility-agents` <span class="hljs-keyword">and</span> those capabilities travel <span class="hljs-keyword">with</span> your project <span class="hljs-keyword">from</span> <span class="hljs-built_in">day</span> one
-&gt; - **In <span class="hljs-keyword">the</span> cloud** - GitHub Agentic Workflows can auto-generate PR descriptions, verify linked issues, <span class="hljs-keyword">and</span> post accessibility impact summaries <span class="hljs-keyword">on</span> a `pull_request` trigger - <span class="hljs-built_in">running</span> <span class="hljs-keyword">the</span> moment a PR <span class="hljs-keyword">is</span> opened, whether <span class="hljs-keyword">or</span> <span class="hljs-keyword">not</span> anyone <span class="hljs-keyword">is</span> watching
-&gt;
-&gt; *The agent documents <span class="hljs-keyword">the</span> diff. You bring <span class="hljs-keyword">the</span> context <span class="hljs-keyword">that</span> no diff can <span class="hljs-keyword">contain</span>.*
-
-<span class="hljs-comment">---</span>
-
-*Next: [Merge Conflicts](<span class="hljs-number">06</span>-merge-conflicts.md)*
-*Back: [Working <span class="hljs-keyword">with</span> Issues](<span class="hljs-number">04</span>-working-<span class="hljs-keyword">with</span>-issues.md)*
-*Related: [Accessible Code Review](<span class="hljs-number">14</span>-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture &amp; Etiquette](<span class="hljs-number">07</span>-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*</code></pre>
+<p><strong>You&#39;re done.</strong> You just read a complete PR - description, conversation, and code changes.</p>
+<blockquote>
+<p><strong>What success feels like:</strong> You followed a PR from description to diff using only headings and landmarks. The next time you open a PR - yours or someone else&#39;s - you&#39;ll know exactly where everything is.</p>
+</blockquote>
+<hr>
+<blockquote>
+<h3>Day 2 Amplifier - Accessibility Agents: <code>@pr-review</code></h3>
+<p><strong>Review at least two pull requests manually before using any agent.</strong> A review generated by <code>@pr-review</code> is only as useful as your ability to read, edit, and challenge it. The agent writes a first draft - you supply the context, the history, and the final judgment that no diff can contain.</p>
+<p>Once you have mastered manual pull request review:</p>
+<ul>
+<li><strong>In VS Code</strong> - <code>@pr-review review PR #N</code> generates line-numbered diffs with change maps, risk assessment, before/after snapshots, CI results, and suggested inline comments - a documented starting point for your own review, not a replacement for it</li>
+<li><strong>In your repo</strong> - Accessibility Agents&#39; review capabilities work across every repository you have access to by default; fork <code>accessibility-agents</code> and those capabilities travel with your project from day one</li>
+<li><strong>In the cloud</strong> - GitHub Agentic Workflows can auto-generate PR descriptions, verify linked issues, and post accessibility impact summaries on a <code>pull_request</code> trigger - running the moment a PR is opened, whether or not anyone is watching</li>
+</ul>
+<p><em>The agent documents the diff. You bring the context that no diff can contain.</em></p>
+</blockquote>
+<hr>
+<p><em>Next: <a href="06-merge-conflicts.html">Merge Conflicts</a></em>
+<em>Back: <a href="04-working-with-issues.html">Working with Issues</a></em>
+<em>Related: <a href="14-accessible-code-review.html">Accessible Code Review</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a> | <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a> | <a href="appendix-q-github-actions-workflows.html">GitHub Actions</a></em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

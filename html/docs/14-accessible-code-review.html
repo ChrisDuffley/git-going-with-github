@@ -68,6 +68,30 @@
 </tr>
 </tbody></table>
 <p>Both environments give you full keyboard and screen reader access. Your choice depends on context, not accessibility.</p>
+<details>
+<summary>GitHub CLI (gh) alternative - review from your terminal</summary>
+
+<p>The GitHub CLI offers a third path for reviewing PRs - especially useful for reading diffs and submitting verdicts:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># View the full PR diff in your terminal</span>
+gh <span class="hljs-built_in">pr</span> diff 42
+
+<span class="hljs-comment"># View PR details (description, status, checks)</span>
+gh <span class="hljs-built_in">pr</span> view 42
+
+<span class="hljs-comment"># Checkout the PR branch locally for testing</span>
+gh <span class="hljs-built_in">pr</span> checkout 42
+
+<span class="hljs-comment"># Approve the PR</span>
+gh <span class="hljs-built_in">pr</span> review 42 --approve --body <span class="hljs-string">&quot;Heading hierarchy looks correct. LGTM.&quot;</span>
+
+<span class="hljs-comment"># Request changes</span>
+gh <span class="hljs-built_in">pr</span> review 42 --request-changes --body <span class="hljs-string">&quot;The alt text on line 34 needs to describe the image.&quot;</span>
+
+<span class="hljs-comment"># Leave a comment-only review</span>
+gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class="hljs-string">&quot;A few observations - see details below.&quot;</span></code></pre>
+<p><strong>Best for:</strong> Quickly reading diffs, approving/rejecting PRs, and checking out branches for local testing. For inline comments on specific lines, use the web interface or VS Code.</p>
+</details>
+
 <hr>
 <h2>Part 1 - Reviewing on GitHub.com</h2>
 <h3>Good News: Modern Interface is Default</h3>

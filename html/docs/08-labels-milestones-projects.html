@@ -120,6 +120,17 @@
 </ol>
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - viewing labels</summary>
+
+<p>List all labels in a repository from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># List all labels with descriptions</span>
+gh label list
+
+<span class="hljs-comment"># List labels in a specific format</span>
+gh label list --json name,description</code></pre>
+</details>
+
 <h3>Applying a Label to an Issue or PR</h3>
 <p>From an open issue or PR:</p>
 <details>
@@ -152,6 +163,23 @@
 </ol>
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - applying labels</summary>
+
+<p>Apply labels to issues or PRs from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Add a label to an issue</span>
+gh issue edit 42 --add-label <span class="hljs-string">&quot;accessibility&quot;</span>
+
+<span class="hljs-comment"># Add multiple labels at once</span>
+gh issue edit 42 --add-label <span class="hljs-string">&quot;bug,good first issue&quot;</span>
+
+<span class="hljs-comment"># Remove a label</span>
+gh issue edit 42 --remove-label <span class="hljs-string">&quot;needs triage&quot;</span>
+
+<span class="hljs-comment"># Add a label to a PR</span>
+gh <span class="hljs-built_in">pr</span> edit 42 --add-label <span class="hljs-string">&quot;accessibility&quot;</span></code></pre>
+</details>
+
 <h3>Filtering Issues by Label</h3>
 <details>
 <summary>Visual / mouse users</summary>
@@ -178,6 +206,23 @@
 <p><strong>Option C - Combining labels:</strong> <code>is:open label:accessibility label:&quot;good first issue&quot;</code></p>
 </details>
 
+<details>
+<summary>GitHub CLI (gh) alternative - filtering by label</summary>
+
+<p>Filter issues by label from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># List issues with a specific label</span>
+gh issue list --label <span class="hljs-string">&quot;accessibility&quot;</span>
+
+<span class="hljs-comment"># Combine multiple labels</span>
+gh issue list --label <span class="hljs-string">&quot;accessibility&quot;</span> --label <span class="hljs-string">&quot;good first issue&quot;</span>
+
+<span class="hljs-comment"># Combine with state filter</span>
+gh issue list --label <span class="hljs-string">&quot;accessibility&quot;</span> --state closed
+
+<span class="hljs-comment"># Search across labels</span>
+gh issue list --search <span class="hljs-string">&quot;label:accessibility label:\&quot;good first issue\&quot;&quot;</span></code></pre>
+</details>
+
 <h3>Creating a New Label</h3>
 <p>If you have write access:</p>
 <ol>
@@ -186,6 +231,17 @@
 <li>Fill in: Label name (F for form field), Color (use the color picker or hex code), Description</li>
 <li>Tab to &quot;Create label&quot; button → Enter</li>
 </ol>
+<details>
+<summary>GitHub CLI (gh) alternative - creating labels</summary>
+
+<p>Create labels from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Create a new label</span>
+gh label create <span class="hljs-string">&quot;accessibility&quot;</span> --description <span class="hljs-string">&quot;Accessibility-related issue&quot;</span> --color <span class="hljs-string">&quot;0075ca&quot;</span>
+
+<span class="hljs-comment"># Create with a specific color</span>
+gh label create <span class="hljs-string">&quot;in progress&quot;</span> --description <span class="hljs-string">&quot;Being actively worked on&quot;</span> --color <span class="hljs-string">&quot;e4e669&quot;</span></code></pre>
+</details>
+
 <p><strong>Accessibility note for color:</strong> Labels have color, but they also have a text name and description - the color is supplementary information. Screen readers announce the label name, not the color, so labels are fully accessible.</p>
 <hr>
 <h2>Milestones</h2>
@@ -241,6 +297,22 @@ Each milestone is announced as a heading + progress information:</p>
 <li>Select a milestone from the dropdown (<code>VO+Down</code> or arrow keys → <code>VO+Space</code>)</li>
 <li><code>Esc</code> to close</li>
 </ol>
+</details>
+
+<details>
+<summary>GitHub CLI (gh) alternative - milestones</summary>
+
+<p>Manage milestones from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Assign an issue to a milestone</span>
+gh issue edit 42 --milestone <span class="hljs-string">&quot;Hackathon Day 1&quot;</span>
+
+<span class="hljs-comment"># Remove from a milestone</span>
+gh issue edit 42 --milestone <span class="hljs-string">&quot;&quot;</span>
+
+<span class="hljs-comment"># List issues in a milestone</span>
+gh issue list --milestone <span class="hljs-string">&quot;Hackathon Day 1&quot;</span></code></pre>
+<p><strong>Note:</strong> Creating milestones requires the web interface or the GitHub API - the <code>gh</code> CLI does not have a <code>milestone create</code> command. Use <code>gh api</code> for advanced operations:</p>
+<pre><code class="hljs language-bash">gh api repos/{owner}/{repo}/milestones -f title=<span class="hljs-string">&quot;Hackathon Day 1&quot;</span> -f description=<span class="hljs-string">&quot;Day 1 deliverables&quot;</span></code></pre>
 </details>
 
 <h3>Creating a Milestone</h3>
