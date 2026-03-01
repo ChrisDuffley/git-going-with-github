@@ -34,7 +34,7 @@
 <blockquote>
 <p><strong>Day 2, Block 1-2 Material</strong></p>
 <p>This guide covers all Git operations in VS Code: cloning repositories, navigating the Source Control panel with screen readers, branch management, staging changes (including individual lines), push/pull operations, viewing file history with Timeline, resolving merge conflicts, and stash management.</p>
-<p><strong>Prerequisites:</strong> <a href="10-vscode-basics.md">VS Code Setup &amp; Accessibility Basics</a>, <a href="05-working-with-pull-requests.md">Working with Pull Requests</a>, <a href="06-merge-conflicts.md">Merge Conflicts</a></p>
+<p><strong>Prerequisites:</strong> <a href="10-vscode-basics.html">VS Code Setup &amp; Accessibility Basics</a>, <a href="05-working-with-pull-requests.html">Working with Pull Requests</a>, <a href="06-merge-conflicts.html">Merge Conflicts</a></p>
 </blockquote>
 <blockquote>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code>. Common equivalents: <code>Ctrl+Shift+G</code> → <code>Cmd+Shift+G</code>, <code>Ctrl+Shift+P</code> → <code>Cmd+Shift+P</code>, <code>Ctrl+Enter</code> → <code>Cmd+Enter</code>, <code>Ctrl+S</code> → <code>Cmd+S</code>.</p>
@@ -91,7 +91,7 @@
 <li>Paste URL → <code>Enter</code></li>
 <li>Choose destination → Open</li>
 </ol>
-<p><strong>Why HTTPS over SSH for this workshop:</strong> HTTPS works immediately with no setup. SSH requires key generation and configuration (see <a href="appendix-d-git-authentication.md">Appendix D: Git Authentication</a> for SSH setup).</p>
+<p><strong>Why HTTPS over SSH for this workshop:</strong> HTTPS works immediately with no setup. SSH requires key generation and configuration (see <a href="appendix-d-git-authentication.html">Appendix D: Git Authentication</a> for SSH setup).</p>
 <hr>
 <h2>2. The Source Control Panel - Complete Walkthrough</h2>
 <p>The Source Control panel (<code>Ctrl+Shift+G</code> - Mac: <code>Cmd+Shift+G</code>) is where all Git operations happen in VS Code. This section provides a complete screen reader walkthrough of every interactive element.</p>
@@ -411,7 +411,7 @@ git branch -a       <span class="hljs-comment"># All branches (including remote)
 <li><code>VO+Shift+Up</code> to stop interacting</li>
 </ul>
 <h3>Writing Good Commit Messages</h3>
-<p>See <a href="07-culture-etiquette.md#writing-good-commit-messages">Culture &amp; Etiquette: Writing Good Commit Messages</a> for format guidance.</p>
+<p>See <a href="07-culture-etiquette.html#writing-good-commit-messages">Culture &amp; Etiquette: Writing Good Commit Messages</a> for format guidance.</p>
 <p><strong>Quick reference:</strong></p>
 <pre><code class="hljs"><span class="hljs-symbol">fix:</span> correct heading hierarchy <span class="hljs-keyword">in</span> GUIDE.md
 
@@ -455,7 +455,7 @@ Fixes <span class="hljs-meta">#42</span></code></pre>
 <p><strong>What to do if push fails:</strong></p>
 <ul>
 <li><strong>Error: &quot;No upstream branch&quot;</strong> → You need to publish the branch first (Command Palette → &quot;Git: Publish Branch&quot;)</li>
-<li><strong>Error: &quot;Permission denied&quot;</strong> → Check your authentication (see <a href="appendix-d-git-authentication.md">Appendix D: Git Authentication</a>)</li>
+<li><strong>Error: &quot;Permission denied&quot;</strong> → Check your authentication (see <a href="appendix-d-git-authentication.html">Appendix D: Git Authentication</a>)</li>
 <li><strong>Error: &quot;Rejected - non-fast-forward&quot;</strong> → Someone else pushed changes; you need to pull first</li>
 </ul>
 <h3>Pulling Changes from GitHub</h3>
@@ -656,7 +656,7 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <hr>
 <h2>9. Resolving Merge Conflicts in VS Code</h2>
 <p>Merge conflicts happen when two people edit the same lines of a file. Git can&#39;t decide which version to keep, so it asks you to choose.</p>
-<p><strong>Prerequisite:</strong> Read <a href="06-merge-conflicts.md">Merge Conflicts</a> for the underlying concepts. This section covers the VS Code-specific workflow.</p>
+<p><strong>Prerequisite:</strong> Read <a href="06-merge-conflicts.html">Merge Conflicts</a> for the underlying concepts. This section covers the VS Code-specific workflow.</p>
 <h3>How VS Code Displays Conflicts</h3>
 <p>When you open a file with conflicts, you see something like:</p>
 <pre><code class="hljs language-markdown">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -883,7 +883,7 @@ gh issue list                  <span class="hljs-comment"># List issues</span>
 gh <span class="hljs-built_in">pr</span> create                   <span class="hljs-comment"># Create a PR interactively</span>
 gh <span class="hljs-built_in">pr</span> list                     <span class="hljs-comment"># List your PRs</span>
 gh <span class="hljs-built_in">pr</span> view 14                  <span class="hljs-comment"># Read PR #14</span></code></pre>
-<p>See <a href="07-culture-etiquette.md">Culture &amp; Etiquette</a> for more <code>gh</code> examples.</p>
+<p>See <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a> for more <code>gh</code> examples.</p>
 <h3>Git CLI (Terminal)</h3>
 <ul>
 <li><strong>The standard Git command-line interface</strong></li>
@@ -972,7 +972,7 @@ git <span class="hljs-built_in">log</span>                        <span class="h
 <p><strong>What success feels like:</strong> Your change is on GitHub. You can verify by visiting the repository and switching to your branch. Every future contribution follows this same six-step pattern.</p>
 </blockquote>
 <hr>
-<p><em>Next: <a href="12-github-pull-requests-extension.md">GitHub Pull Requests Extension</a></em><br><em>Back: <a href="10-vscode-basics.md">VS Code Setup &amp; Accessibility Basics</a></em><br><em>Related: <a href="06-merge-conflicts.md">Merge Conflicts</a> | <a href="07-culture-etiquette.md">Culture &amp; Etiquette</a></em></p>
+<p><em>Next: <a href="12-github-pull-requests-extension.html">GitHub Pull Requests Extension</a></em><br><em>Back: <a href="10-vscode-basics.html">VS Code Setup &amp; Accessibility Basics</a></em><br><em>Related: <a href="06-merge-conflicts.html">Merge Conflicts</a> | <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a></em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">
