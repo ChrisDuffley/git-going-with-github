@@ -6,6 +6,8 @@
     "build:html": "node scripts/build-html.js",
     "build:podcasts": "node podcasts/build-bundles.js && node podcasts/generate-site.js",
     "build:podcast-bundles": "node podcasts/build-bundles.js",
+    "build:podcast-scripts": "node podcasts/generate-scripts.js",
+    "build:podcast-audio": "node podcasts/generate-audio.js",
     "build:podcast-site": "node podcasts/generate-site.js",
     "build": "npm run build:podcasts && npm run build:html",
     "watch:html": "node scripts/build-html.js --watch",

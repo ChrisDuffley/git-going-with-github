@@ -20,7 +20,7 @@ License: CC BY 4.0 | [Site](https://community-access.org/git-going-with-github/)
 
 > **The Central Project: Accessibility Agents**
 >
-> This workshop is built around a real, live open source project: **[Accessibility Agents](https://github.com/community-access/accessibility-agents)** - six GitHub Copilot agents and 28 slash commands for accessible, agentic repository management. It was built by your facilitator and is MIT-licensed.
+> This workshop is built around a real, live open source project: **[Accessibility Agents](https://github.com/community-access/accessibility-agents)** - 55 AI agents across 3 teams and 5 platforms for accessible, agentic repository management. It was built by your facilitator and is MIT-licensed.
 >
 > You will fork it, understand it, contribute to it, and personalize it. By the end of Day 2, your name is in its commit history.
 >
@@ -58,7 +58,7 @@ You do **not** need to know how to code to participate and contribute meaningful
 | Day | Focus | What You Will Do |
 |-----|-------|-----------------|
 | **Day 1** | GitHub Foundations | Set up your environment, learn GitHub navigation with your screen reader, file your first issue, open your first pull request |
-| **Day 2** | VS Code + Accessibility Agents | Bridge from the browser to **github.dev** (VS Code in your browser - no install needed), then step into **Visual Studio Code** on the desktop, learn VS Code basics, use GitHub Copilot, activate the six Accessibility Agents agents, run agentic workflows in the cloud, and ship a real PR upstream to `community-access/accessibility-agents` |
+| **Day 2** | VS Code + Accessibility Agents | Bridge from the browser to **github.dev** (VS Code in your browser - no install needed), then step into **Visual Studio Code** on the desktop, learn VS Code basics, use GitHub Copilot, activate the Accessibility Agents ecosystem (55 agents, 3 teams, 5 platforms), run agentic workflows in the cloud, and ship a real PR upstream to `community-access/accessibility-agents` |
 
 ### The Journey Arc
 
@@ -87,7 +87,7 @@ Every skill you build on Day 1 maps directly to an Accessibility Agents command 
 - A fork of `accessibility-agents` with your personalized preferences
 - At least one merged PR in a real open source project
 - Your name in the commit history of `community-access/accessibility-agents`
-- A working set of six AI agents that travel with your fork to any repository you apply them to
+- A working set of 55 AI agents across 3 teams that travel with your fork to any repository you apply them to
 
 ---
 
@@ -123,7 +123,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 | [13](docs/13-github-copilot.md) | **VS Code: GitHub Copilot** | Inline suggestions, Copilot Chat, effective prompting for documentation work, custom instructions vs custom agents, Accessible View workflow |
 | [14](docs/14-accessible-code-review.md) | **Accessible Code Review** | Navigating diffs and conducting PR reviews with a screen reader, on GitHub and in VS Code - culminating skill before automation |
 | [15](docs/15-issue-templates.md) | **Issue Templates** | Creating and using GitHub issue templates |
-| [16](docs/16-accessibility-agents.md) | **Accessibility Agents** | Six agents (@daily-briefing, @issue-tracker, @pr-review, @analytics, @insiders-a11y-tracker, @template-builder), 28 slash commands, building custom agents, cloud extension - agentic flow after all learning complete |
+| [16](docs/16-accessibility-agents.md) | **Accessibility Agents** | 55 agents across 3 teams (Accessibility, GitHub Workflow, Developer Tools), 54+ slash commands, contributing to the ecosystem - agentic flow after all learning complete |
 
 **Workshop Agendas** - For facilitators only (not part of learner sequence)
 
@@ -157,7 +157,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 | [S](docs/appendix-s-github-organizations-templates.md) | **Organizations, Templates, and Repository Settings** | Organizations, repository templates, visibility, archiving, and contributor-relevant settings |
 | [T](docs/appendix-t-contributing-to-open-source.md) | **Contributing to Open Source** | A first-timer's guide: finding issues, scoping contributions, writing PRs, and building a contribution habit |
 | [U](docs/appendix-u-resources.md) | **Resources** | Every link, tool, and reference from this event |
-| [V](docs/appendix-v-accessibility-agents-reference.md) | **Accessibility Agents Reference** | Six agents, 28 slash commands, customization system, and workspace configuration |
+| [V](docs/appendix-v-accessibility-agents-reference.md) | **Accessibility Agents Reference** | 55 agents, 3 teams, 5 platforms, slash commands, and workspace configuration |
 | [W](docs/appendix-w-github-copilot-reference.md) | **GitHub Copilot Reference** | Copilot features, chat participants, slash commands, MCP servers, and agentic ecosystem |
 | [X](docs/appendix-x-copilot-models.md) | **GitHub Copilot AI Models** | Model comparison, strengths, plan availability, and selection guidance |
 | [Y](docs/appendix-y-accessing-workshop-materials.md) | **Accessing and Downloading Workshop Materials** | GitHub Pages, GitHub.com, cloning, ZIP download, offline reading, folder guide |
@@ -185,7 +185,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 │   │   ├── accessibility-bug.yml        ← Structured accessibility bug form (YAML)
 │   │   └── feature-request.yml         ← Feature/improvement request form (YAML)
 │   ├── PULL_REQUEST_TEMPLATE.md        ← PR checklist with accessibility section
-│   ├── agents/                          ← Accessibility Agents: six Copilot Chat agents
+│   ├── agents/                          ← Accessibility Agents: workshop Copilot Chat agents (55 total across 3 teams)
 │   │   ├── daily-briefing.agent.md
 │   │   ├── issue-tracker.agent.md
 │   │   ├── pr-review.agent.md
@@ -193,7 +193,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
 │   │   ├── insiders-a11y-tracker.agent.md
 │   │   ├── template-builder.agent.md
 │   │   └── preferences.example.md      ← Copy to preferences.md and personalize
-│   └── prompts/                         ← 28 slash commands for Copilot Chat
+│   └── prompts/                         ← 54+ slash commands for Copilot Chat
 │       ├── a11y-update.prompt.md
 │       ├── create-issue.prompt.md
 │       ├── daily-briefing.prompt.md
@@ -232,7 +232,7 @@ All documentation lives in the `docs/` folder. Read them in order for the full e
     ├── 13-github-copilot.md           ← GitHub Copilot: inline suggestions, Chat, prompting, custom agents
     ├── 14-accessible-code-review.md   ← Reviewer mechanics: diffs, comments, Accessible Diff Viewer - final culminating skill
     ├── 15-issue-templates.md          ← Creating GitHub issue templates
-    ├── 16-accessibility-agents.md              ← Accessibility Agents: six agents, 28 commands, agentic workflows - automate everything you learned
+    ├── 16-accessibility-agents.md              ← Accessibility Agents: 55 agents, 3 teams, 5 platforms - automate everything you learned
     ├── appendix-a-glossary.md                    ← A: Every term explained (look up any time)
     ├── appendix-b-screen-reader-cheatsheet.md    ← B: Full shortcut reference, per-screen-reader tables (keep open)
     ├── appendix-c-accessibility-standards.md     ← C: WCAG 2.2, ARIA, PR checklist

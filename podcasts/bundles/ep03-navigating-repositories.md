@@ -70,6 +70,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Navigating Repositories
+> **Listen to Episode 3:** [Navigating Repositories](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## A Screen Reader Guide to GitHub Repositories
 
 > This guide covers everything you need to explore a GitHub repository using your keyboard and screen reader. No mouse required.
@@ -655,6 +657,8 @@ Navigate to the [Accessibility Agents repository](https://github.com/community-a
 ### Supplementary: Glossary - repository, branch, commit, clone, fork
 
 # Appendix A: GitHub Concepts & Glossary
+> **Listen to Episode 18:** [Glossary of Terms](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Every Term You Need for Open Source Contribution
 
 > This glossary is your reference for the entire two-day workshop. When you hear a term you don't recognize - check here first. Terms are grouped by category and also sorted alphabetically at the end.

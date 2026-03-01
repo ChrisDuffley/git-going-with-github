@@ -73,6 +73,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Labels, Milestones, and Projects
+> **Listen to Episode 9:** [Labels, Milestones, and Projects](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Organizing Work and Cross-Referencing on GitHub
 
 > Labels, milestones, and projects are the organizational layer of GitHub. They turn a chaotic list of issues into a structured, navigable, prioritized body of work.
@@ -543,6 +545,8 @@ Go to the Learning Room repository and do two things:
 ### Supplementary: GitHub Projects Deep Dive - boards, tables, custom fields
 
 # Appendix I: GitHub Projects Deep Dive
+> **Listen to Episode 26:** [GitHub Projects Deep Dive](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Boards, Tables, Roadmaps, Automations, and Accessible Navigation
 
 > GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).

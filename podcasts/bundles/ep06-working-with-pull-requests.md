@@ -80,6 +80,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Working with Pull Requests
+> **Listen to Episode 6:** [Working with Pull Requests](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Creating, Reviewing, and Merging Pull Requests with a Screen Reader
 
 > Pull requests are where your work becomes a contribution. This guide takes you through the full pull request workflow - from opening one to participating in review - using only your keyboard and screen reader.
@@ -991,6 +993,8 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 ### Supplementary: Accessible Code Review - diff navigation and review habits
 
 # Accessible Code Review
+> **Listen to Episode 15:** [Accessible Code Review](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Conducting Pull Request Reviews with a Screen Reader
 
 > This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).

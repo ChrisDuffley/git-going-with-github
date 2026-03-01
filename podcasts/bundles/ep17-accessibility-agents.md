@@ -74,17 +74,19 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Accessibility Agents
-## Custom AI Agents for GitHub Workflows
+> **Listen to Episode 17:** [Accessibility Agents](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
+## 55 AI Agents Across 3 Teams and 5 Platforms
 
 > **Day 2, Block 3 Material**
 >
 > **Before you read this guide:**
 >
-> Accessibility Agents covers six AI-powered agents and 28 slash commands. These are Day 2, Block 3 material. They are not where you start.
+> [Accessibility Agents](https://github.com/community-access/accessibility-agents) is a growing open source ecosystem: **55 AI-powered agents** organized into **three teams** (Accessibility, GitHub Workflow, and Developer Tools), running on **five platforms** (GitHub Copilot, Claude Code, Gemini CLI, Claude Desktop, and Codex CLI). During this workshop, you will use six of the GitHub Workflow agents hands-on. But the larger ecosystem is where your creative contribution matters.
 >
 > **The agents are only useful if you have already done the work manually.** An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff is useless to someone who has never read a diff. The agent does not teach you the skill - it multiplies a skill you already have.
 >
-> Day 1 built those skills. This chapter shows how to amplify them with automation.
+> Day 1 built those skills. This chapter shows how to amplify them with automation - and how you can contribute new agents, improve existing ones, and shape the project's future.
 
 ---
 
@@ -98,7 +100,9 @@ but keep the main narrative focused on the primary chapter.
 - [ ] GitHub Copilot subscription or organization access (classroom/free tier)
 - [ ] `.github/agents/` folder exists in your repository (or will create custom agents)
 
-### Agent-Specific Prerequisites (Complete Before Using That Agent)
+### Workshop Agent Prerequisites (Complete Before Using That Agent)
+
+The workshop focuses on six agents from the GitHub Workflow team. Each has a manual skill you must do first.
 
 | Agent | You Must Have Done First | Reference |
 |-------|--------------------------|----------|
@@ -109,6 +113,8 @@ but keep the main narrative focused on the primary chapter.
 | `@insiders-a11y-tracker` | Filed an accessibility bug, applied WCAG labels | [Ch 4](04-working-with-issues.md), [Ch 15](15-issue-templates.md) |
 | `@template-builder` | Designed a template manually, tested locally | [Ch 15](15-issue-templates.md#7-building-an-accessibility-bug-report-template) |
 
+**The full ecosystem** includes 55 agents across three teams - you are not limited to these six. See [Section 3](#3-the-ecosystem-55-agents-3-teams-5-platforms) for the complete landscape.
+
 **Estimated time for this chapter:** 1.5 hours (including exercises)
 
 ---
@@ -117,11 +123,12 @@ but keep the main narrative focused on the primary chapter.
 
 1. [The Principle: Skill First, Agent Second](#1-the-principle-skill-first-agent-second)
 2. [Setup and Configuration](#2-setup-and-configuration)
-3. [The Six Agents - Complete Reference](#3-the-six-agents--complete-reference)
-4. [The 28 Slash Commands](#4-the-28-slash-commands)
-5. [Building Your Own Agent](#5-building-your-own-agent)
-6. [The Cloud Extension: Agents Beyond VS Code](#6-the-cloud-extension-agents-beyond-vs-code)
-7. [GitHub Desktop, GitHub CLI, and Copilot CLI](#7-github-desktop-github-cli-and-copilot-cli)
+3. [The Ecosystem: 55 Agents, 3 Teams, 5 Platforms](#3-the-ecosystem-55-agents-3-teams-5-platforms)
+4. [Your Workshop Agents - Hands-On Reference](#4-your-workshop-agents--hands-on-reference)
+5. [Slash Commands and Prompts](#5-slash-commands-and-prompts)
+6. [Contributing to the Ecosystem](#6-contributing-to-the-ecosystem)
+7. [The Cloud Extension: Agents Beyond VS Code](#7-the-cloud-extension-agents-beyond-vs-code)
+8. [GitHub Desktop, GitHub CLI, and Copilot CLI](#8-github-desktop-github-cli-and-copilot-cli)
 
 ---
 
@@ -129,14 +136,16 @@ but keep the main narrative focused on the primary chapter.
 
 Accessibility Agents is not a way to skip learning GitHub. It is a way to amplify skills you have already built through deliberate practice.
 
-Every agent automates a sequence of steps you learned to do manually on Day 1. If you do not know those steps by hand, you cannot:
+The ecosystem now includes 55 agents across three specialized teams, running on five different AI platforms. That scale makes this principle even more important: every agent automates a sequence of steps you learned to do manually on Day 1. If you do not know those steps by hand, you cannot:
 
 - Verify that the agent's output is correct
 - Catch when the agent misses context that only you have
 - Edit the agent's drafts into something worth posting under your name
 - Know when the agent is confidently wrong
 
-**Every agent has a Day 1 prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it.**
+**Every agent has a manual prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it.**
+
+During the workshop, you will use six agents from the GitHub Workflow team hands-on:
 
 | Agent | Skill You Must Have Done Manually First | See |
 |-------|----------------------------------------|-----|
@@ -147,28 +156,50 @@ Every agent automates a sequence of steps you learned to do manually on Day 1. I
 | `@insiders-a11y-tracker` | File an accessibility bug report; apply WCAG labels; manually check a Markdown file for heading hierarchy | [Working with Issues](04-working-with-issues.md), [Issue Templates](15-issue-templates.md) |
 | `@template-builder` | Design a template manually (understand field types, YAML structure, testing); create a template for your own project | [Issue Templates](15-issue-templates.md#7-building-an-accessibility-bug-report-template) |
 
+But these are six out of 55. The other 49 agents - including 26 dedicated to accessibility auditing across web, document, and mobile platforms - follow the same principle. See [Section 3](#3-the-ecosystem-55-agents-3-teams-5-platforms) for the full landscape.
+
 The facilitator introduces one agent at a time in Block 3, and always asks the same question before each one:
 
 > *"What would you do if you had to do this step manually right now?"*
 
 That question is not rhetorical. Answer it before running the agent. If you cannot answer it, read the referenced guide section first.
 
+> **Innovation prompt:** As you work through each agent, think about which of the other 49 agents in the ecosystem might help with workflows you encounter regularly. On Day 2, you will have the opportunity to contribute improvements, new patterns, or entirely new agents back to the project.
+
 ---
 
 ## 2. Setup and Configuration
 
-### First-Time Setup
+### Quick Install (One Command)
+
+Accessibility Agents now ships with a one-liner installer that sets up all 55 agents for your platform:
+
+**macOS / Linux:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/Community-Access/accessibility-agents/main/install.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/Community-Access/accessibility-agents/main/install.ps1 | iex
+```
+
+The installer detects which AI tools you have installed (VS Code with Copilot, Claude Code, Gemini CLI, Claude Desktop, Codex CLI) and configures the appropriate agent files for each platform. To uninstall, run the corresponding uninstall script from the repository.
+
+### Workshop Setup (Fork and Clone)
+
+For the workshop, you will also fork and clone the repository so you can make contributions:
 
 1. **Fork** [accessibility-agents](https://github.com/community-access/accessibility-agents) to your GitHub account (you did this on Day 1 or Day 2 morning)
 2. **Clone** your fork:
    ```bash
    git clone https://github.com/[your-username]/accessibility-agents.git
    ```
-3. **Open in VS Code**: navigate to the folder → `code .` (or File → Open Folder)
+3. **Open in VS Code**: navigate to the folder and run `code .` (or File, then Open Folder)
 4. **Open Copilot Chat**: `Ctrl+Shift+I`
-5. **Test**: type `@daily-briefing morning briefing` → press `Enter`
+5. **Test**: type `@daily-briefing morning briefing` and press `Enter`
 
-**No API keys. No configuration files. No setup scripts. If Copilot Chat works, the agents work.**
+**No API keys. No configuration files. The installer handles everything.** If Copilot Chat works, the agents work.
 
 ### Prerequisites
 
@@ -184,7 +215,17 @@ When you type `@` in Copilot Chat, VS Code scans:
 2. Any agents installed globally on your machine
 3. Agents defined by extensions
 
-The six Accessibility Agents agents come from `.github/agents/` in your fork of the `accessibility-agents` repository.
+The Accessibility Agents ecosystem installs agents appropriate to each platform:
+
+| Platform | Agent Format | How Agents Load |
+|----------|-------------|-----------------|
+| **GitHub Copilot** (VS Code) | `.github/agents/*.agent.md` | Auto-discovered when workspace is open |
+| **Claude Code** | Per-agent CLAUDE.md files + hook enforcement | Loaded via `.claude/` configuration |
+| **Gemini CLI** | Gemini skill files | Loaded via gemini configuration |
+| **Claude Desktop** | MCP server integration | Configured via Claude Desktop settings |
+| **Codex CLI** | Codex agent files | Loaded via codex configuration |
+
+For this workshop, we focus on GitHub Copilot in VS Code. The same 55 agent personalities are available on all five platforms.
 
 ### Optional: Personalize Your Instance
 
@@ -221,9 +262,10 @@ Commit `preferences.md` to your fork. Now the agents know who you are and what y
 
 When you fork `accessibility-agents`, the `.github/agents/` folder comes with it. This means:
 
-- Any collaborator who clones your fork gets the same six agents
-- You can customize the agents for your specific project by editing the `.agent.md` files in your fork
-- Any project can have agents - you could create a `.github/agents/` folder in any repository and add `.agent.md` files using the same pattern
+- Any collaborator who clones your fork gets all 55 agents automatically
+- You can customize agents for your specific project by editing the `.agent.md` files in your fork
+- Any project can have agents - create a `.github/agents/` folder in any repository and add `.agent.md` files using the same pattern
+- The one-liner installer can also set up agents globally, so they are available in every workspace you open
 
 ### Invoking Agents on GitHub.com
 
@@ -383,7 +425,132 @@ This directly connects to the `/draft-release` slash command in Accessibility Ag
 
 ---
 
-## 3. The Six Agents - Complete Reference
+## 3. The Ecosystem: 55 Agents, 3 Teams, 5 Platforms
+
+Before diving into the six agents you will use hands-on, step back and see the full landscape. Accessibility Agents is not six tools - it is an ecosystem of 55 specialized agents organized into three teams, each addressing a different dimension of accessible software development.
+
+### Team 1: Accessibility (26 agents)
+
+These agents audit, fix, and enforce accessibility across web, document, and mobile platforms.
+
+| Agent | What It Does |
+|-------|-------------|
+| `@accessibility-lead` | Orchestrates multi-agent accessibility audits; delegates to specialists |
+| `@aria-specialist` | ARIA roles, states, properties, and widget patterns |
+| `@modal-specialist` | Dialog focus trapping, escape behavior, screen reader announcements |
+| `@contrast-master` | Color contrast ratios, focus indicators, visual presentation |
+| `@keyboard-navigator` | Tab order, focus management, keyboard shortcuts, skip links |
+| `@live-region-controller` | Live region announcements, dynamic content updates, toast notifications |
+| `@forms-specialist` | Form labels, error handling, validation, autocomplete, field grouping |
+| `@alt-text-headings` | Alt text quality, heading hierarchy, document outline, landmarks |
+| `@tables-specialist` | Table markup, scope, caption, headers, sortable columns, ARIA grid |
+| `@link-checker` | Link text quality, ambiguous links, WCAG 2.4.4 and 2.4.9 compliance |
+| `@web-accessibility-wizard` | Full guided WCAG audit with severity scoring and remediation tracking |
+| `@testing-coach` | Screen reader testing guidance (NVDA, JAWS, VoiceOver), automated test setup |
+| `@wcag-guide` | WCAG 2.2 AA reference, success criteria explanations, conformance guidance |
+| `@word-accessibility` | Microsoft Word document accessibility auditing |
+| `@excel-accessibility` | Microsoft Excel spreadsheet accessibility auditing |
+| `@powerpoint-accessibility` | Microsoft PowerPoint presentation accessibility auditing |
+| `@office-scan-config` | Office document scan configuration and rule management |
+| `@pdf-accessibility` | PDF accessibility auditing (PDF/UA, tagged PDF structure) |
+| `@pdf-scan-config` | PDF scan configuration and rule management |
+| `@document-accessibility-wizard` | Guided document audit wizard (Word, Excel, PowerPoint, PDF) |
+| `@cognitive-accessibility` | Cognitive accessibility patterns, plain language, reading level |
+| `@mobile-accessibility` | Mobile accessibility (iOS VoiceOver, Android TalkBack) |
+| `@design-system-auditor` | Design system component accessibility review |
+| `@markdown-a11y-assistant` | Markdown accessibility (headings, links, alt text, tables, emoji) |
+| `@epub-accessibility` | ePub/digital publication accessibility auditing |
+| `@epub-scan-config` | ePub scan configuration and rule management |
+
+### Team 2: GitHub Workflow (12 agents)
+
+These agents automate GitHub operations - the six you use in this workshop plus six more.
+
+| Agent | What It Does | Workshop Use |
+|-------|-------------|-------------|
+| `@daily-briefing` | Morning situation report across all repositories | Block 3 hands-on |
+| `@issue-tracker` | Find, prioritize, triage, and draft replies to issues | Block 3 hands-on |
+| `@pr-review` | Generate structured PR reviews with risk assessment | Block 3 hands-on |
+| `@analytics` | Contribution velocity, review turnaround, code hotspots | Block 3 hands-on |
+| `@insiders-a11y-tracker` | Monitor accessibility-sensitive changes in repositories | Block 3 hands-on |
+| `@template-builder` | Interactive issue template wizard via Ask Questions | Block 3 hands-on |
+| `@github-hub` | Central hub for all GitHub operations | - |
+| `@repo-admin` | Repository settings, branch protection, rulesets | - |
+| `@team-manager` | Team membership, permissions, and organization management | - |
+| `@contributions-hub` | Contribution tracking and contributor recognition | - |
+| `@repo-manager` | Multi-repository operations and cross-repo workflows | - |
+| `@nexus` | Cross-agent orchestration and workflow coordination | - |
+
+### Team 3: Developer Tools (6 agents)
+
+These agents support accessible application development across desktop and cross-platform frameworks.
+
+| Agent | What It Does |
+|-------|-------------|
+| `@developer-hub` | Central hub for developer tool operations |
+| `@python-specialist` | Python accessibility patterns and best practices |
+| `@wxpython-specialist` | wxPython GUI accessibility implementation |
+| `@desktop-a11y-specialist` | Desktop application accessibility (Windows, macOS, Linux) |
+| `@desktop-a11y-testing-coach` | Desktop accessibility testing guidance and automation |
+| `@a11y-tool-builder` | Build custom accessibility testing tools and utilities |
+
+### Beyond Agents: The Supporting Ecosystem
+
+The 55 agents are backed by additional resources in the repository:
+
+| Resource | Count | Purpose |
+|----------|-------|---------|
+| Copilot prompts (`.prompt.md`) | 54+ | Single-task slash commands invoked with `/command` |
+| Copilot skills (`SKILL.md`) | 17 | Multi-step workflows with bundled scripts and reference files |
+| Copilot instructions (`.instructions.md`) | 6 | Always-on coding standards (accessibility, markdown, semantic HTML, ARIA) |
+| Claude Code hooks | 3 | Proactive detection, edit gate, session marker - enforcement without prompting |
+| Example violations | 20+ | Intentional accessibility issues in `example/` for practice |
+
+### Hook-Based Enforcement (Claude Code)
+
+On Claude Code, Accessibility Agents includes a hook system that enforces accessibility standards automatically:
+
+1. **Proactive detection hook** - scans every file edit for accessibility regressions before they are committed
+2. **Edit gate hook** - blocks commits that introduce WCAG violations until they are fixed
+3. **Session marker hook** - tracks which accessibility checks have run during the current session
+
+This means accessibility enforcement happens whether or not the developer remembers to ask for it. The hooks run as part of the Claude Code lifecycle, not as an afterthought.
+
+### What Would You Build?
+
+This is the question that matters most. The 55 agents that exist today were built by contributors who saw a gap and filled it. The ecosystem grows when someone asks:
+
+- "Why is there no agent for [framework] accessibility patterns?"
+- "I spend 30 minutes on [task] every week - could an agent do the repetitive part?"
+- "This agent is good but it misses [specific edge case] - I could improve those instructions"
+- "Mobile native accessibility testing has no agent coverage yet - I could start one"
+
+**The contribution paths are:**
+
+1. **Report an agent gap** - file an issue describing what is missing and why it matters
+2. **Improve existing agent instructions** - make an agent smarter about edge cases it misses
+3. **Add framework-specific patterns** - teach agents about React, Vue, Angular, Svelte, or other framework accessibility patterns
+4. **Fix installer issues** - improve the one-liner scripts for different OS configurations
+5. **Write documentation** - help others understand how to use and contribute to agents
+
+See the [Accessibility Agents CONTRIBUTING guide](https://github.com/community-access/accessibility-agents/blob/main/CONTRIBUTING.md) for detailed instructions on each path.
+
+### Roadmap: What Is Coming Next
+
+The project roadmap includes:
+
+- **Mobile native agents** - agents specialized for iOS (VoiceOver) and Android (TalkBack) native app accessibility
+- **Anthropic Connectors listing** - making agents discoverable through the Anthropic marketplace
+- **veraPDF integration** - automated PDF/UA validation for the PDF accessibility agent
+- **Document remediation agents** - agents that fix accessibility issues in documents, not just find them
+- **WCAG AAA agent** - a specialized agent for AAA-level conformance (currently, agents target AA)
+- **Multi-language support** - agent instructions in languages beyond English
+
+**Your contribution could be the next item that ships.** Every agent started as one person's idea and one pull request.
+
+---
+
+## 4. Your Workshop Agents - Hands-On Reference
 
 Open each agent file in VS Code to read its full instructions before using it: `.github/agents/[name].agent.md`
 
@@ -816,9 +983,9 @@ Agent: [Syntax-highlighted YAML output]
 
 ---
 
-## 4. The 28 Slash Commands
+## 5. Slash Commands and Prompts
 
-Slash commands are simpler than agents - they're single-purpose prompts defined in `.github/prompts/`. Type `/` in Copilot Chat to see the full command menu.
+The repository includes 54+ slash commands defined as `.prompt.md` files in `.github/prompts/`. Type `/` in Copilot Chat to see the full command menu.
 
 ### Most Useful for This Workshop
 
@@ -834,7 +1001,9 @@ Slash commands are simpler than agents - they're single-purpose prompts defined 
 | `/draft-release` | Generate release notes from merged PRs | `/draft-release v2.0` |
 | `/my-prs` | Your open PRs with CI and review status | `/my-prs` |
 
-### Complete Slash Command List
+### Workshop Slash Command Quick Reference
+
+The commands listed below are the ones most relevant to this workshop. The full repository contains 54+ commands covering accessibility auditing, document scanning, framework-specific checks, and more. See [Appendix V](appendix-v-accessibility-agents-reference.md) for the complete list.
 
 ```
 /address-comments     Address all open review comments on your PR
@@ -902,9 +1071,11 @@ Load accessibility tracking configuration from `.github/agents/preferences.md`
 
 ---
 
-## 5. Building Your Own Agent
+## 6. Contributing to the Ecosystem
 
-The six Accessibility Agents agents and 28 slash commands are starting points. The `.agent.md` format is open - you can create your own agents for any repeatable workflow.
+The 55 Accessibility Agents and 54+ slash commands are starting points. The `.agent.md` format is open - you can create your own agents for any repeatable workflow, and contribute them back to the project.
+
+> **Think strategically about impact.** Before you build, ask: "Who benefits from this agent, and how often?" An agent that saves 100 people five minutes each week has more impact than an agent that saves one person an hour once. The best contributions solve problems that many people share.
 
 > Source: [accessibility.github.com/documentation/guide/getting-started-with-agents/](https://accessibility.github.com/documentation/guide/getting-started-with-agents/)
 
@@ -1635,19 +1806,22 @@ You've now:
 2. **Customized an agent** for your domain (Exercise 2)
 3. **Refined iteratively** with agent help (Exercise 3)
 
-Your next step: use these skills for other agents.
+Your next step: explore the broader ecosystem.
 
-- Use `@pr-review` to draft code review comments (manual → agent → refine)
-- Use `@issue-tracker` to find and prioritize issues (manual → agent → refine)
-- Use `@daily-briefing` to summarize your daily activity (manual → agent → refine)
+- Browse the [full agent list](#3-the-ecosystem-55-agents-3-teams-5-platforms) - which agents solve problems you face regularly?
+- Try an Accessibility team agent: `@contrast-master check this page` or `@alt-text-headings review this file`
+- Think about what is missing: what agent would you build if you could?
+- Use `@pr-review` to draft code review comments (manual then agent then refine)
+- Use `@issue-tracker` to find and prioritize issues (manual then agent then refine)
+- Use `@daily-briefing` to summarize your daily activity (manual then agent then refine)
 
 Each agent follows the same pattern: **you know the manual way, the agent suggests, you refine and decide.**
 
-That's Accessibility Agents' promise: not to replace your thinking, but to amplify your skills.
+That's Accessibility Agents' promise: not to replace your thinking, but to amplify your skills - and to grow through the contributions of everyone who uses it.
 
 ---
 
-## 6. The Cloud Extension: Agents Beyond VS Code
+## 7. The Cloud Extension: Agents Beyond VS Code
 
 Accessibility Agents' agents run on your machine, in your editor, when you ask for them. That is one scope.
 
@@ -1659,6 +1833,7 @@ The same Markdown-authored pattern extends further:
 - **Triggered by:** You, when you type `@[agent-name]` in Copilot Chat
 - **Runs on:** Your machine, using your Copilot subscription
 - **Reaches:** Every repository your GitHub account has access to
+- **Scale:** All 55 agents available when the workspace is open
 
 ### Scope 2: Your Repository (Travels with Forks)
 
@@ -1667,7 +1842,7 @@ The same Markdown-authored pattern extends further:
 - **Runs on:** Their machine, using their Copilot subscription
 - **Reaches:** Their GitHub account's repositories
 
-When you fork `accessibility-agents`, the agents come with it. You can edit them for your project's context. You can add new ones. You can share them with every contributor who clones your fork.
+When you fork `accessibility-agents`, all 55 agents come with it. You can edit them for your project's context. You can add new ones. You can share them with every contributor who clones your fork.
 
 ### Scope 3: The Cloud (GitHub Agentic Workflows)
 
@@ -1714,7 +1889,7 @@ This runs automatically on every new issue. No human intervention required.
 
 ---
 
-## 7. GitHub Desktop, GitHub CLI, and Copilot CLI
+## 8. GitHub Desktop, GitHub CLI, and Copilot CLI
 
 These tools are not required for this workshop, but are worth knowing as options for different workflows.
 
@@ -1851,44 +2026,123 @@ Run this command? (Y/n)
 ### Supplementary: Accessibility Agents Reference - all 28 commands
 
 # Appendix V: Accessibility Agents Reference
+> **Listen to Episode 39:** [Accessibility Agents - Complete Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats
 
-> This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. For the lesson, see [Chapter 16: Accessibility Agents](16-accessibility-agents.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
+> This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. The ecosystem includes **55 agents** across **3 teams** and **5 platforms**, plus 54+ slash commands, 17 skills, and 6 instruction files. For the lesson, see [Chapter 16: Accessibility Agents](16-accessibility-agents.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
 
 ---
 
 ## Table of Contents
 
-1. [The Six Agents](#1-the-six-agents)
-2. [The 28 Slash Commands](#2-the-28-slash-commands)
-3. [Customization Primitives - Decision Guide](#3-customization-primitives--decision-guide)
-4. [Scope and Priority - All Levels](#4-scope-and-priority--all-levels)
-5. [Always-On Instructions - All File Types](#5-always-on-instructions--all-file-types)
-6. [File-Based Instructions (.instructions.md)](#6-file-based-instructions-instructionsmd)
-7. [.agent.md - Complete Format Reference](#7-agentmd--complete-format-reference)
-8. [.prompt.md - Complete Format Reference](#8-promptmd--complete-format-reference)
-9. [Agent Skills (SKILL.md) - Complete Format Reference](#9-agent-skills-skillmd--complete-format-reference)
-10. [Hooks (.json) - Lifecycle Automation](#10-hooks-json--lifecycle-automation)
-11. [preferences.md - Accessibility Agents Personal Settings](#11-preferencesmd--accessibility-agents-personal-settings)
-12. [Diagnostics and Troubleshooting](#12-diagnostics-and-troubleshooting)
-13. [Further Reading](#13-further-reading)
+1. [The Full Agent Ecosystem](#1-the-full-agent-ecosystem)
+2. [Workshop Agents - Quick Reference](#2-workshop-agents--quick-reference)
+3. [Slash Commands and Prompts](#3-slash-commands-and-prompts)
+4. [Customization Primitives - Decision Guide](#4-customization-primitives--decision-guide)
+5. [Scope and Priority - All Levels](#5-scope-and-priority--all-levels)
+6. [Always-On Instructions - All File Types](#6-always-on-instructions--all-file-types)
+7. [File-Based Instructions (.instructions.md)](#7-file-based-instructions-instructionsmd)
+8. [.agent.md - Complete Format Reference](#8-agentmd--complete-format-reference)
+9. [.prompt.md - Complete Format Reference](#9-promptmd--complete-format-reference)
+10. [Agent Skills (SKILL.md) - Complete Format Reference](#10-agent-skills-skillmd--complete-format-reference)
+11. [Hooks (.json) - Lifecycle Automation](#11-hooks-json--lifecycle-automation)
+12. [preferences.md - Accessibility Agents Personal Settings](#12-preferencesmd--accessibility-agents-personal-settings)
+13. [Diagnostics and Troubleshooting](#13-diagnostics-and-troubleshooting)
+14. [Further Reading](#14-further-reading)
 
 ---
 
-## 1. The Six Agents
+## 1. The Full Agent Ecosystem
+
+Accessibility Agents includes 55 agents organized into three specialized teams, available on five platforms.
+
+### Platforms
+
+| Platform | Agent Format | Installation |
+|----------|-------------|-------------|
+| **GitHub Copilot** (VS Code) | `.github/agents/*.agent.md` | Fork repo or run installer |
+| **Claude Code** | Per-agent CLAUDE.md + hook enforcement | One-liner installer auto-detects |
+| **Gemini CLI** | Gemini skill files | One-liner installer auto-detects |
+| **Claude Desktop** | MCP server integration | One-liner installer auto-detects |
+| **Codex CLI** | Codex agent files | One-liner installer auto-detects |
+
+### Team 1: Accessibility (26 agents)
+
+| Agent | Type | What It Does |
+|-------|------|-------------|
+| `@accessibility-lead` | Orchestrator | Delegates multi-agent accessibility audits to specialist agents |
+| `@aria-specialist` | Task | ARIA roles, states, properties, widget patterns (modals, tabs, comboboxes) |
+| `@modal-specialist` | Task | Dialog focus trapping, escape behavior, screen reader overlay announcements |
+| `@contrast-master` | Task | Color contrast ratios, focus indicators, dark mode, visual presentation |
+| `@keyboard-navigator` | Task | Tab order, focus management, keyboard shortcuts, skip links, focus traps |
+| `@live-region-controller` | Task | Live region announcements, dynamic content, toasts, loading states |
+| `@forms-specialist` | Task | Form labels, error handling, validation, autocomplete, field grouping |
+| `@alt-text-headings` | Task | Alt text quality, heading hierarchy, document outline, landmark structure |
+| `@tables-specialist` | Task | Table markup, scope, caption, headers, sortable columns, ARIA grid |
+| `@link-checker` | Informational | Link text quality, ambiguous links, WCAG 2.4.4 and 2.4.9 compliance |
+| `@web-accessibility-wizard` | Orchestrator | Full guided WCAG audit - severity scoring, remediation tracking, action plan |
+| `@testing-coach` | Informational | NVDA/JAWS/VoiceOver testing guidance, automated test setup (axe-core, Playwright) |
+| `@wcag-guide` | Informational | WCAG 2.2 AA reference, success criteria explanations, conformance levels |
+| `@word-accessibility` | Task | Microsoft Word document accessibility auditing and remediation |
+| `@excel-accessibility` | Task | Microsoft Excel spreadsheet accessibility auditing and remediation |
+| `@powerpoint-accessibility` | Task | Microsoft PowerPoint presentation accessibility auditing |
+| `@office-scan-config` | Informational | Office document scan configuration and rule management |
+| `@pdf-accessibility` | Task | PDF accessibility auditing (PDF/UA, tagged PDF structure) |
+| `@pdf-scan-config` | Informational | PDF scan configuration and rule management |
+| `@document-accessibility-wizard` | Orchestrator | Guided document audit wizard for Word, Excel, PowerPoint, and PDF |
+| `@cognitive-accessibility` | Informational | Cognitive accessibility, plain language, reading level, content clarity |
+| `@mobile-accessibility` | Task | iOS VoiceOver and Android TalkBack native app accessibility |
+| `@design-system-auditor` | Task | Design system component accessibility review and pattern library audit |
+| `@markdown-a11y-assistant` | Task | Markdown headings, links, alt text, tables, emoji, structure enforcement |
+| `@epub-accessibility` | Task | ePub and digital publication accessibility auditing |
+| `@epub-scan-config` | Informational | ePub scan configuration and rule management |
+
+### Team 2: GitHub Workflow (12 agents)
+
+| Agent | Type | What It Does |
+|-------|------|-------------|
+| `@daily-briefing` | Informational | Morning situation report - issues, PRs, CI, security, community activity |
+| `@issue-tracker` | Both | Find, prioritize, triage, draft replies to issues across repositories |
+| `@pr-review` | Both | Structured PR reviews with risk assessment, change maps, inline suggestions |
+| `@analytics` | Informational | Contribution velocity, review turnaround, code hotspots, workload distribution |
+| `@insiders-a11y-tracker` | Both | Monitor accessibility-sensitive changes - WCAG/ARIA, headings, links, keyboard |
+| `@template-builder` | Guided | Interactive issue template wizard via VS Code Ask Questions |
+| `@github-hub` | Both | Central hub for all GitHub operations and repository management |
+| `@repo-admin` | Task | Repository settings, branch protection rules, and rulesets |
+| `@team-manager` | Task | Team membership, permissions, organization management |
+| `@contributions-hub` | Informational | Contribution tracking, contributor recognition, community metrics |
+| `@repo-manager` | Task | Multi-repository operations and cross-repo workflow coordination |
+| `@nexus` | Orchestrator | Cross-agent orchestration - coordinates multiple agents for complex workflows |
+
+### Team 3: Developer Tools (6 agents)
+
+| Agent | Type | What It Does |
+|-------|------|-------------|
+| `@developer-hub` | Both | Central hub for developer tool operations and project scaffolding |
+| `@python-specialist` | Task | Python accessibility patterns, Django/Flask a11y, best practices |
+| `@wxpython-specialist` | Task | wxPython GUI accessibility - keyboard, focus, screen reader support |
+| `@desktop-a11y-specialist` | Task | Desktop application accessibility across Windows, macOS, and Linux |
+| `@desktop-a11y-testing-coach` | Informational | Desktop accessibility testing guidance and automation setup |
+| `@a11y-tool-builder` | Task | Build custom accessibility testing tools, linters, and CI checks |
+
+### Supporting Resources
+
+| Resource | Count | Location |
+|----------|-------|---------|
+| Copilot prompts | 54+ | `.github/prompts/*.prompt.md` |
+| Copilot skills | 17 | `.github/skills/*/SKILL.md` |
+| Copilot instructions | 6 | `.github/instructions/*.instructions.md` |
+| Claude Code hooks | 3 | `.claude/hooks/` |
+| Example violations | 20+ | `example/` directory |
+
+---
+
+## 2. Workshop Agents - Quick Reference
+
+These six agents from the GitHub Workflow team are used hands-on during Day 2, Block 3.
 
 Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
-
-### Quick Reference
-
-| Agent | Type | Invoke With | What It Does |
-|-------|------|-------------|-------------|
-| `@daily-briefing` | Informational | `@daily-briefing morning briefing` | Prioritized sweep of issues, review requests, CI failures, @mentions |
-| `@issue-tracker` | Informational + Task | `@issue-tracker find accessibility issues` | Find, prioritize, triage, and draft replies to issues |
-| `@pr-review` | Informational + Task | `@pr-review review PR #14` | Generate structured PR review documents with risk assessment and inline comment suggestions |
-| `@analytics` | Informational | `@analytics team velocity this month` | Contribution velocity, review turnaround, code hotspots, workload distribution |
-| `@insiders-a11y-tracker` | Informational + Task | `@insiders-a11y-tracker check recent changes` | Monitor accessibility-sensitive changes: WCAG/ARIA, heading hierarchy, link quality, keyboard patterns |
-| `@template-builder` | Informational (guided) | `@template-builder create accessibility template` | Interactive wizard that generates GitHub issue template YAML via Ask Questions |
 
 ---
 
@@ -2010,11 +2264,11 @@ Invoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
 ---
 
-## 2. The 28 Slash Commands
+## 3. Slash Commands and Prompts
 
-Type `/` in Copilot Chat to open the command menu. Each command corresponds to a `.prompt.md` file in `.github/prompts/`.
+The repository includes 54+ slash commands. Type `/` in Copilot Chat to open the command menu. Each command corresponds to a `.prompt.md` file in `.github/prompts/`.
 
-### Quick Reference
+### Workshop Quick Reference
 
 | Command | What It Does |
 |---------|-------------|
@@ -2061,7 +2315,7 @@ Type `/` in Copilot Chat to open the command menu. Each command corresponds to a
 
 ---
 
-## 3. Customization Primitives - Decision Guide
+## 4. Customization Primitives - Decision Guide
 
 Before creating any file, choose the right primitive for the job. Each primitive is a different file type with a different purpose, scope, and trigger.
 
@@ -2091,7 +2345,7 @@ Before creating any file, choose the right primitive for the job. Each primitive
 
 ---
 
-## 4. Scope and Priority - All Levels
+## 5. Scope and Priority - All Levels
 
 Every customization file exists at one of three scopes. VS Code combines all matching files from all scopes and sends them to the model.
 
@@ -2147,7 +2401,7 @@ VS Code collects **all** matching instruction files from all scopes and includes
 
 ---
 
-## 5. Always-On Instructions - All File Types
+## 6. Always-On Instructions - All File Types
 
 Always-on instructions are automatically included in every chat request. You never invoke them - Copilot simply follows them.
 
@@ -2286,7 +2540,7 @@ Organization instructions are the lowest priority - workspace and user instructi
 
 ---
 
-## 6. File-Based Instructions (`.instructions.md`)
+## 7. File-Based Instructions (`.instructions.md`)
 
 File-based instructions load conditionally - either when the files you are editing match a glob pattern, or when the agent determines the instruction is relevant to the current task.
 
@@ -2386,7 +2640,7 @@ Type `/instructions` in the Chat input to open the Configure Instructions menu.
 
 ---
 
-## 7. `.agent.md` - Complete Format Reference
+## 8. `.agent.md` - Complete Format Reference
 
 ### File Locations
 
@@ -2538,7 +2792,7 @@ When asked to [task]:
 
 ---
 
-## 8. `.prompt.md` - Complete Format Reference
+## 9. `.prompt.md` - Complete Format Reference
 
 ### File Locations
 
@@ -2639,7 +2893,7 @@ For each finding include:
 
 ---
 
-## 9. Agent Skills (`SKILL.md`) - Complete Format Reference
+## 10. Agent Skills (`SKILL.md`) - Complete Format Reference
 
 A Skill is a folder - not a single file. The folder contains `SKILL.md` plus any scripts, templates, and reference documents the skill needs.
 
@@ -2731,7 +2985,7 @@ description: "Audit Markdown files for accessibility violations. Use for heading
 
 ---
 
-## 10. Hooks (`.json`) - Lifecycle Automation
+## 11. Hooks (`.json`) - Lifecycle Automation
 
 Hooks execute shell commands at specific points in an agent's lifecycle. They are deterministic - they run regardless of what the agent was prompted to do.
 
@@ -2831,7 +3085,7 @@ Permission decisions: `"allow"` | `"ask"` (prompt user) | `"deny"` (block the to
 
 ---
 
-## 11. `preferences.md` - Accessibility Agents Personal Settings
+## 12. `preferences.md` - Accessibility Agents Personal Settings
 
 Copy `.github/agents/preferences.example.md` to `.github/agents/preferences.md`. The file is in `.gitignore` - your private settings stay only in your local fork.
 
@@ -2912,7 +3166,7 @@ I use TalkBack on Android.
 
 ---
 
-## 12. Diagnostics and Troubleshooting
+## 13. Diagnostics and Troubleshooting
 
 ### View All Loaded Customizations
 
@@ -2964,7 +3218,7 @@ This shows: which files were found, which were loaded, which have errors, and fr
 
 ---
 
-## 13. Further Reading
+## 14. Further Reading
 
 For the broader ecosystem - the community plugin marketplace, MCP server integrations, and running agents in the cloud via GitHub Actions - see [Appendix W: GitHub Copilot & Agentic Reference](appendix-w-github-copilot-reference.md).
 

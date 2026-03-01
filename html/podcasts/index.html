@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
-  <title>Podcast Production Guide - GIT Going with GitHub</title>
+  <title>Podcast Audio Pipeline - GIT Going with GitHub</title>
   <link rel="stylesheet" href="./styles/github-markdown.css">
   <link rel="stylesheet" href="./styles/highlight.css">
   <link rel="stylesheet" href="./styles/custom.css">
@@ -26,106 +26,285 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
   <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Podcast Production Guide</span>
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Podcast Audio Pipeline</span>
   </nav>
   <main id="main-content" class="markdown-body">
-    <h1>Podcast Production Guide</h1>
-<h2>Git Going with GitHub - Audio Series</h2>
-<p>This directory contains everything needed to produce the <strong>Git Going with GitHub</strong> audio series using Google NotebookLM.</p>
+    <h1>Podcast Audio Pipeline</h1>
+<p>This directory contains the complete pipeline for producing the Git Going with GitHub companion audio series: 44 episodes of two-host conversational content designed for blind and low-vision developers.</p>
+<h2>Pipeline Overview</h2>
+<pre><code class="hljs">build-bundles.js     Generate source bundles from chapter content
+        |
+        <span class="hljs-type">v</span>
+  bundles/*.md       One bundle per episode (production prompt + source material)
+        |
+        <span class="hljs-type">v</span>                                               OR
+        |<span class="hljs-type">---&gt; NotebookLM</span> (manual)                       |
+        <span class="hljs-type">|     Upload</span> bundle, generate, export MP3       |
+        <span class="hljs-type">|                                               |
+        v</span>                                               v
+generate-scripts.js  Convert bundles into two-host scripts <span class="hljs-built_in">using</span> Google Gemini
+        |
+        <span class="hljs-type">v</span>
+  scripts/*.txt      Conversational scripts <span class="hljs-built_in">with</span> [ALEX]/[JAMIE]/[PAUSE] markers
+        |
+        <span class="hljs-type">v</span>
+generate-audio.js    Voice scripts <span class="hljs-built_in">with</span> Google Cloud TTS Journey voices
+        |
+        <span class="hljs-type">v</span>
+  audio/*.mp3        Final MP3 files (gitignored - hosted on GitHub Releases)
+        |
+        <span class="hljs-type">v</span>
+generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</code></pre>
+<p>Two production paths:</p>
+<ul>
+<li><strong>NotebookLM</strong> (manual): Upload a bundle, get a conversational podcast with zero setup. Great for quick iteration.</li>
+<li><strong>Google TTS</strong> (automated): Gemini generates scripts, Journey voices synthesize audio. Fully scriptable, reproducible, under $0.10 for all 44 episodes.</li>
+</ul>
 <h2>Directory Structure</h2>
 <pre><code class="hljs">podcasts/
-  README<span class="hljs-selector-class">.md</span>             This guide
-  build-bundles<span class="hljs-selector-class">.js</span>      Generates NotebookLM <span class="hljs-selector-tag">source</span> bundles + manifest<span class="hljs-selector-class">.json</span>
-  generate-site<span class="hljs-selector-class">.js</span>      Generates PODCASTS<span class="hljs-selector-class">.md</span> and feed<span class="hljs-selector-class">.xml</span> from manifest<span class="hljs-selector-class">.json</span>
-  manifest<span class="hljs-selector-class">.json</span>         Episode manifest (metadata, status tracking)
-  feed<span class="hljs-selector-class">.xml</span>              RSS <span class="hljs-number">2.0</span> podcast feed (auto-generated)
-  bundles/              <span class="hljs-number">44</span> generated episode <span class="hljs-selector-tag">source</span> bundles <span class="hljs-keyword">for</span> NotebookLM
-  audio/                MP3 files after export from NotebookLM (not <span class="hljs-keyword">in</span> git)</code></pre>
-<h2>Quick Start</h2>
-<h3>1. Generate bundles + manifest</h3>
-<pre><code class="hljs language-bash">node podcasts/build-bundles.js</code></pre>
-<p>This reads every chapter and appendix from <code>docs/</code>, combines each with:</p>
+  README<span class="hljs-variable">.md</span>             This guide
+  build-bundles<span class="hljs-variable">.js</span>      Generates source bundles + manifest<span class="hljs-variable">.json</span>
+  <span class="hljs-keyword">generate</span>-scripts<span class="hljs-variable">.js</span>   Converts bundles to two-host scripts via Gemini
+  <span class="hljs-keyword">generate</span>-audio<span class="hljs-variable">.js</span>     Voices scripts <span class="hljs-keyword">with</span> Google Cloud TTS Journey voices
+  <span class="hljs-keyword">generate</span>-site<span class="hljs-variable">.js</span>      Generates PODCASTS<span class="hljs-variable">.md</span> <span class="hljs-keyword">and</span> feed<span class="hljs-variable">.xml</span> from manifest<span class="hljs-variable">.json</span>
+  manifest<span class="hljs-variable">.json</span>         Episode manifest (metadata, status tracking)
+  feed<span class="hljs-variable">.xml</span>              RSS <span class="hljs-number">2</span><span class="hljs-variable">.0</span> podcast feed (auto-generated)
+  bundles/              <span class="hljs-number">44</span> generated episode source bundles
+  scripts/              Generated two-host scripts (committed, reviewable)
+  audio/                MP3 files after generation (<span class="hljs-keyword">not</span> in git)</code></pre>
+<h2>Prerequisites</h2>
 <ul>
-<li>Episode-specific production prompt with tone/style direction</li>
-<li>Concept coverage checklist (ensures every key idea is explained)</li>
-<li>Cross-referenced supplementary content from related chapters</li>
-<li>Prerequisite recaps from earlier episodes</li>
+<li>Node.js 18 or later (the scripts use built-in <code>fetch()</code> - zero npm packages needed)</li>
+<li>A Google account (free tier works for both APIs)</li>
 </ul>
-<p>Output: 44 bundle files in <code>podcasts/bundles/</code> and <code>podcasts/manifest.json</code>.</p>
-<h3>2. Generate player page + RSS feed</h3>
-<pre><code class="hljs language-bash">node podcasts/generate-site.js</code></pre>
-<p>Reads <code>manifest.json</code> and generates:</p>
-<ul>
-<li><code>PODCASTS.md</code> (root) - HTML5 audio player page for all 44 episodes</li>
-<li><code>podcasts/feed.xml</code> - RSS 2.0 feed with iTunes podcast namespace</li>
-</ul>
-<h3>3. Do both at once</h3>
-<pre><code class="hljs language-bash">npm run build:podcasts</code></pre>
-<p>Or build everything (podcasts + HTML site):</p>
-<pre><code class="hljs language-bash">npm run build</code></pre>
-<h3>4. Create episodes in NotebookLM</h3>
+<hr>
+<h2>Path A: NotebookLM (Manual)</h2>
+<p>No API keys needed. Best for quick one-off generation or when you want NotebookLM&#39;s conversational AI.</p>
+<h3>1. Generate bundles</h3>
+<pre><code class="hljs language-bash">npm run build:podcast-bundles</code></pre>
+<h3>2. Create episodes in NotebookLM</h3>
 <ol>
 <li>Open <a href="https://notebooklm.google.com">NotebookLM</a> and sign in.</li>
-<li>Click <strong>New notebook</strong>.</li>
-<li>Name it: <code>Ep 00 - Welcome to Git Going with GitHub</code>.</li>
-<li>Click <strong>Add source</strong>, then <strong>Upload</strong> and select <code>podcasts/bundles/ep00-welcome.md</code>.</li>
-<li>Wait for the source to be indexed (a few seconds).</li>
-<li>In the <strong>Studio</strong> panel on the right, click <strong>Generate</strong> under Audio Overview.</li>
-<li>NotebookLM generates a two-host podcast conversation (takes 2-5 minutes).</li>
-<li>Listen to the preview. If you want to adjust focus, add a <strong>Notebook note</strong> with guidance like: &quot;Spend more time on the two-day structure and less on individual chapters&quot; and regenerate.</li>
-<li>When satisfied, click the download button (down arrow icon) to export the MP3.</li>
-<li>Save the MP3 as <code>podcasts/audio/ep00-welcome.mp3</code>.</li>
+<li>Select &quot;New notebook&quot;.</li>
+<li>Name it: &quot;Ep 00 - Welcome to Git Going with GitHub&quot;.</li>
+<li>Select &quot;Add source&quot;, then &quot;Upload&quot; and choose <code>podcasts/bundles/ep00-welcome.md</code>.</li>
+<li>Wait for indexing (a few seconds).</li>
+<li>In the Studio panel, select &quot;Generate&quot; under Audio Overview.</li>
+<li>Listen to the preview. Add a notebook note to adjust focus if needed and regenerate.</li>
+<li>Download the MP3 and save as <code>podcasts/audio/ep00-welcome.mp3</code>.</li>
 </ol>
 <p>Repeat for each episode.</p>
-<h3>5. Batch production tips</h3>
+<h3>Batch production tips</h3>
 <ul>
-<li><strong>Work in tiers.</strong> Start with Tier 1 (episodes 0-10, the Day 1 core), then Tier 2 (episodes 11-17, the Day 2 core), then Tier 3 (episodes 18-43, appendices).</li>
-<li><strong>Keep notebooks.</strong> Do not delete the NotebookLM notebooks. You can regenerate episodes when source chapters are updated.</li>
-<li><strong>Regenerate after updates.</strong> Run <code>npm run build:podcasts</code> whenever chapter content changes, then re-upload the updated bundle to the corresponding NotebookLM notebook and regenerate.</li>
-<li><strong>Review for accuracy.</strong> NotebookLM&#39;s audio is AI-generated. Listen for:<ul>
-<li>Incorrect terminology or pronunciation</li>
-<li>Visual language (&quot;you will see&quot; instead of &quot;navigate to&quot;)</li>
-<li>Missing concepts from the checklist in the bundle prompt</li>
-<li>Overly long tangents that dilute the episode focus</li>
+<li>Work in tiers: Day 1 core (episodes 0-10), Day 2 core (11-17), appendices (18-43).</li>
+<li>Keep notebooks around - you can regenerate when source chapters change.</li>
+<li>Listen for visual language (&quot;you will see&quot;) and missing checklist concepts.</li>
 </ul>
-</li>
-<li><strong>Custom prompting.</strong> If an episode needs adjustments, add notes to the NotebookLM notebook. Examples:<ul>
-<li>&quot;Focus on the screen reader workflow, not the visual interface&quot;</li>
-<li>&quot;Explain what a merge conflict marker looks like when read aloud&quot;</li>
-<li>&quot;The audience are professional adults, not beginners in general&quot;</li>
-</ul>
-</li>
-</ul>
-<h2>Concept Coverage</h2>
-<p>Each episode bundle includes an explicit <strong>Concept Coverage Checklist</strong> in the production prompt. This tells NotebookLM exactly which ideas must be explained. After generating an episode, listen through and verify every checklist item was addressed.</p>
-<p>If NotebookLM skips a concept:</p>
+<hr>
+<h2>Path B: Google TTS with Journey Voices (Automated)</h2>
+<p>Fully automated, reproducible, and costs under a dime for all 44 episodes.</p>
+<h3>Step 1: Create a Google Cloud Project</h3>
 <ol>
-<li>Add a notebook note: &quot;Make sure to explain [concept] in detail&quot;</li>
-<li>Regenerate the Audio Overview</li>
-<li>Verify the concept is now covered</li>
+<li>Open <a href="https://console.cloud.google.com/">Google Cloud Console</a></li>
+<li>Select &quot;Create Project&quot; from the project dropdown at the top</li>
+<li>Name it something like &quot;git-going-podcasts&quot;</li>
+<li>Note the project ID</li>
 </ol>
-<p>Episodes also include <strong>cross-references</strong> to related chapters and <strong>prerequisite recaps</strong> so the hosts can naturally bridge concepts across episodes.</p>
-<h2>Hosting</h2>
-<p>MP3 files are hosted as GitHub Release assets. After generating an MP3:</p>
+<p>If you already have a Google Cloud project, you can reuse it.</p>
+<h3>Step 2: Get a Gemini API Key (for script generation)</h3>
+<p>This key powers the Gemini model that converts bundles into two-host conversational scripts.</p>
 <ol>
-<li>Do not commit MP3 files to the repo (they are in <code>.gitignore</code>).</li>
-<li>Create a GitHub Release (or update an existing one) and attach the MP3 as a release asset.</li>
-<li>Run <code>npm run build:podcasts</code> to regenerate the RSS feed and player page.</li>
-<li>Commit the updated <code>feed.xml</code>, <code>manifest.json</code>, and <code>PODCASTS.md</code> and push.</li>
+<li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio</a></li>
+<li>Select &quot;Create API key&quot;</li>
+<li>Choose your Cloud project from Step 1</li>
+<li>Copy the key</li>
 </ol>
-<p>Students can subscribe to the RSS feed in any podcast app:</p>
+<p>Cost: Free tier gives 15 requests per minute and 1 million tokens per minute. All 44 episodes fit within this.</p>
+<h3>Step 3: Enable Text-to-Speech API and Create a Key</h3>
+<p>This key powers the Journey voices that read your scripts aloud.</p>
+<ol>
+<li>Open the <a href="https://console.cloud.google.com/apis/library/texttospeech.googleapis.com">Text-to-Speech API page</a> in Cloud Console</li>
+<li>Select &quot;Enable&quot;</li>
+<li>Open <a href="https://console.cloud.google.com/apis/credentials">API Credentials</a></li>
+<li>Select &quot;Create Credentials&quot; then &quot;API key&quot;</li>
+<li>(Recommended) Select &quot;Edit API key&quot;, then under &quot;API restrictions&quot; choose &quot;Restrict key&quot; and select only &quot;Cloud Text-to-Speech API&quot;</li>
+<li>Copy the key</li>
+</ol>
+<p>Cost: Journey voices cost $0.03 per million characters. All 44 episodes total roughly 800,000 characters, so the entire series costs about $0.02 to $0.05.</p>
+<h3>Step 4: Set Environment Variables</h3>
+<p>PowerShell (current session):</p>
+<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:GEMINI_API_KEY</span> = <span class="hljs-string">&quot;your-gemini-key-here&quot;</span>
+<span class="hljs-variable">$env:GOOGLE_TTS_API_KEY</span> = <span class="hljs-string">&quot;your-tts-key-here&quot;</span></code></pre>
+<p>PowerShell (persistent - add to your profile):</p>
+<pre><code class="hljs language-powershell">[<span class="hljs-type">Environment</span>]::SetEnvironmentVariable(<span class="hljs-string">&#x27;GEMINI_API_KEY&#x27;</span>, <span class="hljs-string">&#x27;your-gemini-key-here&#x27;</span>, <span class="hljs-string">&#x27;User&#x27;</span>)
+[<span class="hljs-type">Environment</span>]::SetEnvironmentVariable(<span class="hljs-string">&#x27;GOOGLE_TTS_API_KEY&#x27;</span>, <span class="hljs-string">&#x27;your-tts-key-here&#x27;</span>, <span class="hljs-string">&#x27;User&#x27;</span>)</code></pre>
+<p>Bash / macOS / Linux:</p>
+<pre><code class="hljs language-bash"><span class="hljs-built_in">export</span> GEMINI_API_KEY=<span class="hljs-string">&quot;your-gemini-key-here&quot;</span>
+<span class="hljs-built_in">export</span> GOOGLE_TTS_API_KEY=<span class="hljs-string">&quot;your-tts-key-here&quot;</span></code></pre>
+<h3>Step 5: Generate Scripts</h3>
+<pre><code class="hljs language-bash">npm run build:podcast-scripts</code></pre>
+<p>This sends each bundle to Gemini and produces conversational two-host scripts in <code>podcasts/scripts/</code>. Scripts are committed to the repo so you can review and edit them before voicing.</p>
+<p>Single episode: <code>node podcasts/generate-scripts.js 17</code></p>
+<p>Episode range: <code>node podcasts/generate-scripts.js 0 10</code></p>
+<h3>Step 6: Generate Audio</h3>
+<pre><code class="hljs language-bash">npm run build:podcast-audio</code></pre>
+<p>This voices each script with Journey voices and writes MP3 files to <code>podcasts/audio/</code>.</p>
+<p>Dry run (cost estimate, no API calls): <code>node podcasts/generate-audio.js --dry-run</code></p>
+<p>Single episode: <code>node podcasts/generate-audio.js 17</code></p>
+<h3>Step 7: Build Player Page and RSS Feed</h3>
+<pre><code class="hljs language-bash">npm run build:podcast-site</code></pre>
+<hr>
+<h2>Voice Configuration</h2>
+<p>The default voices are:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Host</th>
+<th scope="col">Voice Name</th>
+<th scope="col">Character</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Alex</td>
+<td>en-US-Journey-D</td>
+<td>Lead host, experienced, warm</td>
+<td>Male, measured delivery, calm with dry humor</td>
+</tr>
+<tr>
+<td>Jamie</td>
+<td>en-US-Journey-F</td>
+<td>Co-host, curious, energetic</td>
+<td>Female, asks great questions, shares analogies</td>
+</tr>
+</tbody></table>
+<p>Journey voices are Google&#39;s most natural-sounding voices, designed specifically for long-form conversational content.</p>
+<h3>Override voices</h3>
+<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:VOICE_ALEX</span> = <span class="hljs-string">&quot;en-US-Journey-O&quot;</span>
+<span class="hljs-variable">$env:VOICE_JAMIE</span> = <span class="hljs-string">&quot;en-US-Journey-D&quot;</span></code></pre>
+<p>List all available Journey voices: <code>node podcasts/generate-audio.js --list-voices</code></p>
+<h3>Adjust speaking rate</h3>
+<p>Default is 0.95 (slightly slower than normal) for comfortable listening.</p>
+<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:TTS_RATE</span> = <span class="hljs-string">&quot;0.90&quot;</span>    <span class="hljs-comment"># Even slower - great for complex topics</span>
+<span class="hljs-variable">$env:TTS_RATE</span> = <span class="hljs-string">&quot;1.0&quot;</span>     <span class="hljs-comment"># Normal speed</span></code></pre>
+<h2>Manifest Status Flow</h2>
+<p>Each episode in manifest.json progresses through these statuses:</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">bundle</span>-ready  --&gt;</span>  <span class="hljs-function"><span class="hljs-title">script</span>-ready  --&gt;</span>  <span class="hljs-function"><span class="hljs-title">audio</span>-ready  --&gt;</span>  published
+(build-bundles)    (gen-scripts)      (gen-audio)       (GitHub Release)</code></pre>
+<p>Scripts only process episodes matching their expected input status, unless <code>--force</code> is used.</p>
+<h2>All npm Scripts</h2>
+<table>
+<thead>
+<tr>
+<th scope="col">Command</th>
+<th scope="col">What It Does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>npm run build:podcast-bundles</code></td>
+<td>Generate source bundles from chapters</td>
+</tr>
+<tr>
+<td><code>npm run build:podcast-scripts</code></td>
+<td>Generate conversational scripts via Gemini</td>
+</tr>
+<tr>
+<td><code>npm run build:podcast-audio</code></td>
+<td>Voice scripts with Journey voices</td>
+</tr>
+<tr>
+<td><code>npm run build:podcast-site</code></td>
+<td>Build player page and RSS feed</td>
+</tr>
+<tr>
+<td><code>npm run build:podcasts</code></td>
+<td>Bundles + site (original pipeline)</td>
+</tr>
+<tr>
+<td><code>npm run build</code></td>
+<td>Full build: podcasts + HTML site</td>
+</tr>
+</tbody></table>
+<h2>Publishing Audio</h2>
+<p>Audio files are hosted on GitHub Releases (not in the repository - they are gitignored).</p>
+<ol>
+<li>Generate all audio: <code>npm run build:podcast-audio</code></li>
+<li>Create a GitHub Release tagged <code>podcasts</code></li>
+<li>Upload the MP3 files from <code>podcasts/audio/</code> as release assets</li>
+<li>The RSS feed already points to release asset URLs</li>
+<li>Update manifest status to <code>published</code> and rebuild the site</li>
+</ol>
+<p>Students subscribe via RSS:</p>
 <pre><code class="hljs">https://community-<span class="hljs-keyword">access</span>.org/git-going-<span class="hljs-keyword">with</span>-github/podcasts/feed.xml</code></pre>
-<p>Or stream episodes from the <a href="../PODCASTS.html">Podcasts page</a>.</p>
+<p>Or stream from the <a href="../PODCASTS.html">Podcasts page</a>.</p>
 <h2>Updating Episodes</h2>
 <p>When chapter content changes:</p>
 <ol>
-<li>Run <code>npm run build:podcasts</code> to regenerate bundles, manifest, feed, and player page.</li>
-<li>Open the corresponding NotebookLM notebook.</li>
-<li>Delete the old source and upload the new bundle file.</li>
-<li>Regenerate the Audio Overview.</li>
-<li>Export the new MP3 and update the GitHub Release asset.</li>
-<li>Commit and push.</li>
+<li><code>npm run build:podcast-bundles</code> to regenerate bundles</li>
+<li><code>node podcasts/generate-scripts.js --force [episode]</code> to regenerate scripts</li>
+<li><code>node podcasts/generate-audio.js --force [episode]</code> to regenerate audio</li>
+<li><code>npm run build:podcast-site</code> to update the player page and RSS feed</li>
+<li>Upload new MP3 to the GitHub Release</li>
+<li>Commit and push</li>
 </ol>
+<h2>Troubleshooting</h2>
+<h3>&quot;GEMINI_API_KEY is not set&quot;</h3>
+<p>Verify the environment variable is set in your current shell:</p>
+<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:GEMINI_API_KEY</span>    <span class="hljs-comment"># Should print your key</span></code></pre>
+<h3>&quot;TTS API error 403&quot;</h3>
+<p>The Text-to-Speech API is not enabled in your project, or your API key does not have access:</p>
+<ol>
+<li>Verify the API is enabled at <a href="https://console.cloud.google.com/apis/library/texttospeech.googleapis.com">Cloud Console APIs</a></li>
+<li>Check that your API key is not restricted to a different API</li>
+</ol>
+<h3>&quot;Rate limited&quot; messages</h3>
+<p>Both APIs have generous free-tier limits. If you hit rate limits:</p>
+<ul>
+<li>The scripts automatically retry with exponential backoff</li>
+<li>Process smaller batches: <code>node podcasts/generate-audio.js 0 10</code></li>
+</ul>
+<h3>Script quality issues</h3>
+<p>If Gemini produces scripts that miss concepts or have formatting issues:</p>
+<ul>
+<li>Try a different model: <code>$env:GEMINI_MODEL = &quot;gemini-2.0-pro&quot;</code></li>
+<li>Edit the script manually in <code>podcasts/scripts/</code> before generating audio</li>
+<li>Re-run with <code>--force</code> for that episode</li>
+</ul>
+<h3>Audio sounds robotic or unnatural</h3>
+<ul>
+<li>Confirm Journey voices are selected: <code>--list-voices</code></li>
+<li>Try a slower rate: <code>$env:TTS_RATE = &quot;0.90&quot;</code></li>
+<li>Journey voices sound best at rates between 0.85 and 1.0</li>
+</ul>
+<h2>Cost Summary</h2>
+<table>
+<thead>
+<tr>
+<th scope="col">Step</th>
+<th scope="col">API</th>
+<th scope="col">Cost</th>
+<th scope="col">Total for 44 episodes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Script generation</td>
+<td>Gemini 2.0 Flash</td>
+<td>Free tier (15 RPM)</td>
+<td>$0.00</td>
+</tr>
+<tr>
+<td>Audio synthesis</td>
+<td>Cloud TTS Journey</td>
+<td>$0.03 / 1M chars</td>
+<td>approximately $0.02-0.05</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td></td>
+<td><strong>Under $0.10</strong></td>
+</tr>
+</tbody></table>
 
   </main>
   <footer role="contentinfo" class="site-footer">

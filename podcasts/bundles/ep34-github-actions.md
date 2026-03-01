@@ -61,6 +61,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 ### Primary Source Material
 
 # Appendix Q: GitHub Actions and Workflows
+> **Listen to Episode 34:** [GitHub Actions and Workflows](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Understanding Automation in Open Source Repositories
 
 > **Why this matters for you:** Every time you open a pull request on a real open source project, automated processes will run. Understanding what they are, what they mean, and what to do when they fail is essential to being a confident contributor.

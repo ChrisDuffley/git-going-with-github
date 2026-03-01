@@ -78,6 +78,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Working with Issues
+> **Listen to Episode 5:** [Working with Issues](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Filing, Managing, and Participating in GitHub Issues
 
 > Issues are where open source collaboration begins. This guide covers everything from finding the right issue to file a perfect bug report - all with your keyboard and screen reader.
@@ -922,6 +924,8 @@ Go to the Learning Room repository and file a real issue:
 ### Supplementary: Labels, Milestones, Projects - issue organization
 
 # Appendix I: GitHub Projects Deep Dive
+> **Listen to Episode 26:** [GitHub Projects Deep Dive](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Boards, Tables, Roadmaps, Automations, and Accessible Navigation
 
 > GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).

@@ -19,7 +19,7 @@ This is a two-day workshop built around one idea: **you will make real contribut
 You learn GitHub's web interface using only your keyboard and screen reader. By the end of Day 1, you will have filed issues, opened pull requests, reviewed someone else's work, and resolved a merge conflict - all in the browser.
 
 **Day 2 - VS Code + Accessibility Agents (Desktop)**
-You move to Visual Studio Code, learn GitHub Copilot, and activate Accessibility Agents - six AI agents that amplify every skill you built on Day 1. By the end of Day 2, your name is in the commit history of a real open source accessibility project.
+You move to Visual Studio Code, learn GitHub Copilot, and activate the Accessibility Agents ecosystem - 55 AI agents across 3 teams and 5 platforms that amplify every skill you built on Day 1. By the end of Day 2, your name is in the commit history of a real open source accessibility project.
 
 ### The Journey Arc
 
@@ -100,7 +100,7 @@ Day 2 moves you from the browser to the desktop. Every skill maps directly to wh
 | [13](13-github-copilot.md) | **VS Code: GitHub Copilot** | Inline suggestions, Copilot Chat, effective prompting, custom instructions | 1 hr |
 | [14](14-accessible-code-review.md) | **Accessible Code Review** | Navigate diffs and review PRs with a screen reader - the culminating skill before automation | 1.5 hrs |
 | [15](15-issue-templates.md) | **Issue Templates** | Create and customize GitHub issue templates with YAML | 1.5 hrs |
-| [16](16-accessibility-agents.md) | **Accessibility Agents** | Six agents, 28 slash commands, building custom agents, agentic workflows | 1.5 hrs |
+| [16](16-accessibility-agents.md) | **Accessibility Agents** | 55 agents across 3 teams, 54+ slash commands, contributing to the ecosystem | 1.5 hrs |
 
 **Day 2 Total:** ~8 hours of structured time
 
@@ -138,7 +138,7 @@ Open these at any time during the workshop. They are not part of the chapter seq
 |----------|----------|---------------|
 | [M](appendix-m-vscode-accessibility-reference.md) | **VS Code Accessibility Reference** | All accessibility settings, audio signals, diff viewer, screen reader configs |
 | [N](appendix-n-github-codespaces.md) | **GitHub Codespaces** | Cloud development environments, accessibility setup, screen reader usage |
-| [V](appendix-v-accessibility-agents-reference.md) | **Accessibility Agents Reference** | Six agents, 28 slash commands, customization, workspace configuration |
+| [V](appendix-v-accessibility-agents-reference.md) | **Accessibility Agents Reference** | 55 agents, 3 teams, 5 platforms, slash commands, workspace configuration |
 | [W](appendix-w-github-copilot-reference.md) | **Copilot Reference** | Copilot features, chat participants, slash commands, MCP servers |
 | [X](appendix-x-copilot-models.md) | **Copilot AI Models** | Model comparison, strengths, plan availability, selection guidance |
 

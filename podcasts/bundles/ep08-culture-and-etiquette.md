@@ -67,6 +67,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Culture, Etiquette, and Community Standards
+> **Listen to Episode 8:** [Open Source Culture and Etiquette](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## How to Be an Effective and Respectful Open Source Contributor
 
 > Technical skills get your code into a project. Communication skills keep you welcomed in the community. This guide covers the human side of open source.
@@ -658,6 +660,8 @@ Notice: same feedback, completely different experience for the person receiving 
 ### Supplementary: Contributing to Open Source - workflow and finding issues
 
 # Appendix T: Contributing to Open Source
+> **Listen to Episode 37:** [Contributing to Open Source](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## A Guide for First-Time Contributors
 
 > You do not need to be a professional developer to contribute to open source. Documentation, accessibility improvements, and bug reports are among the most valuable contributions any project can receive.

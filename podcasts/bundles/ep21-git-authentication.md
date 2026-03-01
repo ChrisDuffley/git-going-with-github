@@ -59,6 +59,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 ### Primary Source Material
 
 # Appendix D: Git Authentication
+> **Listen to Episode 21:** [Git Authentication](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## SSH Keys & Personal Access Tokens
 
 > **Audience:** This appendix is for contributors who need to configure Git authentication for push access. If you're working entirely through the GitHub web interface or GitHub Desktop, you can skip this. If you're using VS Code with Git command line, this becomes relevant when you want to push commits to your fork.

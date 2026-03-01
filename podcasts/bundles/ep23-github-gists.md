@@ -55,6 +55,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 ### Primary Source Material
 
 # Appendix F: GitHub Gists
+> **Listen to Episode 23:** [GitHub Gists](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Shareable Code Snippets and Notes
 
 > Gists are a simple way to share code snippets, notes, or small files without creating a full repository. Think of them as lightweight, version-controlled pastebins.

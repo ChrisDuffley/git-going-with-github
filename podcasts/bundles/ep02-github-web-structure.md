@@ -69,6 +69,8 @@ but keep the main narrative focused on the primary chapter.
 ### Primary Source Material
 
 # Understanding GitHub's Web Structure
+> **Listen to Episode 2:** [Understanding GitHub on the Web](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## How GitHub Is Organized, and How to Orient Yourself on Every Page
 
 > **Read this before navigating GitHub for the first time.** This lesson gives you the mental model that makes every subsequent guide easier. Once you understand how GitHub pages are built - their landmark structure, heading hierarchy, and URL patterns - you will know how to orient yourself on any page you land on, even ones this guide never mentions.
@@ -591,6 +593,8 @@ Open any GitHub repository - try [github.com/community-access/accessibility-agen
 ### Supplementary: Screen Reader Cheat Sheet - GitHub shortcuts
 
 # Appendix B: Screen Reader Cheat Sheet
+> **Listen to Episode 19:** [Screen Reader Cheat Sheet](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## GitHub Navigation with NVDA, JAWS, and VoiceOver
 
 > **How to use this sheet:** Keep it open in a second window or print it. Commands are organized by task so you can find what you need quickly while you work. All commands are keyboard-only - no mouse required.

@@ -52,6 +52,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 ### Primary Source Material
 
 # Appendix U: Resources
+> **Listen to Episode 38:** [Resources and Links](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
+
 ## Everything You Need - Before, During, and After the Workshop
 
 > This is your permanent reference. Every link, tool, guide, and community resource from the two-day workshop in one place. Bookmark this page in your fork so it travels with you.
