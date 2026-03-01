@@ -106,7 +106,7 @@ async function callGemini(bundleContent, retries = 3) {
         system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
         contents: [{ parts: [{ text: bundleContent }] }],
         generationConfig: {
-          maxOutputTokens: 8192,
+          maxOutputTokens: 32768,
           temperature: 0.85
         }
       })
@@ -130,9 +130,18 @@ async function callGemini(bundleContent, retries = 3) {
     }
 
     const data = await res.json();
+    const finishReason = data.candidates?.[0]?.finishReason;
     const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
     if (!text) {
       throw new Error('Gemini returned empty response');
+    }
+    if (finishReason === 'MAX_TOKENS') {
+      if (attempt < retries) {
+        console.log(`    Truncated (MAX_TOKENS). Retry ${attempt}/${retries}...`);
+        await sleep(2000 * attempt);
+        continue;
+      }
+      console.log('    WARNING: Response truncated by MAX_TOKENS on final attempt');
     }
     return text;
   }

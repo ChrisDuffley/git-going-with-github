@@ -1,239 +1,302 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series designed specifically for blind and low-vision developers who are stepping into the world of GitHub and open source collaboration. I am your host, Alex.
+Welcome back to Git Going with GitHub. This is episode four, titled The Learning Room. I am Alex, and I am here to guide you through the wonderful, sometimes chaotic, but always rewarding world of open source collaboration. 
 
 [JAMIE]
-And I am Jamie! I am so excited to be here. I remember learning GitHub just a couple of years ago, and I am not going to lie, it felt like trying to learn a new language while simultaneously trying to navigate a new city blindfolded. So I am here to ask all the questions that you are probably thinking right now. 
+And I am Jamie. I am relatively new to GitHub, having learned it just about two years ago. I am here to ask all the questions that you might be thinking, and hopefully help us all avoid the mistakes I made when I was first starting out.
 
 [ALEX]
-And those questions are exactly what we need. Today we are on episode four, which is titled The Learning Room. We are going to be talking about a very special repository designed just for this workshop. We will cover what it is, how practice challenges are structured, the famous fork, edit, and pull request workflow, how automated bots give you feedback, and how you will review your classmates' work. 
+We are so glad to have you here. In this episode, we are talking about the Learning Room. This is a very special part of the GitHub workshop experience. But before we dive into that, let us do a quick recap. In episode three, we talked about navigating repositories. 
 
 [JAMIE]
-We will also talk about why practicing in a low-stakes environment is the secret to building real confidence, and most importantly, how to actually find your challenge and know when you are done. Because that was always my biggest fear when I started. Am I finished? Did I break the internet? 
+Right, we talked about how a repository is essentially the master project folder. It holds all the files, the history of changes, and the branches. And we talked about how a branch is like a parallel universe where you can safely make changes without breaking the main project. 
 
 [ALEX]
-Spoiler alert, you will not break the internet. But before we dive into all of that, let us do a very quick recap of episode three, where we talked about repository structure. 
-
-[JAMIE]
-Right. In episode three, we learned that a repository, or repo for short, is basically a project folder that tracks every change ever made to the files inside it. We talked about how to navigate a repository using screen reader landmarks, and we specifically highlighted the readme dot m d file, which is the welcome mat for any project. It tells you what the project is and how to get started.
-
-[ALEX]
-Exactly. We also talked about how folders are structured, and how pressing the letter T in many screen readers, or using your standard navigation keys, can help you explore that file tree. So if you are feeling a little fuzzy on how to move around a repository, you might want to give episode three a quick listen. But if you are ready to move forward, let us talk about the Learning Room. 
+Exactly. If you are feeling a little fuzzy on how to move through a repository using your screen reader, or how to explore a file tree, you might want to pause this and go back to episode three. But if you are ready to keep going, let us talk about the Learning Room. 
 
 [PAUSE]
 
 [ALEX]
-So Jamie, when you first started learning how to code, how did you practice?
+During your first day of learning GitHub, you are actually working on two parallel tracks. Track one is your individual skills track. This happens on your personal GitHub account. You work through modules at your own pace, and a friendly automated bot named Mona guides you step by step. 
 
 [JAMIE]
-Mostly on my own. I had a folder on my computer called Jamie Projects, and I just wrote code in there. If I made a mistake, it was just me and my screen reader sitting alone in my room trying to figure it out. It was incredibly isolating.
+I like Mona. Mona is very patient when I forget to commit my changes.
 
 [ALEX]
-That is exactly how most of us start. And GitHub actually has a great tool for that solo practice called GitHub Skills. In the first part of today's workshop, you will be using GitHub Skills to practice things like creating a branch and writing markdown. That is Track One. It happens on your personal account, at your own pace, and nobody else sees it.
+Mona is great. But track one is private. It is just you and the bot. Track two is the Learning Room contribution sprint. And this is completely different. The Learning Room is a single, shared GitHub repository where all the workshop participants collaborate together at the exact same time. 
 
 [JAMIE]
-Okay, so Track One is the Jamie Projects folder approach. Just me practicing my scales. What is Track Two?
+Wait, all of us? In one repository? At the same time? That sounds like a recipe for overriding each other's work. 
 
 [ALEX]
-Track Two is the Learning Room. The Learning Room is a single, shared GitHub repository where all the workshop participants collaborate together. It is not your personal repository. It is one central project with many students, many branches, and many pull requests happening all at the same time. 
+It sounds like it, but that is the magic of GitHub. Think of the Learning Room like a large community kitchen. Track one, with Mona, is like practicing chopping vegetables in your own private kitchen at home. You can take your time, and nobody is watching. But the Learning Room is the community kitchen. You are at one prep station, someone else is at the stove, someone else is baking bread. You can all hear and interact with each other, you are all contributing to the same massive meal, but because everyone has their own specific task and their own branch, you do not bump elbows.
 
 [JAMIE]
-Okay, that sounds like a lot of steps, and a little bit chaotic. Everyone working in the same place at the same time?
+Okay, I love that analogy. But why do we do it this way? Why not just keep practicing in our private kitchens?
 
 [ALEX]
-It does sound chaotic! But here is the thing, you have already done most of the underlying skills on Day One. This is just applying the exact same workflow, but with GitHub handling the heavy lifting of keeping everyone organized. Think of Track One, your solo practice, like having your own private backyard garden. You can plant whatever you want, pull weeds at your own pace, and if a plant dies, nobody knows. 
+Because open source is a community kitchen. Real open source projects are shared spaces. By putting everyone in one repository, we create a realistic environment. You get to see other people's work, you learn from the person sitting next to you, and we can practice peer review. 
 
 [JAMIE]
-I have definitely killed a few digital plants in my time. 
+That makes sense. It bridges the gap between learning the buttons to press, and actually working with other human beings. 
 
 [ALEX]
-We all have! But the Learning Room is like a community garden. Everyone has their own specific task or small patch to work on, but you are all sharing the same soil, the same tools, and the same pathways. You can hear your neighbors working next to you. You can walk over and see how they are planting their tomatoes, and you can learn from their techniques. 
+Exactly. Now, to understand how we collaborate in this space, we need to talk about the workflow. Specifically, the fork, edit, and pull request workflow. 
 
 [JAMIE]
-I love that analogy. So why do we do it this way? Why not just let everyone stay in their own private backyards?
+Oh, good. I hear the word fork all the time. I know what a branch is, but what is a fork? Is it just another utensil in our community kitchen?
 
 [ALEX]
-Because open source software is a community garden. Real projects out in the real world are shared spaces. By putting everyone in one shared repository, we create a realistic environment. You get to see each other's work, you get to review the code of the person sitting next to you, and you get to experience what it actually feels like to collaborate. 
+Great question. Let us define it. A fork is a complete, personal copy of someone else's repository, placed into your own GitHub account. Let us say you find an amazing open source project, but you do not have permission to change their files directly. You would create a fork. That makes a copy in your account where you have full control. You make your edits there. 
+
+[JAMIE]
+Okay, so I fork the project, I make my changes in my copy. But how does the original project get those changes? 
+
+[ALEX]
+That is where the Pull Request comes in. And I love that name because you are literally requesting that the original project owners pull your changes from your fork into their project. In standard open source, this fork, edit, and pull request workflow is how almost everything gets done. 
+
+[JAMIE]
+So in the Learning Room, are we all forking the repository? 
+
+[ALEX]
+In the Learning Room, we actually simplify it just a bit to keep us all in one space. Instead of everyone making their own separate fork, we give everyone permission to create branches directly inside the shared Learning Room repository. You will still create a branch, make your edit, and open a Pull Request. It is the exact same workflow you use with a fork, just contained within one big shared house so we can all see each other's pull requests easily. 
 
 [PAUSE]
 
 [JAMIE]
-Okay, so we are all in this community garden together. What exactly are we planting? Or, to drop the analogy, what are the practice challenges we are actually doing in the Learning Room?
+Okay, so we are in this shared community kitchen. What are we actually cooking? What are the tasks? 
 
 [ALEX]
-Great question. Inside the Learning Room repository, there is a folder called docs. Inside that docs folder, there is a file called challenges dot m d. This is basically your challenge menu. There are twelve different challenges organized by skill level, from beginner all the way to expert. 
+We call them challenges. Inside the Learning Room repository, there is a folder called docs. Inside that folder, there is a file called CHALLENGES dot M D. M D stands for Markdown. This file is your menu. It lists twelve different challenges organized by skill level, from beginner to expert. 
 
 [JAMIE]
-A menu is a great way to think about it. You do not have to eat everything on the menu, right? You just pick what sounds good to you and matches your appetite.
+How do I find my challenge and know what to do? 
 
 [ALEX]
-Exactly. You do not need to complete every challenge. You pick the ones that match your current skill level. And the challenges themselves revolve around fixing intentional errors that we have placed in three specific practice files. It is almost like a digital escape room, or a controlled scavenger hunt. We broke things on purpose so you can fix them.
+You will navigate to that challenges file and read through the options. Each challenge tells you exactly which file you need to edit, what skills you will practice, and what the success criteria are. And here is the fun part. The practice files you will be editing have intentional mistakes built into them. 
 
 [JAMIE]
-Oh, I love a good scavenger hunt. What kind of things did you break?
+Intentional mistakes? Like a scavenger hunt?
 
 [ALEX]
-There are three main practice files in the docs folder. The first one is called welcome dot m d. This file is an introduction to open source contribution, but it has three sections marked with the word TODO in capital letters. The content is just missing. Your challenge is to write a sentence or two to fill in those blanks. For example, one TODO asks you to add a paragraph explaining that using assistive technology is not a barrier to contribution, and that it actually brings a valuable perspective.
+Exactly like a scavenger hunt. Let me give you an example. There is a file called welcome dot M D. It is supposed to be an introduction to open source for newcomers. But it has three sections marked with the word TODO in capital letters, where the content is just missing. 
 
 [JAMIE]
-That is a really important point to make, too. It is not just busy work, it is actual meaningful text. What about the second file?
+Oh, I have seen those in real projects. Someone writes a document, gets tired, types TODO, and leaves it for someone else. 
 
 [ALEX]
-The second file is called keyboard dash shortcuts dot m d. It is a big reference document with tables of screen reader shortcuts for N V D A, JAWS, and VoiceOver. But, we put intentional errors in some of the shortcut references. 
+Precisely. One of the beginner challenges is to find those TODO markers, delete them, and write the missing paragraphs. Another file is called keyboard dash shortcuts dot M D. This is a reference guide for screen reader shortcuts. It has tables for N V D A, JAWS, and VoiceOver. But we purposely put incorrect shortcuts in those tables. 
 
 [JAMIE]
-Oh, that is delightfully evil. There is nothing more frustrating than reading documentation, trying the shortcut, and having nothing happen because the documentation is wrong. 
+Oh, that is devious. I love it. So we have to find the wrong shortcut and fix it?
 
 [ALEX]
-Exactly! And now you get the satisfaction of fixing it. The challenge asks you to find the broken shortcut and correct it, while making sure you preserve the markdown table formatting. 
+Yes, and you have to do it without breaking the structure of the Markdown table. It is fantastic practice. There is also a setup guide file with broken links that point to nowhere. Your job might be to track down the broken links and update them to the correct web address. 
 
 [JAMIE]
-And what is the third file?
+Okay, that sounds like a lot of fun, actually. But how do I know when I am done? Do I just save the file and yell across the room that I finished?
 
 [ALEX]
-The third file is setup dash guide dot m d. It is a step by step guide for setting up GitHub, but it is full of broken links that point to nowhere, and steps that are incomplete. Your job in the intermediate challenges is to fix the heading hierarchy, improve the link text so it is accessible, and add missing descriptions. 
+Not quite. You know you are done when your Pull Request is merged into the main project. Merging means your changes are officially accepted and combined with the original file. When that happens, an automated bot will actually post a celebration comment on your pull request and award you a digital badge. 
 
 [PAUSE]
 
 [JAMIE]
-Okay, so I have looked at the challenge menu. I know I want to fix the broken screen reader shortcuts. How do I actually submit my solution? When I am out in the real world of open source, I hear people talk about the fork, edit, and pull request workflow. Is that what we are doing here?
+Alright, let us talk about opening that Pull Request. I remember the first time I had to open a Pull Request. I was terrified. I felt like I was standing on a stage and everyone was about to judge my code. 
 
 [ALEX]
-Yes, that is exactly what we are doing. Let us break down that workflow, because it is the fundamental heartbeat of GitHub. Fork, edit, and pull request. Let us start by defining those terms. Jamie, how would you explain a fork to someone who has never heard the term?
+That is a very common feeling. It can feel incredibly intimidating. You are putting your work out there for public review. 
 
 [JAMIE]
-I usually compare it to photocopying a recipe from a heavy reference book at the library. You are not allowed to scribble your own notes directly into the library's official book. So, you make a photocopy to take home. That photocopy is your fork. It is a personal, independent copy of the project where you can experiment, make a mess, and change whatever you want without affecting the original project. 
+It really is intimidating! OK, that sounds like a lot of steps. Creating branches, making edits, opening this request for everyone to see. 
 
 [ALEX]
-That is a perfect analogy. You fork the project to make your own copy. Then comes the second step, which is edit. You take your photocopy home, you cross out the part of the recipe that says to use one clove of garlic, and you write in ten cloves of garlic, because obviously. 
+It does! But here is the thing. You have already done most of this on Day 1 in your private track. It is the exact same workflow. And remember, the Learning Room is a safe environment. Every single person in that repository is learning, just like you. And we have built safety nets into the process. 
 
 [JAMIE]
-Obviously. Measure garlic with your heart. So you make your edits, and you save those changes. In GitHub terms, saving a snapshot of your edits is called making a commit. 
+Safety nets? Like what?
 
 [ALEX]
-Right. So you have forked the project, you have made your edits, and you have committed them. Now, you think your garlic-heavy recipe is so good that the library should update their official book with your version. You cannot just sneak in and glue your paper over their page. You have to ask them politely. This is the third step. The pull request.
+The first safety net is our automated bot. We call it the Learning Room PR Bot. The moment you open your Pull Request, within about thirty seconds, this bot springs into action. 
 
 [JAMIE]
-And I love that name, pull request, because you are literally requesting that the original project maintainers pull your changes into their official project. 
+What does the bot do? Does it grade my work?
 
 [ALEX]
-Exactly. You are saying, hello, I made this improvement on my copy. Would you review it and consider pulling it into your main project? In the Learning Room, we are practicing this exact same concept. You will find an issue, you will make a new branch to hold your edits, you will fix the broken shortcut or write the missing text, and then you will open a pull request to submit your changes. 
+I prefer to think of it as a friendly automated building inspector who walks through the house before the open house begins. The bot checks to make sure you edited the correct file. It checks your Markdown formatting to ensure you used headings correctly. If you added an image, it checks to make sure you included alternative text for screen readers. It even checks to ensure you did not leave any broken links behind. 
 
 [JAMIE]
-Okay, so I have opened my pull request. I have essentially handed my rough draft essay to the teacher. What happens next? Am I just waiting around for a human to notice me?
+Wow, that is really thorough. What happens if I messed something up? Does it reject my Pull Request?
+
+[ALEX]
+Never. The bot never fails your Pull Request or closes it. Instead, it posts a very detailed, educational comment on your Pull Request. It tells you exactly what it found, explains why it matters for accessibility or formatting, and gives you links to documentation so you can learn how to fix it. 
+
+[JAMIE]
+Oh, I wish I had known that when I started. An automated proofreader that explains things nicely instead of just yelling error messages at me. 
+
+[ALEX]
+Exactly. It gives you instant feedback. And you can push a new commit to your branch to fix the issues, and the bot will run again and update its report. It is a completely low-stakes way to practice getting technical feedback. 
 
 [PAUSE]
 
 [ALEX]
-Not at all. In fact, within about thirty seconds of opening your pull request, you will get your first piece of feedback. But it will not be from a human. It will be from the Learning Room automation bot.
+But the bot is only the first step. The second step is human peer review. And this is where the real magic of the Learning Room happens. 
 
 [JAMIE]
-A bot? Like a robot reading my code?
+Peer review. So, reading and commenting on classmate work. How does that work? Do I just pick someone at random?
 
 [ALEX]
-Exactly. Think of the bot like a friendly automated sous-chef, or a really advanced spellchecker. Before the head chef comes over to taste your dish, the automated sous-chef just does a quick check to make sure you actually turned the oven on, and that you used salt instead of sugar. 
+We have another automation called the pairing bot. When you open your Pull Request, the pairing bot looks at the roster of students and automatically assigns one of your classmates to be your reviewer. It tries to balance the workload so nobody gets overwhelmed. 
 
 [JAMIE]
-That sounds incredibly helpful. What exactly does this bot check for?
+So someone else in the workshop gets a notification saying, Jamie needs you to review their work? 
 
 [ALEX]
-It checks for a few things. First, it makes sure you linked your pull request to the correct issue. Second, it checks to ensure you only modified the files in the docs folder, so you did not accidentally delete the whole repository. But most importantly, it runs an accessibility check on your markdown formatting. 
+Yes. And the bot even posts a comment giving the reviewer instructions on what to look for. It might say, please check that Jamie completed all three TODO sections, and that the new paragraphs read well. 
 
 [JAMIE]
-Oh, that is clever! What kind of accessibility things is it looking for?
+Okay, so let us walk through this from the perspective of the reviewer. Let us say I get that notification. I have been assigned to review your Pull Request, Alex. How do I navigate that with my screen reader? Where do I go?
 
 [ALEX]
-It checks if your heading levels are in the correct order, like making sure you do not jump straight from a heading level one to a heading level three. It checks if your links have descriptive text instead of just saying click here. And it checks if your tables are formatted correctly so screen readers can navigate them. 
+This is a great practical question. First, you will navigate to the Learning Room repository in your browser. From the main repository page, you need to navigate to the Pull Requests tab. 
 
 [JAMIE]
-I wish I had known that when I started. I used to be so terrified of opening a pull request because I thought a senior developer was going to yell at me for a typo. Knowing that a friendly bot is going to quietly point out my formatting errors first takes so much pressure off. 
+How do I find that tab efficiently? 
 
 [ALEX]
-That is exactly why it is there. The bot will never fail your pull request. It will just post a comment with suggestions, detailed explanations of any accessibility issues, and links to resources so you can learn why it matters. It is purely educational. 
+If you are using N V D A or JAWS on Windows, you can use GitHub's built-in keyboard shortcuts. Press the letter G, followed by the letter P. That stands for Go to Pull requests. 
 
 [JAMIE]
-How do I actually read what the bot said?
+Oh, that is clever! G then P. Does that work for VoiceOver on Mac too?
 
 [ALEX]
-Once you open your pull request, the bot will leave its feedback as a comment. If you are using N V D A or JAWS, you will navigate to your pull request, make sure you are on the Conversation tab, and press the letter H to navigate through the headings. You will hear a heading for the bot's comment, and you can just use your down arrow to read its feedback. 
+Yes, those are GitHub specific shortcuts, so they work across platforms as long as your screen reader is passing the keystrokes through. Once you are on the Pull Requests page, you will be in a list of all open pull requests. If it is a busy workshop, there might be thirty pull requests in that list. 
 
 [JAMIE]
-And for Mac users on VoiceOver?
+That sounds overwhelming. How do I find the one I am supposed to review?
 
 [ALEX]
-For VoiceOver, you will navigate to the Conversation tab, and use Quick Nav H, or press V O plus Command plus H, to jump through the headings until you reach the bot's comment, then press V O plus down arrow to read the text. 
+You use the filter. Navigate to the filter text box. By default, it says something like, is open is PR. You can clear that and type a specific filter query. You will type, review dash requested, then a colon, then the at symbol, and the word me. So, review requested colon at me. Press Enter. 
+
+[JAMIE]
+And that filters the list to only show the ones where I am the assigned reviewer?
+
+[ALEX]
+Exactly. Now you can use your screen reader's heading navigation. Press the letter H to jump from one pull request title to the next. When you hear the title of the one you want, press Enter to open it. 
+
+[JAMIE]
+Okay, I am on the Pull Request page. What am I looking at? Or rather, what am I listening to? 
+
+[ALEX]
+A Pull Request page has a few different tabs, but the two most important ones are the Conversation tab, and the Files Changed tab. You land on the Conversation tab by default. 
+
+[JAMIE]
+The Conversation tab. Is that where the bot leaves its report and where people leave comments? 
+
+[ALEX]
+Yes. You can use heading navigation here as well. Every comment is a heading. You will find the original description of the Pull Request, the automated bot's report, and any discussion that has happened so far. You will also find a section called Reviewers, usually marked as a heading level three, which confirms that you are assigned. 
+
+[JAMIE]
+So I read the conversation to get context. But how do I actually see the changes you made to the code or the text? 
+
+[ALEX]
+For that, you navigate to the Files Changed tab. Once you activate that tab, you are looking at the diff. 
+
+[JAMIE]
+The diff. Let us define that. A diff is short for difference. It is a special view that shows exactly what was added and what was removed from a file. 
+
+[ALEX]
+Right. Navigating a diff with a screen reader takes a little practice. GitHub presents the diff as a table or a structured list of lines. As you arrow down through the content, your screen reader will announce the state of each line. 
+
+[JAMIE]
+What does that sound like? 
+
+[ALEX]
+If a line was added, your screen reader will usually say plus, or inserted, before reading the text. If a line was removed, it will say minus, or deleted. Unchanged lines, which are just there to give you context, are read normally without a prefix. 
+
+[JAMIE]
+So if you were fixing a typo in the word GitHub, I would hear a minus line with the misspelled word, immediately followed by a plus line with the correctly spelled word? 
+
+[ALEX]
+Exactly. You can read through the entire file this way, line by line, to see exactly what the author changed. 
+
+[JAMIE]
+Okay, so I have read your changes. I think they look great, but I want to suggest one small addition. How do I leave my review? 
+
+[ALEX]
+On the Conversation tab, there is a large text area for adding a comment. If you are using N V D A, you might press N V D A plus Space to enter Focus Mode, or Forms Mode for JAWS, so you can type freely. If you are using VoiceOver on a Mac, you would navigate to the text area and press V O plus Shift plus Down Arrow to interact with it. 
+
+[JAMIE]
+I type my feedback. Do I just say, looks good?
+
+[ALEX]
+You could, but helpful peer review is specific. You might say, I love the paragraph you added about assistive technology. One suggestion, maybe we could add a link to the official documentation here. 
+
+[JAMIE]
+That is a great way to phrase it. It is encouraging but offers a clear improvement. So I type that out. Then what?
+
+[ALEX]
+Then you navigate to the button called Review Changes. When you activate it, you get to choose the type of review. You can choose Comment, which is just leaving feedback without passing judgment. You can choose Approve, which means you think it is perfect and ready to be merged. Or you can choose Request Changes, which means there is something specific that must be fixed before it can be merged. 
+
+[JAMIE]
+So if you missed one of the TODO markers, I would choose Request Changes and politely let you know. 
+
+[ALEX]
+Exactly. Once you select your option, you navigate to the Submit Review button and press Enter. The author gets a notification, and they can push a new commit to address your feedback. 
 
 [PAUSE]
 
 [JAMIE]
-Okay, so the bot has checked my work. The headings are good, the links are descriptive. Is it time to merge my pull request?
+I really like this process. But I have to ask, what if I am assigned to review someone's work, and I do not know if their code is right? I am a beginner too. I might approve something that is actually broken. 
 
 [ALEX]
-Not quite yet. The bot handles the technical validation, but we also need human judgment. We need to make sure your writing actually makes sense. This is where peer review comes in. 
+That is the beauty of the Learning Room. It is completely low stakes. Remember the flight simulator analogy? 
 
 [JAMIE]
-Peer review. So, reviewing my classmates. I am going to be honest, Alex. The idea of reviewing someone else's code when I am just learning myself feels really intimidating. I am not an expert. Who am I to judge their work?
+A flight simulator. Where you can crash the plane without actually hurting anyone. 
 
 [ALEX]
-That is a very common feeling, but remember, you are not expected to be an expert. You are a peer. Think of it like swapping essays in a high school English class. You are not the teacher grading them. You are just a fellow student reading their work to see if it makes sense, if they missed any obvious typos, and to offer encouragement. 
+Exactly. We want you to make mistakes here. If you approve a Pull Request that has a formatting error, the automated bot will probably catch it anyway. And even if the bot misses it, and it gets merged into the repository, that is fine! It just becomes a new challenge for the next student to fix. 
 
 [JAMIE]
-That feels much more manageable. Swapping essays. I can do that. How do I know whose essay I am supposed to read?
+Oh, I never thought of it that way. A mistake just creates more open source work for the community. 
 
 [ALEX]
-The Learning Room has another bot that handles pairings. When you open your pull request, the pairing bot will automatically assign a classmate to review your work, and it will assign you to review someone else's work. 
+Right. The goal here is not perfect code. The goal is building confidence. When you practice this fork, edit, and pull request workflow in a safe environment, you are building muscle memory. 
 
 [JAMIE]
-So I will get a notification saying I have been requested for a review?
+So when I go to contribute to a huge project like N V D A or React, my hands will already know the keyboard shortcuts. I will already know how to filter for my reviews. 
 
 [ALEX]
-Exactly. You will get a notification, and the bot will even post a comment explaining exactly what you should look for. For example, it might say, please check if all three TODO sections got completed, and see if the new content matches the style of the rest of the document. 
+Precisely. Because the steps you take in the Learning Room are the exact same steps you take on the biggest open source projects in the world. And I want to emphasize this. When you merge a Pull Request in the Learning Room, it is a real contribution. 
 
 [JAMIE]
-That is so helpful. It gives you a rubric. So how do I actually leave a review using my screen reader? 
+It is not a simulation?
 
 [ALEX]
-It is a simple process. First, you navigate to the pull request you were assigned to. You read the description, and you explore the Files Changed tab to see exactly what they added or deleted. When you are ready to leave feedback, you move to the comment box. 
+The environment is designed for learning, but the technology is real. You found an issue, you made a meaningful change, you received technical feedback from a bot, you received human feedback from a peer, you incorporated their suggestions, and you merged your work. That is open source contribution in its purest form. You will have a merged commit in your GitHub history to prove it. 
 
 [JAMIE]
-Let me guess the shortcuts. If I am using N V D A or JAWS, I will navigate to the comment box, press N V D A plus Space, or Insert plus Z, to switch into Focus Mode, and start typing my comment. 
-
-[ALEX]
-You got it. You type your encouragement or your suggestions. Then, you will press Tab to reach the Review Changes button. This is important. When you activate that button, you will be given three choices for what kind of review you are submitting. 
-
-[JAMIE]
-What are the choices?
-
-[ALEX]
-The first choice is Comment. This means you are just leaving general feedback or asking a question, but you are not making a final decision on the work yet. The second choice is Approve. This means the work looks great, they followed the instructions, and you think it is ready to be merged into the project. The third choice is Request Changes. This means they missed something important, like they forgot to fix one of the broken links, and they need to update it before it can be merged. 
-
-[JAMIE]
-And if I am on a Mac using VoiceOver?
-
-[ALEX]
-You will use V O plus Shift plus Down Arrow to interact with the comment text area, type your review, then press V O plus Shift plus Up Arrow to stop interacting. You will Tab over to the Review Changes button, press V O plus Space to activate it, select your review type, and then tab to Submit Review and press V O plus Space again.
-
-[JAMIE]
-What if I do not agree with the reviewer? Like, what if my classmate requests changes, but I think my way was actually better?
-
-[ALEX]
-That happens all the time in open source! It is a conversation. You can simply reply to their comment in the thread, explain your reasoning politely, and discuss it. If you really get stuck, you can always ask your workshop facilitator for a second opinion. 
-
-[JAMIE]
-Will my pull request get lost in the noise? If there are twenty students all opening pull requests at the same time, I feel like my little fix is going to drown.
-
-[ALEX]
-It will not get lost, I promise. Every pull request has its own dedicated page and its own conversation thread. When your assigned reviewer leaves a comment, it only happens on your specific page. It is like having twenty different conference rooms. You are only having a conversation with the people in your specific room.
+That is incredibly motivating. It takes the fear out of the process and replaces it with a sense of community. 
 
 [PAUSE]
 
-[JAMIE]
-Okay, so I have found a challenge, I opened my pull request, the bot checked my headings, and my classmate approved my changes. How do I actually finish? When am I done?
-
 [ALEX]
-When your reviewer selects Approve, the Merge button on your pull request will become available. Merging is the final step. It is the moment where your photocopy of the recipe officially gets glued into the library's master book. You will navigate to the Merge Pull Request button and activate it. 
+Let us wrap up with a few key takeaways from our discussion today. First, the Learning Room is a shared repository where everyone collaborates together. It is designed to simulate the bustling, collaborative nature of a real open source project. 
 
 [JAMIE]
-That sounds like it should come with fireworks.
+Second, the practice challenges are real files with intentional mistakes. You find your challenge in the docs folder, make your fixes on a branch, and open a Pull Request. 
 
 [ALEX]
-It basically does! When you hit merge, the Learning Room has one final bot waiting for you. The celebration bot. It tracks your progress, and it will post a public comment celebrating your achievement. It might award you a digital badge, like Markdown Master or Accessibility Advocate, and it
+Third, you are supported by two types of feedback. The automated bot gives you instant, low-stakes technical feedback on accessibility and formatting. And your peers give you human feedback on your content. 
+
+[JAMIE]
+And finally, leaving a peer review is just as important as writing the code. You use the filter review requested colon at me to find your assignments, read the diff to see what changed, and leave constructive, encouraging comments. 
+
+[ALEX]
+Beautifully summarized. In our next episode, we are going to dive deeper into how projects organize all of this work. We will be talking about Working with Issues. Issues are how we track bugs, plan features, and figure out what to work on next. 
+
+[JAMIE]
+I cannot wait. Tracking tasks is my favorite kind of organizing. 
+
+[ALEX]
+Thank you all for listening to Git Going with GitHub. Take a deep breath, go open that first Pull Request in the Learning Room, and we will see you in the next episode.

@@ -1,199 +1,172 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series designed specifically for blind and low-vision developers who are learning GitHub and open source collaboration. I am your host, Alex. I have been teaching accessibility and software development for years, and I am thrilled to be guiding you through this two-day workshop.
+Welcome to Git Going with GitHub. This is episode zero, titled Welcome to Git Going with GitHub. I am your host, Alex, and I am thrilled to be starting this journey with you. Whether you are a seasoned programmer who is just now moving over to GitHub, or you are completely new to version control, this audio series is designed to be your companion. We are going to explore open source collaboration using GitHub, Visual Studio Code, and GitHub Copilot, all with a strict focus on screen reader and keyboard-only navigation.
 
 [JAMIE]
-And I am Jamie! I am your co-host, and I am so excited to be here. I am a developer who learned GitHub just about two years ago. I still vividly remember exactly what it felt like to start. It was overwhelming, it was confusing, and my screen reader kept reading massive blocks of code that I did not understand. I am here to ask the questions that you are probably thinking, and hopefully share some of those lightbulb aha moments I had along the way.
+And I am Jamie! I am so excited to be here. I will be learning right alongside you, asking the questions, and probably sharing a few embarrassing stories from my own learning journey. Because let me tell you, I learned GitHub just two years ago, and I remember exactly how overwhelming it felt. When I first heard people throwing around words like clone, fork, and branch, I thought we were doing some weird mix of agriculture and science fiction.
 
 [ALEX]
-You are definitely going to have plenty of those moments over the next two days, Jamie. This is Episode 0, titled Welcome to Git Going with GitHub. In this episode, we are going to give you a complete overview of what this workshop is, who it is for, and exactly what you are going to accomplish. We will break down the two-day structure, explore our core learning philosophy, preview some of the most important vocabulary words you need to know, and talk about how all the chapters and exercises fit together. 
+That is a perfect description of how it sounds at first. And that is exactly why we are doing this. Before we dive into the deep end, we want to give you a map of the territory. This episode is an overview of the entire two-day workshop. We are going to talk about what open source actually means, how this course is structured, the philosophy behind how we teach, and we will preview some of the core vocabulary you will be using every single day. 
 
 [JAMIE]
-And if you are feeling a little nervous about things like the command line or Git, stick around, because we are going to talk about that too. Spoiler alert, you are going to be completely fine.
-
-[PAUSE]
+But before we get into all of that, a quick public service announcement. If you are listening to this and you have not yet completed Chapter 0, which is the Pre-Workshop Setup, you will want to navigate to that chapter and complete it before Day 1 officially begins. It takes about thirty minutes. It walks you through creating your GitHub account, installing Git, setting up VS Code, and configuring your screen reader specifically for GitHub. 
 
 [ALEX]
-Let us start with the big picture. This workshop is built around one single, driving idea. By the end of this course, you will make real contributions to a real open source project. We are not doing simulated exercises. We are not pretending. You are going to do the real thing.
+Exactly. Getting your environment set up correctly is half the battle. Once your screen reader is optimized for the web interface, everything else flows much more smoothly. So, let us start with the big picture. The entire goal of this workshop is built around one single idea. By the end of these two days, you will make real contributions to a real open source project. Not a simulated sandbox. Not pretend. Real open source.
 
 [JAMIE]
-I love that so much. But Alex, before we get into the how, we should probably define the what. What exactly does open source mean, and why does it matter?
+Which brings up a great question. For someone entirely new to this space, what exactly does open source mean, and why does it matter so much? 
 
 [ALEX]
-That is the perfect place to start. Open source software is software where the original source code is made freely available and may be redistributed and modified by anyone. 
+Open source refers to software where the original source code is made freely available. Anyone can navigate to the code, read it, modify it, and distribute it. But more importantly, open source is a collaborative community. It is a way of building software where thousands of people from all over the world work together to solve problems, rather than one closed-off team in a single company.
 
 [JAMIE]
-So, if proprietary software is like a private estate with a tall brick wall around it, where only the hired landscapers are allowed to touch the plants, open source is more like a community garden. You might not own the entire garden yourself, but you can walk in, plant some tomatoes in one of the boxes, pull some weeds in another, and maybe fix the latch on the front gate so it is easier for the next person to open.
+I always like to think of open source as a massive community potluck dinner. Someone brings the main dish, which is the core software. But then someone else says, hey, this needs salt, and they add a new feature. Someone else brings dessert, which might be a documentation update. And someone else fixes the wobbly table, which is a bug fix. Anyone is allowed to walk into the room, taste the food, and contribute their own recipe to make the whole meal better for everyone.
 
 [ALEX]
-That is a brilliant analogy, Jamie. It is exactly like a community garden. And it matters because the modern internet is built on open source. The screen reader you might be using right now, the browser you are listening to this on, the servers hosting this audio, they all rely heavily on open source code. When you learn how to contribute, you get a voice in how the software of the world is built. You get to fix the accessibility bugs that block you and others. You get to improve the tools you use every single day.
-
-[JAMIE]
-That is incredibly empowering. It is not just about writing code, it is about having a seat at the table.
-
-[ALEX]
-Exactly. And over the next two days, we are going to get you that seat at the table. Let us talk about how the workshop is structured. It is divided into two distinct parts. Day 1 is called GitHub Foundations, and it takes place entirely in your web browser. 
-
-[JAMIE]
-Wait, entirely in the browser? We are not going to be using a code editor or the terminal on the first day?
-
-[ALEX]
-That is right. On Day 1, you will learn GitHub's web interface using only your keyboard and your screen reader. You will learn how to navigate repository pages, file bug reports, review other people's work, and even resolve conflicts, all without leaving your browser. 
-
-[JAMIE]
-I actually really like that approach. When I first started, I tried to learn Git in the command line, GitHub in the browser, and Visual Studio Code all at the exact same time. It was a disaster. I did not know which tool was throwing an error, or where I was supposed to be navigating.
-
-[ALEX]
-That is exactly why we split it up. Day 1 isolates the concepts. We want you to understand the flow of collaboration first. Then, on Day 2, we move to the desktop. Day 2 is all about Visual Studio Code, which we often just call VS Code, and a powerful ecosystem of tools called Accessibility Agents.
-
-[JAMIE]
-Accessibility Agents? That sounds very futuristic.
-
-[ALEX]
-It is very modern! On Day 2, you will learn how to use GitHub Copilot, which is an artificial intelligence coding assistant, and you will activate a network of 55 accessibility agents spread across 3 teams. 
-
-[JAMIE]
-Okay, 55 agents sounds like a lot of people to manage.
-
-[ALEX]
-They are not people, they are automated AI assistants that specialize in specific tasks. Think of them like a highly trained pit crew in a car race. You are the driver steering the car. You make the decisions. But when you pull into the pit stop, you have one agent that specializes in writing issue templates, another that tests your code for screen reader compatibility, and another that drafts your project summaries. They amplify everything you learned to do manually on Day 1.
-
-[JAMIE]
-That pit crew analogy makes total sense. So I am still driving, they are just changing the tires really fast. But this brings up a question about how we learn. If the agents can do all these things, why do we spend the entire first day doing it manually in the browser?
-
-[ALEX]
-That brings us to our core learning philosophy for this entire workshop. Learn the manual skill first, then learn how it is automated. The agents only make sense when you already understand what they are doing behind the scenes. 
-
-[JAMIE]
-It is like learning how to do long division with a pencil and paper before your teacher lets you use a calculator. If you just type numbers into a calculator without understanding the math, you will not know if the answer it gives you is completely wrong.
-
-[ALEX]
-Precisely. If an AI agent drafts a description for your project, but you have never written one manually, you will not know how to review the agent's work. You will not know if it missed a crucial accessibility detail. By doing it manually on Day 1, you build the mental model. You earn the right to use the automation on Day 2 because you know exactly how to supervise it.
-
-[PAUSE]
-
-[ALEX]
-Before we get too deep into the weeds, let us establish some shared vocabulary. The GitHub ecosystem has a lot of jargon, and we want to make sure everyone is on the same page. Let us start with the most fundamental concept. Jamie, what is a repository?
-
-[JAMIE]
-A repository, which everyone usually just shortens to repo, is the container for an entire project. It holds all the files, the folders, the documentation, and the complete history of every single change ever made.
-
-[ALEX]
-That history part is critical. A repository is not just a folder on your computer. It is a folder with a built-in time machine. You can navigate to any point in the past and see exactly what the project looked like on that specific day. 
-
-[JAMIE]
-I love the time machine analogy. So, if I want to contribute to an open source repository, what is my first step? Do I just start changing their files?
-
-[ALEX]
-You cannot directly change someone else's files unless they give you permission. Instead, you usually start by creating an Issue. 
-
-[JAMIE]
-An issue. That always sounded like a negative word to me, like I have an issue with your project.
-
-[ALEX]
-It does sound a bit negative, but in GitHub terms, an issue is simply a discussion item. It can be a bug report, yes, but it can also be a request for a new feature, a question about how something works, or a to-do list item. Think of an issue like a conversational ticket at a deli counter. You pull a number, say issue number 42, and then everyone can gather around that ticket to discuss the work that needs to be done.
-
-[JAMIE]
-Okay, so I find an issue, or I create one, and we agree on what needs to be fixed. I make the changes to the code. How do I give those changes back to the original project?
-
-[ALEX]
-You do that by opening a Pull Request. So a pull request - and I love that name because you are literally requesting that someone pull your changes into their project...
-
-[JAMIE]
-Oh that is clever! I wish I had known that when I started. I always wondered who was pulling what. 
-
-[ALEX]
-Yes, you are the one requesting. You say, hello project maintainers, I have fixed the bug we discussed in issue number 42. Here are my changes. I request that you pull them into your repository.
-
-[JAMIE]
-If a repository is a book, a pull request is like sliding a newly drafted chapter across the desk to the editor and saying, what do you think? Please pull this into the final manuscript.
-
-[ALEX]
-Exactly. And the editor, or in our case, the project maintainer, will review your pull request. They might leave comments, they might ask you to make a few tweaks. This is called Code Review. And once everyone is happy, the maintainer will perform a Merge.
-
-[JAMIE]
-A merge. That is when the editor takes my drafted chapter and officially binds it into the book.
-
-[ALEX]
-You nailed it. Merging is the act of combining your changes into the main project. Once your pull request is merged, your code is officially part of the open source project. Your name is in the commit history forever.
-
-[PAUSE]
-
-[ALEX]
-Now, let us talk about how the course materials are organized to help you reach that merge moment. The GitHub Learning Room guide is your table of contents. It is split into Chapters and Appendices.
-
-[JAMIE]
-What is the difference between the two? Should I just read the whole thing from top to bottom?
-
-[ALEX]
-You will read the chapters from top to bottom. The chapters are designed to be read and practiced in order. Each one builds directly on the one before it. Chapter 1 teaches you GitHub's web structure. Chapter 2 teaches you how to navigate repositories. Chapter 3 puts you in a shared practice environment, and so on.
-
-[JAMIE]
-And the appendices?
-
-[ALEX]
-The appendices are pure reference material. You do not read them in order. You open them when you need them. Think of the chapters like the recipes in a cookbook, teaching you how to bake a specific cake step by step. The appendices are like the conversion charts at the back of the cookbook. You do not sit down and read a chart of oven temperatures for fun. You just navigate to it when you need to convert fahrenheit to celsius.
-
-[JAMIE]
-That makes perfect sense. I see there is an appendix for the Glossary, an appendix for a Screen Reader Cheat Sheet, and an appendix for GitHub Actions. I will definitely be keeping the Screen Reader Cheat Sheet open in a separate browser tab.
-
-[ALEX]
-That is a highly recommended strategy. Now, throughout the chapters, you are going to encounter 24 structured exercises. We have designed these very specifically. Every exercise follows the exact same three-part pattern.
-
-[JAMIE]
-I noticed this! The pattern is: Try It, You are done when, and What success feels like. 
-
-[ALEX]
-Yes. First, the Try It section gives you the exact steps to perform. Then, the You are done when section gives you a clear, objective condition that proves you finished the task. But Jamie, why do you think we included the third section, What success feels like?
-
-[JAMIE]
-As a screen reader user, this is honestly my favorite part of the whole curriculum. When I am learning a new web interface, the hardest part is not pressing the buttons. The hardest part is knowing if pressing the button actually did anything. Visual users get a big green popup or a spinning loading wheel. But if focus doesn't move, my screen reader might stay completely silent. 
-
-[ALEX]
-Exactly right. 
-
-[JAMIE]
-The What success feels like section tells me exactly what I should expect to hear. It might say, your screen reader will announce that a dialog has opened, or, your focus will be moved to the main landmark, or, you will hear the words pull request successfully merged. If I know what the audio feedback is supposed to be, I know I did it right.
-
-[ALEX]
-That is exactly why it is there. We want to remove all the guesswork. We want you to feel confident that the system is responding to your commands. And speaking of confidence, we have designed every single exercise so that it takes only one to five minutes, and it is completely impossible to fail. 
-
-[JAMIE]
-Impossible to fail? What if I accidentally delete the repository?
-
-[ALEX]
-You do not have the permissions to delete the repository! The environment is safe. You can experiment, you can make mistakes, and you can always reset.
+I love that analogy. And what makes GitHub so powerful is that it provides the kitchen, the tables, and the recipe cards for that potluck. GitHub is the platform where millions of these open source projects live. It matters because much of the modern internet, including the tools we use for accessibility, runs on open source software. When you learn how to contribute, you get a voice in how the software you use every day is built.
 
 [PAUSE]
 
 [JAMIE]
-Okay, Alex, I want to pivot a little bit and talk to the folks listening who might be feeling a bit of imposter syndrome right now. When I look ahead at Day 2, I see chapters about Git source control, cloning repositories, staging commits, and navigating the VS Code terminal. OK that sounds like a lot of steps.
+Okay, so we are going to be cooking at the open source potluck. How exactly are we going to learn all of this in just two days? 
 
 [ALEX]
-It does! But here is the thing - you have already done most of this on Day 1. Same workflow, just with VS Code handling the heavy lifting.
+We divide the workshop into two distinct phases. Day 1 is all about GitHub Foundations in the browser. You will learn the GitHub web interface using only your keyboard and your screen reader. We will not touch a command line. We will not open a desktop application. You will learn how to navigate projects, find issues, propose changes, and review other people's work, entirely through the GitHub website.
 
 [JAMIE]
-That is reassuring. Two years ago, I was terrified of the command line. I thought it was this fragile glass box, and if I typed the wrong command, I would break my computer or erase my hard drive. I stuck to visual interfaces because I was scared of the terminal.
+And I really appreciate this approach. When I started two years ago, I tried to learn the command line, the website, and the code editor all on the same day. It was a disaster. I did not know which program was throwing an error, or what the error even meant.
 
 [ALEX]
-That is a very common feeling, and we want to completely normalize that fear. The command line can feel intimidating because it is just a blank prompt waiting for you. But it is just text. It is just a way of talking to your computer without using a mouse.
+That is incredibly common, and it is the reason for our core learning philosophy in this workshop. We believe you must learn the manual skill first, before you introduce automation. If you try to use advanced tools before you understand what they are doing behind the scenes, you will get lost the moment something goes wrong. By spending all of Day 1 in the browser, you build a mental model of how GitHub is structured. You learn the concepts deeply. 
 
 [JAMIE]
-And for screen reader users, the terminal is actually incredibly accessible once you get the hang of it, because it is entirely text-based. There are no unlabeled graphical buttons. There are no weird floating menus. It is just text in, and text out. 
+So Day 1 is building the foundation. What happens on Day 2? 
 
 [ALEX]
-Exactly. And we are going to teach you how to review that text output. We are going to show you how to read the git status messages, how to understand what branch you are on, and how to use keyboard shortcuts to make VS Code highly accessible. For example, we will teach you shortcuts like Control plus Shift plus P to open the command palette, which is your gateway to everything in VS Code.
+Day 2 is when we move to the desktop. We transition into Visual Studio Code, which we often just call VS Code. This is a powerful, accessible code editor. Once we are in VS Code, we introduce GitHub Copilot, which is an artificial intelligence coding assistant, and we activate the Accessibility Agents ecosystem. 
 
 [JAMIE]
-I use Control plus Shift plus P a hundred times a day now. 
+Okay, hold on. Accessibility Agents? That sounds like something out of a spy movie. What are they?
 
 [ALEX]
-It is essential. We will also cover some of the more complex Git concepts in a very gentle way. You will learn about concepts like Forking, which is just making your own personal copy of a project. You will learn about Cloning, which is downloading that copy to your computer. 
+They do sound a bit like secret agents. On Day 2, you will be introduced to a system of fifty-five accessibility agents working across three different teams. These agents are AI assistants configured specifically to help with accessibility tasks. For example, one team of agents acts as your daily briefing and issue tracking squad. They can summarize what happened in a project overnight so your screen reader does not have to read through fifty individual comments. Another team focuses on pull request reviews, helping you spot missing alternative text or improper heading structures in code before you submit it.
 
 [JAMIE]
-If forking is asking the chef for a copy of their secret recipe to put in your recipe box, cloning is taking that recipe card out of the box and putting it on your kitchen counter so you can actually start baking.
+Oh, that is clever! It is like having a team of expert accessibility consultants sitting in the room with you, ready to review your work or summarize long threads. 
 
 [ALEX]
-I am loving these analogies today, Jamie. You will also learn about Branches, which are like parallel timelines where you can experiment without breaking the main project. And we will even talk about the dreaded Merge Conflict.
+Exactly. But again, tying back to our philosophy, these agents only make sense if you already know what an issue or a pull request is. If you do not know how to manually review code, the agent's advice will not mean anything to you. That is why Day 2 is all about taking the manual skills you mastered on Day 1 and amplifying them with these fifty-five agents. By the end of Day 2, you will use these tools to ship a real contribution, and your name will be permanently recorded in the commit history of an open source project.
+
+[PAUSE]
 
 [JAMIE]
-Oh no. Merge conflicts
+Alex, you just used a few terms that I want to make sure we define, because I remember being so confused by them. We have an entire glossary in Appendix A, but can we do a high-level preview of the core vocabulary right now? Let us start with Repository.
+
+[ALEX]
+Absolutely. A repository, or repo for short, is the container for an entire project. It holds all the files, the folders, the documentation, and, most importantly, the complete history of every change ever made. 
+
+[JAMIE]
+I remember someone telling me a repository is just a folder. But it is more than that, right? 
+
+[ALEX]
+It is much more than that. Think of a repository as a project folder that has a time machine built into it. Because it tracks every single modification, you can ask the repository to show you exactly what the project looked like last Tuesday at noon, or who added a specific line of code three years ago. It never forgets.
+
+[JAMIE]
+Okay, next term. What is an Issue?
+
+[ALEX]
+An issue is essentially a discussion item within a repository. If you find a bug, you open an issue to report it. If you want to request a new feature, you open an issue. 
+
+[JAMIE]
+So it is like a digital to-do list combined with a discussion forum. When I want to fix something, I navigate to the Issues section, find one that sounds interesting, and announce that I am going to work on it.
+
+[ALEX]
+That is exactly right. Issues are the starting point for almost all open source work. Now, once you have done the work and fixed the bug, you need a way to give that fix back to the project. That brings us to our third core term, the Pull Request.
+
+[JAMIE]
+Ah, the famous PR. I used to hear people say, just submit a PR, and I would nod and pretend I knew what they meant.
+
+[ALEX]
+A pull request, or PR, is a formal proposal to combine your changes into the main project. And I love that name, because you are literally requesting that the maintainer pull your changes into their repository. You are saying, here is the work I did to fix that issue, please review it.
+
+[JAMIE]
+My favorite analogy for a pull request is publishing a book. Imagine the repository is the official, published book. You cannot just grab a pen and write your own paragraph directly onto the printed pages for everyone in the world to see. Instead, you write your changes on a separate piece of paper, which is your draft. A pull request is you handing that piece of paper to the editor and saying, I think this paragraph makes the book better. What do you think?
+
+[ALEX]
+That is a brilliant comparison. And the editor, who in our world is called the project maintainer, will read your draft. They might leave comments asking you to change a sentence, or fix a typo. This is the code review process. You update your draft based on their feedback. And finally, when the editor is happy with it, they perform the fourth core concept, the Merge.
+
+[JAMIE]
+And a merge is when the editor takes your piece of paper, types it into the official manuscript, and publishes it for real.
+
+[ALEX]
+Exactly. Merging is the act of combining your approved pull request into the main repository. Once it is merged, your code is officially part of the project. So, to recap the lifecycle. You find a problem in a Repository. You discuss it in an Issue. You propose a solution with a Pull Request. And the maintainer accepts it with a Merge. 
+
+[PAUSE]
+
+[JAMIE]
+Okay, that sounds like a lot of steps. And if I am being honest, thinking about doing all of this, plus moving over to VS Code on Day 2, feels a little intimidating. Especially for folks who might be totally new to the command line, or new to using version control. 
+
+[ALEX]
+It does sound like a lot! But here is the thing. You have already done most of this on Day 1 in the browser. You already know the workflow. When we move to VS Code, it is the exact same workflow, just with VS Code handling the heavy lifting. We are going to take it one step at a time. 
+
+[JAMIE]
+And there is actually a really cool bridge between Day 1 and Day 2, right? The period key trick. I wish I had known that when I started.
+
+[ALEX]
+It is one of my favorite features on GitHub. When you are on any repository page in your browser, if you simply press the period key on your keyboard, GitHub will instantly open a web-based version of VS Code right there in your browser tab. It is called GitHub dot dev. You do not have to install anything. It uses the exact same screen reader mode and keyboard shortcuts as the desktop version. It is the perfect stepping stone. You get to feel what a code editor is like, but you are still in the safety of your web browser. 
+
+[JAMIE]
+That is amazing. You can literally just press period, and suddenly you are in an accessible editor. 
+
+[ALEX]
+Yes. And we deliberately designed this workshop so that you are never thrown into the deep end without a life vest. Every single chapter builds on the one right before it. If you look at the course guide, you will notice we have structured the materials very specifically. There are chapters, and there are appendices. 
+
+[JAMIE]
+How should we be using those? Should I read the appendices before I start the exercises?
+
+[ALEX]
+No, please do not try to read the appendices straight through! The chapters, numbered one through sixteen, are your main journey. They are designed to be read and practiced in order. The appendices, labeled with letters like Appendix A for the Glossary, or Appendix B for the Screen Reader Cheat Sheet, are purely reference materials. You keep them open in a separate tab or window. When you encounter a term you do not know, or you forget a screen reader command, you navigate to the appendix, find what you need, and then jump right back into the chapter.
+
+[JAMIE]
+That takes a lot of pressure off. I do not have to memorize every single command before I start. I can just look them up as I go. 
+
+[ALEX]
+Exactly. Memorization is not the goal. Navigation and confidence are the goals. And to build that confidence, we have included twenty-four structured exercises throughout the curriculum. 
+
+[JAMIE]
+I love the exercises in this course. They are so bite-sized. Can you explain the pattern we use for them?
+
+[ALEX]
+Every single exercise follows the exact same three-part pattern. First is the Try It section, which gives you clear, step-by-step instructions on what to do. Second is the You Are Done When section. This tells you the specific outcome you are looking for, so there is no guessing about whether you finished it correctly. Finally, there is the What Success Feels Like section. This is incredibly important for screen reader users. We describe exactly what you should hear, or where your focus should land, when the task is completed successfully. 
+
+[JAMIE]
+That is so helpful. I remember reading tutorials that would just say, click the button and you are done. And I would press enter on a button, and my screen reader would say nothing, and I had no idea if it actually worked. Knowing what success feels like is a game changer. 
+
+[ALEX]
+It really is. Let me give you an example. In Chapter One, there is an exercise called the Sixty Second Orientation. The Try It section asks you to navigate to a repository page, and press a sequence of keyboard shortcuts. Press the number 1 key, then the letter D, then the number 2 key, then the letter H. The You Are Done When section says you have successfully navigated between the main content, the repository details, and the file list. And the What Success Feels Like section explains the specific auditory feedback you will get from your screen reader as you jump between those landmarks. Every exercise takes between one and five minutes, and they are designed to be impossible to fail. They are just stepping stones.
+
+[PAUSE]
+
+[JAMIE]
+I am feeling so much better about this. But what if I do get stuck? What if my screen reader starts reading a wall of text, or I press the wrong shortcut and suddenly I am in a completely different view?
+
+[ALEX]
+First, take a breath. Getting lost is a normal part of learning a complex interface. If you get stuck, we have a whole section in the guide called Getting Help. You can reference the Troubleshooting guide, which has step-by-step solutions to common screen reader focus issues. You can check the Quick Reference guide for shortcuts. And if you are truly stuck, you can actually open an issue in the workshop repository itself! You will describe what you tried, what happened, and what you expected to happen. It is a safe environment to practice asking for help the open source way.
+
+[JAMIE]
+I really appreciate that. It normalizes getting stuck. When I first started, I thought getting an error meant I was bad at programming. Now I know that getting errors just means I am programming.
+
+[ALEX]
+That is a fantastic way to look at it. Professional developers get errors all day long. The difference is just that they have built up the muscle memory of how to recover from them. And that is exactly the muscle memory we are going to build over these two days. 
+
+[JAMIE]
+So, as we wrap up this introductory episode, what are the biggest takeaways we should keep in mind before we jump into Chapter One?
+
+[ALEX]
+I would say there are four main takeaways. Number one, remember our philosophy. We learn the manual skill first, then we automate it. Do not rush to the fancy tools until you understand the basic concepts. Number two, lean heavily on your reference materials. Keep the Glossary and the Screen Reader Cheat Sheet open in another tab. Number three, trust the exercise pattern. Focus on what success feels like, and take it one small step at a time. 
+
+[JAMIE]
+And number four, be kind to yourself. You are learning a new language, a new platform, and a new way of collaborating all at once. If it feels like a lot, that is because it is a lot. But you are going to do great.
+
+[ALEX]
+Well said, Jamie. Up next in episode one, we are going to dive into Chapter One, Understanding GitHub's Web Structure. We will explore how GitHub organizes its pages, how to orient yourself using headings and landmarks, and how to make your screen reader glide through the interface. We will see you there!
