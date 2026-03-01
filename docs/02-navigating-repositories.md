@@ -523,7 +523,7 @@ Quick way to check the project description, website link, and topics:
 
 **Time:** 3 minutes | **What you need:** Browser with screen reader, signed in to GitHub
 
-Navigate to [github.com/community-access/accessibility-agents](https://github.com/community-access/accessibility-agents) and do this:
+Navigate to the [Accessibility Agents repository](https://github.com/community-access/accessibility-agents) and do this:
 
 1. **Code tab** - Press `D` to the "Repository navigation" landmark, then `K` to find "Code". Press `Enter`. You're on the file list.
 2. **Issues tab** - Press `G` then `I` (Focus Mode first: `NVDA+Space`). How many open issues are there? Press `3` to jump through issue titles.

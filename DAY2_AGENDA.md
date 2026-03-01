@@ -400,7 +400,7 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 **The output:** A `spec.md` file committed to `accessibility-agents`. A record of what the community intended. Anyone who wants to build it next week has a starting point.
 
 **The Spec Kit toolkit** (for self-directed use after the workshop):
-- Repo: [github.com/github/spec-kit](https://github.com/github/spec-kit)
+- Repo: [Spec Kit repository on GitHub](https://github.com/github/spec-kit)
 - Init command: `uvx --from git+https://github.com/github/spec-kit.git specify init accessibility-agents-v2`
 - Slash commands: `/specify` → `/plan` → `/tasks` → implement
 

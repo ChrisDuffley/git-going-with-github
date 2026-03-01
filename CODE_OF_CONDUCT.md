@@ -101,11 +101,11 @@ Community leaders will follow these Community Impact Guidelines in determining t
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, available at [www.contributor-covenant.org/version/2/1/code_of_conduct/](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.1, available at the [Contributor Covenant Code of Conduct version 2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 
 Community Impact Guidelines were inspired by [Mozilla's code of conduct enforcement ladder](https://github.com/mozilla/diversity).
 
-For answers to common questions about this code of conduct, see the FAQ at [www.contributor-covenant.org/faq](https://www.contributor-covenant.org/faq). Translations are available at [www.contributor-covenant.org/translations](https://www.contributor-covenant.org/translations).
+For answers to common questions about this code of conduct, see the FAQ at the [Contributor Covenant FAQ](https://www.contributor-covenant.org/faq). Translations are available at the [Contributor Covenant translations page](https://www.contributor-covenant.org/translations).
 
 ---
 

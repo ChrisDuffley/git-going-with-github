@@ -41,7 +41,7 @@ Even though this is an educational repository, the following are genuine securit
 ### What Is Out of Scope
 
 - Theoretical attacks with no realistic exploitation path
-- Vulnerabilities in GitHub's own infrastructure (report those to GitHub directly at [github.com/security](https://github.com/security))
+- Vulnerabilities in GitHub's own infrastructure (report those to GitHub directly at the [GitHub Security page](https://github.com/security))
 - Broken links or outdated documentation (open a regular issue for those)
 
 ## Response Timeline

@@ -117,7 +117,7 @@ Establish a shared navigation foundation AND set up the Introduction to GitHub S
 
 **Group activity - follow together:**
 
-1. Navigate to [github.com/skills/introduction-to-github](https://github.com/skills/introduction-to-github)
+1. Navigate to the [Introduction to GitHub skills course](https://github.com/skills/introduction-to-github)
 2. Read the repository description with your screen reader
 3. Find and activate the **"Start course"** button (NVDA/JAWS: `B` to navigate buttons; VoiceOver: `VO+Right` → find the button → `VO+Space`)
 4. GitHub opens a "Create a new repository" page - fill in:
@@ -244,7 +244,7 @@ Mona detects your commit and responds with Step 3 instructions: open a pull requ
 
 > **The Markdown module** runs alongside everything else you do today. Every comment you write, every issue you file, every PR description - you are practicing Markdown in real GitHub contexts.
 
-1. Navigate to [github.com/skills/communicate-using-markdown](https://github.com/skills/communicate-using-markdown)
+1. Navigate to the [Communicate Using Markdown skills course](https://github.com/skills/communicate-using-markdown)
 2. "Start course" → create the repo in your account
 3. Wait for Mona to create Issue #1 with Step 1 instructions
 4. Read the instructions - Mona will walk you through: headers, emphasis, images, code blocks, task lists, and tables
@@ -318,7 +318,7 @@ Participants understand what pull requests are, how to read one, and how to part
 
 > **Magic Moment #3:** Instead of reviewing a pre-built PR in a shared repo, you are about to review a pull request that Mona creates *exclusively for you*, in *your own repository*. The content of the PR is real. Your review will be read by Mona and trigger the next step.
 
-1. Navigate to [github.com/skills/review-pull-requests](https://github.com/skills/review-pull-requests)
+1. Navigate to the [Review Pull Requests skills course](https://github.com/skills/review-pull-requests)
 2. "Start course" → create the repo in your account
 3. Wait for Mona to create Issue #1 and a practice pull request titled "Update the game over message"
 4. Navigate to the Pull Requests tab - open the PR Mona created
@@ -357,7 +357,7 @@ Return to your `introduction-to-github` Skills repo. Mona has been waiting for y
 4. Confirm the merge
 5. Navigate back to the Code tab - `PROFILE.md` now appears on `main`
 
-> **Magic Moment #4:** The `introduction-to-github` course is now complete. Navigate to [github.com/skills/introduction-to-github](https://github.com/skills/introduction-to-github) - your completion badge appears on the course page. Your GitHub profile now shows this course as completed.
+> **Magic Moment #4:** The `introduction-to-github` course is now complete. Navigate to the [Introduction to GitHub skills course](https://github.com/skills/introduction-to-github) - your completion badge appears on the course page. Your GitHub profile now shows this course as completed.
 
 ### Reference Document
 [Working with Pull Requests](docs/05-working-with-pull-requests.md)
@@ -568,9 +568,9 @@ Example:
 
 > **Magic Moment #5:** Before the Day 2 preview, check your completions.
 
-1. Navigate to [github.com/skills/introduction-to-github](https://github.com/skills/introduction-to-github) - completed?
-2. Navigate to [github.com/skills/review-pull-requests](https://github.com/skills/review-pull-requests) - completed?
-3. Navigate to [github.com/skills/communicate-using-markdown](https://github.com/skills/communicate-using-markdown) - how many steps complete?
+1. Navigate to the [Introduction to GitHub skills course](https://github.com/skills/introduction-to-github) - completed?
+2. Navigate to the [Review Pull Requests skills course](https://github.com/skills/review-pull-requests) - completed?
+3. Navigate to the [Communicate Using Markdown skills course](https://github.com/skills/communicate-using-markdown) - how many steps complete?
 4. Navigate to your GitHub profile - what appears there now?
 
 These completions are yours permanently. They travel to every GitHub profile page you have. They are evidence of skills, not just reading.

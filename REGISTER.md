@@ -44,7 +44,7 @@ You must be signed into a [GitHub](https://github.com) account to file the issue
 
 If you do not have a GitHub account yet, follow these steps:
 
-1. Open your browser and go to [github.com/signup](https://github.com/signup)
+1. Open your browser and go to the [GitHub sign-up page](https://github.com/signup)
 2. Enter your **email address** and press Tab or activate Continue
 3. Create a **password** (at least 8 characters, 15+ recommended) and continue
 4. Choose a **username** - lowercase letters, numbers, and hyphens only. Keep it professional; it represents you in the open source community. GitHub will tell you immediately if the name is taken
@@ -56,11 +56,13 @@ If you do not have a GitHub account yet, follow these steps:
 
 After creating your account, check your email for a message from GitHub with the subject "Please verify your email address" and activate the link inside it.
 
-**Enable two-factor authentication** (strongly recommended): Go to [github.com/settings/security](https://github.com/settings/security), find "Two-factor authentication," and activate "Enable." An authenticator app (Microsoft Authenticator, Google Authenticator, or Authy) is the most reliable option.
+**Enable two-factor authentication** (strongly recommended): Go to [GitHub Security Settings](https://github.com/settings/security), find "Two-factor authentication," and activate "Enable." An authenticator app (Microsoft Authenticator, Google Authenticator, or Authy) is the most reliable option.
+
+Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
 
 ### File Your Registration Issue
 
-**Important:** You must be signed into your GitHub account before clicking the link below. If you are not signed in, go to [github.com](https://github.com) and sign in first.
+**Important:** You must be signed into your GitHub account before clicking the link below. If you are not signed in, go to [GitHub](https://github.com) and sign in first.
 
 > [**Start Step 2 - File your registration issue**](https://github.com/community-access/git-going-with-github/issues/new?template=workshop-registration.yml&title=%5BREGISTER%5D+GIT+Going+with+GitHub+-+March+2026)
 

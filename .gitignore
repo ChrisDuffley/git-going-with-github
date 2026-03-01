@@ -1,6 +1,43 @@
 # Accessibility Agents personal preferences — each person's copy stays in their fork only, never committed
 .github/agents/preferences.md
 
+# Accessibility web agents — installed locally via agents repo, not committed
+.github/agents/web-accessibility-wizard.agent.md
+.github/agents/web-csv-reporter.agent.md
+.github/agents/web-issue-fixer.agent.md
+.github/agents/cross-page-analyzer.agent.md
+.github/agents/aria-specialist.agent.md
+.github/agents/alt-text-headings.agent.md
+.github/agents/contrast-master.agent.md
+.github/agents/forms-specialist.agent.md
+.github/agents/keyboard-navigator.agent.md
+.github/agents/link-checker.agent.md
+.github/agents/tables-data-specialist.agent.md
+.github/agents/live-region-controller.agent.md
+.github/agents/modal-specialist.agent.md
+.github/agents/testing-coach.agent.md
+.github/agents/wcag-guide.agent.md
+.github/agents/scanner-bridge.agent.md
+.github/agents/lighthouse-bridge.agent.md
+.github/agents/markdown-scanner.agent.md
+.github/agents/markdown-fixer.agent.md
+.github/agents/markdown-a11y-assistant.agent.md
+.github/agents/markdown-csv-reporter.agent.md
+.github/agents/shared-instructions.md
+.github/skills/
+.github/instructions/
+.github/prompts/audit-web-*.prompt.md
+.github/prompts/audit-markdown.prompt.md
+.github/prompts/compare-web-audits.prompt.md
+.github/prompts/compare-markdown-audits.prompt.md
+.github/prompts/compare-audits.prompt.md
+.github/prompts/export-web-csv.prompt.md
+.github/prompts/export-markdown-csv.prompt.md
+.github/prompts/fix-web-issues.prompt.md
+.github/prompts/fix-markdown-issues.prompt.md
+.github/prompts/quick-web-check.prompt.md
+.github/prompts/quick-markdown-check.prompt.md
+
 # Registration data — contains personal information, stored as workflow artifacts only
 .github/data/
 

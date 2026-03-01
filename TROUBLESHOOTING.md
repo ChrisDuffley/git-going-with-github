@@ -39,8 +39,8 @@
 **Symptoms:** Terminal shows `git: command not found`, `'git' is not recognized`, or similar error.
 
 **Solution:**
-1. **Windows:** Download and install Git for Windows from https://git-scm.com/download/win. During installation, accept the defaults. Restart your terminal after installation.
-2. **macOS:** Run `xcode-select --install` (installs Git as part of Command Line Tools), or download from https://git-scm.com/download/mac, or run `brew install git` if Homebrew is installed.
+1. **Windows:** Download and install Git for Windows from the [Git for Windows download page](https://git-scm.com/download/win). During installation, accept the defaults. Restart your terminal after installation.
+2. **macOS:** Run `xcode-select --install` (installs Git as part of Command Line Tools), or download from the [Git for macOS download page](https://git-scm.com/download/mac), or run `brew install git` if Homebrew is installed.
 3. **Linux (Debian/Ubuntu):** `sudo apt update && sudo apt install git`
 4. **Linux (Fedora):** `sudo dnf install git`
 5. Verify: Close and reopen your terminal, then type `git --version`
@@ -57,7 +57,7 @@
 **Symptoms:** `npm: command not found` or `node: command not found` when trying to build HTML files.
 
 **Solution:**
-1. Download Node.js LTS from https://nodejs.org/
+1. Download Node.js LTS from the [Node.js download page](https://nodejs.org/)
 2. Install with default settings
 3. Close and reopen your terminal
 4. Verify: `node --version` and `npm --version`
@@ -73,7 +73,7 @@
 1. Install GitHub CLI from https://cli.github.com/
 2. **Windows:** Download the `.msi` installer or use `winget install --id GitHub.cli`
 3. **macOS:** `brew install gh`
-4. **Linux:** See https://github.com/cli/cli/blob/trunk/docs/install_linux.md
+4. **Linux:** See the [GitHub CLI Linux installation guide](https://github.com/cli/cli/blob/trunk/docs/install_linux.md)
 5. Authenticate: `gh auth login` → follow prompts → choose HTTPS or SSH → authenticate via browser
 6. Verify: `gh --version`
 
@@ -88,6 +88,8 @@
 1. Create a free account at https://github.com/signup
 2. Verify your email address (check inbox for confirmation)
 3. Optionally enable two-factor authentication (recommended): https://github.com/settings/security
+
+Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
 
 ---
 

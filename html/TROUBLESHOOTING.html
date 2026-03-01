@@ -67,8 +67,8 @@
 <p><strong>Symptoms:</strong> Terminal shows <code>git: command not found</code>, <code>&#39;git&#39; is not recognized</code>, or similar error.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li><strong>Windows:</strong> Download and install Git for Windows from <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>. During installation, accept the defaults. Restart your terminal after installation.</li>
-<li><strong>macOS:</strong> Run <code>xcode-select --install</code> (installs Git as part of Command Line Tools), or download from <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a>, or run <code>brew install git</code> if Homebrew is installed.</li>
+<li><strong>Windows:</strong> Download and install Git for Windows from the <a href="https://git-scm.com/download/win">Git for Windows download page</a>. During installation, accept the defaults. Restart your terminal after installation.</li>
+<li><strong>macOS:</strong> Run <code>xcode-select --install</code> (installs Git as part of Command Line Tools), or download from the <a href="https://git-scm.com/download/mac">Git for macOS download page</a>, or run <code>brew install git</code> if Homebrew is installed.</li>
 <li><strong>Linux (Debian/Ubuntu):</strong> <code>sudo apt update &amp;&amp; sudo apt install git</code></li>
 <li><strong>Linux (Fedora):</strong> <code>sudo dnf install git</code></li>
 <li>Verify: Close and reopen your terminal, then type <code>git --version</code></li>
@@ -84,7 +84,7 @@
 <p><strong>Symptoms:</strong> <code>npm: command not found</code> or <code>node: command not found</code> when trying to build HTML files.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Download Node.js LTS from <a href="https://nodejs.org/">https://nodejs.org/</a></li>
+<li>Download Node.js LTS from the <a href="https://nodejs.org/">Node.js download page</a></li>
 <li>Install with default settings</li>
 <li>Close and reopen your terminal</li>
 <li>Verify: <code>node --version</code> and <code>npm --version</code></li>
@@ -98,7 +98,7 @@
 <li>Install GitHub CLI from <a href="https://cli.github.com/">https://cli.github.com/</a></li>
 <li><strong>Windows:</strong> Download the <code>.msi</code> installer or use <code>winget install --id GitHub.cli</code></li>
 <li><strong>macOS:</strong> <code>brew install gh</code></li>
-<li><strong>Linux:</strong> See <a href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md">https://github.com/cli/cli/blob/trunk/docs/install_linux.md</a></li>
+<li><strong>Linux:</strong> See the <a href="https://github.com/cli/cli/blob/trunk/docs/install_linux.md">GitHub CLI Linux installation guide</a></li>
 <li>Authenticate: <code>gh auth login</code> → follow prompts → choose HTTPS or SSH → authenticate via browser</li>
 <li>Verify: <code>gh --version</code></li>
 </ol>
@@ -112,6 +112,7 @@
 <li>Verify your email address (check inbox for confirmation)</li>
 <li>Optionally enable two-factor authentication (recommended): <a href="https://github.com/settings/security">https://github.com/settings/security</a></li>
 </ol>
+<p>Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with <code>repo</code> scope before contributing. If you need help, contact the workshop organizers.</p>
 <hr>
 <h3>Problem: Cannot fork the repository</h3>
 <p><strong>Symptoms:</strong> Click &quot;Fork&quot; but nothing happens, or you see an error message.</p>

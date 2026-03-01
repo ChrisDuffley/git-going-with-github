@@ -40,7 +40,7 @@
 - A GitHub account (free tier is fine)
 
 ### Software - Required Before the Workshop
-- **Git** - [git-scm.com](https://git-scm.com/downloads) (Windows/Linux) or Xcode Command Line Tools (macOS)
+- **Git** - [Download Git](https://git-scm.com/downloads) (Windows/Linux) or Xcode Command Line Tools (macOS)
 - **Visual Studio Code** (free) - [download here](https://code.visualstudio.com/)
 - **GitHub Copilot Chat** extension for VS Code - installed from within VS Code (this single extension provides both inline suggestions and Chat)
 - A GitHub Copilot subscription or Free tier access (Copilot Free is available to all GitHub users)
@@ -51,8 +51,8 @@ You only need **one** of these. Use whichever you are most comfortable with.
 
 | Screen Reader | Platform | Cost | Download |
 |---------------|----------|------|----------|
-| **NVDA** (NonVisual Desktop Access) | Windows | Free | [nvaccess.org](https://www.nvaccess.org/download/) |
-| **JAWS** (Job Access With Speech) | Windows | Paid (trial available) | [freedomscientific.com](https://www.freedomscientific.com/products/software/jaws/) |
+| **NVDA** (NonVisual Desktop Access) | Windows | Free | [Download NVDA](https://www.nvaccess.org/download/) |
+| **JAWS** (Job Access With Speech) | Windows | Paid (trial available) | [Download JAWS](https://www.freedomscientific.com/products/software/jaws/) |
 | **VoiceOver** | macOS / iOS | Built-in (free) | Included with macOS - press `Cmd+F5` to activate |
 
 > **Note:** All workshop exercises are designed to work with any of these screen readers. Where specific key commands differ, we will note all three. You are not disadvantaged by using any particular screen reader.
@@ -109,34 +109,76 @@ If you already have a GitHub account, skip to [Step 2](#4-step-2--configure-gith
 
 GitHub also sends a **separate** email verification link after account creation. Check your inbox for an email from GitHub with subject "Please verify your email address" and activate the link inside it. Some GitHub features (including creating repositories) require a verified email.
 
-### Enable two-factor authentication (strongly recommended)
+### Enable two-factor authentication (2FA): detailed guidance and workshop policy
 
-Two-factor authentication (2FA) adds a second verification step each time you sign in, protecting your account if your password is compromised.
+Two-factor authentication (2FA) adds a second verification step each time you sign in, protecting your account if your password is compromised. For this workshop we strongly recommend enabling 2FA. See the **Workshop policy** below for allowed alternatives if you cannot enable 2FA before the event.
 
-1. Navigate to [github.com/settings/security](https://github.com/settings/security)
-2. Find the section **"Two-factor authentication"** and activate **"Enable"**
-3. GitHub asks how you want to receive your second factor. **Recommended options:**
-   - **Authenticator app** (most reliable) - apps like Microsoft Authenticator, Google Authenticator, or Authy generate a 6-digit code
-   - **SMS / text message** - simpler but less secure
-   - **Passkey or security key** - most secure; requires a hardware key or device biometric
-4. Follow the on-screen setup for your chosen method
-5. **Setting up an authenticator app:**
+Quick steps to enable 2FA
 
-   <details>
-   <summary>Visual / mouse users</summary>
+1. Open https://github.com/settings/security while signed in.
+2. Under **Two-factor authentication**, choose **Enable** and follow the prompts.
+3. Choose one of the second-factor methods (recommended order):
+    - **Authenticator app** (recommended): Microsoft Authenticator, Google Authenticator, Authy — generates time-based 6-digit codes.
+    - **Security key / passkey** (most secure): hardware security keys (YubiKey, etc.) or platform passkeys (biometric device credentials).
+    - **SMS / text message** (least preferred): can be used if other options are unavailable.
 
-   The setup page shows a QR code. Open your authenticator app (Microsoft Authenticator, Google Authenticator, or Authy), choose **Add account** or the `+` button, and scan the QR code with your device camera. The app will generate 6-digit codes - enter the current code on the GitHub page to verify.
+Detailed setup notes
 
-   </details>
+- Authenticator app (recommended):
+   - Visual users: scan the QR code with your authenticator app and enter the 6-digit code shown.
+   - Screen reader users: choose the link labeled **"enter this text code"** or **"can't scan the barcode?"** to reveal the secret (a 32-character key). Use the authenticator app's manual/key-entry option to add the account.
 
-   <details>
-   <summary>Screen reader users</summary>
+- Security key / passkey:
+   - Follow the on-screen prompts to register a hardware key or platform passkey. These are highly recommended for long-term security and are supported by modern browsers and devices.
 
-   The QR code image cannot be read by a screen reader. Look for a text link labeled **"Enter this text code"**, **"setup key"**, or **"can't scan the barcode?"** - GitHub provides the secret as a 32-character plain-text string. Copy it and paste it directly into your authenticator app's **manual entry** or **enter key** field.
+- SMS / text message:
+   - Enter your phone number and verify the code sent via text. Use only if authenticator apps or keys are unavailable.
 
-   </details>
+Recovery and backup
 
-6. **Save your recovery codes** - GitHub provides a set of single-use backup codes. Download or copy them and store them somewhere safe (password manager, printed and secured). These are the only way to regain access to your account if you lose your second factor device.
+- After enabling 2FA, GitHub will display **recovery (single-use) codes**. Immediately copy, download, or securely store these codes (password manager or physically secure location). They are the only fallback if you lose your second-factor device.
+- Consider registering more than one second-factor method (e.g., authenticator app + a hardware key) to avoid account lockout.
+
+Using Git with 2FA: HTTPS vs SSH, and Personal Access Tokens (PATs)
+
+When 2FA is enabled, your GitHub account password cannot be used for HTTPS Git operations. You must use one of these alternatives to push/pull to repositories:
+
+- SSH keys (recommended for git push/pull):
+   1. Generate an SSH key on your machine (replace email):
+
+       ```bash
+       ssh-keygen -t ed25519 -C "your-email@example.com"
+       # or for older systems: ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
+       ```
+   2. Copy the public key (`~/.ssh/id_ed25519.pub`) and add it at https://github.com/settings/keys → **New SSH key**.
+   3. Test the connection: `ssh -T git@github.com` (first-time prompts about known hosts are expected).
+
+   - SSH continues to work regardless of whether 2FA is enabled.
+
+- Personal Access Token (PAT) for HTTPS Git or tools that ask for a password:
+   1. Create a PAT at https://github.com/settings/tokens → **Generate new token**.
+   2. For normal repo push/pull access, grant **repo** scope (check only what you need). If you need workflow or packages access, add those scopes explicitly.
+   3. Use the PAT instead of your password when prompted by Git over HTTPS. In GUI tools (VS Code, GitHub Desktop), paste the PAT where the password is requested or configure the credential helper to store it.
+
+   - Short-lived tokens and fine-grained tokens: GitHub supports fine-grained tokens which are preferred for scoped access. If your tooling supports them, use fine-grained tokens with only the required repository permissions.
+
+Tool-specific tips
+
+- VS Code (Git): When the extension prompts for credentials, choose the web-based sign-in or paste a PAT when prompted for a password. The GitHub authentication extension will walk you through a browser sign-in that supports 2FA.
+- GitHub Desktop: use web authentication which supports 2FA, or provide a PAT if requested.
+
+Workshop policy (copy-ready)
+
+For this workshop we strongly recommend participants enable 2FA. If you cannot enable 2FA before the event, you may still participate if you complete one of the following before Day 1:
+
+- Add a verified SSH key to your GitHub account and use SSH for Git operations, or
+- Create a Personal Access Token (PAT) with the `repo` scope and use it for HTTPS Git authentication.
+
+If none of these options are possible, contact the workshop organizers at the email or issue link in this guide so we can make accommodations. We cannot grant organization-level repository access to accounts that lack any second-factor or equivalent (SSH/PAT) protections without explicit organizer approval.
+
+Copy-ready paragraph for `CONTRIBUTING.md` / registration forms
+
+> Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
 
 ---
 
@@ -205,7 +247,7 @@ These settings make GitHub significantly more usable with a screen reader. **Do 
 
 ### Navigate to Accessibility Settings
 
-The fastest path for everyone: navigate directly to **[github.com/settings/accessibility](https://github.com/settings/accessibility)** while signed in.
+The fastest path for everyone: navigate directly to **[GitHub Accessibility Settings](https://github.com/settings/accessibility)** while signed in.
 
 If you prefer to navigate through the interface:
 
@@ -291,7 +333,7 @@ Find the **Link underlines** checkbox or toggle and turn it on. This adds underl
 
 #### 4. Set Your Theme (Appearance Settings)
 
-Theme is on a separate page: [github.com/settings/appearance](https://github.com/settings/appearance)
+Theme is on a separate page: [GitHub Appearance Settings](https://github.com/settings/appearance)
 
 1. Navigate to that page
 2. Find the **"Theme mode"** or **"Theme"** section
@@ -413,7 +455,7 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 ### NVDA (Windows)
 
 **Install NVDA** if you haven't already:
-1. Download from [nvaccess.org/download](https://www.nvaccess.org/download/)
+1. Download from [the NVDA download page](https://www.nvaccess.org/download/)
 2. Run the installer - you can install to your computer or run portably
 3. After launch, NVDA speaks "NVDA started" when running
 
@@ -487,7 +529,7 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 > **VS Code does not install Git.** It detects whether Git is already on your system. If Git is missing, the Source Control panel will display a warning, and all `git` commands in the terminal will fail. Install Git before installing VS Code.
 
 **Windows:**
-1. Download the Git for Windows installer from [git-scm.com/download/win](https://git-scm.com/download/win)
+1. Download the Git for Windows installer from [Git for Windows download page](https://git-scm.com/download/win)
 2. Run the installer - default options are correct for most users
 3. On the "Adjusting your PATH environment" screen, keep the default: **"Git from the command line and also from 3rd-party software"**
 4. Complete the installer and restart any open terminals
@@ -502,7 +544,7 @@ Git is often already present via Xcode Command Line Tools. To check:
 1. Open Terminal (`Cmd+Space` → type "Terminal")
 2. Type `git --version` and press `Enter`
 3. If Git is not installed, macOS will automatically prompt you to install Xcode Command Line Tools - follow the prompt and wait for it to complete
-4. Alternatively, install directly from [git-scm.com/download/mac](https://git-scm.com/download/mac) or via Homebrew: `brew install git`
+4. Alternatively, install directly from [Git for macOS download page](https://git-scm.com/download/mac) or via Homebrew: `brew install git`
 
 **Screen reader note (Windows terminal verification):**
 - PowerShell is accessible with all screen readers via Browse Mode or Forms Mode
@@ -657,7 +699,7 @@ Copilot Free is available to all GitHub users at no cost. It includes:
 - Limited inline code completions per month
 - Limited Copilot Chat messages per month
 
-For this workshop, Free tier is sufficient. If you want unlimited access, paid plans are available at [github.com/features/copilot#pricing](https://github.com/features/copilot#pricing).
+For this workshop, Free tier is sufficient. If you want unlimited access, paid plans are available at [GitHub Copilot pricing](https://github.com/features/copilot#pricing).
 
 ---
 
@@ -763,7 +805,7 @@ If you cannot complete any step in this guide before the workshop:
 
 1. **File an issue** - [community-access/git-going-with-github](https://github.com/community-access/git-going-with-github/issues) - we will help you get set up
 2. **File an issue in this repository** - describe exactly what step you are on and what is not working
-3. **Join the GitHub Accessibility Discussions** - [github.com/orgs/community/discussions/categories/accessibility](https://github.com/orgs/community/discussions/categories/accessibility) - the community is helpful and welcoming
+3. **Join the GitHub Accessibility Discussions** - [GitHub Community Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility) - the community is helpful and welcoming
 
 You will not be left behind. Every setup issue we can solve before Day 1 means more time for learning on the day.
 

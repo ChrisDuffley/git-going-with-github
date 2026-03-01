@@ -69,6 +69,10 @@ This guide covers contributing to **this workshop learning repository**. For con
 
 You learned this workflow during the workshop. Here it is again as a reference.
 
+### Account security
+
+Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
+
 ### Fork the Repository
 
 1. Navigate to the workshop repository on GitHub
@@ -334,7 +338,7 @@ The `html/` directory is committed to the repository so that:
 ### Troubleshooting
 
 **"npm: command not found"**
-You need to install Node.js first. Download from [nodejs.org](https://nodejs.org/) (LTS version recommended).
+You need to install Node.js first. Download from the [Node.js download page](https://nodejs.org/) (LTS version recommended).
 
 **Build errors:**
 - Ensure all markdown files have valid syntax

@@ -22,7 +22,7 @@ Sponsored by [Community Access](https://community-access.github.io) in partnersh
 
 ---
 
-> **Registration is open!** [**Register now**](https://community-access.github.io/git-going-with-github/REGISTER.html) - your seat is waiting.
+> **Registration is open!** [**Register for the GIT Going with GitHub workshop**](https://community-access.github.io/git-going-with-github/REGISTER.html) - your seat is waiting.
 
 ---
 
@@ -133,8 +133,8 @@ You need one of the following. Use whichever you are most comfortable with.
 
 | Screen Reader | Platform | Cost | Where to Get It |
 |---------------|----------|------|-----------------|
-| **[NVDA](https://www.nvaccess.org/download/)** | Windows | Free | [nvaccess.org/download](https://www.nvaccess.org/download/) |
-| **[JAWS](https://www.freedomscientific.com/products/software/jaws/)** | Windows | Paid (40-minute trial available) | [freedomscientific.com](https://www.freedomscientific.com/products/software/jaws/) |
+| **[NVDA](https://www.nvaccess.org/download/)** | Windows | Free | [Download NVDA](https://www.nvaccess.org/download/) |
+| **[JAWS](https://www.freedomscientific.com/products/software/jaws/)** | Windows | Paid (40-minute trial available) | [Download JAWS](https://www.freedomscientific.com/products/software/jaws/) |
 | **[VoiceOver](https://support.apple.com/guide/voiceover/welcome/mac)** | macOS | Built-in (free) | Already on your Mac - press Cmd+F5 to activate |
 
 All exercises work with any of these. Where keyboard commands differ, we provide all three.
@@ -151,7 +151,7 @@ All exercises work with any of these. Where keyboard commands differ, we provide
 Install these before the workshop. Detailed, screen-reader-friendly installation instructions are in our [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html).
 
 1. **Git** - the version control system underneath GitHub
-   - Windows: Download from [git-scm.com/download/win](https://git-scm.com/download/win) - run the installer with default options
+   - Windows: Download from [Git for Windows download page](https://git-scm.com/download/win) - run the installer with default options
    - macOS: Open Terminal and type `git --version` - if Git is not installed, macOS will prompt you to install it automatically
    - Verify: Open a terminal and run `git --version` - you should see a version number
 
@@ -172,7 +172,7 @@ Install these before the workshop. Detailed, screen-reader-friendly installation
 
 If you do not have a GitHub account, create one before the workshop:
 
-1. Navigate to [github.com/signup](https://github.com/signup)
+1. Navigate to the [GitHub sign-up page](https://github.com/signup)
 2. Enter your email address, create a password, and choose a username
    - Your username appears on every contribution you make - keep it professional
 3. Complete the verification step
@@ -182,16 +182,18 @@ If you do not have a GitHub account, create one before the workshop:
 
 **After creating your account, configure these accessibility settings** (they make a significant difference):
 
-1. Go to [github.com/settings/accessibility](https://github.com/settings/accessibility)
+1. Go to [GitHub Accessibility Settings](https://github.com/settings/accessibility)
 2. **Turn OFF Hovercards / Link Previews** - this is the single most important setting. With hovercards on, your screen reader announces extra noise on every link you pass. Turn it off.
 3. **Turn ON Link Underlines** - makes links visually distinguishable without relying on color
-4. Set your preferred theme at [github.com/settings/appearance](https://github.com/settings/appearance) - high contrast options are available
+4. Set your preferred theme at [GitHub Appearance Settings](https://github.com/settings/appearance) - high contrast options are available
 
 **Enable two-factor authentication** (strongly recommended):
 
-1. Go to [github.com/settings/security](https://github.com/settings/security)
+1. Go to [GitHub Security Settings](https://github.com/settings/security)
 2. Enable 2FA using an authenticator app, SMS, or a security key
 3. Save your recovery codes somewhere safe
+
+Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
 
 Our [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html) walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.
 
@@ -259,8 +261,8 @@ No. The workshop, all software, and all materials are free.
 
 Know someone who would benefit from this workshop? Share this page:
 
-**Workshop site:** [community-access.github.io/git-going-with-github](https://community-access.github.io/git-going-with-github/)
-**GitHub repo:** [github.com/community-access/git-going-with-github](https://github.com/community-access/git-going-with-github)
+**Workshop site:** [GIT Going with GitHub workshop site](https://community-access.github.io/git-going-with-github/)
+**GitHub repo:** [GIT Going with GitHub on GitHub](https://github.com/community-access/git-going-with-github)
 
 The best way to make open source more accessible is to bring more people who use assistive technology into the room where it is built.
 

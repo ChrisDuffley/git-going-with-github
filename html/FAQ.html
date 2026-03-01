@@ -212,6 +212,7 @@
 <p>Never use <code>credential.helper store</code> on shared or multi-user systems - it saves credentials in plaintext.</p>
 <h3>Q: How do I set up two-factor authentication?</h3>
 <p><strong>A:</strong> Go to <a href="https://github.com/settings/security">https://github.com/settings/security</a> → &quot;Enable two-factor authentication.&quot; GitHub supports authenticator apps (recommended), security keys, and SMS. After enabling 2FA, you will need recovery codes - save them somewhere safe.</p>
+<p>Security note: We strongly recommend enabling 2FA on your GitHub account. If you cannot enable 2FA, you may still participate by adding an SSH key or creating a Personal Access Token (PAT) with <code>repo</code> scope for Git operations. Contact the workshop organizers if you need help.</p>
 <h3>Q: My organization uses SSO (Single Sign-On). Does that affect anything?</h3>
 <p><strong>A:</strong> Yes. After authenticating with SSO, you may need to authorize your SSH key or PAT for that organization. Go to <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> → find your token → click &quot;Configure SSO&quot; → authorize for your org.</p>
 <hr>

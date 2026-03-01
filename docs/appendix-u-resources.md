@@ -135,10 +135,10 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 
 | Resource | URL |
 |----------|-----|
-| Download NVDA (free) | [nvaccess.org/download](https://www.nvaccess.org/download/) |
-| NVDA User Guide | [nvaccess.org/files/nvda/documentation/userGuide.html](https://www.nvaccess.org/files/nvda/documentation/userGuide.html) |
-| NVDA Add-ons | [nvda-project.org/addonStore](https://nvda-project.org/addonStore/) |
-| NVDA Community | [nvda-community.github.io](https://nvda-community.github.io) |
+| Download NVDA (free) | [NVDA download page](https://www.nvaccess.org/download/) |
+| NVDA User Guide | [NVDA User Guide](https://www.nvaccess.org/files/nvda/documentation/userGuide.html) |
+| NVDA Add-ons | [NVDA Add-on Store](https://nvda-project.org/addonStore/) |
+| NVDA Community | [NVDA Community site](https://nvda-community.github.io) |
 
 **Key commands (quick reference):**
 - Toggle browse/focus mode: `NVDA+Space`
@@ -631,9 +631,9 @@ After the workshop, use these resources to find your next open source contributi
 
 | Resource | URL | What It Does |
 |----------|-----|-------------|
-| **Good First Issue** | [goodfirstissue.dev](https://goodfirstissue.dev) | Curated list of beginner-friendly issues across popular open source projects |
-| **Up For Grabs** | [up-for-grabs.net](https://up-for-grabs.net) | Projects that explicitly welcome new contributors |
-| **GitHub Explore** | [github.com/explore](https://github.com/explore) | Discover trending repos, topics, and collections |
+| **Good First Issue** | [Good First Issue](https://goodfirstissue.dev) | Curated list of beginner-friendly issues across popular open source projects |
+| **Up For Grabs** | [Up For Grabs](https://up-for-grabs.net) | Projects that explicitly welcome new contributors |
+| **GitHub Explore** | [GitHub Explore](https://github.com/explore) | Discover trending repos, topics, and collections |
 | **Accessibility on GitHub** | Search: `topic:accessibility is:public` | Public repositories tagged with the accessibility topic |
 | **AT on GitHub** | Search: `topic:assistive-technology is:public` | Public repositories tagged with assistive-technology |
 | **Filter by label** | In any repo: Issues → Label → `good first issue` | Works on every public repository |
@@ -652,31 +652,31 @@ is:open is:issue label:accessibility no:assignee
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| WCAG 2.2 (Full Standard) | [w3.org/TR/WCAG22](https://www.w3.org/TR/WCAG22/) | The complete Web Content Accessibility Guidelines |
-| WCAG Quick Reference | [w3.org/WAI/WCAG22/quickref](https://www.w3.org/WAI/WCAG22/quickref/) | Filtered, searchable version - much more practical |
-| ARIA Authoring Practices Guide | [w3.org/WAI/ARIA/apg](https://www.w3.org/WAI/ARIA/apg/) | When and how to use ARIA roles and attributes |
-| WebAIM Screen Reader Survey | [webaim.org/projects/screenreadersurvey](https://webaim.org/projects/screenreadersurvey/) | Real-world data on how screen reader users work |
-| The A11y Project | [a11yproject.com](https://www.a11yproject.com) | Community-driven accessibility checklist and resources |
-| Deque University (free content) | [dequeuniversity.com](https://www.dequeuniversity.com) | Free accessibility rules reference |
-| MDN Accessibility Guide | [developer.mozilla.org/en-US/docs/Web/Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) | Web accessibility fundamentals |
+| WCAG 2.2 (Full Standard) | [WCAG 2.2 specification](https://www.w3.org/TR/WCAG22/) | The complete Web Content Accessibility Guidelines |
+| WCAG Quick Reference | [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/) | Filtered, searchable version - much more practical |
+| ARIA Authoring Practices Guide | [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) | When and how to use ARIA roles and attributes |
+| WebAIM Screen Reader Survey | [WebAIM Screen Reader Survey](https://webaim.org/projects/screenreadersurvey/) | Real-world data on how screen reader users work |
+| The A11y Project | [The A11y Project](https://www.a11yproject.com) | Community-driven accessibility checklist and resources |
+| Deque University (free content) | [Deque University](https://www.dequeuniversity.com) | Free accessibility rules reference |
+| MDN Accessibility Guide | [MDN Accessibility Guide](https://developer.mozilla.org/en-US/docs/Web/Accessibility) | Web accessibility fundamentals |
 
 ### Accessibility Testing Tools
 
 | Tool | URL | Notes |
 |------|-----|-------|
-| WebAIM Contrast Checker | [webaim.org/resources/contrastchecker](https://webaim.org/resources/contrastchecker/) | Check text/background color contrast against WCAG AA/AAA |
-| WAVE Browser Extension | [wave.webaim.org/extension](https://wave.webaim.org/extension/) | Highlights accessibility issues on any webpage - Chrome, Firefox, Edge |
-| Axe DevTools | [deque.com/axe/devtools](https://www.deque.com/axe/devtools/) | Finds WCAG violations with severity levels |
+| WebAIM Contrast Checker | [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Check text/background color contrast against WCAG AA/AAA |
+| WAVE Browser Extension | [WAVE Browser Extension](https://wave.webaim.org/extension/) | Highlights accessibility issues on any webpage - Chrome, Firefox, Edge |
+| Axe DevTools | [Axe DevTools](https://www.deque.com/axe/devtools/) | Finds WCAG violations with severity levels |
 | Lighthouse | In Chrome DevTools (F12 → Lighthouse tab) | Built-in auditing for accessibility, performance, and SEO |
 
 ### Interactive Git Learning
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| Learn Git Branching | [learngitbranching.js.org](https://learngitbranching.js.org/) | Gamified, step-by-step challenges - branching, merging, rebasing |
-| Visualizing Git | [git-school.github.io/visualizing-git](https://git-school.github.io/visualizing-git/) | Interactive visual playground for branches and commits |
-| Pro Git Book (free) | [git-scm.com/book/en/v2](https://git-scm.com/book/en/v2) | Complete reference - free online |
-| Git Cheat Sheet | [github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf) | Quick command reference PDF |
+| Learn Git Branching | [Learn Git Branching](https://learngitbranching.js.org/) | Gamified, step-by-step challenges - branching, merging, rebasing |
+| Visualizing Git | [Visualizing Git](https://git-school.github.io/visualizing-git/) | Interactive visual playground for branches and commits |
+| Pro Git Book (free) | [Pro Git Book](https://git-scm.com/book/en/v2) | Complete reference - free online |
+| Git Cheat Sheet | [GitHub Git Cheat Sheet (PDF)](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf) | Quick command reference PDF |
 
 ---
 
@@ -684,7 +684,7 @@ is:open is:issue label:accessibility no:assignee
 
 | Resource | URL | Notes |
 |----------|-----|-------|
-| Full Keyboard Shortcuts Reference | [docs.github.com/en/get-started/accessibility/keyboard-shortcuts](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) | Every shortcut on every page |
+| Full Keyboard Shortcuts Reference | [GitHub Keyboard Shortcuts documentation](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) | Every shortcut on every page |
 | Press `?` on any GitHub page | - | Opens the keyboard shortcuts overlay for that specific page |
 
 **The most important shortcuts to memorize:**
@@ -734,25 +734,25 @@ Not sure where to start after the workshop? Use these suggested paths.
 
 | Resource | URL |
 |----------|-----|
-| GitHub Accessibility Community Discussions | [github.com/orgs/community/discussions/categories/accessibility](https://github.com/orgs/community/discussions/categories/accessibility) |
-| GitHub Accessibility Feedback | [github.com/github-community/community/discussions/categories/accessibility](https://github.com/github-community/community/discussions/categories/accessibility) |
-| GitHub Accessibility Team (public presence) | [accessibility.github.com](https://accessibility.github.com) |
+| GitHub Accessibility Community Discussions | [GitHub Community Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility) |
+| GitHub Accessibility Feedback | [GitHub Accessibility Feedback Discussions](https://github.com/github-community/community/discussions/categories/accessibility) |
+| GitHub Accessibility Team (public presence) | [GitHub Accessibility site](https://accessibility.github.com) |
 
 ### Accessibility Agents Community
 
 | Resource | URL |
 |----------|-----|
-| Accessibility Agents Issues (bug reports, ideas) | [github.com/community-access/accessibility-agents/issues](https://github.com/community-access/accessibility-agents/issues) |
-| Accessibility Agents Discussions | [github.com/community-access/accessibility-agents/discussions](https://github.com/community-access/accessibility-agents/discussions) |
+| Accessibility Agents Issues (bug reports, ideas) | [Accessibility Agents Issues](https://github.com/community-access/accessibility-agents/issues) |
+| Accessibility Agents Discussions | [Accessibility Agents Discussions](https://github.com/community-access/accessibility-agents/discussions) |
 | Security concerns | jeff@jeffbishop.com (do not open public issues for vulnerabilities) |
 
 ### Open Source Accessibility Community
 
 | Resource | URL |
 |----------|-----|
-| A11y Slack | [web-a11y.slack.com](https://web-a11y.slack.com) (invite: [a11y.me/slack](https://www.a11y.me/slack)) |
-| A11y Weekly Newsletter | [a11yweekly.com](https://a11yweekly.com) |
-| Inclusive Design Research Centre | [idrc.ocadu.ca](https://idrc.ocadu.ca) |
+| A11y Slack | [A11y Slack community](https://web-a11y.slack.com) (invite: [A11y Slack invite page](https://www.a11y.me/slack)) |
+| A11y Weekly Newsletter | [A11y Weekly Newsletter](https://a11yweekly.com) |
+| Inclusive Design Research Centre | [Inclusive Design Research Centre](https://idrc.ocadu.ca) |
 
 ---
 

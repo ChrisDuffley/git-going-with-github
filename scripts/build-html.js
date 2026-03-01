@@ -44,7 +44,8 @@ const htmlTemplate = (content, title, relativePath) => {
   const isHome = relativePath === 'index.html';
   const isRegister = relativePath === 'REGISTER.html';
   const siteName = 'GIT Going with GitHub';
-  const pageTitle = isHome ? siteName : `${title} - ${siteName}`;
+  const titleContainsSiteName = title === siteName || title.includes(siteName);
+  const pageTitle = isHome || titleContainsSiteName ? title : `${title} - ${siteName}`;
 
   return `<!DOCTYPE html>
 <html lang="en">

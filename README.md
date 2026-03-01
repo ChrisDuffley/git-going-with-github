@@ -11,7 +11,7 @@ License: CC BY 4.0 | [Site](https://community-access.github.io/git-going-with-gi
 | Detail | Information |
 |---|---|
 | **Workshop site** | [community-access.github.io/git-going-with-github](https://community-access.github.io/git-going-with-github/) |
-| **Register** | [Sign up now](https://community-access.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
+| **Register** | [Register for the workshop](https://community-access.github.io/git-going-with-github/REGISTER.html) (75 seats, free, two steps) |
 | **Discussions** | [Join the conversation](https://github.com/community-access/git-going-with-github/discussions) |
 | **Support** | [File an issue](https://github.com/community-access/git-going-with-github/issues) |
 | **Dates** | March 7-8, 2026 · 12-8 PM Eastern |
