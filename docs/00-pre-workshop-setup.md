@@ -1,7 +1,7 @@
 # Pre-Workshop Setup - GIT Going with GitHub
 ## Everything You Need Before Day 1 Begins
 
-> **A [Community Access](https://community-access.github.io) workshop.**
+> **A [Community Access](https://community-access.org) workshop.**
 >
 > **Please complete this guide at least one day before the workshop.** If you run into any issues, [file an issue](https://github.com/community-access/git-going-with-github/issues) so we can help - we want Day 1 to start with everyone ready to go, not troubleshooting.
 

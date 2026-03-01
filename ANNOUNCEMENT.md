@@ -1,12 +1,14 @@
 # GIT Going with GitHub
 
-[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://community-access.github.io/git-going-with-github/) | [Full Curriculum](https://community-access.github.io/git-going-with-github/COMING_SOON.html) | [Discussion Forum](https://github.com/community-access/git-going-with-github/discussions) | [Register](https://community-access.github.io/git-going-with-github/REGISTER.html)
+[License: CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) | [View Site](https://community-access.org/git-going-with-github/) | [Full Curriculum](https://community-access.org/git-going-with-github/docs/course-guide.html) | [Discussion Forum](https://github.com/community-access/git-going-with-github/discussions) | [Register](https://community-access.org/git-going-with-github/REGISTER.html)
 
 ## You Belong in Open Source. Let Us Show You the Door.
 
-### A Two-Day Workshop by [Community Access](https://community-access.github.io)
+> **Note:** Workshop content is being actively refined during the week of March 7, 2026. Students should expect updates to materials leading up to and during the course.
 
-Sponsored by [Community Access](https://community-access.github.io) in partnership with [GitHub](https://github.com).
+### A Two-Day Workshop by [Community Access](https://community-access.org)
+
+Sponsored by [Community Access](https://community-access.org) in partnership with [GitHub](https://github.com).
 
 | Detail | Information |
 |---|---|
@@ -15,14 +17,14 @@ Sponsored by [Community Access](https://community-access.github.io) in partnersh
 | **Location** | Online via [Zoom](https://zoom.us/) |
 | **Cost** | Free |
 | **Capacity** | 75 participants (limited seats) |
-| **Presented by** | [Community Access](https://community-access.github.io) |
+| **Presented by** | [Community Access](https://community-access.org) |
 | **In partnership with** | [GitHub](https://github.com) |
 
 ### Registered: <span id="registration-count" aria-live="polite">loading...</span> out of 75 spots
 
 ---
 
-> **Registration is open!** [**Register for the GIT Going with GitHub workshop**](https://community-access.github.io/git-going-with-github/REGISTER.html) - your seat is waiting.
+> **Registration is open!** [**Register for the GIT Going with GitHub workshop**](https://community-access.org/git-going-with-github/REGISTER.html) - your seat is waiting.
 
 ---
 
@@ -30,7 +32,7 @@ Sponsored by [Community Access](https://community-access.github.io) in partnersh
 
 ---
 
-> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://community-access.github.io/git-going-with-github/COMING_SOON.html) before March 7. It walks you through every step - GitHub account, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
+> **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) before March 7. It walks you through every step - GitHub account, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver. Get set up early so Day 1 starts with learning, not troubleshooting.
 
 ---
 
@@ -46,9 +48,9 @@ This workshop exists because open source software powers the world - and the peo
 
 ---
 
-## Powered by [Accessibility Agents](https://community-access.github.io/accessibility-agents)
+## Powered by [Accessibility Agents](https://community-access.org/accessibility-agents)
 
-On Day 2, you will work with **[Accessibility Agents](https://community-access.github.io/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands built for accessible software development, project management, and community collaboration. Daily briefings, issue triage, PR review, accessibility monitoring, analytics - all driven by AI, all designed for screen reader users.
+On Day 2, you will work with **[Accessibility Agents](https://community-access.org/accessibility-agents)** - a real, MIT-licensed open source project with six [GitHub Copilot](https://github.com/features/copilot) agents and 28 slash commands built for accessible software development, project management, and community collaboration. Daily briefings, issue triage, PR review, accessibility monitoring, analytics - all driven by AI, all designed for screen reader users.
 
 You will fork it, understand it, improve it, and personalize it. By the end of the workshop, your name is in its commit history.
 
@@ -86,33 +88,33 @@ These are not hypothetical outcomes. Every participant ships something real.
 
 ## The Two-Day Journey
 
-### [Day 1 - GitHub Foundations (Browser + Screen Reader)](https://community-access.github.io/git-going-with-github/COMING_SOON.html)
+### [Day 1 - GitHub Foundations (Browser + Screen Reader)](https://community-access.org/git-going-with-github/DAY1_AGENDA.html)
 
 Your screen reader and keyboard are the only tools you need. Everything happens in the browser.
 
 | Block | What Happens |
 |-------|-------------|
-| **[Welcome and Setup Check](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Introductions, verify everyone's screen reader and browser are ready |
-| **[Screen Reader Orientation to GitHub](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Navigate GitHub pages using headings, landmarks, and keyboard shortcuts |
-| **[Navigating Repositories](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Explore a real repository - files, branches, commits, contributors |
-| **[Working with Issues](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Search, file, comment on, and triage issues using [Markdown](https://community-access.github.io/git-going-with-github/COMING_SOON.html) |
-| **[Understanding Pull Requests](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Read diffs, write inline review comments, approve and merge |
-| **[Your First Contribution Sprint](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Make a real contribution to the shared practice repository - with automated bot feedback and human peer review |
-| **[Community and Culture](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Open source etiquette, constructive feedback, [managing notifications](https://community-access.github.io/git-going-with-github/COMING_SOON.html), organizing with [labels](https://community-access.github.io/git-going-with-github/COMING_SOON.html) |
+| **[Welcome and Setup Check](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html)** | Introductions, verify everyone's screen reader and browser are ready |
+| **[Screen Reader Orientation to GitHub](https://community-access.org/git-going-with-github/docs/01-understanding-github-web-structure.html)** | Navigate GitHub pages using headings, landmarks, and keyboard shortcuts |
+| **[Navigating Repositories](https://community-access.org/git-going-with-github/docs/02-navigating-repositories.html)** | Explore a real repository - files, branches, commits, contributors |
+| **[Working with Issues](https://community-access.org/git-going-with-github/docs/04-working-with-issues.html)** | Search, file, comment on, and triage issues using [Markdown](https://community-access.org/git-going-with-github/docs/appendix-e-github-flavored-markdown.html) |
+| **[Understanding Pull Requests](https://community-access.org/git-going-with-github/docs/05-working-with-pull-requests.html)** | Read diffs, write inline review comments, approve and merge |
+| **[Your First Contribution Sprint](https://community-access.org/git-going-with-github/docs/06-merge-conflicts.html)** | Make a real contribution to the shared practice repository - with automated bot feedback and human peer review |
+| **[Community and Culture](https://community-access.org/git-going-with-github/docs/07-culture-etiquette.html)** | Open source etiquette, constructive feedback, [managing notifications](https://community-access.org/git-going-with-github/docs/09-notifications.html), organizing with [labels](https://community-access.org/git-going-with-github/docs/08-labels-milestones-projects.html) |
 
 You will also work through [GitHub Skills](https://skills.github.com/) modules - interactive, bot-guided courses that run in your own GitHub account. A bot named Mona creates real issues and pull requests for you, verifies your actions, and guides you through each step. It is the same mechanism used by real open source projects.
 
-### Day 2 - From Contributor to Product Maker (VS Code + [Accessibility Agents](https://community-access.github.io/accessibility-agents))
+### Day 2 - From Contributor to Product Maker (VS Code + [Accessibility Agents](https://community-access.org/accessibility-agents))
 
 You earned the tools. Now you wield them.
 
 | Block | What Happens |
 |-------|-------------|
 | **Day 1 Debrief** | Celebrate what shipped, surface questions, set your Day 2 goal |
-| **[VS Code Setup](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Screen reader mode, workspace navigation, the bridge from browser to editor |
-| **[Deep Contribution with Copilot](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Use [GitHub Copilot](https://github.com/features/copilot) as a writing partner - draft improvements, review your own work, commit with confidence |
-| **[Activate the Agents](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Run six AI agents that amplify every skill you built on Day 1 - daily briefings, issue triage, PR review, accessibility monitoring |
-| **[Ship Your Contribution](https://community-access.github.io/git-going-with-github/COMING_SOON.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
+| **[VS Code Setup](https://community-access.org/git-going-with-github/docs/10-vscode-basics.html)** | Screen reader mode, workspace navigation, the bridge from browser to editor |
+| **[Deep Contribution with Copilot](https://community-access.org/git-going-with-github/docs/13-github-copilot.html)** | Use [GitHub Copilot](https://github.com/features/copilot) as a writing partner - draft improvements, review your own work, commit with confidence |
+| **[Activate the Agents](https://community-access.org/git-going-with-github/docs/16-accessibility-agents.html)** | Run six AI agents that amplify every skill you built on Day 1 - daily briefings, issue triage, PR review, accessibility monitoring |
+| **[Ship Your Contribution](https://community-access.org/git-going-with-github/docs/14-accessible-code-review.html)** | Open a real pull request to a live public repository. Your facilitator reviews and merges it. |
 | **Design the Future** | Collaborative speccing session - what should the next version of these tools look like? Your ideas, on the record. |
 
 ---
@@ -148,7 +150,7 @@ All exercises work with any of these. Where keyboard commands differ, we provide
 
 ### Software to Install
 
-Install these before the workshop. Detailed, screen-reader-friendly installation instructions are in our [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html).
+Install these before the workshop. Detailed, screen-reader-friendly installation instructions are in our [Pre-Workshop Setup Guide](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html).
 
 1. **Git** - the version control system underneath GitHub
    - Windows: Download from [Git for Windows download page](https://git-scm.com/download/win) - run the installer with default options
@@ -195,7 +197,7 @@ If you do not have a GitHub account, create one before the workshop:
 
 Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
 
-Our [Pre-Workshop Setup Guide](https://community-access.github.io/git-going-with-github/COMING_SOON.html) walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.
+Our [Pre-Workshop Setup Guide](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.
 
 ---
 
@@ -207,7 +209,7 @@ Registration requires two steps. Both are required.
 
 **Step 2** - Sign into your free [GitHub](https://github.com) account, then file a GitHub issue with your name, email, and screen reader preference. You must be signed in to file the issue. If you do not have an account yet, [create one here](https://github.com/signup) or the registration page will walk you through it.
 
-> [**Go to the registration page**](https://community-access.github.io/git-going-with-github/REGISTER.html) to complete both steps - it only takes a few minutes.
+> [**Go to the registration page**](https://community-access.org/git-going-with-github/REGISTER.html) to complete both steps - it only takes a few minutes.
 
 Registered: <span id="registration-count-2" aria-live="polite">loading...</span> out of 75 spots
 
@@ -221,7 +223,7 @@ Every step in this workshop is written three ways - for NVDA, for JAWS, and for 
 
 And the goal is not just "learn GitHub." The goal is to move you from **user** to **maker**. From someone who encounters accessibility barriers to someone who files the issue, proposes the fix, reviews the pull request, and ships the solution. That arc - from observer to contributor to product maker - is what the two days are designed to deliver.
 
-The curriculum includes [17 chapters](https://community-access.github.io/git-going-with-github/COMING_SOON.html), [25 reference appendices](https://community-access.github.io/git-going-with-github/COMING_SOON.html), 24 hands-on exercises, a shared practice repository with automated feedback bots, three [GitHub Skills](https://skills.github.com/) modules with a bot that verifies your work in real time, and a live open source project where your contributions are merged on Day 2.
+The curriculum includes [17 chapters](https://community-access.org/git-going-with-github/docs/course-guide.html), [25 reference appendices](https://community-access.org/git-going-with-github/docs/course-guide.html), 24 hands-on exercises, a shared practice repository with automated feedback bots, three [GitHub Skills](https://skills.github.com/) modules with a bot that verifies your work in real time, and a live open source project where your contributions are merged on Day 2.
 
 All of it is open source. All of it is yours to keep, fork, and share.
 
@@ -261,7 +263,7 @@ No. The workshop, all software, and all materials are free.
 
 Know someone who would benefit from this workshop? Share this page:
 
-**Workshop site:** [GIT Going with GitHub workshop site](https://community-access.github.io/git-going-with-github/)
+**Workshop site:** [GIT Going with GitHub workshop site](https://community-access.org/git-going-with-github/)
 **GitHub repo:** [GIT Going with GitHub on GitHub](https://github.com/community-access/git-going-with-github)
 
 The best way to make open source more accessible is to bring more people who use assistive technology into the room where it is built.
@@ -278,4 +280,4 @@ A sincere thank you to the [Visual Studio Code](https://code.visualstudio.com/) 
 
 *All workshop materials are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).*
 
-*A [Community Access](https://community-access.github.io) initiative.*
+*A [Community Access](https://community-access.org) initiative.*
