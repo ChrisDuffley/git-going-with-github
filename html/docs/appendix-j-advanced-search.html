@@ -59,10 +59,10 @@
 <li><strong>Issues/PRs list:</strong> Each tab has its own search bar pre-scoped to that repository</li>
 <li><strong>Advanced Search UI:</strong> <code>github.com/search/advanced</code> - a form with individual fields for each filter. Accessible but verbose; query syntax below is faster.</li>
 </ul>
-<p><strong>Keyboard to global search:</strong></p>
-<pre><code class="hljs">/ → <span class="hljs-type">Focus</span> the global search bar (works on most <span class="hljs-type">GitHub</span> pages)
-<span class="hljs-type">Type</span> your query → <span class="hljs-type">Enter</span>
-→ <span class="hljs-type">Results</span> page opens, grouped by <span class="hljs-keyword">type</span> (<span class="hljs-type">Code</span>, <span class="hljs-type">Issues</span>, <span class="hljs-type">PRs</span>, <span class="hljs-type">Repositories</span>, etc.)</code></pre>
+<h3>Keyboard to global search</h3>
+<pre><code class="hljs language-text">/ → Focus the global search bar (works on most GitHub pages)
+Type your query → Enter
+→ Results page opens, grouped by type (Code, Issues, PRs, Repositories, etc.)</code></pre>
 <hr>
 <h2>2. Search Scopes</h2>
 <p>By default, GitHub searches across all of GitHub. Scope modifiers restrict results:</p>
@@ -253,30 +253,30 @@
 <h3>Going to the Issues search directly</h3>
 <p>GitHub&#39;s issue/PR search is at <code>github.com/issues</code> (your issues) or <code>github.com/pulls</code> (your PRs). The search bar there is pre-scoped to &quot;repos you have access to involving you.&quot;</p>
 <h3>Practical queries</h3>
-<p><strong>Find all unassigned, open accessibility issues across an org:</strong></p>
-<pre><code class="hljs">org:community-<span class="hljs-keyword">access</span> <span class="hljs-keyword">is</span>:issue <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> label:accessibility <span class="hljs-keyword">no</span>:assignee</code></pre>
-<p><strong>Find good first issues in any language:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:issue <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> label:&quot;good first issue&quot; <span class="hljs-keyword">no</span>:assignee</code></pre>
-<p><strong>Find good first issues in a specific language:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:issue <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> label:&quot;good first issue&quot; <span class="hljs-keyword">language</span>:python <span class="hljs-keyword">no</span>:assignee</code></pre>
-<p><strong>Find all PRs you need to review:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:pr <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> review-requested:<span class="hljs-meta">@me</span></code></pre>
-<p><strong>Find all open PRs where you were mentioned:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:pr <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> mentions:<span class="hljs-meta">@me</span></code></pre>
-<p><strong>Find your open issues across all repos:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:issue <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> author:<span class="hljs-meta">@me</span></code></pre>
-<p><strong>Find issues that are stale (open, not updated in 6+ months):</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:issue <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> repo:<span class="hljs-keyword">owner</span>/<span class="hljs-type">name</span> updated:&lt;<span class="hljs-number">2024</span><span class="hljs-number">-08</span><span class="hljs-number">-01</span></code></pre>
+<h4>Find all unassigned, open accessibility issues across an org</h4>
+<pre><code class="hljs language-text">org:community-access is:issue is:open label:accessibility no:assignee</code></pre>
+<h4>Find good first issues in any language</h4>
+<pre><code class="hljs language-text">is:issue is:open label:&quot;good first issue&quot; no:assignee</code></pre>
+<h4>Find good first issues in a specific language</h4>
+<pre><code class="hljs language-text">is:issue is:open label:&quot;good first issue&quot; language:python no:assignee</code></pre>
+<h4>Find all PRs you need to review</h4>
+<pre><code class="hljs language-text">is:pr is:open review-requested:@me</code></pre>
+<h4>Find all open PRs where you were mentioned</h4>
+<pre><code class="hljs language-text">is:pr is:open mentions:@me</code></pre>
+<h4>Find your open issues across all repos</h4>
+<pre><code class="hljs language-text">is:issue is:open author:@me</code></pre>
+<h4>Find issues that are stale (open, not updated in 6+ months)</h4>
+<pre><code class="hljs language-text">is:issue is:open repo:owner/name updated:&lt;2024-08-01</code></pre>
 <hr>
 <h2>5. Searching Code</h2>
 <p>Code search operates differently from issue search. As of 2024, GitHub uses an improved code search engine (sometimes called &quot;code search v2&quot;) with better indexing.</p>
-<p><strong>Basic code search:</strong></p>
-<pre><code class="hljs">repo:<span class="hljs-keyword">owner</span>/<span class="hljs-type">name</span> <span class="hljs-keyword">language</span>:javascript aria-label</code></pre>
-<p><strong>Find uses of a function across a repo:</strong></p>
-<pre><code class="hljs">repo:<span class="hljs-keyword">owner</span>/<span class="hljs-type">name</span> symbol:handleKeyDown</code></pre>
-<p><strong>Find a pattern across all repos in an org:</strong></p>
-<pre><code class="hljs">org:community-<span class="hljs-keyword">access</span> aria-hidden=<span class="hljs-string">&quot;true&quot;</span></code></pre>
-<p><strong>Code search qualifiers:</strong></p>
+<h3>Basic code search</h3>
+<pre><code class="hljs language-text">repo:owner/name language:javascript aria-label</code></pre>
+<h3>Find uses of a function across a repo</h3>
+<pre><code class="hljs language-text">repo:owner/name symbol:handleKeyDown</code></pre>
+<h3>Find a pattern across all repos in an org</h3>
+<pre><code class="hljs language-text">org:community-access aria-hidden=&quot;true&quot;</code></pre>
+<h3>Code search qualifiers</h3>
 <table>
 <thead>
 <tr>
@@ -311,21 +311,21 @@
 </tbody></table>
 <hr>
 <h2>6. Searching Commits</h2>
-<p><strong>Find commits with a keyword in the message:</strong></p>
-<pre><code class="hljs">repo:<span class="hljs-keyword">owner</span>/<span class="hljs-type">name</span> fix keyboard navigation</code></pre>
-<p><strong>Find commits by a specific author:</strong></p>
-<pre><code class="hljs">repo:<span class="hljs-keyword">owner</span>/<span class="hljs-type">name</span> author:username</code></pre>
-<p><strong>Find commits in a date range:</strong></p>
-<pre><code class="hljs"><span class="hljs-attribute">repo</span>:owner/name committer-date:<span class="hljs-number">2025</span>-<span class="hljs-number">01</span>-<span class="hljs-number">01</span>..<span class="hljs-number">2025</span>-<span class="hljs-number">03</span>-<span class="hljs-number">31</span></code></pre>
-<p><strong>Find commits that touched a specific file:</strong></p>
-<pre><code class="hljs">repo:<span class="hljs-keyword">owner</span>/<span class="hljs-type">name</span> <span class="hljs-keyword">path</span>:docs/README.md</code></pre>
+<h3>Find commits with a keyword in the message</h3>
+<pre><code class="hljs language-text">repo:owner/name fix keyboard navigation</code></pre>
+<h3>Find commits by a specific author</h3>
+<pre><code class="hljs language-text">repo:owner/name author:username</code></pre>
+<h3>Find commits in a date range</h3>
+<pre><code class="hljs language-text">repo:owner/name committer-date:2025-01-01..2025-03-31</code></pre>
+<h3>Find commits that touched a specific file</h3>
+<pre><code class="hljs language-text">repo:owner/name path:docs/README.md</code></pre>
 <hr>
 <h2>7. Searching Repositories</h2>
-<p><strong>Find accessible repos by topic:</strong></p>
-<pre><code class="hljs"><span class="hljs-symbol">topic:</span>accessibility stars:&gt;<span class="hljs-number">50</span> <span class="hljs-built_in">is</span>:<span class="hljs-keyword">public</span></code></pre>
-<p><strong>Find repos with a specific language, sorted by stars:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">language</span>:typescript topic:screen-reader <span class="hljs-keyword">sor</span><span class="hljs-variable">t:stars</span>-desc</code></pre>
-<p><strong>Repository qualifiers:</strong></p>
+<h3>Find accessible repos by topic</h3>
+<pre><code class="hljs language-text">topic:accessibility stars:&gt;50 is:public</code></pre>
+<h3>Find repos with a specific language, sorted by stars</h3>
+<pre><code class="hljs language-text">language:typescript topic:screen-reader sort:stars-desc</code></pre>
+<h3>Repository qualifiers</h3>
 <table>
 <thead>
 <tr>
@@ -368,23 +368,23 @@
 </tbody></table>
 <hr>
 <h2>8. Searching Users and Organizations</h2>
-<p><strong>Find users:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">type</span>:<span class="hljs-keyword">user</span> <span class="hljs-title">location</span>:Seattle followers:&gt;<span class="hljs-number">100</span></code></pre>
-<p><strong>Find organizations:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">type</span>:org topic:accessibility</code></pre>
+<h3>Find users</h3>
+<pre><code class="hljs language-text">type:user location:Seattle followers:&gt;100</code></pre>
+<h3>Find organizations</h3>
+<pre><code class="hljs language-text">type:org topic:accessibility</code></pre>
 <hr>
 <h2>9. Practical Queries for This Workshop</h2>
 <p>Bookmark these for use during the hackathon:</p>
-<p><strong>Find open contributions you can make right now in accessibility-agents:</strong></p>
-<pre><code class="hljs">repo:community-<span class="hljs-keyword">access</span>/accessibility-agents <span class="hljs-keyword">is</span>:issue <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> label:&quot;good first issue&quot; <span class="hljs-keyword">no</span>:assignee</code></pre>
-<p><strong>Check whether your issue is already filed:</strong></p>
-<pre><code class="hljs">repo:community-<span class="hljs-keyword">access</span>/accessibility-agents <span class="hljs-keyword">is</span>:issue keyboard navigation</code></pre>
-<p><strong>Find all accessibility-related issues in a project:</strong></p>
-<pre><code class="hljs">repo:community-<span class="hljs-keyword">access</span>/accessibility-agents <span class="hljs-keyword">is</span>:issue <span class="hljs-keyword">label</span>:accessibility <span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span></code></pre>
-<p><strong>See all your merged PRs (proof of contribution):</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:pr <span class="hljs-keyword">is</span>:merged author:@<span class="hljs-keyword">me</span></code></pre>
-<p><strong>Find recent discussions about a topic:</strong></p>
-<pre><code class="hljs">repo:community-<span class="hljs-keyword">access</span>/accessibility-agents <span class="hljs-keyword">in</span>:discussions screen reader</code></pre>
+<h3>Find open contributions you can make right now in accessibility-agents</h3>
+<pre><code class="hljs language-text">repo:community-access/accessibility-agents is:issue is:open label:&quot;good first issue&quot; no:assignee</code></pre>
+<h3>Check whether your issue is already filed</h3>
+<pre><code class="hljs language-text">repo:community-access/accessibility-agents is:issue keyboard navigation</code></pre>
+<h3>Find all accessibility-related issues in a project</h3>
+<pre><code class="hljs language-text">repo:community-access/accessibility-agents is:issue label:accessibility is:open</code></pre>
+<h3>See all your merged PRs (proof of contribution)</h3>
+<pre><code class="hljs language-text">is:pr is:merged author:@me</code></pre>
+<h3>Find recent discussions about a topic</h3>
+<pre><code class="hljs language-text">repo:community-access/accessibility-agents in:discussions screen reader</code></pre>
 <hr>
 <h2>10. Saving and Reusing Searches</h2>
 <p>GitHub does not have a built-in saved-search feature, but you can:</p>
@@ -393,8 +393,8 @@
 <li><strong>Pin in notifications</strong> - if you&#39;re watching a repo, set up notification filters</li>
 <li><strong>Accessibility Agents</strong> - use <code>/my-issues</code> and <code>/my-prs</code> for your personal saved-search equivalents without leaving VS Code</li>
 </ol>
-<p><strong>Example bookmarkable URL:</strong></p>
-<pre><code class="hljs">https://github.com/issues?q=<span class="hljs-literal">is</span><span class="hljs-meta">%3Aissue</span>+<span class="hljs-literal">is</span><span class="hljs-meta">%3Aopen</span>+assignee<span class="hljs-meta">%3A</span><span class="hljs-meta">%40me</span></code></pre>
+<h3>Example bookmarkable URL</h3>
+<pre><code class="hljs language-text">https://github.com/issues?q=is%3Aissue+is%3Aopen+assignee%3A%40me</code></pre>
 <hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a></em></p>
 

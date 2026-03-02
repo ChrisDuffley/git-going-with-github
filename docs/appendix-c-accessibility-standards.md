@@ -1,4 +1,5 @@
 # Appendix C: Accessibility Standards Reference
+>
 > **Listen to Episode 20:** [Accessibility Standards Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## WCAG, ARIA, and What They Mean for Your Contributions
@@ -9,10 +10,10 @@
 
 ## Table of Contents
 
-1. [WCAG 2.2 - The Four Principles](#1-wcag-22--the-four-principles)
+1. [WCAG 2.2 - The Four Principles](#1-wcag-22---the-four-principles)
 2. [Conformance Levels: A, AA, AAA](#2-conformance-levels-a-aa-aaa)
 3. [Key Success Criteria for Web Contributions](#3-key-success-criteria-for-web-contributions)
-4. [ARIA - Roles, States, and Properties](#4-aria--roles-states-and-properties)
+4. [ARIA - Roles, States, and Properties](#4-aria---roles-states-and-properties)
 5. [ARIA Landmark Roles](#5-aria-landmark-roles)
 6. [Common ARIA Patterns](#6-common-aria-patterns)
 7. [How Standards Apply to GitHub Contributions](#7-how-standards-apply-to-github-contributions)
@@ -27,7 +28,7 @@
 WCAG (Web Content Accessibility Guidelines) is organized around four principles, often abbreviated **POUR**:
 
 | Principle | Meaning | Example Failure |
-|-----------|---------|-----------------|
+| -----------  | ---------  | -----------------  |
 | **Perceivable** | Information must be presentable to users in ways they can perceive | An image with no alt text - a screen reader user gets nothing |
 | **Operable** | UI components and navigation must be operable | A button that only works on hover - keyboard users cannot activate it |
 | **Understandable** | Information and operation must be understandable | An error message that says "Invalid input" with no explanation of what is wrong |
@@ -40,7 +41,7 @@ Every WCAG success criterion belongs to one of these four principles.
 ## 2. Conformance Levels: A, AA, AAA
 
 | Level | Requirement | Who targets this |
-|-------|-------------|-----------------|
+| -------  | -------------  | -----------------  |
 | **A** | Minimum accessibility - the baseline that removes the most severe barriers | Required by most accessibility laws |
 | **AA** | Enhanced accessibility - removes significant barriers | Required by WCAG 2.2 compliance targets, most government and enterprise standards, GitHub's own accessibility commitment |
 | **AAA** | Highest level - removes remaining barriers for the most niche cases | Not universally required; applied where feasible |
@@ -56,7 +57,7 @@ These are the criteria you will most commonly encounter when contributing to web
 ### Perceivable
 
 | Criterion | Level | What It Requires |
-|-----------|-------|-----------------|
+| -----------  | -------  | -----------------  |
 | **1.1.1 Non-text Content** | A | All images, icons, and non-text content have a text alternative (`alt` attribute, `aria-label`, etc.) |
 | **1.3.1 Info and Relationships** | A | Structure conveyed visually (headings, lists, tables) is also conveyed programmatically |
 | **1.3.2 Meaningful Sequence** | A | Reading order makes sense when CSS is removed |
@@ -70,7 +71,7 @@ These are the criteria you will most commonly encounter when contributing to web
 ### Operable
 
 | Criterion | Level | What It Requires |
-|-----------|-------|-----------------|
+| -----------  | -------  | -----------------  |
 | **2.1.1 Keyboard** | A | All functionality is available via keyboard |
 | **2.1.2 No Keyboard Trap** | A | Keyboard focus can always be moved away from any component |
 | **2.4.1 Bypass Blocks** | A | A mechanism to skip repeated navigation (skip link) |
@@ -85,7 +86,7 @@ These are the criteria you will most commonly encounter when contributing to web
 ### Understandable
 
 | Criterion | Level | What It Requires |
-|-----------|-------|-----------------|
+| -----------  | -------  | -----------------  |
 | **3.1.1 Language of Page** | A | The default language is identified in the HTML (`lang` attribute) |
 | **3.2.1 On Focus** | A | Receiving focus does not trigger unexpected context changes |
 | **3.2.2 On Input** | A | Changing a setting does not cause unexpected changes unless the user is warned |
@@ -96,7 +97,7 @@ These are the criteria you will most commonly encounter when contributing to web
 ### Robust
 
 | Criterion | Level | What It Requires |
-|-----------|-------|-----------------|
+| -----------  | -------  | -----------------  |
 | **4.1.1 Parsing** | A | HTML/markup does not have errors that break AT interpretation |
 | **4.1.2 Name, Role, Value** | A | All UI components have accessible names, roles, and states that can be programmatically determined |
 | **4.1.3 Status Messages** | AA | Status messages (e.g. "item added to cart") are announced without receiving focus |
@@ -107,15 +108,15 @@ These are the criteria you will most commonly encounter when contributing to web
 
 WAI-ARIA (Accessible Rich Internet Applications) fills the gap between what HTML natively expresses and what complex interactive widgets require.
 
-**Three categories:**
+### Three categories
 
 | Category | Purpose | Examples |
-|----------|---------|---------|
+| ----------  | ---------  | ---------  |
 | **Roles** | What the element *is* | `role="button"`, `role="dialog"`, `role="tab"` |
 | **States** | Current condition (can change) | `aria-expanded="false"`, `aria-checked="true"`, `aria-disabled="true"` |
 | **Properties** | Stable characteristics | `aria-label="Close dialog"`, `aria-required="true"`, `aria-describedby="hint-text"` |
 
-**Important rules:**
+### Important rules
 
 1. **Don't use ARIA if native HTML suffices.** A `<button>` is already a button - adding `role="button"` to a `<div>` is only needed when HTML semantics cannot be used.
 2. **All interactive ARIA widgets must be keyboard operable.** Adding `role="button"` means you must also handle `Enter` and `Space` keypresses in JavaScript.
@@ -128,7 +129,7 @@ WAI-ARIA (Accessible Rich Internet Applications) fills the gap between what HTML
 Landmarks let screen reader users jump directly to major sections of a page. GitHub uses these extensively; screen reader users navigate between them with `D` (NVDA/JAWS) or the Rotor (VoiceOver).
 
 | Role | HTML Equivalent | Purpose |
-|------|----------------|---------|
+| ------  | ----------------  | ---------  |
 | `banner` | `<header>` | Site-wide header |
 | `navigation` | `<nav>` | Navigation links |
 | `main` | `<main>` | Primary page content |
@@ -223,7 +224,7 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 ### Automated Tools (catch ~30-40% of issues)
 
 | Tool | Use |
-|------|-----|
+| ------  | -----  |
 | [axe DevTools](https://www.deque.com/axe/) | Browser extension - run on any page, get WCAG violations with criterion references |
 | [WAVE](https://wave.webaim.org/) | Browser extension or web service - visual overlay showing issues |
 | [Lighthouse](https://developer.chrome.com/docs/lighthouse/) | Built into Chrome DevTools - accessibility audit with scores |
@@ -242,7 +243,7 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 ## 9. Quick Reference: What to Check in a PR
 
 | Check | WCAG Criterion |
-|-------|---------------|
+| -------  | ---------------  |
 | New images have alt text | 1.1.1 |
 | Heading levels are in order | 1.3.1 |
 | Links have descriptive text | 2.4.4 |
@@ -259,7 +260,7 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 ## 10. Official References
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | WCAG 2.2 Full Specification | [w3.org/TR/WCAG22](https://www.w3.org/TR/WCAG22/) |
 | WCAG 2.2 Quick Reference | [w3.org/WAI/WCAG22/quickref](https://www.w3.org/WAI/WCAG22/quickref/) |
 | Understanding WCAG 2.2 | [w3.org/WAI/WCAG22/Understanding](https://www.w3.org/WAI/WCAG22/Understanding/) |

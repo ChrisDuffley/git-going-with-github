@@ -43,7 +43,7 @@
 <li>If listed but <strong>not Pressed</strong> (or <strong>&quot;Enable&quot;</strong>) - activate the toggle to enable it</li>
 <li>If not listed at all - the feature has graduated to the standard interface; it is active automatically</li>
 </ul>
-<p>Full step-by-step instructions with per-screen-reader commands are in <a href="00-pre-workshop-setup.html#step-4-check-github-feature-preview-settings">Pre-Workshop Setup, Step 4</a>.</p>
+<p>Full step-by-step instructions with per-screen-reader commands are in <a href="00-pre-workshop-setup.html#step-4---check-github-feature-preview-settings">Pre-Workshop Setup, Step 4</a>.</p>
 <p><strong>Browse vs Focus Mode (NVDA):</strong> Toggle between modes with <code>NVDA+Space</code> (NVDA key = <code>Insert</code> or <code>Caps Lock</code>). Use <strong>Browse Mode</strong> (the default) for reading lists, headings, and issue content. Switch to <strong>Focus Mode</strong> when typing in text fields and search boxes. Use <code>NVDA+F7</code> at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page - this is your orientation tool.</p>
 </blockquote>
 <hr>
@@ -108,10 +108,10 @@ gh issue list --state closed</code></pre>
 <hr>
 <h2>The Issues List Page</h2>
 <h3>Page structure</h3>
-<pre><code class="hljs">[<span class="hljs-keyword">Search</span> / filter bar]          ← controls <span class="hljs-built_in">at</span> the <span class="hljs-built_in">top</span>
-[State tabs: <span class="hljs-keyword">Open</span> | <span class="hljs-type">Closed</span>]    ← filter <span class="hljs-built_in">by</span> status
+<pre><code class="hljs language-text">[Search / filter bar]          ← controls at the top
+[State tabs: Open | Closed]    ← filter by status
 [Issues list]                  ← each issue is one list item or heading
-[Pagination]                   ← <span class="hljs-built_in">at</span> the <span class="hljs-built_in">bottom</span></code></pre>
+[Pagination]                   ← at the bottom</code></pre>
 <h3>How to read the issue list</h3>
 <details>
 <summary>Visual / mouse users</summary>
@@ -159,14 +159,14 @@ gh issue list --state closed</code></pre>
 <li>Type your filter or search query</li>
 <li>Press <code>Enter</code> to apply</li>
 </ol>
-<p><strong>Useful filter queries:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> label:<span class="hljs-string">&quot;good first issue&quot;</span>    ← great <span class="hljs-keyword">for</span> finding your first contribution
-<span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> label:accessibility         ← accessibility-related <span class="hljs-keyword">open</span> issues
-<span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> assignee:<span class="hljs-meta">@me</span>                ← issues assigned to you
-<span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> no:assignee                 ← unassigned issues
-<span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> author:<span class="hljs-meta">@me</span>                  ← issues you filed
-mentions:<span class="hljs-meta">@me</span>                        ← <span class="hljs-keyword">where</span> you were <span class="hljs-meta">@mentioned</span>
-<span class="hljs-keyword">is</span>:<span class="hljs-keyword">open</span> <span class="hljs-keyword">is</span>:unread                   ← issues with unread activity</code></pre>
+<h4>Useful filter queries</h4>
+<pre><code class="hljs language-text">is:open label:&quot;good first issue&quot;    ← great for finding your first contribution
+is:open label:accessibility         ← accessibility-related open issues
+is:open assignee:@me                ← issues assigned to you
+is:open no:assignee                 ← unassigned issues
+is:open author:@me                  ← issues you filed
+mentions:@me                        ← where you were @mentioned
+is:open is:unread                   ← issues with unread activity</code></pre>
 <h3>Using the filter buttons</h3>
 <p>Above the issue list, there is an <strong>actions toolbar</strong> with filter buttons for Labels, Milestones, Assignees, etc.</p>
 <details>
@@ -224,21 +224,21 @@ gh issue list --search <span class="hljs-string">&quot;screen reader&quot;</span
 <h2>Reading an Issue</h2>
 <h3>Landing on an issue page</h3>
 <p>When you open an issue, the page structure is:</p>
-<pre><code class="hljs">[<span class="hljs-symbol">Issue</span> title - h1]
-[<span class="hljs-symbol">Open</span>/<span class="hljs-symbol">Closed</span> status badge]
-[<span class="hljs-symbol">Author</span>, timestamp, comment count]
+<pre><code class="hljs language-text">[Issue title - h1]
+[Open/Closed status badge]
+[Author, timestamp, comment count]
 ─────────────────────────────────
-[<span class="hljs-symbol">Issue</span> description - <span class="hljs-symbol">Main</span> content]   ← the original post
-[<span class="hljs-symbol">Labels</span>, <span class="hljs-symbol">Assignees</span> sidebar - h3s]
+[Issue description - Main content]   ← the original post
+[Labels, Assignees sidebar - h3s]
 ─────────────────────────────────
-[<span class="hljs-symbol">Activity</span> / <span class="hljs-symbol">Timeline</span>]                ← comments and events
-  [<span class="hljs-symbol">First</span> comment - h3]
-  [<span class="hljs-symbol">Second</span> comment - h3]
+[Activity / Timeline]                ← comments and events
+  [First comment - h3]
+  [Second comment - h3]
   ...
 ─────────────────────────────────
-[<span class="hljs-symbol">Add</span> a comment - landmark]
-[<span class="hljs-symbol">Comment</span> text area]
-[<span class="hljs-symbol">Close</span> issue / <span class="hljs-symbol">Submit</span> button]</code></pre>
+[Add a comment - landmark]
+[Comment text area]
+[Close issue / Submit button]</code></pre>
 <h3>Quick navigation</h3>
 <table>
 <thead>
@@ -399,7 +399,7 @@ gh issue comment 42 --body <span class="hljs-string">&quot;Thanks for reporting 
 </tbody></table>
 <h3>GitHub shortcuts for the Issues pages</h3>
 <p>These are the GitHub built-in shortcuts for working with issues. Enable Focus Mode first (NVDA: <code>NVDA+Space</code>, JAWS: <code>Insert+Z</code>) before using single-key shortcuts.</p>
-<p><strong>On the Issues list page:</strong></p>
+<h4>On the Issues list page</h4>
 <table>
 <thead>
 <tr>
@@ -427,7 +427,7 @@ gh issue comment 42 --body <span class="hljs-string">&quot;Thanks for reporting 
 | <code>M</code> | Filter by or edit milestones |
 | <code>A</code> | Filter by or edit assignee |
 | <code>O</code> or <code>Enter</code> | Open the selected issue |</p>
-<p><strong>On an open issue:</strong></p>
+<h4>On an open issue</h4>
 <table>
 <thead>
 <tr>
@@ -465,7 +465,7 @@ gh issue comment 42 --body <span class="hljs-string">&quot;Thanks for reporting 
 </tr>
 </tbody></table>
 <blockquote>
-<p><strong><code>R</code> to quote is a power move:</strong> Select any text in a comment while in Browse Mode (<code>Shift+Arrow</code> to select), then press <code>R</code>. GitHub puts the quoted text in the comment box as a Markdown blockquote. Much faster than typing <code>&gt; </code> manually.</p>
+<p><strong><code>R</code> to quote is a power move:</strong> Select any text in a comment while in Browse Mode (<code>Shift+Arrow</code> to select), then press <code>R</code>. GitHub puts the quoted text in the comment box as a Markdown blockquote. Much faster than typing <code>&gt;</code> manually.</p>
 </blockquote>
 <p>For the full shortcut system, see <a href="appendix-b-screen-reader-cheatsheet.html#github-built-in-keyboard-shortcuts">Screen Reader Cheat Sheet - GitHub Shortcuts section</a>.</p>
 <ol>
@@ -509,14 +509,14 @@ gh issue comment 42 --body <span class="hljs-string">&quot;Thanks for reporting 
 
 <h3>Filling Out the Issue Form</h3>
 <p>The issue form has these fields (order may vary depending on the template):</p>
-<p><strong>Title field:</strong></p>
+<h4>Title field</h4>
 <ol>
 <li>Find the Title input field (<code>F</code> or by landmark)</li>
 <li>Focus Mode → type a clear, specific title</li>
 <li>Good title: &quot;Screen reader announces wrong element count on Issues list with 50+ items&quot;</li>
 <li>Bad title: &quot;Bug with screen reader&quot;</li>
 </ol>
-<p><strong>Description / Body field:</strong></p>
+<h4>Description / Body field</h4>
 <ol>
 <li>Tab to the body text area</li>
 <li>Focus Mode → type using the Markdown template provided</li>
@@ -546,7 +546,7 @@ Describe what should have happened.
 <span class="hljs-section">## Additional context</span>
 
 Any other information, screenshots (with alt text), or links.</code></pre>
-<p><strong>Assigning labels from the sidebar:</strong></p>
+<h3>Assigning labels from the sidebar</h3>
 <p>While the form is open, the sidebar has dropdowns for Labels, Assignees, and Milestone.</p>
 <details>
 <summary>Visual / mouse users</summary>
@@ -580,7 +580,7 @@ Any other information, screenshots (with alt text), or links.</code></pre>
 </ol>
 </details>
 
-<p><strong>Submitting the issue:</strong></p>
+<h3>Submitting the issue</h3>
 <ol>
 <li>Tab to &quot;Submit new issue&quot; button</li>
 <li>Press <code>Enter</code></li>
@@ -638,10 +638,10 @@ gh issue create --template <span class="hljs-string">&quot;bug_report.md&quot;</
 </tbody></table>
 <h3>Mentioning another issue in a comment</h3>
 <p>Simply type <code>#</code> followed by a number anywhere in a comment body. GitHub autocompletes with a dropdown of matching issues and PRs:</p>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: <span class="hljs-built_in">Type</span> <span class="hljs-meta"># in the comment box (Focus Mode)</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: A dropdown appears <span class="hljs-keyword">with</span> issues <span class="hljs-built_in">and</span> PRs
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: ↑/↓ <span class="hljs-keyword">to</span> navigate, <span class="hljs-built_in">or</span> <span class="hljs-built_in">type</span> more numbers <span class="hljs-keyword">to</span> filter
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Enter <span class="hljs-keyword">to</span> <span class="hljs-built_in">insert</span> the reference</code></pre>
+<pre><code class="hljs language-text">Step 1: Type # in the comment box (Focus Mode)
+Step 2: A dropdown appears with issues and PRs
+Step 3: ↑/↓ to navigate, or type more numbers to filter
+Step 4: Enter to insert the reference</code></pre>
 <h3>Cross-repo references</h3>
 <p><code>owner/repo#42</code> - references issue #42 in a different repository.</p>
 <hr>
@@ -670,18 +670,18 @@ gh issue create --template <span class="hljs-string">&quot;bug_report.md&quot;</
 </tbody></table>
 <h3>Creating a Sub-Issue</h3>
 <p>From any open issue:</p>
-<pre><code class="hljs"><span class="hljs-number">1.</span> Open <span class="hljs-keyword">the</span> parent issue page
-<span class="hljs-number">2.</span> Scroll <span class="hljs-built_in">to</span> (<span class="hljs-keyword">or</span> H-navigate <span class="hljs-built_in">to</span>) <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;Sub-issues&quot;</span> section <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> issue body/sidebar
-<span class="hljs-number">3.</span> Tab <span class="hljs-built_in">to</span> <span class="hljs-string">&quot;Add sub-issue&quot;</span> button → Enter
-<span class="hljs-number">4.</span> Type <span class="hljs-keyword">the</span> issue <span class="hljs-built_in">number</span> <span class="hljs-keyword">or</span> title <span class="hljs-built_in">to</span> search
-<span class="hljs-number">5.</span> Select <span class="hljs-keyword">the</span> issue <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> dropdown → Enter <span class="hljs-built_in">to</span> link
-   Or: select <span class="hljs-string">&quot;Create new issue&quot;</span> <span class="hljs-built_in">to</span> <span class="hljs-built_in">create</span> <span class="hljs-keyword">and</span> link <span class="hljs-keyword">in</span> <span class="hljs-literal">one</span> step</code></pre>
+<pre><code class="hljs language-text">1. Open the parent issue page
+2. Scroll to (or H-navigate to) the &quot;Sub-issues&quot; section in the issue body/sidebar
+3. Tab to &quot;Add sub-issue&quot; button → Enter
+4. Type the issue number or title to search
+5. Select the issue from the dropdown → Enter to link
+   Or: select &quot;Create new issue&quot; to create and link in one step</code></pre>
 <p><strong>Screen reader note:</strong> The sub-issues section is announced as a region. After linking, the child issue appears as a list item with a checkbox showing its open/closed state. Tab through to read each child&#39;s title and status.</p>
 <h3>Reading Sub-Issues on a Parent Issue</h3>
-<pre><code class="hljs">H → <span class="hljs-string">&quot;Sub-issues&quot;</span> heading
+<pre><code class="hljs language-text">H → &quot;Sub-issues&quot; heading
 ↓ → list of linked child issues
-Each item: [checkbox <span class="hljs-keyword">state</span>] [issue title] [<span class="hljs-comment">#number] [open/closed badge]</span>
-Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if you have write access)</code></pre>
+Each item: [checkbox state] [issue title] [#number] [open/closed badge]
+Tab → &quot;Add sub-issue&quot; button (if you have write access)</code></pre>
 <p><strong>Progress indicator:</strong> The parent issue shows a completion bar (e.g., &quot;3 of 7 completed&quot;) based on how many child issues are closed. Screen readers announce this as a progress region.</p>
 <h3>Viewing a Child Issue&#39;s Parent</h3>
 <p>Every child issue shows a &quot;Parent issue&quot; link near the top of the page (above the description). Navigate with <code>H</code> or links (<code>K</code>) to find it.</p>
@@ -832,37 +832,37 @@ gh issue edit 42 --milestone <span class="hljs-string">&quot;Hackathon Day 1&quo
 <li><strong>Steps to reproduce</strong> - numbered, step-by-step</li>
 <li><strong>Frequency</strong> - &quot;This happens every time&quot; vs &quot;intermittent&quot;</li>
 </ol>
-<p><strong>Example of a well-filed accessibility issue:</strong></p>
-<pre><code class="hljs">Title: Issues <span class="hljs-built_in">list</span> <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> announce label filtering results <span class="hljs-keyword">to</span> screen readers
+<h3>Example of a well-filed accessibility issue</h3>
+<pre><code class="hljs language-text">Title: Issues list does not announce label filtering results to screen readers
 
-<span class="hljs-comment">## What happened</span>
-When I apply a label filter <span class="hljs-keyword">on</span> <span class="hljs-keyword">the</span> Issues <span class="hljs-built_in">list</span> using <span class="hljs-keyword">the</span> Labels dropdown,
-<span class="hljs-keyword">the</span> filtered <span class="hljs-built_in">list</span> updates visually <span class="hljs-keyword">but</span> NVDA <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> announce <span class="hljs-keyword">that</span> <span class="hljs-keyword">the</span>
-results changed <span class="hljs-keyword">or</span> how many items are now shown.
+## What happened
+When I apply a label filter on the Issues list using the Labels dropdown,
+the filtered list updates visually but NVDA does not announce that the
+results changed or how many items are now shown.
 
-<span class="hljs-comment">## What I expected</span>
-After filtering, <span class="hljs-keyword">the</span> screen reader should announce something like
-<span class="hljs-string">&quot;14 issues open, filtered by label: accessibility&quot;</span> <span class="hljs-keyword">or</span> a live region
-update indicating <span class="hljs-keyword">the</span> results changed.
+## What I expected
+After filtering, the screen reader should announce something like
+&quot;14 issues open, filtered by label: accessibility&quot; or a live region
+update indicating the results changed.
 
-<span class="hljs-comment">## How to reproduce</span>
-<span class="hljs-number">1.</span> Navigate <span class="hljs-keyword">to</span> any repo&#x27;s Issues <span class="hljs-literal">tab</span>
-<span class="hljs-number">2.</span> Press B <span class="hljs-keyword">to</span> navigate <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;Label&quot;</span> filter button
-<span class="hljs-number">3.</span> Press Enter <span class="hljs-keyword">to</span> open <span class="hljs-keyword">the</span> dropdown
-<span class="hljs-number">4.</span> Select <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;accessibility&quot;</span> label
-<span class="hljs-number">5.</span> Press Escape <span class="hljs-keyword">to</span> close
-<span class="hljs-number">6.</span> Notice: no announcement <span class="hljs-keyword">that</span> filtering has been applied
+## How to reproduce
+1. Navigate to any repo&#x27;s Issues tab
+2. Press B to navigate to the &quot;Label&quot; filter button
+3. Press Enter to open the dropdown
+4. Select the &quot;accessibility&quot; label
+5. Press Escape to close
+6. Notice: no announcement that filtering has been applied
 
-<span class="hljs-comment">## Environment</span>
-- Screen reader: NVDA <span class="hljs-number">2025.3</span><span class="hljs-number">.3</span> (<span class="hljs-keyword">with</span> NVDA+Chrome)
-- Browser: Chrome <span class="hljs-number">124.0</span><span class="hljs-number">.6367</span><span class="hljs-number">.82</span>
-- OS: Windows <span class="hljs-number">11</span> <span class="hljs-number">22</span>H2
-- GitHub interface: Modern experience (default <span class="hljs-keyword">since</span> Jan <span class="hljs-number">2026</span>)
+## Environment
+- Screen reader: NVDA 2025.3.3 (with NVDA+Chrome)
+- Browser: Chrome 124.0.6367.82
+- OS: Windows 11 22H2
+- GitHub interface: Modern experience (default since Jan 2026)
 
-<span class="hljs-comment">## Additional context</span>
-JAWS <span class="hljs-number">2026</span> also <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> announce. VoiceOver <span class="hljs-keyword">on</span> macOS Sonoma <span class="hljs-keyword">with</span>
-Safari <span class="hljs-number">17</span> <span class="hljs-keyword">does</span> announce <span class="hljs-string">&quot;List updated&quot;</span> when filtering <span class="hljs-keyword">is</span> applied,
-so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code></pre>
+## Additional context
+JAWS 2026 also does not announce. VoiceOver on macOS Sonoma with
+Safari 17 does announce &quot;List updated&quot; when filtering is applied,
+so the macOS behavior appears correct.</code></pre>
 <hr>
 <h2>Try It: File Your First Issue</h2>
 <p><strong>Time:</strong> 3 minutes | <strong>What you need:</strong> Browser, signed in to GitHub</p>

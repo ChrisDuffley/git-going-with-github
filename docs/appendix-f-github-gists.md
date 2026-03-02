@@ -1,4 +1,5 @@
 # Appendix F: GitHub Gists
+>
 > **Listen to Episode 23:** [GitHub Gists](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Shareable Code Snippets and Notes
@@ -10,6 +11,7 @@
 ## What Is a Gist?
 
 A Gist is a Git repository that holds a single file or a small collection of files. Every Gist:
+
 - Has its own URL (e.g., `gist.github.com/username/a1b2c3d4`)
 - Is version-controlled (you can see edit history)
 - Can be **public** (anyone can see) or **secret** (only people with the link can see)
@@ -24,7 +26,7 @@ A Gist is a Git repository that holds a single file or a small collection of fil
 ## When to Use a Gist vs a Repository
 
 | Use a Gist When... | Use a Repository When... |
-|--------------------|--------------------------|
+| --------------------  | --------------------------  |
 | Sharing a single code snippet | Building a full project |
 | Posting configuration examples | Collaborating with multiple people |
 | Quick notes or documentation | Need issues, PRs, or project management |
@@ -46,7 +48,8 @@ A Gist is a Git repository that holds a single file or a small collection of fil
    - Select **"Create secret gist"** for link-only sharing
 6. The Gist is created with a unique URL you can share
 
-**Screen reader navigation:**
+#### Screen reader navigation
+
 - `D` to cycle landmarks to "Main"
 - `F` to navigate form fields
 - Tab through: Description → Filename → Content textbox → Visibility buttons
@@ -54,6 +57,7 @@ A Gist is a Git repository that holds a single file or a small collection of fil
 ### Adding Multiple Files to a Gist
 
 You can add multiple files to a single Gist:
+
 1. After typing the first filename and content, select **"Add file"** (button below the editor)
 2. Repeat for each additional file
 3. Create the Gist
@@ -102,6 +106,7 @@ Make changes locally, commit, and push just like a normal repo.
 ## Forking a Gist
 
 You can fork someone else's Gist to create your own copy:
+
 1. View the Gist
 2. Select **"Fork"** in the top-right
 3. GitHub creates a new Gist under your account
@@ -115,11 +120,13 @@ You can fork someone else's Gist to create your own copy:
 **Your Gists page:** [gist.github.com/your-username](https://gist.github.com/)
 
 All your public and secret Gists are listed here. You can:
+
 - Search your Gists by filename or content
 - Star Gists you want to reference later
 - Delete old Gists
 
-**Screen reader navigation:**
+### Screen reader navigation
+
 - Each Gist appears as a heading (H2) with its description
 - Press `2` or `H` to jump between Gists
 - Each Gist has links: "Edit," "Delete," "Star," "Embed"
@@ -131,6 +138,7 @@ All your public and secret Gists are listed here. You can:
 **Browse trending Gists:** [gist.github.com/discover](https://gist.github.com/discover)
 
 See popular Gists by language. Great for finding:
+
 - Useful scripts and utilities
 - Configuration examples
 - Code snippets for learning
@@ -140,11 +148,13 @@ See popular Gists by language. Great for finding:
 ## Gist Comments
 
 Public Gists support comments. Anyone with a GitHub account can leave a comment, making Gists useful for:
+
 - Asking questions about a snippet
 - Suggesting improvements
 - Discussing implementation details
 
-**To add a comment:**
+### To add a comment
+
 1. Scroll to the bottom of the Gist page
 2. `F` to navigate form fields → Find the comment textarea
 3. Type your comment (Markdown supported)
@@ -154,23 +164,27 @@ Public Gists support comments. Anyone with a GitHub account can leave a comment,
 
 ## Security and Privacy
 
-**Public Gists:**
+### Public Gists
+
 - Appear on your profile
 - Are indexed by search engines
 - Anyone can view, fork, and comment
 
-**Secret Gists:**
+### Secret Gists
+
 - Do not appear on your profile
 - Are not indexed by search engines
 - Anyone with the URL can view
 - Still version-controlled and can be starred
 
-**Never put sensitive data in Gists:**
+### Never put sensitive data in Gists
+
 - Passwords or API keys
 - Personal identifying information
 - Proprietary code you don't have permission to share
 
 If you accidentally post sensitive data:
+
 1. Delete the Gist immediately
 2. Revoke/regenerate any exposed credentials
 3. Remember: Forks and clones may still exist
@@ -181,7 +195,7 @@ If you accidentally post sensitive data:
 
 ### 1. Sharing Screen Reader Config
 
-```
+```text
 Filename: nvda-github-config.txt
 Content:
 # NVDA Settings for GitHub Web Navigation
@@ -195,7 +209,7 @@ Share the Gist URL with other screen reader users.
 
 ### 2. Quick Markdown Note
 
-```
+```text
 Filename: workshop-notes.md
 Content:
 # Workshop Day 1 Notes
@@ -215,7 +229,7 @@ When answering questions, paste your code as a Gist and link to it. Readers get 
 ## Gists vs GitHub Repositories - Quick Comparison
 
 | Feature | Gist | Repository |
-|---------|------|------------|
+| ---------  | ------  | ------------  |
 | Issues | No | Yes |
 | Pull Requests | No | Yes |
 | GitHub Actions | No | Yes |

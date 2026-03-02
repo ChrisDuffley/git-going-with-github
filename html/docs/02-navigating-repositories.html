@@ -40,12 +40,12 @@
 <hr>
 <h2>What Is a Repository Page?</h2>
 <p>When you navigate to a GitHub repository (e.g., <code>https://github.com/owner/repo-name</code>), you land on the <strong>repository home page</strong> (also called the Code tab). This page has several distinct regions:</p>
-<pre><code class="hljs">┌────────────────────────────────────────────────────┐
-│  Navigation bar (GitHub <span class="hljs-keyword">global</span> nav)                │
-│  avatar menu | Notifications | <span class="hljs-keyword">search</span>               │
+<pre><code class="hljs language-text">┌────────────────────────────────────────────────────┐
+│  Navigation bar (GitHub global nav)                │
+│  avatar menu | Notifications | search               │
 ├────────────────────────────────────────────────────┤
-│  Repository <span class="hljs-keyword">header</span>                                  │
-│  <span class="hljs-keyword">owner</span> / repo-<span class="hljs-type">name</span>  (h1)                            │
+│  Repository header                                  │
+│  owner / repo-name  (h1)                            │
 │  [Star] [Watch] [Fork] buttons                      │
 ├────────────────────────────────────────────────────┤
 │  Repository navigation tabs (landmark)              │
@@ -53,8 +53,8 @@
 ├─────────────────────────────┬──────────────────────┤
 │  File tree / code panel     │  Sidebar              │
 │  Branch selector            │  About section        │
-│  Files <span class="hljs-keyword">table</span> (t:<span class="hljs-keyword">table</span>)      │  Topics               │
-│  Last <span class="hljs-keyword">commit</span> message         │  Releases             │
+│  Files table (t:table)      │  Topics               │
+│  Last commit message         │  Releases             │
 ├─────────────────────────────┴──────────────────────┤
 │  README.md (rendered)                               │
 │  (a separate landmark region)                       │
@@ -68,9 +68,9 @@
 <li><strong>The tab bar</strong> is a landmark labeled &quot;Repository navigation&quot;</li>
 </ol>
 <h3>Orientation sequence (do this on every new repo)</h3>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Press <span class="hljs-number">1</span> - hear the repo name
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: Press D - navigate through landmarks <span class="hljs-keyword">to</span> learn page <span class="hljs-keyword">structure</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: Press NVDA+F7 (<span class="hljs-built_in">or</span> VO+U) - scan headings <span class="hljs-keyword">to</span> understand what<span class="hljs-comment">&#x27;s on the page</span></code></pre>
+<pre><code class="hljs language-text">Step 1: Press 1 - hear the repo name
+Step 2: Press D - navigate through landmarks to learn page structure
+Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what&#x27;s on the page</code></pre>
 <hr>
 <h2>Navigating the Repository Tabs</h2>
 <p>The main tabs are: <strong>Code</strong>, <strong>Issues</strong>, <strong>Pull Requests</strong>, <strong>Discussions</strong>, <strong>Actions</strong>, <strong>Projects</strong>, <strong>Wiki</strong>, <strong>Security</strong>, <strong>Insights</strong>, and <strong>Settings</strong> (Settings only visible to maintainers). Not all tabs appear on every repository - Discussions, Wiki, and Projects must be enabled by the repository owner.</p>
@@ -158,8 +158,8 @@
 <td><code>VO+Space</code></td>
 </tr>
 </tbody></table>
-<p><strong>Reading a row:</strong>
-Navigate to the Name column, hear the filename, then move right to read the commit message, then right again for the age. For example: &quot;docs/ | Add accessibility guide | 3 days ago&quot;</p>
+<h4>Reading a row</h4>
+<p>Navigate to the Name column, hear the filename, then move right to read the commit message, then right again for the age. For example: &quot;docs/ | Add accessibility guide | 3 days ago&quot;</p>
 <h3>Folder vs file</h3>
 <ul>
 <li>Folders end with a <code>/</code> in the Name column</li>
@@ -196,12 +196,12 @@ Navigate to the Name column, hear the filename, then move right to read the comm
 </details>
 
 <h3>Inside the branch dropdown</h3>
-<pre><code class="hljs">Step <span class="hljs-number">1</span>: The dropdown panel opens - <span class="hljs-keyword">it</span> is <span class="hljs-keyword">a</span> live region
-Step <span class="hljs-number">2</span>: A search field appears - you can type <span class="hljs-built_in">to</span> <span class="hljs-built_in">filter</span> branches
-Step <span class="hljs-number">3</span>: Press Tab <span class="hljs-built_in">to</span> move <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> results list
-Step <span class="hljs-number">4</span>: Press ↓/↑ <span class="hljs-keyword">or</span> Tab/Shift+Tab <span class="hljs-built_in">to</span> navigate <span class="hljs-keyword">the</span> list <span class="hljs-keyword">of</span> branches
-Step <span class="hljs-number">5</span>: Press Enter <span class="hljs-built_in">to</span> <span class="hljs-keyword">switch</span> <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> selected branch
-Step <span class="hljs-number">6</span>: Press Escape <span class="hljs-built_in">to</span> <span class="hljs-built_in">close</span> <span class="hljs-keyword">without</span> switching</code></pre>
+<pre><code class="hljs language-text">Step 1: The dropdown panel opens - it is a live region
+Step 2: A search field appears - you can type to filter branches
+Step 3: Press Tab to move to the results list
+Step 4: Press ↓/↑ or Tab/Shift+Tab to navigate the list of branches
+Step 5: Press Enter to switch to the selected branch
+Step 6: Press Escape to close without switching</code></pre>
 <p>To return to the search field from the list: navigate to the tabs control at the top of the dropdown (&quot;Branches&quot; and &quot;Tags&quot; tabs), then use <code>Shift+Tab</code>.</p>
 <p><strong>VoiceOver:</strong> After activating the button, <code>VO+Down</code> to interact with the dropdown → <code>VO+Right</code> to navigate items.</p>
 <h3>Switching to a tag</h3>
@@ -256,7 +256,7 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room
 
 <span class="hljs-comment"># Clone and cd into the folder</span>
 gh repo <span class="hljs-built_in">clone</span> community-access/learning-room &amp;&amp; <span class="hljs-built_in">cd</span> learning-room</code></pre>
-<p><strong>Or with standard Git:</strong></p>
+<h2>Or with standard Git</h2>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/community-access/learning-room.git
 <span class="hljs-built_in">cd</span> learning-room</code></pre>
 <p><strong>Setup:</strong> Install the GitHub CLI from <a href="https://cli.github.com">cli.github.com</a> and authenticate with <code>gh auth login</code>. See <a href="appendix-d-git-authentication.html">Appendix D</a> for details.</p>
@@ -328,10 +328,10 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 <h2>Viewing a Single File</h2>
 <p>When you open a file from the files table, the page shows the rendered content (for Markdown files) or the raw code (for code files).</p>
 <h3>File page landmarks</h3>
-<pre><code class="hljs">D → <span class="hljs-string">&quot;Repository navigation&quot;</span> - repo <span class="hljs-literal">tab</span> bar
-D → <span class="hljs-string">&quot;Repository header&quot;</span> - <span class="hljs-built_in">file</span> breadcrumb path
-D → <span class="hljs-string">&quot;Main&quot;</span> - <span class="hljs-keyword">the</span> <span class="hljs-built_in">file</span> content area
-D → <span class="hljs-string">&quot;Repository files navigation&quot;</span> - <span class="hljs-keyword">contains</span>: Raw, Blame, History buttons</code></pre>
+<pre><code class="hljs language-text">D → &quot;Repository navigation&quot; - repo tab bar
+D → &quot;Repository header&quot; - file breadcrumb path
+D → &quot;Main&quot; - the file content area
+D → &quot;Repository files navigation&quot; - contains: Raw, Blame, History buttons</code></pre>
 <h3>Reading a Markdown file (like README.md)</h3>
 <p>The README renders with full heading structure. Use:</p>
 <ul>
@@ -370,8 +370,8 @@ D → <span class="hljs-string">&quot;Repository files navigation&quot;</span> -
 <li><strong>History</strong> - see the full commit history for this file</li>
 <li><strong>Edit (pencil)</strong> - edit the file directly on GitHub (if you have write access or it&#39;s your fork)</li>
 </ul>
-<p><strong>How to reach these buttons:</strong>
-Press <code>B</code> from within the file area, OR use <code>D</code> to navigate to the &quot;Repository files navigation&quot; landmark.</p>
+<h4>How to reach these buttons</h4>
+<p>Press <code>B</code> from within the file area, OR use <code>D</code> to navigate to the &quot;Repository files navigation&quot; landmark.</p>
 <h3>Editing a file</h3>
 <details>
 <summary>Visual / mouse users</summary>
@@ -413,10 +413,10 @@ Press <code>B</code> from within the file area, OR use <code>D</code> to navigat
 <li>The page reloads in Blame view</li>
 <li>The content is a table: <strong>left column</strong> = commit info (who, when, message), <strong>right column</strong> = the line of code</li>
 </ol>
-<pre><code class="hljs">T - jump <span class="hljs-keyword">to</span> the blame <span class="hljs-keyword">table</span>
-Ctrl+Alt+→ - <span class="hljs-keyword">move</span> <span class="hljs-keyword">from</span> <span class="hljs-keyword">commit</span> <span class="hljs-keyword">info</span> <span class="hljs-keyword">column</span> <span class="hljs-keyword">to</span> code <span class="hljs-keyword">column</span>
-Ctrl+Alt+↓ - <span class="hljs-keyword">move</span> <span class="hljs-keyword">to</span> the next <span class="hljs-type">line</span>
-K - navigate the <span class="hljs-keyword">commit</span> links (opens that <span class="hljs-keyword">commit</span><span class="hljs-string">&#x27;s detail page)</span></code></pre>
+<pre><code class="hljs language-text">T - jump to the blame table
+Ctrl+Alt+→ - move from commit info column to code column
+Ctrl+Alt+↓ - move to the next line
+K - navigate the commit links (opens that commit&#x27;s detail page)</code></pre>
 <hr>
 <h2>Commit History</h2>
 <p>Two ways to view history:</p>
@@ -425,10 +425,10 @@ K - navigate the <span class="hljs-keyword">commit</span> links (opens that <spa
 <li><strong>File-level history:</strong> From any file page, activate the &quot;History&quot; button.</li>
 </ul>
 <h3>Reading the Commits List Page</h3>
-<pre><code class="hljs">H <span class="hljs-keyword">or</span> <span class="hljs-number">3</span> - navigate <span class="hljs-keyword">by</span> <span class="hljs-built_in">date</span> headings (commits are grouped <span class="hljs-keyword">by</span> <span class="hljs-built_in">date</span>)
-I - navigate individual commit list <span class="hljs-keyword">items</span>
-K - navigate commit links (SHA hashes, <span class="hljs-keyword">short</span> descriptions)
-Enter - <span class="hljs-built_in">open</span> <span class="hljs-keyword">a</span> commit <span class="hljs-built_in">to</span> see its diff</code></pre>
+<pre><code class="hljs language-text">H or 3 - navigate by date headings (commits are grouped by date)
+I - navigate individual commit list items
+K - navigate commit links (SHA hashes, short descriptions)
+Enter - open a commit to see its diff</code></pre>
 <h3>Reading a Commit Page</h3>
 <p>A commit page shows:</p>
 <ul>
@@ -437,10 +437,10 @@ Enter - <span class="hljs-built_in">open</span> <span class="hljs-keyword">a</sp
 <li>Parent commit link</li>
 <li>A diff for every file changed</li>
 </ul>
-<pre><code class="hljs"><span class="hljs-number">1</span> - go <span class="hljs-built_in">to</span> commit message heading
-H <span class="hljs-keyword">or</span> <span class="hljs-number">3</span> - navigate <span class="hljs-built_in">file</span> headings <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> diff
-T - navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> stats table (<span class="hljs-built_in">files</span> changed, <span class="hljs-keyword">lines</span> added/deleted)
-+ - skip table navigation <span class="hljs-keyword">and</span> <span class="hljs-built_in">read</span> <span class="hljs-built_in">file</span> diffs <span class="hljs-keyword">by</span> <span class="hljs-built_in">line</span></code></pre>
+<pre><code class="hljs language-text">1 - go to commit message heading
+H or 3 - navigate file headings in the diff
+T - navigate to the stats table (files changed, lines added/deleted)
++ - skip table navigation and read file diffs by line</code></pre>
 <hr>
 <h2>Searching for a File</h2>
 <p>The &quot;Go to file&quot; shortcut is extremely useful when you know what you are looking for.</p>

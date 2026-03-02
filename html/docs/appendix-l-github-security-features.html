@@ -40,9 +40,9 @@
 <hr>
 <h2>Quick Navigation</h2>
 <ol>
-<li><a href="#1-the-security-tab--what-it-contains">The Security Tab - What It Contains</a></li>
-<li><a href="#2-dependabot--automated-dependency-updates">Dependabot - Automated Dependency Updates</a></li>
-<li><a href="#3-secret-scanning--preventing-credential-leaks">Secret Scanning - Preventing Credential Leaks</a></li>
+<li><a href="#1-the-security-tab---what-it-contains">The Security Tab - What It Contains</a></li>
+<li><a href="#2-dependabot---automated-dependency-updates">Dependabot - Automated Dependency Updates</a></li>
+<li><a href="#3-secret-scanning---preventing-credential-leaks">Secret Scanning - Preventing Credential Leaks</a></li>
 <li><a href="#4-code-scanning-and-codeql">Code Scanning and CodeQL</a></li>
 <li><a href="#5-private-vulnerability-reporting">Private Vulnerability Reporting</a></li>
 <li><a href="#6-the-securitymd-file">The SECURITY.md File</a></li>
@@ -53,12 +53,12 @@
 <hr>
 <h2>1. The Security Tab - What It Contains</h2>
 <p>Every GitHub repository has a <strong>Security tab</strong> in its navigation bar. What you see there depends on whether you are a contributor with elevated access or a public viewer.</p>
-<p><strong>Public viewers see:</strong></p>
+<h3>Public viewers see</h3>
 <ul>
 <li>Security policy (if the repo has a <code>SECURITY.md</code>)</li>
 <li>The private vulnerability reporting form (if enabled by the maintainer)</li>
 </ul>
-<p><strong>Contributors with write or admin access see:</strong></p>
+<h3>Contributors with write or admin access see</h3>
 <ul>
 <li>Dependabot alerts</li>
 <li>Secret scanning alerts</li>
@@ -67,15 +67,15 @@
 <li>The ability to manage security settings</li>
 </ul>
 <h3>Screen Reader Path to the Security Tab</h3>
-<pre><code class="hljs"><span class="hljs-built_in">On</span> <span class="hljs-variable">any</span> <span class="hljs-variable">repository</span> <span class="hljs-variable">page</span><span class="hljs-operator">:</span>
-<span class="hljs-built_in">Tab</span> <span class="hljs-variable">navigation</span> → <span class="hljs-variable">secondary</span> <span class="hljs-variable">nav</span> <span class="hljs-variable">region</span> → <span class="hljs-string">&quot;Security&quot;</span> <span class="hljs-variable">link</span> → <span class="hljs-built_in">Enter</span>
-<span class="hljs-built_in">Or</span><span class="hljs-operator">:</span> <span class="hljs-variable">G</span> <span class="hljs-variable">then</span> <span class="hljs-variable">S</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">GitHub</span> <span class="hljs-variable">keyboard</span> <span class="hljs-variable">shortcut</span> <span class="hljs-operator">-</span> <span class="hljs-variable">enable</span> <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> <span class="hljs-variable">first</span><span class="hljs-punctuation">)</span></code></pre>
+<pre><code class="hljs language-text">On any repository page:
+Tab navigation → secondary nav region → &quot;Security&quot; link → Enter
+Or: G then S (GitHub keyboard shortcut - enable Focus Mode first)</code></pre>
 <hr>
 <h2>2. Dependabot - Automated Dependency Updates</h2>
 <p>Dependabot is GitHub&#39;s automated dependency monitoring and update system. It does two things:</p>
 <h3>Dependabot Alerts</h3>
 <p>When a known security vulnerability (CVE - Common Vulnerability and Exposure) is discovered in a package your project depends on, GitHub creates a <strong>Dependabot alert</strong>.</p>
-<p><strong>Alert severity levels:</strong></p>
+<h4>Alert severity levels</h4>
 <table>
 <thead>
 <tr>
@@ -105,16 +105,16 @@
 <td>Low likelihood of exploitation - fix when convenient</td>
 </tr>
 </tbody></table>
-<p><strong>What a dependency alert looks like:</strong></p>
-<pre><code class="hljs"><span class="hljs-attribute">Alert</span>: Dependabot alert #<span class="hljs-number">5</span>
-<span class="hljs-attribute">Severity</span>: High
-<span class="hljs-attribute">Package</span>: lodash (npm)
-<span class="hljs-attribute">Vulnerable</span> version: &lt; <span class="hljs-number">4</span>.<span class="hljs-number">17</span>.<span class="hljs-number">21</span>
-<span class="hljs-attribute">Fixed</span> version: <span class="hljs-number">4</span>.<span class="hljs-number">17</span>.<span class="hljs-number">21</span>
-<span class="hljs-attribute">Advisory</span>: GHSA-<span class="hljs-number">35</span>jh-r3h4-<span class="hljs-number">6</span>jhm
-<span class="hljs-attribute">Description</span>: Prototype pollution vulnerability allows an attacker to
-<span class="hljs-attribute">modify</span> Object.prototype leading to denial of service or remote code execution.</code></pre>
-<p><strong>What to do as a contributor when you see an alert:</strong></p>
+<h4>What a dependency alert looks like</h4>
+<pre><code class="hljs language-text">Alert: Dependabot alert #5
+Severity: High
+Package: lodash (npm)
+Vulnerable version: &lt; 4.17.21
+Fixed version: 4.17.21
+Advisory: GHSA-35jh-r3h4-6jhm
+Description: Prototype pollution vulnerability allows an attacker to
+modify Object.prototype leading to denial of service or remote code execution.</code></pre>
+<h4>What to do as a contributor when you see an alert</h4>
 <ol>
 <li>Read the advisory to understand the vulnerability scope</li>
 <li>Check whether the project actually uses the vulnerable code path</li>
@@ -123,16 +123,16 @@
 </ol>
 <h3>Dependabot Security Updates</h3>
 <p>If enabled, Dependabot automatically opens a PR to update the vulnerable dependency. The PR will look like:</p>
-<pre><code class="hljs"><span class="hljs-symbol">Title:</span> Bump lodash <span class="hljs-keyword">from</span> <span class="hljs-number">4.17</span>.<span class="hljs-number">20</span> <span class="hljs-keyword">to</span> <span class="hljs-number">4.17</span>.<span class="hljs-number">21</span>
-<span class="hljs-symbol">Author:</span> dependabot[bot]
-<span class="hljs-symbol">Description:</span> Bumps lodash <span class="hljs-keyword">from</span> <span class="hljs-number">4.17</span>.<span class="hljs-number">20</span> <span class="hljs-keyword">to</span> <span class="hljs-number">4.17</span>.<span class="hljs-number">21</span>.
+<pre><code class="hljs language-text">Title: Bump lodash from 4.17.20 to 4.17.21
+Author: dependabot[bot]
+Description: Bumps lodash from 4.17.20 to 4.17.21.
   - Release notes
   - Changelog
   - Commits (linked)</code></pre>
 <p>As a contributor with access, reviewing and merging these Dependabot PRs is a high-value, low-risk way to contribute.</p>
 <h3>Dependabot Version Updates</h3>
 <p>Beyond security fixes, Dependabot can be configured to open PRs keeping all dependencies at their latest versions (not just security fixes). This is configured in <code>.github/dependabot.yml</code>.</p>
-<p><strong>Example <code>dependabot.yml</code>:</strong></p>
+<h4>Example <code>dependabot.yml</code></h4>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">version:</span> <span class="hljs-number">2</span>
 <span class="hljs-attr">updates:</span>
   <span class="hljs-bullet">-</span> <span class="hljs-attr">package-ecosystem:</span> <span class="hljs-string">&quot;npm&quot;</span>
@@ -146,13 +146,13 @@
 <h3>Push Protection (Real-Time Prevention)</h3>
 <p><strong>Push Protection</strong> intercepts a <code>git push</code> before it reaches GitHub and blocks it if it detects a known secret pattern.</p>
 <p>If your push is blocked:</p>
-<pre><code class="hljs"><span class="hljs-comment">remote: error: GH013: Repository rule violations found for refs/heads/main.</span>
-<span class="hljs-comment">remote: Push cannot contain secrets</span>
-<span class="hljs-comment">remote: </span>
-<span class="hljs-comment">remote: - commit: abc123 in file: config.js</span>
-<span class="hljs-comment">remote:   secret: GitHub Personal Access Token</span>
-<span class="hljs-comment">remote:   location: line 5</span></code></pre>
-<p><strong>What to do:</strong></p>
+<pre><code class="hljs language-text">remote: error: GH013: Repository rule violations found for refs/heads/main.
+remote: Push cannot contain secrets
+remote: 
+remote: - commit: abc123 in file: config.js
+remote:   secret: GitHub Personal Access Token
+remote:   location: line 5</code></pre>
+<h4>What to do</h4>
 <ol>
 <li>Remove the secret from the file immediately</li>
 <li>Rotate the exposed credential (GitHub will automatically revoke detected GitHub tokens)</li>
@@ -179,19 +179,19 @@
 <li>Command injection risks</li>
 </ul>
 <h3>Reading a Code Scanning Alert</h3>
-<pre><code class="hljs">Alert: Uncontrolled <span class="hljs-built_in">format</span> <span class="hljs-keyword">string</span>
-Rule: py/tainted-<span class="hljs-built_in">format</span>-<span class="hljs-keyword">string</span>
+<pre><code class="hljs language-text">Alert: Uncontrolled format string
+Rule: py/tainted-format-string
 Severity: High
 File: src/utils/logger.py
-Line: <span class="hljs-number">47</span>
+Line: 47
 
 Details:
-  logging.info(user_input)  ← user_input flows unsanitized <span class="hljs-keyword">into</span> <span class="hljs-built_in">format</span> <span class="hljs-keyword">string</span>
+  logging.info(user_input)  ← user_input flows unsanitized into format string
   
   Flow:
-  <span class="hljs-number">1.</span> User input enters <span class="hljs-keyword">at</span>: request.args.<span class="hljs-built_in">get</span>(<span class="hljs-string">&#x27;message&#x27;</span>) [<span class="hljs-built_in">line</span> <span class="hljs-number">12</span>]
-  <span class="hljs-number">2.</span> Passed <span class="hljs-built_in">to</span>: logger.info(message) [<span class="hljs-built_in">line</span> <span class="hljs-number">47</span>]
-  <span class="hljs-number">3.</span> Risk: <span class="hljs-built_in">format</span> <span class="hljs-keyword">string</span> injection <span class="hljs-keyword">if</span> message <span class="hljs-keyword">contains</span> %s, %d patterns</code></pre>
+  1. User input enters at: request.args.get(&#x27;message&#x27;) [line 12]
+  2. Passed to: logger.info(message) [line 47]
+  3. Risk: format string injection if message contains %s, %d patterns</code></pre>
 <p><strong>As a contributor:</strong> Code scanning alerts are excellent, well-scoped contribution opportunities. Each alert shows you the exact file, line, and the data flow causing the issue. Fixing it is often a one-line change.</p>
 <h3>Where to Find Code Scanning Alerts</h3>
 <p>Security tab → Code scanning → filter by severity, rule, or file.</p>
@@ -248,7 +248,7 @@ Details:
 <li>Or directly: <code>https://github.com/owner/repo/security/policy</code></li>
 </ol>
 <p>Screen reader path:</p>
-<pre><code class="hljs">Security <span class="hljs-literal">tab</span> → H → <span class="hljs-string">&quot;Policy&quot;</span> heading → Link: <span class="hljs-string">&quot;Security policy&quot;</span> → Enter</code></pre>
+<pre><code class="hljs language-text">Security tab → H → &quot;Policy&quot; heading → Link: &quot;Security policy&quot; → Enter</code></pre>
 <hr>
 <h2>7. Software Bill of Materials (SBOM)</h2>
 <p>An SBOM is a machine-readable inventory of every component (libraries, packages, dependencies) in a software project. It is increasingly required by enterprise and government organizations for supply chain security compliance.</p>
@@ -268,55 +268,55 @@ Details:
 <hr>
 <h2>8. Screen Reader Navigation of the Security Tab</h2>
 <h3>Reaching the Security Tab</h3>
-<pre><code class="hljs"><span class="hljs-keyword">From</span> any repo page:
+<pre><code class="hljs language-text">From any repo page:
 Secondary navigation landmark → Tab through: Code, Issues, PRs, Actions, Projects, Wiki, Security
-Or: <span class="hljs-keyword">Focus</span> <span class="hljs-keyword">Mode</span> → G <span class="hljs-keyword">then</span> S (GitHub shortcut)</code></pre>
+Or: Focus Mode → G then S (GitHub shortcut)</code></pre>
 <h3>Navigating Dependabot Alerts</h3>
-<pre><code class="hljs">Security <span class="hljs-literal">tab</span> → select <span class="hljs-string">&quot;Dependabot alerts&quot;</span> link
-Alert list is <span class="hljs-keyword">a</span> table: T (NVDA/JAWS Browse Mode) → navigate rows
-Each row: Tab <span class="hljs-built_in">to</span> expand → Enter <span class="hljs-built_in">to</span> <span class="hljs-built_in">open</span> full alert details
-Inside <span class="hljs-keyword">an</span> alert:
+<pre><code class="hljs language-text">Security tab → select &quot;Dependabot alerts&quot; link
+Alert list is a table: T (NVDA/JAWS Browse Mode) → navigate rows
+Each row: Tab to expand → Enter to open full alert details
+Inside an alert:
   H → navigate: Alert title, Package details, Description, References headings
-  <span class="hljs-number">2</span> → jump between major sections
-  Links → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> GHSA advisory, <span class="hljs-keyword">the</span> vulnerable package, <span class="hljs-keyword">the</span> Dependabot PR</code></pre>
+  2 → jump between major sections
+  Links → navigate to the GHSA advisory, the vulnerable package, the Dependabot PR</code></pre>
 <h3>Navigating Code Scanning Alerts</h3>
-<pre><code class="hljs">Security <span class="hljs-literal">tab</span> → select <span class="hljs-string">&quot;Code scanning&quot;</span> link
-Alert list: T <span class="hljs-built_in">to</span> find <span class="hljs-keyword">the</span> table → ↑/↓ <span class="hljs-built_in">to</span> navigate rows
-Open <span class="hljs-keyword">an</span> alert: Enter
-Inside <span class="hljs-keyword">the</span> alert:
+<pre><code class="hljs language-text">Security tab → select &quot;Code scanning&quot; link
+Alert list: T to find the table → ↑/↓ to navigate rows
+Open an alert: Enter
+Inside the alert:
   H → Alert title, Description, Code flow, Steps headings
-  Links → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> specific <span class="hljs-built_in">file</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">line</span>
-  The code flow section shows <span class="hljs-keyword">the</span> path <span class="hljs-built_in">from</span> source <span class="hljs-built_in">to</span> sink:
-  Navigate <span class="hljs-keyword">with</span> ↓ through <span class="hljs-keyword">the</span> flow steps</code></pre>
+  Links → navigate to the specific file and line
+  The code flow section shows the path from source to sink:
+  Navigate with ↓ through the flow steps</code></pre>
 <h3>The Private Vulnerability Reporting Form</h3>
-<pre><code class="hljs"><span class="hljs-variable">Security</span> <span class="hljs-variable">tab</span> → <span class="hljs-string">&quot;Report a vulnerability&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span>
-<span class="hljs-variable">Form</span> <span class="hljs-variable">fields</span><span class="hljs-operator">:</span> <span class="hljs-variable">F</span> <span class="hljs-variable">or</span> <span class="hljs-built_in">E</span> → <span class="hljs-variable">cycle</span> <span class="hljs-variable">through</span><span class="hljs-operator">:</span> <span class="hljs-variable">Title</span><span class="hljs-operator">,</span> <span class="hljs-variable">Description</span><span class="hljs-operator">,</span> <span class="hljs-variable">Severity</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">select</span><span class="hljs-punctuation">)</span><span class="hljs-operator">,</span> <span class="hljs-variable">Versions</span><span class="hljs-operator">,</span> <span class="hljs-variable">CVSS</span>
-<span class="hljs-variable">Describe</span> <span class="hljs-variable">field</span><span class="hljs-operator">:</span> <span class="hljs-variable">NVDA</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> → <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> → <span class="hljs-variable">type</span> → <span class="hljs-variable">NVDA</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> <span class="hljs-variable">to</span> <span class="hljs-variable">leave</span>
-<span class="hljs-variable">Submit</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Tab</span> → <span class="hljs-string">&quot;Submit report&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span></code></pre>
+<pre><code class="hljs language-text">Security tab → &quot;Report a vulnerability&quot; button → Enter
+Form fields: F or E → cycle through: Title, Description, Severity (select), Versions, CVSS
+Describe field: NVDA+Space → Focus Mode → type → NVDA+Space to leave
+Submit: Tab → &quot;Submit report&quot; button → Enter</code></pre>
 <hr>
 <h2>9. Security and Accessibility Agents</h2>
 <p>Accessibility Agents&#39; <code>/security-dashboard</code> slash command gives you a quick security overview without visiting the Security tab in the browser:</p>
-<pre><code class="hljs">/security-dashboard</code></pre>
-<p><strong>Sample output:</strong></p>
-<pre><code class="hljs">## Security Dashboard - community-access/accessibility-agents
+<pre><code class="hljs language-text">/security-dashboard</code></pre>
+<h3>Sample output</h3>
+<pre><code class="hljs language-text">## Security Dashboard - community-access/accessibility-agents
 
 ### Dependabot Alerts
-- <span class="hljs-number">0</span> Critical
-- <span class="hljs-number">1</span> High: actions/cache &lt; <span class="hljs-number">3.3</span><span class="hljs-number">.2</span> (fixed: <span class="hljs-number">3.3</span><span class="hljs-number">.3</span>)
-- <span class="hljs-number">2</span> Medium: misc dependency updates available
+- 0 Critical
+- 1 High: actions/cache &lt; 3.3.2 (fixed: 3.3.3)
+- 2 Medium: misc dependency updates available
 
 ### Secret Scanning
 - No active alerts
 
 ### Code Scanning
-- Last scan: <span class="hljs-number">2</span> days ago - <span class="hljs-number">0</span> new alerts
+- Last scan: 2 days ago - 0 new alerts
 
 ### Dependabot PRs Open
-- #<span class="hljs-number">47</span>: Bump actions/cache <span class="hljs-keyword">from</span> <span class="hljs-number">3.3</span><span class="hljs-number">.1</span> to <span class="hljs-number">3.3</span><span class="hljs-number">.3</span>
-  <span class="hljs-string">&quot;Review and merge to resolve the High severity alert&quot;</span>
+- #47: Bump actions/cache from 3.3.1 to 3.3.3
+  &quot;Review and merge to resolve the High severity alert&quot;
 
 ### Recommendation
-Action needed: Review PR #<span class="hljs-number">47</span> (<span class="hljs-number">5</span> minutes - single file change)</code></pre>
+Action needed: Review PR #47 (5 minutes - single file change)</code></pre>
 <p><strong>Workshop exercise:</strong> Run <code>/security-dashboard</code> on your fork after Day 2. Review any Dependabot PRs open on the upstream <code>community-access/accessibility-agents</code> - merging one is a real security contribution.</p>
 <hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-q-github-actions-workflows.html">Appendix Q - GitHub Actions</a> | <a href="appendix-k-branch-protection-rulesets.html">Appendix K - Branch Protection</a></em></p>

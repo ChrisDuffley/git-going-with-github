@@ -1,4 +1,5 @@
 # Appendix O: GitHub Mobile
+>
 > **Listen to Episode 32:** [GitHub Mobile](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Accessibility Guide for iOS and Android
@@ -24,7 +25,7 @@
 ## 1. Installing GitHub Mobile
 
 | Platform | Download |
-|----------|----------|
+| ----------  | ----------  |
 | iOS (iPhone / iPad) | [App Store - GitHub](https://apps.apple.com/app/github/id1477376905) |
 | Android | [Google Play - GitHub](https://play.google.com/store/apps/details?id=com.github.android) |
 
@@ -37,7 +38,7 @@ After installing, sign in with your GitHub account. Enable notifications when pr
 GitHub Mobile is organized into five main tabs at the bottom of the screen:
 
 | Tab | Contents |
-|-----|----------|
+| -----  | ----------  |
 | Home | Personalized feed of activity across your repositories |
 | Notifications | All @mentions, review requests, issue updates |
 | Explore | Discover repositories and trending projects |
@@ -58,7 +59,7 @@ Navigate between tabs with a single tap (or swipe on iOS with VoiceOver active).
 ### Basic Gestures in GitHub Mobile
 
 | Gesture | Action |
-|---------|--------|
+| ---------  | --------  |
 | Swipe right | Move to the next element |
 | Swipe left | Move to the previous element |
 | Double tap | Activate the focused element |
@@ -95,7 +96,7 @@ Open the Rotor by rotating two fingers on the screen as if turning a dial. Usefu
 ### Basic Gestures in GitHub Mobile
 
 | Gesture | Action |
-|---------|--------|
+| ---------  | --------  |
 | Swipe right | Move to next element |
 | Swipe left | Move to previous element |
 | Double tap | Activate the focused element |
@@ -134,6 +135,7 @@ GitHub Mobile's Notifications tab is one of its strongest features for AT users 
 ### Filtering Notifications
 
 Use the filter icon at the top right to filter by:
+
 - Type (Issues, PRs, Releases, etc.)
 - Repository
 - Reason (you were @mentioned, a review was requested, etc.)
@@ -149,6 +151,7 @@ Mobile is well suited for quick PR reviews - approving straightforward changes, 
 ### Navigating a PR
 
 When you open a pull request, the screen is divided into sections:
+
 - **Description** - the PR body with any images or checklists
 - **Commits** - individual commits in this PR
 - **Files changed** - a simplified diff view
@@ -190,7 +193,7 @@ The Files Changed tab shows a simplified diff - additions and removals are text-
 ## 8. What Mobile Does Well vs. Desktop
 
 | Task | Mobile | Desktop |
-|------|--------|---------|
+| ------  | --------  | ---------  |
 | Triage notifications | Excellent - linear list, swipe actions | Good |
 | Quick review / approve a PR | Good | Good |
 | Writing long PR descriptions | Fair - small keyboard | Better |
@@ -207,19 +210,24 @@ The Files Changed tab shows a simplified diff - additions and removals are text-
 
 ## 9. Common Issues and Workarounds
 
-**VoiceOver skips some PR descriptions:**
+### VoiceOver skips some PR descriptions
+
 Long PR descriptions with images, tables, or embedded videos may not read cleanly. Open the PR in Safari instead - tap the **…** menu → **Open in Browser**.
 
-**TalkBack does not announce new notifications badge:**
+### TalkBack does not announce new notifications badge
+
 The badge count on the Notifications tab updates live but may not be announced. Navigate directly to the Notifications tab to get the current count read aloud.
 
-**The keyboard covers the comment field:**
+### The keyboard covers the comment field
+
 Usual iOS/Android behavior - scroll up slightly after the keyboard appears, or rotate to landscape mode to gain more visible space.
 
-**Can't find the Submit button after writing a review:**
+### Can't find the Submit button after writing a review
+
 Scroll down past the text field; buttons are below the keyboard dismiss area. On iOS, tap elsewhere to dismiss the keyboard first, then scroll to Submit.
 
-**GitHub Mobile crashes or freezes:**
+### GitHub Mobile crashes or freezes
+
 Force close the app and reopen. If the problem persists, sign out and back in via Profile → Settings → Sign out.
 
 ---

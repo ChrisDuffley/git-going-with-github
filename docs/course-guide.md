@@ -1,10 +1,11 @@
 # Course Guide
+>
 > **Listen to Episode 0:** [Welcome to Git Going with GitHub](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## GitHub Learning Room - Your Complete Workshop Companion
 
 > **Welcome.** You are about to begin a two-day journey into open source collaboration using GitHub, VS Code, and GitHub Copilot - all designed for screen reader and keyboard-only navigation. This guide is your starting point and table of contents for everything in this workshop.
-
+>
 > **Note:** Workshop content is being actively refined during the week of March 7, 2026. Students should expect updates to materials leading up to and during the course.
 
 ---
@@ -15,15 +16,17 @@ This is a two-day workshop built around one idea: **you will make real contribut
 
 ### The Two Days
 
-**Day 1 - GitHub Foundations (Browser)**
+#### Day 1 - GitHub Foundations (Browser)
+
 You learn GitHub's web interface using only your keyboard and screen reader. By the end of Day 1, you will have filed issues, opened pull requests, reviewed someone else's work, and resolved a merge conflict - all in the browser.
 
-**Day 2 - VS Code + Accessibility Agents (Desktop)**
+#### Day 2 - VS Code + Accessibility Agents (Desktop)
+
 You move to Visual Studio Code, learn GitHub Copilot, and activate the Accessibility Agents ecosystem - 55 AI agents across 3 teams and 5 platforms that amplify every skill you built on Day 1. By the end of Day 2, your name is in the commit history of a real open source accessibility project.
 
 ### The Journey Arc
 
-```
+```text
 Day 1 - Learn the skill in the browser
   Navigate → Issue → Pull Request → Review → Merge
 
@@ -229,4 +232,4 @@ If you get stuck at any point during the workshop, these resources are always av
 
 ---
 
-*Last updated: February 2026*
+Last updated: February 2026

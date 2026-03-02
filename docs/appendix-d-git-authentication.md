@@ -1,4 +1,5 @@
 # Appendix D: Git Authentication
+>
 > **Listen to Episode 21:** [Git Authentication](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## SSH Keys & Personal Access Tokens
@@ -10,11 +11,13 @@
 ## When You Need Authentication
 
 GitHub requires authentication when you:
+
 - **Push** commits to a repository
 - **Clone** a private repository
 - **Access** organization repositories with specific permissions
 
 You do **not** need authentication to:
+
 - Clone public repositories
 - View public repositories on GitHub.com
 - Read issues and pull requests
@@ -27,13 +30,15 @@ You do **not** need authentication to:
 
 A Personal Access Token is a password-like string you generate on GitHub and use instead of your account password when Git asks for credentials.
 
-**Pros:**
+#### Pros
+
 - Works on all operating systems
 - Easy to set up for screen reader users (no command line required)
 - Can be scoped to specific permissions
 - Easy to revoke if compromised
 
-**Cons:**
+#### Cons
+
 - You have to store it securely
 - Expires after a set time (you must regenerate)
 
@@ -41,12 +46,14 @@ A Personal Access Token is a password-like string you generate on GitHub and use
 
 SSH uses public-key cryptography. You generate a key pair on your computer (public + private), upload the public key to GitHub, and Git uses the private key to prove your identity.
 
-**Pros:**
+#### Pros
+
 - Once set up, works automatically (no password prompts)
 - More secure than tokens
 - Never expires
 
-**Cons:**
+#### Cons
+
 - Requires command-line setup (less accessible for some screen reader users)
 - Slightly more complex initial configuration
 
@@ -73,12 +80,14 @@ SSH uses public-key cryptography. You generate a key pair on your computer (publ
 
 ### Step 2: Store It Securely
 
-**Options:**
+#### Options
+
 - **Password manager** (1Password, Bitwarden, LastPass) - best option
 - **Encrypted note** in your operating system's secure notes
 - **Plain text file** in an encrypted folder (temporary only)
 
-**Do not:**
+#### Do not
+
 - Paste it into a document you sync to cloud storage unencrypted
 - Email it to yourself
 - Save it in a public GitHub file
@@ -87,7 +96,7 @@ SSH uses public-key cryptography. You generate a key pair on your computer (publ
 
 The next time Git asks for your password (when you push, pull from a private repo, or clone a private repo):
 
-```
+```text
 Username: [your-github-username]
 Password: [paste-your-PAT-here]
 ```
@@ -97,6 +106,7 @@ Password: [paste-your-PAT-here]
 **macOS Keychain:** macOS will offer to save it to Keychain. Select "Always Allow."
 
 **Linux:** You can configure Git to cache credentials:
+
 ```bash
 git config --global credential.helper cache
 ```
@@ -122,6 +132,7 @@ ssh-keygen -t ed25519 -C "your-email@example.com"
 ```
 
 When prompted:
+
 - Press `Enter` to accept the default file location
 - Enter a passphrase (optional but recommended)
 
@@ -129,17 +140,20 @@ When prompted:
 
 ### Step 3: Copy Your Public Key
 
-**Windows (PowerShell):**
+#### Windows (PowerShell)
+
 ```powershell
 Get-Content ~/.ssh/id_ed25519.pub | Set-Clipboard
 ```
 
-**macOS:**
+#### macOS
+
 ```bash
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
-**Linux:**
+#### Linux
+
 ```bash
 cat ~/.ssh/id_ed25519.pub
 # Manually select and copy the output
@@ -167,11 +181,11 @@ You should see: `Hi username! You've successfully authenticated...`
 
 When cloning or adding remotes, use SSH URLs instead of HTTPS:
 
-```
-# SSH format:
+```text
+# SSH format
 git@github.com:owner/repo.git
 
-# Instead of HTTPS:
+# Instead of HTTPS
 https://github.com/owner/repo.git
 ```
 
@@ -181,17 +195,20 @@ https://github.com/owner/repo.git
 
 If you cloned with HTTPS but want to use SSH (or vice versa), update the remote:
 
-**Check your current remote:**
+### Check your current remote
+
 ```bash
 git remote -v
 ```
 
-**Switch to SSH:**
+### Switch to SSH
+
 ```bash
 git remote set-url origin git@github.com:your-username/repo.git
 ```
 
-**Switch to HTTPS:**
+### Switch to HTTPS
+
 ```bash
 git remote set-url origin https://github.com/your-username/repo.git
 ```
@@ -204,7 +221,8 @@ git remote set-url origin https://github.com/your-username/repo.git
 
 **Problem:** Your token expired or is incorrect.
 
-**Solution:**
+#### Solution
+
 - Generate a new PAT
 - Clear your credential cache (Windows: Credential Manager; macOS: Keychain; Linux: `git credential-cache exit`)
 - Try pushing again - Git will ask for credentials
@@ -213,7 +231,8 @@ git remote set-url origin https://github.com/your-username/repo.git
 
 **Problem:** SSH key not properly set up.
 
-**Solution:**
+#### Solution
+
 - Verify your key is added to GitHub: [github.com/settings/keys](https://github.com/settings/keys)
 - Check SSH agent is running: `ssh-add -l`
 - Add your key to the agent: `ssh-add ~/.ssh/id_ed25519`
@@ -222,7 +241,8 @@ git remote set-url origin https://github.com/your-username/repo.git
 
 **Problem:** SSH doesn't recognize GitHub's host key.
 
-**Solution:**
+#### Solution
+
 ```bash
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
@@ -254,14 +274,16 @@ Open source maintainers increasingly require signed commits before merging. Some
 
 If you already have an SSH key set up for authentication, you can use it for signing too.
 
-**Step 1: Configure Git to use SSH for signing:**
+##### Step 1: Configure Git to use SSH for signing
+
 ```bash
 git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519.pub
 git config --global commit.gpgsign true
 ```
 
-**Step 2: Add your SSH key as a signing key on GitHub:**
+##### Step 2: Add your SSH key as a signing key on GitHub
+
 1. Navigate to [github.com/settings/ssh](https://github.com/settings/ssh)
 2. Select **"New SSH key"**
 3. Change **"Key type"** to **"Signing Key"** (not Authentication Key)
@@ -271,31 +293,36 @@ Your commits now show the **Verified** badge in GitHub's commit history.
 
 #### GPG Signing (traditional method)
 
-**Step 1: Generate a GPG key:**
+##### Step 1: Generate a GPG key
+
 ```bash
 gpg --full-generate-key
 # Choose: RSA and RSA, 4096 bits, never expires
 # Enter your GitHub email address when prompted
 ```
 
-**Step 2: Find your key ID:**
+## Step 2: Find your key ID
+
 ```bash
 gpg --list-secret-keys --keyid-format=long
 # Output includes: sec   rsa4096/XXXXXXXXXXXXXXXX
 # The X's are your key ID
 ```
 
-**Step 3: Export the public key:**
+## Step 3: Export the public key
+
 ```bash
 gpg --armor --export YOUR_KEY_ID
 # Copies the block starting with -----BEGIN PGP PUBLIC KEY BLOCK-----
 ```
 
-**Step 4: Add to GitHub:**
+## Step 4: Add to GitHub
+
 1. Navigate to [github.com/settings/gpg-keys](https://github.com/settings/gpg-keys)
 2. Select **"New GPG key"** → paste the exported public key
 
-**Step 5: Configure Git to sign all commits:**
+## Step 5: Configure Git to sign all commits
+
 ```bash
 git config --global user.signingkey YOUR_KEY_ID
 git config --global commit.gpgsign true
@@ -305,15 +332,18 @@ git config --global commit.gpgsign true
 
 GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and GPG Keys → Vigilant mode). When enabled, GitHub marks **all** commits from your account as "Unverified" unless they are signed - even commits that were previously shown without a badge.
 
-**Why some maintainers enable Vigilant Mode:**
+#### Why some maintainers enable Vigilant Mode
+
 - It makes tampered or spoofed commits immediately obvious
 - It signals that the repository cares about commit provenance
 
-**What you see as a contributor:**
+#### What you see as a contributor
+
 - Every unsigned commit you push will show a yellow "Unverified" badge
 - This is a visual signal - commits can still be pushed, but maintainers may block the merge
 
-**To read verification badges with a screen reader:**
+#### To read verification badges with a screen reader
+
 - Navigate to the repository's commit history (Code tab → Commits link)
 - Each commit row contains either "Verified" or "Unverified" as a badge element
 - NVDA/JAWS: the badge is inside the commit row; use `↓` to read through each row and the badge text is read inline
@@ -325,7 +355,8 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 ## For This Workshop
 
-**Recommended approach:**
+### Recommended approach
+
 1. Generate a Personal Access Token with 30-day expiration
 2. Scope: `repo` and `workflow`
 3. Store it in your password manager

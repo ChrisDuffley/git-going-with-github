@@ -1,4 +1,5 @@
 # Appendix E: GitHub Flavored Markdown - Advanced Reference
+>
 > **Listen to Episode 22:** [GitHub Flavored Markdown](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Beyond the Basics: Tables, Alerts, Diagrams, Math, and Accessibility
@@ -13,12 +14,12 @@
 2. [Collapsible Sections with `<details>`](#2-collapsible-sections-with-details)
 3. [Task List Checkboxes](#3-task-list-checkboxes)
 4. [Mermaid Diagrams](#4-mermaid-diagrams)
-5. [Math Expressions - LaTeX](#5-math-expressions--latex)
+5. [Math Expressions - LaTeX](#5-math-expressions---latex)
 6. [Footnotes](#6-footnotes)
 7. [Linked Heading Anchors](#7-linked-heading-anchors)
 8. [Syntax Highlighting in Code Blocks](#8-syntax-highlighting-in-code-blocks)
 9. [HTML in Markdown](#9-html-in-markdown)
-10. [Screen Reader Considerations](#10-screen-reader-considerations)
+10. [Screen Reader Considerations](#10-screen-reader-considerations-for-gfm)
 11. [GFM Quick-Reference Card](#11-gfm-quick-reference-card)
 
 ---
@@ -49,7 +50,7 @@ GitHub introduced **alert blocks** in 2023. They render as colored, bordered cal
 ### How They Render
 
 | Type | Color | Icon | Use When... |
-|------|-------|------|-------------|
+| ------  | -------  | ------  | -------------  |
 | `NOTE` | Blue | | Supplementary information |
 | `TIP` | Green | | Best practice suggestions |
 | `IMPORTANT` | Purple | | Something the reader absolutely must know |
@@ -59,6 +60,7 @@ GitHub introduced **alert blocks** in 2023. They render as colored, bordered cal
 ### Screen Reader Behavior
 
 Alert blocks render as `<blockquote>` elements with an SVG icon and a strong heading. Screen readers read:
+
 - NVDA/JAWS: announces `blockquote` role, then reads the type label ("Note", "Warning") then the content
 - VoiceOver: reads the type as bold text then the content
 - The colored icon is decorative (`aria-hidden`); it does not add information beyond the type label
@@ -71,20 +73,22 @@ Long stack traces, verbose logs, or optional reading sections get wrapped in `<d
 
 ### Syntax
 
-```markdown
+````markdown
 <details>
 <summary>Click to expand: Full stack trace</summary>
 
 ```
+
 Error: Cannot read property 'length' of null
     at Object.<anonymous> (app.js:15)
     at Module._compile (module.js:653)
-```
+
+```text
 
 The error occurs on line 15 when `data` is null.
 
 </details>
-```
+````
 
 ### Real-World Uses
 
@@ -96,6 +100,7 @@ The error occurs on line 15 when `data` is null.
 ### Screen Reader Behavior
 
 The `<details>` element renders as a disclosure widget:
+
 - NVDA: announces "button collapsed" for the `<summary>` - press Enter or Space to expand
 - JAWS: announces "collapsed" - press Enter on the summary link to expand
 - VoiceOver: announces "collapsed, button" - press VO+Space to activate
@@ -132,8 +137,9 @@ Task lists in GitHub issues and PRs render as **real interactive checkboxes**. A
 
 In Browse Mode, checkboxes are read as `checkbox, not checked` or `checkbox, checked`.
 
-**To toggle a task list checkbox:**
-```
+#### To toggle a task list checkbox
+
+```text
 Navigate to the checkbox: Tab (Focus Mode) or clicking via mouse
 Press Space to toggle (Focus Mode required for keyboard toggle on web)
 NVDA: NVDA+Space → Focus Mode → Tab to find checkbox → Space to toggle
@@ -160,13 +166,13 @@ flowchart LR
     F --> G{Review passed?}
     G -- Yes --> H[Merge]
     G -- No --> D
-```
+```text
 ````
 
 ### Common Diagram Types
 
 | Type | Keyword | Use Case |
-|------|---------|---------|
+| ------  | ---------  | ---------  |
 | Flowchart | `flowchart LR` / `TD` | Process flows, decision trees |
 | Sequence | `sequenceDiagram` | API calls, user interaction flows |
 | Entity-Relationship | `erDiagram` | Database schemas |
@@ -179,12 +185,14 @@ flowchart LR
 
 > **Important:** Mermaid diagrams render as SVG images. GitHub does not auto-generate alt text for them. Screen readers will typically either skip them or announce generic SVG container information.
 
-**What to do as a document author:**
+#### What to do as a document author
+
 1. Always add a **text description** before or after every Mermaid diagram
 2. Consider duplicating critical flow information as a numbered list or table
 3. Use the diagram for visual learners; use the text list for screen reader users
 
-**Example - accessible Mermaid usage:**
+#### Example - accessible Mermaid usage
+
 ```markdown
 The PR workflow follows these steps:
 
@@ -200,7 +208,8 @@ The PR workflow follows these steps:
 ```mermaid
 flowchart LR
     Fork --> Clone --> Branch --> Commit --> Push --> PR --> Review --> Merge
-```
+```text
+
 ```
 
 ---
@@ -232,6 +241,7 @@ $$
 ### Screen Reader Note
 
 Math expressions rendered by MathJax include `aria-label` attributes with the spoken form of the equation. Screen readers should announce the math correctly, but accuracy varies:
+
 - NVDA + Firefox/Chrome: reads MathML fairly well
 - JAWS: reads the aria-label text
 - VoiceOver: reads the aria-label text
@@ -277,7 +287,7 @@ Every heading in a GitHub Markdown file gets an automatically generated anchor I
 GitHub converts the heading text to lowercase, replaces spaces with hyphens, and removes most punctuation:
 
 | Heading Text | Generated Anchor |
-|---|---|
+| ---  | ---  |
 | `# Introduction` | `#introduction` |
 | `## Getting Started` | `#getting-started` |
 | `### VS Code: Setup & Accessibility Basics` | `#vs-code-setup--accessibility-basics` |
@@ -309,7 +319,7 @@ Fenced code blocks with a language identifier get syntax highlighting:
 ```python
 def greet(name: str) -> str:
     return f"Hello, {name}!"
-```
+```text
 
 ```yaml
 name: CI
@@ -317,13 +327,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-```
+```text
 
 ```bash
 git checkout -b feature/my-change
 git add .
 git commit -m "Add accessibility improvements"
-```
+```text
 ````
 
 ### Supported Languages (Most Common)
@@ -370,7 +380,7 @@ Line two on the next line, same paragraph.
 ### Accessibility Requirements for HTML in Markdown
 
 | Element | Accessibility requirement |
-|---------|--------------------------|
+| ---------  | --------------------------  |
 | `<img>` | Must have a descriptive `alt` attribute - never use `alt=""` for informative images |
 | `<table>` | Needs `<th>` headers with `scope` for complex tables |
 | `<div align="center">` | Purely visual; no accessibility impact |
@@ -383,7 +393,7 @@ Line two on the next line, same paragraph.
 ### Summary of Accessibility Notes
 
 | Feature | Screen Reader Behavior | Author Responsibility |
-|---------|----------------------|----------------------|
+| ---------  | ----------------------  | ----------------------  |
 | Alert blocks | Type label read before content | None - GitHub handles it |
 | `<details>` | Announced as collapsed/expanded disclosure | Write clear `<summary>` text |
 | Task checkboxes | Read as standard checkbox | Use meaningful task descriptions |
@@ -432,7 +442,7 @@ Content revealed on expand.
 ```mermaid
 flowchart LR
     A --> B --> C
-```
+```text
 
 Inline math: $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$
 
@@ -449,11 +459,12 @@ Footnote reference[^1]
 ```python
 # Language-tagged code block
 print("Hello, world!")
-```
+```text
 
 Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to submit.
 
 H<sub>2</sub>O  |  x<sup>2</sup>
+
 ```
 
 ---

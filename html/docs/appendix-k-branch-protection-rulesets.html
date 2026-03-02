@@ -42,10 +42,10 @@
 <ol>
 <li><a href="#1-what-branch-protection-does">What Branch Protection Does</a></li>
 <li><a href="#2-common-branch-protection-rules">Common Branch Protection Rules</a></li>
-<li><a href="#3-repository-rulesets--the-modern-approach">Repository Rulesets - The Modern Approach</a></li>
-<li><a href="#4-why-your-pr-cannot-be-merged--diagnosis-guide">Why Your PR Cannot Be Merged - Diagnosis Guide</a></li>
+<li><a href="#3-repository-rulesets---the-modern-approach">Repository Rulesets - The Modern Approach</a></li>
+<li><a href="#4-why-your-pr-cannot-be-merged---diagnosis-guide">Why Your PR Cannot Be Merged - Diagnosis Guide</a></li>
 <li><a href="#5-navigating-the-merge-box-with-a-screen-reader">Navigating the Merge Box with a Screen Reader</a></li>
-<li><a href="#6-status-checks--what-they-are-and-what-they-mean">Status Checks - What They Are and What They Mean</a></li>
+<li><a href="#6-status-checks---what-they-are-and-what-they-mean">Status Checks - What They Are and What They Mean</a></li>
 <li><a href="#7-who-can-configure-branch-protection">Who Can Configure Branch Protection</a></li>
 <li><a href="#8-workshop-repository-configuration-reference">Workshop Repository Configuration Reference</a></li>
 </ol>
@@ -74,7 +74,7 @@
 <p><strong>Dismiss stale reviews:</strong> Some repos have this enabled - whenever you push a new commit, all existing approvals are automatically withdrawn and you need a fresh review. This prevents sneaking in bad code after approval.</p>
 <h3>Required Status Checks</h3>
 <p>Automated workflows (GitHub Actions or third-party CI) must complete successfully before merging is allowed.</p>
-<p><strong>Example checks you may see:</strong></p>
+<h4>Example checks you may see</h4>
 <ul>
 <li><code>ci / build</code> - compiles the code</li>
 <li><code>ci / test</code> - runs the test suite</li>
@@ -147,15 +147,15 @@
 <p>Most repositories you encounter still use classic branch protection rules. Rulesets will become more common as maintainers migrate.</p>
 <h3>Finding and Reading Rulesets</h3>
 <p>If you want to understand why certain rules apply to a branch:</p>
-<pre><code class="hljs">Repository → Insights tab → Rulesets (<span class="hljs-keyword">if</span> you have <span class="hljs-keyword">access</span> - contributors usually don<span class="hljs-symbol">&#x27;t</span>)
-<span class="hljs-keyword">Or</span>: Repository → Settings → Rules → Rulesets (admin only)</code></pre>
+<pre><code class="hljs language-text">Repository → Insights tab → Rulesets (if you have access - contributors usually don&#x27;t)
+Or: Repository → Settings → Rules → Rulesets (admin only)</code></pre>
 <p>Alternatively, PR merge box messages describe which rules are blocking - you don&#39;t need admin access to understand what&#39;s required.</p>
 <hr>
 <h2>4. Why Your PR Cannot Be Merged - Diagnosis Guide</h2>
 <p>When you open a PR and the merge button is grayed out or shows an error, the merge box tells you exactly what needs to happen. Here is how to read it.</p>
 <h3>&quot;X review required / X reviews required&quot;</h3>
 <p><strong>What it means:</strong> The required number of approvals hasn&#39;t been reached yet.</p>
-<p><strong>What to do:</strong></p>
+<h4>What to do</h4>
 <ol>
 <li>Request review from a codeowner or maintainer (right sidebar → Reviewers → request)</li>
 <li>Check if any reviews exist but requested changes - those count against you</li>
@@ -164,7 +164,7 @@
 </ol>
 <h3>&quot;Some checks haven&#39;t completed yet&quot; or &quot;Some checks were not successful&quot;</h3>
 <p><strong>What it means:</strong> A required status check is pending or failing.</p>
-<p><strong>What to do:</strong></p>
+<h4>What to do</h4>
 <ol>
 <li>Scroll down to the merge box - expand &quot;Show all checks&quot;</li>
 <li>Find the failing check → click &quot;Details&quot; to see the full log</li>
@@ -176,14 +176,14 @@
 <p><strong>If checks are stuck &quot;in progress&quot; for over 30 minutes:</strong> The workflow runner may have an issue - contact the maintainer.</p>
 <h3>&quot;This branch is out of date with the base branch&quot;</h3>
 <p><strong>What it means:</strong> New commits were pushed to <code>main</code> after you created your PR branch. The maintainer requires everything to be current.</p>
-<p><strong>What to do:</strong></p>
+<h4>What to do</h4>
 <ul>
 <li>Click <strong>&quot;Update branch&quot;</strong> in the merge box - GitHub does a merge commit from <code>main</code> into your branch</li>
 <li>Or locally: <code>git fetch upstream &amp;&amp; git rebase upstream/main</code> then force-push (only if you are comfortable with rebase)</li>
 </ul>
 <h3>&quot;Commits must have verified signatures&quot;</h3>
 <p><strong>What it means:</strong> Branch protection requires signed commits (see <a href="appendix-d-git-authentication.html">Appendix D: Git Authentication</a>).</p>
-<p><strong>What to do:</strong></p>
+<h4>What to do</h4>
 <ol>
 <li>Enable commit signing locally before making more commits</li>
 <li>For existing unsigned commits, you need to rebase-rewrite them - this is advanced; ask the maintainer if there is a workaround</li>
@@ -194,31 +194,31 @@
 <h2>5. Navigating the Merge Box with a Screen Reader</h2>
 <p>The merge box lives at the bottom of every PR page. With a screen reader, navigating to it efficiently is important.</p>
 <h3>Reaching the Merge Box</h3>
-<pre><code class="hljs">PR page → End key (<span class="hljs-keyword">jump </span>to <span class="hljs-keyword">bottom </span>of page)
-<span class="hljs-keyword">Or: </span><span class="hljs-keyword">B </span>key (NVDA <span class="hljs-keyword">Browse </span>Mode) → navigate <span class="hljs-keyword">buttons </span>→ look for <span class="hljs-string">&quot;Merge pull request&quot;</span> <span class="hljs-keyword">button
-</span><span class="hljs-keyword">Or: </span>H key → navigate to <span class="hljs-string">&quot;Merge&quot;</span> heading area</code></pre>
+<pre><code class="hljs language-text">PR page → End key (jump to bottom of page)
+Or: B key (NVDA Browse Mode) → navigate buttons → look for &quot;Merge pull request&quot; button
+Or: H key → navigate to &quot;Merge&quot; heading area</code></pre>
 <h3>Reading the Merge Box Status</h3>
-<pre><code class="hljs">From <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span> box area:
-H → section heading (<span class="hljs-string">&quot;Merging is blocked&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;This branch has no conflicts&quot;</span>)
-↓ → <span class="hljs-keyword">first</span> status message
-↓/Tab → <span class="hljs-keyword">each</span> requirement listed (required reviews, required checks, etc.)</code></pre>
-<p><strong>NVDA specific path:</strong></p>
-<pre><code class="hljs">NVDA+F7 → Elements list → <span class="hljs-keyword">Filter</span> <span class="hljs-keyword">by</span> <span class="hljs-keyword">type</span>: Headings
-Find &quot;Merge&quot; related heading → <span class="hljs-keyword">move</span> focus <span class="hljs-keyword">to</span> that section
-<span class="hljs-keyword">Then</span> ↓ through the section content</code></pre>
-<p><strong>JAWS specific path:</strong></p>
-<pre><code class="hljs">H → navigate <span class="hljs-built_in">to</span> <span class="hljs-built_in">merge</span> section
-Then ↓ key → <span class="hljs-built_in">read</span> <span class="hljs-keyword">each</span> <span class="hljs-keyword">item</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> requirements list</code></pre>
+<pre><code class="hljs language-text">From the merge box area:
+H → section heading (&quot;Merging is blocked&quot; or &quot;This branch has no conflicts&quot;)
+↓ → first status message
+↓/Tab → each requirement listed (required reviews, required checks, etc.)</code></pre>
+<h4>NVDA specific path</h4>
+<pre><code class="hljs language-text">NVDA+F7 → Elements list → Filter by type: Headings
+Find &quot;Merge&quot; related heading → move focus to that section
+Then ↓ through the section content</code></pre>
+<h4>JAWS specific path</h4>
+<pre><code class="hljs language-text">H → navigate to merge section
+Then ↓ key → read each item in the requirements list</code></pre>
 <h3>Checking Status Checks</h3>
-<pre><code class="hljs">Merge box area → Tab → <span class="hljs-string">&quot;Show all checks&quot;</span> link<span class="hljs-built_in"> or </span>button → Enter
-Expands to show: each<span class="hljs-built_in"> check </span>name, its status (passed/failed/pending), <span class="hljs-string">&quot;Details&quot;</span> link
-Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-string">&quot;Details&quot;</span> link → Enter to open the<span class="hljs-built_in"> check </span>log</code></pre>
+<pre><code class="hljs language-text">Merge box area → Tab → &quot;Show all checks&quot; link or button → Enter
+Expands to show: each check name, its status (passed/failed/pending), &quot;Details&quot; link
+Tab through each check → &quot;Details&quot; link → Enter to open the check log</code></pre>
 <h3>Reading Check Details</h3>
 <p>The check log is a text-heavy page in a pre-formatted block.</p>
-<pre><code class="hljs"><span class="hljs-keyword">Check</span> <span class="hljs-keyword">log</span> page: H → &quot;Summary&quot; heading → ↓ <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> <span class="hljs-keyword">summary</span>
-<span class="hljs-keyword">To</span> <span class="hljs-keyword">read</span> the <span class="hljs-keyword">full</span> <span class="hljs-keyword">log</span>: F → form controls → step dropdown (<span class="hljs-keyword">if</span> multi-step)
-<span class="hljs-keyword">Or</span>: Tab → <span class="hljs-keyword">each</span> step accordion → Enter <span class="hljs-keyword">to</span> expand → ↓ <span class="hljs-keyword">to</span> <span class="hljs-keyword">read</span> <span class="hljs-keyword">log</span> lines
-<span class="hljs-keyword">Log</span> content <span class="hljs-keyword">is</span> usually <span class="hljs-keyword">in</span> a scrollable region: ↓ key scrolls through lines</code></pre>
+<pre><code class="hljs language-text">Check log page: H → &quot;Summary&quot; heading → ↓ to read summary
+To read the full log: F → form controls → step dropdown (if multi-step)
+Or: Tab → each step accordion → Enter to expand → ↓ to read log lines
+Log content is usually in a scrollable region: ↓ key scrolls through lines</code></pre>
 <hr>
 <h2>6. Status Checks - What They Are and What They Mean</h2>
 <p>Status checks come from two sources:</p>
@@ -356,11 +356,11 @@ Tab through each<span class="hljs-built_in"> check </span>→ <span class="hljs-
 </tr>
 </tbody></table>
 <p><strong>Workshop tip:</strong> Your personal fork of <code>accessibility-agents</code> has no branch protection by default. If you want to practice the full &quot;review before merge&quot; workflow with a partner, you can add branch protection to your fork:</p>
-<pre><code class="hljs">Your fork → Settings → Branches → <span class="hljs-keyword">Add</span> branch protection rule
-Branch name <span class="hljs-built_in">pattern</span>: main
-<span class="hljs-keyword">Check</span>: <span class="hljs-keyword">Require</span> a pull request <span class="hljs-built_in">before</span> merging
-<span class="hljs-keyword">Check</span>: <span class="hljs-keyword">Require</span> approvals → <span class="hljs-number">1</span>
-<span class="hljs-keyword">Save</span> changes</code></pre>
+<pre><code class="hljs language-text">Your fork → Settings → Branches → Add branch protection rule
+Branch name pattern: main
+Check: Require a pull request before merging
+Check: Require approvals → 1
+Save changes</code></pre>
 <p>Then practice opening a PR on your fork and requesting your workshop partner&#39;s review.</p>
 <hr>
 <h2>Related Resources</h2>

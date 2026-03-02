@@ -40,10 +40,10 @@
 <hr>
 <h2>Table of Contents</h2>
 <ol>
-<li><a href="#1-wcag-22--the-four-principles">WCAG 2.2 - The Four Principles</a></li>
+<li><a href="#1-wcag-22---the-four-principles">WCAG 2.2 - The Four Principles</a></li>
 <li><a href="#2-conformance-levels-a-aa-aaa">Conformance Levels: A, AA, AAA</a></li>
 <li><a href="#3-key-success-criteria-for-web-contributions">Key Success Criteria for Web Contributions</a></li>
-<li><a href="#4-aria--roles-states-and-properties">ARIA - Roles, States, and Properties</a></li>
+<li><a href="#4-aria---roles-states-and-properties">ARIA - Roles, States, and Properties</a></li>
 <li><a href="#5-aria-landmark-roles">ARIA Landmark Roles</a></li>
 <li><a href="#6-common-aria-patterns">Common ARIA Patterns</a></li>
 <li><a href="#7-how-standards-apply-to-github-contributions">How Standards Apply to GitHub Contributions</a></li>
@@ -297,7 +297,7 @@
 <hr>
 <h2>4. ARIA - Roles, States, and Properties</h2>
 <p>WAI-ARIA (Accessible Rich Internet Applications) fills the gap between what HTML natively expresses and what complex interactive widgets require.</p>
-<p><strong>Three categories:</strong></p>
+<h3>Three categories</h3>
 <table>
 <thead>
 <tr>
@@ -322,7 +322,7 @@
 <td><code>aria-label=&quot;Close dialog&quot;</code>, <code>aria-required=&quot;true&quot;</code>, <code>aria-describedby=&quot;hint-text&quot;</code></td>
 </tr>
 </tbody></table>
-<p><strong>Important rules:</strong></p>
+<h3>Important rules</h3>
 <ol>
 <li><strong>Don&#39;t use ARIA if native HTML suffices.</strong> A <code>&lt;button&gt;</code> is already a button - adding <code>role=&quot;button&quot;</code> to a <code>&lt;div&gt;</code> is only needed when HTML semantics cannot be used.</li>
 <li><strong>All interactive ARIA widgets must be keyboard operable.</strong> Adding <code>role=&quot;button&quot;</code> means you must also handle <code>Enter</code> and <code>Space</code> keypresses in JavaScript.</li>

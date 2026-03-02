@@ -1,4 +1,5 @@
 # Appendix N: GitHub Codespaces
+>
 > **Listen to Episode 31:** [GitHub Codespaces](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Cloud Development Environments - Accessibility Guide
@@ -26,7 +27,7 @@
 
 A Codespace is a cloud-hosted development environment. When you open one, GitHub provisions a virtual machine, clones your repository into it, and connects it to a VS Code interface - either in your browser or via your local VS Code Desktop.
 
-**Why this matters for accessibility:**
+### Why this matters for accessibility
 
 - No local installation of tools, compilers, or language runtimes required
 - Your screen reader and OS settings stay on your machine; only the editor runs in the cloud
@@ -58,7 +59,7 @@ A Codespace is a cloud-hosted development environment. When you open one, GitHub
 ### Machine Types
 
 | Type | CPU | RAM | Best for |
-|------|-----|-----|----------|
+| ------  | -----  | -----  | ----------  |
 | 2-core | 2 vCPU | 8 GB | General development, documentation |
 | 4-core | 4 vCPU | 16 GB | Builds, tests, moderate workloads |
 | 8-core | 8 vCPU | 32 GB | Heavy builds, multiple services |
@@ -103,6 +104,7 @@ When VS Code detects a screen reader, it automatically activates **Screen Reader
 3. Press Enter to activate
 
 In this mode:
+
 - The editor reads content line by line instead of character by character
 - Diff views are rendered as accessible text comparisons
 - Inline suggestions from Copilot are announced on a keypress rather than automatically
@@ -112,7 +114,7 @@ In this mode:
 VS Code in Codespaces supports the same audio cues as the desktop version:
 
 | Event | Default Audio Cue |
-|-------|------------------|
+| -------  | ------------------  |
 | Error on current line | Tone |
 | Warning on current line | Tone |
 | Breakpoint hit | Tone |
@@ -162,7 +164,7 @@ Codespaces uses standard VS Code keyboard shortcuts. The most important ones for
 ### Navigation
 
 | Shortcut | Action |
-|----------|--------|
+| ----------  | --------  |
 | Ctrl+Shift+P | Command Palette |
 | Ctrl+P | Quick Open (search files by name) |
 | Ctrl+` | Toggle integrated terminal |
@@ -174,7 +176,7 @@ Codespaces uses standard VS Code keyboard shortcuts. The most important ones for
 ### Editor
 
 | Shortcut | Action |
-|----------|--------|
+| ----------  | --------  |
 | Ctrl+Shift+K | Delete line |
 | Alt+↑ / Alt+↓ | Move line up/down |
 | Ctrl+/ | Toggle line comment |
@@ -186,7 +188,7 @@ Codespaces uses standard VS Code keyboard shortcuts. The most important ones for
 ### Source Control
 
 | Shortcut | Action |
-|----------|--------|
+| ----------  | --------  |
 | Ctrl+Shift+G | Open Source Control panel |
 | Ctrl+Enter | Commit (when focus is on message field) |
 
@@ -238,7 +240,7 @@ VS Code settings (themes, font size, keybindings) can be synchronized to Codespa
 ## 9. Codespaces vs GitHub.dev
 
 | Feature | GitHub Codespaces | GitHub.dev |
-|---------|-----------------|------------|
+| ---------  | -----------------  | ------------  |
 | Access | github.com/codespaces or press `.` then choose Codespaces | Press `.` on any repository |
 | Terminal | Yes - full terminal | No terminal |
 | Extensions | Most VS Code extensions | Web-compatible extensions only |
@@ -253,22 +255,28 @@ For workshop exercises that involve running scripts or tests, use Codespaces. Fo
 
 ## 10. Common Issues and Workarounds
 
-**The Codespace takes a long time to open:**
+### The Codespace takes a long time to open
+
 Provisioning a new Codespace can take up to 90 seconds. If it hangs beyond that, refresh the browser tab and try again. Resuming an existing Codespace is much faster (5-10 seconds).
 
-**Screen reader stops reading after I switch to the terminal:**
+### Screen reader stops reading after I switch to the terminal
+
 Switch to Browse Mode (NVDA: Insert+Space; JAWS: Insert+Z) to read the terminal output, then return to Focus Mode to type your next command.
 
-**Audio cues are not working in the browser:**
+### Audio cues are not working in the browser
+
 Some browsers mute audio by default for new tabs. Check your browser's site permissions to ensure audio is allowed for github.dev or the Codespace URL.
 
-**Extensions I rely on locally are not available:**
+### Extensions I rely on locally are not available
+
 Some extensions are not compatible with the browser-based VS Code. Connect to the Codespace via VS Code Desktop instead (see [Section 3](#3-codespace-environments)) to access your full extension library.
 
-**I accidentally deleted my Codespace before pushing:**
+### I accidentally deleted my Codespace before pushing
+
 If the branch exists on GitHub, you can create a new Codespace from it. Uncommitted changes in a deleted Codespace cannot be recovered.
 
-**My changes are not showing in GitHub after committing:**
+### My changes are not showing in GitHub after committing
+
 You may have committed but not pushed. In the Source Control panel, look for the **Sync Changes** or **Push** button. Run `git push` in the terminal if needed.
 
 ---

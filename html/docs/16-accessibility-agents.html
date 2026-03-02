@@ -43,7 +43,7 @@
 </blockquote>
 <hr>
 <h2>Prerequisites Checklist</h2>
-<p><strong>Before starting this chapter, verify you have completed:</strong></p>
+<h3>Before starting this chapter, verify you have completed</h3>
 <h3>Core Prerequisites (Required for All Agents)</h3>
 <ul>
 <li><input aria-label="Chapter 0:" disabled="" type="checkbox"> Chapter 0: <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a> - Git, VS Code, and GitHub account</li>
@@ -95,7 +95,7 @@
 <li><a href="#1-the-principle-skill-first-agent-second">The Principle: Skill First, Agent Second</a></li>
 <li><a href="#2-setup-and-configuration">Setup and Configuration</a></li>
 <li><a href="#3-the-ecosystem-55-agents-3-teams-5-platforms">The Ecosystem: 55 Agents, 3 Teams, 5 Platforms</a></li>
-<li><a href="#4-agents-in-detail--hands-on-reference">Agents in Detail - Hands-On Reference</a></li>
+<li><a href="#4-agents-in-detail---hands-on-reference">Agents in Detail - Hands-On Reference</a></li>
 <li><a href="#5-slash-commands-and-prompts">Slash Commands and Prompts</a></li>
 <li><a href="#6-contributing-to-the-ecosystem">Contributing to the Ecosystem</a></li>
 <li><a href="#7-the-bigger-picture-teams-orchestration-and-beyond-vs-code">The Bigger Picture: Teams, Orchestration, and Beyond VS Code</a></li>
@@ -111,7 +111,7 @@
 <li>Edit the agent&#39;s drafts into something worth posting under your name</li>
 <li>Know when the agent is confidently wrong</li>
 </ul>
-<p><strong>Every agent has a manual prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it.</strong></p>
+<h3>Every agent has a manual prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it</h3>
 <p>This applies across all three teams and all 55 agents:</p>
 <ul>
 <li><strong>GitHub Workflow agents</strong> automate repository navigation, issue triage, PR review, and contribution analytics - skills you practiced on Day 1</li>
@@ -130,20 +130,25 @@
 <h2>2. Setup and Configuration</h2>
 <h3>Quick Install (One Command)</h3>
 <p>Accessibility Agents now ships with a one-liner installer that sets up all 55 agents for your platform:</p>
-<p><strong>macOS / Linux:</strong></p>
+<h4>macOS / Linux</h4>
 <pre><code class="hljs language-bash">curl -fsSL https://raw.githubusercontent.com/Community-Access/accessibility-agents/main/install.sh | bash</code></pre>
-<p><strong>Windows (PowerShell):</strong></p>
+<h4>Windows (PowerShell)</h4>
 <pre><code class="hljs language-powershell"><span class="hljs-built_in">irm</span> https://raw.githubusercontent.com/Community<span class="hljs-literal">-Access</span>/accessibility<span class="hljs-literal">-agents</span>/main/install.ps1 | <span class="hljs-built_in">iex</span></code></pre>
 <p>The installer detects which AI tools you have installed (VS Code with Copilot, Claude Code, Gemini CLI, Claude Desktop, Codex CLI) and configures the appropriate agent files for each platform. To uninstall, run the corresponding uninstall script from the repository.</p>
 <h3>Workshop Setup (Fork and Clone)</h3>
 <p>For the workshop, you will also fork and clone the repository so you can make contributions:</p>
 <ol>
-<li><strong>Fork</strong> <a href="https://github.com/community-access/accessibility-agents">accessibility-agents</a> to your GitHub account (you did this on Day 1 or Day 2 morning)</li>
-<li><strong>Clone</strong> your fork:<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[your-username]/accessibility-agents.git</code></pre>
+<li><p><strong>Fork</strong> <a href="https://github.com/community-access/accessibility-agents">accessibility-agents</a> to your GitHub account (you did this on Day 1 or Day 2 morning)</p>
 </li>
-<li><strong>Open in VS Code</strong>: navigate to the folder and run <code>code .</code> (or File, then Open Folder)</li>
-<li><strong>Open Copilot Chat</strong>: <code>Ctrl+Shift+I</code></li>
-<li><strong>Test</strong>: type <code>@daily-briefing morning briefing</code> and press <code>Enter</code></li>
+<li><p><strong>Clone</strong> your fork:</p>
+<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[your-username]/accessibility-agents.git</code></pre>
+</li>
+<li><p><strong>Open in VS Code</strong>: navigate to the folder and run <code>code .</code> (or File, then Open Folder)</p>
+</li>
+<li><p><strong>Open Copilot Chat</strong>: <code>Ctrl+Shift+I</code></p>
+</li>
+<li><p><strong>Test</strong>: type <code>@daily-briefing morning briefing</code> and press <code>Enter</code></p>
+</li>
 </ol>
 <p><strong>No API keys. No configuration files. The installer handles everything.</strong> If Copilot Chat works, the agents work.</p>
 <h3>Prerequisites</h3>
@@ -225,7 +230,7 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 </ul>
 <h3>Invoking Agents on GitHub.com</h3>
 <p>Accessibility Agents agents run in VS Code. But the same <code>.agent.md</code> files can also be invoked directly on GitHub.com - no VS Code, no local clone required.</p>
-<p><strong>Option 1: Copilot Chat with Task mode</strong></p>
+<h4>Option 1: Copilot Chat with Task mode</h4>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -250,7 +255,7 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 </ol>
 </details>
 
-<p><strong>Option 2: Assign an issue to Copilot</strong></p>
+<h4>Option 2: Assign an issue to Copilot</h4>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -291,11 +296,11 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs">On <span class="hljs-keyword">any</span> PR page:
-B → navigate buttons → find <span class="hljs-string">&quot;Summarize&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;Copilot summary&quot;</span> button → Enter
-Wait <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> summary <span class="hljs-built_in">to</span> render (usually <span class="hljs-number">5</span><span class="hljs-number">-10</span> <span class="hljs-built_in">seconds</span>)
-Copilot summary appears <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> <span class="hljs-built_in">new</span> blockquote <span class="hljs-keyword">or</span> section above/below <span class="hljs-keyword">the</span> description
-H <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> summary heading <span class="hljs-built_in">to</span> <span class="hljs-built_in">read</span> <span class="hljs-keyword">it</span></code></pre>
+<pre><code class="hljs language-text">On any PR page:
+B → navigate buttons → find &quot;Summarize&quot; or &quot;Copilot summary&quot; button → Enter
+Wait for the summary to render (usually 5-10 seconds)
+Copilot summary appears as a new blockquote or section above/below the description
+H or 2 → navigate to the summary heading to read it</code></pre>
 </details>
 
 <h4>Copilot PR Review</h4>
@@ -316,15 +321,15 @@ H <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> → na
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs">On <span class="hljs-keyword">any</span> issue page:
-H <span class="hljs-keyword">or</span> <span class="hljs-number">2</span> → navigate <span class="hljs-built_in">to</span> <span class="hljs-string">&quot;Copilot&quot;</span> section heading <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> sidebar
-B → activate <span class="hljs-string">&quot;Explain&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;Suggest fix&quot;</span> button
-Copilot response appears below <span class="hljs-keyword">the</span> button; use H <span class="hljs-built_in">to</span> navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">it</span></code></pre>
+<pre><code class="hljs language-text">On any issue page:
+H or 2 → navigate to &quot;Copilot&quot; section heading in the sidebar
+B → activate &quot;Explain&quot; or &quot;Suggest fix&quot; button
+Copilot response appears below the button; use H to navigate to it</code></pre>
 </details>
 
 <h4>GitHub Models - Free AI Playground</h4>
 <p><a href="https://github.com/marketplace/models">github.com/marketplace/models</a> is a free playground where you can test AI models (OpenAI GPT-4o, Meta Llama 3, Mistral, Phi-4 Mini, and others) directly in your browser.</p>
-<p><strong>What you can do:</strong></p>
+<h5>What you can do</h5>
 <ul>
 <li>Send prompts to any listed model and compare responses side by side</li>
 <li>Adjust parameters (temperature, max tokens) without any setup</li>
@@ -341,12 +346,12 @@ Copilot response appears below <span class="hljs-keyword">the</span> button; use
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs">Navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">https</span>://github.com/marketplace/models
-H → <span class="hljs-string">&quot;Models&quot;</span> h1, <span class="hljs-keyword">then</span> model category headings
-Links → navigate <span class="hljs-built_in">to</span> individual model cards
-Enter <span class="hljs-keyword">on</span> <span class="hljs-title">a</span> <span class="hljs-title">model</span> <span class="hljs-title">card</span> → <span class="hljs-title">opens</span> <span class="hljs-title">the</span> <span class="hljs-title">chat</span> <span class="hljs-title">playground</span>
-In <span class="hljs-keyword">the</span> playground: E <span class="hljs-keyword">or</span> F → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> prompt textarea → NVDA+Space (Focus Mode) → type prompt → Enter <span class="hljs-built_in">to</span> submit
-Response appears below <span class="hljs-keyword">the</span> Send button; use H <span class="hljs-built_in">to</span> find <span class="hljs-keyword">the</span> response section heading</code></pre>
+<pre><code class="hljs language-text">Navigate to https://github.com/marketplace/models
+H → &quot;Models&quot; h1, then model category headings
+Links → navigate to individual model cards
+Enter on a model card → opens the chat playground
+In the playground: E or F → navigate to the prompt textarea → NVDA+Space (Focus Mode) → type prompt → Enter to submit
+Response appears below the Send button; use H to find the response section heading</code></pre>
 </details>
 
 <h4>Copilot-Drafted Release Notes</h4>
@@ -613,7 +618,7 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <li>&quot;This agent is good but it misses [specific edge case] - I could improve those instructions&quot;</li>
 <li>&quot;Mobile native accessibility testing has no agent coverage yet - I could start one&quot;</li>
 </ul>
-<p><strong>The contribution paths are:</strong></p>
+<h4>The contribution paths are</h4>
 <ol>
 <li><strong>Report an agent gap</strong> - file an issue describing what is missing and why it matters</li>
 <li><strong>Improve existing agent instructions</strong> - make an agent smarter about edge cases it misses</li>
@@ -646,8 +651,9 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <h3>Agent 1: <code>@daily-briefing</code> - Morning Briefing</h3>
 <p><strong>Type:</strong> Informational</p>
 <p><strong>File:</strong> <code>.github/agents/daily-briefing.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have manually navigated a repository&#39;s Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to <a href="02-navigating-repositories.html">Navigating Repositories</a> and <a href="09-notifications.html">Notifications</a> first. The briefing output only makes sense when you already know what each section of it is describing.</p>
-<p><strong>What it does:</strong></p>
+<p><strong>Before you run this agent:</strong> You should have manually navigated a repository&#39;s Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to <a href="02-navigating-repositories.html">Navigating Repositories</a> and <a href="09-notifications.html">Notifications</a> first.
+The briefing output only makes sense when you already know what each section of it is describing.</p>
+<h4>What it does</h4>
 <p>Sweeps every repository you have access to and builds a prioritized dashboard:</p>
 <ul>
 <li>Issues opened in the last 24 hours</li>
@@ -656,14 +662,14 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <li>Security and Dependabot alerts</li>
 <li>Community reactions to your recent comments</li>
 </ul>
-<p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@daily-briefing</span> morning briefing
+<h4>Example commands</h4>
+<pre><code class="hljs language-text">@daily-briefing morning briefing
 
-<span class="hljs-variable">@daily-briefing</span> what needs my attention today in accessibility-agents?
+@daily-briefing what needs my attention today in accessibility-agents?
 
-<span class="hljs-variable">@daily-briefing</span> summarize activity in community-access/accessibility-agents from the last week</code></pre>
+@daily-briefing summarize activity in community-access/accessibility-agents from the last week</code></pre>
 <p><strong>Screen reader tip:</strong> The briefing output uses heading level 2 for each section. Use <code>H</code> key (NVDA/JAWS virtual mode) or <code>VO+Command+H</code> (VoiceOver) to jump between: Open Issues, Review Requests, CI Status, Security Alerts, Community Activity.</p>
-<p><strong>Output format:</strong></p>
+<h4>Output format</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Issues Opened (Last 24 Hours)</span>
 <span class="hljs-bullet">-</span> #42 [accessibility-agents] Add Timeline View documentation (opened 3 hours ago)
 <span class="hljs-bullet">-</span> #41 [accessibility-agents] Fix heading hierarchy in GUIDE.md (opened 18 hours ago)
@@ -683,8 +689,9 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <h3>Agent 2: <code>@issue-tracker</code> - Issue Management</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/issue-tracker.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have filed at least one issue using the full manual process - writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent&#39;s priority scores and draft replies will mean nothing to you. Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a href="08-labels-milestones-projects.html">Labels, Milestones &amp; Projects</a> first.</p>
-<p><strong>What it does:</strong></p>
+<p><strong>Before you run this agent:</strong> You should have filed at least one issue using the full manual process - writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent&#39;s priority scores and draft replies will mean nothing to you.
+Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a href="08-labels-milestones-projects.html">Labels, Milestones &amp; Projects</a> first.</p>
+<h4>What it does</h4>
 <p>Finds, prioritizes, and helps you manage issues across all your repositories:</p>
 <ul>
 <li>Cross-repository priority scoring with community sentiment</li>
@@ -692,16 +699,16 @@ Response appears below <span class="hljs-keyword">the</span> Send button; use H 
 <li>Saved search support</li>
 <li>Release-awareness (flags issues that affect upcoming releases)</li>
 </ul>
-<p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@issue-tracker</span> find open issues labeled good-first-issue
+<h4>Example commands</h4>
+<pre><code class="hljs language-text">@issue-tracker find open issues labeled good-first-issue
 
-<span class="hljs-variable">@issue-tracker</span> find accessibility issues across all my repos
+@issue-tracker find accessibility issues across all my repos
 
-<span class="hljs-variable">@issue-tracker</span> is there a duplicate of issue #<span class="hljs-number">42</span> in accessibility-agents?
+@issue-tracker is there a duplicate of issue #42 in accessibility-agents?
 
-<span class="hljs-variable">@issue-tracker</span> draft a reply to issue #<span class="hljs-number">15</span> acknowledging it <span class="hljs-keyword">and</span> asking for more context</code></pre>
+@issue-tracker draft a reply to issue #15 acknowledging it and asking for more context</code></pre>
 <p><strong>Important:</strong> The agent can draft a reply. You review the tone against the <a href="07-culture-etiquette.html">Culture &amp; Etiquette guide</a> before posting. Your name goes on it.</p>
-<p><strong>Output example:</strong></p>
+<h4>Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Open Issues Labeled &quot;good-first-issue&quot;</span>
 
 <span class="hljs-section">### High Priority</span>
@@ -729,8 +736,9 @@ This will help us diagnose the issue faster.
 <h3>Agent 3: <code>@pr-review</code> - Pull Request Review</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/pr-review.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have manually reviewed at least one pull request diff in the GitHub browser interface - navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces. Return to <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> if this is not yet familiar.</p>
-<p><strong>What it does:</strong></p>
+<p><strong>Before you run this agent:</strong> You should have manually reviewed at least one pull request diff in the GitHub browser interface - navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces.
+Return to <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> if this is not yet familiar.</p>
+<h4>What it does</h4>
 <p>Generates full review documents for pull requests:</p>
 <ul>
 <li>Line-numbered diffs with change maps</li>
@@ -739,16 +747,16 @@ This will help us diagnose the issue faster.
 <li>CI results and test coverage information</li>
 <li>Suggested inline review comments with line number references</li>
 </ul>
-<p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@pr-review</span> review PR #<span class="hljs-number">14</span> in accessibility-agents
+<h4>Example commands</h4>
+<pre><code class="hljs language-text">@pr-review review PR #14 in accessibility-agents
 
-<span class="hljs-variable">@pr-review</span> what is the risk level of PR #<span class="hljs-number">8</span>?
+@pr-review what is the risk level of PR #8?
 
-<span class="hljs-variable">@pr-review</span> generate inline comments for PR #<span class="hljs-number">14</span>
+@pr-review generate inline comments for PR #14
 
-<span class="hljs-variable">@pr-review</span> summarize what changed in PR #<span class="hljs-number">14</span> in two sentences</code></pre>
+@pr-review summarize what changed in PR #14 in two sentences</code></pre>
 <p><strong>Critical rule:</strong> Read the agent&#39;s review. Edit it. Make it yours. Post your edited version. The agent produces a starting point - it does not know the project&#39;s history, the contributor&#39;s background, or the community&#39;s implicit standards the way you do.</p>
-<p><strong>Output example:</strong></p>
+<h4>Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## PR Review: #14 - Improve screen reader navigation guide</span>
 
 <span class="hljs-section">### Summary</span>
@@ -761,26 +769,26 @@ This PR adds 3 new sections to the screen reader navigation guide and updates 2 
 <span class="hljs-section">### Risk Assessment</span>
 <span class="hljs-strong">**Risk Level:**</span> Low
 
-<span class="hljs-strong">**What Could Break:**</span>
+<span class="hljs-section">#### What Could Break</span>
 <span class="hljs-bullet">-</span> None identified - documentation-only change
 
-<span class="hljs-strong">**High-Impact Areas:**</span>
+<span class="hljs-section">#### High-Impact Areas</span>
 <span class="hljs-bullet">-</span> Section 3 (Keyboard Navigation) - heavily referenced by other guides
 
 <span class="hljs-section">### Change Map</span>
 
 <span class="hljs-section">#### docs/navigation-guide.md</span>
 
-<span class="hljs-strong">**Lines 42-65: ADDED - NVDA Browse Mode shortcuts**</span>
+<span class="hljs-section">##### Lines 42-65: ADDED - NVDA Browse Mode shortcuts</span>
 <span class="hljs-bullet">+</span> New content explaining Browse Mode vs Focus Mode
 <span class="hljs-bullet">+</span> Table of NVDA-specific shortcuts
 <span class="hljs-bullet">+</span> Screen reader announcements examples
 
-<span class="hljs-strong">**Lines 88-92: MODIFIED - Updated heading hierarchy example**</span>
+<span class="hljs-section">##### Lines 88-92: MODIFIED - Updated heading hierarchy example</span>
 <span class="hljs-bullet">-</span> Old: Basic example with 2 levels
 <span class="hljs-bullet">+</span> New: Comprehensive example with 3 levels and explanations
 
-<span class="hljs-strong">**Lines 120-145: ADDED - Common navigation mistakes section**</span>
+<span class="hljs-section">##### Lines 120-145: ADDED - Common navigation mistakes section</span>
 <span class="hljs-bullet">+</span> Lists 5 common mistakes with solutions
 
 <span class="hljs-section">### Suggested Inline Comments</span>
@@ -790,7 +798,7 @@ This PR adds 3 new sections to the screen reader navigation guide and updates 2 
 <span class="hljs-strong">**Line 143:**</span> This mistake applies to VoiceOver too - expand to include VO+Arrow navigation
 
 <span class="hljs-section">### Recommendation</span>
-<span class="hljs-strong">**Approve with Minor Changes**</span>
+<span class="hljs-section">#### Approve with Minor Changes</span>
 
 This is a valuable addition to the guide. The three typos and one clarification request are minor. Once those are addressed, this is ready to merge.
 
@@ -800,7 +808,7 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <p><strong>Type:</strong> Informational</p>
 <p><strong>File:</strong> <code>.github/agents/analytics.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have explored the Insights tab of at least one repository - looked at the contribution graph, understood what commit frequency means, and thought about what &quot;high-churn files&quot; implies for a project&#39;s stability. The analytics output describes patterns in data you should already be able to read manually. Return to <a href="02-navigating-repositories.html">Navigating Repositories</a> if the Insights tab is unfamiliar.</p>
-<p><strong>What it does:</strong></p>
+<h4>What it does</h4>
 <p>Surfaces team contribution patterns, velocity metrics, and bottleneck detection:</p>
 <ul>
 <li>Contribution velocity over time</li>
@@ -808,16 +816,16 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <li>Code hotspot detection (files with the most churn)</li>
 <li>Workload distribution across contributors</li>
 </ul>
-<p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@analytics</span> team velocity in accessibility-agents this month
+<h4>Example commands</h4>
+<pre><code class="hljs language-text">@analytics team velocity in accessibility-agents this month
 
-<span class="hljs-variable">@analytics</span> who are the most active contributors to accessibility-agents?
+@analytics who are the most active contributors to accessibility-agents?
 
-<span class="hljs-variable">@analytics</span> which files are changed most often in accessibility-agents?
+@analytics which files are changed most often in accessibility-agents?
 
-<span class="hljs-variable">@analytics</span> how long does PR review take on average in accessibility-agents?</code></pre>
+@analytics how long does PR review take on average in accessibility-agents?</code></pre>
 <p><strong>Accessibility use case:</strong> After Day 2&#39;s contribution wave, run <code>@analytics team velocity in accessibility-agents today</code> to see the hackathon&#39;s collective output. A moment of real-time team celebration.</p>
-<p><strong>Output example:</strong></p>
+<h4>Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Team Velocity - accessibility-agents (January 2026)</span>
 
 <span class="hljs-section">### Contribution Summary</span>
@@ -849,8 +857,9 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <h3>Agent 5: <code>@insiders-a11y-tracker</code> - Accessibility Change Monitoring</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/insiders-a11y-tracker.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have filed at least one accessibility bug report using the workshop&#39;s issue template, applied a WCAG label to an issue, and manually reviewed a Markdown file for heading hierarchy - knowing what H1 → H2 → H3 means, what a skip means, and why it matters to screen reader navigation. The tracker flags accessibility issues in your contributions; you need to understand the standard it is measuring against before you can act on its output. Return to <a href="15-issue-templates.html">Issue Templates</a> and <a href="04-working-with-issues.html">Working with Issues</a> if these are not yet familiar.</p>
-<p><strong>What it does:</strong></p>
+<p><strong>Before you run this agent:</strong> You should have filed at least one accessibility bug report using the workshop&#39;s issue template, applied a WCAG label to an issue, and manually reviewed a Markdown file for heading hierarchy - knowing what H1 means, what H2 means, what H3 means, what a skip means, and why it matters to screen reader navigation. The tracker flags accessibility issues in your contributions; you need to understand the standard it is measuring against before you can act on its output.
+Return to <a href="15-issue-templates.html">Issue Templates</a> and <a href="04-working-with-issues.html">Working with Issues</a> if these are not yet familiar.</p>
+<h4>What it does</h4>
 <p>Monitors accessibility-sensitive changes across configured repositories:</p>
 <ul>
 <li>WCAG/ARIA cross-referenced change tracking</li>
@@ -858,14 +867,14 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <li>Monitors for heading hierarchy violations in Markdown</li>
 <li>Tracks link text quality (flags bare URLs, non-descriptive labels)</li>
 </ul>
-<p><strong>Example commands:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">@insiders-a11y-tracker</span> check recent changes in accessibility-agents
+<h4>Example commands</h4>
+<pre><code class="hljs language-text">@insiders-a11y-tracker check recent changes in accessibility-agents
 
-<span class="hljs-variable">@insiders-a11y-tracker</span> review my PR #<span class="hljs-number">14</span> for accessibility impact
+@insiders-a11y-tracker review my PR #14 for accessibility impact
 
-<span class="hljs-variable">@insiders-a11y-tracker</span> are there any accessibility regressions in the last <span class="hljs-number">5</span> commits?</code></pre>
+@insiders-a11y-tracker are there any accessibility regressions in the last 5 commits?</code></pre>
 <p><strong>Day 2 workflow:</strong> Run this before submitting any PR. If the agent flags an issue, fix it before requesting review - not after.</p>
-<p><strong>Output example:</strong></p>
+<h4>Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Accessibility Changes - accessibility-agents (Last 5 Commits)</span>
 
 <span class="hljs-section">### Issues Found: 2</span>
@@ -880,101 +889,167 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <span class="hljs-code">```markdown
 # VS Code Setup
 
-### Screen Reader Mode</span></code></pre>
-<p><strong>WCAG Guideline:</strong> 1.3.1 Info and Relationships (Level A)</p>
-<p><strong>Impact:</strong> Screen reader users navigating by heading level will not find this section when jumping to H2 headings.</p>
-<p><strong>Suggested Fix:</strong> Change <code>### Screen Reader Mode</code> to <code>## Screen Reader Mode</code></p>
-<hr>
-<h4>Issue 2: Non-Descriptive Link Text</h4>
-<p><strong>File:</strong> README.md<br><strong>Commit:</strong> b8e3c1d<br><strong>Line:</strong> 28  </p>
-<p><strong>Problem:</strong> Link text is &quot;click here&quot;</p>
-<pre><code class="hljs language-markdown">For more information, [<span class="hljs-string">click here</span>](<span class="hljs-link">https://example.com/guide</span>).</code></pre>
-<p><strong>WCAG Guideline:</strong> 2.4.4 Link Purpose (Level A)</p>
-<p><strong>Impact:</strong> Screen reader users navigating by links will hear &quot;click here&quot; with no context about the destination.</p>
-<p><strong>Suggested Fix:</strong> Use descriptive link text: <code>Read the [complete setup guide](https://example.com/guide).</code></p>
-<hr>
-<h3>Positive Changes: 1</h3>
-<h4>Improvement: ARIA Label Added</h4>
-<p><strong>File:</strong> docs/navigation-guide.md<br><strong>Commit:</strong> c7d4e2f<br><strong>Line:</strong> 89  </p>
-<p><strong>Change:</strong> Added <code>aria-label</code> to icon-only button example</p>
-<pre><code class="hljs language-markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close dialog&quot;</span>&gt;</span></span>✕<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></code></pre>
-<p><strong>WCAG Guideline:</strong> 4.1.2 Name, Role, Value (Level A)</p>
-<p><strong>Impact:</strong> Screen reader users can now understand the button&#39;s purpose without visible text.</p>
-<hr>
-<h2>Recommendations</h2>
-<ol>
-<li>Fix heading hierarchy skip in docs/11-vscode-basics.md before merging PR #14</li>
-<li>Update link text in README.md (low priority - not in active workflow path)</li>
-<li>Continue using descriptive ARIA labels for icon-only controls (positive trend)</li>
-</ol>
-<pre><code class="hljs">
+### Screen Reader Mode
+```</span>text
+
+<span class="hljs-strong">**WCAG Guideline:**</span> 1.3.1 Info and Relationships (Level A)
+
+<span class="hljs-strong">**Impact:**</span> Screen reader users navigating by heading level will not find this section when jumping to H2 headings.
+
+<span class="hljs-strong">**Suggested Fix:**</span> Change <span class="hljs-code">`### Screen Reader Mode`</span> to <span class="hljs-code">`## Screen Reader Mode`</span>
+
 ---
 
-<span class="hljs-meta">### Agent 6: `<span class="hljs-comment">@template-builder` - Interactive Issue Template Wizard
+<span class="hljs-section">#### Issue 2: Non-Descriptive Link Text</span>
 
-**Type:** Informational with guided output
+<span class="hljs-strong">**File:**</span> README.md  
+<span class="hljs-strong">**Commit:**</span> b8e3c1d  
+<span class="hljs-strong">**Line:**</span> 28  
 
-**File:** `.github/agents/template-builder.agent.md`
+<span class="hljs-strong">**Problem:**</span> Link text is &quot;click here&quot;
 
-**Before you run this agent:** You should have read [Issue Templates](15-issue-templates.md) thoroughly - understanding YAML field types, creating a template manually (Exercise B), and designing your own template (Exercise D). The Template Builder does not teach template design - it automates the YAML writing. You need to know what you want to ask for before the agent can guide you through the form structure.
+<span class="hljs-code">```markdown
+For more information, [click here](https://example.com/guide).
+```</span>text
 
-**What it does:**
+<span class="hljs-strong">**WCAG Guideline:**</span> 2.4.4 Link Purpose (Level A)
 
-An interactive wizard that guides you through building GitHub issue templates step-by-step using VS Code&#x27;s Ask Questions feature. Instead of writing YAML syntax, answer simple questions and the agent generates production-ready templates.
+<span class="hljs-strong">**Impact:**</span> Screen reader users navigating by links will hear &quot;click here&quot; with no context about the destination.
 
-**Example workflow:**
-</span></span></code></pre>
-<p>You: @template-builder create accessibility bug template</p>
-<p>Agent: [Ask Questions interface]
-  Q: What&#39;s this template called?
-  → &quot;Accessibility Bug Report&quot;</p>
-<p>  Q: What&#39;s it for?
-  → &quot;Report screen reader, keyboard, and assistive tech issues&quot;</p>
-<p>  Q: Add a field (type, label, required?)
+<span class="hljs-strong">**Suggested Fix:**</span> Use descriptive link text: <span class="hljs-code">`Read the [complete setup guide](https://example.com/guide).`</span>
+
+---
+
+<span class="hljs-section">### Positive Changes: 1</span>
+
+<span class="hljs-section">#### Improvement: ARIA Label Added</span>
+
+<span class="hljs-strong">**File:**</span> docs/navigation-guide.md  
+<span class="hljs-strong">**Commit:**</span> c7d4e2f  
+<span class="hljs-strong">**Line:**</span> 89  
+
+<span class="hljs-strong">**Change:**</span> Added <span class="hljs-code">`aria-label`</span> to icon-only button example
+
+<span class="hljs-code">```markdown
+&lt;button aria-label=&quot;Close dialog&quot;&gt;✕&lt;/button&gt;
+```</span>text
+
+<span class="hljs-strong">**WCAG Guideline:**</span> 4.1.2 Name, Role, Value (Level A)
+
+<span class="hljs-strong">**Impact:**</span> Screen reader users can now understand the button&#x27;s purpose without visible text.
+
+---
+
+<span class="hljs-section">## Recommendations</span>
+
+<span class="hljs-bullet">1.</span> Fix heading hierarchy skip in docs/11-vscode-basics.md before merging PR #14
+<span class="hljs-bullet">2.</span> Update link text in README.md (low priority - not in active workflow path)
+<span class="hljs-bullet">3.</span> Continue using descriptive ARIA labels for icon-only controls (positive trend)
+</code></pre>
+<hr>
+<h3>Agent 6: <code>@template-builder</code> - Interactive Issue Template Wizard</h3>
+<p><strong>Type:</strong> Informational with guided output</p>
+<p><strong>File:</strong> <code>.github/agents/template-builder.agent.md</code></p>
+<p><strong>Before you run this agent:</strong> You should have read <a href="15-issue-templates.html">Issue Templates</a> thoroughly - understanding YAML field types, creating a template manually (Exercise B), and designing your own template (Exercise D). The Template Builder does not teach template design - it automates the YAML writing. You need to know what you want to ask for before the agent can guide you through the form structure.</p>
+<h4>What it does</h4>
+<p>An interactive wizard that guides you through building GitHub issue templates step-by-step using VS Code&#39;s Ask Questions feature. Instead of writing YAML syntax, answer simple questions and the agent generates production-ready templates.</p>
+<h4>Example workflow</h4>
+<pre><code class="hljs language-text">
+You: @template-builder create accessibility bug template
+
+Agent: [Ask Questions interface]
+  Q: What&#x27;s this template called?
+  → &quot;Accessibility Bug Report&quot;
+  
+  Q: What&#x27;s it for?
+  → &quot;Report screen reader, keyboard, and assistive tech issues&quot;
+  
+  Q: Add a field (type, label, required?)
   → Field 1: dropdown, &quot;Screen Reader&quot;, yes
-     Options: NVDA, JAWS, VoiceOver, TalkBack, Other</p>
-<p>  → Field 2: textarea, &quot;How to reproduce&quot;, required</p>
-<p>  → Field 3: textarea, &quot;Expected vs actual&quot;, required</p>
-<p>  Q: Ready to generate?
-  → Yes</p>
-<p>Agent: [Syntax-highlighted YAML output]
-        Ready to copy and save to .github/ISSUE_TEMPLATE/</p>
-<pre><code class="hljs">
-<span class="hljs-strong">**Example commands:**</span>
+     Options: NVDA, JAWS, VoiceOver, TalkBack, Other
+  
+  → Field 2: textarea, &quot;How to reproduce&quot;, required
+  
+  → Field 3: textarea, &quot;Expected vs actual&quot;, required
+  
+  Q: Ready to generate?
+  → Yes
+
+Agent: [Syntax-highlighted YAML output]
+        Ready to copy and save to .github/ISSUE_TEMPLATE/
 </code></pre>
-<p>@template-builder create accessibility template</p>
-<p>@template-builder design a security vulnerability template</p>
-<p>@template-builder build a feature request form</p>
-<pre><code class="hljs">
-<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span>Why use it?<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span> Manual YAML template creation takes 15-20 minutes and is error-prone. The <span class="hljs-keyword">Template</span> Builder generates correct, tested templates in 2-3 minutes via guided questions.
+<h4>Example commands</h4>
+<pre><code class="hljs language-text">
+@template-builder create accessibility template
 
-<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span>Advanced:<span class="hljs-symbol">*</span><span class="hljs-symbol">*</span> After generating a template, you can ask: `<span class="hljs-meta">@template-builder</span> reorder the fields` or `<span class="hljs-meta">@template-builder</span> add a checkbox field for version compatibility` - the agent regenerates your YAML with the changes applied.
+@template-builder design a security vulnerability template
 
----
-
-<span class="hljs-comment">## 5. Slash Commands and Prompts</span>
-
-The repository includes 54+ slash commands defined as `.prompt.md` files in `.github/prompts/`. Type `/` in Copilot Chat to see the full command menu.
-
-<span class="hljs-comment">### Most Useful for This Workshop</span>
-
-|<span class="hljs-string"> Command </span>|<span class="hljs-string"> What It Does </span>|<span class="hljs-string"> Example Usage </span>|
-|<span class="hljs-string">---------</span>|<span class="hljs-string">-------------</span>|<span class="hljs-string">---------------</span>|
-|<span class="hljs-string"> `/my-issues` </span>|<span class="hljs-string"> Your open issues with priority signals </span>|<span class="hljs-string"> `/my-issues` </span>|
-|<span class="hljs-string"> `/review-pr` </span>|<span class="hljs-string"> AI-generated review with inline suggestions </span>|<span class="hljs-string"> `/review-pr #14` </span>|
-|<span class="hljs-string"> `/pr-comment` </span>|<span class="hljs-string"> Draft a response to a PR comment </span>|<span class="hljs-string"> `/pr-comment #14` </span>|
-|<span class="hljs-string"> `/a11y-update` </span>|<span class="hljs-string"> Latest accessibility improvements with WCAG cross-references </span>|<span class="hljs-string"> `/a11y-update insiders` </span>|
-|<span class="hljs-string"> `/triage` </span>|<span class="hljs-string"> Triage a new issue with label and priority suggestions </span>|<span class="hljs-string"> `/triage #22` </span>|
-|<span class="hljs-string"> `/issue-reply` </span>|<span class="hljs-string"> Draft a reply to an issue thread </span>|<span class="hljs-string"> `/issue-reply #15` </span>|
-|<span class="hljs-string"> `/daily-briefing` </span>|<span class="hljs-string"> Same as `@daily-briefing` - your morning activity snapshot </span>|<span class="hljs-string"> `/daily-briefing` </span>|
-|<span class="hljs-string"> `/draft-release` </span>|<span class="hljs-string"> Generate release notes from merged PRs </span>|<span class="hljs-string"> `/draft-release v2.0` </span>|
-|<span class="hljs-string"> `/my-prs` </span>|<span class="hljs-string"> Your open PRs with CI and review status </span>|<span class="hljs-string"> `/my-prs` </span>|
-
-<span class="hljs-comment">### Workshop Slash Command Quick Reference</span>
-
-The commands listed below are the ones most relevant to this workshop. The full repository contains 54+ commands covering accessibility auditing, document scanning, framework-specific checks, and more. See [Appendix V](appendix-v-accessibility-agents-reference.md) for the complete list.
+@template-builder build a feature request form
 </code></pre>
-<p>/address-comments     Address all open review comments on your PR
+<p><strong>Why use it?</strong> Manual YAML template creation takes 15-20 minutes and is error-prone. The Template Builder generates correct, tested templates in 2-3 minutes via guided questions.</p>
+<p><strong>Advanced:</strong> After generating a template, you can ask: <code>@template-builder reorder the fields</code> or <code>@template-builder add a checkbox field for version compatibility</code> - the agent regenerates your YAML with the changes applied.</p>
+<hr>
+<h2>5. Slash Commands and Prompts</h2>
+<p>The repository includes 54+ slash commands defined as <code>.prompt.md</code> files in <code>.github/prompts/</code>. Type <code>/</code> in Copilot Chat to see the full command menu.</p>
+<h3>Most Useful for This Workshop</h3>
+<table>
+<thead>
+<tr>
+<th scope="col">Command</th>
+<th scope="col">What It Does</th>
+<th scope="col">Example Usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>/my-issues</code></td>
+<td>Your open issues with priority signals</td>
+<td><code>/my-issues</code></td>
+</tr>
+<tr>
+<td><code>/review-pr</code></td>
+<td>AI-generated review with inline suggestions</td>
+<td><code>/review-pr #14</code></td>
+</tr>
+<tr>
+<td><code>/pr-comment</code></td>
+<td>Draft a response to a PR comment</td>
+<td><code>/pr-comment #14</code></td>
+</tr>
+<tr>
+<td><code>/a11y-update</code></td>
+<td>Latest accessibility improvements with WCAG cross-references</td>
+<td><code>/a11y-update insiders</code></td>
+</tr>
+<tr>
+<td><code>/triage</code></td>
+<td>Triage a new issue with label and priority suggestions</td>
+<td><code>/triage #22</code></td>
+</tr>
+<tr>
+<td><code>/issue-reply</code></td>
+<td>Draft a reply to an issue thread</td>
+<td><code>/issue-reply #15</code></td>
+</tr>
+<tr>
+<td><code>/daily-briefing</code></td>
+<td>Same as <code>@daily-briefing</code> - your morning activity snapshot</td>
+<td><code>/daily-briefing</code></td>
+</tr>
+<tr>
+<td><code>/draft-release</code></td>
+<td>Generate release notes from merged PRs</td>
+<td><code>/draft-release v2.0</code></td>
+</tr>
+<tr>
+<td><code>/my-prs</code></td>
+<td>Your open PRs with CI and review status</td>
+<td><code>/my-prs</code></td>
+</tr>
+</tbody></table>
+<h3>Workshop Slash Command Quick Reference</h3>
+<p>The commands listed below are the ones most relevant to this workshop. The full repository contains 54+ commands covering accessibility auditing, document scanning, framework-specific checks, and more. See <a href="appendix-v-accessibility-agents-reference.html">Appendix V</a> for the complete list.</p>
+<pre><code class="hljs language-text">
+/address-comments     Address all open review comments on your PR
 /a11y-update          Latest accessibility improvements with WCAG cross-references
 /ci-status            CI/CD health dashboard across your repos
 /create-issue         Create a well-formed issue from a description
@@ -1001,45 +1076,38 @@ The commands listed below are the ones most relevant to this workshop. The full 
 /security-dashboard   Dependabot alerts and vulnerability status
 /sprint-review        End-of-sprint summary with velocity and retrospective
 /team-dashboard       Team activity and contribution overview
-/triage               Triage a new issue with label and priority suggestions</p>
-<pre><code class="hljs">
-<span class="hljs-comment">### Reading Slash Command Definitions</span>
+/triage               Triage a new issue with label and priority suggestions
+</code></pre>
+<h3>Reading Slash Command Definitions</h3>
+<p>Each <code>/command</code> corresponds to a <code>.prompt.md</code> file in <code>.github/prompts/</code>. Open any of them in VS Code to read what instructions it gives Copilot.</p>
+<h4>Example: <code>/a11y-update</code></h4>
+<p>File: <code>.github/prompts/a11y-update.prompt.md</code></p>
+<pre><code class="hljs language-markdown">---
+name: a11y-update
+description: &quot;Get the latest accessibility improvements across all tracked repos -- with WCAG cross-references and ARIA pattern mapping&quot;
+agent: insiders-a11y-tracker
+tools:
+<span class="hljs-bullet">  -</span> github/*
+<span class="hljs-bullet">  -</span> createFile
+<span class="hljs-bullet">  -</span> createDirectory
+<span class="hljs-section">  - ask<span class="hljs-emphasis">_questions
+---
 
-<span class="hljs-string">Each</span> <span class="hljs-string">`/command`</span> <span class="hljs-string">corresponds</span> <span class="hljs-string">to</span> <span class="hljs-string">a</span> <span class="hljs-string">`.prompt.md`</span> <span class="hljs-string">file</span> <span class="hljs-string">in</span> <span class="hljs-string">`.github/prompts/`.</span> <span class="hljs-string">Open</span> <span class="hljs-string">any</span> <span class="hljs-string">of</span> <span class="hljs-string">them</span> <span class="hljs-string">in</span> <span class="hljs-string">VS</span> <span class="hljs-string">Code</span> <span class="hljs-string">to</span> <span class="hljs-string">read</span> <span class="hljs-string">what</span> <span class="hljs-string">instructions</span> <span class="hljs-string">it</span> <span class="hljs-string">gives</span> <span class="hljs-string">Copilot.</span>
+Show me the latest accessibility improvements across tracked repositories.
 
-<span class="hljs-attr">**Example:</span> <span class="hljs-string">`/a11y-update`**</span>
+${input:scope:Optional: &#x27;insiders&#x27;, &#x27;stable&#x27;, &#x27;both&#x27;, a specific month, &#x27;screen reader&#x27;, search keywords, &#x27;track owner/repo&#x27;, or a specific repo name}
 
-<span class="hljs-attr">File:</span> <span class="hljs-string">`.github/prompts/a11y-update.prompt.md`</span>
+## Behavior
 
-<span class="hljs-string">```markdown</span>
-<span class="hljs-meta">---</span>
-<span class="hljs-attr">name:</span> <span class="hljs-string">a11y-update</span>
-<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Get the latest accessibility improvements across all tracked repos -- with WCAG cross-references and ARIA pattern mapping&quot;</span>
-<span class="hljs-attr">agent:</span> <span class="hljs-string">insiders-a11y-tracker</span>
-<span class="hljs-attr">tools:</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-string">github/*</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-string">createFile</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-string">createDirectory</span>
-  <span class="hljs-bullet">-</span> <span class="hljs-string">ask_questions</span>
-<span class="hljs-meta">---
-</span>
-<span class="hljs-string">Show</span> <span class="hljs-string">me</span> <span class="hljs-string">the</span> <span class="hljs-string">latest</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">improvements</span> <span class="hljs-string">across</span> <span class="hljs-string">tracked</span> <span class="hljs-string">repositories.</span>
-
-<span class="hljs-string">${input:scope:Optional:</span> <span class="hljs-string">&#x27;insiders&#x27;</span><span class="hljs-string">,</span> <span class="hljs-string">&#x27;stable&#x27;</span><span class="hljs-string">,</span> <span class="hljs-string">&#x27;both&#x27;</span><span class="hljs-string">,</span> <span class="hljs-string">a</span> <span class="hljs-string">specific</span> <span class="hljs-string">month,</span> <span class="hljs-string">&#x27;screen reader&#x27;</span><span class="hljs-string">,</span> <span class="hljs-string">search</span> <span class="hljs-string">keywords,</span> <span class="hljs-string">&#x27;track owner/repo&#x27;</span><span class="hljs-string">,</span> <span class="hljs-string">or</span> <span class="hljs-string">a</span> <span class="hljs-string">specific</span> <span class="hljs-string">repo</span> <span class="hljs-string">name}</span>
-
-<span class="hljs-comment">## Behavior</span>
-
-<span class="hljs-string">Load</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">tracking</span> <span class="hljs-string">configuration</span> <span class="hljs-string">from</span> <span class="hljs-string">`.github/agents/preferences.md`</span>
-<span class="hljs-string">(repos,</span> <span class="hljs-string">labels,</span> <span class="hljs-string">channels).</span> <span class="hljs-string">If</span> <span class="hljs-literal">no</span> <span class="hljs-string">preferences</span> <span class="hljs-string">exist,</span> <span class="hljs-string">use</span> <span class="hljs-string">defaults</span>
-<span class="hljs-string">(microsoft/vscode</span> <span class="hljs-string">with</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">labels).</span></code></pre>
+Load accessibility tracking configuration from `.github/agents/preferences.md`
+(repos, labels, channels). If no preferences exist, use defaults
+(microsoft/vscode with accessibility labels).</span></span></code></pre>
 <p><strong>This is how you learn to write your own.</strong> Copy an existing file, edit the instructions, save it with a new name - you have just created a new slash command for your fork.</p>
 <hr>
 <h2>6. Contributing to the Ecosystem</h2>
 <p>The 55 Accessibility Agents and 54+ slash commands are starting points. The <code>.agent.md</code> format is open - you can create your own agents for any repeatable workflow, and contribute them back to the project.</p>
 <blockquote>
 <p><strong>Think strategically about impact.</strong> Before you build, ask: &quot;Who benefits from this agent, and how often?&quot; An agent that saves 100 people five minutes each week has more impact than an agent that saves one person an hour once. The best contributions solve problems that many people share.</p>
-</blockquote>
-<blockquote>
 <p>Source: <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents/</a></p>
 </blockquote>
 <h3>Two Types of Custom Agents</h3>
@@ -1080,7 +1148,7 @@ Step-by-step behavioral rules
 
 <span class="hljs-section">## Response Guidelines</span>
 How to format output</code></pre>
-<p><strong>Frontmatter fields:</strong></p>
+<h3>Frontmatter fields</h3>
 <table>
 <thead>
 <tr>
@@ -1118,7 +1186,7 @@ How to format output</code></pre>
   <span class="hljs-bullet">-</span> <span class="hljs-string">github/*</span></code></pre>
 <h3>Example: Informational Agent - <code>@insiders-a11y-tracker</code></h3>
 <p>This agent monitors VS Code Insiders releases for accessibility improvements. It searches the <code>microsoft/vscode</code> repository using predefined GitHub query syntax, so you never have to remember the exact filter parameters.</p>
-<p><strong>Use it:</strong></p>
+<h4>Use it</h4>
 <ol>
 <li>Select <code>@insiders-a11y-tracker</code> from the agent picker</li>
 <li>Ask: <code>what shipped this month?</code> or <code>any keyboard navigation improvements in January?</code></li>
@@ -1138,12 +1206,12 @@ How to format output</code></pre>
 <p><strong>To build it:</strong> Follow the step-by-step guide at <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents</a> - the YAML frontmatter, each section of the system prompt, and the complete agent file are all shown.</p>
 <h3>Key Pattern: Tiered Decision-Making</h3>
 <p>From the guide:</p>
-<pre><code class="hljs">For objective issues (link <span class="hljs-keyword">text</span>, heading hierarchy, list structure):
-  → Agent makes <span class="hljs-keyword">the</span> fix directly
+<pre><code class="hljs language-text">For objective issues (link text, heading hierarchy, list structure):
+  → Agent makes the fix directly
 
-For subjective issues (alt <span class="hljs-keyword">text</span>, plain language):
-  → Agent flags <span class="hljs-keyword">the</span> issue, explains why <span class="hljs-keyword">it</span> matters, suggests <span class="hljs-keyword">a</span> fix,
-    <span class="hljs-keyword">and</span> waits <span class="hljs-keyword">for</span> human approval <span class="hljs-keyword">before</span> making changes</code></pre>
+For subjective issues (alt text, plain language):
+  → Agent flags the issue, explains why it matters, suggests a fix,
+    and waits for human approval before making changes</code></pre>
 <p>This tiered approach - automate what can be objectively evaluated, flag what needs human judgment - is the right model for any accessibility agent. It maximizes the agent&#39;s value while keeping humans in control of decisions that require context.</p>
 <h3>Required Prerequisites for the Markdown Accessibility Assistant</h3>
 <ul>
@@ -1151,21 +1219,21 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <li>Node.js installed (for <code>npx markdownlint-cli2</code>)</li>
 </ul>
 <h3>Invoking Custom Agents</h3>
-<p><strong>From VS Code:</strong></p>
+<h4>From VS Code</h4>
 <ol>
 <li>Open Copilot Chat (<code>Ctrl+Shift+I</code> / <code>Cmd+Shift+I</code> on macOS)</li>
 <li>In the Chat input toolbar, select the <strong>Set Agent</strong> button</li>
 <li>Select your custom agent from the agent picker</li>
 <li>Type your request - the agent executes in your local workspace</li>
 </ol>
-<p><strong>From GitHub.com (Task mode):</strong></p>
+<h4>From GitHub.com (Task mode)</h4>
 <ol>
 <li>Open Copilot Chat on GitHub.com</li>
 <li>Select <strong>Task</strong> from the mode picker</li>
 <li>Optionally select a custom agent from the agent picker</li>
 <li>Submit your request - the agent can create a PR automatically</li>
 </ol>
-<p><strong>From an issue (Issue Assignment):</strong></p>
+<h4>From an issue (Issue Assignment)</h4>
 <ol>
 <li>Open any issue → <strong>Assignees</strong> → assign <strong>Copilot</strong></li>
 <li>In the dialog, optionally select a custom agent</li>
@@ -1206,21 +1274,21 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <p><strong>Time estimate:</strong> 5-10 minutes</p>
 <hr>
 <h5>Step 1: Open Your Fork in VS Code</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>Open VS Code</li>
 <li><strong>File</strong> → <strong>Open Folder</strong> → select your locally cloned <code>accessibility-agents</code> folder</li>
 <li>The folder tree appears on the left showing the repository structure</li>
 <li><strong>Verify you&#39;re in the right place:</strong> The folder name should be <code>accessibility-agents</code> at the top of the sidebar</li>
 </ol>
-<p><strong>What you should see:</strong></p>
+<h6>What you should see</h6>
 <ul>
 <li>Left sidebar showing: <code>.github/</code>, <code>docs/</code>, <code>learning-room/</code>, <code>README.md</code>, etc.</li>
 <li>The status bar at the bottom shows your current git branch (probably <code>main</code>)</li>
 </ul>
 <hr>
 <h5>Step 2: Open Copilot Chat</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li><strong>Keyboard shortcut:</strong> Press <code>Ctrl+Shift+I</code> (Windows/Linux) or <code>Cmd+Shift+I</code> (macOS)<ul>
 <li><strong>Alternative:</strong> Use menu: <strong>View</strong> → <strong>Copilot Chat</strong></li>
@@ -1229,12 +1297,12 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 <li>A chat panel opens on the right side of VS Code</li>
 <li>At the top, you see &quot;Copilot Chat&quot; and probably a text input at the bottom saying &quot;Ask Copilot...&quot;</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h6>What happens</h6>
 <ul>
 <li>Copilot is now ready to receive instructions</li>
 <li>You have access to all agents in <code>.github/agents/</code> (because you opened that folder)</li>
 </ul>
-<p><strong>If Copilot Chat doesn&#39;t open:</strong></p>
+<h6>If Copilot Chat doesn&#39;t open</h6>
 <ul>
 <li>Make sure GitHub Copilot Chat extension is installed (Extensions sidebar → search &quot;GitHub Copilot Chat&quot;)</li>
 <li>Make sure you&#39;re signed into GitHub (top right of VS Code)</li>
@@ -1242,21 +1310,21 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 </ul>
 <hr>
 <h5>Step 3: Invoke the Template Builder Agent</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>Click in the chat input box (bottom of Copilot Chat panel)</li>
 <li>Type: <code>@template-builder</code> (the <code>@</code> prefix invokes an agent)</li>
 <li>You should see suggestions appearing: a dropdown showing available agents</li>
 <li>If <code>@template-builder</code> appears, click it or press <code>Enter</code> to select it</li>
-<li>The input now shows: <code>@template-builder </code></li>
+<li>The input now shows: <code>@template-builder</code></li>
 </ol>
-<p><strong>What to do next:</strong></p>
+<h6>What to do next</h6>
 <ol>
 <li>Type: <code>create accessibility template</code></li>
 <li>Your full message should read: <code>@template-builder create accessibility template</code></li>
 <li>Press <code>Enter</code> to send</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h6>What happens</h6>
 <ul>
 <li>The agent processes your request</li>
 <li>It starts asking questions via VS Code&#39;s Ask Questions interface</li>
@@ -1264,8 +1332,8 @@ For subjective issues (alt <span class="hljs-keyword">text</span>, plain languag
 </ul>
 <hr>
 <h5>Step 4: Answer the Agent&#39;s Questions</h5>
-<p><strong>What to expect:</strong>
-The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
+<h6>What to expect</h6>
+<p>The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 <ol>
 <li>&quot;What&#39;s your template name?&quot; (text input)</li>
 <li>&quot;What&#39;s this template for?&quot; (text input)</li>
@@ -1275,55 +1343,55 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 <li>&quot;More fields?&quot; (yes/no)</li>
 <li>[Repeat for each field you want]</li>
 </ol>
-<p><strong>How to interact:</strong></p>
+<h6>How to interact</h6>
 <ul>
 <li><strong>For text inputs:</strong> Type your answer and press <code>Tab</code> or <code>Enter</code> to move to the next prompt</li>
 <li><strong>For dropdowns:</strong> Use <code>↑↓ Arrow keys</code> to navigate options, <code>Enter</code> to select</li>
 <li><strong>For toggles:</strong> Press <code>Space</code> to switch between yes/no</li>
 </ul>
-<p><strong>Example responses:</strong></p>
-<pre><code class="hljs"><span class="hljs-attr">Q:</span> <span class="hljs-string">Template</span> <span class="hljs-string">name?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Bug</span> <span class="hljs-string">Report</span>
+<h6>Example responses</h6>
+<pre><code class="hljs language-text">Q: Template name?
+A: Accessibility Bug Report
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">What&#x27;s</span> <span class="hljs-string">it</span> <span class="hljs-string">for?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">Report</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">and</span> <span class="hljs-string">keyboard</span> <span class="hljs-string">navigation</span> <span class="hljs-string">issues</span>
+Q: What&#x27;s it for?
+A: Report screen reader and keyboard navigation issues
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">First</span> <span class="hljs-string">field</span> <span class="hljs-string">name?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">Screen</span> <span class="hljs-string">Reader</span>
+Q: First field name?
+A: Screen Reader
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Field</span> <span class="hljs-string">type?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">dropdown</span>
+Q: Field type?
+A: dropdown
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Dropdown</span> <span class="hljs-string">options?</span> <span class="hljs-string">(comma-separated)</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">NVDA,</span> <span class="hljs-string">JAWS,</span> <span class="hljs-string">VoiceOver,</span> <span class="hljs-string">TalkBack,</span> <span class="hljs-string">Other</span>
+Q: Dropdown options? (comma-separated)
+A: NVDA, JAWS, VoiceOver, TalkBack, Other
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Required?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-literal">Yes</span>
+Q: Required?
+A: Yes
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Add</span> <span class="hljs-string">another</span> <span class="hljs-string">field?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-literal">Yes</span>
+Q: Add another field?
+A: Yes
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Second</span> <span class="hljs-string">field</span> <span class="hljs-string">name?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">Browser</span>
+Q: Second field name?
+A: Browser
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Field</span> <span class="hljs-string">type?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">dropdown</span>
+Q: Field type?
+A: dropdown
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Options?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-string">Chrome,</span> <span class="hljs-string">Firefox,</span> <span class="hljs-string">Safari,</span> <span class="hljs-string">Edge,</span> <span class="hljs-string">Other</span>
+Q: Options?
+A: Chrome, Firefox, Safari, Edge, Other
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Required?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-literal">Yes</span>
+Q: Required?
+A: Yes
 
-<span class="hljs-attr">Q:</span> <span class="hljs-string">Add</span> <span class="hljs-string">another</span> <span class="hljs-string">field?</span>
-<span class="hljs-attr">A:</span> <span class="hljs-literal">No</span></code></pre>
-<p><strong>As you answer:</strong></p>
+Q: Add another field?
+A: No</code></pre>
+<h6>As you answer</h6>
 <ul>
 <li>Read each question carefully</li>
 <li>Provide clear, brief answers</li>
 <li>Don&#39;t worry about perfect wording - the agent will format it correctly</li>
 </ul>
-<p><strong>What success looks like:</strong></p>
+<h6>What success looks like</h6>
 <ul>
 <li>You&#39;ve answered at least 3-4 fields</li>
 <li>Each field has a name, type, and requirement status</li>
@@ -1331,21 +1399,21 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 </ul>
 <hr>
 <h5>Step 5: Generate and Review the Output</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>When the agent asks &quot;Ready to generate?&quot;, select <strong>Yes</strong></li>
 <li>The agent produces a <strong>complete YAML template</strong> in the chat</li>
 <li>The template appears in a code block with syntax highlighting</li>
 <li>The code block has buttons: <strong>Copy</strong> and <strong>Insert into File</strong> (or similar)</li>
 </ol>
-<p><strong>What to look for:</strong></p>
+<h6>What to look for</h6>
 <ul>
 <li>The template starts with <code>name:</code>, <code>description:</code>, <code>title:</code>, <code>labels:</code></li>
 <li>Under <code>body:</code>, each field appears with <code>type:</code>, <code>id:</code>, <code>attributes:</code>, <code>validations:</code></li>
 <li>Dropdown fields show <code>options:</code> with your specified choices</li>
 <li>Required fields show <code>required: true</code></li>
 </ul>
-<p><strong>Example output (truncated):</strong></p>
+<h6>Example output (truncated)</h6>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Bug</span> <span class="hljs-string">Report</span>
 <span class="hljs-attr">description:</span> <span class="hljs-string">Report</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">and</span> <span class="hljs-string">keyboard</span> <span class="hljs-string">navigation</span> <span class="hljs-string">issues</span>
 <span class="hljs-attr">title:</span> <span class="hljs-string">&quot;[A11Y] &quot;</span>
@@ -1377,14 +1445,14 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
         <span class="hljs-bullet">-</span> <span class="hljs-string">Other</span>
     <span class="hljs-attr">validations:</span>
       <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span></code></pre>
-<p><strong>Validate the output:</strong></p>
+<h6>Validate the output</h6>
 <ul>
-<li>✓ Does the YAML syntax look correct? (colons, indentation, no red squiggles if VS Code is open)</li>
-<li>✓ Are all your fields present?</li>
-<li>✓ Are dropdowns showing the options you specified?</li>
-<li>✓ Are required fields marked as <code>required: true</code>?</li>
+<li>Does the YAML syntax look correct? (colons, indentation, no red squiggles if VS Code is open)</li>
+<li>Are all your fields present?</li>
+<li>Are dropdowns showing the options you specified?</li>
+<li>Are required fields marked as <code>required: true</code>?</li>
 </ul>
-<p><strong>If something looks wrong:</strong></p>
+<h6>If something looks wrong</h6>
 <ul>
 <li>Don&#39;t edit the YAML yet - just note what&#39;s off</li>
 <li>You can ask the agent: &quot;@template-builder fix the browser field, should be an input not a dropdown&quot;</li>
@@ -1392,7 +1460,7 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 </ul>
 <hr>
 <h5>Step 6: Copy the Template</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>In the code block, click the <strong>Copy</strong> button (usually top-right of the code block)<ul>
 <li><strong>Keyboard alternative:</strong> Select all the code (<code>Ctrl+A</code> while in code block), then <code>Ctrl+C</code></li>
@@ -1400,14 +1468,14 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 </li>
 <li>The template is copied to your clipboard</li>
 </ol>
-<p><strong>Verify:</strong></p>
+<h6>Verify</h6>
 <ul>
 <li>A notification may appear: &quot;Copied to clipboard&quot;</li>
 <li>The text is ready to paste</li>
 </ul>
 <hr>
 <h5>Step 7: Save the Template to Your Fork</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>In VS Code, open the file explorer (left sidebar)</li>
 <li>Navigate to: <code>.github/ISSUE_TEMPLATE/</code></li>
@@ -1417,26 +1485,27 @@ The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 <li><strong>Click and paste</strong> your copied YAML: <code>Ctrl+V</code></li>
 <li>Save the file: <code>Ctrl+S</code></li>
 </ol>
-<p><strong>What you should see:</strong></p>
+<h6>What you should see</h6>
 <ul>
 <li>The YAML fills the file</li>
 <li>Syntax highlighting colors the code</li>
 <li>No red squiggles (if syntax is valid)</li>
 <li>File is marked as &quot;modified&quot; (white dot on the tab)</li>
 </ul>
-<ol start="8">
-<li><strong>Commit and push to GitHub:</strong><pre><code class="hljs language-bash">git add .github/ISSUE_TEMPLATE/my-a11y-template.yml
+<ol>
+<li><p><strong>Commit and push to GitHub:</strong></p>
+<pre><code class="hljs language-bash">git add .github/ISSUE_TEMPLATE/my-a11y-template.yml
 git commit -m <span class="hljs-string">&quot;feat: add accessibility template (agent-generated)&quot;</span>
 git push origin main</code></pre>
 </li>
 </ol>
-<p><strong>If there&#39;s a merge conflict:</strong></p>
+<h6>If there&#39;s a merge conflict</h6>
 <ul>
 <li>Ask your facilitator for help (unlikely at this point)</li>
 </ul>
 <hr>
 <h5>Step 8: Test the Template in Your Fork</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>Go to your fork on GitHub in your browser</li>
 <li>Click <strong>Issues</strong> tab</li>
@@ -1451,7 +1520,7 @@ git push origin main</code></pre>
 </ul>
 </li>
 </ol>
-<p><strong>What success looks like:</strong></p>
+<h6>What success looks like</h6>
 <ul>
 <li>The template appears when you click &quot;New issue&quot;</li>
 <li>All fields display and behave correctly</li>
@@ -1469,7 +1538,7 @@ git push origin main</code></pre>
 <li>Tested it in your fork&#39;s issue form</li>
 <li>Confirmed it&#39;s accessible with screen reader</li>
 </ul>
-<p><strong>What you learned:</strong></p>
+<h6>What you learned</h6>
 <ul>
 <li>How AI agents can automate the mechanical parts of GitHub workflows</li>
 <li>The interaction pattern: you describe, agent generates, you refine/deploy</li>
@@ -1481,14 +1550,14 @@ git push origin main</code></pre>
 <p><strong>Time estimate:</strong> 10-15 minutes</p>
 <hr>
 <h5>Step 1: Open the Agent File</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>In VS Code, navigate to <code>.github/agents/</code></li>
 <li>File: <code>template-builder.agent.md</code></li>
 <li>Double-click to open it in the editor</li>
 <li>You see the agent&#39;s instructions in Markdown format</li>
 </ol>
-<p><strong>What to notice:</strong></p>
+<h6>What to notice</h6>
 <ul>
 <li>The file starts with YAML frontmatter (name, description, topics)</li>
 <li>Below that, sections like &quot;## How to Use&quot;, &quot;## Pre-Built Workflow&quot;</li>
@@ -1496,7 +1565,7 @@ git push origin main</code></pre>
 </ul>
 <hr>
 <h5>Step 2: Find the Pre-Built Workflows Section</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>Use <code>Ctrl+F</code> to open Find</li>
 <li>Search for: <code>Pre-Built Workflow</code></li>
@@ -1504,23 +1573,23 @@ git push origin main</code></pre>
 <li>You should land on the &quot;Pre-Built Workflow: Guided Accessibility Template&quot; section</li>
 <li>This section explains how to invoke the agent with a specific behavior</li>
 </ol>
-<p><strong>What to look for:</strong></p>
+<h6>What to look for</h6>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Pre-Built Workflow: Guided Accessibility Template</span>
 
 The agent includes a guided workflow for the most common case: building 
 an accessibility bug report template.
 
-<span class="hljs-section">### Invoke with:</span>
+<span class="hljs-section">### Invoke with</span>
 <span class="hljs-bullet">-</span> <span class="hljs-code">`@template-builder`</span> + &quot;create accessibility template&quot;
 <span class="hljs-bullet">-</span> <span class="hljs-code">`/build-a11y-template`</span>
 
-<span class="hljs-section">### Workflow:</span>
+<span class="hljs-section">### Workflow</span>
 The agent skips to Phase 2 but pre-populates it with ...</code></pre>
 <hr>
 <h5>Step 3: Add a New Pre-Built Workflow</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
-<li>Position your cursor at the end of the &quot;Accessibility Template&quot; section (before the next <code>## </code> or <code>---</code>)</li>
+<li>Position your cursor at the end of the &quot;Accessibility Template&quot; section (before the next <code>##</code> or <code>---</code>)</li>
 <li>Press <code>Enter</code> twice to create space</li>
 <li>Type a new section for Security Vulnerability templates:</li>
 </ol>
@@ -1528,7 +1597,7 @@ The agent skips to Phase 2 but pre-populates it with ...</code></pre>
 
 Query the agent with: <span class="hljs-code">`@template-builder`</span> + &quot;create security template&quot;
 
-<span class="hljs-section">### Workflow:</span>
+<span class="hljs-section">### Workflow</span>
 The agent guides you through vulnerability-specific fields:
 
 <span class="hljs-bullet">1.</span> <span class="hljs-strong">**Vulnerability Type**</span> (dropdown)
@@ -1557,9 +1626,9 @@ The agent guides you through vulnerability-specific fields:
 <span class="hljs-bullet">6.</span> <span class="hljs-strong">**Requested Disclosure Timeline**</span> (input, optional)
 <span class="hljs-bullet">   -</span> When should you publish the fix?
 
-<span class="hljs-section">### Output:</span>
+<span class="hljs-section">### Output</span>
 A security vulnerability report template ready for your project&#x27;s use.</code></pre>
-<p><strong>What you&#39;re adding:</strong></p>
+<h4>What you&#39;re adding</h4>
 <ul>
 <li>A clear label for the new workflow</li>
 <li>Instructions on how to invoke it</li>
@@ -1568,44 +1637,48 @@ A security vulnerability report template ready for your project&#x27;s use.</cod
 </ul>
 <hr>
 <h5>Step 4: Save the Updated Agent</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
 <li>Save the file: <code>Ctrl+S</code></li>
 <li>You should see no error messages</li>
 <li>The agent file now includes your new Pre-Built Workflow</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h6>What happens</h6>
 <ul>
 <li>The agent recognizes your new workflow</li>
 <li>Next time you invoke <code>@template-builder</code> with &quot;create security template&quot;, it will follow your new guidance</li>
 </ul>
 <hr>
 <h5>Step 5: Test the Extended Agent</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
-<li>Open Copilot Chat again: <code>Ctrl+Shift+I</code></li>
-<li>Type: <code>@template-builder create security template</code></li>
-<li>Press <code>Enter</code></li>
-<li>The agent should now ask vulnerability-specific questions:<pre><code class="hljs"><span class="hljs-symbol">Q:</span> Template name?
-<span class="hljs-symbol">A:</span> Security Vulnerability Report
+<li><p>Open Copilot Chat again: <code>Ctrl+Shift+I</code></p>
+</li>
+<li><p>Type: <code>@template-builder create security template</code></p>
+</li>
+<li><p>Press <code>Enter</code></p>
+</li>
+<li><p>The agent should now ask vulnerability-specific questions:</p>
+<pre><code class="hljs language-text">Q: Template name?
+A: Security Vulnerability Report
 
-<span class="hljs-symbol">Q:</span> What<span class="hljs-comment">&#x27;s it for?</span>
-<span class="hljs-symbol">A:</span> Report security vulnerabilities <span class="hljs-keyword">in</span> a standardized format
+Q: What&#x27;s it for?
+A: Report security vulnerabilities in a standardized format
 
-<span class="hljs-symbol">Q:</span> First field?
-<span class="hljs-symbol">A:</span> Vulnerability Type (dropdown)
+Q: First field?
+A: Vulnerability Type (dropdown)
 
-<span class="hljs-symbol">Q:</span> Options?
-<span class="hljs-symbol">A:</span> SQL Injection, XSS, Authentication Bypass, Privilege Escalation, DoS, Other</code></pre>
+Q: Options?
+A: SQL Injection, XSS, Authentication Bypass, Privilege Escalation, DoS, Other</code></pre>
 </li>
 </ol>
-<p><strong>What success looks like:</strong></p>
+<h6>What success looks like</h6>
 <ul>
 <li>The agent recognizes &quot;create security template&quot;</li>
 <li>It guides you through security-specific fields</li>
 <li>The output is a different template than the accessibility one</li>
 </ul>
-<p><strong>If the agent doesn&#39;t recognize your new workflow:</strong></p>
+<h6>If the agent doesn&#39;t recognize your new workflow</h6>
 <ul>
 <li>Make sure you saved the file</li>
 <li>Try reloading VS Code: <code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;</li>
@@ -1613,16 +1686,19 @@ A security vulnerability report template ready for your project&#x27;s use.</cod
 </ul>
 <hr>
 <h5>Step 6: Deploy Your Extended Agent</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
-<li>Commit your agent change:<pre><code class="hljs language-bash">git add .github/agents/template-builder.agent.md
+<li><p>Commit your agent change:</p>
+<pre><code class="hljs language-bash">git add .github/agents/template-builder.agent.md
 git commit -m <span class="hljs-string">&quot;feat: add security vulnerability template workflow to template-builder agent&quot;</span>
 git push origin main</code></pre>
 </li>
-<li>The extended agent is now in your fork</li>
-<li>Anyone who forks your fork gets the security workflow too</li>
+<li><p>The extended agent is now in your fork</p>
+</li>
+<li><p>Anyone who forks your fork gets the security workflow too</p>
+</li>
 </ol>
-<p><strong>What success looks like:</strong></p>
+<h6>What success looks like</h6>
 <ul>
 <li>Your commit appears on GitHub</li>
 <li>The agent file shows the new Pre-Built Workflow section</li>
@@ -1638,7 +1714,7 @@ git push origin main</code></pre>
 <li>Tested the agent to confirm it recognizes your new workflow</li>
 <li>Committed and pushed the changes</li>
 </ul>
-<p><strong>What you learned:</strong></p>
+<h6>What you learned</h6>
 <ul>
 <li>How agents are just structured Markdown instructions</li>
 <li>How to tailor agent behavior for specific domains (accessibility, security, etc.)</li>
@@ -1650,32 +1726,38 @@ git push origin main</code></pre>
 <p><strong>Time estimate:</strong> 5-10 minutes</p>
 <hr>
 <h5>Step 1: Start Fresh</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
-<li>In Copilot Chat, type: <code>@template-builder create a feature request template</code></li>
-<li>Answer the agent&#39;s questions to build a feature request form:<pre><code class="hljs"><span class="hljs-attribute">Name</span>: Feature Request
-<span class="hljs-attribute">Purpose</span>: Propose new functionality
-<span class="hljs-attribute">Fields</span>:
-<span class="hljs-literal">-</span> Problem Statement (textarea, required)
-<span class="hljs-literal">-</span> Proposed Solution (textarea, required)
-<span class="hljs-literal">-</span> Version Interested (input, optional)</code></pre>
+<li><p>In Copilot Chat, type: <code>@template-builder create a feature request template</code></p>
 </li>
-<li>Let the agent generate the YAML</li>
-<li>Copy it to a file: <code>.github/ISSUE_TEMPLATE/feature-request.yml</code></li>
+<li><p>Answer the agent&#39;s questions to build a feature request form:</p>
+<pre><code class="hljs language-text">Name: Feature Request
+Purpose: Propose new functionality
+Fields:
+- Problem Statement (textarea, required)
+- Proposed Solution (textarea, required)
+- Version Interested (input, optional)</code></pre>
+</li>
+<li><p>Let the agent generate the YAML</p>
+</li>
+<li><p>Copy it to a file: <code>.github/ISSUE_TEMPLATE/feature-request.yml</code></p>
+</li>
 </ol>
-<p><strong>What you&#39;re doing:</strong></p>
+<h6>What you&#39;re doing</h6>
 <ul>
 <li>Running a complete template generation (same as Exercise 1)</li>
 </ul>
 <hr>
 <h5>Step 2: Ask for a Modification</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
-<li>Once the template is generated, <strong>while still in the same chat conversation</strong>, ask:<pre><code class="hljs"><span class="hljs-keyword">@template-builder</span> add a checkbox <span class="hljs-attribute">field</span>: <span class="hljs-string">&quot;I have searched for existing feature requests&quot;</span></code></pre>
+<li><p>Once the template is generated, <strong>while still in the same chat conversation</strong>, ask:</p>
+<pre><code class="hljs language-text">@template-builder add a checkbox field: &quot;I have searched for existing feature requests&quot;</code></pre>
 </li>
-<li>The agent regenerates the YAML with your new checkbox added in the right place (usually as required field pre-validation)</li>
+<li><p>The agent regenerates the YAML with your new checkbox added in the right place (usually as required field pre-validation)</p>
+</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h6>What happens</h6>
 <ul>
 <li>The agent <strong>modifies</strong> the YAML it generated</li>
 <li>The new checkbox appears in the YAML with proper formatting and indentation</li>
@@ -1683,20 +1765,22 @@ git push origin main</code></pre>
 </ul>
 <hr>
 <h5>Step 3: Request Another Refinement</h5>
-<p><strong>What to do:</strong></p>
+<h6>What to do</h6>
 <ol>
-<li>Follow up with:<pre><code class="hljs">@<span class="hljs-keyword">template</span>-builder change <span class="hljs-string">&quot;Proposed Solution&quot;</span> field to <span class="hljs-keyword">include</span> markdown code <span class="hljs-keyword">block</span> support</code></pre>
+<li><p>Follow up with:</p>
+<pre><code class="hljs language-text">@template-builder change &quot;Proposed Solution&quot; field to include markdown code block support</code></pre>
 </li>
-<li>The agent modifies the textarea field&#39;s attributes to enable code highlighting</li>
+<li><p>The agent modifies the textarea field&#39;s attributes to enable code highlighting</p>
+</li>
 </ol>
-<p><strong>What changes:</strong></p>
+<h6>What changes</h6>
 <ul>
 <li>The field now includes <code>render: &quot;a11y friendly code rendering&quot;</code> or similar</li>
 <li>The YAML structure is preserved; only the specific field is enhanced</li>
 </ul>
 <hr>
 <h5>Step 4: Observe the Iterative Pattern</h5>
-<p><strong>What to reflect on:</strong></p>
+<h6>What to reflect on</h6>
 <ol>
 <li>You gave the agent <strong>one goal</strong> (generate a feature request template)</li>
 <li>The agent produced <strong>complete output</strong> (full YAML)</li>
@@ -1704,7 +1788,7 @@ git push origin main</code></pre>
 <li>At each step, the agent <strong>understood context</strong> (which field, how to modify it)</li>
 <li>You <strong>didn&#39;t start over</strong> - just evolved the template</li>
 </ol>
-<p><strong>This is the pattern that scales:</strong></p>
+<h6>This is the pattern that scales</h6>
 <ul>
 <li><strong>Template generation:</strong> &quot;Create a template with these fields&quot;</li>
 <li><strong>Code review:</strong> &quot;Review this PR and flag accessibility issues&quot;</li>
@@ -1721,7 +1805,7 @@ git push origin main</code></pre>
 <li>Requested further refinement (enhance field)</li>
 <li>Observed how the agent maintains context across requests</li>
 </ul>
-<p><strong>What you learned:</strong></p>
+<h6>What you learned</h6>
 <ul>
 <li>Agents work best with <strong>iterative dialogue</strong>, not one-shot requests</li>
 <li>You can build complex outputs through successive refinements</li>
@@ -1882,7 +1966,7 @@ git push origin main</code></pre>
 <p><strong>The link between Accessibility Agents and Agentic Workflows:</strong> Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Accessibility Agents pattern <em>is</em> a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.</p>
 <h3>Go Deeper</h3>
 <p>For full documentation on every agent, all 54+ slash commands, customization formats, and troubleshooting, see <a href="appendix-v-accessibility-agents-reference.html">Appendix V: Accessibility Agents Reference</a>. For the audio version, listen to <a href="../PODCASTS.html">Episode 39: Accessibility Agents - Complete Reference</a>.</p>
-<p><strong>Example: Auto-triage accessibility issues</strong></p>
+<h4>Example: Auto-triage accessibility issues</h4>
 <p>File: <code>.github/workflows/auto-triage-a11y.md</code></p>
 <pre><code class="hljs language-markdown">---
 name: Auto-Triage Accessibility Issues
@@ -1921,12 +2005,12 @@ When an issue is opened with &quot;accessibility&quot; or &quot;a11y&quot; or &q
 <p><strong>When to use:</strong> If command-line Git feels overwhelming, GitHub Desktop provides a GUI alternative.</p>
 <h3>GitHub CLI (<code>gh</code>)</h3>
 <p>A command-line interface for GitHub operations.</p>
-<p><strong>Install:</strong></p>
+<h4>Install</h4>
 <pre><code class="hljs language-bash">winget install GitHub.cli       <span class="hljs-comment"># Windows</span>
 brew install gh                 <span class="hljs-comment"># macOS</span></code></pre>
-<p><strong>Authenticate:</strong></p>
+<h4>Authenticate</h4>
 <pre><code class="hljs language-bash">gh auth login</code></pre>
-<p><strong>Common commands:</strong></p>
+<h4>Common commands</h4>
 <pre><code class="hljs language-bash">gh issue list                   <span class="hljs-comment"># List issues in current repo</span>
 gh issue view 42                <span class="hljs-comment"># Read issue #42</span>
 gh <span class="hljs-built_in">pr</span> list                      <span class="hljs-comment"># List pull requests</span>
@@ -1938,9 +2022,9 @@ gh repo fork owner/repo         <span class="hljs-comment"># Fork a repository</
 <p><strong>Screen reader advantage:</strong> <code>gh</code> output is plain text with no dynamic regions - more predictable than the browser for certain operations.</p>
 <h3>GitHub Copilot CLI (<code>gh copilot</code>)</h3>
 <p>An extension that adds Copilot to the terminal.</p>
-<p><strong>Install:</strong></p>
+<h4>Install</h4>
 <pre><code class="hljs language-bash">gh extension install github/gh-copilot</code></pre>
-<p><strong>Commands:</strong></p>
+<h4>Commands</h4>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Ask Copilot to explain a command</span>
 gh copilot explain <span class="hljs-string">&quot;git rebase -i HEAD~3&quot;</span>
 
@@ -1950,7 +2034,7 @@ gh copilot suggest <span class="hljs-string">&quot;undo my last commit but keep 
 <span class="hljs-comment"># Ask Copilot to write a shell script</span>
 gh copilot suggest <span class="hljs-string">&quot;create a script that finds all Markdown files and checks for heading hierarchy&quot;</span></code></pre>
 <p><strong>Use case:</strong> When you know <em>what</em> you want to do but are unsure of the exact git command syntax.</p>
-<p><strong>Example session:</strong></p>
+<h2>Example session</h2>
 <pre><code class="hljs language-bash">$ gh copilot suggest <span class="hljs-string">&quot;show me all commits from last week&quot;</span>
 
 Suggestion: git <span class="hljs-built_in">log</span> --since=<span class="hljs-string">&quot;1 week ago&quot;</span> --oneline
@@ -1994,7 +2078,7 @@ Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 <h2>Troubleshooting</h2>
 <h3>&quot;Agent not found&quot;</h3>
 <p><strong>Issue:</strong> Typing <code>@agent-name</code> shows &quot;No agent found.&quot;</p>
-<p><strong>Solutions:</strong></p>
+<h4>Solutions</h4>
 <ol>
 <li>Verify <code>.github/agents/[name].agent.md</code> exists in your workspace</li>
 <li>Reload VS Code window: <code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;</li>
@@ -2003,7 +2087,7 @@ Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 </ol>
 <h3>Agent produces incorrect output</h3>
 <p><strong>Issue:</strong> Agent&#39;s response is wrong or misses context.</p>
-<p><strong>Solutions:</strong></p>
+<h4>Solutions</h4>
 <ol>
 <li><strong>Provide more context in your prompt:</strong> Be specific about what you need</li>
 <li><strong>Use @ mentions:</strong> Reference specific files or selections (<code>@filename.md</code>, <code>#selection</code>)</li>
@@ -2012,7 +2096,7 @@ Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 </ol>
 <h3>Slash command doesn&#39;t work</h3>
 <p><strong>Issue:</strong> <code>/command</code> shows &quot;Command not found.&quot;</p>
-<p><strong>Solutions:</strong></p>
+<h4>Solutions</h4>
 <ol>
 <li>Verify <code>.github/prompts/[name].md</code> exists</li>
 <li>Reload window: <code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;</li>

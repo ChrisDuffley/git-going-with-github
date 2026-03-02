@@ -1,4 +1,5 @@
 # Appendix W: GitHub Copilot & Agentic Reference
+>
 > **Listen to Episode 40:** [GitHub Copilot - Complete Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Keyboard Shortcuts, Chat, Screen Reader Workflow, Plugin Ecosystem, and GitHub Agentic Workflows
@@ -13,16 +14,16 @@
 2. [Chat Participants](#2-chat-participants)
 3. [Chat Slash Commands](#3-chat-slash-commands)
 4. [Chat Modes](#4-chat-modes)
-5. [Custom Instructions - All Levels](#5-custom-instructions--all-levels)
+5. [Custom Instructions - All Levels](#5-custom-instructions---all-levels)
 6. [Accessible View Workflow](#6-accessible-view-workflow)
 7. [Configuration Scope Reference](#7-configuration-scope-reference)
 8. [Instruction Priority and Conflicts](#8-instruction-priority-and-conflicts)
 9. [All File Types Quick Reference](#9-all-file-types-quick-reference)
 10. [VS Code Settings Reference](#10-vs-code-settings-reference)
 11. [Diagnostics and Troubleshooting](#11-diagnostics-and-troubleshooting)
-12. [Screen Reader Workflow - Official Guide](#12-screen-reader-workflow--official-guide)
-13. [awesome-copilot - Plugin Ecosystem](#13-awesome-copilot--plugin-ecosystem)
-14. [GitHub Agentic Workflows - Agents in the Cloud](#14-github-agentic-workflows--agents-in-the-cloud)
+12. [Screen Reader Workflow - Official Guide](#12-screen-reader-workflow---official-guide)
+13. [awesome-copilot - Plugin Ecosystem](#13-awesome-copilot---plugin-ecosystem)
+14. [GitHub Agentic Workflows - Agents in the Cloud](#14-github-agentic-workflows---agents-in-the-cloud)
 
 ---
 
@@ -31,7 +32,7 @@
 ### Inline Suggestions (Ghost Text)
 
 | Action | Windows / Linux | macOS |
-|--------|----------------|-------|
+| --------  | ----------------  | -------  |
 | Accept entire suggestion | `Tab` | `Tab` |
 | Reject suggestion | `Escape` | `Escape` |
 | Accept one word at a time | `Ctrl+Right Arrow` | `Cmd+Right Arrow` |
@@ -48,7 +49,7 @@
 ### Copilot Chat
 
 | Action | Windows / Linux | macOS |
-|--------|----------------|-------|
+| --------  | ----------------  | -------  |
 | Open Chat panel | `Ctrl+Shift+I` | `Cmd+Shift+I` |
 | Open inline chat (in-file, at cursor) | `Ctrl+I` | `Cmd+I` |
 | Open Quick Chat (floating dialog) | `Ctrl+Shift+Alt+I` | `Cmd+Shift+Ctrl+I` |
@@ -58,7 +59,7 @@
 ### Accessibility
 
 | Action | Windows / Linux | macOS |
-|--------|----------------|-------|
+| --------  | ----------------  | -------  |
 | Open Accessible View | `Alt+F2` | `Option+F2` |
 | Open Accessible Help | `Alt+H` | `Option+H` |
 | Close Accessible View | `Escape` | `Escape` |
@@ -74,14 +75,14 @@ Type these in the Copilot Chat input to give Copilot context from a specific sou
 ### `@` Participants - Scope Context
 
 | Participant | What It Does |
-|-------------|-------------|
+| -------------  | -------------  |
 | `@workspace` | Searches your entire VS Code workspace for relevant context |
 | `@github` | Accesses GitHub.com data - search issues, PRs, code across the platform |
 | `@terminal` | Provides context from the VS Code integrated terminal |
 
-**Example prompts:**
+#### Example prompts
 
-```
+```text
 @workspace find all places where heading hierarchy is documented
 
 @github search community-access/accessibility-agents for issues labeled accessibility
@@ -92,15 +93,15 @@ Type these in the Copilot Chat input to give Copilot context from a specific sou
 ### `#` Variables - Specific Context
 
 | Variable | What It Attaches |
-|----------|-----------------|
+| ----------  | -----------------  |
 | `#file` | Opens a file picker - attach any file from your workspace |
 | `#selection` | Attaches your currently selected text |
 | `#codebase` | Searches the full codebase for relevant snippets |
 | `#terminalLastCommand` | Attaches the last terminal command and its output |
 
-**Example prompts:**
+#### Example prompts
 
-```
+```text
 Review #selection for heading hierarchy violations
 
 Explain what #file does (then pick a file from the picker)
@@ -117,7 +118,7 @@ Search #codebase for all screen reader navigation instructions
 Type `/` in Copilot Chat to see the available built-in commands.
 
 | Command | What It Does | Example |
-|---------|-------------|---------|
+| ---------  | -------------  | ---------  |
 | `/explain` | Explains the selected code or text in plain language | Select a complex block → `/explain` |
 | `/fix` | Suggests fixes for problems in the selected code | Select broken code → `/fix` |
 | `/tests` | Generates unit tests for the selected function (code files) | Select a function → `/tests` |
@@ -126,10 +127,10 @@ Type `/` in Copilot Chat to see the available built-in commands.
 | `/help` | Shows all available Copilot commands and participants | `/help` |
 | `/clear` | Clears the current chat history | `/clear` |
 
-**Workspace management slash commands:**
+### Workspace management slash commands
 
 | Command | What It Does | Example |
-|---------|-------------|--------|
+| ---------  | -------------  | --------  |
 | `/init` | Analyzes your workspace and auto-generates a `.github/copilot-instructions.md` tailored to your project | `/init` |
 | `/savePrompt` | Saves the current chat conversation as a reusable `.prompt.md` slash command file | After a useful exchange, type `/savePrompt` |
 
@@ -137,7 +138,7 @@ Type `/` in Copilot Chat to see the available built-in commands.
 
 ### Using Slash Commands for Documentation Work
 
-```
+```text
 Select a section of Markdown → /explain
 → Copilot explains the purpose and structure of that section
 
@@ -155,7 +156,7 @@ Select a broken YAML template → /fix
 Copilot Chat has four modes. Select the current mode from the dropdown at the bottom of the Chat input area.
 
 | Mode | What It Does | Best For |
-|------|-------------|----------|
+| ------  | -------------  | ----------  |
 | **Ask** | Conversational Q&A. Copilot explains, suggests, and answers but does not directly edit files. | Questions, explanations, discussion, exploring ideas |
 | **Edit** | You define a working set of files; Copilot proposes edits as a diff that you approve or reject. | Targeted, controlled multi-file edits |
 | **Agent** | Copilot works autonomously - it decides which files to touch, reads/writes code, runs terminal commands. | Larger end-to-end tasks |
@@ -207,7 +208,8 @@ GitHub Copilot supports multiple ways to provide custom instructions. They diffe
 - Error handling must be intentional - no silent catch blocks
 ```
 
-**Auto-generate with `/init`:**
+### Auto-generate with `/init`
+
 1. Open Copilot Chat
 2. Type `/init`
 3. VS Code analyzes your workspace and generates a tailored `copilot-instructions.md`
@@ -223,7 +225,7 @@ GitHub Copilot supports multiple ways to provide custom instructions. They diffe
 
 **Location:** `AGENTS.md` at the workspace root. For monorepos, also supported nested in subdirectories (closest file to the current directory wins).
 
-```
+```text
 repo-root/
   AGENTS.md               ← applies everywhere
   frontend/
@@ -248,10 +250,10 @@ repo-root/
 
 **When to use:** Mixed AI tool environments where Claude Code and VS Code Copilot are both used. Uses the same format as the other always-on files.
 
-**Supported locations:**
+#### Supported locations
 
 | File | Scope | Committed? |
-|------|-------|-----------|
+| ------  | -------  | -----------  |
 | `CLAUDE.md` (workspace root) | All requests in workspace | Yes |
 | `.claude/CLAUDE.md` | All requests in workspace | Yes |
 | `CLAUDE.local.md` (workspace root) | All requests; local only | No - gitignored |
@@ -281,15 +283,15 @@ Write docstrings for all public functions and classes.
 
 **When to use:** Language-specific rules (Python style, TypeScript patterns), framework conventions, folder-specific standards (docs/, tests/, src/api/).
 
-**Locations:**
+#### Locations
 
 | Scope | Location |
-|-------|----------|
+| -------  | ----------  |
 | Workspace | `.github/instructions/*.instructions.md` |
 | Additional workspace folders | Configure with `chat.instructionsFilesLocations` |
 | User / Personal | VS Code profile folder `*.instructions.md` |
 
-**Frontmatter:**
+#### Frontmatter
 
 ```yaml
 ---
@@ -299,7 +301,7 @@ applyTo: "**/*.py"            # Optional glob - auto-attach when matching files 
 ---
 ```
 
-**`applyTo` glob patterns:**
+#### `applyTo` glob patterns
 
 ```yaml
 applyTo: "**"                            # Always included (careful - applies to everything)
@@ -311,15 +313,15 @@ applyTo: "**/*.test.{js,ts}"            # Test files only
 applyTo: ".github/ISSUE_TEMPLATE/**"    # Issue template files only
 ```
 
-**How files are triggered:**
+#### How files are triggered
 
 | Discovery Mode | How It Works |
-|---------------|-------------|
+| ---------------  | -------------  |
 | **Automatic** (via `applyTo`) | Instruction loads automatically when a matching file is in the chat context |
 | **On-demand** (via `description`) | Agent detects from the description that this instruction is relevant to the task |
 | **Manual** | User selects "Add Context → Instructions" in the Chat panel |
 
-**Example - test file conventions:**
+#### Example - test file conventions
 
 ```markdown
 ---
@@ -338,7 +340,8 @@ applyTo: "**/*.test.{js,ts}"
 - Mock external dependencies; do not test third-party libraries
 ```
 
-**Create an instructions file:**
+## Create an instructions file
+
 - `Ctrl+Shift+P` → "Chat: New Instructions File" → choose scope (Workspace or User)
 - Or create the file manually in `.github/instructions/`
 
@@ -350,7 +353,8 @@ applyTo: "**/*.test.{js,ts}"
 
 **Priority:** Lowest - workspace and user instructions both override these. However, they are additive - they are appended to, not replacing, other instructions.
 
-**Requirements:**
+#### Requirements
+
 - GitHub Enterprise or Teams plan with Copilot enabled
 - Admin configures instructions in organization settings on GitHub.com
 - Each user must enable discovery in VS Code:
@@ -398,7 +402,7 @@ Each setting accepts an array of `{ text: "..." }` (inline) or `{ file: "relativ
 ### 4G. Comparison - When to Use Each Approach
 
 | Approach | Scope | Always-on? | Multi-tool? | Best For |
-|----------|-------|------------|-------------|---------|
+| ----------  | -------  | ------------  | -------------  | ---------  |
 | `copilot-instructions.md` | Workspace | Yes | VS Code only | Primary project instructions |
 | `AGENTS.md` | Workspace + monorepo | Yes | All AI tools | Multi-tool teams or large monorepos |
 | `CLAUDE.md` | Workspace + user | Yes | Copilot + Claude | Claude Code compatibility |
@@ -414,7 +418,7 @@ Copilot Chat responses stream in token by token, which can fragment screen reade
 
 ### Recommended Workflow - Every Copilot Interaction
 
-```
+```text
 1. Open Copilot Chat: Ctrl+Shift+I
 2. Type your prompt
 3. Press Ctrl+Enter to send
@@ -429,7 +433,7 @@ Copilot Chat responses stream in token by token, which can fragment screen reade
 ### Why Accessible View Is Better for Screen Reader Users
 
 | Without Accessible View | With Accessible View (`Alt+F2`) |
-|------------------------|--------------------------------|
+| ------------------------  | --------------------------------  |
 | Responses announced in fragments as tokens arrive | Full, complete response in one readable pane |
 | Live region updates may interrupt or overlap | No streaming, no live region noise |
 | Difficult to re-read specific sections | Navigate with `Up/Down Arrow` at your own pace |
@@ -438,13 +442,15 @@ Copilot Chat responses stream in token by token, which can fragment screen reade
 
 ### Screen Reader Navigation in Accessible View
 
-**NVDA / JAWS:**
+#### NVDA / JAWS
+
 - `Up/Down Arrow` - read line by line
 - `Ctrl+Home` - jump to start
 - `H` - navigate by headings (if response has sections)
 - `Escape` - close Accessible View, return to Chat
 
-**VoiceOver:**
+#### VoiceOver
+
 - `VO+Shift+Down` - interact with the Accessible View content
 - `Down Arrow` - read line by line
 - `VO+Escape` - stop interacting
@@ -454,7 +460,7 @@ Copilot Chat responses stream in token by token, which can fragment screen reade
 
 When a multi-line ghost text suggestion appears in the editor:
 
-```
+```text
 1. Do not accept immediately
 2. Press Alt+F2
 3. Accessible View shows: "Suggestion: [full text]"
@@ -483,7 +489,7 @@ Every Copilot customization file lives at one of three scopes. VS Code **combine
 Files committed to your repository. Everyone who clones the repo gets them.
 
 | File Type | Location |
-|-----------|----------|
+| -----------  | ----------  |
 | Always-on instructions | `.github/copilot-instructions.md` |
 | Always-on (multi-tool) | `AGENTS.md` (root), `<folder>/AGENTS.md` (nested) |
 | Always-on (Claude compat) | `CLAUDE.md`, `.claude/CLAUDE.md` |
@@ -505,7 +511,7 @@ Files in your VS Code profile folder. Syncs with Settings Sync. Available in eve
 **Path on macOS:** `~/Library/Application Support/Code - Insiders/User/prompts/`
 
 | File Type | Location |
-|-----------|----------|
+| -----------  | ----------  |
 | Instructions | `<profile>/prompts/*.instructions.md` |
 | Agents | `<profile>/prompts/*.agent.md` |
 | Prompts | `<profile>/prompts/*.prompt.md` |
@@ -527,7 +533,7 @@ Configured by administrators in GitHub organization settings. Automatically appl
 
 When multiple instruction sources give conflicting guidance, VS Code uses this priority order:
 
-```
+```text
 1. Personal / User-level    - HIGHEST - overrides all others
 2. Workspace / Repository   - middle priority
 3. Organization-level       - LOWEST - overridden by workspace and user
@@ -538,6 +544,7 @@ When multiple instruction sources give conflicting guidance, VS Code uses this p
 ### How Instructions Are Combined
 
 Say you have:
+
 - Organization: "Use British English spellings"
 - Workspace: "Use TypeScript strict mode"
 - User: "Use British English spellings - but use Z spellings (organize, not organise) for technical terms"
@@ -553,7 +560,7 @@ Within a single scope (e.g., workspace), all matching instructions files are com
 ## 9. All File Types Quick Reference
 
 | Purpose | File Name Pattern | Location | How It Activates |
-|---------|------------------|----------|-----------------|
+| ---------  | ------------------  | ----------  | -----------------  |
 | Always-on instructions | `copilot-instructions.md` | `.github/` | Automatic - every request |
 | Always-on (multi-tool) | `AGENTS.md` | Repo root or subfolders | Automatic - every request |
 | Always-on (Claude compat) | `CLAUDE.md` | Repo root, `.claude/`, `~/.claude/` | Automatic - every request |
@@ -565,7 +572,8 @@ Within a single scope (e.g., workspace), all matching instructions files are com
 | Lifecycle hook | `*.json` | `.github/hooks/`, `.claude/settings*.json` | Automatic at lifecycle events |
 | Personal preferences | `preferences.md` | `.github/agents/` (gitignored) | Read by agents when mentioned |
 
-**Create any new customization file:**
+### Create any new customization file
+
 `Ctrl+Shift+P` → "Chat: New Instructions File" (or "New Prompt File", "New Agent File")
 
 ---
@@ -577,7 +585,7 @@ All Copilot customization-related settings. Set in VS Code Settings (`Ctrl+,`) o
 ### Core Instruction Settings
 
 | Setting | Default | Description |
-|---------|---------|-------------|
+| ---------  | ---------  | -------------  |
 | `chat.instructionsFilesLocations` | - | Array of additional folder paths to search for `*.instructions.md` files |
 | `chat.useAgentsMdFile` | `true` | Enable/disable `AGENTS.md` recognition |
 | `chat.useClaudeMdFile` | `true` | Enable/disable `CLAUDE.md`/`CLAUDE.local.md` recognition |
@@ -590,7 +598,7 @@ All Copilot customization-related settings. Set in VS Code Settings (`Ctrl+,`) o
 ### Organization Instructions
 
 | Setting | Default | Description |
-|---------|---------|-------------|
+| ---------  | ---------  | -------------  |
 | `github.copilot.chat.organizationInstructions.enabled` | `false` | Enable discovery of organization-level custom instructions |
 
 ### Deprecated Task-Specific Instructions
@@ -598,7 +606,7 @@ All Copilot customization-related settings. Set in VS Code Settings (`Ctrl+,`) o
 > Prefer file-based instructions over these settings for new work.
 
 | Setting | What It Augments |
-|---------|-----------------|
+| ---------  | -----------------  |
 | `github.copilot.chat.codeGeneration.instructions` | All code generation |
 | `github.copilot.chat.testGeneration.instructions` | Test file generation |
 | `github.copilot.chat.reviewSelection.instructions` | Code review via Chat |
@@ -628,6 +636,7 @@ To see which instruction files, agents, prompts, and skills are currently loaded
 2. **Right-click method:** Right-click in the Chat view → "Diagnostics"
 
 The Diagnostics panel shows:
+
 - All agents found and whether they loaded successfully
 - All prompt/instruction files and their source (workspace vs user vs organization)
 - All skills and their discovery status
@@ -635,35 +644,41 @@ The Diagnostics panel shows:
 
 ### Common Issues
 
-**`copilot-instructions.md` not being followed:**
+#### `copilot-instructions.md` not being followed
+
 1. Confirm the file is at exactly `.github/copilot-instructions.md` (relative to workspace root)
 2. Check the file is plain Markdown with no frontmatter syntax errors
 3. Open Diagnostics to confirm it appears in the loaded files list
 4. Some instructions work better with specific phrasing; use imperative mood ("Always use...")
 
-**`.instructions.md` file not loading automatically:**
+#### `.instructions.md` file not loading automatically
+
 1. Verify `chat.includeApplyingInstructions` is not set to `false`
 2. Check the `applyTo` glob - test with `"**"` temporarily to confirm the file loads at all
 3. Confirm the file is in `.github/instructions/` or a folder listed in `chat.instructionsFilesLocations`
 4. File extension must be `.instructions.md` exactly - not `.md`, not `.instruction.md`
 
-**Custom agent (`@agent-name`) not appearing:**
+#### Custom agent (`@agent-name`) not appearing
+
 1. File must be named `<agent-name>.agent.md` and placed in `.github/agents/`
 2. Check YAML frontmatter for syntax errors - use a YAML validator
 3. Confirm `user-invocable` is not set to `false` (which hides it from the picker)
 4. Run `Ctrl+Shift+P` → "Reload Window" after any changes to agent files
 
-**Slash command (`/command`) not appearing:**
+#### Slash command (`/command`) not appearing
+
 1. File must be at `.github/prompts/<command-name>.prompt.md`
 2. Extension must be `.prompt.md` exactly
 3. Reload VS Code: `Ctrl+Shift+P` → "Reload Window"
 
-**Instructions from different files conflicting:**
+#### Instructions from different files conflicting
+
 1. Open Diagnostics to see all loaded instruction files
 2. Remove or edit conflicting instructions - they are not automatically de-duplicated
 3. User-level instructions override workspace instructions for the same topic
 
-**`chat.instructionsFilesLocations` not working:**
+#### `chat.instructionsFilesLocations` not working
+
 - Path must be a folder path, not a file path
 - Use forward slashes or escaped backslashes
 - Relative paths are relative to the workspace root
@@ -675,7 +690,7 @@ The Diagnostics panel shows:
 ### Opening Copilot
 
 | What | Windows / Linux | macOS |
-|------|----------------|-------|
+| ------  | ----------------  | -------  |
 | Chat panel | `Ctrl+Shift+I` | `Cmd+Shift+I` |
 | Inline chat (in file) | `Ctrl+I` | `Cmd+I` |
 | Quick Chat (floating) | `Ctrl+Shift+Alt+I` | `Cmd+Shift+Ctrl+I` |
@@ -683,7 +698,7 @@ The Diagnostics panel shows:
 ### Reading Copilot Responses
 
 | What | How |
-|------|-----|
+| ------  | -----  |
 | Complete response (streams live in Accessible View) | `Alt+F2` - open anytime, including while response is still generating |
 | Close Accessible View | `Escape` |
 | Read current inline suggestion | `Alt+F2` while ghost text is showing |
@@ -691,7 +706,7 @@ The Diagnostics panel shows:
 ### Accepting/Rejecting Suggestions
 
 | What | Windows / Linux | macOS |
-|------|----------------|-------|
+| ------  | ----------------  | -------  |
 | Accept | `Tab` | `Tab` |
 | Reject | `Escape` | `Escape` |
 | Accept word by word (recommended) | `Ctrl+Right Arrow` | `Cmd+Right Arrow` |
@@ -704,7 +719,7 @@ The Diagnostics panel shows:
 ### Instructions Management
 
 | What | How |
-|------|-----|
+| ------  | -----  |
 | Auto-generate instructions from workspace | Type `/init` in Chat |
 | New instructions file | `Ctrl+Shift+P` → "Chat: New Instructions File" |
 | New prompt/slash command file | `Ctrl+Shift+P` → "Chat: New Prompt File" |
@@ -742,7 +757,7 @@ When Screen Reader Mode is on, VS Code changes how it announces suggestions (ful
 3. Enable the Copilot-specific signals:
 
 | Signal Setting | What It Signals |
-|-------------------|-----------------|
+| -------------------  | -----------------  |
 | `accessibility.signals.lineHasInlineSuggestion` | A suggestion is available on the current line |
 | `accessibility.signals.chatRequestSent` | Your prompt has been sent |
 | `accessibility.signals.chatResponsePending` | Copilot is generating a response |
@@ -764,7 +779,7 @@ Recommended JSON config for Copilot accessibility signals:
 This is the complete table of Copilot screen reader shortcuts as published by the GitHub Accessibility team:
 
 | Action | Shortcut |
-|--------|----------|
+| --------  | ----------  |
 | Accept Inline Suggestion | `Tab` |
 | Dismiss Inline Suggestion | `Escape` |
 | Show next suggestion in Suggestions Panel | `Alt+]` |
@@ -777,9 +792,9 @@ This is the complete table of Copilot screen reader shortcuts as published by th
 
 ### Step 4: Recommended Workflow for Inline Suggestions
 
-**The screen reader-optimized workflow for every inline suggestion:**
+#### The screen reader-optimized workflow for every inline suggestion
 
-```
+```text
 1. Type your code or documentation
 2. Copilot generates a suggestion (audio cue sounds if enabled)
 3. DO NOT press Tab immediately
@@ -795,7 +810,7 @@ This workflow avoids the streaming announcement problem (where suggestions are r
 
 ### Step 5: Recommended Workflow for Chat Responses
 
-```
+```text
 1. Open Chat: Ctrl+Shift+I
 2. Type your prompt, press Ctrl+Enter to send
 3. Press Alt+F2 - Accessible View opens immediately; the response streams live into it
@@ -808,7 +823,7 @@ This workflow avoids the streaming announcement problem (where suggestions are r
 
 Pressing `Ctrl+Enter` opens a **Suggestions Panel** - a separate editor tab that shows up to 10 alternative suggestions simultaneously. This is useful when the default suggestion isn't quite right and you want to compare options.
 
-```
+```text
 1. Ctrl+Enter - opens "GitHub Copilot" editor tab
 2. Screen Reader Mode is active: navigate with Browse Mode
 3. H key to navigate headings (each suggestion may be under a heading)
@@ -820,7 +835,7 @@ Pressing `Ctrl+Enter` opens a **Suggestions Panel** - a separate editor tab that
 ### Resources
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | VS Code Copilot Cheat Sheet | [code.visualstudio.com/docs/copilot/reference/copilot-vscode-features](https://code.visualstudio.com/docs/copilot/reference/copilot-vscode-features) |
 | VS Code Accessibility Features | [code.visualstudio.com/docs/editor/accessibility](https://code.visualstudio.com/docs/editor/accessibility) |
 | GitHub Accessibility Discussions | [github.com/orgs/community/discussions/categories/accessibility](https://github.com/orgs/community/discussions/categories/accessibility) |
@@ -839,7 +854,7 @@ Pressing `Ctrl+Enter` opens a **Suggestions Panel** - a separate editor tab that
 ### Repository Structure
 
 | Directory | Contents |
-|-----------|----------|
+| -----------  | ----------  |
 | `prompts/` | Community-contributed `.prompt.md` slash command files |
 | `instructions/` | Community-contributed `.instructions.md` guidance files |
 | `agents/` | Community-contributed `.agent.md` agent definitions |
@@ -861,10 +876,10 @@ The easiest way to explore awesome-copilot from VS Code:
 3. Copilot Chat opens an interactive plugin marketplace browser
 4. Browse plugins by category, read descriptions, and install with a single command
 
-**Key plugins available via `/plugin`:**
+#### Key plugins available via `/plugin`
 
 | Plugin | What It Does |
-|--------|-------------|
+| --------  | -------------  |
 | **Awesome Copilot** | The meta-plugin - browse and install any resource from the full ecosystem |
 | **Copilot SDK** | Official SDK for C#, Go, Node.js, and Python development patterns |
 | **Partners** | 20+ partner agents from Azure, JetBrains, MongoDB, and others |
@@ -923,7 +938,7 @@ Install in VS Code by clicking the button at `https://aka.ms/awesome-copilot/mcp
 ### awesome-copilot vs. Accessibility Agents
 
 | Feature | Accessibility Agents (`.github/agents/`) | awesome-copilot |
-|---------|--------------------------------|----------------|
+| ---------  | --------------------------------  | ----------------  |
 | **Scope** | Your repo and fork | Community-wide ecosystem |
 | **Distribution** | Clone the repo; agents travel with it | Plugin marketplace - install on demand |
 | **Customization** | Edit `.agent.md` files directly | Use as-is or fork and modify |
@@ -941,7 +956,7 @@ Install in VS Code by clicking the button at `https://aka.ms/awesome-copilot/mcp
 ### What This Enables
 
 | Workflow Category | Trigger | Example |
-|------------------|---------|---------|
+| ------------------  | ---------  | ---------  |
 | Issue & PR Management | `issues: opened` | Auto-triage, label, and assign new issues |
 | Continuous Documentation | `push` to main | Keep README and docs in sync with code changes |
 | Metrics & Analytics | `schedule: daily` | Daily status report posted as a new issue |
@@ -955,7 +970,7 @@ Browse 50+ community-built workflows at [Peli's Agent Factory](https://github.gi
 
 The `gh aw` CLI (a `gh` extension) compiles `.md` workflow files into `.lock.yml` GitHub Actions workflows:
 
-```
+```text
 .github/workflows/daily-report.md  ← you write this (Markdown + frontmatter)
         ↓  gh aw compile
 .github/workflows/daily-report.lock.yml  ← generated, runs as standard GitHub Actions
@@ -999,7 +1014,7 @@ The body is natural language - describe what you want the AI agent to do. The fr
 ### Key Frontmatter Properties
 
 | Property | Purpose |
-|----------|---------|
+| ----------  | ---------  |
 | `on: schedule: daily` | Runs once per day (also: `weekly`, `cron` expressions, `issues: opened`, `pull_request`) |
 | `on: issue_comment: created` | Trigger from a comment command in an issue or PR |
 | `on: workflow_dispatch` | Manual run via the Actions tab "Run workflow" button |
@@ -1015,7 +1030,7 @@ This means: the AI agent cannot push code, delete branches, or modify arbitrary 
 ### Supported AI Engines
 
 | Engine | Notes |
-|--------|-------|
+| --------  | -------  |
 | GitHub Copilot CLI | Default engine |
 | Claude (Anthropic) | Alternative engine |
 | OpenAI Codex | Alternative engine |
@@ -1046,7 +1061,7 @@ gh aw compile .github/workflows/daily-report.md
 ### Resources
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | Official documentation | `github.github.com/gh-aw/` |
 | Source repository (open source) | `github.com/github/gh-aw` |
 | Peli's Agent Factory (50+ examples) | `github.github.com/gh-aw/blog/2026-01-12-welcome-to-pelis-agent-factory/` |

@@ -1,4 +1,5 @@
 # Appendix J: GitHub Advanced Search
+>
 > **Listen to Episode 27:** [Advanced Search](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Finding Anything Across All of GitHub
@@ -30,8 +31,9 @@ GitHub's search is accessible from nearly any page:
 - **Issues/PRs list:** Each tab has its own search bar pre-scoped to that repository
 - **Advanced Search UI:** `github.com/search/advanced` - a form with individual fields for each filter. Accessible but verbose; query syntax below is faster.
 
-**Keyboard to global search:**
-```
+### Keyboard to global search
+
+```text
 / → Focus the global search bar (works on most GitHub pages)
 Type your query → Enter
 → Results page opens, grouped by type (Code, Issues, PRs, Repositories, etc.)
@@ -44,7 +46,7 @@ Type your query → Enter
 By default, GitHub searches across all of GitHub. Scope modifiers restrict results:
 
 | Modifier | Scope |
-|---|---|
+| ---  | ---  |
 | `repo:owner/name` | One specific repository |
 | `org:orgname` | All repos in an organization |
 | `user:username` | All repos owned by a user |
@@ -61,7 +63,7 @@ By default, GitHub searches across all of GitHub. Scope modifiers restrict resul
 ### Boolean Logic
 
 | Syntax | Meaning |
-|---|---|
+| ---  | ---  |
 | `word1 word2` | Both words (implicit AND) |
 | `word1 OR word2` | Either word |
 | `"exact phrase"` | Exact phrase match |
@@ -71,7 +73,7 @@ By default, GitHub searches across all of GitHub. Scope modifiers restrict resul
 ### Common Qualifiers
 
 | Qualifier | Meaning |
-|---|---|
+| ---  | ---  |
 | `is:open` | Open items only |
 | `is:closed` | Closed items only |
 | `is:merged` | Merged PRs only |
@@ -96,7 +98,7 @@ By default, GitHub searches across all of GitHub. Scope modifiers restrict resul
 ### Date Qualifiers
 
 | Qualifier | Meaning |
-|---|---|
+| ---  | ---  |
 | `created:>2025-01-01` | Created after a date |
 | `created:<2025-01-01` | Created before a date |
 | `created:2025-01-01..2025-03-31` | Created in a date range |
@@ -113,38 +115,45 @@ GitHub's issue/PR search is at `github.com/issues` (your issues) or `github.com/
 
 ### Practical queries
 
-**Find all unassigned, open accessibility issues across an org:**
-```
+#### Find all unassigned, open accessibility issues across an org
+
+```text
 org:community-access is:issue is:open label:accessibility no:assignee
 ```
 
-**Find good first issues in any language:**
-```
+#### Find good first issues in any language
+
+```text
 is:issue is:open label:"good first issue" no:assignee
 ```
 
-**Find good first issues in a specific language:**
-```
+#### Find good first issues in a specific language
+
+```text
 is:issue is:open label:"good first issue" language:python no:assignee
 ```
 
-**Find all PRs you need to review:**
-```
+#### Find all PRs you need to review
+
+```text
 is:pr is:open review-requested:@me
 ```
 
-**Find all open PRs where you were mentioned:**
-```
+#### Find all open PRs where you were mentioned
+
+```text
 is:pr is:open mentions:@me
 ```
 
-**Find your open issues across all repos:**
-```
+#### Find your open issues across all repos
+
+```text
 is:issue is:open author:@me
 ```
 
-**Find issues that are stale (open, not updated in 6+ months):**
-```
+#### Find issues that are stale (open, not updated in 6+ months)
+
+```text
 is:issue is:open repo:owner/name updated:<2024-08-01
 ```
 
@@ -154,24 +163,28 @@ is:issue is:open repo:owner/name updated:<2024-08-01
 
 Code search operates differently from issue search. As of 2024, GitHub uses an improved code search engine (sometimes called "code search v2") with better indexing.
 
-**Basic code search:**
-```
+### Basic code search
+
+```text
 repo:owner/name language:javascript aria-label
 ```
 
-**Find uses of a function across a repo:**
-```
+### Find uses of a function across a repo
+
+```text
 repo:owner/name symbol:handleKeyDown
 ```
 
-**Find a pattern across all repos in an org:**
-```
+### Find a pattern across all repos in an org
+
+```text
 org:community-access aria-hidden="true"
 ```
 
-**Code search qualifiers:**
+### Code search qualifiers
+
 | Qualifier | Meaning |
-|---|---|
+| ---  | ---  |
 | `language:python` | Filter by programming language |
 | `path:src/` | Only files under this path |
 | `filename:config.yml` | Only files with this name |
@@ -183,23 +196,27 @@ org:community-access aria-hidden="true"
 
 ## 6. Searching Commits
 
-**Find commits with a keyword in the message:**
-```
+### Find commits with a keyword in the message
+
+```text
 repo:owner/name fix keyboard navigation
 ```
 
-**Find commits by a specific author:**
-```
+### Find commits by a specific author
+
+```text
 repo:owner/name author:username
 ```
 
-**Find commits in a date range:**
-```
+### Find commits in a date range
+
+```text
 repo:owner/name committer-date:2025-01-01..2025-03-31
 ```
 
-**Find commits that touched a specific file:**
-```
+### Find commits that touched a specific file
+
+```text
 repo:owner/name path:docs/README.md
 ```
 
@@ -207,19 +224,22 @@ repo:owner/name path:docs/README.md
 
 ## 7. Searching Repositories
 
-**Find accessible repos by topic:**
-```
+### Find accessible repos by topic
+
+```text
 topic:accessibility stars:>50 is:public
 ```
 
-**Find repos with a specific language, sorted by stars:**
-```
+### Find repos with a specific language, sorted by stars
+
+```text
 language:typescript topic:screen-reader sort:stars-desc
 ```
 
-**Repository qualifiers:**
+### Repository qualifiers
+
 | Qualifier | Meaning |
-|---|---|
+| ---  | ---  |
 | `stars:>100` | More than 100 stars |
 | `forks:>10` | More than 10 forks |
 | `is:public` | Public repos only |
@@ -233,13 +253,15 @@ language:typescript topic:screen-reader sort:stars-desc
 
 ## 8. Searching Users and Organizations
 
-**Find users:**
-```
+### Find users
+
+```text
 type:user location:Seattle followers:>100
 ```
 
-**Find organizations:**
-```
+### Find organizations
+
+```text
 type:org topic:accessibility
 ```
 
@@ -249,28 +271,33 @@ type:org topic:accessibility
 
 Bookmark these for use during the hackathon:
 
-**Find open contributions you can make right now in accessibility-agents:**
-```
+### Find open contributions you can make right now in accessibility-agents
+
+```text
 repo:community-access/accessibility-agents is:issue is:open label:"good first issue" no:assignee
 ```
 
-**Check whether your issue is already filed:**
-```
+### Check whether your issue is already filed
+
+```text
 repo:community-access/accessibility-agents is:issue keyboard navigation
 ```
 
-**Find all accessibility-related issues in a project:**
-```
+### Find all accessibility-related issues in a project
+
+```text
 repo:community-access/accessibility-agents is:issue label:accessibility is:open
 ```
 
-**See all your merged PRs (proof of contribution):**
-```
+### See all your merged PRs (proof of contribution)
+
+```text
 is:pr is:merged author:@me
 ```
 
-**Find recent discussions about a topic:**
-```
+### Find recent discussions about a topic
+
+```text
 repo:community-access/accessibility-agents in:discussions screen reader
 ```
 
@@ -284,8 +311,9 @@ GitHub does not have a built-in saved-search feature, but you can:
 2. **Pin in notifications** - if you're watching a repo, set up notification filters
 3. **Accessibility Agents** - use `/my-issues` and `/my-prs` for your personal saved-search equivalents without leaving VS Code
 
-**Example bookmarkable URL:**
-```
+### Example bookmarkable URL
+
+```text
 https://github.com/issues?q=is%3Aissue+is%3Aopen+assignee%3A%40me
 ```
 

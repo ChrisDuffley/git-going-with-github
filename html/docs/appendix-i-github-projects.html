@@ -115,28 +115,28 @@
 <li>Follow the same template/name flow</li>
 </ol>
 <h3>Screen Reader: Project Creation</h3>
-<pre><code class="hljs"><span class="hljs-number">1.</span> Navigate <span class="hljs-keyword">to</span> org <span class="hljs-keyword">or</span> repo Projects tab
-   → Tab <span class="hljs-keyword">to</span> the green &quot;New project&quot; button → Enter
-<span class="hljs-number">2.</span> <span class="hljs-keyword">Template</span> modal opens
-   → Arrow keys <span class="hljs-keyword">to</span> browse <span class="hljs-keyword">template</span> cards
-   → Enter <span class="hljs-keyword">to</span> <span class="hljs-keyword">select</span> a <span class="hljs-keyword">template</span>
-<span class="hljs-number">3.</span> <span class="hljs-type">Name</span> field: <span class="hljs-keyword">type</span> your project <span class="hljs-type">name</span>
-<span class="hljs-number">4.</span> &quot;Create project&quot; button: Tab → Enter
-<span class="hljs-number">5.</span> You land <span class="hljs-keyword">on</span> the <span class="hljs-built_in">new</span> empty project</code></pre>
+<pre><code class="hljs language-text">1. Navigate to org or repo Projects tab
+   → Tab to the green &quot;New project&quot; button → Enter
+2. Template modal opens
+   → Arrow keys to browse template cards
+   → Enter to select a template
+3. Name field: type your project name
+4. &quot;Create project&quot; button: Tab → Enter
+5. You land on the new empty project</code></pre>
 <hr>
 <h2>3. The Three Layouts in Depth</h2>
 <h3>Table View</h3>
 <p>The default layout. A spreadsheet-style grid where each row is an issue, PR, or draft item. Columns are fields (Title, Status, Assignee, Labels, Priority, custom fields you create).</p>
 <p><strong>What it&#39;s best for:</strong> Bulk editing, sorting, filtering, seeing many items at once with their field values.</p>
-<p><strong>Keyboard navigation:</strong></p>
-<pre><code class="hljs">T                     → Jump <span class="hljs-keyword">to</span> <span class="hljs-keyword">table</span>
-↑/↓                   → <span class="hljs-keyword">Move</span> <span class="hljs-keyword">between</span> <span class="hljs-keyword">rows</span>
-←/→                   → <span class="hljs-keyword">Move</span> <span class="hljs-keyword">between</span> <span class="hljs-keyword">columns</span>
-Enter                 → <span class="hljs-keyword">Open</span> item detail panel (right sidebar)
-<span class="hljs-keyword">Escape</span>                → <span class="hljs-keyword">Close</span> detail panel
-Space (<span class="hljs-keyword">on</span> a cell)     → Edit that cell<span class="hljs-string">&#x27;s value
-F2 (on title cell)    → Edit title inline</span></code></pre>
-<p><strong>Screen reader output per row:</strong></p>
+<h4>Keyboard navigation</h4>
+<pre><code class="hljs language-text">T                     → Jump to table
+↑/↓                   → Move between rows
+←/→                   → Move between columns
+Enter                 → Open item detail panel (right sidebar)
+Escape                → Close detail panel
+Space (on a cell)     → Edit that cell&#x27;s value
+F2 (on title cell)    → Edit title inline</code></pre>
+<h4>Screen reader output per row</h4>
 <blockquote>
 <p>&quot;Fix keyboard trap in modal dialog | Status: In Progress | Assignee: alice | Priority: High | Labels: bug, accessibility&quot;</p>
 </blockquote>
@@ -144,14 +144,14 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <p>Kanban-style columns. Each column represents a status value. Cards can be dragged between columns (or updated via keyboard by editing the Status field).</p>
 <p><strong>What it&#39;s best for:</strong> Visual workflow tracking, seeing WIP (work in progress), standup-style status reviews.</p>
 <p><strong>Screen reader note:</strong> Drag-and-drop is not keyboard accessible. Change a card&#39;s column by opening it and editing the Status field instead.</p>
-<p><strong>Keyboard navigation:</strong></p>
-<pre><code class="hljs"><span class="hljs-built_in">Tab</span>                   → <span class="hljs-variable">Move</span> <span class="hljs-variable">between</span> <span class="hljs-variable">columns</span> <span class="hljs-variable">and</span> <span class="hljs-variable">cards</span>
-<span class="hljs-built_in">Enter</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">on</span> <span class="hljs-variable">a</span> <span class="hljs-variable">card</span><span class="hljs-punctuation">)</span>     → <span class="hljs-built_in">Open</span> <span class="hljs-variable">item</span> <span class="hljs-variable">detail</span> <span class="hljs-variable">panel</span>
-<span class="hljs-variable">B</span>                     → <span class="hljs-variable">Jump</span> <span class="hljs-variable">to</span> <span class="hljs-variable">board</span> <span class="hljs-variable">regions</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">if</span> <span class="hljs-variable">heading</span> <span class="hljs-variable">navigation</span><span class="hljs-punctuation">)</span>
-<span class="hljs-variable">Within</span> <span class="hljs-variable">a</span> <span class="hljs-variable">card</span><span class="hljs-operator">:</span>
-  <span class="hljs-built_in">Enter</span>               → <span class="hljs-built_in">Open</span> <span class="hljs-variable">panel</span>
-  <span class="hljs-built_in">Space</span>               → <span class="hljs-built_in">Toggle</span> <span class="hljs-variable">selection</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">for</span> <span class="hljs-variable">bulk</span> <span class="hljs-variable">moves</span><span class="hljs-punctuation">)</span></code></pre>
-<p><strong>Change a card&#39;s column without dragging:</strong></p>
+<h4>Keyboard navigation</h4>
+<pre><code class="hljs language-text">Tab                   → Move between columns and cards
+Enter (on a card)     → Open item detail panel
+B                     → Jump to board regions (if heading navigation)
+Within a card:
+  Enter               → Open panel
+  Space               → Toggle selection (for bulk moves)</code></pre>
+<h4>Change a card&#39;s column without dragging</h4>
 <ol>
 <li><code>Enter</code> to open the card</li>
 <li>Navigate to the <strong>Status</strong> field in the right panel</li>
@@ -163,7 +163,7 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <p>A horizontal timeline. Items appear as bars spanning their start/due dates. Iterations and milestones can be visualized against real calendar time.</p>
 <p><strong>What it&#39;s best for:</strong> Release planning, sprint capacity planning, communicating timelines to stakeholders.</p>
 <p><strong>Screen reader note:</strong> Roadmap is chart-based. The underlying data is still fully accessible via the Table view - treat Roadmap as a visual summary, and use Table for all editing.</p>
-<p><strong>Setting dates:</strong></p>
+<h4>Setting dates</h4>
 <ul>
 <li>Add a <strong>Date</strong> custom field (e.g., &quot;Start Date&quot;, &quot;Due Date&quot;) or use a <strong>Milestone</strong> field</li>
 <li>Items without dates appear in the ungrouped section</li>
@@ -215,11 +215,11 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <li>Name the field and configure options (for select fields, type each option, press Enter to add more)</li>
 <li>Confirm - the field appears as a new column</li>
 </ol>
-<p><strong>Screen reader path:</strong></p>
-<pre><code class="hljs">Tab <span class="hljs-keyword">to</span> &quot;+&quot; <span class="hljs-keyword">column</span> <span class="hljs-keyword">header</span> button → Enter
-→ Field <span class="hljs-keyword">type</span> menu opens → ↑/↓ <span class="hljs-keyword">to</span> choose <span class="hljs-keyword">type</span> → Enter
-→ <span class="hljs-type">Name</span> field: <span class="hljs-keyword">type</span> field <span class="hljs-type">name</span>
-→ <span class="hljs-keyword">For</span> &quot;Single select&quot;: <span class="hljs-keyword">type</span> <span class="hljs-keyword">option</span> names, Tab/Enter <span class="hljs-keyword">between</span> <span class="hljs-keyword">options</span>
+<h4>Screen reader path</h4>
+<pre><code class="hljs language-text">Tab to &quot;+&quot; column header button → Enter
+→ Field type menu opens → ↑/↓ to choose type → Enter
+→ Name field: type field name
+→ For &quot;Single select&quot;: type option names, Tab/Enter between options
 → &quot;Save&quot; button → Enter</code></pre>
 <h3>Editing a Field Value on an Item</h3>
 <ol>
@@ -421,47 +421,47 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 </ol>
 <h3>Using the Repository Field</h3>
 <p>When a project spans multiple repos, the <strong>&quot;Repository&quot;</strong> field lets you see - and filter by - which repo each item belongs to:</p>
-<pre><code class="hljs"><span class="hljs-keyword">Filter</span>: repo:community-<span class="hljs-keyword">access</span>/accessibility-agents
-→ <span class="hljs-keyword">Show</span> <span class="hljs-keyword">only</span> accessibility-agents issues <span class="hljs-keyword">in</span> this <span class="hljs-keyword">cross</span>-repo project</code></pre>
+<pre><code class="hljs language-text">Filter: repo:community-access/accessibility-agents
+→ Show only accessibility-agents issues in this cross-repo project</code></pre>
 <p><strong>Common use case:</strong> An organization project tracking all accessibility bugs across every repo, labeled <code>accessibility</code>, with Auto-add enabled.</p>
 <hr>
 <h2>10. Screen Reader Navigation Reference</h2>
 <h3>Project Home Page (list of projects)</h3>
-<pre><code class="hljs"><span class="hljs-number">3</span> → Jump <span class="hljs-selector-tag">to</span> project titles (they are <span class="hljs-selector-tag">h3</span> links)
-Enter → Open <span class="hljs-selector-tag">a</span> project</code></pre>
+<pre><code class="hljs language-text">3 → Jump to project titles (they are h3 links)
+Enter → Open a project</code></pre>
 <h3>Inside a Project - General</h3>
-<pre><code class="hljs">Tab → <span class="hljs-keyword">Move</span> <span class="hljs-keyword">between</span> interactive elements (<span class="hljs-keyword">view</span> tabs, filters, fields, buttons)
-F6 → <span class="hljs-keyword">Cycle</span> <span class="hljs-keyword">between</span> major panels (<span class="hljs-keyword">header</span>, <span class="hljs-keyword">view</span> tabs, content area)
-/ → Focus the <span class="hljs-keyword">filter</span> bar (<span class="hljs-keyword">if</span> supported; otherwise Tab <span class="hljs-keyword">to</span> reach it)</code></pre>
+<pre><code class="hljs language-text">Tab → Move between interactive elements (view tabs, filters, fields, buttons)
+F6 → Cycle between major panels (header, view tabs, content area)
+/ → Focus the filter bar (if supported; otherwise Tab to reach it)</code></pre>
 <h3>Table View</h3>
-<pre><code class="hljs">T <span class="hljs-keyword">or</span> Region → Jump <span class="hljs-keyword">to</span> the <span class="hljs-keyword">table</span> data region
-↑/↓ → Navigate <span class="hljs-keyword">rows</span>
-←/→ → Navigate <span class="hljs-keyword">columns</span> <span class="hljs-keyword">within</span> a <span class="hljs-keyword">row</span>
-Enter → <span class="hljs-keyword">Open</span> item detail panel
-Space → Toggle <span class="hljs-keyword">row</span> selection
-<span class="hljs-keyword">Escape</span> → <span class="hljs-keyword">Close</span> detail panel <span class="hljs-keyword">or</span> cancel edit
-F2 → Edit a title cell <span class="hljs-keyword">if</span> focused</code></pre>
+<pre><code class="hljs language-text">T or Region → Jump to the table data region
+↑/↓ → Navigate rows
+←/→ → Navigate columns within a row
+Enter → Open item detail panel
+Space → Toggle row selection
+Escape → Close detail panel or cancel edit
+F2 → Edit a title cell if focused</code></pre>
 <p><strong>NVDA note:</strong> Use Browse mode (NVDA+Space to toggle) to read all cell content, then App mode (NVDA+Space again) for interactive editing. NVDA announces cell content as you navigate with arrow keys.</p>
 <p><strong>JAWS note:</strong> Use JAWS cursor (JAWS+P) to read grid cell content. For interactive editing, press Enter to enter application mode in the table.</p>
 <p><strong>VoiceOver note:</strong> Use VO+Shift+↓ to interact with the table. VO+←/→ moves between cells. Press VO+Space to activate a cell for editing.</p>
 <h3>Board View</h3>
-<pre><code class="hljs">Tab → <span class="hljs-keyword">Move</span> <span class="hljs-keyword">between</span> cards <span class="hljs-keyword">and</span> <span class="hljs-keyword">column</span> headers
-Enter (<span class="hljs-keyword">on</span> card) → <span class="hljs-keyword">Open</span> detail panel
-The &quot;Status&quot; field <span class="hljs-keyword">in</span> the panel → Change the card<span class="hljs-string">&#x27;s column</span></code></pre>
+<pre><code class="hljs language-text">Tab → Move between cards and column headers
+Enter (on card) → Open detail panel
+The &quot;Status&quot; field in the panel → Change the card&#x27;s column</code></pre>
 <h3>Detail Panel (right sidebar, any view)</h3>
-<pre><code class="hljs">Tab → <span class="hljs-keyword">Move</span> <span class="hljs-keyword">between</span> fields
+<pre><code class="hljs language-text">Tab → Move between fields
 Enter/Space → Activate a field editor
-<span class="hljs-keyword">Select</span> dropdowns → ↑/↓ <span class="hljs-keyword">to</span> navigate <span class="hljs-keyword">options</span>, Enter <span class="hljs-keyword">to</span> <span class="hljs-keyword">select</span>
-<span class="hljs-keyword">Escape</span> → <span class="hljs-keyword">Close</span> the dropdown <span class="hljs-keyword">or</span> the panel</code></pre>
+Select dropdowns → ↑/↓ to navigate options, Enter to select
+Escape → Close the dropdown or the panel</code></pre>
 <h3>Filter Bar</h3>
-<pre><code class="hljs">Click/Tab <span class="hljs-keyword">to</span><span class="hljs-built_in"> filter </span>bar →<span class="hljs-built_in"> type </span>query → Enter <span class="hljs-keyword">to</span> apply
-Backspace → <span class="hljs-built_in">Remove</span> last<span class="hljs-built_in"> filter </span>token
-Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-built_in"> filter </span>bar</code></pre>
+<pre><code class="hljs language-text">Click/Tab to filter bar → type query → Enter to apply
+Backspace → Remove last filter token
+Escape → Clear focus from filter bar</code></pre>
 <hr>
 <h2>11. Accessibility Agents: <code>/project-status</code></h2>
 <p>The <strong><code>/project-status</code></strong> command from Accessibility Agents gives you a live project board overview directly in VS Code Copilot Chat, without opening a browser.</p>
 <h3>What It Shows</h3>
-<pre><code class="hljs">/project-status community-access/accessibility-agents</code></pre>
+<pre><code class="hljs language-text">/project-status community-access/accessibility-agents</code></pre>
 <ul>
 <li>Items per column (Todo, In Progress, Done, etc.) with assignees and average age</li>
 <li>Blocked items (labeled &quot;blocked&quot; or flagged with a field value)</li>
@@ -471,23 +471,23 @@ Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-b
 <li>Sprint/iteration progress if an Iteration field is configured</li>
 </ul>
 <h3>Example Output</h3>
-<pre><code class="hljs"><span class="hljs-variable">GitHub</span> <span class="hljs-variable">Project</span><span class="hljs-operator">:</span> <span class="hljs-variable">Accessibility</span> <span class="hljs-variable">Agents</span> <span class="hljs-variable">Roadmap</span> <span class="hljs-punctuation">(</span><span class="hljs-number">3</span> <span class="hljs-variable">active</span> <span class="hljs-variable">views</span><span class="hljs-punctuation">)</span>
+<pre><code class="hljs language-text">GitHub Project: Accessibility Agents Roadmap (3 active views)
 
-<span class="hljs-built_in">Column</span> <span class="hljs-variable">Breakdown</span><span class="hljs-operator">:</span>
+Column Breakdown:
 ┌─────────────┬───────┬──────────────────┬─────────┬──────────────┐
-│ <span class="hljs-built_in">Column</span>      │ <span class="hljs-variable">Items</span> │ <span class="hljs-variable">Assignees</span>        │ <span class="hljs-variable">Avg</span> <span class="hljs-variable">Age</span> │ <span class="hljs-variable">Stale</span> <span class="hljs-punctuation">(</span><span class="hljs-number">7</span><span class="hljs-variable">d</span><span class="hljs-operator">+</span><span class="hljs-punctuation">)</span> │
+│ Column      │ Items │ Assignees        │ Avg Age │ Stale (7d+) │
 ├─────────────┼───────┼──────────────────┼─────────┼──────────────┤
-│ <span class="hljs-variable">To</span> <span class="hljs-built_in">Do</span>       │   <span class="hljs-number">8</span>   │ <span class="hljs-operator">@</span><span class="hljs-variable">alice</span><span class="hljs-punctuation">(</span><span class="hljs-number">3</span><span class="hljs-punctuation">)</span><span class="hljs-operator">,@</span><span class="hljs-variable">bob</span><span class="hljs-punctuation">(</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span> │ <span class="hljs-number">5</span> <span class="hljs-variable">days</span>  │     <span class="hljs-number">1</span>       │
-│ <span class="hljs-built_in">In</span> <span class="hljs-variable">Progress</span> │   <span class="hljs-number">4</span>   │ <span class="hljs-operator">@</span><span class="hljs-variable">charlie</span><span class="hljs-punctuation">(</span><span class="hljs-number">2</span><span class="hljs-punctuation">)</span>       │ <span class="hljs-number">3</span> <span class="hljs-variable">days</span>  │     <span class="hljs-number">0</span>       │
-│ <span class="hljs-built_in">In</span> <span class="hljs-variable">Review</span>   │   <span class="hljs-number">2</span>   │ <span class="hljs-operator">--</span>               │ <span class="hljs-number">2</span> <span class="hljs-variable">days</span>  │     <span class="hljs-number">0</span>       │
-│ <span class="hljs-variable">Done</span>        │  <span class="hljs-number">23</span>   │ <span class="hljs-operator">--</span>               │  <span class="hljs-operator">--</span>     │    <span class="hljs-operator">--</span>       │
+│ To Do       │   8   │ @alice(3),@bob(2) │ 5 days  │     1       │
+│ In Progress │   4   │ @charlie(2)       │ 3 days  │     0       │
+│ In Review   │   2   │ --               │ 2 days  │     0       │
+│ Done        │  23   │ --               │  --     │    --       │
 └─────────────┴───────┴──────────────────┴─────────┴──────────────┘
 
-<span class="hljs-variable">Attention</span> <span class="hljs-variable">Items</span><span class="hljs-operator">:</span>
-  <span class="hljs-variable">Stale</span><span class="hljs-operator">:</span> <span class="hljs-string">&quot;Update screen reader navigation guide&quot;</span> <span class="hljs-operator">-</span> <span class="hljs-built_in">In</span> <span class="hljs-variable">Review</span> <span class="hljs-variable">for</span> <span class="hljs-number">9</span> <span class="hljs-variable">days</span><span class="hljs-operator">,</span> <span class="hljs-variable">no</span> <span class="hljs-variable">activity</span>
-  <span class="hljs-variable">Unassigned</span><span class="hljs-operator">:</span> <span class="hljs-string">&quot;Triage accessibility bug backlog&quot;</span> <span class="hljs-variable">in</span> <span class="hljs-built_in">In</span> <span class="hljs-variable">Progress</span>
+Attention Items:
+  Stale: &quot;Update screen reader navigation guide&quot; - In Review for 9 days, no activity
+  Unassigned: &quot;Triage accessibility bug backlog&quot; in In Progress
 
-<span class="hljs-built_in">After</span> <span class="hljs-variable">the</span> <span class="hljs-variable">overview</span><span class="hljs-operator">:</span> <span class="hljs-string">&quot;Want to see a specific column or check a team member&#x27;s workload?&quot;</span></code></pre>
+After the overview: &quot;Want to see a specific column or check a team member&#x27;s workload?&quot;</code></pre>
 <h3>When to Use It</h3>
 <ul>
 <li>During standup: quick status snapshot without leaving VS Code</li>

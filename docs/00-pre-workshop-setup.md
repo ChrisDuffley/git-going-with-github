@@ -1,4 +1,5 @@
 # Pre-Workshop Setup - GIT Going with GitHub
+>
 > **Listen to Episode 1:** [Pre-Workshop Setup](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Everything You Need Before Day 1 Begins
@@ -12,15 +13,15 @@
 ## Table of Contents
 
 1. [What You Will Need](#what-you-will-need)
-2. [Step 1 - Create Your GitHub Account](#step-1-create-your-github-account)
-3. [Step 2 - Configure GitHub Accessibility Settings](#step-2-configure-github-accessibility-settings)
-4. [Step 3 - Configure Your Profile](#step-3-configure-your-profile)
-5. [Step 4 - Check GitHub Feature Preview Settings](#step-4-check-github-feature-preview-settings)
-6. [Step 5 - Set Up Your Screen Reader and Browser](#step-5-set-up-your-screen-reader-browser)
-7. [Step 6 - Install Git and Visual Studio Code](#step-6-install-git-and-visual-studio-code)
-8. [Step 7 - Configure Git Identity](#step-7-configure-git-identity)
-9. [Step 8 - Install VS Code Extensions](#step-8-install-vs-code-extensions)
-10. [Step 9 - Verification Checklist](#step-9-verification-checklist)
+2. [Step 1 - Create Your GitHub Account](#step-1---create-your-github-account)
+3. [Step 2 - Configure GitHub Accessibility Settings](#step-2---configure-github-accessibility-settings)
+4. [Step 3 - Configure Your Profile](#step-3---configure-your-profile)
+5. [Step 4 - Check GitHub Feature Preview Settings](#step-4---check-github-feature-preview-settings)
+6. [Step 5 - Set Up Your Screen Reader and Browser](#step-5---set-up-your-screen-reader--browser)
+7. [Step 6 - Install Git and Visual Studio Code](#step-6---install-git-and-visual-studio-code)
+8. [Step 7 - Configure Git Identity](#step-7---configure-git-identity)
+9. [Step 8 - Install VS Code Extensions](#step-8---install-vs-code-extensions)
+10. [Step 9 - Verification Checklist](#step-9---verification-checklist)
 11. [Other GitHub Access Methods (Reference Only)](#other-github-access-methods-reference-only)
 12. [Getting Help Before the Event](#getting-help-before-the-event)
 
@@ -29,11 +30,13 @@
 ## What You Will Need
 
 ### Hardware
+
 - A computer running Windows or macOS
 - A reliable internet connection
 - Headphones (recommended - screen reader audio during group sessions)
 
 ### Software - Day 1
+
 - A modern web browser: **Chrome** or **Firefox** recommended
   - Both have strong compatibility with GitHub's interface and screen readers
   - Edge is also acceptable on Windows
@@ -42,6 +45,7 @@
 - A GitHub account (free tier is fine)
 
 ### Software - Required Before the Workshop
+
 - **Git** - [Download Git](https://git-scm.com/downloads) (Windows/Linux) or Xcode Command Line Tools (macOS)
 - **Visual Studio Code** (free) - [download here](https://code.visualstudio.com/)
 - **GitHub Copilot Chat** extension for VS Code - installed from within VS Code (this single extension provides both inline suggestions and Chat)
@@ -52,7 +56,7 @@
 You only need **one** of these. Use whichever you are most comfortable with.
 
 | Screen Reader | Platform | Cost | Download |
-|---------------|----------|------|----------|
+| ---------------  | ----------  | ------  | ----------  |
 | **NVDA** (NonVisual Desktop Access) | Windows | Free | [Download NVDA](https://www.nvaccess.org/download/) |
 | **JAWS** (Job Access With Speech) | Windows | Paid (trial available) | [Download JAWS](https://www.freedomscientific.com/products/software/jaws/) |
 | **VoiceOver** | macOS / iOS | Built-in (free) | Included with macOS - press `Cmd+F5` to activate |
@@ -63,13 +67,13 @@ You only need **one** of these. Use whichever you are most comfortable with.
 
 ## Step 1 - Create Your GitHub Account
 
-If you already have a GitHub account, skip to [Step 2](#step-2-configure-github-accessibility-settings).
+If you already have a GitHub account, skip to [Step 2](#step-2---configure-github-accessibility-settings).
 
 > **Before you begin:** Have your email address and a chosen password ready. The signup form is a single-page form with several fields - your screen reader will encounter a verification puzzle partway through (see note below).
 
 ### Create an account
 
-1. Open your browser and navigate to **https://github.com/signup**
+1. Open your browser and navigate to the **[GitHub signup page](https://github.com/signup)**
 2. The page loads with focus on the first field: **"Enter your email address"**
    - Type your email address and press `Tab` or activate **Continue**
 3. The next field is **"Create a password"**
@@ -117,24 +121,24 @@ Two-factor authentication (2FA) adds a second verification step each time you si
 
 Quick steps to enable 2FA
 
-1. Open https://github.com/settings/security while signed in.
+1. Open the [GitHub security settings page](https://github.com/settings/security) while signed in.
 2. Under **Two-factor authentication**, choose **Enable** and follow the prompts.
 3. Choose one of the second-factor methods (recommended order):
-    - **Authenticator app** (recommended): Microsoft Authenticator, Google Authenticator, Authy — generates time-based 6-digit codes.
+    - **Authenticator app** (recommended): Microsoft Authenticator, Google Authenticator, Authy - generates time-based 6-digit codes.
     - **Security key / passkey** (most secure): hardware security keys (YubiKey, etc.) or platform passkeys (biometric device credentials).
     - **SMS / text message** (least preferred): can be used if other options are unavailable.
 
 Detailed setup notes
 
 - Authenticator app (recommended):
-   - Visual users: scan the QR code with your authenticator app and enter the 6-digit code shown.
-   - Screen reader users: choose the link labeled **"enter this text code"** or **"can't scan the barcode?"** to reveal the secret (a 32-character key). Use the authenticator app's manual/key-entry option to add the account.
+  - Visual users: scan the QR code with your authenticator app and enter the 6-digit code shown.
+  - Screen reader users: choose the link labeled **"enter this text code"** or **"can't scan the barcode?"** to reveal the secret (a 32-character key). Use the authenticator app's manual/key-entry option to add the account.
 
 - Security key / passkey:
-   - Follow the on-screen prompts to register a hardware key or platform passkey. These are highly recommended for long-term security and are supported by modern browsers and devices.
+  - Follow the on-screen prompts to register a hardware key or platform passkey. These are highly recommended for long-term security and are supported by modern browsers and devices.
 
 - SMS / text message:
-   - Enter your phone number and verify the code sent via text. Use only if authenticator apps or keys are unavailable.
+  - Enter your phone number and verify the code sent via text. Use only if authenticator apps or keys are unavailable.
 
 Recovery and backup
 
@@ -152,17 +156,18 @@ When 2FA is enabled, your GitHub account password cannot be used for HTTPS Git o
        ssh-keygen -t ed25519 -C "your-email@example.com"
        # or for older systems: ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
        ```
-   2. Copy the public key (`~/.ssh/id_ed25519.pub`) and add it at https://github.com/settings/keys → **New SSH key**.
+
+   2. Copy the public key (`~/.ssh/id_ed25519.pub`) and add it at the [GitHub SSH keys page](https://github.com/settings/keys) → **New SSH key**.
    3. Test the connection: `ssh -T git@github.com` (first-time prompts about known hosts are expected).
 
-   - SSH continues to work regardless of whether 2FA is enabled.
+  - SSH continues to work regardless of whether 2FA is enabled.
 
 - Personal Access Token (PAT) for HTTPS Git or tools that ask for a password:
-   1. Create a PAT at https://github.com/settings/tokens → **Generate new token**.
+   1. Create a PAT at the [GitHub personal access tokens page](https://github.com/settings/tokens) → **Generate new token**.
    2. For normal repo push/pull access, grant **repo** scope (check only what you need). If you need workflow or packages access, add those scopes explicitly.
    3. Use the PAT instead of your password when prompted by Git over HTTPS. In GUI tools (VS Code, GitHub Desktop), paste the PAT where the password is requested or configure the credential helper to store it.
 
-   - Short-lived tokens and fine-grained tokens: GitHub supports fine-grained tokens which are preferred for scoped access. If your tooling supports them, use fine-grained tokens with only the required repository permissions.
+  - Short-lived tokens and fine-grained tokens: GitHub supports fine-grained tokens which are preferred for scoped access. If your tooling supports them, use fine-grained tokens with only the required repository permissions.
 
 Tool-specific tips
 
@@ -344,7 +349,7 @@ Both have been broadly rolled out and may already be active on your account. Che
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-**NVDA or JAWS (Windows):**
+#### NVDA or JAWS (Windows)
 
 1. Sign into GitHub and open any page
 2. Switch to Browse Mode if not already active (`NVDA+Space` / JAWS virtual cursor)
@@ -385,7 +390,7 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 ### What Each Feature Enables
 
 | Feature | What it improves for screen reader users |
-|---------|------------------------------------------|
+| ---------  | ------------------------------------------  |
 | **New Issues Experience** | Issues list uses proper `<ul>` list structure. Issue titles are h3 headings. ARIA live regions announce filter result updates. Toolbar uses arrow key navigation. Close issue via `Ctrl+Shift+Enter` from the comment box. |
 | **New Files Changed Experience** | Files Changed tab includes a navigable file tree region. Diffs are structured as tables with row/column navigation. Filter changed files field is reachable with `E`. Inline comment mode activates with `Enter` on a focused diff line. |
 
@@ -398,17 +403,20 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 ### NVDA (Windows)
 
 **Install NVDA** if you haven't already:
+
 1. Download from [the NVDA download page](https://www.nvaccess.org/download/)
 2. Run the installer - you can install to your computer or run portably
 3. After launch, NVDA speaks "NVDA started" when running
 
-**Configure NVDA for web browsing:**
+#### Configure NVDA for web browsing
+
 1. Open NVDA Menu (`NVDA+N`)
 2. Go to **Preferences → Settings → Browse Mode**
 3. Enable "Use screen layout" - this helps with GitHub's landmark navigation
 4. Under **Document Formatting**, disable announcements you find too verbose
 
-**Recommended NVDA voice settings:**
+#### Recommended NVDA voice settings
+
 - Rate: 60-75% (fast enough to be efficient, slow enough to be clear)
 - Punctuation: "Most" (reads important symbols like `#` and `@` without reading every period)
 
@@ -420,12 +428,14 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **If using a trial:** JAWS runs in 40-minute sessions without a license. Restart it if you need more time.
 
-**Configure JAWS for web browsing:**
+#### Configure JAWS for web browsing
+
 1. Open JAWS Settings Center: `Insert+F2 → Settings Center`
 2. Ensure "Virtual cursor" is active for web browsing
 3. In Chrome or Firefox, JAWS should automatically activate Virtual/Browse mode
 
-**Recommended JAWS settings for GitHub:**
+#### Recommended JAWS settings for GitHub
+
 - Verbosity → Links: Read link text only (disable "opens in new window" if too verbose)
 - Verbosity → Punctuation: "Most" for same reason as NVDA
 
@@ -437,7 +447,8 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Activate VoiceOver:** `Command+F5` toggles VoiceOver on and off.
 
-**Essential VoiceOver setup for web:**
+#### Essential VoiceOver setup for web
+
 1. Open VoiceOver Utility: `VO+F8`
 2. Go to **Web** category → **Web Rotor**
 3. Ensure these are checked: Headings, Landmarks, Links, Buttons, Form Controls, Tables
@@ -446,7 +457,8 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Your VoiceOver modifier key:** `VO` = `Control+Option` by default.
 
-**Turn on Quick Nav for fast navigation:**
+#### Turn on Quick Nav for fast navigation
+
 - Press `Left Arrow + Right Arrow` simultaneously to toggle Quick Nav
 - With Quick Nav on: `H` = next heading, `L` = next link, `B` = next button (same as NVDA/JAWS browse mode keys)
 
@@ -455,7 +467,7 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 ### Browser Recommendations Summary
 
 | Browser | Windows | macOS | Notes |
-|---------|---------|-------|-------|
+| ---------  | ---------  | -------  | -------  |
 | **Chrome** | Recommended | Good | Best with NVDA and JAWS |
 | **Firefox** | Recommended | Good | Excellent accessibility support on all platforms |
 | **Edge** | Acceptable | Acceptable | Chromium-based; works well |
@@ -471,25 +483,30 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 > **VS Code does not install Git.** It detects whether Git is already on your system. If Git is missing, the Source Control panel will display a warning, and all `git` commands in the terminal will fail. Install Git before installing VS Code.
 
-**Windows:**
+#### Windows
+
 1. Download the Git for Windows installer from [Git for Windows download page](https://git-scm.com/download/win)
 2. Run the installer - default options are correct for most users
 3. On the "Adjusting your PATH environment" screen, keep the default: **"Git from the command line and also from 3rd-party software"**
 4. Complete the installer and restart any open terminals
 
-**Verify installation (Windows):**
+#### Verify installation (Windows)
+
 1. Open PowerShell or Command Prompt
 2. Type `git --version` and press `Enter`
 3. You should see a version number such as `git version 2.47.0.windows.2` - any version is fine
 
-**macOS:**
+#### macOS
+
 Git is often already present via Xcode Command Line Tools. To check:
+
 1. Open Terminal (`Cmd+Space` → type "Terminal")
 2. Type `git --version` and press `Enter`
 3. If Git is not installed, macOS will automatically prompt you to install Xcode Command Line Tools - follow the prompt and wait for it to complete
 4. Alternatively, install directly from [Git for macOS download page](https://git-scm.com/download/mac) or via Homebrew: `brew install git`
 
-**Screen reader note (Windows terminal verification):**
+#### Screen reader note (Windows terminal verification)
+
 - PowerShell is accessible with all screen readers via Browse Mode or Forms Mode
 - Type `git --version`, press `Enter`, then press `↑` to re-read the output line
 
@@ -513,29 +530,34 @@ Visual Studio Code (VS Code) is the development environment used throughout this
 > **Do this before anything else in VS Code.** Screen Reader Mode changes how the editor renders content - without it, your screen reader may receive incomplete or fragmented output from the editor, diff views, and Copilot Chat.
 
 VS Code may detect your screen reader automatically when it first opens and ask if you want to enable this mode. If it does:
+
 1. Listen for the dialog - it will say something like "A screen reader is detected. Would you like to enable Screen Reader Optimized mode?"
 2. Press `Enter` to accept, or `Tab` to the **Enable** button and press `Space`
 
 If VS Code did **not** prompt you automatically, enable it manually:
 
-**Option A - Keyboard shortcut:**
+#### Option A - Keyboard shortcut
+
 1. Press `Shift+Alt+F1`
 2. VS Code toggles Screen Reader Optimized mode immediately
 
-**Option B - Command Palette:**
+#### Option B - Command Palette
+
 1. Press `Ctrl+Shift+P` to open the Command Palette
    - Your screen reader will announce "Type to filter" or the palette input field
 2. Type: `screen reader` - the list filters as you type
 3. Arrow down to **"Accessibility: Toggle Screen Reader Accessibility Mode"**
 4. Press `Enter`
 
-**How to confirm it is on:**
+#### How to confirm it is on
+
 1. Press `Ctrl+Shift+P` to open the Command Palette again
 2. Type: `screen reader optimized`
 3. If the status bar at the bottom of the window is accessible to you, it will read **"Screen Reader Optimized"**
 4. Alternatively: go to **File → Preferences → Settings** (`Ctrl+,`), type `screenReaderOptimized` in the search box, and verify the checkbox is ticked
 
-**What Screen Reader Mode changes:**
+#### What Screen Reader Mode changes
+
 - The editor renders as a plain text region your screen reader can navigate linearly with arrow keys
 - Audio cues are enabled for inline suggestions, errors, warnings, and folder expand/collapse
 - Diffs are presented as readable before/after text instead of a visual side-by-side view
@@ -546,7 +568,7 @@ If VS Code did **not** prompt you automatically, enable it manually:
 ### VS Code keyboard basics (we will cover these fully in the workshop)
 
 | Action | Shortcut |
-|--------|----------|
+| --------  | ----------  |
 | Open Command Palette | `Ctrl+Shift+P` |
 | Open file | `Ctrl+P` |
 | Open terminal | `` Ctrl+` `` (backtick) |
@@ -572,7 +594,8 @@ git config --global user.name "Your Name"
 git config --global user.email "your-email@example.com"
 ```
 
-**What to use:**
+#### What to use
+
 - **user.name:** Your real name or the name you want shown on commits (e.g., "Jane Smith")
 - **user.email:** The email address associated with your GitHub account (must match exactly)
 
@@ -581,6 +604,7 @@ git config --global user.email "your-email@example.com"
 ### Why This Matters
 
 If Git isn't configured, it will either:
+
 - Use a default name like "Unknown" (looks unprofessional in project history)
 - Refuse to create commits with an error message
 
@@ -593,7 +617,8 @@ git config --global --list
 ```
 
 You should see:
-```
+
+```text
 user.name=Your Name
 user.email=your-email@example.com
 ```
@@ -630,7 +655,8 @@ Both extensions require you to be signed into GitHub. Do this once and both will
 
 This single extension provides both inline code completions and the conversational Chat panel. It is used throughout the second half of the workshop.
 
-**Install:**
+#### Install
+
 1. Press `Ctrl+Shift+X` to open the Extensions panel
    - Your screen reader will announce "Extensions" and place focus in the search box
 2. Type: `GitHub Copilot Chat`
@@ -642,7 +668,8 @@ This single extension provides both inline code completions and the conversation
 6. Press `Tab` to find the **Install** button, then press `Enter` or `Space`
 7. Wait for installation to complete - VS Code will announce "Extension installed" or similar
 
-**Verify it is working:**
+#### Verify it is working
+
 1. Press `Ctrl+Shift+I` to open the Copilot Chat panel
    - Your screen reader should announce the chat input field
 2. Type: `Hello, are you there?` and press `Enter`
@@ -650,7 +677,8 @@ This single extension provides both inline code completions and the conversation
 4. Navigate up with `Shift+Tab` or `Up Arrow` to read the response
 5. If you see an error about signing in, press `Ctrl+Shift+P` and run **"GitHub: Sign in"** again
 
-**Verify inline completions:**
+#### Verify inline completions
+
 1. Press `Ctrl+N` to create a new untitled file
 2. Press `Ctrl+Shift+P`, type `change language`, and select **"Change Language Mode"** - choose **Python** or **JavaScript**
 3. Start typing a function name such as `function greet` (JavaScript) or `def greet` (Python)
@@ -664,7 +692,8 @@ This single extension provides both inline code completions and the conversation
 
 This extension lets you review and manage pull requests without leaving VS Code. It is used in the code review chapters.
 
-**Install:**
+#### Install
+
 1. Press `Ctrl+Shift+X` to open the Extensions panel
 2. Type: `GitHub Pull Requests`
 3. Press `Tab` to move into the results list
@@ -674,7 +703,8 @@ This extension lets you review and manage pull requests without leaving VS Code.
 6. Press `Tab` to the **Install** button and press `Enter` or `Space`
 7. VS Code will announce when installation is complete
 
-**Verify it is working:**
+#### Verify it is working
+
 1. Press `Ctrl+Shift+P` and type: `GitHub Pull Requests: Sign in`
    - If you are already signed in from the earlier step, this command may not appear - that means you are already authenticated
 2. To confirm the extension loaded: press `Ctrl+Shift+P`, type `GitHub Pull Requests: Focus on Pull Requests View`
@@ -688,6 +718,7 @@ This extension lets you review and manage pull requests without leaving VS Code.
 ### Copilot Free tier
 
 Copilot Free is available to all GitHub users at no cost. It includes:
+
 - Limited inline code completions per month
 - Limited Copilot Chat messages per month
 
@@ -699,7 +730,7 @@ For this workshop, Free tier is sufficient. If you want unlimited access, paid p
 
 Work through this checklist before Day 1. Check off each item:
 
-```
+```text
 Pre-Workshop Checklist
 
 GITHUB ACCOUNT

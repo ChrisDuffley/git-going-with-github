@@ -38,8 +38,6 @@
 <p><strong>Day 2, Block 2-3 Material</strong></p>
 <p>This guide covers GitHub Copilot: inline code suggestions, Copilot Chat (conversational assistance), custom instructions vs custom agents, effective prompting for non-code contributions, and using Accessible View to read AI-generated responses.</p>
 <p><strong>Prerequisites:</strong> <a href="10-vscode-basics.html">VS Code Setup &amp; Accessibility Basics</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
-</blockquote>
-<blockquote>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code> on Mac. Key equivalents: <code>Ctrl+Shift+I</code> → <code>Cmd+Shift+I</code> (Chat), <code>Ctrl+I</code> → <code>Cmd+I</code> (inline chat), <code>Alt+F2</code> → <code>Option+F2</code> (Accessible View), <code>Ctrl+/</code> → <code>Cmd+/</code> (insert suggestion). See the <a href="#8-keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a> at the end of this chapter for the complete list.</p>
 </blockquote>
 <hr>
@@ -47,8 +45,8 @@
 <ol>
 <li><a href="#1-what-is-github-copilot">What is GitHub Copilot</a></li>
 <li><a href="#2-installing-github-copilot">Installing GitHub Copilot</a></li>
-<li><a href="#3-inline-suggestions--ghost-text-completions">Inline Suggestions - Ghost Text Completions</a></li>
-<li><a href="#4-github-copilot-chat--conversational-assistance">GitHub Copilot Chat - Conversational Assistance</a></li>
+<li><a href="#3-inline-suggestions---ghost-text-completions">Inline Suggestions - Ghost Text Completions</a></li>
+<li><a href="#4-github-copilot-chat---conversational-assistance">GitHub Copilot Chat - Conversational Assistance</a></li>
 <li><a href="#5-effective-prompting-for-documentation-work">Effective Prompting for Documentation Work</a></li>
 <li><a href="#6-custom-instructions-vs-custom-agents">Custom Instructions vs Custom Agents</a></li>
 <li><a href="#7-using-accessible-view-with-copilot-responses">Using Accessible View with Copilot Responses</a></li>
@@ -90,20 +88,20 @@
 <li>Authorize the Copilot extension</li>
 <li>Return to VS Code</li>
 </ol>
-<p><strong>Verify activation:</strong></p>
+<h4>Verify activation</h4>
 <ul>
 <li>Bottom-right status bar shows Copilot icon (looks like <code>&gt;&lt;</code>)</li>
 <li>Icon should be active (not grayed out)</li>
 <li>If grayed out, click it to sign in</li>
 </ul>
 <h3>Checking Subscription Status</h3>
-<p><strong>Command Palette:</strong></p>
+<h4>Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;Copilot: Check Status&quot;</li>
 <li>Select it to see your subscription tier (Free, Pro, Enterprise)</li>
 </ol>
-<p><strong>Free tier includes:</strong></p>
+<h4>Free tier includes</h4>
 <ul>
 <li>Completions and multi-line suggestions</li>
 <li>Copilot Chat</li>
@@ -113,7 +111,7 @@
 <h2>3. Inline Suggestions - Ghost Text Completions</h2>
 <p>Copilot suggests completions as you type, displayed as gray &quot;ghost text&quot; after your cursor. In screen reader mode, VS Code announces suggestions rather than showing them visually.</p>
 <h3>How Inline Suggestions Work</h3>
-<p><strong>While typing:</strong></p>
+<h4>While typing</h4>
 <ol>
 <li>Copilot analyzes your context (file content, cursor position, nearby files)</li>
 <li>Generates a suggestion</li>
@@ -186,7 +184,7 @@
 <td><code>Cmd+/</code></td>
 </tr>
 </tbody></table>
-<p><strong>Accepting word-by-word (<code>Ctrl+Right Arrow</code> / Mac: <code>Cmd+Right Arrow</code>) is particularly useful when:</strong></p>
+<h4>Accepting word-by-word (<code>Ctrl+Right Arrow</code> / Mac: <code>Cmd+Right Arrow</code>) is particularly useful when</h4>
 <ul>
 <li>The suggestion starts correctly but you want to finish differently</li>
 <li>You want to review the suggestion incrementally</li>
@@ -199,32 +197,32 @@
 <details>
 <summary>Screen reader users - tuning announcement verbosity</summary>
 
-<p><strong>If suggestions are announced too frequently or are intrusive:</strong></p>
-<p><strong>NVDA:</strong></p>
+<h4>If suggestions are announced too frequently or are intrusive</h4>
+<h4>NVDA</h4>
 <ol>
 <li>NVDA Menu → Preferences → Settings → Presentation</li>
 <li>Find &quot;Report dynamic content changes&quot;</li>
 <li>Reduce verbosity level or set specific delays</li>
 </ol>
-<p><strong>JAWS:</strong></p>
+<h4>JAWS</h4>
 <ol>
 <li>Settings Center → HTML/PDF/Accessibility</li>
 <li>Adjust &quot;Auto Forms Mode&quot; and &quot;ARIA Live Region&quot; settings</li>
 </ol>
-<p><strong>VoiceOver:</strong></p>
+<h4>VoiceOver</h4>
 <ol>
 <li>VoiceOver Utility → Verbosity</li>
 <li>Reduce &quot;Announcements&quot; level</li>
 </ol>
-<p><strong>Alternative: Use Accessible View</strong>
-Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appears to read it in the Accessible View (full text, no streaming).</p>
+<h4>Alternative: Use Accessible View</h4>
+<p>Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appears to read it in the Accessible View (full text, no streaming).</p>
 </details>
 
 <h3>Prompting Through Comments</h3>
 <p>Copilot reads inline comments as instructions. For Markdown files:</p>
 <pre><code class="hljs language-markdown">&lt;!-- Write a step-by-step guide for screen reader users on how to create a GitHub issue --&gt;</code></pre>
 <p>Type this comment, press <code>Enter</code>, and Copilot drafts content based on your instruction. You review, edit, and refine.</p>
-<p><strong>Example prompts for this workshop:</strong></p>
+<h4>Example prompts for this workshop</h4>
 <pre><code class="hljs language-markdown">&lt;!-- Explain how to navigate the GitHub Issues list with NVDA --&gt;
 
 &lt;!-- Create a checklist for accessible Markdown documentation --&gt;
@@ -237,12 +235,12 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 <details>
 <summary>Visual / mouse users</summary>
 
-<p><strong>Temporarily (current language):</strong></p>
+<h4>Temporarily disable for current language</h4>
 <ul>
 <li>Click the Copilot icon in the status bar (bottom-right <code>&gt;&lt;</code> icon)</li>
 <li>Select &quot;Disable Completions for [language]&quot;</li>
 </ul>
-<p><strong>Permanently:</strong></p>
+<h4>Permanently disable completions</h4>
 <ul>
 <li>Open Settings: <code>Ctrl+,</code> (Mac: <code>Cmd+,</code>) → search &quot;Copilot enable&quot; → uncheck &quot;Enable Inline Suggestions&quot;</li>
 </ul>
@@ -251,12 +249,12 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 <details>
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
-<p><strong>Temporarily (current language):</strong></p>
+<h4>Temporarily disable via Command Palette</h4>
 <ul>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → type &quot;Copilot: Disable Completions&quot; → press <code>Enter</code></li>
 <li>Or navigate to the Copilot status bar item and activate it (depends on screen reader and focus)</li>
 </ul>
-<p><strong>Permanently:</strong></p>
+<h4>Permanently disable via Settings</h4>
 <ul>
 <li><code>Ctrl+,</code> (Mac: <code>Cmd+,</code>) → search &quot;inline suggestions&quot; → toggle off &quot;GitHub Copilot: Enable Inline Completions&quot;</li>
 </ul>
@@ -303,7 +301,7 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 <td>Complex features where you want to validate the approach before any changes are made</td>
 </tr>
 </tbody></table>
-<p><strong>Switching modes:</strong></p>
+<h4>Switching modes</h4>
 <ul>
 <li>The mode selector is a dropdown at the <strong>bottom of the Chat input area</strong>, just above the text field</li>
 <li>Tab through the toolbar at the bottom of Chat to find it, or click on the current mode name</li>
@@ -316,7 +314,7 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 <h3>Choosing a Model</h3>
 <p>Copilot gives you access to AI models from OpenAI, Anthropic (Claude), Google (Gemini), xAI (Grok), and others. The <strong>model picker</strong> is a button at the bottom of the Chat input area, next to the mode selector, showing the current model name (e.g., &quot;Auto&quot; or &quot;Claude Sonnet 4.6&quot;).</p>
 <p><strong>When &quot;Auto&quot; is selected</strong> (the default), Copilot automatically chooses the best model for each request - lighter models for quick questions, more capable models for complex reasoning. Auto mode has been generally available since December 2025. You can override it whenever you want a specific model.</p>
-<p><strong>Quick guidance:</strong></p>
+<h4>Quick guidance</h4>
 <ul>
 <li><strong>Free-tier users:</strong> GPT-4.1 and GPT-5 mini are available at no cost and handle most everyday tasks well</li>
 <li><strong>Need deep reasoning/debugging?</strong> Try Claude Sonnet 4.6 or GPT-5.2 (1× premium requests)</li>
@@ -325,7 +323,7 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 </ul>
 <p>For the complete model comparison, strengths, weaknesses, and plan availability, see <a href="appendix-x-copilot-models.html">Appendix X: GitHub Copilot AI Models Reference</a>.</p>
 <h3>Chat Interface Structure</h3>
-<p><strong>Panel layout (top to bottom):</strong></p>
+<h4>Panel layout (top to bottom)</h4>
 <ol>
 <li><p><strong>Chat input field</strong> (multi-line text area)</p>
 <ul>
@@ -354,7 +352,7 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 </li>
 </ol>
 <h3>Screen Reader Navigation in Chat</h3>
-<p><strong>NVDA/JAWS:</strong></p>
+<h4>NVDA/JAWS</h4>
 <ul>
 <li>Chat input is a web-based text field</li>
 <li>Switch to Forms Mode (<code>Enter</code> or automatic when focused)</li>
@@ -363,7 +361,7 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 <li>Response appears in a live region (announced as it streams in)</li>
 <li>For complete reading: press <code>Alt+F2</code> for Accessible View</li>
 </ul>
-<p><strong>VoiceOver:</strong></p>
+<h4>VoiceOver</h4>
 <ul>
 <li><code>VO+Tab</code> to navigate to chat input</li>
 <li><code>VO+Shift+Down</code> to interact</li>
@@ -373,7 +371,7 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 <li>For complete reading: <code>Alt+F2</code> for Accessible View</li>
 </ul>
 <h3>What to Ask Copilot Chat</h3>
-<p><strong>For this workshop (non-coding examples):</strong></p>
+<h4>For this workshop (non-coding examples)</h4>
 <table>
 <thead>
 <tr>
@@ -415,7 +413,7 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 </tr>
 </tbody></table>
 <h3>Using @ Mentions in Chat</h3>
-<p><strong>@ symbols let you provide context to Copilot:</strong></p>
+<h4>@ symbols let you provide context to Copilot</h4>
 <table>
 <thead>
 <tr>
@@ -444,14 +442,14 @@ Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appear
 <td>References the last terminal command and output</td>
 </tr>
 </tbody></table>
-<p><strong>Example prompts with context:</strong></p>
-<pre><code class="hljs">Explain what @README.md covers <span class="hljs-keyword">for</span> a <span class="hljs-keyword">new</span> contributor
+<h4>Example prompts with context</h4>
+<pre><code class="hljs language-text">Explain what @README.md covers for a new contributor
 
-Review <span class="hljs-comment">#selection for accessibility issues</span>
+Review #selection for accessibility issues
 
-Search @workspace <span class="hljs-keyword">for</span> all references <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;screen reader mode&quot;</span>
+Search @workspace for all references to &quot;screen reader mode&quot;
 
-What does this error mean? <span class="hljs-comment">#terminalLastCommand</span></code></pre>
+What does this error mean? #terminalLastCommand</code></pre>
 <h3>Using Slash Commands</h3>
 <p>Type <code>/</code> in Copilot Chat to see available commands:</p>
 <table>
@@ -486,7 +484,7 @@ What does this error mean? <span class="hljs-comment">#terminalLastCommand</span
 <td>Saves the current chat conversation as a reusable <code>.prompt.md</code> file</td>
 </tr>
 </tbody></table>
-<p><strong>Example:</strong></p>
+<h4>Example</h4>
 <ol>
 <li>Select a block of complex Markdown</li>
 <li>Open Chat: <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>)</li>
@@ -497,11 +495,11 @@ What does this error mean? <span class="hljs-comment">#terminalLastCommand</span
 <h2>5. Effective Prompting for Documentation Work</h2>
 <p>Copilot works best with clear, specific prompts. The more context you provide, the better the response.</p>
 <h3>Anatomy of a Good Prompt</h3>
-<p><strong>Bad prompt:</strong></p>
-<pre><code class="hljs">Write <span class="hljs-keyword">about</span> accessibility</code></pre>
-<p><strong>Good prompt:</strong></p>
-<pre><code class="hljs">Write a <span class="hljs-number">3</span>-paragraph section explaining how <span class="hljs-keyword">screen </span>reader users can navigate the VS Code Explorer sidebar. Include keyboard <span class="hljs-keyword">shortcuts </span>for NVDA <span class="hljs-keyword">and </span><span class="hljs-keyword">JAWS. </span>Assume the reader has never used VS Code <span class="hljs-keyword">before. </span>Use clear headings <span class="hljs-keyword">and </span><span class="hljs-keyword">bullet </span>points.</code></pre>
-<p><strong>What makes it good:</strong></p>
+<h4>Bad prompt</h4>
+<pre><code class="hljs language-text">Write about accessibility</code></pre>
+<h4>Good prompt</h4>
+<pre><code class="hljs language-text">Write a 3-paragraph section explaining how screen reader users can navigate the VS Code Explorer sidebar. Include keyboard shortcuts for NVDA and JAWS. Assume the reader has never used VS Code before. Use clear headings and bullet points.</code></pre>
+<h4>What makes it good</h4>
 <ol>
 <li><strong>Specific scope:</strong> &quot;3-paragraph section&quot;</li>
 <li><strong>Clear topic:</strong> &quot;navigate the VS Code Explorer sidebar&quot;</li>
@@ -510,57 +508,57 @@ What does this error mean? <span class="hljs-comment">#terminalLastCommand</span
 <li><strong>Format guidance:</strong> &quot;headings and bullet points&quot;</li>
 </ol>
 <h3>Prompting Patterns for This Workshop</h3>
-<p><strong>Pattern 1: Contextual Rewrite</strong></p>
-<pre><code class="hljs">This section <span class="hljs-keyword">is</span> too technical <span class="hljs-keyword">for</span> beginners. Rewrite <span class="hljs-keyword">it</span> <span class="hljs-keyword">in</span> plain language:
+<h4>Pattern 1: Contextual Rewrite</h4>
+<pre><code class="hljs language-text">This section is too technical for beginners. Rewrite it in plain language:
 
-[paste existing <span class="hljs-built_in">text</span>]
+[paste existing text]
 
-Target audience: Screen reader users trying VS Code <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> <span class="hljs-built_in">time</span></code></pre>
-<p><strong>Pattern 2: Generate with Constraints</strong></p>
-<pre><code class="hljs">Write <span class="hljs-keyword">a</span> step-<span class="hljs-keyword">by</span>-step guide <span class="hljs-keyword">for</span> creating <span class="hljs-keyword">a</span> GitHub issue <span class="hljs-keyword">using</span> only keyboard navigation. Include:
+Target audience: Screen reader users trying VS Code for the first time</code></pre>
+<h4>Pattern 2: Generate with Constraints</h4>
+<pre><code class="hljs language-text">Write a step-by-step guide for creating a GitHub issue using only keyboard navigation. Include:
 - NVDA screen reader announcements
 - Exact keyboard shortcuts
-- What <span class="hljs-built_in">to</span> <span class="hljs-built_in">do</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">the</span> form field is <span class="hljs-keyword">not</span> announced correctly
-Format <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> numbered list</code></pre>
-<p><strong>Pattern 3: Review and Improve</strong></p>
-<pre><code class="hljs">Review this PR description for:
-<span class="hljs-bullet">1.</span> Clarity for maintainers
-<span class="hljs-bullet">2.</span> Respect and positive tone
-<span class="hljs-bullet">3.</span> Whether it links to the related issue
-<span class="hljs-bullet">4.</span> If it explains WHY the change matters
+- What to do if the form field is not announced correctly
+Format as a numbered list</code></pre>
+<h4>Pattern 3: Review and Improve</h4>
+<pre><code class="hljs language-text">Review this PR description for:
+1. Clarity for maintainers
+2. Respect and positive tone
+3. Whether it links to the related issue
+4. If it explains WHY the change matters
 
 Here&#x27;s the description:
 [paste your PR description]</code></pre>
-<p><strong>Pattern 4: Accessibility Audit</strong></p>
-<pre><code class="hljs"><span class="hljs-attribute">Check this Markdown for accessibility problems</span><span class="hljs-punctuation">:</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">Heading hierarchy (H1 → H2 → H3, no skips)</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">Link text (no &quot;click here&quot; or bare URLs)</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">Alt text for images</span>
-<span class="hljs-bullet">-</span> <span class="hljs-string">List structure</span>
+<h4>Pattern 4: Accessibility Audit</h4>
+<pre><code class="hljs language-text">Check this Markdown for accessibility problems:
+- Heading hierarchy (H1 → H2 → H3, no skips)
+- Link text (no &quot;click here&quot; or bare URLs)
+- Alt text for images
+- List structure
 
 [paste Markdown content]</code></pre>
-<p><strong>Pattern 5: Draft from Outline</strong></p>
-<pre><code class="hljs">Write a section based <span class="hljs-keyword">on</span> this outline:
+<h4>Pattern 5: Draft from Outline</h4>
+<pre><code class="hljs language-text">Write a section based on this outline:
 
-## Timeline <span class="hljs-keyword">View</span> - <span class="hljs-keyword">File</span> History
+## Timeline View - File History
 - What Timeline shows
-- How <span class="hljs-keyword">to</span> <span class="hljs-keyword">open</span> it (keyboard)
+- How to open it (keyboard)
 - How screen readers announce each commit
-- How <span class="hljs-keyword">to</span> <span class="hljs-keyword">view</span> a specific commit<span class="hljs-symbol">&#x27;s</span> changes
+- How to view a specific commit&#x27;s changes
 
-Write <span class="hljs-keyword">for</span> screen reader users. <span class="hljs-keyword">Use</span> H3 subheadings. Include a table <span class="hljs-keyword">for</span> keyboard shortcuts.</code></pre>
+Write for screen reader users. Use H3 subheadings. Include a table for keyboard shortcuts.</code></pre>
 <h3>Iterating on Responses</h3>
 <p>Copilot&#39;s first response is a draft. Refine it:</p>
-<p><strong>Follow-up prompts:</strong></p>
-<pre><code class="hljs">Make <span class="hljs-keyword">it</span> shorter - reduce <span class="hljs-built_in">to</span> <span class="hljs-number">5</span> bullet points
+<h4>Follow-up prompts</h4>
+<pre><code class="hljs language-text">Make it shorter - reduce to 5 bullet points
 
-Add more detail about what NVDA announces <span class="hljs-keyword">at</span> <span class="hljs-keyword">each</span> step
+Add more detail about what NVDA announces at each step
 
-Rewrite this <span class="hljs-keyword">in</span> <span class="hljs-keyword">a</span> more friendly tone
+Rewrite this in a more friendly tone
 
-Add <span class="hljs-keyword">a</span> <span class="hljs-string">&quot;Common Mistakes&quot;</span> section <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> <span class="hljs-function"><span class="hljs-keyword">end</span>
+Add a &quot;Common Mistakes&quot; section at the end
 
-<span class="hljs-title">Format</span> <span class="hljs-title">this</span> <span class="hljs-title">as</span> <span class="hljs-title">a</span> <span class="hljs-title">table</span> <span class="hljs-title">instead</span> <span class="hljs-title">of</span> <span class="hljs-title">a</span> <span class="hljs-title">bulleted</span> <span class="hljs-title">list</span></span></code></pre>
+Format this as a table instead of a bulleted list</code></pre>
 <p>Copilot remembers the conversation context - just say what to change.</p>
 <hr>
 <h2>6. Custom Instructions vs Custom Agents</h2>
@@ -568,14 +566,14 @@ Add <span class="hljs-keyword">a</span> <span class="hljs-string">&quot;Common M
 <h3>Custom Instructions</h3>
 <p><strong>File:</strong> <code>.github/copilot-instructions.md</code></p>
 <p><strong>Purpose:</strong> Always-on background guidance for every Copilot interaction.</p>
-<p><strong>What they do:</strong></p>
+<h4>What they do</h4>
 <ul>
 <li>Apply to all code suggestions automatically</li>
 <li>Set project-wide standards</li>
 <li>Influence tone and style</li>
 <li>Provide context about your project&#39;s conventions</li>
 </ul>
-<p><strong>Example <code>.github/copilot-instructions.md</code>:</strong></p>
+<h4>Example <code>.github/copilot-instructions.md</code></h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section"># Copilot Instructions for accessibility-agents</span>
 
 <span class="hljs-section">## Accessibility Standards</span>
@@ -599,18 +597,18 @@ Add <span class="hljs-keyword">a</span> <span class="hljs-string">&quot;Common M
 <span class="hljs-bullet">-</span> Direct and actionable
 <span class="hljs-bullet">-</span> Assume readers are competent but may be new to this specific tool</code></pre>
 <p><strong>When active:</strong> Every time Copilot generates a suggestion (inline or in Chat)</p>
-<p><strong>You never have to ask for these - Copilot simply follows them.</strong></p>
+<h3>You never have to ask for these - Copilot simply follows them</h3>
 <h3>Custom Agents</h3>
 <p><strong>Files:</strong> <code>.github/agents/[name].agent.md</code></p>
 <p><strong>Purpose:</strong> On-demand, focused workflows that you deliberately invoke.</p>
-<p><strong>What they do:</strong></p>
+<h4>What they do</h4>
 <ul>
 <li>Perform specific, repeatable tasks</li>
 <li>Can access specific tools (GitHub API, file system, terminal)</li>
 <li>Generate structured output (reports, reviews, analysis)</li>
 <li>Execute multi-step workflows</li>
 </ul>
-<p><strong>Example agent names:</strong></p>
+<h4>Example agent names</h4>
 <ul>
 <li><code>@daily-briefing</code> - Summarize repository activity</li>
 <li><code>@issue-tracker</code> - Find and prioritize issues</li>
@@ -658,7 +656,7 @@ Add <span class="hljs-keyword">a</span> <span class="hljs-string">&quot;Common M
 <h3>Using Both Together</h3>
 <p><strong>Custom instructions</strong> ensure Copilot follows your accessibility standards on every suggestion.</p>
 <p><strong>Custom agents</strong> handle specific workflows like auditing, issue tracking, or automated remediation.</p>
-<p><strong>Example workflow:</strong></p>
+<h4>Example workflow</h4>
 <ol>
 <li>Your <code>.github/copilot-instructions.md</code> says: &quot;Always check heading hierarchy in Markdown&quot;</li>
 <li>You invoke <code>@insiders-a11y-tracker</code> to scan recent changes</li>
@@ -666,7 +664,7 @@ Add <span class="hljs-keyword">a</span> <span class="hljs-string">&quot;Common M
 <li>You ask Copilot Chat to fix it: &quot;Fix the heading hierarchy in this file&quot;</li>
 <li>Copilot&#39;s fix follows your custom instructions (uses semantic HTML, adds ARIA where needed)</li>
 </ol>
-<p><strong>Both work together - instructions guide every response, agents automate specific workflows.</strong></p>
+<h4>Both work together - instructions guide every response, agents automate specific workflows</h4>
 <hr>
 <h3>Writing Accessibility-Focused Custom Instructions</h3>
 <blockquote>
@@ -698,37 +696,37 @@ Add <span class="hljs-keyword">a</span> <span class="hljs-string">&quot;Common M
 </tr>
 </tbody></table>
 <h4>Do&#39;s - What Makes Instructions Effective</h4>
-<p><strong>Use normative language: MUST, MUST NOT, SHOULD, SHOULD NOT</strong></p>
+<h5>Use normative language: MUST, MUST NOT, SHOULD, SHOULD NOT</h5>
 <p>Most language models respond well to normative language. These terms reduce ambiguity and make rules clearly mandatory versus optional - the same approach WCAG itself uses:</p>
-<pre><code class="hljs"><span class="hljs-comment">## Keyboard Navigation</span>
-- Keyboard <span class="hljs-keyword">shortcuts </span><span class="hljs-keyword">SHOULD </span>NOT override high-priority <span class="hljs-keyword">browser </span><span class="hljs-keyword">or </span>OS <span class="hljs-keyword">shortcuts.
-</span>- A keyboard <span class="hljs-keyword">shortcut </span>MUST use <span class="hljs-built_in">at</span> most <span class="hljs-number">4</span> simultaneous keys.
-- All interactive components MUST <span class="hljs-keyword">be </span>reachable <span class="hljs-keyword">by </span>Tab key.</code></pre>
-<p><strong>Focus on team-specific standards, not generic principles</strong></p>
+<pre><code class="hljs language-text">## Keyboard Navigation
+- Keyboard shortcuts SHOULD NOT override high-priority browser or OS shortcuts.
+- A keyboard shortcut MUST use at most 4 simultaneous keys.
+- All interactive components MUST be reachable by Tab key.</code></pre>
+<h3>Focus on team-specific standards, not generic principles</h3>
 <p>Copilot already knows WCAG. Tell it what <em>your team</em> does specifically:</p>
-<pre><code class="hljs">This application MUST conform to WCAG <span class="hljs-number">2</span>.<span class="hljs-number">2</span> Level AA.
-DeprecatedButton <span class="hljs-keyword">SHOULD </span>NOT <span class="hljs-keyword">be </span>used<span class="hljs-comment">; use NewAccessibleButton instead.</span></code></pre>
-<p><strong>Use lists and checklists to structure instructions</strong></p>
+<pre><code class="hljs language-text">This application MUST conform to WCAG 2.2 Level AA.
+DeprecatedButton SHOULD NOT be used; use NewAccessibleButton instead.</code></pre>
+<h3>Use lists and checklists to structure instructions</h3>
 <p>Lists provide clear guardrails - Copilot follows them step by step:</p>
 <pre><code class="hljs language-text">## Checklist for evaluating 1.3.1 Info and Relationships
 - [ ] role=&quot;presentation&quot; MUST NOT be applied to semantic elements.
 - [ ] Error messages MUST be programmatically associated with inputs.
 - [ ] Name-value pairs MUST NOT use headings; use &lt;p&gt;.</code></pre>
-<p><strong>Reference and enforce your design system</strong></p>
+<h3>Reference and enforce your design system</h3>
 <p>Document which components to use and which are deprecated. Design systems evolve - keep instructions current:</p>
-<pre><code class="hljs">Use AccessibleModal <span class="hljs-keyword">from</span> <span class="hljs-variable">@company</span><span class="hljs-operator">/</span>ui<span class="hljs-operator">-</span>kit<span class="hljs-variable">@3</span>.x.
-LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hljs-keyword">in</span> <span class="hljs-keyword">any</span> <span class="hljs-keyword">new</span> code.</code></pre>
+<pre><code class="hljs language-text">Use AccessibleModal from @company/ui-kit@3.x.
+LegacyDialog MUST NOT be used in any new code.</code></pre>
 <h4>Don&#39;ts - Common Instruction Mistakes</h4>
-<p><strong>Don&#39;t paste entire WCAG guidelines</strong></p>
+<h5>Don&#39;t paste entire WCAG guidelines</h5>
 <p>Copilot is already trained on WCAG. Pasting the full text wastes context space and dilutes your specific instructions. Instead, write concise, actionable rules that give <em>net-new</em> information: your team&#39;s specific practices, exceptions, and priorities.</p>
-<p><strong>Don&#39;t reference external links</strong></p>
+<h5>Don&#39;t reference external links</h5>
 <p>By default, Copilot does not access external links in custom instructions - this is a deliberate security feature. A URL like <code>https://www.w3.org/WAI/WCAG21/</code> will not be fetched. Write the relevant rule directly.</p>
-<p><strong>Don&#39;t reference private repositories</strong></p>
+<h5>Don&#39;t reference private repositories</h5>
 <p>Copilot cannot access private repository content from within custom instructions unless the content is already present in the active repo.</p>
 <h4>Additional Guidance</h4>
 <p><strong>Role-based prompting</strong> - You can give Copilot a persona to shape how it responds:</p>
-<pre><code class="hljs"><span class="hljs-keyword">As</span> the lead accessibility expert <span class="hljs-keyword">on</span> your team, your <span class="hljs-keyword">primary</span> focus <span class="hljs-keyword">is</span> ensuring
-<span class="hljs-keyword">all</span> UI <span class="hljs-keyword">is</span> accessible <span class="hljs-keyword">by</span> <span class="hljs-keyword">default</span>, relying <span class="hljs-keyword">on</span> semantic HTML <span class="hljs-keyword">before</span> ARIA attributes.</code></pre>
+<pre><code class="hljs language-text">As the lead accessibility expert on your team, your primary focus is ensuring
+all UI is accessible by default, relying on semantic HTML before ARIA attributes.</code></pre>
 <p>Be specific about skills and responsibilities; avoid broad personas that may introduce unintended assumptions.</p>
 <p><strong>Keep instructions concise.</strong> There is no hard character limit, but overly long instructions reduce precision. Summarize the most important, actionable rules rather than listing every possible guideline.</p>
 <p><strong>Contribute effective instructions</strong> to <a href="https://github.com/github/awesome-copilot">github.com/github/awesome-copilot</a> so others benefit from your organization&#39;s work.</p>
@@ -736,14 +734,14 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 <h2>7. Using Accessible View with Copilot Responses</h2>
 <p>Copilot Chat responses stream in token by token. This is visually nice but can fragment screen reader announcements. <strong>Accessible View</strong> provides complete, structured access to generated content.</p>
 <h3>Why Use Accessible View for Copilot</h3>
-<p><strong>Without Accessible View:</strong></p>
+<h4>Without Accessible View</h4>
 <ul>
 <li>Responses announced in fragments as tokens arrive</li>
 <li>Live region updates may interrupt or overlap</li>
 <li>Difficult to re-read specific parts</li>
 <li>Context can be lost in streaming</li>
 </ul>
-<p><strong>With Accessible View (<code>Alt+F2</code> / Mac: <code>Option+F2</code>):</strong></p>
+<h4>With Accessible View (<code>Alt+F2</code> / Mac: <code>Option+F2</code>)</h4>
 <ul>
 <li>Full complete response in a readable pane</li>
 <li>Navigate with <code>Up/Down Arrow</code> at your own pace</li>
@@ -752,7 +750,7 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 <li>No interruptions or live region noise</li>
 </ul>
 <h3>Recommended Workflow</h3>
-<p><strong>Every time you ask Copilot something:</strong></p>
+<h4>Every time you ask Copilot something</h4>
 <ol>
 <li>Type your prompt in Chat input</li>
 <li>Press <code>Ctrl+Enter</code> (Mac: <code>Cmd+Enter</code>) to send</li>
@@ -764,7 +762,7 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 <blockquote>
 <p><strong>VS Code December 2025 update:</strong> The Accessible View now updates dynamically as responses stream in. You no longer need to wait for a response to finish before opening it - open <code>Alt+F2</code> right after sending and follow the response as it arrives.</p>
 </blockquote>
-<p><strong>Benefits:</strong></p>
+<h4>Benefits</h4>
 <ul>
 <li>Follow responses live without waiting</li>
 <li>Navigate and re-read at your own pace</li>
@@ -772,7 +770,7 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 <li>Headings are announced correctly</li>
 </ul>
 <h3>Accessible View for Inline Suggestions</h3>
-<p><strong>When a suggestion appears:</strong></p>
+<h4>When a suggestion appears</h4>
 <ol>
 <li>Don&#39;t accept it immediately</li>
 <li>Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>)</li>
@@ -782,10 +780,10 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 <li>To close without inserting: press <code>Escape</code>, then <code>Tab</code> to accept or <code>Escape</code> to reject</li>
 </ol>
 <p><strong><code>Ctrl+/</code> (Mac: <code>Cmd+/</code>) inserts the suggestion directly from Accessible View</strong> - you don’t need to close the view first and then press <code>Tab</code>. This is the recommended workflow for screen reader users.</p>
-<p><strong>This is especially useful for multi-line suggestions where the ghost text is hard to review.</strong></p>
+<h4>This is especially useful for multi-line suggestions where the ghost text is hard to review</h4>
 <h3>Code Blocks in Accessible View</h3>
 <p>When Copilot suggests code or Markdown:</p>
-<p><strong>In Accessible View:</strong></p>
+<h4>In Accessible View</h4>
 <ul>
 <li>Code blocks are in <code>&lt;pre&gt;</code> elements</li>
 <li>Screen readers announce &quot;code block&quot; or &quot;pre-formatted text&quot;</li>
@@ -956,7 +954,7 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 <h2>Troubleshooting</h2>
 <h3>Copilot Not Suggesting Anything</h3>
 <p><strong>Issue:</strong> No suggestions appear as you type.</p>
-<p><strong>Solutions:</strong></p>
+<h4>Solutions</h4>
 <ol>
 <li>Check Copilot is active: status bar icon should not be grayed out</li>
 <li>Click the Copilot icon → verify &quot;Completions enabled&quot;</li>
@@ -966,7 +964,7 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 </ol>
 <h3>Suggestions Are Too Frequent/Distracting</h3>
 <p><strong>Issue:</strong> Constant interruptions from suggestions.</p>
-<p><strong>Solutions:</strong></p>
+<h4>Solutions</h4>
 <ol>
 <li>Use word-by-word acceptance: <code>Ctrl+Right Arrow</code></li>
 <li>Reduce screen reader verbosity (see Section 3)</li>
@@ -975,7 +973,7 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 </ol>
 <h3>Chat Responses Not Announced</h3>
 <p><strong>Issue:</strong> Screen reader silent when Copilot responds.</p>
-<p><strong>Solutions:</strong></p>
+<h4>Solutions</h4>
 <ol>
 <li>Wait for response to complete, then press <code>Alt+F2</code> for Accessible View</li>
 <li>Check ARIA live region settings in your screen reader</li>
@@ -984,7 +982,7 @@ LegacyDialog MUST <span class="hljs-keyword">NOT</span> be used <span class="hlj
 </ol>
 <h3>&quot;Copilot Subscription Required&quot;</h3>
 <p><strong>Issue:</strong> Extension installed but asks for subscription.</p>
-<p><strong>Solutions:</strong></p>
+<h4>Solutions</h4>
 <ol>
 <li>Sign in to GitHub: Copilot icon → &quot;Sign in&quot;</li>
 <li>Verify GitHub account has Copilot access (free tier or paid)</li>

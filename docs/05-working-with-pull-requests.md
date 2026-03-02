@@ -1,4 +1,5 @@
 # Working with Pull Requests
+>
 > **Listen to Episode 6:** [Working with Pull Requests](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Creating, Reviewing, and Merging Pull Requests with a Screen Reader
@@ -8,11 +9,12 @@
 > **Screen reader note - New Files Changed Experience:** This guide uses GitHub's improved Files Changed experience, which adds proper ARIA landmark structure to the Files Changed tab, including the file tree and diff navigation. This feature may already be active for your account - it has been broadly rolled out and may no longer appear as a Feature Preview toggle at all.
 >
 > **To verify:** Activate the **User Menu** button (top-right of any GitHub page) → activate **"Feature preview"** → scan the list for **"New Files Changed Experience"**:
+>
 > - If listed and the toggle announces **"Pressed"** (or **"Disable"**) - already enabled, no action needed
 > - If listed but **not Pressed** (or **"Enable"**) - activate the toggle to enable it
 > - If not listed at all - the feature has graduated to the standard interface; it is active automatically
 >
-> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4-check-github-feature-preview-settings).
+> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4---check-github-feature-preview-settings).
 >
 > **Browse vs Focus Mode (NVDA):** Use **Browse Mode** (the default) for reading PR conversations, navigating headings, and reviewing diffs. Switch to **Focus Mode** (`NVDA+Space`) only when you need to type in comment boxes or search fields. Switch back to Browse Mode to resume navigation. Maximize your browser window for consistent landmark layout.
 
@@ -21,6 +23,7 @@
 ## What Is a Pull Request?
 
 A pull request (PR) is a proposal to merge changes from one branch into another. When you have:
+
 - Edited a file directly on GitHub (web editor)
 - Made changes in your fork
 - Made changes on a feature branch
@@ -28,6 +31,7 @@ A pull request (PR) is a proposal to merge changes from one branch into another.
 ...you open a PR to request that those changes be merged into the target branch (usually `main`).
 
 A PR shows:
+
 - **What** changed - a diff of every file
 - **Why** it changed - your PR description
 - **Conversation** - comments, reviews, and discussion
@@ -64,7 +68,8 @@ Click the **Pull requests** tab in the repository navigation bar. The tab shows 
 
 </details>
 
-### From a PR notification:
+### From a PR notification
+
 If you received a notification about a PR, follow the notification link directly to the PR page.
 
 <details>
@@ -95,6 +100,7 @@ gh pr view 42 --web
 ## The Pull Request List Page
 
 The PR list works identically to the Issues list:
+
 - `3` to navigate PR titles (they are h3 headings)
 - `I` to navigate list items
 - `F` or `E` / `Shift+E` to reach the search/filter field
@@ -110,7 +116,7 @@ The PR list works identically to the Issues list:
 
 A PR page has three main tabs:
 
-```
+```text
 [PR title - h1]
 [State badge: Open / Merged / Closed / Draft]
 [Author, base ← compare, timestamp]
@@ -184,6 +190,7 @@ Each tab link reads with its name and the count: "Files changed, 3 files changed
 ### Status Checks Section
 
 Below the description, the status checks summary shows whether automated tests passed. Look for:
+
 - “All checks have passed” / “Some checks failed” / “Checks pending”
 - A “Show all checks” button or link
 
@@ -217,12 +224,14 @@ See [GitHub Actions & Workflows](appendix-q-github-actions-workflows.md) for ful
 ### Review Comments
 
 Each review comment thread is an h3. Navigate with `3`:
+
 - Hear the reviewer's username, timestamp, and their review verdict ("approved" or "requested changes")
 - Then the body of their review comment
 - Then any replies to that comment
 
 To reply to a review comment:
-```
+
+```text
 Step 1: Navigate to the comment (3)
 Step 2: Tab to "Reply…" link/button
 Step 3: The reply text area appears - Focus Mode → type your reply
@@ -233,7 +242,7 @@ Step 4: Ctrl+Enter to submit
 
 ## Reading the Commits Tab
 
-```
+```text
 Step 1: Navigate to Commits tab (D → PR tabs → Enter)
 Step 2: 3 to navigate date group headings ("Commits on April 20")
 Step 3: I to navigate individual commits within a date group
@@ -281,11 +290,13 @@ The file tree panel is on the left side of the Files Changed tab. It lists every
 ### The Diff for a File
 
 Each changed file has:
+
 - A **file heading** (its path, e.g., "src/index.html") - navigable with `3` or `H`
 - A **stats line** ("24 additions, 6 deletions")
 - The **diff content** - a table where each row is one line of code
 
-**Lines in a diff are read as:**
+#### Lines in a diff are read as
+
 - `+ Added line` - line that was added
 - `- Removed line` - line that was removed
 - `Context line` - unchanged line shown for context
@@ -337,7 +348,8 @@ Hover over any line in the diff - a blue `+` button appears on the left margin. 
 4. Focus Mode → type your comment
 5. `Tab` to **Add single comment** button (instant comment) OR **Start a review** (to batch comments)
 
-**Multi-line comment:**
+#### Multi-line comment (Windows)
+
 1. Focus the first line you want to comment on
 2. Press `Shift+↓` to extend the selection to additional lines
 3. A comment button appears - activate it
@@ -354,7 +366,8 @@ Hover over any line in the diff - a blue `+` button appears on the left margin. 
 4. `VO+Shift+Down` to interact with the text area, then type your comment
 5. `VO+Shift+Up` to stop interacting, then `Tab` to **Add single comment** and `VO+Space`
 
-**Multi-line comment:**
+#### Multi-line comment (macOS)
+
 1. Focus the first line and `Shift+↓` to extend the selection
 2. `VO+Space` on the comment button that appears
 3. The comment applies to the full range of selected lines
@@ -410,16 +423,18 @@ Inline comments appear as expandable threads within the diff table. Navigate to 
 
 ### Filling out the PR form
 
-**Title field:**
-```
+#### Title field
+
+```text
 Step 1: F to navigate to the title field
 Step 2: Focus Mode → type a descriptive title
 Step 3: Good: "Add keyboard navigation for carousel component"
 Step 4: Bad: "Fix bugs"
 ```
 
-**Description field:**
-```
+#### Description field
+
+```text
 Step 1: Tab to the body text area
 Step 2: Focus Mode → type using the PR template (if provided)
 ```
@@ -479,8 +494,10 @@ Closes #42
 >
 > The `Closes #12` line tells GitHub to automatically close issue 12 when this PR merges. The validation bot checks that this line is present and that your description is at least 50 characters long.
 
-**Setting a Draft PR:**
+### Setting a Draft PR
+
 If your work is not finished, open as a Draft:
+
 1. After filling in the form, find the dropdown arrow next to "Create pull request"
 2. Select "Create draft pull request"
 3. This signals to reviewers that it is not ready for formal review yet
@@ -489,33 +506,38 @@ If your work is not finished, open as a Draft:
 
 A **draft pull request** is a PR explicitly marked as a work in progress. It is visible to the team, can receive comments, and runs CI - but is blocked from being merged until you mark it ready.
 
-**When to use a draft:**
+#### When to use a draft
+
 - You want to show your approach and get early feedback before finishing
 - You need CI to run but don't want accidental merges
 - You are working across multiple days and want your progress visible
 - You want to pair with a collaborator on the work
 
-**What a draft PR does differently:**
+#### What a draft PR does differently
+
 - The merge button is disabled - even an authorized maintainer cannot merge a draft
 - The PR header shows a grey "Draft" badge instead of the green "Open" badge
 - Reviewers are not auto-notified (no review requests are sent until ready)
 - CI workflows still run normally
 
-**Mark a draft ready for review:**
+#### Mark a draft ready for review
+
 1. Open the PR
 2. Navigate to the "Reviewers" sidebar or scroll to bottom of the Conversation tab
 3. Find and activate the **"Ready for review"** button
 4. The draft badge changes to "Open" and reviewers are notified
 
-**Screen reader path:**
-```
+#### Screen reader path
+
+```text
 Scroll to bottom of Conversation tab
 → B to navigate buttons
 → "Ready for review" button → Enter
 → Confirmation: PR status changes to Open
 ```
 
-**Convert an open PR to draft (after opening):**
+#### Convert an open PR to draft (after opening)
+
 1. In the right sidebar, find the "Reviewers" section
 2. Look for the **"Convert to draft"** link (below the review status)
 3. Confirm in the dialog - this removes merge eligibility until you mark it ready again
@@ -541,8 +563,10 @@ gh pr list --draft
 
 </details>
 
-**Requesting reviewers:**
+## Requesting reviewers
+
 From the sidebar Reviewers section:
+
 1. Navigate to "Reviewers" heading (`3` or `H`)
 2. Activate the gear button
 3. Type a username in the search field
@@ -556,6 +580,7 @@ From the sidebar Reviewers section:
 ## Submitting a Review
 
 When you are asked to review a PR, you have three options:
+
 - **Comment** - leave feedback without a verdict; does not block merging
 - **Approve** - signal you are satisfied; often required before merge
 - **Request changes** - indicate changes must be addressed; blocks merge until resolved
@@ -642,20 +667,20 @@ gh pr review 42 --comment --body "A few suggestions - see inline comments."
 
 These are the GitHub built-in shortcuts for PR pages. Enable Focus Mode first (NVDA: `NVDA+Space`, JAWS: `Insert+Z`) before using single-key shortcuts.
 
-**On the PR list page:**
+#### On the PR list page
 
 | Shortcut | Action |
-|---|---|
+| ---  | ---  |
 | `G P` | Jump to the Pull Requests tab from anywhere in the repo |
 | `C` | Create a new pull request |
 | `Ctrl+/` (Win) or `Cmd+/` (Mac) | Focus the PR search bar |
 
 **Shortcut note:** For `G P`, press `G`, release it, then press `P` (two sequential key presses, not simultaneous).
 
-**On an open pull request:**
+#### On an open pull request
 
 | Shortcut | Action |
-|---|---|
+| ---  | ---  |
 | `?` | Show all shortcuts for this page |
 | `Q` | Request a reviewer |
 | `M` | Set a milestone |
@@ -665,10 +690,10 @@ These are the GitHub built-in shortcuts for PR pages. Enable Focus Mode first (N
 | `Ctrl+Shift+P` | Toggle Write and Preview tabs in the comment box |
 | `Ctrl+Enter` | Submit comment from inside the text area |
 
-**On the Files Changed tab:**
+#### On the Files Changed tab
 
 | Shortcut | Action |
-|---|---|
+| ---  | ---  |
 | `T` | Jump to the "Filter changed files" field |
 | `C` | Open the commits dropdown to filter which commits are shown |
 | `Ctrl+G` (Win) or `Cmd+G` (Mac) | Insert a code suggestion block around selected code |
@@ -680,41 +705,50 @@ For the full shortcut system, see [Screen Reader Cheat Sheet - GitHub Shortcuts 
 
 A **suggested change** is a special form of inline review comment where the reviewer proposes exact replacement text. The PR author can apply the suggestion directly from GitHub - no copy-paste or separate commit needed.
 
-**As a reviewer - inserting a suggestion:**
+#### As a reviewer - inserting a suggestion
+
 1. On the Files Changed tab, navigate to the line you want to propose a change for
 2. Activate the **line comment button** for that line (the `+` that appears on hover, or Tab to navigate to it)
 3. In the comment text area that opens, press `Ctrl+G` (Windows) or `Cmd+G` (Mac)
 4. GitHub wraps a suggestion block around the current line content:
-   ````
+
+   ````markdown
    ```suggestion
    the current line content here
    ```
    ````
+
 5. Edit the text inside the suggestion block to show your proposed change
 6. Add context above the block if helpful: "This makes the alt text more descriptive:"
 7. Submit as part of your review ("Start a review" → batch with other comments)
 
 **Screen reader note:** The suggestion block is plain Markdown text in the comment editor. Type it directly:
-```
+
+```text
 ```suggestion
 your proposed text here
+```text
+
 ```
-```
+
 (Three backticks, the word `suggestion`, Enter, your text, Enter, three backticks.)
 
-**As an author - applying a suggestion:**
+#### As an author - applying a suggestion
+
 1. Open the PR Conversation or Files Changed tab
 2. Navigate to the inline comment containing a suggestion (it shows a diff-style preview)
 3. Find and activate the **"Apply suggestion"** button below the suggestion block
 4. GitHub creates a commit automatically that applies the change - no file editing required
 5. The conversation thread is marked as resolved
 
-**Batching multiple suggestions into one commit:**
+#### Batching multiple suggestions into one commit
+
 1. For each suggestion you want to apply, activate **"Add suggestion to batch"** instead of "Apply suggestion"
 2. After selecting all suggestions, activate the **"Commit suggestions"** button that appears at the top
 3. GitHub applies all batched suggestions in a single commit
 
-**When to use suggestions vs. comments:**
+#### When to use suggestions vs. comments
+
 - Use a suggestion when you know the exact text that would fix the issue
 - Use a plain comment when the change requires judgment from the author (e.g., "this alt text isn't descriptive - can you describe what the image shows?")
 
@@ -734,15 +768,18 @@ your proposed text here
 
 When a PR is approved and checks pass, a maintainer can merge it. The merge button section appears at the bottom of the Conversation tab.
 
-```
+```text
+
 Step 1: Navigate to the bottom of the Conversation tab
 Step 2: Find "Merge pull request" button (or similar)
 Step 3: A dropdown arrow next to the button offers strategy options:
-   - Create a merge commit
-   - Squash and merge
-   - Rebase and merge
+
+- Create a merge commit
+- Squash and merge
+- Rebase and merge
 Step 4: Choose strategy → activate the button
 Step 5: Confirm in the dialog that appears
+
 ```
 
 <details>
@@ -769,7 +806,8 @@ gh pr merge 42 --auto --squash
 
 </details>
 
-**After a PR is merged:**
+## After a PR is merged
+
 - The PR status badge changes to "Merged" (purple)
 - The source branch can be deleted - a "Delete branch" button appears
 - Any linked issues with `Closes #N` in the description are automatically closed
@@ -781,13 +819,14 @@ gh pr merge 42 --auto --squash
 **Auto-merge** lets you pre-authorize a PR to merge automatically the moment all branch protection requirements are satisfied - required reviews approved, all status checks passing, and the branch up to date.
 
 This is especially useful when:
+
 - You've addressed all review comments and are waiting for CI to finish
 - A maintainer has approved the PR but a required check is still running
 - You're in a different time zone from the reviewers
 
 ### Enabling Auto-Merge on Your PR
 
-```
+```text
 1. Open your PR → scroll to the merge box at the bottom
 2. Tab to the merge button dropdown arrow (next to "Merge pull request")
 3. Select "Enable auto-merge"
@@ -795,15 +834,17 @@ This is especially useful when:
 5. Confirm in the dialog - the merge box now shows "Auto-merge enabled"
 ```
 
-**Screen reader path:**
-```
+#### Screen reader path
+
+```text
 Conversation tab → End key → merge box region
 Tab → dropdown button (announced as "Select merge method" or similar)
 Enter → arrow keys through options → "Enable auto-merge" → Enter
 Dialog: Tab → confirm button → Enter
 ```
 
-**What happens next:**
+#### What happens next
+
 - The PR merge box changes to show "Auto-merge enabled - merge will happen automatically"
 - When the last required check passes (or last required review arrives), GitHub merges the PR silently
 - You receive a notification: "Your PR was automatically merged"
@@ -811,7 +852,7 @@ Dialog: Tab → confirm button → Enter
 
 ### Cancelling Auto-Merge
 
-```
+```text
 Merge box → Tab → "Disable auto-merge" button → Enter
 ```
 
@@ -825,7 +866,7 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 
 **Example:** You are assigned to review a PR titled "Add missing NVDA shortcut to keyboard-shortcuts.md." The PR modifies `docs/keyboard-shortcuts.md` in the Learning Room repository and references Challenge 2.
 
-```
+```text
 1. Notifications → open the PR notification
 2. D → PR tabs → Files changed tab
 3. T → enter the first diff table → navigate lines with arrow keys
@@ -839,7 +880,7 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 
 **Example:** Your PR for Challenge 3 (Complete Welcome Guide) received a review comment: "The [TODO] about evaluating issues is good, but the paragraph could mention checking if the issue is already assigned." The validation bot also flagged a link text issue.
 
-```
+```text
 1. Open your PR (Notifications → PR link, or find it in PR list)
 2. 3 to navigate review comments
 3. For the reviewer's comment: read it → Tab to "Reply" → Focus Mode → type "Good point - I will add a sentence about checking assignees. Pushing a fix now."
@@ -849,7 +890,7 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 
 ### Scenario C: "My PR has a merge conflict"
 
-```
+```text
 1. You will see a "This branch has conflicts that must be resolved" message near the bottom
 2. Tab to "Resolve conflicts" button → GitHub opens a web conflict editor
 3. The editor shows conflict markers - see Merge Conflicts guide (06-merge-conflicts.md)
@@ -861,7 +902,7 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 ## Common PR Mistakes to Avoid
 
 | Mistake | Better Approach |
-|---------|----------------|
+| ---------  | ----------------  |
 | Opening a PR without an associated issue | Link to or create an issue first; comment "I'd like to work on this" |
 | A vague title like "Fix things" | Be specific: "Fix missing alt text on homepage hero image" |
 | Missing the PR template sections | Fill all sections - description, testing, related issues |
@@ -894,6 +935,7 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 > **Review at least two pull requests manually before using any agent.** A review generated by `@pr-review` is only as useful as your ability to read, edit, and challenge it. The agent writes a first draft - you supply the context, the history, and the final judgment that no diff can contain.
 >
 > Once you have mastered manual pull request review:
+>
 > - **In VS Code** - `@pr-review review PR #N` generates line-numbered diffs with change maps, risk assessment, before/after snapshots, CI results, and suggested inline comments - a documented starting point for your own review, not a replacement for it
 > - **In your repo** - Accessibility Agents' review capabilities work across every repository you have access to by default; fork `accessibility-agents` and those capabilities travel with your project from day one
 > - **In the cloud** - GitHub Agentic Workflows can auto-generate PR descriptions, verify linked issues, and post accessibility impact summaries on a `pull_request` trigger - running the moment a PR is opened, whether or not anyone is watching

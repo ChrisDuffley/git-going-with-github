@@ -1,4 +1,5 @@
 # Appendix I: GitHub Projects Deep Dive
+>
 > **Listen to Episode 26:** [GitHub Projects Deep Dive](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Boards, Tables, Roadmaps, Automations, and Accessible Navigation
@@ -29,7 +30,7 @@
 GitHub has two generations of project tooling. The current generation - called **Projects (v2)** - is what you'll find on any repository or organization page today.
 
 | Feature | Classic Projects (v1) | Projects v2 (current) |
-|---|---|---|
+| ---  | ---  | ---  |
 | Layouts | Kanban board only | Board, Table, Roadmap |
 | Custom fields | None | Text, Number, Date, Select, Iteration |
 | Automations | None built-in | Native GitHub Actions integration |
@@ -62,7 +63,7 @@ Projects can be created at the **organization level** (shared across all repos i
 
 ### Screen Reader: Project Creation
 
-```
+```text
 1. Navigate to org or repo Projects tab
    → Tab to the green "New project" button → Enter
 2. Template modal opens
@@ -83,8 +84,9 @@ The default layout. A spreadsheet-style grid where each row is an issue, PR, or 
 
 **What it's best for:** Bulk editing, sorting, filtering, seeing many items at once with their field values.
 
-**Keyboard navigation:**
-```
+#### Keyboard navigation
+
+```text
 T                     → Jump to table
 ↑/↓                   → Move between rows
 ←/→                   → Move between columns
@@ -94,7 +96,8 @@ Space (on a cell)     → Edit that cell's value
 F2 (on title cell)    → Edit title inline
 ```
 
-**Screen reader output per row:**
+#### Screen reader output per row
+>
 > "Fix keyboard trap in modal dialog | Status: In Progress | Assignee: alice | Priority: High | Labels: bug, accessibility"
 
 ### Board View
@@ -105,8 +108,9 @@ Kanban-style columns. Each column represents a status value. Cards can be dragge
 
 **Screen reader note:** Drag-and-drop is not keyboard accessible. Change a card's column by opening it and editing the Status field instead.
 
-**Keyboard navigation:**
-```
+#### Keyboard navigation
+
+```text
 Tab                   → Move between columns and cards
 Enter (on a card)     → Open item detail panel
 B                     → Jump to board regions (if heading navigation)
@@ -115,7 +119,8 @@ Within a card:
   Space               → Toggle selection (for bulk moves)
 ```
 
-**Change a card's column without dragging:**
+#### Change a card's column without dragging
+
 1. `Enter` to open the card
 2. Navigate to the **Status** field in the right panel
 3. Activate the Status dropdown
@@ -130,7 +135,8 @@ A horizontal timeline. Items appear as bars spanning their start/due dates. Iter
 
 **Screen reader note:** Roadmap is chart-based. The underlying data is still fully accessible via the Table view - treat Roadmap as a visual summary, and use Table for all editing.
 
-**Setting dates:**
+#### Setting dates
+
 - Add a **Date** custom field (e.g., "Start Date", "Due Date") or use a **Milestone** field
 - Items without dates appear in the ungrouped section
 
@@ -143,7 +149,7 @@ This is one of Projects v2's most powerful features. You can add fields beyond t
 ### Field Types
 
 | Type | Use Case | Example |
-|---|---|---|
+| ---  | ---  | ---  |
 | **Text** | Free-form notes | "Acceptance criteria", "Design link" |
 | **Number** | Story points, estimates | "Points: 3" |
 | **Date** | Deadlines, start dates | "Due: 2025-06-15" |
@@ -153,14 +159,16 @@ This is one of Projects v2's most powerful features. You can add fields beyond t
 ### Creating a Custom Field
 
 From any project view:
+
 1. In Table view, scroll right to the `+` button at the end of the column header row
 2. Activate the `+` button
 3. Select a field type
 4. Name the field and configure options (for select fields, type each option, press Enter to add more)
 5. Confirm - the field appears as a new column
 
-**Screen reader path:**
-```
+#### Screen reader path
+
+```text
 Tab to "+" column header button → Enter
 → Field type menu opens → ↑/↓ to choose type → Enter
 → Name field: type field name
@@ -182,6 +190,7 @@ Tab to "+" column header button → Enter
 ### Add an Existing Issue or PR
 
 From any project view:
+
 1. Activate the **"+ Add item"** button at the bottom of a table/column
 2. Type `#` to trigger the issue/PR search
 3. Type a keyword or issue number
@@ -211,6 +220,7 @@ Draft issues live only inside the project (not in any repository) until you prom
 ### Bulk Edit Items
 
 In Table view:
+
 1. Check the checkbox on each row (first column, `Space` to toggle)
 2. A bulk action bar appears at the top
 3. Options: change Status, assign label, change assignee, archive, delete
@@ -224,6 +234,7 @@ Projects v2 has native automation rules - no GitHub Actions YAML required.
 ### Accessing Automations
 
 From a project:
+
 1. Select the `...` menu (project overflow) in the top-right
 2. Select **"Workflows"**
 3. You'll see a list of built-in automation rules you can enable/disable
@@ -231,7 +242,7 @@ From a project:
 ### Available Built-In Workflows
 
 | Workflow | What It Does |
-|---|---|
+| ---  | ---  |
 | **Item added to project** | When an item is manually added, set its Status to a chosen value |
 | **Item reopened** | When an issue/PR is reopened, change its Status (e.g., back to "In Progress") |
 | **Item closed** | When an issue/PR is closed, set Status to "Done" automatically |
@@ -252,6 +263,7 @@ Now any matching issue in linked repos is added to your project the moment it's 
 ### GitHub Actions Integration
 
 For more complex automations, Projects v2 has a full GraphQL API and works with GitHub Actions. Example use cases:
+
 - Auto-assign items based on repository when added
 - Set due dates based on linked milestone
 - Send Slack notifications when high-priority items are added
@@ -282,6 +294,7 @@ An **iteration** field lets you group work into time-boxed cycles - sprints, wee
 ### Iteration Insights
 
 From any project:
+
 1. Select the **Insights** tab (the bar chart icon)
 2. Select **"Current iteration"**
 3. See: items by status, completion rate, items added vs closed over time
@@ -304,7 +317,7 @@ A **view** is a saved configuration of layout + filters + grouping + sort. You c
 The filter bar accepts a query language similar to GitHub's issue search:
 
 | Query | Meaning |
-|---|---|
+| ---  | ---  |
 | `status:In Progress` | Show only items with that Status value |
 | `assignee:@me` | Show only items assigned to you |
 | `label:accessibility` | Items with the accessibility label |
@@ -319,6 +332,7 @@ Combine filters: `assignee:@me status:"In Progress"` shows your in-progress work
 ### Grouping
 
 In Table or Board view, you can group rows:
+
 1. Select **"Group by"** in the view configuration menu
 2. Choose any field: Status, Assignee, Priority, Iteration, Label, Repository
 3. Items are collapsible into group sections
@@ -326,6 +340,7 @@ In Table or Board view, you can group rows:
 ### Sorting
 
 Multiple sort levels are supported. Primary sort → secondary sort:
+
 - Priority ascending, then due date ascending
 
 ---
@@ -345,7 +360,7 @@ A single project can track issues and PRs from **multiple repositories** - inclu
 
 When a project spans multiple repos, the **"Repository"** field lets you see - and filter by - which repo each item belongs to:
 
-```
+```text
 Filter: repo:community-access/accessibility-agents
 → Show only accessibility-agents issues in this cross-repo project
 ```
@@ -358,14 +373,14 @@ Filter: repo:community-access/accessibility-agents
 
 ### Project Home Page (list of projects)
 
-```
+```text
 3 → Jump to project titles (they are h3 links)
 Enter → Open a project
 ```
 
 ### Inside a Project - General
 
-```
+```text
 Tab → Move between interactive elements (view tabs, filters, fields, buttons)
 F6 → Cycle between major panels (header, view tabs, content area)
 / → Focus the filter bar (if supported; otherwise Tab to reach it)
@@ -373,7 +388,7 @@ F6 → Cycle between major panels (header, view tabs, content area)
 
 ### Table View
 
-```
+```text
 T or Region → Jump to the table data region
 ↑/↓ → Navigate rows
 ←/→ → Navigate columns within a row
@@ -391,7 +406,7 @@ F2 → Edit a title cell if focused
 
 ### Board View
 
-```
+```text
 Tab → Move between cards and column headers
 Enter (on card) → Open detail panel
 The "Status" field in the panel → Change the card's column
@@ -399,7 +414,7 @@ The "Status" field in the panel → Change the card's column
 
 ### Detail Panel (right sidebar, any view)
 
-```
+```text
 Tab → Move between fields
 Enter/Space → Activate a field editor
 Select dropdowns → ↑/↓ to navigate options, Enter to select
@@ -408,7 +423,7 @@ Escape → Close the dropdown or the panel
 
 ### Filter Bar
 
-```
+```text
 Click/Tab to filter bar → type query → Enter to apply
 Backspace → Remove last filter token
 Escape → Clear focus from filter bar
@@ -422,7 +437,7 @@ The **`/project-status`** command from Accessibility Agents gives you a live pro
 
 ### What It Shows
 
-```
+```text
 /project-status community-access/accessibility-agents
 ```
 
@@ -435,7 +450,7 @@ The **`/project-status`** command from Accessibility Agents gives you a live pro
 
 ### Example Output
 
-```
+```text
 GitHub Project: Accessibility Agents Roadmap (3 active views)
 
 Column Breakdown:

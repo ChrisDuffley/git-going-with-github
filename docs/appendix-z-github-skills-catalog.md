@@ -1,6 +1,6 @@
 # Appendix Z: GitHub Skills - Complete Course Catalog
+>
 > **Listen to Episode 43:** [GitHub Skills - Complete Course Catalog](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
-
 
 GitHub Skills is GitHub's free, self-paced interactive learning platform. Every course runs entirely inside GitHub - no external site, no separate login, no video. You copy a course repository to your own account, and an automated bot named Mona teaches you through real issues and pull requests.
 
@@ -32,7 +32,7 @@ These three modules are integrated into the Day 1 agenda. You complete them duri
 The following table lists the three GitHub Skills modules used during Day 1, with their workshop block and what each teaches.
 
 | Module | Workshop Block | What Mona Teaches | Link |
-|--------|---------------|-------------------|------|
+| --------  | ---------------  | -------------------  | ------  |
 | **Introduction to GitHub** | Day 1, Blocks 1-3 | Branches, commits, pull requests, merge | [Start course](https://github.com/skills/introduction-to-github) |
 | **Communicate Using Markdown** | Day 1, Block 3 | Headings, emphasis, links, code blocks, task lists, tables | [Start course](https://github.com/skills/communicate-using-markdown) |
 | **Review Pull Requests** | Day 1, Block 4 | Assign reviewers, leave comments, suggest changes, approve, merge | [Start course](https://github.com/skills/review-pull-requests) |
@@ -52,7 +52,7 @@ Deepen your understanding of Git version control beyond what the workshop covere
 The following table lists Git fundamentals courses in recommended order.
 
 | Order | Module | Duration | Prerequisite | What You Learn | Link |
-|-------|--------|----------|-------------|----------------|------|
+| -------  | --------  | ----------  | -------------  | ----------------  | ------  |
 | 1 | **Introduction to Git** | Less than 1 hour | None | Git CLI and VS Code - branches, commits, and merges using command line | [Start course](https://github.com/skills/introduction-to-git) |
 | 2 | **Resolve Merge Conflicts** | Less than 30 min | Introduction to GitHub | Why conflicts happen, reading conflict markers, resolving in the web editor | [Start course](https://github.com/skills/resolve-merge-conflicts) |
 | 3 | **Change Commit History** | Less than 1 hour | Introduction to Git | Amend commits, interactive rebase, squash, and reorder history | [Start course](https://github.com/skills/change-commit-history) |
@@ -68,7 +68,7 @@ Learn the collaboration features that power open source projects and team workfl
 The following table lists GitHub collaboration courses in recommended order.
 
 | Order | Module | Duration | Prerequisite | What You Learn | Link |
-|-------|--------|----------|-------------|----------------|------|
+| -------  | --------  | ----------  | -------------  | ----------------  | ------  |
 | 1 | **Introduction to Repository Management** | Less than 1 hour | Introduction to GitHub | Branch protection, issue templates, labels, milestones, and contributor-friendly settings | [Start course](https://github.com/skills/introduction-to-repository-management) |
 | 2 | **Connect the Dots** | Less than 30 min | Introduction to GitHub | Cross-referencing issues and PRs, linking work across your repository | [Start course](https://github.com/skills/connect-the-dots) |
 | 3 | **GitHub Pages** | Less than 1 hour | Introduction to GitHub | Deploy a site from your repository using GitHub Pages | [Start course](https://github.com/skills/github-pages) |
@@ -85,7 +85,7 @@ Build automated workflows that test, build, and deploy your projects.
 The following table lists GitHub Actions courses in recommended order.
 
 | Order | Module | Duration | Prerequisite | What You Learn | Link |
-|-------|--------|----------|-------------|----------------|------|
+| -------  | --------  | ----------  | -------------  | ----------------  | ------  |
 | 1 | **Hello GitHub Actions** | Less than 30 min | Introduction to GitHub | Workflow files, triggers, jobs, steps, and your first automated run | [Start course](https://github.com/skills/hello-github-actions) |
 | 2 | **Test with Actions** | Less than 1 hour | Hello GitHub Actions | Continuous integration (CI) - run tests automatically on every push and PR | [Start course](https://github.com/skills/test-with-actions) |
 | 3 | **Reusable Workflows** | Less than 1 hour | Hello GitHub Actions | Create shared workflows, call them from other repos, use matrix strategies | [Start course](https://github.com/skills/reusable-workflows) |
@@ -106,7 +106,7 @@ Master AI-assisted development with GitHub Copilot across editors, CLI, and GitH
 The following table lists GitHub Copilot courses in recommended order.
 
 | Order | Module | Duration | Prerequisite | What You Learn | Link |
-|-------|--------|----------|-------------|----------------|------|
+| -------  | --------  | ----------  | -------------  | ----------------  | ------  |
 | 1 | **Getting Started with GitHub Copilot** | Less than 1 hour | None | Code completion, Copilot Chat, debugging assistance, and your first AI-assisted project | [Start course](https://github.com/skills/getting-started-with-github-copilot) |
 | 2 | **Build Applications with Copilot Agent Mode** | Less than 1 hour | Getting Started with Copilot | Use Copilot's agent mode to build multi-file applications from natural language | [Start course](https://github.com/skills/build-applications-w-copilot-agent-mode) |
 | 3 | **Copilot Code Review** | Less than 30 min | Getting Started with Copilot | Use Copilot to review pull requests, catch quality issues, and improve code before merging | [Start course](https://github.com/skills/copilot-code-review) |
@@ -129,7 +129,7 @@ Learn to identify vulnerabilities, scan for secrets, and secure your supply chai
 The following table lists security courses in recommended order.
 
 | Order | Module | Duration | Prerequisite | What You Learn | Link |
-|-------|--------|----------|-------------|----------------|------|
+| -------  | --------  | ----------  | -------------  | ----------------  | ------  |
 | 1 | **Secure Code Game** | 1-2 hours | Basic coding knowledge | Find and fix real security vulnerabilities in an interactive, gamified format | [Start course](https://github.com/skills/secure-code-game) |
 | 2 | **Introduction to Secret Scanning** | Less than 30 min | Introduction to GitHub | Enable secret scanning, detect leaked credentials, and prevent secrets from being committed | [Start course](https://github.com/skills/introduction-to-secret-scanning) |
 | 3 | **Secure Repository Supply Chain** | Less than 1 hour | Introduction to GitHub | Understand dependencies, find vulnerabilities with Dependabot, and patch them | [Start course](https://github.com/skills/secure-repository-supply-chain) |
@@ -147,7 +147,7 @@ Deploy to the cloud and migrate existing projects to GitHub.
 The following table lists cloud and migration courses in recommended order.
 
 | Order | Module | Duration | Prerequisite | What You Learn | Link |
-|-------|--------|----------|-------------|----------------|------|
+| -------  | --------  | ----------  | -------------  | ----------------  | ------  |
 | 1 | **Code with Codespaces** | Less than 1 hour | Introduction to GitHub | Create and configure cloud development environments with GitHub Codespaces | [Start course](https://github.com/skills/code-with-codespaces) |
 | 2 | **Migrate ADO Repository** | Less than 1 hour | Introduction to Git | Create a sample Azure DevOps project and migrate it to GitHub using the CLI | [Start course](https://github.com/skills/migrate-ado-repository) |
 | 3 | **Idea to App with Spark** | Less than 1 hour | None | Turn ideas into web applications by describing them in natural language - no coding required | [Start course](https://github.com/skills/idea-to-app-with-spark) |
@@ -161,7 +161,7 @@ The following table lists cloud and migration courses in recommended order.
 The following table alphabetically lists every GitHub Skills course with its category and link for quick lookup.
 
 | Module | Category | Link |
-|--------|----------|------|
+| --------  | ----------  | ------  |
 | AI in Actions | Actions | [Start course](https://github.com/skills/ai-in-actions) |
 | Build Applications with Copilot Agent Mode | Copilot | [Start course](https://github.com/skills/build-applications-w-copilot-agent-mode) |
 | Change Commit History | Git | [Start course](https://github.com/skills/change-commit-history) |
@@ -234,7 +234,7 @@ GitHub Skills does not have a central dashboard for tracking completions. Use th
 
 Copy this list into your own notes to track progress:
 
-```
+```text
 Workshop Courses
 - [ ] Introduction to GitHub
 - [ ] Communicate Using Markdown
@@ -297,4 +297,4 @@ Path 6: Cloud and Migration
 
 ---
 
-*Last updated: March 2026*
+Last updated: March 2026

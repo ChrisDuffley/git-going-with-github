@@ -1,4 +1,5 @@
 # Appendix S: Organizations, Templates, and Repository Settings
+>
 > **Listen to Episode 36:** [Organizations and Templates](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## A Contributor's Guide to GitHub's Structural Features
@@ -14,7 +15,7 @@
 These are two very different actions that both appear near the "Code" button:
 
 | Action | Use when... | What you get |
-|--------|-------------|-------------|
+| --------  | -------------  | -------------  |
 | **Fork** | Contributing back to the original project | Full git history; your changes can be PRed upstream |
 | **Use this template** | Starting a *new* project based on the structure | Clean git history; no connection to the original repo |
 
@@ -25,6 +26,7 @@ accessibility-agents could serve as a template if you want to build your own age
 ### Creating a Template Repository
 
 Maintainers can mark any repository as a template:
+
 1. Navigate to the repository's **Settings** tab
 2. Scroll to the **"General"** section → find the **"Template repository"** checkbox
 3. Check it and save
@@ -38,8 +40,9 @@ Maintainers can mark any repository as a template:
 4. Name your new repository, choose visibility, and confirm
 5. GitHub creates a new repository with the template's files but **no commit history**
 
-**Screen reader path:**
-```
+#### Screen reader path
+
+```text
 B → navigate buttons → find "Use this template" → Enter
 ↓ → "Create a new repository" from the dropdown → Enter
 ```
@@ -53,7 +56,7 @@ B → navigate buttons → find "Use this template" → Enter
 A GitHub organization is an account that multiple people share. Instead of `github.com/username/repo`, organization repos live at `github.com/org-name/repo`. The workshop's central project lives at `github.com/community-access/accessibility-agents` - `community-access` is an organization.
 
 | Personal Account | Organization Account |
-|-----------------|---------------------|
+| -----------------  | ---------------------  |
 | Owned by one person | Shared by a team or community |
 | Single-person repos | Repos are shared assets |
 | Your profile at `github.com/username` | Org profile at `github.com/org-name` |
@@ -62,6 +65,7 @@ A GitHub organization is an account that multiple people share. Instead of `gith
 ### Joining an Organization
 
 Maintainers can invite you to join. When invited:
+
 1. You receive an email + GitHub notification
 2. Navigate to [github.com/settings/organizations](https://github.com/settings/organizations) to accept
 3. Or click the link in the invitation email
@@ -82,7 +86,8 @@ Organizations can create **teams** (e.g., `@community-access/accessibility-revie
 ### Navigating an Organization Profile Page
 
 At `github.com/community-access`:
-```
+
+```text
 H → headings: org name, People, Repositories, Projects sections
 1 → jumps to the org name heading
 Links → navigate to individual repositories, members, and projects
@@ -99,7 +104,7 @@ You may not have Settings access to most repositories (that requires maintainer 
 ### Repository Visibility
 
 | Setting | What it means for contributors |
-|---------|-------------------------------|
+| ---------  | -------------------------------  |
 | **Public** | Anyone can view and fork; you don't need an account to read it |
 | **Private** | Only invited users can see or contribute |
 | **Internal** (org only) | Visible to all org members; cannot be forked outside the org |
@@ -109,6 +114,7 @@ The repository's visibility label appears on its page. Screen readers: the visib
 ### Archived Repositories
 
 When a maintainer archives a repository, it becomes **read-only**:
+
 - No new issues, PRs, or comments can be created
 - Existing content is fully preserved and viewable
 - The UI shows a yellow banner: "This repository has been archived by the owner."

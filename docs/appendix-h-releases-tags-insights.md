@@ -1,4 +1,5 @@
 # Appendix H: Releases, Tags, and Repository Insights
+>
 > **Listen to Episode 25:** [Releases, Tags, and Insights](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Understanding Versioned Releases and Repository Activity
@@ -9,7 +10,7 @@
 
 ## Table of Contents
 
-**Part 1 - Releases and Tags**
+### Part 1 - Releases and Tags
 
 1. [What Is a Release?](#1-what-is-a-release)
 2. [Releases vs. Tags vs. Branches](#2-releases-vs-tags-vs-branches)
@@ -20,19 +21,19 @@
 7. [Draft and Pre-Release States](#7-draft-and-pre-release-states)
 8. [Accessibility Agents: `/draft-release`](#8-accessibility-agents-draft-release)
 
-**Part 2 - Repository Insights**
+### Part 2 - Repository Insights
 
-9. [What Is the Insights Tab?](#9-what-is-the-insights-tab)
-10. [Navigating to Insights](#10-navigating-to-insights)
-11. [Pulse - Recent Activity Summary](#11-pulse--recent-activity-summary)
-12. [Contributors - Who Builds the Project](#12-contributors--who-builds-the-project)
-13. [Traffic - Who Visits the Repo](#13-traffic--who-visits-the-repo)
-14. [Commits and Code Frequency](#14-commits-and-code-frequency)
-15. [Dependency Graph](#15-dependency-graph)
-16. [Network and Forks](#16-network-and-forks)
-17. [Community Standards](#17-community-standards)
-18. [Screen Reader Navigation Reference](#18-screen-reader-navigation-reference)
-19. [Accessibility Agents: `/my-stats` and `/team-dashboard`](#19-accessibility-agents-my-stats-and-team-dashboard)
+1. [What Is the Insights Tab?](#9-what-is-the-insights-tab)
+2. [Navigating to Insights](#10-navigating-to-insights)
+3. [Pulse - Recent Activity Summary](#11-pulse---recent-activity-summary)
+4. [Contributors - Who Builds the Project](#12-contributors---who-builds-the-project)
+5. [Traffic - Who Visits the Repo](#13-traffic---who-visits-the-repo)
+6. [Commits and Code Frequency](#14-commits-and-code-frequency)
+7. [Dependency Graph](#15-dependency-graph)
+8. [Network and Forks](#16-network-and-forks)
+9. [Community Standards](#17-community-standards)
+10. [Screen Reader Navigation Reference](#18-screen-reader-navigation-reference)
+11. [Accessibility Agents: `/my-stats` and `/team-dashboard`](#19-accessibility-agents-my-stats-and-team-dashboard)
 
 ---
 
@@ -43,6 +44,7 @@
 A **release** is a named snapshot of a repository at a specific point in history, packaged and published for users.
 
 For software projects, a release typically includes:
+
 - A version number (e.g., `v2.1.0`)
 - Release notes explaining what changed
 - Links to download the compiled or packaged software (if applicable)
@@ -59,12 +61,13 @@ For documentation-only or non-software projects, releases are often used to mark
 These three concepts are closely related:
 
 | Concept | What It Is | Lives |
-|---|---|---|
+| ---  | ---  | ---  |
 | **Branch** | A movable pointer to the latest commit on a line of work | Permanently moves as commits are added |
 | **Tag** | A fixed pointer to a single specific commit | Never moves - always points to the same commit |
 | **Release** | A tag + release notes + optional downloadable assets published on GitHub | Based on a tag |
 
-**The relationship:**
+### The relationship
+
 - Every release is backed by a tag
 - A tag without a release is just a version marker in the git history
 - GitHub automatically creates a tag when you create a release
@@ -76,12 +79,14 @@ These three concepts are closely related:
 ### Finding the Releases Page
 
 From any repository page:
+
 1. Look on the right sidebar for a **"Releases"** section showing the latest release
 2. Activate "Releases" or the version link to go to the full releases page
 3. Alternatively: navigate to `github.com/owner/repo/releases`
 
-**Screen reader path:**
-```
+#### Screen reader path
+
+```text
 On the repository home page:
 → H or 3 to find "Releases" heading in the right sidebar
 → Tab to the latest release link → Enter
@@ -91,6 +96,7 @@ On the repository home page:
 ### The Releases List Page
 
 Each release appears as a section with:
+
 - The release title (usually the version number)
 - A badge: "Latest" (most recent stable), "Pre-release", or nothing (older release)
 - Publication date
@@ -99,8 +105,9 @@ Each release appears as a section with:
 - Asset downloads (if included)
 - Source code download links (always present - auto-generated zip/tar.gz)
 
-**Navigation:**
-```
+#### Navigation
+
+```text
 2 → Jump between release title headings
 K → Navigate links (download assets, compare, tag links)
 ↓ → Read release notes
@@ -113,23 +120,26 @@ K → Navigate links (download assets, compare, tag links)
 Most projects follow **Semantic Versioning** (semver): `MAJOR.MINOR.PATCH`
 
 | Part | When It Changes | Meaning |
-|---|---|---|
+| ---  | ---  | ---  |
 | `MAJOR` (e.g., `2.x.x`) | Breaking changes | Existing behavior changed in an incompatible way; users may need to update their code |
 | `MINOR` (e.g., `x.1.x`) | New features, backward-compatible | New functionality added; existing code still works |
 | `PATCH` (e.g., `x.x.1`) | Bug fixes | Something was broken and is now fixed |
 
-**Examples:**
+### Examples
+
 - `v2.0.0` → major release, breaking changes possible
 - `v2.1.0` → new features added
 - `v2.1.3` → three bug fixes since v2.1.0
 
 **Pre-release suffixes** (not part of semver core, but common):
+
 - `v2.1.0-alpha.1` → early preview, may be unstable
 - `v2.1.0-beta.2` → feature-complete but still testing
 - `v2.1.0-rc.1` → release candidate, nearly final
 
-**Your contribution's journey:**
-```
+### Your contribution's journey
+
+```text
 PR opened → PR reviewed → PR merged → default branch updated
                                               ↓
                                    Next release prepared
@@ -143,7 +153,7 @@ PR opened → PR reviewed → PR merged → default branch updated
 
 Release notes document what changed. High-quality release notes categorize changes:
 
-```
+```text
 ## What's New in v2.1.0
 
 ### Breaking Changes
@@ -203,19 +213,22 @@ The `/draft-release` command generates structured release notes automatically fr
 
 The `/draft-release` command automates release note generation from your merged pull requests.
 
-**Usage:**
-```
+### Usage
+
+```text
 /draft-release v2.1.0
 /draft-release owner/repo v2.1.0
 ```
 
-**What it produces:**
+### What it produces
+
 - Auto-categorized changes: Breaking Changes, Features, Bug Fixes, Dependencies
 - Each PR listed with number, title, and author
 - A full changelog link
 - Markdown formatted and ready to paste into GitHub's release editor
 
-**Example output:**
+### Example output
+
 ```markdown
 ## v2.1.0
 
@@ -243,11 +256,13 @@ The `/draft-release` command automates release note generation from your merged 
 
 The Insights tab shows quantitative activity data for a repository. It is primarily read-only and chart-heavy - but all underlying data is also presented in tables that screen readers can navigate.
 
-**Who can see Insights:**
+### Who can see Insights
+
 - Anyone can see Insights on a public repository
 - Private repository Insights require collaborator access
 
-**What Insights does NOT show:**
+### What Insights does NOT show
+
 - Individual user data in detail (e.g., lines per commit per person)
 - Real-time data (most views update daily or weekly)
 - Code quality scores
@@ -257,12 +272,14 @@ The Insights tab shows quantitative activity data for a repository. It is primar
 ## 10. Navigating to Insights
 
 From any repository:
+
 1. Navigate to the repository's main tab bar
 2. Find and select the **Insights** tab
 3. The Insights sub-navigation has multiple views listed on the left (or top on smaller screens)
 
-**Screen reader path:**
-```
+### Screen reader path
+
+```text
 T → navigate the repository tab bar
 → "Insights" link → Enter
 → Left sidebar has sub-navigation: Pulse, Contributors, Traffic, Commits, etc.
@@ -282,13 +299,15 @@ T → navigate the repository tab bar
 - A list of proposed PRs (open)
 - A list of opened and closed issues
 
-**What it tells you as a contributor:**
+### What it tells you as a contributor
+
 - Is this project actively maintained? (Are PRs being merged regularly?)
 - Is there a backlog? (Many open issues vs. few closures)
 - Is the maintainer responsive? (Time between PR open and merge)
 
-**Screen reader navigation:**
-```
+### Screen reader navigation
+
+```text
 2 → Section headings: "Merged pull requests", "Proposed pull requests", "Closed issues", etc.
 3 → Individual PR/issue title links within each section
 K → Navigate all links
@@ -300,22 +319,25 @@ K → Navigate all links
 
 The Contributors view shows a bar chart of commits over time, with each contributor represented by a different color. Below the chart is a sortable table.
 
-**The table (accessible):**
+### The table (accessible)
+
 - Username
 - Number of commits (with a link to filtered commit history)
 - Additions (lines added)
 - Deletions (lines removed)
 - Sorted by total commits by default
 
-**Why this matters as a new contributor:**
+### Why this matters as a new contributor
+
 - You can see how active top contributors are
 - After your first merged PR, your name appears here (with your commits)
 - You can link to your section (`github.com/owner/repo/graphs/contributors`) as proof of contribution
 
-**Screen reader:**
+### Screen reader
+
 The chart is a canvas graphic - not directly readable. The table below it is fully accessible. Navigate with `T` to reach the table, then `Tab` for sorting controls.
 
-```
+```text
 T → Contributors table
 Tab → Column headers (click to sort: Commits, Additions, Deletions)
 ↓ → Navigate rows (each contributor is a row)
@@ -328,16 +350,17 @@ K → Links to each contributor's filtered commit list
 
 **Traffic** shows who is viewing and cloning the repository. Available only to repository owners and collaborators with push access.
 
-**Metrics:**
+### Metrics
 
 | View | What It Shows |
-|---|---|
+| ---  | ---  |
 | **Visitors** | Unique visitors and total page views over 14 days |
 | **Git clones** | Number of times the repo was cloned (git clone, not forks) |
 | **Referring sites** | Where traffic comes from (Google, Hacker News, direct, etc.) |
 | **Popular content** | Which files and pages in the repo get the most views |
 
-**Why this matters:**
+### Why this matters
+
 - If the README is the most-viewed file, documentation improvements have high impact
 - If traffic spiked when a blog post linked the repo, that's a good signal for community growth
 
@@ -346,6 +369,7 @@ K → Links to each contributor's filtered commit list
 ## 14. Commits and Code Frequency
 
 **Commits** shows commit frequency over the past year, by week. Useful for identifying:
+
 - Active development periods (many commits)
 - Dormant periods (no commits) - a project with 6+ months of inactivity may be unmaintained
 - Release sprints (burst of commits before a release tag)
@@ -353,6 +377,7 @@ K → Links to each contributor's filtered commit list
 **Code Frequency** shows additions and deletions per week as an area chart. A healthy codebase has more additions than deletions until it matures, then stabilizes.
 
 **Churn** (high deletions alongside high additions) can indicate:
+
 - Heavy refactoring
 - Ongoing maintenance of large files
 - Active cleanup of technical debt
@@ -364,12 +389,14 @@ K → Links to each contributor's filtered commit list
 ## 15. Dependency Graph
 
 The **Dependency Graph** shows:
+
 - What your project depends on (libraries, packages)
 - What depends on your project (if others import your repo)
 
 **Dependents** - repositories that depend on this one - is the "used by" count you see on the right sidebar of popular packages.
 
-**Enabling/viewing:**
+### Enabling/viewing
+
 - Settings → Security & Analysis → Dependency graph → Enable
 - Navigate to Insights → Dependency graph
 
@@ -392,20 +419,21 @@ The **Network** view shows a graphical branch/fork network - who has forked the 
 The **Community Standards** view (found in the Insights sidebar or in the main repository homepage's "Recommended" sidebar section) shows a checklist of community health files:
 
 | File | Purpose | Status |
-|---|---|---|
-| Description | One-line repo summary | ✓ or ✗ |
-| README | Project overview | ✓ or ✗ |
-| Code of Conduct | Community behavior standards | ✓ or ✗ |
-| Contributing guide | How to contribute | ✓ or ✗ |
-| License | Usage rights | ✓ or ✗ |
-| Issue templates | Structured issue forms | ✓ or ✗ |
-| Pull request template | PR checklist | ✓ or ✗ |
-| Security policy | How to report vulnerabilities | ✓ or ✗ |
+| ---  | ---  | ---  |
+| Description | One-line repo summary | Present or Missing |
+| README | Project overview | Present or Missing |
+| Code of Conduct | Community behavior standards | Present or Missing |
+| Contributing guide | How to contribute | Present or Missing |
+| License | Usage rights | Present or Missing |
+| Issue templates | Structured issue forms | Present or Missing |
+| Pull request template | PR checklist | Present or Missing |
+| Security policy | How to report vulnerabilities | Present or Missing |
 
 A fully green checklist signals a well-maintained project. For accessibility-agents contributors, **adding a missing community health file is always a welcome `good first issue` contribution.**
 
-**Screen reader:**
-```
+### Screen reader
+
+```text
 H / 2 → "Community Standards" section heading
 Tab → Each checklist item (links to add missing files)
 ```
@@ -416,57 +444,64 @@ Tab → Each checklist item (links to add missing files)
 
 ### Releases Pages
 
-**Repository home page (finding releases):**
-```
+#### Repository home page (finding releases)
+
+```text
 Right sidebar:
 → H or 3 to find "Releases" heading
 → K to the version link (e.g., "v2.1.0") → Enter opens that release
 → K to the "N releases" count link → Enter opens full list
 ```
 
-**Releases list page:**
-```
+#### Releases list page
+
+```text
 2         → Major section headings
 3         → Individual release title headings (each release is an h2 or h3)
 K         → Navigate links (assets, tag, compare)
 ↓         → Read release notes inline
 ```
 
-**Individual release page:**
-```
+#### Individual release page
+
+```text
 H / 2     → Section headings within release notes
 I         → List items (change entries)
 K         → Links (PRs referenced, comparison link, asset downloads)
 ```
 
-**Comparing two releases (the Changelog):**
+#### Comparing two releases (the Changelog)
 
 The compare URL (`/compare/v1.0.0...v2.0.0`) shows a diff of all commits and merged PRs between two tags:
-```
+
+```text
 3         → Individual commit or PR headings
 I         → Commit list items
 ```
 
 ### Insights Pages
 
-**Insights tab bar (sub-navigation):**
-```
+#### Insights tab bar (sub-navigation)
+
+```text
 Insights left sidebar:
 K → Navigate sidebar links: Pulse, Contributors, Traffic, Commits, Code frequency, Dependency graph, Network, Forks, Community
 Enter → Open that Insights view
 ```
 
-**Charts and graphs - general strategy:**
+#### Charts and graphs - general strategy
 
 Most Insights charts are canvas or SVG visuals. They announce as "image" or "graphic" to screen readers. **Skip the chart and use the data table or list below it**, which contains the same information in accessible form.
-```
+
+```text
 T → Jump to data tables
 H → Section headings
 I → List items (in Pulse views)
 ```
 
-**Pulse view:**
-```
+#### Pulse view
+
+```text
 2 → "Merged pull requests", "Opened issues", etc. sections
 3 → Individual PR/issue titles
 K → Links to each item
@@ -482,13 +517,14 @@ Instead of navigating GitHub's chart-heavy Insights UI, Accessibility Agents pro
 
 Shows your personal contribution statistics across all tracked repos:
 
-```
+```text
 /my-stats
 /my-stats last 30 days
 /my-stats org:community-access
 ```
 
 Output includes:
+
 - PRs opened and merged
 - Issues filed and closed
 - Reviews conducted
@@ -499,13 +535,14 @@ Output includes:
 
 Shows team-wide activity across tracked repos - who contributed what, response times, review coverage:
 
-```
+```text
 /team-dashboard
 /team-dashboard org:community-access
 /team-dashboard sprint
 ```
 
 Output includes:
+
 - Per-person contribution summary
 - Review coverage (how many PRs got reviews)
 - Open issues by assignee

@@ -1,4 +1,5 @@
 # Appendix V: Accessibility Agents Reference
+>
 > **Listen to Episode 39:** [Accessibility Agents - Complete Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Complete Reference - Agents, Slash Commands, Instructions, Configuration Levels, and All File Formats
@@ -10,17 +11,17 @@
 ## Table of Contents
 
 1. [The Full Agent Ecosystem](#1-the-full-agent-ecosystem)
-2. [GitHub Workflow Agents - Quick Reference](#2-github-workflow-agents--quick-reference)
+2. [GitHub Workflow Agents - Quick Reference](#2-github-workflow-agents---quick-reference)
 3. [Slash Commands and Prompts](#3-slash-commands-and-prompts)
-4. [Customization Primitives - Decision Guide](#4-customization-primitives--decision-guide)
-5. [Scope and Priority - All Levels](#5-scope-and-priority--all-levels)
-6. [Always-On Instructions - All File Types](#6-always-on-instructions--all-file-types)
+4. [Customization Primitives - Decision Guide](#4-customization-primitives---decision-guide)
+5. [Scope and Priority - All Levels](#5-scope-and-priority---all-levels)
+6. [Always-On Instructions - All File Types](#6-always-on-instructions---all-file-types)
 7. [File-Based Instructions (.instructions.md)](#7-file-based-instructions-instructionsmd)
-8. [.agent.md - Complete Format Reference](#8-agentmd--complete-format-reference)
-9. [.prompt.md - Complete Format Reference](#9-promptmd--complete-format-reference)
-10. [Agent Skills (SKILL.md) - Complete Format Reference](#10-agent-skills-skillmd--complete-format-reference)
-11. [Hooks (.json) - Lifecycle Automation](#11-hooks-json--lifecycle-automation)
-12. [preferences.md - Accessibility Agents Personal Settings](#12-preferencesmd--accessibility-agents-personal-settings)
+8. [.agent.md - Complete Format Reference](#8-agentmd---complete-format-reference)
+9. [.prompt.md - Complete Format Reference](#9-promptmd---complete-format-reference)
+10. [Agent Skills (SKILL.md) - Complete Format Reference](#10-agent-skills-skillmd---complete-format-reference)
+11. [Hooks (.json) - Lifecycle Automation](#11-hooks-json---lifecycle-automation)
+12. [preferences.md - Accessibility Agents Personal Settings](#12-preferencesmd---accessibility-agents-personal-settings)
 13. [Diagnostics and Troubleshooting](#13-diagnostics-and-troubleshooting)
 14. [Further Reading](#14-further-reading)
 
@@ -33,7 +34,7 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 ### Platforms
 
 | Platform | Agent Format | Installation |
-|----------|-------------|-------------|
+| ----------  | -------------  | -------------  |
 | **GitHub Copilot** (VS Code) | `.github/agents/*.agent.md` | Fork repo or run installer |
 | **Claude Code** | Per-agent CLAUDE.md + hook enforcement | One-liner installer auto-detects |
 | **Gemini CLI** | Gemini skill files | One-liner installer auto-detects |
@@ -43,7 +44,7 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 ### Team 1: Accessibility (26 agents)
 
 | Agent | Type | What It Does |
-|-------|------|-------------|
+| -------  | ------  | -------------  |
 | `@accessibility-lead` | Orchestrator | Delegates multi-agent accessibility audits to specialist agents |
 | `@aria-specialist` | Task | ARIA roles, states, properties, widget patterns (modals, tabs, comboboxes) |
 | `@modal-specialist` | Task | Dialog focus trapping, escape behavior, screen reader overlay announcements |
@@ -74,7 +75,7 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 ### Team 2: GitHub Workflow (12 agents)
 
 | Agent | Type | What It Does |
-|-------|------|-------------|
+| -------  | ------  | -------------  |
 | `@daily-briefing` | Informational | Morning situation report - issues, PRs, CI, security, community activity |
 | `@issue-tracker` | Both | Find, prioritize, triage, draft replies to issues across repositories |
 | `@pr-review` | Both | Structured PR reviews with risk assessment, change maps, inline suggestions |
@@ -91,7 +92,7 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 ### Team 3: Developer Tools (6 agents)
 
 | Agent | Type | What It Does |
-|-------|------|-------------|
+| -------  | ------  | -------------  |
 | `@developer-hub` | Both | Central hub for developer tool operations and project scaffolding |
 | `@python-specialist` | Task | Python accessibility patterns, Django/Flask a11y, best practices |
 | `@wxpython-specialist` | Task | wxPython GUI accessibility - keyboard, focus, screen reader support |
@@ -102,7 +103,7 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 ### Supporting Resources
 
 | Resource | Count | Location |
-|----------|-------|---------|
+| ----------  | -------  | ---------  |
 | Copilot prompts | 54+ | `.github/prompts/*.prompt.md` |
 | Copilot skills | 17 | `.github/skills/*/SKILL.md` |
 | Copilot instructions | 6 | `.github/instructions/*.instructions.md` |
@@ -122,12 +123,13 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 **Agent file:** `.github/agents/daily-briefing.agent.md`
 
 | Example Command | What It Does |
-|----------------|-------------|
+| ----------------  | -------------  |
 | `@daily-briefing morning briefing` | Full prioritized situation report |
 | `@daily-briefing what needs my attention today in accessibility-agents?` | Repo-scoped briefing |
 | `@daily-briefing summarize activity from the last week` | Weekly digest |
 
-**Output sections (H2 headings - navigate with `H`):**
+#### Output sections (H2 headings - navigate with `H`)
+
 - Needs Your Action
   - Pull Requests Waiting for Your Review
   - @Mentions Requiring Response
@@ -145,7 +147,7 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 **Agent file:** `.github/agents/issue-tracker.agent.md`
 
 | Example Command | What It Does |
-|----------------|-------------|
+| ----------------  | -------------  |
 | `@issue-tracker find open issues labeled good-first-issue` | Filtered issue search |
 | `@issue-tracker find accessibility issues across all my repos` | Cross-repo search |
 | `@issue-tracker is there a duplicate of issue #42?` | Duplicate check |
@@ -160,13 +162,14 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 **Agent file:** `.github/agents/pr-review.agent.md`
 
 | Example Command | What It Does |
-|----------------|-------------|
+| ----------------  | -------------  |
 | `@pr-review review PR #14` | Full review document |
 | `@pr-review what is the risk level of PR #8?` | Risk assessment only |
 | `@pr-review generate inline comments for PR #14` | Line-level suggestions only |
 | `@pr-review summarize PR #14 in two sentences` | Quick summary |
 
-**Output sections (H2/H3 headings):**
+#### Output sections (H2/H3 headings)
+
 - Summary
 - Risk Assessment (High / Medium / Low)
 - Files Changed (per-file descriptions)
@@ -184,7 +187,7 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 **Agent file:** `.github/agents/analytics.agent.md`
 
 | Example Command | What It Does |
-|----------------|-------------|
+| ----------------  | -------------  |
 | `@analytics team velocity in accessibility-agents this month` | Contribution pace |
 | `@analytics who are the most active contributors?` | Top contributors by commits and reviews |
 | `@analytics which files are changed most often?` | Code hotspot detection |
@@ -197,15 +200,15 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 **Agent file:** `.github/agents/insiders-a11y-tracker.agent.md`
 
 | Example Command | What It Does |
-|----------------|-------------|
+| ----------------  | -------------  |
 | `@insiders-a11y-tracker check recent changes` | Scan last commits for a11y impact |
 | `@insiders-a11y-tracker review my PR #14 for accessibility impact` | PR-scoped accessibility review |
 | `@insiders-a11y-tracker are there any accessibility regressions in the last 5 commits?` | Regression scan |
 
-**What it monitors:**
+#### What it monitors
 
 | Area | What It Checks |
-|------|---------------|
+| ------  | ---------------  |
 | Markdown / docs | Heading hierarchy skips, non-descriptive link text, missing image alt text, table structure |
 | HTML / JSX | ARIA attribute changes, `tabIndex`, `outline: none`, `display: none` on focused elements |
 | JavaScript | `onMouseDown` without keyboard equivalent, `onMouseEnter`/`onMouseLeave` without keyboard parallel |
@@ -220,13 +223,14 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 **Agent file:** `.github/agents/template-builder.agent.md`
 
 | Example Command | What It Does |
-|----------------|-------------|
+| ----------------  | -------------  |
 | `@template-builder create accessibility template` | Guided a11y bug report template |
 | `@template-builder create security template` | Guided security vulnerability template |
 | `@template-builder build a feature request form` | General feature request template |
 | `@template-builder reorder the fields` | Modify existing generated YAML |
 
-**Guided workflow phases:**
+#### Guided workflow phases
+
 1. **Metadata:** name, description, title prefix, auto-labels
 2. **Fields (one at a time):** type → label → description → required → type-specific options
 3. **Review and output:** complete YAML ready to save to `.github/ISSUE_TEMPLATE/`
@@ -242,7 +246,7 @@ The repository includes 54+ slash commands. Type `/` in Copilot Chat to open the
 ### Workshop Quick Reference
 
 | Command | What It Does |
-|---------|-------------|
+| ---------  | -------------  |
 | `/address-comments` | Address all open review comments on your PR |
 | `/a11y-update` | Latest accessibility improvements with WCAG cross-references |
 | `/ci-status` | CI/CD health dashboard across your repos |
@@ -275,7 +279,7 @@ The repository includes 54+ slash commands. Type `/` in Copilot Chat to open the
 ### Most Useful During the Workshop
 
 | Command | Example Usage |
-|---------|-------------|
+| ---------  | -------------  |
 | `/my-issues` | `/my-issues` - see all your open issues with priority signals |
 | `/review-pr` | `/review-pr #14` - AI-generated review with inline suggestions |
 | `/triage` | `/triage #22` - get label and priority suggestions for a new issue |
@@ -291,7 +295,7 @@ The repository includes 54+ slash commands. Type `/` in Copilot Chat to open the
 Before creating any file, choose the right primitive for the job. Each primitive is a different file type with a different purpose, scope, and trigger.
 
 | Primitive | File Type | When to Use |
-|-----------|-----------|-------------|
+| -----------  | -----------  | -------------  |
 | **Always-on instructions** | `copilot-instructions.md`, `AGENTS.md`, `CLAUDE.md` | Standards that apply to every request - coding conventions, project context, tone |
 | **File-based instructions** | `*.instructions.md` | Rules that only apply to specific file types or folders - Python style, test conventions, docs standards |
 | **Prompts / Slash Commands** | `*.prompt.md` | Single repeatable task invoked with `/command` - scaffolding, triage, PR prep |
@@ -302,16 +306,20 @@ Before creating any file, choose the right primitive for the job. Each primitive
 
 ### Choosing Between Primitives
 
-**Instructions vs Agent?**
+#### Instructions vs Agent?
+
 - Instructions guide behavior passively (always-on or file-scoped). Agents perform tasks actively (on-demand, tool-using).
 
-**Prompt vs Agent?**
+#### Prompt vs Agent?
+
 - Use a prompt for a single focused task you invoke explicitly. Use an agent when the task spans multiple steps, needs different tools, or should work as a subagent for other agents.
 
-**Prompt vs Skill?**
+#### Prompt vs Skill?
+
 - Both appear as `/` slash commands. Use a prompt for one well-defined task. Use a skill when the workflow bundles scripts, templates, or reference docs alongside the instructions.
 
-**Instructions vs Hooks?**
+#### Instructions vs Hooks?
+
 - Instructions *guide* the agent (non-deterministic). Hooks *enforce* behavior via shell commands at lifecycle events - they run regardless of what the agent was prompted to do.
 
 ---
@@ -323,7 +331,7 @@ Every customization file exists at one of three scopes. VS Code combines all mat
 ### The Three Scopes
 
 | Scope | Where Files Live | Who Shares It |
-|-------|-----------------|---------------|
+| -------  | -----------------  | ---------------  |
 | **User / Personal** | VS Code profile folder | You only - follows Settings Sync across devices |
 | **Workspace** | `.github/` and related folders in the repo | Everyone who clones the repo |
 | **Organization** | GitHub organization settings (Enterprise/Team) | Everyone in the org |
@@ -339,7 +347,7 @@ Every customization file exists at one of three scopes. VS Code combines all mat
 All of these files roam with your VS Code Settings Sync.
 
 | File Type | Location on Windows | Location on macOS/Linux |
-|-----------|---------------------|------------------------|
+| -----------  | ---------------------  | ------------------------  |
 | Instructions | `%APPDATA%\Code - Insiders\User\prompts\*.instructions.md` | `~/Library/Application Support/Code - Insiders/User/prompts/` |
 | Prompts | Same folder - `*.prompt.md` | Same folder |
 | Agents | Same folder - `*.agent.md` | Same folder |
@@ -347,6 +355,7 @@ All of these files roam with your VS Code Settings Sync.
 > On this machine: `C:\Users\jeffb\AppData\Roaming\Code - Insiders\User\prompts\`
 
 To sync user instructions/prompts/agents across devices:
+
 1. Enable Settings Sync (`Ctrl+Shift+P` → "Settings Sync: Turn On")
 2. `Ctrl+Shift+P` → "Settings Sync: Configure"
 3. Check "Prompts and Instructions"
@@ -354,7 +363,7 @@ To sync user instructions/prompts/agents across devices:
 ### Workspace-Level File Locations (Repo-Shared)
 
 | File Type | Default Location | Override Setting |
-|-----------|-----------------|-----------------|
+| -----------  | -----------------  | -----------------  |
 | Always-on instructions | `.github/copilot-instructions.md` | - (fixed path) |
 | Always-on (multi-tool) | `AGENTS.md` (root) or nested per subfolder | `chat.useAgentsMdFile` to enable/disable |
 | Always-on (Claude compat) | `CLAUDE.md`, `.claude/CLAUDE.md`, `CLAUDE.local.md` (local only) | `chat.useClaudeMdFile` to enable/disable |
@@ -380,7 +389,7 @@ Always-on instructions are automatically included in every chat request. You nev
 
 **Best for:** Most projects. Cross-editor compatible. Version-controlled and team-shared.
 
-```
+```text
 .github/
   copilot-instructions.md   ← lives here
 ```
@@ -418,13 +427,15 @@ Always-on instructions are automatically included in every chat request. You nev
 
 **Best for:** Projects that use multiple AI tools (Copilot, Claude Code, Gemini CLI, etc.) where a single instruction file should work across all of them. Also best for monorepos where different folders need different rules.
 
-**Root-level (applies everywhere):**
-```
+#### Root-level (applies everywhere)
+
+```text
 AGENTS.md           ← root of workspace
 ```
 
-**Nested (per subfolder - experimental):**
-```
+#### Nested (per subfolder - experimental)
+
+```text
 AGENTS.md                  ← root defaults
 frontend/AGENTS.md         ← frontend-specific rules (overrides root for frontend/)
 backend/AGENTS.md          ← backend-specific rules (overrides root for backend/)
@@ -445,7 +456,7 @@ Enable nested file support: `chat.useNestedAgentsMdFiles: true` in VS Code setti
 **Best for:** Teams that use Claude Code alongside VS Code. One file, recognized by both.
 
 | Location | Scope |
-|----------|-------|
+| ----------  | -------  |
 | `CLAUDE.md` (workspace root) | Workspace - shared via git |
 | `.claude/CLAUDE.md` | Workspace - shared via git |
 | `CLAUDE.local.md` (workspace root) | Workspace - local only, not committed |
@@ -499,7 +510,8 @@ Each entry is an array of objects with either `text` (inline instruction) or `fi
 
 Organization administrators can define custom instructions that apply to all repositories in the organization. Every team member gets these instructions automatically.
 
-**To enable discovery in VS Code:**
+#### To enable discovery in VS Code
+
 ```json
 // User settings.json
 {
@@ -520,7 +532,7 @@ File-based instructions load conditionally - either when the files you are editi
 ### File Locations
 
 | Scope | Location |
-|-------|----------|
+| -------  | ----------  |
 | Workspace | `.github/instructions/*.instructions.md` |
 | Additional workspace folders | Configure with `chat.instructionsFilesLocations` setting |
 | User / Personal | VS Code profile prompts folder (`*.instructions.md`) |
@@ -555,7 +567,7 @@ applyTo: ".github/ISSUE_TEMPLATE/**"  # Only issue template files
 ### Discovery Modes
 
 | Mode | Trigger | When to Use |
-|------|---------|-------------|
+| ------  | ---------  | -------------  |
 | **Automatic** (`applyTo` set) | When matching files are in the chat context | Language rules, framework patterns, folder-specific standards |
 | **On-demand** (`description` set, no `applyTo`) | Agent detects task relevance from description keywords | Migration guides, refactoring rules, API design patterns |
 | **Manual** | User selects "Add Context → Instructions" in Chat | Ad-hoc attachment for one-off situations |
@@ -599,14 +611,16 @@ applyTo: ".github/ISSUE_TEMPLATE/**/*.{yml,yaml}"
 
 ### Creating an Instructions File
 
-**Command Palette method:**
+#### Command Palette method
+
 1. `Ctrl+Shift+P` → "Chat: New Instructions File"
 2. Choose Workspace or User Profile scope
 3. Enter filename
 4. Add `applyTo` and/or `description` frontmatter
 5. Write instructions
 
-**Quick creation method:**
+#### Quick creation method
+
 Type `/instructions` in the Chat input to open the Configure Instructions menu.
 
 ---
@@ -616,7 +630,7 @@ Type `/instructions` in the Chat input to open the Configure Instructions menu.
 ### File Locations
 
 | Scope | Location |
-|-------|----------|
+| -------  | ----------  |
 | Workspace | `.github/agents/*.agent.md` |
 | User / Personal | VS Code profile folder `*.agent.md` |
 
@@ -648,7 +662,7 @@ The first available model in the array is used. Useful for environments where no
 ### Invocation Control
 
 | Setting | Default | Effect |
-|---------|---------|--------|
+| ---------  | ---------  | --------  |
 | `user-invocable: true` | Default | Agent appears in `@` picker; users can invoke it directly |
 | `user-invocable: false` | - | Hidden from picker; only callable as a subagent from another agent |
 | `disable-model-invocation: false` | Default | Other agents can delegate to this agent based on description matching |
@@ -656,10 +670,10 @@ The first available model in the array is used. Useful for environments where no
 
 ### All Tool Names
 
-**Built-in aliases:**
+#### Built-in aliases
 
 | Alias | What It Provides |
-|-------|-----------------|
+| -------  | -----------------  |
 | `read` | Read files in the local workspace |
 | `edit` | Edit files in the local workspace |
 | `search` | Search files and text in the workspace |
@@ -668,10 +682,10 @@ The first available model in the array is used. Useful for environments where no
 | `web` | Fetch URLs and search the web |
 | `todo` | Manage task lists |
 
-**Specific tools (reference by exact name):**
+#### Specific tools (reference by exact name)
 
 | Tool | What It Provides |
-|------|-----------------|
+| ------  | -----------------  |
 | `githubRepo` | GitHub API - search issues, PRs, code |
 | `fetch` | HTTP fetch - read external URLs |
 | `createFile` | Create new files in the workspace |
@@ -683,7 +697,7 @@ The first available model in the array is used. Useful for environments where no
 | `github/*` | All GitHub MCP tools (wildcard) |
 | `<server>/*` | All tools from a named MCP server |
 
-**Tool combinations by use case:**
+#### Tool combinations by use case
 
 ```yaml
 # Read-only research (safest)
@@ -733,10 +747,12 @@ When asked to [task]:
 ## Output Format
 
 ```
+
 ## [Section Header]
 
 [Describe the exact output structure here with placeholders]
-```
+
+```text
 
 ## Accessibility Requirements
 - Use heading level 2 for the document title, level 3 for sections
@@ -768,7 +784,7 @@ When asked to [task]:
 ### File Locations
 
 | Scope | Location |
-|-------|----------|
+| -------  | ----------  |
 | Workspace | `.github/prompts/*.prompt.md` |
 | User / Personal | VS Code profile folder `*.prompt.md` |
 
@@ -801,7 +817,7 @@ When both the prompt and the referenced agent define tools, VS Code uses this pr
 
 ### Input Parameters
 
-```
+```text
 ${input:parameterName:Prompt text shown to the user}
 ```
 
@@ -809,7 +825,7 @@ ${input:parameterName:Prompt text shown to the user}
 - The text after the second `:` is shown to the user as a placeholder or tooltip
 - Multiple parameters are supported in one prompt file
 
-```
+```text
 ${input:repo:Target repository - e.g. owner/repo or leave blank for current workspace}
 ${input:scope:Optional filter: label name, date range, or org:orgname}
 ```
@@ -870,7 +886,7 @@ A Skill is a folder - not a single file. The folder contains `SKILL.md` plus any
 
 ### Folder Structure
 
-```
+```text
 .github/skills/
   my-skill/
     SKILL.md              ← Required; name must match folder name
@@ -885,7 +901,7 @@ A Skill is a folder - not a single file. The folder contains `SKILL.md` plus any
 ### File Locations
 
 | Scope | Location |
-|-------|----------|
+| -------  | ----------  |
 | Workspace | `.github/skills/<name>/SKILL.md` |
 | Workspace (alternate) | `.agents/skills/<name>/SKILL.md` |
 | Workspace (Claude compat) | `.claude/skills/<name>/SKILL.md` |
@@ -908,7 +924,7 @@ disable-model-invocation: false       # Optional - prevent automatic loading by 
 ### Slash Command Behavior
 
 | `user-invocable` | `disable-model-invocation` | Result |
-|------------------|--------------------------|--------|
+| ------------------  | --------------------------  | --------  |
 | true (default) | false (default) | Appears as `/command` AND auto-loads |
 | false | false | Does NOT appear as `/command`; auto-loads only |
 | true | true | Appears as `/command`; does NOT auto-load |
@@ -965,7 +981,7 @@ Hooks execute shell commands at specific points in an agent's lifecycle. They ar
 ### File Locations
 
 | Scope | Location | Committed? |
-|-------|----------|-----------|
+| -------  | ----------  | -----------  |
 | Workspace (team-shared) | `.github/hooks/*.json` | Yes |
 | Workspace (local) | `.claude/settings.local.json` | No (gitignored) |
 | Workspace | `.claude/settings.json` | Yes |
@@ -976,7 +992,7 @@ Hooks from all locations are combined - workspace and user hooks do not override
 ### Hook Events
 
 | Event | When It Fires |
-|-------|--------------|
+| -------  | --------------  |
 | `SessionStart` | First prompt of a new agent session |
 | `UserPromptSubmit` | User submits any prompt |
 | `PreToolUse` | Immediately before any tool is invoked |
@@ -1013,7 +1029,7 @@ Hooks from all locations are combined - workspace and user hooks do not override
 ### Hook Command Fields
 
 | Field | Required | Description |
-|-------|----------|-------------|
+| -------  | ----------  | -------------  |
 | `type` | Yes | Must be `"command"` |
 | `command` | Yes | Shell command to run (default for all platforms) |
 | `windows` | No | Windows-specific override |
@@ -1035,7 +1051,7 @@ Hooks receive JSON on `stdin`. They can return JSON on `stdout`:
 }
 ```
 
-**`PreToolUse` permission decisions:**
+#### `PreToolUse` permission decisions
 
 ```json
 {
@@ -1049,7 +1065,8 @@ Hooks receive JSON on `stdin`. They can return JSON on `stdout`:
 
 Permission decisions: `"allow"` | `"ask"` (prompt user) | `"deny"` (block the tool call)
 
-**Exit codes:**
+#### Exit codes
+
 - `0` - success; agent continues
 - `2` - blocking error; agent stops
 - Other - non-blocking warning
@@ -1093,7 +1110,7 @@ I use NVDA with Chrome on Windows 11.
 ### `Preferred Output Format` Options
 
 | Value | What It Does |
-|-------|-------------|
+| -------  | -------------  |
 | `"concise"` | Bullet points and short summaries, minimal prose |
 | `"detailed"` | Full context and more explanation in every response |
 | `"screen-reader-optimized"` | Heading-heavy structure, no tables, explicit empty-state messages |
@@ -1102,11 +1119,11 @@ I use NVDA with Chrome on Windows 11.
 
 The `@daily-briefing` agent reads this to sort its output sections. Examples:
 
-```
+```text
 Accessibility issues first, then review requests assigned to me, then CI failures, then general activity.
 ```
 
-```
+```text
 Review requests first. CI failures second. Security alerts third. Everything else as a digest at the end.
 ```
 
@@ -1114,11 +1131,11 @@ Review requests first. CI failures second. Security alerts third. Everything els
 
 The `@pr-review` and `@issue-tracker` agents read this when drafting comments:
 
-```
+```text
 Direct but constructive. Always explain the "why" behind a suggestion. Assume good intent from authors.
 ```
 
-```
+```text
 Friendly and encouraging for first-time contributors.
 More direct and concise for established contributors.
 ```
@@ -1127,7 +1144,7 @@ More direct and concise for established contributors.
 
 Tells agents which screen reader and browser you use so they can tailor output and recommendations:
 
-```
+```text
 I use NVDA with Chrome on Windows 11.
 I use VoiceOver with Safari on macOS Sonoma.
 I use JAWS with Firefox on Windows 10.
@@ -1150,22 +1167,26 @@ This shows: which files were found, which were loaded, which have errors, and fr
 
 ### Common Issues
 
-**Agent not found when typing `@agent-name`:**
+#### Agent not found when typing `@agent-name`
+
 1. Verify `.github/agents/[name].agent.md` exists in your open workspace folder
 2. Check that the YAML frontmatter has no syntax errors (missing quotes, wrong indentation)
 3. `Ctrl+Shift+P` → "Reload Window"
 4. Check that the `name` field in the frontmatter matches what you are typing
 
-**Instructions not being applied:**
+#### Instructions not being applied
+
 1. For `.github/copilot-instructions.md`: file must be at workspace root in the `.github/` folder
 2. For `*.instructions.md`: check that `applyTo` glob matches the file you are editing, and that `chat.includeApplyingInstructions` is `true` in VS Code settings
 3. For `AGENTS.md`: check that `chat.useAgentsMdFile` is `true`
 4. Use Diagnostics view (above) to verify the file was found and loaded
 
-**Instructions file in wrong place:**
+#### Instructions file in wrong place
+
 - Add custom locations: `chat.instructionsFilesLocations` setting accepts an array of additional folder paths
 
-**Slash command not appearing:**
+#### Slash command not appearing
+
 1. Verify `.github/prompts/[name].prompt.md` exists
 2. `Ctrl+Shift+P` → "Reload Window"
 3. File must use `.prompt.md` extension (not just `.md`)
@@ -1175,7 +1196,7 @@ This shows: which files were found, which were loaded, which have errors, and fr
 ## Accessibility Agents Keyboard Shortcuts
 
 | Action | Shortcut |
-|--------|----------|
+| --------  | ----------  |
 | Open Copilot Chat | `Ctrl+Shift+I` |
 | Invoke an agent | Type `@agent-name` in Chat |
 | Use a slash command | Type `/command-name` in Chat |
@@ -1196,7 +1217,7 @@ For the broader ecosystem - the community plugin marketplace, MCP server integra
 ### Official accessibility.github.com Guides
 
 | Guide | URL |
-|-------|-----|
+| -------  | -----  |
 | Getting started with custom agents for accessibility | [accessibility.github.com/documentation/guide/getting-started-with-agents/](https://accessibility.github.com/documentation/guide/getting-started-with-agents/) |
 | Optimizing Copilot with custom instructions (accessibility) | [accessibility.github.com/documentation/guide/copilot-instructions/](https://accessibility.github.com/documentation/guide/copilot-instructions/) |
 | GitHub Copilot for VS Code screen reader guide | [accessibility.github.com/documentation/guide/github-copilot-vsc/](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) |

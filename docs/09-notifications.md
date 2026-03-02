@@ -1,4 +1,5 @@
 # Notifications
+>
 > **Listen to Episode 10:** [Notifications and Mentions](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Managing Your GitHub Notification Inbox
@@ -12,7 +13,7 @@
 GitHub sends you a notification when:
 
 | Event | You are notified if... |
-|-------|------------------------|
+| -------  | ------------------------  |
 | Someone @mentions you | `@your-username` appears in any issue, PR, or discussion |
 | A PR is assigned to you for review | You are added as a reviewer |
 | An issue or PR is assigned to you | You are assigned |
@@ -27,7 +28,7 @@ GitHub sends you a notification when:
 For each repository, you choose how many notifications to receive:
 
 | Level | What You Receive |
-|-------|-----------------|
+| -------  | -----------------  |
 | **Participating and @mentions** | Only notifications where you participated (commented, were assigned, @mentioned). Recommended for most repos. |
 | **All Activity** | Every issue opened, every comment, every PR. Only use this for your own repos or very active contribution. |
 | **Ignore** | No notifications from this repo at all. |
@@ -99,7 +100,7 @@ gh pr view 42 --repo owner/repo
 
 ### Page structure
 
-```
+```text
 [Filters sidebar on left]     ← Unread / Participating / @Mentions / Assigned / etc.
 [Notification list in center] ← Each notification is a row
 [Detail pane on right]        ← Preview the notification (can be disabled)
@@ -146,7 +147,7 @@ Components: **repo/org** | **thread title** | **event type** | **timestamp**
 These shortcuts work when a notification is focused in the inbox:
 
 | Shortcut | Action |
-|----------|--------|
+| ----------  | --------  |
 | `E` | Mark as done (archive from inbox) |
 | `Shift+I` | Mark as read without opening |
 | `Shift+U` | Mark as unread |
@@ -163,7 +164,7 @@ These shortcuts work when a notification is focused in the inbox:
 The left sidebar has quick filters. Use `Tab` or `K` to navigate to them:
 
 | Filter | Shows |
-|--------|-------|
+| --------  | -------  |
 | Inbox | All active notifications (default) |
 | Unread | Only unread notifications |
 | Saved | Notifications you saved with `S` |
@@ -211,6 +212,7 @@ Click the filter/search box at the top of the notification list and type a repos
 ### The "mark all as done" workflow
 
 After a busy day or coming back from time away, clear your inbox methodically:
+
 1. Open Notifications inbox
 2. Tab to "Mark all as done" button → Enter (clears everything at once)
 3. Then use the "Done" filter to retrieve any you want to revisit
@@ -252,6 +254,7 @@ If a thread generates too many notifications:
 ### Dealing with @mentions you didn't expect
 
 If you were @mentioned in an unfamiliar thread:
+
 1. Read the thread for context before responding
 2. If it seems like a mistake, a simple "I don't think this mention was meant for me - feel free to remove it!" is enough
 3. Unsubscribe after reading if you don't need to stay in the loop
@@ -265,14 +268,15 @@ Global notification preferences are at `https://github.com/settings/notification
 Key settings to review:
 
 | Setting | Recommendation |
-|---------|---------------|
+| ---------  | ---------------  |
 | **Email delivery** | Choose Participating and @mentions unless you prefer email for everything |
 | **GitHub Mobile** | Enable only if you use GitHub Mobile - mobile notifications can duplicate desktop ones |
 | **Watching** | "Participating and @mentions" unless you are an active maintainer |
 | **Organization alerts** | Enable for orgs where you have responsibilities |
 
 Navigate this settings page:
-```
+
+```text
 H → navigate to each settings section heading
 F or E → navigate form fields within each section
 Tab → move between options within a form group
@@ -287,7 +291,7 @@ New contributors often confuse these two. They appear next to each other on ever
 ### Starring a Repository
 
 | Feature | Description |
-|---|---|
+| ---  | ---  |
 | **What it does** | Bookmarks the repository to your Stars list at `github.com/stars` |
 | **Notifications** | **None.** Starring never sends you any notifications |
 | **Visibility** | Public - anyone can see what you've starred on your profile |
@@ -299,7 +303,7 @@ Starring is GitHub's equivalent of a bookmark + public endorsement. The star cou
 ### Watching a Repository
 
 | Feature | Description |
-|---|---|
+| ---  | ---  |
 | **What it does** | Subscribes you to notifications from that repository |
 | **Notifications** | Sends notifications based on your chosen level (see below) |
 | **Visibility** | Private - other users cannot see what you're watching |
@@ -310,8 +314,9 @@ Starring is GitHub's equivalent of a bookmark + public endorsement. The star cou
 
 When you comment on an issue or PR in a repository, GitHub **automatically subscribes you** to that thread - but not the whole repository. However, if you once click "Watch" on a busy repository (say, a popular open source project), you will receive a notification for every issue opened and every comment posted - potentially hundreds per day.
 
-**How to silence a repository you accidentally over-subscribed to:**
-```
+#### How to silence a repository you accidentally over-subscribed to
+
+```text
 Step 1: Navigate to the repository
 Step 2: B → Find "Unwatch" button → Enter
 Step 3: Select "Participating and @mentions"
@@ -323,7 +328,7 @@ This immediately reduces notifications from that repository to only threads you 
 ### Recommended Watching Strategy for This Workshop
 
 | Repository | Recommended Watch Level |
-|---|---|
+| ---  | ---  |
 | `community-access/accessibility-agents` | **Participating and @mentions** - you contribute there, you only need to hear back when someone replies to you |
 | Your own fork | **All Activity** - this is your fork; know everything |
 | Very busy popular repos | **Ignore** or **Participating** - do not watch for All Activity |
@@ -384,6 +389,7 @@ Go to [github.com/notifications](https://github.com/notifications) and practice:
 > **Manage your notification inbox manually before using any agent.** The signal-versus-noise judgment you develop - what to act on, what to watch, what to mute - is the same judgment the agent applies when prioritizing its output. Without that judgment, you cannot evaluate whether the agent's prioritization is correct or whether it surfaced the things that actually matter to you.
 >
 > Once you have mastered manual notification management:
+>
 > - **In VS Code** - `@daily-briefing morning briefing` delivers the same information as your notification inbox, organized by priority and actionability, with the ability to reply, close, and merge from inside Copilot Chat
 > - **In your repo** - Fork `accessibility-agents` and every collaborator on your project can run `@daily-briefing` against your shared repository; the whole team stays aligned from a single command with no inbox required
 > - **In the cloud** - GitHub Agentic Workflows can run on a schedule and post a team digest to a designated issue each morning, surfacing what needs attention before anyone opens their notifications

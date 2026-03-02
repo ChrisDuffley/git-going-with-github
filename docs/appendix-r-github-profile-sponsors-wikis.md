@@ -1,4 +1,5 @@
 # Appendix R: GitHub Profile, Sponsors, and Wikis
+>
 > **Listen to Episode 35:** [Profile, Sponsors, and Wikis](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Building Your Community Presence on GitHub
@@ -23,7 +24,7 @@ GitHub has a hidden feature: if you create a repository named exactly **your-use
 4. Initialize with a README
 5. Edit the README with whatever you want to show on your profile
 
-**What to include:**
+#### What to include
 
 - **Introduction:** Who you are, what you work on
 - **Current focus:** What projects or technologies you're learning
@@ -31,7 +32,7 @@ GitHub has a hidden feature: if you create a repository named exactly **your-use
 - **How to reach you:** Email, LinkedIn, personal site
 - **Fun facts:** Hobbies, interests (optional-keeps it human)
 
-**Example profile README:**
+#### Example profile README
 
 ```markdown
 # Hi, I'm Jane Smith
@@ -76,19 +77,19 @@ I've been using screen readers for 8 years and believe accessible design is bett
 
 ### Other Profile Customizations
 
-**Pinned repositories (up to 6):**
+#### Pinned repositories (up to 6)
 
 - Highlight your best work on your profile
 - Navigate to your profile → Select "Customize your pins"
 - Choose which repos appear first
 
-**Contribution graph:**
+#### Contribution graph
 
 - Shows your GitHub activity over the past year
 - Green squares indicate days with commits, PRs, issues, etc.
 - Cannot be customized but reflects consistent contribution
 
-**Status:**
+#### Status
 
 - Set a temporary status message (e.g., "On vacation until March 15")
 - Navigate to your profile → Select the smile icon → Set status
@@ -101,7 +102,8 @@ I've been using screen readers for 8 years and believe accessible design is bett
 
 GitHub Sponsors lets you financially support developers and projects you depend on. It's like Patreon for open source.
 
-**How it works:**
+#### How it works
+
 - Developers/projects create a Sponsors profile
 - You choose a monthly sponsorship tier ($5, $10, $25/month, etc.)
 - Your payment goes directly to the developer (GitHub takes no fees)
@@ -120,7 +122,8 @@ GitHub Sponsors lets you financially support developers and projects you depend 
 4. Select payment method (credit card or PayPal)
 5. GitHub sends a receipt; your sponsorship appears on your profile (optionally publicly)
 
-**Screen reader navigation:**
+#### Screen reader navigation
+
 - The Sponsor button appears near the profile photo or repo name
 - Press `B` to cycle through buttons on the page until you hear "Sponsor"
 
@@ -144,12 +147,14 @@ Many accessibility advocates successfully use Sponsors to fund their work improv
 
 Every repository can have a wiki - a space for documentation separate from the code. It's lightweight and Markdown-based.
 
-**When to use a wiki:**
+#### When to use a wiki
+
 - Multi-page documentation (tutorials, guides, FAQs)
 - Community-editable docs (wikis can be editable by anyone)
 - Knowledge that doesn't belong in README (too long, too specific)
 
-**When NOT to use a wiki:**
+#### When NOT to use a wiki
+
 - Your project already uses GitHub Pages or external docs
 - Documentation needs to be version-controlled with code (wikis are separate Git repos)
 - You want full control (wikis are less customizable than Pages)
