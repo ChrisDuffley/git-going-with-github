@@ -117,14 +117,15 @@ GitHub also sends a **separate** email verification link after account creation.
 
 ### Enable two-factor authentication (2FA): detailed guidance and workshop policy
 
-Two-factor authentication (2FA) adds a second verification step each time you sign in, protecting your account if your password is compromised. For this workshop we strongly recommend enabling 2FA. See the **Workshop policy** below for allowed alternatives if you cannot enable 2FA before the event.
+Two-factor authentication (2FA) adds a second verification step each time you sign in, protecting your account if your password is compromised. For this workshop, 2FA is required. We recommend using the **GitHub Mobile app** for the smoothest experience - see the options below.
 
 Quick steps to enable 2FA
 
 1. Open the [GitHub security settings page](https://github.com/settings/security) while signed in.
 2. Under **Two-factor authentication**, choose **Enable** and follow the prompts.
 3. Choose one of the second-factor methods (recommended order):
-    - **Authenticator app** (recommended): Microsoft Authenticator, Google Authenticator, Authy - generates time-based 6-digit codes.
+    - **GitHub Mobile app** (recommended for this workshop): Install the free [GitHub Mobile](https://github.com/mobile) app on your phone. Once linked to your account, GitHub sends a push notification to your phone each time you sign in. You simply tap **Approve** - no codes to type. The app is available for iOS and Android and supports VoiceOver and TalkBack.
+    - **Authenticator app**: Microsoft Authenticator, Google Authenticator, Authy - generates time-based 6-digit codes.
     - **Security key / passkey** (most secure): hardware security keys (YubiKey, etc.) or platform passkeys (biometric device credentials).
     - **SMS / text message** (least preferred): can be used if other options are unavailable.
 
@@ -145,47 +146,26 @@ Recovery and backup
 - After enabling 2FA, GitHub will display **recovery (single-use) codes**. Immediately copy, download, or securely store these codes (password manager or physically secure location). They are the only fallback if you lose your second-factor device.
 - Consider registering more than one second-factor method (e.g., authenticator app + a hardware key) to avoid account lockout.
 
-Using Git with 2FA: HTTPS vs SSH, and Personal Access Tokens (PATs)
+Authenticating Git with GitHub: browser-based sign-in (OAuth)
 
-When 2FA is enabled, your GitHub account password cannot be used for HTTPS Git operations. You must use one of these alternatives to push/pull to repositories:
+When you use Git inside VS Code or GitHub Desktop, you do not need to manage passwords, tokens, or SSH keys manually. These tools use **browser-based OAuth sign-in** - the same "Sign in with GitHub" flow you use on any website:
 
-- SSH keys (recommended for git push/pull):
-   1. Generate an SSH key on your machine (replace email):
+1. The first time you push or pull code, VS Code (or GitHub Desktop) opens your default web browser to a GitHub authorization page.
+2. Sign in to GitHub in the browser (including your 2FA step - a push notification if you use GitHub Mobile, or a code from your authenticator app).
+3. Approve the authorization request.
+4. Switch back to VS Code. Your credentials are securely stored by your operating system's credential manager, so you will not be prompted again on this machine.
 
-       ```bash
-       ssh-keygen -t ed25519 -C "your-email@example.com"
-       # or for older systems: ssh-keygen -t rsa -b 4096 -C "your-email@example.com"
-       ```
+That is it. No tokens to generate, no keys to create, no strings to paste. If you are using GitHub Mobile for 2FA, the entire flow is: type your password, tap **Approve** on your phone, and you are authenticated.
 
-   2. Copy the public key (`~/.ssh/id_ed25519.pub`) and add it at the [GitHub SSH keys page](https://github.com/settings/keys) → **New SSH key**.
-   3. Test the connection: `ssh -T git@github.com` (first-time prompts about known hosts are expected).
+> **Screen reader note:** The authorization page opens in your default browser. After approving, the browser shows a message saying you can return to VS Code. Use `Alt+Tab` (Windows) or `Cmd+Tab` (macOS) to switch back.
 
-  - SSH continues to work regardless of whether 2FA is enabled.
+> **Tip - GitHub Mobile for push notification 2FA:** If you have not already, install the free [GitHub Mobile](https://github.com/mobile) app (iOS and Android). Once linked to your account, every 2FA prompt becomes a single tap on a push notification instead of typing a 6-digit code. The app supports VoiceOver (iOS) and TalkBack (Android).
 
-- Personal Access Token (PAT) for HTTPS Git or tools that ask for a password:
-   1. Create a PAT at the [GitHub personal access tokens page](https://github.com/settings/tokens) → **Generate new token**.
-   2. For normal repo push/pull access, grant **repo** scope (check only what you need). If you need workflow or packages access, add those scopes explicitly.
-   3. Use the PAT instead of your password when prompted by Git over HTTPS. In GUI tools (VS Code, GitHub Desktop), paste the PAT where the password is requested or configure the credential helper to store it.
+Workshop policy
 
-  - Short-lived tokens and fine-grained tokens: GitHub supports fine-grained tokens which are preferred for scoped access. If your tooling supports them, use fine-grained tokens with only the required repository permissions.
+For this workshop, participants need a GitHub account with 2FA enabled. The browser-based sign-in described above handles all Git authentication automatically - no additional setup is required beyond having a working GitHub account.
 
-Tool-specific tips
-
-- VS Code (Git): When the extension prompts for credentials, choose the web-based sign-in or paste a PAT when prompted for a password. The GitHub authentication extension will walk you through a browser sign-in that supports 2FA.
-- GitHub Desktop: use web authentication which supports 2FA, or provide a PAT if requested.
-
-Workshop policy (copy-ready)
-
-For this workshop we strongly recommend participants enable 2FA. If you cannot enable 2FA before the event, you may still participate if you complete one of the following before Day 1:
-
-- Add a verified SSH key to your GitHub account and use SSH for Git operations, or
-- Create a Personal Access Token (PAT) with the `repo` scope and use it for HTTPS Git authentication.
-
-If none of these options are possible, contact the workshop organizers at the email or issue link in this guide so we can make accommodations. We cannot grant organization-level repository access to accounts that lack any second-factor or equivalent (SSH/PAT) protections without explicit organizer approval.
-
-Copy-ready paragraph for `CONTRIBUTING.md` / registration forms
-
-> Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
+If you run into any authentication issues before the workshop, contact the workshop organizers at the email or issue link in this guide so we can help.
 
 ---
 
