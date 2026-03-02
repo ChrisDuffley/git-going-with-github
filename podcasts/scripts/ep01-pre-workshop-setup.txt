@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode one, titled Pre-Workshop Setup. I am your host, Alex, and I am here with my co-host, Jamie. In this audio series, we are going to guide you through learning GitHub, version control, and open source collaboration, specifically designed for developers who use screen readers or magnification.
+Welcome to Gitt Going with GitHub. This is episode one, titled Pre-Workshop Setup. I am your host, Alex, and I am here with my co-host, Jamie. In this audio series, we are going to guide you through learning GitHub, version control, and open source collaboration, specifically designed for developers who use screen readers or magnification.
 
 [JAMIE]
 Hi everyone. I am so excited to be here. I actually took this exact workshop about two years ago. I remember exactly what it feels like to hear all these new terms thrown around and feel completely overwhelmed. So I am here to ask Alex all the questions that are probably running through your head right now.
@@ -63,7 +63,7 @@ It is. Two-factor authentication means that to sign into your account, you need 
 So how do we set this up accessibly?
 
 [ALEX]
-You will navigate to your account settings, move to the Password and authentication section, and activate the Enable two-factor authentication button. GitHub gives you a few options. The most common is an authenticator app, like Microsoft Authenticator or Google Authenticator. 
+You will navigate to your account settings, move to the Password and authentication section, and activate the Enable two-factor authentication button. GitHub gives you a few options. Our top recommendation for this workshop is the GitHub Mobile app, which we will talk about in a moment. You can also use an authenticator app, like Microsoft Authenticator or Google Authenticator. 
 
 [JAMIE]
 For screen reader users, scanning a visual QR code on the screen with a phone camera can be really frustrating. 
@@ -75,31 +75,31 @@ Yes it can. And that is why you should navigate past the QR code graphic and act
 Okay, so I have two F A turned on. I am secure. But wait, if I am using Git on my laptop terminal to send code up to GitHub, how does my terminal know my second factor code?
 
 [ALEX]
-That is a brilliant question. When you have two F A enabled, you can no longer use your standard GitHub password on the command line. Git will reject it. Instead, you need to use either a Personal Access Token, or an S S H key. 
+Here is the good news. If you are using VS Code or GitHub Desktop, you do not have to worry about that at all. These tools use browser-based sign-in, sometimes called OAuth. The first time you push code, VS Code opens your web browser to a familiar GitHub sign-in page.
 
 [JAMIE]
-Okay, define those for me. 
+So it is just the normal sign-in flow I already know?
 
 [ALEX]
-Let us start with a Personal Access Token, often called a PAT. A PAT is a long, randomly generated string of characters that GitHub creates for you. You use it exactly like a password when Git asks for one. But unlike your main password, a PAT can be scoped. 
+Exactly. You type your password, complete your two F A step, and approve the connection. Then you switch back to VS Code and you are done. Your credentials are stored securely by your operating system, so you will not be asked again on that machine. No tokens, no keys, no long strings to copy and paste.
 
 [JAMIE]
-Scaped meaning limited?
+That is so much simpler than I expected. And what about the two F A step itself? You mentioned typing a code from an authenticator app. Is there an easier way?
 
 [ALEX]
-Exactly. Think of your main GitHub password like the master key to your house. It opens every door. A Personal Access Token is like a valet key you give to a parking attendant. It only starts the ignition, but it will not unlock the glove box or the trunk. You can create a PAT that only has permission to read and write code repositories, but cannot delete your account or change your billing settings. And you can set it to automatically expire after thirty days.
+Absolutely. This is one of my favorite tips. Install the GitHub Mobile app on your phone. It is free and available for both iOS and Android. Once you link it to your GitHub account, every time you sign in, instead of opening your authenticator app and typing a six-digit code, you just get a push notification on your phone. You tap Approve, and you are in. 
 
 [JAMIE]
-That is really smart. And what about the other option you mentioned, S S H keys? 
+A push notification? That is it? No more fumbling for codes?
 
 [ALEX]
-S S H stands for Secure Shell. An S S H key is actually a pair of files generated on your computer. One is private, which stays securely on your hard drive, and one is public, which you upload to GitHub. Once they are linked, your computer and GitHub recognize each other automatically. No passwords or tokens to type ever again. 
+That is it. One tap. And the app is fully accessible. It supports VoiceOver on iOS and TalkBack on Android. Think of it like a doorbell camera for your GitHub account. When someone tries to sign in, your phone buzzes and asks, is this you? You tap yes, and the door opens.
 
 [JAMIE]
-I use S S H keys now and I love them, but I will say, generating them in the terminal was a bit intimidating on my first day. 
+I love that analogy. So just to recap the authentication story. You sign into GitHub through your browser when VS Code asks you to. You complete your two F A, ideally with a single tap on the GitHub Mobile app. And then VS Code remembers you. That is the entire process.
 
 [ALEX]
-Which is exactly why, for this workshop, we recommend starting with a Personal Access Token. It is entirely web-based, highly accessible to set up in the browser, and you just paste it into your credential manager once. 
+That is the entire process. No extra setup needed for this workshop beyond having a GitHub account with two F A enabled. 
 
 [PAUSE]
 
@@ -238,7 +238,7 @@ It is incredibly handy for quick typo fixes or documentation updates. But for he
 [PAUSE]
 
 [ALEX]
-So, let us review our verification checklist before Day One. First, you have created your GitHub account, verified your email, and turned on Two-Factor Authentication. 
+So, let us review our verification checklist before Day One. First, you have created your GitHub account, verified your email, and turned on Two-Factor Authentication. We recommend installing the GitHub Mobile app for the easiest two F A experience. 
 
 [JAMIE]
 Second, you went into GitHub's Accessibility Settings, turned off the extremely noisy Hovercards, and turned on Link underlines. 
@@ -268,4 +268,4 @@ Perfectly summarized. That brings us to the end of Episode One. Now that your to
 I cannot wait. See you all in the next episode!
 
 [ALEX]
-Thanks for listening to Git Going with GitHub. Keep practicing, and we will see you next time.
+Thanks for listening to Gitt Going with GitHub. Keep practicing, and we will see you next time.
