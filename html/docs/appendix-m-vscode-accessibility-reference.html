@@ -42,8 +42,8 @@
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-complete-accessibility-settings-reference">Complete Accessibility Settings Reference</a></li>
-<li><a href="#2-audio-cues--all-options">Audio Cues - All Options</a></li>
-<li><a href="#3-accessible-diff-viewer--complete-guide">Accessible Diff Viewer - Complete Guide</a></li>
+<li><a href="#2-audio-cues---all-options">Audio Cues - All Options</a></li>
+<li><a href="#3-accessible-diff-viewer---complete-guide">Accessible Diff Viewer - Complete Guide</a></li>
 <li><a href="#4-screen-reader-specific-configurations">Screen Reader-Specific Configurations</a></li>
 <li><a href="#5-complete-keyboard-shortcuts">Complete Keyboard Shortcuts</a></li>
 <li><a href="#6-accessibility-signals-types-and-customization">Accessibility Signals Types and Customization</a></li>
@@ -483,7 +483,7 @@
   <span class="hljs-attr">&quot;accessibility.signals.taskCompleted.sound&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;file:///C:/Users/YourName/sounds/success.wav&quot;</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">&quot;accessibility.signals.diffLineInserted.sound&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;file:///C:/Users/YourName/sounds/added.wav&quot;</span>
 <span class="hljs-punctuation">}</span></code></pre>
-<p><strong>Sound file requirements:</strong></p>
+<h4>Sound file requirements</h4>
 <ul>
 <li>Format: WAV, MP3, or OGG</li>
 <li>Duration: Keep under 2 seconds</li>
@@ -522,18 +522,18 @@
 </tr>
 </tbody></table>
 <h3>Diff Viewer Structure</h3>
-<p><strong>Top-level structure:</strong></p>
-<pre><code class="hljs">Accessible Diff Viewer
-├── Header (<span class="hljs-built_in">file</span> path, change summary)
-├── Hunk <span class="hljs-number">1</span> <span class="hljs-keyword">of</span> N
-│   ├── Hunk location (<span class="hljs-built_in">line</span> range)
-│   ├── Unchanged <span class="hljs-keyword">lines</span> (context)
-│   ├── Modified/Added/Removed <span class="hljs-keyword">lines</span> (<span class="hljs-keyword">with</span> prefix)
-│   └── More unchanged <span class="hljs-keyword">lines</span> (context)
-├── Hunk <span class="hljs-number">2</span> <span class="hljs-keyword">of</span> N
+<h4>Top-level structure</h4>
+<pre><code class="hljs language-text">Accessible Diff Viewer
+├── Header (file path, change summary)
+├── Hunk 1 of N
+│   ├── Hunk location (line range)
+│   ├── Unchanged lines (context)
+│   ├── Modified/Added/Removed lines (with prefix)
+│   └── More unchanged lines (context)
+├── Hunk 2 of N
 │   └── ...
 └── Footer (totals: X additions, Y deletions)</code></pre>
-<p><strong>Line prefixes:</strong></p>
+<h4>Line prefixes</h4>
 <table>
 <thead>
 <tr>
@@ -558,18 +558,18 @@
 <td>&quot;Removed: [line content]&quot; or &quot;Line removed: [content]&quot;</td>
 </tr>
 <tr>
-<td>`</td>
-<td>~`</td>
+<td><code>|~</code></td>
 <td>Modified line (original)</td>
+<td>&quot;Modified from: [old content]&quot;</td>
 </tr>
 <tr>
-<td>`</td>
-<td>+`</td>
+<td><code>|+</code></td>
 <td>Modified line (new version)</td>
+<td>&quot;Modified to: [new content]&quot;</td>
 </tr>
 </tbody></table>
 <h3>Navigating Hunks</h3>
-<p><strong>Hunk = a block of related changes</strong></p>
+<h4>Hunk = a block of related changes</h4>
 <table>
 <thead>
 <tr>
@@ -595,7 +595,7 @@
 </tr>
 </tbody></table>
 <h3>Screen Reader-Specific Navigation</h3>
-<p><strong>NVDA/JAWS:</strong></p>
+<h4>NVDA/JAWS</h4>
 <ol>
 <li>Open diff: <code>Enter</code> on file in Source Control, or <code>F7</code> in an open diff</li>
 <li><code>Alt+F2</code> to open Accessible Diff Viewer</li>
@@ -603,7 +603,7 @@
 <li>Use <code>H</code> key to jump between hunks (each hunk has a heading)</li>
 <li><code>Escape</code> to close and return to editor</li>
 </ol>
-<p><strong>VoiceOver:</strong></p>
+<h4>VoiceOver</h4>
 <ol>
 <li><code>VO+Arrow</code> to navigate to diff file → <code>VO+Space</code> to open</li>
 <li><code>Option+F2</code> for Accessible Diff Viewer</li>
@@ -613,30 +613,30 @@
 </ol>
 <h3>Understanding Context Lines</h3>
 <p>The diff shows 3 unchanged lines before and after each change for context. These are announced as &quot;Unchanged: [content]&quot;.</p>
-<p><strong>Example:</strong></p>
-<pre><code class="hljs">Hunk <span class="hljs-number">1</span> of <span class="hljs-number">3</span> <span class="hljs-operator">-</span> lines <span class="hljs-number">4</span>2-<span class="hljs-number">48</span>
+<h4>Example</h4>
+<pre><code class="hljs language-text">Hunk 1 of 3 - lines 42-48
 
-  <span class="hljs-params">Unchanged:</span> <span class="hljs-comment">## Screen Reader Setup</span>
-  <span class="hljs-params">Unchanged:</span>
-<span class="hljs-operator">-</span> <span class="hljs-params">Removed:</span> This guide covers NVDA only.
-<span class="hljs-operator">+</span> <span class="hljs-params">Added:</span> This guide covers NVDA, JAWS, and VoiceOver.
-  <span class="hljs-params">Unchanged:</span>
-  <span class="hljs-params">Unchanged:</span> <span class="hljs-comment">### Installing NVDA</span></code></pre>
+  Unchanged: ## Screen Reader Setup
+  Unchanged:
+- Removed: This guide covers NVDA only.
++ Added: This guide covers NVDA, JAWS, and VoiceOver.
+  Unchanged:
+  Unchanged: ### Installing NVDA</code></pre>
 <p>The unchanged lines help you understand where in the file the change occurred.</p>
 <h3>Inline Diff View vs Side-by-Side</h3>
-<p><strong>Inline view (recommended for screen readers):</strong></p>
+<h4>Inline view (recommended for screen readers)</h4>
 <ul>
 <li>All changes in a single editor</li>
 <li>Removed lines followed by added lines</li>
 <li>Easier to navigate with screen reader reading commands</li>
 </ul>
-<p><strong>Side-by-side view (default, visual):</strong></p>
+<h4>Side-by-side view (default, visual)</h4>
 <ul>
 <li>Left panel: original file</li>
 <li>Right panel: modified file</li>
 <li>Requires navigating between panels</li>
 </ul>
-<p><strong>To switch to inline view:</strong></p>
+<h4>To switch to inline view</h4>
 <ol>
 <li>Open Settings: <code>Ctrl+,</code></li>
 <li>Search: &quot;diffEditor.renderSideBySide&quot;</li>
@@ -645,7 +645,7 @@
 <hr>
 <h2>4. Screen Reader-Specific Configurations</h2>
 <h3>NVDA Configuration for VS Code</h3>
-<p><strong>Recommended NVDA settings:</strong></p>
+<h4>Recommended NVDA settings</h4>
 <ol>
 <li><p><strong>Browse Mode settings:</strong></p>
 <ul>
@@ -674,12 +674,12 @@
 </ul>
 </li>
 </ol>
-<p><strong>NVDA add-ons for VS Code:</strong></p>
+<h4>NVDA add-ons for VS Code</h4>
 <ul>
 <li><strong>Focus Highlight</strong> - shows focus location visually (helpful for sighted trainers)</li>
 <li><strong>IndentNav</strong> - navigate by indentation level (useful for Python, YAML)</li>
 </ul>
-<p><strong>VS Code-specific NVDA commands:</strong></p>
+<h4>VS Code-specific NVDA commands</h4>
 <table>
 <thead>
 <tr>
@@ -709,7 +709,7 @@
 </tr>
 </tbody></table>
 <h3>JAWS Configuration for VS Code</h3>
-<p><strong>Recommended JAWS settings:</strong></p>
+<h4>Recommended JAWS settings</h4>
 <ol>
 <li><p><strong>Settings Center → HTML/PDF/Accessibility:</strong></p>
 <ul>
@@ -730,9 +730,9 @@
 </ul>
 </li>
 </ol>
-<p><strong>JAWS scripts for VS Code:</strong></p>
+<h4>JAWS scripts for VS Code</h4>
 <p>Custom JAWS scripts exist for VS Code. Check: <a href="https://github.com/search?q=jaws+vscode+scripts">jaws-vscode-scripts (GitHub)</a> for community-maintained scripts.</p>
-<p><strong>VS Code-specific JAWS commands:</strong></p>
+<h4>VS Code-specific JAWS commands</h4>
 <table>
 <thead>
 <tr>
@@ -766,7 +766,7 @@
 </tr>
 </tbody></table>
 <h3>VoiceOver Configuration for VS Code (macOS)</h3>
-<p><strong>Recommended VoiceOver Utility settings:</strong></p>
+<h4>Recommended VoiceOver Utility settings</h4>
 <ol>
 <li><p><strong>Verbosity → Text:</strong></p>
 <ul>
@@ -794,7 +794,7 @@
 </ul>
 </li>
 </ol>
-<p><strong>VS Code-specific VoiceOver commands:</strong></p>
+<h4>VS Code-specific VoiceOver commands</h4>
 <table>
 <thead>
 <tr>
@@ -835,7 +835,7 @@
 <td><code>Left/Right Arrow</code>, then <code>Up/Down Arrow</code></td>
 </tr>
 </tbody></table>
-<p><strong>Quick Nav navigation (when enabled):</strong></p>
+<h4>Quick Nav navigation (when enabled)</h4>
 <table>
 <thead>
 <tr>
@@ -1632,7 +1632,7 @@
 <hr>
 <h2>7. Settings.json Configuration Examples</h2>
 <h3>Minimal Screen Reader Profile</h3>
-<p><strong>For users who prefer minimal announcements and use Accessible View manually:</strong></p>
+<h4>For users who prefer minimal announcements and use Accessible View manually</h4>
 <pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">&quot;editor.accessibilitySupport&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;on&quot;</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">&quot;editor.minimap.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
@@ -1648,7 +1648,7 @@
   <span class="hljs-attr">&quot;accessibility.signals.taskFailed&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;on&quot;</span>
 <span class="hljs-punctuation">}</span></code></pre>
 <h3>Maximum Feedback Profile</h3>
-<p><strong>For users who want all audio and verbal announcements:</strong></p>
+<h4>For users who want all audio and verbal announcements</h4>
 <pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">&quot;editor.accessibilitySupport&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;on&quot;</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">&quot;editor.minimap.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
@@ -1676,7 +1676,7 @@
   <span class="hljs-attr">&quot;terminal.integrated.enableBell&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span>
 <span class="hljs-punctuation">}</span></code></pre>
 <h3>Copilot-Optimized Profile</h3>
-<p><strong>For users working heavily with GitHub Copilot:</strong></p>
+<h4>For users working heavily with GitHub Copilot</h4>
 <pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">&quot;editor.accessibilitySupport&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;on&quot;</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">&quot;editor.minimap.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
@@ -1696,7 +1696,7 @@
 <span class="hljs-punctuation">}</span></code></pre>
 <p><strong>Note:</strong> The <code>github.copilot.enable</code> object controls which file types get Copilot suggestions.</p>
 <h3>Git/Diff-Optimized Profile</h3>
-<p><strong>For users doing heavy PR review and diff work:</strong></p>
+<h4>For users doing heavy PR review and diff work</h4>
 <pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">&quot;editor.accessibilitySupport&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;on&quot;</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">&quot;diffEditor.renderSideBySide&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
@@ -1711,7 +1711,7 @@
   <span class="hljs-attr">&quot;scm.diffDecorationsGutterWidth&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">2</span>
 <span class="hljs-punctuation">}</span></code></pre>
 <h3>Performance-Optimized Profile</h3>
-<p><strong>For users on slower machines or with large repositories:</strong></p>
+<h4>For users on slower machines or with large repositories</h4>
 <pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">&quot;editor.accessibilitySupport&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;on&quot;</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">&quot;editor.minimap.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>
@@ -1739,7 +1739,7 @@
 <span class="hljs-punctuation">}</span></code></pre>
 <hr>
 <h2>Quick Copy: Complete Recommended Settings</h2>
-<p><strong>Paste this into your <code>settings.json</code> for a balanced screen reader profile:</strong></p>
+<h3>Paste this into your <code>settings.json</code> for a balanced screen reader profile</h3>
 <pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
   <span class="hljs-attr">&quot;editor.accessibilitySupport&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;on&quot;</span><span class="hljs-punctuation">,</span>
   <span class="hljs-attr">&quot;editor.minimap.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">false</span></span><span class="hljs-punctuation">,</span>

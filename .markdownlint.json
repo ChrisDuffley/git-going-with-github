@@ -1,0 +1,53 @@
+{
+  "MD013": {
+    "line_length": 500,
+    "tables": false,
+    "code_blocks": false,
+    "headings": false
+  },
+  "MD060": false,
+  "MD033": {
+    "allowed_elements": [
+      "details",
+      "summary",
+      "kbd",
+      "br",
+      "sub",
+      "sup",
+      "img",
+      "a",
+      "p",
+      "div",
+      "span",
+      "strong",
+      "em",
+      "blockquote",
+      "h1",
+      "h2",
+      "h3",
+      "h4",
+      "h5",
+      "h6",
+      "ul",
+      "ol",
+      "li",
+      "table",
+      "thead",
+      "tbody",
+      "tr",
+      "th",
+      "td",
+      "dl",
+      "dt",
+      "dd",
+      "hr",
+      "code",
+      "pre",
+      "audio",
+      "source"
+    ]
+  },
+  "MD024": {
+    "siblings_only": true
+  }
+}

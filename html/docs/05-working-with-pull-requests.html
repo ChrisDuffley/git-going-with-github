@@ -43,7 +43,7 @@
 <li>If listed but <strong>not Pressed</strong> (or <strong>&quot;Enable&quot;</strong>) - activate the toggle to enable it</li>
 <li>If not listed at all - the feature has graduated to the standard interface; it is active automatically</li>
 </ul>
-<p>Full step-by-step instructions with per-screen-reader commands are in <a href="00-pre-workshop-setup.html#step-4-check-github-feature-preview-settings">Pre-Workshop Setup, Step 4</a>.</p>
+<p>Full step-by-step instructions with per-screen-reader commands are in <a href="00-pre-workshop-setup.html#step-4---check-github-feature-preview-settings">Pre-Workshop Setup, Step 4</a>.</p>
 <p><strong>Browse vs Focus Mode (NVDA):</strong> Use <strong>Browse Mode</strong> (the default) for reading PR conversations, navigating headings, and reviewing diffs. Switch to <strong>Focus Mode</strong> (<code>NVDA+Space</code>) only when you need to type in comment boxes or search fields. Switch back to Browse Mode to resume navigation. Maximize your browser window for consistent landmark layout.</p>
 </blockquote>
 <hr>
@@ -93,7 +93,7 @@
 </ol>
 </details>
 
-<h3>From a PR notification:</h3>
+<h3>From a PR notification</h3>
 <p>If you received a notification about a PR, follow the notification link directly to the PR page.</p>
 <details>
 <summary>GitHub CLI (gh) alternative</summary>
@@ -129,31 +129,31 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 <hr>
 <h2>Anatomy of a Pull Request Page</h2>
 <p>A PR page has three main tabs:</p>
-<pre><code class="hljs">[PR title - h1]
-[State badge: <span class="hljs-keyword">Open</span> / Merged / Closed / Draft]
-[Author, base ← compare, <span class="hljs-type">timestamp</span>]
+<pre><code class="hljs language-text">[PR title - h1]
+[State badge: Open / Merged / Closed / Draft]
+[Author, base ← compare, timestamp]
 
 [ Conversation ] [ Commits ] [ Files changed ]
                                 ↑ tab bar landmark
 
 ─── Conversation Tab ────────────────────────────────────────
-[PR description - authored <span class="hljs-keyword">by</span> opener]
-[Status checks <span class="hljs-keyword">summary</span>]
+[PR description - authored by opener]
+[Status checks summary]
 [Activity / review thread]
-  [Review <span class="hljs-keyword">comment</span> - h3]
-  [<span class="hljs-type">Line</span> comments - nested]
-[Merge controls (<span class="hljs-keyword">for</span> maintainers)]
-[<span class="hljs-keyword">Comment</span> <span class="hljs-type">box</span>]
+  [Review comment - h3]
+  [Line comments - nested]
+[Merge controls (for maintainers)]
+[Comment box]
 
 ─── Commits Tab ─────────────────────────────────────────────
-[List <span class="hljs-keyword">of</span> commits, grouped <span class="hljs-keyword">by</span> <span class="hljs-type">date</span> - h3 <span class="hljs-keyword">for</span> dates]
-[<span class="hljs-keyword">Each</span> <span class="hljs-keyword">commit</span> <span class="hljs-keyword">as</span> a list item <span class="hljs-keyword">with</span> SHA, message, author]
+[List of commits, grouped by date - h3 for dates]
+[Each commit as a list item with SHA, message, author]
 
 ─── Files Changed Tab ────────────────────────────────────────
-[File <span class="hljs-keyword">filter</span> <span class="hljs-keyword">search</span>]
+[File filter search]
 [File tree (left panel)]
-[Diff <span class="hljs-keyword">for</span> <span class="hljs-keyword">each</span> file - <span class="hljs-keyword">each</span> file <span class="hljs-keyword">is</span> a heading]
-[<span class="hljs-type">Line</span>-<span class="hljs-keyword">level</span> <span class="hljs-keyword">comment</span> threads <span class="hljs-keyword">within</span> diffs]</code></pre>
+[Diff for each file - each file is a heading]
+[Line-level comment threads within diffs]</code></pre>
 <hr>
 <h2>Navigating the PR Tab Bar</h2>
 <p>The Conversation, Commits, and Files changed tabs are in a “Pull request navigation tabs” landmark.</p>
@@ -233,17 +233,17 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 <li>Then any replies to that comment</li>
 </ul>
 <p>To reply to a review comment:</p>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Navigate <span class="hljs-keyword">to</span> the <span class="hljs-built_in">comment</span> (<span class="hljs-number">3</span>)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Reply…&quot;</span> link/button
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: The reply <span class="hljs-built_in">text</span> area appears - Focus Mode → <span class="hljs-built_in">type</span> your reply
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Ctrl+Enter <span class="hljs-keyword">to</span> submit</code></pre>
+<pre><code class="hljs language-text">Step 1: Navigate to the comment (3)
+Step 2: Tab to &quot;Reply…&quot; link/button
+Step 3: The reply text area appears - Focus Mode → type your reply
+Step 4: Ctrl+Enter to submit</code></pre>
 <hr>
 <h2>Reading the Commits Tab</h2>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Navigate <span class="hljs-keyword">to</span> Commits tab (D → PR tabs → Enter)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: <span class="hljs-number">3</span> <span class="hljs-keyword">to</span> navigate <span class="hljs-type">date</span> <span class="hljs-keyword">group</span> headings (<span class="hljs-string">&quot;Commits on April 20&quot;</span>)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: I <span class="hljs-keyword">to</span> navigate individual commits within a <span class="hljs-type">date</span> <span class="hljs-keyword">group</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: <span class="hljs-keyword">Each</span> commit: SHA link, message, author, [Verified] badge <span class="hljs-keyword">if</span> signed
-<span class="hljs-keyword">Step</span> <span class="hljs-number">5</span>: Enter <span class="hljs-keyword">on</span> a commit <span class="hljs-keyword">to</span> open its diff</code></pre>
+<pre><code class="hljs language-text">Step 1: Navigate to Commits tab (D → PR tabs → Enter)
+Step 2: 3 to navigate date group headings (&quot;Commits on April 20&quot;)
+Step 3: I to navigate individual commits within a date group
+Step 4: Each commit: SHA link, message, author, [Verified] badge if signed
+Step 5: Enter on a commit to open its diff</code></pre>
 <hr>
 <h2>Reading the Files Changed Tab</h2>
 <p>This is the core of a code review. You will read diffs - the before/after state of every file that changed.</p>
@@ -285,7 +285,7 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 <li>A <strong>stats line</strong> (&quot;24 additions, 6 deletions&quot;)</li>
 <li>The <strong>diff content</strong> - a table where each row is one line of code</li>
 </ul>
-<p><strong>Lines in a diff are read as:</strong></p>
+<h4>Lines in a diff are read as</h4>
 <ul>
 <li><code>+ Added line</code> - line that was added</li>
 <li><code>- Removed line</code> - line that was removed</li>
@@ -337,7 +337,7 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 <li>Focus Mode → type your comment</li>
 <li><code>Tab</code> to <strong>Add single comment</strong> button (instant comment) OR <strong>Start a review</strong> (to batch comments)</li>
 </ol>
-<p><strong>Multi-line comment:</strong></p>
+<h4>Multi-line comment (Windows)</h4>
 <ol>
 <li>Focus the first line you want to comment on</li>
 <li>Press <code>Shift+↓</code> to extend the selection to additional lines</li>
@@ -356,7 +356,7 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 <li><code>VO+Shift+Down</code> to interact with the text area, then type your comment</li>
 <li><code>VO+Shift+Up</code> to stop interacting, then <code>Tab</code> to <strong>Add single comment</strong> and <code>VO+Space</code></li>
 </ol>
-<p><strong>Multi-line comment:</strong></p>
+<h4>Multi-line comment (macOS)</h4>
 <ol>
 <li>Focus the first line and <code>Shift+↓</code> to extend the selection</li>
 <li><code>VO+Space</code> on the comment button that appears</li>
@@ -410,14 +410,14 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 </details>
 
 <h3>Filling out the PR form</h3>
-<p><strong>Title field:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: F to navigate to the title <span class="hljs-built_in">field</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: <span class="hljs-keyword">Focus</span> <span class="hljs-keyword">Mode</span> → type a descriptive title
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: Good: <span class="hljs-string">&quot;Add keyboard navigation for carousel component&quot;</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Bad: <span class="hljs-string">&quot;Fix bugs&quot;</span></code></pre>
-<p><strong>Description field:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Tab to the body text area
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: <span class="hljs-keyword">Focus</span> <span class="hljs-keyword">Mode</span> → type <span class="hljs-built_in">using</span> the PR template (<span class="hljs-keyword">if</span> provided)</code></pre>
+<h4>Title field</h4>
+<pre><code class="hljs language-text">Step 1: F to navigate to the title field
+Step 2: Focus Mode → type a descriptive title
+Step 3: Good: &quot;Add keyboard navigation for carousel component&quot;
+Step 4: Bad: &quot;Fix bugs&quot;</code></pre>
+<h4>Description field</h4>
+<pre><code class="hljs language-text">Step 1: Tab to the body text area
+Step 2: Focus Mode → type using the PR template (if provided)</code></pre>
 <p>If no template, use this structure:</p>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Summary</span>
 
@@ -466,8 +466,8 @@ Closes #12
 <span class="hljs-bullet">-</span> [x] No images added (or alt text provided)</code></pre>
 <p>The <code>Closes #12</code> line tells GitHub to automatically close issue 12 when this PR merges. The validation bot checks that this line is present and that your description is at least 50 characters long.</p>
 </blockquote>
-<p><strong>Setting a Draft PR:</strong>
-If your work is not finished, open as a Draft:</p>
+<h3>Setting a Draft PR</h3>
+<p>If your work is not finished, open as a Draft:</p>
 <ol>
 <li>After filling in the form, find the dropdown arrow next to &quot;Create pull request&quot;</li>
 <li>Select &quot;Create draft pull request&quot;</li>
@@ -475,33 +475,33 @@ If your work is not finished, open as a Draft:</p>
 </ol>
 <h3>Draft Pull Requests - Full Lifecycle</h3>
 <p>A <strong>draft pull request</strong> is a PR explicitly marked as a work in progress. It is visible to the team, can receive comments, and runs CI - but is blocked from being merged until you mark it ready.</p>
-<p><strong>When to use a draft:</strong></p>
+<h4>When to use a draft</h4>
 <ul>
 <li>You want to show your approach and get early feedback before finishing</li>
 <li>You need CI to run but don&#39;t want accidental merges</li>
 <li>You are working across multiple days and want your progress visible</li>
 <li>You want to pair with a collaborator on the work</li>
 </ul>
-<p><strong>What a draft PR does differently:</strong></p>
+<h4>What a draft PR does differently</h4>
 <ul>
 <li>The merge button is disabled - even an authorized maintainer cannot merge a draft</li>
 <li>The PR header shows a grey &quot;Draft&quot; badge instead of the green &quot;Open&quot; badge</li>
 <li>Reviewers are not auto-notified (no review requests are sent until ready)</li>
 <li>CI workflows still run normally</li>
 </ul>
-<p><strong>Mark a draft ready for review:</strong></p>
+<h4>Mark a draft ready for review</h4>
 <ol>
 <li>Open the PR</li>
 <li>Navigate to the &quot;Reviewers&quot; sidebar or scroll to bottom of the Conversation tab</li>
 <li>Find and activate the <strong>&quot;Ready for review&quot;</strong> button</li>
 <li>The draft badge changes to &quot;Open&quot; and reviewers are notified</li>
 </ol>
-<p><strong>Screen reader path:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">Scroll </span>to <span class="hljs-keyword">bottom </span>of Conversation tab
-→ <span class="hljs-keyword">B </span>to navigate <span class="hljs-keyword">buttons
-</span>→ <span class="hljs-string">&quot;Ready for review&quot;</span> <span class="hljs-keyword">button </span>→ Enter
+<h4>Screen reader path</h4>
+<pre><code class="hljs language-text">Scroll to bottom of Conversation tab
+→ B to navigate buttons
+→ &quot;Ready for review&quot; button → Enter
 → Confirmation: PR status changes to Open</code></pre>
-<p><strong>Convert an open PR to draft (after opening):</strong></p>
+<h4>Convert an open PR to draft (after opening)</h4>
 <ol>
 <li>In the right sidebar, find the &quot;Reviewers&quot; section</li>
 <li>Look for the <strong>&quot;Convert to draft&quot;</strong> link (below the review status)</li>
@@ -524,8 +524,8 @@ gh <span class="hljs-built_in">pr</span> view 42
 gh <span class="hljs-built_in">pr</span> list --draft</code></pre>
 </details>
 
-<p><strong>Requesting reviewers:</strong>
-From the sidebar Reviewers section:</p>
+<h2>Requesting reviewers</h2>
+<p>From the sidebar Reviewers section:</p>
 <ol>
 <li>Navigate to &quot;Reviewers&quot; heading (<code>3</code> or <code>H</code>)</li>
 <li>Activate the gear button</li>
@@ -622,7 +622,7 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 
 <h3>GitHub shortcuts for pull requests</h3>
 <p>These are the GitHub built-in shortcuts for PR pages. Enable Focus Mode first (NVDA: <code>NVDA+Space</code>, JAWS: <code>Insert+Z</code>) before using single-key shortcuts.</p>
-<p><strong>On the PR list page:</strong></p>
+<h4>On the PR list page</h4>
 <table>
 <thead>
 <tr>
@@ -644,7 +644,7 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 </tr>
 </tbody></table>
 <p><strong>Shortcut note:</strong> For <code>G P</code>, press <code>G</code>, release it, then press <code>P</code> (two sequential key presses, not simultaneous).</p>
-<p><strong>On an open pull request:</strong></p>
+<h4>On an open pull request</h4>
 <table>
 <thead>
 <tr>
@@ -685,7 +685,7 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 <td>Submit comment from inside the text area</td>
 </tr>
 </tbody></table>
-<p><strong>On the Files Changed tab:</strong></p>
+<h4>On the Files Changed tab</h4>
 <table>
 <thead>
 <tr>
@@ -713,90 +713,99 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 <p>For the full shortcut system, see <a href="appendix-b-screen-reader-cheatsheet.html#github-built-in-keyboard-shortcuts">Screen Reader Cheat Sheet - GitHub Shortcuts section</a>.</p>
 <h3>Suggested Changes</h3>
 <p>A <strong>suggested change</strong> is a special form of inline review comment where the reviewer proposes exact replacement text. The PR author can apply the suggestion directly from GitHub - no copy-paste or separate commit needed.</p>
-<p><strong>As a reviewer - inserting a suggestion:</strong></p>
+<h4>As a reviewer - inserting a suggestion</h4>
 <ol>
-<li>On the Files Changed tab, navigate to the line you want to propose a change for</li>
-<li>Activate the <strong>line comment button</strong> for that line (the <code>+</code> that appears on hover, or Tab to navigate to it)</li>
-<li>In the comment text area that opens, press <code>Ctrl+G</code> (Windows) or <code>Cmd+G</code> (Mac)</li>
-<li>GitHub wraps a suggestion block around the current line content:<pre><code class="hljs"><span class="hljs-string">``</span><span class="hljs-string">`suggestion
-the current line content here
-`</span><span class="hljs-string">``</span></code></pre>
+<li><p>On the Files Changed tab, navigate to the line you want to propose a change for</p>
 </li>
-<li>Edit the text inside the suggestion block to show your proposed change</li>
-<li>Add context above the block if helpful: &quot;This makes the alt text more descriptive:&quot;</li>
-<li>Submit as part of your review (&quot;Start a review&quot; → batch with other comments)</li>
+<li><p>Activate the <strong>line comment button</strong> for that line (the <code>+</code> that appears on hover, or Tab to navigate to it)</p>
+</li>
+<li><p>In the comment text area that opens, press <code>Ctrl+G</code> (Windows) or <code>Cmd+G</code> (Mac)</p>
+</li>
+<li><p>GitHub wraps a suggestion block around the current line content:</p>
+<pre><code class="hljs language-markdown"><span class="hljs-code">```suggestion
+the current line content here
+```</span></code></pre>
+</li>
+<li><p>Edit the text inside the suggestion block to show your proposed change</p>
+</li>
+<li><p>Add context above the block if helpful: &quot;This makes the alt text more descriptive:&quot;</p>
+</li>
+<li><p>Submit as part of your review (&quot;Start a review&quot; → batch with other comments)</p>
+</li>
 </ol>
 <p><strong>Screen reader note:</strong> The suggestion block is plain Markdown text in the comment editor. Type it directly:</p>
-<pre><code class="hljs">```suggestion
-your proposed text here</code></pre>
-<pre><code class="hljs">(Three backticks, <span class="hljs-keyword">the</span> <span class="hljs-built_in">word</span> `suggestion`, Enter, your <span class="hljs-keyword">text</span>, Enter, <span class="hljs-literal">three</span> backticks.)
-
-**As <span class="hljs-keyword">an</span> author - applying <span class="hljs-keyword">a</span> suggestion:**
-<span class="hljs-number">1.</span> Open <span class="hljs-keyword">the</span> PR Conversation <span class="hljs-keyword">or</span> Files Changed <span class="hljs-literal">tab</span>
-<span class="hljs-number">2.</span> Navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> inline comment containing <span class="hljs-keyword">a</span> suggestion (<span class="hljs-keyword">it</span> shows <span class="hljs-keyword">a</span> diff-style preview)
-<span class="hljs-number">3.</span> Find <span class="hljs-keyword">and</span> activate <span class="hljs-keyword">the</span> **<span class="hljs-string">&quot;Apply suggestion&quot;</span>** button below <span class="hljs-keyword">the</span> suggestion block
-<span class="hljs-number">4.</span> GitHub creates <span class="hljs-keyword">a</span> commit automatically that applies <span class="hljs-keyword">the</span> change - no <span class="hljs-built_in">file</span> editing required
-<span class="hljs-number">5.</span> The conversation thread is marked <span class="hljs-keyword">as</span> resolved
-
-**Batching multiple suggestions <span class="hljs-keyword">into</span> <span class="hljs-literal">one</span> commit:**
-<span class="hljs-number">1.</span> For <span class="hljs-keyword">each</span> suggestion you want <span class="hljs-built_in">to</span> apply, activate **<span class="hljs-string">&quot;Add suggestion to batch&quot;</span>** instead <span class="hljs-keyword">of</span> <span class="hljs-string">&quot;Apply suggestion&quot;</span>
-<span class="hljs-number">2.</span> After selecting all suggestions, activate <span class="hljs-keyword">the</span> **<span class="hljs-string">&quot;Commit suggestions&quot;</span>** button that appears <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> top
-<span class="hljs-number">3.</span> GitHub applies all batched suggestions <span class="hljs-keyword">in</span> <span class="hljs-keyword">a</span> single commit
-
-**When <span class="hljs-built_in">to</span> use suggestions vs. comments:**
-- Use <span class="hljs-keyword">a</span> suggestion when you know <span class="hljs-keyword">the</span> exact <span class="hljs-keyword">text</span> that would fix <span class="hljs-keyword">the</span> issue
-- Use <span class="hljs-keyword">a</span> plain comment when <span class="hljs-keyword">the</span> change requires judgment <span class="hljs-built_in">from</span> <span class="hljs-keyword">the</span> author (e.g., <span class="hljs-string">&quot;this alt text isn&#x27;t descriptive - can you describe what the image shows?&quot;</span>)
-
-<span class="hljs-number">1.</span> After adding all your inline comments, navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> review summary button
-<span class="hljs-number">2.</span> On Files Changed <span class="hljs-literal">tab</span>: find <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;Review changes&quot;</span> button (B <span class="hljs-built_in">to</span> navigate buttons)
-<span class="hljs-number">3.</span> Press Enter <span class="hljs-built_in">to</span> <span class="hljs-built_in">open</span> <span class="hljs-keyword">the</span> review dialog
-<span class="hljs-number">4.</span> A panel opens:
-   - A summary <span class="hljs-keyword">text</span> area <span class="hljs-keyword">for</span> overall comments
-   - Radio buttons <span class="hljs-keyword">for</span> Comment / Approve / Request changes
-<span class="hljs-number">5.</span> Switch <span class="hljs-built_in">to</span> Focus Mode → type your summary comment
-<span class="hljs-number">6.</span> Navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> radio buttons <span class="hljs-keyword">with</span> arrow <span class="hljs-built_in">keys</span> → select your verdict
-<span class="hljs-number">7.</span> Tab <span class="hljs-built_in">to</span> <span class="hljs-string">&quot;Submit review&quot;</span> button → Enter
-
-<span class="hljs-comment">---</span>
-
-<span class="hljs-comment">## Understanding Merge Options (for Maintainers)</span>
-
-When <span class="hljs-keyword">a</span> PR is approved <span class="hljs-keyword">and</span> checks pass, <span class="hljs-keyword">a</span> maintainer can <span class="hljs-built_in">merge</span> <span class="hljs-keyword">it</span>. The <span class="hljs-built_in">merge</span> button section appears <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> bottom <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> Conversation <span class="hljs-literal">tab</span>.
+<pre><code class="hljs language-text">```suggestion
+your proposed text here
+```text
 </code></pre>
-<p>Step 1: Navigate to the bottom of the Conversation tab
-Step 2: Find &quot;Merge pull request&quot; button (or similar)
-Step 3: A dropdown arrow next to the button offers strategy options:</p>
+<p>(Three backticks, the word <code>suggestion</code>, Enter, your text, Enter, three backticks.)</p>
+<h4>As an author - applying a suggestion</h4>
+<ol>
+<li>Open the PR Conversation or Files Changed tab</li>
+<li>Navigate to the inline comment containing a suggestion (it shows a diff-style preview)</li>
+<li>Find and activate the <strong>&quot;Apply suggestion&quot;</strong> button below the suggestion block</li>
+<li>GitHub creates a commit automatically that applies the change - no file editing required</li>
+<li>The conversation thread is marked as resolved</li>
+</ol>
+<h4>Batching multiple suggestions into one commit</h4>
+<ol>
+<li>For each suggestion you want to apply, activate <strong>&quot;Add suggestion to batch&quot;</strong> instead of &quot;Apply suggestion&quot;</li>
+<li>After selecting all suggestions, activate the <strong>&quot;Commit suggestions&quot;</strong> button that appears at the top</li>
+<li>GitHub applies all batched suggestions in a single commit</li>
+</ol>
+<h4>When to use suggestions vs. comments</h4>
 <ul>
-<li>Create a merge commit</li>
-<li>Squash and merge</li>
-<li>Rebase and merge
-Step 4: Choose strategy → activate the button
-Step 5: Confirm in the dialog that appears</li>
+<li>Use a suggestion when you know the exact text that would fix the issue</li>
+<li>Use a plain comment when the change requires judgment from the author (e.g., &quot;this alt text isn&#39;t descriptive - can you describe what the image shows?&quot;)</li>
 </ul>
-<pre><code class="hljs">
-&lt;details&gt;
-&lt;summary&gt;GitHub CLI (gh) alternative - merging <span class="hljs-keyword">a</span> PR&lt;/summary&gt;
+<ol>
+<li>After adding all your inline comments, navigate to the review summary button</li>
+<li>On Files Changed tab: find the &quot;Review changes&quot; button (B to navigate buttons)</li>
+<li>Press Enter to open the review dialog</li>
+<li>A panel opens:<ul>
+<li>A summary text area for overall comments</li>
+<li>Radio buttons for Comment / Approve / Request changes</li>
+</ul>
+</li>
+<li>Switch to Focus Mode → type your summary comment</li>
+<li>Navigate to the radio buttons with arrow keys → select your verdict</li>
+<li>Tab to &quot;Submit review&quot; button → Enter</li>
+</ol>
+<hr>
+<h2>Understanding Merge Options (for Maintainers)</h2>
+<p>When a PR is approved and checks pass, a maintainer can merge it. The merge button section appears at the bottom of the Conversation tab.</p>
+<pre><code class="hljs language-text">
+Step 1: Navigate to the bottom of the Conversation tab
+Step 2: Find &quot;Merge pull request&quot; button (or similar)
+Step 3: A dropdown arrow next to the button offers strategy options:
 
-Merge <span class="hljs-keyword">a</span> pull request <span class="hljs-built_in">from</span> your terminal:
+- Create a merge commit
+- Squash and merge
+- Rebase and merge
+Step 4: Choose strategy → activate the button
+Step 5: Confirm in the dialog that appears
+</code></pre>
+<details>
+<summary>GitHub CLI (gh) alternative - merging a PR</summary>
 
-```bash
-<span class="hljs-comment"># Merge with default strategy (merge commit)</span>
-gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span>
+<p>Merge a pull request from your terminal:</p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Merge with default strategy (merge commit)</span>
+gh <span class="hljs-built_in">pr</span> merge 42
 
 <span class="hljs-comment"># Squash and merge</span>
-gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--squash</span>
+gh <span class="hljs-built_in">pr</span> merge 42 --squash
 
 <span class="hljs-comment"># Rebase and merge</span>
-gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--rebase</span>
+gh <span class="hljs-built_in">pr</span> merge 42 --rebase
 
 <span class="hljs-comment"># Delete the branch after merging</span>
-gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--squash --delete-branch</span>
+gh <span class="hljs-built_in">pr</span> merge 42 --squash --delete-branch
 
 <span class="hljs-comment"># Enable auto-merge (merges when checks pass)</span>
-gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</span> <span class="hljs-comment">--auto --squash</span></code></pre>
+gh <span class="hljs-built_in">pr</span> merge 42 --auto --squash</code></pre>
 </details>
 
-<p><strong>After a PR is merged:</strong></p>
+<h2>After a PR is merged</h2>
 <ul>
 <li>The PR status badge changes to &quot;Merged&quot; (purple)</li>
 <li>The source branch can be deleted - a &quot;Delete branch&quot; button appears</li>
@@ -812,17 +821,17 @@ gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</spa
 <li>You&#39;re in a different time zone from the reviewers</li>
 </ul>
 <h3>Enabling Auto-Merge on Your PR</h3>
-<pre><code class="hljs"><span class="hljs-number">1.</span> Open your PR → scroll <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span> box <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> bottom
-<span class="hljs-number">2.</span> Tab <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span> button dropdown arrow (next <span class="hljs-built_in">to</span> <span class="hljs-string">&quot;Merge pull request&quot;</span>)
-<span class="hljs-number">3.</span> Select <span class="hljs-string">&quot;Enable auto-merge&quot;</span>
-<span class="hljs-number">4.</span> Choose your <span class="hljs-built_in">merge</span> strategy (squash, rebase, <span class="hljs-keyword">or</span> <span class="hljs-built_in">merge</span> commit)
-<span class="hljs-number">5.</span> Confirm <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> dialog - <span class="hljs-keyword">the</span> <span class="hljs-built_in">merge</span> box now shows <span class="hljs-string">&quot;Auto-merge enabled&quot;</span></code></pre>
-<p><strong>Screen reader path:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">Conversation</span> <span class="hljs-variable">tab</span> → <span class="hljs-built_in">End</span> <span class="hljs-variable">key</span> → <span class="hljs-variable">merge</span> <span class="hljs-variable">box</span> <span class="hljs-variable">region</span>
-<span class="hljs-built_in">Tab</span> → <span class="hljs-variable">dropdown</span> <span class="hljs-variable">button</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">announced</span> <span class="hljs-variable">as</span> <span class="hljs-string">&quot;Select merge method&quot;</span> <span class="hljs-variable">or</span> <span class="hljs-variable">similar</span><span class="hljs-punctuation">)</span>
-<span class="hljs-built_in">Enter</span> → <span class="hljs-variable">arrow</span> <span class="hljs-variable">keys</span> <span class="hljs-variable">through</span> <span class="hljs-variable">options</span> → <span class="hljs-string">&quot;Enable auto-merge&quot;</span> → <span class="hljs-built_in">Enter</span>
-<span class="hljs-built_in">Dialog</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Tab</span> → <span class="hljs-variable">confirm</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span></code></pre>
-<p><strong>What happens next:</strong></p>
+<pre><code class="hljs language-text">1. Open your PR → scroll to the merge box at the bottom
+2. Tab to the merge button dropdown arrow (next to &quot;Merge pull request&quot;)
+3. Select &quot;Enable auto-merge&quot;
+4. Choose your merge strategy (squash, rebase, or merge commit)
+5. Confirm in the dialog - the merge box now shows &quot;Auto-merge enabled&quot;</code></pre>
+<h4>Screen reader path</h4>
+<pre><code class="hljs language-text">Conversation tab → End key → merge box region
+Tab → dropdown button (announced as &quot;Select merge method&quot; or similar)
+Enter → arrow keys through options → &quot;Enable auto-merge&quot; → Enter
+Dialog: Tab → confirm button → Enter</code></pre>
+<h4>What happens next</h4>
 <ul>
 <li>The PR merge box changes to show &quot;Auto-merge enabled - merge will happen automatically&quot;</li>
 <li>When the last required check passes (or last required review arrives), GitHub merges the PR silently</li>
@@ -830,7 +839,7 @@ gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</spa
 <li>If a reviewer requests changes after auto-merge is enabled, auto-merge is automatically cancelled (a new approval is required before it re-enables)</li>
 </ul>
 <h3>Cancelling Auto-Merge</h3>
-<pre><code class="hljs"><span class="hljs-built_in">Merge</span> <span class="hljs-variable">box</span> → <span class="hljs-built_in">Tab</span> → <span class="hljs-string">&quot;Disable auto-merge&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span></code></pre>
+<pre><code class="hljs language-text">Merge box → Tab → &quot;Disable auto-merge&quot; button → Enter</code></pre>
 <blockquote>
 <p><strong>Note:</strong> Auto-merge is only available if the repository administrator has enabled it in Settings → General. Many open source repos have it on; some do not.</p>
 </blockquote>
@@ -838,25 +847,25 @@ gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</spa
 <h2>Practical Scenarios</h2>
 <h3>Scenario A: &quot;I want to review an assigned PR&quot;</h3>
 <p><strong>Example:</strong> You are assigned to review a PR titled &quot;Add missing NVDA shortcut to keyboard-shortcuts.md.&quot; The PR modifies <code>docs/keyboard-shortcuts.md</code> in the Learning Room repository and references Challenge 2.</p>
-<pre><code class="hljs"><span class="hljs-number">1.</span> Notifications → <span class="hljs-keyword">open</span> the PR notification
-<span class="hljs-number">2.</span> D → PR tabs → Files changed tab
-<span class="hljs-number">3.</span> T → enter the first diff <span class="hljs-keyword">table</span> → navigate lines <span class="hljs-keyword">with</span> arrow keys
-<span class="hljs-number">4.</span> <span class="hljs-keyword">Check</span>: does the <span class="hljs-built_in">new</span> shortcut appear <span class="hljs-keyword">in</span> the correct NVDA <span class="hljs-keyword">table</span>? <span class="hljs-keyword">Is</span> the <span class="hljs-keyword">table</span> formatting preserved?
-<span class="hljs-number">5.</span> <span class="hljs-keyword">For</span> <span class="hljs-keyword">each</span> concern: activate the <span class="hljs-type">line</span> <span class="hljs-keyword">comment</span> button → <span class="hljs-keyword">type</span> <span class="hljs-keyword">comment</span> → <span class="hljs-keyword">Start</span> a review
-<span class="hljs-number">6.</span> D → PR tabs → Conversation → scroll <span class="hljs-keyword">to</span> bottom
-<span class="hljs-number">7.</span> B → &quot;Review changes&quot; button → <span class="hljs-keyword">type</span> <span class="hljs-keyword">summary</span> → <span class="hljs-keyword">select</span> verdict → Submit review</code></pre>
+<pre><code class="hljs language-text">1. Notifications → open the PR notification
+2. D → PR tabs → Files changed tab
+3. T → enter the first diff table → navigate lines with arrow keys
+4. Check: does the new shortcut appear in the correct NVDA table? Is the table formatting preserved?
+5. For each concern: activate the line comment button → type comment → Start a review
+6. D → PR tabs → Conversation → scroll to bottom
+7. B → &quot;Review changes&quot; button → type summary → select verdict → Submit review</code></pre>
 <h3>Scenario B: &quot;I want to respond to review feedback on my PR&quot;</h3>
 <p><strong>Example:</strong> Your PR for Challenge 3 (Complete Welcome Guide) received a review comment: &quot;The [TODO] about evaluating issues is good, but the paragraph could mention checking if the issue is already assigned.&quot; The validation bot also flagged a link text issue.</p>
-<pre><code class="hljs"><span class="hljs-number">1.</span> Open your PR (Notifications → PR link, <span class="hljs-keyword">or</span> find it <span class="hljs-keyword">in</span> PR <span class="hljs-built_in">list</span>)
-<span class="hljs-number">2.</span> <span class="hljs-number">3</span> to navigate review comments
-<span class="hljs-number">3.</span> For the reviewe<span class="hljs-string">r&#x27;s comment: read it → Tab to &quot;Reply&quot; → Focus Mode → type &quot;Good point - I will add a sentence about checking assignees. Pushing a fix now.&quot;
-4. For the bot&#x27;</span>s link text flag: fix the link <span class="hljs-keyword">in</span> docs/welcome.md, commit, <span class="hljs-keyword">and</span> push
-<span class="hljs-number">5.</span> When <span class="hljs-built_in">all</span> addressed: Tab to <span class="hljs-string">&quot;Re-request review&quot;</span> button → Enter</code></pre>
+<pre><code class="hljs language-text">1. Open your PR (Notifications → PR link, or find it in PR list)
+2. 3 to navigate review comments
+3. For the reviewer&#x27;s comment: read it → Tab to &quot;Reply&quot; → Focus Mode → type &quot;Good point - I will add a sentence about checking assignees. Pushing a fix now.&quot;
+4. For the bot&#x27;s link text flag: fix the link in docs/welcome.md, commit, and push
+5. When all addressed: Tab to &quot;Re-request review&quot; button → Enter</code></pre>
 <h3>Scenario C: &quot;My PR has a merge conflict&quot;</h3>
-<pre><code class="hljs"><span class="hljs-number">1.</span> You will see a &quot;This branch has conflicts that must be resolved&quot; message near the bottom
-<span class="hljs-number">2.</span> Tab <span class="hljs-keyword">to</span> &quot;Resolve conflicts&quot; button → GitHub opens a web <span class="hljs-keyword">conflict</span> editor
-<span class="hljs-number">3.</span> The editor shows <span class="hljs-keyword">conflict</span> markers - see Merge Conflicts guide (<span class="hljs-number">06</span>-merge-conflicts.md)
-<span class="hljs-number">4.</span> Edit the file <span class="hljs-keyword">to</span> resolve → Mark <span class="hljs-keyword">as</span> resolved → <span class="hljs-keyword">Commit</span> merge</code></pre>
+<pre><code class="hljs language-text">1. You will see a &quot;This branch has conflicts that must be resolved&quot; message near the bottom
+2. Tab to &quot;Resolve conflicts&quot; button → GitHub opens a web conflict editor
+3. The editor shows conflict markers - see Merge Conflicts guide (06-merge-conflicts.md)
+4. Edit the file to resolve → Mark as resolved → Commit merge</code></pre>
 <hr>
 <h2>Common PR Mistakes to Avoid</h2>
 <table>

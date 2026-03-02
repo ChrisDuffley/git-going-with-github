@@ -1,4 +1,5 @@
 # Appendix L: GitHub Security Features
+>
 > **Listen to Episode 29:** [GitHub Security Features](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Dependabot, Secret Scanning, Code Scanning, and Private Advisories
@@ -9,9 +10,9 @@
 
 ## Quick Navigation
 
-1. [The Security Tab - What It Contains](#1-the-security-tab--what-it-contains)
-2. [Dependabot - Automated Dependency Updates](#2-dependabot--automated-dependency-updates)
-3. [Secret Scanning - Preventing Credential Leaks](#3-secret-scanning--preventing-credential-leaks)
+1. [The Security Tab - What It Contains](#1-the-security-tab---what-it-contains)
+2. [Dependabot - Automated Dependency Updates](#2-dependabot---automated-dependency-updates)
+3. [Secret Scanning - Preventing Credential Leaks](#3-secret-scanning---preventing-credential-leaks)
 4. [Code Scanning and CodeQL](#4-code-scanning-and-codeql)
 5. [Private Vulnerability Reporting](#5-private-vulnerability-reporting)
 6. [The SECURITY.md File](#6-the-securitymd-file)
@@ -25,11 +26,13 @@
 
 Every GitHub repository has a **Security tab** in its navigation bar. What you see there depends on whether you are a contributor with elevated access or a public viewer.
 
-**Public viewers see:**
+### Public viewers see
+
 - Security policy (if the repo has a `SECURITY.md`)
 - The private vulnerability reporting form (if enabled by the maintainer)
 
-**Contributors with write or admin access see:**
+### Contributors with write or admin access see
+
 - Dependabot alerts
 - Secret scanning alerts
 - Code scanning alerts
@@ -38,7 +41,7 @@ Every GitHub repository has a **Security tab** in its navigation bar. What you s
 
 ### Screen Reader Path to the Security Tab
 
-```
+```text
 On any repository page:
 Tab navigation → secondary nav region → "Security" link → Enter
 Or: G then S (GitHub keyboard shortcut - enable Focus Mode first)
@@ -54,18 +57,18 @@ Dependabot is GitHub's automated dependency monitoring and update system. It doe
 
 When a known security vulnerability (CVE - Common Vulnerability and Exposure) is discovered in a package your project depends on, GitHub creates a **Dependabot alert**.
 
-**Alert severity levels:**
+#### Alert severity levels
 
 | Level | CVSS Score Range | What it means |
-|-------|-----------------|---------------|
+| -------  | -----------------  | ---------------  |
 | **Critical** | 9.0-10.0 | Exploit likely, wide impact - fix immediately |
 | **High** | 7.0-8.9 | Significant risk - fix this sprint |
 | **Medium** | 4.0-6.9 | Some risk with specific conditions - schedule fix |
 | **Low** | 0.1-3.9 | Low likelihood of exploitation - fix when convenient |
 
-**What a dependency alert looks like:**
+#### What a dependency alert looks like
 
-```
+```text
 Alert: Dependabot alert #5
 Severity: High
 Package: lodash (npm)
@@ -76,7 +79,7 @@ Description: Prototype pollution vulnerability allows an attacker to
 modify Object.prototype leading to denial of service or remote code execution.
 ```
 
-**What to do as a contributor when you see an alert:**
+#### What to do as a contributor when you see an alert
 
 1. Read the advisory to understand the vulnerability scope
 2. Check whether the project actually uses the vulnerable code path
@@ -87,7 +90,7 @@ modify Object.prototype leading to denial of service or remote code execution.
 
 If enabled, Dependabot automatically opens a PR to update the vulnerable dependency. The PR will look like:
 
-```
+```text
 Title: Bump lodash from 4.17.20 to 4.17.21
 Author: dependabot[bot]
 Description: Bumps lodash from 4.17.20 to 4.17.21.
@@ -102,7 +105,8 @@ As a contributor with access, reviewing and merging these Dependabot PRs is a hi
 
 Beyond security fixes, Dependabot can be configured to open PRs keeping all dependencies at their latest versions (not just security fixes). This is configured in `.github/dependabot.yml`.
 
-**Example `dependabot.yml`:**
+#### Example `dependabot.yml`
+
 ```yaml
 version: 2
 updates:
@@ -125,7 +129,7 @@ Secret scanning detects if you accidentally commit tokens, API keys, passwords, 
 
 If your push is blocked:
 
-```
+```text
 remote: error: GH013: Repository rule violations found for refs/heads/main.
 remote: Push cannot contain secrets
 remote: 
@@ -134,7 +138,7 @@ remote:   secret: GitHub Personal Access Token
 remote:   location: line 5
 ```
 
-**What to do:**
+#### What to do
 
 1. Remove the secret from the file immediately
 2. Rotate the exposed credential (GitHub will automatically revoke detected GitHub tokens)
@@ -171,7 +175,7 @@ Code scanning uses static analysis to find security vulnerabilities in the code 
 
 ### Reading a Code Scanning Alert
 
-```
+```text
 Alert: Uncontrolled format string
 Rule: py/tainted-format-string
 Severity: High
@@ -216,6 +220,7 @@ GitHub provides **Private Vulnerability Reporting** - a disclosure form that sen
 ### The Responsible Disclosure Process
 
 After you submit:
+
 1. Maintainers acknowledge your report (typically within 1-7 days for active projects)
 2. They may ask follow-up questions in the private advisory thread
 3. They develop and test a fix
@@ -227,6 +232,7 @@ After you submit:
 ### What If the Maintainer Doesn't Respond?
 
 If a maintainer doesn't respond within a reasonable time (30-90 days is the standard window):
+
 1. Send a follow-up in the private advisory thread
 2. Contact GitHub directly if the issue is critical (GitHub can assist with coordinated disclosure)
 3. Follow the project's SECURITY.md for their stated disclosure policy
@@ -247,11 +253,13 @@ A `SECURITY.md` file at the repository root defines the project's security polic
 ### Navigating to a Repository's SECURITY.md
 
 From the repository:
+
 1. Security tab → Policies section → "Security policy" link
 2. Or directly: `https://github.com/owner/repo/security/policy`
 
 Screen reader path:
-```
+
+```text
 Security tab → H → "Policy" heading → Link: "Security policy" → Enter
 ```
 
@@ -269,6 +277,7 @@ An SBOM is a machine-readable inventory of every component (libraries, packages,
 4. GitHub generates a SPDX-format JSON file listing all dependencies with their versions and licenses
 
 This export is useful when:
+
 - Your organization requires SBOM documentation before adopting an open source dependency
 - You're auditing a project's complete dependency chain
 - You want to identify license compatibility for a commercial product
@@ -279,7 +288,7 @@ This export is useful when:
 
 ### Reaching the Security Tab
 
-```
+```text
 From any repo page:
 Secondary navigation landmark → Tab through: Code, Issues, PRs, Actions, Projects, Wiki, Security
 Or: Focus Mode → G then S (GitHub shortcut)
@@ -287,7 +296,7 @@ Or: Focus Mode → G then S (GitHub shortcut)
 
 ### Navigating Dependabot Alerts
 
-```
+```text
 Security tab → select "Dependabot alerts" link
 Alert list is a table: T (NVDA/JAWS Browse Mode) → navigate rows
 Each row: Tab to expand → Enter to open full alert details
@@ -299,7 +308,7 @@ Inside an alert:
 
 ### Navigating Code Scanning Alerts
 
-```
+```text
 Security tab → select "Code scanning" link
 Alert list: T to find the table → ↑/↓ to navigate rows
 Open an alert: Enter
@@ -312,7 +321,7 @@ Inside the alert:
 
 ### The Private Vulnerability Reporting Form
 
-```
+```text
 Security tab → "Report a vulnerability" button → Enter
 Form fields: F or E → cycle through: Title, Description, Severity (select), Versions, CVSS
 Describe field: NVDA+Space → Focus Mode → type → NVDA+Space to leave
@@ -325,13 +334,13 @@ Submit: Tab → "Submit report" button → Enter
 
 Accessibility Agents' `/security-dashboard` slash command gives you a quick security overview without visiting the Security tab in the browser:
 
-```
+```text
 /security-dashboard
 ```
 
-**Sample output:**
+### Sample output
 
-```
+```text
 ## Security Dashboard - community-access/accessibility-agents
 
 ### Dependabot Alerts

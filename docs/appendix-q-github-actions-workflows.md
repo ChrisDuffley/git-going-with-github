@@ -1,4 +1,5 @@
 # Appendix Q: GitHub Actions and Workflows
+>
 > **Listen to Episode 34:** [GitHub Actions and Workflows](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Understanding Automation in Open Source Repositories
@@ -38,7 +39,7 @@ Think of it as a robot assistant that every repository can optionally configure.
 ## 2. Key Vocabulary
 
 | Term | What It Means |
-|------|---------------|
+| ------  | ---------------  |
 | **Workflow** | A complete automated process defined in a YAML file. A repo can have many workflows. |
 | **Job** | A group of steps that run together, usually on the same machine. A workflow can have multiple jobs. |
 | **Step** | A single task within a job - running a command, calling an action, etc. |
@@ -58,7 +59,7 @@ Think of it as a robot assistant that every repository can optionally configure.
 
 Workflow files live in a specific, mandatory location:
 
-```
+```text
 your-repository/
 └── .github/
     └── workflows/
@@ -122,7 +123,7 @@ If `npm test` exits with an error, the job fails, and that failure shows up as a
 The most common triggers you will encounter as a contributor:
 
 | Trigger | What Causes It |
-|---------|---------------|
+| ---------  | ---------------  |
 | `push` | Any commit pushed to a branch |
 | `pull_request` | A PR is opened, updated, synchronized, or reopened |
 | `pull_request_review` | A review is submitted on a PR |
@@ -143,22 +144,24 @@ When you open a pull request on a repo that uses GitHub Actions, you will see a 
 ### What the status indicators mean
 
 | Symbol | Color | Meaning | What to do |
-|--------|-------|---------|-----------|
-| ● spinning | Yellow/Orange | Checks are running - wait | Wait for them to complete |
-| ✓ checkmark | Green | All required checks passed | Good - you may be able to merge |
-| ✗ cross | Red | One or more checks failed | Do not merge - read the failure |
-| ⊘ | Grey | Check was skipped | Usually fine - skipped by design |
+| --------  | -------  | ---------  | -----------  |
+| Spinning circle | Yellow/Orange | Checks are running - wait | Wait for them to complete |
+| Checkmark | Green | All required checks passed | Good - you may be able to merge |
+| X (cross) | Red | One or more checks failed | Do not merge - read the failure |
+| Slashed circle | Grey | Check was skipped | Usually fine - skipped by design |
 | | Yellow | Non-blocking warning | Review but may not block merge |
 
 ### Navigating status checks with a screen reader
 
-**NVDA / JAWS (browse mode):**
+#### NVDA / JAWS (browse mode)
+
 1. Open the pull request Conversation tab
 2. Navigate to the section heading for "checks" using `H` or `2`
 3. Each check result is announced as a link or button with its name and status
 4. Press `Enter` on a failed check to expand its details
 
-**VoiceOver (macOS, Safari):**
+#### VoiceOver (macOS, Safari)
+
 1. Use `VO+U` to open the Rotor
 2. Select "Headings" and navigate to the checks section
 3. Use `VO+Arrow` to read through check results
@@ -184,7 +187,7 @@ The **Actions tab** of a repository shows the history of all workflow runs. You 
 
 ### Navigating workflow runs (NVDA/JAWS browse mode)
 
-```
+```text
 Key          Action
 H            Jump between section headings
 3            Jump between workflow run headings (they are h3)
@@ -194,7 +197,7 @@ Enter        Open a workflow run to see details
 
 ### Navigating workflow runs (VoiceOver macOS)
 
-```
+```text
 Key                  Action
 VO+U → Headings      Open rotor and navigate by heading
 VO+Right/Left        Read next/previous item
@@ -204,11 +207,13 @@ VO+Space             Activate a link or button
 ### Reading a run's details
 
 When you open a workflow run, you see:
+
 - Job names listed on the left (or in a sidebar)
 - Steps listed within each job
 - Green checkmarks (passed) or red X marks (failed) next to each step
 
 To find out **why a step failed:**
+
 1. Navigate to the failed step
 2. Activate it to expand the log output
 3. The log is a large text area - switch to focus mode to read it
@@ -283,19 +288,22 @@ A failing check is information, not a judgment. It is the system telling you som
 ### Step 2: Navigate to the failed check
 
 From your PR's Conversation tab:
+
 1. Scroll down to the checks section (press `D` to reach the "Checks" region if using a screen reader)
-2. Find the failing check (red ✗)
+2. Find the failing check (red X)
 3. Press `Enter` on "Details" (or the check name itself) to open the workflow run
 
 ### Step 3: Find the failing step
 
 In the workflow run:
-1. Look for the step with the red ✗ marker
+
+1. Look for the step with the red X marker
 2. Press `Enter` or `Space` to expand the log output
 
 ### Step 4: Read the error message
 
 Look for:
+
 - `Error:` - describes what went wrong
 - `FAILED` or `FAIL` - test failure summary
 - File name and line number - where exactly the problem is
@@ -304,6 +312,7 @@ Look for:
 ### Step 5: Fix the issue locally (or in the web editor)
 
 Common fixes:
+
 - **Test failure:** Understand what the test expects and whether your change broke something intentional
 - **Lint failure:** Run the project's format/lint command, or manually fix the flagged lines
 - **Spell check failure:** Fix the typo noted in the log
@@ -379,14 +388,14 @@ jobs:
 ### Common tools used in a11y workflows
 
 | Tool | What It Checks |
-|------|----------------|
+| ------  | ----------------  |
 | [axe-core](https://github.com/dequelabs/axe-core) | WCAG violations in HTML/rendered pages |
 | [pa11y](https://pa11y.org/) | Automated accessibility testing against URLs |
 | [jest-axe](https://github.com/nickcolley/jest-axe) | axe checks inside unit tests |
 | [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci) | Accessibility + performance scoring |
 | [IBM Equal Access Checker](https://github.com/IBMa/equal-access) | WCAG 2.1 / 2.2 compliance checking |
 
-**What these tools catch (and what they do not):**
+#### What these tools catch (and what they do not)
 
 Automated tools catch approximately **30-40% of accessibility issues** - things like missing alt attributes, insufficient color contrast ratios, or unlabeled form fields. The remaining issues require human testing, especially with actual assistive technology like your screen reader.
 
@@ -430,7 +439,7 @@ jobs:
 
 > **Goal:** Practice navigating the Actions tab and reading a workflow file using your screen reader.
 
-**Steps:**
+#### Steps
 
 1. Navigate to the `learning-room` repository on GitHub
 2. Go to the **Actions tab** (in the Repository navigation landmark)
@@ -445,7 +454,7 @@ jobs:
    - How many steps it has
    - What the last step does
 
-**Discussion questions:**
+#### Discussion questions
 
 - What would happen if you opened a PR and the "Accessibility Scan" check failed?
 - Where would you look to find out what accessibility violation was detected?
@@ -466,23 +475,23 @@ GitHub Actions is a deep topic. This workshop covers what you need as a **contri
 When you are ready to go deeper, these are the best places to start:
 
 | Resource | Link |
-|----------|------|
-| GitHub Actions Documentation | https://docs.github.com/en/actions |
-| GitHub Skills: Hello GitHub Actions | https://github.com/skills/hello-github-actions |
-| GitHub Skills: Continuous Integration | https://github.com/skills/continuous-integration |
-| GitHub Marketplace (Actions) | https://github.com/marketplace?type=actions |
-| GitHub Accessibility Scanner | https://github.com/marketplace/actions/accessibility-scanner |
-| GitHub Actions Accessibility Conformance Report | https://accessibility.github.com/conformance |
+| ----------  | ------  |
+| GitHub Actions Documentation | [GitHub Actions docs](https://docs.github.com/en/actions) |
+| GitHub Skills: Hello GitHub Actions | [Hello GitHub Actions course](https://github.com/skills/hello-github-actions) |
+| GitHub Skills: Continuous Integration | [Continuous Integration course](https://github.com/skills/continuous-integration) |
+| GitHub Marketplace (Actions) | [GitHub Marketplace for Actions](https://github.com/marketplace?type=actions) |
+| GitHub Accessibility Scanner | [Accessibility Scanner action](https://github.com/marketplace/actions/accessibility-scanner) |
+| GitHub Actions Accessibility Conformance Report | [Accessibility conformance report](https://accessibility.github.com/conformance) |
 
 ---
 
 ## Summary
 
 | Concept | Key Takeaway |
-|---------|-------------|
+| ---------  | -------------  |
 | Workflows live in `.github/workflows/` | YAML files that define automation |
 | Triggers fire workflows | `push`, `pull_request`, `schedule` are the most common |
-| Status checks appear on your PR | Green ✓, Red ✗, Yellow ● = pass, fail, running |
+| Status checks appear on your PR | Green checkmark, Red X, Yellow circle = pass, fail, running |
 | Required checks must pass | Configured by maintainers - blocks merging if failing |
 | Failing checks are normal | Read the log, fix the issue, push again |
 | a11y workflows catch ~30-40% of issues | Human screen reader testing catches the rest |

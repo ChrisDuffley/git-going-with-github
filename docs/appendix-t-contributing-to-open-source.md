@@ -1,4 +1,5 @@
 # Appendix T: Contributing to Open Source
+>
 > **Listen to Episode 37:** [Contributing to Open Source](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## A Guide for First-Time Contributors
@@ -55,7 +56,8 @@ A good first contribution is:
 - **Described** - the PR or issue explains what changed and why, not just what
 - **Tested** - for documentation, this means reading it aloud with your screen reader before submitting; for code, it means verifying the fix works
 
-**Signs a contribution is too large for a first attempt:**
+### Signs a contribution is too large for a first attempt
+
 - The PR touches more than three or four files
 - You need to understand the entire codebase to make the change
 - The issue has been open for a long time with many comments suggesting it is complex
@@ -69,7 +71,7 @@ Start small. A well-executed small contribution is far more valuable than a larg
 Most open source projects label issues that are suitable for new contributors. Look for:
 
 | Label | Meaning |
-|-------|---------|
+| -------  | ---------  |
 | `good first issue` | Explicitly recommended for first-time contributors |
 | `first-timers-only` | Reserved for people making their first contribution to this project |
 | `help wanted` | Maintainers are actively looking for someone to pick this up |
@@ -110,6 +112,7 @@ If the issue looks right for you, comment briefly to let the team know you are w
 ### Writing a Good PR Description
 
 A PR description should answer:
+
 - **What** did you change?
 - **Why** was the change needed?
 - **How** did you verify it works?
@@ -151,7 +154,7 @@ Over time, a series of contributions builds a portfolio that shows how you work 
 
 The hardest part of open source contribution is starting. Once you have one merged PR, the next is easier - you know the workflow, you have proof it is possible, and you have already navigated the social dynamics of working with a maintainer.
 
-**Practical habits:**
+### Practical habits
 
 - **Keep a list** of projects you use and like. These are natural candidates for contributions because you already understand what they do.
 - **File bug reports** when you encounter problems, even if you cannot fix them yourself. A clear, reproducible bug report is a real contribution.

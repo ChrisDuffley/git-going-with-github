@@ -1,4 +1,5 @@
 # Appendix A: GitHub Concepts & Glossary
+>
 > **Listen to Episode 18:** [Glossary of Terms](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Every Term You Need for Open Source Contribution
@@ -42,12 +43,14 @@ A remote is a connection to a repository hosted elsewhere (usually on GitHub). Y
 
 When you run `git push origin main`, you're pushing your local `main` branch to the remote named `origin`.
 
-**To see your remotes:**
+#### To see your remotes
+
 ```bash
 git remote -v
 ```
 
-**To add a remote:**
+#### To add a remote
+
 ```bash
 git remote add upstream https://github.com/original-owner/repo.git
 ```
@@ -56,7 +59,7 @@ git remote add upstream https://github.com/original-owner/repo.git
 
 ### Origin
 
-`origin` is the default name Git gives to the remote repository you cloned from. When you clone your fork, `origin` points to your fork on GitHub. 
+`origin` is the default name Git gives to the remote repository you cloned from. When you clone your fork, `origin` points to your fork on GitHub.
 
 Commands like `git push` and `git pull` default to using `origin` unless you specify otherwise.
 
@@ -66,16 +69,16 @@ Commands like `git push` and `git pull` default to using `origin` unless you spe
 
 `.gitignore` is a special file in the root of your repository that tells Git which files or folders to ignore - meaning Git will not track or commit them.
 
-**Why use .gitignore?**
+#### Why use .gitignore?
 
 - Prevent committing temporary files (`.DS_Store`, `Thumbs.db`)
 - Ignore build outputs (`dist/`, `build/`, `node_modules/`)
 - Keep secrets out of Git (`.env` files, API keys, credentials)
 - Avoid committing IDE-specific files (`.vscode/`, `.idea/`)
 
-**Example `.gitignore`:**
+#### Example `.gitignore`
 
-```
+```text
 # Dependencies
 node_modules/
 vendor/
@@ -112,7 +115,7 @@ Then add it to `.gitignore` and commit the change.
 
 Cloning copies a repository from GitHub to your local computer so you can work with it in VS Code or your preferred editor. When you clone, you get all the files and the complete history.
 
-```
+```text
 git clone https://github.com/your-username/repo-name.git
 ```
 
@@ -126,7 +129,8 @@ A branch is a separate line of development inside a repository. The main branch 
 
 Think of branches like parallel timelines - each branch is its own version of the project that can evolve independently and be merged back together later.
 
-**Common branch names:**
+#### Common branch names
+
 - `main` - the primary, stable branch
 - `develop` - integration branch (not all projects have this)
 - `feature/my-new-thing` - convention for feature branches
@@ -138,6 +142,7 @@ Think of branches like parallel timelines - each branch is its own version of th
 ### Commit
 
 A commit is a saved snapshot of your changes at a moment in time. Every commit has:
+
 - A **message** describing what changed and why
 - A unique **SHA hash** (a fingerprint like `a1b2c3d`)
 - The **author** and timestamp
@@ -146,7 +151,8 @@ A commit is a saved snapshot of your changes at a moment in time. Every commit h
 Good commit messages are in the imperative mood: "Fix typo in README" not "Fixed typo" or "Fixing typo."
 
 Example of a well-written commit message:
-```
+
+```text
 Fix broken link in accessibility guide
 
 The link to the NVDA download page was using an outdated URL.
@@ -170,6 +176,7 @@ Reading diffs is one of the core skills for code review. When you view a Pull Re
 ### Issue
 
 An issue is a discussion item in a GitHub repository. Issues are used for:
+
 - Reporting bugs
 - Requesting features or improvements
 - Asking questions
@@ -185,6 +192,7 @@ Every issue gets a sequential number (like `#42`) and can have labels, assignees
 A pull request is a proposal to merge changes from one branch into another. When you have finished working on your fork or feature branch, you open a PR to say "here is my work - please review it and consider merging it."
 
 A PR shows:
+
 - Which branch you want to merge into which target branch
 - The diff (all changes you made)
 - A description of what you changed and why
@@ -197,6 +205,7 @@ The name "pull request" means you are requesting that the maintainers pull your 
 ### Code Review
 
 Code review is the process of one or more collaborators reading and providing feedback on a PR before it is merged. Reviewers can:
+
 - **Comment** - leave a note on a line (not a formal verdict)
 - **Approve** - signal that they are happy with the changes
 - **Request Changes** - indicate that specific things need to be addressed before merging
@@ -210,7 +219,7 @@ Good code reviews are kind, specific, and constructive.
 Merging is combining changes from one branch into another. When a PR is approved, a maintainer merges it. There are three merge strategies:
 
 | Strategy | What It Does | When Used |
-|----------|-------------|-----------|
+| ----------  | -------------  | -----------  |
 | **Merge commit** | Creates a new commit recording the merge | Default on most projects |
 | **Squash and merge** | Combines all PR commits into one commit | Keeping history clean |
 | **Rebase and merge** | Replays commits on top of target branch | Linear history projects |
@@ -241,7 +250,7 @@ See [Merge Conflicts Guide](06-merge-conflicts.md) for step-by-step instructions
 
 Upstream refers to the original repository that you forked from. When the upstream project has new changes that you want to bring into your fork, you "sync" your fork with upstream.
 
-```
+```text
 Your Fork → upstream → Original Repo
 Your changes flow this way: Original Repo ← Pull Request ← Your Fork
 ```
@@ -251,6 +260,7 @@ Your changes flow this way: Original Repo ← Pull Request ← Your Fork
 ### Label
 
 Labels are colored tags applied to issues and PRs to categorize them. Common labels:
+
 - `bug` - something isn't working
 - `enhancement` - new feature or request
 - `documentation` - documentation-only change
@@ -303,7 +313,7 @@ A collaborator is someone who has been explicitly granted write access to a repo
 These abbreviations appear frequently in GitHub comments, PR descriptions, and commit messages:
 
 | Term | Stands For | Meaning |
-|------|-----------|---------|
+| ------  | -----------  | ---------  |
 | **LGTM** | Looks Good To Me | Informal approval - "I reviewed it and it looks correct" |
 | **WIP** | Work In Progress | This PR is not ready for review yet |
 | **nit** | Nitpick | A minor, optional suggestion - "not a blocker" |
@@ -339,6 +349,7 @@ These abbreviations appear frequently in GitHub comments, PR descriptions, and c
 - `HEAD^` or `HEAD~1` means "the commit before HEAD"
 
 You'll see HEAD referenced in commands like:
+
 ```bash
 git reset HEAD~1  # Undo the last commit
 git diff HEAD     # Show uncommitted changes
@@ -350,17 +361,21 @@ git diff HEAD     # Show uncommitted changes
 
 A "detached HEAD" occurs when you check out a specific commit instead of a branch. You're no longer "on" a branch - just looking at a snapshot in time.
 
-**Why it happens:**
+#### Why it happens
+
 ```bash
 git checkout a1b2c3d  # Checking out a commit directly
 ```
 
-**What this means:**
+#### What this means
+
 - Any commits you make won't belong to any branch
 - If you switch branches, those commits become "orphaned"
 
-**How to fix it:**
+#### How to fix it
+
 If you made commits in detached HEAD state and want to keep them:
+
 ```bash
 git branch new-branch-name  # Creates a branch from your current position
 git checkout new-branch-name
@@ -374,17 +389,19 @@ git checkout new-branch-name
 
 `git stash` temporarily saves your uncommitted changes and reverts your working directory to a clean state. It's useful when you need to switch branches but aren't ready to commit.
 
-**Common workflow:**
+#### Common workflow
+
 ```bash
 # You're working on branch A
 git stash  # Save your changes temporarily
 git checkout main  # Switch to main
-# Do something on main...
+# Do something on main..
 git checkout branch-a  # Switch back
 git stash pop  # Restore your changes
 ```
 
-**Stash commands:**
+## Stash commands
+
 - `git stash` - save changes
 - `git stash list` - see what's stashed
 - `git stash pop` - restore and remove from stash
@@ -399,8 +416,9 @@ git stash pop  # Restore your changes
 
 Rebasing is an alternative to merging. Instead of creating a merge commit, rebase moves (replays) your commits on top of another branch.
 
-**Merge:**
-```
+#### Merge
+
+```text
 main:    A---B---C
                \
 feature:        D---E---F
@@ -408,22 +426,26 @@ feature:        D---E---F
 result:  A---B---C-------M (merge commit)
 ```
 
-**Rebase:**
-```
+#### Rebase
+
+```text
 main:    A---B---C
 feature:             D'---E'---F' (commits "replayed" on top of C)
 ```
 
-**When to use rebase:**
+#### When to use rebase
+
 - Keep a linear project history
 - Clean up your branch before submitting a PR
 - Incorporate upstream changes into your feature branch
 
-**When NOT to rebase:**
+#### When NOT to rebase
+
 - Shared branches (never rebase `main` or public branches)
 - After pushing to GitHub (unless you're comfortable force pushing)
 
-**Basic rebase workflow:**
+#### Basic rebase workflow
+
 ```bash
 git checkout feature-branch
 git rebase main
@@ -446,7 +468,8 @@ git checkout main
 git cherry-pick a1b2c3d  # Apply commit a1b2c3d to main
 ```
 
-**When to use:**
+#### When to use
+
 - Extract a single fix from a larger feature branch
 - Backport a bug fix to an older release branch
 - Undo a commit on one branch but keep it on another
@@ -469,12 +492,14 @@ git fetch origin  # Download updates from origin
 git pull origin main  # Fetch + merge origin/main into current branch
 ```
 
-**When to use fetch:**
+#### When to use fetch
+
 - You want to see what changed without committing to merging
 - You want to review changes before integrating them
 - You're syncing upstream and want to inspect first
 
-**When to use pull:**
+#### When to use pull
+
 - You know you want the latest changes merged immediately
 - You're working alone on a branch
 
@@ -486,16 +511,18 @@ git pull origin main  # Fetch + merge origin/main into current branch
 
 Force pushing (`git push --force` or `git push -f`) overwrites the remote branch with your local version, replacing its history. This is **dangerous** because it can delete commits that others have based work on.
 
-**When force push is okay:**
+#### When force push is okay
+
 - Your own feature branch that no one else is working on
 - After rebasing to clean up history before merging a PR
 
-**When force push is NEVER okay:**
+#### When force push is NEVER okay
+
 - The `main` branch
 - Shared branches where others have based work on your commits
 - Public branches with collaborators
 
-**Safer alternative: `--force-with-lease`**
+#### Safer alternative: `--force-with-lease`
 
 ```bash
 git push --force-with-lease origin feature-branch
@@ -503,7 +530,7 @@ git push --force-with-lease origin feature-branch
 
 `--force-with-lease` only force pushes if no one else has pushed to the remote branch since you last fetched. If someone pushed changes, the command fails and warns you.
 
-**Why force push is needed after rebase:**
+#### Why force push is needed after rebase
 
 When you rebase, Git rewrites commit history. The remote branch and your local branch now have conflicting histories. A normal `git push` fails. Force pushing resolves this by saying "trust my version."
 
@@ -534,6 +561,7 @@ In practice: when you open a PR, you will often see automated checks run (tests,
 ### Status Check
 
 A status check is the result of an automated test or workflow run on a PR. Status checks show as:
+
 - Green checkmark - all checks passed
 - Red X - one or more checks failed
 - Yellow dot - checks are still running
@@ -571,7 +599,7 @@ GitHub Copilot is an AI-powered coding assistant. It suggests code, documentatio
 Every healthy open source project has these files in the root of the repository:
 
 | File | Purpose |
-|------|---------|
+| ------  | ---------  |
 | `README.md` | Project overview, how to use it, how to contribute |
 | `CONTRIBUTING.md` | How to contribute - setup, workflow, PR guidelines |
 | `CODE_OF_CONDUCT.md` | Community standards and expectations |
@@ -586,7 +614,7 @@ Every healthy open source project has these files in the root of the repository:
 ## Alphabetical Quick Reference
 
 | Term | Definition |
-|------|-----------|
+| ------  | -----------  |
 | .gitignore | File specifying which files Git should ignore |
 | Assignee | Person responsible for an issue or PR |
 | Base branch | The branch a PR merges INTO |

@@ -1,4 +1,5 @@
 # Appendix U: Resources
+>
 > **Listen to Episode 38:** [Resources and Links](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Everything You Need - Before, During, and After the Workshop
@@ -9,14 +10,14 @@
 
 ## Table of Contents
 
-1. [The Central Project - Accessibility Agents](#1-the-central-project--accessibility-agents)
+1. [The Central Project - Accessibility Agents](#1-the-central-project---accessibility-agents)
 2. [GitHub Accessibility Guides](#2-github-accessibility-guides)
 3. [GitHub Skills Learning Modules](#3-github-skills-learning-modules)
 4. [Screen Reader Downloads and Documentation](#4-screen-reader-downloads-and-documentation)
 5. [VS Code Resources](#5-vs-code-resources)
 6. [GitHub Copilot Resources](#6-github-copilot-resources)
 7. [GitHub Agentic Workflows](#7-github-agentic-workflows)
-8. [Spec-Driven Development - Spec Kit](#8-spec-driven-development--spec-kit)
+8. [Spec-Driven Development - Spec Kit](#8-spec-driven-development---spec-kit)
 9. [GitHub CLI, Desktop, and Copilot CLI](#9-github-cli-desktop-and-copilot-cli)
 10. [GitHub Mobile Apps](#10-github-mobile-apps)
 11. [GitHub Best Practices and Power Features](#11-github-best-practices-and-power-features)
@@ -24,7 +25,7 @@
 13. [Accessibility Standards and References](#13-accessibility-standards-and-references)
 14. [GitHub Keyboard Shortcuts](#14-github-keyboard-shortcuts)
 15. [Community and Support](#15-community-and-support)
-16. [Your Workshop Documentation - Offline Reference](#16-your-workshop-documentation--offline-reference)
+16. [Your Workshop Documentation - Offline Reference](#16-your-workshop-documentation---offline-reference)
 
 ---
 
@@ -33,7 +34,7 @@
 The project you forked, contributed to, and carry home.
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | **Accessibility Agents - Main Repo** | [github.com/community-access/accessibility-agents](https://github.com/community-access/accessibility-agents) | The upstream - your contributions go here |
 | Getting Started Guide | [accessibility-agents/Documentation/GETTING-STARTED.md](https://github.com/community-access/accessibility-agents/blob/main/Documentation/GETTING-STARTED.md) | Your first hour with the agents |
 | Full Reference Guide | [accessibility-agents/Documentation/GUIDE.md](https://github.com/community-access/accessibility-agents/blob/main/Documentation/GUIDE.md) | Complete agent and command reference |
@@ -45,11 +46,13 @@ The project you forked, contributed to, and carry home.
 ### Your Personal Fork
 
 After the workshop, your fork lives at:
-```
+
+```text
 https://github.com/[your-username]/accessibility-agents
 ```
 
-**Quick access from VS Code:**
+#### Quick access from VS Code
+
 1. Clone your fork: `git clone https://github.com/[your-username]/accessibility-agents.git`
 2. Open in VS Code: `cd accessibility-agents && code .`
 3. Open Copilot Chat: `Ctrl+Shift+I`
@@ -68,7 +71,7 @@ https://github.com/[your-username]/accessibility-agents
 Official guides from the GitHub Accessibility team. These were the primary research sources for this workshop's documentation.
 
 | Guide | URL | When to Use |
-|-------|-----|-------------|
+| -------  | -----  | -------------  |
 | **GitHub Repos - Screen Reader Guide** | [accessibility.github.com/documentation/guide/repos](https://accessibility.github.com/documentation/guide/repos/) | Navigating repositories, file trees, branches |
 | **GitHub Issues - Screen Reader Guide** | [accessibility.github.com/documentation/guide/issues](https://accessibility.github.com/documentation/guide/issues/) | Filing, reading, commenting on issues |
 | **GitHub Pull Requests - Screen Reader Guide** | [accessibility.github.com/documentation/guide/pull-requests](https://accessibility.github.com/documentation/guide/pull-requests/) | Reading diffs, reviewing, merging |
@@ -97,7 +100,7 @@ Unlike a conventional course where you watch videos or read slides, GitHub Skill
 
 Since everything happens in GitHub, the accessibility skills from this workshop apply directly:
 
-```
+```text
 Starting a course:
   Navigate to the module URL
   B → "Start course" button → Enter
@@ -119,7 +122,7 @@ Following lessons:
 GitHub Skills courses are available 24/7 and are completely free. Recommended order after this workshop:
 
 | Module | URL | Duration | Prerequisite | What You Learn |
-|--------|-----|----------|-------------|----------------|
+| --------  | -----  | ----------  | -------------  | ----------------  |
 | **Introduction to GitHub** | [github.com/skills/introduction-to-github](https://github.com/skills/introduction-to-github) | < 1 hour | None | Branches, commits, pull requests, merge |
 | **Communicate Using Markdown** | [github.com/skills/communicate-using-markdown](https://github.com/skills/communicate-using-markdown) | < 1 hour | Introduction to GitHub | Headings, emphasis, images, code blocks, task lists, tables |
 | **Review Pull Requests** | [github.com/skills/review-pull-requests](https://github.com/skills/review-pull-requests) | < 30 min | Introduction to GitHub | Assign reviewers, leave comments, suggest changes, apply suggestions, approve, merge |
@@ -136,13 +139,14 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 ### NVDA (Windows)
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | Download NVDA (free) | [NVDA download page](https://www.nvaccess.org/download/) |
 | NVDA User Guide | [NVDA User Guide](https://www.nvaccess.org/files/nvda/documentation/userGuide.html) |
 | NVDA Add-ons | [NVDA Add-on Store](https://nvda-project.org/addonStore/) |
 | NVDA Community | [NVDA Community site](https://nvda-community.github.io) |
 
-**Key commands (quick reference):**
+#### Key commands (quick reference)
+
 - Toggle browse/focus mode: `NVDA+Space`
 - Elements list: `NVDA+F7`
 - Next heading: `H` | Next link: `K` | Next button: `B` | Next form field: `F`
@@ -150,12 +154,13 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 ### JAWS (Windows)
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | Download JAWS (trial available) | [freedomscientific.com/products/software/jaws](https://www.freedomscientific.com/products/software/jaws/) |
 | JAWS Getting Started | [freedomscientific.com/training/jaws/getting-started](https://www.freedomscientific.com/training/jaws/getting-started/) |
 | JAWS Keyboard Reference | [freedomscientific.com/training/jaws/keyboard-shortcuts](https://www.freedomscientific.com/training/jaws/) |
 
-**Key commands (quick reference):**
+#### Key commands (quick reference)
+
 - Virtual PC Cursor on/off: `Insert+Z`
 - Elements list: `Insert+F3`
 - Next heading: `H` | Next link: `Tab` or `U` | Next button: `B`
@@ -163,12 +168,13 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 ### VoiceOver (macOS / iOS - built in)
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | VoiceOver User Guide (macOS) | [support.apple.com/guide/voiceover/welcome/mac](https://support.apple.com/guide/voiceover/welcome/mac) |
 | VoiceOver Getting Started (macOS) | [apple.com/accessibility/mac/vision](https://www.apple.com/accessibility/mac/vision/) |
 | Enable VoiceOver | `Cmd+F5` (macOS) or Settings → Accessibility → VoiceOver (iOS) |
 
-**Key commands (quick reference):**
+#### Key commands (quick reference)
+
 - Start/stop VoiceOver: `Cmd+F5`
 - VO modifier: `Caps Lock` or `Ctrl+Option`
 - Rotor: `VO+U`
@@ -177,7 +183,7 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 ### Other Screen Readers (Reference)
 
 | Screen Reader | Platform | URL |
-|--------------|----------|-----|
+| --------------  | ----------  | -----  |
 | Narrator | Windows (built in) | `Win+Ctrl+Enter` to launch - no download required |
 | Orca | Linux (GNOME) | [wiki.gnome.org/Projects/Orca](https://wiki.gnome.org/Projects/Orca) |
 | TalkBack | Android (built in) | Settings → Accessibility → TalkBack |
@@ -187,7 +193,7 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 ## 5. VS Code Resources
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | Download VS Code | [code.visualstudio.com](https://code.visualstudio.com) | Free - Windows, macOS, Linux |
 | VS Code Accessibility Docs | [code.visualstudio.com/docs/editor/accessibility](https://code.visualstudio.com/docs/editor/accessibility) | Screen reader mode, audio cues, accessible view |
 | VS Code Keyboard Shortcuts (Windows) | [aka.ms/vscode-keyboard-windows](https://aka.ms/vscode-keyboard-windows) | Full reference PDF |
@@ -196,7 +202,8 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 | GitLens | [marketplace.visualstudio.com/items?itemName=eamodio.gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens) | Enhanced git history, blame, and branch visualization |
 | YAML Support | [marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml) | YAML validation - useful for issue templates |
 
-**Install the GitHub PR extension quickly:**
+### Install the GitHub PR extension quickly
+
 1. Open VS Code Extensions (`Ctrl+Shift+X`)
 2. Search: `GitHub Pull Requests`
 3. Install: publisher is "GitHub"
@@ -206,7 +213,7 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 ## 6. GitHub Copilot Resources
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | GitHub Copilot (Free tier) | [github.com/features/copilot](https://github.com/features/copilot) | Free for individuals - no credit card required |
 | Copilot Documentation | [docs.github.com/copilot](https://docs.github.com/en/copilot) | Full reference |
 | Copilot in VS Code | [docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot](https://docs.github.com/en/copilot/using-github-copilot/getting-started-with-github-copilot) | Setup guide |
@@ -222,15 +229,16 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 GitHub Agentic Workflows are in **technical preview** as of February 2026. Access, feedback channels, and setup information:
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | Agentic Workflows Blog Post | [github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows](https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/) | The announcement - explains the full model |
 | `gh-aw` CLI Extension | `gh extension install github/gh-aw` | Install via GitHub CLI |
 | Technical Preview Feedback | [gh.io/aw-tp-community-feedback](https://gh.io/aw-tp-community-feedback) | Community discussion for the preview |
 | GitHub Next Discord | [gh.io/next-discord](https://gh.io/next-discord) | Real-time discussion with the GitHub Next team |
 
-**How Agentic Workflows connect to what you learned:**
+### How Agentic Workflows connect to what you learned
 
 During the workshop, you learned:
+
 1. Standard GitHub Actions (YAML workflows - triggers, jobs, steps)
 2. Accessibility Agents agents (`.agent.md` files - plain English instructions, Copilot Chat executor)
 3. GitHub Agentic Workflows (`.md` files in `.github/workflows/` - plain English instructions, cloud-based coding agent executor)
@@ -242,18 +250,20 @@ All three live in `.github/`. All three are plain text. The only difference is w
 ## 8. Spec-Driven Development - Spec Kit
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | Spec Kit - GitHub Repo | [github.com/github/spec-kit](https://github.com/github/spec-kit) | Open source, MIT license |
 | Spec Kit Blog Post | [github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit](https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/) | Full explanation of the methodology |
 
 **The core idea:** Write the intent of a feature before anyone builds it. The specification is a living document - AI uses it to plan tasks, contributors use it to stay aligned, the community uses it to evaluate whether the outcome matched the intention.
 
-**Quick start:**
+### Quick start
+
 ```bash
 uvx --from git+https://github.com/github/spec-kit.git specify init YOUR_PROJECT_NAME
 ```
 
-**Slash commands:**
+### Slash commands
+
 - `/specify` - open a new specification session
 - `/plan` - convert a spec into a development plan
 - `/tasks` - break the plan into trackable tasks
@@ -267,7 +277,7 @@ Works with GitHub Copilot, Claude Code, and Gemini CLI.
 ### GitHub CLI (`gh`)
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | Download | [cli.github.com](https://cli.github.com) |
 | Documentation | [cli.github.com/manual](https://cli.github.com/manual/) |
 | Authentication guide | [docs.github.com/en/github-cli/github-cli/quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart) |
@@ -304,7 +314,7 @@ gh copilot suggest "undo my last commit but keep the changes staged"
 ### GitHub Desktop
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | Download | [desktop.github.com](https://desktop.github.com) |
 | Keyboard shortcuts | [docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/keyboard-shortcuts-in-github-desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/keyboard-shortcuts-in-github-desktop) |
 
@@ -315,7 +325,7 @@ gh copilot suggest "undo my last commit but keep the changes staged"
 GitHub's official mobile apps bring the full GitHub experience to your phone or tablet. Perfect for reviewing PRs, triaging issues, and staying connected when away from your computer.
 
 | Platform | Download | Screen Reader Support |
-|----------|----------|----------------------|
+| ----------  | ----------  | ----------------------  |
 | **iOS** | [apps.apple.com/app/github/id1477376905](https://apps.apple.com/app/github/id1477376905) | VoiceOver supported |
 | **Android** | [play.google.com/store/apps/details?id=com.github.android](https://play.google.com/store/apps/details?id=com.github.android) | TalkBack supported |
 
@@ -332,6 +342,7 @@ GitHub's official mobile apps bring the full GitHub experience to your phone or 
 ### Accessibility Features
 
 Both apps support:
+
 - Native screen reader gestures (VoiceOver on iOS, TalkBack on Android)
 - Dynamic text sizing
 - Dark mode / high contrast
@@ -348,19 +359,22 @@ Essential tips and lesser-known features that make you a more effective contribu
 ### Saved Replies
 
 Saved replies let you create reusable text templates for common responses. Perfect for:
+
 - Thanking first-time contributors
 - Requesting more information with a friendly tone
 - Explaining common setup issues
 - Closing duplicate issues
 
-**How to set up:**
+#### How to set up
+
 1. Go to [github.com/settings/replies](https://github.com/settings/replies)
 2. Click "Add a saved reply"
 3. Give it a short label (e.g., "welcome-first-time")
 4. Write your template text (can include Markdown)
 5. Save
 
-**How to use:**
+#### How to use
+
 - When writing any comment, press `Ctrl+.` (period) to open the saved replies menu
 - Select your saved reply
 - Edit as needed before posting
@@ -368,12 +382,14 @@ Saved replies let you create reusable text templates for common responses. Perfe
 ### Pinned Issues
 
 Pin important issues to the top of your repository's Issues tab. Perfect for:
+
 - FAQs and getting started guides
 - Known issues and workarounds
 - Roadmap and project status updates
 - Community guidelines
 
-**How to pin an issue:**
+#### How to pin an issue
+
 1. Open the issue you want to pin
 2. In the right sidebar, click the three-dot menu (⋯)
 3. Select "Pin issue"
@@ -384,12 +400,14 @@ You can pin up to 3 issues per repository. Pinned issues are visible to everyone
 ### Pinned Comments (New: Feb 2026)
 
 You can now pin a single comment within an issue thread to keep important information visible. Perfect for:
+
 - Workarounds or temporary solutions
 - Decisions made during discussion
 - Links to related issues or PRs
 - Status updates from maintainers
 
-**How to pin a comment:**
+#### How to pin a comment
+
 1. Find the comment you want to pin
 2. Click the three-dot menu (⋯) on the comment
 3. Select "Pin comment"
@@ -400,11 +418,13 @@ Only repository collaborators can pin comments. There can be only one pinned com
 
 Share precise references to code by including line numbers in GitHub URLs.
 
-**Syntax:**
+#### Syntax
+
 - Single line: `github.com/owner/repo/blob/main/file.js#L42`
 - Line range: `github.com/owner/repo/blob/main/file.js#L42-L58`
 
-**How to create these links:**
+#### How to create these links
+
 1. Navigate to a file on GitHub
 2. Click the line number (in screen readers: navigate to the line and activate the number link)
 3. Hold `Shift` and click another line number to select a range
@@ -418,7 +438,8 @@ When you link to code on GitHub using a branch name (`main`, `develop`), that li
 
 **Why this matters:** When you file a bug report or reference code in a discussion, you want the link to show exactly what you were looking at - not what the code looks like weeks later after someone refactored it.
 
-**How to create a permalink:**
+#### How to create a permalink
+
 1. View any file on GitHub
 2. Press `Y` while viewing the file - the URL changes from `/blob/main/file.js` to `/blob/a1b2c3d4.../file.js`
 3. Copy the new URL - it now points to that specific commit
@@ -429,13 +450,15 @@ When you link to code on GitHub using a branch name (`main`, `develop`), that li
 
 Not every issue is a bug or feature request. Some are questions, proposals, or open-ended conversations. GitHub Discussions provide a better home for these.
 
-**When to convert:**
+#### When to convert
+
 - Questions that don't require a code change ("How do I configure X?")
 - Proposals that need community feedback before becoming actionable
 - General discussion about the project's direction
 - Show-and-tell or community showcases
 
-**How to convert an issue to a discussion:**
+#### How to convert an issue to a discussion
+
 1. Open the issue
 2. In the right sidebar, click "Convert to discussion"
 3. Select which discussion category it belongs in
@@ -449,7 +472,8 @@ In organizations, you can mention entire teams instead of individuals: `@org-nam
 
 **Example:** `@github/accessibility` notifies everyone on GitHub's accessibility team.
 
-**Why this matters:**
+#### Why this matters
+
 - You don't need to know who's on a team - just mention the team
 - Teams can subscribe to notifications as a group
 - CODEOWNERS files use team mentions for automatic reviewer assignment
@@ -460,7 +484,8 @@ In organizations, you can mention entire teams instead of individuals: `@org-nam
 
 Keep long issue descriptions or PR descriptions scannable by hiding details in collapsible sections.
 
-**Syntax:**
+#### Syntax
+
 ```markdown
 <details>
 <summary>Click to expand: Full error stack trace</summary>
@@ -470,7 +495,8 @@ Keep long issue descriptions or PR descriptions scannable by hiding details in c
 </details>
 ```
 
-**Use for:**
+#### Use for
+
 - Long error messages or logs
 - Optional context that most readers don't need
 - Large screenshots or code samples
@@ -482,8 +508,9 @@ Keep long issue descriptions or PR descriptions scannable by hiding details in c
 
 Credit multiple people for a single commit using the `Co-authored-by` trailer in your commit message.
 
-**Syntax:**
-```
+#### Syntax
+
+```text
 Fix keyboard navigation in modal dialog
 
 This addresses the issue where focus was lost when the modal closed.
@@ -492,7 +519,8 @@ Co-authored-by: Alex Chen <alex@example.com>
 Co-authored-by: Jordan Smith <jordan@example.com>
 ```
 
-**Why this matters:**
+#### Why this matters
+
 - Pair programming - both people get credit in the Git history
 - Crediting someone who provided the solution but didn't write the code
 - GitHub recognizes these trailers and shows all co-authors on the commit
@@ -504,12 +532,13 @@ Co-authored-by: Jordan Smith <jordan@example.com>
 Three ways to interact with a repository - each means something different:
 
 | Action | What It Does | When to Use |
-|--------|--------------|-------------|
+| --------  | --------------  | -------------  |
 | **Watch** | Subscribe to notifications for activity | You want to stay updated on issues, PRs, and releases |
 | **Star** | Bookmark a repo | You want to save it for later or show appreciation |
 | **Fork** | Create your own copy of the repo | You want to contribute changes or use it as a starting point |
 
-**Watch settings:**
+#### Watch settings
+
 - **All activity** - every issue, PR, and discussion
 - **Participating** (default) - only threads you comment on or are @mentioned in
 - **Releases only** - just new releases
@@ -523,8 +552,9 @@ The `CODEOWNERS` file automatically requests reviews from specific people or tea
 
 **Location:** `.github/CODEOWNERS` in your repository
 
-**Syntax:**
-```
+#### Syntax
+
+```text
 # Documentation team reviews all docs changes
 /docs/ @org-name/docs-team
 
@@ -538,12 +568,14 @@ The `CODEOWNERS` file automatically requests reviews from specific people or tea
 * @project-lead
 ```
 
-**How it works:**
+## How it works
+
 1. Someone opens a PR that changes files in `/docs/`
 2. GitHub automatically requests a review from `@org-name/docs-team`
 3. The PR can't be merged until the required review is approved (if branch protection requires it)
 
-**Use for:**
+## Use for
+
 - Ensuring domain experts review specialized code
 - Distributing review responsibilities
 - Preventing changes from being merged without appropriate oversight
@@ -552,17 +584,20 @@ The `CODEOWNERS` file automatically requests reviews from specific people or tea
 
 Support open source maintainers financially through GitHub Sponsors. If a project you use has a "Sponsor" button, consider supporting them.
 
-**How it works:**
+#### How it works
+
 - Maintainers set up a Sponsors profile
 - You can sponsor with a monthly recurring amount or one-time payment
 - GitHub doesn't take a fee (as of 2026)
 
-**Why sponsor:**
+#### Why sponsor
+
 - Open source maintainers often work for free in their spare time
 - Your sponsorship helps them dedicate more time to the project
 - Many maintainers offer perks to sponsors (early access, prioritized issues, etc.)
 
-**How to sponsor:**
+#### How to sponsor
+
 1. Visit a repository with a "Sponsor" button
 2. Click the button
 3. Choose a sponsorship tier
@@ -572,31 +607,35 @@ Support open source maintainers financially through GitHub Sponsors. If a projec
 
 GitHub supports several powerful Markdown features beyond the basics:
 
-**Task Lists:**
+#### Task Lists
+
 ```markdown
 - [x] Completed task
 - [ ] Pending task
 - [ ] Another pending task
 ```
 
-**Tables with alignment:**
+#### Tables with alignment
+
 ```markdown
 | Left-aligned | Center-aligned | Right-aligned |
 |:-------------|:--------------:|--------------:|
 | Text         | Text           | Text          |
 ```
 
-**Mermaid Diagrams:**
+#### Mermaid Diagrams
+
 ````markdown
 ```mermaid
 graph TD
     A[User opens issue] --> B{Is it a bug?}
     B -->|Yes| C[Label: bug]
     B -->|No| D[Label: enhancement]
-```
+```text
 ````
 
-**Math Expressions (LaTeX):**
+#### Math Expressions (LaTeX)
+
 ```markdown
 Inline math: $E = mc^2$
 
@@ -606,14 +645,16 @@ $$
 $$
 ```
 
-**Footnotes:**
+#### Footnotes
+
 ```markdown
 Here is a statement that needs citation[^1].
 
 [^1]: Source: Documentation link
 ```
 
-**Alerts (Callout blocks):**
+#### Alerts (Callout blocks)
+
 ```markdown
 > [!NOTE]
 > Useful information that users should know
@@ -632,7 +673,7 @@ Here is a statement that needs citation[^1].
 After the workshop, use these resources to find your next open source contribution.
 
 | Resource | URL | What It Does |
-|----------|-----|-------------|
+| ----------  | -----  | -------------  |
 | **Good First Issue** | [Good First Issue](https://goodfirstissue.dev) | Curated list of beginner-friendly issues across popular open source projects |
 | **Up For Grabs** | [Up For Grabs](https://up-for-grabs.net) | Projects that explicitly welcome new contributors |
 | **GitHub Explore** | [GitHub Explore](https://github.com/explore) | Discover trending repos, topics, and collections |
@@ -640,9 +681,9 @@ After the workshop, use these resources to find your next open source contributi
 | **AT on GitHub** | Search: `topic:assistive-technology is:public` | Public repositories tagged with assistive-technology |
 | **Filter by label** | In any repo: Issues → Label → `good first issue` | Works on every public repository |
 
-**GitHub search queries to bookmark:**
+### GitHub search queries to bookmark
 
-```
+```text
 is:open is:issue label:good-first-issue topic:accessibility
 is:open is:issue label:help-wanted topic:screen-reader
 is:open is:issue label:accessibility no:assignee
@@ -653,7 +694,7 @@ is:open is:issue label:accessibility no:assignee
 ## 13. Accessibility Standards and References
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | WCAG 2.2 (Full Standard) | [WCAG 2.2 specification](https://www.w3.org/TR/WCAG22/) | The complete Web Content Accessibility Guidelines |
 | WCAG Quick Reference | [WCAG 2.2 Quick Reference](https://www.w3.org/WAI/WCAG22/quickref/) | Filtered, searchable version - much more practical |
 | ARIA Authoring Practices Guide | [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) | When and how to use ARIA roles and attributes |
@@ -665,7 +706,7 @@ is:open is:issue label:accessibility no:assignee
 ### Accessibility Testing Tools
 
 | Tool | URL | Notes |
-|------|-----|-------|
+| ------  | -----  | -------  |
 | WebAIM Contrast Checker | [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) | Check text/background color contrast against WCAG AA/AAA |
 | WAVE Browser Extension | [WAVE Browser Extension](https://wave.webaim.org/extension/) | Highlights accessibility issues on any webpage - Chrome, Firefox, Edge |
 | Axe DevTools | [Axe DevTools](https://www.deque.com/axe/devtools/) | Finds WCAG violations with severity levels |
@@ -674,7 +715,7 @@ is:open is:issue label:accessibility no:assignee
 ### Interactive Git Learning
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | Learn Git Branching | [Learn Git Branching](https://learngitbranching.js.org/) | Gamified, step-by-step challenges - branching, merging, rebasing |
 | Visualizing Git | [Visualizing Git](https://git-school.github.io/visualizing-git/) | Interactive visual playground for branches and commits |
 | Pro Git Book (free) | [Pro Git Book](https://git-scm.com/book/en/v2) | Complete reference - free online |
@@ -685,14 +726,14 @@ is:open is:issue label:accessibility no:assignee
 ## 14. GitHub Keyboard Shortcuts
 
 | Resource | URL | Notes |
-|----------|-----|-------|
+| ----------  | -----  | -------  |
 | Full Keyboard Shortcuts Reference | [GitHub Keyboard Shortcuts documentation](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) | Every shortcut on every page |
 | Press `?` on any GitHub page | - | Opens the keyboard shortcuts overlay for that specific page |
 
-**The most important shortcuts to memorize:**
+### The most important shortcuts to memorize
 
 | Shortcut | What It Does |
-|----------|-------------|
+| ----------  | -------------  |
 | `?` | Open keyboard shortcuts help for current page |
 | `G I` (press G then I) | Go to Issues tab |
 | `G P` | Go to Pull Requests tab |
@@ -713,7 +754,7 @@ Not sure where to start after the workshop? Use these suggested paths.
 ### By Role
 
 | Role | Start Here | Then |
-|------|-----------|------|
+| ------  | -----------  | ------  |
 | New contributor | `00-pre-workshop-setup.md` | Issues → Pull Requests → Merge Conflicts |
 | Maintainer | `08-labels-milestones-projects.md` | Issue templates → Branch protection → Notifications |
 | Accessibility advocate | `14-accessible-code-review.md` | Screen reader cheat sheet → Appendix C (Standards) |
@@ -722,7 +763,7 @@ Not sure where to start after the workshop? Use these suggested paths.
 ### By Time Available
 
 | Time | Suggested Path |
-|------|----------------|
+| ------  | ----------------  |
 | 30 min | Pre-workshop setup → Understanding GitHub's web structure |
 | 1 hour | Add: Working with Issues |
 | 2 hours | Add: Pull Requests + Navigating Repositories |
@@ -735,7 +776,7 @@ Not sure where to start after the workshop? Use these suggested paths.
 ### GitHub Accessibility
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | GitHub Accessibility Community Discussions | [GitHub Community Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility) |
 | GitHub Accessibility Feedback | [GitHub Accessibility Feedback Discussions](https://github.com/github-community/community/discussions/categories/accessibility) |
 | GitHub Accessibility Team (public presence) | [GitHub Accessibility site](https://accessibility.github.com) |
@@ -743,15 +784,15 @@ Not sure where to start after the workshop? Use these suggested paths.
 ### Accessibility Agents Community
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | Accessibility Agents Issues (bug reports, ideas) | [Accessibility Agents Issues](https://github.com/community-access/accessibility-agents/issues) |
 | Accessibility Agents Discussions | [Accessibility Agents Discussions](https://github.com/community-access/accessibility-agents/discussions) |
-| Security concerns | jeff@jeffbishop.com (do not open public issues for vulnerabilities) |
+| Security concerns | <jeff@jeffbishop.com> (do not open public issues for vulnerabilities) |
 
 ### Open Source Accessibility Community
 
 | Resource | URL |
-|----------|-----|
+| ----------  | -----  |
 | A11y Slack | [A11y Slack community](https://web-a11y.slack.com) (invite: [A11y Slack invite page](https://www.a11y.me/slack)) |
 | A11y Weekly Newsletter | [A11y Weekly Newsletter](https://a11yweekly.com) |
 | Inclusive Design Research Centre | [Inclusive Design Research Centre](https://idrc.ocadu.ca) |
@@ -771,7 +812,7 @@ The documentation set is in the `docs/` folder of this learning repository (sepa
 ### Quick Navigation
 
 | Topic | File |
-|-------|------|
+| -------  | ------  |
 | Pre-workshop setup | [docs/00-pre-workshop-setup.md](00-pre-workshop-setup.md) |
 | Understanding GitHub's Web Structure | [docs/01-understanding-github-web-structure.md](01-understanding-github-web-structure.md) |
 | Navigating repositories | [docs/02-navigating-repositories.md](02-navigating-repositories.md) |

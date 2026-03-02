@@ -1,4 +1,5 @@
 # Appendix G: GitHub Discussions
+>
 > **Listen to Episode 24:** [GitHub Discussions](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Forum-Style Conversations Beyond Issues and Pull Requests
@@ -27,7 +28,7 @@
 **Not every conversation belongs in an issue.** GitHub Discussions exists for the conversations that don't fit:
 
 | Use Issues When | Use Discussions When |
-|---|---|
+| ---  | ---  |
 | You found a bug | You have a question about how something works |
 | You want to request a specific feature | You want to brainstorm ideas before filing a feature request |
 | There is actionable work to be done | You want community input before deciding what work to do |
@@ -36,7 +37,8 @@
 
 **The signal for maintainers:** A question in an issue is noisier - it implies something needs to be done. The same question in Discussions doesn't trigger workflow automation and doesn't inflate the issue count.
 
-**Common Discussions categories you'll encounter:**
+### Common Discussions categories you'll encounter
+
 - **Q&A** - Support questions and answers (one answer can be marked correct)
 - **Ideas** - Feature brainstorming before a formal feature request
 - **Announcements** - Maintainer posts about releases, breaking changes, roadmaps
@@ -70,14 +72,16 @@ Large organizations can have organization-level Discussions separate from any in
 
 The Discussions home page is organized by category. Each category is a section with its own heading.
 
-**Navigating categories:**
-```
+### Navigating categories
+
+```text
 3 → Jump to category headings
 K → Navigate discussion titles within a category
 Enter → Open a discussion
 ```
 
-**The side panel (left or right depending on view width) shows:**
+### The side panel (left or right depending on view width) shows
+
 - All categories with item counts
 - Pin/announcements section at top
 - Most active discussions
@@ -95,8 +99,9 @@ Enter → Open a discussion
    - For **Q&A** category: phrase the title as a question
 4. Activate **"Start discussion"**
 
-**Screen reader path:**
-```
+### Screen reader path
+
+```text
 Tab to "New discussion" button → Enter
 → Category list: ↑/↓ to select category → Enter
 → Title field: type title
@@ -113,13 +118,15 @@ Tab to "New discussion" button → Enter
 ### Reading a Discussion
 
 A discussion page is structured similarly to an issue:
+
 - The original post at the top
 - Replies in chronological order
 - An "Answered" reply pinned to the top (Q&A category only)
 - A reply editor at the bottom
 
-**Navigation:**
-```
+#### Navigation
+
+```text
 H → Jump between the original post heading and reply headings
 3 → Navigate individual reply headings
 ↓ → Read through content
@@ -135,7 +142,8 @@ H → Jump between the original post heading and reply headings
 ### Replying to a Specific Comment (Nested Reply)
 
 Each comment has a **Reply** button below it:
-```
+
+```text
 Tab to "Reply" button on the specific comment → Enter
 → Nested text area opens under that comment
 → Focus Mode → type → Ctrl+Enter
@@ -153,7 +161,8 @@ In the **Q&A** category, one reply can be marked as the accepted answer. This is
 
 **Only the discussion author and repository maintainers** can mark an answer.
 
-**To mark an answer (as the discussion author):**
+### To mark an answer (as the discussion author)
+
 1. Navigate to the reply you want to mark as the answer
 2. Look for the **"Mark as answer"** button below the reply
 3. Activate it - the reply is pinned to the top and the discussion shows a green "Answered" badge
@@ -168,14 +177,16 @@ In the **Q&A** category, one reply can be marked as the accepted answer. This is
 
 Some discussion categories support embedded polls. A poll lets you gather structured vote data from the community.
 
-**Creating a poll:**
+### Creating a poll
+
 1. When creating a discussion, look for the "Add a poll" option below the body editor
 2. Type each poll option (up to 8 options)
 3. Set poll duration (optional)
 4. Submit the discussion - the poll appears inline
 
-**Voting in a poll:**
-```
+### Voting in a poll
+
+```text
 Navigate to the poll section
 → Radio buttons or checkboxes for each option
 → Space/Enter to vote
@@ -190,7 +201,7 @@ Navigate to the poll section
 
 ### Discussions List
 
-```
+```text
 T                     → Navigate tab bar to reach "Discussions" tab
 H / 2                 → Category section headings
 3                     → Individual discussion titles (h3 links)
@@ -201,7 +212,7 @@ Enter                 → Open a discussion
 
 ### Inside a Discussion
 
-```
+```text
 H                     → Original post heading and top-level reply headings
 3                     → Individual replies
 ↓                     → Read body content
@@ -209,16 +220,19 @@ Tab                   → Move to interactive elements (reply buttons, reactions
 Ctrl+Enter            → Submit a reply (when in text area)
 ```
 
-**NVDA note:**
+#### NVDA note
+
 - Browse mode (NVDA+Space) to read the discussion
 - Enter application mode for the reply editor
 - Discussion replies are `<article>` elements - NVDA announces "article" as you navigate with H
 
-**JAWS note:**
+#### JAWS note
+
 - `A` key navigates `<article>` elements - useful for jumping between replies
 - Use Forms Mode for the reply editor
 
-**VoiceOver note:**
+#### VoiceOver note
+
 - VO+Right to read through content
 - VO+Command+L to list all links (useful for navigating many replies quickly)
 - VO+Space on the reply field to enter interaction mode
@@ -230,6 +244,7 @@ Ctrl+Enter            → Submit a reply (when in text area)
 Some organizations enable Discussions at the organization level, separate from any repository. These work identically to repository discussions but span the whole organization.
 
 Common uses:
+
 - Org-wide announcements
 - Community introductions ("Introduce yourself" pinned thread)
 - Cross-repo feature brainstorming

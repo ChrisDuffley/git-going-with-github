@@ -49,25 +49,25 @@
 <li><a href="#7-landmark-structure-by-page-type">Landmark Structure by Page Type</a></li>
 <li><a href="#8-githubs-heading-hierarchy-in-practice">GitHub&#39;s Heading Hierarchy in Practice</a></li>
 <li><a href="#9-how-githubs-layout-changes-by-viewport">How GitHub&#39;s Layout Changes by Viewport</a></li>
-<li><a href="#10-the-mental-model--building-your-internal-map">The Mental Model - Building Your Internal Map</a></li>
+<li><a href="#10-the-mental-model---building-your-internal-map">The Mental Model - Building Your Internal Map</a></li>
 </ol>
 <hr>
 <h2>1. GitHub&#39;s Three-Level Structure</h2>
 <p>GitHub is not a single page or a single kind of page. It is three nested levels, and understanding which level you are on changes how you navigate.</p>
-<pre><code class="hljs">Level <span class="hljs-number">1</span>: Your Account <span class="hljs-symbol">/</span> Profile
-   github.com<span class="hljs-symbol">/your-username</span>
-   github.com<span class="hljs-symbol">/settings/...</span>
-   github.com<span class="hljs-symbol">/notifications</span>
+<pre><code class="hljs language-text">Level 1: Your Account / Profile
+   github.com/your-username
+   github.com/settings/...
+   github.com/notifications
 
-Level <span class="hljs-number">2</span>: An Organization <span class="hljs-keyword">or</span> User&#x27;s Space
-   github.com<span class="hljs-symbol">/microsoft</span>
-   github.com<span class="hljs-symbol">/community-access</span>
-   github.com<span class="hljs-symbol">/github</span>
+Level 2: An Organization or User&#x27;s Space
+   github.com/microsoft
+   github.com/community-access
+   github.com/github
 
-Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operator">-</span> where all the work happens
-   github.com<span class="hljs-symbol">/community-access/accessibility-agents</span>
-   github.com<span class="hljs-symbol">/community-access/accessibility-agents/issues</span>
-   github.com<span class="hljs-operator">/</span>community-access<span class="hljs-operator">/</span>accessibility-agents<span class="hljs-operator">/</span>pull<span class="hljs-operator">/</span><span class="hljs-number">42</span></code></pre>
+Level 3: A Repository - where all the work happens
+   github.com/community-access/accessibility-agents
+   github.com/community-access/accessibility-agents/issues
+   github.com/community-access/accessibility-agents/pull/42</code></pre>
 <p><strong>Most of this workshop happens at Level 3.</strong> Issues, pull requests, code, and actions all live inside a repository. When someone says &quot;go to the repo,&quot; they mean Level 3.</p>
 <blockquote>
 <p><strong>Screen reader orientation tip:</strong> The first heading (<code>H</code> then <code>1</code>) on any page tells you what level you are on. On a repository page, it reads &quot;owner/repo-name.&quot; On your profile page, it reads your username. On a settings page, it reads the settings category name.</p>
@@ -127,7 +127,7 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 </blockquote>
 <h3>Secondary navigation (repository pages only)</h3>
 <p>When you are inside a repository, a second navigation bar appears below the global bar. This contains the repository&#39;s tabs:</p>
-<pre><code class="hljs">Code | <span class="hljs-type">Issues</span> | <span class="hljs-type">Pull</span> requests | <span class="hljs-type">Actions</span> | <span class="hljs-type">Projects</span> | <span class="hljs-type">Wiki</span> | <span class="hljs-type">Security</span> | <span class="hljs-type">Insights</span> | <span class="hljs-type">Settings</span></code></pre>
+<pre><code class="hljs language-text">Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights | Settings</code></pre>
 <p><strong>Screen reader landmark:</strong> This is labeled <strong>&quot;Repository navigation&quot;</strong>. Press <code>D</code> to jump to it directly.</p>
 <hr>
 <h2>3. How to Tell Where You Are</h2>
@@ -263,7 +263,7 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 <h2>4. The Five Key Page Types</h2>
 <h3>Page Type 1: Repository Home (Code Tab)</h3>
 <p>This is the central hub of any project. It is where you find the file tree, the README, branch information, and links to all other parts of the repository.</p>
-<p><strong>What to expect:</strong></p>
+<h4>What to expect</h4>
 <ul>
 <li>H1: <code>owner/repo-name</code></li>
 <li>Repository navigation landmark (Code, Issues, PRs, Actions tabs)</li>
@@ -273,7 +273,7 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 </ul>
 <h3>Page Type 2: Issues List</h3>
 <p>A searchable, filterable list of all issues in the repository.</p>
-<p><strong>What to expect:</strong></p>
+<h4>What to expect</h4>
 <ul>
 <li>H1: <code>Issues</code></li>
 <li>A search and filter bar at the top</li>
@@ -283,7 +283,7 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 </ul>
 <h3>Page Type 3: Issue Detail</h3>
 <p>The full view of a single issue: the original report, all comments, labels, assignees, and the timeline.</p>
-<p><strong>What to expect:</strong></p>
+<h4>What to expect</h4>
 <ul>
 <li>H1: The issue title</li>
 <li>H2: &quot;Description&quot; (original issue body)</li>
@@ -293,7 +293,7 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 </ul>
 <h3>Page Type 4: Pull Request Detail</h3>
 <p>The most complex page on GitHub - it has three tabs (Conversation, Commits, Files Changed), each with its own structure.</p>
-<p><strong>What to expect:</strong></p>
+<h4>What to expect</h4>
 <ul>
 <li>H1: The PR title</li>
 <li>Landmark: &quot;Pull request tabs&quot; (Conversation, Commits, Files changed)</li>
@@ -303,12 +303,12 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 </ul>
 <h3>Page Type 5: Your Personal Feed and Profile</h3>
 <p>Your personal home (<code>github.com</code>) shows activity from repositories you follow. Your profile (<code>github.com/username</code>) shows your contribution graph, pinned repos, and bio.</p>
-<p><strong>What to expect on your feed:</strong></p>
+<h4>What to expect on your feed</h4>
 <ul>
 <li>A &quot;For you&quot; activity stream - recent activity from repos you watch</li>
 <li>A sidebar of suggested repositories and topics</li>
 </ul>
-<p><strong>What to expect on your profile:</strong></p>
+<h4>What to expect on your profile</h4>
 <ul>
 <li>H1: Your username</li>
 <li>A contribution activity graph (visually prominent; read as a table by screen readers)</li>
@@ -318,33 +318,33 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 <hr>
 <h2>5. Visual Map of a Repository Page</h2>
 <p>This diagram shows the layout of a repository home page. It is presented as ASCII art - every screen reader will read it correctly as text, left to right, top to bottom.</p>
-<pre><code class="hljs">+----------------------------------------------------------+
-|<span class="hljs-string">  GLOBAL NAVIGATION (landmark: &quot;Navigation Menu&quot;)         </span>|
-|<span class="hljs-string">  [GitHub] [Search] [Copilot] [PRs] [Issues] [Bell] [You]</span>|
+<pre><code class="hljs language-text">+----------------------------------------------------------+
+|  GLOBAL NAVIGATION (landmark: &quot;Navigation Menu&quot;)         |
+|  [GitHub] [Search] [Copilot] [PRs] [Issues] [Bell] [You]|
 +----------------------------------------------------------+
-|<span class="hljs-string">  REPOSITORY TABS (landmark: &quot;Repository navigation&quot;)     </span>|
-|<span class="hljs-string">  [Code] [Issues 12] [Pull requests 3] [Actions] [...]   </span>|
+|  REPOSITORY TABS (landmark: &quot;Repository navigation&quot;)     |
+|  [Code] [Issues 12] [Pull requests 3] [Actions] [...]   |
 +----------------------------------------------------------+
-|<span class="hljs-string">  REPOSITORY HEADER                                        </span>|
-|<span class="hljs-string">  owner / repo-name  (this is the H1 heading)             </span>|
-|<span class="hljs-string">  [Star 42]  [Watch]  [Fork 8]                             </span>|
+|  REPOSITORY HEADER                                        |
+|  owner / repo-name  (this is the H1 heading)             |
+|  [Star 42]  [Watch]  [Fork 8]                             |
 +-----------------------------+----------------------------+
-|<span class="hljs-string">  FILE AREA                  </span>|<span class="hljs-string">  SIDEBAR                   </span>|
-|<span class="hljs-string">  Branch: [main v]           </span>|<span class="hljs-string">  About                     </span>|
-|<span class="hljs-string">  [Go to file]  [Code v]     </span>|<span class="hljs-string">  Description text          </span>|
-|<span class="hljs-string">                             </span>|<span class="hljs-string">  Topics: accessibility     </span>|
-|<span class="hljs-string">  FILE TABLE (landmark)      </span>|<span class="hljs-string">  Releases: 3               </span>|
-|<span class="hljs-string">  .github/     3 days ago    </span>|<span class="hljs-string">  Contributors: 5           </span>|
-|<span class="hljs-string">  docs/        2 days ago    </span>|<span class="hljs-string">  Languages: Markdown 100%  </span>|
-|<span class="hljs-string">  README.md    yesterday     </span>|<span class="hljs-string">                            </span>|
+|  FILE AREA                  |  SIDEBAR                   |
+|  Branch: [main v]           |  About                     |
+|  [Go to file]  [Code v]     |  Description text          |
+|                             |  Topics: accessibility     |
+|  FILE TABLE (landmark)      |  Releases: 3               |
+|  .github/     3 days ago    |  Contributors: 5           |
+|  docs/        2 days ago    |  Languages: Markdown 100%  |
+|  README.md    yesterday     |                            |
 +-----------------------------+----------------------------+
-|<span class="hljs-string">  README (landmark: &quot;Repository files navigation&quot;)         </span>|
-|<span class="hljs-string">  # Rendered README content here                           </span>|
-|<span class="hljs-string">  ...                                                      </span>|
+|  README (landmark: &quot;Repository files navigation&quot;)         |
+|  # Rendered README content here                           |
+|  ...                                                      |
 +----------------------------------------------------------+
-|<span class="hljs-string">  FOOTER                                                   </span>|
+|  FOOTER                                                   |
 +----------------------------------------------------------+</code></pre>
-<p><strong>Screen reader navigation of this page:</strong></p>
+<h3>Screen reader navigation of this page</h3>
 <ul>
 <li><code>1</code> → hear &quot;owner/repo-name&quot; (the H1, confirms you are on the right repo)</li>
 <li><code>D</code> → &quot;Navigation Menu&quot; → <code>D</code> → &quot;Repository navigation&quot; → <code>D</code> → &quot;Main&quot; (file tree area)</li>
@@ -371,16 +371,16 @@ Level <span class="hljs-number">3</span>: A Repository <span class="hljs-operato
 <details>
 <summary>Screen reader users (NVDA / JAWS) - 10-second orientation sequence</summary>
 
-<pre><code class="hljs">Step 1: Press 1
-        → Hear: what <span class="hljs-keyword">page</span> type are you <span class="hljs-keyword">on</span>? (repo name / <span class="hljs-string">&quot;Issues&quot;</span> / issue <span class="hljs-keyword">title</span> / PR <span class="hljs-keyword">title</span>)
+<pre><code class="hljs language-text">Step 1: Press 1
+        → Hear: what page type are you on? (repo name / &quot;Issues&quot; / issue title / PR title)
 
 Step 2: Press D repeatedly
-        → Hear: what landmark regions exist <span class="hljs-keyword">on</span> this <span class="hljs-keyword">page</span>?
-        → Build a map: <span class="hljs-string">&quot;Navigation Menu, Repository navigation, Main, Add a comment, Pagination&quot;</span>
+        → Hear: what landmark regions exist on this page?
+        → Build a map: &quot;Navigation Menu, Repository navigation, Main, Add a comment, Pagination&quot;
 
-Step 3: Press NVDA+F7 (NVDA) <span class="hljs-keyword">or</span> <span class="hljs-keyword">Insert</span>+F3 (JAWS)
-        → Open the Elements <span class="hljs-keyword">List</span> → choose <span class="hljs-string">&quot;Headings&quot;</span> tab
-        → Hear: the full heading outline of the <span class="hljs-keyword">page</span>
+Step 3: Press NVDA+F7 (NVDA) or Insert+F3 (JAWS)
+        → Open the Elements List → choose &quot;Headings&quot; tab
+        → Hear: the full heading outline of the page
         → This tells you every major section available</code></pre>
 <p>After these three steps, you know:</p>
 <ul>
@@ -394,16 +394,16 @@ Step 3: Press NVDA+F7 (NVDA) <span class="hljs-keyword">or</span> <span class="h
 <details>
 <summary>Screen reader users (VoiceOver - macOS) - 10-second orientation sequence</summary>
 
-<pre><code class="hljs">Step <span class="hljs-number">1</span>: Quick Nav H (<span class="hljs-keyword">with</span> Quick Nav <span class="hljs-keyword">on</span>) <span class="hljs-title">or</span> <span class="hljs-title">VO</span>+<span class="hljs-title">Cmd</span>+<span class="hljs-title">H</span> → <span class="hljs-title">navigate</span> <span class="hljs-title">to</span> <span class="hljs-title">h1</span>
-        → Hear: what page type are you <span class="hljs-keyword">on</span>? (<span class="hljs-title">repo</span> <span class="hljs-title">name</span> / <span class="hljs-string">&quot;Issues&quot;</span> / <span class="hljs-title">issue</span> <span class="hljs-title">title</span> / <span class="hljs-title">PR</span> <span class="hljs-title">title</span>)
+<pre><code class="hljs language-text">Step 1: Quick Nav H (with Quick Nav on) or VO+Cmd+H → navigate to h1
+        → Hear: what page type are you on? (repo name / &quot;Issues&quot; / issue title / PR title)
 
-Step <span class="hljs-number">2</span>: VO+U → press Left/Right Arrow <span class="hljs-built_in">to</span> choose <span class="hljs-string">&quot;Landmarks&quot;</span> → Up/Down <span class="hljs-built_in">to</span> explore
-        → Build <span class="hljs-keyword">a</span> map: <span class="hljs-string">&quot;Navigation Menu, Repository navigation, Main, Add a comment, Pagination&quot;</span>
-        → Escape <span class="hljs-built_in">to</span> dismiss <span class="hljs-keyword">the</span> rotor
+Step 2: VO+U → press Left/Right Arrow to choose &quot;Landmarks&quot; → Up/Down to explore
+        → Build a map: &quot;Navigation Menu, Repository navigation, Main, Add a comment, Pagination&quot;
+        → Escape to dismiss the rotor
 
-Step <span class="hljs-number">3</span>: VO+U → press Left/Right Arrow <span class="hljs-built_in">to</span> choose <span class="hljs-string">&quot;Headings&quot;</span>
-        → Hear: <span class="hljs-keyword">the</span> full heading outline <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> page
-        → Up/Down <span class="hljs-built_in">to</span> navigate headings; Enter <span class="hljs-built_in">to</span> jump <span class="hljs-built_in">to</span> <span class="hljs-literal">one</span></code></pre>
+Step 3: VO+U → press Left/Right Arrow to choose &quot;Headings&quot;
+        → Hear: the full heading outline of the page
+        → Up/Down to navigate headings; Enter to jump to one</code></pre>
 <p>After these three steps, you know:</p>
 <ul>
 <li><strong>What</strong> page you are on (step 1)</li>
@@ -563,50 +563,50 @@ Step <span class="hljs-number">3</span>: VO+U → press Left/Right Arrow <span c
 <h2>8. GitHub&#39;s Heading Hierarchy in Practice</h2>
 <p>GitHub uses a predictable heading structure. Learning this pattern means you can navigate any page by heading level alone.</p>
 <h3>Repository home</h3>
-<pre><code class="hljs"><span class="hljs-params">H1:</span> owner<span class="hljs-symbol">/repo-name</span>
-  <span class="hljs-params">H2:</span> About (sidebar section)
-  <span class="hljs-params">H2:</span> Releases
-  <span class="hljs-params">H2:</span> (README sections <span class="hljs-operator">-</span> whatever the author wrote)</code></pre>
+<pre><code class="hljs language-text">H1: owner/repo-name
+  H2: About (sidebar section)
+  H2: Releases
+  H2: (README sections - whatever the author wrote)</code></pre>
 <h3>Issues list</h3>
-<pre><code class="hljs">H1: <span class="hljs-title function_ invoke__">Issues</span>
-  (no H2s - issues are listed <span class="hljs-keyword">as</span> links, not headings)
-  (<span class="hljs-keyword">use</span> I <span class="hljs-keyword">for</span> <span class="hljs-title class_">list</span> items, or <span class="hljs-number">3</span> <span class="hljs-keyword">for</span> <span class="hljs-title class_">issue</span> headings <span class="hljs-keyword">in</span> some views)</code></pre>
+<pre><code class="hljs language-text">H1: Issues
+  (no H2s - issues are listed as links, not headings)
+  (use I for list items, or 3 for issue headings in some views)</code></pre>
 <h3>Issue detail</h3>
-<pre><code class="hljs"><span class="hljs-symbol">H1:</span> Issue title
-<span class="hljs-symbol">  H2:</span> Description
-<span class="hljs-symbol">  H2:</span> Activity
-<span class="hljs-symbol">    H3:</span> Each comment header (author + timestamp)</code></pre>
-<h3>Pull request detail - Conversation tab</h3>
-<pre><code class="hljs">H1: PR title
-  H2: (description, <span class="hljs-keyword">if</span> <span class="hljs-keyword">any</span>)
+<pre><code class="hljs language-text">H1: Issue title
+  H2: Description
   H2: Activity
-    H3: <span class="hljs-keyword">Each</span> <span class="hljs-keyword">comment</span> <span class="hljs-keyword">header</span>
-    H3: <span class="hljs-keyword">Each</span> review submission
-    H4: <span class="hljs-keyword">Each</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">comment</span> <span class="hljs-keyword">within</span> a review</code></pre>
+    H3: Each comment header (author + timestamp)</code></pre>
+<h3>Pull request detail - Conversation tab</h3>
+<pre><code class="hljs language-text">H1: PR title
+  H2: (description, if any)
+  H2: Activity
+    H3: Each comment header
+    H3: Each review submission
+    H4: Each inline comment within a review</code></pre>
 <h3>Pull request detail - Files Changed tab</h3>
-<pre><code class="hljs"><span class="hljs-params">H1:</span> PR title
-  <span class="hljs-params">H2:</span> File tree (<span class="hljs-keyword">with</span> <span class="hljs-string">&quot;New Files Changed Experience&quot;</span> enabled)
-    <span class="hljs-params">H3:</span> Each file name heading
-      <span class="hljs-params">H4:</span> Each diff hunk heading</code></pre>
+<pre><code class="hljs language-text">H1: PR title
+  H2: File tree (with &quot;New Files Changed Experience&quot; enabled)
+    H3: Each file name heading
+      H4: Each diff hunk heading</code></pre>
 <blockquote>
 <p><strong>Why this matters:</strong> Pressing <code>3</code> on a PR Files Changed tab jumps between file headings - this is how you quickly navigate to a specific file without tabbing through the entire diff.</p>
 </blockquote>
 <hr>
 <h2>9. How GitHub&#39;s Layout Changes by Viewport</h2>
 <p>GitHub is a responsive web application. The layout shifts at different screen widths, and this affects what landmarks and headings you encounter.</p>
-<p><strong>At full desktop width (1200px+):</strong></p>
+<h3>At full desktop width (1200px+)</h3>
 <ul>
 <li>File tree and sidebar are visible alongside the main content</li>
 <li>The full repository tab bar is visible</li>
 <li>All landmark regions described above are present</li>
 </ul>
-<p><strong>At tablet width (768-1199px):</strong></p>
+<h3>At tablet width (768-1199px)</h3>
 <ul>
 <li>Sidebar may collapse or move below the main content</li>
 <li>Some navigation items may move into a &quot;More&quot; dropdown</li>
 <li>Landmark structure remains the same - only visual position changes</li>
 </ul>
-<p><strong>At mobile width (below 768px):</strong></p>
+<h3>At mobile width (below 768px)</h3>
 <ul>
 <li>Global navigation collapses to a hamburger-style menu</li>
 <li>Tabs may scroll horizontally or collapse</li>
@@ -616,31 +616,31 @@ Step <span class="hljs-number">3</span>: VO+U → press Left/Right Arrow <span c
 <hr>
 <h2>10. The Mental Model - Building Your Internal Map</h2>
 <p>After your first day of using GitHub, you will have an internal map. Here is what that map should look like:</p>
-<pre><code class="hljs">GitHub as a buildi<span class="hljs-symbol">ng:</span>
+<pre><code class="hljs language-text">GitHub as a building:
 
 LOBBY (global nav bar)
-  Always here, same on every <span class="hljs-built_in">floor</span>
-  Contai<span class="hljs-symbol">ns:</span> <span class="hljs-built_in">search</span>, your inbox, your identity
-  Landma<span class="hljs-symbol">rk:</span> <span class="hljs-string">&quot;Navigation Menu&quot;</span>
+  Always here, same on every floor
+  Contains: search, your inbox, your identity
+  Landmark: &quot;Navigation Menu&quot;
 
-<span class="hljs-built_in">FLOOR</span> SELECTOR (repository nav tabs)
+FLOOR SELECTOR (repository nav tabs)
   Changes based on which repo you&#x27;re in
-  Contai<span class="hljs-symbol">ns:</span> <span class="hljs-built_in">Code</span>, Issues, PRs, Actions, Settings
-  Landma<span class="hljs-symbol">rk:</span> <span class="hljs-string">&quot;Repository navigation&quot;</span>
+  Contains: Code, Issues, PRs, Actions, Settings
+  Landmark: &quot;Repository navigation&quot;
 
 MAIN ROOM (the primary content area)
-  Changes completely depending on which <span class="hljs-built_in">floor</span> you&#x27;re on
-  Landma<span class="hljs-symbol">rk:</span> <span class="hljs-string">&quot;Main&quot;</span>
+  Changes completely depending on which floor you&#x27;re on
+  Landmark: &quot;Main&quot;
 
 MAILBOX (Add a comment)
-  At the bottom of Issues <span class="hljs-built_in">and</span> PR Conversation pages
-  Landma<span class="hljs-symbol">rk:</span> <span class="hljs-string">&quot;Add a comment&quot;</span>
+  At the bottom of Issues and PR Conversation pages
+  Landmark: &quot;Add a comment&quot;
 
 ELEVATOR BUTTONS (keyboard shortcuts)
-  G+I = Issues <span class="hljs-built_in">floor</span>
-  G+P = Pull requests <span class="hljs-built_in">floor</span>
-  G+C = <span class="hljs-built_in">Code</span> <span class="hljs-built_in">floor</span>
-  G+A = Actions <span class="hljs-built_in">floor</span>
+  G+I = Issues floor
+  G+P = Pull requests floor
+  G+C = Code floor
+  G+A = Actions floor
   ? = Show all buttons in this building</code></pre>
 <p>When you get disoriented:</p>
 <ol>

@@ -1,4 +1,5 @@
 # Appendix M: VS Code Accessibility Reference
+>
 > **Listen to Episode 30:** [VS Code Accessibility Reference](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Complete Technical Reference for Screen Reader Users
@@ -12,8 +13,8 @@
 ## Table of Contents
 
 1. [Complete Accessibility Settings Reference](#1-complete-accessibility-settings-reference)
-2. [Audio Cues - All Options](#2-audio-cues--all-options)
-3. [Accessible Diff Viewer - Complete Guide](#3-accessible-diff-viewer--complete-guide)
+2. [Audio Cues - All Options](#2-audio-cues---all-options)
+3. [Accessible Diff Viewer - Complete Guide](#3-accessible-diff-viewer---complete-guide)
 4. [Screen Reader-Specific Configurations](#4-screen-reader-specific-configurations)
 5. [Complete Keyboard Shortcuts](#5-complete-keyboard-shortcuts)
 6. [Accessibility Signals Types and Customization](#6-accessibility-signals-types-and-customization)
@@ -28,7 +29,7 @@ All settings can be accessed via Settings UI (`Ctrl+,`) or by editing `settings.
 ### Core Accessibility Settings
 
 | Setting Path | Values | Default | Description |
-|--------------|--------|---------|-------------|
+| --------------  | --------  | ---------  | -------------  |
 | `editor.accessibilitySupport` | `auto`, `on`, `off` | `auto` | Enables screen reader optimizations. `auto` detects NVDA/JAWS/VoiceOver. Set to `on` to force. |
 | `editor.accessibilityPageSize` | number (lines) | `10` | Number of lines to read when using Page Up/Down in screen reader mode |
 | `editor.guides.bracketPairs` | boolean | `false` | Shows bracket pair guides. Disable for screen readers (visual only). |
@@ -46,7 +47,7 @@ All settings can be accessed via Settings UI (`Ctrl+,`) or by editing `settings.
 ### Diff and Merge Settings
 
 | Setting Path | Values | Default | Description |
-|--------------|--------|---------|-------------|
+| --------------  | --------  | ---------  | -------------  |
 | `diffEditor.codeLens` | boolean | `false` | Shows CodeLens in diff view. Visual only. |
 | `diffEditor.diffAlgorithm` | `legacy`, `advanced` | `advanced` | Diff calculation method. `advanced` produces better hunks for screen readers. |
 | `diffEditor.ignoreTrimWhitespace` | boolean | `true` | Ignores whitespace changes in diffs. **Recommended:** `true` to reduce noise. |
@@ -57,7 +58,7 @@ All settings can be accessed via Settings UI (`Ctrl+,`) or by editing `settings.
 ### Terminal Settings
 
 | Setting Path | Values | Default | Description |
-|--------------|--------|---------|-------------|
+| --------------  | --------  | ---------  | -------------  |
 | `terminal.integrated.accessibleViewFocusesTerminal` | boolean | `true` | Returns focus to terminal after closing Accessible View. |
 | `terminal.integrated.accessibleViewPreserveCursorPosition` | boolean | `false` | Preserves cursor position when opening Accessible View. |
 | `terminal.integrated.enableBell` | boolean | `false` | Enables terminal bell sound. **Recommended:** `true` for audio feedback. |
@@ -66,7 +67,7 @@ All settings can be accessed via Settings UI (`Ctrl+,`) or by editing `settings.
 ### Notification Settings
 
 | Setting Path | Values | Default | Description |
-|--------------|--------|---------|-------------|
+| --------------  | --------  | ---------  | -------------  |
 | `accessibility.verbosity.comments` | boolean | `true` | Announces comment threads in code. |
 | `accessibility.verbosity.diff-editor` | boolean | `true` | Announces diff editor context. |
 | `accessibility.verbosity.editor` | boolean | `true` | Announces editor operations. |
@@ -94,7 +95,7 @@ Audio cues provide non-verbal feedback through sound. Each cue can be configured
 ### Audio Cue Values
 
 | Value | Behavior |
-|-------|----------|
+| -------  | ----------  |
 | `auto` | Play sound in screen reader mode only |
 | `on` | Always play sound |
 | `off` | Never play sound |
@@ -102,7 +103,7 @@ Audio cues provide non-verbal feedback through sound. Each cue can be configured
 ### Complete Accessibility Signals List
 
 | Setting | When It Plays | Recommended |
-|---------|--------------|-------------|
+| ---------  | --------------  | -------------  |
 | `accessibility.signals.clear` | When clearing the terminal or output | `on` |
 | `accessibility.signals.chatRequestSent` | When sending a Copilot Chat prompt | `on` |
 | `accessibility.signals.chatResponsePending` | While Copilot is generating a response | `auto` |
@@ -146,7 +147,8 @@ Audio cues provide non-verbal feedback through sound. Each cue can be configured
 }
 ```
 
-**Sound file requirements:**
+#### Sound file requirements
+
 - Format: WAV, MP3, or OGG
 - Duration: Keep under 2 seconds
 - Volume: Normalize to avoid clipping
@@ -168,16 +170,16 @@ The Accessible Diff Viewer presents file diffs as a structured, line-by-line lis
 ### Opening Accessible Diff Viewer
 
 | Method | Steps |
-|--------|-------|
+| --------  | -------  |
 | Keyboard (in diff editor) | Press `F7` to jump to first hunk, `Alt+F2` to open Accessible View |
 | Command Palette | `Ctrl+Shift+P` → "Open Accessible Diff Viewer" |
 | Automatic | Some contexts open it automatically in screen reader mode |
 
 ### Diff Viewer Structure
 
-**Top-level structure:**
+#### Top-level structure
 
-```
+```text
 Accessible Diff Viewer
 ├── Header (file path, change summary)
 ├── Hunk 1 of N
@@ -190,22 +192,22 @@ Accessible Diff Viewer
 └── Footer (totals: X additions, Y deletions)
 ```
 
-**Line prefixes:**
+#### Line prefixes
 
 | Prefix | Meaning | Screen Reader Announcement |
-|--------|---------|----------------------------|
+| --------  | ---------  | ----------------------------  |
 | (no prefix) | Unchanged line (context) | "Unchanged: [line content]" |
 | `+` | Added line | "Added: [line content]" or "Line added: [content]" |
 | `-` | Removed line | "Removed: [line content]" or "Line removed: [content]" |
-| `| ~` | Modified line (original) | "Modified from: [old content]" |
-| `| +` | Modified line (new version) | "Modified to: [new content]" |
+| `\|~` | Modified line (original) | "Modified from: [old content]" |
+| `\|+` | Modified line (new version) | "Modified to: [new content]" |
 
 ### Navigating Hunks
 
-**Hunk = a block of related changes**
+#### Hunk = a block of related changes
 
 | Action | Keyboard |
-|--------|----------|
+| --------  | ----------  |
 | Jump to next hunk | `F7` |
 | Jump to previous hunk | `Shift+F7` |
 | Jump to next change | `F8` (in some contexts) |
@@ -213,14 +215,16 @@ Accessible Diff Viewer
 
 ### Screen Reader-Specific Navigation
 
-**NVDA/JAWS:**
+#### NVDA/JAWS
+
 1. Open diff: `Enter` on file in Source Control, or `F7` in an open diff
 2. `Alt+F2` to open Accessible Diff Viewer
 3. Navigate with `Up/Down Arrow` (line by line)
 4. Use `H` key to jump between hunks (each hunk has a heading)
 5. `Escape` to close and return to editor
 
-**VoiceOver:**
+#### VoiceOver
+
 1. `VO+Arrow` to navigate to diff file → `VO+Space` to open
 2. `Option+F2` for Accessible Diff Viewer
 3. `VO+Arrow` keys to navigate lines
@@ -231,9 +235,9 @@ Accessible Diff Viewer
 
 The diff shows 3 unchanged lines before and after each change for context. These are announced as "Unchanged: [content]".
 
-**Example:**
+#### Example
 
-```
+```text
 Hunk 1 of 3 - lines 42-48
 
   Unchanged: ## Screen Reader Setup
@@ -248,17 +252,19 @@ The unchanged lines help you understand where in the file the change occurred.
 
 ### Inline Diff View vs Side-by-Side
 
-**Inline view (recommended for screen readers):**
+#### Inline view (recommended for screen readers)
+
 - All changes in a single editor
 - Removed lines followed by added lines
 - Easier to navigate with screen reader reading commands
 
-**Side-by-side view (default, visual):**
+#### Side-by-side view (default, visual)
+
 - Left panel: original file
 - Right panel: modified file
 - Requires navigating between panels
 
-**To switch to inline view:**
+#### To switch to inline view
 
 1. Open Settings: `Ctrl+,`
 2. Search: "diffEditor.renderSideBySide"
@@ -270,7 +276,7 @@ The unchanged lines help you understand where in the file the change occurred.
 
 ### NVDA Configuration for VS Code
 
-**Recommended NVDA settings:**
+#### Recommended NVDA settings
 
 1. **Browse Mode settings:**
    - NVDA Menu → Preferences → Settings → Browse Mode
@@ -290,14 +296,15 @@ The unchanged lines help you understand where in the file the change occurred.
 4. **Input Composition:**
    - "Announce candidates during IME text composition": **Checked**
 
-**NVDA add-ons for VS Code:**
+#### NVDA add-ons for VS Code
+
 - **Focus Highlight** - shows focus location visually (helpful for sighted trainers)
 - **IndentNav** - navigate by indentation level (useful for Python, YAML)
 
-**VS Code-specific NVDA commands:**
+#### VS Code-specific NVDA commands
 
 | Action | NVDA Command |
-|--------|--------------|
+| --------  | --------------  |
 | Read from cursor | `Insert+Down Arrow` |
 | Read all | `Insert+Down Arrow` (twice) |
 | Stop speech | `Control` |
@@ -306,7 +313,7 @@ The unchanged lines help you understand where in the file the change occurred.
 
 ### JAWS Configuration for VS Code
 
-**Recommended JAWS settings:**
+#### Recommended JAWS settings
 
 1. **Settings Center → HTML/PDF/Accessibility:**
    - "Auto Forms Mode": **Checked**
@@ -320,14 +327,14 @@ The unchanged lines help you understand where in the file the change occurred.
 3. **Settings Center → Text Processing:**
    - "Blank Line Announcement": **Tone** (less verbose than speech)
 
-**JAWS scripts for VS Code:**
+#### JAWS scripts for VS Code
 
 Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](https://github.com/search?q=jaws+vscode+scripts) for community-maintained scripts.
 
-**VS Code-specific JAWS commands:**
+#### VS Code-specific JAWS commands
 
 | Action | JAWS Command |
-|--------|--------------|
+| --------  | --------------  |
 | Say current line | `Insert+Up Arrow` |
 | Read from cursor | `Insert+Page Down` |
 | Read to end | `Insert+Page Down` (twice) |
@@ -337,7 +344,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 
 ### VoiceOver Configuration for VS Code (macOS)
 
-**Recommended VoiceOver Utility settings:**
+#### Recommended VoiceOver Utility settings
 
 1. **Verbosity → Text:**
    - "Punctuation": **All** (for code and Markdown)
@@ -356,10 +363,10 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
    - "Enable positional audio": **On** (helps orient focus location)
    - "Mute sound effects": **Off** (audio cues are helpful)
 
-**VS Code-specific VoiceOver commands:**
+#### VS Code-specific VoiceOver commands
 
 | Action | VoiceOver Command |
-|--------|--------------|
+| --------  | --------------  |
 | Read from cursor | `VO+A` |
 | Read all | `VO+Shift+Down Arrow` (in text area) |
 | Stop reading | `Control` |
@@ -369,10 +376,10 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Open rotor | `VO+U` |
 | Navigate rotor | `Left/Right Arrow`, then `Up/Down Arrow` |
 
-**Quick Nav navigation (when enabled):**
+#### Quick Nav navigation (when enabled)
 
 | Command | Action |
-|---------|--------|
+| ---------  | --------  |
 | `H` | Next heading |
 | `Shift+H` | Previous heading |
 | `L` | Next link |
@@ -391,7 +398,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Global Navigation
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Command Palette | `Ctrl+Shift+P` | `Cmd+Shift+P` |
 | Quick Open (Go to File) | `Ctrl+P` | `Cmd+P` |
 | Settings | `Ctrl+,` | `Cmd+,` |
@@ -406,7 +413,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Sidebar Panels
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Explorer | `Ctrl+Shift+E` | `Cmd+Shift+E` |
 | Search | `Ctrl+Shift+F` | `Cmd+Shift+F` |
 | Source Control | `Ctrl+Shift+G` | `Cmd+Shift+G` |
@@ -416,7 +423,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Editor - File Operations
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | New File | `Ctrl+N` | `Cmd+N` |
 | Open File | `Ctrl+O` | `Cmd+O` |
 | Save | `Ctrl+S` | `Cmd+S` |
@@ -433,7 +440,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Editor - Navigation
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Go to Line | `Ctrl+G` | `Ctrl+G` |
 | Go to Symbol | `Ctrl+Shift+O` | `Cmd+Shift+O` |
 | Go to Definition | `F12` | `F12` |
@@ -453,7 +460,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Editor - Editing
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Cut Line | `Ctrl+X` | `Cmd+X` |
 | Copy Line | `Ctrl+C` | `Cmd+C` |
 | Paste | `Ctrl+V` | `Cmd+V` |
@@ -475,7 +482,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Editor - Find and Replace
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Find | `Ctrl+F` | `Cmd+F` |
 | Replace | `Ctrl+H` | `Cmd+H` |
 | Find Next | `F3` or `Enter` | `Cmd+G` or `Enter` |
@@ -489,7 +496,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Editor - Multi-Cursor
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Add Cursor Above | `Ctrl+Alt+Up` | `Cmd+Option+Up` |
 | Add Cursor Below | `Ctrl+Alt+Down` | `Cmd+Option+Down` |
 | Add Cursor to Line Ends | `Shift+Alt+I` | `Shift+Option+I` |
@@ -498,7 +505,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Terminal
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Toggle Terminal | `Ctrl+Backtick` | `Ctrl+Backtick` |
 | Create New Terminal | `Ctrl+Shift+Backtick` | `Ctrl+Shift+Backtick` |
 | Focus Terminal | `Ctrl+Backtick` | `Ctrl+Backtick` |
@@ -509,7 +516,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Source Control (Git)
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Open Source Control | `Ctrl+Shift+G` | `Cmd+Shift+G` |
 | Commit (in message field) | `Ctrl+Enter` | `Cmd+Enter` |
 | Stage File | `Ctrl+Enter` (on file) | `Cmd+Enter` |
@@ -518,7 +525,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Diff Viewer
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Next Diff Hunk | `F7` | `F7` |
 | Previous Diff Hunk | `Shift+F7` | `Shift+F7` |
 | Open Accessible Diff Viewer | `Alt+F2` | `Option+F2` |
@@ -526,7 +533,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Copilot
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Accept Suggestion | `Tab` | `Tab` |
 | Reject Suggestion | `Escape` | `Escape` |
 | Accept Word | `Ctrl+Right` | `Cmd+Right` |
@@ -542,7 +549,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Accessibility Features
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Toggle Screen Reader Mode | `Shift+Alt+F1` | `Shift+Option+F1` |
 | Accessible Help | `Alt+H` | `Option+H` |
 | Accessible View | `Alt+F2` | `Option+F2` |
@@ -552,7 +559,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Problems Panel
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Show Problems | `Ctrl+Shift+M` | `Cmd+Shift+M` |
 | Go to Next Error/Warning | `F8` | `F8` |
 | Go to Previous Error/Warning | `Shift+F8` | `Shift+F8` |
@@ -560,7 +567,7 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 ### Markdown Preview
 
 | Action | Windows/Linux | macOS |
-|--------|---------------|-------|
+| --------  | ---------------  | -------  |
 | Toggle Preview | `Ctrl+Shift+V` | `Cmd+Shift+V` |
 | Open Preview to Side | `Ctrl+K V` | `Cmd+K V` |
 
@@ -575,7 +582,7 @@ Accessibility signals are events that trigger announcements or audio cues. Beyon
 Control how much information VS Code announces:
 
 | Setting | Values | Default | Controls |
-|---------|--------|---------|----------|
+| ---------  | --------  | ---------  | ----------  |
 | `accessibility.verbosity.diffEditor` | `verbose`, `minimal`, `off` | `verbose` | Diff viewer context announcements |
 | `accessibility.verbosity.editor` | `verbose`, `minimal`, `off` | `verbose` | General editor announcements |
 | `accessibility.verbosity.hover` | `verbose`, `minimal`, `off` | `verbose` | Hover popup announcements |
@@ -591,7 +598,7 @@ Control how much information VS Code announces:
 Control when and how often announcements occur:
 
 | Setting | Values | Default | Description |
-|---------|--------|---------|-------------|
+| ---------  | --------  | ---------  | -------------  |
 | `accessibility.signals.debouncePositionChanges` | number (ms) | `500` | Delay before announcing position changes (prevents spam during rapid navigation) |
 | `accessibility.signals.onDidChangeFocus` | boolean | `true` | Announce focus changes |
 | `accessibility.signals.onDidChangeModelContent` | boolean | `false` | Announce content changes (very verbose) |
@@ -613,7 +620,7 @@ This prevents overlapping announcements.
 
 ### Minimal Screen Reader Profile
 
-**For users who prefer minimal announcements and use Accessible View manually:**
+#### For users who prefer minimal announcements and use Accessible View manually
 
 ```json
 {
@@ -634,7 +641,7 @@ This prevents overlapping announcements.
 
 ### Maximum Feedback Profile
 
-**For users who want all audio and verbal announcements:**
+#### For users who want all audio and verbal announcements
 
 ```json
 {
@@ -667,7 +674,7 @@ This prevents overlapping announcements.
 
 ### Copilot-Optimized Profile
 
-**For users working heavily with GitHub Copilot:**
+#### For users working heavily with GitHub Copilot
 
 ```json
 {
@@ -693,7 +700,7 @@ This prevents overlapping announcements.
 
 ### Git/Diff-Optimized Profile
 
-**For users doing heavy PR review and diff work:**
+#### For users doing heavy PR review and diff work
 
 ```json
 {
@@ -713,7 +720,7 @@ This prevents overlapping announcements.
 
 ### Performance-Optimized Profile
 
-**For users on slower machines or with large repositories:**
+#### For users on slower machines or with large repositories
 
 ```json
 {
@@ -747,7 +754,7 @@ This prevents overlapping announcements.
 
 ## Quick Copy: Complete Recommended Settings
 
-**Paste this into your `settings.json` for a balanced screen reader profile:**
+### Paste this into your `settings.json` for a balanced screen reader profile
 
 ```json
 {

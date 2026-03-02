@@ -40,7 +40,7 @@
 </blockquote>
 <hr>
 <h2>Prerequisites Checklist</h2>
-<p><strong>Before starting this chapter, verify you have completed:</strong></p>
+<h3>Before starting this chapter, verify you have completed</h3>
 <ul>
 <li><input aria-label="Chapter 5:" disabled="" type="checkbox"> Chapter 5: <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> - Understand PR structure, diffs, and comment workflows</li>
 <li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - VS Code installed and configured</li>
@@ -112,16 +112,16 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs"><span class="hljs-variable">Press</span> <span class="hljs-built_in">D</span> → <span class="hljs-variable">navigate</span> <span class="hljs-variable">to</span> <span class="hljs-string">&quot;Pull request navigation tabs&quot;</span> <span class="hljs-variable">landmark</span>
-<span class="hljs-variable">Press</span> → <span class="hljs-variable">or</span> <span class="hljs-built_in">Tab</span> → <span class="hljs-variable">find</span> <span class="hljs-string">&quot;Files changed&quot;</span> <span class="hljs-variable">link</span> → <span class="hljs-built_in">Enter</span></code></pre>
+<pre><code class="hljs language-text">Press D → navigate to &quot;Pull request navigation tabs&quot; landmark
+Press → or Tab → find &quot;Files changed&quot; link → Enter</code></pre>
 <p>The tab label announces the number of changed files: <em>&quot;Files changed, 4 files changed&quot;</em></p>
 </details>
 
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-<pre><code class="hljs"><span class="hljs-variable">VO</span><span class="hljs-operator">+</span><span class="hljs-variable">U</span> → <span class="hljs-variable">Landmarks</span> → <span class="hljs-variable">navigate</span> <span class="hljs-variable">to</span> <span class="hljs-string">&quot;Pull request navigation tabs&quot;</span>
-<span class="hljs-variable">VO</span><span class="hljs-operator">+</span><span class="hljs-built_in">Right</span> <span class="hljs-variable">or</span> <span class="hljs-variable">Quick</span> <span class="hljs-variable">Nav</span> <span class="hljs-built_in">K</span> → <span class="hljs-variable">find</span> <span class="hljs-string">&quot;Files changed&quot;</span> <span class="hljs-variable">link</span> → <span class="hljs-variable">VO</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span></code></pre>
+<pre><code class="hljs language-text">VO+U → Landmarks → navigate to &quot;Pull request navigation tabs&quot;
+VO+Right or Quick Nav K → find &quot;Files changed&quot; link → VO+Space</code></pre>
 <p>VoiceOver announces the number of changed files: <em>&quot;Files changed, 4 files changed&quot;</em></p>
 </details>
 
@@ -137,22 +137,22 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs">Press D → navigate <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;File tree&quot;</span> region
-Press ↓ <span class="hljs-keyword">to</span> move <span class="hljs-keyword">through</span> files
-Each <span class="hljs-built_in">file</span> reads: <span class="hljs-string">&quot;[filename] - [N additions, N deletions]&quot;</span>
-Press Enter <span class="hljs-keyword">on</span> a <span class="hljs-built_in">file</span> <span class="hljs-keyword">to</span> scroll <span class="hljs-keyword">its</span> diff <span class="hljs-keyword">into</span> view</code></pre>
+<pre><code class="hljs language-text">Press D → navigate to &quot;File tree&quot; region
+Press ↓ to move through files
+Each file reads: &quot;[filename] - [N additions, N deletions]&quot;
+Press Enter on a file to scroll its diff into view</code></pre>
 </details>
 
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-<pre><code class="hljs">VO+U → Landmarks → navigate <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;File tree&quot;</span> region
-VO+Down <span class="hljs-keyword">to</span> move <span class="hljs-keyword">through</span> files
-Each <span class="hljs-built_in">file</span> reads: <span class="hljs-string">&quot;[filename] - [N additions, N deletions]&quot;</span>
-VO+Space <span class="hljs-keyword">on</span> a <span class="hljs-built_in">file</span> <span class="hljs-keyword">to</span> scroll <span class="hljs-keyword">its</span> diff <span class="hljs-keyword">into</span> view</code></pre>
+<pre><code class="hljs language-text">VO+U → Landmarks → navigate to &quot;File tree&quot; region
+VO+Down to move through files
+Each file reads: &quot;[filename] - [N additions, N deletions]&quot;
+VO+Space on a file to scroll its diff into view</code></pre>
 </details>
 
-<p><strong>What to listen for / look for:</strong></p>
+<h4>What to listen for / look for</h4>
 <ul>
 <li>How many files changed?</li>
 <li>Which areas of the codebase are affected?</li>
@@ -170,18 +170,18 @@ VO+Space <span class="hljs-keyword">on</span> a <span class="hljs-built_in">file
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs">Press <span class="hljs-number">3</span> <span class="hljs-built_in">to</span> jump <span class="hljs-built_in">file</span>-<span class="hljs-keyword">by</span>-<span class="hljs-built_in">file</span> through <span class="hljs-keyword">the</span> diff
-Listen <span class="hljs-keyword">for</span>: <span class="hljs-string">&quot;learning-room/docs/keyboard-shortcuts.md - collapsed&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;expanded&quot;</span>
-Press Enter <span class="hljs-keyword">or</span> Space <span class="hljs-built_in">to</span> expand <span class="hljs-keyword">a</span> collapsed <span class="hljs-built_in">file</span></code></pre>
+<pre><code class="hljs language-text">Press 3 to jump file-by-file through the diff
+Listen for: &quot;learning-room/docs/keyboard-shortcuts.md - collapsed&quot; or &quot;expanded&quot;
+Press Enter or Space to expand a collapsed file</code></pre>
 <p>If a diff is very long, the file tree is usually faster than pressing <code>3</code> repeatedly.</p>
 </details>
 
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-<pre><code class="hljs">Quick Nav H <span class="hljs-keyword">or</span> VO+Cmd+H <span class="hljs-built_in">to</span> jump <span class="hljs-built_in">file</span>-<span class="hljs-keyword">by</span>-<span class="hljs-built_in">file</span> through <span class="hljs-keyword">the</span> diff
-Listen <span class="hljs-keyword">for</span>: <span class="hljs-string">&quot;learning-room/docs/keyboard-shortcuts.md - collapsed&quot;</span> <span class="hljs-keyword">or</span> <span class="hljs-string">&quot;expanded&quot;</span>
-VO+Space <span class="hljs-built_in">to</span> expand <span class="hljs-keyword">a</span> collapsed <span class="hljs-built_in">file</span></code></pre>
+<pre><code class="hljs language-text">Quick Nav H or VO+Cmd+H to jump file-by-file through the diff
+Listen for: &quot;learning-room/docs/keyboard-shortcuts.md - collapsed&quot; or &quot;expanded&quot;
+VO+Space to expand a collapsed file</code></pre>
 <p>If a diff is very long, the file tree is usually faster than using heading navigation.</p>
 </details>
 
@@ -202,28 +202,28 @@ VO+Space <span class="hljs-built_in">to</span> expand <span class="hljs-keyword"
 <details>
 <summary>Screen reader users - NVDA</summary>
 
-<pre><code class="hljs">Press T <span class="hljs-built_in">to</span> jump <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> diff table → Insert+Space (Focus Mode)
-Press ↓ <span class="hljs-built_in">to</span> move through <span class="hljs-keyword">lines</span> <span class="hljs-literal">one</span> <span class="hljs-keyword">at</span> <span class="hljs-keyword">a</span> <span class="hljs-built_in">time</span>
-Press Ctrl+Alt+→ <span class="hljs-built_in">to</span> <span class="hljs-built_in">read</span> across columns: [<span class="hljs-built_in">line</span> <span class="hljs-built_in">number</span>] | [change type] | [code content]</code></pre>
+<pre><code class="hljs language-text">Press T to jump to the diff table → Insert+Space (Focus Mode)
+Press ↓ to move through lines one at a time
+Press Ctrl+Alt+→ to read across columns: [line number] | [change type] | [code content]</code></pre>
 </details>
 
 <details>
 <summary>Screen reader users - JAWS</summary>
 
-<pre><code class="hljs">Press T <span class="hljs-keyword">to</span> jump <span class="hljs-keyword">to</span> the diff <span class="hljs-keyword">table</span> → <span class="hljs-keyword">Insert</span>+Z (Virtual PC <span class="hljs-keyword">Cursor</span> <span class="hljs-keyword">off</span>)
-Press ↓ <span class="hljs-keyword">to</span> <span class="hljs-keyword">move</span> through lines
-Press Ctrl+Alt+→ <span class="hljs-keyword">for</span> <span class="hljs-keyword">column</span>-<span class="hljs-keyword">by</span>-<span class="hljs-keyword">column</span> reading</code></pre>
+<pre><code class="hljs language-text">Press T to jump to the diff table → Insert+Z (Virtual PC Cursor off)
+Press ↓ to move through lines
+Press Ctrl+Alt+→ for column-by-column reading</code></pre>
 </details>
 
 <details>
 <summary>Screen reader users - VoiceOver (macOS)</summary>
 
-<pre><code class="hljs">Press T <span class="hljs-keyword">or</span> VO+U → <span class="hljs-keyword">Tables</span> → <span class="hljs-keyword">select</span> the diff <span class="hljs-keyword">table</span>
-VO+Shift+↓ <span class="hljs-keyword">to</span> enter the <span class="hljs-keyword">table</span>
-VO+→/← <span class="hljs-keyword">to</span> navigate <span class="hljs-keyword">columns</span>, VO+↑/↓ <span class="hljs-keyword">to</span> navigate <span class="hljs-keyword">rows</span></code></pre>
+<pre><code class="hljs language-text">Press T or VO+U → Tables → select the diff table
+VO+Shift+↓ to enter the table
+VO+→/← to navigate columns, VO+↑/↓ to navigate rows</code></pre>
 </details>
 
-<p><strong>What each line announces / shows:</strong></p>
+<h4>What each line announces / shows</h4>
 <ul>
 <li>Added lines: <code>&quot;+ [code content]&quot;</code> - or announced as &quot;inserted&quot;</li>
 <li>Removed lines: <code>&quot;- [code content]&quot;</code> - or announced as &quot;deleted&quot;</li>
@@ -247,33 +247,33 @@ VO+→/← <span class="hljs-keyword">to</span> navigate <span class="hljs-keywo
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Navigate <span class="hljs-keyword">to</span> the target line <span class="hljs-built_in">in</span> the diff table (see <span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: <span class="hljs-keyword">While</span> focused on that line, press Tab → look <span class="hljs-keyword">for</span> a <span class="hljs-built_in">comment</span> button
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: Alternatively: press B <span class="hljs-keyword">to</span> navigate buttons → look <span class="hljs-keyword">for</span> <span class="hljs-string">&quot;Add a comment to this line&quot;</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Press Enter <span class="hljs-keyword">to</span> open the inline <span class="hljs-built_in">comment</span> box
-<span class="hljs-keyword">Step</span> <span class="hljs-number">5</span>: <span class="hljs-built_in">Insert</span>+Space (NVDA) <span class="hljs-built_in">or</span> <span class="hljs-built_in">Insert</span>+Z (JAWS) → <span class="hljs-keyword">switch</span> <span class="hljs-keyword">to</span> Focus Mode
-<span class="hljs-keyword">Step</span> <span class="hljs-number">6</span>: <span class="hljs-built_in">Type</span> your <span class="hljs-built_in">comment</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">7</span>: Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Start a review&quot;</span> button (<span class="hljs-built_in">not</span> <span class="hljs-string">&quot;Add single comment&quot;</span> - see note below)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">8</span>: Press Enter</code></pre>
+<pre><code class="hljs language-text">Step 1: Navigate to the target line in the diff table (see Step 4)
+Step 2: While focused on that line, press Tab → look for a comment button
+Step 3: Alternatively: press B to navigate buttons → look for &quot;Add a comment to this line&quot;
+Step 4: Press Enter to open the inline comment box
+Step 5: Insert+Space (NVDA) or Insert+Z (JAWS) → switch to Focus Mode
+Step 6: Type your comment
+Step 7: Tab to &quot;Start a review&quot; button (not &quot;Add single comment&quot; - see note below)
+Step 8: Press Enter</code></pre>
 </details>
 
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Navigate <span class="hljs-keyword">to</span> the target line <span class="hljs-built_in">in</span> the diff table (see <span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: <span class="hljs-keyword">While</span> focused on that line, Tab → look <span class="hljs-keyword">for</span> a <span class="hljs-built_in">comment</span> button
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: Alternatively: Quick Nav B → look <span class="hljs-keyword">for</span> <span class="hljs-string">&quot;Add a comment to this line&quot;</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: VO+Space <span class="hljs-keyword">to</span> open the inline <span class="hljs-built_in">comment</span> box
-<span class="hljs-keyword">Step</span> <span class="hljs-number">5</span>: VO+Shift+Down <span class="hljs-keyword">to</span> interact <span class="hljs-keyword">with</span> the <span class="hljs-built_in">text</span> area
-<span class="hljs-keyword">Step</span> <span class="hljs-number">6</span>: <span class="hljs-built_in">Type</span> your <span class="hljs-built_in">comment</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">7</span>: VO+Shift+Up <span class="hljs-keyword">to</span> <span class="hljs-built_in">stop</span> interacting → Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Start a review&quot;</span> button
-<span class="hljs-keyword">Step</span> <span class="hljs-number">8</span>: VO+Space</code></pre>
+<pre><code class="hljs language-text">Step 1: Navigate to the target line in the diff table (see Step 4)
+Step 2: While focused on that line, Tab → look for a comment button
+Step 3: Alternatively: Quick Nav B → look for &quot;Add a comment to this line&quot;
+Step 4: VO+Space to open the inline comment box
+Step 5: VO+Shift+Down to interact with the text area
+Step 6: Type your comment
+Step 7: VO+Shift+Up to stop interacting → Tab to &quot;Start a review&quot; button
+Step 8: VO+Space</code></pre>
 </details>
 
 <blockquote>
 <p><strong>Why &quot;Start a review&quot; instead of &quot;Add single comment&quot;:</strong> A single comment posts immediately and sends a notification for each one. &quot;Start a review&quot; batches all your comments and sends one notification when you submit - far less disruptive for the author.</p>
 </blockquote>
-<p><strong>Placing a multi-line comment:</strong></p>
+<h4>Placing a multi-line comment</h4>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -283,19 +283,19 @@ VO+→/← <span class="hljs-keyword">to</span> navigate <span class="hljs-keywo
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs">Step <span class="hljs-number">1</span>: Navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> <span class="hljs-built_in">line</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> range
-Step <span class="hljs-number">2</span>: Press Shift+↓ <span class="hljs-built_in">to</span> extend selection <span class="hljs-built_in">to</span> additional <span class="hljs-keyword">lines</span>
-Step <span class="hljs-number">3</span>: A comment button appears <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> selected range
-Step <span class="hljs-number">4</span>: Proceed <span class="hljs-keyword">as</span> above</code></pre>
+<pre><code class="hljs language-text">Step 1: Navigate to the first line of the range
+Step 2: Press Shift+↓ to extend selection to additional lines
+Step 3: A comment button appears for the selected range
+Step 4: Proceed as above</code></pre>
 </details>
 
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-<pre><code class="hljs">Step <span class="hljs-number">1</span>: Navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-keyword">first</span> <span class="hljs-built_in">line</span> <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> range
-Step <span class="hljs-number">2</span>: Shift+↓ <span class="hljs-built_in">to</span> extend selection <span class="hljs-built_in">to</span> additional <span class="hljs-keyword">lines</span>
-Step <span class="hljs-number">3</span>: A comment button appears <span class="hljs-keyword">for</span> <span class="hljs-keyword">the</span> selected range
-Step <span class="hljs-number">4</span>: VO+Space <span class="hljs-built_in">to</span> activate, <span class="hljs-keyword">then</span> proceed <span class="hljs-keyword">as</span> above</code></pre>
+<pre><code class="hljs language-text">Step 1: Navigate to the first line of the range
+Step 2: Shift+↓ to extend selection to additional lines
+Step 3: A comment button appears for the selected range
+Step 4: VO+Space to activate, then proceed as above</code></pre>
 </details>
 
 <hr>
@@ -312,12 +312,12 @@ Step <span class="hljs-number">4</span>: VO+Space <span class="hljs-built_in">to
 
 <p>Navigate them with <code>3</code> (jump to <code>h3</code> headings in the diff).</p>
 <p>To add to a thread:</p>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> 1: Navigate <span class="hljs-keyword">to</span> the thread heading (3)
-<span class="hljs-keyword">Step</span> 2: Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Reply…&quot;</span> link
-<span class="hljs-keyword">Step</span> 3: Enter → text<span class="hljs-built_in"> area </span>appears → Focus Mode →<span class="hljs-built_in"> type </span>reply
-<span class="hljs-keyword">Step</span> 4: Ctrl+Enter <span class="hljs-keyword">to</span> submit the reply</code></pre>
+<pre><code class="hljs language-text">Step 1: Navigate to the thread heading (3)
+Step 2: Tab to &quot;Reply…&quot; link
+Step 3: Enter → text area appears → Focus Mode → type reply
+Step 4: Ctrl+Enter to submit the reply</code></pre>
 <p>To mark a thread as resolved (if you have write access):</p>
-<pre><code class="hljs">Tab <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;Resolve conversation&quot;</span> button → Enter</code></pre>
+<pre><code class="hljs language-text">Tab to the &quot;Resolve conversation&quot; button → Enter</code></pre>
 </details>
 
 <details>
@@ -325,12 +325,12 @@ Step <span class="hljs-number">4</span>: VO+Space <span class="hljs-built_in">to
 
 <p>Navigate with Quick Nav <code>H</code> or <code>VO+Cmd+H</code> (jump to headings in the diff).</p>
 <p>To add to a thread:</p>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> 1: Quick Nav H <span class="hljs-keyword">to</span> navigate <span class="hljs-keyword">to</span> the thread heading
-<span class="hljs-keyword">Step</span> 2: Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Reply…&quot;</span> link
-<span class="hljs-keyword">Step</span> 3: VO+Space → text<span class="hljs-built_in"> area </span>appears → VO+Shift+Down →<span class="hljs-built_in"> type </span>reply
-<span class="hljs-keyword">Step</span> 4: Cmd+Return <span class="hljs-keyword">to</span> submit the reply</code></pre>
+<pre><code class="hljs language-text">Step 1: Quick Nav H to navigate to the thread heading
+Step 2: Tab to &quot;Reply…&quot; link
+Step 3: VO+Space → text area appears → VO+Shift+Down → type reply
+Step 4: Cmd+Return to submit the reply</code></pre>
 <p>To mark a thread as resolved (if you have write access):</p>
-<pre><code class="hljs">Tab <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;Resolve conversation&quot;</span> button → VO+Space</code></pre>
+<pre><code class="hljs language-text">Tab to the &quot;Resolve conversation&quot; button → VO+Space</code></pre>
 </details>
 
 <hr>
@@ -351,30 +351,30 @@ Step <span class="hljs-number">4</span>: VO+Space <span class="hljs-built_in">to
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: Press D → navigate <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Pull request navigation tabs&quot;</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: Press ← <span class="hljs-keyword">to</span> return <span class="hljs-keyword">to</span> the Conversation tab → Enter
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: Scroll <span class="hljs-keyword">to</span> the bottom (End key, <span class="hljs-built_in">or</span> ↓ repeatedly)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Alternatively: press B repeatedly → <span class="hljs-built_in">find</span> <span class="hljs-string">&quot;Review changes&quot;</span> button
-<span class="hljs-keyword">Step</span> <span class="hljs-number">5</span>: Press Enter <span class="hljs-keyword">to</span> open the review summary <span class="hljs-built_in">dialog</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">6</span>: Focus Mode → <span class="hljs-built_in">type</span> your overall <span class="hljs-built_in">comment</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">7</span>: Tab <span class="hljs-keyword">to</span> the radio button <span class="hljs-built_in">group</span> → ↑/↓ <span class="hljs-keyword">to</span> <span class="hljs-built_in">select</span> a verdict
-<span class="hljs-keyword">Step</span> <span class="hljs-number">8</span>: Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Submit review&quot;</span> button → Enter</code></pre>
+<pre><code class="hljs language-text">Step 1: Press D → navigate to &quot;Pull request navigation tabs&quot;
+Step 2: Press ← to return to the Conversation tab → Enter
+Step 3: Scroll to the bottom (End key, or ↓ repeatedly)
+Step 4: Alternatively: press B repeatedly → find &quot;Review changes&quot; button
+Step 5: Press Enter to open the review summary dialog
+Step 6: Focus Mode → type your overall comment
+Step 7: Tab to the radio button group → ↑/↓ to select a verdict
+Step 8: Tab to &quot;Submit review&quot; button → Enter</code></pre>
 </details>
 
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: VO+U → Landmarks → navigate <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Pull request navigation tabs&quot;</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: VO+Left <span class="hljs-keyword">to</span> return <span class="hljs-keyword">to</span> the Conversation tab → VO+Space
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: VO+End <span class="hljs-built_in">or</span> VO+Down <span class="hljs-keyword">to</span> reach the bottom of the page
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Alternatively: Quick Nav B → <span class="hljs-built_in">find</span> <span class="hljs-string">&quot;Review changes&quot;</span> button
-<span class="hljs-keyword">Step</span> <span class="hljs-number">5</span>: VO+Space <span class="hljs-keyword">to</span> open the review summary <span class="hljs-built_in">dialog</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">6</span>: VO+Shift+Down → <span class="hljs-built_in">type</span> your overall <span class="hljs-built_in">comment</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">7</span>: VO+Shift+Up → Tab <span class="hljs-keyword">to</span> the radio button <span class="hljs-built_in">group</span> → VO+Left/Right <span class="hljs-keyword">to</span> <span class="hljs-built_in">select</span> a verdict
-<span class="hljs-keyword">Step</span> <span class="hljs-number">8</span>: Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;Submit review&quot;</span> button → VO+Space</code></pre>
+<pre><code class="hljs language-text">Step 1: VO+U → Landmarks → navigate to &quot;Pull request navigation tabs&quot;
+Step 2: VO+Left to return to the Conversation tab → VO+Space
+Step 3: VO+End or VO+Down to reach the bottom of the page
+Step 4: Alternatively: Quick Nav B → find &quot;Review changes&quot; button
+Step 5: VO+Space to open the review summary dialog
+Step 6: VO+Shift+Down → type your overall comment
+Step 7: VO+Shift+Up → Tab to the radio button group → VO+Left/Right to select a verdict
+Step 8: Tab to &quot;Submit review&quot; button → VO+Space</code></pre>
 </details>
 
-<p><strong>Verdicts and their meaning:</strong></p>
+<h4>Verdicts and their meaning</h4>
 <table>
 <thead>
 <tr>
@@ -407,17 +407,17 @@ Step <span class="hljs-number">4</span>: VO+Space <span class="hljs-built_in">to
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-<pre><code class="hljs">Step <span class="hljs-number">1</span>: From your P<span class="hljs-string">R&#x27;s Conversation tab, find the reviewer&#x27;</span>s name <span class="hljs-keyword">in</span> the sidebar (<span class="hljs-number">3</span> → <span class="hljs-string">&quot;Reviewers&quot;</span> heading)
-Step <span class="hljs-number">2</span>: Activate the refresh/re-request icon <span class="hljs-built_in">next</span> to their name
-Step <span class="hljs-number">3</span>: This re-notifies the reviewer that yo<span class="hljs-string">u&#x27;ve made changes</span></code></pre>
+<pre><code class="hljs language-text">Step 1: From your PR&#x27;s Conversation tab, find the reviewer&#x27;s name in the sidebar (3 → &quot;Reviewers&quot; heading)
+Step 2: Activate the refresh/re-request icon next to their name
+Step 3: This re-notifies the reviewer that you&#x27;ve made changes</code></pre>
 </details>
 
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: <span class="hljs-keyword">From</span> your PR<span class="hljs-comment">&#x27;s Conversation tab, Quick Nav H or VO+Cmd+H to find the &quot;Reviewers&quot; heading in the sidebar</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: Tab <span class="hljs-built_in">or</span> Quick Nav B <span class="hljs-keyword">to</span> find the re-request icon (<span class="hljs-string">&quot;Re-request review&quot;</span>) <span class="hljs-keyword">next</span> <span class="hljs-keyword">to</span> the reviewer<span class="hljs-comment">&#x27;s name</span>
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: VO+Space <span class="hljs-keyword">to</span> activate - this re-notifies the reviewer that you<span class="hljs-comment">&#x27;ve made changes</span></code></pre>
+<pre><code class="hljs language-text">Step 1: From your PR&#x27;s Conversation tab, Quick Nav H or VO+Cmd+H to find the &quot;Reviewers&quot; heading in the sidebar
+Step 2: Tab or Quick Nav B to find the re-request icon (&quot;Re-request review&quot;) next to the reviewer&#x27;s name
+Step 3: VO+Space to activate - this re-notifies the reviewer that you&#x27;ve made changes</code></pre>
 </details>
 
 <hr>
@@ -433,25 +433,25 @@ Step <span class="hljs-number">3</span>: This re-notifies the reviewer that yo<s
 <p>Without the extension, any <code>git diff</code> operation also opens the diff editor.</p>
 <h3>Using the Accessible Diff Viewer (<code>F7</code>)</h3>
 <p>From any open diff editor:</p>
-<pre><code class="hljs">Press F7 → Accessible Diff Viewer opens <span class="hljs-keyword">as</span> <span class="hljs-keyword">a</span> panel below <span class="hljs-keyword">the</span> diff</code></pre>
+<pre><code class="hljs language-text">Press F7 → Accessible Diff Viewer opens as a panel below the diff</code></pre>
 <p>The Accessible Diff Viewer reads each change as a structured block:</p>
-<pre><code class="hljs">&quot;Changed lines<span class="hljs-number"> 14 </span>to<span class="hljs-number"> 14 </span>in docs/keyboard-shortcuts.md
-[Change<span class="hljs-number"> 1 </span>of 3]
+<pre><code class="hljs language-text">&quot;Changed lines 14 to 14 in docs/keyboard-shortcuts.md
+[Change 1 of 3]
 
 Removed:
-    <span class="hljs-comment">#### NVDA Single-Key Navigation</span>
+    #### NVDA Single-Key Navigation
 
 Added:
-    <span class="hljs-comment">### NVDA Single-Key Navigation&quot;</span></code></pre>
+    ### NVDA Single-Key Navigation&quot;</code></pre>
 <p>This example is from a real Learning Room scenario: a contributor fixing the heading hierarchy in <code>docs/keyboard-shortcuts.md</code> by changing a level-4 heading to level-3, which is exactly what you look for when reviewing Challenge 2 PRs.</p>
-<p><strong>Navigation:</strong></p>
+<h4>Navigation</h4>
 <ul>
 <li><code>F7</code> - jump to next change (next hunk)</li>
 <li><code>Shift+F7</code> - jump to previous change</li>
 <li><code>Alt+F2</code> - open VS Code&#39;s Accessible View for additional context on the current item</li>
 <li><code>Escape</code> - close the Accessible Diff Viewer</li>
 </ul>
-<p><strong>What makes this better than the raw diff editor:</strong></p>
+<h4>What makes this better than the raw diff editor</h4>
 <ul>
 <li>Each change is announced as a discrete unit with clear &quot;Removed:&quot; and &quot;Added:&quot; labels</li>
 <li>You hear the change number of total changes (&quot;Change 3 of 12&quot;)</li>
@@ -460,11 +460,11 @@ Added:
 </ul>
 <h3>Placing Comments in VS Code (GitHub PR Extension)</h3>
 <p>From the diff editor with the GitHub PR extension:</p>
-<pre><code class="hljs">Step <span class="hljs-number">1</span>: <span class="hljs-keyword">In</span> the diff gutter, navigate <span class="hljs-keyword">to</span> the <span class="hljs-type">line</span> you want <span class="hljs-keyword">to</span> <span class="hljs-keyword">comment</span> <span class="hljs-keyword">on</span>
-Step <span class="hljs-number">2</span>: Ctrl+Shift+P → &quot;GitHub Pull Requests: Add Comment&quot;
-Step <span class="hljs-number">3</span>: <span class="hljs-keyword">Or</span> press Shift+F10 (Windows) <span class="hljs-keyword">or</span> Control+<span class="hljs-keyword">Return</span> (macOS) <span class="hljs-keyword">on</span> the <span class="hljs-type">line</span> → context menu → &quot;GitHub Pull Requests: Add Comment&quot;
-Step <span class="hljs-number">4</span>: A <span class="hljs-type">text</span> area opens - <span class="hljs-keyword">type</span> your <span class="hljs-keyword">comment</span>
-Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from</span> the <span class="hljs-keyword">inline</span> UI</code></pre>
+<pre><code class="hljs language-text">Step 1: In the diff gutter, navigate to the line you want to comment on
+Step 2: Ctrl+Shift+P → &quot;GitHub Pull Requests: Add Comment&quot;
+Step 3: Or press Shift+F10 (Windows) or Control+Return (macOS) on the line → context menu → &quot;GitHub Pull Requests: Add Comment&quot;
+Step 4: A text area opens - type your comment
+Step 5: Submit from the inline UI</code></pre>
 <p>Comments placed in VS Code sync to GitHub - they appear in the PR&#39;s Files Changed tab and the author receives the same notification.</p>
 <hr>
 <h2>Code Review Structure and Content</h2>
@@ -475,15 +475,15 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 <li><strong>Educational</strong> - say <em>why</em> something matters, not just what to change</li>
 <li><strong>Graduated</strong> - signal whether this is blocking, or a preference</li>
 </ol>
-<p><strong>Blocking example (reviewing a PR for <code>docs/keyboard-shortcuts.md</code>):</strong></p>
+<h4>Blocking example (reviewing a PR for <code>docs/keyboard-shortcuts.md</code>)</h4>
 <blockquote>
 <p>&quot;The heading on line 34 uses <code>####</code> (level 4) directly after <code>##</code> (level 2), skipping heading level 3. Screen reader users who navigate by heading level will miss any content between those two levels. Please change <code>####</code> to <code>###</code> before this merges.&quot;</p>
 </blockquote>
-<p><strong>Non-blocking (nit) example (reviewing a PR for <code>docs/welcome.md</code>):</strong></p>
+<h4>Non-blocking (nit) example (reviewing a PR for <code>docs/welcome.md</code>)</h4>
 <blockquote>
 <p>&quot;nit: The link text in the &#39;Getting Help&#39; section reads &#39;click here for more information.&#39; Screen reader users who navigate links out of context will hear only &#39;click here&#39; with no destination. Consider &#39;See the accessibility setup guide&#39; instead. Not blocking.&quot;</p>
 </blockquote>
-<p><strong>Question example (reviewing a PR for <code>docs/setup-guide.md</code>):</strong></p>
+<h4>Question example (reviewing a PR for <code>docs/setup-guide.md</code>)</h4>
 <blockquote>
 <p>&quot;The PR description says this fixes broken links in the setup guide, but the link on line 12 still points to <code>/docs/old-setup</code>. Am I reading the diff correctly, or was this link intentionally left? Happy to re-review once I understand.&quot;</p>
 </blockquote>
@@ -603,24 +603,24 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 <h2>Common Review Scenarios</h2>
 <h3>&quot;I want to verify the PR only changes what it claims&quot;</h3>
 <p><strong>Example:</strong> A PR says &quot;Challenge 2: Add NVDA shortcut&quot; but the file tree shows changes to both <code>docs/keyboard-shortcuts.md</code> and <code>docs/welcome.md</code>.</p>
-<pre><code class="hljs"><span class="hljs-number">1.</span> File tree → count <span class="hljs-keyword">the</span> <span class="hljs-built_in">files</span>, <span class="hljs-built_in">read</span> <span class="hljs-keyword">the</span> names
-<span class="hljs-number">2.</span> <span class="hljs-number">3</span> → navigate <span class="hljs-keyword">each</span> <span class="hljs-built_in">file</span> heading → listen <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> stats <span class="hljs-built_in">line</span> (N additions, N deletions)
-<span class="hljs-number">3.</span> For keyboard-shortcuts.md: T → Focus Mode → ↓ through <span class="hljs-keyword">lines</span> → verify <span class="hljs-keyword">the</span> <span class="hljs-built_in">new</span> shortcut row
-<span class="hljs-number">4.</span> For welcome.md: check <span class="hljs-keyword">if</span> <span class="hljs-keyword">the</span> change is related → <span class="hljs-keyword">if</span> unrelated, leave <span class="hljs-keyword">a</span> comment <span class="hljs-keyword">on</span> <span class="hljs-title">the</span> <span class="hljs-title">first</span> <span class="hljs-title">line</span></code></pre>
+<pre><code class="hljs language-text">1. File tree → count the files, read the names
+2. 3 → navigate each file heading → listen to the stats line (N additions, N deletions)
+3. For keyboard-shortcuts.md: T → Focus Mode → ↓ through lines → verify the new shortcut row
+4. For welcome.md: check if the change is related → if unrelated, leave a comment on the first line</code></pre>
 <h3>&quot;I want to find all changes to one specific section&quot;</h3>
 <p><strong>Example:</strong> A PR for Challenge 3 modified <code>docs/welcome.md</code>. You want to verify the <code>[TODO]</code> in the &quot;Who Can Contribute?&quot; section was filled in correctly.</p>
-<pre><code class="hljs"><span class="hljs-number">1</span>. In VS Code: <span class="hljs-keyword">open</span> docs/welcome.md → Ctrl+G → jump <span class="hljs-keyword">to</span> the <span class="hljs-string">&quot;Who Can Contribute?&quot;</span> section
-<span class="hljs-number">2</span>. F7 → Accessible Diff Viewer → listen <span class="hljs-keyword">for</span> <span class="hljs-keyword">changes</span> near that heading
-<span class="hljs-number">3</span>. Or <span class="hljs-keyword">on</span> GitHub: <span class="hljs-keyword">file</span> tree → <span class="hljs-built_in">expand</span> welcome.md → T → navigate the diff table <span class="hljs-keyword">to</span> the [TODO] <span class="hljs-built_in">line</span></code></pre>
+<pre><code class="hljs language-text">1. In VS Code: open docs/welcome.md → Ctrl+G → jump to the &quot;Who Can Contribute?&quot; section
+2. F7 → Accessible Diff Viewer → listen for changes near that heading
+3. Or on GitHub: file tree → expand welcome.md → T → navigate the diff table to the [TODO] line</code></pre>
 <h3>&quot;I agreed but then the author made more changes - did anything new appear?&quot;</h3>
-<pre><code class="hljs"><span class="hljs-number">1.</span> Go <span class="hljs-keyword">to</span> the Commits tab (D → PR tabs → &quot;Commits&quot; → Enter)
-<span class="hljs-number">2.</span> <span class="hljs-number">3</span> <span class="hljs-keyword">to</span> navigate commits - find <span class="hljs-keyword">any</span> commits <span class="hljs-keyword">after</span> your last review
-<span class="hljs-number">3.</span> Press `Enter` <span class="hljs-keyword">on</span> the <span class="hljs-keyword">commit</span> <span class="hljs-keyword">to</span> see <span class="hljs-keyword">only</span> what changed <span class="hljs-keyword">in</span> that push (<span class="hljs-keyword">not</span> the <span class="hljs-keyword">full</span> diff)</code></pre>
+<pre><code class="hljs language-text">1. Go to the Commits tab (D → PR tabs → &quot;Commits&quot; → Enter)
+2. 3 to navigate commits - find any commits after your last review
+3. Press `Enter` on the commit to see only what changed in that push (not the full diff)</code></pre>
 <h3>&quot;A reviewer left a comment I don&#39;t understand&quot;</h3>
-<pre><code class="hljs"><span class="hljs-number">1.</span> Read <span class="hljs-keyword">the</span> full thread (<span class="hljs-number">3</span> → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> thread heading)
-<span class="hljs-number">2.</span> Tab <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;Reply&quot;</span> button
-<span class="hljs-number">3.</span> Ask: <span class="hljs-string">&quot;Can you clarify what change you&#x27;re suggesting? I want to understand before I act on this.&quot;</span>
-<span class="hljs-number">4.</span> Or: reference <span class="hljs-keyword">a</span> specific <span class="hljs-built_in">line</span> <span class="hljs-keyword">in</span> your reply <span class="hljs-keyword">using</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">line</span> <span class="hljs-built_in">number</span></code></pre>
+<pre><code class="hljs language-text">1. Read the full thread (3 → navigate to the thread heading)
+2. Tab to the &quot;Reply&quot; button
+3. Ask: &quot;Can you clarify what change you&#x27;re suggesting? I want to understand before I act on this.&quot;
+4. Or: reference a specific line in your reply using the line number</code></pre>
 <hr>
 <h2>Exercises</h2>
 <p>These exercises use the files in <code>learning-room/docs/</code> in this repository. All examples involve documentation changes - no code required.</p>
@@ -630,77 +630,77 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 <p><strong>What You&#39;ll Learn:</strong> How to use screen reader heading navigation to spot accessibility issues in a GitHub PR diff.</p>
 <hr>
 <h4>Step 1: Navigate to the Pull Request</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Open GitHub in your browser and navigate to the workshop repository (<code>github.com/[your-fork]/[workshop-repo]</code> or <code>community-access/accessibility-agents</code>)</li>
 <li>Click the <strong>Pull Requests</strong> tab (top navigation)</li>
 <li>Look for a PR titled &quot;Add screen reader tips to the setup guide&quot; - click it to open</li>
 <li>You should now see the PR page with sections: Conversation, Commits, Files Changed</li>
 </ol>
-<p><strong>How to know you&#39;re in the right place:</strong></p>
+<h5>How to know you&#39;re in the right place</h5>
 <ul>
 <li>The PR title is visible at the top</li>
 <li>You see a description box with text about what this PR does</li>
 <li>You see tabs labeled &quot;Conversation,&quot; &quot;Commits,&quot; &quot;Files Changed&quot;</li>
 </ul>
-<p><strong>If you can&#39;t find the PR:</strong></p>
+<h5>If you can&#39;t find the PR</h5>
 <ul>
 <li>Use <code>Ctrl+F</code> to search the PR list for &quot;screen reader tips&quot;</li>
 <li>Or ask in the workshop Slack - someone can share the exact URL</li>
 </ul>
 <hr>
 <h4>Step 2: Read the PR Description</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>You are currently on the <strong>Conversation</strong> tab</li>
 <li>Read the PR description (the text immediately under the PR title)</li>
 <li>Look for: &quot;What does this PR change?&quot; and &quot;Why does it change it?&quot;</li>
 <li><strong>With screen reader:</strong> Navigate to the description with <code>D</code> (NVDA) or press <code>Ctrl+Option+Up</code> (VoiceOver) to find main landmarks, then read the content region</li>
 </ol>
-<p><strong>What to look for:</strong></p>
+<h5>What to look for</h5>
 <ul>
 <li>Does the PR author explain what file changed? (should mention <code>setup-guide.md</code>)</li>
 <li>Does it explain why? (should mention &quot;improve accessibility&quot; or &quot;add tips&quot;)</li>
 <li>Is it clear enough that a reviewer can understand the goal without reading the diff?</li>
 </ul>
-<p><strong>What success looks like:</strong></p>
+<h5>What success looks like</h5>
 <ul>
 <li>You can answer: &quot;This PR adds [specific content] to [specific file] because [clear reason]&quot;</li>
 <li>Example: &quot;This PR adds screen reader usage tips to the setup guide because new users need accessibility guidance&quot;</li>
 </ul>
 <hr>
 <h4>Step 3: Navigate to &quot;Files Changed&quot;</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Click the <strong>Files Changed</strong> tab (top of the PR page, to the right of &quot;Commits&quot;)</li>
 <li>You are now viewing the diff</li>
 <li><strong>With keyboard (all screen readers):</strong> Press <code>T</code> to jump to the diff table. The page focuses on the file comparison area.</li>
 </ol>
-<p><strong>What you should see:</strong></p>
+<h5>What you should see</h5>
 <ul>
 <li>A section showing the file name <code>setup-guide.md</code> with a small badge showing &quot;+20 −0&quot; (20 lines added, 0 lines removed)</li>
 <li>Below it, the diff with removed lines (preceded by <code>−</code>) and added lines (preceded by <code>+</code>)</li>
 </ul>
-<p><strong>If you see multiple files:</strong></p>
+<h5>If you see multiple files</h5>
 <ul>
 <li>Scroll up to see if there are other files. For this exercise, only <code>setup-guide.md</code> should be changed.</li>
 <li>If you see other files, confirm they are not modified (the badge should show &quot;+0 −0&quot; or no changes)</li>
 </ul>
 <hr>
 <h4>Step 4: Activate Focus Mode for Better Diff Reading</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Look for a button labeled &quot;Focus Mode&quot; or an icon (usually at the top right of the diff area)</li>
 <li><strong>With keyboard:</strong> Press <code>F</code> to toggle Focus Mode (may need to be in the diff area first)</li>
 <li><strong>With mouse:</strong> Click the Focus Mode button/icon</li>
 </ol>
-<p><strong>What happens in Focus Mode:</strong></p>
+<h5>What happens in Focus Mode</h5>
 <ul>
 <li>The page simplifies: sidebars disappear</li>
 <li>Only the diff is visible - easier for screen reader navigation and less cognitive load</li>
 <li>The diff is now the main content area</li>
 </ul>
-<p><strong>With screen reader (once in Focus Mode):</strong></p>
+<h5>With screen reader (once in Focus Mode)</h5>
 <ul>
 <li>NVDA/JAWS: Press <code>T</code> to jump to the diff table</li>
 <li>VoiceOver: Navigate with <code>VO+Right Arrow</code> to find the table/content region</li>
@@ -708,23 +708,23 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 </ul>
 <hr>
 <h4>Step 5: Find the Heading Hierarchy Issue</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li><strong>Read through the entire diff</strong> line by line. Pay special attention to lines starting with <code>#</code></li>
 <li>You are looking for: a line with <code>####</code> (four hashes, heading level 4) that comes <em>directly after</em> a <code>##</code> (two hashes, heading level 2)</li>
 <li>When you find it, <strong>note the exact line number</strong> shown in the diff</li>
 </ol>
-<p><strong>Example of what you&#39;re looking for:</strong></p>
-<pre><code class="hljs">  ## Setup Basics          ← Heading level <span class="hljs-number">2</span>
+<h5>Example of what you&#39;re looking for</h5>
+<pre><code class="hljs language-text">  ## Setup Basics          ← Heading level 2
   ...several lines...
-  #### Advanced Tips       ← Heading level <span class="hljs-number">4</span> (skipped level <span class="hljs-number">3</span>!)</code></pre>
-<p><strong>Why this matters:</strong></p>
+  #### Advanced Tips       ← Heading level 4 (skipped level 3!)</code></pre>
+<h5>Why this matters</h5>
 <ul>
 <li>Screen reader users navigate documents by heading level: <code>1</code> → <code>2</code> → <code>3</code> → <code>4</code></li>
 <li>A skip from <code>##</code> to <code>####</code> breaks that navigation</li>
 <li>When a user presses &quot;jump to heading level 3,&quot; they&#39;ll find none, wondering if content is missing</li>
 </ul>
-<p><strong>What success looks like:</strong></p>
+<h5>What success looks like</h5>
 <ul>
 <li>You found the line with <code>####</code> that violates hierarchy</li>
 <li>You can say the line number and what heading text appears there</li>
@@ -732,28 +732,31 @@ Step <span class="hljs-number">5</span>: Submit <span class="hljs-keyword">from<
 </ul>
 <hr>
 <h4>Step 6: Place a Blocking Review Comment on the Heading</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Find the diff line with the problematic <code>####</code> heading</li>
 <li><strong>Hover your mouse over the line number</strong> on the left side of that line (or if using keyboard, navigate to that line in the table)</li>
 <li>A button should appear (or press the Add Comment hotkey - usually <code>C</code> in GitHub)</li>
 <li>Click it or press <code>Enter</code> to open a comment box</li>
 </ol>
-<p><strong>In the comment box:</strong></p>
+<h5>In the comment box</h5>
 <ol>
-<li>Type: <code>blocking:</code> (tells reviewers this stops the PR from merging)</li>
-<li>Press Space, then explain:<pre><code class="hljs">Heading hierarchy violation. This heading uses #### (level <span class="hljs-number">4</span>) directly 
-after ## (level <span class="hljs-number">2</span>), skipping level <span class="hljs-number">3.</span> Screen reader users navigating 
-by heading level will miss this section. Change to ### (level <span class="hljs-number">3</span>).</code></pre>
+<li><p>Type: <code>blocking:</code> (tells reviewers this stops the PR from merging)</p>
 </li>
-<li>Click the <strong>Comment</strong> button (or press <code>Ctrl+Enter</code> for keyboard submit)</li>
+<li><p>Press Space, then explain:</p>
+<pre><code class="hljs language-text">Heading hierarchy violation. This heading uses #### (level 4) directly 
+after ## (level 2), skipping level 3. Screen reader users navigating 
+by heading level will miss this section. Change to ### (level 3).</code></pre>
+</li>
+<li><p>Click the <strong>Comment</strong> button (or press <code>Ctrl+Enter</code> for keyboard submit)</p>
+</li>
 </ol>
-<p><strong>What happens next:</strong></p>
+<h5>What happens next</h5>
 <ul>
 <li>Your comment appears in the thread under that line</li>
 <li>The PR author sees it and can make the fix</li>
 </ul>
-<p><strong>If the comment button doesn&#39;t appear:</strong></p>
+<h5>If the comment button doesn&#39;t appear</h5>
 <ul>
 <li>Make sure you&#39;re hovering over the <em>line number</em> area (left side of the line)</li>
 <li>Try refreshing the page and trying again</li>
@@ -761,39 +764,43 @@ by heading level will miss this section. Change to ### (level <span class="hljs-
 </ul>
 <hr>
 <h4>Step 7: Find the Link Text Issue</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li><strong>Continue reading the diff</strong> (from where you left off)</li>
 <li>Look for a line containing link text that reads <code>&quot;click here&quot;</code> or <code>&quot;click here for more information&quot;</code></li>
 <li><strong>Note the line number</strong></li>
 </ol>
-<p><strong>Why this matters:</strong></p>
+<h5>Why this matters</h5>
 <ul>
 <li>Screen reader users can ask their reader to &quot;list all links on this page&quot; - they hear only the link text</li>
 <li>If the text is &quot;click here,&quot; they have no context about where it goes</li>
 <li>Descriptive link text is WCAG 2.4.4 (Link Purpose)</li>
 </ul>
-<p><strong>What success looks like:</strong></p>
+<h5>What success looks like</h5>
 <ul>
 <li>You found a link with non-descriptive text</li>
 <li>You can explain why &quot;click here&quot; is bad and what would be better</li>
 </ul>
 <hr>
 <h4>Step 8: Place a Comment on the Link</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
-<li>Find the line in the diff with the problematic link</li>
-<li>Hover over the line number and click to open a comment box (or press <code>C</code>)</li>
-<li>Type:<pre><code class="hljs"><span class="hljs-symbol">nit:</span> Link <span class="hljs-keyword">text</span> <span class="hljs-string">&quot;click here&quot;</span> <span class="hljs-built_in">is</span> <span class="hljs-built_in">not</span> descriptive. Screen reader users 
-who list links won<span class="hljs-comment">&#x27;t know the context. Suggest: &quot;Read the accessibility </span>
-checklist<span class="hljs-string">&quot; or another descriptive phrase.</span></code></pre>
+<li><p>Find the line in the diff with the problematic link</p>
 </li>
-<li>Click <strong>Comment</strong> or press <code>Ctrl+Enter</code></li>
+<li><p>Hover over the line number and click to open a comment box (or press <code>C</code>)</p>
+</li>
+<li><p>Type:</p>
+<pre><code class="hljs language-text">nit: Link text &quot;click here&quot; is not descriptive. Screen reader users 
+who list links won&#x27;t know the context. Suggest: &quot;Read the accessibility 
+checklist&quot; or another descriptive phrase.</code></pre>
+</li>
+<li><p>Click <strong>Comment</strong> or press <code>Ctrl+Enter</code></p>
+</li>
 </ol>
 <p><strong>Note:</strong> <code>nit:</code> means &quot;nice-to-have improvement&quot; (not blocking, but good to fix)</p>
 <hr>
 <h4>Step 9: Submit Your Review</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Look for a button labeled <strong>&quot;Review changes&quot;</strong> (usually at the top right of the page or bottom of comments)</li>
 <li>Click it (or navigate with keyboard and press <code>Enter</code>)</li>
@@ -804,20 +811,20 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 </ul>
 </li>
 </ol>
-<p><strong>For this exercise:</strong></p>
+<h5>For this exercise</h5>
 <ol>
 <li>Select <strong>&quot;Request changes&quot;</strong> (you found two things to fix)</li>
 <li>In the summary field, write: <code>Found 2 accessibility issues that must be fixed before merging.</code></li>
 <li>Click <strong>&quot;Submit review&quot;</strong></li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h5>What happens</h5>
 <ul>
 <li>Your review is submitted</li>
 <li>The PR author gets a notification</li>
 <li>The PR shows your review with the two comments</li>
 <li>GitHub blocks merging until the author responds to or fixes the changes</li>
 </ul>
-<p><strong>What success looks like:</strong></p>
+<h5>What success looks like</h5>
 <ul>
 <li>You see your review appear on the PR page</li>
 <li>It shows 2 comments you made</li>
@@ -846,7 +853,7 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 </ul>
 <hr>
 <h4>Step 1: Open the GitHub Pull Requests Extension</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Open VS Code</li>
 <li><strong>With keyboard (all screen readers):</strong> Press <code>Ctrl+Shift+X</code> to open the Extensions sidebar<ul>
@@ -857,14 +864,14 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 <li>If it&#39;s not installed, click <strong>Install</strong></li>
 <li>If it is installed, click <strong>GitHub Pull Requests</strong> to view its details</li>
 </ol>
-<p><strong>What you should see:</strong></p>
+<h5>What you should see</h5>
 <ul>
 <li>The extension is listed as active</li>
 <li>It mentions: &quot;Review and manage GitHub pull requests and issues&quot;</li>
 </ul>
 <hr>
 <h4>Step 2: Open the Pull Requests Sidebar</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Look for a <strong>GitHub-themed icon</strong> on the left sidebar (circle with octocat logo) - click it<ul>
 <li><strong>With keyboard:</strong> The icon may not be keyboard-reachable directly; instead go to Step 3</li>
@@ -874,13 +881,13 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 <li><strong>Find the PR titled &quot;Add screen reader tips to the setup guide&quot;</strong> - it should appear in a list</li>
 <li>Click it to open</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h5>What happens</h5>
 <ul>
 <li>VS Code opens a new editor tab for this PR</li>
 <li>Below the PR title, you see a &quot;Changes&quot; section listing modified files</li>
 <li>You should see <code>setup-guide.md</code> in the changes list</li>
 </ul>
-<p><strong>If you can&#39;t find the PR:</strong></p>
+<h5>If you can&#39;t find the PR</h5>
 <ul>
 <li>Use <code>Ctrl+Shift+P</code> → search <code>GitHub Pull Requests: Open Pull Request</code></li>
 <li>Paste the PR URL: <code>https://github.com/[owner]/[repo]/pull/[number]</code></li>
@@ -888,12 +895,12 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 </ul>
 <hr>
 <h4>Step 3: View the File Changes</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>In the <strong>Changes</strong> section, locate <code>setup-guide.md</code></li>
 <li>Click on the filename to open it</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h5>What happens</h5>
 <ul>
 <li>A diff editor opens showing two columns:<ul>
 <li><strong>Left:</strong> the original file (before changes)</li>
@@ -903,7 +910,7 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 <li>Different colors show added (green), removed (red), and modified (blue) lines</li>
 <li>The file name appears at the top: <code>setup-guide.md</code></li>
 </ul>
-<p><strong>With screen reader:</strong></p>
+<h5>With screen reader</h5>
 <ul>
 <li>NVDA/JAWS: The editor announces &quot;Diff Editor - setup-guide.md&quot;</li>
 <li>Use <code>Ctrl+Home</code> to jump to the start of the diff</li>
@@ -911,7 +918,7 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 </ul>
 <hr>
 <h4>Step 4: Access the Accessible Diff Viewer</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li><strong>With keyboard:</strong> Press <code>F7</code> to open the Accessible Diff Viewer<ul>
 <li><strong>With mouse:</strong> Look for a button or menu option labeled &quot;Accessible View&quot; or &quot;Open Accessible Diff&quot;</li>
@@ -919,14 +926,14 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 </ul>
 </li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h5>What happens</h5>
 <ul>
 <li>A new panel opens at the bottom of VS Code</li>
 <li>The panel announces each change one at a time</li>
 <li>Changes appear in text format with labels: &quot;Added: &quot; and &quot;Removed: &quot;</li>
 <li>The panel is read-only (you read the changes, you don&#39;t edit here)</li>
 </ul>
-<p><strong>If the Accessible Diff Viewer doesn&#39;t open:</strong></p>
+<h5>If the Accessible Diff Viewer doesn&#39;t open</h5>
 <ul>
 <li>Make sure the diff editor is active (click in the diff area first)</li>
 <li>Try <code>Ctrl+Shift+P</code> → search <code>Open Accessible Diff</code></li>
@@ -934,43 +941,51 @@ checklist<span class="hljs-string">&quot; or another descriptive phrase.</span><
 </ul>
 <hr>
 <h4>Step 5: Listen to and Understand the First Change</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
-<li>The first change is automatically announced when you open the Accessible Diff Viewer</li>
-<li><strong>Let your screen reader read it completely</strong> - don&#39;t interrupt</li>
-<li>Write down the exact text announced:<pre><code class="hljs">Removed: [<span class="hljs-built_in">write</span> what <span class="hljs-keyword">the</span> viewer said]
-Added: [<span class="hljs-built_in">write</span> what <span class="hljs-keyword">the</span> viewer said]</code></pre>
+<li><p>The first change is automatically announced when you open the Accessible Diff Viewer</p>
 </li>
-<li>Press the <strong>Down arrow</strong> to move to the next change</li>
+<li><p><strong>Let your screen reader read it completely</strong> - don&#39;t interrupt</p>
+</li>
+<li><p>Write down the exact text announced:</p>
+<pre><code class="hljs language-text">Removed: [write what the viewer said]
+Added: [write what the viewer said]</code></pre>
+</li>
+<li><p>Press the <strong>Down arrow</strong> to move to the next change</p>
+</li>
 </ol>
-<p><strong>What to expect (example):</strong></p>
-<pre><code class="hljs">Removed: ## Old Heading
-Added: ## New Heading <span class="hljs-keyword">with</span> More Details</code></pre>
-<p><strong>With screen reader:</strong></p>
+<h5>What to expect (example)</h5>
+<pre><code class="hljs language-text">Removed: ## Old Heading
+Added: ## New Heading with More Details</code></pre>
+<h5>With screen reader</h5>
 <ul>
 <li>NVDA/JAWS: The Accessible Diff Viewer announces &quot;Removed:&quot; and &quot;Added:&quot; labels, followed by the line content</li>
 <li>VoiceOver: The announcement may be similar; listen for &quot;removed&quot; and &quot;added&quot; keywords</li>
 </ul>
 <hr>
 <h4>Step 6: Find the Heading Hierarchy Issue</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
-<li>Continue pressing <strong>Down arrow</strong> to move through changes</li>
-<li>Listen carefully for a change involving headings (lines starting with <code>#</code>)</li>
-<li>Specifically, listen for: &quot;Added: ####&quot; (four hashes)</li>
-<li>When you hear this, <strong>stop and write it down:</strong><pre><code class="hljs">Line <span class="hljs-built_in">number</span>: [<span class="hljs-keyword">if</span> available]
-Removed: [what was removed, <span class="hljs-keyword">if</span> anything]
-Added: [<span class="hljs-keyword">the</span> <span class="hljs-literal">four</span>-hash heading]
-Context: [is there <span class="hljs-keyword">a</span> <span class="hljs-comment">## heading just before this?]</span></code></pre>
+<li><p>Continue pressing <strong>Down arrow</strong> to move through changes</p>
+</li>
+<li><p>Listen carefully for a change involving headings (lines starting with <code>#</code>)</p>
+</li>
+<li><p>Specifically, listen for: &quot;Added: ####&quot; (four hashes)</p>
+</li>
+<li><p>When you hear this, <strong>stop and write it down:</strong></p>
+<pre><code class="hljs language-text">Line number: [if available]
+Removed: [what was removed, if anything]
+Added: [the four-hash heading]
+Context: [is there a ## heading just before this?]</code></pre>
 </li>
 </ol>
-<p><strong>Why listen for this?</strong></p>
+<h5>Why listen for this?</h5>
 <ul>
 <li>Four hashes (<code>####</code>) indicate a level 4 heading</li>
 <li>In the diff, you&#39;re looking for it appearing after a level 2 heading (<code>##</code>)</li>
 <li>This creates the hierarchy skip you caught in Exercise A</li>
 </ul>
-<p><strong>What success looks like:</strong></p>
+<h5>What success looks like</h5>
 <ul>
 <li>You found the explanation in the Accessible Diff Viewer&#39;s format</li>
 <li>You can explain: &quot;The added line with <code>####</code> directly follows a <code>##</code>, skipping level 3&quot;</li>
@@ -978,7 +993,7 @@ Context: [is there <span class="hljs-keyword">a</span> <span class="hljs-comment
 </ul>
 <hr>
 <h4>Step 7: Locate the Heading Line and Add an Inline Comment</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Once you identified the problematic heading in the Accessible Diff Viewer, <strong>close the Accessible Diff Viewer</strong> (press <code>F7</code> again or <code>Alt+F2</code>)</li>
 <li>You&#39;re back in the regular Diff Editor</li>
@@ -995,57 +1010,59 @@ Context: [is there <span class="hljs-keyword">a</span> <span class="hljs-comment
 </ul>
 </li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h5>What happens</h5>
 <ul>
 <li>A comment box opens</li>
 <li>You can type your comment</li>
 </ul>
 <hr>
 <h4>Step 8: Write Your Accessible Diff Comment</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
-<li>In the comment box, type:<pre><code class="hljs">blocking: Heading hierarchy violation. The Accessible Diff Viewer 
+<li><p>In the comment box, type:</p>
+<pre><code class="hljs language-text">blocking: Heading hierarchy violation. The Accessible Diff Viewer 
 clearly showed this #### heading appearing directly after ##, skipping 
-level <span class="hljs-number">3.</span> Screen reader users navigating by heading level will miss this 
+level 3. Screen reader users navigating by heading level will miss this 
 content. Change to ###.</code></pre>
 </li>
-<li>Press <code>Ctrl+Enter</code> or click <strong>Comment</strong> to submit</li>
+<li><p>Press <code>Ctrl+Enter</code> or click <strong>Comment</strong> to submit</p>
+</li>
 </ol>
-<p><strong>Why mention the Accessible Diff Viewer?</strong></p>
+<h5>Why mention the Accessible Diff Viewer?</h5>
 <ul>
 <li>It shows that the tool <em>itself</em> helps you see the issue</li>
 <li>It documents how you caught the problem (useful for learning)</li>
 </ul>
 <hr>
 <h4>Step 9: Create a GitHub Pull Request Comment</h4>
-<p><strong>Special Section: Comparing Tools</strong></p>
+<h5>Special Section: Comparing Tools</h5>
 <p>Now you&#39;ve reviewed the same PR in:</p>
 <ol>
 <li><strong>Browser (Exercise A):</strong> You spot-checked line numbers manually</li>
 <li><strong>VS Code (Exercise B):</strong> The Diff Editor plus Accessible Diff Viewer announced changes</li>
 </ol>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Go to GitHub in your browser and open the same PR</li>
 <li>Scroll to the bottom and leave a comment in the Conversation tab:</li>
 </ol>
-<pre><code class="hljs">I<span class="hljs-string">&#x27;ve now reviewed this PR in both the browser and VS Code. Here&#x27;</span>s 
+<pre><code class="hljs language-text">I&#x27;ve now reviewed this PR in both the browser and VS Code. Here&#x27;s 
 what I found:
 
-**<span class="hljs-keyword">Browser </span>review:** I had to manually navigate with heading commands 
-<span class="hljs-keyword">and </span><span class="hljs-keyword">scan </span>for the skip visually. Found <span class="hljs-number">2</span> issues.
+**Browser review:** I had to manually navigate with heading commands 
+and scan for the skip visually. Found 2 issues.
 
-**VS Code + Accessible <span class="hljs-keyword">Diff </span>Viewer:** The Accessible <span class="hljs-keyword">Diff </span>Viewer 
+**VS Code + Accessible Diff Viewer:** The Accessible Diff Viewer 
 announced changes in a linear format, making it easier to follow 
-the story of what changed without <span class="hljs-keyword">scanning </span><span class="hljs-keyword">back </span><span class="hljs-keyword">and </span>forth.
+the story of what changed without scanning back and forth.
 
 **My conclusion:** [Choose one]
-- The <span class="hljs-keyword">browser </span>method was clearer for me
+- The browser method was clearer for me
 - VS Code was clearer for me
-- <span class="hljs-keyword">Both </span>have strengths<span class="hljs-comment">; I&#x27;d use each for different purposes</span>
-  - <span class="hljs-keyword">Browser </span><span class="hljs-keyword">best </span>for: [specific reason]
-  - VS Code <span class="hljs-keyword">best </span>for: [specific reason]</code></pre>
-<ol start="3">
+- Both have strengths; I&#x27;d use each for different purposes
+  - Browser best for: [specific reason]
+  - VS Code best for: [specific reason]</code></pre>
+<ol>
 <li>Click <strong>Comment</strong></li>
 </ol>
 <hr>
@@ -1064,14 +1081,14 @@ the story of what changed without <span class="hljs-keyword">scanning </span><sp
 <hr>
 <h4>Step 1: Gather Your Data</h4>
 <p>Before writing your reflection, collect all the information you gathered:</p>
-<p><strong>From Exercise A (Browser Review):</strong></p>
+<h5>From Exercise A (Browser Review)</h5>
 <ul>
 <li>Which line number had the heading hierarchy skip?</li>
 <li>Which line number had the link text issue?</li>
 <li>How many steps did it take to find each issue?</li>
 <li>Did you use screen reader commands or visual scanning more?</li>
 </ul>
-<p><strong>From Exercise B (VS Code Review):</strong></p>
+<h5>From Exercise B (VS Code Review)</h5>
 <ul>
 <li>What did the Accessible Diff Viewer announce for the heading change?</li>
 <li>Was the announcement clearer than the browser&#39;s <code>+</code> and <code>−</code> format?</li>
@@ -1081,7 +1098,7 @@ the story of what changed without <span class="hljs-keyword">scanning </span><sp
 <p><strong>Write these down</strong> (in a text editor, on paper, or mentally) - you&#39;ll reference them in Steps 2-4.</p>
 <hr>
 <h4>Step 2: Navigate to the PR and Leave Your Reflection Comment</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Go to GitHub in your browser</li>
 <li>Open the same PR (&quot;Add screen reader tips to the setup guide&quot;)</li>
@@ -1089,73 +1106,73 @@ the story of what changed without <span class="hljs-keyword">scanning </span><sp
 <li>Scroll all the way down to the comment box at the bottom (labeled &quot;Leave a comment&quot; or &quot;Add a comment&quot;)</li>
 <li>Click in the comment box</li>
 </ol>
-<p><strong>What you should see:</strong></p>
+<h5>What you should see</h5>
 <ul>
 <li>A text editing area with formatting options (Bold, Italic, Link, etc.)</li>
 <li>A <strong>Comment</strong> button below the text area</li>
 </ul>
 <hr>
 <h4>Step 3: Write Your Comparison</h4>
-<p><strong>What to do:</strong>
-Type your response to these three questions. Be specific - reference exact tools, steps, and what you discovered:</p>
-<p><strong>Question 1: Environment Preference</strong></p>
-<pre><code class="hljs">After reviewing this PR in both environments, my preferred tool was:
+<h5>What to do</h5>
+<p>Type your response to these three questions. Be specific - reference exact tools, steps, and what you discovered:</p>
+<h5>Question 1: Environment Preference</h5>
+<pre><code class="hljs language-text">After reviewing this PR in both environments, my preferred tool was:
 [Browser / VS Code / Both equally]
 
-Why: [<span class="hljs-number">1</span>-<span class="hljs-number">2</span> sentences explaining your choice]
+Why: [1-2 sentences explaining your choice]
 
-Example: <span class="hljs-comment">&quot;I preferred VS Code because the Accessible Diff Viewer </span>
-separated <span class="hljs-keyword">changes</span> into <span class="hljs-string">&#x27;Added:&#x27;</span> <span class="hljs-built_in">and</span> <span class="hljs-string">&#x27;Removed:&#x27;</span>, making it obvious 
-what the <span class="hljs-keyword">new</span> content was. In the browser, I had <span class="hljs-keyword">to</span> mentally <span class="hljs-built_in">filter</span> 
-the + <span class="hljs-built_in">and</span> − characters.<span class="hljs-comment">&quot;</span></code></pre>
-<p><strong>Question 2: Strengths of Each Environment</strong></p>
-<pre><code class="hljs"><span class="hljs-type">Browser</span> made this easier: [<span class="hljs-type">One</span> specific task, e.g., <span class="hljs-comment">&quot;Finding the PR URL&quot;</span>] 
-because [<span class="hljs-type">Why</span>]
+Example: &quot;I preferred VS Code because the Accessible Diff Viewer 
+separated changes into &#x27;Added:&#x27; and &#x27;Removed:&#x27;, making it obvious 
+what the new content was. In the browser, I had to mentally filter 
+the + and − characters.&quot;</code></pre>
+<h5>Question 2: Strengths of Each Environment</h5>
+<pre><code class="hljs language-text">Browser made this easier: [One specific task, e.g., &quot;Finding the PR URL&quot;] 
+because [Why]
 
-<span class="hljs-type">VS</span> <span class="hljs-type">Code</span> made this easier: [<span class="hljs-type">One</span> specific task, e.g., <span class="hljs-comment">&quot;Following the diff linearly&quot;</span>] 
-because [<span class="hljs-type">Why</span>]
+VS Code made this easier: [One specific task, e.g., &quot;Following the diff linearly&quot;] 
+because [Why]
 
-<span class="hljs-type">Example</span> <span class="hljs-type">Browser</span>: <span class="hljs-comment">&quot;Finding context about *why* the change was made, 
-because all the discussion is in one place&quot;</span>
+Example Browser: &quot;Finding context about *why* the change was made, 
+because all the discussion is in one place&quot;
 
-<span class="hljs-type">Example</span> <span class="hljs-type">VS</span> <span class="hljs-type">Code</span>: <span class="hljs-comment">&quot;The Accessible Diff Viewer announcing changes sequentially 
-meant I didn&#x27;t miss anything by accidentally scrolling past it&quot;</span></code></pre>
-<p><strong>Question 3: Real-World Impact</strong></p>
-<pre><code class="hljs">For someone reading the published document (not the diff), the heading 
-<span class="hljs-keyword">skip </span>matters because: [1<span class="hljs-string">-2</span> sentences]
+Example VS Code: &quot;The Accessible Diff Viewer announcing changes sequentially 
+meant I didn&#x27;t miss anything by accidentally scrolling past it&quot;</code></pre>
+<h5>Question 3: Real-World Impact</h5>
+<pre><code class="hljs language-text">For someone reading the published document (not the diff), the heading 
+skip matters because: [1-2 sentences]
 
-Example: &quot;A screen reader user pressing the &#x27;3&#x27; key to navigate to level<span class="hljs-string">-3</span> 
+Example: &quot;A screen reader user pressing the &#x27;3&#x27; key to navigate to level-3 
 headings will find none, and might think the document skipped a section. 
 This breaks the information hierarchy.&quot;</code></pre>
-<p><strong>Full template to copy into the comment box:</strong></p>
-<pre><code class="hljs"><span class="hljs-comment">## Code Review Reflection - Browser vs VS Code</span>
+<h5>Full template to copy into the comment box</h5>
+<pre><code class="hljs language-text">## Code Review Reflection - Browser vs VS Code
 
 After reviewing this PR using both the browser and VS Code environments, 
-here&#x27;s what I <span class="hljs-params">found:</span>
+here&#x27;s what I found:
 
-<span class="hljs-comment">### Environment Preference</span>
+### Environment Preference
 
-My preferred tool <span class="hljs-params">was:</span> <span class="hljs-operator">*</span><span class="hljs-operator">*</span>[Browser <span class="hljs-symbol">/</span> VS Code]<span class="hljs-operator">*</span><span class="hljs-operator">*</span>
+My preferred tool was: **[Browser / VS Code]**
 
-<span class="hljs-params">Why:</span> [<span class="hljs-number">1</span><span class="hljs-operator">-</span><span class="hljs-number">2</span> sentences]
+Why: [1-2 sentences]
 
-<span class="hljs-comment">### Specific Strengths</span>
+### Specific Strengths
 
-<span class="hljs-operator">*</span><span class="hljs-operator">*</span>Browser made this easier:<span class="hljs-operator">*</span><span class="hljs-operator">*</span>
-<span class="hljs-operator">-</span> <span class="hljs-params">Task:</span> [specific thing]
-<span class="hljs-operator">-</span> <span class="hljs-params">Why:</span> [explanation]
+#### Browser made this easier
+- Task: [specific thing]
+- Why: [explanation]
 
-<span class="hljs-operator">*</span><span class="hljs-operator">*</span>VS Code made this easier:<span class="hljs-operator">*</span><span class="hljs-operator">*</span>
-<span class="hljs-operator">-</span> <span class="hljs-params">Task:</span> [specific thing]
-<span class="hljs-operator">-</span> <span class="hljs-params">Why:</span> [explanation]
+#### VS Code made this easier
+- Task: [specific thing]
+- Why: [explanation]
 
-<span class="hljs-comment">### Real-World Impact</span>
+### Real-World Impact
 
-The heading hierarchy skip <span class="hljs-keyword">in</span> the published document matters <span class="hljs-params">because:</span> 
-[<span class="hljs-number">1</span><span class="hljs-operator">-</span><span class="hljs-number">2</span> sentences about why screen reader users would be affected]</code></pre>
+The heading hierarchy skip in the published document matters because: 
+[1-2 sentences about why screen reader users would be affected]</code></pre>
 <hr>
 <h4>Step 4: Review Your Comment</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Before submitting, <strong>re-read your comment</strong> using your screen reader or by reading aloud</li>
 <li>Ask yourself:<ul>
@@ -1170,20 +1187,20 @@ The heading hierarchy skip <span class="hljs-keyword">in</span> the published do
 </ol>
 <hr>
 <h4>Step 5: Submit Your Reflection</h4>
-<p><strong>What to do:</strong></p>
+<h5>What to do</h5>
 <ol>
 <li>Locate the <strong>Comment</strong> button at the bottom right of the comment box</li>
 <li><strong>With keyboard:</strong> Press <code>Tab</code> until the Comment button is focused, then <code>Enter</code></li>
 <li><strong>With mouse:</strong> Click the <strong>Comment</strong> button</li>
 <li>Your comment is submitted and appears on the PR page</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h5>What happens</h5>
 <ul>
 <li>Your comment is now visible on the PR</li>
 <li>Other reviewers can see your comparison</li>
 <li>You have completed the three-part exercise series</li>
 </ul>
-<p><strong>What success looks like:</strong></p>
+<h5>What success looks like</h5>
 <ul>
 <li>Your comment appears on the PR thread</li>
 <li>It includes all three reflections</li>

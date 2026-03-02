@@ -1,12 +1,12 @@
 # The Learning Room: Shared Practice Repository
+>
 > **Listen to Episode 4:** [The Learning Room](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
-
 
 ## What Is the Learning Room?
 
 The **Learning Room** is a single, shared GitHub repository where all workshop participants collaborate together. It is not your personal fork. It is not your individual repository. It is one repo with many students, many branches, and many pull requests.
 
-```
+```text
 learning-room (SHARED)
 ├── main branch (protected)
 ├── Student A's PR #12 (open, assigned to Student B for review)
@@ -16,7 +16,8 @@ learning-room (SHARED)
 └── [More PRs as students contribute]
 ```
 
-**Why one shared repo?**
+### Why one shared repo?
+
 - **Realistic** - Open source projects are shared spaces
 - **Community** - You see each other's work and learn from each other
 - **Peer review** - You review the people sitting next to you
@@ -29,6 +30,7 @@ learning-room (SHARED)
 Throughout Day 1, you work on **two parallel learning tracks**:
 
 ### Track 1: GitHub Skills Modules (Your Account)
+
 - **[Introduction to GitHub](https://github.com/skills/introduction-to-github)** - Create branch, open PR, merge
 - **[Communicate Using Markdown](https://github.com/skills/communicate-using-markdown)** - Write headings, links, code, tables
 - **[Review Pull Requests](https://github.com/skills/review-pull-requests)** - Comment, approve, suggest changes
@@ -39,6 +41,7 @@ Throughout Day 1, you work on **two parallel learning tracks**:
 **Purpose:** Hands-on practice of individual skills
 
 ### Track 2: Learning Room Contribution Sprint (Shared)
+
 - **Block 5:** Your first real contribution (you and 5-20 other students contributing simultaneously)
 - **Block 6:** Community tools (labels, milestones, notifications)
 
@@ -47,8 +50,9 @@ Throughout Day 1, you work on **two parallel learning tracks**:
 **Pace:** Structured by facilitator; synchronized with workshop schedule  
 **Purpose:** Collaborative practice of the full workflow (issue → branch → PR → review → merge)
 
-**The Two Tracks Reinforce Each Other:**
-```
+#### The Two Tracks Reinforce Each Other
+
+```text
 Skills Module (individual)      Learning Room (group)
      ↓                               ↓
 Create a branch                 Create a branch (together)
@@ -66,7 +70,7 @@ Next step unlocked             Ready to merge
 
 ## Learning Room Folder Structure
 
-```
+```text
 learning-room/
 ├── README.md                           ← Getting started guide
 ├── AUTOMATION.md                       ← How the bot works
@@ -102,13 +106,16 @@ The `docs/` folder contains three practice files with intentional issues. These 
 
 This file introduces newcomers to open source. It has **three [TODO] sections** where content is missing:
 
-**[TODO] 1 - "Who Can Contribute?" section:**
+#### [TODO] 1 - "Who Can Contribute?" section
+>
 > [TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
 
-**[TODO] 2 - "Finding Something to Work On" section:**
+#### [TODO] 2 - "Finding Something to Work On" section
+>
 > [TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]
 
-**[TODO] 3 - "After Your Contribution Is Merged" section:**
+#### [TODO] 3 - "After Your Contribution Is Merged" section
+>
 > [TODO: Add a sentence or two about what this means for someone's GitHub profile and open source portfolio.]
 
 It also has a broken internal link that needs to be found and fixed. **Challenges 1 and 3** from CHALLENGES.md map directly to this file.
@@ -118,6 +125,7 @@ It also has a broken internal link that needs to be found and fixed. **Challenge
 This is a comprehensive reference with tables for NVDA, JAWS, and VoiceOver shortcuts. It contains **intentional errors** in some shortcut references that students need to find and fix.
 
 The file has three major sections:
+
 - **NVDA (Windows)** - Single-key navigation, mode switching, reading commands
 - **JAWS (Windows)** - Virtual cursor navigation, mode switching, reading commands
 - **VoiceOver (macOS)** - Rotor navigation, VO commands for GitHub
@@ -131,6 +139,7 @@ Plus cross-platform shortcuts for GitHub pages and common workarounds.
 This step-by-step guide walks through GitHub account setup, accessibility settings, screen reader configuration, and repository forking. It contains **broken links** that point to incorrect URLs and **incomplete steps**.
 
 Look for:
+
 - Links to GitHub settings pages that may have changed
 - A `[TODO]` note at the bottom referencing items for facilitators
 - Steps that reference forking a "workshop repository" without providing the actual URL
@@ -142,7 +151,7 @@ This file is used for **intermediate and advanced challenges** (Challenges 4-6) 
 This file lists all 12 challenges organized by skill level:
 
 | Level | Challenges | Requirement |
-|-------|-----------|-------------|
+| -------  | -----------  | -------------  |
 | Beginner (1-3) | Fix broken link, add shortcut, complete welcome guide | 0+ merged PRs |
 | Intermediate (4-6) | Fix heading hierarchy, improve link text, add alt text | 1+ merged PRs |
 | Advanced (7-9) | Accessibility review, create documentation, mentor a peer | 3+ merged PRs |
@@ -160,11 +169,13 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 
 ### Step 1: Student Opens a PR
 
-**Student A (working on Challenge 3: Complete Welcome Guide):**
+#### Student A (working on Challenge 3: Complete Welcome Guide)
+
 1. Finds their assigned issue (Issues tab → filter `Assignee:@me`)
 2. Opens `docs/welcome.md` and edits the three `[TODO]` sections
 3. Commits to a new branch: `fix/studentA-issue12`
 4. Opens a pull request with description:
+
    ```markdown
    ## What Changed
    Completed the three [TODO] sections in docs/welcome.md:
@@ -174,13 +185,15 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
    
    Closes #12
    ```
+
 5. **Submits the PR**
 
 **Visibility:** The PR immediately appears in the repo's Pull Requests tab. All students can see it.
 
 ### Step 2: Automation Bot Validates
 
-**Bot (`.github/workflows/learning-room-pr-bot.yml`):**
+#### Bot (`.github/workflows/learning-room-pr-bot.yml`)
+
 - Runs within 30 seconds
 - Checks:
   - Issue reference (does PR link to issue with `Closes #12`?)
@@ -199,12 +212,14 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 
 ### Step 3: Peer Reviewer Is Assigned
 
-**Pairing Bot (`.github/workflows/student-grouping.yml`):**
+#### Pairing Bot (`.github/workflows/student-grouping.yml`)
+
 - Automatically selects a reviewer (uses `least_reviews` strategy - balances workload)
 - Requests review via GitHub API
 - Posts assignment comment explaining what to look for
 - **Example:**
-  ```
+
+  ```text
   ## Peer Review Assigned
   
   Hi @studentA! Your PR has been automatically paired with @studentC for peer review.
@@ -217,14 +232,16 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
   - Does the bot report pass all required checks?
   ```
 
-**Visibility:**
+#### Visibility
+
 - Student A sees their assigned reviewer
 - Student C receives a notification: "review requested"
 - All students see the assignment comment in the PR thread
 
 ### Step 4: Reviewer Reads and Comments
 
-**Student C (the assigned reviewer reviewing the welcome.md changes):**
+#### Student C (the assigned reviewer reviewing the welcome.md changes)
+
 1. Receives notification: "PR review requested"
 2. Navigates to the PR in the Learning Room repo
 3. Reads:
@@ -237,38 +254,44 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
    - Overall comment: "The content reads well and all TODOs are resolved. One suggestion: the 'Finding Something to Work On' section could mention checking if an issue already has an assignee."
 5. Submits review: **Approve** (or **Request Changes** if a `[TODO]` marker was missed)
 
-**Visibility:**
+#### Visibility
+
 - Student A (PR author) gets notification: "Your PR has a new review"
 - All students see the review comments in the PR thread
 - Student C's review shows in the Reviewers sidebar
 
 ### Step 5: Author Responds and Updates
 
-**Student A (PR author):**
+#### Student A (PR author)
+
 1. Reads the bot feedback and human review
 2. Talks to the reviewer if something is unclear
 3. Makes changes based on feedback
 4. Pushes new commits to the same branch
 5. Re-addresses the feedback
 
-**Visibility:**
+#### Visibility
+
 - Bot re-validates on each new commit
 - All students see updated activity in the PR
 - Timeline shows iteration happening
 
 ### Step 6: Merge and Celebration
 
-**When Reviewer Approves:**
+#### When Reviewer Approves
+
 - Student A merges the PR (button becomes available)
 - PR closes, shows "merged"
 
-**Bot Posts Celebration:**
+#### Bot Posts Celebration
+
 - Skills progression bot tracks the merge
 - Posts achievement comment (badge earned, level up tracking)
 - Updates student roster progress
 - Shows milestone celebration if applicable
 
-**Visibility:**
+#### Visibility
+
 - All students see the merged PR
 - Achievement comment is public
 - Progress reflected in Learning Paths documentation
@@ -278,7 +301,7 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 ## What All Students See
 
 | What | Where | Who Sees It |
-|------|-------|-----------|
+| ------  | -------  | -----------  |
 | All open PRs | Pull Requests tab | Everyone |
 | PR description & changes | PR page | Everyone |
 | Bot feedback | PR comments | Everyone |
@@ -295,6 +318,7 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 When you open a PR in the Learning Room, you get **three types of feedback**:
 
 ### Type 1: Automated Bot Feedback (30 seconds)
+
 - Technical validation (links, headings, file locations)
 - Accessibility checking (detailed)
 - Educational messaging (WHY each thing matters)
@@ -302,6 +326,7 @@ When you open a PR in the Learning Room, you get **three types of feedback**:
 - Never fails the PR; always educational
 
 ### Type 2: Peer Reviewer Feedback (15-60 minutes)
+
 - Human judgment on content
 - Creative suggestions
 - Encouragement and mentorship
@@ -309,6 +334,7 @@ When you open a PR in the Learning Room, you get **three types of feedback**:
 - Can approve, request changes, or comment
 
 ### Type 3: Progress Tracking (on merge)
+
 - Skill badges (Markdown Master, Accessibility Advocate)
 - Level progression (Beginner → Intermediate → Advanced → Expert)
 - Milestone celebrations (1st, 5th, 10th PR)
@@ -327,8 +353,9 @@ If your facilitator creates study groups, you'll be assigned with 2-3 other stud
 3. **Collaborative Challenges** - Optional group exercises
 4. **Peer Support** - Tag each other with questions
 
-**Example:**
-```
+### Example
+
+```text
 Study Group #2: @studentA, @studentC, @studentE
 
 This is your collaboration space!
@@ -343,7 +370,7 @@ This is your collaboration space!
 ## Key Differences: Skills Module vs. Learning Room
 
 | Aspect | GitHub Skills (Your Account) | Learning Room (Shared) |
-|--------|---|---|
+| --------  | ---  | ---  |
 | **Repo** | Your personal copy | One shared repo |
 | **Bot** | Mona (GitHub) | Learning Room automation bot |
 | **Reviewer** | Mona (auto) | Human peer (auto-assigned) |
@@ -373,7 +400,7 @@ This is your collaboration space!
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-```
+```text
 1. Go to github.com/[org]/learning-room
 2. Press D → "Repository navigation"
 3. Press K → navigate to "Pull Requests" tab
@@ -387,7 +414,7 @@ This is your collaboration space!
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-```
+```text
 1. Go to github.com/[org]/learning-room
 2. VO+U → Landmarks → "Repository navigation"
 3. Quick Nav K → navigate to "Pull Requests" tab → VO+Space
@@ -412,7 +439,7 @@ This is your collaboration space!
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-```
+```text
 Conversation Tab (reading reviews):
   1. Press H → navigate headings
   2. Listen for "Reviewers" heading (h3)
@@ -432,7 +459,7 @@ Files Changed Tab (what actually changed):
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-```
+```text
 Conversation Tab (reading reviews):
   1. Quick Nav H or VO+Cmd+H → navigate headings
   2. Listen for "Reviewers" heading
@@ -464,7 +491,7 @@ Files Changed Tab (what actually changed):
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-```
+```text
 1. On Conversation tab, scroll to comment box
 2. Switch to Focus Mode (NVDA+Space / Insert+Z)
 3. Type your review comment
@@ -482,7 +509,7 @@ Files Changed Tab (what actually changed):
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-```
+```text
 1. On Conversation tab, Quick Nav F or VO+U → Landmarks → "Add a comment"
 2. VO+Shift+Down to interact with the comment text area
 3. Type your review comment
@@ -512,7 +539,7 @@ Files Changed Tab (what actually changed):
 <details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
-```
+```text
 1. Open your PR (find in Pull Requests tab)
 2. Read all comments and bot feedback
 3. Scroll to comment box
@@ -527,7 +554,7 @@ Files Changed Tab (what actually changed):
 <details>
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
-```
+```text
 1. Open your PR (find in Pull Requests tab → Quick Nav H to navigate PR titles)
 2. Quick Nav H and VO+Down to read all comments and bot feedback
 3. VO+U → Landmarks → "Add a comment" to reach the comment box
@@ -544,30 +571,39 @@ Files Changed Tab (what actually changed):
 ## FAQ: PR Sharing in Learning Room
 
 ### "Can I see other students' PRs?"
+
 **Yes!** All PRs in the shared repo are visible. This is intentional - you learn by seeing how others approach problems.
 
 ### "What if I don't agree with my assigned reviewer?"
+
 You can request additional reviewers manually. The bot's assignment is a convenience, not a mandate. Click "Reviewers" → select someone else.
 
 ### "Will my PR get lost with everyone's open at once?"
+
 No. Each PR has its own conversation thread. The bot update is yours alone. Your reviewer is specifically assigned.
 
 ### "Can I comment on someone else's PR?"
+
 Yes! Anyone can comment on public PRs. If you see something helpful, jump in. This is real open source.
 
 ### "What if my reviewer doesn't respond?"
+
 Mention them directly: "@name, any thoughts on the changes I pushed?" or ask your facilitator for help.
 
 ### "Can I work with a friend?"
+
 Your study group will be created by facilitator, but you likely know your reviewers from the workshop. It's okay to chat between sessions.
 
 ### "How long does review take?"
+
 Typically 15-60 minutes during the workshop. If a reviewer is slow, your facilitator can help or assign someone else.
 
 ### "What if bot feedback is wrong?"
+
 Comment explaining why. Request human review. The bot isn't perfect - that's why you have humans too.
 
 ### "Do I need to complete every challenge?"
+
 No! The Learning Room has challenges for all skill levels. You can pick what interests you, complete at your pace, and continue after the workshop.
 
 ---
@@ -585,8 +621,6 @@ You merged your work
 **That is open source contribution.** Your facilitator has a record. The GitHub repo has a record. You have a merged commit in your history.
 
 This is not hypothetical. This is not simulation. This is real.
-
-
 
 ---
 

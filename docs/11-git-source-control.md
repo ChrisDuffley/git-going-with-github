@@ -1,4 +1,5 @@
 # Git & Source Control in VS Code
+>
 > **Listen to Episode 12:** [Git and Source Control in VS Code](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Managing Repositories, Branches, and Changes Accessibly
@@ -8,7 +9,7 @@
 > This guide covers all Git operations in VS Code: cloning repositories, navigating the Source Control panel with screen readers, branch management, staging changes (including individual lines), push/pull operations, viewing file history with Timeline, resolving merge conflicts, and stash management.
 >
 > **Prerequisites:** [VS Code Setup & Accessibility Basics](10-vscode-basics.md), [Working with Pull Requests](05-working-with-pull-requests.md), [Merge Conflicts](06-merge-conflicts.md)
-
+>
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+`. Common equivalents: `Ctrl+Shift+G` → `Cmd+Shift+G`, `Ctrl+Shift+P` → `Cmd+Shift+P`, `Ctrl+Enter` → `Cmd+Enter`, `Ctrl+S` → `Cmd+S`.
 
 ---
@@ -16,23 +17,23 @@
 ## Table of Contents
 
 1. [Cloning a Repository in VS Code](#1-cloning-a-repository-in-vs-code)
-2. [The Source Control Panel - Complete Walkthrough](#2-the-source-control-panel--complete-walkthrough)
+2. [The Source Control Panel - Complete Walkthrough](#2-the-source-control-panel---complete-walkthrough)
 3. [Branch Management](#3-branch-management)
-4. [Staging Changes - Files, Lines, and Chunks](#4-staging-changes--files-lines-and-chunks)
+4. [Staging Changes - Files, Lines, and Chunks](#4-staging-changes---files-lines-and-chunks)
 5. [Committing with Screen Readers](#5-committing-with-screen-readers)
 6. [Push and Pull Operations](#6-push-and-pull-operations)
 7. [Discarding Changes](#7-discarding-changes)
-8. [Timeline View - File History and Blame](#8-timeline-view--file-history-and-blame)
+8. [Timeline View - File History and Blame](#8-timeline-view---file-history-and-blame)
 9. [Resolving Merge Conflicts in VS Code](#9-resolving-merge-conflicts-in-vs-code)
 10. [Stash Management](#10-stash-management)
-11. [Emergency Recovery - git reflog](#10b-emergency-recovery--git-reflog)
+11. [Emergency Recovery - git reflog](#10b-emergency-recovery---git-reflog)
 12. [Alternative Git Interfaces](#11-alternative-git-interfaces)
 
 ---
 
 ## 1. Cloning a Repository in VS Code
 
-**Three ways to clone a repository:**
+### Three ways to clone a repository
 
 ### Method 1: Command Palette (Recommended for Screen Readers)
 
@@ -44,7 +45,8 @@
 6. Choose a local folder where the repository should be cloned
 7. VS Code asks: "Would you like to open the cloned repository?" - select "Open"
 
-**Screen reader navigation:**
+#### Screen reader navigation
+
 - The Command Palette is a searchable list - type to filter, `Up/Down Arrow` to navigate results
 - The folder picker is a standard file dialog - navigate with `Arrow` keys, `Enter` to select
 
@@ -111,11 +113,12 @@ The Source Control panel (`Ctrl+Shift+G` - Mac: `Cmd+Shift+G`) is where all Git 
 
 **Shortcut:** `Ctrl+Shift+G` (Mac: `Cmd+Shift+G`)
 
-**What opens:**
+#### What opens
+
 - A sidebar panel on the left side of VS Code
 - Focus lands on the first interactive element (usually the commit message input or the first changed file)
 
-**Panel structure from top to bottom:**
+#### Panel structure from top to bottom
 
 1. **Source Control title bar** (heading level 2)
    - Branch name displayed (example: "main" or "feature/add-documentation")
@@ -144,7 +147,8 @@ The Source Control panel (`Ctrl+Shift+G` - Mac: `Cmd+Shift+G`) is where all Git 
 
 ### Screen Reader Navigation in the Source Control Panel
 
-**NVDA/JAWS:**
+#### NVDA/JAWS
+
 - The panel is a web-based tree view
 - Use `Up/Down Arrow` to navigate between items
 - Use `Right Arrow` to expand a section (Changes, Staged Changes)
@@ -152,7 +156,8 @@ The Source Control panel (`Ctrl+Shift+G` - Mac: `Cmd+Shift+G`) is where all Git 
 - Use `Enter` to open a file diff
 - Use `Space` to stage/unstage a file (when focused on a file item)
 
-**VoiceOver:**
+#### VoiceOver
+
 - Navigate with `VO+Arrow` keys
 - `VO+Space` to activate (open diff or stage/unstage)
 - The panel is announced as a "group" containing lists
@@ -164,7 +169,7 @@ The Source Control panel (`Ctrl+Shift+G` - Mac: `Cmd+Shift+G`) is where all Git 
 When a file appears in the Changes or Staged Changes list, VS Code shows a status letter:
 
 | Letter | Meaning |
-|--------|---------|
+| --------  | ---------  |
 | M | Modified - file exists and was changed |
 | A | Added - new file, not in Git yet |
 | D | Deleted - file was removed |
@@ -179,7 +184,7 @@ When a file appears in the Changes or Staged Changes list, VS Code shows a statu
 When focused on any file in the Source Control panel:
 
 | Action | What It Does |
-|--------|-------------|
+| --------  | -------------  |
 | Open File | Opens the file in the editor (same as `Enter`) |
 | Open Changes | Opens side-by-side diff view (same as `Enter`) |
 | Stage Changes | Moves file from Changes → Staged Changes |
@@ -198,12 +203,14 @@ Branches are how you organize work in Git. Every repository starts with a `main`
 
 ### Viewing the Current Branch
 
-**Where it's shown:**
+#### Where it's shown
+
 1. Bottom-left corner of VS Code (status bar) - visual users see it immediately
 2. Source Control panel title bar
 3. Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`) → "Git: Show Git Output"
 
-**Keyboard access to status bar:**
+#### Keyboard access to status bar
+
 - The status bar is not in the standard keyboard navigation flow
 - Use the Command Palette for branch operations instead
 
@@ -211,7 +218,7 @@ Branches are how you organize work in Git. Every repository starts with a `main`
 
 ### Creating a New Branch
 
-**Command Palette method (recommended):**
+#### Command Palette method (recommended)
 
 1. `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
 2. Type "git create branch"
@@ -220,11 +227,13 @@ Branches are how you organize work in Git. Every repository starts with a `main`
 5. Press `Enter`
 
 VS Code:
+
 - Creates the branch
 - Switches to it automatically
 - Your working files stay exactly as they were
 
-**Naming conventions:**
+#### Naming conventions
+
 - Use lowercase with hyphens: `feature/add-timeline-guide`
 - Avoid spaces and special characters
 - Be descriptive: `fix/heading-hierarchy` not `fix1`
@@ -267,7 +276,7 @@ git branch -d feature/improve-docs
 
 ### Switching Between Branches
 
-**Command Palette method:**
+#### Command Palette method
 
 1. `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
 2. Type "git checkout"
@@ -278,14 +287,15 @@ git branch -d feature/improve-docs
 
 **Screen reader announcement:** "Branch: main" or "Branch: feature/add-timeline-guide"
 
-**What happens when you switch:**
+#### What happens when you switch
+
 - VS Code saves your current files
 - Loads the files from the other branch
 - If you have uncommitted changes, Git may block the switch (see "Stashing" in Section 10)
 
 ### Deleting a Branch
 
-**After your PR is merged, you can delete the branch:**
+#### After your PR is merged, you can delete the branch
 
 1. `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
 2. Type "git delete branch"
@@ -300,6 +310,7 @@ git branch -d feature/improve-docs
 **Command:** `Ctrl+Shift+P` → "Git: Show Git Output" → Branch list appears
 
 **Alternative:** Use the integrated terminal:
+
 ```bash
 git branch          # Local branches only
 git branch -a       # All branches (including remote)
@@ -310,6 +321,7 @@ git branch -a       # All branches (including remote)
 ## 4. Staging Changes - Files, Lines, and Chunks
 
 Git has a two-step commit process:
+
 1. **Stage** the changes you want to include
 2. **Commit** those staged changes
 
@@ -334,15 +346,18 @@ This lets you commit only part of your work, leaving the rest for a later commit
 2. Navigate to the file in the "Changes" list
 3. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) to stage immediately
 
-**Alternative:**
+#### Alternative (keyboard shortcut)
+
 - Focus the file → press `Space`
 
-**Alternative:**
+#### Alternative (context menu)
+
 - Focus the file → press `Shift+F10` (Mac: `Ctrl+Return`) → select "Stage Changes"
 
 </details>
 
-**What happens:**
+#### What happens
+
 - The file moves from "Changes" → "Staged Changes"
 - A green "A" or "M" indicator appears
 
@@ -359,7 +374,7 @@ All modified files move to "Staged Changes."
 
 **This is one of Git's most powerful features:** You can stage only specific lines of a file, leaving other changes unstaged.
 
-**Workflow:**
+#### Workflow
 
 1. Open Source Control: `Ctrl+Shift+G` (Mac: `Cmd+Shift+G`)
 2. Navigate to a file in "Changes"
@@ -371,7 +386,8 @@ All modified files move to "Staged Changes."
 
 **Result:** Only those lines are staged. The rest of the file remains in "Changes."
 
-**Use case for this workshop:**
+#### Use case for this workshop
+
 - You fixed a typo and added a new section in the same file
 - You want to commit the typo fix separately from the new content
 - Stage only the typo fix lines, commit them with message "fix: typo in heading"
@@ -420,7 +436,7 @@ git status
 
 ### Unstaging Files
 
-**Reverse the process:**
+#### Reverse the process
 
 1. Focus the file in "Staged Changes"
 2. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) or `Space`
@@ -432,7 +448,7 @@ git status
 
 ### The Commit Workflow
 
-**Standard process:**
+#### Standard process
 
 1. Open Source Control: `Ctrl+Shift+G` (Mac: `Cmd+Shift+G`)
 2. Stage changes (see Section 4)
@@ -440,15 +456,17 @@ git status
 4. Type your commit message
 5. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) to commit
 
-**Screen reader experience:**
+#### Screen reader experience
 
-**NVDA/JAWS:**
+#### NVDA/JAWS
+
 - The commit input is announced as "Source Control Input, edit, multi-line"
 - You're automatically in Forms Mode - just start typing
 - The input expands as you type (supports multi-line messages)
 - Press `Ctrl+Enter` (Mac: `Cmd+Enter`) to commit (not `Enter`, which adds a new line)
 
-**VoiceOver:**
+#### VoiceOver
+
 - `VO+Tab` to navigate to the input
 - `VO+Shift+Down` to interact
 - Type your message
@@ -459,15 +477,16 @@ git status
 
 See [Culture & Etiquette: Writing Good Commit Messages](07-culture-etiquette.md#writing-good-commit-messages) for format guidance.
 
-**Quick reference:**
+#### Quick reference
 
-```
+```text
 fix: correct heading hierarchy in GUIDE.md
 
 Fixes #42
 ```
 
-**Format:**
+#### Format
+
 - First line: type + colon + short summary (50 characters max)
 - Blank line
 - Optional body: detailed explanation
@@ -508,20 +527,21 @@ git commit -am "docs: update screen reader instructions"
 
 ### Pushing Your Commits to GitHub
 
-**After committing locally:**
+#### After committing locally
 
 1. Open Source Control: `Ctrl+Shift+G` (Mac: `Cmd+Shift+G`)
 2. Look for the "Publish Branch" button (if this is a new branch) or "Sync Changes" button
 3. Press `Enter` on that button
 
-**Alternative: Command Palette**
+#### Alternative: Command Palette
 
 1. `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
 2. Type "git push"
 3. Select "Git: Push"
 4. VS Code pushes your commits to GitHub
 
-**Screen reader feedback:**
+#### Screen reader feedback
+
 - NVDA/JAWS: Status bar announces "Pushing..." then "Pushed successfully" or an error message
 - Check the Source Control panel for any error messages (they appear as banner notifications)
 
@@ -556,19 +576,21 @@ If your branch is behind `main`, look for the **"Update branch"** button on your
 
 </details>
 
-**What to do if push fails:**
+## What to do if push fails
+
 - **Error: "No upstream branch"** → You need to publish the branch first (Command Palette → "Git: Publish Branch")
 - **Error: "Permission denied"** → Check your authentication (see [Appendix D: Git Authentication](appendix-d-git-authentication.md))
 - **Error: "Rejected - non-fast-forward"** → Someone else pushed changes; you need to pull first
 
 ### Pulling Changes from GitHub
 
-**When to pull:**
+#### When to pull
+
 - Before you start work each day
 - When GitHub shows your branch is behind the remote
 - When preparing to merge a PR
 
-**How to pull:**
+#### How to pull
 
 1. `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
 2. Type "git pull"
@@ -577,7 +599,8 @@ If your branch is behind `main`, look for the **"Update branch"** button on your
 
 **If there are conflicts:** See Section 9.
 
-**Auto-fetch setting:**
+#### Auto-fetch setting
+
 - VS Code can check for remote changes automatically every few minutes
 - Enable: Settings (`Ctrl+,` - Mac: `Cmd+,`) → search "git autofetch" → set to `true`
 
@@ -597,8 +620,9 @@ For straightforward updates, GitHub has a built-in sync button:
 4. GitHub automatically merges upstream changes into your fork's default branch
 5. Then pull those changes to your local clone: `Git: Pull` from the Command Palette
 
-**Screen reader path:**
-```
+#### Screen reader path
+
+```text
 On your fork's main page:
 → H or 3 to find the sync notice heading
 → Tab to "Sync fork" button → Enter
@@ -611,7 +635,7 @@ On your fork's main page:
 
 To sync locally using git, you first configure the upstream remote. This only needs to be done once per clone.
 
-```
+```text
 Step 1: Open the terminal in VS Code: Ctrl+` (backtick)
 Step 2: Check your current remotes:
   git remote -v
@@ -623,7 +647,8 @@ Step 4: Verify:
   → You should now see both "origin" (your fork) and "upstream" (original)
 ```
 
-**Example for Accessibility Agents:**
+#### Example for Accessibility Agents
+
 ```bash
 git remote add upstream https://github.com/community-access/accessibility-agents.git
 ```
@@ -646,8 +671,9 @@ git merge upstream/main
 git push origin main
 ```
 
-**Via VS Code Command Palette:**
-```
+## Via VS Code Command Palette
+
+```text
 Ctrl+Shift+P → "Git: Fetch" → select "upstream"
 Ctrl+Shift+P → "Git: Merge Branch" → select "upstream/main"
 Ctrl+Shift+P → "Git: Push"
@@ -673,7 +699,7 @@ If you've made changes to the same files the upstream has changed, merge conflic
 
 ### How to Discard Changes
 
-**Single file:**
+#### Single file
 
 1. Open Source Control: `Ctrl+Shift+G`
 2. Navigate to the file in "Changes"
@@ -681,7 +707,7 @@ If you've made changes to the same files the upstream has changed, merge conflic
 4. Select "Discard Changes"
 5. Confirm in the warning dialog (VS Code will ask "Are you sure?")
 
-**All changes:**
+#### All changes
 
 1. `Ctrl+Shift+G`
 2. Navigate to the "Changes" section heading
@@ -699,7 +725,7 @@ If you're not sure whether you'll need these changes later, use **stash** (Secti
 
 **Git Delete** removes a file from both your working directory AND Git's tracking. This is different from discarding changes - it permanently removes the file from the repository history going forward.
 
-**How to use:**
+#### How to use
 
 1. Open the file you want to remove in the editor
 2. `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
@@ -708,7 +734,8 @@ If you're not sure whether you'll need these changes later, use **stash** (Secti
 
 The file is staged for deletion - you still need to commit to record the removal.
 
-**When to use Git Delete vs. just deleting the file:**
+#### When to use Git Delete vs. just deleting the file
+
 - Simply deleting a file from Explorer leaves it as an "untracked deletion" in Git
 - Using `Git: Delete` (git rm) stages the deletion in one step
 - Use `git rm` when you want to track the file removal as part of your next commit
@@ -721,14 +748,14 @@ The **Timeline view** shows the Git history of the currently open file: every co
 
 ### Opening Timeline View
 
-**Method 1: Explorer Sidebar**
+#### Method 1: Explorer Sidebar
 
 1. Open Explorer: `Ctrl+Shift+E`
 2. At the bottom of the Explorer, there's a "Timeline" section
 3. `Tab` or `Arrow` to navigate into Timeline
 4. The list shows all commits affecting the currently open file
 
-**Method 2: Command Palette**
+#### Method 2: Command Palette
 
 1. Open a file in the editor
 2. `Ctrl+Shift+P`
@@ -753,6 +780,7 @@ For each commit entry:
 3. A diff view opens showing what changed in that specific commit
 
 This is incredibly useful for understanding:
+
 - When a particular line was added
 - Why a section was removed
 - What the file looked like at any point in history
@@ -761,18 +789,20 @@ This is incredibly useful for understanding:
 
 **Git Blame** shows who last modified each line of the file.
 
-**How to access:**
+#### How to access
 
 1. Open a file in the editor
 2. `Ctrl+Shift+P`
 3. Type "git blame"
 4. Select "Git: Toggle Blame"
 
-**What appears:**
+#### What appears
+
 - Inline annotations next to every line (visually)
 - Hover over a line to see commit details
 
-**For screen reader users:**
+#### For screen reader users
+
 - The inline blame annotations can add noise
 - Use **Timeline view instead** to see recent changes to the whole file
 - Use `Ctrl+F` to search the Timeline list for a specific author or date
@@ -780,7 +810,7 @@ This is incredibly useful for understanding:
 **Useful blame settings** (add to `.vscode/settings.json` or user Settings):
 
 | Setting | Default | What It Does |
-|---------|---------|-------------|
+| ---------  | ---------  | -------------  |
 | `git.blame.ignoreWhitespace` | `false` | When `true`, whitespace-only changes (reformatting) are excluded from blame - useful when code was reformatted without logic changes |
 | `git.blame.editorDecoration.disableHover` | `false` | When `true`, disables the hover tooltip on blame annotations - reduces screen reader noise if you find the blame decorations intrusive |
 
@@ -805,6 +835,7 @@ When you open a file with conflicts, you see something like:
 ```
 
 **VS Code adds buttons above each conflict** (visually):
+
 - "Accept Current Change" (keeps HEAD version)
 - "Accept Incoming Change" (keeps the other branch's version)
 - "Accept Both Changes" (keeps both, one after the other)
@@ -851,7 +882,7 @@ When you open a file with conflicts, you see something like:
 7. Press `F7` to jump to the next conflict
 8. Repeat until all conflicts resolved
 
-**This gives you structured, hunk-by-hunk navigation instead of searching for markers manually.**
+#### This gives you structured, hunk-by-hunk navigation instead of searching for markers manually
 
 ### Aborting a Merge
 
@@ -877,14 +908,15 @@ Everything returns to the pre-merge state.
 
 ### Creating a Stash
 
-**Method 1: Command Palette**
+#### Method 1: Command Palette
 
 1. `Ctrl+Shift+P`
 2. Type "git stash"
 3. Select "Git: Stash"
 4. Optionally type a stash message (helps you remember what's in it)
 
-**What happens:**
+#### What happens
+
 - Your uncommitted changes disappear from the editor
 - The files revert to the last commit
 - Your changes are saved in a hidden Git stash
@@ -892,40 +924,42 @@ Everything returns to the pre-merge state.
 
 ### Viewing Stashes
 
-**Command Palette:**
+#### Command Palette
 
 1. `Ctrl+Shift+P`
 2. Type "git stash list"
 3. Select "Git: Show Stash"
 
-**Alternative: Integrated Terminal**
+#### Alternative: Integrated Terminal
 
 ```bash
 git stash list
 ```
 
 Output looks like:
-```
+
+```text
 stash@{0}: WIP on feature/docs: add Timeline guide
 stash@{1}: WIP on main: fix typo
 ```
 
 ### Applying a Stash
 
-**To restore your stashed changes:**
+#### To restore your stashed changes
 
 1. `Ctrl+Shift+P`
 2. Type "git stash apply"
 3. Select "Git: Apply Latest Stash"
 
-**Or to apply a specific stash:**
+#### Or to apply a specific stash
 
 1. `Ctrl+Shift+P`
 2. Type "git stash pop"
 3. Select "Git: Pop Stash..."
 4. Choose which stash from the list
 
-**Difference between Apply and Pop:**
+#### Difference between Apply and Pop
+
 - **Apply**: restores changes and keeps the stash (you can apply it again later)
 - **Pop**: restores changes and deletes the stash
 
@@ -949,7 +983,7 @@ If you no longer need what's in a stash:
 ### When to Use Reflog
 
 | Scenario | What happened | Reflog solution |
-|----------|--------------|------------------|
+| ----------  | --------------  | ------------------  |
 | Deleted a branch by mistake | `git branch -D feature/x` | Find the last commit SHA from reflog → recreate branch |
 | `git reset --hard` lost commits | Moved HEAD to older commit | Find the SHA before the reset → reset back to it |
 | Rebase went wrong | Commits appear lost | Find pre-rebase HEAD → reset to it |
@@ -963,7 +997,7 @@ git reflog
 
 Output looks like:
 
-```
+```text
 abc1234 HEAD@{0}: commit: Fix typo in README
 bcd2345 HEAD@{1}: reset: moving to HEAD~1
 cde3456 HEAD@{2}: commit: Add accessibility section
@@ -976,7 +1010,7 @@ Each line: `<SHA> HEAD@{N}: <what happened>`
 
 ### Recovering Lost Commits
 
-**If you need to restore a commit that has been lost:**
+#### If you need to restore a commit that has been lost
 
 ```bash
 # Step 1 - Find the last good commit SHA in reflog
@@ -1029,7 +1063,7 @@ VS Code's Source Control panel is one way to use Git. These alternatives exist f
 - Install: `winget install GitHub.cli` (Windows) or `brew install gh` (macOS)
 - Strengths: Fast, scriptable, plain-text output (predictable for screen readers)
 
-**Common commands:**
+#### Common commands
 
 ```bash
 gh repo clone owner/repo       # Clone a repository
@@ -1046,7 +1080,7 @@ See [Culture & Etiquette](07-culture-etiquette.md) for more `gh` examples.
 - **The standard Git command-line interface**
 - Included with VS Code (integrated terminal: `Ctrl+Backtick`)
 
-**Common commands:**
+#### Common commands
 
 ```bash
 git status                     # Show modified files
@@ -1064,7 +1098,7 @@ git log                        # View commit history
 ## VS Code Keyboard Shortcuts - Git Operations Quick Reference
 
 | Action | Shortcut |
-|--------|----------|
+| --------  | ----------  |
 | Open Source Control | `Ctrl+Shift+G` |
 | Stage file | `Ctrl+Enter` (on file in Changes) |
 | Unstage file | `Ctrl+Enter` (on file in Staged Changes) |

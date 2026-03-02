@@ -1,4 +1,5 @@
 # Working with Issues
+>
 > **Listen to Episode 5:** [Working with Issues](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Filing, Managing, and Participating in GitHub Issues
@@ -8,11 +9,12 @@
 > **Screen reader note - New Issues Experience:** This guide uses GitHub's improved Issues experience, which provides better ARIA landmark structure and live-region announcements for screen readers. This feature may already be active for your account - it has been broadly rolled out and may no longer appear as a Feature Preview toggle at all.
 >
 > **To verify:** Activate the **User Menu** button (top-right of any GitHub page) → activate **"Feature preview"** → scan the list for **"New Issues Experience"**:
+>
 > - If listed and the toggle announces **"Pressed"** (or **"Disable"**) - already enabled, no action needed
 > - If listed but **not Pressed** (or **"Enable"**) - activate the toggle to enable it
 > - If not listed at all - the feature has graduated to the standard interface; it is active automatically
 >
-> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4-check-github-feature-preview-settings).
+> Full step-by-step instructions with per-screen-reader commands are in [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4---check-github-feature-preview-settings).
 >
 > **Browse vs Focus Mode (NVDA):** Toggle between modes with `NVDA+Space` (NVDA key = `Insert` or `Caps Lock`). Use **Browse Mode** (the default) for reading lists, headings, and issue content. Switch to **Focus Mode** when typing in text fields and search boxes. Use `NVDA+F7` at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page - this is your orientation tool.
 
@@ -96,7 +98,7 @@ Navigate directly: `https://github.com/[owner]/[repo]/issues`
 
 ### Page structure
 
-```
+```text
 [Search / filter bar]          ← controls at the top
 [State tabs: Open | Closed]    ← filter by status
 [Issues list]                  ← each issue is one list item or heading
@@ -134,6 +136,7 @@ The issues list shows each issue as a row with its title, labels, number, assign
 ### What is announced per issue
 
 When you navigate to an issue in the list, your screen reader will announce (in some order):
+
 - Issue title (as a link)
 - Issue number (`#42`)
 - Labels (e.g., "bug, good first issue")
@@ -153,8 +156,9 @@ Filtering lets you narrow the list to find the right issue quickly.
 3. Type your filter or search query
 4. Press `Enter` to apply
 
-**Useful filter queries:**
-```
+#### Useful filter queries
+
+```text
 is:open label:"good first issue"    ← great for finding your first contribution
 is:open label:accessibility         ← accessibility-related open issues
 is:open assignee:@me                ← issues assigned to you
@@ -232,7 +236,7 @@ The two state links "Open" and "Closed" appear near the top of the issue list. P
 
 When you open an issue, the page structure is:
 
-```
+```text
 [Issue title - h1]
 [Open/Closed status badge]
 [Author, timestamp, comment count]
@@ -253,7 +257,7 @@ When you open an issue, the page structure is:
 ### Quick navigation
 
 | Goal | Key |
-|------|-----|
+| ------  | -----  |
 | Hear the issue title | `1` |
 | Jump to description | `2` (first h2 is usually "Description") |
 | Jump to Activity section | `2` → next h2 is "Activity" |
@@ -296,6 +300,7 @@ The terminal output includes the title, state, labels, assignees, body, and comm
 Each comment in the thread is marked as an h3. Navigate between them with `3`.
 
 Each comment announces:
+
 - Commenter's username
 - Timestamp ("2 days ago")
 - Body text
@@ -365,7 +370,7 @@ gh issue comment 42 --body "Thanks for reporting this. I can reproduce the issue
 These keyboard shortcuts work inside the text area (Focus Mode):
 
 | Shortcut | Result |
-|----------|--------|
+| ----------  | --------  |
 | `Ctrl+B` | **Bold text** |
 | `Ctrl+I` | *Italic text* |
 | `Ctrl+E` | `Code span` |
@@ -378,10 +383,10 @@ These keyboard shortcuts work inside the text area (Focus Mode):
 
 These are the GitHub built-in shortcuts for working with issues. Enable Focus Mode first (NVDA: `NVDA+Space`, JAWS: `Insert+Z`) before using single-key shortcuts.
 
-**On the Issues list page:**
+#### On the Issues list page
 
 | Shortcut | Action |
-|---|---|
+| ---  | ---  |
 | `?` | Show all shortcuts for this page |
 | `G I` | Jump to the Issues tab from anywhere in the repo |
 | `C` | Create a new issue |
@@ -394,10 +399,10 @@ These are the GitHub built-in shortcuts for working with issues. Enable Focus Mo
 | `A` | Filter by or edit assignee |
 | `O` or `Enter` | Open the selected issue |
 
-**On an open issue:**
+#### On an open issue
 
 | Shortcut | Action |
-|---|---|
+| ---  | ---  |
 | `M` | Set a milestone |
 | `L` | Apply a label |
 | `A` | Set an assignee |
@@ -406,7 +411,7 @@ These are the GitHub built-in shortcuts for working with issues. Enable Focus Mo
 | `Ctrl+Shift+P` (Win) or `Cmd+Shift+P` (Mac) | Toggle Write and Preview tabs |
 | `Ctrl+Enter` | Submit comment from inside the text area |
 
-> **`R` to quote is a power move:** Select any text in a comment while in Browse Mode (`Shift+Arrow` to select), then press `R`. GitHub puts the quoted text in the comment box as a Markdown blockquote. Much faster than typing `> ` manually.
+> **`R` to quote is a power move:** Select any text in a comment while in Browse Mode (`Shift+Arrow` to select), then press `R`. GitHub puts the quoted text in the comment box as a Markdown blockquote. Much faster than typing `>` manually.
 
 For the full shortcut system, see [Screen Reader Cheat Sheet - GitHub Shortcuts section](appendix-b-screen-reader-cheatsheet.md#github-built-in-keyboard-shortcuts).
 
@@ -434,6 +439,7 @@ From the Issues list page, click the green **New issue** button in the top-right
 <summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 From the Issues list:
+
 1. Press `K` to navigate links and find the "New issue" button/link
 2. Press `Enter`
 3. If a template picker appears: press `3` to navigate template names, read the description below each, then press `Enter` on "Get started" for the right template - or find "Open a blank issue." link if no template fits
@@ -444,6 +450,7 @@ From the Issues list:
 <summary>Screen reader users (VoiceOver - macOS)</summary>
 
 From the Issues list:
+
 1. Quick Nav `B` or `VO+U` → Buttons to find the "New issue" button
 2. `VO+Space` to activate it
 3. If a template picker appears: Quick Nav `H` or `VO+Cmd+H` to navigate template names, then `VO+Space` on "Get started" for the right template - or Quick Nav `K` to find the "Open a blank issue" link
@@ -454,13 +461,15 @@ From the Issues list:
 
 The issue form has these fields (order may vary depending on the template):
 
-**Title field:**
+#### Title field
+
 1. Find the Title input field (`F` or by landmark)
 2. Focus Mode → type a clear, specific title
 3. Good title: "Screen reader announces wrong element count on Issues list with 50+ items"
 4. Bad title: "Bug with screen reader"
 
-**Description / Body field:**
+#### Description / Body field
+
 1. Tab to the body text area
 2. Focus Mode → type using the Markdown template provided
 3. If no template, use this structure:
@@ -492,7 +501,7 @@ Describe what should have happened.
 Any other information, screenshots (with alt text), or links.
 ```
 
-**Assigning labels from the sidebar:**
+### Assigning labels from the sidebar
 
 While the form is open, the sidebar has dropdowns for Labels, Assignees, and Milestone.
 
@@ -527,7 +536,8 @@ In the right sidebar, click the gear icon () next to **Labels**. A dropdown open
 
 </details>
 
-**Submitting the issue:**
+### Submitting the issue
+
 1. Tab to "Submit new issue" button
 2. Press `Enter`
 
@@ -565,7 +575,7 @@ Linking issues and PRs to each other creates a trail of context that helps every
 When you type these phrases in a PR description or comment (followed by an issue number), GitHub creates a connection:
 
 | Keyword | Effect on merge |
-|---------|----------------|
+| ---------  | ----------------  |
 | `Closes #42` | Closes issue #42 when the PR merges |
 | `Fixes #42` | Same - typically for bugs |
 | `Resolves #42` | Same - general use |
@@ -576,7 +586,7 @@ When you type these phrases in a PR description or comment (followed by an issue
 
 Simply type `#` followed by a number anywhere in a comment body. GitHub autocompletes with a dropdown of matching issues and PRs:
 
-```
+```text
 Step 1: Type # in the comment box (Focus Mode)
 Step 2: A dropdown appears with issues and PRs
 Step 3: ↑/↓ to navigate, or type more numbers to filter
@@ -596,7 +606,7 @@ Step 4: Enter to insert the reference
 ### When to Use Sub-Issues
 
 | Use case | Example |
-|----------|---------|
+| ----------  | ---------  |
 | Large feature broken down | Parent: "Redesign navigation"; Children: "Keyboard nav," "Screen reader nav," "Mobile nav" |
 | Epic tracking | Parent: "WCAG 2.1 AA compliance"; Children: one issue per failing criterion |
 | Release milestone | Parent: "v2.0 release"; Children: every required PR/fix |
@@ -605,7 +615,7 @@ Step 4: Enter to insert the reference
 
 From any open issue:
 
-```
+```text
 1. Open the parent issue page
 2. Scroll to (or H-navigate to) the "Sub-issues" section in the issue body/sidebar
 3. Tab to "Add sub-issue" button → Enter
@@ -618,7 +628,7 @@ From any open issue:
 
 ### Reading Sub-Issues on a Parent Issue
 
-```
+```text
 H → "Sub-issues" heading
 ↓ → list of linked child issues
 Each item: [checkbox state] [issue title] [#number] [open/closed badge]
@@ -634,7 +644,7 @@ Every child issue shows a "Parent issue" link near the top of the page (above th
 ### Sub-Issues vs. Task Lists
 
 | Feature | Task list checkboxes | Sub-issues |
-|---------|---------------------|------------|
+| ---------  | ---------------------  | ------------  |
 | Location | Issue description (Markdown) | Sidebar/section (structured data) |
 | Each item is | Text line + checkbox | A full GitHub issue |
 | Tracked in Projects | No (checkbox only) | Yes (each child tracks independently) |
@@ -697,10 +707,13 @@ gh issue reopen 42
 </details>
 
 ### Reopening a closed issue
+
 If an issue is Closed, the "Close issue" button becomes "Reopen issue" - navigate and activate to reopen.
 
 ### Assigning an issue
+
 From the issue sidebar:
+
 1. Navigate to "Assignees" heading (`3` or `H`)
 2. Activate the gear/plus button
 3. Type a username in the search field
@@ -728,13 +741,16 @@ gh issue edit 42 --milestone "Hackathon Day 1"
 </details>
 
 ### Changing labels
+
 From the issue sidebar:
+
 1. Navigate to "Labels" heading
 2. Activate the gear button
 3. Select/deselect labels from the dropdown
 4. Press Escape to save
 
 ### Transferring or deleting an issue
+
 Available from the "..." (ellipsis) button at the top of the issue - navigate buttons with `B` to find it.
 
 ---
@@ -767,9 +783,9 @@ When filing accessibility bugs, these details help maintainers reproduce and fix
 8. **Steps to reproduce** - numbered, step-by-step
 9. **Frequency** - "This happens every time" vs "intermittent"
 
-**Example of a well-filed accessibility issue:**
+### Example of a well-filed accessibility issue
 
-```
+```text
 Title: Issues list does not announce label filtering results to screen readers
 
 ## What happened
@@ -827,6 +843,7 @@ Go to the Learning Room repository and file a real issue:
 > **File, read, comment on, and triage real issues manually before using any agent.** If you have not done the triage work yourself - reading descriptions, assigning labels, identifying duplicates - you cannot evaluate whether an agent's priority scoring is correct. The skill must exist before the amplifier is useful.
 >
 > Once you have mastered manual issue management:
+>
 > - **In VS Code** - `@issue-tracker find open issues labeled good-first-issue` searches cross-repository with community sentiment scoring, release-awareness prioritization, and batch-reply capability across every repo you have access to
 > - **In your repo** - The issue templates in `accessibility-agents/.github/ISSUE_TEMPLATE/` structure both human filing and automated triage; fork `accessibility-agents` and that structure travels into any project you lead
 > - **In the cloud** - GitHub Agentic Workflows triage new issues the moment they are opened: applying labels, posting first-response comments, adding to Project boards - the same triage actions you practiced manually today, running at scale

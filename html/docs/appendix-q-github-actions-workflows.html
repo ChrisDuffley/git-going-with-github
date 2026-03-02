@@ -120,13 +120,13 @@
 <hr>
 <h2>3. Where Workflows Live in a Repository</h2>
 <p>Workflow files live in a specific, mandatory location:</p>
-<pre><code class="hljs">your-repository/
+<pre><code class="hljs language-text">your-repository/
 └── .github/
     └── workflows/
-        ├── ci<span class="hljs-selector-class">.yml</span>              ← Runs tests on every push/PR
-        ├── lint<span class="hljs-selector-class">.yml</span>            ← Checks <span class="hljs-selector-tag">code</span> style
-        ├── a11y-scan<span class="hljs-selector-class">.yml</span>       ← Accessibility scanning
-        └── deploy<span class="hljs-selector-class">.yml</span>          ← Deploys the site when <span class="hljs-selector-tag">code</span> merges to main</code></pre>
+        ├── ci.yml              ← Runs tests on every push/PR
+        ├── lint.yml            ← Checks code style
+        ├── a11y-scan.yml       ← Accessibility scanning
+        └── deploy.yml          ← Deploys the site when code merges to main</code></pre>
 <p>The <code>.github/</code> folder is hidden by convention (starts with a dot). To find it:</p>
 <ul>
 <li><strong>On GitHub.com:</strong> The file browser shows it - use <code>T</code> (go to file) or navigate the file table with <code>Ctrl+Alt+Arrow</code> keys</li>
@@ -225,25 +225,25 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>● spinning</td>
+<td>Spinning circle</td>
 <td>Yellow/Orange</td>
 <td>Checks are running - wait</td>
 <td>Wait for them to complete</td>
 </tr>
 <tr>
-<td>✓ checkmark</td>
+<td>Checkmark</td>
 <td>Green</td>
 <td>All required checks passed</td>
 <td>Good - you may be able to merge</td>
 </tr>
 <tr>
-<td>✗ cross</td>
+<td>X (cross)</td>
 <td>Red</td>
 <td>One or more checks failed</td>
 <td>Do not merge - read the failure</td>
 </tr>
 <tr>
-<td>⊘</td>
+<td>Slashed circle</td>
 <td>Grey</td>
 <td>Check was skipped</td>
 <td>Usually fine - skipped by design</td>
@@ -256,14 +256,14 @@
 </tr>
 </tbody></table>
 <h3>Navigating status checks with a screen reader</h3>
-<p><strong>NVDA / JAWS (browse mode):</strong></p>
+<h4>NVDA / JAWS (browse mode)</h4>
 <ol>
 <li>Open the pull request Conversation tab</li>
 <li>Navigate to the section heading for &quot;checks&quot; using <code>H</code> or <code>2</code></li>
 <li>Each check result is announced as a link or button with its name and status</li>
 <li>Press <code>Enter</code> on a failed check to expand its details</li>
 </ol>
-<p><strong>VoiceOver (macOS, Safari):</strong></p>
+<h4>VoiceOver (macOS, Safari)</h4>
 <ol>
 <li>Use <code>VO+U</code> to open the Rotor</li>
 <li>Select &quot;Headings&quot; and navigate to the checks section</li>
@@ -286,16 +286,16 @@
 <li>Find the &quot;Actions&quot; tab link and activate it (<code>Enter</code>)</li>
 </ol>
 <h3>Navigating workflow runs (NVDA/JAWS browse mode)</h3>
-<pre><code class="hljs">Key          Action
-H            <span class="hljs-keyword">Jump </span><span class="hljs-keyword">between </span>section headings
-<span class="hljs-number">3</span>            <span class="hljs-keyword">Jump </span><span class="hljs-keyword">between </span>workflow run headings (they are h3)
-Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">between </span>interactive elements (links, <span class="hljs-keyword">buttons)
-</span>Enter        Open a workflow run to see details</code></pre>
+<pre><code class="hljs language-text">Key          Action
+H            Jump between section headings
+3            Jump between workflow run headings (they are h3)
+Tab          Move between interactive elements (links, buttons)
+Enter        Open a workflow run to see details</code></pre>
 <h3>Navigating workflow runs (VoiceOver macOS)</h3>
-<pre><code class="hljs"><span class="hljs-built_in">Key</span>                  <span class="hljs-variable">Action</span>
-<span class="hljs-variable">VO</span><span class="hljs-operator">+</span><span class="hljs-variable">U</span> → <span class="hljs-variable">Headings</span>      <span class="hljs-built_in">Open</span> <span class="hljs-variable">rotor</span> <span class="hljs-variable">and</span> <span class="hljs-variable">navigate</span> <span class="hljs-variable">by</span> <span class="hljs-variable">heading</span>
-<span class="hljs-variable">VO</span><span class="hljs-operator">+</span><span class="hljs-built_in">Right</span><span class="hljs-operator">/</span><span class="hljs-built_in">Left</span>        <span class="hljs-built_in">Read</span> <span class="hljs-variable">next</span><span class="hljs-operator">/</span><span class="hljs-variable">previous</span> <span class="hljs-variable">item</span>
-<span class="hljs-variable">VO</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span>             <span class="hljs-built_in">Activate</span> <span class="hljs-variable">a</span> <span class="hljs-variable">link</span> <span class="hljs-variable">or</span> <span class="hljs-variable">button</span></code></pre>
+<pre><code class="hljs language-text">Key                  Action
+VO+U → Headings      Open rotor and navigate by heading
+VO+Right/Left        Read next/previous item
+VO+Space             Activate a link or button</code></pre>
 <h3>Reading a run&#39;s details</h3>
 <p>When you open a workflow run, you see:</p>
 <ul>
@@ -349,13 +349,13 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 <p>From your PR&#39;s Conversation tab:</p>
 <ol>
 <li>Scroll down to the checks section (press <code>D</code> to reach the &quot;Checks&quot; region if using a screen reader)</li>
-<li>Find the failing check (red ✗)</li>
+<li>Find the failing check (red X)</li>
 <li>Press <code>Enter</code> on &quot;Details&quot; (or the check name itself) to open the workflow run</li>
 </ol>
 <h3>Step 3: Find the failing step</h3>
 <p>In the workflow run:</p>
 <ol>
-<li>Look for the step with the red ✗ marker</li>
+<li>Look for the step with the red X marker</li>
 <li>Press <code>Enter</code> or <code>Space</code> to expand the log output</li>
 </ol>
 <h3>Step 4: Read the error message</h3>
@@ -454,7 +454,7 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 <td>WCAG 2.1 / 2.2 compliance checking</td>
 </tr>
 </tbody></table>
-<p><strong>What these tools catch (and what they do not):</strong></p>
+<h4>What these tools catch (and what they do not)</h4>
 <p>Automated tools catch approximately <strong>30-40% of accessibility issues</strong> - things like missing alt attributes, insufficient color contrast ratios, or unlabeled form fields. The remaining issues require human testing, especially with actual assistive technology like your screen reader.</p>
 <p>This is precisely why <strong>manual testing by people who use screen readers is so valuable and irreplaceable.</strong></p>
 <h3>Preparing the Environment for GitHub-Hosted Agents</h3>
@@ -484,7 +484,7 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 <blockquote>
 <p><strong>Goal:</strong> Practice navigating the Actions tab and reading a workflow file using your screen reader.</p>
 </blockquote>
-<p><strong>Steps:</strong></p>
+<h4>Steps</h4>
 <ol>
 <li>Navigate to the <code>learning-room</code> repository on GitHub</li>
 <li>Go to the <strong>Actions tab</strong> (in the Repository navigation landmark)</li>
@@ -501,7 +501,7 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 </ul>
 </li>
 </ol>
-<p><strong>Discussion questions:</strong></p>
+<h4>Discussion questions</h4>
 <ul>
 <li>What would happen if you opened a PR and the &quot;Accessibility Scan&quot; check failed?</li>
 <li>Where would you look to find out what accessibility violation was detected?</li>
@@ -527,27 +527,27 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 </thead>
 <tbody><tr>
 <td>GitHub Actions Documentation</td>
-<td><a href="https://docs.github.com/en/actions">https://docs.github.com/en/actions</a></td>
+<td><a href="https://docs.github.com/en/actions">GitHub Actions docs</a></td>
 </tr>
 <tr>
 <td>GitHub Skills: Hello GitHub Actions</td>
-<td><a href="https://github.com/skills/hello-github-actions">https://github.com/skills/hello-github-actions</a></td>
+<td><a href="https://github.com/skills/hello-github-actions">Hello GitHub Actions course</a></td>
 </tr>
 <tr>
 <td>GitHub Skills: Continuous Integration</td>
-<td><a href="https://github.com/skills/continuous-integration">https://github.com/skills/continuous-integration</a></td>
+<td><a href="https://github.com/skills/continuous-integration">Continuous Integration course</a></td>
 </tr>
 <tr>
 <td>GitHub Marketplace (Actions)</td>
-<td><a href="https://github.com/marketplace?type=actions">https://github.com/marketplace?type=actions</a></td>
+<td><a href="https://github.com/marketplace?type=actions">GitHub Marketplace for Actions</a></td>
 </tr>
 <tr>
 <td>GitHub Accessibility Scanner</td>
-<td><a href="https://github.com/marketplace/actions/accessibility-scanner">https://github.com/marketplace/actions/accessibility-scanner</a></td>
+<td><a href="https://github.com/marketplace/actions/accessibility-scanner">Accessibility Scanner action</a></td>
 </tr>
 <tr>
 <td>GitHub Actions Accessibility Conformance Report</td>
-<td><a href="https://accessibility.github.com/conformance">https://accessibility.github.com/conformance</a></td>
+<td><a href="https://accessibility.github.com/conformance">Accessibility conformance report</a></td>
 </tr>
 </tbody></table>
 <hr>
@@ -569,7 +569,7 @@ Tab          <span class="hljs-keyword">Move </span><span class="hljs-keyword">b
 </tr>
 <tr>
 <td>Status checks appear on your PR</td>
-<td>Green ✓, Red ✗, Yellow ● = pass, fail, running</td>
+<td>Green checkmark, Red X, Yellow circle = pass, fail, running</td>
 </tr>
 <tr>
 <td>Required checks must pass</td>

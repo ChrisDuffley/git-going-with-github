@@ -85,7 +85,7 @@
 <h3>2. <strong>Sync with main frequently</strong></h3>
 <p>The longer your branch diverges from main, the more likely conflicts become.</p>
 <p><strong>Best practice:</strong> Sync daily if main is active:</p>
-<pre><code class="hljs language-bash"><span class="hljs-comment"># From your feature branch:</span>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># From your feature branch</span>
 git fetch origin
 git merge origin/main
 <span class="hljs-comment"># Or: git rebase origin/main (if comfortable with rebasing)</span></code></pre>
@@ -174,21 +174,21 @@ git push --force-with-lease  <span class="hljs-comment"># See warning below abou
 <hr>
 <h2>Conflict Markers - What They Mean</h2>
 <p>When conflict markers appear in a file, your editor is showing you both versions of the conflicted content so you can choose. The format is always:</p>
-<pre><code class="hljs">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<span class="hljs-section">The content that is on YOUR current branch
-=======</span>
+<pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+The content that is on YOUR current branch
+=======
 The content coming from the OTHER branch (or main)
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name-or-commit-hash</code></pre>
-<p><strong>Breakdown:</strong></p>
+<h3>Breakdown</h3>
 <ul>
 <li><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> - the start of YOUR version (HEAD = &quot;the branch you are currently on&quot;)</li>
 <li><code>=======</code> - the dividing line between the two versions</li>
 <li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</code> - the end of the INCOMING version (from the branch being merged in)</li>
 </ul>
 <h3>Example in a real file</h3>
-<p><strong>Original file (<code>docs/keyboard-shortcuts.md</code>) before conflict:</strong></p>
+<h4>Original file (<code>docs/keyboard-shortcuts.md</code>) before conflict</h4>
 <pre><code class="hljs language-markdown">| Insert+Space | Toggle between Browse Mode and Focus Mode |</code></pre>
-<p><strong>After two students both added a shortcut to the same table row:</strong></p>
+<h4>After two students both added a shortcut to the same table row</h4>
 <pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 | Insert+Space | Toggle between Browse Mode and Focus Mode |
 | Insert+F5 | List elements by type |
@@ -196,7 +196,7 @@ The content coming from the OTHER branch (or main)
 | Insert+Space | Toggle between Browse Mode and Focus Mode |
 | Insert+F7 | Elements list (links, headings, form fields) |
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; add-nvda-shortcut</code></pre>
-<p><strong>Resolution options:</strong></p>
+<h4>Resolution options</h4>
 <ol>
 <li>Keep your version: add only <code>Insert+F5</code></li>
 <li>Keep their version: add only <code>Insert+F7</code></li>
@@ -273,12 +273,12 @@ The content coming from the OTHER branch (or main)
 <hr>
 <h2>Resolving Conflicts in VS Code (Day 2)</h2>
 <p>VS Code has excellent merge conflict tooling with full screen reader support. This is covered in depth in <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a>, but here is an overview:</p>
-<h3>VS Code shows conflicts as:</h3>
-<pre><code class="hljs">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
+<h3>VS Code shows conflicts as</h3>
+<pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
 Your version
 ||||||| original                   ← (3-way merge, if enabled)
-<span class="hljs-section">Original version before both edits
-=======</span>
+Original version before both edits
+=======
 Incoming version
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name (Incoming Change)</code></pre>
 <h3>VS Code merge conflict actions</h3>
@@ -345,10 +345,10 @@ Incoming version
 <hr>
 <h2>Reading a Conflict Message from Git (Command Line Reference)</h2>
 <p>If you work locally, <code>git merge</code> or <code>git pull</code> will say:</p>
-<pre><code class="hljs"><span class="hljs-keyword">CONFLICT</span> (content): Merge <span class="hljs-keyword">conflict</span> <span class="hljs-keyword">in</span> src/<span class="hljs-keyword">index</span>.html
-Automatic merge failed; fix conflicts <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">commit</span> the result.</code></pre>
+<pre><code class="hljs language-text">CONFLICT (content): Merge conflict in src/index.html
+Automatic merge failed; fix conflicts and then commit the result.</code></pre>
 <p>And <code>git status</code> will show:</p>
-<pre><code class="hljs"><span class="hljs-keyword">both</span> modified: src/<span class="hljs-keyword">index</span>.html</code></pre>
+<pre><code class="hljs language-text">both modified: src/index.html</code></pre>
 <p>These are normal outputs. The conflict markers are inserted into the file by Git - open the file and follow the steps above.</p>
 <details>
 <summary>Git CLI alternative - resolving conflicts in the terminal</summary>
@@ -393,31 +393,31 @@ gh <span class="hljs-built_in">pr</span> diff 42</code></pre>
 
 <hr>
 <h2>Summary Checklist</h2>
-<pre><code class="hljs">Before you <span class="hljs-keyword">start</span>:
-  □ My PR <span class="hljs-keyword">is</span> small <span class="hljs-keyword">and</span> focused (fewer conflicts <span class="hljs-operator">=</span> easier life)
-  □ I checked that others aren<span class="hljs-string">&#x27;t editing the same files
+<pre><code class="hljs language-text">Before you start:
+  □ My PR is small and focused (fewer conflicts = easier life)
+  □ I checked that others aren&#x27;t editing the same files
 
 When you see a conflict:
-  □ Don&#x27;</span>t panic <span class="hljs-operator">-</span> conflicts <span class="hljs-keyword">are</span> normal
-  □ Read <span class="hljs-keyword">both</span> versions (<span class="hljs-keyword">between</span> <span class="hljs-operator">&lt;&lt;</span><span class="hljs-operator">&lt;</span> <span class="hljs-keyword">and</span> <span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span>, <span class="hljs-keyword">and</span> <span class="hljs-keyword">between</span> <span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span> <span class="hljs-keyword">and</span> <span class="hljs-operator">&gt;&gt;</span><span class="hljs-operator">&gt;</span>)
-  □ Decide: keep <span class="hljs-keyword">one</span>, keep <span class="hljs-keyword">both</span>, <span class="hljs-keyword">or</span> combine intelligently
-  □ Remove <span class="hljs-keyword">ALL</span> three conflict marker lines (<span class="hljs-operator">&lt;&lt;</span><span class="hljs-operator">&lt;</span>, <span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span>, <span class="hljs-operator">&gt;&gt;</span><span class="hljs-operator">&gt;</span>)
-  □ Verify the <span class="hljs-keyword">final</span> file makes sense
-  □ Mark <span class="hljs-keyword">as</span> resolved → <span class="hljs-keyword">Commit</span> <span class="hljs-keyword">merge</span>
+  □ Don&#x27;t panic - conflicts are normal
+  □ Read both versions (between &lt;&lt;&lt; and ===, and between === and &gt;&gt;&gt;)
+  □ Decide: keep one, keep both, or combine intelligently
+  □ Remove ALL three conflict marker lines (&lt;&lt;&lt;, ===, &gt;&gt;&gt;)
+  □ Verify the final file makes sense
+  □ Mark as resolved → Commit merge
 
 After resolving:
-  □ Re<span class="hljs-operator">-</span><span class="hljs-keyword">check</span> that the PR description <span class="hljs-keyword">and</span> issue link <span class="hljs-keyword">are</span> still accurate
-  □ Comment <span class="hljs-keyword">on</span> the PR: &quot;Resolved merge conflict - kept both the aria-label and type attribute&quot;
-  □ Request re<span class="hljs-operator">-</span>review if reviewers already approved before the conflict was introduced</code></pre>
+  □ Re-check that the PR description and issue link are still accurate
+  □ Comment on the PR: &quot;Resolved merge conflict - kept both the aria-label and type attribute&quot;
+  □ Request re-review if reviewers already approved before the conflict was introduced</code></pre>
 <hr>
 <h2>Try It: Read a Conflict (Without Fear)</h2>
 <p><strong>Time:</strong> 2 minutes | <strong>What you need:</strong> Any text editor or just read below</p>
 <p>Read this merge conflict aloud. The goal is not to resolve it - just to understand what you&#39;re hearing:</p>
-<pre><code class="hljs">The button should have an
+<pre><code class="hljs language-text">The button should have an
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-<span class="hljs-attribute">aria-label</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;Submit form&quot;</span>
-<span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span><span class="hljs-operator">=</span>
-<span class="hljs-attribute">aria-label</span><span class="hljs-operator">=</span><span class="hljs-string">&quot;Send your response&quot;</span>
+aria-label=&quot;Submit form&quot;
+=======
+aria-label=&quot;Send your response&quot;
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature-branch
 attribute for screen readers.</code></pre>
 <p>Answer these three questions:</p>

@@ -1,4 +1,5 @@
 # Labels, Milestones, and Projects
+>
 > **Listen to Episode 9:** [Labels, Milestones, and Projects](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Organizing Work and Cross-Referencing on GitHub
@@ -18,7 +19,7 @@ Labels are announced as: "Label: bug" or "Labels: accessibility, good first issu
 ### Standard Labels You Will Find in Most Repos
 
 | Label | Purpose |
-|-------|---------|
+| -------  | ---------  |
 | `bug` | Something isn't working as expected |
 | `enhancement` | A new feature or improvement |
 | `documentation` | Changes or additions to documentation only |
@@ -185,6 +186,7 @@ gh issue list --search "label:accessibility label:\"good first issue\""
 ### Creating a New Label
 
 If you have write access:
+
 1. Navigate to Issues → Labels page
 2. Tab to "New label" button → Enter
 3. Fill in: Label name (F for form field), Color (use the color picker or hex code), Description
@@ -214,6 +216,7 @@ gh label create "in progress" --description "Being actively worked on" --color "
 ### What Are Milestones?
 
 Milestones group issues and PRs toward a shared goal or deadline. Think of a milestone as a sprint, a version release, or an event (like "Hackathon Day 1 Deliverables"). A milestone shows:
+
 - A title and optional description
 - An optional due date
 - A progress bar (percentage of closed issues vs total)
@@ -221,11 +224,14 @@ Milestones group issues and PRs toward a shared goal or deadline. Think of a mil
 ### Navigating to Milestones
 
 From Issues tab:
+
 1. Press `K` to find the "Milestones" link → Enter
 2. You see a list of milestones, each with its title, progress, and due date
 
-**Reading a milestone:**
+#### Reading a milestone
+
 Each milestone is announced as a heading + progress information:
+
 - "Hackathon Day 1 Deliverables, 3 of 8 issues closed, due April 20"
 
 ### Opening a Milestone
@@ -291,12 +297,14 @@ gh api repos/{owner}/{repo}/milestones -f title="Hackathon Day 1" -f description
 ### Creating a Milestone
 
 Requires write access:
+
 1. Navigate to Milestones page
 2. Tab to "New milestone" button → Enter
 3. Fill in: Title, Description, Due date (optional)
 4. Tab to "Create milestone" → Enter
 
 **Due date field note:** The date field may render as a date picker. You can:
+
 - Type the date in `YYYY-MM-DD` format directly (most reliable)
 - Or use arrow keys to adjust month/day/year if spin buttons are provided
 - Or press `Space` or `Enter` to open a calendar widget (if your screen reader supports it) and arrow through dates
@@ -312,7 +320,7 @@ Cross-references are links between issues, PRs, and commits. GitHub automaticall
 ### Types of Cross-References
 
 | Syntax | Effect |
-|--------|--------|
+| --------  | --------  |
 | `#42` | Links to issue or PR #42 in the same repo |
 | `owner/repo#42` | Links to issue #42 in a different repository |
 | `a1b2c3d` | Links to a specific commit by its SHA hash |
@@ -325,12 +333,14 @@ Cross-references are links between issues, PRs, and commits. GitHub automaticall
 ### Typing a Cross-Reference
 
 Inside any comment or PR description text area (Focus Mode):
+
 1. Type `#` - a live-search dropdown appears
 2. Continue typing the issue number or title fragment
 3. Use `↓` to navigate the dropdown → `Enter` to select
 4. The `#42` link is inserted automatically
 
 For `@mentions`:
+
 1. Type `@` followed by a username
 2. A dropdown of suggestions appears
 3. `↓` to navigate → `Enter` to select
@@ -338,6 +348,7 @@ For `@mentions`:
 ### When the "Closes" Keyword Fires
 
 The `Closes #42` keyword must appear in:
+
 - The **PR description** (body text)
 - A **commit message** pushed to the default branch
 
@@ -352,7 +363,7 @@ It does **not** fire from comments on the PR. If you write "Closes #42" in a com
 GitHub Projects is a built-in project management tool. It can display issues and PRs from across multiple repositories in one view. Projects support three layouts:
 
 | Layout | Description | Best For |
-|--------|-------------|----------|
+| --------  | -------------  | ----------  |
 | **Table** | Spreadsheet-style with custom fields | Tracking detailed status |
 | **Board** | Kanban columns (Todo, In Progress, Done) | Visual workflow |
 | **Roadmap** | Timeline/Gantt view | Planning across time |
@@ -360,13 +371,14 @@ GitHub Projects is a built-in project management tool. It can display issues and
 ### Finding a Project
 
 From an organization page or repository:
+
 1. Navigate to the "Projects" tab
 2. Press `3` to navigate project titles (they are h3 links)
 3. `Enter` to open a project
 
 ### Navigating a Project - Table View
 
-```
+```text
 Step 1: The main content is a large grid/table
 Step 2: T to jump to the table
 Step 3: Ctrl+Alt+↓ to navigate rows (each row is an issue or PR)
@@ -374,12 +386,13 @@ Step 4: Ctrl+Alt+→ to navigate columns (Title, Status, Priority, etc.)
 Step 5: Enter on a row to open the issue/PR detail panel
 ```
 
-**What is announced per row:**
+#### What is announced per row
+
 "Add keyboard navigation to carousel | Status: In Progress | Assignee: username | Priority: High"
 
 ### Navigating a Project - Board View
 
-```
+```text
 Step 1: Switch to Board view using the view selector button
 Step 2: Each column (Todo / In Progress / Done) is a region
 Step 3: D to navigate between column landmarks
@@ -390,11 +403,13 @@ Step 5: Enter on a card to open the issue/PR panel
 ### Adding an Issue to a Project
 
 From an open issue:
+
 1. Navigate to the sidebar "Projects" section (`H` or `3`)
 2. Activate the Projects gear button
 3. Select the project from the dropdown
 
 Or from within a project:
+
 1. Activate "Add item" button at the bottom of a column/table
 2. Type `#` to search for existing issues
 3. Select the issue → it's added to the project
@@ -406,7 +421,8 @@ Or from within a project:
 Here is a recommended structure for the `learning-room` sandbox project:
 
 ### Labels to create
-```
+
+```text
 accessibility      - all a11y-related work
 documentation      - docs-only changes
 good first issue   - for new contributors
@@ -417,14 +433,16 @@ help wanted        - community assistance requested
 ```
 
 ### Milestone to create
-```
+
+```text
 Name: Hackathon Day 1 Deliverables
 Due: [Day 1 date]
 Description: All contributions made during Day 1 of the Open Source AT Hackathon
 ```
 
 ### Workflow
-```
+
+```text
 1. File an issue → add label + milestone
 2. Comment "I'll work on this" → add "in progress" label
 3. Make changes → open PR → link to issue
@@ -453,6 +471,7 @@ Go to the Learning Room repository and do two things:
 > **Apply labels and milestones manually in today's exercises before using any agent.** Labels are the language that automation uses to filter, route, and prioritize work. If you have not designed and applied them yourself, you cannot configure them correctly for automated use - and you cannot tell when automation is applying the wrong ones.
 >
 > Once you have mastered manual organization:
+>
 > - **In VS Code** - `@issue-tracker find open issues labeled accessibility, severity-high` uses the exact label vocabulary you configured today, delivering prioritized cross-repository results with community engagement and release-impact scoring
 > - **In your repo** - Accessibility Agents forks carry the label schema in `.github/ISSUE_TEMPLATE/`; your project's organizational language travels with every clone and does not require manual recreation
 > - **In the cloud** - GitHub Agentic Workflows apply labels automatically when issues are opened, routing work into the right milestone and Project view without manual triage on every item - but only if your labels were designed with clear, consistent intent

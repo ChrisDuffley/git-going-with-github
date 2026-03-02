@@ -1,4 +1,5 @@
 # Understanding GitHub's Web Structure
+>
 > **Listen to Episode 2:** [Understanding GitHub on the Web](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## How GitHub Is Organized, and How to Orient Yourself on Every Page
@@ -18,7 +19,7 @@
 7. [Landmark Structure by Page Type](#7-landmark-structure-by-page-type)
 8. [GitHub's Heading Hierarchy in Practice](#8-githubs-heading-hierarchy-in-practice)
 9. [How GitHub's Layout Changes by Viewport](#9-how-githubs-layout-changes-by-viewport)
-10. [The Mental Model - Building Your Internal Map](#10-the-mental-model--building-your-internal-map)
+10. [The Mental Model - Building Your Internal Map](#10-the-mental-model---building-your-internal-map)
 
 ---
 
@@ -26,7 +27,7 @@
 
 GitHub is not a single page or a single kind of page. It is three nested levels, and understanding which level you are on changes how you navigate.
 
-```
+```text
 Level 1: Your Account / Profile
    github.com/your-username
    github.com/settings/...
@@ -58,7 +59,7 @@ No matter where you navigate on GitHub, the same global navigation bar is at the
 Visually, the top bar contains (left to right):
 
 | Element | What It Is | How to Reach It |
-|---|---|---|
+| ---  | ---  | ---  |
 | GitHub logo / home link | Returns to your personal feed | First link in "Navigation Menu" landmark |
 | Search bar | Global search across all of GitHub | `S` or `/` shortcut; or `D` → Navigation Menu → `K` to search |
 | Copilot icon | Quick access to GitHub Copilot chat | `K` navigation from search bar |
@@ -75,7 +76,7 @@ Visually, the top bar contains (left to right):
 
 When you are inside a repository, a second navigation bar appears below the global bar. This contains the repository's tabs:
 
-```
+```text
 Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights | Settings
 ```
 
@@ -92,7 +93,7 @@ Three signals tell you exactly where you are on GitHub, without needing to see t
 GitHub URLs are readable descriptions of your location:
 
 | URL pattern | Where you are |
-|---|---|
+| ---  | ---  |
 | `github.com` | Your personal feed / home |
 | `github.com/username` | A user profile page |
 | `github.com/org` | An organization profile |
@@ -113,7 +114,7 @@ GitHub URLs are readable descriptions of your location:
 GitHub formats page titles consistently:
 
 | Page type | Title format |
-|---|---|
+| ---  | ---  |
 | Repository home | `owner/repo: Short description - GitHub` |
 | Issues list | `Issues · owner/repo` |
 | Specific issue | `Issue title · Issue #42 · owner/repo` |
@@ -126,7 +127,7 @@ GitHub formats page titles consistently:
 Press `1` (in Browse Mode) on any GitHub page to jump to the first H1 heading. What you hear tells you what type of page you are on:
 
 | You hear | You are on |
-|---|---|
+| ---  | ---  |
 | `owner/repo-name` | Repository home page |
 | `Issues` | Issues list |
 | The issue title | Issue detail page |
@@ -142,7 +143,8 @@ Press `1` (in Browse Mode) on any GitHub page to jump to the first H1 heading. W
 
 This is the central hub of any project. It is where you find the file tree, the README, branch information, and links to all other parts of the repository.
 
-**What to expect:**
+#### What to expect
+
 - H1: `owner/repo-name`
 - Repository navigation landmark (Code, Issues, PRs, Actions tabs)
 - A file tree table - navigate with `T` then `Ctrl+Alt+Arrow`
@@ -153,7 +155,8 @@ This is the central hub of any project. It is where you find the file tree, the 
 
 A searchable, filterable list of all issues in the repository.
 
-**What to expect:**
+#### What to expect
+
 - H1: `Issues`
 - A search and filter bar at the top
 - Each issue is a link with: issue title, labels, number, author, comment count
@@ -164,7 +167,8 @@ A searchable, filterable list of all issues in the repository.
 
 The full view of a single issue: the original report, all comments, labels, assignees, and the timeline.
 
-**What to expect:**
+#### What to expect
+
 - H1: The issue title
 - H2: "Description" (original issue body)
 - H2: "Activity" (comments and events)
@@ -175,7 +179,8 @@ The full view of a single issue: the original report, all comments, labels, assi
 
 The most complex page on GitHub - it has three tabs (Conversation, Commits, Files Changed), each with its own structure.
 
-**What to expect:**
+#### What to expect
+
 - H1: The PR title
 - Landmark: "Pull request tabs" (Conversation, Commits, Files changed)
 - Conversation tab: same structure as an issue detail
@@ -186,11 +191,13 @@ The most complex page on GitHub - it has three tabs (Conversation, Commits, File
 
 Your personal home (`github.com`) shows activity from repositories you follow. Your profile (`github.com/username`) shows your contribution graph, pinned repos, and bio.
 
-**What to expect on your feed:**
+#### What to expect on your feed
+
 - A "For you" activity stream - recent activity from repos you watch
 - A sidebar of suggested repositories and topics
 
-**What to expect on your profile:**
+#### What to expect on your profile
+
 - H1: Your username
 - A contribution activity graph (visually prominent; read as a table by screen readers)
 - Pinned repositories
@@ -202,7 +209,7 @@ Your personal home (`github.com`) shows activity from repositories you follow. Y
 
 This diagram shows the layout of a repository home page. It is presented as ASCII art - every screen reader will read it correctly as text, left to right, top to bottom.
 
-```
+```text
 +----------------------------------------------------------+
 |  GLOBAL NAVIGATION (landmark: "Navigation Menu")         |
 |  [GitHub] [Search] [Copilot] [PRs] [Issues] [Bell] [You]|
@@ -231,7 +238,8 @@ This diagram shows the layout of a repository home page. It is presented as ASCI
 +----------------------------------------------------------+
 ```
 
-**Screen reader navigation of this page:**
+### Screen reader navigation of this page
+
 - `1` → hear "owner/repo-name" (the H1, confirms you are on the right repo)
 - `D` → "Navigation Menu" → `D` → "Repository navigation" → `D` → "Main" (file tree area)
 - `T` → jump to the file table → `Ctrl+Alt+Down Arrow` to navigate rows
@@ -261,7 +269,7 @@ That's your visual map. Click anything visible to navigate.
 <details>
 <summary>Screen reader users (NVDA / JAWS) - 10-second orientation sequence</summary>
 
-```
+```text
 Step 1: Press 1
         → Hear: what page type are you on? (repo name / "Issues" / issue title / PR title)
 
@@ -276,6 +284,7 @@ Step 3: Press NVDA+F7 (NVDA) or Insert+F3 (JAWS)
 ```
 
 After these three steps, you know:
+
 - **What** page you are on (step 1)
 - **Where** the page regions are (step 2)
 - **What** content is available and how it is organized (step 3)
@@ -287,7 +296,7 @@ From there, navigate with purpose: `D` to jump to regions, `H` or `3` to jump to
 <details>
 <summary>Screen reader users (VoiceOver - macOS) - 10-second orientation sequence</summary>
 
-```
+```text
 Step 1: Quick Nav H (with Quick Nav on) or VO+Cmd+H → navigate to h1
         → Hear: what page type are you on? (repo name / "Issues" / issue title / PR title)
 
@@ -301,6 +310,7 @@ Step 3: VO+U → press Left/Right Arrow to choose "Headings"
 ```
 
 After these three steps, you know:
+
 - **What** page you are on (step 1)
 - **Where** the page regions are (step 2)
 - **What** content is available and how it is organized (step 3)
@@ -318,14 +328,14 @@ From there, navigate with purpose: `VO+U → Landmarks` to jump to regions, Quic
 Each GitHub page type has a consistent landmark pattern. Knowing the pattern means you can skip steps 2 and 3 above for familiar pages.
 
 > **Landmark navigation quick reference:**
+>
 > - **NVDA / JAWS:** Press `D` to cycle through landmarks, `Shift+D` to go backwards
 > - **VoiceOver (macOS):** Press `VO+U`, then Left/Right to select "Landmarks", then Up/Down to navigate
-
 
 ### Repository home page landmarks (in order)
 
 | Landmark (what you hear with `D`) | Contains |
-|---|---|
+| ---  | ---  |
 | Navigation Menu | Global nav bar - logo, search, PRs, Issues, notifications, avatar |
 | Repository navigation | Code, Issues, PRs, Actions, etc. tabs |
 | Main | Everything below the tabs - file tree, README |
@@ -334,7 +344,7 @@ Each GitHub page type has a consistent landmark pattern. Knowing the pattern mea
 ### Issues list page landmarks
 
 | Landmark | Contains |
-|---|---|
+| ---  | ---  |
 | Navigation Menu | Global nav |
 | Repository navigation | Repo tabs |
 | Main | Filter bar + issue list |
@@ -344,7 +354,7 @@ Each GitHub page type has a consistent landmark pattern. Knowing the pattern mea
 ### Issue detail page landmarks
 
 | Landmark | Contains |
-|---|---|
+| ---  | ---  |
 | Navigation Menu | Global nav |
 | Repository navigation | Repo tabs |
 | Main | Issue title, description, comments, sidebar |
@@ -353,7 +363,7 @@ Each GitHub page type has a consistent landmark pattern. Knowing the pattern mea
 ### Pull request Conversation tab landmarks
 
 | Landmark | Contains |
-|---|---|
+| ---  | ---  |
 | Navigation Menu | Global nav |
 | Repository navigation | Repo tabs |
 | Pull request tabs | Conversation, Commits, Files changed tab links |
@@ -363,7 +373,7 @@ Each GitHub page type has a consistent landmark pattern. Knowing the pattern mea
 ### Pull request Files Changed tab landmarks
 
 | Landmark | Contains |
-|---|---|
+| ---  | ---  |
 | Navigation Menu | Global nav |
 | Pull request tabs | Tab links |
 | Main | File tree + diff view |
@@ -377,7 +387,7 @@ GitHub uses a predictable heading structure. Learning this pattern means you can
 
 ### Repository home
 
-```
+```text
 H1: owner/repo-name
   H2: About (sidebar section)
   H2: Releases
@@ -386,7 +396,7 @@ H1: owner/repo-name
 
 ### Issues list
 
-```
+```text
 H1: Issues
   (no H2s - issues are listed as links, not headings)
   (use I for list items, or 3 for issue headings in some views)
@@ -394,7 +404,7 @@ H1: Issues
 
 ### Issue detail
 
-```
+```text
 H1: Issue title
   H2: Description
   H2: Activity
@@ -403,7 +413,7 @@ H1: Issue title
 
 ### Pull request detail - Conversation tab
 
-```
+```text
 H1: PR title
   H2: (description, if any)
   H2: Activity
@@ -414,7 +424,7 @@ H1: PR title
 
 ### Pull request detail - Files Changed tab
 
-```
+```text
 H1: PR title
   H2: File tree (with "New Files Changed Experience" enabled)
     H3: Each file name heading
@@ -429,17 +439,20 @@ H1: PR title
 
 GitHub is a responsive web application. The layout shifts at different screen widths, and this affects what landmarks and headings you encounter.
 
-**At full desktop width (1200px+):**
+### At full desktop width (1200px+)
+
 - File tree and sidebar are visible alongside the main content
 - The full repository tab bar is visible
 - All landmark regions described above are present
 
-**At tablet width (768-1199px):**
+### At tablet width (768-1199px)
+
 - Sidebar may collapse or move below the main content
 - Some navigation items may move into a "More" dropdown
 - Landmark structure remains the same - only visual position changes
 
-**At mobile width (below 768px):**
+### At mobile width (below 768px)
+
 - Global navigation collapses to a hamburger-style menu
 - Tabs may scroll horizontally or collapse
 - The landmark structure is the same but the "Navigation Menu" landmark becomes a toggle
@@ -452,7 +465,7 @@ GitHub is a responsive web application. The layout shifts at different screen wi
 
 After your first day of using GitHub, you will have an internal map. Here is what that map should look like:
 
-```
+```text
 GitHub as a building:
 
 LOBBY (global nav bar)
@@ -482,6 +495,7 @@ ELEVATOR BUTTONS (keyboard shortcuts)
 ```
 
 When you get disoriented:
+
 1. Press `1` - hear the H1 - know what floor you are on
 2. Press `D` - hear the landmarks - know what rooms are available
 3. Press `NVDA+F7` - see the full outline - know what's in the room

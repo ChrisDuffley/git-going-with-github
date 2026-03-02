@@ -1,4 +1,5 @@
 # Appendix Y: Accessing and Downloading Workshop Materials
+>
 > **Listen to Episode 42:** [Accessing Workshop Materials](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## How to Get, Read, and Keep These Documents
@@ -51,7 +52,7 @@ You can read every file directly on GitHub.com without downloading anything:
 3. Click into the `docs/` folder to see all chapters and appendices
 4. Click any `.md` file - GitHub renders it as formatted text with headings, links, and code blocks
 
-**Navigating the repository with a screen reader:**
+### Navigating the repository with a screen reader
 
 - **File list:** The repository file listing is a grid. Use `T` to jump to the file table, then arrow keys to navigate rows
 - **File content:** Once inside a file, GitHub renders the Markdown. Use `H` to navigate headings
@@ -88,7 +89,8 @@ If you do not have Git installed or prefer not to use the command line:
 4. Choose **Download ZIP**
 5. Save the file and extract it to a folder on your computer
 
-**Screen reader navigation for the Code dropdown:**
+#### Screen reader navigation for the Code dropdown
+
 - The **Code** button is near the repository description, after the branch selector
 - In NVDA/JAWS browse mode, press `B` to jump between buttons until you reach "Code"
 - Activate it with `Enter` or `Space`
@@ -120,7 +122,7 @@ If you have already cloned the repo, every file is already on your computer. Ope
 ## 5. What's in Each Folder
 
 | Folder | Contents | Format |
-|--------|----------|--------|
+| --------  | ----------  | --------  |
 | `docs/` | All 17 chapters (00-16) and 25 appendices (A-Y) | Markdown (`.md`) |
 | `html/` | Pre-built HTML versions of every Markdown file | HTML (`.html`) |
 | `html/docs/` | HTML versions of all chapters and appendices | HTML (`.html`) |
@@ -184,7 +186,7 @@ Download a fresh ZIP from the repository and replace your local copy. There is n
 ## 8. Which Format Should I Use?
 
 | Need | Best format | Why |
-|------|-------------|-----|
+| ------  | -------------  | -----  |
 | Reading during the workshop | **GitHub Pages** (online HTML) | No setup, always current, fully accessible |
 | Offline reference | **Local HTML** (`html/` folder) | Works in any browser, no internet needed, styled and navigable |
 | Editing or contributing | **Markdown** (`.md` files) | The source format - edit these, then rebuild HTML |

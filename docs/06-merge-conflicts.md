@@ -1,4 +1,5 @@
 # Merge Conflicts
+>
 > **Listen to Episode 7:** [Merge Conflicts Are Not Scary](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
 
 ## Understanding, Preventing, and Resolving Conflicts
@@ -12,6 +13,7 @@
 A merge conflict occurs when two people have both changed the **same part of the same file** in **different ways**, and Git cannot automatically decide which version is correct.
 
 Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap - for example:
+
 - Person A changed line 12 to say "Submit form"
 - Person B changed line 12 to say "Send message"
 - Git asks: which one do you want to keep?
@@ -23,7 +25,7 @@ Git can merge changes automatically when they touch different parts of a file. C
 The most common causes:
 
 | Cause | Example |
-|-------|---------|
+| -------  | ---------  |
 | Two people edited the same line | You both fixed the same typo differently |
 | One person deleted a file but another edited it | You removed an old function; they fixed a bug in it |
 | Two people restructured the same section | You reorganized a list; they added items to it |
@@ -49,7 +51,7 @@ The longer your branch diverges from main, the more likely conflicts become.
 **Best practice:** Sync daily if main is active:
 
 ```bash
-# From your feature branch:
+# From your feature branch
 git fetch origin
 git merge origin/main
 # Or: git rebase origin/main (if comfortable with rebasing)
@@ -126,6 +128,7 @@ For more on force pushing and rebasing, see the [Glossary](appendix-a-glossary.m
 Conflicts indicate that multiple people are actively improving the project. In a healthy, collaborative environment, occasional conflicts are normal and manageable.
 
 If you never have conflicts, it might mean:
+
 - You're the only contributor (less review, less learning)
 - PRs are moving too slowly (stagnation)
 - People are avoiding working on important files (technical debt)
@@ -174,7 +177,7 @@ Scroll to the bottom of the Conversation tab. The conflict message appears as a 
 
 When conflict markers appear in a file, your editor is showing you both versions of the conflicted content so you can choose. The format is always:
 
-```
+```text
 <<<<<<< HEAD
 The content that is on YOUR current branch
 =======
@@ -182,19 +185,21 @@ The content coming from the OTHER branch (or main)
 >>>>>>> branch-name-or-commit-hash
 ```
 
-**Breakdown:**
+### Breakdown
+
 - `<<<<<<< HEAD` - the start of YOUR version (HEAD = "the branch you are currently on")
 - `=======` - the dividing line between the two versions
 - `>>>>>>> branch-name` - the end of the INCOMING version (from the branch being merged in)
 
 ### Example in a real file
 
-**Original file (`docs/keyboard-shortcuts.md`) before conflict:**
+#### Original file (`docs/keyboard-shortcuts.md`) before conflict
+
 ```markdown
 | Insert+Space | Toggle between Browse Mode and Focus Mode |
 ```
 
-**After two students both added a shortcut to the same table row:**
+#### After two students both added a shortcut to the same table row
 
 ```text
 <<<<<<< HEAD
@@ -206,7 +211,8 @@ The content coming from the OTHER branch (or main)
 >>>>>>> add-nvda-shortcut
 ```
 
-**Resolution options:**
+#### Resolution options
+
 1. Keep your version: add only `Insert+F5`
 2. Keep their version: add only `Insert+F7`
 3. Keep both rows: add both shortcuts to the table (often the right answer when two students added different valid shortcuts)
@@ -288,9 +294,9 @@ When the conflict editor opens, your screen reader will announce a text editor. 
 
 VS Code has excellent merge conflict tooling with full screen reader support. This is covered in depth in [Git & Source Control in VS Code](11-git-source-control.md), but here is an overview:
 
-### VS Code shows conflicts as:
+### VS Code shows conflicts as
 
-```
+```text
 <<<<<<< HEAD (Current Change)
 Your version
 ||||||| original                   ← (3-way merge, if enabled)
@@ -306,6 +312,7 @@ Incoming version
 <summary>Visual / mouse users</summary>
 
 When your cursor is on a conflict region, VS Code shows **CodeLens action links** above the conflict block in the editor:
+
 - **Accept Current Change** - keeps your version (HEAD)
 - **Accept Incoming Change** - keeps the branch version being merged
 - **Accept Both Changes** - keeps both (stacked one after the other)
@@ -352,12 +359,14 @@ Click the link you want. The conflict markers disappear and your chosen content 
 ### Ask for help - it's normal
 
 If you are unsure which version to keep:
+
 1. Leave a comment on the PR: "I have a merge conflict in `filename.js` and I'm not sure which version to keep - could someone help me understand the intent of these two changes?"
 2. Tag the PR author or a maintainer with `@username`
 
 ### Abandon and start fresh (nuclear option)
 
 If a conflict is severe (the branch diverged a lot from main):
+
 1. Close the PR without merging
 2. Start a new branch from the latest `main`
 3. Apply only your intended changes to the new branch
@@ -371,14 +380,14 @@ This is legitimate - not a failure.
 
 If you work locally, `git merge` or `git pull` will say:
 
-```
+```text
 CONFLICT (content): Merge conflict in src/index.html
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
 And `git status` will show:
 
-```
+```text
 both modified: src/index.html
 ```
 
@@ -438,7 +447,7 @@ If conflicts exist, the `gh pr view` output shows "This branch has conflicts tha
 
 ## Summary Checklist
 
-```
+```text
 Before you start:
   □ My PR is small and focused (fewer conflicts = easier life)
   □ I checked that others aren't editing the same files
@@ -465,7 +474,7 @@ After resolving:
 
 Read this merge conflict aloud. The goal is not to resolve it - just to understand what you're hearing:
 
-```
+```text
 The button should have an
 <<<<<<< HEAD
 aria-label="Submit form"
@@ -476,6 +485,7 @@ attribute for screen readers.
 ```
 
 Answer these three questions:
+
 1. **What does your branch say?** (The text between `<<<<<<< HEAD` and `=======`)
 2. **What does the other branch say?** (The text between `=======` and `>>>>>>>`)
 3. **Which version would you keep, and why?**
@@ -491,6 +501,7 @@ Answer these three questions:
 > **Resolve at least one conflict completely by hand before using any AI assistance.** You must be able to read `<<<<<<<`, `=======`, and `>>>>>>>` markers and understand what each version represents. An AI-suggested resolution you cannot independently verify is a liability - you are accepting a change you do not understand into a codebase other people depend on.
 >
 > Once you have mastered manual conflict resolution:
+>
 > - **In VS Code** - Copilot Chat (`Ctrl+Shift+I`) can explain a conflict in plain language - *"Person A renamed the button to 'Submit Form'; Person B renamed it to 'Send Message'. Which intent should take priority?"* - but you decide what survives
 > - **In your repo** - Accessibility Agents' `@pr-review` can identify high-risk overlapping changes before a conflict occurs, flagging when two contributors are editing the same file area and giving you time to coordinate before it escalates
 > - **In the cloud** - GitHub Agentic Workflows can detect stale PRs diverging from `main` and automatically notify contributors with a suggested rebase checklist - preventing the conflict before it is ever introduced

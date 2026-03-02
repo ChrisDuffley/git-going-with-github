@@ -44,12 +44,12 @@
 <li><a href="#2-collapsible-sections-with-details">Collapsible Sections with <code>&lt;details&gt;</code></a></li>
 <li><a href="#3-task-list-checkboxes">Task List Checkboxes</a></li>
 <li><a href="#4-mermaid-diagrams">Mermaid Diagrams</a></li>
-<li><a href="#5-math-expressions--latex">Math Expressions - LaTeX</a></li>
+<li><a href="#5-math-expressions---latex">Math Expressions - LaTeX</a></li>
 <li><a href="#6-footnotes">Footnotes</a></li>
 <li><a href="#7-linked-heading-anchors">Linked Heading Anchors</a></li>
 <li><a href="#8-syntax-highlighting-in-code-blocks">Syntax Highlighting in Code Blocks</a></li>
 <li><a href="#9-html-in-markdown">HTML in Markdown</a></li>
-<li><a href="#10-screen-reader-considerations">Screen Reader Considerations</a></li>
+<li><a href="#10-screen-reader-considerations-for-gfm">Screen Reader Considerations</a></li>
 <li><a href="#11-gfm-quick-reference-card">GFM Quick-Reference Card</a></li>
 </ol>
 <hr>
@@ -124,14 +124,18 @@
 <h3>Syntax</h3>
 <pre><code class="hljs language-markdown"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">details</span>&gt;</span></span>
 <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">summary</span>&gt;</span></span>Click to expand: Full stack trace<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">summary</span>&gt;</span></span>
-</code></pre>
-<p>Error: Cannot read property &#39;length&#39; of null
-    at Object.<anonymous> (app.js:15)
-    at Module._compile (module.js:653)</p>
-<pre><code class="hljs">
-The <span class="hljs-literal">error</span> occurs <span class="hljs-keyword">on</span> <span class="hljs-literal">line</span> <span class="hljs-number">15</span> <span class="hljs-keyword">when</span> `data` <span class="hljs-keyword">is</span> <span class="hljs-keyword">null</span>.
 
-&lt;/details&gt;</code></pre>
+<span class="hljs-code">```
+
+Error: Cannot read property &#x27;length&#x27; of null
+    at Object.&lt;anonymous&gt; (app.js:15)
+    at Module._compile (module.js:653)
+
+```</span>text
+
+The error occurs on line 15 when <span class="hljs-code">`data`</span> is null.
+
+<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></span></code></pre>
 <h3>Real-World Uses</h3>
 <ul>
 <li><strong>Bug reports:</strong> Collapse the full stack trace, show only the first few lines in the summary</li>
@@ -168,12 +172,12 @@ The <span class="hljs-literal">error</span> occurs <span class="hljs-keyword">on
 </ul>
 <h3>Screen Reader Interaction</h3>
 <p>In Browse Mode, checkboxes are read as <code>checkbox, not checked</code> or <code>checkbox, checked</code>.</p>
-<p><strong>To toggle a task list checkbox:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">Navigate</span> <span class="hljs-variable">to</span> <span class="hljs-variable">the</span> <span class="hljs-variable">checkbox</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Tab</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span><span class="hljs-punctuation">)</span> <span class="hljs-variable">or</span> <span class="hljs-variable">clicking</span> <span class="hljs-variable">via</span> <span class="hljs-variable">mouse</span>
-<span class="hljs-variable">Press</span> <span class="hljs-built_in">Space</span> <span class="hljs-variable">to</span> <span class="hljs-variable">toggle</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> <span class="hljs-variable">required</span> <span class="hljs-variable">for</span> <span class="hljs-variable">keyboard</span> <span class="hljs-variable">toggle</span> <span class="hljs-variable">on</span> <span class="hljs-variable">web</span><span class="hljs-punctuation">)</span>
-<span class="hljs-variable">NVDA</span><span class="hljs-operator">:</span> <span class="hljs-variable">NVDA</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> → <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> → <span class="hljs-built_in">Tab</span> <span class="hljs-variable">to</span> <span class="hljs-variable">find</span> <span class="hljs-variable">checkbox</span> → <span class="hljs-built_in">Space</span> <span class="hljs-variable">to</span> <span class="hljs-variable">toggle</span>
-<span class="hljs-variable">JAWS</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Tab</span> <span class="hljs-variable">to</span> <span class="hljs-variable">checkbox</span> → <span class="hljs-built_in">Space</span> <span class="hljs-variable">to</span> <span class="hljs-variable">toggle</span>
-<span class="hljs-variable">VoiceOver</span><span class="hljs-operator">:</span> <span class="hljs-variable">VO</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> <span class="hljs-variable">on</span> <span class="hljs-variable">the</span> <span class="hljs-variable">checkbox</span> <span class="hljs-variable">element</span></code></pre>
+<h4>To toggle a task list checkbox</h4>
+<pre><code class="hljs language-text">Navigate to the checkbox: Tab (Focus Mode) or clicking via mouse
+Press Space to toggle (Focus Mode required for keyboard toggle on web)
+NVDA: NVDA+Space → Focus Mode → Tab to find checkbox → Space to toggle
+JAWS: Tab to checkbox → Space to toggle
+VoiceOver: VO+Space on the checkbox element</code></pre>
 <hr>
 <h2>4. Mermaid Diagrams</h2>
 <p>GitHub renders <a href="https://mermaid.js.org/">Mermaid.js</a> diagrams inline when you use a <code>mermaid</code> fenced code block. Common in READMEs, PRs, and documentation to illustrate architecture, flows, and relationships.</p>
@@ -188,7 +192,7 @@ flowchart LR
     F --&gt; G{Review passed?}
     G -- Yes --&gt; H[Merge]
     G -- No --&gt; D
-```</span></code></pre>
+```</span>text</code></pre>
 <h3>Common Diagram Types</h3>
 <table>
 <thead>
@@ -238,13 +242,13 @@ flowchart LR
 <blockquote>
 <p><strong>Important:</strong> Mermaid diagrams render as SVG images. GitHub does not auto-generate alt text for them. Screen readers will typically either skip them or announce generic SVG container information.</p>
 </blockquote>
-<p><strong>What to do as a document author:</strong></p>
+<h4>What to do as a document author</h4>
 <ol>
 <li>Always add a <strong>text description</strong> before or after every Mermaid diagram</li>
 <li>Consider duplicating critical flow information as a numbered list or table</li>
 <li>Use the diagram for visual learners; use the text list for screen reader users</li>
 </ol>
-<p><strong>Example - accessible Mermaid usage:</strong></p>
+<h4>Example - accessible Mermaid usage</h4>
 <pre><code class="hljs language-markdown">The PR workflow follows these steps:
 
 <span class="hljs-bullet">1.</span> Fork the repository
@@ -258,20 +262,15 @@ flowchart LR
 
 <span class="hljs-code">```mermaid
 flowchart LR
-    Fork --&gt; Clone --&gt; Branch --&gt; Commit --&gt; Push --&gt; PR --&gt; Review --&gt; Merge</span></code></pre>
-<pre><code class="hljs">
-<span class="hljs-meta">---
-</span>
-<span class="hljs-comment">## 5. Math Expressions - LaTeX</span>
-
-<span class="hljs-string">GitHub</span> <span class="hljs-string">renders</span> <span class="hljs-string">LaTeX</span> <span class="hljs-string">math</span> <span class="hljs-string">expressions</span> <span class="hljs-string">using</span> <span class="hljs-string">MathJax.</span> <span class="hljs-string">Common</span> <span class="hljs-string">in</span> <span class="hljs-string">data</span> <span class="hljs-string">science,</span> <span class="hljs-string">research,</span> <span class="hljs-string">and</span> <span class="hljs-string">documentation</span> <span class="hljs-string">for</span> <span class="hljs-string">algorithms.</span>
-
-<span class="hljs-comment">### Inline Math</span>
-
-<span class="hljs-string">Use</span> <span class="hljs-string">single</span> <span class="hljs-string">`$`</span> <span class="hljs-attr">delimiters for inline math within a sentence:</span>
-
-<span class="hljs-string">```markdown</span>
-<span class="hljs-string">The</span> <span class="hljs-string">formula</span> <span class="hljs-string">is</span> <span class="hljs-string">$e</span> <span class="hljs-string">=</span> <span class="hljs-string">mc^2$</span> <span class="hljs-string">where</span> <span class="hljs-string">$c$</span> <span class="hljs-string">is</span> <span class="hljs-string">the</span> <span class="hljs-string">speed</span> <span class="hljs-string">of</span> <span class="hljs-string">light.</span></code></pre>
+    Fork --&gt; Clone --&gt; Branch --&gt; Commit --&gt; Push --&gt; PR --&gt; Review --&gt; Merge
+```</span>text
+</code></pre>
+<hr>
+<h2>5. Math Expressions - LaTeX</h2>
+<p>GitHub renders LaTeX math expressions using MathJax. Common in data science, research, and documentation for algorithms.</p>
+<h3>Inline Math</h3>
+<p>Use single <code>$</code> delimiters for inline math within a sentence:</p>
+<pre><code class="hljs language-markdown">The formula is $e = mc^2$ where $c$ is the speed of light.</code></pre>
 <p>Renders as: The formula is <em>e = mc²</em> where <em>c</em> is the speed of light.</p>
 <h3>Block Math</h3>
 <p>Use <code>$$</code> delimiters for display-style (centered, larger) math:</p>
@@ -352,7 +351,7 @@ You can also use named footnotes[^accessibility-note].
 <pre><code class="hljs language-markdown"><span class="hljs-code">```python
 def greet(name: str) -&gt; str:
     return f&quot;Hello, {name}!&quot;
-```</span>
+```</span>text
 
 <span class="hljs-code">```yaml
 name: CI
@@ -360,13 +359,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-```</span>
+```</span>text
 
 <span class="hljs-code">```bash
 git checkout -b feature/my-change
 git add .
 git commit -m &quot;Add accessibility improvements&quot;
-```</span></code></pre>
+```</span>text</code></pre>
 <h3>Supported Languages (Most Common)</h3>
 <p><code>markdown</code>, <code>yaml</code>, <code>json</code>, <code>javascript</code>, <code>typescript</code>, <code>python</code>, <code>bash</code>, <code>shell</code>, <code>html</code>, <code>css</code>, <code>ruby</code>, <code>go</code>, <code>rust</code>, <code>java</code>, <code>c</code>, <code>cpp</code>, <code>csharp</code>, <code>php</code>, <code>sql</code>, <code>dockerfile</code>, <code>plaintext</code></p>
 <p>Use <code>plaintext</code> or just omit the language for content where no highlighting is needed.</p>
@@ -512,23 +511,32 @@ Content revealed on expand.
 
 <span class="hljs-code">```mermaid
 flowchart LR
-    A --&gt; B --&gt; C</span></code></pre>
-<p>Inline math: $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$</p>
-<p>Block math:
+    A --&gt; B --&gt; C
+```</span>text
+
+Inline math: $x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}$
+
+Block math:
 $$
 E = mc^2
-$$</p>
-<p>Footnote reference[^1]
-[^1]: Footnote definition text here.</p>
-<p><a href="#setup">Go to Setup section</a></p>
-<pre><code class="hljs language-python"><span class="hljs-comment"># Language-tagged code block</span>
-<span class="hljs-built_in">print</span>(<span class="hljs-string">&quot;Hello, world!&quot;</span>)</code></pre>
-<p>Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to submit.</p>
-<p>H<sub>2</sub>O  |  x<sup>2</sup></p>
-<pre><code class="hljs">
-<span class="hljs-meta">---
-</span>
-<span class="hljs-attr">*Return to:</span> [<span class="hljs-string">Resources</span>]<span class="hljs-string">(appendix-u-resources.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">B</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Screen</span> <span class="hljs-string">Reader</span> <span class="hljs-string">Cheat</span> <span class="hljs-string">Sheet</span>]<span class="hljs-string">(appendix-b-screen-reader-cheatsheet.md)</span> <span class="hljs-string">|</span> [<span class="hljs-string">Appendix</span> <span class="hljs-string">A</span> <span class="hljs-bullet">-</span> <span class="hljs-string">Glossary</span>]<span class="hljs-string">(appendix-a-glossary.md)*</span></code></pre>
+$$
+
+Footnote reference[^1]
+[<span class="hljs-symbol">^1</span>]: <span class="hljs-link">Footnote definition text here.</span>
+
+[<span class="hljs-string">Go to Setup section</span>](<span class="hljs-link">#setup</span>)
+
+<span class="hljs-code">```python
+# Language-tagged code block
+print(&quot;Hello, world!&quot;)
+```</span>text
+
+Press <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>Ctrl<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span>+<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">kbd</span>&gt;</span></span>Enter<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">kbd</span>&gt;</span></span> to submit.
+
+H<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">sub</span>&gt;</span></span>2<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">sub</span>&gt;</span></span>O  |  x<span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">sup</span>&gt;</span></span>2<span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">sup</span>&gt;</span></span>
+</code></pre>
+<hr>
+<p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Appendix B - Screen Reader Cheat Sheet</a> | <a href="appendix-a-glossary.html">Appendix A - Glossary</a></em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

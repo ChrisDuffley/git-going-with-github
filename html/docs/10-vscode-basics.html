@@ -43,7 +43,7 @@
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-why-vs-code-for-open-source-contribution">Why VS Code for Open Source Contribution</a></li>
-<li><a href="#2-the-bridge-githubdev--vs-code-in-your-browser">The Bridge: github.dev - VS Code in Your Browser</a></li>
+<li><a href="#2-the-bridge-githubdev---vs-code-in-your-browser">The Bridge: github.dev - VS Code in Your Browser</a></li>
 <li><a href="#3-screen-reader-mode-in-vs-code">Screen Reader Mode in VS Code</a></li>
 <li><a href="#4-essential-keyboard-navigation-and-findfilter">Essential Keyboard Navigation and Find/Filter</a></li>
 <li><a href="#5-accessible-help-accessible-view-and-accessible-diff">Accessible Help, Accessible View, and Accessible Diff</a></li>
@@ -103,10 +103,10 @@
 <p>For Markdown contributions (which is most of what <code>accessibility-agents</code> needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow - with less tab switching and with agents available on every file you open.</p>
 <hr>
 <h2>2. The Bridge: github.dev - VS Code in Your Browser</h2>
-<p><strong>Before you install anything: try VS Code right now in your browser.</strong></p>
+<h3>Before you install anything: try VS Code right now in your browser</h3>
 <p>GitHub provides a web-based version of VS Code called <strong>github.dev</strong>. It runs entirely in your browser with zero installation. The keyboard shortcuts, screen reader mode, and editor experience are identical to the desktop app.</p>
 <h3>How to Access github.dev</h3>
-<p><strong>Method 1: The Period Key Shortcut (Fastest)</strong></p>
+<h4>Method 1: The Period Key Shortcut (Fastest)</h4>
 <p>From any GitHub repository page:</p>
 <ol>
 <li>Press <code>.</code> (period key - just the period, no modifier keys)</li>
@@ -115,7 +115,7 @@
 <li>The URL changes to <code>github.dev/owner/repo</code></li>
 <li>Screen reader mode works exactly as it does in desktop VS Code (toggle with <code>Shift+Alt+F1</code>)</li>
 </ol>
-<p><strong>Where it works:</strong></p>
+<h4>Where it works</h4>
 <ul>
 <li>Repository home pages</li>
 <li>File view pages</li>
@@ -124,13 +124,13 @@
 </ul>
 <p><strong>Screen reader note:</strong> The period key shortcut is a single keypress - no modifier keys. It&#39;s GitHub&#39;s universal &quot;open this in VS Code&quot; command.</p>
 <p><strong>Alternative: Press <code>&gt;</code> (Shift+Period)</strong> to open github.dev in a <strong>new tab</strong>. This preserves your GitHub page and is the preferred method when you want to keep both interfaces open.</p>
-<p><strong>Method 2: Direct URL</strong></p>
+<h4>Method 2: Direct URL</h4>
 <p>Change the domain in any GitHub URL:</p>
 <ul>
 <li><code>github.com/owner/repo</code> → <code>github.dev/owner/repo</code></li>
 <li>Works for any branch, file, or commit URL</li>
 </ul>
-<p><strong>Method 3: From the Repository Page</strong></p>
+<h4>Method 3: From the Repository Page</h4>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -168,14 +168,14 @@
 <li>Same file navigation patterns (Explorer, <code>Ctrl+P</code> / Mac: <code>Cmd+P</code>, <code>Ctrl+Shift+O</code> / Mac: <code>Cmd+Shift+O</code>)</li>
 <li>But accessible instantly from any GitHub page with one keystroke</li>
 </ul>
-<p><strong>Use github.dev when:</strong></p>
+<h4>Use github.dev when</h4>
 <ul>
 <li>You want to edit a file quickly without switching apps</li>
 <li>You&#39;re on a machine where you can&#39;t install software</li>
 <li>You want to browse code with VS Code navigation (symbols, search, split view)</li>
 <li>You&#39;re reviewing a PR and want to see the full file context</li>
 </ul>
-<p><strong>Use desktop VS Code when:</strong></p>
+<h4>Use desktop VS Code when</h4>
 <ul>
 <li>You need Copilot inline suggestions</li>
 <li>You want to run Accessibility Agents agents</li>
@@ -184,33 +184,33 @@
 </ul>
 <hr>
 <h3>Screen Reader Experience in github.dev</h3>
-<p><strong>Activate screen reader mode immediately:</strong></p>
+<h4>Activate screen reader mode immediately</h4>
 <ol>
 <li>Press <code>.</code> on any GitHub repository to open github.dev</li>
 <li>Press <code>Shift+Alt+F1</code> (Mac: <code>Shift+Option+F1</code>) to enable screen reader mode</li>
 <li>VS Code announces &quot;Screen reader optimized&quot;</li>
 </ol>
-<p><strong>What changes:</strong></p>
+<h4>What changes</h4>
 <ul>
 <li>Focus behavior adjusts for keyboard navigation</li>
 <li>Code suggestions are announced via ARIA live regions</li>
 <li>Error messages are announced when you navigate to them</li>
 <li>Inline decorations are suppressed to reduce noise</li>
 </ul>
-<p><strong>Navigation:</strong></p>
+<h4>Navigation</h4>
 <ul>
 <li>Use <code>Ctrl+Shift+E</code> to open the Explorer (file tree)</li>
 <li>Use <code>Up/Down Arrow</code> to navigate files</li>
 <li>Press <code>Enter</code> on a file to open it in the editor</li>
 <li>The editor behaves like a standard text area - your screen reader&#39;s reading commands work normally</li>
 </ul>
-<p><strong>NVDA/JAWS users:</strong></p>
+<h4>NVDA/JAWS users</h4>
 <ul>
 <li>You remain in Browse/Virtual mode for the overall interface</li>
 <li>When focus enters the editor text area, you&#39;re automatically in Forms/Focus mode</li>
 <li>All standard cursor movement works: <code>Home</code>, <code>End</code>, <code>Ctrl+Home</code>, <code>Ctrl+End</code>, <code>Ctrl+F</code> to find</li>
 </ul>
-<p><strong>VoiceOver users:</strong></p>
+<h4>VoiceOver users</h4>
 <ul>
 <li>Quick Nav OFF when inside the editor (<code>Left Arrow + Right Arrow</code> to toggle)</li>
 <li>Use <code>VO+Shift+Down</code> to interact with the editor area</li>
@@ -258,8 +258,8 @@
 <td>VS Code detects NVDA and JAWS automatically on Windows; VoiceOver on macOS</td>
 </tr>
 </tbody></table>
-<p><strong>Verify it is active:</strong>
-Open Settings (<code>Ctrl+,</code> - Mac: <code>Cmd+,</code>) → search for <code>accessibility support</code> → confirm it shows <code>on</code> (not <code>auto</code>).</p>
+<h4>Verify it is active</h4>
+<p>Open Settings (<code>Ctrl+,</code> - Mac: <code>Cmd+,</code>) → search for <code>accessibility support</code> → confirm it shows <code>on</code> (not <code>auto</code>).</p>
 <h3>What Changes in Screen Reader Mode</h3>
 <table>
 <thead>
@@ -482,7 +482,7 @@ Open Settings (<code>Ctrl+,</code> - Mac: <code>Cmd+,</code>) → search for <co
 <td>Enables regex patterns in the search box</td>
 </tr>
 </tbody></table>
-<p><strong>Screen reader interactions inside the Find widget:</strong></p>
+<h5>Screen reader interactions inside the Find widget</h5>
 <ul>
 <li>Toggles are announced as checkboxes - press <code>Space</code> to toggle each one</li>
 <li>Match count is announced as you type (example: <code>3 of 12 matches</code>)</li>
@@ -532,10 +532,10 @@ Open Settings (<code>Ctrl+,</code> - Mac: <code>Cmd+,</code>) → search for <co
 <td>Navigate the result tree with <code>Up/Down Arrow</code> → <code>Enter</code> to open</td>
 </tr>
 </tbody></table>
-<p><strong>Glob pattern examples for this workshop:</strong></p>
-<pre><code class="hljs">docs/*<span class="hljs-string">.md</span>          → all Markdown files in the docs folder
-*<span class="hljs-string">.agent.md</span>         → all Accessibility Agents agent definition files
-<span class="hljs-string">.github/</span>**         → everything inside the <span class="hljs-string">.github</span> folder
+<h5>Glob pattern examples for this workshop</h5>
+<pre><code class="hljs language-text">docs/*.md          → all Markdown files in the docs folder
+*.agent.md         → all Accessibility Agents agent definition files
+.github/**         → everything inside the .github folder
 !node_modules/**   → exclude the node_modules folder from results</code></pre>
 <h4>Finding Settings (<code>Ctrl+,</code>)</h4>
 <p>The Settings editor has built-in search that filters by keyword as you type. Additional filter options:</p>
@@ -629,7 +629,7 @@ Open Settings (<code>Ctrl+,</code> - Mac: <code>Cmd+,</code>) → search for <co
 <hr>
 <h3>5.1 Accessible Help - Context-Aware Keyboard Guide</h3>
 <p>Every interactive area of VS Code - the editor, the terminal, the diff view, the Copilot Chat panel - has its own keyboard commands. <strong>Accessible Help</strong> surfaces those commands in a plain-text, fully readable dialog, tailored to exactly where your focus is right now.</p>
-<p><strong>How to open Accessible Help:</strong></p>
+<h4>How to open Accessible Help</h4>
 <table>
 <thead>
 <tr>
@@ -660,22 +660,22 @@ Open Settings (<code>Ctrl+,</code> - Mac: <code>Cmd+,</code>) → search for <co
 </tbody></table>
 <p>The dialog is announced with a heading and a complete list of keyboard shortcuts for that specific widget. Navigate with <code>Up/Down Arrow</code>. Press <code>Escape</code> to dismiss and return focus to where you were.</p>
 <p><strong>Why this matters:</strong> You do not need to memorize every shortcut in every panel. Open Accessible Help in any unfamiliar area and VS Code will tell you exactly what you can do there. It is the built-in answer to &quot;what can I press from here?&quot;</p>
-<p><strong>Example output when pressing <code>Alt+H</code> in the editor:</strong></p>
-<pre><code class="hljs">Accessible Help: Editor
+<h4>Example output when pressing <code>Alt+H</code> in the editor</h4>
+<pre><code class="hljs language-text">Accessible Help: Editor
 
-Press F8 <span class="hljs-built_in">to</span> jump <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> next error <span class="hljs-keyword">or</span> warning.
-Press Shift+F8 <span class="hljs-built_in">to</span> jump <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> previous error <span class="hljs-keyword">or</span> warning.
-Press Ctrl+Shift+M <span class="hljs-built_in">to</span> <span class="hljs-built_in">open</span> <span class="hljs-keyword">the</span> Problems panel.
-Press F12 <span class="hljs-built_in">to</span> go <span class="hljs-built_in">to</span> <span class="hljs-keyword">a</span> definition.
-Press Alt+F12 <span class="hljs-built_in">to</span> peek <span class="hljs-keyword">a</span> definition inline.
-Press Ctrl+Shift+O <span class="hljs-built_in">to</span> go <span class="hljs-built_in">to</span> <span class="hljs-keyword">a</span> symbol <span class="hljs-keyword">in</span> this <span class="hljs-built_in">file</span>.
-Press Alt+F2 <span class="hljs-built_in">to</span> <span class="hljs-built_in">open</span> <span class="hljs-keyword">the</span> Accessible View.
-Press Alt+H <span class="hljs-built_in">to</span> view this help content again.</code></pre>
+Press F8 to jump to the next error or warning.
+Press Shift+F8 to jump to the previous error or warning.
+Press Ctrl+Shift+M to open the Problems panel.
+Press F12 to go to a definition.
+Press Alt+F12 to peek a definition inline.
+Press Ctrl+Shift+O to go to a symbol in this file.
+Press Alt+F2 to open the Accessible View.
+Press Alt+H to view this help content again.</code></pre>
 <p>Use Accessible Help as your first action whenever you land somewhere new in VS Code.</p>
 <hr>
 <h3>5.2 Accessible View - Reading Dynamic and Streamed Content</h3>
 <p><strong>Accessible View</strong> (<code>Alt+F2</code>) gives screen reader users a clean, static, fully readable version of content that is otherwise presented dynamically, in tooltips, or in streaming form.</p>
-<p><strong>How to open Accessible View:</strong></p>
+<h4>How to open Accessible View</h4>
 <table>
 <thead>
 <tr>
@@ -692,7 +692,7 @@ Press Alt+H <span class="hljs-built_in">to</span> view this help content again.<
 <td>Close Accessible View and return to the editor</td>
 </tr>
 </tbody></table>
-<p><strong>What Accessible View provides:</strong></p>
+<h4>What Accessible View provides</h4>
 <table>
 <thead>
 <tr>
@@ -732,7 +732,7 @@ Press Alt+H <span class="hljs-built_in">to</span> view this help content again.<
 <td>Persistent readable content until you close it</td>
 </tr>
 </tbody></table>
-<p><strong>Recommended workflow for Copilot Chat:</strong></p>
+<h4>Recommended workflow for Copilot Chat</h4>
 <ol>
 <li>Type your prompt in the Chat input</li>
 <li>Wait for the response to finish (NVDA: live region announcements stop; JAWS: typing indicator disappears; VoiceOver: busy state clears)</li>
@@ -740,7 +740,7 @@ Press Alt+H <span class="hljs-built_in">to</span> view this help content again.<
 <li>Navigate with <code>Up/Down Arrow</code> through the response</li>
 <li>Press <code>Escape</code> to return to the chat input</li>
 </ol>
-<p><strong>Recommended workflow for hover documentation:</strong></p>
+<h4>Recommended workflow for hover documentation</h4>
 <ol>
 <li>Navigate to a symbol or link with keyboard</li>
 <li>Press <code>Ctrl+K I</code> to trigger hover programmatically (no mouse needed)</li>
@@ -751,7 +751,7 @@ Press Alt+H <span class="hljs-built_in">to</span> view this help content again.<
 <h3>5.3 Accessible Diff Viewer - Reading Changes Without Visual Scanning</h3>
 <p>When you open a file diff - in Source Control, in the GitHub PR extension, or during a merge conflict - VS Code normally shows it as a side-by-side or inline visual view. For screen reader users, tracking which lines changed and how can be difficult without a structured reading mode.</p>
 <p><strong>The Accessible Diff Viewer</strong> presents the same diff as a plain, navigable list of changed lines - organized by hunk, labeled by change type (added, removed, unchanged), with the line number announced for each line.</p>
-<p><strong>How to open the Accessible Diff Viewer:</strong></p>
+<h4>How to open the Accessible Diff Viewer</h4>
 <table>
 <thead>
 <tr>
@@ -772,27 +772,27 @@ Press Alt+H <span class="hljs-built_in">to</span> view this help content again.<
 <td><code>Ctrl+Shift+P</code> → type &quot;Open Accessible Diff Viewer&quot;</td>
 </tr>
 </tbody></table>
-<p><strong>What the Accessible Diff Viewer announces:</strong></p>
+<h4>What the Accessible Diff Viewer announces</h4>
 <p>For each hunk (a block of related changes), the viewer announces:</p>
 <ul>
 <li>The hunk number and total hunk count (<code>Hunk 2 of 5</code>)</li>
 <li>The line range affected</li>
 <li>Each line, prefixed with its change type:</li>
 </ul>
-<pre><code class="hljs">Hunk <span class="hljs-number">1</span> of <span class="hljs-number">3</span> <span class="hljs-operator">-</span> lines <span class="hljs-number">12</span> to <span class="hljs-number">18</span>
-  <span class="hljs-params">Unchanged:</span> <span class="hljs-comment">## Screen Reader Cheat Sheet</span>
-<span class="hljs-operator">-</span> Line <span class="hljs-params">removed:</span> <span class="hljs-operator">&gt;</span> Quick reference for NVDA users.
-<span class="hljs-operator">+</span> Line <span class="hljs-params">added:</span> <span class="hljs-operator">&gt;</span> Quick reference for NVDA, JAWS, and VoiceOver users.
-  <span class="hljs-params">Unchanged:</span>
-  <span class="hljs-params">Unchanged:</span> Use this document during the workshop.</code></pre>
+<pre><code class="hljs language-text">Hunk 1 of 3 - lines 12 to 18
+  Unchanged: ## Screen Reader Cheat Sheet
+- Line removed: &gt; Quick reference for NVDA users.
++ Line added: &gt; Quick reference for NVDA, JAWS, and VoiceOver users.
+  Unchanged:
+  Unchanged: Use this document during the workshop.</code></pre>
 <p>This gives you the complete picture of what changed, in reading order, without visual diff scanning.</p>
-<p><strong>Practical uses during this workshop:</strong></p>
+<h4>Practical uses during this workshop</h4>
 <ul>
 <li><strong>Before approving a PR:</strong> Open the diff → <code>F7</code> to enter the first hunk → navigate each change → <code>F7</code> for next hunk → repeat until all hunks reviewed</li>
 <li><strong>During a merge conflict:</strong> The conflict markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>) appear as lines in the viewer - you can read both conflicting versions before deciding which to keep</li>
 <li><strong>After Copilot generates an edit:</strong> Open the diff (<code>Ctrl+Shift+G</code> → navigate to the changed file → <code>Enter</code>) then review exactly what Copilot changed vs. what was there before</li>
 </ul>
-<p><strong>Audio cues for diffs:</strong></p>
+<h4>Audio cues for diffs</h4>
 <p>With <code>accessibility.signals.diffLineInserted</code> and <code>accessibility.signals.diffLineDeleted</code> both set to <code>on</code> in Settings, VS Code plays a distinct tone when your cursor moves over an added line (higher pitched) or a removed line (lower pitched). You receive change-type information through sound before the line text is announced.</p>
 <hr>
 <h2>Accessibility Signals and Audio Cues</h2>

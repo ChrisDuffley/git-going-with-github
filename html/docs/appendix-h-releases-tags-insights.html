@@ -39,7 +39,7 @@
 </blockquote>
 <hr>
 <h2>Table of Contents</h2>
-<p><strong>Part 1 - Releases and Tags</strong></p>
+<h3>Part 1 - Releases and Tags</h3>
 <ol>
 <li><a href="#1-what-is-a-release">What Is a Release?</a></li>
 <li><a href="#2-releases-vs-tags-vs-branches">Releases vs. Tags vs. Branches</a></li>
@@ -50,13 +50,13 @@
 <li><a href="#7-draft-and-pre-release-states">Draft and Pre-Release States</a></li>
 <li><a href="#8-accessibility-agents-draft-release">Accessibility Agents: <code>/draft-release</code></a></li>
 </ol>
-<p><strong>Part 2 - Repository Insights</strong></p>
-<ol start="9">
+<h3>Part 2 - Repository Insights</h3>
+<ol>
 <li><a href="#9-what-is-the-insights-tab">What Is the Insights Tab?</a></li>
 <li><a href="#10-navigating-to-insights">Navigating to Insights</a></li>
-<li><a href="#11-pulse--recent-activity-summary">Pulse - Recent Activity Summary</a></li>
-<li><a href="#12-contributors--who-builds-the-project">Contributors - Who Builds the Project</a></li>
-<li><a href="#13-traffic--who-visits-the-repo">Traffic - Who Visits the Repo</a></li>
+<li><a href="#11-pulse---recent-activity-summary">Pulse - Recent Activity Summary</a></li>
+<li><a href="#12-contributors---who-builds-the-project">Contributors - Who Builds the Project</a></li>
+<li><a href="#13-traffic---who-visits-the-repo">Traffic - Who Visits the Repo</a></li>
 <li><a href="#14-commits-and-code-frequency">Commits and Code Frequency</a></li>
 <li><a href="#15-dependency-graph">Dependency Graph</a></li>
 <li><a href="#16-network-and-forks">Network and Forks</a></li>
@@ -104,7 +104,7 @@
 <td>Based on a tag</td>
 </tr>
 </tbody></table>
-<p><strong>The relationship:</strong></p>
+<h3>The relationship</h3>
 <ul>
 <li>Every release is backed by a tag</li>
 <li>A tag without a release is just a version marker in the git history</li>
@@ -119,11 +119,11 @@
 <li>Activate &quot;Releases&quot; or the version link to go to the full releases page</li>
 <li>Alternatively: navigate to <code>github.com/owner/repo/releases</code></li>
 </ol>
-<p><strong>Screen reader path:</strong></p>
-<pre><code class="hljs"><span class="hljs-keyword">On</span> the repository home page:
-→ H <span class="hljs-literal">or</span> <span class="hljs-number">3</span> <span class="hljs-keyword">to</span> find <span class="hljs-string">&quot;Releases&quot;</span> heading <span class="hljs-keyword">in</span> the right sidebar
-→ Tab <span class="hljs-keyword">to</span> the latest release <span class="hljs-keyword">link</span> → Enter
-→ <span class="hljs-literal">Or</span>: Tab <span class="hljs-keyword">to</span> <span class="hljs-string">&quot;N Releases&quot;</span> count <span class="hljs-keyword">link</span> → Enter → Opens <span class="hljs-literal">full</span> releases <span class="hljs-built_in">list</span></code></pre>
+<h4>Screen reader path</h4>
+<pre><code class="hljs language-text">On the repository home page:
+→ H or 3 to find &quot;Releases&quot; heading in the right sidebar
+→ Tab to the latest release link → Enter
+→ Or: Tab to &quot;N Releases&quot; count link → Enter → Opens full releases list</code></pre>
 <h3>The Releases List Page</h3>
 <p>Each release appears as a section with:</p>
 <ul>
@@ -135,10 +135,10 @@
 <li>Asset downloads (if included)</li>
 <li>Source code download links (always present - auto-generated zip/tar.gz)</li>
 </ul>
-<p><strong>Navigation:</strong></p>
-<pre><code class="hljs"><span class="hljs-number">2</span> → Jump between release title headings
-K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</span> <span class="hljs-title">links</span>)
-↓ → <span class="hljs-keyword">Read</span> release notes</code></pre>
+<h4>Navigation</h4>
+<pre><code class="hljs language-text">2 → Jump between release title headings
+K → Navigate links (download assets, compare, tag links)
+↓ → Read release notes</code></pre>
 <hr>
 <h2>4. Understanding Version Numbers</h2>
 <p>Most projects follow <strong>Semantic Versioning</strong> (semver): <code>MAJOR.MINOR.PATCH</code></p>
@@ -166,7 +166,7 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <td>Something was broken and is now fixed</td>
 </tr>
 </tbody></table>
-<p><strong>Examples:</strong></p>
+<h3>Examples</h3>
 <ul>
 <li><code>v2.0.0</code> → major release, breaking changes possible</li>
 <li><code>v2.1.0</code> → new features added</li>
@@ -178,32 +178,32 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <li><code>v2.1.0-beta.2</code> → feature-complete but still testing</li>
 <li><code>v2.1.0-rc.1</code> → release candidate, nearly final</li>
 </ul>
-<p><strong>Your contribution&#39;s journey:</strong></p>
-<pre><code class="hljs">PR opened → PR reviewed → PR merged → <span class="hljs-keyword">default</span> branch updated
+<h3>Your contribution&#39;s journey</h3>
+<pre><code class="hljs language-text">PR opened → PR reviewed → PR merged → default branch updated
                                               ↓
-                                   Next <span class="hljs-keyword">release</span> <span class="hljs-keyword">prepared</span>
+                                   Next release prepared
                                               ↓
-                          Tag created → <span class="hljs-keyword">Release</span> published → v2<span class="hljs-number">.1</span><span class="hljs-number">.1</span></code></pre>
+                          Tag created → Release published → v2.1.1</code></pre>
 <hr>
 <h2>5. Reading Release Notes</h2>
 <p>Release notes document what changed. High-quality release notes categorize changes:</p>
-<pre><code class="hljs"><span class="hljs-comment">## What&#x27;s New in v2.1.0</span>
+<pre><code class="hljs language-text">## What&#x27;s New in v2.1.0
 
-<span class="hljs-comment">### Breaking Changes</span>
-- <span class="hljs-title class_">The</span> <span class="hljs-string">`preferences.md`</span> format has changed - see the migration guide
+### Breaking Changes
+- The `preferences.md` format has changed - see the migration guide
 
-<span class="hljs-comment">### New Features</span>
-- <span class="hljs-title class_">Added</span> <span class="hljs-string">`/project-status`</span> command (<span class="hljs-comment">#42, <span class="hljs-doctag">@alice</span>)</span>
-- <span class="hljs-title class_">Added</span> <span class="hljs-string">`/onboard-repo`</span> command (<span class="hljs-comment">#38, <span class="hljs-doctag">@bob</span>)</span>
+### New Features
+- Added `/project-status` command (#42, @alice)
+- Added `/onboard-repo` command (#38, @bob)
 
-<span class="hljs-comment">### Bug Fixes</span>
-- <span class="hljs-title class_">Fixed</span> keyboard navigation <span class="hljs-keyword">in</span> the triage workflow (<span class="hljs-comment">#51, <span class="hljs-doctag">@charlie</span>)</span>
-- <span class="hljs-title class_">Screen</span> reader announcement now correct <span class="hljs-keyword">for</span> merged <span class="hljs-title class_">PRs</span> (<span class="hljs-comment">#48, <span class="hljs-doctag">@alice</span>)</span>
+### Bug Fixes
+- Fixed keyboard navigation in the triage workflow (#51, @charlie)
+- Screen reader announcement now correct for merged PRs (#48, @alice)
 
-<span class="hljs-comment">### Dependencies</span>
-- <span class="hljs-title class_">Updated</span> github-mcp-server to v3.<span class="hljs-number">0.1</span>
+### Dependencies
+- Updated github-mcp-server to v3.0.1
 
-**<span class="hljs-title class_">Full</span> <span class="hljs-title class_">Changelog</span><span class="hljs-symbol">:**</span> <span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/github.com/owner</span><span class="hljs-regexp">/repo/compare</span><span class="hljs-regexp">/v2.0.0...v2.1.0</span></code></pre>
+**Full Changelog:** https://github.com/owner/repo/compare/v2.0.0...v2.1.0</code></pre>
 <p><strong>The &quot;Full Changelog&quot; link</strong> at the bottom of many release notes goes to a comparison view showing every merged PR between two tags. This is where you&#39;ll see your PR listed by name, with your username credited.</p>
 <hr>
 <h2>6. For Maintainers: Creating a Release</h2>
@@ -230,17 +230,17 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <hr>
 <h2>8. Accessibility Agents: <code>/draft-release</code></h2>
 <p>The <code>/draft-release</code> command automates release note generation from your merged pull requests.</p>
-<p><strong>Usage:</strong></p>
-<pre><code class="hljs">/draft-release v2.1.0
+<h3>Usage</h3>
+<pre><code class="hljs language-text">/draft-release v2.1.0
 /draft-release owner/repo v2.1.0</code></pre>
-<p><strong>What it produces:</strong></p>
+<h3>What it produces</h3>
 <ul>
 <li>Auto-categorized changes: Breaking Changes, Features, Bug Fixes, Dependencies</li>
 <li>Each PR listed with number, title, and author</li>
 <li>A full changelog link</li>
 <li>Markdown formatted and ready to paste into GitHub&#39;s release editor</li>
 </ul>
-<p><strong>Example output:</strong></p>
+<h3>Example output</h3>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## v2.1.0</span>
 
 <span class="hljs-section">### New Features</span>
@@ -262,12 +262,12 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <h2>Part 2 - Repository Insights</h2>
 <h2>9. What Is the Insights Tab?</h2>
 <p>The Insights tab shows quantitative activity data for a repository. It is primarily read-only and chart-heavy - but all underlying data is also presented in tables that screen readers can navigate.</p>
-<p><strong>Who can see Insights:</strong></p>
+<h3>Who can see Insights</h3>
 <ul>
 <li>Anyone can see Insights on a public repository</li>
 <li>Private repository Insights require collaborator access</li>
 </ul>
-<p><strong>What Insights does NOT show:</strong></p>
+<h3>What Insights does NOT show</h3>
 <ul>
 <li>Individual user data in detail (e.g., lines per commit per person)</li>
 <li>Real-time data (most views update daily or weekly)</li>
@@ -281,11 +281,11 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <li>Find and select the <strong>Insights</strong> tab</li>
 <li>The Insights sub-navigation has multiple views listed on the left (or top on smaller screens)</li>
 </ol>
-<p><strong>Screen reader path:</strong></p>
-<pre><code class="hljs">T → navigate <span class="hljs-keyword">the</span> repository <span class="hljs-literal">tab</span> bar
-→ <span class="hljs-string">&quot;Insights&quot;</span> link → Enter
+<h3>Screen reader path</h3>
+<pre><code class="hljs language-text">T → navigate the repository tab bar
+→ &quot;Insights&quot; link → Enter
 → Left sidebar has sub-navigation: Pulse, Contributors, Traffic, Commits, etc.
-→ K <span class="hljs-built_in">to</span> navigate sidebar links → Enter <span class="hljs-built_in">to</span> <span class="hljs-built_in">open</span> <span class="hljs-keyword">each</span> view</code></pre>
+→ K to navigate sidebar links → Enter to open each view</code></pre>
 <hr>
 <h2>11. Pulse - Recent Activity Summary</h2>
 <p><strong>Pulse</strong> is the Insights landing page. It summarizes activity in a chosen time period (last 24 hours, 7 days, or 30 days):</p>
@@ -297,20 +297,20 @@ K → Navigate links (download assets, compare, <span class="hljs-keyword">tag</
 <li>A list of proposed PRs (open)</li>
 <li>A list of opened and closed issues</li>
 </ul>
-<p><strong>What it tells you as a contributor:</strong></p>
+<h3>What it tells you as a contributor</h3>
 <ul>
 <li>Is this project actively maintained? (Are PRs being merged regularly?)</li>
 <li>Is there a backlog? (Many open issues vs. few closures)</li>
 <li>Is the maintainer responsive? (Time between PR open and merge)</li>
 </ul>
-<p><strong>Screen reader navigation:</strong></p>
-<pre><code class="hljs"><span class="hljs-number">2</span> → <span class="hljs-keyword">Section</span> headings: <span class="hljs-string">&quot;Merged pull requests&quot;</span>, <span class="hljs-string">&quot;Proposed pull requests&quot;</span>, <span class="hljs-string">&quot;Closed issues&quot;</span>, etc.
-<span class="hljs-number">3</span> → Individual PR/issue title links within each <span class="hljs-keyword">section</span>
-K → Navigate <span class="hljs-literal">all</span> links</code></pre>
+<h3>Screen reader navigation</h3>
+<pre><code class="hljs language-text">2 → Section headings: &quot;Merged pull requests&quot;, &quot;Proposed pull requests&quot;, &quot;Closed issues&quot;, etc.
+3 → Individual PR/issue title links within each section
+K → Navigate all links</code></pre>
 <hr>
 <h2>12. Contributors - Who Builds the Project</h2>
 <p>The Contributors view shows a bar chart of commits over time, with each contributor represented by a different color. Below the chart is a sortable table.</p>
-<p><strong>The table (accessible):</strong></p>
+<h3>The table (accessible)</h3>
 <ul>
 <li>Username</li>
 <li>Number of commits (with a link to filtered commit history)</li>
@@ -318,22 +318,22 @@ K → Navigate <span class="hljs-literal">all</span> links</code></pre>
 <li>Deletions (lines removed)</li>
 <li>Sorted by total commits by default</li>
 </ul>
-<p><strong>Why this matters as a new contributor:</strong></p>
+<h3>Why this matters as a new contributor</h3>
 <ul>
 <li>You can see how active top contributors are</li>
 <li>After your first merged PR, your name appears here (with your commits)</li>
 <li>You can link to your section (<code>github.com/owner/repo/graphs/contributors</code>) as proof of contribution</li>
 </ul>
-<p><strong>Screen reader:</strong>
-The chart is a canvas graphic - not directly readable. The table below it is fully accessible. Navigate with <code>T</code> to reach the table, then <code>Tab</code> for sorting controls.</p>
-<pre><code class="hljs">T → Contributors <span class="hljs-keyword">table</span>
-Tab → <span class="hljs-keyword">Column</span> headers (click <span class="hljs-keyword">to</span> sort: Commits, Additions, Deletions)
-↓ → Navigate <span class="hljs-keyword">rows</span> (<span class="hljs-keyword">each</span> contributor <span class="hljs-keyword">is</span> a <span class="hljs-keyword">row</span>)
-K → Links <span class="hljs-keyword">to</span> <span class="hljs-keyword">each</span> contributor<span class="hljs-string">&#x27;s filtered commit list</span></code></pre>
+<h3>Screen reader</h3>
+<p>The chart is a canvas graphic - not directly readable. The table below it is fully accessible. Navigate with <code>T</code> to reach the table, then <code>Tab</code> for sorting controls.</p>
+<pre><code class="hljs language-text">T → Contributors table
+Tab → Column headers (click to sort: Commits, Additions, Deletions)
+↓ → Navigate rows (each contributor is a row)
+K → Links to each contributor&#x27;s filtered commit list</code></pre>
 <hr>
 <h2>13. Traffic - Who Visits the Repo</h2>
 <p><strong>Traffic</strong> shows who is viewing and cloning the repository. Available only to repository owners and collaborators with push access.</p>
-<p><strong>Metrics:</strong></p>
+<h3>Metrics</h3>
 <table>
 <thead>
 <tr>
@@ -358,7 +358,7 @@ K → Links <span class="hljs-keyword">to</span> <span class="hljs-keyword">each
 <td>Which files and pages in the repo get the most views</td>
 </tr>
 </tbody></table>
-<p><strong>Why this matters:</strong></p>
+<h3>Why this matters</h3>
 <ul>
 <li>If the README is the most-viewed file, documentation improvements have high impact</li>
 <li>If traffic spiked when a blog post linked the repo, that&#39;s a good signal for community growth</li>
@@ -387,7 +387,7 @@ K → Links <span class="hljs-keyword">to</span> <span class="hljs-keyword">each
 <li>What depends on your project (if others import your repo)</li>
 </ul>
 <p><strong>Dependents</strong> - repositories that depend on this one - is the &quot;used by&quot; count you see on the right sidebar of popular packages.</p>
-<p><strong>Enabling/viewing:</strong></p>
+<h3>Enabling/viewing</h3>
 <ul>
 <li>Settings → Security &amp; Analysis → Dependency graph → Enable</li>
 <li>Navigate to Insights → Dependency graph</li>
@@ -412,91 +412,91 @@ K → Links <span class="hljs-keyword">to</span> <span class="hljs-keyword">each
 <tbody><tr>
 <td>Description</td>
 <td>One-line repo summary</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 <tr>
 <td>README</td>
 <td>Project overview</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 <tr>
 <td>Code of Conduct</td>
 <td>Community behavior standards</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 <tr>
 <td>Contributing guide</td>
 <td>How to contribute</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 <tr>
 <td>License</td>
 <td>Usage rights</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 <tr>
 <td>Issue templates</td>
 <td>Structured issue forms</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 <tr>
 <td>Pull request template</td>
 <td>PR checklist</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 <tr>
 <td>Security policy</td>
 <td>How to report vulnerabilities</td>
-<td>✓ or ✗</td>
+<td>Present or Missing</td>
 </tr>
 </tbody></table>
 <p>A fully green checklist signals a well-maintained project. For accessibility-agents contributors, <strong>adding a missing community health file is always a welcome <code>good first issue</code> contribution.</strong></p>
-<p><strong>Screen reader:</strong></p>
-<pre><code class="hljs">H / <span class="hljs-number">2</span> → <span class="hljs-string">&quot;Community Standards&quot;</span> section heading
-Tab → Each checklist <span class="hljs-keyword">item</span> (links <span class="hljs-built_in">to</span> <span class="hljs-built_in">add</span> missing <span class="hljs-built_in">files</span>)</code></pre>
+<h3>Screen reader</h3>
+<pre><code class="hljs language-text">H / 2 → &quot;Community Standards&quot; section heading
+Tab → Each checklist item (links to add missing files)</code></pre>
 <hr>
 <h2>18. Screen Reader Navigation Reference</h2>
 <h3>Releases Pages</h3>
-<p><strong>Repository home page (finding releases):</strong></p>
-<pre><code class="hljs">Right sidebar:
-→ H <span class="hljs-keyword">or</span> <span class="hljs-number">3</span> <span class="hljs-keyword">to</span> find <span class="hljs-string">&quot;Releases&quot;</span> heading
-→ K <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-built_in">version</span> link (e.g., <span class="hljs-string">&quot;v2.1.0&quot;</span>) → Enter opens <span class="hljs-keyword">that</span> release
-→ K <span class="hljs-keyword">to</span> <span class="hljs-keyword">the</span> <span class="hljs-string">&quot;N releases&quot;</span> <span class="hljs-built_in">count</span> link → Enter opens full <span class="hljs-built_in">list</span></code></pre>
-<p><strong>Releases list page:</strong></p>
-<pre><code class="hljs"><span class="hljs-number">2</span>         → Major section headings
-<span class="hljs-number">3</span>         → Individual <span class="hljs-keyword">release</span> title headings (<span class="hljs-keyword">each</span> <span class="hljs-keyword">release</span> <span class="hljs-keyword">is</span> an h2 <span class="hljs-keyword">or</span> h3)
+<h4>Repository home page (finding releases)</h4>
+<pre><code class="hljs language-text">Right sidebar:
+→ H or 3 to find &quot;Releases&quot; heading
+→ K to the version link (e.g., &quot;v2.1.0&quot;) → Enter opens that release
+→ K to the &quot;N releases&quot; count link → Enter opens full list</code></pre>
+<h4>Releases list page</h4>
+<pre><code class="hljs language-text">2         → Major section headings
+3         → Individual release title headings (each release is an h2 or h3)
 K         → Navigate links (assets, tag, compare)
-↓         → <span class="hljs-keyword">Read</span> <span class="hljs-keyword">release</span> notes <span class="hljs-keyword">inline</span></code></pre>
-<p><strong>Individual release page:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">H</span> <span class="hljs-operator">/</span> <span class="hljs-number">2</span>     → <span class="hljs-variable">Section</span> <span class="hljs-variable">headings</span> <span class="hljs-variable">within</span> <span class="hljs-variable">release</span> <span class="hljs-variable">notes</span>
-<span class="hljs-built_in">I</span>         → <span class="hljs-built_in">List</span> <span class="hljs-variable">items</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">change</span> <span class="hljs-variable">entries</span><span class="hljs-punctuation">)</span>
-<span class="hljs-built_in">K</span>         → <span class="hljs-built_in">Links</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">PRs</span> <span class="hljs-variable">referenced</span><span class="hljs-operator">,</span> <span class="hljs-variable">comparison</span> <span class="hljs-variable">link</span><span class="hljs-operator">,</span> <span class="hljs-variable">asset</span> <span class="hljs-variable">downloads</span><span class="hljs-punctuation">)</span></code></pre>
-<p><strong>Comparing two releases (the Changelog):</strong></p>
+↓         → Read release notes inline</code></pre>
+<h4>Individual release page</h4>
+<pre><code class="hljs language-text">H / 2     → Section headings within release notes
+I         → List items (change entries)
+K         → Links (PRs referenced, comparison link, asset downloads)</code></pre>
+<h4>Comparing two releases (the Changelog)</h4>
 <p>The compare URL (<code>/compare/v1.0.0...v2.0.0</code>) shows a diff of all commits and merged PRs between two tags:</p>
-<pre><code class="hljs"><span class="hljs-number">3</span>         → Individual <span class="hljs-keyword">commit</span> <span class="hljs-keyword">or</span> PR headings
-I         → <span class="hljs-keyword">Commit</span> list items</code></pre>
+<pre><code class="hljs language-text">3         → Individual commit or PR headings
+I         → Commit list items</code></pre>
 <h3>Insights Pages</h3>
-<p><strong>Insights tab bar (sub-navigation):</strong></p>
-<pre><code class="hljs">Insights left sidebar:
-K → Navigate sidebar links: Pulse, Contributors, Traffic, Commits, <span class="hljs-built_in">Code</span> frequency, Dependency <span class="hljs-keyword">graph</span>, Network, Forks, Community
-Enter → <span class="hljs-keyword">Open</span> that Insights <span class="hljs-built_in">view</span></code></pre>
-<p><strong>Charts and graphs - general strategy:</strong></p>
+<h4>Insights tab bar (sub-navigation)</h4>
+<pre><code class="hljs language-text">Insights left sidebar:
+K → Navigate sidebar links: Pulse, Contributors, Traffic, Commits, Code frequency, Dependency graph, Network, Forks, Community
+Enter → Open that Insights view</code></pre>
+<h4>Charts and graphs - general strategy</h4>
 <p>Most Insights charts are canvas or SVG visuals. They announce as &quot;image&quot; or &quot;graphic&quot; to screen readers. <strong>Skip the chart and use the data table or list below it</strong>, which contains the same information in accessible form.</p>
-<pre><code class="hljs">T → Jump <span class="hljs-selector-tag">to</span> data tables
-H → <span class="hljs-selector-tag">Section</span> headings
-<span class="hljs-selector-tag">I</span> → List items (in Pulse views)</code></pre>
-<p><strong>Pulse view:</strong></p>
-<pre><code class="hljs"><span class="hljs-number">2</span> → <span class="hljs-string">&quot;Merged pull requests&quot;</span>, <span class="hljs-string">&quot;Opened issues&quot;</span>, etc. sections
-<span class="hljs-number">3</span> → Individual PR/issue titles
-K → Links <span class="hljs-built_in">to</span> <span class="hljs-keyword">each</span> <span class="hljs-keyword">item</span></code></pre>
+<pre><code class="hljs language-text">T → Jump to data tables
+H → Section headings
+I → List items (in Pulse views)</code></pre>
+<h4>Pulse view</h4>
+<pre><code class="hljs language-text">2 → &quot;Merged pull requests&quot;, &quot;Opened issues&quot;, etc. sections
+3 → Individual PR/issue titles
+K → Links to each item</code></pre>
 <hr>
 <h2>19. Accessibility Agents: <code>/my-stats</code> and <code>/team-dashboard</code></h2>
 <p>Instead of navigating GitHub&#39;s chart-heavy Insights UI, Accessibility Agents provides two commands that deliver the same data in text form directly in VS Code.</p>
 <h3><code>/my-stats</code></h3>
 <p>Shows your personal contribution statistics across all tracked repos:</p>
-<pre><code class="hljs">/<span class="hljs-keyword">my</span>-stats
-/<span class="hljs-keyword">my</span>-stats <span class="hljs-keyword">last</span> <span class="hljs-number">30</span> days
-/<span class="hljs-keyword">my</span>-stats org:community-access</code></pre>
+<pre><code class="hljs language-text">/my-stats
+/my-stats last 30 days
+/my-stats org:community-access</code></pre>
 <p>Output includes:</p>
 <ul>
 <li>PRs opened and merged</li>
@@ -507,9 +507,9 @@ K → Links <span class="hljs-built_in">to</span> <span class="hljs-keyword">eac
 </ul>
 <h3><code>/team-dashboard</code></h3>
 <p>Shows team-wide activity across tracked repos - who contributed what, response times, review coverage:</p>
-<pre><code class="hljs">/<span class="hljs-built_in">team</span>-dashboard
-/<span class="hljs-built_in">team</span>-dashboard org:community-<span class="hljs-keyword">access</span>
-/<span class="hljs-built_in">team</span>-dashboard sprint</code></pre>
+<pre><code class="hljs language-text">/team-dashboard
+/team-dashboard org:community-access
+/team-dashboard sprint</code></pre>
 <p>Output includes:</p>
 <ul>
 <li>Per-person contribution summary</li>

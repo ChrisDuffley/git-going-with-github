@@ -1,6 +1,6 @@
 # Appendix X: GitHub Copilot AI Models Reference
+>
 > **Listen to Episode 41:** [Copilot AI Models](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
-
 
 <!-- TOC -->
 - [Overview](#1-overview)
@@ -32,7 +32,7 @@ GitHub Docs organizes models by task. Match your task to the right model to get 
 For everyday tasks - code completions, explanations, refactoring, writing documentation.
 
 | Model | Provider | Strengths | Cost |
-|-------|----------|-----------|------|
+| -------  | ----------  | -----------  | ------  |
 | **GPT-4.1** | OpenAI | Fast, accurate code completions and explanations. Reliable default for most tasks. | Free |
 | **GPT-5 mini** | OpenAI | Reliable for most coding and writing tasks. Fast and accurate across languages and frameworks. Also supports image input. | Free |
 | **GPT-5.1-Codex** | OpenAI | Higher-quality code on complex engineering tasks like features, tests, debugging, refactors, and reviews - without requiring lengthy prompts. | 1× |
@@ -44,7 +44,7 @@ For everyday tasks - code completions, explanations, refactoring, writing docume
 For quick answers, boilerplate generation, renaming, or lightweight explanations where speed matters.
 
 | Model | Provider | Strengths | Cost |
-|-------|----------|-----------|------|
+| -------  | ----------  | -----------  | ------  |
 | **Claude Haiku 4.5** | Anthropic | Balances fast responses with quality output. Ideal for small tasks and lightweight code explanations. | 0.33× |
 | **Gemini 3 Flash** | Google | Fast, reliable answers to lightweight coding questions. | 0.33× |
 | **GPT-5.1-Codex-Mini** | OpenAI | Fast reasoning variant; quick answers on coding tasks. | 0.33× |
@@ -54,7 +54,7 @@ For quick answers, boilerplate generation, renaming, or lightweight explanations
 For complex problems, architecture decisions, multi-file analysis, tricky bugs, and understanding unfamiliar codebases.
 
 | Model | Provider | Strengths | Cost |
-|-------|----------|-----------|------|
+| -------  | ----------  | -----------  | ------  |
 | **GPT-5 mini** | OpenAI | Deep reasoning with faster responses. Ideal for interactive sessions and step-by-step code analysis. | Free |
 | **GPT-5.2** | OpenAI | Great at complex reasoning, code analysis, and technical decision-making. | 1× |
 | **Claude Sonnet 4 / 4.5 / 4.6** | Anthropic | More reliable completions and smarter reasoning under pressure. Performance and practicality balanced for coding workflows; strong at complex problem-solving. | 1× |
@@ -68,7 +68,7 @@ For complex problems, architecture decisions, multi-file analysis, tricky bugs, 
 For autonomous coding tasks in Agent mode - when Copilot writes code, runs terminal commands, and iterates without step-by-step guidance from you.
 
 | Model | Provider | Strengths | Cost |
-|-------|----------|-----------|------|
+| -------  | ----------  | -----------  | ------  |
 | **GPT-5.1-Codex-Max** | OpenAI | Best for agentic tasks. Recommended when using Copilot in Agent mode. | 1× |
 | **GPT-5.2-Codex** | OpenAI | Best for agentic tasks. Strong autonomous reasoning and multi-step execution. | 1× |
 | **GPT-5.3-Codex** | OpenAI | Newest Codex variant. Powerful agentic capabilities. | 1× |
@@ -78,7 +78,7 @@ For autonomous coding tasks in Agent mode - when Copilot writes code, runs termi
 For tasks that involve images, screenshots, diagrams, or UI mockups - paste an image directly into the chat input.
 
 | Model | Supports Images |
-|-------|----------------|
+| -------  | ----------------  |
 | GPT-5 mini | Yes |
 | Claude Sonnet 4 / 4.5 / 4.6 | Yes |
 | Gemini 3 Pro | Yes |
@@ -88,7 +88,7 @@ For tasks that involve images, screenshots, diagrams, or UI mockups - paste an i
 ## 3. Complete Model Reference
 
 | Model | Status | Provider | Plans | Multiplier |
-|-------|--------|----------|-------|-----------|
+| -------  | --------  | ----------  | -------  | -----------  |
 | GPT-4.1 | GA | OpenAI | Free, Pro, Pro+, Business, Enterprise | 0 (free) |
 | GPT-5 mini | GA | OpenAI | Free, Pro, Pro+, Business, Enterprise | 0 (free) |
 | Raptor mini | Preview | OpenAI (fine-tuned) | Free, Pro | 0 (free) |
@@ -118,7 +118,7 @@ For tasks that involve images, screenshots, diagrams, or UI mockups - paste an i
 ## 4. Model Availability by Plan
 
 | Plan | Free Models Included | Paid Models Available | Monthly Premium Requests |
-|------|---------------------|----------------------|--------------------------|
+| ------  | ---------------------  | ----------------------  | --------------------------  |
 | **Copilot Free** | GPT-4.1, GPT-5 mini, Raptor mini | None | 50 (monthly) |
 | **Copilot Pro** | All 0× models | Most (Pro+ models excluded) | 300 (monthly) |
 | **Copilot Pro+** | All 0× models | All models | Unlimited |
@@ -132,14 +132,14 @@ Models marked with a premium multiplier consume premium requests proportionally.
 ## 5. Premium Requests and Cost Multipliers
 
 | Multiplier | Impact | Example Models |
-|-----------|--------|----------------|
+| -----------  | --------  | ----------------  |
 | **0 (free)** | Never consumes premium requests | GPT-4.1, GPT-5 mini, Raptor mini |
 | **0.25×** | Very low cost | Grok Code Fast 1 |
 | **0.33×** | Low cost | Claude Haiku 4.5, Gemini 3 Flash, GPT-5.1-Codex-Mini |
 | **1×** | Standard | Claude Sonnet 4/4.5/4.6, GPT-5.1-Codex, GPT-5.2, Gemini 2.5 Pro, Codex variants |
 | **3×** | High cost | Claude Opus 4.5, Claude Opus 4.6 |
 
-**Tips for managing premium request usage:**
+### Tips for managing premium request usage
 
 - Use **GPT-4.1** or **GPT-5 mini** (both free) for everyday questions, quick explanations, and simple completions - they're fast and capable
 - Upgrade to **Claude Sonnet** or **GPT-5.2** (1×) only when the task genuinely requires deeper reasoning
@@ -178,13 +178,15 @@ In the Chat panel, the model picker button is near the **bottom** of the chat vi
 
 **Auto mode** (the default) lets Copilot choose the best model based on the type of request. It became generally available on December 10, 2025.
 
-**How Auto works:**
+### How Auto works
+
 - For simple questions, Copilot routes to a faster, lighter model
 - For complex code generation or debugging, Copilot upgrades to a more capable model automatically
 - For agent tasks, Copilot selects an appropriate Codex model
 - You can see which model was used after each response
 
-**When to override Auto:**
+### When to override Auto
+
 - You specifically need a model with certain capabilities (e.g., vision input with Claude Sonnet 4)
 - You're managing premium request quotas and want to control costs
 - You've found a particular model gives better results for your specific workflow or domain
@@ -198,7 +200,8 @@ To switch back to Auto from a specific model, re-open the model picker and selec
 
 GitHub regularly updates the model roster. Older model versions are retired when newer equivalents are available. When a model is retired, Copilot stops sending requests to it and falls back to newer alternatives.
 
-**Already retired (as of February 2026):**
+### Already retired (as of February 2026)
+
 - Claude Sonnet 3.5, Claude Sonnet 3.7
 - Gemini 2.0 Flash
 - o1-mini, o3, o3-mini, o4-mini

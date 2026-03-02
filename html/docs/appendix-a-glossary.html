@@ -58,58 +58,58 @@
 <li><strong><code>upstream</code></strong> - the original repository you forked from</li>
 </ul>
 <p>When you run <code>git push origin main</code>, you&#39;re pushing your local <code>main</code> branch to the remote named <code>origin</code>.</p>
-<p><strong>To see your remotes:</strong></p>
+<h4>To see your remotes</h4>
 <pre><code class="hljs language-bash">git remote -v</code></pre>
-<p><strong>To add a remote:</strong></p>
+<h4>To add a remote</h4>
 <pre><code class="hljs language-bash">git remote add upstream https://github.com/original-owner/repo.git</code></pre>
 <hr>
 <h3>Origin</h3>
-<p><code>origin</code> is the default name Git gives to the remote repository you cloned from. When you clone your fork, <code>origin</code> points to your fork on GitHub. </p>
+<p><code>origin</code> is the default name Git gives to the remote repository you cloned from. When you clone your fork, <code>origin</code> points to your fork on GitHub.</p>
 <p>Commands like <code>git push</code> and <code>git pull</code> default to using <code>origin</code> unless you specify otherwise.</p>
 <hr>
 <h3>.gitignore</h3>
 <p><code>.gitignore</code> is a special file in the root of your repository that tells Git which files or folders to ignore - meaning Git will not track or commit them.</p>
-<p><strong>Why use .gitignore?</strong></p>
+<h4>Why use .gitignore?</h4>
 <ul>
 <li>Prevent committing temporary files (<code>.DS_Store</code>, <code>Thumbs.db</code>)</li>
 <li>Ignore build outputs (<code>dist/</code>, <code>build/</code>, <code>node_modules/</code>)</li>
 <li>Keep secrets out of Git (<code>.env</code> files, API keys, credentials)</li>
 <li>Avoid committing IDE-specific files (<code>.vscode/</code>, <code>.idea/</code>)</li>
 </ul>
-<p><strong>Example <code>.gitignore</code>:</strong></p>
-<pre><code class="hljs"><span class="hljs-comment"># Dependencies</span>
+<h4>Example <code>.gitignore</code></h4>
+<pre><code class="hljs language-text"># Dependencies
 node_modules/
 vendor/
 
-<span class="hljs-comment"># Environment variables</span>
-<span class="hljs-string">.env</span>
-<span class="hljs-string">.env.local</span>
+# Environment variables
+.env
+.env.local
 
-<span class="hljs-comment"># Build outputs</span>
+# Build outputs
 dist/
 build/
-*<span class="hljs-string">.log</span>
+*.log
 
-<span class="hljs-comment"># OS files</span>
-<span class="hljs-string">.DS_Store</span>
+# OS files
+.DS_Store
 Thumbs.db
 
-<span class="hljs-comment"># IDE</span>
-<span class="hljs-string">.vscode/</span>
-<span class="hljs-string">.idea/</span></code></pre>
+# IDE
+.vscode/
+.idea/</code></pre>
 <p><strong>Important:</strong> <code>.gitignore</code> only ignores <strong>untracked</strong> files. If you already committed a file, you must remove it from Git&#39;s tracking first:</p>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">rm</span> --cached filename</code></pre>
 <p>Then add it to <code>.gitignore</code> and commit the change.</p>
 <hr>
 <h3>Clone</h3>
 <p>Cloning copies a repository from GitHub to your local computer so you can work with it in VS Code or your preferred editor. When you clone, you get all the files and the complete history.</p>
-<pre><code class="hljs">git <span class="hljs-keyword">clone</span> <span class="hljs-title">https</span>://github.com/your-username/repo-name.git</code></pre>
+<pre><code class="hljs language-text">git clone https://github.com/your-username/repo-name.git</code></pre>
 <p><strong>Fork vs Clone:</strong> Fork = your copy on GitHub. Clone = a copy on your computer. You usually clone your fork.</p>
 <hr>
 <h3>Branch</h3>
 <p>A branch is a separate line of development inside a repository. The main branch (often called <code>main</code> or <code>master</code>) holds the stable, released version of the project. When you want to add a feature or fix a bug, you create a new branch so your work doesn&#39;t affect <code>main</code> until it&#39;s ready.</p>
 <p>Think of branches like parallel timelines - each branch is its own version of the project that can evolve independently and be merged back together later.</p>
-<p><strong>Common branch names:</strong></p>
+<h4>Common branch names</h4>
 <ul>
 <li><code>main</code> - the primary, stable branch</li>
 <li><code>develop</code> - integration branch (not all projects have this)</li>
@@ -128,12 +128,12 @@ Thumbs.db
 </ul>
 <p>Good commit messages are in the imperative mood: &quot;Fix typo in README&quot; not &quot;Fixed typo&quot; or &quot;Fixing typo.&quot;</p>
 <p>Example of a well-written commit message:</p>
-<pre><code class="hljs">Fix broken link <span class="hljs-keyword">in</span> accessibility guide
+<pre><code class="hljs language-text">Fix broken link in accessibility guide
 
-The link <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> NVDA download page was <span class="hljs-keyword">using</span> <span class="hljs-keyword">an</span> outdated <span class="hljs-built_in">URL</span>.
-Updated <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> current direct download page.
+The link to the NVDA download page was using an outdated URL.
+Updated to the current direct download page.
 
-Fixes <span class="hljs-comment">#42</span></code></pre>
+Fixes #42</code></pre>
 <hr>
 <h3>Diff</h3>
 <p>A diff (short for difference) shows what changed between two versions of a file. Lines that were <strong>added</strong> are shown in green (with a <code>+</code> prefix). Lines that were <strong>removed</strong> are shown in red (with a <code>-</code> prefix). Lines that are unchanged are shown in grey for context.</p>
@@ -211,8 +211,8 @@ The incoming content from the other branch
 <hr>
 <h3>Upstream</h3>
 <p>Upstream refers to the original repository that you forked from. When the upstream project has new changes that you want to bring into your fork, you &quot;sync&quot; your fork with upstream.</p>
-<pre><code class="hljs">Your Fork → upstream → Original Repo
-Your changes flow <span class="hljs-keyword">this</span> way: Original Repo ← Pull Request ← Your Fork</code></pre>
+<pre><code class="hljs language-text">Your Fork → upstream → Original Repo
+Your changes flow this way: Original Repo ← Pull Request ← Your Fork</code></pre>
 <hr>
 <h3>Label</h3>
 <p>Labels are colored tags applied to issues and PRs to categorize them. Common labels:</p>
@@ -375,29 +375,29 @@ git diff HEAD     <span class="hljs-comment"># Show uncommitted changes</span></
 <hr>
 <h3>Detached HEAD</h3>
 <p>A &quot;detached HEAD&quot; occurs when you check out a specific commit instead of a branch. You&#39;re no longer &quot;on&quot; a branch - just looking at a snapshot in time.</p>
-<p><strong>Why it happens:</strong></p>
+<h4>Why it happens</h4>
 <pre><code class="hljs language-bash">git checkout a1b2c3d  <span class="hljs-comment"># Checking out a commit directly</span></code></pre>
-<p><strong>What this means:</strong></p>
+<h4>What this means</h4>
 <ul>
 <li>Any commits you make won&#39;t belong to any branch</li>
 <li>If you switch branches, those commits become &quot;orphaned&quot;</li>
 </ul>
-<p><strong>How to fix it:</strong>
-If you made commits in detached HEAD state and want to keep them:</p>
+<h4>How to fix it</h4>
+<p>If you made commits in detached HEAD state and want to keep them:</p>
 <pre><code class="hljs language-bash">git branch new-branch-name  <span class="hljs-comment"># Creates a branch from your current position</span>
 git checkout new-branch-name</code></pre>
 <p><strong>Screen reader note:</strong> Git will warn you verbosely when entering detached HEAD state. Read the guidance carefully.</p>
 <hr>
 <h3>Stash</h3>
 <p><code>git stash</code> temporarily saves your uncommitted changes and reverts your working directory to a clean state. It&#39;s useful when you need to switch branches but aren&#39;t ready to commit.</p>
-<p><strong>Common workflow:</strong></p>
+<h4>Common workflow</h4>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># You&#x27;re working on branch A</span>
 git stash  <span class="hljs-comment"># Save your changes temporarily</span>
 git checkout main  <span class="hljs-comment"># Switch to main</span>
-<span class="hljs-comment"># Do something on main...</span>
+<span class="hljs-comment"># Do something on main..</span>
 git checkout branch-a  <span class="hljs-comment"># Switch back</span>
 git stash pop  <span class="hljs-comment"># Restore your changes</span></code></pre>
-<p><strong>Stash commands:</strong></p>
+<h2>Stash commands</h2>
 <ul>
 <li><code>git stash</code> - save changes</li>
 <li><code>git stash list</code> - see what&#39;s stashed</li>
@@ -409,27 +409,27 @@ git stash pop  <span class="hljs-comment"># Restore your changes</span></code></
 <hr>
 <h3>Rebase</h3>
 <p>Rebasing is an alternative to merging. Instead of creating a merge commit, rebase moves (replays) your commits on top of another branch.</p>
-<p><strong>Merge:</strong></p>
-<pre><code class="hljs"><span class="hljs-comment">main:    A</span><span class="hljs-literal">---</span><span class="hljs-comment">B</span><span class="hljs-literal">---</span><span class="hljs-comment">C</span>
-               <span class="hljs-comment">\</span>
-<span class="hljs-comment">feature:        D</span><span class="hljs-literal">---</span><span class="hljs-comment">E</span><span class="hljs-literal">---</span><span class="hljs-comment">F</span>
-                         <span class="hljs-comment">\</span>
-<span class="hljs-comment">result:  A</span><span class="hljs-literal">---</span><span class="hljs-comment">B</span><span class="hljs-literal">---</span><span class="hljs-comment">C</span><span class="hljs-literal">-------</span><span class="hljs-comment">M (merge commit)</span></code></pre>
-<p><strong>Rebase:</strong></p>
-<pre><code class="hljs"><span class="hljs-variable">main</span><span class="hljs-operator">:</span>    <span class="hljs-variable">A</span><span class="hljs-operator">---</span><span class="hljs-variable">B</span><span class="hljs-operator">---</span><span class="hljs-built_in">C</span>
-<span class="hljs-variable">feature</span><span class="hljs-operator">:</span>             <span class="hljs-built_in">D</span><span class="hljs-operator">&#x27;---</span><span class="hljs-built_in">E</span><span class="hljs-operator">&#x27;---</span><span class="hljs-variable">F</span><span class="hljs-operator">&#x27;</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">commits</span> <span class="hljs-string">&quot;replayed&quot;</span> <span class="hljs-variable">on</span> <span class="hljs-variable">top</span> <span class="hljs-variable">of</span> <span class="hljs-built_in">C</span><span class="hljs-punctuation">)</span></code></pre>
-<p><strong>When to use rebase:</strong></p>
+<h4>Merge</h4>
+<pre><code class="hljs language-text">main:    A---B---C
+               \
+feature:        D---E---F
+                         \
+result:  A---B---C-------M (merge commit)</code></pre>
+<h4>Rebase</h4>
+<pre><code class="hljs language-text">main:    A---B---C
+feature:             D&#x27;---E&#x27;---F&#x27; (commits &quot;replayed&quot; on top of C)</code></pre>
+<h4>When to use rebase</h4>
 <ul>
 <li>Keep a linear project history</li>
 <li>Clean up your branch before submitting a PR</li>
 <li>Incorporate upstream changes into your feature branch</li>
 </ul>
-<p><strong>When NOT to rebase:</strong></p>
+<h4>When NOT to rebase</h4>
 <ul>
 <li>Shared branches (never rebase <code>main</code> or public branches)</li>
 <li>After pushing to GitHub (unless you&#39;re comfortable force pushing)</li>
 </ul>
-<p><strong>Basic rebase workflow:</strong></p>
+<h4>Basic rebase workflow</h4>
 <pre><code class="hljs language-bash">git checkout feature-branch
 git rebase main
 <span class="hljs-comment"># Fix any conflicts</span>
@@ -441,7 +441,7 @@ git push --force-with-lease  <span class="hljs-comment"># See Force Push below</
 <p><strong>Use case:</strong> You made a bug fix on the wrong branch and want to apply it to <code>main</code> without merging the whole branch.</p>
 <pre><code class="hljs language-bash">git checkout main
 git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to main</span></code></pre>
-<p><strong>When to use:</strong></p>
+<h4>When to use</h4>
 <ul>
 <li>Extract a single fix from a larger feature branch</li>
 <li>Backport a bug fix to an older release branch</li>
@@ -454,13 +454,13 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <pre><code class="hljs language-bash">git fetch origin  <span class="hljs-comment"># Download updates from origin</span></code></pre>
 <p><strong><code>git pull</code></strong> = <code>git fetch</code> + <code>git merge</code>. It downloads changes <strong>and</strong> immediately merges them into your current branch.</p>
 <pre><code class="hljs language-bash">git pull origin main  <span class="hljs-comment"># Fetch + merge origin/main into current branch</span></code></pre>
-<p><strong>When to use fetch:</strong></p>
+<h4>When to use fetch</h4>
 <ul>
 <li>You want to see what changed without committing to merging</li>
 <li>You want to review changes before integrating them</li>
 <li>You&#39;re syncing upstream and want to inspect first</li>
 </ul>
-<p><strong>When to use pull:</strong></p>
+<h4>When to use pull</h4>
 <ul>
 <li>You know you want the latest changes merged immediately</li>
 <li>You&#39;re working alone on a branch</li>
@@ -469,21 +469,21 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <hr>
 <h3>Force Push</h3>
 <p>Force pushing (<code>git push --force</code> or <code>git push -f</code>) overwrites the remote branch with your local version, replacing its history. This is <strong>dangerous</strong> because it can delete commits that others have based work on.</p>
-<p><strong>When force push is okay:</strong></p>
+<h4>When force push is okay</h4>
 <ul>
 <li>Your own feature branch that no one else is working on</li>
 <li>After rebasing to clean up history before merging a PR</li>
 </ul>
-<p><strong>When force push is NEVER okay:</strong></p>
+<h4>When force push is NEVER okay</h4>
 <ul>
 <li>The <code>main</code> branch</li>
 <li>Shared branches where others have based work on your commits</li>
 <li>Public branches with collaborators</li>
 </ul>
-<p><strong>Safer alternative: <code>--force-with-lease</code></strong></p>
+<h4>Safer alternative: <code>--force-with-lease</code></h4>
 <pre><code class="hljs language-bash">git push --force-with-lease origin feature-branch</code></pre>
 <p><code>--force-with-lease</code> only force pushes if no one else has pushed to the remote branch since you last fetched. If someone pushed changes, the command fails and warns you.</p>
-<p><strong>Why force push is needed after rebase:</strong></p>
+<h4>Why force push is needed after rebase</h4>
 <p>When you rebase, Git rewrites commit history. The remote branch and your local branch now have conflicting histories. A normal <code>git push</code> fails. Force pushing resolves this by saying &quot;trust my version.&quot;</p>
 <p><strong>Rule of thumb:</strong> If you&#39;re not sure whether you need to force push, you probably shouldn&#39;t.</p>
 <hr>

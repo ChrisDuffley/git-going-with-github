@@ -38,29 +38,27 @@
 <p><strong>Day 2, Block 1-2 Material</strong></p>
 <p>This guide covers all Git operations in VS Code: cloning repositories, navigating the Source Control panel with screen readers, branch management, staging changes (including individual lines), push/pull operations, viewing file history with Timeline, resolving merge conflicts, and stash management.</p>
 <p><strong>Prerequisites:</strong> <a href="10-vscode-basics.html">VS Code Setup &amp; Accessibility Basics</a>, <a href="05-working-with-pull-requests.html">Working with Pull Requests</a>, <a href="06-merge-conflicts.html">Merge Conflicts</a></p>
-</blockquote>
-<blockquote>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code>. Common equivalents: <code>Ctrl+Shift+G</code> → <code>Cmd+Shift+G</code>, <code>Ctrl+Shift+P</code> → <code>Cmd+Shift+P</code>, <code>Ctrl+Enter</code> → <code>Cmd+Enter</code>, <code>Ctrl+S</code> → <code>Cmd+S</code>.</p>
 </blockquote>
 <hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-cloning-a-repository-in-vs-code">Cloning a Repository in VS Code</a></li>
-<li><a href="#2-the-source-control-panel--complete-walkthrough">The Source Control Panel - Complete Walkthrough</a></li>
+<li><a href="#2-the-source-control-panel---complete-walkthrough">The Source Control Panel - Complete Walkthrough</a></li>
 <li><a href="#3-branch-management">Branch Management</a></li>
-<li><a href="#4-staging-changes--files-lines-and-chunks">Staging Changes - Files, Lines, and Chunks</a></li>
+<li><a href="#4-staging-changes---files-lines-and-chunks">Staging Changes - Files, Lines, and Chunks</a></li>
 <li><a href="#5-committing-with-screen-readers">Committing with Screen Readers</a></li>
 <li><a href="#6-push-and-pull-operations">Push and Pull Operations</a></li>
 <li><a href="#7-discarding-changes">Discarding Changes</a></li>
-<li><a href="#8-timeline-view--file-history-and-blame">Timeline View - File History and Blame</a></li>
+<li><a href="#8-timeline-view---file-history-and-blame">Timeline View - File History and Blame</a></li>
 <li><a href="#9-resolving-merge-conflicts-in-vs-code">Resolving Merge Conflicts in VS Code</a></li>
 <li><a href="#10-stash-management">Stash Management</a></li>
-<li><a href="#10b-emergency-recovery--git-reflog">Emergency Recovery - git reflog</a></li>
+<li><a href="#10b-emergency-recovery---git-reflog">Emergency Recovery - git reflog</a></li>
 <li><a href="#11-alternative-git-interfaces">Alternative Git Interfaces</a></li>
 </ol>
 <hr>
 <h2>1. Cloning a Repository in VS Code</h2>
-<p><strong>Three ways to clone a repository:</strong></p>
+<h3>Three ways to clone a repository</h3>
 <h3>Method 1: Command Palette (Recommended for Screen Readers)</h3>
 <ol>
 <li>Open Command Palette: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
@@ -71,7 +69,7 @@
 <li>Choose a local folder where the repository should be cloned</li>
 <li>VS Code asks: &quot;Would you like to open the cloned repository?&quot; - select &quot;Open&quot;</li>
 </ol>
-<p><strong>Screen reader navigation:</strong></p>
+<h4>Screen reader navigation</h4>
 <ul>
 <li>The Command Palette is a searchable list - type to filter, <code>Up/Down Arrow</code> to navigate results</li>
 <li>The folder picker is a standard file dialog - navigate with <code>Arrow</code> keys, <code>Enter</code> to select</li>
@@ -127,12 +125,12 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 <p>The Source Control panel (<code>Ctrl+Shift+G</code> - Mac: <code>Cmd+Shift+G</code>) is where all Git operations happen in VS Code. This section provides a complete screen reader walkthrough of every interactive element.</p>
 <h3>Opening the Source Control Panel</h3>
 <p><strong>Shortcut:</strong> <code>Ctrl+Shift+G</code> (Mac: <code>Cmd+Shift+G</code>)</p>
-<p><strong>What opens:</strong></p>
+<h4>What opens</h4>
 <ul>
 <li>A sidebar panel on the left side of VS Code</li>
 <li>Focus lands on the first interactive element (usually the commit message input or the first changed file)</li>
 </ul>
-<p><strong>Panel structure from top to bottom:</strong></p>
+<h4>Panel structure from top to bottom</h4>
 <ol>
 <li><p><strong>Source Control title bar</strong> (heading level 2)</p>
 <ul>
@@ -173,7 +171,7 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 </li>
 </ol>
 <h3>Screen Reader Navigation in the Source Control Panel</h3>
-<p><strong>NVDA/JAWS:</strong></p>
+<h4>NVDA/JAWS</h4>
 <ul>
 <li>The panel is a web-based tree view</li>
 <li>Use <code>Up/Down Arrow</code> to navigate between items</li>
@@ -182,7 +180,7 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 <li>Use <code>Enter</code> to open a file diff</li>
 <li>Use <code>Space</code> to stage/unstage a file (when focused on a file item)</li>
 </ul>
-<p><strong>VoiceOver:</strong></p>
+<h4>VoiceOver</h4>
 <ul>
 <li>Navigate with <code>VO+Arrow</code> keys</li>
 <li><code>VO+Space</code> to activate (open diff or stage/unstage)</li>
@@ -267,13 +265,13 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 <h2>3. Branch Management</h2>
 <p>Branches are how you organize work in Git. Every repository starts with a <code>main</code> or <code>master</code> branch. You create new branches for features, bug fixes, or experiments.</p>
 <h3>Viewing the Current Branch</h3>
-<p><strong>Where it&#39;s shown:</strong></p>
+<h4>Where it&#39;s shown</h4>
 <ol>
 <li>Bottom-left corner of VS Code (status bar) - visual users see it immediately</li>
 <li>Source Control panel title bar</li>
 <li>Command Palette: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → &quot;Git: Show Git Output&quot;</li>
 </ol>
-<p><strong>Keyboard access to status bar:</strong></p>
+<h4>Keyboard access to status bar</h4>
 <ul>
 <li>The status bar is not in the standard keyboard navigation flow</li>
 <li>Use the Command Palette for branch operations instead</li>
@@ -282,7 +280,7 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 <p><strong>Visual users:</strong> You can also click the branch name in the bottom-left status bar to open the branch picker directly.</p>
 </blockquote>
 <h3>Creating a New Branch</h3>
-<p><strong>Command Palette method (recommended):</strong></p>
+<h4>Command Palette method (recommended)</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;git create branch&quot;</li>
@@ -296,7 +294,7 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 <li>Switches to it automatically</li>
 <li>Your working files stay exactly as they were</li>
 </ul>
-<p><strong>Naming conventions:</strong></p>
+<h4>Naming conventions</h4>
 <ul>
 <li>Use lowercase with hyphens: <code>feature/add-timeline-guide</code></li>
 <li>Avoid spaces and special characters</li>
@@ -334,7 +332,7 @@ git branch -d feature/improve-docs</code></pre>
 </details>
 
 <h3>Switching Between Branches</h3>
-<p><strong>Command Palette method:</strong></p>
+<h4>Command Palette method</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;git checkout&quot;</li>
@@ -344,14 +342,14 @@ git branch -d feature/improve-docs</code></pre>
 <li><code>Enter</code> to switch</li>
 </ol>
 <p><strong>Screen reader announcement:</strong> &quot;Branch: main&quot; or &quot;Branch: feature/add-timeline-guide&quot;</p>
-<p><strong>What happens when you switch:</strong></p>
+<h4>What happens when you switch</h4>
 <ul>
 <li>VS Code saves your current files</li>
 <li>Loads the files from the other branch</li>
 <li>If you have uncommitted changes, Git may block the switch (see &quot;Stashing&quot; in Section 10)</li>
 </ul>
 <h3>Deleting a Branch</h3>
-<p><strong>After your PR is merged, you can delete the branch:</strong></p>
+<h4>After your PR is merged, you can delete the branch</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;git delete branch&quot;</li>
@@ -393,17 +391,17 @@ git branch -a       <span class="hljs-comment"># All branches (including remote)
 <li>Navigate to the file in the &quot;Changes&quot; list</li>
 <li>Press <code>Ctrl+Enter</code> (Mac: <code>Cmd+Enter</code>) to stage immediately</li>
 </ol>
-<p><strong>Alternative:</strong></p>
+<h4>Alternative (keyboard shortcut)</h4>
 <ul>
 <li>Focus the file → press <code>Space</code></li>
 </ul>
-<p><strong>Alternative:</strong></p>
+<h4>Alternative (context menu)</h4>
 <ul>
 <li>Focus the file → press <code>Shift+F10</code> (Mac: <code>Ctrl+Return</code>) → select &quot;Stage Changes&quot;</li>
 </ul>
 </details>
 
-<p><strong>What happens:</strong></p>
+<h4>What happens</h4>
 <ul>
 <li>The file moves from &quot;Changes&quot; → &quot;Staged Changes&quot;</li>
 <li>A green &quot;A&quot; or &quot;M&quot; indicator appears</li>
@@ -418,7 +416,7 @@ git branch -a       <span class="hljs-comment"># All branches (including remote)
 <p>All modified files move to &quot;Staged Changes.&quot;</p>
 <h3>Staging Individual Lines or Chunks</h3>
 <p><strong>This is one of Git&#39;s most powerful features:</strong> You can stage only specific lines of a file, leaving other changes unstaged.</p>
-<p><strong>Workflow:</strong></p>
+<h4>Workflow</h4>
 <ol>
 <li>Open Source Control: <code>Ctrl+Shift+G</code> (Mac: <code>Cmd+Shift+G</code>)</li>
 <li>Navigate to a file in &quot;Changes&quot;</li>
@@ -429,7 +427,7 @@ git branch -a       <span class="hljs-comment"># All branches (including remote)
 <li>Select &quot;Stage Selected Lines&quot;</li>
 </ol>
 <p><strong>Result:</strong> Only those lines are staged. The rest of the file remains in &quot;Changes.&quot;</p>
-<p><strong>Use case for this workshop:</strong></p>
+<h4>Use case for this workshop</h4>
 <ul>
 <li>You fixed a typo and added a new section in the same file</li>
 <li>You want to commit the typo fix separately from the new content</li>
@@ -472,7 +470,7 @@ git status</code></pre>
 </details>
 
 <h3>Unstaging Files</h3>
-<p><strong>Reverse the process:</strong></p>
+<h4>Reverse the process</h4>
 <ol>
 <li>Focus the file in &quot;Staged Changes&quot;</li>
 <li>Press <code>Ctrl+Enter</code> (Mac: <code>Cmd+Enter</code>) or <code>Space</code></li>
@@ -481,7 +479,7 @@ git status</code></pre>
 <hr>
 <h2>5. Committing with Screen Readers</h2>
 <h3>The Commit Workflow</h3>
-<p><strong>Standard process:</strong></p>
+<h4>Standard process</h4>
 <ol>
 <li>Open Source Control: <code>Ctrl+Shift+G</code> (Mac: <code>Cmd+Shift+G</code>)</li>
 <li>Stage changes (see Section 4)</li>
@@ -489,15 +487,15 @@ git status</code></pre>
 <li>Type your commit message</li>
 <li>Press <code>Ctrl+Enter</code> (Mac: <code>Cmd+Enter</code>) to commit</li>
 </ol>
-<p><strong>Screen reader experience:</strong></p>
-<p><strong>NVDA/JAWS:</strong></p>
+<h4>Screen reader experience</h4>
+<h4>NVDA/JAWS</h4>
 <ul>
 <li>The commit input is announced as &quot;Source Control Input, edit, multi-line&quot;</li>
 <li>You&#39;re automatically in Forms Mode - just start typing</li>
 <li>The input expands as you type (supports multi-line messages)</li>
 <li>Press <code>Ctrl+Enter</code> (Mac: <code>Cmd+Enter</code>) to commit (not <code>Enter</code>, which adds a new line)</li>
 </ul>
-<p><strong>VoiceOver:</strong></p>
+<h4>VoiceOver</h4>
 <ul>
 <li><code>VO+Tab</code> to navigate to the input</li>
 <li><code>VO+Shift+Down</code> to interact</li>
@@ -507,11 +505,11 @@ git status</code></pre>
 </ul>
 <h3>Writing Good Commit Messages</h3>
 <p>See <a href="07-culture-etiquette.html#writing-good-commit-messages">Culture &amp; Etiquette: Writing Good Commit Messages</a> for format guidance.</p>
-<p><strong>Quick reference:</strong></p>
-<pre><code class="hljs"><span class="hljs-symbol">fix:</span> correct heading hierarchy <span class="hljs-keyword">in</span> GUIDE.md
+<h4>Quick reference</h4>
+<pre><code class="hljs language-text">fix: correct heading hierarchy in GUIDE.md
 
-Fixes <span class="hljs-meta">#42</span></code></pre>
-<p><strong>Format:</strong></p>
+Fixes #42</code></pre>
+<h4>Format</h4>
 <ul>
 <li>First line: type + colon + short summary (50 characters max)</li>
 <li>Blank line</li>
@@ -543,20 +541,20 @@ git commit -am <span class="hljs-string">&quot;docs: update screen reader instru
 <h2>6. Push and Pull Operations</h2>
 <p><strong>Push</strong> sends your local commits to GitHub.<br><strong>Pull</strong> downloads new commits from GitHub to your local repository.</p>
 <h3>Pushing Your Commits to GitHub</h3>
-<p><strong>After committing locally:</strong></p>
+<h4>After committing locally</h4>
 <ol>
 <li>Open Source Control: <code>Ctrl+Shift+G</code> (Mac: <code>Cmd+Shift+G</code>)</li>
 <li>Look for the &quot;Publish Branch&quot; button (if this is a new branch) or &quot;Sync Changes&quot; button</li>
 <li>Press <code>Enter</code> on that button</li>
 </ol>
-<p><strong>Alternative: Command Palette</strong></p>
+<h4>Alternative: Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;git push&quot;</li>
 <li>Select &quot;Git: Push&quot;</li>
 <li>VS Code pushes your commits to GitHub</li>
 </ol>
-<p><strong>Screen reader feedback:</strong></p>
+<h4>Screen reader feedback</h4>
 <ul>
 <li>NVDA/JAWS: Status bar announces &quot;Pushing...&quot; then &quot;Pushed successfully&quot; or an error message</li>
 <li>Check the Source Control panel for any error messages (they appear as banner notifications)</li>
@@ -586,20 +584,20 @@ git <span class="hljs-built_in">log</span> HEAD..origin/main --oneline</code></p
 <p>If your branch is behind <code>main</code>, look for the <strong>&quot;Update branch&quot;</strong> button on your PR page to pull in the latest changes.</p>
 </details>
 
-<p><strong>What to do if push fails:</strong></p>
+<h2>What to do if push fails</h2>
 <ul>
 <li><strong>Error: &quot;No upstream branch&quot;</strong> → You need to publish the branch first (Command Palette → &quot;Git: Publish Branch&quot;)</li>
 <li><strong>Error: &quot;Permission denied&quot;</strong> → Check your authentication (see <a href="appendix-d-git-authentication.html">Appendix D: Git Authentication</a>)</li>
 <li><strong>Error: &quot;Rejected - non-fast-forward&quot;</strong> → Someone else pushed changes; you need to pull first</li>
 </ul>
 <h3>Pulling Changes from GitHub</h3>
-<p><strong>When to pull:</strong></p>
+<h4>When to pull</h4>
 <ul>
 <li>Before you start work each day</li>
 <li>When GitHub shows your branch is behind the remote</li>
 <li>When preparing to merge a PR</li>
 </ul>
-<p><strong>How to pull:</strong></p>
+<h4>How to pull</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;git pull&quot;</li>
@@ -607,7 +605,7 @@ git <span class="hljs-built_in">log</span> HEAD..origin/main --oneline</code></p
 <li>VS Code fetches and merges remote changes</li>
 </ol>
 <p><strong>If there are conflicts:</strong> See Section 9.</p>
-<p><strong>Auto-fetch setting:</strong></p>
+<h4>Auto-fetch setting</h4>
 <ul>
 <li>VS Code can check for remote changes automatically every few minutes</li>
 <li>Enable: Settings (<code>Ctrl+,</code> - Mac: <code>Cmd+,</code>) → search &quot;git autofetch&quot; → set to <code>true</code></li>
@@ -624,24 +622,24 @@ git <span class="hljs-built_in">log</span> HEAD..origin/main --oneline</code></p
 <li>GitHub automatically merges upstream changes into your fork&#39;s default branch</li>
 <li>Then pull those changes to your local clone: <code>Git: Pull</code> from the Command Palette</li>
 </ol>
-<p><strong>Screen reader path:</strong></p>
-<pre><code class="hljs"><span class="hljs-built_in">On</span> <span class="hljs-variable">your</span> <span class="hljs-variable">fork</span><span class="hljs-operator">&#x27;</span><span class="hljs-variable">s</span> <span class="hljs-variable">main</span> <span class="hljs-variable">page</span><span class="hljs-operator">:</span>
-→ <span class="hljs-variable">H</span> <span class="hljs-variable">or</span> <span class="hljs-number">3</span> <span class="hljs-variable">to</span> <span class="hljs-variable">find</span> <span class="hljs-variable">the</span> <span class="hljs-variable">sync</span> <span class="hljs-variable">notice</span> <span class="hljs-variable">heading</span>
-→ <span class="hljs-built_in">Tab</span> <span class="hljs-variable">to</span> <span class="hljs-string">&quot;Sync fork&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span>
-→ <span class="hljs-string">&quot;Update branch&quot;</span> <span class="hljs-variable">in</span> <span class="hljs-variable">the</span> <span class="hljs-variable">dialog</span> → <span class="hljs-built_in">Enter</span></code></pre>
+<h4>Screen reader path</h4>
+<pre><code class="hljs language-text">On your fork&#x27;s main page:
+→ H or 3 to find the sync notice heading
+→ Tab to &quot;Sync fork&quot; button → Enter
+→ &quot;Update branch&quot; in the dialog → Enter</code></pre>
 <p><strong>Limitation:</strong> The GitHub sync button only syncs the default branch. For other branches, use the git method below.</p>
 <h3>Adding the Upstream Remote (One-Time Setup)</h3>
 <p>To sync locally using git, you first configure the upstream remote. This only needs to be done once per clone.</p>
-<pre><code class="hljs"><span class="hljs-keyword">Step</span> <span class="hljs-number">1</span>: <span class="hljs-keyword">Open</span> the terminal <span class="hljs-built_in">in</span> VS Code: Ctrl+` (backtick)
-<span class="hljs-keyword">Step</span> <span class="hljs-number">2</span>: <span class="hljs-keyword">Check</span> your current remotes:
+<pre><code class="hljs language-text">Step 1: Open the terminal in VS Code: Ctrl+` (backtick)
+Step 2: Check your current remotes:
   git remote -v
-  → You should see <span class="hljs-string">&quot;origin&quot;</span> pointing to YOUR fork
-<span class="hljs-keyword">Step</span> <span class="hljs-number">3</span>: <span class="hljs-keyword">Add</span> the upstream remote:
+  → You should see &quot;origin&quot; pointing to YOUR fork
+Step 3: Add the upstream remote:
   git remote add upstream https://github.com/ORIGINAL-OWNER/ORIGINAL-REPO.git
-<span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Verify:
+Step 4: Verify:
   git remote -v
-  → You should now see both <span class="hljs-string">&quot;origin&quot;</span> (your fork) and <span class="hljs-string">&quot;upstream&quot;</span> (original)</code></pre>
-<p><strong>Example for Accessibility Agents:</strong></p>
+  → You should now see both &quot;origin&quot; (your fork) and &quot;upstream&quot; (original)</code></pre>
+<h4>Example for Accessibility Agents</h4>
 <pre><code class="hljs language-bash">git remote add upstream https://github.com/community-access/accessibility-agents.git</code></pre>
 <h3>Fetching and Merging Upstream Changes</h3>
 <p>Once your upstream remote is configured:</p>
@@ -656,10 +654,10 @@ git merge upstream/main
 
 <span class="hljs-comment"># 4. Push the updated branch to your fork on GitHub</span>
 git push origin main</code></pre>
-<p><strong>Via VS Code Command Palette:</strong></p>
-<pre><code class="hljs">Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&quot;Git: Fetch&quot;</span> → select <span class="hljs-string">&quot;upstream&quot;</span>
-Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&quot;Git: Merge Branch&quot;</span> → select <span class="hljs-string">&quot;upstream/main&quot;</span>
-Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&quot;Git: Push&quot;</span></code></pre>
+<h2>Via VS Code Command Palette</h2>
+<pre><code class="hljs language-text">Ctrl+Shift+P → &quot;Git: Fetch&quot; → select &quot;upstream&quot;
+Ctrl+Shift+P → &quot;Git: Merge Branch&quot; → select &quot;upstream/main&quot;
+Ctrl+Shift+P → &quot;Git: Push&quot;</code></pre>
 <h3>When Conflicts Occur During Sync</h3>
 <p>If you&#39;ve made changes to the same files the upstream has changed, merge conflicts can occur during sync. The same conflict resolution flow applies - see Section 9 of this chapter.</p>
 <p><strong>Best practice:</strong> Always sync before starting new work on a fork. A quick <code>git fetch upstream</code> at the start of each session prevents conflicts from accumulating.</p>
@@ -673,7 +671,7 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <li>You accidentally edited the wrong file</li>
 </ul>
 <h3>How to Discard Changes</h3>
-<p><strong>Single file:</strong></p>
+<h4>Single file</h4>
 <ol>
 <li>Open Source Control: <code>Ctrl+Shift+G</code></li>
 <li>Navigate to the file in &quot;Changes&quot;</li>
@@ -681,7 +679,7 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <li>Select &quot;Discard Changes&quot;</li>
 <li>Confirm in the warning dialog (VS Code will ask &quot;Are you sure?&quot;)</li>
 </ol>
-<p><strong>All changes:</strong></p>
+<h4>All changes</h4>
 <ol>
 <li><code>Ctrl+Shift+G</code></li>
 <li>Navigate to the &quot;Changes&quot; section heading</li>
@@ -694,7 +692,7 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <p>If you&#39;re not sure whether you&#39;ll need these changes later, use <strong>stash</strong> (Section 10) instead of discard. Stash saves your changes temporarily without committing them.</p>
 <h3>Deleting a File from the Repository (Git Delete / git rm)</h3>
 <p><strong>Git Delete</strong> removes a file from both your working directory AND Git&#39;s tracking. This is different from discarding changes - it permanently removes the file from the repository history going forward.</p>
-<p><strong>How to use:</strong></p>
+<h4>How to use</h4>
 <ol>
 <li>Open the file you want to remove in the editor</li>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
@@ -702,7 +700,7 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <li>Confirm the deletion</li>
 </ol>
 <p>The file is staged for deletion - you still need to commit to record the removal.</p>
-<p><strong>When to use Git Delete vs. just deleting the file:</strong></p>
+<h4>When to use Git Delete vs. just deleting the file</h4>
 <ul>
 <li>Simply deleting a file from Explorer leaves it as an &quot;untracked deletion&quot; in Git</li>
 <li>Using <code>Git: Delete</code> (git rm) stages the deletion in one step</li>
@@ -712,14 +710,14 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <h2>8. Timeline View - File History and Blame</h2>
 <p>The <strong>Timeline view</strong> shows the Git history of the currently open file: every commit that touched this file, who made it, and when.</p>
 <h3>Opening Timeline View</h3>
-<p><strong>Method 1: Explorer Sidebar</strong></p>
+<h4>Method 1: Explorer Sidebar</h4>
 <ol>
 <li>Open Explorer: <code>Ctrl+Shift+E</code></li>
 <li>At the bottom of the Explorer, there&#39;s a &quot;Timeline&quot; section</li>
 <li><code>Tab</code> or <code>Arrow</code> to navigate into Timeline</li>
 <li>The list shows all commits affecting the currently open file</li>
 </ol>
-<p><strong>Method 2: Command Palette</strong></p>
+<h4>Method 2: Command Palette</h4>
 <ol>
 <li>Open a file in the editor</li>
 <li><code>Ctrl+Shift+P</code></li>
@@ -749,19 +747,19 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 </ul>
 <h3>Git Blame - Line-by-Line History</h3>
 <p><strong>Git Blame</strong> shows who last modified each line of the file.</p>
-<p><strong>How to access:</strong></p>
+<h4>How to access</h4>
 <ol>
 <li>Open a file in the editor</li>
 <li><code>Ctrl+Shift+P</code></li>
 <li>Type &quot;git blame&quot;</li>
 <li>Select &quot;Git: Toggle Blame&quot;</li>
 </ol>
-<p><strong>What appears:</strong></p>
+<h4>What appears</h4>
 <ul>
 <li>Inline annotations next to every line (visually)</li>
 <li>Hover over a line to see commit details</li>
 </ul>
-<p><strong>For screen reader users:</strong></p>
+<h4>For screen reader users</h4>
 <ul>
 <li>The inline blame annotations can add noise</li>
 <li>Use <strong>Timeline view instead</strong> to see recent changes to the whole file</li>
@@ -855,7 +853,7 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <li>Press <code>F7</code> to jump to the next conflict</li>
 <li>Repeat until all conflicts resolved</li>
 </ol>
-<p><strong>This gives you structured, hunk-by-hunk navigation instead of searching for markers manually.</strong></p>
+<h4>This gives you structured, hunk-by-hunk navigation instead of searching for markers manually</h4>
 <h3>Aborting a Merge</h3>
 <p>If you want to cancel the merge and go back to before you started:</p>
 <ol>
@@ -874,14 +872,14 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <li>You want to save experimental work without committing it</li>
 </ul>
 <h3>Creating a Stash</h3>
-<p><strong>Method 1: Command Palette</strong></p>
+<h4>Method 1: Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code></li>
 <li>Type &quot;git stash&quot;</li>
 <li>Select &quot;Git: Stash&quot;</li>
 <li>Optionally type a stash message (helps you remember what&#39;s in it)</li>
 </ol>
-<p><strong>What happens:</strong></p>
+<h4>What happens</h4>
 <ul>
 <li>Your uncommitted changes disappear from the editor</li>
 <li>The files revert to the last commit</li>
@@ -889,32 +887,32 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <li>You can now switch branches or pull safely</li>
 </ul>
 <h3>Viewing Stashes</h3>
-<p><strong>Command Palette:</strong></p>
+<h4>Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code></li>
 <li>Type &quot;git stash list&quot;</li>
 <li>Select &quot;Git: Show Stash&quot;</li>
 </ol>
-<p><strong>Alternative: Integrated Terminal</strong></p>
+<h4>Alternative: Integrated Terminal</h4>
 <pre><code class="hljs language-bash">git stash list</code></pre>
 <p>Output looks like:</p>
-<pre><code class="hljs"><span class="hljs-attribute">stash</span>@{<span class="hljs-number">0</span>}: WIP <span class="hljs-literal">on</span> feature/docs: add Timeline guide
-<span class="hljs-attribute">stash</span>@{<span class="hljs-number">1</span>}: WIP <span class="hljs-literal">on</span> main: fix typo</code></pre>
+<pre><code class="hljs language-text">stash@{0}: WIP on feature/docs: add Timeline guide
+stash@{1}: WIP on main: fix typo</code></pre>
 <h3>Applying a Stash</h3>
-<p><strong>To restore your stashed changes:</strong></p>
+<h4>To restore your stashed changes</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code></li>
 <li>Type &quot;git stash apply&quot;</li>
 <li>Select &quot;Git: Apply Latest Stash&quot;</li>
 </ol>
-<p><strong>Or to apply a specific stash:</strong></p>
+<h4>Or to apply a specific stash</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code></li>
 <li>Type &quot;git stash pop&quot;</li>
 <li>Select &quot;Git: Pop Stash...&quot;</li>
 <li>Choose which stash from the list</li>
 </ol>
-<p><strong>Difference between Apply and Pop:</strong></p>
+<h4>Difference between Apply and Pop</h4>
 <ul>
 <li><strong>Apply</strong>: restores changes and keeps the stash (you can apply it again later)</li>
 <li><strong>Pop</strong>: restores changes and deletes the stash</li>
@@ -964,14 +962,14 @@ Ctrl+<span class="hljs-keyword">Shift+P </span>→ <span class="hljs-string">&qu
 <h3>Reading the Reflog in VS Code Terminal</h3>
 <pre><code class="hljs language-bash">git reflog</code></pre>
 <p>Output looks like:</p>
-<pre><code class="hljs">abc1234 HEAD@{<span class="hljs-number">0</span>}: <span class="hljs-keyword">commit</span>: Fix typo <span class="hljs-keyword">in</span> README
-bcd2345 HEAD@{<span class="hljs-number">1</span>}: <span class="hljs-keyword">reset</span>: moving <span class="hljs-keyword">to</span> HEAD~<span class="hljs-number">1</span>
-cde3456 HEAD@{<span class="hljs-number">2</span>}: <span class="hljs-keyword">commit</span>: <span class="hljs-keyword">Add</span> accessibility section
-def4567 HEAD@{<span class="hljs-number">3</span>}: checkout: moving <span class="hljs-keyword">from</span> main <span class="hljs-keyword">to</span> feature/docs</code></pre>
+<pre><code class="hljs language-text">abc1234 HEAD@{0}: commit: Fix typo in README
+bcd2345 HEAD@{1}: reset: moving to HEAD~1
+cde3456 HEAD@{2}: commit: Add accessibility section
+def4567 HEAD@{3}: checkout: moving from main to feature/docs</code></pre>
 <p>Each line: <code>&lt;SHA&gt; HEAD@{N}: &lt;what happened&gt;</code></p>
 <p><strong>Screen reader tip:</strong> Run this in the integrated terminal (<code>Ctrl+Backtick</code>). The output is plain text - read line by line with ↓. You are looking for the SHA just before the action that caused the problem.</p>
 <h3>Recovering Lost Commits</h3>
-<p><strong>If you need to restore a commit that has been lost:</strong></p>
+<h4>If you need to restore a commit that has been lost</h4>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Step 1 - Find the last good commit SHA in reflog</span>
 git reflog
 
@@ -1011,7 +1009,7 @@ git checkout -b feature/deleted-branch-name abc1234</code></pre>
 <li>Install: <code>winget install GitHub.cli</code> (Windows) or <code>brew install gh</code> (macOS)</li>
 <li>Strengths: Fast, scriptable, plain-text output (predictable for screen readers)</li>
 </ul>
-<p><strong>Common commands:</strong></p>
+<h4>Common commands</h4>
 <pre><code class="hljs language-bash">gh repo <span class="hljs-built_in">clone</span> owner/repo       <span class="hljs-comment"># Clone a repository</span>
 gh issue list                  <span class="hljs-comment"># List issues</span>
 gh <span class="hljs-built_in">pr</span> create                   <span class="hljs-comment"># Create a PR interactively</span>
@@ -1023,7 +1021,7 @@ gh <span class="hljs-built_in">pr</span> view 14                  <span class="h
 <li><strong>The standard Git command-line interface</strong></li>
 <li>Included with VS Code (integrated terminal: <code>Ctrl+Backtick</code>)</li>
 </ul>
-<p><strong>Common commands:</strong></p>
+<h4>Common commands</h4>
 <pre><code class="hljs language-bash">git status                     <span class="hljs-comment"># Show modified files</span>
 git add .                      <span class="hljs-comment"># Stage all changes</span>
 git commit -m <span class="hljs-string">&quot;message&quot;</span>        <span class="hljs-comment"># Commit with message</span>
