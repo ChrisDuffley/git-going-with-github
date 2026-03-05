@@ -18,6 +18,7 @@ Everything in this repository is designed for learning. The files in `docs/` hav
 | `docs/welcome.md` | Introduction to contributing (has some sections to complete) |
 | `docs/keyboard-shortcuts.md` | Keyboard shortcut reference (has some errors to find and fix) |
 | `docs/setup-guide.md` | Setup instructions (has some broken links and gaps) |
+| `docs/branch-navigation-practice.md` | Practice exercise for learning GitHub branch navigation |
 
 ---
 
