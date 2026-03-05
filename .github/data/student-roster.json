@@ -1,48 +1,11 @@
 {
-  "cohort": "Example Cohort 2024",
+  "cohort": "Open Source Assistive Technology Hackathon - March 8-9, 2026",
+  "cohortStartDate": "2026-03-08",
+  "cohortEndDate": "2026-03-09",
   "facilitators": [
-    "facilitator-username-1",
-    "facilitator-username-2"
+    "facilitator-username"
   ],
-  "students": [
-    {
-      "username": "student1",
-      "name": "Student One",
-      "timezone": "America/Los_Angeles",
-      "interests": ["accessibility", "frontend"],
-      "pronouns": "they/them",
-      "screenReader": false,
-      "mergedPRs": 0,
-      "currentLevel": "Beginner",
-      "badges": [],
-      "joinedDate": "2024-01-15"
-    },
-    {
-      "username": "student2",
-      "name": "Student Two",
-      "timezone": "Europe/London",
-      "interests": ["documentation", "accessibility"],
-      "pronouns": "she/her",
-      "screenReader": true,
-      "screenReaderType": "NVDA",
-      "mergedPRs": 0,
-      "currentLevel": "Beginner",
-      "badges": [],
-      "joinedDate": "2024-01-15"
-    },
-    {
-      "username": "student3",
-      "name": "Student Three",
-      "timezone": "Asia/Tokyo",
-      "interests": ["backend", "testing"],
-      "pronouns": "he/him",
-      "screenReader": false,
-      "mergedPRs": 0,
-      "currentLevel": "Beginner",
-      "badges": [],
-      "joinedDate": "2024-01-16"
-    }
-  ],
+  "students": [],
   "studyGroups": [],
-  "notes": "This is a template file. Update with actual student information. Student data can be automatically updated by workflows or maintained manually."
+  "notes": "Student registrations will be automatically added to this file. Update facilitators list with actual GitHub usernames."
 }
