@@ -17,6 +17,16 @@ Open source software is software whose source code is publicly available. Anyone
 
 You do not need to be a professional developer to contribute. Documentation, accessibility improvements, and bug reports are among the most valuable contributions an open source project can receive.
 
+### Why Is Open Source Important?
+
+Open source empowers communities. When source code is public:
+- Developers can audit the code for security issues
+- Researchers can build upon existing work
+- Underrepresented communities can create technology that serves their needs
+- Educators can teach with real-world code
+
+More importantly, **open source is driven by collaboration**. A healthy open source project welcomes contributions from people of all backgrounds: beginners and experts, analysts and developers, people who use assistive technology, people working across different time zones, and people from different cultures.
+
 ---
 
 ## Who Can Contribute?
