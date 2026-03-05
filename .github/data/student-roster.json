@@ -3,9 +3,518 @@
   "cohortStartDate": "2026-03-08",
   "cohortEndDate": "2026-03-09",
   "facilitators": [
-    "facilitator-username"
+    "facilitator-github-username"
   ],
-  "students": [],
-  "studyGroups": [],
-  "notes": "Student registrations will be automatically added to this file. Update facilitators list with actual GitHub usernames."
+  "students": [
+    {
+      "username": "BudgieMom",
+      "name": "BudgieMom",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "ChrisDuffley",
+      "name": "ChrisDuffley",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "DarkhorseStudios",
+      "name": "DarkhorseStudios",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "DeenadayalanMoodley",
+      "name": "DeenadayalanMoodley",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "EBartlett86",
+      "name": "EBartlett86",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "Mark-Iott",
+      "name": "Mark-Iott",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "SarahCranston17",
+      "name": "SarahCranston17",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "avdhutde",
+      "name": "avdhutde",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "b-j-arthur",
+      "name": "b-j-arthur",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "blindgeekzone",
+      "name": "blindgeekzone",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "evangeline-dionisio",
+      "name": "evangeline-dionisio",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "jamalmazrui",
+      "name": "jamalmazrui",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "jekis913",
+      "name": "jekis913",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "jldail13",
+      "name": "jldail13",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "kcrpine",
+      "name": "kcrpine",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "kf4hav",
+      "name": "kf4hav",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "mikedoise",
+      "name": "mikedoise",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "nvdaes",
+      "name": "nvdaes",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "nycki96",
+      "name": "nycki96",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "pranav-chinthala",
+      "name": "pranav-chinthala",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "prater-devin",
+      "name": "prater-devin",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "rahul6387",
+      "name": "rahul6387",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "seanmcmahondc-collab",
+      "name": "seanmcmahondc-collab",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "soundaryakp1999",
+      "name": "soundaryakp1999",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "taylorarndt",
+      "name": "taylorarndt",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "tirupati223",
+      "name": "tirupati223",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "tommym2006",
+      "name": "tommym2006",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "tukamuhebwajustus256",
+      "name": "tukamuhebwajustus256",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "venkateshpotluri",
+      "name": "venkateshpotluri",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
+      "username": "woodyanna",
+      "name": "woodyanna",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    }
+  ]
 }
