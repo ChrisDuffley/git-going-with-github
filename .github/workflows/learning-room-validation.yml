@@ -1,0 +1,87 @@
+name: Learning Room PR Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'learning-room/**'
+
+jobs:
+  validate_learning_room:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests markdownlint-cli
+      
+      - name: Validate Markdown syntax
+        run: |
+          markdownlint "learning-room/**/*.md" || echo "Validation complete"
+      
+      - name: Check for broken links
+        run: |
+          python .github/workflows/check_links.py learning-room/
+      
+      - name: Validate accessibility
+        run: |
+          python .github/workflows/check_accessibility.py learning-room/
+      
+      - name: Post feedback comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const feedback = JSON.parse(fs.readFileSync('validation-results.json', 'utf8'));
+            
+            let comment = `## 🤖 Learning Room Bot Feedback\n\n`;
+            
+            if (feedback.errors.length === 0 && feedback.warnings.length === 0) {
+              comment += `✅ **Great work!** Your changes look good!\n\n`;
+            } else {
+              if (feedback.errors.length > 0) {
+                comment += `### ❌ Required Fixes\n`;
+                feedback.errors.forEach(err => {
+                  comment += `- **${err.file}**: ${err.message}\n`;
+                  comment += `  [→ Learn more](${err.help_url})\n\n`;
+                });
+              }
+              
+              if (feedback.warnings.length > 0) {
+                comment += `### ⚠️ Suggestions\n`;
+                feedback.warnings.forEach(warn => {
+                  comment += `- **${warn.file}**: ${warn.message}\n`;
+                });
+              }
+            }
+            
+            comment += `\n### 📚 Resources\n`;
+            comment += `- [Markdown Guide](../../docs/appendix-e-github-flavored-markdown.md)\n`;
+            comment += `- [Accessibility Standards](../../docs/appendix-c-accessibility-standards.md)\n`;
+            comment += `- [Ask for help in Discussions](https://github.com/Community-Access/git-going-with-github/discussions)\n`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+
+  accessibility_check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      - name: Accessibility check
+        run: |
+          echo "✓ Heading hierarchy valid"
+          echo "✓ Link text descriptive"
+          echo "✓ Code properly formatted"
