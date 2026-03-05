@@ -1,5 +1,5 @@
 [ALEX]
-Welcome back to Git Going with GitHub. This is episode four, titled The Learning Room. I am Alex, and I am here to guide you through the wonderful, sometimes chaotic, but always rewarding world of open source collaboration. 
+Welcome back to Gitt Going with GitHub. This is episode four, titled The Learning Room. I am Alex, and I am here to guide you through the wonderful, sometimes chaotic, but always rewarding world of open source collaboration. 
 
 [JAMIE]
 And I am Jamie. I am relatively new to GitHub, having learned it just about two years ago. I am here to ask all the questions that you might be thinking, and hopefully help us all avoid the mistakes I made when I was first starting out.
@@ -299,4 +299,4 @@ Beautifully summarized. In our next episode, we are going to dive deeper into ho
 I cannot wait. Tracking tasks is my favorite kind of organizing. 
 
 [ALEX]
-Thank you all for listening to Git Going with GitHub. Take a deep breath, go open that first Pull Request in the Learning Room, and we will see you in the next episode.
+Thank you all for listening to Gitt Going with GitHub. Take a deep breath, go open that first Pull Request in the Learning Room, and we will see you in the next episode.

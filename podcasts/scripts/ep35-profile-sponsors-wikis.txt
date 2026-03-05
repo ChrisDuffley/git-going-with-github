@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series for blind and low-vision developers who are mastering Git, GitHub, and open-source collaboration. I am Alex, and I am thrilled to be here with you for Episode 35, Profile, Sponsors, and Wikis. 
+Welcome to Gitt Going with GitHub, the audio learning series for blind and low-vision developers who are mastering Git, GitHub, and open-source collaboration. I am Alex, and I am thrilled to be here with you for Episode 35, Profile, Sponsors, and Wikis. 
 
 [JAMIE]
 And I am Jamie. I am so ready for this episode because up until now, we have been very focused on the code. We have talked about repositories, commits, branches, and pull requests. But today feels a little different. Today feels like we are talking about the people behind the code. 

@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 31, GitHub Codespaces. I am Alex, and I am so glad you are joining us today as we continue our journey through accessible development and open source collaboration. 
+Welcome to Gitt Going with GitHub. This is episode 31, GitHub Codespaces. I am Alex, and I am so glad you are joining us today as we continue our journey through accessible development and open source collaboration. 
 
 [JAMIE]
 And I am Jamie. I am a developer who learned GitHub about two years ago, and I am here to ask all the questions that you are probably thinking right now. I remember exactly what it felt like to be overwhelmed by all this terminology, so we are going to break it down together.

@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is Episode 8: Open Source Culture and Etiquette. I am Alex, and today we are shifting gears. Over the past few episodes, we have covered the mechanical side of GitHub. We talked about branches, commits, pull requests, and resolving merge conflicts. But today, we are focusing on the human side of open source software. 
+Welcome to Gitt Going with GitHub. This is Episode 8: Open Source Culture and Etiquette. I am Alex, and today we are shifting gears. Over the past few episodes, we have covered the mechanical side of GitHub. We talked about branches, commits, pull requests, and resolving merge conflicts. But today, we are focusing on the human side of open source software. 
 
 [JAMIE]
 Hi everyone, Jamie here. And I have to admit, this is the topic that intimidated me the most when I was learning GitHub two years ago. The terminal commands were tricky, sure, but the idea of talking to strangers on the internet, asking them to accept my code, and worrying I might say the wrong thing or break some unwritten rule? That was terrifying. 
@@ -198,4 +198,4 @@ Beautifully summarized, Jamie. Taking the time to master these communication ski
 I am looking forward to it. Until next time, happy collaborating! 
 
 [ALEX]
-Keep building, and we will catch you in the next episode of Git Going with GitHub.
+Keep building, and we will catch you in the next episode of Gitt Going with GitHub.

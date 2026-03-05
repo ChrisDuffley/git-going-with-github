@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio series for blind and low-vision developers learning the ins and outs of open source collaboration. I am Alex, and I am here with Jamie. 
+Welcome to Gitt Going with GitHub, the audio series for blind and low-vision developers learning the ins and outs of open source collaboration. I am Alex, and I am here with Jamie. 
 
 [JAMIE]
 Hi everyone! I am so ready for this one.
@@ -247,4 +247,4 @@ Perfectly summarized. That is all for episode seven. In our next episode, we are
 I cannot wait for that one. See you all next time!
 
 [ALEX]
-Thanks for listening to Git Going with GitHub. Happy coding.
+Thanks for listening to Gitt Going with GitHub. Happy coding.

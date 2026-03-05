@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio series for blind and low-vision developers learning GitHub and open source. I am Alex, your lead host, and as always, I am joined by my co-host, Jamie.
+Welcome to Gitt Going with GitHub, the audio series for blind and low-vision developers learning GitHub and open source. I am Alex, your lead host, and as always, I am joined by my co-host, Jamie.
 
 [JAMIE]
 Hi everyone. I am Jamie. I am so ready for today. We are on Episode 17, which is called Accessibility Agents. And I have to admit, I peeked at the workshop materials for today and my mind is a little blown by what we are covering.
@@ -288,4 +288,4 @@ This has been such an eye opening episode. I am going to go play with the templa
 Next time, we are diving into Episode 18, which is all about GitHub Actions. We have touched on it briefly today with agentic workflows, but in the next episode, we are going to break down exactly how to automate your testing, your deployments, and your repository maintenance using continuous integration. 
 
 [JAMIE]
-I cannot wait. Thank you all for listening to Git Going with GitHub. We will see you in the next episode.
+I cannot wait. Thank you all for listening to Gitt Going with GitHub. We will see you in the next episode.

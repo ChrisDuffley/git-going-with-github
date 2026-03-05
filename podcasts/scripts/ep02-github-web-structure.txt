@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is Episode 2: Understanding GitHub on the Web. I am your host, Alex, and I am here to guide you through learning GitHub and open source collaboration, specifically designed for screen reader users and developers with low vision.
+Welcome to Gitt Going with GitHub. This is Episode 2: Understanding GitHub on the Web. I am your host, Alex, and I am here to guide you through learning GitHub and open source collaboration, specifically designed for screen reader users and developers with low vision.
 
 [JAMIE]
 And I am Jamie! I am so excited to be here. I learned GitHub about two years ago, and I still remember exactly how overwhelming it felt the first time I landed on a repository page. There is just so much information coming at you all at once. 
@@ -291,4 +291,4 @@ Those are excellent takeaways. Now that you have a mental map of the building, a
 I cannot wait. I am ready to get out of the lobby and into the project rooms. 
 
 [ALEX]
-Until then, open up your browser, head to GitHub, and practice your ten-second orientation. Thank you for listening to Git Going with GitHub. We will see you in the next episode.
+Until then, open up your browser, head to GitHub, and practice your ten-second orientation. Thank you for listening to Gitt Going with GitHub. We will see you in the next episode.

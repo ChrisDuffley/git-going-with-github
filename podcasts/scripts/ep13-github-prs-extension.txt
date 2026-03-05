@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode thirteen: The GitHub Pull Requests Extension. I am Alex, and I am here with Jamie. 
+Welcome to Gitt Going with GitHub. This is episode thirteen: The GitHub Pull Requests Extension. I am Alex, and I am here with Jamie. 
 
 [JAMIE]
 Hi everyone! I am so ready for this episode. We are at the point in the workshop where everything starts coming together. 
@@ -330,4 +330,4 @@ Perfectly summarized. Now that you are comfortable navigating code and collabora
 I cannot wait for that one. See you all then!
 
 [ALEX]
-Thanks for listening to Git Going with GitHub.
+Thanks for listening to Gitt Going with GitHub.

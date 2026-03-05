@@ -6,8 +6,7 @@
     "build:html": "node scripts/build-html.js",
     "build:podcasts": "node podcasts/build-bundles.js && node podcasts/generate-site.js",
     "build:podcast-bundles": "node podcasts/build-bundles.js",
-    "build:podcast-scripts": "node podcasts/generate-scripts.js",
-    "build:podcast-audio": "node podcasts/generate-audio.js",
+    "build:podcast-audio": "python podcasts/tts/generate_all.py",
     "build:podcast-site": "node podcasts/generate-site.js",
     "build": "npm run build:podcasts && npm run build:html",
     "watch:html": "node scripts/build-html.js --watch",
@@ -22,9 +21,10 @@
   "author": "",
   "license": "CC-BY-4.0",
   "devDependencies": {
-    "marked": "^11.2.0",
-    "highlight.js": "^11.9.0",
+    "chokidar": "^3.5.3",
     "github-markdown-css": "^5.5.1",
-    "chokidar": "^3.5.3"
-  }
+    "highlight.js": "^11.9.0",
+    "marked": "^11.2.0"
+  },
+  "dependencies": {}
 }

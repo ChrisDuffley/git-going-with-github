@@ -1,5 +1,5 @@
 [ALEX]
-Welcome back to Git Going with GitHub. This is episode 28, Branch Protection and Rulesets. I am Alex, here to guide you through the wonderful, and sometimes slightly rigid, world of repository security.
+Welcome back to Gitt Going with GitHub. This is episode 28, Branch Protection and Rulesets. I am Alex, here to guide you through the wonderful, and sometimes slightly rigid, world of repository security.
 
 [JAMIE]
 And I am Jamie. I am so glad we are talking about this today because I vividly remember the first time I tried to contribute to an open source project. I did all the work, I pushed my branch, I created my pull request, and then I navigated to the bottom of the page to merge it. But I could not. The merge button was just completely unavailable to me. There were all these messages about failing checks and required reviews. I honestly panicked. I thought I had broken their entire repository.
@@ -266,4 +266,4 @@ I am definitely going to be less intimidated the next time I see a grayed out me
 Next time, we are going to dive deeper into the actual review process. We have talked about requiring reviews, but how do you actually leave one? We will cover how to navigate a pull request diff, leave inline comments, and officially approve or request changes on someone else's code. 
 
 [JAMIE]
-That is going to be great. I cannot wait to learn how to be a good reviewer. Thanks for listening, everyone, and we will catch you in the next episode of Git Going with GitHub.
+That is going to be great. I cannot wait to learn how to be a good reviewer. Thanks for listening, everyone, and we will catch you in the next episode of Gitt Going with GitHub.

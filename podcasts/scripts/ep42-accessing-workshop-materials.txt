@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series designed specifically for blind and low-vision developers who are navigating the world of open source. I am Alex, and as always, I am thrilled to be here with you.
+Welcome to Gitt Going with GitHub, the audio learning series designed specifically for blind and low-vision developers who are navigating the world of open source. I am Alex, and as always, I am thrilled to be here with you.
 
 [JAMIE]
 And I am Jamie! I am a developer who learned GitHub about two years ago, and I am here to ask all the questions that you are probably thinking as you listen. 

@@ -1,5 +1,5 @@
 [ALEX]
-Welcome back to Git Going with GitHub. I am Alex, and today we are diving into Episode 26, which is our GitHub Projects Deep Dive. 
+Welcome back to Gitt Going with GitHub. I am Alex, and today we are diving into Episode 26, which is our GitHub Projects Deep Dive. 
 
 [JAMIE]
 Hello everyone, I am Jamie! I am very excited for this one. I know we touched on the basics of projects back in Episode 8, along with labels and milestones. But today we are going all in, right? 

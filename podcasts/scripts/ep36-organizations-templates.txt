@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 36, Organizations and Templates. I am your host, Alex, and as always, I am here to help you navigate the world of version control and open source collaboration.
+Welcome to Gitt Going with GitHub. This is episode 36, Organizations and Templates. I am your host, Alex, and as always, I am here to help you navigate the world of version control and open source collaboration.
 
 [JAMIE]
 And I am Jamie. I am here to ask all the questions that you are probably thinking as you listen. I started learning GitHub about two years ago, and I still remember how wild it felt to move past just hosting my own small projects. Today, we are graduating. We are moving from single player mode into massive multiplayer mode.
@@ -245,4 +245,4 @@ Perfect summary. You now have the conceptual foundation to navigate massive open
 I cannot wait. Those issue forms save so much back and forth communication. 
 
 [ALEX]
-They really do. Until then, keep exploring, keep practicing, and we will see you next time on Git Going with GitHub.
+They really do. Until then, keep exploring, keep practicing, and we will see you next time on Gitt Going with GitHub.

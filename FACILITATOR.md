@@ -514,4 +514,446 @@ The workshop is licensed under Creative Commons Attribution. Attribution: "Based
 
 ---
 
-*Questions about facilitation? Open an issue with the `question` label.*
+## Chapter-by-Chapter Facilitation Guide
+
+### Chapters 0-2: Pre-Workshop & Orientation (Day 1 Blocks 0-1)
+
+**Chapter 0: Pre-Workshop Setup**
+- **Facilitator role:** Verify everyone completed this before arriving
+- **Common issues:** 
+  - Screen reader not announcing page headings (turn off hovercards)
+  - GitHub modern experience disabled (enable in Feature Options)
+  - Accessibility settings not found (keyboard shortcut: `G` then `D` then `A`)
+- **What to watch for:** Participants may not realize page titles are headings - emphasize pressing `1` to find them
+- **Talking point:** "The first heading on every GitHub page tells you where you are. It's your anchor point."
+
+**Chapter 1: Understanding GitHub's Web Structure**
+- **Purpose:** Mental model - three levels of organization + landmark structure
+- **Key concept demo:** Have everyone press `D` to navigate landmarks on the learning-room repo page; call out "Navigation Menu," "Repository Navigation," "Main," "Search Results"
+- **Common confusion:** The difference between repository navigation (Code, Issues, PRs tabs) and global navigation (top bar)
+- **Accessibility teaching point:** "Landmarks are not visual features - they are semantic markers your screen reader uses to let you jump around instead of reading every line"
+- **Demo script:**
+  ```
+  "I'm opening github.com/community-access/learning-room
+   I press 1, twice - what do I hear? [let people answer]
+   Yes, the first heading is the page title. The second is a section heading.
+   Now I press D - I move through landmarks.
+   I hear Navigation Menu - that's the top bar.
+   I move forward with D again - Repository Navigation - that's where Code, Issues, PRs live.
+   Now I press D again - Main - that's the content area where the file list is.
+   If I press D one more time - it might say Search Results landmark, but there's nothing there right now.
+   These landmarks are the skeleton of every GitHub page."
+  ```
+
+**Chapter 2: Navigating Repositories**
+- **Purpose:** Concrete navigation patterns using single-key shortcuts
+- **Key practice:** Have everyone navigate the learning-room repo using `H` to browse headings, then `T` to find tables, then open `docs/welcome.md`
+- **Common struggle:** Memorizing which key does what - reassure them that pressing `H-H-H` is faster than searching visually
+- **Demo the Elements List:** `NVDA+F7` / `Insert+F3` / `VO+U` - show everyone that the list view of headings, links, and buttons exists
+- **Accessibility insight:** "The Elements List is a speed tool. When you know what you're looking for, listing all links or buttons gets you there faster than pressing `K` fifteen times."
+- **Demo script:**
+  ```
+  "Let's open the learning-room README together.
+   We're looking for the section that explains what files to work on.
+   I could press H to go heading-by-heading. That's fine.
+   But I could also press NVDA+F7 to open the Elements List, jump to Headings tab, and see all of them at once.
+   I can see [describes list] - let me jump to 'The Practice Files' heading.
+   Much faster than stepping through."
+  ```
+
+### Chapter 3: The Learning Room (Day 1 Block 1-5)
+
+**Key before starting:** Everyone must read this chapter before Day 1 begins. It explains the environment, PR workflow, bot feedback, and peer review model.
+
+- **Facilitator role:** Reinforce the fork-edit-PR workflow
+- **What not to do:** Don't let participants edit the `learning-room` repo directly. They must fork first.
+- **Automation introduction:** Explain that the bot comments are not grading - they are teaching
+- **Common errors:** Editing `main` instead of creating a branch; committing directly instead of PRing; not requesting a human review
+- **Demo the bot feedback:**
+  ```
+  "When you open your PR, within 30 seconds you'll see a comment from a bot.
+   The bot is checking: does your heading hierarchy go H1, H2, H3 (not skipping)?
+   Are your links descriptive (not 'click here')?
+   Did you spell everything correctly?
+   It will link you to resources explaining the rules.
+   But here's the important part: the bot is not rejecting your PR.
+   It's teaching. You can learn from the bot feedback and still ask your reviewers for human judgment."
+  ```
+
+### Chapters 4-5: Issues & Pull Requests (Day 1 Blocks 2-4)
+
+**Chapter 4: Working with Issues**
+- **Purpose:** Understanding issue lifecycle, templates, labeling
+- **Live demo:** Open an issue in the learning-room repo, show the anatomy - title, description, labels, assignee, milestone, comments
+- **Interactive activity:** Have participants navigate an issue end-to-end with their screen reader
+  - Find the issue title (should be first heading)
+  - Navigate to the description with `H` or by scrolling
+  - Find the labels (usually below description)
+  - See the comments section
+- **Accessibility teaching point:** "An issue is a conversation. Each comment is timestamped. Your screen reader can navigate them with `D` to find the 'Comments' section, then use arrow keys through the list."
+- **Demo script for issue anatomy:**
+  ```
+  "I'm opening issue #1 in the learning-room repo.
+   My screen reader announces it: heading level 1, 'Welcome! Introduce yourself'.
+   That's the issue title. Below it is the issue body - the full description.
+   If I press H, I move to the next heading. There shouldn't be one - just the comments below.
+   If I press D, I move through landmarks until I find the Comments section.
+   Then I can use arrow keys to navigate each comment one by one.
+   The bot comment, the first person's introduction, the second person's - they're all visible
+   because they're in the same accessibility tree."
+  ```
+
+**Chapter 5: Working with Pull Requests**
+- **Purpose:** Understanding PR anatomy, creating a PR, reviewing, merging
+- **Emphasize:** A PR is a proposal. It asks, "Can you merge these commits to main?" It is not automatic.
+- **Interactive activity:** Have everyone read the sample PR (pre-seeded on practice-review branch) with their screen reader
+- **Common confusion:** Difference between suggesting changes (non-blocking) versus requesting changes (blocking)
+- **Accessibility insight:** "A PR conversation is denser than issues because diffs are involved. Your screen reader will announce code blocks as such. You may find it easier to read diffs by requesting changes (which shows the side-by-side) than by trying to parse the raw diff."
+- **Demo the diff navigation:**
+  ```
+  "Opens a PR with a change to a markdown file
+   The diff section uses <pre> tags - screen readers announce them as code blocks.
+   Instead of reading the raw diff, I can press R to request changes.
+   That opens a suggestion editor where I can see the old and new side-by-side.
+   Much more readable."
+  ```
+
+### Chapter 6: Merge Conflicts (Reference; covered in-context)
+
+**When it matters:** Usually NOT during the workshop, but valuable for future contribution
+- **Facilitator talking point:** "Merge conflicts happen when two people edit the same line. GitHub shows you both changes and asks you to pick. You will probably not see this in the workshop - we'll stagger everyone working on different files."
+- **If conflict occurs:** Don't panic. Open the file. You'll see markers like `<<<<<<` and `======` and `>>>>>>`. They show the conflicting sections. You delete one, keep the other.
+- **Common error:** Thinking a merge conflict is a failure. It's not - it's normal in large projects.
+
+### Chapter 7: Culture & Etiquette (Day 1 Block 6)
+
+**Purpose:** Building inclusive communities, understanding norms
+- **Facilitator role:** Model the behavior described
+- **Accessibility-specific point:** "In this project, we document accessibility decisions because our contributors include people with disabilities. That's not a burden - it's a feature. It's how we ensure no one is left out."
+- **Common misunderstanding:** "I don't want to break the build." Reassure participants that CI failures are learning moments, not disasters.
+- **Demo:** Show a PR with a helpful, kind review comment versus a curt one. Discuss the difference.
+
+### Chapters 8-9: Tracking & Notifications (Day 1 Block 6)
+
+**Chapter 8: Labels, Milestones, Projects**
+- **In practice:** Students won't be creating labels, but they will see them and need to understand what they mean
+- **Facilitator tip:** "Before Block 5, create a quick reference list of your labels and what they mean. Pin it to a document. Students can refer to it."
+- **Interactive activity:** Show the learning-room repo's label bar. Have everyone navigate labels on an issue: press `K` to move through links until they find a label link, press Enter, they see all issues with that label
+
+**Chapter 9: Notifications**
+- **Value:** "Notifications let you stay aware without being overwhelmed. You control what creates a notification - starring, watching, participating in a conversation."
+- **Accessibility point:** "Your notification inbox is more reliable than email forwarding. GitHub's inbox is fully accessible."
+- **Demo:** Open the notification bell. Navigate to the inbox. Show how to navigate notification history.
+
+### Chapters 10-16: Day 2 Deep Dives (Day 2 Blocks 1-5)
+
+**Chapter 10: VS Code Basics**
+- **Before starting:** Everyone should have VS Code installed and VS Code Insiders Extension Pack installed
+- **Screen reader mode:** This is critical. Demo it - `Shift+Alt+F1` to toggle
+- **Navigation shortcuts:**
+  - `Ctrl+P` - quick file open
+  - `Ctrl+Shift+P` - command palette
+  - `Ctrl+Shift+E` - explorer/file tree
+  - `Ctrl+G` - go to line
+- **Common struggle:** "Why is the code so hard to read?" Answer: "You're not meant to read it top-to-bottom. You navigate by symbols, jumps, search. VS Code accessibility mode makes that workflow clear."
+- **Demo script:**
+  ```
+  "Opens VS Code with a project
+   I press Ctrl+P - Quick Open appears.
+   I type the filename I want - say, 'daily-briefing'
+   I get instant matches. Press Enter - file opens.
+   Now I press Ctrl+Shift+P - Command Palette.
+   I'm looking for a command - maybe 'Go to Definition'
+   I type it, press Enter, VS Code jumps me to where that function is defined.
+   This is how sighted devs navigate with a mouse - using 'Go', 'Find', 'Definition'.
+   Screen reader mode + keyboard makes that pattern native."
+  ```
+
+**Chapter 11: Git & Source Control**
+- **Prerequisites:** Git installed locally. VS Code's Source Control panel visible.
+- **Workflow recap:** 
+  1. Create a branch (VS Code UI or terminal `git checkout -b`)
+  2. Make edits (edit files)
+  3. Commit (Source Control panel → message → commit)
+  4. Push (Terminal: `git push origin branch-name`)
+  5. Open PR (GitHub web)
+- **Common error:** Forgetting to push. Changes exist locally but not on GitHub until pushed.
+- **Demo:**
+  ```
+  "I've made changes to a file in VS Code.
+   I open the Source Control panel - Ctrl+Shift+G
+   It shows me which files changed.
+   I type a commit message: 'Add documentation for markdown syntax'
+   I press Ctrl+Enter to commit.
+   Now I'm ready to push.
+   But wait - I need a branch first. Let me create one.
+   Terminal: git checkout -b fix-docs
+   Now I commit to that branch.
+   Now I push: git push origin fix-docs
+   GitHub sees that push and offers me a button to create a PR from that branch.
+   Click it, and I'm in familiar territory - the PR form."
+  ```
+
+**Chapter 12: GitHub Pull Requests Extension**
+- **Value:** "This extension brings GitHub into VS Code. No context switching."
+- **Demo:**  Open the PR panel (click icon in left sidebar). Show how to see all assigned PRs, review right from VS Code.
+- **Advantage for screen reader users:** "You can navigate a PR's diff, comments, and details without leaving VS Code. The context is continuous."
+
+**Chapter 13: GitHub Copilot** (Introduce carefully)
+- **Important caveat:** "Copilot is a tool, not a replacement for thinking. It makes suggestions based on training data. You evaluate them."
+- **Accessibility note:** "Copilot inline suggestions appear in the editor. Screen reader users may need to toggle suggestions on/off depending on focus preference. Demo: `Ctrl+Alt+\` to toggle."
+- **Use case:** "Copilot is great for boilerplate, docstrings, and repetitive patterns. It is not great for novel or domain-specific logic."
+- **Demo:**
+  ```
+  "I'm writing a Python function to validate GitHub URLs.
+   I type: def validate_github_url(url):
+   I press Ctrl+/ wait a moment
+   Copilot suggests some code.
+   I can press Tab to accept, Escape to reject, or keep typing to override.
+   I choose to accept, then I modify it for my specific needs.
+   Copilot handled the boilerplate."
+  ```
+
+**Chapter 14: Accessible Code Review**
+- **Purpose:** Teaching the review perspective, not just the author's
+- **Key concept:** "Good code review feedback is specific, kind, and teaches. It's not gatekeeping."
+- **Interactive activity:** Have participants read a sample PR and draft review comments together
+- **Accessibility focus:** "When reviewing, check heading hierarchy, link text, alt text, color contrast. These are code quality issues, not afterthoughts."
+
+**Chapter 15: Issue Templates** (Usually pre-configured; reference only)
+- **What's happening:** Your repo's issue template is guiding participants' reports
+- **If customizing:** Make sure template is accessible - test with screen reader before using
+- **Demo:** Create a sample issue using the template to show participants what structure they should follow
+
+**Chapter 16: Accessibility Agents** 
+- **This is the capstone.** Participants use the tools from all previous chapters to understand and improve a real open source project.
+- **Facilitator role:** Enable not prescribe. Answer questions, don't drive choices.
+- **Common pattern:** "I found a bug in the agent tool. Can I fix it?" YES! That's a real contribution. Show them how to file an issue, fork, clone, edit, and PR.
+
+---
+
+## Accessibility Testing Checklist for Facilitators
+
+Before Day 1 and Day 2 start, verify the following on your demo machine AND participant machines:
+
+### Screen Reader Setup (NVDA)
+- [ ] NVDA installed, latest stable version
+- [ ] Browse Mode / Focus Mode switching works (`NVDA+Space`)
+- [ ] Single-key navigation active: `H` (headings), `D` (landmarks), `K` (links), `T` (tables)
+- [ ] Elements List opens (`Insert+F3`)
+- [ ] GitHub.com announces page headings correctly
+- [ ] GitHub issue/PR pages announce title, description, comments in order
+- [ ] Markdown tables are readable (table mode navigates rows/cols with arrows)
+- [ ] Code blocks announce as code
+- [ ] Buttons and form fields navigate with `B` and `F`
+
+### Screen Reader Setup (JAWS)
+- [ ] JAWS installed, latest version
+- [ ] Browse Mode / Forms Mode toggling works
+- [ ] Virtual cursor navigation works
+- [ ] Virtual PC cursor works for mousing interactions
+- [ ] Table reading mode navigates correctly
+- [ ] Headings landmark navigation works
+
+### Screen Reader Setup (VoiceOver - macOS)
+- [ ] VoiceOver enabled (Cmd+F5)
+- [ ] Web rotor works (VO+U)
+- [ ] Rotor shows headings, form fields, links in order
+- [ ] Keyboard navigation works (VO+Right Arrow through elements)
+
+### Browser Configuration
+- [ ] Hovercards are OFF (GitHub Settings → Accessibility → Turn off hovercards)
+- [ ] GitHub modern experience is ON if using Issues/Projects (Feature preview)
+- [ ] JavaScript is enabled (required for GitHub)
+- [ ] Dark mode or light mode is stable (no flashing or flickering when toggling)
+
+### VS Code (for Day 2)
+- [ ] VS Code installed (latest stable)
+- [ ] Screen reader mode enabled (`Shift+Alt+F1` or Settings)
+- [ ] Accessibility support setting is `on`
+- [ ] Single-key file navigation works (`Ctrl+P`)
+- [ ] Command palette works (`Ctrl+Shift+P`)
+- [ ] Terminal opens and is readable (`Ctrl+Backtick`)
+- [ ] Source control panel visible (`Ctrl+Shift+G`)
+- [ ] Markdown preview renders tables accessibly
+- [ ] Extensions are readable in the sidebar
+
+### Exercise Verification
+- [ ] Learning-room repo is public and accessible without login
+- [ ] Issues tab shows the practice issues clearly
+- [ ] Pull requests tab shows the practice PR
+- [ ] Markdown files in `learning-room/docs/` render without errors
+- [ ] No broken links in practice files (if they're supposed to be broken for the exercise, verify they display clearly as broken)
+
+---
+
+## Facilitator Q&A Guide
+
+### "I pressed H and nothing happens"
+**Problem:** Single-key navigation is disabled or broken.  
+**Solution:**  
+1. Are you in Browse Mode? (NVDA: press `NVDA+Space`)
+2. Is the page a GitHub page, or a different website where H might be reserved?
+3. Try pressing `H` again while holding `Shift` in case it's a mode issue.
+4. Refresh the page (`Ctrl+R` or `Cmd+R`).  
+**Escalation:** If still broken, it may be a NVDA/screen reader version issue - consider restarting the screen reader.
+
+### "I can't find the Issues tab"
+**Problem:** Repository navigation is not visible/not announced.  
+**Solution:**  
+1. Press `H` to go to the next heading. If you hear "Code," "Issues," "Pull Requests," you're in the repo navigation.
+2. If not, press `D` to jump to the Repository Navigation landmark.
+3. Once you hear any of those tabs, press `K` to navigate the links within it.  
+**Teaching point:** "The tabs are links, not buttons. Press Enter, not Space."
+
+### "The table is hard to read"
+**Problem:** Markdown tables are rendering but the screen reader isn't navigating them well.  
+**Solution:**  
+1. Are you in table mode? (NVDA: when in a table, you can press `NVDA+Alt+T` to toggle table mode)
+2. In table mode, arrow keys navigate cells, `Ctrl+Home` jumps to the first cell.
+3. If still hard: read the table headers first (usually first row or first column), then navigate row by row.  
+**Accessibility note:** Markdown tables have limitations - HTML tables are more accessible, but Markdown is what we have here.
+
+### "I filed an issue but the bot didn't respond"
+**Problem:** Bot has not commented after 5 minutes.  
+**Solution:**  
+1. Verify the repository is PUBLIC (bots require this on free tier).
+2. Navigate to the Actions tab in that repository. You should see a workflow run. Has it completed?
+3. If the run failed, click it to see logs. Most common error: GitHub Actions didn't have permission to comment (Settings → Actions → Permissions).
+4. If the run is still pending, wait up to 2 minutes more.
+5. If 5+ minutes and no action: refresh the page. Sometimes the UI doesn't update.  
+**Escalation:** Manually verify the issue was created (it should be in the Issues tab).
+
+### "I can't commit because 'nothing to commit'"
+**Problem:** A student tries to commit but the VS Code terminal says "nothing to commit."  
+**Solution:**  
+1. Did you actually edit a file? Open the file and make sure your changes are there.
+2. Did you save the file? (`Ctrl+S`)
+3. Does the Source Control panel show the file as changed? (`Ctrl+Shift+G`)
+4. If you see the file in the Source Control panel but it won't show as changed: the file may not be part of your workspace. Make sure you're working in the right folder.  
+**Teaching point:** Git only tracks changes to files it already knows about. If you create a new file, it will show in Source Control as "Untracked" - you must add it first (click the `+` next to the filename).
+
+### "I don't understand the diff"
+**Problem:** The GitHub diff view is hard to parse on a screen reader.  
+**Solution:**  
+1. If reading a diff on GitHub's web, try requesting changes (`R` key) to get a suggestion view (side-by-side or inline).
+2. If reading in VS Code, the diff viewer is more accessible than GitHub's web diff.
+3. Alternative: just read the file as it is now. The diff is additive context - not always necessary to review.  
+**Accessibility teaching point:** "Code reviews aren't always about reading diffs. They're about understanding intent. Ask the author: What changed and why? That conversation might matter more than parsing the diff syntax."
+
+### "I keep getting permission denied when pushing"
+**Problem:** Git push fails with "Permission denied" or "Authentication failed."  
+**Solution:**  
+1. Are you authenticated to GitHub? (`gh auth status`)
+2. If not authenticated: `gh auth login` → follow prompts.
+3. If authenticated but still failing: Is the branch name spelled right? (`git branch` to see your current branch)
+4. Is the remote correct? (`git remote -v` to verify origin points to your fork)
+5. Have you pushed this branch before, or is it new? (First push requires `git push -u origin branch-name`)  
+**Common beginner error:** Trying to push to the upstream repo instead of their fork. Push to your fork first, then open a PR upstream.
+
+### "The agent command didn't work"
+**Problem:** User typed `@accessibility-lead write a test` and got no response.  
+**Solution:**  
+1. Are you in Copilot Chat? (Icon in the left sidebar, or `Ctrl+Alt+I`)
+2. Did you include the `@agent-name`? Some agents are invoked with @ symbol, some with `/slash commands.`
+3. Did Copilot Chat load correctly? Try closing the panel and reopening.
+4. Is the agent installed in your `.github/agents/` folder? (Verify by navigating to `.github/` and checking the file list)
+5. If you're offline, agents won't work (they're running in the cloud).  
+**Escalation:** Check Copilot Chat logs (bottom of chat panel) for error messages.
+
+### "I don't know what commit message to write"
+**Problem:** Student is staring at the commit message prompt, uncertain what to say.  
+**Talking point / suggestion:**  
+```
+"A good commit message is:
+- First line: one sentence, present tense, no more than 50 characters
+- Example: 'Add keyboard shortcuts for JAWS'
+- Second line: blank line
+- Rest (optional): details explaining why (not what - git diff shows what)
+- Example: 'JAWS users requested this feature in issue #42'"
+```
+**Demo:**
+```
+git commit -m "Add keyboard shortcuts for JAWS
+
+This resolves #42. JAWS users noted the shortcuts were missing from the docs."
+```
+
+### "What if I make a breaking change?"
+**Problem:** Participant is worried their edit might break something.  
+**Reassurance:**  
+1. "You're editing documentation or adding features. Documentation changes don't break anything - they clarify. Feature additions go in a PR where others review first."
+2. "If you do break something, that's how we learn. We'll see it in CI (if we have tests) or in code review. You revert it, we move on."
+3. "The main branch is protected. You can't accidentally push breaking changes directly - you must PR first, be reviewed, then merge."
+
+### "How do I know if my PR is good enough?"
+**Problem:** Participant is uncertain whether their work meets the standard.  
+**Process to explain:**  
+1. Submit your PR (you've already done the hard part).
+2. Wait for bot feedback. Does it pass checks?
+3. Request human review (ask @ people in the comments).
+4. Read their suggestions.
+5. Make changes if you agree.
+6. When you and the reviewers agree, they'll approve and merge.
+7. If you disagree with feedback, explain why in a comment. Conversation happens.  
+**Philosophy:** "There's no 'good enough' - there's 'what did you try?' and 'what did you learn?' Your first contribution might be small, but it counts."
+
+---
+
+## Common Patterns & How to Explain Them
+
+### The Fork-Edit-PR Workflow
+**Why it's confusing:** It requires working across three repositories (upstream, your fork, local clone). Visual developers see this as click-fork-click-edit-click-PR. Screen reader users navigate three different sites.
+
+**How to teach it:**
+```
+"Let me walk through the three repositories.
+
+1. Upstream repo - Community-Access/learning-room
+   This is the official repository. You can't edit it directly.
+   
+2. Your fork - [your-name]/learning-room
+   When you click Fork, GitHub copies the entire repo to your account.
+   This is your personal copy. You CAN edit this one.
+   
+3. Your local clone - on your laptop, in a folder
+   You get the fork onto your laptop with git clone.
+   You edit here, in actual files, then push back to the fork.
+   
+The flow: Edit locally → commit → push to fork → open PR from fork to upstream.
+All three repositories are talking to each other, but you're the only one editing the one you control."
+```
+
+### GitHub Actions / Automation
+**Why it's confusing:** Something happens automatically behind the scenes. Users can't see the mechanism.
+
+**How to teach it:**
+```
+"When you open a PR, GitHub has optional 'watchers' - like automated reviewers.
+A bot watches for the PR and runs checks.
+Did you follow the format? The bot checks.
+Are there any typos? The bot can scan.
+Invalid markdown? The bot flags it.
+All within 30 seconds. The bot isn't smart - it's just very, very fast.
+And it's not mean - it's teaching. It links you to resources, not blocking you."
+```
+
+### Merge Conflicts
+**Why it's confusing:** Two people can't both change the same line. Git doesn't know which version is right.
+
+**How to teach it:**
+```
+"Imagine a document you and I are both editing.
+You added a sentence to line 10.
+I also added a sentence to line 10.
+You do it first - your sentence is on main now.
+I try to push my sentence to line 10.
+Git says: 'I have TWO sentences here. I don't know which one is correct.'
+I have to go in and pick one, delete the other, or combine them.
+Then I commit the fix and push again.
+It's not a failure - it's just how parallel editing works."
+```
+
+---
+
+*Questions about facilitation? Open an issue with the `question` label. Contributions to this guide are welcome.*

@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode three, Navigating Repositories. I am Alex, and I am so glad you are joining us today.
+Welcome to Gitt Going with GitHub. This is episode three, Navigating Repositories. I am Alex, and I am so glad you are joining us today.
 
 [JAMIE]
 Hello everyone! I am Jamie, and I am incredibly ready for this one.

@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. I am Alex, and this is episode 25 of our audio series for blind and low-vision developers. Today, we are talking about Releases, Tags, and Repository Insights.
+Welcome to Gitt Going with GitHub. I am Alex, and this is episode 25 of our audio series for blind and low-vision developers. Today, we are talking about Releases, Tags, and Repository Insights.
 
 [JAMIE]
 I am Jamie, and I am so excited for this one. Up until now, we have spent a lot of time talking about how to get your code into a project. We have covered making commits, opening pull requests, and getting those pull requests merged. But today is about what happens next. How does that merged code actually get to the people who use the software? 
@@ -255,4 +255,4 @@ That brings us to the end of episode 25. Now that we understand how releases and
 I cannot wait. Thanks for listening, everyone. Happy coding!
 
 [ALEX]
-See you next time on Git Going with GitHub.
+See you next time on Gitt Going with GitHub.

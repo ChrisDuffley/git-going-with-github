@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series for blind and low-vision developers who are mastering GitHub and open source collaboration. This is episode nineteen, titled Screen Reader Cheat Sheet. I am your host, Alex, and as always, I am joined by my fantastic co-host, Jamie.
+Welcome to Gitt Going with GitHub, the audio learning series for blind and low-vision developers who are mastering GitHub and open source collaboration. This is episode nineteen, titled Screen Reader Cheat Sheet. I am your host, Alex, and as always, I am joined by my fantastic co-host, Jamie.
 
 [JAMIE]
 Hello everyone! I am so excited for this episode. If you are following along in the two-day workshop, we are looking at Appendix B today. And I have to admit, when I first started learning GitHub about two years ago, I felt like I was drowning in keyboard shortcuts. There are screen reader shortcuts, browser shortcuts, and GitHub shortcuts. It felt like trying to learn to play a piano with three different sets of sheet music at the same time.

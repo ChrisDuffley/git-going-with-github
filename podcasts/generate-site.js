@@ -2,9 +2,11 @@
 /**
  * Podcast Site Generator for Git Going with GitHub
  *
- * Reads podcasts/manifest.json and generates:
- *   1. PODCASTS.md   - Player page with HTML5 audio for every episode
- *   2. podcasts/feed.xml - RSS 2.0 podcast feed (iTunes-compatible)
+ * Reads podcasts/manifest.json and podcasts/scripts/*.txt transcripts,
+ * then generates:
+ *   1. PODCASTS.md      - Player page with audio + full transcripts per episode
+ *   2. podcasts/feed.xml - RSS 2.0 podcast feed with transcript show notes
+ *                          and MP3 enclosures (iTunes-compatible)
  *
  * Usage: node podcasts/generate-site.js
  *
@@ -18,6 +20,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const MANIFEST_PATH = path.join(__dirname, 'manifest.json');
+const SCRIPTS_DIR = path.join(__dirname, 'scripts');
 const PODCASTS_MD = path.join(ROOT, 'PODCASTS.md');
 const FEED_XML = path.join(__dirname, 'feed.xml');
 
@@ -55,6 +58,151 @@ function sourceLabel(ep) {
 }
 
 // ---------------------------------------------------------------------------
+// XML/HTML helpers
+// ---------------------------------------------------------------------------
+
+function escapeXml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+// ---------------------------------------------------------------------------
+// Transcript reading and formatting
+// ---------------------------------------------------------------------------
+
+/**
+ * Find the transcript script file for an episode.
+ * Script files are named epNN-slug.txt in podcasts/scripts/.
+ */
+function findScriptFile(ep) {
+  const pad = String(ep.number).padStart(2, '0');
+  const expected = `ep${pad}-${ep.slug}.txt`;
+  const expectedPath = path.join(SCRIPTS_DIR, expected);
+  if (fs.existsSync(expectedPath)) return expectedPath;
+
+  // Fallback: scan for any file matching the episode number
+  const files = fs.readdirSync(SCRIPTS_DIR);
+  const match = files.find(f => f.startsWith(`ep${pad}-`) && f.endsWith('.txt'));
+  return match ? path.join(SCRIPTS_DIR, match) : null;
+}
+
+/**
+ * Parse a script file and return an array of segments:
+ * [{ speaker: 'ALEX'|'JAMIE'|'PAUSE', text: string }]
+ */
+function parseScript(scriptText) {
+  const segments = [];
+  let currentSpeaker = null;
+  let currentLines = [];
+
+  for (const line of scriptText.split('\n')) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+
+    if (trimmed === '[PAUSE]') {
+      if (currentSpeaker && currentLines.length) {
+        segments.push({ speaker: currentSpeaker, text: currentLines.join(' ').trim() });
+        currentLines = [];
+      }
+      segments.push({ speaker: 'PAUSE', text: '' });
+      continue;
+    }
+
+    const match = trimmed.match(/^\[(ALEX|JAMIE)\]$/);
+    if (match) {
+      if (currentSpeaker && currentLines.length) {
+        segments.push({ speaker: currentSpeaker, text: currentLines.join(' ').trim() });
+        currentLines = [];
+      }
+      currentSpeaker = match[1];
+      continue;
+    }
+
+    // Handle [ALEX] Text on same line
+    const inlineMatch = trimmed.match(/^\[(ALEX|JAMIE)\]\s+(.*)/);
+    if (inlineMatch) {
+      if (currentSpeaker && currentLines.length) {
+        segments.push({ speaker: currentSpeaker, text: currentLines.join(' ').trim() });
+        currentLines = [];
+      }
+      currentSpeaker = inlineMatch[1];
+      if (inlineMatch[2]) currentLines.push(inlineMatch[2]);
+      continue;
+    }
+
+    currentLines.push(trimmed);
+  }
+
+  if (currentSpeaker && currentLines.length) {
+    segments.push({ speaker: currentSpeaker, text: currentLines.join(' ').trim() });
+  }
+  return segments;
+}
+
+/**
+ * Format transcript segments into readable markdown for the PODCASTS.md page.
+ * Each speaker turn becomes a bold-labeled paragraph.
+ */
+function formatTranscriptMarkdown(segments) {
+  const lines = [];
+  for (const seg of segments) {
+    if (seg.speaker === 'PAUSE') {
+      lines.push('---');
+      lines.push('');
+      continue;
+    }
+    const name = seg.speaker === 'ALEX' ? 'Alex' : 'Jamie';
+    lines.push(`**${name}:** ${seg.text}`);
+    lines.push('');
+  }
+  return lines.join('\n');
+}
+
+/**
+ * Format transcript segments into clean HTML for RSS content:encoded.
+ * Uses <p> tags with speaker names in <strong>.
+ */
+function formatTranscriptHtml(segments) {
+  const parts = [];
+  for (const seg of segments) {
+    if (seg.speaker === 'PAUSE') {
+      parts.push('<hr />');
+      continue;
+    }
+    const name = seg.speaker === 'ALEX' ? 'Alex' : 'Jamie';
+    parts.push(`<p><strong>${name}:</strong> ${escapeXml(seg.text)}</p>`);
+  }
+  return parts.join('\n');
+}
+
+/**
+ * Format transcript as plain text for itunes:summary.
+ */
+function formatTranscriptPlainText(segments) {
+  const lines = [];
+  for (const seg of segments) {
+    if (seg.speaker === 'PAUSE') continue;
+    const name = seg.speaker === 'ALEX' ? 'Alex' : 'Jamie';
+    lines.push(`${name}: ${seg.text}`);
+  }
+  return lines.join('\n\n');
+}
+
+/**
+ * Load and parse transcript for an episode. Returns null if no script found.
+ */
+function loadTranscript(ep) {
+  const scriptPath = findScriptFile(ep);
+  if (!scriptPath) return null;
+  const text = fs.readFileSync(scriptPath, 'utf-8');
+  return parseScript(text);
+}
+
+// ---------------------------------------------------------------------------
 // Generate PODCASTS.md
 // ---------------------------------------------------------------------------
 
@@ -65,9 +213,11 @@ function generatePlayerPage(manifest) {
   lines.push('');
   lines.push('## Git Going with GitHub - Audio Series');
   lines.push('');
-  lines.push('Listen to companion audio episodes for every chapter and appendix in this workshop. Each episode is a conversational overview that previews or reviews the key concepts - perfect for learning on the go or reducing screen reader fatigue.');
+  lines.push('Listen to companion audio episodes for every chapter and appendix in this workshop. Each episode is a conversational overview between hosts Alex and Jamie that previews or reviews the key concepts - perfect for learning on the go or reducing screen reader fatigue. Every episode includes a full transcript below the player.');
   lines.push('');
   lines.push(`**Subscribe:** Add the [podcast RSS feed](${SITE_URL}/podcasts/feed.xml) to your preferred podcast app - Apple Podcasts, Spotify, Overcast, or any RSS reader.`);
+  lines.push('');
+  lines.push('**Transcripts:** Every episode includes a complete, readable transcript. Expand the "Read Transcript" section below any episode to follow along or search the conversation.');
   lines.push('');
   lines.push('---');
   lines.push('');
@@ -114,6 +264,21 @@ function generatePlayerPage(manifest) {
     lines.push('');
     lines.push(`[Download Episode ${ep.number} (MP3)](${audioUrl})`);
     lines.push('');
+
+    // Transcript section
+    const segments = loadTranscript(ep);
+    if (segments && segments.length > 0) {
+      const transcriptMd = formatTranscriptMarkdown(segments);
+      lines.push('<details>');
+      lines.push(`<summary>Read Transcript - Episode ${ep.number}: ${ep.title}</summary>`);
+      lines.push('');
+      lines.push(`#### Transcript`);
+      lines.push('');
+      lines.push(transcriptMd);
+      lines.push('</details>');
+      lines.push('');
+    }
+
     lines.push('---');
     lines.push('');
   }
@@ -121,7 +286,7 @@ function generatePlayerPage(manifest) {
   // Footer
   lines.push('## Production');
   lines.push('');
-  lines.push('These episodes are generated using [Google NotebookLM](https://notebooklm.google.com/) Audio Overviews. Each episode is produced from the workshop chapter content combined with episode-specific production prompts that ensure concept coverage, accessible language, and screen reader-friendly descriptions.');
+  lines.push('These episodes are generated using [Piper](https://github.com/rhasspy/piper) local neural text-to-speech with ONNX models. Each episode is produced from the workshop chapter content using episode-specific scripts that ensure concept coverage, accessible language, and screen reader-friendly descriptions.');
   lines.push('');
   lines.push('Source bundles and production documentation are in the [podcasts/](podcasts/) directory.');
   lines.push('');
@@ -133,15 +298,6 @@ function generatePlayerPage(manifest) {
 // Generate RSS 2.0 feed (podcasts/feed.xml)
 // ---------------------------------------------------------------------------
 
-function escapeXml(str) {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
-}
-
 function generateRssFeed(manifest) {
   const now = new Date().toUTCString();
 
@@ -150,16 +306,35 @@ function generateRssFeed(manifest) {
     const audioUrl = `${AUDIO_BASE}/ep${pad}-${ep.slug}.mp3`;
     const episodeUrl = `${SITE_URL}/PODCASTS.html`;
 
+    // Load transcript for show notes
+    const segments = loadTranscript(ep);
+    let contentEncoded = '';
+    let itunesSummary = escapeXml(ep.description);
+
+    if (segments && segments.length > 0) {
+      const transcriptHtml = formatTranscriptHtml(segments);
+      contentEncoded = `
+      <content:encoded><![CDATA[
+        <h2>Episode ${ep.number}: ${escapeXml(ep.title)}</h2>
+        <p>${escapeXml(ep.description)}</p>
+        <h3>Full Transcript</h3>
+        ${transcriptHtml}
+        <p><a href="${episodeUrl}">View all episodes on the web</a></p>
+      ]]></content:encoded>`;
+
+      itunesSummary = escapeXml(formatTranscriptPlainText(segments));
+    }
+
     return `    <item>
       <title>${escapeXml(`Episode ${ep.number}: ${ep.title}`)}</title>
-      <description>${escapeXml(ep.description)}</description>
+      <description>${escapeXml(ep.description)}</description>${contentEncoded}
       <link>${episodeUrl}</link>
       <guid isPermaLink="false">git-going-ep${pad}</guid>
       <pubDate>${now}</pubDate>
       <enclosure url="${audioUrl}" type="audio/mpeg" length="0" />
       <itunes:episode>${ep.number + 1}</itunes:episode>
       <itunes:title>${escapeXml(ep.title)}</itunes:title>
-      <itunes:summary>${escapeXml(ep.description)}</itunes:summary>
+      <itunes:summary>${itunesSummary}</itunes:summary>
       <itunes:duration>${ep.duration || '10:00'}</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
     </item>`;
@@ -207,6 +382,13 @@ function main() {
   const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, 'utf-8'));
   console.log(`Read manifest: ${manifest.length} episodes`);
 
+  // Count available transcripts
+  let transcriptCount = 0;
+  for (const ep of manifest) {
+    if (findScriptFile(ep)) transcriptCount++;
+  }
+  console.log(`Transcripts found: ${transcriptCount} of ${manifest.length}`);
+
   // Generate PODCASTS.md
   const playerPage = generatePlayerPage(manifest);
   fs.writeFileSync(PODCASTS_MD, playerPage, 'utf-8');
@@ -218,6 +400,9 @@ function main() {
   console.log(`Generated: ${FEED_XML}`);
 
   console.log('\nPodcast site generation complete.');
+  if (transcriptCount > 0) {
+    console.log(`  ${transcriptCount} episodes have embedded transcripts in both the page and RSS feed.`);
+  }
 }
 
 main();

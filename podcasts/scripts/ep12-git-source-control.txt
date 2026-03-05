@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 12, Git and Source Control in VS Code. I am Alex, and I am here with Jamie. 
+Welcome to Gitt Going with GitHub. This is episode 12, Git and Source Control in VS Code. I am Alex, and I am here with Jamie. 
 
 [JAMIE]
 Hello everyone! I am really excited for this one. I feel like we have been building up to this moment for the entire series.
@@ -386,4 +386,4 @@ That is the final piece of the puzzle. In our next episode, we are going to dive
 I cannot wait. Thank you all for listening!
 
 [ALEX]
-Thank you for joining us. Keep exploring, keep committing, and we will see you next time on Git Going with GitHub.
+Thank you for joining us. Keep exploring, keep committing, and we will see you next time on Gitt Going with GitHub.

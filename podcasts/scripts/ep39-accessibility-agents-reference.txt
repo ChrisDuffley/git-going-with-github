@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 39, Accessibility Agents Complete Reference. I am Alex, and I am thrilled to be here with you as we near the end of our two-day workshop material. 
+Welcome to Gitt Going with GitHub. This is episode 39, Accessibility Agents Complete Reference. I am Alex, and I am thrilled to be here with you as we near the end of our two-day workshop material. 
 
 [JAMIE]
 And I am Jamie! I am so ready for this. We have been hinting at this massive ecosystem of agents for a while. Back in episode 17, we did a high-level overview of what an agent even is. But today, we are opening up the whole reference manual. 
@@ -273,4 +273,4 @@ That is a perfect summary. You now have the keys to the entire customization eng
 I cannot wait. I am going to go write a custom agent to fetch my coffee. See you all next time!
 
 [ALEX]
-Thanks for listening to Git Going with GitHub. Keep exploring, and keep building accessible software.
+Thanks for listening to Gitt Going with GitHub. Keep exploring, and keep building accessible software.

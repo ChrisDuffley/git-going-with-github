@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 27, Advanced Search. I am Alex, and I am thrilled to be back with you for another deep dive into making GitHub work for us, rather than the other way around. Today, we are unlocking what I consider to be a developer superpower.
+Welcome to Gitt Going with GitHub. This is episode 27, Advanced Search. I am Alex, and I am thrilled to be back with you for another deep dive into making GitHub work for us, rather than the other way around. Today, we are unlocking what I consider to be a developer superpower.
 
 [JAMIE]
 And I am Jamie. I am so ready for this one. When I started learning GitHub about two years ago, I spent so much time just tabbing through endless lists of issues, trying to find the one bug I was supposed to be working on. 
@@ -268,4 +268,4 @@ In episode 28, we are moving from finding things to reviewing things. We will be
 I cannot wait. I always find reviewing code a bit intimidating, so I am looking forward to breaking it down. 
 
 [ALEX]
-We will make it approachable, I promise. Thank you all for listening to Git Going with GitHub. Keep practicing your queries, and we will see you in the next episode.
+We will make it approachable, I promise. Thank you all for listening to Gitt Going with GitHub. Keep practicing your queries, and we will see you in the next episode.

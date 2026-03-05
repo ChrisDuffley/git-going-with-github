@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode six, Working with Pull Requests. I am Alex, and I am here to guide you through the accessibility of open source collaboration.
+Welcome to Gitt Going with GitHub. This is episode six, Working with Pull Requests. I am Alex, and I am here to guide you through the accessibility of open source collaboration.
 
 [JAMIE]
 And I am Jamie! I am here to ask the questions, share my own learning curve, and hopefully prevent you from making the same mistakes I did when I first started using GitHub a couple of years ago.
@@ -300,4 +300,4 @@ In our next episode, we are going to tackle the one topic that strikes fear into
 I have panicked many times. I am looking forward to learning how not to. 
 
 [ALEX]
-Until then, keep exploring, keep committing, and we will see you next time on Git Going with GitHub.
+Until then, keep exploring, keep committing, and we will see you next time on Gitt Going with GitHub.

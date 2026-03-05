@@ -1,5 +1,5 @@
 [ALEX]
-Welcome back to Git Going with GitHub. This is episode 38, called Resources and Links. I am Alex, your lead host, and as always, I am joined by Jamie. 
+Welcome back to Gitt Going with GitHub. This is episode 38, called Resources and Links. I am Alex, your lead host, and as always, I am joined by Jamie. 
 
 [JAMIE]
 Hello everyone. We are getting toward the end of our two-day workshop material, and I have to admit, my brain is feeling a little bit full. We have covered issues, pull requests, merge conflicts, Copilot, VS Code, and custom agents. It is a massive amount of information.
@@ -240,4 +240,4 @@ Perfect. Third, when you are ready to practice, use GitHub Skills. It uses the t
 This has been incredibly helpful. I feel like I finally have a map to the library. What is next?
 
 [ALEX]
-In our next episode, we are going to dive deep into the GitHub Concepts Glossary. We will be demystifying all the jargon and technical terms you will encounter in the wild, from upstream to cherry-picking to rebasing. You will not want to miss it. Until then, keep practicing, keep exploring, and keep Git Going.
+In our next episode, we are going to dive deep into the GitHub Concepts Glossary. We will be demystifying all the jargon and technical terms you will encounter in the wild, from upstream to cherry-picking to rebasing. You will not want to miss it. Until then, keep practicing, keep exploring, and keep Gitt Going.

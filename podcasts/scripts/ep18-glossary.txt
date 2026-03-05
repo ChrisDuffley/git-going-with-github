@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode eighteen, Glossary of Terms. I am Alex, and today we are doing something a little different. Instead of a step by step tutorial, we are taking a step back to build our vocabulary. If you are attending our two day workshop, this episode is your foundational reference guide. 
+Welcome to Gitt Going with GitHub. This is episode eighteen, Glossary of Terms. I am Alex, and today we are doing something a little different. Instead of a step by step tutorial, we are taking a step back to build our vocabulary. If you are attending our two day workshop, this episode is your foundational reference guide. 
 
 [JAMIE]
 And I am Jamie. I am so glad we are doing this because when I started learning GitHub about two years ago, the jargon was honestly the biggest barrier. People would say things like, just fork the repo, clone it local, branch off upstream, and push a pull request. And my brain would just shut down. It sounded like a completely different language.
@@ -213,4 +213,4 @@ And finally, lean on the accessibility structures. Use landmarks and headings to
 Well said, Jamie. Having this shared vocabulary is going to make the rest of the workshop so much smoother. In our next episode, we are going to dive into the magic of automation with GitHub Actions and Workflows. We will learn how to make the repository do the heavy lifting for us. 
 
 [JAMIE]
-I cannot wait for that one. Thank you all for listening, and we will see you next time on Git Going with GitHub.
+I cannot wait for that one. Thank you all for listening, and we will see you next time on Gitt Going with GitHub.

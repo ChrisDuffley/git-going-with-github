@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is Episode 20, Accessibility Standards Reference. I am Alex, and today we are going to talk about the rules of the road for making web applications and open source projects usable by everyone.
+Welcome to Gitt Going with GitHub. This is Episode 20, Accessibility Standards Reference. I am Alex, and today we are going to talk about the rules of the road for making web applications and open source projects usable by everyone.
 
 [JAMIE]
 And I am Jamie. If you are joining us at the workshop, you have probably heard these acronyms tossed around all week. Things like W C A G, or ARIA, or Level double A. To be honest, when I started learning GitHub two years ago, this alphabet soup was one of the most intimidating parts. I felt like I needed a law degree just to write a simple button.
@@ -308,4 +308,4 @@ So what is up next?
 In Episode 21, we are moving from theory to practice. We will be diving into the GitHub Interface Deep Dive. We will explore exactly how GitHub's web interface is structured, how to navigate its complex landmark architecture, and the specific keyboard shortcuts that will make you incredibly fast at triaging issues and reviewing code. 
 
 [JAMIE]
-I cannot wait for that one. Thanks for listening to Git Going with GitHub. We will see you in the next episode!
+I cannot wait for that one. Thanks for listening to Gitt Going with GitHub. We will see you in the next episode!

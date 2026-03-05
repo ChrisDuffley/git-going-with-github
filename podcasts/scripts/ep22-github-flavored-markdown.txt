@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 22, GitHub Flavored Markdown. 
+Welcome to Gitt Going with GitHub. This is episode 22, GitHub Flavored Markdown. 
 
 [JAMIE]
 We are officially halfway through our two-day workshop material! If you have been following along, you already know how to clone repositories, navigate branches, and make commits. But today, we are talking about how we actually write the text that goes into our documentation, our pull requests, and our issues. 

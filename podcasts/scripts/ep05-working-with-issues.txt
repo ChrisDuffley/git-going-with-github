@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 5, Working with Issues. I am Alex, and I am here to guide you through the accessibility and workflow concepts that will help you thrive in open source.
+Welcome to Gitt Going with GitHub. This is episode 5, Working with Issues. I am Alex, and I am here to guide you through the accessibility and workflow concepts that will help you thrive in open source.
 
 [JAMIE]
 And I am Jamie. I am a blind developer who started learning GitHub about two years ago, and I am here to ask all the questions that you are probably thinking right now. 
@@ -323,4 +323,4 @@ We certainly are. In our next episode, Working with Pull Requests, we will take 
 I am looking forward to it. Thanks for listening, everyone!
 
 [ALEX]
-See you next time on Git Going with GitHub.
+See you next time on Gitt Going with GitHub.

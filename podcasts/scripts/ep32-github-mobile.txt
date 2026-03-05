@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is Episode 32, called GitHub Mobile. I am Alex, and I am so glad you are joining us today.
+Welcome to Gitt Going with GitHub. This is Episode 32, called GitHub Mobile. I am Alex, and I am so glad you are joining us today.
 
 [JAMIE]
 And I am Jamie! If you have been following along with our two-day workshop series, you have already learned how to navigate repositories, open issues, and manage pull requests using the desktop website and VS Code. But today, we are taking GitHub on the go.

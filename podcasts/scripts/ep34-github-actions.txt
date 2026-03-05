@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series for blind and low-vision developers who are mastering GitHub and open source collaboration. This is episode 34, titled GitHub Actions and Workflows. I am your host, Alex.
+Welcome to Gitt Going with GitHub, the audio learning series for blind and low-vision developers who are mastering GitHub and open source collaboration. This is episode 34, titled GitHub Actions and Workflows. I am your host, Alex.
 
 [JAMIE]
 And I am Jamie. I am so excited for this one. We have spent the last thirty-three episodes talking about how to write code, how to commit code, and how to open pull requests. But today, we are talking about what happens after you open that pull request. Because a lot of magic happens, and sometimes it can feel a little bit like a black box.
@@ -303,4 +303,4 @@ Next time, in episode 35, we are taking everything we learned today about GitHub
 I cannot wait for that.
 
 [ALEX]
-Until then, keep exploring, keep pushing code, and we will talk to you next time on Git Going with GitHub.
+Until then, keep exploring, keep pushing code, and we will talk to you next time on Gitt Going with GitHub.

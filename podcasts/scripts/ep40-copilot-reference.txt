@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series designed for blind and low-vision developers who are mastering GitHub and open source collaboration. I am Alex, and I am thrilled to be here with you.
+Welcome to Gitt Going with GitHub, the audio learning series designed for blind and low-vision developers who are mastering GitHub and open source collaboration. I am Alex, and I am thrilled to be here with you.
 
 [JAMIE]
 And I am Jamie! This is episode 40, which means we are getting close to the end of our journey, but we still have some incredibly powerful tools to cover. Today, we are doing a complete reference guide for GitHub Copilot. 
@@ -233,7 +233,7 @@ I am definitely going to set up an instructions file today. This has been such a
 In episode 41, we are going to dive deep into a specific community toolset: Accessibility Agents. We will look at how to build and use custom agents specifically designed to catch accessibility violations before they ever leave your editor. It is going to be incredibly practical.
 
 [JAMIE]
-I cannot wait for that one. Thank you all for listening to Git Going with GitHub. 
+I cannot wait for that one. Thank you all for listening to Gitt Going with GitHub. 
 
 [ALEX]
 Keep exploring, keep coding, and we will see you in the next episode.

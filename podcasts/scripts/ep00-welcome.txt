@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode zero, titled Welcome to Git Going with GitHub. I am your host, Alex, and I am thrilled to be starting this journey with you. Whether you are a seasoned programmer who is just now moving over to GitHub, or you are completely new to version control, this audio series is designed to be your companion. We are going to explore open source collaboration using GitHub, Visual Studio Code, and GitHub Copilot, all with a strict focus on screen reader and keyboard-only navigation.
+Welcome to Gitt Going with GitHub. This is episode zero, titled Welcome to Gitt Going with GitHub. I am your host, Alex, and I am thrilled to be starting this journey with you. Whether you are a seasoned programmer who is just now moving over to GitHub, or you are completely new to version control, this audio series is designed to be your companion. We are going to explore open source collaboration using GitHub, Visual Studio Code, and GitHub Copilot, all with a strict focus on screen reader and keyboard-only navigation.
 
 [JAMIE]
 And I am Jamie! I am so excited to be here. I will be learning right alongside you, asking the questions, and probably sharing a few embarrassing stories from my own learning journey. Because let me tell you, I learned GitHub just two years ago, and I remember exactly how overwhelming it felt. When I first heard people throwing around words like clone, fork, and branch, I thought we were doing some weird mix of agriculture and science fiction.
@@ -78,7 +78,7 @@ Okay, next term. What is an Issue?
 An issue is essentially a discussion item within a repository. If you find a bug, you open an issue to report it. If you want to request a new feature, you open an issue. 
 
 [JAMIE]
-So it is like a digital to-do list combined with a discussion forum. When I want to fix something, I navigate to the Issues section, find one that sounds interesting, and announce that I am going to work on it.
+So it is like a list, combined with a discussion forum. When I want to fix something, I navigate to the Issues section, find one that sounds interesting, and announce that I am going to work on it.
 
 [ALEX]
 That is exactly right. Issues are the starting point for almost all open source work. Now, once you have done the work and fixed the bug, you need a way to give that fix back to the project. That brings us to our third core term, the Pull Request.

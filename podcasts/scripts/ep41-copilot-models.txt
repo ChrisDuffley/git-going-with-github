@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio series where we build your open source skills from the ground up. I am Alex, and today we are diving into Episode 41, titled Copilot AI Models.
+Welcome to Gitt Going with GitHub, the audio series where we build your open source skills from the ground up. I am Alex, and today we are diving into Episode 41, titled Copilot AI Models.
 
 [JAMIE]
 And I am Jamie. I am so excited for this one. We have been using GitHub Copilot in the last few episodes, asking it to explain code and help us write functions. But today we are looking under the hood. 

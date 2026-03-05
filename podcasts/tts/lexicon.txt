@@ -1,0 +1,136 @@
+# Pronunciation Lexicon for Piper TTS
+#
+# Piper uses espeak-ng for phonemization. This lexicon provides text
+# substitutions applied BEFORE sending text to Piper so that technical
+# terms, acronyms, and tricky words are pronounced correctly.
+#
+# Format: one entry per line — WORD<tab>REPLACEMENT
+# Lines starting with # are comments. Blank lines are ignored.
+# Matching is case-insensitive; replacement preserves the casing shown here.
+#
+# Piper/espeak-ng also supports direct IPA via espeak phoneme syntax:
+#   [[...]]  — inline phoneme override in text sent to espeak-ng
+# For words that need precise IPA, use the PHONEME column instead of plain text.
+#
+# ─── Acronyms & Initialisms ──────────────────────────────────────────────
+WCAG	W-Cag
+NVDA	N V D A
+ARIA	Aria
+JAWS	Jaws
+HTML	H T M L
+CSS	C S S
+API	A P I
+CLI	C L I
+GUI	gooey
+IDE	I D E
+JSON	Jason
+YAML	Yamel
+SSML	S S M L
+SSH	S S H
+HTTPS	H T T P S
+HTTP	H T T P
+URL	U R L
+URI	U R I
+JWT	J W T
+OAuth	oh-auth
+RBAC	R-Back
+UUID	you-you-I-D
+GUID	gwid
+SDK	S D K
+npm	N P M
+VS Code	V S Code
+#
+# ─── Git & GitHub Terms ──────────────────────────────────────────────────
+GitHub	Git Hub
+GitLab	Git Lab
+Gitpod	Git pod
+.gitignore	dot git ignore
+.gitattributes	dot git attributes
+.gitmodules	dot git modules
+PRs	P Rs
+PR	P R
+repo	reepo
+repos	reepos
+README	read me
+README.md	read me dot M D
+CHANGELOG	change log
+CODEOWNERS	code owners
+codespace	code space
+codespaces	code spaces
+Dependabot	Dependa-bot
+#
+# ─── Accessibility Terms ─────────────────────────────────────────────────
+a11y	accessibility
+i18n	internationalization
+l10n	localization
+screenreader	screen reader
+screenreaders	screen readers
+VoiceOver	Voice Over
+TalkBack	Talk Back
+ChromeVox	Chrome Vox
+tabindex	tab index
+focusable	focus-able
+aria-label	aria label
+aria-labelledby	aria labelled by
+aria-describedby	aria described by
+aria-live	aria live
+aria-hidden	aria hidden
+role=	role equals
+alt text	alt text
+#
+# ─── Technical Jargon ────────────────────────────────────────────────────
+DevOps	dev ops
+DevEx	dev ex
+localhost	local host
+async	ay-sink
+cron	kron
+regex	rej-ex
+stdin	standard in
+stdout	standard out
+stderr	standard error
+boolean	boo-lee-an
+linting	linting
+linter	linter
+chmod	C H mod
+sudo	soo-doo
+wget	W get
+cURL	curl
+#
+# ─── File Extensions & Paths ─────────────────────────────────────────────
+.js	dot J S
+.ts	dot T S
+.jsx	dot J S X
+.tsx	dot T S X
+.py	dot pie
+.md	dot M D
+.yml	dot yamel
+.yaml	dot yamel
+.json	dot Jason
+.html	dot H T M L
+.css	dot C S S
+.sh	dot S H
+.env	dot env
+.config	dot config
+#
+# ─── Names & Brands ──────────────────────────────────────────────────────
+Copilot	Co-pilot
+macOS	mac O S
+iOS	eye O S
+OAuth2	oh-auth two
+PostgreSQL	post-gres Q L
+MySQL	my S Q L
+SQLite	S Q Lite
+MongoDB	Mongo D B
+Redis	Red-iss
+Kubernetes	Koo-ber-nettees
+kubectl	kube control
+Terraform	Terra-form
+Bicep	Bye-sep
+ESLint	E S Lint
+Prettier	Prettier
+Webpack	Web pack
+Vite	veet
+Vercel	ver-sell
+Netlify	net-lih-fy
+Astro	Astro
+Svelte	svelt

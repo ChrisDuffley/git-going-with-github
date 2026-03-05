@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to episode eleven of Git Going with GitHub. I am Alex, your lead host for this series, and today we are tackling a massive and exciting topic. We are talking about setting up Visual Studio Code for accessibility. 
+Welcome to episode eleven of Gitt Going with GitHub. I am Alex, your lead host for this series, and today we are tackling a massive and exciting topic. We are talking about setting up Visual Studio Code for accessibility. 
 
 [JAMIE]
 And I am Jamie. I have to admit, I am really looking forward to this one, but I also remember how overwhelming this exact topic was for me about two years ago. We spent episode one of this series making sure you all had Visual Studio Code and Git installed, which was a great first step. But actually opening the editor and figuring out how to make it talk nicely with a screen reader felt like a whole new mountain to climb.
@@ -271,4 +271,4 @@ And finally, when reviewing changes, use the Command Palette to open the Accessi
 This has been incredibly helpful. I feel like my workbench is finally set up and my tools are organized. What are we building next?
 
 [ALEX]
-In our next episode, we are going to take everything we just learned about the interface and apply it to version control. We will be covering Git and Source Control directly inside VS Code. We will learn how to stage, commit, and push our code without ever leaving the editor. Thank you for listening to Git Going with GitHub, and we will catch you in the next episode.
+In our next episode, we are going to take everything we just learned about the interface and apply it to version control. We will be covering Git and Source Control directly inside VS Code. We will learn how to stage, commit, and push our code without ever leaving the editor. Thank you for listening to Gitt Going with GitHub, and we will catch you in the next episode.

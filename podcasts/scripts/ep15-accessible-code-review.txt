@@ -1,5 +1,5 @@
 [ALEX]
-Welcome back to Git Going with GitHub. This is episode fifteen, Accessible Code Review. I am your host, Alex.
+Welcome back to Gitt Going with GitHub. This is episode fifteen, Accessible Code Review. I am your host, Alex.
 
 [JAMIE]
 And I am Jamie! I am so ready for this one.
@@ -297,7 +297,7 @@ And number four, always use Start a review to batch your comments, rather than s
 This has been incredibly helpful. I feel like I am ready to go leave some blocking post-it notes on some pull requests. 
 
 [ALEX]
-I am sure your team will appreciate the thorough feedback. Thank you all for listening to Git Going with GitHub. In episode sixteen, we will dive into those Accessibility Agents and see how AI can speed up your workflow. Until then, keep practicing those reviews. 
+I am sure your team will appreciate the thorough feedback. Thank you all for listening to Gitt Going with GitHub. In episode sixteen, we will dive into those Accessibility Agents and see how AI can speed up your workflow. Until then, keep practicing those reviews. 
 
 [JAMIE]
 See you next time!

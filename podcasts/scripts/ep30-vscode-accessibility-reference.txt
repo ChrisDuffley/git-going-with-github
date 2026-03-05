@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the podcast where we make version control and open source collaboration accessible to everyone. I am Alex, and I am thrilled to be here with you today.
+Welcome to Gitt Going with GitHub, the podcast where we make version control and open source collaboration accessible to everyone. I am Alex, and I am thrilled to be here with you today.
 
 [JAMIE]
 And I am Jamie! I am so excited for this one. We are on episode thirty! Episode thirty, Alex. That feels like a massive milestone.
@@ -315,4 +315,4 @@ In our next episode, we are moving from editor configuration to pure magic. We a
 Oh, that is going to be incredible. Copilot is a game changer. I cannot wait. 
 
 [ALEX]
-Until then, keep exploring your settings, customize your audio cues, and we will see you next time on Git Going with GitHub.
+Until then, keep exploring your settings, customize your audio cues, and we will see you next time on Gitt Going with GitHub.

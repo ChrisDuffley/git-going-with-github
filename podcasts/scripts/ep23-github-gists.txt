@@ -1,5 +1,5 @@
 [ALEX]
-Welcome back to Git Going with GitHub. I am Alex, and this is episode twenty three of our audio series. Today, we are talking about a feature called GitHub Gists. That is spelled G I S T S. We will cover what they are, how to create them using both the web interface and the command line, the difference between public and secret Gists, and how to embed them. 
+Welcome back to Gitt Going with GitHub. I am Alex, and this is episode twenty three of our audio series. Today, we are talking about a feature called GitHub Gists. That is spelled G I S T S. We will cover what they are, how to create them using both the web interface and the command line, the difference between public and secret Gists, and how to embed them. 
 
 [JAMIE]
 Hi everyone, I am Jamie. And I have to say, I see links to Gists all the time when I am searching for coding answers on the web, but for the longest time, I did not really understand what made them different from a regular GitHub repository. Two years ago when I was first starting out, I thought a Gist was just a funny name for a text file.

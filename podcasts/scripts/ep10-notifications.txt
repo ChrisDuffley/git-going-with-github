@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode ten, Notifications and Mentions. I am Alex, and I am here to help you navigate the social and collaborative side of open source without getting completely overwhelmed by the noise.
+Welcome to Gitt Going with GitHub. This is episode ten, Notifications and Mentions. I am Alex, and I am here to help you navigate the social and collaborative side of open source without getting completely overwhelmed by the noise.
 
 [JAMIE]
 And I am Jamie. I am a blind developer who is still figuring out how to keep my digital life organized. I have to admit, Alex, the title of this episode gives me a little bit of anxiety. Notifications. Just the word makes me think of my phone buzzing non stop and an inbox with ten thousand unread messages. 
@@ -280,4 +280,4 @@ This episode concludes the first major phase of our workshop. You now know how t
 Oh, I cannot wait for that. Having an AI assistant read my notifications sounds like a dream come true. 
 
 [ALEX]
-It is a game changer, but it relies entirely on the manual discipline we learned today. An agent can only summarize effectively if you have your watch settings configured correctly. So, practice taming your inbox today, and we will see you in the next episode. Thanks for listening to Git Going with GitHub.
+It is a game changer, but it relies entirely on the manual discipline we learned today. An agent can only summarize effectively if you have your watch settings configured correctly. So, practice taming your inbox today, and we will see you in the next episode. Thanks for listening to Gitt Going with GitHub.

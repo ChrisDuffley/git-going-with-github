@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode nine, Labels, Milestones, and Projects. I am Alex, and I am here with Jamie. 
+Welcome to Gitt Going with GitHub. This is episode nine, Labels, Milestones, and Projects. I am Alex, and I am here with Jamie. 
 
 [JAMIE]
 Hello everyone. If you have been following along, you know we have covered a lot of ground. Back in episode five, we talked about how to create and participate in issues. But today, we are tackling the big question. What happens when a repository has hundreds, or even thousands, of open issues? How do you keep track of it all?
@@ -226,4 +226,4 @@ And finally, do not try to drag and drop cards in a board view. Just press Enter
 Perfectly summarized. Now that you know how to organize work, you are going to want to know when people interact with that work. In our next episode, we are tackling one of the most requested topics: GitHub Notifications. We will show you how to tame your inbox, filter the noise, and ensure you never miss a mention. 
 
 [JAMIE]
-I cannot wait for that one. My inbox is currently a disaster zone. Thank you all for listening, and we will catch you in the next episode of Git Going with GitHub.
+I cannot wait for that one. My inbox is currently a disaster zone. Thank you all for listening, and we will catch you in the next episode of Gitt Going with GitHub.

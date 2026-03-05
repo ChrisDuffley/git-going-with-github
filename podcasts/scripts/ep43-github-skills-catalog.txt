@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series for blind and low-vision developers. I am Alex, and today we are diving into Episode 43, GitHub Skills and the Complete Course Catalog. 
+Welcome to Gitt Going with GitHub, the audio learning series for blind and low-vision developers. I am Alex, and today we are diving into Episode 43, GitHub Skills and the Complete Course Catalog. 
 
 [JAMIE]
 And I am Jamie! We are getting so close to the end of our series, which matches up with the end of Day 2 of the workshop. Today is all about what happens next. How do you keep learning once the workshop is over? 

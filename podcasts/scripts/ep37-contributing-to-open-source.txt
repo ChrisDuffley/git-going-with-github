@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is Episode 37, Contributing to Open Source. I am Alex, and I am here with Jamie. 
+Welcome to Gitt Going with GitHub. This is Episode 37, Contributing to Open Source. I am Alex, and I am here with Jamie. 
 
 [JAMIE]
 Hello everyone! I am so excited for this episode. We are well into Day 2 of our GitHub workshop, and today we are talking about taking everything we have learned so far and actually putting it out into the world. 
@@ -241,4 +241,4 @@ In Episode 38, we are shifting gears. We will be diving deep into GitHub Actions
 Oh, I love making the robots do the work. That is going to be a fun one. 
 
 [ALEX]
-It really is. Thank you all for listening to Git Going with GitHub. We will see you in the next episode!
+It really is. Thank you all for listening to Gitt Going with GitHub. We will see you in the next episode!

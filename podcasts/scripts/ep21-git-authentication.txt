@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode twenty-one, Git Authentication. I am Alex, and as always, I am here to help you navigate the world of Git, GitHub, and open source collaboration.
+Welcome to Gitt Going with GitHub. This is episode twenty-one, Git Authentication. I am Alex, and as always, I am here to help you navigate the world of Git, GitHub, and open source collaboration.
 
 [JAMIE]
 And I am Jamie! I am here to ask the questions, share my own learning bumps, and hopefully make this journey a little smoother for you. And Alex, today we are talking about a topic that caused me more stress than learning Git itself when I started two years ago. Authentication. Proving to GitHub that I am who I say I am.

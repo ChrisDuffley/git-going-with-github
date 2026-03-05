@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode 16, Issue Templates. I am Alex, and as always, I am joined by Jamie.
+Welcome to Gitt Going with GitHub. This is episode 16, Issue Templates. I am Alex, and as always, I am joined by Jamie.
 
 [JAMIE]
 Hello everyone! I am very excited for this one because, if you remember way back in episode 5, we talked about how to file an issue. And I mentioned that staring at a completely blank text box was one of the most intimidating parts of learning GitHub for me. I never knew what information I was supposed to provide. 

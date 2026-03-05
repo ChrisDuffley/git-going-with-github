@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to episode twenty four of Git Going with GitHub, the audio learning series designed specifically for blind and low vision developers who are navigating the world of open source collaboration. I am your host, Alex.
+Welcome to episode twenty four of Gitt Going with GitHub, the audio learning series designed specifically for blind and low vision developers who are navigating the world of open source collaboration. I am your host, Alex.
 
 [JAMIE]
 And I am your cohost, Jamie! Today, we are diving into a feature that I honestly wish I understood two years ago when I first started my GitHub journey. We are talking all about GitHub Discussions.

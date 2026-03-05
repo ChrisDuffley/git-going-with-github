@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. 
+Welcome to Gitt Going with GitHub. 
 
 [JAMIE]
 The audio series for blind and low-vision developers learning GitHub and open source collaboration.
@@ -317,4 +317,4 @@ Perfect summary, Jamie. In our next episode, we are going to explore GitHub Disc
 I am looking forward to it. Thanks for listening, everyone!
 
 [ALEX]
-Keep practicing, and we will catch you in the next episode of Git Going with GitHub.
+Keep practicing, and we will catch you in the next episode of Gitt Going with GitHub.

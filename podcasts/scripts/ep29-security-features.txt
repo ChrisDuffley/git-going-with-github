@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub. This is episode twenty nine, GitHub Security Features. I am Alex, and today we are talking about how GitHub helps keep your code, your contributors, and your users safe. 
+Welcome to Gitt Going with GitHub. This is episode twenty nine, GitHub Security Features. I am Alex, and today we are talking about how GitHub helps keep your code, your contributors, and your users safe. 
 
 [JAMIE]
 And I am Jamie. I have to be honest, Alex, the word security always makes me a little nervous. It feels like one of those areas where making a mistake has massive consequences. When I first started learning GitHub a couple of years ago, I was terrified I would accidentally break something or leak something important. 

@@ -1,5 +1,5 @@
 [ALEX]
-Welcome to Git Going with GitHub, the audio learning series for blind and low-vision developers who are mastering GitHub and open source collaboration. I am your host, Alex, and I am thrilled to be here with you today for episode fourteen, titled GitHub Copilot. Today, we are diving into the world of AI coding assistants.
+Welcome to Gitt Going with GitHub, the audio learning series for blind and low-vision developers who are mastering GitHub and open source collaboration. I am your host, Alex, and I am thrilled to be here with you today for episode fourteen, titled GitHub Copilot. Today, we are diving into the world of AI coding assistants.
 
 [JAMIE]
 Hi everyone, I am Jamie. I am so excited for this one. I keep hearing developers talk about AI and Copilot, but I have been a little hesitant to jump in. I am really hoping we can break down how this actually works with a screen reader.
