@@ -1,0 +1,78 @@
+name: Bug Report
+description: Report something that is broken or not working as expected
+labels: ["bug", "needs triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide as much information as possible to help us understand and fix the issue.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the bug? What did you expect to happen?
+      placeholder: "Describe the bug in detail..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce the issue?
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: "Describe what you expected to happen..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: "Describe what actually happens..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or Recording (optional)
+      description: If applicable, add a screenshot or screen recording that shows the issue
+      placeholder: "Paste screenshot or describe what you see"
+    validations:
+      required: false
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: Your Environment
+      description: Help us understand your setup
+      placeholder: |
+        - Operating System: Windows/macOS/Linux
+        - Screen Reader: NVDA/JAWS/VoiceOver
+        - Browser: Chrome/Firefox/Safari/Edge
+        - Device: Desktop/Laptop/Mobile
+    validations:
+      required: false
+  
+  - type: checkbox
+    id: assistance
+    attributes:
+      label: Would you like help fixing this?
+      description: Are you interested in submitting a PR to fix this bug?
+      options:
+        - label: "Yes, I would like to help fix this"

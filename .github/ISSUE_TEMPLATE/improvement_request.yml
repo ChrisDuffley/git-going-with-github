@@ -1,0 +1,68 @@
+name: Documentation or Feature Request
+description: Suggest an improvement to documentation or a new feature
+labels: ["documentation", "enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement! We welcome your ideas for making this repository more helpful and accessible.
+  
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What would you like to see improved or added?
+      placeholder: "Describe the improvement or feature you're suggesting..."
+    validations:
+      required: true
+  
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Why Is This Important?
+      description: Help us understand the problem this solves or the value it provides
+      placeholder: |
+        - This would help people who use [assistive technology]
+        - This addressing a gap in the documentation
+        - This would make it easier to [do something]
+    validations:
+      required: true
+  
+  - type: textarea
+    id: example
+    attributes:
+      label: Example or Suggested Change (optional)
+      description: If possible, show an example or describe what the improvement might look like
+      placeholder: |
+        Here's an example of what I mean:
+        - [Sample code or documentation text]
+        - [Link to similar work elsewhere]
+    validations:
+      required: false
+  
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: What type of improvement is this?
+      options:
+        - Select an option...
+        - Documentation (add/improve existing docs)
+        - Accessibility (improve for screen reader users)
+        - Navigation (improve how people find things)
+        - Examples (add sample code or workflows)
+        - Other
+    validations:
+      required: true
+  
+  - type: checkboxes
+    id: effort
+    attributes:
+      label: Effort Level
+      description: How much work do you think this would take?
+      options:
+        - label: "Small (< 30 minutes)"
+        - label: "Medium (30 minutes - 2 hours)"
+        - label: "Large (> 2 hours)"
+        - label: "Unsure"

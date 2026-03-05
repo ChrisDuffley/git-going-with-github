@@ -5,11 +5,11 @@ This reference lists keyboard shortcuts for navigating GitHub with a screen read
 
 ---
 
-## NVDA (Windows)
+#### NVDA (Windows)
 
-NVDA is a free, open source screen reader for Windows. Download it from [nvaccess.org](https://nvaccess.org).
+NVDA is a free, open source screen reader for Windows. Download it from [nvaccess.org](htps://nvaccess.org).
 
-### Single-Key Navigation (Browse Mode)
+#### Single-Key Navigation (Browse Mode)
 
 Use these keys to jump to specific element types on any GitHub page.
 
@@ -26,14 +26,14 @@ Use these keys to jump to specific element types on any GitHub page.
 | L | Next list |
 | I | Next list item |
 
-### Switching Modes
+#### Switching Modes
 
 | Key | Action |
 |-----|--------|
 | Insert+Space | Toggle between Browse Mode and Focus Mode |
 | Insert+F7 | Elements list (links, headings, form fields, buttons) |
 
-### Reading Commands
+#### Reading Commands
 
 | Key | Action |
 |-----|--------|
