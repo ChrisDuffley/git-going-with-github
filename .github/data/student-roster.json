@@ -143,6 +143,23 @@
       "assignedIssue": null
     },
     {
+      "username": "beckyk102125",
+      "name": "beckyk102125",
+      "pronouns": "they/them",
+      "timezone": "Unknown",
+      "screenReader": true,
+      "screenReaderType": "Unknown",
+      "interests": [
+        "accessibility",
+        "open-source"
+      ],
+      "joinedDate": "2026-03-05",
+      "mergedPRs": 0,
+      "currentLevel": "Beginner",
+      "badges": [],
+      "assignedIssue": null
+    },
+    {
       "username": "blindwiz",
       "name": "blindwiz",
       "pronouns": "they/them",
