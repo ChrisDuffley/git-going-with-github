@@ -86,3 +86,8 @@ __pycache__/
 *.tmp
 *.swp
 *~
+
+# TTS model files (too large for git, should be downloaded separately)
+podcasts/tts/models/
+*.onnx
+*.onnx.json
