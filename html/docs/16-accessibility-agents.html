@@ -48,7 +48,7 @@
 <ul>
 <li><input aria-label="Chapter 0:" disabled="" type="checkbox"> Chapter 0: <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a> - Git, VS Code, and GitHub account</li>
 <li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - GitHub Copilot Chat installed and working</li>
-<li><input aria-label="GitHub Copilot subscription or organization access (classroom/free tier)" disabled="" type="checkbox"> GitHub Copilot subscription or organization access (classroom/free tier)</li>
+<li><input aria-label="GitHub Copilot access (Copilot Free tier is enough for this workshop)" disabled="" type="checkbox"> GitHub Copilot access (Copilot Free tier is enough for this workshop)</li>
 <li><input aria-label="" disabled="" type="checkbox"> <code>.github/agents/</code> folder exists in your repository (or will create custom agents)</li>
 </ul>
 <h3>Agent Prerequisites (The &quot;Skill First&quot; Principle)</h3>
@@ -89,6 +89,127 @@
 </tbody></table>
 <p>This is not an exhaustive list - it illustrates the principle. Before running any agent, ask yourself: <em>could I do this task manually right now?</em> If the answer is no, learn the manual skill first.</p>
 <p><strong>Estimated time for this chapter:</strong> 1.5 hours (including exercises)</p>
+<hr>
+<h2>Workshop Recommendation (Chapter 16)</h2>
+<p>Chapter 16 is the <strong>agent exploration and hands-on validation chapter</strong> - where students match agents to skills they already have and learn how to trust, evaluate, and improve AI-powered workflow automation.</p>
+<ul>
+<li><strong>Challenge count:</strong> 3 guided + 1-2 optional contribution challenges</li>
+<li><strong>Automation check:</strong> none (agent output requires human judgment before use)</li>
+<li><strong>Evidence:</strong> Slack/Discord message or facilitator chat showing agent output and your evaluation of it</li>
+<li><strong>Pattern:</strong> explore → validate → improve → optionally contribute</li>
+<li><strong>Key principle:</strong> Skill First, Agent Second - <strong>every agent requires manual prerequisite skills</strong></li>
+</ul>
+<h3>Chapter 16 Guided Challenges (No Bot Validation - Skill-First Focus)</h3>
+<p>For this workshop, Chapter 16 focuses on agent exploration and validation:</p>
+<p>If 55 agents feels too broad, start with this beginner sequence:</p>
+<ol>
+<li><code>@daily-briefing</code> (maps to repository and issue awareness)</li>
+<li><code>@issue-tracker</code> (maps to Chapter 4 issue workflow)</li>
+<li><code>@pr-review</code> (maps to Chapter 5 and Chapter 14 review workflow)</li>
+</ol>
+<p>Use the discovery framework for each agent you pick:</p>
+<ul>
+<li>Skill you already have</li>
+<li>Matching agent</li>
+<li>One safe first prompt</li>
+</ul>
+<ol>
+<li><p><strong>Agent Discovery Mapping</strong> (20 min)</p>
+<ul>
+<li>Fork the <code>accessibility-agents</code> repository</li>
+<li>Read the list of 55 agents in the ecosystem (Section 3)</li>
+<li>Identify 3-5 agents that match workflows you already do by hand from Day 1:<ul>
+<li>Example: You filed issues manually → you can use <code>@issue-tracker</code></li>
+<li>Example: You reviewed a PR with diffs → you can use <code>@pr-review</code>  </li>
+<li>Example: You checked colors for contrast → you can use <code>@contrast-master</code></li>
+</ul>
+</li>
+<li>For each agent, write a one-sentence answer: <em>&quot;I am ready for this agent because I have already [skill]&quot;</em></li>
+<li>Screenshot/paste in an issue comment on accessibility-agents repo (use <code>#16-agent-discovery</code> label)</li>
+</ul>
+</li>
+<li><p><strong>Agent Skill Validation</strong> (30 min)</p>
+<ul>
+<li>Clone your fork of <code>accessibility-agents</code> to VS Code</li>
+<li>Open Copilot Chat (<code>Ctrl+Shift+I</code>)</li>
+<li>Choose one agent from your discovery list (suggest starting with <code>@daily-briefing</code> or <code>@issue-tracker</code>)</li>
+<li>Run it once with a simple prompt (e.g., <code>@daily-briefing morning briefing</code> or <code>@issue-tracker find open issues labeled good-first-issue in accessibility-agents</code>)</li>
+<li>Read the agent&#39;s output carefully</li>
+<li>In a new issue comment, answer these three evaluation questions:<ul>
+<li>What did the agent output? (2-3 sentences)</li>
+<li>Does this output match what you expected based on manual experience?</li>
+<li>Did the agent miss anything important that you (as a human) would catch?</li>
+</ul>
+</li>
+<li>Use <code>#16-agent-validation</code> label</li>
+</ul>
+</li>
+<li><p><strong>Agent Instructions Deep Dive</strong> (15 min)</p>
+<ul>
+<li>Open one <code>.agent.md</code> or <code>.prompt.md</code> file from the repository</li>
+<li>Read the agent&#39;s system instructions and tool permissions</li>
+<li>Answer: <em>What is this agent trying to do, and what tools does it have access to?</em></li>
+<li>Answer: <em>Could this agent make a mistake?</em> If so, what kind?</li>
+<li>Post your answers in an issue comment with <code>#16-agent-internals</code> label</li>
+</ul>
+</li>
+</ol>
+<h3>Optional Contribution Challenges (For Day 2 Hackathon)</h3>
+<ol start="4">
+<li><p><strong>Improve an Existing Agent</strong> (45 min - hackathon activity)</p>
+<ul>
+<li>Find an agent whose instructions have a gap (use Section 6 suggestions or file an issue)</li>
+<li>Fork the repo, edit the agent&#39;s <code>.agent.md</code> file</li>
+<li>Get a facilitator review</li>
+<li>Open a PR with your improvement</li>
+<li><strong>Evidence:</strong> Your merged PR</li>
+</ul>
+</li>
+<li><p><strong>Propose a New Agent</strong> (60 min - hackathon activity)</p>
+<ul>
+<li>Identify a workflow that is not yet covered by any of the 55 agents</li>
+<li>File an issue describing what the agent should do and why it matters</li>
+<li>Include 3 example prompts people would use</li>
+<li><strong>Evidence:</strong> Your issue with facilitator/maintainer discussion</li>
+</ul>
+</li>
+</ol>
+<h3>Expected Outcomes</h3>
+<ul>
+<li>Student can map personal Day 1 skills to specific accessible agents in the ecosystem</li>
+<li>Student understands the <strong>Skill First, Agent Second</strong> principle and can articulate why agent output requires human judgment</li>
+<li>Student can read agent instructions and evaluate what an agent can and cannot do</li>
+<li>Student has used at least one agent and verified it against manual skills</li>
+<li>(Optional) Student has contributed to the accessibility-agents ecosystem with a bug fix, improvement, or feature proposal</li>
+</ul>
+<h3>If You Get Stuck</h3>
+<ol>
+<li><strong>I can&#39;t find an agent that matches my skills</strong> → Start with <code>@daily-briefing</code> or <code>@issue-tracker</code> - those build directly on Chapter 2-5 material. If you haven&#39;t done those manual steps yet, go back to those chapters first.</li>
+<li><strong>The agent output doesn&#39;t make sense</strong> → That is the right response. Paste the output in an issue comment along with your confusion. That is valuable feedback. The agent may need better instructions or guardrails.</li>
+<li><strong>I can&#39;t access the agents in Copilot Chat</strong> → Verify: Is Copilot Chat extension installed (not just Copilot)? Are you signed in to GitHub in VS Code? Does <code>.github/agents/</code> folder exist in your cloned repository? Run <code>ls -la .github/agents/</code> to confirm.</li>
+<li><strong>The repository won&#39;t clone</strong> → Use the terminal: <code>git clone https://github.com/[your-username]/accessibility-agents.git</code> then <code>cd accessibility-agents &amp;&amp; code .</code></li>
+<li><strong>Ask facilitator:</strong> Show them what agent you wanted to run, what output you got, and what you expected. They can verify the agent is set up correctly.</li>
+</ol>
+<h3>Learning Moment</h3>
+<p>The 55 agents exist because someone did the manual work first, then automated the repetitive parts. As you explore agents, you are not just learning tools - you are learning what automation looks like when it is built on real expertise and real constraints. That is the foundation for contributing back: you already know the limits of automation because you have done the work by hand.</p>
+<hr>
+<h2>Capstone: Share Your Feedback (The Most Important Task!)</h2>
+<p>You have now explored the full agent ecosystem, completed the workshop, and have valuable perspective on what worked, what confused you, and what we should improve for the next cohort.</p>
+<p><strong>Your feedback directly shapes the future of this project.</strong> We read every response, discuss improvements, and act on suggestions.</p>
+<h3>Submit Workshop Feedback</h3>
+<p><a href="https://github.com/community-access/git-going-with-github/issues/new?template=feedback-workshop.yml"><strong>File a Feedback Issue</strong> →</a></p>
+<p>Use the <strong>Workshop Feedback</strong> form to share:</p>
+<ul>
+<li><strong>Which agents stood out?</strong> (Most useful or surprising)</li>
+<li><strong>Which agents confused you?</strong> (What would make them better)</li>
+<li><strong>Was the chapter progression logical?</strong> (Did earlier chapters prepare you for later ones)</li>
+<li><strong>Accessibility experience</strong> (If applicable - did any assistive technology work/fail?)</li>
+<li><strong>Best takeaway</strong> (What will you remember in 6 months)</li>
+<li><strong>What should we improve?</strong> (Honest feedback, not graded)</li>
+<li><strong>Anything else?</strong> (Facilitator appreciation, wild ideas, whatever matters to you)</li>
+</ul>
+<p><strong>Answer as much or as little as you&#39;re comfortable sharing.</strong> Even one thoughtful answer is valuable. This feedback becomes part of our workshop archive and roadmap for future cohorts.</p>
+<p><strong>Your honest perspective is how this project improves. Thank you for being part of building a more accessible technical future.</strong></p>
 <hr>
 <h2>Table of Contents</h2>
 <ol>

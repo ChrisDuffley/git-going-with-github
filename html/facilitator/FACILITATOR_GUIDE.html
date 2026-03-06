@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
+  <title>Facilitator Guide & Workshop Timeline - GIT Going with GitHub</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Guide & Workshop Timeline</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Facilitator Guide &amp; Workshop Timeline</h1>
+<h2>Overview</h2>
+<p>This workshop runs <strong>Saturday, March 8-9, 2026</strong> from <strong>12pm-8pm ET</strong> both days.</p>
+<p><strong>Participants:</strong> 66 blind and low-vision students<br><strong>Format:</strong> Hybrid (streaming + learning room)<br><strong>Main Goal:</strong> Get every student to merge their first pull request</p>
+<hr>
+<h2>Before the Workshop (Friday, March 7)</h2>
+<h3>Facilitator Checklist</h3>
+<ul>
+<li><input aria-label="Verify all 66 student branches exist" disabled="" type="checkbox"> Verify all 66 student branches exist</li>
+<li><input aria-label="Test assignment issues load without errors" disabled="" type="checkbox"> Test assignment issues load without errors</li>
+<li><input aria-label="Confirm peers are assigned for cross-review" disabled="" type="checkbox"> Confirm peers are assigned for cross-review</li>
+<li><input aria-label="Test bot validation workflow on practice PR" disabled="" type="checkbox"> Test bot validation workflow on practice PR</li>
+<li><input aria-label="Share link to" disabled="" type="checkbox"> Share link to <a href="https://us06web.zoom.us/meeting/register/YdAAvwzAQUCYpPpNtAlG3g">Zoom registration</a></li>
+<li><input aria-label="Send reminder email with:" disabled="" type="checkbox"> Send reminder email with:<ul>
+<li>Zoom link + audio-only option</li>
+<li>Pre-workshop setup reminder</li>
+<li>FAQ: &quot;What if I get stuck?&quot;</li>
+<li>Office hours/emergency contact info</li>
+</ul>
+</li>
+</ul>
+<h3>Verify Infrastructure</h3>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># Check all branches exist</span>
+git branch | Select-String <span class="hljs-string">&quot;student/&quot;</span> | Measure-Object
+
+<span class="hljs-comment"># Verify roster is updated</span>
+python -c <span class="hljs-string">&quot;import json; print(f\&quot;Total students: {len(json.load(open(&#x27;.github/data/student-roster.json&#x27;))[&#x27;students&#x27;])}\&quot;)&quot;</span>
+
+<span class="hljs-comment"># Test one assignment issue creation (run on practice student)</span>
+gh issue create --title <span class="hljs-string">&quot;[TEST] Sample Assignment&quot;</span> --body <span class="hljs-string">&quot;Test issue&quot;</span> --assignee <span class="hljs-variable">$YOUR_USERNAME</span></code></pre>
+<hr>
+<h2>Day 1: Saturday, March 8, 12pm-8pm ET</h2>
+<h3>12:00 PM - 1:00 PM: Welcome &amp; GitHub Orientation (60 min)</h3>
+<p><strong>Facilitator Role:</strong></p>
+<ul>
+<li>Create welcoming opening acknowledging everyone&#39;s accessibility needs</li>
+<li>Explain why GitHub matters for blind/low-vision inclusion</li>
+<li>Demonstrate: &quot;I&#39;m going to open the repo right now and you&#39;ll follow along&quot;</li>
+<li>Q&amp;A in chat - answer every question</li>
+</ul>
+<p><strong>What Students Do:</strong></p>
+<ul>
+<li>Join Zoom with screen reader</li>
+<li>Open GitHub in their browser</li>
+<li>Navigate to <code>/learning-room/</code> folder</li>
+<li>Confirm they can see their assignment issue</li>
+</ul>
+<p><strong>Resources to Have Ready:</strong></p>
+<ul>
+<li>Screen reader cheatsheet (Appendix B)</li>
+<li>Common GitHub.com keyboard shortcuts printed</li>
+<li>Zoom chat moderator who watches for questions</li>
+</ul>
+<p><strong>Success Metric:</strong> All 66 students in Zoom report &quot;I found my issue&quot;</p>
+<hr>
+<h3>1:00 PM - 1:30 PM: Demo - Your First PR (30 min)</h3>
+<p><strong>You (facilitator) will:</strong></p>
+<ol>
+<li>Show a completed example on screen with narration</li>
+<li>Walk through EVERY step:<ul>
+<li>&quot;First, I click the edit pencil&quot;</li>
+<li>&quot;I see the markdown editor open&quot;</li>
+<li>&quot;I make my change here&quot;</li>
+<li>&quot;I scroll down and create a new branch: <code>fix/demo-001</code>&quot;</li>
+<li>&quot;Now I click &#39;Propose changes&#39; button&quot;</li>
+<li>&quot;GitHub shows me the PR preview - notice the bot already right here checking my work&quot;</li>
+<li>&quot;I fill in the PR template fields&quot;</li>
+<li>&quot;I click &#39;Create Pull Request&#39;&quot;</li>
+<li>&quot;The bot comments within 30 seconds with feedback&quot;</li>
+<li>&quot;I address the feedback and push an update commit&quot;</li>
+<li>&quot;I request review by typing @peer_username&quot;</li>
+<li>&quot;My peer reviews and I get approval&quot;</li>
+<li>&quot;I click merge button&quot;</li>
+<li><strong>✨ Done! My PR is merged!</strong></li>
+</ul>
+</li>
+</ol>
+<p><strong>This is the workflow EVERY student will repeat.</strong> Make it crystal clear.</p>
+<p><strong>Success Metric:</strong> Students report &quot;I see how this works&quot; in chat</p>
+<hr>
+<h3>1:30 PM - 6:00 PM: Silent Working Session (270 min)</h3>
+<p><strong>Students work independently on their assignment issues.</strong></p>
+<p>This is THE MAIN ENGAGEMENT. They&#39;re making their first real contribution.</p>
+<p><strong>Facilitator Role:</strong></p>
+<ul>
+<li>Monitor Discussions and PR comments for questions</li>
+<li>Respond quickly to blockers</li>
+<li>Celebrate each merged PR in chat</li>
+<li>Track progress in <a href="./progress-tracker.json">progress tracker</a></li>
+</ul>
+<p><strong>Expected Cadence:</strong></p>
+<ul>
+<li><strong>1:30-2:30 PM</strong> - Students opening issues, starting edits (expect 15-20 PRs)</li>
+<li><strong>2:30-3:30 PM</strong> - Bot feedback flowing, students making fixes (25-30 PRs)</li>
+<li><strong>3:30-5:00 PM</strong> - Reviews happening, merges happening (30-35 PRs)</li>
+<li><strong>5:00-6:00 PM</strong> - Stragglers finishing, peer reviews catching up</li>
+</ul>
+<p><strong>Facilitator Interventions:</strong></p>
+<p>If student hasn&#39;t opened a PR by 2:30 PM:</p>
+<ul>
+<li>Message them: &quot;Hey @student! Need help? Here&#39;s the link to your issue: [issue #XX]&quot;</li>
+<li>Keep it low-pressure - some will take longer</li>
+</ul>
+<p>If bot gives critical feedback:</p>
+<ul>
+<li>Explain in Discussions what the bot meant</li>
+<li>Show the fix clearly</li>
+<li>Make sure student isn&#39;t discouraged</li>
+</ul>
+<p>If a peer review isn&#39;t happening:</p>
+<ul>
+<li>Offer to do a facilitator review instead</li>
+<li>Or ask another student: &quot;Can you review this PR?&quot;</li>
+<li>Priority is getting to merge, not strict peer review</li>
+</ul>
+<p><strong>Celebrate Merges:</strong></p>
+<pre><code class="hljs">🎉 Huge congrats @username! Your first PR <span class="hljs-keyword">is</span> MERGED! 
+You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span class="hljs-keyword">to</span> an <span class="hljs-keyword">open</span> source project!</code></pre>
+<hr>
+<h3>6:00 PM - 6:30 PM: Q&amp;A &amp; Reflection (30 min)</h3>
+<p><strong>Prompt for Discussion:</strong></p>
+<blockquote>
+<p>&quot;Tell us in chat: What was one thing you learned today about GitHub?&quot;</p>
+</blockquote>
+<p><strong>Be ready to:</strong></p>
+<ul>
+<li>Answer &quot;I got an error...&quot; questions</li>
+<li>Help troubleshoot remaining issues</li>
+<li>Give credit to peer reviewers</li>
+<li>Mark students who didn&#39;t finish but are close as &quot;follow-up needed&quot;</li>
+</ul>
+<p><strong>Send them home with:</strong></p>
+<ul>
+<li>Tomorrow&#39;s agenda</li>
+<li>Sneak peek at what&#39;s next</li>
+<li>Encouragement!</li>
+</ul>
+<hr>
+<h3>6:30 PM - 8:00 PM: Office Hours (Optional)</h3>
+<ul>
+<li>Available for 1:1 troubleshooting</li>
+<li>Help students finish PRs</li>
+<li>Answer &quot;How do I...?&quot; questions about GitHub</li>
+<li>Document common questions for tomorrow&#39;s content</li>
+</ul>
+<hr>
+<h2>Day 2: Sunday, March 9, 12pm-8pm ET</h2>
+<h3>12:00 PM - 12:30 PM: Recap &amp; Wins (30 min)</h3>
+<p><strong>Facilitator:</strong></p>
+<ul>
+<li>Show stats: &quot;66 students, X PRs merged on Day 1&quot;</li>
+<li>Acknowledge students who got stuck but persisted</li>
+<li>Introduce next challenge level for students ready to go further</li>
+</ul>
+<hr>
+<h3>12:30 PM - 1:30 PM: Deep Dive - Code Review (60 min)</h3>
+<p><strong>Teach:</strong></p>
+<ul>
+<li>How to review someone else&#39;s PR  </li>
+<li>What good feedback looks like</li>
+<li>How to incorporate feedback gracefully</li>
+<li>Real-world code review practices</li>
+</ul>
+<p><strong>Paired Activity:</strong></p>
+<ul>
+<li>Have students review each other&#39;s Day 1 PRs</li>
+<li>Start with example feedback you provide</li>
+<li>Let them practice the async review process</li>
+</ul>
+<hr>
+<h3>1:30 PM - 6:00 PM: Skill-Building Challenges (270 min)</h3>
+<p><strong>Now students work on progressively harder challenges:</strong></p>
+<table>
+<thead>
+<tr>
+<th scope="col">Skill Level</th>
+<th scope="col">Students</th>
+<th scope="col">Challenges</th>
+<th scope="col">Topics</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Beginner (joined yesterday)</td>
+<td>~40</td>
+<td>Challenge 2-3</td>
+<td>Content writing, link validation</td>
+</tr>
+<tr>
+<td>Intermediate (feeling confident)</td>
+<td>~20</td>
+<td>Branch: <code>day2-practice</code></td>
+<td>Comparing diffs, merge conflicts</td>
+</tr>
+<tr>
+<td>Advanced (want more)</td>
+<td>~6</td>
+<td>Custom projects</td>
+<td>Taking on real issues</td>
+</tr>
+</tbody></table>
+<p><strong>Bot Enhances:</strong></p>
+<ul>
+<li>Accessibility feedback becomes more detailed</li>
+<li>Highlights larger patterns (&quot;You capitalized but others use lowercase&quot;)</li>
+<li>Suggests improvements not just fixes</li>
+</ul>
+<p><strong>Facilitator Role:</strong></p>
+<ul>
+<li>Track who&#39;s moving between skill levels</li>
+<li>Give stretch challenges to advanced students</li>
+<li>Help intermediate students with conflict resolution</li>
+<li>Keep the energy positive</li>
+</ul>
+<hr>
+<h3>6:00 PM - 7:00 PM: Final Q&amp;A &amp; Celebration (60 min)</h3>
+<p><strong>Metrics to share:</strong></p>
+<pre><code class="hljs"><span class="hljs-attribute">🎯 WORKSHOP RESULTS</span><span class="hljs-punctuation">:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">66 students registered</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">X PRs merged (track real number)</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">X students got 2+ merges</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">X students completed code review cycle</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">100% accessibility - screen readers worked flawlessly</span>
+
+<span class="hljs-attribute">📊 Impact</span><span class="hljs-punctuation">:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">X open source contributions submitted</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">X participants added to 66 projects&#x27; contributor lists</span>
+<span class="hljs-bullet">-</span> <span class="hljs-string">X% of students felt encouraged to contribute again</span></code></pre>
+<p><strong>Next Steps:</strong></p>
+<ul>
+<li>Point them to contributing.md in their favorite open source projects</li>
+<li>Share list of &quot;good first issue&quot; finding techniques</li>
+<li>Give them the RESOURCES appendix</li>
+<li>Offer alumni community channel</li>
+</ul>
+<h3>7:00 PM - 8:00 PM: Informal Hangout (60 min)</h3>
+<ul>
+<li>Students &quot;hang out&quot; on Zoom</li>
+<li>Chat with peers and facilitators</li>
+<li>Ask follow-up questions</li>
+<li>Exchange GitHub usernames</li>
+</ul>
+<hr>
+<h2>Facilitator Role Critical Points</h2>
+<h3>Communication Style</h3>
+<p>✅ <strong>DO:</strong></p>
+<ul>
+<li>Use simple language: &quot;Click the pencil icon to edit&quot;</li>
+<li>Narrate exactly what you&#39;re doing: &quot;I&#39;m clicking... now I&#39;m typing...&quot;</li>
+<li>Normalize mistakes: &quot;Oops I forgot something - let me fix it&quot;</li>
+<li>Celebrate effort not just success: &quot;Nice work thinking through that!&quot;</li>
+<li>Answer the same question multiple times patiently</li>
+</ul>
+<p>❌ <strong>DON&#39;T:</strong></p>
+<ul>
+<li>Use &quot;obviously&quot; or assume prior knowledge</li>
+<li>Assume everyone is on the same screen area</li>
+<li>Rush through demos</li>
+<li>Make anyone feel bad about getting stuck</li>
+<li>Focus on speed - focus on understanding</li>
+</ul>
+<h3>Responding to Common Issues</h3>
+<table>
+<thead>
+<tr>
+<th scope="col">Student Says</th>
+<th scope="col">Your Response</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&quot;I can&#39;t see my assignment issue&quot;</td>
+<td>Have them go to Issues tab, filter by Assignee &gt; Me, or give direct link</td>
+</tr>
+<tr>
+<td>&quot;The bot is confusing me&quot;</td>
+<td>Ask what part confused them, then explain in plain language</td>
+</tr>
+<tr>
+<td>&quot;I don&#39;t know what [jargon] means&quot;</td>
+<td>Explain, then add it to glossary so next student finds it</td>
+</tr>
+<tr>
+<td>&quot;I accidentally merged the wrong thing&quot;</td>
+<td>No big deal - revert commit, explain it, move on</td>
+</tr>
+<tr>
+<td>&quot;My screen reader stops at the file picker&quot;</td>
+<td>Have them use keyboard: Tab to button, Space to open, Type filename</td>
+</tr>
+<tr>
+<td>&quot;I&#39;m done - what&#39;s next?&quot;</td>
+<td>Option 1: Do another challenge. Option 2: Review someone&#39;s PR. Option 3: Help a peer.</td>
+</tr>
+</tbody></table>
+<h3>End of Workshop Facilitator Duties</h3>
+<ol>
+<li><strong>Export metrics</strong> - Use progress tracker to generate final report</li>
+<li><strong>Write thank you email</strong> - Personal note to each student (use template)</li>
+<li><strong>Create alumni channel</strong> - Slack/Discord for ongoing support</li>
+<li><strong>Document what worked</strong> - Feedback for next workshop</li>
+<li><strong>Tag students in commit credit</strong> - Add to CONTRIBUTORS file</li>
+</ol>
+<hr>
+<h2>Emergency Protocols</h2>
+<h3>Bot stops responding to PRs</h3>
+<ul>
+<li>Check GitHub Actions status page</li>
+<li>Manually review PRs and comment with feedback format bot would use</li>
+<li>Post in Discussions: &quot;Facing technical issue, we&#39;ll handle this manually&quot;</li>
+</ul>
+<h3>Student GitHub account locked</h3>
+<ul>
+<li>Have them reset password via GitHub</li>
+<li>Or create temporary escalation issue for them to move forward</li>
+</ul>
+<h3>Zoom connectivity issues</h3>
+<ul>
+<li>Have phone dial-in number as backup</li>
+<li>Offer to continue in Discussions if needed</li>
+<li>Record session for students who lose connection</li>
+</ul>
+<h3>Workshop needs to end early</h3>
+<ul>
+<li>Stop at natural break point</li>
+<li>Students can continue async after</li>
+<li>No one forced offline mid-PR</li>
+</ul>
+
+  </main>
+  <footer role="contentinfo" class="site-footer">
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.org">Community Access</a></p>
+    <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.org">community-access.org</a></p>
+  </footer>
+  </body>
+</html>

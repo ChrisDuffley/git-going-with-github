@@ -8,6 +8,70 @@
 
 ---
 
+## Workshop Recommendation (Chapter 9)
+
+For this workshop, Chapter 9 is a **guided practice chapter**, not a graded automation chapter.
+
+- **No Actions-based validation:** Notification settings and inbox actions are account-level behaviors and are not reliably validated by the Learning Room PR bot.
+- **Keep it teachable and simple:** Focus on one clear routine students can repeat daily.
+- **Use a consistent pattern:** Demonstrate once, then have students complete a short guided walkthrough.
+
+### Why this chapter has no bot-graded challenge
+
+- The current validation workflow checks PR and markdown quality, not personal notification preferences.
+- Notification state changes (watch level, mute, done, saved) are not part of repository file changes.
+- A forced graded check here would create busywork instead of meaningful skill practice.
+
+---
+
+## Guided Walkthrough Challenge (No Automation Check)
+
+Use this as the chapter exercise. It should take about 5-8 minutes.
+
+### Goal
+
+Set up a useful notification workflow so students can keep up with reviews, mentions, and assignments without inbox overload.
+
+### Student Steps
+
+1. Open the workshop repository and set **Watch** to **Participating and @mentions**.
+2. Open the notifications inbox: `https://github.com/notifications`.
+3. Activate the **Review requested** filter.
+4. Activate the **Assigned** filter.
+5. Open one notification and return to inbox.
+6. Perform one inbox action on a non-critical thread:
+	- `M` to mute, or
+	- `E` to mark done.
+
+### Expected Outcome
+
+- Student can find review requests quickly.
+- Student can find assigned work quickly.
+- Student can reduce noise with one inbox action.
+
+### Facilitator Verification (Lightweight)
+
+Ask each student to report the following verbally or in chat:
+
+1. Their selected watch level.
+2. Which two filters they used.
+3. Which inbox action they tested (`M` or `E`).
+
+This keeps Chapter 9 practical and consistent without adding grading overhead.
+
+### If You Get Stuck
+
+1. Reload the notifications page and reapply one filter at a time.
+2. If inbox is empty, switch to `Done` and practice action flow there.
+3. If shortcuts conflict with screen reader mode, focus the notification row and retry.
+4. Ask facilitator to model one inbox action live, then repeat.
+
+### Learning Moment
+
+Notification management protects focus. You can stay responsive without drowning in updates.
+
+---
+
 ## What Generates a Notification?
 
 GitHub sends you a notification when:

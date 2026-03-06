@@ -46,146 +46,163 @@ jobs:
             }
             
             // Get all participants (contributors to learning-room)
-            const { data: contributors } = await github.rest.repos.listContributors({
-              owner: context.repo.owner,
-              repo: context.repo.repo
-            });
-            
-            // Filter out bots and the PR author
-            const potentialReviewers = contributors
-              .filter(c => c.type === 'User' && c.login !== author)
-              .map(c => c.login);
-            
-            if (potentialReviewers.length === 0) {
-              console.log('No peer reviewers available yet');
-              return;
-            }
-            
-            // Pairing strategies
-            async function getReviewerByStrategy(strategy = 'random') {
-              if (strategy === 'random') {
-                return potentialReviewers[Math.floor(Math.random() * potentialReviewers.length)];
+            try {
+              const { data: contributors } = await github.rest.repos.listContributors({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                per_page: 100
+              });
+              
+              // Filter out bots and the PR author
+              const potentialReviewers = contributors
+                .filter(c => c.type === 'User' && c.login !== author)
+                .map(c => c.login);
+              
+              if (potentialReviewers.length === 0) {
+                console.log('No peer reviewers available yet');
+                return;
               }
               
-              if (strategy === 'least_reviews') {
-                // Find person who has done the fewest reviews
-                const reviewCounts = {};
-                for (const reviewer of potentialReviewers) {
-                  const { data: reviews } = await github.rest.pulls.list({
+              // Pairing strategies
+              async function getReviewerByStrategy(strategy = 'least_reviews') {
+                if (strategy === 'random') {
+                  return potentialReviewers[Math.floor(Math.random() * potentialReviewers.length)];
+                }
+                
+                if (strategy === 'least_reviews') {
+                  // Optimized: get all PRs once, then count reviews per reviewer
+                  const { data: allPRs } = await github.rest.pulls.list({
                     owner: context.repo.owner,
                     repo: context.repo.repo,
                     state: 'all',
                     per_page: 100
                   });
                   
-                  let count = 0;
-                  for (const pr of reviews) {
-                    const { data: prReviews } = await github.rest.pulls.listReviews({
-                      owner: context.repo.owner,
-                      repo: context.repo.repo,
-                      pull_number: pr.number
-                    });
-                    if (prReviews.some(r => r.user.login === reviewer)) {
-                      count++;
+                  const reviewCounts = {};
+                  potentialReviewers.forEach(reviewer => {
+                    reviewCounts[reviewer] = 0;
+                  });
+                  
+                  // Count reviews for each PR in a single pass
+                  for (const pr of allPRs) {
+                    try {
+                      const { data: prReviews } = await github.rest.pulls.listReviews({
+                        owner: context.repo.owner,
+                        repo: context.repo.repo,
+                        pull_number: pr.number,
+                        per_page: 100
+                      });
+                      
+                      prReviews.forEach(review => {
+                        if (review.user && potentialReviewers.includes(review.user.login)) {
+                          reviewCounts[review.user.login]++;
+                        }
+                      });
+                    } catch (error) {
+                      // Skip PRs where we can't fetch reviews
+                      console.log(`Could not fetch reviews for PR ${pr.number}`);
                     }
                   }
-                  reviewCounts[reviewer] = count;
+                  
+                  // Return reviewer with fewest reviews
+                  const sortedByReviews = Object.entries(reviewCounts)
+                    .sort((a, b) => a[1] - b[1]);
+                  return sortedByReviews[0]?.[0] || potentialReviewers[0];
                 }
                 
-                // Return reviewer with fewest reviews
-                return Object.entries(reviewCounts)
-                  .sort((a, b) => a[1] - b[1])[0]?.[0] || potentialReviewers[0];
+                if (strategy === 'skill_match') {
+                  // Match based on PR content and student interests
+                  const { data: prData } = await github.rest.pulls.get({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    pull_number: context.payload.pull_request.number
+                  });
+                  
+                  const hasA11yLabel = prData.labels?.some(l => 
+                    l.name.includes('accessibility') || l.name.includes('a11y')
+                  );
+                  
+                  if (hasA11yLabel && roster.students.length > 0) {
+                    const a11yExperts = roster.students
+                      .filter(s => s.interests?.includes('accessibility') && s.username !== author)
+                      .map(s => s.username);
+                    
+                    if (a11yExperts.length > 0) {
+                      return a11yExperts[Math.floor(Math.random() * a11yExperts.length)];
+                    }
+                  }
+                  
+                  // Fall back to random if no skill match
+                  return potentialReviewers[Math.floor(Math.random() * potentialReviewers.length)];
+                }
+                
+                // Default to random
+                return potentialReviewers[Math.floor(Math.random() * potentialReviewers.length)];
               }
               
-              if (strategy === 'skill_match') {
-                // Match based on PR content
-                const prFiles = context.payload.pull_request.changed_files;
-                
-                // If accessibility-related, find reviewer interested in a11y
-                const { data: prData } = await github.rest.pulls.get({
+              const reviewer = await getReviewerByStrategy('least_reviews');
+              
+              // Request review
+              try {
+                await github.rest.pulls.requestReviewers({
                   owner: context.repo.owner,
                   repo: context.repo.repo,
-                  pull_number: context.payload.pull_request.number
+                  pull_number: context.payload.pull_request.number,
+                  reviewers: [reviewer]
                 });
                 
-                const hasA11yLabel = prData.labels?.some(l => 
-                  l.name.includes('accessibility') || l.name.includes('a11y')
-                );
-                
-                if (hasA11yLabel && roster.students.length > 0) {
-                  const a11yExperts = roster.students
-                    .filter(s => s.interests?.includes('accessibility') && s.username !== author)
-                    .map(s => s.username);
-                  
-                  if (a11yExperts.length > 0) {
-                    return a11yExperts[Math.floor(Math.random() * a11yExperts.length)];
-                  }
-                }
-              }
-              
-              // Default to random
-              return potentialReviewers[Math.floor(Math.random() * potentialReviewers.length)];
-            }
-            
-            const reviewer = await getReviewerByStrategy('least_reviews');
-            
-            // Request review
-            try {
-              await github.rest.pulls.requestReviewers({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                pull_number: context.payload.pull_request.number,
-                reviewers: [reviewer]
-              });
-              
-              const pairBody = [
-                '## Peer Review Assigned',
-                '',
-                'Hi @' + author + '! Your PR has been automatically paired with @' + reviewer + ' for peer review.',
-                '',
-                '### For @' + reviewer + ':',
-                '',
-                'This is a great opportunity to practice code review skills! Here\'s what to look for:',
-                '',
-                '**Content Quality:**',
-                '- [ ] Does the change accomplish what the issue describes?',
-                '- [ ] Is the writing clear and helpful?',
-                '- [ ] Are there any typos or grammar issues?',
-                '',
-                '**Accessibility:**',
-                '- [ ] Proper heading hierarchy (H1 \u2192 H2 \u2192 H3, no skips)?',
-                '- [ ] Descriptive link text (not "click here")?',
-                '- [ ] Alt text on images?',
-                '- [ ] [TODO] markers removed?',
-                '',
-                '**Documentation:**',
-                '- [ ] Code blocks are properly formatted?',
-                '- [ ] Tables have headers?',
-                '- [ ] References/links work correctly?',
-                '',
-                '**Review Guidelines:**',
-                '- Be kind and constructive',
-                '- Suggest improvements, don\'t just point out problems',
-                '- Ask questions if something is unclear',
-                '- Approve when ready or request changes with explanation',
-                '',
-                '**Resources:**',
-                '- [How to Review PRs](../../docs/05-working-with-pull-requests.md#reviewing-pull-requests)',
-                '- [Writing Good Review Comments](../../docs/07-culture-etiquette.md#giving-feedback)',
-                '',
-                '---',
-                '*Pairing by Learning Room Grouping Engine*'
-              ].join('\n');
+                const pairBody = [
+                  '## Peer Review Assigned',
+                  '',
+                  'Hi @' + author + '! Your PR has been automatically paired with @' + reviewer + ' for peer review.',
+                  '',
+                  '### For @' + reviewer + ':',
+                  '',
+                  'This is a great opportunity to practice code review skills! Here\'s what to look for:',
+                  '',
+                  '**Content Quality:**',
+                  '- [ ] Does the change accomplish what the issue describes?',
+                  '- [ ] Is the writing clear and helpful?',
+                  '- [ ] Are there any typos or grammar issues?',
+                  '',
+                  '**Accessibility:**',
+                  '- [ ] Proper heading hierarchy (H1 → H2 → H3, no skips)?',
+                  '- [ ] Descriptive link text (not "click here")?',
+                  '- [ ] Alt text on images?',
+                  '- [ ] [TODO] markers removed?',
+                  '',
+                  '**Documentation:**',
+                  '- [ ] Code blocks are properly formatted?',
+                  '- [ ] Tables have headers?',
+                  '- [ ] References/links work correctly?',
+                  '',
+                  '**Review Guidelines:**',
+                  '- Be kind and constructive',
+                  '- Suggest improvements, don\'t just point out problems',
+                  '- Ask questions if something is unclear',
+                  '- Approve when ready or request changes with explanation',
+                  '',
+                  '**Resources:**',
+                  '- [How to Review PRs](../../docs/05-working-with-pull-requests.md#reviewing-pull-requests)',
+                  '- [Writing Good Review Comments](../../docs/07-culture-etiquette.md#giving-feedback)',
+                  '',
+                  '---',
+                  '*Pairing by Learning Room Grouping Engine*'
+                ].join('\n');
 
-              await github.rest.issues.createComment({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                issue_number: context.payload.pull_request.number,
-                body: pairBody
-              });
-              
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.pull_request.number,
+                  body: pairBody
+                });
+                
+              } catch (error) {
+                console.log('Could not assign reviewer:', error.message);
+              }
             } catch (error) {
-              console.log('Could not assign reviewer:', error.message);
+              console.error('Error in peer reviewer assignment:', error);
+              // Don't fail the workflow if pairing fails
             }
 
   create-study-groups:

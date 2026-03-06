@@ -61,7 +61,11 @@ GitHub Skills modules require no pre-work - they are set up together, in-session
 
 ---
 
-## Block 0 - Welcome and Orientation (9:00 AM, 30 min)
+## Block 0 - Welcome and Orientation (9:00 AM, 45 min)
+
+### Date & Location
+**Saturday, March 7, 2026** | 9:00 AM - 5:00 PM  
+**Sunday, March 8, 2026** | 9:00 AM - 5:00 PM
 
 ### Purpose
 Make participants comfortable, set expectations, verify setups, and create a psychologically safe space for the day.
@@ -79,6 +83,18 @@ Make participants comfortable, set expectations, verify setups, and create a psy
 - Does everyone's screen reader announce page headings?
 - Is hovercards turned off? (If not - navigate to Accessibility Settings now)
 - Can everyone access GitHub Issues and Pull Requests? (Modern experience may already be active - if not, verify via User Menu → Feature preview; see Step 4 in [Pre-Workshop Setup](docs/00-pre-workshop-setup.md))
+
+**Clone the learning-room repository (15 minutes):**
+Everyone will work in the shared `learning-room` repository today. Clone it now so it's ready for Block 5:
+1. Open your terminal (or GitHub Desktop if you prefer GUI)
+2. Navigate to where you store projects: `cd ~/Documents` (or your preferred location)
+3. Clone the repository:
+   ```bash
+   git clone https://github.com/Community-Access/learning-room.git
+   cd learning-room
+   ```
+4. Verify you can see the files: `ls` (you should see `README.md`, `docs/`, etc.)
+5. **Optional:** Open the folder in your code editor to explore the file structure
 
 **Introductions:**
 - Each participant: your name, your screen reader and OS, what brings you here
@@ -329,10 +345,10 @@ Getting started with open source AT contributions.
 4. In the description, reference the file and line where you found the issue:
    ```markdown
    ## What I found
-   In `docs/setup-guide.md`, the link to the accessibility settings page appears to be broken.
+   The `[DATE]` placeholder at the bottom of `docs/welcome.md` needs to be updated with today's date.
    
    ## Which challenge
-   Challenge 1: Fix Broken Link (from CHALLENGES.md)
+   Challenge 1: Update [DATE] Placeholder (from CHALLENGES.md)
    ```
 5. Submit - note the issue number. You will use `Closes #XX` in your PR during Block 5
 
@@ -439,7 +455,7 @@ The `learning-room` repo has a `docs/` folder with three intentionally imperfect
 
 | Challenge | File | What to fix | Difficulty |
 |-----------|------|-------------|-----------|
-| Challenge 1: Fix Broken Link | `docs/welcome.md` | Find and repair the broken internal link | 10-15 min |
+| Challenge 1: Fix Broken Link | `docs/welcome.md` | Update the `[DATE]` placeholder with today's date | 5-10 min |
 | Challenge 2: Add Keyboard Shortcut | `docs/keyboard-shortcuts.md` | Add a missing shortcut to the correct table | 15-20 min |
 | Challenge 3: Complete Welcome Guide | `docs/welcome.md` | Fill in the three `[TODO]` sections | 20-30 min |
 ### Know Your File Before You Fix It (5 min)

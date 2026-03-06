@@ -157,7 +157,9 @@
 <p>Before entering the room (or joining the call), participants should have completed everything in <a href="docs/00-pre-workshop-setup.html">Pre-Workshop Setup</a>. The facilitator will do a quick verification at the start.</p>
 <p>GitHub Skills modules require no pre-work - they are set up together, in-session, during the blocks where they are used.</p>
 <hr>
-<h2>Block 0 - Welcome and Orientation (9:00 AM, 30 min)</h2>
+<h2>Block 0 - Welcome and Orientation (9:00 AM, 45 min)</h2>
+<h3>Date &amp; Location</h3>
+<p><strong>Saturday, March 7, 2026</strong> | 9:00 AM - 5:00 PM<br><strong>Sunday, March 8, 2026</strong> | 9:00 AM - 5:00 PM</p>
 <h3>Purpose</h3>
 <p>Make participants comfortable, set expectations, verify setups, and create a psychologically safe space for the day.</p>
 <h3>Activities</h3>
@@ -175,6 +177,17 @@
 <li>Is hovercards turned off? (If not - navigate to Accessibility Settings now)</li>
 <li>Can everyone access GitHub Issues and Pull Requests? (Modern experience may already be active - if not, verify via User Menu → Feature preview; see Step 4 in <a href="docs/00-pre-workshop-setup.html">Pre-Workshop Setup</a>)</li>
 </ul>
+<p><strong>Clone the learning-room repository (15 minutes):</strong>
+Everyone will work in the shared <code>learning-room</code> repository today. Clone it now so it&#39;s ready for Block 5:</p>
+<ol>
+<li>Open your terminal (or GitHub Desktop if you prefer GUI)</li>
+<li>Navigate to where you store projects: <code>cd ~/Documents</code> (or your preferred location)</li>
+<li>Clone the repository:<pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/Community-Access/learning-room.git
+<span class="hljs-built_in">cd</span> learning-room</code></pre>
+</li>
+<li>Verify you can see the files: <code>ls</code> (you should see <code>README.md</code>, <code>docs/</code>, etc.)</li>
+<li><strong>Optional:</strong> Open the folder in your code editor to explore the file structure</li>
+</ol>
 <p><strong>Introductions:</strong></p>
 <ul>
 <li>Each participant: your name, your screen reader and OS, what brings you here</li>
@@ -432,10 +445,10 @@ Getting started with open source AT contributions.</code></pre>
 <li>Choose the &quot;Beginner Challenge&quot; template (this maps to Challenge 1, 2, or 3 from CHALLENGES.md)</li>
 <li>In the title, be specific: &quot;Fix broken link in docs/welcome.md&quot; or &quot;Add missing NVDA shortcut to keyboard-shortcuts.md&quot;</li>
 <li>In the description, reference the file and line where you found the issue:<pre><code class="hljs language-markdown"><span class="hljs-section">## What I found</span>
-In <span class="hljs-code">`docs/setup-guide.md`</span>, the link to the accessibility settings page appears to be broken.
+The <span class="hljs-code">`[DATE]`</span> placeholder at the bottom of <span class="hljs-code">`docs/welcome.md`</span> needs to be updated with today&#x27;s date.
 
 <span class="hljs-section">## Which challenge</span>
-Challenge 1: Fix Broken Link (from CHALLENGES.md)</code></pre>
+Challenge 1: Update [DATE] Placeholder (from CHALLENGES.md)</code></pre>
 </li>
 <li>Submit - note the issue number. You will use <code>Closes #XX</code> in your PR during Block 5</li>
 </ol>
@@ -542,8 +555,8 @@ Challenge 1: Fix Broken Link (from CHALLENGES.md)</code></pre>
 <tbody><tr>
 <td>Challenge 1: Fix Broken Link</td>
 <td><code>docs/welcome.md</code></td>
-<td>Find and repair the broken internal link</td>
-<td>10-15 min</td>
+<td>Update the <code>[DATE]</code> placeholder with today&#39;s date</td>
+<td>5-10 min</td>
 </tr>
 <tr>
 <td>Challenge 2: Add Keyboard Shortcut</td>

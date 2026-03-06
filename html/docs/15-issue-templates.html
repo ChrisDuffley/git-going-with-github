@@ -40,15 +40,140 @@
 <hr>
 <h2>Prerequisites Checklist</h2>
 <h3>Before starting this chapter, verify you have completed</h3>
+<p><strong>Hard Requirements:</strong></p>
 <ul>
 <li><input aria-label="Chapter 4:" disabled="" type="checkbox"> Chapter 4: <a href="04-working-with-issues.html">Working with Issues</a> - Know how to create, read, and navigate issues</li>
-<li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - VS Code installed with YAML syntax highlighting enabled</li>
-<li><input aria-label="Chapter 9:" disabled="" type="checkbox"> Chapter 9: <a href="09-notifications.html">Notifications</a> - Basic understanding of workflow triggers</li>
 <li><input aria-label="A GitHub repository where you have write access (your fork or personal repo)" disabled="" type="checkbox"> A GitHub repository where you have write access (your fork or personal repo)</li>
-<li><input aria-label="Terminal/Command line basic comfort (Chapter 5 mentions git workflows)" disabled="" type="checkbox"> Terminal/Command line basic comfort (Chapter 5 mentions git workflows)</li>
+<li><input aria-label="A text editor with YAML syntax highlighting (VS Code, or any editor showing" disabled="" type="checkbox"> A text editor with YAML syntax highlighting (VS Code, or any editor showing <code>.yml</code> files with color)</li>
+</ul>
+<p><strong>Recommended (but not blocking):</strong></p>
+<ul>
+<li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - Optional but helpful for generating template variations</li>
+<li><input aria-label="Chapter 9:" disabled="" type="checkbox"> Chapter 9: <a href="09-notifications.html">Notifications</a> - Basic understanding of workflow triggers</li>
+<li><input aria-label="Terminal/Command line basic comfort (useful but you can GitHub web editor if needed)" disabled="" type="checkbox"> Terminal/Command line basic comfort (useful but you can GitHub web editor if needed)</li>
+</ul>
+<p><strong>What you already have:</strong></p>
+<ul>
+<li><input aria-label="You filled out the" disabled="" type="checkbox"> You filled out the <strong>Workshop Registration template</strong> to join this workshop — this is your learning tool for Chapter 15</li>
 </ul>
 <p><strong>Day 2 Amplifier:</strong> In <a href="16-accessibility-agents.html">Chapter 16 (Accessibility Agents)</a>, you&#39;ll use <code>@template-builder</code> to automate template creation. Complete this chapter first, then come back to Chapter 16.</p>
-<p><strong>Estimated time for this chapter:</strong> 1.5 hours (including exercises)</p>
+<p><strong>Estimated time for this chapter:</strong> 2-2.5 hours (including exercises and YAML troubleshooting time)</p>
+<hr>
+<h2>Workshop Recommendation (Chapter 15)</h2>
+<p>Chapter 15 is a <strong>template design and implementation chapter</strong> focused on structuring contributions with a concrete, familiar example.</p>
+<ul>
+<li><strong>Challenge count:</strong> 2-3 guided challenges</li>
+<li><strong>Automation check:</strong> none (template structure quality is design-focused)</li>
+<li><strong>Evidence:</strong> issue comment or PR with template remixed or created</li>
+<li><strong>Pattern:</strong> analyze (a template you know) → remix (into a new context) → create (from scratch)</li>
+</ul>
+<h3>Chapter 15 Guided Challenges (No Bot Validation)</h3>
+<p>For this workshop, Chapter 15 starts with a template you&#39;ve already seen: the registration form you filled out to join the workshop. This is the perfect teaching tool because:</p>
+<ol>
+<li><strong>You know what it does</strong> — You filled it out and saw it work</li>
+<li><strong>It shows YAML form templates</strong> — More advanced than Markdown; uses structured fields</li>
+<li><strong>Good accessibility design</strong> — Demonstrates labeled form fields and validation</li>
+</ol>
+<h4>Challenge 1: Analyze the registration template</h4>
+<p>Understand how professional templates work by examining the one you already used:</p>
+<p><strong>The Template:</strong> <a href="https://github.com/community-access/git-going-with-github/blob/main/.github/ISSUE_TEMPLATE/workshop-registration.yml"><code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code></a> — This is the form you filled out to register. It&#39;s a real, production template.</p>
+<p><strong>What to Read:</strong></p>
+<ol>
+<li><p><strong>YAML Frontmatter</strong> (top 5 lines):</p>
+<ul>
+<li><code>name</code> → What appears in the template chooser</li>
+<li><code>description</code> → Helper text when users pick this template</li>
+<li><code>title</code> → Auto-fills the issue title</li>
+<li><code>labels</code> → Automatically adds labels to issues created with this template</li>
+</ul>
+</li>
+<li><p><strong>Field Types</strong> (in the <code>body</code> section). Notice we use:</p>
+<ul>
+<li><code>type: markdown</code> → Display-only text (instructions)</li>
+<li><code>type: input</code> → Single-line text field (name, email)</li>
+<li><code>type: dropdown</code> → List of options (proficiency level, screen reader choice)</li>
+<li><code>type: textarea</code> → Multi-line text (questions/accommodations)</li>
+</ul>
+</li>
+<li><p><strong>Field Metadata</strong>:</p>
+<ul>
+<li><code>id</code> → Internal identifier; doesn&#39;t display to user</li>
+<li><code>label</code> → What the user sees as the field name</li>
+<li><code>description</code> → Helper text explaining what to fill in</li>
+<li><code>placeholder</code> → Example text inside the field</li>
+<li><code>validations: required: true</code> → Marks a field as required</li>
+</ul>
+</li>
+<li><p><strong>Accessibility Thinking</strong> (Search the file for &quot;accessible&quot;) — Notice the description mentions that all fields work with screen readers. This is professional template thinking.</p>
+</li>
+</ol>
+<p><strong>Compare:</strong> How is this different from a blank issue?</p>
+<ul>
+<li>Blank issue: massive empty text box, no guidance</li>
+<li>This template: structured fields, helpful descriptions, required/optional clarity</li>
+</ul>
+<p><strong>Expected Outcome:</strong> You can explain why templates reduce back-and-forth questions and make contribution easier.</p>
+<h3>Worked Example: Remixing the Registration Template</h3>
+<p>Use this side-by-side pattern when you remix the registration template.</p>
+<p><strong>Source sample:</strong> <a href="../.github/ISSUE_TEMPLATE/workshop-registration.yml"><code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code></a></p>
+<p><strong>Remix sample:</strong> <a href="../learning-room/docs/samples/chapter-15-registration-remix-example.yml"><code>learning-room/docs/samples/chapter-15-registration-remix-example.yml</code></a></p>
+<p>What changes and what stays the same:</p>
+<ol>
+<li>Keep the YAML skeleton (<code>name</code>, <code>description</code>, <code>title</code>, <code>labels</code>, <code>body</code>).</li>
+<li>Keep field structure (<code>type</code>, <code>id</code>, <code>attributes</code>, <code>validations</code>).</li>
+<li>Change context-specific content (labels, field names, descriptions, options).</li>
+<li>Re-evaluate which fields must be required.</li>
+</ol>
+<p>This is a remix workflow, not a from-scratch workflow.</p>
+<h4>Challenge 2: Remix the registration template for a new context</h4>
+<p>Take what you learned and adapt the registration template for a different use case:</p>
+<ul>
+<li>Pick a new context (e.g., bug report, event attendance, product research)</li>
+<li>Keep the same YAML structure and field types</li>
+<li>Change: title, labels, and field descriptions to match your new context</li>
+<li>Change: field names and options (e.g., <code>proficiency</code> → <code>experience</code>, or similar)</li>
+<li>Create a new file: <code>.github/ISSUE_TEMPLATE/my-template.yml</code></li>
+<li>Validate YAML syntax before pushing (for example: <a href="https://www.yamllint.com/">https://www.yamllint.com/</a>)</li>
+<li>Commit and push to a repository where you have write access</li>
+</ul>
+<p><strong>Expected Outcome:</strong> You can adapt a professional template to a new context without creating from scratch.</p>
+<h4>Challenge 3: Optional: Create a Markdown template</h4>
+<p>If you want to explore Markdown templates as well:</p>
+<ul>
+<li>Create a new file: <code>.github/ISSUE_TEMPLATE/my-markdown-template.md</code></li>
+<li>Write Markdown-template frontmatter (<code>name</code>, <code>about</code>, <code>title</code>, <code>labels</code>) and note that this differs from YAML form templates (which use <code>description</code>)</li>
+<li>Add a Markdown body with 3-4 sections (e.g., Problem, Context, Solution Ideas)</li>
+<li>Include HTML comment instructions to guide contributors: <code>&lt;!-- Instructions here --&gt;</code></li>
+<li>Commit and push</li>
+</ul>
+<p><strong>Expected Outcome:</strong> You can create both YAML form templates and Markdown templates.</p>
+<h4>Challenge 4: Test in the Template Chooser (Optional)</h4>
+<ul>
+<li>Click &quot;New Issue&quot; in your test repository</li>
+<li>Verify your template appears in the chooser</li>
+<li>Click &quot;Get started&quot; and file a test issue using your template</li>
+</ul>
+<p><strong>Expected Outcome:</strong> Your template works and appears in the GitHub template picker.</p>
+<h3>Expected Overall Outcomes</h3>
+<ul>
+<li>Student understands template structure (YAML frontmatter, field types, validation)</li>
+<li>Student can analyze and remix professional templates</li>
+<li>Student can create both YAML form and Markdown templates</li>
+<li>Student understands why templates improve contribution quality</li>
+<li>Student can reduce maintainer effort through clear, guided contribution processes</li>
+</ul>
+<h3>If You Get Stuck</h3>
+<ol>
+<li><strong>Can&#39;t find the registration template?</strong> Look in <code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code> — that&#39;s the form you filled out to register.</li>
+<li><strong>YAML syntax confusing?</strong> The registration template is a working example. Copy its structure and edit the field descriptions. YAML is just indented key-value pairs.</li>
+<li><strong>YAML not parsing?</strong> Compare with the remix sample in <code>learning-room/docs/samples/chapter-15-registration-remix-example.yml</code> and check indentation (2 spaces per level).</li>
+<li><strong>Your template doesn&#39;t appear?</strong> Verify: filename ends in <code>.yml</code> or <code>.md</code>, you pushed the commit, and file is in <code>.github/ISSUE_TEMPLATE/</code> folder.</li>
+<li><strong>Testing in the template chooser isn&#39;t working?</strong> Reload the Issues page, try a different repository, or ask facilitator for a test repository with write access.</li>
+<li><strong>Remix approach feels overwhelming?</strong> Start by changing just the field labels and descriptions. Don&#39;t change the structure yet.</li>
+<li>Ask facilitator to review your template and suggest improvements.</li>
+</ol>
+<h3>Learning Moment</h3>
+<p>Templates are scaffolding. They don&#39;t restrict expert contributors—they guide newcomers. A template that takes 2 minutes to understand saves 30 minutes of back-and-forth questions later. By remixing a professional template, you learned how to make templates work for your specific context. That&#39;s how maintainers decide if a new template is worth creating: they adapt existing patterns first, then innovate.</p>
 <hr>
 <h2>Table of Contents</h2>
 <ol>

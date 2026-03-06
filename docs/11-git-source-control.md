@@ -14,6 +14,44 @@
 
 ---
 
+## Workshop Recommendation (Chapter 11)
+
+Chapter 11 is the first **local Git workflow chapter** with hands-on repository management.
+
+- **Challenge count:** 3
+- **Time per challenge:** under 10 minutes each
+- **Evidence:** PR metadata, branch names, and committed changes
+- **Pattern:** clone -> edit -> commit -> push -> PR
+
+### Chapter 11 Challenge Set
+
+1. **Clone the learning room repository**
+   - Clone `learning-room` to your local machine using VS Code.
+2. **Make one small commit**
+   - Edit a file, stage changes, write a clear commit message, and commit locally.
+3. **Push and open a linked PR**
+   - Push your branch and open a PR that references a challenge issue with `Closes #XX`.
+
+### Expected Outcomes
+
+- Student can clone a repository using VS Code Command Palette.
+- Student can navigate the Source Control panel and stage files.
+- Student can write a clear commit message and push a branch to GitHub.
+
+### If You Get Stuck
+
+1. Confirm Command Palette opens with `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac).
+2. If Source Control panel doesn't open, use `Ctrl+Shift+G` (Windows) or `Cmd+Shift+G` (Mac).
+3. If push fails, verify authentication: `Ctrl+Shift+P` → "Git: Fetch" to test connection.
+4. If branch won't create, confirm VS Code is in the cloned repository folder (status bar shows branch name).
+5. Ask facilitator to verify your clone location and help with one push.
+
+### Learning Moment
+
+Local Git operations give you full control and immediate feedback. You can see your changes before they reach GitHub.
+
+---
+
 ## Table of Contents
 
 1. [Cloning a Repository in VS Code](#1-cloning-a-repository-in-vs-code)
@@ -70,6 +108,35 @@
 5. Choose destination → Open
 
 **Why HTTPS over SSH for this workshop:** HTTPS works immediately with no setup. SSH requires key generation and configuration (see [Appendix D: Git Authentication](appendix-d-git-authentication.md) for SSH setup).
+
+### Try It Now: Clone the Sci-Fi Themes Repo 🚀
+
+To make your first clone meaningful and fun, try cloning the **VS Code Sci-Fi Thinking Phrases** repository:
+
+**Repository URL:** `https://github.com/community-access/vscode-sci-fi-themes.git`
+
+This repo contains custom loading phrases for GitHub Copilot Chat from three sci-fi universes:
+- **Star Trek** — Engage warp drive and run diagnostics
+- **The Hitchhiker's Guide** — Consult the Infinite Improbability Drive
+- **Star Wars** — Read the ripples in the Force
+
+#### Why Clone This?
+
+- ✅ It's a real, working repository with multiple files to explore
+- ✅ You'll see a practical use of cloning (customizing your personal VS Code setup)
+- ✅ After cloning, you can pick a theme and apply it to your `settings.json`
+- ✅ When you open Copilot Chat, you'll see your custom phrases appear! 🌟
+
+#### Quick Start
+
+1. Clone: `Ctrl+Shift+P` → "Git: Clone" → paste URL above → `Enter`
+2. Choose a destination folder and open when prompted
+3. Navigate to the `themes/` folder and pick a `.json` file (star-trek, hitchhikers, or star-wars)
+4. Copy the `chat.agent.thinking.phrases` setting into your VS Code `settings.json`
+5. Reload VS Code: `Ctrl+Shift+P` → "Developer: Reload Window"
+6. Open Copilot Chat (`Ctrl+Shift+I`) and ask a question—watch your custom phrases appear!
+
+See `CLONE-THIS-REPO.md` in that repo for full instructions.
 
 <details>
 <summary>Web alternative (github.com)</summary>

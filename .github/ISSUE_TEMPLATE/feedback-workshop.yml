@@ -1,0 +1,168 @@
+name: "Workshop Feedback - Constructive Input Welcomed"
+description: "Share your experience with GIT Going with GitHub - what worked, what didn't, what you learned, what confused you. Your feedback helps us improve for the next cohort."
+title: "[FEEDBACK] GIT Going with GitHub - March 2026"
+labels: ["feedback", "workshop-experience"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Your Feedback Matters
+
+        You've completed (or are working through) GIT Going with GitHub. This form is your chance to tell us what worked, what didn't, and what we should change next time.
+
+        **This is not graded.** Your honest feedback is a gift to us and to future students. We read every response.
+
+        **All feedback is constructive by nature.** What confused you? Tell us. What felt missing? Tell us. What could we do better? Tell us. We are listening.
+
+        ---
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Part 1: Agent Exploration (Chapter 16)
+
+        You've now explored the 55+ agents in our system. Let's capture what worked and what didn't.
+
+  - type: textarea
+    id: agent-wins
+    attributes:
+      label: "Agent Wins: Which agents were most useful or surprising to you?"
+      description: "Name 1-3 agents that helped you or surprised you with their capabilities. Why did they stand out?"
+      placeholder: |
+        Example:
+        - @daily-briefing was incredibly useful for understanding my workflow
+        - @contrast-master helped me see color accessibility issues I would have missed
+        - @web-accessibility-wizard was confusing at first, but once I understood the questions, it worked great
+      validations:
+        required: false
+
+  - type: textarea
+    id: agent-gaps
+    attributes:
+      label: "Agent Gaps: Did you find any agents confusing or unhelpful?"
+      description: "Name 1-3 agents that didn't work as expected, confused you, or felt incomplete. What would make them better?"
+      placeholder: |
+        Example:
+        - @aria-specialist output was too technical for beginner level
+        - I couldn't figure out how to use @markdown-accessibility -- the prompts seemed to expect code, but I had documentation
+        - Missing an agent for X (accessibility concern or workflow)
+      validations:
+        required: false
+
+  - type: textarea
+    id: workshop-flow
+    attributes:
+      label: "Workshop Flow: How did the chapter progression feel?"
+      description: "Was the sequencing logical? Did earlier chapters prepare you for later ones? Any chapters that felt out of order or disconnected?"
+      placeholder: |
+        Example:
+        - The escalation from Chapter 4 to Chapter 5 felt natural
+        - Chapter 7 (Culture & Etiquette) could come earlier - students need this mindset before opening PRs
+        - Chapter 15 (Templates) felt rushed - I didn't have time to fully absorb it before Chapter 16
+      validations:
+        required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Part 2: Accessibility & Inclusion (Your Experience)
+
+        We designed this workshop to be accessible from Day 1. Tell us how we did.
+
+  - type: dropdown
+    id: at-used
+    attributes:
+      label: "Which assistive technology did you primarily use (if any)?"
+      description: "This helps us understand the accessibility landscape of our student body."
+      options:
+        - "No assistive technology (sighted, no AT)"
+        - "NVDA (Windows screen reader)"
+        - "JAWS (Windows screen reader)"
+        - "VoiceOver (Mac screen reader)"
+        - "VoiceOver (iOS screen reader)"
+        - "Other screen reader"
+        - "Magnification software"
+        - "Other AT or accommodation"
+        - "Prefer not to answer"
+    validations:
+      required: false
+
+  - type: textarea
+    id: accessibility-feedback
+    attributes:
+      label: "Accessibility Feedback: Was the workshop accessible to you?"
+      description: "Tell us about your experience accessing content, tools, environments, and resources. What worked? What didn't?"
+      placeholder: |
+        Example:
+        - The markdown documentation was great, but the Mermaid diagrams broke my screen reader
+        - VS Code setup section assumed clicking would work - keyboard navigation would have helped
+        - The keyboard shortcuts were clear and helped me navigate faster
+        - I needed CAPTCHA assistance during registration and the facilitator helped immediately
+      validations:
+        required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ## Part 3: General Workshop Experience
+
+  - type: textarea
+    id: what-stuck
+    attributes:
+      label: "What concept or skill sticks with you the most?"
+      description: "What from this workshop will you use or remember 6 months from now?"
+      placeholder: |
+        Example:
+        - Understanding that accessibility is about removing barriers, not adding complexity
+        - How to ask good questions in GitHub issues
+        - That my pull request review feedback actually helps other people
+      validations:
+        required: false
+
+  - type: textarea
+    id: what-confused
+    attributes:
+      label: "What confused you the most?"
+      description: "What topic or exercise could we explain better for next cohort?"
+      placeholder: |
+        Example:
+        - The difference between bot validation and human review
+        - Why we used both Markdown and YAML templates in Chapter 15
+        - How to know if my code review comment was useful or just pedantic
+      validations:
+        required: false
+
+  - type: textarea
+    id: general-feedback
+    attributes:
+      label: "Anything else?"
+      description: "Is there something we didn't ask that you want to tell us? Suggestions for next time? Things you loved? Facilitator appreciation? All welcome."
+      placeholder: |
+        Example:
+        - The emoji and personality in the docs made learning fun
+        - I wish there had been more peer pairing exercises
+        - Our facilitator [name] was amazing at explaining complex ideas
+        - I'd love to volunteer for the next cohort
+        - This changed how I think about open source
+      validations:
+        required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        ## Thank You
+
+        Thank you for spending two days (or more) with us. Whether you're continuing with open source, working in tech, or exploring for the first time, you've learned something that matters.
+
+        **You belong in open source. You belong in tech.**
+
+        If you have questions after the workshop, you can:
+        1. Reply to this issue with follow-up questions
+        2. Browse [Community Access discussions](https://github.com/community-access/accessibility-agents/discussions)
+        3. File an issue in [git-going-with-github](https://github.com/community-access/git-going-with-github/issues)
+        4. Reach out to facilitators directly (names and contact info in your cohort materials)
+
+        We hope to see you again. Whether that's a future workshop, contributing to open source, or building your own projects—we're cheering for you. ✨

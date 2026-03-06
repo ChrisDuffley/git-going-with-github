@@ -95,6 +95,52 @@ Every skill you build on Day 1 maps directly to an Accessibility Agents command 
 
 All documentation lives in the `docs/` folder. Read them in order for the full experience, or jump to what you need.
 
+---
+
+## 🎯 Your Challenges Are Waiting (Start Here!)
+
+**You have 30+ challenges pre-assigned to you by your GitHub username.**
+
+Go to the **Issues** tab of this repository and filter by your username. You'll see challenges like:
+
+```
+Chapter 4.1: Create Your First Issue (@YOUR_USERNAME)
+Chapter 4.2: Claim a Challenge (@YOUR_USERNAME)
+Chapter 5.1: Open Your First Pull Request (@YOUR_USERNAME)
+... and 27 more
+```
+
+Each issue is your personal challenge tracker. Inside, you'll find:
+- **Clear instructions** (with links back to this documentation)
+- **Step-by-step walkthrough** for your screen reader
+- **Bot validation** (automatic feedback on your work)
+- **Proof that you completed it** (closed issue = skill unlocked)
+
+**[Open the Challenge Hub](learning-room/docs/CHALLENGES.md)** for detailed instructions on every challenge, organized by chapter, with full context and learning moments.
+
+**The workflow is simple:**
+1. Click on a challenge issue assigned to you
+2. Click "I'm working on this!" to claim it
+3. Follow the instructions in the issue + the Challenge Hub
+4. Open a PR that says `Closes #<issue_number>`
+5. The bot validates your work
+6. When it passes, merge your PR and your issue auto-closes
+7. Move to the next challenge!
+
+**You don't need to memorize anything.** Every challenge is in the Issues tab, waiting for you. Every step is documented. Every question has a "If You Get Stuck" section.
+
+### ⚙️ Facilitators: Challenge Management
+
+Are you running this workshop? See [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md) for:
+- 🎓 Pre-workshop setup (batch issue generation for your cohort)
+- 📊 Real-time monitoring and student support
+- 🤖 Understanding and configuring bot validation
+- 🔄 Cleaning up and refreshing between cohorts
+
+The Facilitator guide includes templates, scripts, success metrics, and a final pre-workshop checklist.
+
+---
+
 > **HTML Version Available:** All markdown documentation is automatically converted to HTML format. After cloning the repository, you can browse the `html/` directory for web-formatted versions of every document. See [BUILD.md](BUILD.md) for details.
 
 > **Audio Series Available:** Every chapter and appendix has a companion podcast episode - a conversational two-host overview perfect for previewing concepts or reducing screen reader fatigue. [Browse all 44 episodes](PODCASTS.md) or [subscribe via RSS](https://community-access.org/git-going-with-github/podcasts/feed.xml).

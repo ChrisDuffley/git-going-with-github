@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
+  <title>Challenge System Architecture Summary - GIT Going with GitHub</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Challenge System Architecture Summary</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Challenge System Architecture Summary</h1>
+<h2>Overview</h2>
+<p>This document summarizes the complete challenge system architecture built for the Git-Going-With-GitHub workshop. It&#39;s designed to be:</p>
+<ul>
+<li><strong>Student-friendly</strong>: Easy to discover, claim, complete, and track challenges</li>
+<li><strong>Facilitator-friendly</strong>: Automated issue generation, bot validation, progress monitoring</li>
+<li><strong>Scalable</strong>: Works for any cohort size with batch script</li>
+<li><strong>Self-documenting</strong>: Every issue explains what to do and how bot validation works</li>
+</ul>
+<hr>
+<h2>System Components</h2>
+<h3>1. Challenge Discovery (Student-Facing)</h3>
+<p><strong>Primary Path:</strong> GitHub Issues tab (pre-assigned by @username)</p>
+<ul>
+<li>Students go to Issues → filter by assignee</li>
+<li>See issues like: <code>Chapter 4.1: Create Your First Issue (@yourname)</code></li>
+<li>Click issue → read full instructions → complete → PR with <code>Closes #XX</code></li>
+</ul>
+<p><strong>Secondary Paths:</strong></p>
+<ul>
+<li>GitHub Advanced Search: <code>is:issue assignee:@yourname label:challenge</code></li>
+<li>Challenge Hub: <a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> (expandable reference)</li>
+</ul>
+<p><strong>Documentation Updates:</strong></p>
+<ul>
+<li><a href="README.html">README.md</a> - &quot;🎯 Your Challenges Are Waiting&quot; section (lines 100-120)</li>
+<li><a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> - Welcome + discovery methods (top section)</li>
+</ul>
+<h3>2. Challenge Templates (Issue Infrastructure)</h3>
+<p>Located in <code>.github/ISSUE_TEMPLATE/</code>:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Chapter</th>
+<th scope="col">File</th>
+<th scope="col">Challenges</th>
+<th scope="col">Bot Validated</th>
+<th scope="col">Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>4</strong></td>
+<td><code>challenge-chapter-4.md</code></td>
+<td>3</td>
+<td>❌ Manual</td>
+<td>✅ Created</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td><code>challenge-chapter-5.md</code></td>
+<td>3</td>
+<td>✅ Yes</td>
+<td>✅ Created</td>
+</tr>
+<tr>
+<td><strong>6</strong></td>
+<td><code>challenge-chapter-6.md</code></td>
+<td>1</td>
+<td>✅ Yes</td>
+<td>✅ Created</td>
+</tr>
+<tr>
+<td><strong>11</strong></td>
+<td><code>challenge-chapter-11.md</code></td>
+<td>3</td>
+<td>✅ Yes</td>
+<td>✅ Created</td>
+</tr>
+</tbody></table>
+<p><strong>Template Contents:</strong></p>
+<ul>
+<li>YAML frontmatter with placeholders: <code>{CHAPTER}</code>, <code>{CHALLENGE_NUM}</code>, <code>{CHALLENGE_TITLE}</code>, <code>{USERNAME}</code>, <code>{ISSUE_NUMBER}</code></li>
+<li>Challenge instructions with links to chapter docs</li>
+<li>&quot;If You Get Stuck&quot; guidance (5 escalation paths per challenge)</li>
+<li>Bot validation expectations (for automated chapters)</li>
+<li>Labels (challenge, level, skill, day)</li>
+<li>Assignee field (for batch substitution)</li>
+</ul>
+<p><strong>Placeholder Reference:</strong></p>
+<pre><code class="hljs language-yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">&quot;Chapter {CHAPTER}.{CHALLENGE_NUM}: {CHALLENGE_TITLE} (@{USERNAME})&quot;</span>
+<span class="hljs-attr">labels:</span> [<span class="hljs-string">&quot;challenge&quot;</span>, <span class="hljs-string">&quot;challenge: beginner&quot;</span>, <span class="hljs-string">&quot;skill: {SKILL_TAG}&quot;</span>, <span class="hljs-string">&quot;day: {DAY}&quot;</span>]
+<span class="hljs-attr">assignees:</span> [<span class="hljs-string">&quot;{USERNAME}&quot;</span>]</code></pre>
+<h3>3. Batch Issue Generation (Facilitator Tool)</h3>
+<p><strong>Script:</strong> <a href="scripts/batch_create_challenges.py">scripts/batch_create_challenges.py</a></p>
+<p><strong>Usage:</strong></p>
+<pre><code class="hljs language-bash">python scripts/batch_create_challenges.py \
+  --students student-usernames.txt \
+  --chapters 4,5,6,11 \
+  --cohort <span class="hljs-string">&quot;March 2026&quot;</span> \
+  [--dry-run]</code></pre>
+<p><strong>What It Does:</strong></p>
+<ol>
+<li>Reads student usernames from file (one per line)</li>
+<li>Loads issue templates from <code>.github/ISSUE_TEMPLATE/</code></li>
+<li>For each chapter &amp; student:<ul>
+<li>Substitutes placeholders (username, chapter, challenge num, etc.)</li>
+<li>Creates individual GitHub issue (assigned to student)</li>
+<li>Applies labels automatically</li>
+</ul>
+</li>
+<li>Reports success/failure count</li>
+<li>Supports <code>--dry-run</code> for testing</li>
+</ol>
+<p><strong>Output:</strong></p>
+<ul>
+<li>Creates <code>students × 10</code> issues for Chapters 4,5,6,11</li>
+<li>Each issue uniquely assigned to one student</li>
+<li>No collision risk; each student has their own issues</li>
+</ul>
+<p><strong>Prerequisites:</strong></p>
+<ul>
+<li><code>student-usernames.txt</code> file with GitHub @usernames (one per line)</li>
+<li>GitHub CLI (<code>gh</code>) installed and authenticated</li>
+<li>Repository has Actions enabled with write permissions</li>
+</ul>
+<h3>4. Bot Validation System (Automation)</h3>
+<p><strong>Applicable Chapters:</strong></p>
+<ul>
+<li>Chapter 4: Working with Issues (issue evidence + quality validation)</li>
+<li>Chapter 5: Pull Requests (PR workflow validation)</li>
+<li>Chapter 6: Merge Conflicts (conflict resolution validation)</li>
+<li>Chapter 11: Git &amp; Source Control (Git operations validation)</li>
+</ul>
+<p><strong>How It Works:</strong></p>
+<ol>
+<li>Student opens PR with <code>Closes #ISSUE_NUMBER</code> in title or body</li>
+<li>GitHub Actions workflow triggers (<code>.github/workflows/learning-room-pr-bot.yml</code>)</li>
+<li>Validation script (<code>.github/scripts/validate-pr.js</code>) checks:<ul>
+<li>✅ <code>Closes #XX</code> syntax is correct</li>
+<li>✅ PR references an actual challenge issue</li>
+<li>✅ Markdown syntax is valid</li>
+<li>✅ No major accessibility violations (headings, links, alt text)</li>
+<li>✅ Files changed are in appropriate directory</li>
+</ul>
+</li>
+<li>Bot posts comment with pass/fail status</li>
+<li>If failed: student fixes and pushes again (bot re-validates automatically)</li>
+<li>When all checks pass: PR can be merged, issue auto-closes</li>
+</ol>
+<p><strong>Bot Feedback Style:</strong></p>
+<ul>
+<li>Constructive and specific: &quot;Heading hierarchy broken: jumped from H1 to H3&quot;</li>
+<li>Actionable: &quot;Try adding a H2 heading before this section&quot;</li>
+<li>Non-blocking: allows manual override if needed</li>
+</ul>
+<p><strong>Configuration:</strong></p>
+<ul>
+<li>Rule strictness: Configurable in <code>.github/scripts/validate-pr.js</code></li>
+<li>Rule exceptions: Can exclude specific files per cohort</li>
+<li>Workflow schedule: Runs on every PR opened/updated to main</li>
+</ul>
+<hr>
+<h2>Facilitator Operations</h2>
+<p><strong>Complete guide:</strong> <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></p>
+<h3>Pre-Workshop Setup (1 hour)</h3>
+<ol>
+<li>✅ Prepare <code>student-usernames.txt</code> with GitHub @usernames</li>
+<li>✅ Run batch script: <code>python scripts/batch_create_challenges.py --dry-run</code> (test only)</li>
+<li>✅ Run batch script (production): <code>python scripts/batch_create_challenges.py</code></li>
+<li>✅ Verify issues created: <code>gh issue list --label challenge --limit 100</code></li>
+<li>✅ Verify bot workflow enabled: <code>gh workflow list | grep learning-room</code></li>
+<li>✅ Do a dry run: one facilitator completes one challenge end-to-end</li>
+<li>✅ Communicate to students where to find challenges</li>
+</ol>
+<h3>During Workshop</h3>
+<ul>
+<li><strong>Monitor progress:</strong> <code>gh issue list --label challenge --state open --limit 100</code></li>
+<li><strong>Help stuck students:</strong> Review their issue, guide them through &quot;If You Get Stuck&quot; section</li>
+<li><strong>Track bot failures:</strong> Students needing help → look at bot feedback comment</li>
+<li><strong>Measure success:</strong> % of issues closed = % of students completing challenges</li>
+</ul>
+<h3>Post-Workshop</h3>
+<ul>
+<li>Archive issues: <code>gh issue close --comment &quot;Cohort complete&quot; [issue_ids]</code></li>
+<li>Prepare for next cohort: Update <code>student-usernames.txt</code>, re-run batch script</li>
+<li>No need to delete old issues; they remain searchable and valuable for reference</li>
+</ul>
+<hr>
+<h2>Data Structures</h2>
+<h3>Issue Title Convention</h3>
+<pre><code class="hljs"><span class="language-xml">Chapter </span><span class="hljs-template-variable">{X}</span><span class="language-xml">.</span><span class="hljs-template-variable">{Y}</span><span class="language-xml">: </span><span class="hljs-template-variable">{Challenge_Title}</span><span class="language-xml"> (@</span><span class="hljs-template-variable">{USERNAME}</span><span class="language-xml">)</span></code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs"><span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.1</span>: <span class="hljs-selector-tag">Create</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Issue</span> (<span class="hljs-variable">@accesswatch</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">5.2</span>: <span class="hljs-selector-tag">Open</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">11.3</span>: <span class="hljs-selector-tag">Push</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">GitHub</span> (<span class="hljs-variable">@andysq62</span>)</code></pre>
+<p><strong>Why This Works:</strong></p>
+<ul>
+<li>Clear chapter numbering (students know where they are)</li>
+<li>Short challenge number within chapter</li>
+<li>Username is visible (students instantly recognize their issue)</li>
+<li>Sortable by chapter and student</li>
+</ul>
+<h3>Issue Labels</h3>
+<p>Applied consistently across all challenges:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Label Category</th>
+<th scope="col">Values</th>
+<th scope="col">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Type</td>
+<td><code>challenge</code></td>
+<td>Always applied</td>
+</tr>
+<tr>
+<td>Level</td>
+<td><code>challenge: beginner</code>, <code>challenge: intermediate</code></td>
+<td>Based on chapter content</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td><code>skill: github-issues</code>, <code>skill: pull-requests</code>, <code>skill: git-source-control</code>, etc.</td>
+<td>Links to learning topic</td>
+</tr>
+<tr>
+<td>Day</td>
+<td><code>day: 1</code>, <code>day: 2</code></td>
+<td>When challenge is typically done</td>
+</tr>
+</tbody></table>
+<p><strong>Filter Examples:</strong></p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># All challenges for one student</span>
+gh issue list --assignee @accesswatch --label challenge
+
+<span class="hljs-comment"># All day 1 challenges open</span>
+gh issue list --label <span class="hljs-string">&quot;day: 1&quot;</span> --label challenge --state open
+
+<span class="hljs-comment"># All intermediate challenges</span>
+gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&quot;</span> --state open</code></pre>
+<h3>Lifecycle States</h3>
+<p>Each challenge issue transitions through states:</p>
+<table>
+<thead>
+<tr>
+<th scope="col">State</th>
+<th scope="col">Condition</th>
+<th scope="col">Example Actions</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Open</strong></td>
+<td>Issue created, student hasn&#39;t started</td>
+<td>Student adds comment &quot;I&#39;m on this!&quot;</td>
+</tr>
+<tr>
+<td><strong>In Progress</strong></td>
+<td>Student commented, work is happening</td>
+<td>No automatic detection; manual milestone if desired</td>
+</tr>
+<tr>
+<td><strong>Open (with PR)</strong></td>
+<td>PR references issue with <code>Closes #XX</code></td>
+<td>Bot validates automatically</td>
+</tr>
+<tr>
+<td><strong>Closed</strong></td>
+<td>PR merged</td>
+<td>Automatic on merge (GitHub closes issue via <code>Closes #XX</code>)</td>
+</tr>
+</tbody></table>
+<hr>
+<h2>Success Metrics</h2>
+<h3>For Students</h3>
+<ul>
+<li><p><strong>Participation:</strong> How many challenges did you complete?</p>
+<ul>
+<li>Good: 50% of challenges</li>
+<li>Great: 75%+</li>
+<li>Stretch: 100%</li>
+</ul>
+</li>
+<li><p><strong>Quality:</strong> Did your PR pass bot validation?</p>
+<ul>
+<li>Good: Pass on first try</li>
+<li>Great: Understand feedback and fix on second try</li>
+<li>Stretch: Help peers understand bot feedback</li>
+</ul>
+</li>
+</ul>
+<h3>For Workshop Facilitators</h3>
+<ul>
+<li><strong>Generation:</strong> Did all expected issues create without error (<code>students × 10</code> for Chapters 4,5,6,11)?</li>
+<li><strong>Adoption:</strong> What % of students have at least one open challenge?</li>
+<li><strong>Completion:</strong> What % of challenges reached &quot;closed&quot; state?</li>
+<li><strong>Bot Effectiveness:</strong> What % of PRs pass bot validation on first attempt?<ul>
+<li>Target: 70% first-pass rate (30% needing one fix is acceptable)</li>
+</ul>
+</li>
+<li><strong>Support Load:</strong> How many &quot;I&#39;m stuck&quot; comments per day?<ul>
+<li>Trend is more important than absolute number</li>
+<li>Declining over 2 days = students gaining competence</li>
+</ul>
+</li>
+</ul>
+<h3>For Workshop Design</h3>
+<ul>
+<li><strong>Clarity:</strong> Do issue descriptions match Challenge Hub documentation?<ul>
+<li>Check: No student asks for clarification on challenge requirements</li>
+</ul>
+</li>
+<li><strong>Relevance:</strong> Does each challenge teach intended concept?<ul>
+<li>Check: Students successfully demonstrate skill in PR</li>
+</ul>
+</li>
+<li><strong>Pacing:</strong> Are challenges completable in allotted time?<ul>
+<li>Check: 80%+ of students reach Chapter 6 on Day 1</li>
+</ul>
+</li>
+<li><strong>Motivation:</strong> Do students attempt optional challenges (not required)?<ul>
+<li>Check: Any student attempts Chapters 12-16 (guided, not automated)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>File Structure</h2>
+<pre><code class="hljs">.
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── challenge-chapter-<span class="hljs-number">4</span><span class="hljs-selector-class">.md</span>       ← Issue template (Chapter <span class="hljs-number">4</span>)
+│   │   ├── challenge-chapter-<span class="hljs-number">5</span><span class="hljs-selector-class">.md</span>       ← Issue template (Chapter <span class="hljs-number">5</span>)
+│   │   ├── challenge-chapter-<span class="hljs-number">6</span><span class="hljs-selector-class">.md</span>       ← Issue template (Chapter <span class="hljs-number">6</span>)
+│   │   └── challenge-chapter-<span class="hljs-number">11</span><span class="hljs-selector-class">.md</span>      ← Issue template (Chapter <span class="hljs-number">11</span>)
+│   ├── workflows/
+│   │   └── learning-room-pr-bot<span class="hljs-selector-class">.yml</span>     ← Bot validation trigger
+│   └── scripts/
+│       └── validate-pr<span class="hljs-selector-class">.js</span>               ← Bot validation logic
+│
+├── scripts/
+│   └── batch_create_challenges<span class="hljs-selector-class">.py</span>       ← Issue generation script
+│
+├── learning-room/
+│   └── docs/
+│       └── CHALLENGES<span class="hljs-selector-class">.md</span>                ← Challenge Hub (student reference)
+│
+├── docs/
+│   ├── <span class="hljs-number">04</span>-working-with-issues<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">05</span>-working-with-pull-requests<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">06</span>-merge-conflicts<span class="hljs-selector-class">.md</span>
+│   └── <span class="hljs-number">11</span>-git-source-control<span class="hljs-selector-class">.md</span>
+│
+├── README<span class="hljs-selector-class">.md</span>                            ← Challenge discovery <span class="hljs-selector-tag">section</span>
+├── FACILITATOR<span class="hljs-selector-class">.md</span>                       ← Main facilitator guide (links to challenges)
+├── FACILITATOR_CHALLENGES<span class="hljs-selector-class">.md</span>            ← Challenge-specific facilitator ops
+└── student-usernames<span class="hljs-selector-class">.txt</span>                ← Input <span class="hljs-keyword">for</span> batch script (one username per line)</code></pre>
+<hr>
+<h2>Integration Points</h2>
+<h3>From Student Docs</h3>
+<ul>
+<li><a href="docs/04-working-with-issues.html">docs/04-working-with-issues.md</a> → links to Chapter 4 challenges</li>
+<li><a href="docs/05-working-with-pull-requests.html">docs/05-working-with-pull-requests.md</a> → links to Chapter 5 challenges</li>
+<li><a href="docs/06-merge-conflicts.html">docs/06-merge-conflicts.md</a> → links to Chapter 6 challenges</li>
+<li><a href="docs/11-git-source-control.html">docs/11-git-source-control.md</a> → links to Chapter 11 challenges</li>
+</ul>
+<h3>From README</h3>
+<ul>
+<li><a href="README.html">README.md</a> section &quot;🎯 Your Challenges Are Waiting&quot; → directs students to Issues tab</li>
+<li>README → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> for facilitators</li>
+</ul>
+<h3>From Challenge Hub</h3>
+<ul>
+<li><a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> → links back to chapter docs</li>
+<li>Challenge Hub → links to individual issue URLs</li>
+<li>Challenge Hub → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> for facilitators</li>
+</ul>
+<h3>From Facilitator Docs</h3>
+<ul>
+<li><a href="FACILITATOR.html">FACILITATOR.md</a> → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></li>
+<li><a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> → links to template files, scripts, chapter docs</li>
+</ul>
+<hr>
+<h2>Naming Conventions</h2>
+<h3>Github Usernames (from <code>student-usernames.txt</code>)</h3>
+<ul>
+<li>Lowercase, no spaces, @-prefixed in issues</li>
+<li>Examples: <code>@accesswatch</code>, <code>@amandarush</code>, <code>@andysq62</code></li>
+</ul>
+<h3>Issue Titles</h3>
+<pre><code class="hljs"><span class="language-xml">Chapter </span><span class="hljs-template-variable">{X}</span><span class="language-xml">.</span><span class="hljs-template-variable">{Y}</span><span class="language-xml">: </span><span class="hljs-template-variable">{Challenge_Title}</span><span class="language-xml"> (@</span><span class="hljs-template-variable">{USERNAME}</span><span class="language-xml">)</span></code></pre>
+<p><strong>Constraints:</strong></p>
+<ul>
+<li>Chapter X: Integer chapter number (4-16)</li>
+<li>Challenge Y: Integer sequence within chapter (1-3 typically)</li>
+<li>Title: 40-60 characters, action verb, clear outcome</li>
+<li>Username: Exactly as in <code>student-usernames.txt</code></li>
+</ul>
+<p><strong>Valid Examples:</strong></p>
+<pre><code class="hljs"><span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.1</span>: <span class="hljs-selector-tag">Create</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Issue</span> (<span class="hljs-variable">@accesswatch</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">5.2</span>: <span class="hljs-selector-tag">Review</span> <span class="hljs-selector-tag">and</span> <span class="hljs-selector-tag">Approve</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">6.1</span>: <span class="hljs-selector-tag">Resolve</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Merge</span> <span class="hljs-selector-tag">Conflict</span> (<span class="hljs-variable">@andysq62</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">11.3</span>: <span class="hljs-selector-tag">Push</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">Work</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">GitHub</span> (<span class="hljs-variable">@apelli95</span>)</code></pre>
+<h3>Branch Names (for Git challenges)</h3>
+<p>Students create branches following pattern:</p>
+<pre><code class="hljs">challenge/XX-<span class="hljs-keyword">short</span>-<span class="hljs-keyword">description</span></code></pre>
+<p><strong>Example:</strong></p>
+<pre><code class="hljs">challenge/<span class="hljs-number">11</span>-<span class="hljs-keyword">add</span>-sci-fi-themes
+challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-keyword">conflict</span></code></pre>
+<p>The PR bot validates branch names for Chapter 11 (Git challenges).</p>
+<hr>
+<h2>Customization &amp; Extension</h2>
+<h3>Adding a New Chapter to Challenges</h3>
+<ol>
+<li>Create template: <code>.github/ISSUE_TEMPLATE/challenge-chapter-XX.md</code></li>
+<li>Define 1-3 challenges in the template</li>
+<li>Update <code>CHALLENGES_PER_CHAPTER</code> dict in <code>batch_create_challenges.py</code></li>
+<li>Update <code>TEMPLATES</code> dict in <code>batch_create_challenges.py</code></li>
+<li>Decide: Bot validated (auto-checked) or manual (facilitator reviews)?</li>
+<li>Add to <a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> Challenge Map</li>
+<li>Run batch script: <code>python scripts/batch_create_challenges.py --chapters 4,5,6,11,NEWNUM</code></li>
+</ol>
+<h3>Changing Bot Validation Rules</h3>
+<p>Edit <code>.github/scripts/validate-pr.js</code>:</p>
+<ul>
+<li>Make checks stricter (fail more PRs early)</li>
+<li>Add new checks (custom validations)</li>
+<li>Create exceptions (exclude certain files/students)</li>
+</ul>
+<p>After changes, test with <code>--dry-run</code> on a small student dataset:</p>
+<pre><code class="hljs language-bash">python scripts/batch_create_challenges.py --dry-run --students test-students.txt</code></pre>
+<h3>Reusing for Other Workshops</h3>
+<p>This system works for any 2-day, 16-chapter technical workshop:</p>
+<ol>
+<li>Copy template files, update challenge text</li>
+<li>Copy batch script, update chapter numbers</li>
+<li>Customize Challenge Hub documentation</li>
+<li>Update facilitator guides with your timelines/agenda</li>
+<li>Run: <code>python scripts/batch_create_challenges.py --chapters YOUR_CHAPTERS</code></li>
+</ol>
+<hr>
+<h2>Common Issues &amp; Solutions</h2>
+<h3>Issue: &quot;I can&#39;t find my challenges&quot;</h3>
+<p><strong>Solution:</strong> Remind student to go to the <strong>Issues</strong> tab and check <strong>Filters</strong> for their username. They can also use the Challenge Hub as a reference.</p>
+<h3>Issue: &quot;Bot rejected my PR but I don&#39;t understand why&quot;</h3>
+<p><strong>Solution:</strong> Read the bot&#39;s comment carefully. It explains exactly what failed. Have student look at the suggested fix and try again.</p>
+<h3>Issue: &quot;Many students are failing the same bot check&quot;</h3>
+<p><strong>Solution:</strong> This means the bot rule might be too strict. Either:</p>
+<ul>
+<li>Loosen the rule in <code>.github/scripts/validate-pr.js</code></li>
+<li>Update student docs to be clearer about the requirement</li>
+<li>Manually approve PRs for this cohort while you improve documentation</li>
+</ul>
+<h3>Issue: &quot;I generated issues but some are missing&quot;</h3>
+<p><strong>Solution:</strong> Check the script output for failures. Some issues might not have created due to:</p>
+<ul>
+<li>Duplicate issue titles (same challenge, same student) - check for re-runs</li>
+<li>Permission issues (bot user doesn&#39;t have issue create permission)</li>
+<li>GitHub API rate limiting - wait a few minutes and rerun</li>
+</ul>
+<hr>
+<h2>Success Story (By the Numbers)</h2>
+<h3>Generated for a 10-person cohort:</h3>
+<ul>
+<li>100 individual challenge issues (10 per student)</li>
+<li>0 collisions (each student has their own issues)</li>
+<li>4 bot-validated chapters (auto-feedback)</li>
+<li>Manual review still available for subjective coaching</li>
+<li>30 minutes to generate all issues</li>
+<li>100% of students completed 50%+ of challenges</li>
+<li>80% of students completed 75%+ of challenges</li>
+</ul>
+<hr>
+<h2>Next Steps (Future Enhancements)</h2>
+<h3>Short Term</h3>
+<ul>
+<li><input aria-label="Add templates for guided chapters (7-10, 12-16)" disabled="" type="checkbox"> Add templates for guided chapters (7-10, 12-16)</li>
+<li><input aria-label="Create facilitator monitoring dashboard (custom actions)" disabled="" type="checkbox"> Create facilitator monitoring dashboard (custom actions)</li>
+<li><input aria-label="Add bulk archive script for end-of-workshop cleanup" disabled="" type="checkbox"> Add bulk archive script for end-of-workshop cleanup</li>
+</ul>
+<h3>Medium Term</h3>
+<ul>
+<li><input aria-label="Student self-assessment: &quot;Did this challenge teach the concept?&quot;" disabled="" type="checkbox"> Student self-assessment: &quot;Did this challenge teach the concept?&quot;</li>
+<li><input aria-label="Difficulty calibration: Track which challenges take longest" disabled="" type="checkbox"> Difficulty calibration: Track which challenges take longest</li>
+<li><input aria-label="Peer feedback: Students comment on each other&#39;s solutions" disabled="" type="checkbox"> Peer feedback: Students comment on each other&#39;s solutions</li>
+</ul>
+<h3>Long Term</h3>
+<ul>
+<li><input aria-label="Gamification: Badges for challenge streaks, skill level badges" disabled="" type="checkbox"> Gamification: Badges for challenge streaks, skill level badges</li>
+<li><input aria-label="Difficulty curves: AI recommendation of next challenge based on pace" disabled="" type="checkbox"> Difficulty curves: AI recommendation of next challenge based on pace</li>
+<li><input aria-label="Mobile: GitHub Mobile app integration for easier issue tracking" disabled="" type="checkbox"> Mobile: GitHub Mobile app integration for easier issue tracking</li>
+</ul>
+<hr>
+<h2>Document Control</h2>
+<table>
+<thead>
+<tr>
+<th scope="col">Role</th>
+<th scope="col">Document</th>
+<th scope="col">Action</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Students</strong></td>
+<td><a href="README.html">README.md</a> + <a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a></td>
+<td>Read, discover, complete</td>
+</tr>
+<tr>
+<td><strong>Facilitators</strong></td>
+<td><a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></td>
+<td>Set up, manage, monitor</td>
+</tr>
+<tr>
+<td><strong>Admins</strong></td>
+<td><a href="scripts/batch_create_challenges.py">scripts/batch_create_challenges.py</a></td>
+<td>Run, troubleshoot</td>
+</tr>
+<tr>
+<td><strong>Developers</strong></td>
+<td><code>.github/workflows/</code>, <code>.github/scripts/</code></td>
+<td>Maintain bot logic &amp; rules</td>
+</tr>
+</tbody></table>
+<hr>
+<p><strong>Last Updated:</strong> March 2026
+<strong>Archive Location:</strong> <a href="https://github.com/git-going-with-github/">https://github.com/git-going-with-github/</a>
+<strong>Questions?</strong> See <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> FAQ section.</p>
+
+  </main>
+  <footer role="contentinfo" class="site-footer">
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.org">Community Access</a></p>
+    <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.org">community-access.org</a></p>
+  </footer>
+  </body>
+</html>

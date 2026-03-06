@@ -1,0 +1,48 @@
+name: Automation Tests
+
+on:
+  pull_request:
+    paths:
+      - ".github/scripts/**"
+      - "scripts/**"
+      - "package.json"
+      - ".github/workflows/**"
+      - "learning-room/docs/CHALLENGES.md"
+      - "docs/**"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/scripts/**"
+      - "scripts/**"
+      - "package.json"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-automation:
+    name: Run Node and Python Automation Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run automation test suite
+        run: npm run test:automation

@@ -20,6 +20,50 @@
 
 ---
 
+## Workshop Recommendation (Chapter 4)
+
+Chapter 4 is the first **issue-based challenge chapter** with short, confidence-building tasks.
+
+- **Challenge count:** 3
+- **Time per challenge:** under 10 minutes
+- **Evidence:** issue comments and issue metadata
+- **Pattern:** claim -> act -> confirm
+
+### Chapter 4 Challenge Set
+
+1. **Create your first issue**
+  - Create one issue with a clear title and short description.
+2. **Claim a challenge issue**
+  - Comment `I'd like to try this!` on a beginner challenge issue.
+3. **Ask one clarifying question**
+  - Add one question comment on your claimed issue.
+
+### Expected Outcomes
+
+- Student can create an issue with a clear title and description.
+- Student can claim a challenge issue in a public thread.
+- Student can ask a useful question before starting implementation.
+
+### If You Get Stuck
+
+1. Re-open `learning-room/docs/CHALLENGES.md` and pick one beginner issue.
+2. Use the issue search filter: `is:open label:"challenge: beginner"`.
+3. If claim/comment fails, refresh and retry once.
+4. Ask facilitator for a direct issue link and continue.
+
+### Learning Moment
+
+Issues are not just task lists. They are collaborative spaces where clear communication reduces confusion and prevents rework.
+
+### Learning Pattern Used in This Chapter
+
+1. Start with a small, safe action.
+2. Practice communication in public issue threads.
+3. Leave clear evidence in the issue timeline.
+4. Build momentum for PR work in Chapter 5.
+
+---
+
 ## What Is a GitHub Issue?
 
 An issue is a discussion thread attached to a repository. Issues are used for:

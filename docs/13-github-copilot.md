@@ -14,6 +14,56 @@
 
 ---
 
+## Workshop Recommendation (Chapter 13)
+
+> **✅ Free to Use:** GitHub Copilot Free tier is included with all GitHub accounts at no cost. This workshop uses only the free tier. If you're on an organization with GitHub Enterprise, you may have Copilot Pro included—either way, you're covered.
+
+Chapter 13 introduces **GitHub Copilot** for AI-assisted documentation and writing.
+
+- **Challenge count:** 3 guided challenges
+- **Automation check:** none (tool configuration is account-local and account-specific)
+- **Evidence:** issue comment with checklist of completed actions
+- **Pattern:** install -> prompt -> use
+
+### Chapter 13 Guided Challenges (No Bot Validation)
+
+For this workshop, Chapter 13 focuses on learning Copilot's interface and practicing effective prompting:
+
+1. **Install GitHub Copilot and sign in**
+   - Install the GitHub Copilot Chat extension from Extensions sidebar and authenticate.
+
+2. **Clone the sci-fi themes repo and ask Copilot to explain it**
+   - Clone `https://github.com/community-access/vscode-sci-fi-themes.git`
+   - Open Copilot Chat (`Ctrl+Shift+I` / Mac: `Cmd+Shift+I`)
+   - Ask: "What does the `chat.agent.thinking.phrases` setting do in VS Code?"
+   - Read Copilot's explanation and apply one theme to your settings.json
+
+3. **Ask Copilot to create a custom theme**
+   - In Copilot Chat, ask: "Create a custom GitHub Copilot thinking phrases theme for [your favorite universe - Dune, Marvel, Studio Ghibli, etc.]"
+   - Copilot generates a new theme
+   - Copy the result into a new file and apply it to your settings.json
+   - Reload VS Code and enjoy your personalized Copilot experience!
+
+### Expected Outcomes
+
+- Student can install and authenticate GitHub Copilot Chat.
+- Student can ask Copilot effective questions about code and settings.
+- Student can use Copilot's output to customize their development environment in fun and creative ways.
+
+### If You Get Stuck
+
+1. If extension installation fails, reload VS Code with `Ctrl+Shift+P` → "Developer: Reload Window".
+2. If OAuth sign-in fails, verify your GitHub account is active in the browser first.
+3. If Chat panel doesn't open, try `Ctrl+Shift+I` (Windows) or `Cmd+Shift+I` (Mac).
+4. If Chat seems unresponsive, click the model selector at bottom of Chat and confirm you're signed in.
+5. Ask facilitator to help verify Copilot is activated and show you one prompt.
+
+### Learning Moment
+
+AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps you write documentation that others can actually understand.
+
+---
+
 ## Table of Contents
 
 1. [What is GitHub Copilot](#1-what-is-github-copilot)

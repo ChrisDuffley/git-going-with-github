@@ -6,6 +6,24 @@
 
 The **Learning Room** is a single, shared GitHub repository where all workshop participants collaborate together. It is not your personal fork. It is not your individual repository. It is one repo with many students, many branches, and many pull requests.
 
+---
+
+## Workshop Recommendation (Chapter 3)
+
+Chapter 3 is a **system orientation chapter**.
+
+- **Challenge count:** none
+- **Automation check:** none
+- **Why:** this chapter explains the shared workflow and prepares students for issue-based challenges in Chapters 4 and 5.
+
+### Readiness Checkpoint
+
+Before starting Chapter 4 challenges, students should be able to:
+
+1. Find `learning-room/docs/CHALLENGES.md`.
+2. Explain issue -> branch -> PR -> review -> merge.
+3. Identify where bot feedback appears on PRs.
+
 ```text
 learning-room (SHARED)
 ├── main branch (protected)

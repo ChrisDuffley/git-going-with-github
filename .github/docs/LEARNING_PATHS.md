@@ -39,19 +39,20 @@ Get comfortable with GitHub workflow and Markdown basics.
 ### Available Challenges
 
 #### 1. Fix Broken Link (`skill: markdown`)
-**Scenario:** The `docs/welcome.md` file has a broken internal link.
+**Scenario:** The `docs/welcome.md` file has a `[DATE]` placeholder that needs updating.
 
 **Your Task:**
-- Find the broken link
-- Fix the path to point to correct file
-- Verify link works in preview
+- Find the `[DATE]` placeholder at the bottom of the file
+- Replace it with today's date in YYYY-MM-DD format (e.g., 2026-03-05)
+- Create a pull request with your changes
 
 **Learning Objectives:**
-- Understanding relative file paths
-- Using Markdown preview
-- Testing your changes
+- Finding content that needs updates
+- Formatting dates correctly
+- Making small, focused pull requests
+- Following commit conventions
 
-**Estimated Time:** 10-15 minutes
+**Estimated Time:** 5-10 minutes
 
 ---
 

@@ -8,6 +8,52 @@
 
 ---
 
+## Workshop Recommendation (Chapter 8)
+
+Chapter 8 is a **guided triage chapter** focused on organization skills.
+
+- **Challenge count:** 1 guided challenge
+- **Automation check:** none by default
+- **Evidence:** structured issue comment in assigned challenge issue
+- **Pattern:** inspect -> classify -> explain
+
+### Chapter 8 Guided Challenge: Triage Recommendation Comment
+
+1. Open your assigned challenge issue.
+2. Review issue title, description, and target file.
+3. Post a triage recommendation comment using this format:
+
+```text
+Chapter 8 triage recommendation:
+- Suggested labels:
+- Suggested milestone:
+- Suggested project board column:
+- One-sentence reason:
+```
+
+4. If you have write access, apply the recommended labels/milestone directly.
+
+This keeps the task simple and accessible for all students, including those without triage permissions.
+
+### Expected Outcomes
+
+- Student can recommend labels/milestone/project placement using issue context.
+- Student understands triage even without maintainer permissions.
+- Student leaves a clear, reusable triage note for maintainers.
+
+### If You Get Stuck
+
+1. Start with one label only (`documentation`, `bug`, or `accessibility`).
+2. If milestone is unclear, write `none` and explain why.
+3. If project board is unknown, write `needs triage` and continue.
+4. Ask facilitator to review your one-sentence reason before posting.
+
+### Learning Moment
+
+Triage is about clarity, not authority. Good recommendations reduce maintainer effort and speed up collaboration.
+
+---
+
 ## Labels
 
 ### What Are Labels?

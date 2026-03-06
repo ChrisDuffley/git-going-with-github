@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
+  <title>Repository Security & Access Guidelines - GIT Going with GitHub</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) {
+      .markdown-body {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <nav aria-label="Breadcrumb" class="breadcrumb">
+    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Repository Security & Access Guidelines</span>
+  </nav>
+  <main id="main-content" class="markdown-body">
+    <h1>Repository Security &amp; Access Guidelines</h1>
+<h2>Overview</h2>
+<p>This repository is configured for a 2-day workshop with 67 blind/low-vision students.
+Safety, accessibility, and reliability are the top priorities.</p>
+<hr>
+<h2>Access Control</h2>
+<h3>Who Can Access What</h3>
+<table>
+<thead>
+<tr>
+<th scope="col">Role</th>
+<th scope="col">Repository</th>
+<th scope="col">Issues</th>
+<th scope="col">PRs</th>
+<th scope="col">Assignments</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Students</td>
+<td>Read (public)</td>
+<td>Create &amp; Comment</td>
+<td>Create &amp; Merge</td>
+<td>Can work on</td>
+</tr>
+<tr>
+<td>Facilitators</td>
+<td>Full Access</td>
+<td>Full Access</td>
+<td>Review &amp; Merge</td>
+<td>Assign issues</td>
+</tr>
+<tr>
+<td>Org Members</td>
+<td>Read</td>
+<td>Comment</td>
+<td>Review</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Public</td>
+<td>Read</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+</tbody></table>
+<h3>Organization Invitations</h3>
+<p>Students are invited to the <code>Community-Access</code> organization as <strong>Members</strong> with:</p>
+<ul>
+<li><strong>Role</strong>: Member (not Admin or Owner)</li>
+<li><strong>Repository Access</strong>: Read/Write to git-going-with-github</li>
+<li><strong>No permissions</strong> to access organization settings or other repos</li>
+<li><strong>Team assignment</strong>: Optional - for grouping during reviews</li>
+</ul>
+<h3>Joining the Organization</h3>
+<p><strong>Process:</strong></p>
+<ol>
+<li>Student receives GitHub organization invitation via email</li>
+<li>Email comes from: <a href="mailto:noreply@github.com">noreply@github.com</a> with subject &quot;You&#39;ve been invited...&quot;</li>
+<li>Student clicks invitation link (valid for 7 days)</li>
+<li>GitHub shows org approval page - student clicks &quot;Join&quot;</li>
+<li>Student is now able to:<ul>
+<li>See assignment issues</li>
+<li>Push to their <code>student/[username]</code> branch</li>
+<li>Create and merge pull requests</li>
+<li>View other students&#39; branches</li>
+</ul>
+</li>
+</ol>
+<p><strong>Troubleshooting:</strong></p>
+<ul>
+<li>Invitation expired? Re-send from org settings</li>
+<li>Can&#39;t see issues marked &quot;assigned&quot;? Check org membership at:
+<a href="https://github.com/orgs/Community-Access/members">https://github.com/orgs/Community-Access/members</a></li>
+<li>Branch push rejected? Verify you are a member of the org</li>
+</ul>
+<hr>
+<h2>Branch Protection</h2>
+<h3>Main Branch (<code>main</code>)</h3>
+<p><strong>Protection Rules:</strong></p>
+<ul>
+<li>Require pull request reviews: YES (1 approval minimum)</li>
+<li>Require status checks to pass: YES (GitHub Actions validation)</li>
+<li>Require branches to be up to date: NO (to avoid merge conflicts)</li>
+<li>Allow auto-merge: NO (manual merge only for safety)</li>
+<li>Allow force pushes: NO (protect history)</li>
+<li>Allow deletions: NO (protect branch)</li>
+</ul>
+<h3>Student Branches (<code>student/*</code>)</h3>
+<p><strong>Protection Rules:</strong></p>
+<ul>
+<li>Creation allowed: Students can create at any time</li>
+<li>Force push allowed: NO (protect work)</li>
+<li>Deletion allowed: Only by admins (prevent data loss)</li>
+<li>Protected from accidental overwrites</li>
+</ul>
+<h3>Action: Student Cannot Break Main</h3>
+<p>Even if a student force-pushes to their branch, they cannot:</p>
+<ul>
+<li>Delete their branch</li>
+<li>Corrupt the main branch</li>
+<li>Block other students</li>
+<li>Undo someone else&#39;s work</li>
+</ul>
+<hr>
+<h2>Permission Model</h2>
+<h3>Least Privilege</h3>
+<p>Students have exactly the permissions they need:</p>
+<ul>
+<li>NOT admins of org/repo</li>
+<li>NOT access to secrets or CI/CD settings</li>
+<li>NOT access to other repos in org</li>
+<li>NOT access to billing or org management</li>
+<li>CAN create branches, issues, and PRs</li>
+<li>CAN push to their own student branch</li>
+<li>CAN review other students&#39; PRs</li>
+<li>CAN merge PRs (with protection checks)</li>
+</ul>
+<hr>
+<h2>Facilitator Access</h2>
+<h3>Facilitators MUST be Organization Owners</h3>
+<p>Facilitators need:</p>
+<ul>
+<li>Create/edit issues</li>
+<li>Assign issues to students</li>
+<li>Merge pull requests</li>
+<li>Review and comment on PRs</li>
+<li>Monitor workshop progress</li>
+</ul>
+<h3>Setup</h3>
+<p>Run these commands (one per facilitator username):</p>
+<pre><code class="hljs language-bash">gh api /orgs/Community-Access/members/[username] -X PUT -f role=admin
+
+<span class="hljs-comment"># Verify</span>
+gh api /orgs/Community-Access/members/[username] --jq .role
+<span class="hljs-comment"># Should return: &quot;admin&quot;</span></code></pre>
+<hr>
+<h2>GitHub Actions Security</h2>
+<h3>Workflows</h3>
+<p><strong>Learning Room PR Validation</strong> (learning-room-validation.yml)</p>
+<ul>
+<li>Triggers: On PR to <code>main</code> modifying <code>learning-room/**</code></li>
+<li>Permissions: Read-only access to repo</li>
+<li>Actions: Validates markdown, links, accessibility</li>
+<li>Output: Single comment on PR with feedback</li>
+<li>Safety: Cannot modify code or create commits</li>
+</ul>
+<h3>Secrets</h3>
+<p><strong>No sensitive secrets stored in repo</strong></p>
+<p>Repository does not contain:</p>
+<ul>
+<li>GitHub tokens</li>
+<li>API keys</li>
+<li>Webhook secrets</li>
+<li>SSH keys</li>
+<li>Passwords</li>
+</ul>
+<p><strong>Safe to</strong>: Public repos, student access, teaching</p>
+<hr>
+<h2>Data Privacy</h2>
+<h3>What Data Is Stored</h3>
+<p>In the repository:</p>
+<ul>
+<li>Student usernames (GitHub public)</li>
+<li>Roster file with pronouns, timezone, interests</li>
+<li>Branch names (<code>student/[username]</code>)</li>
+<li>Commit history (who wrote what)</li>
+<li>PR/issue history (who said what)</li>
+</ul>
+<h3>What Data Is NOT Stored</h3>
+<p>Protected from accidental exposure:</p>
+<ul>
+<li>Real names (optional, in roster under &quot;name&quot; field)</li>
+<li>Home addresses</li>
+<li>Phone numbers</li>
+<li>Email addresses (GitHub enterprise feature only)</li>
+<li>Payment information</li>
+<li>Health information beyond &quot;uses screen reader&quot;</li>
+</ul>
+<h3>Access to Roster</h3>
+<p>File: <code>.github/data/student-roster.json</code></p>
+<ul>
+<li>Visible in: Repository code</li>
+<li>Accessible to: All org members</li>
+<li>Sensitivity: LOW (only public GitHub usernames + opt-in profile)</li>
+<li>Safe to: Share roster with facilitators, teaching staff</li>
+</ul>
+<hr>
+<h2>Safety Checks</h2>
+<h3>Before Workshop (Friday, March 7)</h3>
+<p><strong>Repository Readiness:</strong></p>
+<ul>
+<li>All 67 student branches created</li>
+<li>Main branch protection enabled</li>
+<li>GitHub Actions workflows enabled</li>
+<li>Facilitators added as org admins</li>
+<li>Students invited to org (pending their acceptance)</li>
+<li>Assignment issues created successfully</li>
+<li>Peer reviewer assignments generated</li>
+</ul>
+<p><strong>Access Verification:</strong></p>
+<ul>
+<li>Facilitators can create and edit issues</li>
+<li>Facilitators can review and merge PRs</li>
+<li>Student branch access configured</li>
+<li>GitHub Actions workflows run on test PR</li>
+</ul>
+<p><strong>Accessibility Check:</strong></p>
+<ul>
+<li>Facilitator guide readable with screen reader</li>
+<li>Assignment issues accessible</li>
+<li>PR templates accessible</li>
+</ul>
+<h3>During Workshop (Saturday, March 8-9)</h3>
+<p><strong>Monitoring:</strong></p>
+<ul>
+<li>GitHub status page monitored (<a href="https://www.githubstatus.com/">https://www.githubstatus.com/</a>)</li>
+<li>Facilitators watch for API errors</li>
+<li>Quick help docs ready for common issues</li>
+<li>Fallback: Manual issue assignment if API down</li>
+</ul>
+<p><strong>Incident Response:</strong></p>
+<ul>
+<li>If bot fails: Facilitators post feedback manually</li>
+<li>If merge fails: Facilitator manually merges</li>
+<li>If branch access denied: Check org membership</li>
+<li>If PR template missing: Check .github/PULL_REQUEST_TEMPLATE directory</li>
+</ul>
+<hr>
+<h2>Daily Operations</h2>
+<h3>Day 1 (Saturday, March 8, 12pm-8pm ET)</h3>
+<ol>
+<li><p><strong>Orientation (12pm-1pm)</strong></p>
+<ul>
+<li>Explain org membership and issue assignment</li>
+<li>Demo: How to find your issue</li>
+<li>Demo: How to create a PR</li>
+</ul>
+</li>
+<li><p><strong>Working Session (1pm-6pm)</strong></p>
+<ul>
+<li>Students work on assignments</li>
+<li>Facilitators monitor for issues</li>
+<li>Check: Issues appearing in Issues tab</li>
+<li>Check: GitHub Actions bot responding to PRs</li>
+</ul>
+</li>
+<li><p><strong>Q&amp;A/Office Hours (6pm-8pm)</strong></p>
+<ul>
+<li>Troubleshoot individual issues</li>
+<li>Answer technical questions</li>
+<li>Review example PRs</li>
+</ul>
+</li>
+</ol>
+<h3>Day 2 (Sunday, March 9, 12pm-8pm ET)</h3>
+<ol>
+<li><p><strong>Recap (12pm-1pm)</strong></p>
+<ul>
+<li>Review progress from Day 1</li>
+<li>Discuss common issues</li>
+</ul>
+</li>
+<li><p><strong>Code Review Training (1pm-3pm)</strong></p>
+<ul>
+<li>Teach students how to review PRs</li>
+<li>Use facilitators&#39; repos as examples</li>
+<li>Practice peer reviews</li>
+</ul>
+</li>
+<li><p><strong>Skill Challenges (3pm-6pm)</strong></p>
+<ul>
+<li>Advanced challenges for fast finishers</li>
+<li>Small group deep dives</li>
+<li>Accessibility focus discussions</li>
+</ul>
+</li>
+<li><p><strong>Celebration (6pm-8pm)</strong></p>
+<ul>
+<li>Showcase completed work</li>
+<li>Q&amp;A</li>
+<li>Next steps &amp; resources</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>Rollback &amp; Emergency</h2>
+<h3>If Something Goes Wrong</h3>
+<p><strong>GitHub Down:</strong></p>
+<ul>
+<li>Monitor: <a href="https://www.githubstatus.com/">https://www.githubstatus.com/</a></li>
+<li>Fallback: Continue teaching fundamentals offline</li>
+<li>Recovery: Resume when GitHub is back</li>
+</ul>
+<p><strong>Organization Issues:</strong></p>
+<ul>
+<li>If students can&#39;t join org, invite them to repo collaborators instead</li>
+<li>Command: <code>gh repo add-member -p pull [username]</code></li>
+<li>Result: Same access, different method</li>
+</ul>
+<p><strong>Bot Not Working:</strong></p>
+<ul>
+<li>Facilitators post feedback manually</li>
+<li>Include: Link to learning-room-validation.yml for transparency</li>
+<li>Continue: Workflow still valid, just faster with automation</li>
+</ul>
+<p><strong>Need to Revert Something:</strong></p>
+<ul>
+<li>Merge conflict: Facilitator helps student resolve</li>
+<li>Bad commit: Use <code>git revert</code> (don&#39;t force push)</li>
+<li>Deleted branch: Can restore from GitHub&#39;s trash (within 90 days)</li>
+</ul>
+<hr>
+<h2>Compliance &amp; Audit</h2>
+<h3>What&#39;s Logged</h3>
+<p>GitHub logs:</p>
+<ul>
+<li>All push events (who, what, when)</li>
+<li>All PR activity (created, reviewed, merged)</li>
+<li>All issue activity (created, commented, closed)</li>
+<li>All member activities (access, permissions changes)</li>
+</ul>
+<p>These are available in:</p>
+<ul>
+<li>Repository settings &gt; Code security and analysis</li>
+<li>Organization settings &gt; Audit log</li>
+</ul>
+<h3>What&#39;s Audited</h3>
+<p>For safety:</p>
+<ul>
+<li>No one pushed to <code>main</code> directly (all via PR)</li>
+<li>All PRs have at least 1 review (from protection rules)</li>
+<li>No one with admin access without reason</li>
+<li>GitHub Actions workflows only do what&#39;s documented</li>
+</ul>
+<h3>For Teaching</h3>
+<p>We can show students:</p>
+<ul>
+<li>Their commit history on their branch</li>
+<li>Their PR reviews on other students&#39; PRs</li>
+<li>How the GitHub Actions bot validated their work</li>
+<li>Example of a properly merged PR</li>
+</ul>
+<hr>
+<h2>Contact &amp; Support</h2>
+<p><strong>Workshop Coordinator:</strong> [Facilitator Name]
+<strong>Emergency Contact:</strong> [Phone/Email]
+<strong>GitHub Organization:</strong> <a href="https://github.com/Community-Access">https://github.com/Community-Access</a>
+<strong>Repository:</strong> <a href="https://github.com/Community-Access/git-going-with-github">https://github.com/Community-Access/git-going-with-github</a>
+<strong>Learning Room:</strong> /learning-room/README.md</p>
+<p><strong>Facilitator Private Slack:</strong> [Link to channel]
+<strong>Student Support Channel:</strong> [Zoom link for office hours]</p>
+
+  </main>
+  <footer role="contentinfo" class="site-footer">
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.org">Community Access</a></p>
+    <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.org">community-access.org</a></p>
+  </footer>
+  </body>
+</html>

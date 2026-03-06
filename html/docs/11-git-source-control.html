@@ -41,6 +41,46 @@
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code>. Common equivalents: <code>Ctrl+Shift+G</code> → <code>Cmd+Shift+G</code>, <code>Ctrl+Shift+P</code> → <code>Cmd+Shift+P</code>, <code>Ctrl+Enter</code> → <code>Cmd+Enter</code>, <code>Ctrl+S</code> → <code>Cmd+S</code>.</p>
 </blockquote>
 <hr>
+<h2>Workshop Recommendation (Chapter 11)</h2>
+<p>Chapter 11 is the first <strong>local Git workflow chapter</strong> with hands-on repository management.</p>
+<ul>
+<li><strong>Challenge count:</strong> 3</li>
+<li><strong>Time per challenge:</strong> under 10 minutes each</li>
+<li><strong>Evidence:</strong> PR metadata, branch names, and committed changes</li>
+<li><strong>Pattern:</strong> clone -&gt; edit -&gt; commit -&gt; push -&gt; PR</li>
+</ul>
+<h3>Chapter 11 Challenge Set</h3>
+<ol>
+<li><strong>Clone the learning room repository</strong><ul>
+<li>Clone <code>learning-room</code> to your local machine using VS Code.</li>
+</ul>
+</li>
+<li><strong>Make one small commit</strong><ul>
+<li>Edit a file, stage changes, write a clear commit message, and commit locally.</li>
+</ul>
+</li>
+<li><strong>Push and open a linked PR</strong><ul>
+<li>Push your branch and open a PR that references a challenge issue with <code>Closes #XX</code>.</li>
+</ul>
+</li>
+</ol>
+<h3>Expected Outcomes</h3>
+<ul>
+<li>Student can clone a repository using VS Code Command Palette.</li>
+<li>Student can navigate the Source Control panel and stage files.</li>
+<li>Student can write a clear commit message and push a branch to GitHub.</li>
+</ul>
+<h3>If You Get Stuck</h3>
+<ol>
+<li>Confirm Command Palette opens with <code>Ctrl+Shift+P</code> (Windows) or <code>Cmd+Shift+P</code> (Mac).</li>
+<li>If Source Control panel doesn&#39;t open, use <code>Ctrl+Shift+G</code> (Windows) or <code>Cmd+Shift+G</code> (Mac).</li>
+<li>If push fails, verify authentication: <code>Ctrl+Shift+P</code> → &quot;Git: Fetch&quot; to test connection.</li>
+<li>If branch won&#39;t create, confirm VS Code is in the cloned repository folder (status bar shows branch name).</li>
+<li>Ask facilitator to verify your clone location and help with one push.</li>
+</ol>
+<h3>Learning Moment</h3>
+<p>Local Git operations give you full control and immediate feedback. You can see your changes before they reach GitHub.</p>
+<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-cloning-a-repository-in-vs-code">Cloning a Repository in VS Code</a></li>
@@ -93,6 +133,32 @@
 <li>Choose destination → Open</li>
 </ol>
 <p><strong>Why HTTPS over SSH for this workshop:</strong> HTTPS works immediately with no setup. SSH requires key generation and configuration (see <a href="appendix-d-git-authentication.html">Appendix D: Git Authentication</a> for SSH setup).</p>
+<h3>Try It Now: Clone the Sci-Fi Themes Repo 🚀</h3>
+<p>To make your first clone meaningful and fun, try cloning the <strong>VS Code Sci-Fi Thinking Phrases</strong> repository:</p>
+<p><strong>Repository URL:</strong> <code>https://github.com/community-access/vscode-sci-fi-themes.git</code></p>
+<p>This repo contains custom loading phrases for GitHub Copilot Chat from three sci-fi universes:</p>
+<ul>
+<li><strong>Star Trek</strong> — Engage warp drive and run diagnostics</li>
+<li><strong>The Hitchhiker&#39;s Guide</strong> — Consult the Infinite Improbability Drive</li>
+<li><strong>Star Wars</strong> — Read the ripples in the Force</li>
+</ul>
+<h4>Why Clone This?</h4>
+<ul>
+<li>✅ It&#39;s a real, working repository with multiple files to explore</li>
+<li>✅ You&#39;ll see a practical use of cloning (customizing your personal VS Code setup)</li>
+<li>✅ After cloning, you can pick a theme and apply it to your <code>settings.json</code></li>
+<li>✅ When you open Copilot Chat, you&#39;ll see your custom phrases appear! 🌟</li>
+</ul>
+<h4>Quick Start</h4>
+<ol>
+<li>Clone: <code>Ctrl+Shift+P</code> → &quot;Git: Clone&quot; → paste URL above → <code>Enter</code></li>
+<li>Choose a destination folder and open when prompted</li>
+<li>Navigate to the <code>themes/</code> folder and pick a <code>.json</code> file (star-trek, hitchhikers, or star-wars)</li>
+<li>Copy the <code>chat.agent.thinking.phrases</code> setting into your VS Code <code>settings.json</code></li>
+<li>Reload VS Code: <code>Ctrl+Shift+P</code> → &quot;Developer: Reload Window&quot;</li>
+<li>Open Copilot Chat (<code>Ctrl+Shift+I</code>) and ask a question—watch your custom phrases appear!</li>
+</ol>
+<p>See <code>CLONE-THIS-REPO.md</code> in that repo for full instructions.</p>
 <details>
 <summary>Web alternative (github.com)</summary>
 

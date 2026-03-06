@@ -38,6 +38,44 @@
 <p>Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them - step by step.</p>
 </blockquote>
 <hr>
+<h2>Workshop Recommendation (Chapter 6)</h2>
+<p>Chapter 6 uses <strong>one controlled practice challenge</strong> so students can learn conflict resolution without high-pressure scenarios.</p>
+<ul>
+<li><strong>Challenge count:</strong> 1</li>
+<li><strong>Time:</strong> under 10 minutes</li>
+<li><strong>Evidence:</strong> issue-linked PR and completion comment</li>
+<li><strong>Pattern:</strong> observe -&gt; resolve -&gt; verify</li>
+</ul>
+<h3>Chapter 6 Challenge: Resolve Conflict Markers</h3>
+<p>Practice sample: <a href="../learning-room/docs/samples/chapter-6-conflict-practice-sample.html"><code>learning-room/docs/samples/chapter-6-conflict-practice-sample.md</code></a></p>
+<ol>
+<li>Open the assigned merge-conflict practice issue.</li>
+<li>Edit only the designated practice file/section.</li>
+<li>Remove conflict markers (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>) and keep the intended final content.</li>
+<li>Open PR with <code>Closes #XX</code> and complete with a short issue comment summary.</li>
+</ol>
+<h3>Expected Outcomes</h3>
+<ul>
+<li>Student can identify conflict markers immediately.</li>
+<li>Student can remove markers and keep intended content.</li>
+<li>Student can submit a clean, issue-linked PR after resolution.</li>
+</ul>
+<h3>If You Get Stuck</h3>
+<ol>
+<li>Pause and read marker blocks line by line before editing.</li>
+<li>Keep one side, or combine both sides when both lines are valid.</li>
+<li>Delete all marker lines (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>).</li>
+<li>Ask facilitator to sanity-check final content before opening PR.</li>
+</ol>
+<h3>Learning Moment</h3>
+<p>Merge conflicts are not failures. They are a normal collaboration checkpoint and a chance to make an intentional content decision.</p>
+<h3>Why this chapter is structured this way</h3>
+<ul>
+<li>Real conflicts can be unpredictable for new contributors.</li>
+<li>Controlled practice keeps the experience safe and repeatable.</li>
+<li>Students still get real issue and PR workflow practice.</li>
+</ul>
+<hr>
 <h2>What Is a Merge Conflict?</h2>
 <p>A merge conflict occurs when two people have both changed the <strong>same part of the same file</strong> in <strong>different ways</strong>, and Git cannot automatically decide which version is correct.</p>
 <p>Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap - for example:</p>

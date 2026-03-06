@@ -1,7 +1,9 @@
 # Day 2 Agenda
 ## From Contributor to Product Maker - Igniting the Forge
 
-> **The premise of Day 2:** You spent Day 1 learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You reviewed someone else's work. Those skills are yours now.
+**Date:** Sunday, March 8, 2026 | 9:00 AM - 5:00 PM
+
+> **The premise of Day 2:** You spent Day 1 (Saturday, March 7) learning how GitHub works - by hand, in the browser, with your screen reader. You filed real issues. You opened a real pull request. You reviewed someone else's work. Those skills are yours now.
 >
 > Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Accessibility Agents - a live, public accessibility project built by your facilitator - not as a shortcut around the skills you learned, but as a **product you can understand, evaluate, critique, and improve** because you now know exactly what it is doing and why.
 >

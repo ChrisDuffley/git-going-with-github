@@ -8,6 +8,25 @@
 
 ---
 
+## Workshop Recommendation (Chapter 2)
+
+Chapter 2 is a **confidence-building orientation chapter**.
+
+- **Challenge count:** none
+- **Automation check:** none
+- **Why:** this chapter teaches navigation foundations that are practiced in later issue and PR chapters.
+
+### Safety-First Learning Pattern
+
+Use this sequence before moving to graded chapters:
+
+1. Learn the page structure (heading, landmarks, tabs).
+2. Practice orientation (`1`, `D`, heading list).
+3. Confirm readiness with a peer or facilitator.
+4. Move to Chapter 4 for issue-based, traceable challenges.
+
+---
+
 ## What Is a Repository Page?
 
 When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-name`), you land on the **repository home page** (also called the Code tab). This page has several distinct regions:

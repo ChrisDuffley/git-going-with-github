@@ -14,6 +14,49 @@
 
 ---
 
+## Workshop Recommendation (Chapter 12)
+
+Chapter 12 introduces the **GitHub Pull Requests extension** for managing PRs directly from VS Code.
+
+- **Challenge count:** 2 guided challenges
+- **Automation check:** none (extension installation and review state are account-local)
+- **Evidence:** issue comment with confirmation of actions completed
+- **Pattern:** install -> check out -> review
+
+### Chapter 12 Guided Challenges (No Bot Validation)
+
+For this workshop, Chapter 12 focuses on tooling setup and PR review workflow:
+
+**Estimated time:** 15-25 minutes
+
+1. **Install the GitHub Pull Requests extension**
+   - Add the extension to VS Code and sign in with your GitHub account.
+
+2. **Check out a challenge PR and post a review**
+   - Download a PR branch locally and write one constructive review comment.
+   - If checkout is blocked by permissions, complete the challenge in read-only mode by reviewing the PR and posting one specific comment.
+
+### Expected Outcomes
+
+- Student can install and authenticate the GitHub PR extension.
+- Student can check out a PR branch in VS Code.
+- Student can interactively review changes and post feedback.
+
+### If You Get Stuck
+
+1. If extension doesn't install, reload VS Code with `Ctrl+Shift+P` → "Developer: Reload Window".
+2. If OAuth sign-in fails, verify your GitHub account is active in the browser first, then retry.
+3. If PR list is empty, switch to "All Open" view in the GitHub section of Explorer.
+4. If checkout fails, confirm you have write access to the repository or ask facilitator.
+5. Ask facilitator to verify the GitHub PR view in Explorer and help with one checkout.
+6. If Activity Bar focus is difficult with a screen reader, use Command Palette and run `GitHub Pull Requests: Focus on Pull Requests View`.
+
+### Learning Moment
+
+PR tooling multiplies your impact. Reviewing others' work refines your own standards and builds community trust.
+
+---
+
 ## Table of Contents
 
 1. [Installing the GitHub Pull Requests Extension](#1-installing-the-github-pull-requests-extension)

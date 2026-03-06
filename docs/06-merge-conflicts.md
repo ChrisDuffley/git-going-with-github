@@ -8,6 +8,49 @@
 
 ---
 
+## Workshop Recommendation (Chapter 6)
+
+Chapter 6 uses **one controlled practice challenge** so students can learn conflict resolution without high-pressure scenarios.
+
+- **Challenge count:** 1
+- **Time:** under 10 minutes
+- **Evidence:** issue-linked PR and completion comment
+- **Pattern:** observe -> resolve -> verify
+
+### Chapter 6 Challenge: Resolve Conflict Markers
+
+Practice sample: [`learning-room/docs/samples/chapter-6-conflict-practice-sample.md`](../learning-room/docs/samples/chapter-6-conflict-practice-sample.md)
+
+1. Open the assigned merge-conflict practice issue.
+2. Edit only the designated practice file/section.
+3. Remove conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) and keep the intended final content.
+4. Open PR with `Closes #XX` and complete with a short issue comment summary.
+
+### Expected Outcomes
+
+- Student can identify conflict markers immediately.
+- Student can remove markers and keep intended content.
+- Student can submit a clean, issue-linked PR after resolution.
+
+### If You Get Stuck
+
+1. Pause and read marker blocks line by line before editing.
+2. Keep one side, or combine both sides when both lines are valid.
+3. Delete all marker lines (`<<<<<<<`, `=======`, `>>>>>>>`).
+4. Ask facilitator to sanity-check final content before opening PR.
+
+### Learning Moment
+
+Merge conflicts are not failures. They are a normal collaboration checkpoint and a chance to make an intentional content decision.
+
+### Why this chapter is structured this way
+
+- Real conflicts can be unpredictable for new contributors.
+- Controlled practice keeps the experience safe and repeatable.
+- Students still get real issue and PR workflow practice.
+
+---
+
 ## What Is a Merge Conflict?
 
 A merge conflict occurs when two people have both changed the **same part of the same file** in **different ways**, and Git cannot automatically decide which version is correct.

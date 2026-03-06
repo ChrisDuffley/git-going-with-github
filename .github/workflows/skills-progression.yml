@@ -37,88 +37,100 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const student = context.payload.pull_request.user.login;
-            const prNumber = context.payload.pull_request.number;
-            
-            // Get linked issue
-            const prBody = context.payload.pull_request.body || '';
-            const issueMatch = prBody.match(/(?:close|closes|fix|fixes|resolve|resolves)\s+#(\d+)/i);
-            
-            if (!issueMatch) return;
-            
-            const issueNumber = parseInt(issueMatch[1]);
-            
-            // Get issue to determine skill
-            const { data: issue } = await github.rest.issues.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: issueNumber
-            });
-            
-            // Determine skill category from labels
-            const labels = issue.labels.map(l => typeof l === 'string' ? l : l.name);
-            let skillType = 'general';
-            
-            if (labels.includes('skill: markdown')) skillType = 'markdown';
-            if (labels.includes('skill: accessibility')) skillType = 'accessibility';
-            if (labels.includes('skill: review')) skillType = 'review';
-            if (labels.includes('skill: collaboration')) skillType = 'collaboration';
-            
-            // Award badge in comment
-            const badges = {
-              'markdown': 'Markdown Master',
-              'accessibility': 'Accessibility Advocate',  
-              'review': 'Code Reviewer',
-              'collaboration': 'Team Player',
-              'general': 'Contributor'
-            };
-            
-            const badge = badges[skillType] || badges['general'];
-            
-            const skills = {
-              'markdown': ['- Proper Markdown syntax', '- Document structure', '- Formatting best practices'],
-              'accessibility': ['- Heading hierarchy', '- Descriptive link text', '- Alt text for images', '- Screen reader considerations'],
-              'review': ['- Constructive feedback', '- Suggesting improvements', '- Thorough examination'],
-              'collaboration': ['- Clear communication', '- Following conventions', '- Team coordination']
-            };
-            const skillLines = skills[skillType] || [];
-            
-            const skillBody = [
-              '## Skill Unlocked: ' + badge,
-              '',
-              'Congratulations @' + student + '! You\'ve completed a **' + skillType + '** challenge.',
-              '',
-              '### Your Progress',
-              '',
-              'This PR demonstrated:',
-              ...skillLines,
-              '',
-              '### What\'s Next?',
-              '',
-              'Check your profile for the next available challenge, or explore:',
-              '- [Learning Path Tracker](../../.github/docs/LEARNING_PATHS.md)',
-              '- [Available Challenges](../../learning-room/docs/CHALLENGES.md)',
-              '',
-              'Keep up the amazing work!',
-              '',
-              '---',
-              '*Progress tracked by Learning Room Skills Engine*'
-            ].join('\n');
+            try {
+              const student = context.payload.pull_request.user.login;
+              const prNumber = context.payload.pull_request.number;
+              
+              // Get linked issue
+              const prBody = context.payload.pull_request.body || '';
+              const issueMatch = prBody.match(/(?:close|closes|fix|fixes|resolve|resolves)\s+#(\d+)/i);
+              
+              if (!issueMatch) {
+                console.log('No linked issue found in PR body');
+                return;
+              }
+              
+              const issueNumber = parseInt(issueMatch[1]);
+              
+              // Get issue to determine skill
+              const { data: issue } = await github.rest.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNumber
+              });
+              
+              // Determine skill category from labels
+              const labels = issue.labels.map(l => typeof l === 'string' ? l : l.name);
+              let skillType = 'general';
+              
+              if (labels.includes('skill: markdown')) skillType = 'markdown';
+              if (labels.includes('skill: accessibility')) skillType = 'accessibility';
+              if (labels.includes('skill: review')) skillType = 'review';
+              if (labels.includes('skill: collaboration')) skillType = 'collaboration';
+              
+              // Award badge in comment
+              const badges = {
+                'markdown': 'Markdown Master',
+                'accessibility': 'Accessibility Advocate',  
+                'review': 'Code Reviewer',
+                'collaboration': 'Team Player',
+                'general': 'Contributor'
+              };
+              
+              const badge = badges[skillType] || badges['general'];
+              
+              const skills = {
+                'markdown': ['- Proper Markdown syntax', '- Document structure', '- Formatting best practices'],
+                'accessibility': ['- Heading hierarchy', '- Descriptive link text', '- Alt text for images', '- Screen reader considerations'],
+                'review': ['- Constructive feedback', '- Suggesting improvements', '- Thorough examination'],
+                'collaboration': ['- Clear communication', '- Following conventions', '- Team coordination']
+              };
+              const skillLines = skills[skillType] || [];
+              
+              const skillBody = [
+                '## Skill Unlocked: ' + badge,
+                '',
+                'Congratulations @' + student + '! You\'ve completed a **' + skillType + '** challenge.',
+                '',
+                '### Your Progress',
+                '',
+                'This PR demonstrated:',
+                ...skillLines,
+                '',
+                '### What\'s Next?',
+                '',
+                'Check your profile for the next available challenge, or explore:',
+                '- [Learning Path Tracker](../../.github/docs/LEARNING_PATHS.md)',
+                '- [Available Challenges](../../learning-room/docs/CHALLENGES.md)',
+                '',
+                'Keep up the amazing work!',
+                '',
+                '---',
+                '*Progress tracked by Learning Room Skills Engine*'
+              ].join('\n');
 
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              body: skillBody
-            });
-            
-            // Add achievement label to PR
-            await github.rest.issues.addLabels({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: prNumber,
-              labels: ['achievement: ' + skillType]
-            });
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: skillBody
+              });
+              
+              // Add achievement label to PR
+              try {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: prNumber,
+                  labels: ['achievement: ' + skillType]
+                });
+              } catch (labelError) {
+                console.log('Could not add label:', labelError.message);
+              }
+            } catch (error) {
+              console.error('Error tracking completion:', error);
+              // Don't fail workflow - just log the error
+            }
 
   unlock-next-challenge:
     name: Unlock Next Challenge

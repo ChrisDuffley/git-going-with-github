@@ -20,6 +20,49 @@
 
 ---
 
+## Workshop Recommendation (Chapter 5)
+
+Chapter 5 is the first **PR-validated chapter** where students convert issue work into merge-ready contributions.
+
+- **Challenge count:** 3
+- **Time per challenge:** under 10 minutes each
+- **Evidence:** PR metadata, bot checks, and merged issue linkage
+- **Pattern:** small change -> linked PR -> green checks
+
+### Chapter 5 Challenge Set
+
+1. **Create one small branch change**
+   - Edit only the file required by your claimed issue.
+2. **Open a linked PR**
+   - Use PR template and include `Closes #XX`.
+3. **Pass required checks**
+   - Respond to bot feedback until required checks pass.
+
+### Expected Outcomes
+
+- Student opens a focused PR that maps to one issue.
+- Student uses `Closes #XX` correctly.
+- Student can interpret bot feedback and improve the PR.
+
+### If You Get Stuck
+
+1. Confirm your PR includes `Closes #XX` in title or body.
+2. Check that changed files are only in `learning-room/`.
+3. Open the bot validation comment and resolve one required check at a time.
+4. If checks still fail, ask for peer or facilitator review with the exact error message.
+
+### Learning Moment
+
+A great PR is small, linked to an issue, and easy to review. Faster feedback builds confidence and momentum.
+
+### Why this feels achievable
+
+- Scope is intentionally small.
+- Feedback is immediate and specific.
+- Success is visible (green checks + closed issue).
+
+---
+
 ## What Is a Pull Request?
 
 A pull request (PR) is a proposal to merge changes from one branch into another. When you have:

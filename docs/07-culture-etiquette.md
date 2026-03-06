@@ -8,6 +8,46 @@
 
 ---
 
+## Workshop Recommendation (Chapter 7)
+
+Chapter 7 is a **communication and culture chapter**.
+
+- **Challenge count:** no bot-graded challenge
+- **Automation check:** none
+- **Why:** communication quality is important but too subjective for fair automated scoring.
+
+### Optional Guided Reflection (Issue Comment Evidence)
+
+Students can post one short comment on their assigned issue:
+
+```text
+Chapter 7 reflection:
+- One respectful review habit I will use:
+- One way I will ask for help clearly:
+- One way I will respond to feedback constructively:
+```
+
+This keeps learning visible without creating a pass/fail pressure point.
+
+### Expected Outcomes
+
+- Student can name respectful collaboration behaviors.
+- Student can prepare a constructive feedback style before review work.
+- Student feels safer asking for help in public threads.
+
+### If You Get Stuck
+
+1. Use one simple sentence per prompt.
+2. Focus on one real behavior you can do today.
+3. If writing feels hard, draft bullet points first, then post.
+4. Ask facilitator for one example response and adapt it.
+
+### Learning Moment
+
+Technical quality and communication quality work together. Respectful, clear communication helps good code get merged faster.
+
+---
+
 ## GitHub Flow - The Standard Contribution Workflow
 
 Before diving into communication norms, it helps to understand the workflow that gives all of those conversations their context. **GitHub Flow** is the lightweight branching model recommended for open source contribution. It is simple by design and works whether you are making a one-line documentation fix or a major feature addition.

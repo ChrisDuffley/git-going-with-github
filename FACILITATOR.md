@@ -3,6 +3,80 @@
 
 > This document is for workshop facilitators only. Participants should start with [README.md](README.md) and [docs/00-pre-workshop-setup.md](docs/00-pre-workshop-setup.md).
 
+**👉 If you're looking for Challenge Management (issue generation, monitoring, bot setup):  See [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md)**
+
+---
+
+## Quick Reference Timeline
+
+**Skip to your current phase:**
+
+### Phase 1: Setup (2 weeks before)
+- [ ] Create GitHub org/repo
+- [ ] Configure repo settings (Issues, Discussions, branch protection)
+- [ ] Enable Actions with write permissions
+- [ ] Test GitHub Skills modules (Introduction to GitHub, Markdown, Review PRs)
+- **Time:** ~2 hours
+
+### Phase 2: Launch (1 week before)
+- [ ] Create 10 labels (accessibility, bug, documentation, good first issue, etc.)
+- [ ] Create "Hackathon Day 1" milestone
+- [ ] Create 1 Welcome issue (unassigned)
+- [ ] Create pre-seeded practice PR on `practice-review` branch
+- [ ] Create participant issues (10 per student for Chapters 4,5,6,11; e.g., 100 issues for 10 students)
+- [ ] Update `.github/data/student-roster.json` with participant names/usernames
+- [ ] Create `day1-practice` branch (differs from main by 2-3 files)
+- **Time:** ~3-4 hours
+
+### Phase 3: Day 1 (30 min before session)
+- [ ] Verify all participant issues created, assigned, labeled
+- [ ] Verify bot automation is working (test a PR comment)
+- [ ] Connect screen share: show learning-room repo structure
+- **Time:** 30 min checklist
+
+### Phase 4: Day 1 Session - Saturday, March 7, 2026 (7.5 hours)
+- **Block 0 (9:00-9:45):** Welcome, setup verification, **git clone learning-room**
+- **Block 1 (9:30-10:10):** Screen reader orientation to GitHub
+- **Block 2 (10:10-11:00):** Navigating repositories & Markdown setup
+- **Break (11:00-11:15)**
+- **Block 3 (11:15-12:10):** Working with Issues & Pull Requests
+- **Block 4 (12:10-1:00 PM):** Pull Request review and merge
+- **Lunch (1:00-2:00 PM)**
+- **Block 5 (2:00-3:00 PM):** Contribution sprint (students work on assigned learning-room issues)
+- **Break (3:00-3:15 PM)**
+- **Block 6 (3:15-4:30 PM):** Community tools & wrap-up
+
+### Phase 5: Day 2 Morning (30 min before session)
+- [ ] Verify VS Code + extensions are installed (demo machine)
+- [ ] Test Copilot Chat + Accessibility Agents
+- [ ] Test slash commands (`/find-issues`, `/daily-briefing`)
+- [ ] Check all student PRs from Day 1 (merge any ready ones)
+- **Time:** 30 min checklist
+
+### Phase 6: Day 2 Session - Sunday, March 8, 2026 (7.5 hours)
+- **Block 0 (9:00-9:30):** Day 1 debrief & goal-setting
+- **Block 1 (9:30-10:30):** VS Code setup & screen reader mode
+- **Break (10:30-10:45)**
+- **Block 2 (10:45-12:00):** Deep contribution with Copilot Chat
+- **Lunch (12:00-1:00 PM)**
+- **Block 3 (1:00-2:00 PM):** Accessibility Agents activation
+- **Block 4 (2:00-3:00 PM):** Agentic workflows in action
+- **Break (3:00-3:15 PM)**
+- **Block 5 (3:15-4:15 PM):** Ship your contribution (upstream PR to accessibility-agents)
+- **Block 6 (4:15-5:00 PM):** Spec kit & future planning
+
+### Phase 7: Post-Workshop
+- [ ] Post completion stats/badges
+- [ ] Collect feedback on automation
+- [ ] Archive student roster
+- [ ] Schedule retrospective
+
+---
+
+## Full Details
+
+(See sections below for complete instructions on each phase)
+
 ---
 
 ## Repository Structure
@@ -164,10 +238,10 @@ See [Working with Issues](docs/04-working-with-issues.md) and the [Day 1 Agenda]
 | `keyboard-shortcuts.md` | The Accessibility Settings link is broken: `htps://` has a typo | `bug`, `good first issue` |
 | `setup-guide.md` | Step 2 link has a typo: `htps://github.com/settings/accessibility` - missing one `t` | `bug`, `good first issue` |
 | `setup-guide.md` | "Note: Links marked [TODO]" callout at the bottom - replace with actual links to the workshop repo | `documentation`, `good first issue` |
+| `welcome.md` | `Last reviewed: [DATE]` placeholder at the bottom - replace with today's date (format: YYYY-MM-DD) | `documentation`, `good first issue` |
 | `welcome.md` | [TODO] paragraph about who can contribute (line 22) | `documentation`, `good first issue` |
 | `welcome.md` | [TODO] paragraph about reading an issue to decide if it's right for you (line 40) | `documentation`, `good first issue` |
 | `welcome.md` | [TODO] sentence about what a merged PR means for GitHub profile (line 52) | `documentation`, `good first issue` |
-| `welcome.md` | `Last reviewed: [DATE]` placeholder at the bottom - replace with today's date | `documentation`, `good first issue` |
 
 Create extras for any additional participants.
 

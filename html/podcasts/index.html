@@ -32,166 +32,102 @@
     <h1>Podcast Audio Pipeline</h1>
 <p>This directory contains the complete pipeline for producing the Git Going with GitHub companion audio series: 44 episodes of two-host conversational content designed for blind and low-vision developers.</p>
 <h2>Pipeline Overview</h2>
-<pre><code class="hljs">build-bundles.js     Generate source bundles from chapter content
+<pre><code class="hljs">build-bundles.js     Generate <span class="hljs-keyword">source</span> bundles <span class="hljs-keyword">from</span> chapter content
         |
-        <span class="hljs-type">v</span>
-  bundles/*.md       One bundle per episode (production prompt + source material)
+        v
+  bundles<span class="hljs-comment">/*.md       One bundle per episode (production prompt + source material)
         |
-        <span class="hljs-type">v</span>                                               OR
-        |<span class="hljs-type">---&gt; NotebookLM</span> (manual)                       |
-        <span class="hljs-type">|     Upload</span> bundle, generate, export MP3       |
-        <span class="hljs-type">|                                               |
-        v</span>                                               v
-generate-scripts.js  Convert bundles into two-host scripts <span class="hljs-built_in">using</span> Google Gemini
+        v
+  scripts/*.txt      Conversational scripts with [ALEX]/[JAMIE]/[PAUSE] markers
         |
-        <span class="hljs-type">v</span>
-  scripts/*.txt      Conversational scripts <span class="hljs-built_in">with</span> [ALEX]/[JAMIE]/[PAUSE] markers
+        v
+  tts/               Local Piper neural TTS (ONNX models, pronunciation lexicon)
         |
-        <span class="hljs-type">v</span>
-generate-audio.js    Voice scripts <span class="hljs-built_in">with</span> Google Cloud TTS Journey voices
+        v
+  audio/*.wav        Final WAV files (gitignored - hosted on GitHub Releases)
         |
-        <span class="hljs-type">v</span>
-  audio/*.mp3        Final MP3 files (gitignored - hosted on GitHub Releases)
-        |
-        <span class="hljs-type">v</span>
-generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</code></pre>
-<p>Two production paths:</p>
-<ul>
-<li><strong>NotebookLM</strong> (manual): Upload a bundle, get a conversational podcast with zero setup. Great for quick iteration.</li>
-<li><strong>Google TTS</strong> (automated): Gemini generates scripts, Journey voices synthesize audio. Fully scriptable, reproducible, under $0.10 for all 44 episodes.</li>
-</ul>
+        v
+generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</span></code></pre>
+<p>Audio is generated locally using <a href="https://github.com/rhasspy/piper">Piper</a> neural text-to-speech. No cloud APIs, no API keys, no billing. Runs entirely on your machine.</p>
 <h2>Directory Structure</h2>
 <pre><code class="hljs">podcasts/
-  README<span class="hljs-variable">.md</span>             This guide
-  build-bundles<span class="hljs-variable">.js</span>      Generates source bundles + manifest<span class="hljs-variable">.json</span>
-  <span class="hljs-keyword">generate</span>-scripts<span class="hljs-variable">.js</span>   Converts bundles to two-host scripts via Gemini
-  <span class="hljs-keyword">generate</span>-audio<span class="hljs-variable">.js</span>     Voices scripts <span class="hljs-keyword">with</span> Google Cloud TTS Journey voices
-  <span class="hljs-keyword">generate</span>-site<span class="hljs-variable">.js</span>      Generates PODCASTS<span class="hljs-variable">.md</span> <span class="hljs-keyword">and</span> feed<span class="hljs-variable">.xml</span> from manifest<span class="hljs-variable">.json</span>
-  manifest<span class="hljs-variable">.json</span>         Episode manifest (metadata, status tracking)
-  feed<span class="hljs-variable">.xml</span>              RSS <span class="hljs-number">2</span><span class="hljs-variable">.0</span> podcast feed (auto-generated)
-  bundles/              <span class="hljs-number">44</span> generated episode source bundles
-  scripts/              Generated two-host scripts (committed, reviewable)
-  audio/                MP3 files after generation (<span class="hljs-keyword">not</span> in git)</code></pre>
+  README<span class="hljs-selector-class">.md</span>             This guide
+  build-bundles<span class="hljs-selector-class">.js</span>      Generates <span class="hljs-selector-tag">source</span> bundles + manifest<span class="hljs-selector-class">.json</span>
+  generate-site<span class="hljs-selector-class">.js</span>      Generates PODCASTS<span class="hljs-selector-class">.md</span> and feed<span class="hljs-selector-class">.xml</span> from manifest<span class="hljs-selector-class">.json</span>
+  manifest<span class="hljs-selector-class">.json</span>         Episode manifest (metadata, status tracking)
+  feed<span class="hljs-selector-class">.xml</span>              RSS <span class="hljs-number">2.0</span> podcast feed (auto-generated)
+  bundles/              <span class="hljs-number">44</span> generated episode <span class="hljs-selector-tag">source</span> bundles
+  scripts/              Two-host scripts (committed, reviewable)
+  audio/                WAV files after generation (not <span class="hljs-keyword">in</span> git)
+  tts/                  Python TTS package
+    __init__<span class="hljs-selector-class">.py</span>         Package init
+    generate_episode<span class="hljs-selector-class">.py</span> Single episode generator
+    generate_all<span class="hljs-selector-class">.py</span>     Batch generator <span class="hljs-keyword">for</span> <span class="hljs-attribute">all</span> episodes
+    download_samples<span class="hljs-selector-class">.py</span> Voice sample downloader
+    lexicon<span class="hljs-selector-class">.txt</span>         Pronunciation dictionary <span class="hljs-keyword">for</span> technical terms
+    models/             Piper ONNX voice models
+    samples/            Voice sample WAVs</code></pre>
 <h2>Prerequisites</h2>
 <ul>
-<li>Node.js 18 or later (the scripts use built-in <code>fetch()</code> - zero npm packages needed)</li>
-<li>A Google account (free tier works for both APIs)</li>
+<li>Python 3.10 or later</li>
+<li>Piper TTS: <code>pip install piper-tts</code></li>
+<li>Node.js 18 or later (for bundle/site generation only)</li>
 </ul>
-<hr>
-<h2>Path A: NotebookLM (Manual)</h2>
-<p>No API keys needed. Best for quick one-off generation or when you want NotebookLM&#39;s conversational AI.</p>
-<h3>1. Generate bundles</h3>
-<pre><code class="hljs language-bash">npm run build:podcast-bundles</code></pre>
-<h3>2. Create episodes in NotebookLM</h3>
-<ol>
-<li>Open <a href="https://notebooklm.google.com">NotebookLM</a> and sign in.</li>
-<li>Select &quot;New notebook&quot;.</li>
-<li>Name it: &quot;Ep 00 - Welcome to Git Going with GitHub&quot;.</li>
-<li>Select &quot;Add source&quot;, then &quot;Upload&quot; and choose <code>podcasts/bundles/ep00-welcome.md</code>.</li>
-<li>Wait for indexing (a few seconds).</li>
-<li>In the Studio panel, select &quot;Generate&quot; under Audio Overview.</li>
-<li>Listen to the preview. Add a notebook note to adjust focus if needed and regenerate.</li>
-<li>Download the MP3 and save as <code>podcasts/audio/ep00-welcome.mp3</code>.</li>
-</ol>
-<p>Repeat for each episode.</p>
-<h3>Batch production tips</h3>
-<ul>
-<li>Work in tiers: Day 1 core (episodes 0-10), Day 2 core (11-17), appendices (18-43).</li>
-<li>Keep notebooks around - you can regenerate when source chapters change.</li>
-<li>Listen for visual language (&quot;you will see&quot;) and missing checklist concepts.</li>
-</ul>
-<hr>
-<h2>Path B: Google TTS with Journey Voices (Automated)</h2>
-<p>Fully automated, reproducible, and costs under a dime for all 44 episodes.</p>
-<h3>Step 1: Create a Google Cloud Project</h3>
-<ol>
-<li>Open <a href="https://console.cloud.google.com/">Google Cloud Console</a></li>
-<li>Select &quot;Create Project&quot; from the project dropdown at the top</li>
-<li>Name it something like &quot;git-going-podcasts&quot;</li>
-<li>Note the project ID</li>
-</ol>
-<p>If you already have a Google Cloud project, you can reuse it.</p>
-<h3>Step 2: Get a Gemini API Key (for script generation)</h3>
-<p>This key powers the Gemini model that converts bundles into two-host conversational scripts.</p>
-<ol>
-<li>Open <a href="https://aistudio.google.com/apikey">Google AI Studio</a></li>
-<li>Select &quot;Create API key&quot;</li>
-<li>Choose your Cloud project from Step 1</li>
-<li>Copy the key</li>
-</ol>
-<p>Cost: Free tier gives 15 requests per minute and 1 million tokens per minute. All 44 episodes fit within this.</p>
-<h3>Step 3: Enable Text-to-Speech API and Create a Key</h3>
-<p>This key powers the Journey voices that read your scripts aloud.</p>
-<ol>
-<li>Open the <a href="https://console.cloud.google.com/apis/library/texttospeech.googleapis.com">Text-to-Speech API page</a> in Cloud Console</li>
-<li>Select &quot;Enable&quot;</li>
-<li>Open <a href="https://console.cloud.google.com/apis/credentials">API Credentials</a></li>
-<li>Select &quot;Create Credentials&quot; then &quot;API key&quot;</li>
-<li>(Recommended) Select &quot;Edit API key&quot;, then under &quot;API restrictions&quot; choose &quot;Restrict key&quot; and select only &quot;Cloud Text-to-Speech API&quot;</li>
-<li>Copy the key</li>
-</ol>
-<p>Cost: Journey voices cost $0.03 per million characters. All 44 episodes total roughly 800,000 characters, so the entire series costs about $0.02 to $0.05.</p>
-<h3>Step 4: Set Environment Variables</h3>
-<p>PowerShell (current session):</p>
-<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:GEMINI_API_KEY</span> = <span class="hljs-string">&quot;your-gemini-key-here&quot;</span>
-<span class="hljs-variable">$env:GOOGLE_TTS_API_KEY</span> = <span class="hljs-string">&quot;your-tts-key-here&quot;</span></code></pre>
-<p>PowerShell (persistent - add to your profile):</p>
-<pre><code class="hljs language-powershell">[<span class="hljs-type">Environment</span>]::SetEnvironmentVariable(<span class="hljs-string">&#x27;GEMINI_API_KEY&#x27;</span>, <span class="hljs-string">&#x27;your-gemini-key-here&#x27;</span>, <span class="hljs-string">&#x27;User&#x27;</span>)
-[<span class="hljs-type">Environment</span>]::SetEnvironmentVariable(<span class="hljs-string">&#x27;GOOGLE_TTS_API_KEY&#x27;</span>, <span class="hljs-string">&#x27;your-tts-key-here&#x27;</span>, <span class="hljs-string">&#x27;User&#x27;</span>)</code></pre>
-<p>Bash / macOS / Linux:</p>
-<pre><code class="hljs language-bash"><span class="hljs-built_in">export</span> GEMINI_API_KEY=<span class="hljs-string">&quot;your-gemini-key-here&quot;</span>
-<span class="hljs-built_in">export</span> GOOGLE_TTS_API_KEY=<span class="hljs-string">&quot;your-tts-key-here&quot;</span></code></pre>
-<h3>Step 5: Generate Scripts</h3>
-<pre><code class="hljs language-bash">npm run build:podcast-scripts</code></pre>
-<p>This sends each bundle to Gemini and produces conversational two-host scripts in <code>podcasts/scripts/</code>. Scripts are committed to the repo so you can review and edit them before voicing.</p>
-<p>Single episode: <code>node podcasts/generate-scripts.js 17</code></p>
-<p>Episode range: <code>node podcasts/generate-scripts.js 0 10</code></p>
-<h3>Step 6: Generate Audio</h3>
-<pre><code class="hljs language-bash">npm run build:podcast-audio</code></pre>
-<p>This voices each script with Journey voices and writes MP3 files to <code>podcasts/audio/</code>.</p>
-<p>Dry run (cost estimate, no API calls): <code>node podcasts/generate-audio.js --dry-run</code></p>
-<p>Single episode: <code>node podcasts/generate-audio.js 17</code></p>
-<h3>Step 7: Build Player Page and RSS Feed</h3>
+<h2>Quick Start</h2>
+<h3>1. Install Piper</h3>
+<pre><code class="hljs language-bash">pip install piper-tts</code></pre>
+<h3>2. Download voice models (if not already present)</h3>
+<pre><code class="hljs language-bash">python -m podcasts.tts.download_samples</code></pre>
+<p>This downloads en_US Piper ONNX models to <code>podcasts/tts/models/</code>.</p>
+<h3>3. Generate all episodes</h3>
+<pre><code class="hljs language-bash">python -m podcasts.tts.generate_all</code></pre>
+<p>Or generate a single episode:</p>
+<pre><code class="hljs language-bash">python -m podcasts.tts.generate_episode ep00-welcome
+python -m podcasts.tts.generate_episode ep05-pull-requests</code></pre>
+<p>Or a range:</p>
+<pre><code class="hljs language-bash">python -m podcasts.tts.generate_all --start 0 --end 10</code></pre>
+<h3>4. Build player page and RSS feed</h3>
 <pre><code class="hljs language-bash">npm run build:podcast-site</code></pre>
-<hr>
 <h2>Voice Configuration</h2>
 <p>The default voices are:</p>
 <table>
 <thead>
 <tr>
 <th scope="col">Host</th>
-<th scope="col">Voice Name</th>
+<th scope="col">Piper Model</th>
 <th scope="col">Character</th>
 <th scope="col">Description</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>Alex</td>
-<td>en-US-Journey-D</td>
+<td>en_US-hfc_male-medium</td>
 <td>Lead host, experienced, warm</td>
-<td>Male, measured delivery, calm with dry humor</td>
+<td>Male, measured delivery</td>
 </tr>
 <tr>
 <td>Jamie</td>
-<td>en-US-Journey-F</td>
+<td>en_US-hfc_female-medium</td>
 <td>Co-host, curious, energetic</td>
-<td>Female, asks great questions, shares analogies</td>
+<td>Female, asks great questions</td>
 </tr>
 </tbody></table>
-<p>Journey voices are Google&#39;s most natural-sounding voices, designed specifically for long-form conversational content.</p>
-<h3>Override voices</h3>
-<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:VOICE_ALEX</span> = <span class="hljs-string">&quot;en-US-Journey-O&quot;</span>
-<span class="hljs-variable">$env:VOICE_JAMIE</span> = <span class="hljs-string">&quot;en-US-Journey-D&quot;</span></code></pre>
-<p>List all available Journey voices: <code>node podcasts/generate-audio.js --list-voices</code></p>
-<h3>Adjust speaking rate</h3>
-<p>Default is 0.95 (slightly slower than normal) for comfortable listening.</p>
-<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:TTS_RATE</span> = <span class="hljs-string">&quot;0.90&quot;</span>    <span class="hljs-comment"># Even slower - great for complex topics</span>
-<span class="hljs-variable">$env:TTS_RATE</span> = <span class="hljs-string">&quot;1.0&quot;</span>     <span class="hljs-comment"># Normal speed</span></code></pre>
+<p>26 en_US voice models are included. Listen to samples in <code>podcasts/tts/samples/</code> to try different voices.</p>
+<p>To change voices, edit the <code>MALE_MODEL</code> and <code>FEMALE_MODEL</code> paths in <code>podcasts/tts/generate_episode.py</code>.</p>
+<h2>Pronunciation Lexicon</h2>
+<p>The file <code>podcasts/tts/lexicon.txt</code> contains pronunciation overrides for technical terms, acronyms, and jargon. The lexicon is applied as text substitution before Piper synthesizes each segment.</p>
+<p>Format: one entry per line, tab-separated <code>WORD&lt;tab&gt;REPLACEMENT</code>. Lines starting with <code>#</code> are comments.</p>
+<p>Example entries:</p>
+<pre><code class="hljs"><span class="hljs-variable">WCAG</span>    <span class="hljs-variable">W</span><span class="hljs-operator">-</span><span class="hljs-variable">Cag</span>
+<span class="hljs-variable">NVDA</span>    <span class="hljs-built_in">N</span> <span class="hljs-variable">V</span> <span class="hljs-built_in">D</span> <span class="hljs-variable">A</span>
+<span class="hljs-variable">GitHub</span>  <span class="hljs-variable">Git</span> <span class="hljs-variable">Hub</span>
+<span class="hljs-variable">JSON</span>    <span class="hljs-variable">Jason</span></code></pre>
+<p>Add new entries when Piper mispronounces a word. The lexicon is loaded once per run and uses word-boundary matching so entries like <code>GUI</code> do not affect words like &quot;guidelines&quot;.</p>
+<p>Piper uses espeak-ng for phonemization. For precise control, you can also use espeak-ng phoneme syntax directly in the script text: <code>[[...]]</code> for inline phoneme overrides.</p>
 <h2>Manifest Status Flow</h2>
 <p>Each episode in manifest.json progresses through these statuses:</p>
 <pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">bundle</span>-ready  --&gt;</span>  <span class="hljs-function"><span class="hljs-title">script</span>-ready  --&gt;</span>  <span class="hljs-function"><span class="hljs-title">audio</span>-ready  --&gt;</span>  published
-(build-bundles)    (gen-scripts)      (gen-audio)       (GitHub Release)</code></pre>
-<p>Scripts only process episodes matching their expected input status, unless <code>--force</code> is used.</p>
+(build-bundles)    (scripts/)         (tts/)            (GitHub Release)</code></pre>
 <h2>All npm Scripts</h2>
 <table>
 <thead>
@@ -205,12 +141,8 @@ generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</c
 <td>Generate source bundles from chapters</td>
 </tr>
 <tr>
-<td><code>npm run build:podcast-scripts</code></td>
-<td>Generate conversational scripts via Gemini</td>
-</tr>
-<tr>
 <td><code>npm run build:podcast-audio</code></td>
-<td>Voice scripts with Journey voices</td>
+<td>Generate audio with local Piper TTS</td>
 </tr>
 <tr>
 <td><code>npm run build:podcast-site</code></td>
@@ -218,7 +150,7 @@ generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</c
 </tr>
 <tr>
 <td><code>npm run build:podcasts</code></td>
-<td>Bundles + site (original pipeline)</td>
+<td>Bundles + site</td>
 </tr>
 <tr>
 <td><code>npm run build</code></td>
@@ -226,37 +158,37 @@ generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</c
 </tr>
 </tbody></table>
 <h2>Publishing Audio</h2>
-<p>Audio files are hosted on GitHub Releases (not in the repository - they are gitignored).</p>
+<p>Audio files are hosted on GitHub Releases (not in the repository, they are gitignored).</p>
 <ol>
-<li>Generate all audio: <code>npm run build:podcast-audio</code></li>
+<li>Generate all audio: <code>python -m podcasts.tts.generate_all</code></li>
 <li>Create a GitHub Release tagged <code>podcasts</code></li>
-<li>Upload the MP3 files from <code>podcasts/audio/</code> as release assets</li>
+<li>Upload the WAV files from <code>podcasts/audio/</code> as release assets</li>
 <li>The RSS feed already points to release asset URLs</li>
 <li>Update manifest status to <code>published</code> and rebuild the site</li>
 </ol>
-<p>Students subscribe via RSS:</p>
-<pre><code class="hljs">https://community-<span class="hljs-keyword">access</span>.org/git-going-<span class="hljs-keyword">with</span>-github/podcasts/feed.xml</code></pre>
-<p>Or stream from the <a href="../PODCASTS.html">Podcasts page</a>.</p>
 <h2>Updating Episodes</h2>
 <p>When chapter content changes:</p>
 <ol>
 <li><code>npm run build:podcast-bundles</code> to regenerate bundles</li>
-<li><code>node podcasts/generate-scripts.js --force [episode]</code> to regenerate scripts</li>
-<li><code>node podcasts/generate-audio.js --force [episode]</code> to regenerate audio</li>
+<li>Edit the script in <code>podcasts/scripts/</code> if the content changed</li>
+<li><code>python -m podcasts.tts.generate_episode &lt;slug&gt;</code> to regenerate audio</li>
 <li><code>npm run build:podcast-site</code> to update the player page and RSS feed</li>
-<li>Upload new MP3 to the GitHub Release</li>
+<li>Upload new audio to the GitHub Release</li>
 <li>Commit and push</li>
 </ol>
 <h2>Troubleshooting</h2>
-<h3>&quot;GEMINI_API_KEY is not set&quot;</h3>
-<p>Verify the environment variable is set in your current shell:</p>
-<pre><code class="hljs language-powershell"><span class="hljs-variable">$env:GEMINI_API_KEY</span>    <span class="hljs-comment"># Should print your key</span></code></pre>
-<h3>&quot;TTS API error 403&quot;</h3>
-<p>The Text-to-Speech API is not enabled in your project, or your API key does not have access:</p>
-<ol>
-<li>Verify the API is enabled at <a href="https://console.cloud.google.com/apis/library/texttospeech.googleapis.com">Cloud Console APIs</a></li>
-<li>Check that your API key is not restricted to a different API</li>
-</ol>
+<h3>Piper command not found</h3>
+<p>Ensure Piper TTS is installed:</p>
+<pre><code class="hljs language-bash">pip install piper-tts
+python -m piper --<span class="hljs-built_in">help</span></code></pre>
+<h3>Model not found</h3>
+<p>Download models first:</p>
+<pre><code class="hljs language-bash">python -m podcasts.tts.download_samples</code></pre>
+<p>Or download specific models manually:</p>
+<pre><code class="hljs language-bash">python -m piper.download_voices en_US-hfc_male-medium --download-dir podcasts/tts/models
+python -m piper.download_voices en_US-hfc_female-medium --download-dir podcasts/tts/models</code></pre>
+<h3>Mispronounced word</h3>
+<p>Add an entry to <code>podcasts/tts/lexicon.txt</code> with the correct pronunciation and regenerate the episode.</p>
 <h3>&quot;Rate limited&quot; messages</h3>
 <p>Both APIs have generous free-tier limits. If you hit rate limits:</p>
 <ul>

@@ -39,6 +39,45 @@
 <p><strong>Learning Room connection:</strong> The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify <code>docs/keyboard-shortcuts.md</code> (shortcut tables with intentional errors), <code>docs/setup-guide.md</code> (broken links and incomplete steps), and <code>docs/welcome.md</code> (<code>[TODO]</code> sections to complete). These are the same files you work on during the Day 1 contribution sprint.</p>
 </blockquote>
 <hr>
+<h2>Workshop Recommendation (Chapter 14)</h2>
+<p>Chapter 14 is the <strong>code review chapter</strong> focused on practicing constructive feedback.</p>
+<ul>
+<li><strong>Challenge count:</strong> 2 guided challenges</li>
+<li><strong>Automation check:</strong> none (review quality is subjective and human-focused)</li>
+<li><strong>Evidence:</strong> issue comment with summary of review and feedback posted</li>
+<li><strong>Pattern:</strong> review -&gt; comment -&gt; verdict</li>
+</ul>
+<h3>Chapter 14 Guided Challenges (No Bot Validation)</h3>
+<p>For this workshop, Chapter 14 focuses on building review skills and giving constructive feedback:</p>
+<ol>
+<li><p><strong>Review a practice PR and leave 2-3 inline comments</strong></p>
+<ul>
+<li>Check out or view an assigned practice PR, read the diff, and post constructive feedback on 2-3 specific lines.</li>
+</ul>
+</li>
+<li><p><strong>Submit a formal review verdict</strong></p>
+<ul>
+<li>Complete your review by submitting an approval, request-changes, or comment-only verdict on the PR.</li>
+</ul>
+</li>
+</ol>
+<h3>Expected Outcomes</h3>
+<ul>
+<li>Student can navigate PR diffs with a screen reader.</li>
+<li>Student can post inline comments on specific lines.</li>
+<li>Student can write constructive feedback that helps the author improve.</li>
+</ul>
+<h3>If You Get Stuck</h3>
+<ol>
+<li>If Files Changed tab won&#39;t open, reload the PR page and retry.</li>
+<li>If inline comment button is hard to find, use the file tree to jump between files (<code>Press 3</code> in NVDA/JAWS).</li>
+<li>If you&#39;re unsure what to comment on, focus on clarity: heading structure, link text, missing steps, or typos.</li>
+<li>If submitting the review fails, check that you&#39;re not in draft mode and have write access to the repo.</li>
+<li>Ask facilitator to help you navigate one diff and model one constructive comment.</li>
+</ol>
+<h3>Learning Moment</h3>
+<p>Constructive review is a gift. Specific, kind feedback helps authors improve and builds trust in the community.</p>
+<hr>
 <h2>Prerequisites Checklist</h2>
 <h3>Before starting this chapter, verify you have completed</h3>
 <ul>
@@ -1228,32 +1267,152 @@ The heading hierarchy skip in the published document matters because:
 </ol>
 <p>If you can answer all three, you&#39;re ready for the next chapter.</p>
 <hr>
+<h2>Part 3 - Using GitHub Copilot to Understand Code Changes</h2>
+<p>Reviewing code is about understanding <em>what changed</em>, <em>why it changed</em>, and <em>whether the change is safe and correct</em>. GitHub Copilot can help you gather and understand information about code changes - especially when diffs are large, complex, or involve unfamiliar frameworks.</p>
+<h3>When to Use Copilot During Code Review</h3>
+<p>Copilot is most useful for answering these questions:</p>
+<ol>
+<li><strong>&quot;What does this code do?&quot;</strong> - you&#39;re reading unfamiliar syntax or a framework you don&#39;t know well</li>
+<li><strong>&quot;Why might this change break something?&quot;</strong> - you need to understand dependencies or side effects</li>
+<li><strong>&quot;Is this pattern safe?&quot;</strong> - you want to verify that the approach follows best practices</li>
+<li><strong>&quot;What would be a better way to write this?&quot;</strong> - you&#39;re looking for alternatives to suggest</li>
+<li><strong>&quot;Does this match the PR&#39;s description?&quot;</strong> - the change seems to do more (or less) than claimed</li>
+</ol>
+<h3>How to Use Copilot During Review</h3>
+<h4>In VS Code with an Open Diff</h4>
+<ol>
+<li>Open the PR using the GitHub Pull Requests extension (see Part 2)</li>
+<li>Open the diff for any file</li>
+<li><strong>Select</strong> a block of code that confuses you (highlight it)</li>
+<li>Open Copilot Chat: <code>Ctrl+Shift+I</code></li>
+<li>Type: <code>Explain what this code does</code> or <code>Why might this change affect [other file]?</code></li>
+<li>Copilot reads the selected code and answers in the chat</li>
+</ol>
+<h4>Example Exchange</h4>
+<pre><code class="hljs language-text">You (selected code):
+  -  const oldParser = require(&#x27;./old-parser.js&#x27;);
+  +  const newParser = require(&#x27;fast-parser&#x27;);
+
+You ask Copilot:
+  &quot;Why would switching from require(&#x27;./old-parser.js&#x27;) to require(&#x27;fast-parser&#x27;) be risky?&quot;
+
+Copilot might respond:
+  &quot;The modules have different APIs. If the code calls oldParser.parseXML() 
+  and newParser doesn&#x27;t have that method, the diff would break existing code. 
+  Check if the call sites were also updated in this PR.&quot;
+
+You then:
+  - Search the diff for calls to parseXML() to verify they were updated
+  - Or leave a comment: &quot;Did we confirm all oldParser.parseXML() calls were 
+    updated to use the new parser&#x27;s API?&quot;</code></pre>
+<h4>On GitHub.com (Web Interface)</h4>
+<ol>
+<li>Open the PR&#39;s Files Changed tab</li>
+<li>Focus on a line or section you want to understand better</li>
+<li>In VS Code Copilot Chat (not in the browser - Copilot Chat doesn&#39;t work directly in browser diffs yet)</li>
+<li>Copy the confusing code, paste it into chat, and ask Copilot to explain</li>
+</ol>
+<p><strong>Another option:</strong> Use the GitHub Copilot inline suggestions on GitHub.com:</p>
+<ul>
+<li>Some GitHub PRs show Copilot insights directly in the diff (as of early 2026)</li>
+<li>If you see a lightbulb 💡 icon, click it to see Copilot&#39;s suggestion about that line</li>
+</ul>
+<h3>Copilot Limitations During Review (Critical to Know)</h3>
+<p>Copilot cannot:</p>
+<ul>
+<li><strong>See the whole project</strong> - it sees only what you show it (the selected diff, not the context of the entire codebase)</li>
+<li><strong>Verify correctness</strong> - it can explain what code does, but not whether it&#39;s correct for your specific use case</li>
+<li><strong>Understand intent</strong> - it reads the code, not the author&#39;s mind or the PR description</li>
+<li><strong>Catch all risks</strong> - it can spot common patterns, but not edge cases unique to your project</li>
+</ul>
+<p><strong>This is why manual review is essential:</strong> You have context (project history, team decisions, user impact) that Copilot does not. Use Copilot to <em>understand</em>, then use your judgment to <em>decide</em>.</p>
+<h3>Best Practices</h3>
+<ol>
+<li><strong>Read the diff manually first</strong> - you spot the big picture before asking Copilot details</li>
+<li><strong>Ask Copilot specific questions</strong> - not &quot;review this code&quot; but &quot;does this regex handle Unicode?&quot;</li>
+<li><strong>Fact-check Copilot&#39;s answers</strong> - it can be confidently wrong, especially about frameworks or domains it has less training data for</li>
+<li><strong>Combine Copilot with manual analysis</strong> - ask Copilot to explain, then verify by checking the PR description or looking for related files</li>
+<li><strong>Use Copilot to draft comments</strong> - type <code>Draft a comment about [issue] for this PR</code> and edit Copilot&#39;s suggestion to match your tone</li>
+</ol>
+<hr>
 <h3>What Comes Next</h3>
-<p>Your manual code review skills - identifying heading issues, catching link text problems, understanding screen reader navigation - are the <strong>foundation</strong> for understanding automated review.</p>
-<p>In <strong>Chapter 16 (Accessibility Agents)</strong>, you&#39;ll use the <code>@pr-review</code> agent to generate a <em>draft</em> review of this same PR. The agent will:</p>
+<p>Your manual code review skills - identifying heading issues, catching link text problems, understanding screen reader navigation, gathering information with Copilot - are the <strong>foundation</strong> for understanding automated review.</p>
+<p>In <strong>Chapter 16 (Accessibility Agents)</strong>, you&#39;ll meet a full team of agents designed to <strong>amplify</strong> these skills:</p>
+<hr>
+<h2>🚀 Day 2 Teaser: The Full Accessibility Agents Review Ecosystem</h2>
+<p>You now have the manual skills. Chapter 16 shows you how to leverage 50+ specialized agents to make your reviews faster, more consistent, and more thorough - while staying in full control of what you post.</p>
+<h3>The Agents That Help With Code Review</h3>
+<p><strong>Pull Request Review Agents:</strong></p>
 <ul>
-<li>Suggest changes automatically</li>
-<li>Identify accessibility issues</li>
-<li>Create a review checklist</li>
+<li><strong><code>@pr-review</code></strong> - Generates a full-draft PR review with line-numbered diff maps, risk assessment, before/after snapshots, and suggested inline comments. You edit and post it under your name.</li>
+<li><strong><code>@pr-author-checklist</code></strong> - Before you even submit your PR, use this to verify you haven&#39;t missed setup steps, accessibility checks, or documentation</li>
+<li><strong><code>@insiders-a11y-tracker</code></strong> - Monitors your PR for accessibility-sensitive changes: WCAG violations, heading hierarchy issues, link text quality, keyboard navigation impacts</li>
 </ul>
-<p><strong>But</strong> - and this is critical - the agent&#39;s suggestions will only make sense <em>because you already know what to look for</em>. You&#39;ll be able to:</p>
+<p><strong>Code Understanding Agents:</strong></p>
 <ul>
-<li>Verify the agent didn&#39;t miss anything</li>
-<li>Add context the agent can&#39;t see</li>
-<li>Decide whether the agent&#39;s suggestions are correct</li>
+<li><strong><code>@developer-hub</code></strong> - Orchestrates explanations for unfamiliar code, patterns, or frameworks you&#39;re reviewing</li>
+<li><strong><code>@python-specialist</code></strong> - If your PR contains Python code, this agent explains patterns, spots accessibility issues, and suggests improvements</li>
+<li><strong><code>@wxpython-specialist</code></strong> - For desktop GUI code, helps verify accessible widget patterns and focus management</li>
 </ul>
-<p>That&#39;s the power of &quot;manual skill first, agent second.&quot; You&#39;re building that skill right now.</p>
+<p><strong>Accessibility Review Agents</strong> (when code affects UI/UX):</p>
+<ul>
+<li><strong><code>@keyboard-navigator</code></strong> - Reviews changes to keyboard handling, tab order, focus management</li>
+<li><strong><code>@aria-specialist</code></strong> - Verifies ARIA attributes, roles, states in interactive components</li>
+<li><strong><code>@contrast-master</code></strong> - Checks color changes for WCAG AA contrast compliance</li>
+<li><strong><code>@alt-text-headings</code></strong> - Reviews changes to alt text, heading hierarchy, document structure</li>
+</ul>
+<p><strong>Comment &amp; Communication Agents:</strong></p>
+<ul>
+<li><strong><code>@text-quality-reviewer</code></strong> - Verifies alt text, aria-labels, and button names are descriptive and typo-free</li>
+<li><strong><code>@link-checker</code></strong> - Flags ambiguous link text like &quot;click here&quot; or &quot;read more&quot;</li>
+</ul>
+<h3>How It Works</h3>
+<ol>
+<li><strong>Review manually first</strong> (you just did this with Exercises A, B, C)</li>
+<li><strong>Run an agent</strong> - <code>@pr-review review PR #14</code> generates a draft in seconds</li>
+<li><strong>Edit the agent&#39;s draft</strong> - you add context, remove noise, correct errors</li>
+<li><strong>Post your review</strong> - it now has both AI efficiency and your human judgment</li>
+<li><strong>The agent tracks impact</strong> - <code>@insiders-a11y-tracker</code> monitors whether your accessibility feedback was addressed</li>
+</ol>
+<h3>The Principle: Skill First, Agent Second</h3>
+<p>Why do this manually before using agents? Because:</p>
+<ul>
+<li>You <strong>understand</strong> what the agent is doing (you did it manually)</li>
+<li>You <strong>evaluate</strong> the agent&#39;s output critically (you know what right looks like)</li>
+<li>You <strong>add judgment</strong> the agent lacks (context, intent, team decisions)</li>
+<li>You <strong>verify</strong> the agent didn&#39;t miss anything important</li>
+</ul>
+<p><strong>Manual reviews teach you what to look for. Agents help you look for it faster.</strong></p>
+<hr>
+<h3>A Real Example: The Flow</h3>
+<p><strong>Manual Review (your work in part 1-2):</strong></p>
+<ul>
+<li>Read diff, identify heading hierarchy skip</li>
+<li>Write comment explaining why it matters</li>
+<li>Submit your verdict</li>
+</ul>
+<p><strong>Agent-Assisted Review (what you&#39;ll do in Chapter 16):</strong></p>
+<ol>
+<li>Run: <code>@pr-review review PR #14</code> </li>
+<li>Agent generates a draft review covering the heading skip, link text, and 5 other issues</li>
+<li>You read the draft and notice: &quot;the agent&#39;s explanation of the heading skip is good, but it missed that the link text on line 23 is still vague. Let me add that.&quot;</li>
+<li>You post the agent&#39;s review + your additions</li>
+<li>Next time you review a similar PR, the agent works faster because it learned from your feedback</li>
+</ol>
+<p><strong>Accessibility Agents are trained on 55 different agent patterns - each built by people who manually reviewed code first, saw repetitive patterns, and automated them.</strong> The agents you&#39;ll use in Chapter 16 exist because expert reviewers looked at 100+ PRs and said &quot;this error comes up in nearly every PR - let me build an agent to catch it automatically.&quot;</p>
+<p>Your manual skills + agent efficiency = <strong>leverage.</strong></p>
 <hr>
 <blockquote>
-<h3>Day 2 Amplifier - Accessibility Agents: <code>@pr-review</code></h3>
-<p><strong>Review at least two pull requests manually - using the techniques in this guide - before running <code>@pr-review</code>.</strong> The agent generates a first-draft review: a line-numbered diff map, risk assessment, before/after snapshots, and suggested inline comments. Your job as reviewer is to read that draft, correct it, enrich it with context the diff cannot contain, and decide what is actually worth saying to the author.</p>
-<p>Once you have that manual foundation:</p>
+<p><strong>What&#39;s coming later today (Chapter 16):</strong></p>
+<p>At the end of the day, Chapter 16 introduces the full 55-agent ecosystem - specialized agents for:</p>
 <ul>
-<li><strong>In VS Code</strong> - <code>@pr-review review PR #N</code> produces a structured, annotated review draft</li>
-<li><strong>In your repo</strong> - Accessibility Agents&#39; review capabilities work in any repository you can access; fork <code>accessibility-agents</code> and those capabilities travel with your project</li>
-<li><strong>In the cloud</strong> - GitHub Agentic Workflows can auto-post PR summaries and accessibility impact assessments the moment a PR is opened, without anyone being online</li>
+<li>GitHub workflow automation (<code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@analytics</code>)</li>
+<li>Web accessibility auditing (<code>@web-accessibility-wizard</code>, <code>@contrast-master</code>, <code>@keyboard-navigator</code>)</li>
+<li>Document scanning (<code>@word-accessibility</code>, <code>@pdf-accessibility</code>, <code>@markdown-a11y-assistant</code>)</li>
+<li>Framework-specific accessibility (<code>@react-specialist</code>, <code>@vue-specialist</code>, <code>@wxpython-specialist</code>)</li>
+<li>And 35+ more, organized into three teams across five platforms</li>
 </ul>
-<p><em>The Accessible Diff Viewer teaches you to hear changes. The agent drafts the notes. You bring the judgment.</em></p>
+<p><strong>The ecosystem is designed to grow.</strong> Agents 56, 57, 58... will be built by contributors like you who saw a gap and filled it.</p>
 </blockquote>
 <hr>
 <p><em>Next: <a href="15-issue-templates.html">Issue Templates</a></em>

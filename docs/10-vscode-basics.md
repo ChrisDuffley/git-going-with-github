@@ -12,6 +12,75 @@
 
 ---
 
+## Workshop Recommendation (Chapter 10)
+
+For this workshop, Chapter 10 is a **guided setup chapter** with a lightweight completion challenge.
+
+- **Primary goal:** make sure every student can open and navigate VS Code accessibly.
+- **No strict bot grading:** setup state is local/account-level and not fully reliable for Actions-based validation.
+- **Issue-linked evidence:** students still complete work through their challenge issue workflow.
+
+### Challenge Type
+
+Use a guided checklist challenge and record completion in a GitHub issue comment.
+
+---
+
+## Guided Walkthrough Challenge: VS Code Accessibility Baseline (No Bot Check)
+
+Use this challenge for Chapter 10. Estimated time: 8-10 minutes.
+
+### Goal
+
+Confirm students can access VS Code (github.dev or desktop), enable screen reader support, and perform core file navigation.
+
+### Student Steps
+
+1. Open any repository and launch github.dev with `.` (period key).
+2. Screen reader mode setup:
+  - Windows (NVDA/JAWS): enable with `Shift+Alt+F1`.
+  - Mac (VoiceOver): mode is usually already optimized. If needed, open Command Palette and run `Toggle Screen Reader Accessibility Mode`.
+3. Open Explorer with `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`).
+4. Open `README.md` from the file tree.
+5. Open outline/symbols with `Ctrl+Shift+O` (Mac: `Cmd+Shift+O`).
+6. Open Command Palette with `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`) and run any command.
+7. Return to your assigned challenge issue and post a completion comment using this format:
+
+```text
+Chapter 10 complete:
+- Opened github.dev: yes
+- Screen reader mode enabled: yes
+- Opened file in Explorer: yes
+- Opened outline/symbols: yes
+- Opened Command Palette: yes
+```
+
+### Facilitator Verification (Lightweight)
+
+- Confirm the completion comment exists on the student's assigned issue.
+- If a student is blocked, ask for the exact step and shortcut where they got stuck.
+- Treat this as readiness verification for later PR-focused chapters, not pass/fail grading.
+
+### Expected Outcomes
+
+- Student can launch and navigate github.dev or desktop VS Code.
+- Student can enable screen reader mode and open core navigation surfaces.
+- Student is ready for VS Code-based contribution chapters.
+
+### If You Get Stuck
+
+1. Confirm you are in a repository page before pressing `.`.
+2. Retry screen reader mode toggle once, then verify in settings.
+3. On Mac with VoiceOver, run `Toggle Screen Reader Accessibility Mode` from Command Palette if navigation is inconsistent.
+4. Use Command Palette to run commands when shortcut memory is hard.
+5. Ask facilitator for a side-by-side demo and repeat the same 5 steps.
+
+### Learning Moment
+
+Tool setup is part of contribution skill. A stable, accessible editor reduces stress and increases contribution quality.
+
+---
+
 ## Table of Contents
 
 1. [Why VS Code for Open Source Contribution](#1-why-vs-code-for-open-source-contribution)
