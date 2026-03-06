@@ -71,6 +71,17 @@ $RECYCLE.BIN/
 # VS Code local history (backup files)
 .history/
 
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache and testing artifacts
+.pytest_cache/
+.mypy_cache/
+__pycache__/
+*.pyc
+*.pyo
+
 # Temporary and editor swap files
 *.tmp
 *.swp
