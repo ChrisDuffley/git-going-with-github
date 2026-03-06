@@ -30,14 +30,27 @@ This document summarizes the complete challenge system architecture built for th
 
 ### 2. Challenge Templates (Issue Infrastructure)
 
-Located in `.github/ISSUE_TEMPLATE/`:
+Located in `.github/ISSUE_TEMPLATE/` (Chapters 4-6, 11) and inline in `scripts/create_all_challenges.ps1` (Chapters 7-16):
 
-| Chapter | File | Challenges | Bot Validated | Status |
-|---------|------|-----------|---------------|--------|
-| **4** | `challenge-chapter-4.md` | 3 | ❌ Manual | ✅ Created |
-| **5** | `challenge-chapter-5.md` | 3 | ✅ Yes | ✅ Created |
-| **6** | `challenge-chapter-6.md` | 1 | ✅ Yes | ✅ Created |
-| **11** | `challenge-chapter-11.md` | 3 | ✅ Yes | ✅ Created |
+| Chapter | Challenges | Submission | Bot Validated | Skill | Day | Status |
+|---------|-----------|------------|---------------|-------|-----|--------|
+| **04** Issues | 3 | PR with `Closes #XX` | No (manual) | github-issues | 1 | Created |
+| **05** Pull Requests | 3 | PR with `Closes #XX` | Yes | pull-requests | 1 | Created |
+| **06** Merge Conflicts | 1 | PR with `Closes #XX` | Yes | merge-conflicts | 1 | Created |
+| **07** Culture and Etiquette | 1 | Issue comment | No | collaboration | 1 | Created |
+| **08** Labels, Milestones, Projects | 1 | Issue comment | No | triage | 1 | Created |
+| **09** Notifications | 1 | Issue comment | No | notifications | 1 | Created |
+| **10** VS Code Basics | 1 | Issue comment | No | vs-code | 2 | Created |
+| **11** Git Source Control | 3 | PR with `Closes #XX` | Yes | git-source-control | 2 | Created |
+| **12** PR Extension | 2 | Issue comment | No | pr-extension | 2 | Created |
+| **13** GitHub Copilot | 3 | Issue comment | No | copilot | 2 | Created |
+| **14** Accessible Code Review | 2 | Issue comment | No | code-review | 2 | Created |
+| **15** Issue Templates | 2 | Comment or PR | No | issue-templates | 2 | Created |
+| **16** Accessibility Agents | 3 | Issue comment | No | agents | 2 | Created |
+
+**Total: 26 challenges per student**
+
+Chapters 4, 5, 6, and 11 use PR-based submission with `Closes #XX` syntax. All other chapters use issue-comment-based submission where students post evidence as a checklist comment.
 
 **Template Contents:**
 - YAML frontmatter with placeholders: `{CHAPTER}`, `{CHALLENGE_NUM}`, `{CHALLENGE_TITLE}`, `{USERNAME}`, `{ISSUE_NUMBER}`
@@ -56,36 +69,47 @@ assignees: ["{USERNAME}"]
 
 ### 3. Batch Issue Generation (Facilitator Tool)
 
-**Script:** [scripts/batch_create_challenges.py](scripts/batch_create_challenges.py)
+**Scripts:**
+
+| Script | Purpose | Chapters |
+|--------|---------|----------|
+| `scripts/create_student_issues.ps1` | Original 10 challenges (template-based) | 04, 05, 06, 11 |
+| `scripts/create_all_challenges.ps1` | All 26 challenges (self-contained) | 07-10, 12-16 |
+
+#### Primary Script: `create_all_challenges.ps1`
 
 **Usage:**
-```bash
-python scripts/batch_create_challenges.py \
-  --students student-usernames.txt \
-  --chapters 4,5,6,11 \
-  --cohort "March 2026" \
-  [--dry-run]
+```powershell
+# Preview what would be created
+.\scripts\create_all_challenges.ps1 -DryRun
+
+# Create all missing challenges for all org members
+.\scripts\create_all_challenges.ps1
+
+# Create only specific chapters (e.g., just the new ones)
+.\scripts\create_all_challenges.ps1 -ChaptersOnly "07,08,09,10,12,13,14,15,16"
 ```
 
 **What It Does:**
-1. Reads student usernames from file (one per line)
-2. Loads issue templates from `.github/ISSUE_TEMPLATE/`
-3. For each chapter & student:
-   - Substitutes placeholders (username, chapter, challenge num, etc.)
-   - Creates individual GitHub issue (assigned to student)
-   - Applies labels automatically
-4. Reports success/failure count
-5. Supports `--dry-run` for testing
+1. Defines all 16 challenge templates inline (Chapters 7-16, 16 challenges)
+2. Loads org members via `gh api`
+3. Checks all existing open challenge issues (paginated)
+4. Compares each student's existing issues against the full template set
+5. Creates only missing challenges (safe to rerun)
+6. Assigns to student, applies correct labels
+7. Reports success/failure count
 
-**Output:**
-- Creates `students × 10` issues for Chapters 4,5,6,11
-- Each issue uniquely assigned to one student
-- No collision risk; each student has their own issues
+**Rerunning for New Members:**
+The script is designed to be rerun periodically. It only creates issues for challenges a student does not already have, so running it again after new members join will create their full set without duplicating existing students' issues.
 
-**Prerequisites:**
-- `student-usernames.txt` file with GitHub @usernames (one per line)
+#### Legacy Script: `create_student_issues.ps1`
+
+Creates the original 10 challenges (Ch 04, 05, 06, 11) by cloning from Weijun-Zhang-1996's template issues. Still functional but superseded by `create_all_challenges.ps1` for new chapters.
+
+**Prerequisites for Both Scripts:**
 - GitHub CLI (`gh`) installed and authenticated
-- Repository has Actions enabled with write permissions
+- Org admin or owner access (to list members and assign issues)
+- Labels must exist in the learning-room repo (see Issue Labels section)
 
 ### 4. Bot Validation System (Automation)
 
@@ -126,17 +150,17 @@ python scripts/batch_create_challenges.py \
 
 ### Pre-Workshop Setup (1 hour)
 
-1. ✅ Prepare `student-usernames.txt` with GitHub @usernames
-2. ✅ Run batch script: `python scripts/batch_create_challenges.py --dry-run` (test only)
-3. ✅ Run batch script (production): `python scripts/batch_create_challenges.py`
-4. ✅ Verify issues created: `gh issue list --label challenge --limit 100`
-5. ✅ Verify bot workflow enabled: `gh workflow list | grep learning-room`
-6. ✅ Do a dry run: one facilitator completes one challenge end-to-end
-7. ✅ Communicate to students where to find challenges
+1. Ensure all students have accepted org invitations (check org members list)
+2. Run dry run: `.\scripts\create_all_challenges.ps1 -DryRun` (verify student count and challenge count)
+3. Run production: `.\scripts\create_all_challenges.ps1` (creates all 26 challenges per org member)
+4. Verify issues created: `gh issue list -R Community-Access/learning-room --label challenge --limit 100`
+5. Verify bot workflow enabled: `gh workflow list -R Community-Access/learning-room`
+6. Do a dry run: one facilitator completes one challenge end-to-end
+7. Communicate to students where to find challenges
 
 ### During Workshop
 
-- **Monitor progress:** `gh issue list --label challenge --state open --limit 100`
+- **Monitor progress:** `gh issue list -R Community-Access/learning-room --label challenge --state open --limit 100`
 - **Help stuck students:** Review their issue, guide them through "If You Get Stuck" section
 - **Track bot failures:** Students needing help → look at bot feedback comment
 - **Measure success:** % of issues closed = % of students completing challenges
@@ -154,14 +178,17 @@ python scripts/batch_create_challenges.py \
 ### Issue Title Convention
 
 ```
-Chapter {X}.{Y}: {Challenge_Title} (@{USERNAME})
+Chapter {XX}.{Y}: {Challenge_Title} (@{USERNAME})
 ```
+
+Chapter numbers are zero-padded to two digits (04, 05, 06, 07... 16) so issues sort correctly when filtered alphabetically.
 
 **Example:**
 ```
-Chapter 4.1: Create Your First Issue (@accesswatch)
-Chapter 5.2: Open Your First Pull Request (@amandarush)
+Chapter 04.1: Create Your First Issue (@accesswatch)
+Chapter 05.2: Open Your First Pull Request (@amandarush)
 Chapter 11.3: Push to GitHub (@andysq62)
+Chapter 13.2: Ask Copilot to Explain a Repo (@apelli95)
 ```
 
 **Why This Works:**
@@ -177,8 +204,8 @@ Applied consistently across all challenges:
 | Label Category | Values | Example |
 |---|---|---|
 | Type | `challenge` | Always applied |
-| Level | `challenge: beginner`, `challenge: intermediate` | Based on chapter content |
-| Skill | `skill: github-issues`, `skill: pull-requests`, `skill: git-source-control`, etc. | Links to learning topic |
+| Level | `challenge: beginner`, `challenge: intermediate`, `challenge: advanced`, `challenge: expert` | Based on chapter content |
+| Skill | `skill: github-issues`, `skill: pull-requests`, `skill: markdown`, `skill: merge-conflicts`, `skill: git-source-control`, `skill: collaboration`, `skill: triage`, `skill: notifications`, `skill: vs-code`, `skill: pr-extension`, `skill: copilot`, `skill: code-review`, `skill: issue-templates`, `skill: agents` | Links to learning topic |
 | Day | `day: 1`, `day: 2` | When challenge is typically done |
 
 **Filter Examples:**
@@ -195,14 +222,14 @@ gh issue list --label "challenge: intermediate" --state open
 
 ### Lifecycle States
 
-Each challenge issue transitions through states:
+Each challenge issue transitions through states. PR-based challenges (Ch 04, 05, 06, 11) auto-close when a PR merges. Comment-based challenges (Ch 07-10, 12-16) are closed manually by the student or facilitator after evidence is posted.
 
-| State | Condition | Example Actions |
-|-------|-----------|-----------------|
-| **Open** | Issue created, student hasn't started | Student adds comment "I'm on this!" |
-| **In Progress** | Student commented, work is happening | No automatic detection; manual milestone if desired |
-| **Open (with PR)** | PR references issue with `Closes #XX` | Bot validates automatically |
-| **Closed** | PR merged | Automatic on merge (GitHub closes issue via `Closes #XX`) |
+| State | Condition | PR-Based | Comment-Based |
+|-------|-----------|----------|---------------|
+| **Open** | Issue created, student has not started | Student adds comment "I'm working on this!" | Same |
+| **In Progress** | Student commented, work is happening | PR opened with `Closes #XX` | Student working through steps |
+| **Evidence Posted** | Challenge work is complete | PR submitted for review | Checklist comment posted on issue |
+| **Closed** | Challenge confirmed complete | PR merged (auto-closes issue) | Student or facilitator closes issue |
 
 ---
 
@@ -222,7 +249,7 @@ Each challenge issue transitions through states:
 
 ### For Workshop Facilitators
 
-- **Generation:** Did all expected issues create without error (`students × 10` for Chapters 4,5,6,11)?
+- **Generation:** Did all expected issues create without error (`students x 26` for all chapters)?
 - **Adoption:** What % of students have at least one open challenge?
 - **Completion:** What % of challenges reached "closed" state?
 - **Bot Effectiveness:** What % of PRs pass bot validation on first attempt?
@@ -250,32 +277,47 @@ Each challenge issue transitions through states:
 .
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
-│   │   ├── challenge-chapter-4.md       ← Issue template (Chapter 4)
-│   │   ├── challenge-chapter-5.md       ← Issue template (Chapter 5)
-│   │   ├── challenge-chapter-6.md       ← Issue template (Chapter 6)
-│   │   └── challenge-chapter-11.md      ← Issue template (Chapter 11)
+│   │   ├── challenge-chapter-4.md       <- Issue template (Chapter 4)
+│   │   ├── challenge-chapter-5.md       <- Issue template (Chapter 5)
+│   │   ├── challenge-chapter-6.md       <- Issue template (Chapter 6)
+│   │   ├── challenge-chapter-11.md      <- Issue template (Chapter 11)
+│   │   └── challenge-hub.md             <- Generic template with placeholders
+│   ├── data/
+│   │   └── challenge-progression.json   <- Progression levels and badges
 │   ├── workflows/
-│   │   └── learning-room-pr-bot.yml     ← Bot validation trigger
+│   │   └── learning-room-pr-bot.yml     <- Bot validation trigger
 │   └── scripts/
-│       └── validate-pr.js               ← Bot validation logic
+│       ├── validate-pr.js               <- Bot validation logic
+│       └── comment-responder.js         <- Issue comment handler
 │
 ├── scripts/
-│   └── batch_create_challenges.py       ← Issue generation script
+│   ├── create_student_issues.ps1        <- Original 10-challenge creator (Ch 04/05/06/11)
+│   └── create_all_challenges.ps1        <- Full 26-challenge creator (Ch 07-16)
 │
 ├── learning-room/
 │   └── docs/
-│       └── CHALLENGES.md                ← Challenge Hub (student reference)
+│       └── CHALLENGES.md                <- Challenge Hub (student reference)
 │
 ├── docs/
 │   ├── 04-working-with-issues.md
 │   ├── 05-working-with-pull-requests.md
 │   ├── 06-merge-conflicts.md
-│   └── 11-git-source-control.md
+│   ├── 07-culture-etiquette.md
+│   ├── 08-labels-milestones-projects.md
+│   ├── 09-notifications.md
+│   ├── 10-vscode-basics.md
+│   ├── 11-git-source-control.md
+│   ├── 12-github-pull-requests-extension.md
+│   ├── 13-github-copilot.md
+│   ├── 14-accessible-code-review.md
+│   ├── 15-issue-templates.md
+│   └── 16-accessibility-agents.md
 │
-├── README.md                            ← Challenge discovery section
-├── FACILITATOR.md                       ← Main facilitator guide (links to challenges)
-├── FACILITATOR_CHALLENGES.md            ← Challenge-specific facilitator ops
-└── student-usernames.txt                ← Input for batch script (one username per line)
+├── README.md                            <- Challenge discovery section
+├── FACILITATOR.md                       <- Main facilitator guide (links to challenges)
+├── FACILITATOR_CHALLENGES.md            <- Challenge-specific facilitator ops
+├── CHALLENGE_SYSTEM_ARCHITECTURE.md     <- This document
+└── student-usernames.txt                <- Input for legacy batch script
 ```
 
 ---
@@ -283,10 +325,19 @@ Each challenge issue transitions through states:
 ## Integration Points
 
 ### From Student Docs
-- [docs/04-working-with-issues.md](docs/04-working-with-issues.md) → links to Chapter 4 challenges
-- [docs/05-working-with-pull-requests.md](docs/05-working-with-pull-requests.md) → links to Chapter 5 challenges
-- [docs/06-merge-conflicts.md](docs/06-merge-conflicts.md) → links to Chapter 6 challenges
-- [docs/11-git-source-control.md](docs/11-git-source-control.md) → links to Chapter 11 challenges
+- [docs/04-working-with-issues.md](docs/04-working-with-issues.md) - links to Chapter 4 challenges
+- [docs/05-working-with-pull-requests.md](docs/05-working-with-pull-requests.md) - links to Chapter 5 challenges
+- [docs/06-merge-conflicts.md](docs/06-merge-conflicts.md) - links to Chapter 6 challenges
+- [docs/07-culture-etiquette.md](docs/07-culture-etiquette.md) - links to Chapter 7 challenges
+- [docs/08-labels-milestones-projects.md](docs/08-labels-milestones-projects.md) - links to Chapter 8 challenges
+- [docs/09-notifications.md](docs/09-notifications.md) - links to Chapter 9 challenges
+- [docs/10-vscode-basics.md](docs/10-vscode-basics.md) - links to Chapter 10 challenges
+- [docs/11-git-source-control.md](docs/11-git-source-control.md) - links to Chapter 11 challenges
+- [docs/12-github-pull-requests-extension.md](docs/12-github-pull-requests-extension.md) - links to Chapter 12 challenges
+- [docs/13-github-copilot.md](docs/13-github-copilot.md) - links to Chapter 13 challenges
+- [docs/14-accessible-code-review.md](docs/14-accessible-code-review.md) - links to Chapter 14 challenges
+- [docs/15-issue-templates.md](docs/15-issue-templates.md) - links to Chapter 15 challenges
+- [docs/16-accessibility-agents.md](docs/16-accessibility-agents.md) - links to Chapter 16 challenges
 
 ### From README
 - [README.md](README.md) section "🎯 Your Challenges Are Waiting" → directs students to Issues tab
@@ -316,17 +367,19 @@ Chapter {X}.{Y}: {Challenge_Title} (@{USERNAME})
 ```
 
 **Constraints:**
-- Chapter X: Integer chapter number (4-16)
+- Chapter XX: Two-digit zero-padded chapter number (04-16)
 - Challenge Y: Integer sequence within chapter (1-3 typically)
 - Title: 40-60 characters, action verb, clear outcome
-- Username: Exactly as in `student-usernames.txt`
+- Username: GitHub login of the assigned student
 
 **Valid Examples:**
 ```
-Chapter 4.1: Create Your First Issue (@accesswatch)
-Chapter 5.2: Review and Approve a Pull Request (@amandarush)
-Chapter 6.1: Resolve a Merge Conflict (@andysq62)
+Chapter 04.1: Create Your First Issue (@accesswatch)
+Chapter 05.2: Review and Approve a Pull Request (@amandarush)
+Chapter 06.1: Resolve a Merge Conflict (@andysq62)
 Chapter 11.3: Push Your Work to GitHub (@apelli95)
+Chapter 14.1: Review a PR with Inline Comments (@JeffBlumentworker)
+Chapter 16.3: Agent Instructions Deep Dive (@ChrisDuffley)
 ```
 
 ### Branch Names (for Git challenges)
@@ -350,13 +403,12 @@ The PR bot validates branch names for Chapter 11 (Git challenges).
 
 ### Adding a New Chapter to Challenges
 
-1. Create template: `.github/ISSUE_TEMPLATE/challenge-chapter-XX.md`
-2. Define 1-3 challenges in the template
-3. Update `CHALLENGES_PER_CHAPTER` dict in `batch_create_challenges.py`
-4. Update `TEMPLATES` dict in `batch_create_challenges.py`
-5. Decide: Bot validated (auto-checked) or manual (facilitator reviews)?
-6. Add to [learning-room/docs/CHALLENGES.md](learning-room/docs/CHALLENGES.md) Challenge Map
-7. Run batch script: `python scripts/batch_create_challenges.py --chapters 4,5,6,11,NEWNUM`
+1. Add challenge definition to `scripts/create_all_challenges.ps1` in the `$challengeDefs` hashtable
+2. Define: title template, labels array, and body template using `New-ChallengeBody`
+3. Create matching label in learning-room if new skill tag is needed
+4. Decide: Bot validated (PR-based) or manual (comment-based)?
+5. Add to [learning-room/docs/CHALLENGES.md](learning-room/docs/CHALLENGES.md) Challenge Map
+6. Run script: `.\scripts\create_all_challenges.ps1 -ChaptersOnly "NEWNUM"`
 
 ### Changing Bot Validation Rules
 
@@ -365,20 +417,20 @@ Edit `.github/scripts/validate-pr.js`:
 - Add new checks (custom validations)
 - Create exceptions (exclude certain files/students)
 
-After changes, test with `--dry-run` on a small student dataset:
-```bash
-python scripts/batch_create_challenges.py --dry-run --students test-students.txt
+After changes, test with `-DryRun`:
+```powershell
+.\scripts\create_all_challenges.ps1 -DryRun -ChaptersOnly "NEWNUM"
 ```
 
 ### Reusing for Other Workshops
 
 This system works for any 2-day, 16-chapter technical workshop:
 
-1. Copy template files, update challenge text
-2. Copy batch script, update chapter numbers
+1. Copy `create_all_challenges.ps1`, update challenge definitions
+2. Update org name and repo name in script header
 3. Customize Challenge Hub documentation
 4. Update facilitator guides with your timelines/agenda
-5. Run: `python scripts/batch_create_challenges.py --chapters YOUR_CHAPTERS`
+5. Run: `.\scripts\create_all_challenges.ps1 -DryRun` then `.\scripts\create_all_challenges.ps1`
 
 ---
 
@@ -406,21 +458,20 @@ This system works for any 2-day, 16-chapter technical workshop:
 
 ## Success Story (By the Numbers)
 
-### Generated for a 10-person cohort:
-- 100 individual challenge issues (10 per student)
+### Generated for a 30-person cohort:
+- 780 individual challenge issues (26 per student)
 - 0 collisions (each student has their own issues)
-- 4 bot-validated chapters (auto-feedback)
-- Manual review still available for subjective coaching
-- 30 minutes to generate all issues
-- 100% of students completed 50%+ of challenges
-- 80% of students completed 75%+ of challenges
+- 4 bot-validated chapters (auto-feedback on PR submission)
+- 12 comment-based chapters (evidence posted as issue comments)
+- Script is rerunnable: new members get their full set automatically
+- Labels: 4 levels, 14 skills, 2 days
 
 ---
 
 ## Next Steps (Future Enhancements)
 
 ### Short Term
-- [ ] Add templates for guided chapters (7-10, 12-16)
+- [x] Add templates for guided chapters (7-10, 12-16) -- completed via `create_all_challenges.ps1`
 - [ ] Create facilitator monitoring dashboard (custom actions)
 - [ ] Add bulk archive script for end-of-workshop cleanup
 
@@ -442,8 +493,8 @@ This system works for any 2-day, 16-chapter technical workshop:
 |------|----------|--------|
 | **Students** | [README.md](README.md) + [learning-room/docs/CHALLENGES.md](learning-room/docs/CHALLENGES.md) | Read, discover, complete |
 | **Facilitators** | [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md) | Set up, manage, monitor |
-| **Admins** | [scripts/batch_create_challenges.py](scripts/batch_create_challenges.py) | Run, troubleshoot |
-| **Developers** | `.github/workflows/`, `.github/scripts/` | Maintain bot logic & rules |
+| **Admins** | [scripts/create_all_challenges.ps1](scripts/create_all_challenges.ps1) | Run, troubleshoot |
+| **Developers** | `.github/workflows/`, `.github/scripts/` | Maintain bot logic and rules |
 
 ---
 

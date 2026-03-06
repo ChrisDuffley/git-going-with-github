@@ -2,115 +2,167 @@
   "levels": [
     {
       "name": "Beginner",
-      "requiredPRs": 0,
-      "description": "Getting started with GitHub and Markdown basics",
+      "requiredChallenges": 0,
+      "description": "Getting started with GitHub, issues, PRs, and merge conflicts",
+      "chapters": [4, 5, 6, 7, 8, 9],
       "challenges": [
-        "fix-broken-link",
-        "add-keyboard-shortcut",
-        "complete-welcome"
+        "04.1-create-first-issue",
+        "04.2-label-and-assign",
+        "04.3-close-with-comment",
+        "05.1-open-first-pr",
+        "05.2-review-and-approve",
+        "05.3-merge-pr",
+        "06.1-resolve-merge-conflict",
+        "07.1-collaboration-reflection",
+        "08.1-triage-recommendation",
+        "09.1-notification-setup"
       ],
       "skills": [
+        "github-issues",
+        "pull-requests",
         "markdown",
-        "git-basics",
-        "pr-workflow"
-      ]
+        "merge-conflicts",
+        "collaboration",
+        "triage",
+        "notifications"
+      ],
+      "day": 1
     },
     {
       "name": "Intermediate",
-      "requiredPRs": 1,
-      "description": "Learning accessibility fundamentals",
+      "requiredChallenges": 7,
+      "description": "VS Code, Git source control, and PR extension workflows",
+      "chapters": [10, 11, 12],
       "challenges": [
-        "fix-heading-hierarchy",
-        "improve-link-text",
-        "add-alt-text"
+        "10.1-vscode-accessibility-baseline",
+        "11.1-clone-and-branch",
+        "11.2-commit-and-push",
+        "11.3-push-to-github",
+        "12.1-install-pr-extension",
+        "12.2-review-pr-in-vscode"
       ],
       "skills": [
-        "accessibility",
-        "document-structure",
-        "screen-reader-basics"
-      ]
+        "vs-code",
+        "git-source-control",
+        "pr-extension"
+      ],
+      "day": 2
     },
     {
       "name": "Advanced",
-      "requiredPRs": 3,
-      "description": "Comprehensive reviews and mentorship",
+      "requiredChallenges": 13,
+      "description": "Copilot, code review, and issue templates",
+      "chapters": [13, 14, 15],
       "challenges": [
-        "review-accessibility",
-        "create-documentation",
-        "mentor-peer"
+        "13.1-install-copilot",
+        "13.2-copilot-explain-repo",
+        "13.3-custom-theme-copilot",
+        "14.1-inline-review-comments",
+        "14.2-formal-review-verdict",
+        "15.1-analyze-registration-template",
+        "15.2-remix-template"
       ],
       "skills": [
+        "copilot",
         "code-review",
-        "technical-writing",
-        "mentorship"
-      ]
+        "issue-templates"
+      ],
+      "day": 2
     },
     {
       "name": "Expert",
-      "requiredPRs": 5,
-      "description": "Creating content and leading initiatives",
+      "requiredChallenges": 20,
+      "description": "Accessibility agents, discovery, and agent evaluation",
+      "chapters": [16],
       "challenges": [
-        "design-challenge",
-        "accessibility-audit",
-        "create-template"
+        "16.1-agent-discovery-mapping",
+        "16.2-agent-skill-validation",
+        "16.3-agent-instructions-deep-dive"
       ],
       "skills": [
-        "instructional-design",
-        "community-leadership",
-        "systematic-testing"
-      ]
+        "agents"
+      ],
+      "day": 2
     }
   ],
   "badges": {
-    "markdown": {
-      "title": "Markdown Master",
-      "description": "Completed Markdown challenge"
+    "github-issues": {
+      "title": "Issue Navigator",
+      "description": "Completed all Chapter 4 issue challenges"
     },
-    "accessibility": {
-      "title": "Accessibility Advocate",
-      "description": "Completed accessibility challenge"
+    "pull-requests": {
+      "title": "PR Pioneer",
+      "description": "Completed all Chapter 5 pull request challenges"
     },
-    "review": {
-      "title": "Code Reviewer",
-      "description": "Provided thorough peer review"
+    "merge-conflicts": {
+      "title": "Conflict Resolver",
+      "description": "Resolved a merge conflict in Chapter 6"
     },
     "collaboration": {
       "title": "Team Player",
-      "description": "Completed collaborative challenge"
+      "description": "Reflected on collaboration culture in Chapter 7"
     },
-    "documentation": {
-      "title": "Documentation Writer",
-      "description": "Created comprehensive documentation"
+    "triage": {
+      "title": "Triage Tactician",
+      "description": "Posted a triage recommendation in Chapter 8"
     },
-    "creation": {
-      "title": "Content Creator",
-      "description": "Designed new learning content"
+    "notifications": {
+      "title": "Signal Keeper",
+      "description": "Set up notification workflow in Chapter 9"
+    },
+    "vs-code": {
+      "title": "Editor Ready",
+      "description": "Completed VS Code accessibility baseline in Chapter 10"
+    },
+    "git-source-control": {
+      "title": "Git Operator",
+      "description": "Completed all Chapter 11 Git challenges"
+    },
+    "pr-extension": {
+      "title": "Extension Explorer",
+      "description": "Installed and used the PR extension in Chapter 12"
+    },
+    "copilot": {
+      "title": "Copilot Companion",
+      "description": "Completed all Chapter 13 Copilot challenges"
+    },
+    "code-review": {
+      "title": "Code Reviewer",
+      "description": "Submitted inline comments and formal review in Chapter 14"
+    },
+    "issue-templates": {
+      "title": "Template Architect",
+      "description": "Analyzed and remixed issue templates in Chapter 15"
+    },
+    "agents": {
+      "title": "Agent Navigator",
+      "description": "Completed agent discovery and evaluation in Chapter 16"
     }
   },
   "milestones": [
     {
-      "prs": 1,
-      "message": "Your first merged PR! This is the start of your open source journey."
+      "challenges": 1,
+      "message": "Your first challenge complete! Welcome to the workshop."
     },
     {
-      "prs": 5,
-      "message": "Five merged contributions! You're building real momentum."
+      "challenges": 7,
+      "message": "Day 1 core complete! You have the GitHub fundamentals."
     },
     {
-      "prs": 10,
-      "message": "Double digits! You're becoming a regular contributor."
+      "challenges": 10,
+      "message": "Double digits! You are building real momentum."
     },
     {
-      "prs": 25,
-      "message": "Quarter century! Your impact is undeniable."
+      "challenges": 16,
+      "message": "Over halfway! VS Code and Git are in your toolkit."
     },
     {
-      "prs": 50,
-      "message": "Half a hundred! You're a pillar of this community."
+      "challenges": 20,
+      "message": "Advanced territory! Copilot, reviews, and templates mastered."
     },
     {
-      "prs": 100,
-      "message": "ONE HUNDRED contributions! You're a legend!"
+      "challenges": 26,
+      "message": "ALL CHALLENGES COMPLETE! You are ready to contribute to any open source project."
     }
   ]
 }
