@@ -18,6 +18,11 @@ on:
         required: true
         default: 'check_progress'
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
 jobs:
   track-completion:
     name: Track Skill Completion

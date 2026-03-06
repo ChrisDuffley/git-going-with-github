@@ -206,6 +206,10 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            if (!fs.existsSync('validation-results.json')) {
+              console.log('validation-results.json not found, skipping status check');
+              return;
+            }
             const results = JSON.parse(fs.readFileSync('validation-results.json', 'utf8'));
             
             const state = results.passed ? 'success' : 'failure';

@@ -13,6 +13,11 @@ on:
         required: true
         default: 'skill_match'
 
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
 jobs:
   assign-peer-reviewer:
     name: Assign Peer Reviewer
