@@ -166,8 +166,6 @@ For this workshop, participants need a GitHub account with 2FA enabled. The brow
 
 If you run into any authentication issues before the workshop, contact the workshop organizers at the email or issue link in this guide so we can help.
 
----
-
 ## Step 2 - Configure GitHub Accessibility Settings
 
 These settings make GitHub significantly more usable with a screen reader. **Do not skip this section** - one setting in particular (hovercards) adds significant noise to every page if left on.
