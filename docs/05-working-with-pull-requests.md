@@ -30,12 +30,94 @@ Chapter 5 is the first **PR-validated chapter** where students convert issue wor
 
 ### Chapter 5 Challenge Set
 
-1. **Create one small branch change**
-   - Edit only the file required by your claimed issue.
-2. **Open a linked PR**
-   - Use PR template and include `Closes #XX`.
-3. **Pass required checks**
-   - Respond to bot feedback until required checks pass.
+1. **Create one small branch change** - edit the file specified in your claimed issue.
+2. **Open a linked PR** - use the PR template and include `Closes #XX`.
+3. **Pass required checks** - respond to bot feedback until all required checks pass.
+
+> **Branch guidance for Chapter 5:** This is the first chapter where you edit files and create branches. Use one of these two paths:
+>
+> - **Web editor (recommended for beginners):** When you edit a file on GitHub.com and click "Propose changes," GitHub creates a branch for you automatically. Name it `fix/yourname-issueXX` (for example, `fix/maria-issue42`).
+> - **Local Git (if you cloned in Block 0):** Create a feature branch with `git checkout -b fix/yourname-issueXX` from `main`. See the "Local Git Alternative" section below for the full command sequence.
+>
+> **Do NOT use your `username-practice` branch yet.** The practice branch is for Chapter 11 and beyond when you work locally with Git and VS Code. For Chapter 5, use a short-lived feature branch as described above.
+
+### Challenge 5.1 Step-by-Step: Create One Small Branch Change
+
+**Goal:** Edit the file referenced in the issue you claimed in Chapter 4 (Challenge 4.2).
+
+**Where you are working:** the `learning-room` repository on GitHub.com, using the web editor.
+
+**Before you start:** Open the issue you claimed in Chapter 4.2 and note which file needs editing. The issue description tells you the file path and what to fix. The practice files are:
+
+The following table summarizes the practice files in the learning-room, what each file contains, and the type of issues to look for.
+
+| File | What it contains | What to fix |
+|------|-----------------|-------------|
+| `docs/welcome.md` | Introduction to open source contribution | Three `[TODO]` sections where content is missing |
+| `docs/keyboard-shortcuts.md` | Screen reader shortcut reference tables | Intentional errors in shortcut references |
+| `docs/setup-guide.md` | Getting-started instructions | Broken links and incomplete steps |
+
+**Steps using the web editor:**
+
+1. In the `learning-room` repository, navigate to the file specified in your issue. Use the file tree or the "Go to file" button (`T` keyboard shortcut).
+2. Open the file and activate the **pencil icon** (Edit this file) button.
+   - Screen reader users (NVDA/JAWS): Press `B` to navigate buttons, find "Edit this file," and press `Enter`.
+   - VoiceOver users: Press `VO+U`, open Buttons rotor, find "Edit this file," and press `VO+Space`.
+3. The file opens in the web editor. Make your change. For example:
+   - If your issue is about a `[TODO]` section: replace the `[TODO]` placeholder with the requested content (one to three sentences).
+   - If your issue is about a broken link: find and correct the URL.
+   - If your issue is about a shortcut error: find and fix the incorrect value in the table.
+4. Keep your change small and focused. Edit only what the issue asks for.
+
+**Proposing your changes (this creates your branch):**
+
+5. After editing, activate the **Commit changes** button (green button above the editor).
+6. A dialog appears. In the **Branch name** field, type: `fix/yourname-issueXX` (replace `yourname` with your GitHub username, and `XX` with the issue number).
+7. Select **Create a new branch for this commit and start a pull request**.
+8. Activate **Propose changes**.
+
+**You are done when:** GitHub shows the "Open a pull request" page. Your file change is saved on a new branch. Continue to Challenge 5.2.
+
+### Challenge 5.2 Step-by-Step: Open a Linked PR
+
+**Goal:** Open a pull request that links to your challenge issue so it closes automatically on merge.
+
+**Where you are working:** the "Open a pull request" page that appeared after Challenge 5.1 (or navigate to Pull Requests tab and select "Compare and pull request").
+
+1. In the **Title** field, write a short description of your change. Examples:
+   - "Complete the Who Can Contribute section in welcome.md"
+   - "Fix broken accessibility settings link in setup-guide.md"
+   - "Correct NVDA modifier key in keyboard-shortcuts.md"
+2. In the **Body** field, use the PR template if one is provided. Make sure to include:
+   - A summary of what you changed and why (at least 50 characters).
+   - The line `Closes #XX` where `XX` is the number of your **assigned Chapter 5 challenge issue** (not the issue you claimed in Chapter 4, unless they are the same).
+   - If you are also closing the issue you claimed in Chapter 4, add that reference too: `Also addresses #YY`.
+3. Verify the **base branch** is `main` and the **compare branch** is your `fix/yourname-issueXX` branch.
+4. Activate the **Create pull request** button.
+
+**You are done when:** Your PR appears in the Pull Requests list. The bot will begin running checks within about 30 seconds. Continue to Challenge 5.3.
+
+### Challenge 5.3 Step-by-Step: Pass Required Checks
+
+**Goal:** Read bot feedback, fix any issues it finds, and get all required checks to pass.
+
+**Where you are working:** the Conversation tab of your open pull request.
+
+1. Wait approximately 30 seconds after opening the PR. The bot posts a validation comment.
+2. Read the bot comment carefully. It checks:
+   - That your PR references an issue with `Closes #XX`.
+   - That your PR description is detailed enough (50+ characters).
+   - That your changed files are in the `learning-room/` folder.
+   - Accessibility checks: heading hierarchy, descriptive link text, valid alt text.
+3. If the bot reports failures:
+   - Open the changed file from the **Files changed** tab.
+   - Activate the pencil icon to edit the file again (directly on your branch).
+   - Fix the issue the bot identified.
+   - Commit the fix to the **same branch** (the bot re-runs automatically on each push).
+4. Repeat step 3 until all required checks show a green checkmark.
+5. When all checks pass, request a review from a peer or the facilitator.
+
+**You are done when:** The bot comment shows all required checks passed (green checkmarks). Your PR is ready for human review and merge.
 
 ### Expected Outcomes
 

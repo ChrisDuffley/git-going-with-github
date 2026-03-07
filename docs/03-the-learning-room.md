@@ -140,7 +140,16 @@ When you join the workshop, the facilitator creates a **personal practice branch
 3. Push your practice branch to GitHub
 4. Open a pull request from your practice branch → `main`
 
-> **Note:** For GitHub web-based editing (Chapters 4-5), you can create temporary feature branches with descriptive names like `fix/welcome-todos` or `add/keyboard-shortcuts`. Your practice branch becomes essential when you start working locally with Git in Chapter 11.
+> **Which branch do I use and when?**
+>
+> | Chapter | Branch needed? | What to use |
+> |---------|---------------|-------------|
+> | Chapter 4 (Issues) | No | Work happens in issue threads directly. No branch or file editing required. |
+> | Chapter 5 (PRs, web editor) | Yes, auto-created | GitHub creates a branch when you click "Propose changes." Name it `fix/yourname-issueXX`. |
+> | Chapter 5 (PRs, local clone) | Yes, create manually | `git checkout -b fix/yourname-issueXX` from `main`. |
+> | Chapter 11+ (Local Git) | Yes | Use your `username-practice` branch or create `fix/yourname-issueXX` branches from `main`. |
+>
+> **Summary:** Chapter 4 needs no branch. Chapters 5-10 use short-lived `fix/` branches. Your `username-practice` branch becomes essential starting in Chapter 11 when you work locally with Git and VS Code.
 
 
 ## The Practice Files: What You Will Work On

@@ -30,12 +30,90 @@ Chapter 4 is the first **issue-based challenge chapter** with short, confidence-
 
 ### Chapter 4 Challenge Set
 
-1. **Create your first issue**
-  - Create one issue with a clear title and short description.
-2. **Claim a challenge issue**
-  - Comment `I'd like to try this!` on a beginner challenge issue.
-3. **Ask one clarifying question**
-  - Add one question comment on your claimed issue.
+1. **Create your first issue** - file a new issue with a clear title and description.
+2. **Claim a challenge issue** - comment on an existing beginner issue to claim it.
+3. **Ask one clarifying question** - add a question comment on your claimed issue.
+
+> **Branch guidance for Chapter 4:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.
+>
+> **How completion works:** When you finish all three challenges, post a comment on your assigned Chapter 4 challenge issue with links to the issues you created, claimed, and commented on. The facilitator reviews your issue activity directly. No pull request is required for Chapter 4.
+
+### Challenge 4.1 Step-by-Step: Create Your First Issue
+
+**Goal:** File a new issue in the Learning Room repository with a specific title and a meaningful description.
+
+**Where you are working:** the Issues tab of the `learning-room` repository on GitHub.com.
+
+1. Open the `learning-room` repository in your browser.
+2. Navigate to the **Issues** tab (press `G` then `I` to jump there with keyboard shortcuts, or find the "Issues" link in the repository navigation).
+3. Activate the **New issue** button.
+4. If a template picker appears, select **Open a blank issue** (or choose a template if one fits).
+5. In the **Title** field, type a clear, specific title (at least 12 characters). Examples:
+   - "Add missing contributor background paragraph in welcome.md"
+   - "Keyboard shortcuts table has incorrect NVDA modifier key"
+   - "Setup guide link to accessibility settings is broken"
+6. In the **Body** field, write a meaningful description (at least 80 characters). Include:
+   - What the problem is or what content is missing.
+   - Where in the repository the problem exists (file name and section).
+   - What you think the fix should be.
+7. Activate **Submit new issue**.
+8. Copy the issue URL or note the issue number (for example, `#150`). You will reference this later.
+
+**You are done when:** Your new issue appears in the Issues list with your username as the author, a clear title, and a detailed description.
+
+### Challenge 4.2 Step-by-Step: Claim a Challenge Issue
+
+**Goal:** Find an existing beginner challenge issue and claim it by leaving a comment.
+
+**Where you are working:** the Issues tab of the `learning-room` repository on GitHub.com.
+
+1. Open the Issues tab in the `learning-room` repository.
+2. Use the search filter to find beginner issues. Type in the filter bar:
+   ```text
+   is:open label:"challenge: beginner"
+   ```
+3. Browse the results and pick one issue that interests you.
+4. Open the issue by activating its title link.
+5. Read the issue description to understand what needs to be done.
+6. Scroll to the comment box at the bottom of the issue.
+7. Type: `I'd like to try this!`
+8. Activate the **Comment** button (or press `Ctrl+Enter`).
+9. Note the issue number (for example, `#42`). This is the issue you will fix in Chapter 5.
+
+**You are done when:** Your comment appears in the issue thread, and other participants can see you have claimed the work.
+
+### Challenge 4.3 Step-by-Step: Ask One Clarifying Question
+
+**Goal:** Practice asking a useful question before starting implementation work.
+
+**Where you are working:** the issue you claimed in Challenge 4.2.
+
+1. Open the issue you claimed in Challenge 4.2.
+2. Re-read the issue description carefully. Think about:
+   - Is anything unclear about what needs to change?
+   - Do you know which file to edit?
+   - Do you understand the expected result?
+3. Scroll to the comment box.
+4. Write one specific question. Examples:
+   - "Should I add the paragraph after the existing heading or create a new subsection?"
+   - "The issue mentions a broken link. Is the correct URL documented somewhere else in the repo?"
+   - "Should the shortcut table keep the same column order, or can I reorganize it?"
+5. Activate the **Comment** button.
+
+**You are done when:** Your question comment appears in the issue thread. A facilitator or peer will respond.
+
+### Completing Chapter 4: Submit Your Evidence
+
+When you have finished all three challenges, go to your **assigned Chapter 4 challenge issue** (the one titled "Chapter 4.1: Create Your First Issue (@yourusername)" or similar) and post a comment with your evidence:
+
+```text
+Chapter 4 completed:
+- Challenge 4.1: Created issue #[number]
+- Challenge 4.2: Claimed issue #[number] (commented)
+- Challenge 4.3: Asked question on issue #[number]
+```
+
+Replace `[number]` with the actual issue numbers. The facilitator will review your issue activity and mark the challenge complete.
 
 ### Expected Outcomes
 
@@ -56,10 +134,10 @@ Issues are not just task lists. They are collaborative spaces where clear commun
 
 ### Learning Pattern Used in This Chapter
 
-1. Start with a small, safe action.
-2. Practice communication in public issue threads.
+1. Start with a small, safe action (create an issue).
+2. Practice communication in public issue threads (claim and question).
 3. Leave clear evidence in the issue timeline.
-4. Build momentum for PR work in Chapter 5.
+4. Build momentum for file editing and PR work in Chapter 5.
 
 
 ## Local Git Alternative: Working from Your Clone

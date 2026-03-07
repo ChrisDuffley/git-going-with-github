@@ -33,7 +33,7 @@ Located in `.github/ISSUE_TEMPLATE/` (Chapters 4-6, 11) and inline in `scripts/c
 
 | Chapter | Challenges | Submission | Bot Validated | Skill | Day | Status |
 |---------|-----------|------------|---------------|-------|-----|--------|
-| **04** Issues | 3 | PR with `Closes #XX` | No (manual) | github-issues | 1 | Created |
+| **04** Issues | 3 | Issue comment (evidence links) | No (manual) | github-issues | 1 | Created |
 | **05** Pull Requests | 3 | PR with `Closes #XX` | Yes | pull-requests | 1 | Created |
 | **06** Merge Conflicts | 1 | PR with `Closes #XX` | Yes | merge-conflicts | 1 | Created |
 | **07** Culture and Etiquette | 1 | Issue comment | No | collaboration | 1 | Created |
@@ -49,7 +49,7 @@ Located in `.github/ISSUE_TEMPLATE/` (Chapters 4-6, 11) and inline in `scripts/c
 
 **Total: 26 challenges per student**
 
-Chapters 4, 5, 6, and 11 use PR-based submission with `Closes #XX` syntax. All other chapters use issue-comment-based submission where students post evidence as a checklist comment.
+Chapters 5, 6, and 11 use PR-based submission with `Closes #XX` syntax. Chapter 4 uses issue-comment-based submission where students post evidence links on their assigned challenge issue (no branch or file editing required). All other chapters use issue-comment-based submission where students post evidence as a checklist comment.
 
 **Template Contents:**
 - YAML frontmatter with placeholders: `{CHAPTER}`, `{CHALLENGE_NUM}`, `{CHALLENGE_TITLE}`, `{USERNAME}`, `{ISSUE_NUMBER}`

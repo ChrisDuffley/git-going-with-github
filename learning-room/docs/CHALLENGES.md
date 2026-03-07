@@ -86,8 +86,8 @@ Use this map for a consistent student experience: safe start, small actions, vis
 | --- | --- | --- | --- | --- |
 | Chapter 2: Navigating Repositories | Orientation only | 0 | Readiness check with facilitator | None |
 | Chapter 3: The Learning Room | System orientation only | 0 | Can explain issue -> branch -> PR flow | None |
-| Chapter 4: Working with Issues | Micro issue challenges | 3 | Issue creation + claim + question comment | Manual/facilitator |
-| Chapter 5: Working with Pull Requests | Bot-validated PR challenges | 3 | Linked PR (`Closes #XX`) + passing checks | PR bot validation |
+| Chapter 4: Working with Issues | Micro issue challenges (no branch needed) | 3 | Issue creation + claim + question comment on challenge issue | Manual/facilitator |
+| Chapter 5: Working with Pull Requests | Bot-validated PR challenges (first branch + file edit) | 3 | Linked PR (`Closes #XX`) + passing checks | PR bot validation |
 | Chapter 6: Merge Conflicts | Controlled single drill | 1 | Issue-linked PR resolving conflict markers | Manual by default |
 | Chapter 7: Culture and Etiquette | Guided reflection | 1 optional | Structured reflection comment | None |
 | Chapter 8: Labels/Milestones/Projects | Guided triage recommendation | 1 | Triage recommendation comment (or apply labels if permitted) | None by default |
@@ -116,16 +116,48 @@ Students can expand any chapter below to see the complete challenge instructions
 <details>
 <summary><strong>Chapter 4: Working with Issues</strong> - 3 Micro-Challenges</summary>
 
+> **Branch guidance:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.
+
 ### Challenge Set
 
-1. **Create your first issue**
-   - Create one issue with a clear title and short description.
+1. **Create your first issue** - file a new issue with a clear title and description.
+2. **Claim a challenge issue** - comment on an existing beginner issue to claim it.
+3. **Ask one clarifying question** - add a question comment on your claimed issue.
 
-2. **Claim a challenge issue**
-   - Comment `I'd like to try this!` on a beginner challenge issue.
+### Challenge 4.1: Create Your First Issue
 
-3. **Ask one clarifying question**
-   - Add one question comment on your claimed issue.
+1. Open the `learning-room` repository in your browser.
+2. Navigate to the **Issues** tab.
+3. Activate the **New issue** button.
+4. Type a clear, specific title (at least 12 characters). For example: "Add missing contributor background paragraph in welcome.md".
+5. Write a meaningful description (at least 80 characters) explaining the problem and where it is.
+6. Activate **Submit new issue**.
+7. Note the issue number for your evidence.
+
+### Challenge 4.2: Claim a Challenge Issue
+
+1. Open the Issues tab and filter: `is:open label:"challenge: beginner"`.
+2. Pick an issue that interests you and open it.
+3. Read the description to understand what needs to be done.
+4. Comment: `I'd like to try this!`
+5. Note the issue number. This is the issue you will fix in Chapter 5.
+
+### Challenge 4.3: Ask One Clarifying Question
+
+1. Open the issue you claimed in Challenge 4.2.
+2. Re-read the description. Think about what is unclear.
+3. Post one specific question as a comment (for example: "Should I add the paragraph after the existing heading or create a new subsection?").
+
+### Completing Chapter 4
+
+Post a comment on your assigned Chapter 4 challenge issue with your evidence:
+
+```text
+Chapter 4 completed:
+- Challenge 4.1: Created issue #[number]
+- Challenge 4.2: Claimed issue #[number]
+- Challenge 4.3: Asked question on issue #[number]
+```
 
 ### Expected Outcomes
 
@@ -149,16 +181,54 @@ Issues are not just task lists. They are collaborative spaces where clear commun
 <details>
 <summary><strong>Chapter 5: Working with Pull Requests</strong> - 3 PR-Validated Challenges</summary>
 
+> **Branch guidance:** This is the first chapter where you edit files and create branches.
+>
+> - **Web editor (recommended):** When you edit a file on GitHub.com and click "Propose changes," GitHub creates a branch for you. Name it `fix/yourname-issueXX`.
+> - **Local Git:** Create a branch with `git checkout -b fix/yourname-issueXX` from `main`.
+> - **Do NOT use your `username-practice` branch yet.** That is for Chapter 11 and beyond.
+
 ### Challenge Set
 
-1. **Create one small branch change**
-   - Edit only the file required by your claimed issue.
+1. **Create one small branch change** - edit the file specified in your claimed issue.
+2. **Open a linked PR** - use the PR template and include `Closes #XX`.
+3. **Pass required checks** - respond to bot feedback until all required checks pass.
 
-2. **Open a linked PR**
-   - Use PR template and include `Closes #XX`.
+### Challenge 5.1: Create One Small Branch Change
 
-3. **Pass required checks**
-   - Respond to bot feedback until required checks pass.
+Open the issue you claimed in Chapter 4.2. It tells you which file to edit.
+
+The following table summarizes the practice files.
+
+| File | What to fix |
+|------|-------------|
+| `docs/welcome.md` | Three `[TODO]` sections where content is missing |
+| `docs/keyboard-shortcuts.md` | Intentional errors in shortcut references |
+| `docs/setup-guide.md` | Broken links and incomplete steps |
+
+**Using the web editor:**
+
+1. Navigate to the file in the `learning-room` repository.
+2. Activate the **pencil icon** (Edit this file).
+3. Make your change (keep it small and focused).
+4. Activate **Commit changes**.
+5. In the branch name field, type: `fix/yourname-issueXX`.
+6. Select **Create a new branch for this commit and start a pull request**.
+7. Activate **Propose changes**.
+
+### Challenge 5.2: Open a Linked PR
+
+1. On the "Open a pull request" page, write a descriptive title.
+2. In the body, include a summary of your change (at least 50 characters) and the line `Closes #XX` (where XX is your Chapter 5 challenge issue number).
+3. Verify the base branch is `main` and the compare branch is your `fix/` branch.
+4. Activate **Create pull request**.
+
+### Challenge 5.3: Pass Required Checks
+
+1. Wait about 30 seconds. The bot posts a validation comment.
+2. Read the bot feedback. It checks: issue reference, description length, file location, and accessibility.
+3. If the bot reports failures, edit the file again (directly on your branch via the Files changed tab pencil icon), fix the issue, and commit. The bot re-runs automatically.
+4. Repeat until all checks show green checkmarks.
+5. Request a review from a peer or facilitator.
 
 ### Expected Outcomes
 
