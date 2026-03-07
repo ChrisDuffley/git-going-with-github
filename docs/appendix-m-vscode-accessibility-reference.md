@@ -175,9 +175,9 @@ The Accessible Diff Viewer presents file diffs as a structured, line-by-line lis
 
 #### Top-level structure
 
-The Accessible Diff Viewer starts with a header showing the file path and change summary. It then shows each hunk (changed section) in order. Each hunk contains: the hunk location (line range), unchanged context lines, the modified, added, or removed lines with their prefix, and more context lines. After all hunks, a footer shows the totals for additions and deletions.
+![](images/diff-viewer-tree.svg)
 
-![Diagram showing the Accessible Diff Viewer tree structure with header, hunks containing line ranges and changes, and footer](images/diff-viewer-tree.svg)
+The Accessible Diff Viewer starts with a header showing the file path and change summary. It then shows each hunk (changed section) in order. Each hunk contains: the hunk location (line range), unchanged context lines, the modified, added, or removed lines with their prefix, and more context lines. After all hunks, a footer shows the totals for additions and deletions.
 
 #### Line prefixes
 

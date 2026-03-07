@@ -190,9 +190,9 @@ gh pr list --search "review-requested:@me"
 
 ### Pull Request Tree Structure
 
-The GitHub Pull Requests panel has two top-level sections. "My Pull Requests" contains four filters: Assigned to Me, Created by Me, Waiting for my Review, and All Open. The repository section shows Local Pull Request Branches (checked out locally), All Open Pull Requests, and All Closed Pull Requests.
+![](images/pr-tree.svg)
 
-![Diagram showing the GitHub Pull Requests panel tree with My Pull Requests filters and repository sections](images/pr-tree.svg)
+The GitHub Pull Requests panel has two top-level sections. "My Pull Requests" contains four filters: Assigned to Me, Created by Me, Waiting for my Review, and All Open. The repository section shows Local Pull Request Branches (checked out locally), All Open Pull Requests, and All Closed Pull Requests.
 
 #### Screen reader announcement example
 
