@@ -70,9 +70,7 @@ Visually, the top bar contains (left to right):
 
 When you are inside a repository, a second navigation bar appears below the global bar. This contains the repository's tabs:
 
-```text
-Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights | Settings
-```
+`Code` - `Issues` - `Pull requests` - `Actions` - `Projects` - `Wiki` - `Security` - `Insights` - `Settings`
 
 **Screen reader landmark:** This is labeled **"Repository navigation"**. Press `D` to jump to it directly.
 

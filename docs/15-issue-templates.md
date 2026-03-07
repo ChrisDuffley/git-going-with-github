@@ -1937,9 +1937,9 @@ After completing Steps 1-7, verify:
 
 1. Create a table:
 
-   ```text
-   Field Name | Type (dropdown/input/textarea) | Why Required? | Options (if dropdown)
-   [name]     | [type]                        | [reason]      | [choices]
+   ```
+   Field Name -- Type (dropdown/input/textarea) -- Why Required? -- Options (if dropdown)
+   [name]     -- [type]                        -- [reason]      -- [choices]
    ```
 
 2. For each issue type from Part 2, add 2-4 required fields:

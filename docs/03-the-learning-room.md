@@ -89,31 +89,30 @@ Throughout Day 1, you work on **two parallel learning tracks**:
 
 ## Learning Room Folder Structure
 
-```text
-learning-room/
-+-- README.md                           ← Getting started guide
-+-- AUTOMATION.md                       ← How the bot works
-+-- .github/
-|   +-- workflows/                      ← 3 automation workflows
-|   |   +-- learning-room-pr-bot.yml            (PR validation)
-|   |   +-- skills-progression.yml              (progress tracking)
-|   |   +-- student-grouping.yml                (peer pairing)
-|   +-- scripts/
-|   |   +-- validate-pr.js                      (validation logic)
-|   +-- data/
-|   |   +-- student-roster.json                 (your cohort info)
-|   |   +-- challenge-progression.json          (levels, badges)
-|   +-- docs/
-|       +-- LEARNING_PATHS.md                   (skill progression guide)
-|       +-- IMPLEMENTATION_GUIDE.md             (facilitator setup)
-+-- docs/
-|   +-- CHALLENGES.md                   ← 12 challenges (Beginner → Expert)
-|   +-- GROUP_CHALLENGES.md             ← 7 collaborative exercises
-|   +-- welcome.md                      ← Has [TODO] to complete
-|   +-- keyboard-shortcuts.md           ← Has intentional errors
-|   +-- setup-guide.md                  ← Has broken links
-+-- [other files for practice]
-```
+The learning-room repository contains these files and folders:
+
+- **README.md** -- Getting started guide
+- **AUTOMATION.md** -- How the bot works
+- **.github/**
+  - **workflows/** -- 3 automation workflows
+    - learning-room-pr-bot.yml (PR validation)
+    - skills-progression.yml (progress tracking)
+    - student-grouping.yml (peer pairing)
+  - **scripts/**
+    - validate-pr.js (validation logic)
+  - **data/**
+    - student-roster.json (your cohort info)
+    - challenge-progression.json (levels, badges)
+  - **docs/**
+    - LEARNING_PATHS.md (skill progression guide)
+    - IMPLEMENTATION_GUIDE.md (facilitator setup)
+- **docs/**
+  - CHALLENGES.md -- 12 challenges (Beginner to Expert)
+  - GROUP_CHALLENGES.md -- 7 collaborative exercises
+  - welcome.md -- Has a TODO to complete
+  - keyboard-shortcuts.md -- Has intentional errors
+  - setup-guide.md -- Has broken links
+- Other files for practice
 
 
 ## Your Practice Branch
