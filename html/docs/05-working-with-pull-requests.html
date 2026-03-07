@@ -92,6 +92,37 @@
 <li>Success is visible (green checks + closed issue).</li>
 </ul>
 <hr>
+<h2>Local Git Alternative: The Full Branch-Edit-PR Workflow</h2>
+<details>
+<summary>If you cloned the learning-room in Block 0 and prefer working locally</summary>
+
+<p>The web editor workflow (pencil button, &quot;Propose changes&quot;) is the primary path taught in this chapter. If you cloned the Learning Room in Block 0 and are comfortable in a terminal, here is the local equivalent. This is the same workflow covered in depth in <a href="11-git-source-control.html">Chapter 11: Git and Source Control</a>.</p>
+<p><strong>Step 1 - Sync and create a feature branch:</strong></p>
+<pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> ~/Documents/learning-room
+git checkout main
+git pull origin main
+git checkout -b fix/welcome-todos</code></pre>
+<p><strong>Step 2 - Edit the file in your editor:</strong></p>
+<p>Open the file in VS Code or your preferred editor:</p>
+<pre><code class="hljs language-bash">code docs/welcome.md</code></pre>
+<p>Make your changes and save the file.</p>
+<p><strong>Step 3 - Stage, commit, and push:</strong></p>
+<pre><code class="hljs language-bash">git add docs/welcome.md
+git commit -m <span class="hljs-string">&quot;Complete TODO sections in welcome.md&quot;</span>
+git push -u origin fix/welcome-todos</code></pre>
+<p><strong>Step 4 - Open a pull request:</strong></p>
+<pre><code class="hljs language-bash">gh <span class="hljs-built_in">pr</span> create --title <span class="hljs-string">&quot;Complete TODO sections in welcome.md&quot;</span> \
+  --body <span class="hljs-string">&quot;Closes #42&quot;</span> --base main</code></pre>
+<p>Or open interactively:</p>
+<pre><code class="hljs language-bash">gh <span class="hljs-built_in">pr</span> create</code></pre>
+<p>The GitHub CLI walks you through title, body, base branch, and reviewers.</p>
+<p><strong>What happens next is identical:</strong> the Learning Room bot validates your PR, posts feedback, and you request a human reviewer - the same as the web workflow.</p>
+<blockquote>
+<p><strong>Tip:</strong> You can also use your <code>username-practice</code> branch instead of creating a feature branch. Switch to it with <code>git checkout username-practice</code> (replacing <code>username</code> with your GitHub username, all lowercase).</p>
+</blockquote>
+</details>
+
+<hr>
 <h2>What Is a Pull Request?</h2>
 <p>A pull request (PR) is a proposal to merge changes from one branch into another. When you have:</p>
 <ul>

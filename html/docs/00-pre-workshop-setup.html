@@ -76,8 +76,7 @@
 <h3>Software - Required Before the Workshop</h3>
 <ul>
 <li><strong>Git</strong> - <a href="https://git-scm.com/downloads">Download Git</a> (Windows/Linux) or Xcode Command Line Tools (macOS)</li>
-<li><strong>Visual Studio Code</strong> (free) - <a href="https://code.visualstudio.com/">download here</a></li>
-<li><strong>GitHub Copilot Chat</strong> extension for VS Code - installed from within VS Code (this single extension provides both inline suggestions and Chat)</li>
+<li><strong>Visual Studio Code</strong> (free) - <a href="https://code.visualstudio.com/">download here</a> (GitHub Copilot is included automatically)</li>
 <li>A GitHub Copilot subscription or Free tier access (Copilot Free is available to all GitHub users)</li>
 </ul>
 <h3>Screen Reader Options</h3>
@@ -691,66 +690,26 @@ user.email=your-email@example.com</code></pre>
 <p>Use the same email you registered with GitHub. If you&#39;re concerned about privacy, GitHub offers a no-reply email you can use: <code>username@users.noreply.github.com</code> - find it in <a href="https://github.com/settings/emails">Settings → Emails</a>.</p>
 <hr>
 <h2>Step 8 - Install VS Code Extensions</h2>
-<p>This workshop uses two VS Code extensions. Both are published by GitHub and are free. Install them in the order shown below.</p>
+<p>This workshop uses two VS Code extensions. GitHub Copilot is built into VS Code automatically. The GitHub Pull Requests extension needs to be installed manually. Both authenticate through your browser session - if you are signed into GitHub in your web browser, VS Code picks up the session automatically.</p>
 <hr>
-<h3>Sign in to GitHub in VS Code first</h3>
-<p>Both extensions require you to be signed into GitHub. Do this once and both will be authenticated.</p>
+<h3>GitHub Copilot (Built In)</h3>
+<p>GitHub Copilot is automatically included with Visual Studio Code. There is no extension to install separately. It provides both inline code completions and the conversational Agent mode panel used throughout the second half of the workshop.</p>
+<h4>Activate Copilot</h4>
 <ol>
-<li>Open VS Code</li>
-<li>Press <code>Ctrl+Shift+P</code> to open the Command Palette</li>
-<li>Type: <code>sign in</code> and arrow down to <strong>&quot;GitHub: Sign in&quot;</strong> - press <code>Enter</code><ul>
-<li>Your default web browser will open to a GitHub authentication page</li>
-</ul>
-</li>
-<li>In the browser, confirm your GitHub account when prompted and select <strong>Authorize Visual Studio Code</strong></li>
-<li>Switch back to VS Code - your browser may ask you to confirm opening VS Code; select <strong>Open</strong> or <strong>Allow</strong></li>
-<li>You should hear VS Code announce a notification, and the accounts icon in the Activity Bar will show your GitHub username</li>
-</ol>
-<blockquote>
-<p><strong>Screen reader note:</strong> The authentication happens in your browser. After authorizing, your browser will show a page saying &quot;You can close this tab and return to VS Code.&quot; Switch back to VS Code with <code>Alt+Tab</code> (Windows) or <code>Cmd+Tab</code> (macOS).</p>
-</blockquote>
-<hr>
-<h3>Extension 1 - GitHub Copilot Chat</h3>
-<p>This single extension provides both inline code completions and the conversational Chat panel. It is used throughout the second half of the workshop.</p>
-<h4>Install</h4>
-<ol>
-<li>Press <code>Ctrl+Shift+X</code> to open the Extensions panel<ul>
-<li>Your screen reader will announce &quot;Extensions&quot; and place focus in the search box</li>
-</ul>
-</li>
-<li>Type: <code>GitHub Copilot Chat</code><ul>
-<li>The list updates as you type</li>
-</ul>
-</li>
-<li>Press <code>Tab</code> to move from the search box into the results list</li>
-<li>Arrow down through the results. Look for <strong>&quot;GitHub Copilot Chat&quot;</strong> with publisher <strong>&quot;GitHub&quot;</strong><ul>
-<li>There are similar-named extensions from other publishers - verify the publisher is &quot;GitHub&quot; before installing</li>
-</ul>
-</li>
-<li>Press <code>Enter</code> to open the extension details page</li>
-<li>Press <code>Tab</code> to find the <strong>Install</strong> button, then press <code>Enter</code> or <code>Space</code></li>
-<li>Wait for installation to complete - VS Code will announce &quot;Extension installed&quot; or similar</li>
-</ol>
-<h4>Verify it is working</h4>
-<ol>
-<li>Press <code>Ctrl+Shift+I</code> to open the Copilot Chat panel<ul>
+<li>Make sure Screen Reader Mode is enabled (see above)</li>
+<li>Make sure you are signed into GitHub in your web browser</li>
+<li>Press <code>Ctrl+Shift+I</code> to open Agent mode<ul>
 <li>Your screen reader should announce the chat input field</li>
 </ul>
 </li>
-<li>Type: <code>Hello, are you there?</code> and press <code>Enter</code></li>
+<li>Type: <code>Hello</code> and press <code>Enter</code></li>
+<li>VS Code will automatically sign you into GitHub Copilot using your browser session - no manual sign-in command is needed</li>
 <li>A response will appear in the chat history above the input field</li>
 <li>Navigate up with <code>Shift+Tab</code> or <code>Up Arrow</code> to read the response</li>
-<li>If you see an error about signing in, press <code>Ctrl+Shift+P</code> and run <strong>&quot;GitHub: Sign in&quot;</strong> again</li>
 </ol>
-<h4>Verify inline completions</h4>
-<ol>
-<li>Press <code>Ctrl+N</code> to create a new untitled file</li>
-<li>Press <code>Ctrl+Shift+P</code>, type <code>change language</code>, and select <strong>&quot;Change Language Mode&quot;</strong> - choose <strong>Python</strong> or <strong>JavaScript</strong></li>
-<li>Start typing a function name such as <code>function greet</code> (JavaScript) or <code>def greet</code> (Python)</li>
-<li>Pause for 1-2 seconds - Copilot will suggest a completion in grey ghost text</li>
-<li>Press <code>Tab</code> to accept it, or <code>Esc</code> to dismiss</li>
-<li>If no suggestions appear: confirm Copilot icon shows in the status bar and that you are signed in</li>
-</ol>
+<blockquote>
+<p><strong>That is it.</strong> You do not need to use the Command Palette to sign in. If you are logged into GitHub in your browser, VS Code handles authentication automatically when you first interact with the agent.</p>
+</blockquote>
 <hr>
 <h3>Extension 2 - GitHub Pull Requests</h3>
 <p>This extension lets you review and manage pull requests without leaving VS Code. It is used in the code review chapters.</p>
@@ -817,10 +776,8 @@ GIT &amp; VS CODE (required before the workshop)
 [ ] Git identity configured (git config --global user.name and user.email)
 [ ] Visual Studio Code installed
 [ ] Screen Reader Mode enabled in VS Code (Shift+Alt+F1 or Command Palette)
-[ ] Signed into GitHub in VS Code
-[ ] GitHub Copilot Chat extension installed (publisher: GitHub)
-[ ] Copilot Chat responds in the Chat panel (Ctrl+Shift+I)
-[ ] Copilot inline suggestions appear when typing in a file
+[ ] Signed into GitHub in your web browser
+[ ] GitHub Copilot responds in Agent mode (Ctrl+Shift+I, type Hello, get a response)
 [ ] GitHub Pull Requests extension installed (publisher: GitHub)
 [ ] Pull Requests panel opens (Ctrl+Shift+P → &quot;Focus on Pull Requests View&quot;)</code></pre>
 <hr>

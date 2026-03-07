@@ -76,6 +76,40 @@
 <li>Students still get real issue and PR workflow practice.</li>
 </ul>
 <hr>
+<h2>Local Git Alternative: Resolving Conflicts from Your Terminal</h2>
+<details>
+<summary>If you cloned the learning-room in Block 0 and prefer resolving conflicts locally</summary>
+
+<p>The GitHub web conflict editor works well and is the primary method taught in this chapter. If you cloned the Learning Room in Block 0 and prefer working in your terminal, here is how to resolve conflicts locally. This is the same workflow covered in depth in <a href="11-git-source-control.html">Chapter 11: Git and Source Control</a>.</p>
+<p><strong>Step 1 - Sync main and merge into your branch:</strong></p>
+<pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> ~/Documents/learning-room
+git checkout main
+git pull origin main
+git checkout your-branch-name
+git merge main</code></pre>
+<p>If there is a conflict, Git will report which files are affected and stop the merge.</p>
+<p><strong>Step 2 - Open the conflicted file:</strong></p>
+<pre><code class="hljs language-bash">code docs/welcome.md   <span class="hljs-comment"># or your preferred editor</span></code></pre>
+<p>Look for the conflict markers:</p>
+<pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Your version of the content
+=======
+The incoming version from main
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; main</code></pre>
+<p><strong>Step 3 - Resolve by editing:</strong></p>
+<ul>
+<li>Keep the version you want (or combine both)</li>
+<li>Delete all three marker lines (<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>)</li>
+<li>Save the file</li>
+</ul>
+<p><strong>Step 4 - Mark resolved, commit, and push:</strong></p>
+<pre><code class="hljs language-bash">git add docs/welcome.md
+git commit -m <span class="hljs-string">&quot;Resolve merge conflict in welcome.md&quot;</span>
+git push</code></pre>
+<p>Your PR on GitHub updates automatically with the resolved content. The same bot checks and human review process apply.</p>
+</details>
+
+<hr>
 <h2>What Is a Merge Conflict?</h2>
 <p>A merge conflict occurs when two people have both changed the <strong>same part of the same file</strong> in <strong>different ways</strong>, and Git cannot automatically decide which version is correct.</p>
 <p>Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap - for example:</p>

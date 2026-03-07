@@ -61,10 +61,6 @@
 <td>Free</td>
 </tr>
 <tr>
-<td><strong>Capacity</strong></td>
-<td>75 participants (limited seats)</td>
-</tr>
-<tr>
 <td><strong>Presented by</strong></td>
 <td><a href="https://community-access.org">Community Access</a></td>
 </tr>
@@ -310,8 +306,8 @@
 <p>Our <a href="https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html">Pre-Workshop Setup Guide</a> walks through every one of these steps with detailed screen reader instructions for NVDA, JAWS, and VoiceOver.</p>
 <hr>
 <h2>Registration Closed</h2>
-<p>Registration for GIT Going with GitHub is now closed. Thank you to everyone who signed up!</p>
-<p><strong>Already registered?</strong> Complete the <a href="https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html"><strong>Pre-Workshop Setup Guide</strong></a> before the workshop begins.</p>
+<p>Registration for GIT Going with GitHub is now closed. Thank you to all who registered!</p>
+<p>Already registered? Complete the <a href="https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html"><strong>Pre-Workshop Setup Guide</strong></a> before March 7 to make sure you are ready for Day 1.</p>
 <hr>
 <h2>What Makes This Workshop Different</h2>
 <p>Most GitHub tutorials tell you what buttons to click. This one starts from a different place entirely: <strong>what does your screen reader announce when the page loads?</strong></p>
@@ -359,5 +355,25 @@ No. The workshop, all software, and all materials are free.</p>
     <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.org">Community Access</a></p>
     <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.org">community-access.org</a></p>
   </footer>
-</body>
+  <script>
+(function() {
+  var url = 'https://api.github.com/search/issues?q=repo:community-access/git-going-with-github+label:registration+is:issue+is:open';
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', url);
+  xhr.setRequestHeader('Accept', 'application/vnd.github+json');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      try {
+        var count = JSON.parse(xhr.responseText).total_count;
+        var els = document.querySelectorAll('[id^="registration-count"]');
+        for (var i = 0; i < els.length; i++) {
+          els[i].textContent = count;
+        }
+      } catch (e) {}
+    }
+  };
+  xhr.onerror = function() {};
+  xhr.send();
+})();
+</script></body>
 </html>

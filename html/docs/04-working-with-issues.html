@@ -97,6 +97,30 @@
 <li>Build momentum for PR work in Chapter 5.</li>
 </ol>
 <hr>
+<h2>Local Git Alternative: Working from Your Clone</h2>
+<details>
+<summary>If you cloned the learning-room in Block 0 and prefer working locally</summary>
+
+<p>During Block 0 you cloned the Learning Room repository to your computer. If you are comfortable in a terminal, you can use the GitHub CLI (<code>gh</code>) from inside that clone for every issue operation in this chapter. This is the same workflow covered in depth in <a href="11-git-source-control.html">Chapter 11: Git and Source Control</a>.</p>
+<p><strong>Verify your clone is ready:</strong></p>
+<pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> ~/Documents/learning-room   <span class="hljs-comment"># or wherever you cloned it</span>
+git status                      <span class="hljs-comment"># should show &quot;On branch main&quot;</span></code></pre>
+<p><strong>Common issue commands from your local terminal:</strong></p>
+<pre><code class="hljs language-bash"><span class="hljs-comment"># List your assigned challenge issues</span>
+gh issue list --assignee @me --label challenge
+
+<span class="hljs-comment"># View a specific issue in the terminal</span>
+gh issue view 42
+
+<span class="hljs-comment"># Leave a comment on an issue</span>
+gh issue comment 42 --body <span class="hljs-string">&quot;I&#x27;d like to try this!&quot;</span>
+
+<span class="hljs-comment"># Create a new issue interactively</span>
+gh issue create</code></pre>
+<p>All of these produce the same result as the web interface. The chapter instructions work identically either way - choose whichever is more comfortable for you.</p>
+</details>
+
+<hr>
 <h2>What Is a GitHub Issue?</h2>
 <p>An issue is a discussion thread attached to a repository. Issues are used for:</p>
 <ul>
