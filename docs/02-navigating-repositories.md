@@ -31,27 +31,7 @@ When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-n
 
 The repository home page is organized from top to bottom as follows. The Navigation bar (GitHub global nav) contains the avatar menu, Notifications, and search. Below that is the Repository header showing "owner / repo-name" as the H1 heading, plus Star, Watch, and Fork buttons. Next are the Repository navigation tabs (a landmark) with Code (active), Issues, Pull requests, Actions, and more. The main content area is split into two columns: on the left is the File tree / code panel with the branch selector, Files table (navigable as a table), and last commit message; on the right is the Sidebar with the About section, topics, and releases. Below both columns is the rendered README.md in a separate landmark region.
 
-```text
-┌────────────────────────────────────────────────────┐
-│  Navigation bar (GitHub global nav)                │
-│  avatar menu | Notifications | search               │
-├────────────────────────────────────────────────────┤
-│  Repository header                                  │
-│  owner / repo-name  (h1)                            │
-│  [Star] [Watch] [Fork] buttons                      │
-├────────────────────────────────────────────────────┤
-│  Repository navigation tabs (landmark)              │
-│  < Code > Issues  Pull requests  Actions  etc.      │
-├─────────────────────────────┬──────────────────────┤
-│  File tree / code panel     │  Sidebar              │
-│  Branch selector            │  About section        │
-│  Files table (t:table)      │  Topics               │
-│  Last commit message         │  Releases             │
-├─────────────────────────────┴──────────────────────┤
-│  README.md (rendered)                               │
-│  (a separate landmark region)                       │
-└────────────────────────────────────────────────────┘
-```
+![Diagram showing the repository page layout with navigation bar, header, tabs, file tree and sidebar columns, and README section](images/repo-page-layout-02.svg)
 
 
 ## Landing on a Repository - What to Expect
