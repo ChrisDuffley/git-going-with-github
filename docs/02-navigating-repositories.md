@@ -31,6 +31,8 @@ When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-n
 
 ![](images/repo-page-layout-02.svg)
 
+### Description
+
 The repository home page is organized from top to bottom as follows. The Navigation bar (GitHub global nav) contains the avatar menu, Notifications, and search. Below that is the Repository header showing "owner / repo-name" as the H1 heading, plus Star, Watch, and Fork buttons. Next are the Repository navigation tabs (a landmark) with Code (active), Issues, Pull requests, Actions, and more. The main content area is split into two columns: on the left is the File tree / code panel with the branch selector, Files table (navigable as a table), and last commit message; on the right is the Sidebar with the About section, topics, and releases. Below both columns is the rendered README.md in a separate landmark region.
 
 

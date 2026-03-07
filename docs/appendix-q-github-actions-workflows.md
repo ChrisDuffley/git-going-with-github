@@ -57,6 +57,8 @@ Workflow files live in a specific, mandatory location:
 
 ![](images/workflow-folder-tree.svg)
 
+### Description
+
 Workflow files live at your-repository/.github/workflows/. Example files include: ci.yml (runs tests on every push or PR), lint.yml (checks code style), a11y-scan.yml (accessibility scanning), and deploy.yml (deploys the site when code merges to main).
 
 The `.github/` folder is hidden by convention (starts with a dot). To find it:
