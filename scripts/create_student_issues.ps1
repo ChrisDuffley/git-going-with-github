@@ -43,20 +43,28 @@ Write-Host "Loading org members..."
 $orgMembers = (gh api "orgs/Community-Access/members?per_page=100" --jq ".[].login") -split "`n" | Where-Object { $_.Trim() }
 Write-Host "Org members: $($orgMembers.Count)"
 
-# Find students who already have open challenge issues
-Write-Host "Checking existing challenge issues..."
-$haveIssues = @()
+# Find students who already have Ch 04-11 challenge issues (check by title pattern)
+Write-Host "Checking existing Ch 04-11 challenge issues..."
+$existingTitles = @()
 $page = 1
 do {
-    $batch = gh api "repos/$repo/issues?state=open&labels=challenge&per_page=100&page=$page" --jq ".[].assignee.login" 2>&1
+    $batch = gh api "repos/$repo/issues?state=open&labels=challenge&per_page=100&page=$page" --jq ".[].title" 2>&1
     if ($batch -and $batch.Trim()) {
-        $haveIssues += ($batch -split "`n" | Where-Object { $_.Trim() })
+        $existingTitles += ($batch -split "`n" | Where-Object { $_.Trim() })
     }
     $page++
 } while ($batch -and ($batch -split "`n").Count -ge 100)
+
+# A member has Ch 04-11 issues if any title matches "Chapter 04.1:.*(@username)"
+$haveIssues = @()
+foreach ($m in $orgMembers) {
+    if ($existingTitles | Where-Object { $_ -match "Chapter 04\.1:.*\(@$m\)" }) {
+        $haveIssues += $m
+    }
+}
 $haveIssues = $haveIssues | Sort-Object -Unique
 
-# Only create for org members who don't already have issues
+# Only create for org members who don't already have Ch 04-11 issues
 $needIssues = $orgMembers | Where-Object { $_ -notin $haveIssues }
 Write-Host "Org members without issues: $($needIssues.Count)"
 Write-Host "Issues to create: $($needIssues.Count * 10)`n"
