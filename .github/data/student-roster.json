@@ -582,6 +582,14 @@
       "currentLevel": "intermediate",
       "interests": [],
       "timezone": ""
+    },
+    {
+      "username": "johnkw4u",
+      "joinedDate": "3/6/2026",
+      "mergedPRs": 0,
+      "currentLevel": "beginner",
+      "interests": [],
+      "timezone": ""
     }
   ],
   "_schema_note": "This file is auto-populated by the registration workflow. Each student entry contains only: username, joinedDate, mergedPRs, currentLevel, interests, timezone. No personal information (names, emails, accommodations) is stored here."
