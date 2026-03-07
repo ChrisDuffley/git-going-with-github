@@ -6,7 +6,6 @@
 
 > Gists are a simple way to share code snippets, notes, or small files without creating a full repository. Think of them as lightweight, version-controlled pastebins.
 
----
 
 ## What Is a Gist?
 
@@ -21,7 +20,6 @@ A Gist is a Git repository that holds a single file or a small collection of fil
 
 **Secret does not mean private.** Anyone with the URL can view a secret Gist. It's just not listed publicly on your profile.
 
----
 
 ## When to Use a Gist vs a Repository
 
@@ -33,7 +31,6 @@ A Gist is a Git repository that holds a single file or a small collection of fil
 | Sharing logs or error messages | Want CI/CD and automated checks |
 | Small utility scripts | Need multiple branches |
 
----
 
 ## Creating a Gist
 
@@ -64,7 +61,6 @@ You can add multiple files to a single Gist:
 
 **Use case:** Share related config files together (e.g., `.vscode/settings.json` + `.vscode/keybindings.json`)
 
----
 
 ## Editing a Gist
 
@@ -75,7 +71,6 @@ You can add multiple files to a single Gist:
 
 Every edit creates a new revision. Click **"Revisions"** to see the full edit history.
 
----
 
 ## Embedding a Gist
 
@@ -89,7 +84,6 @@ GitHub renders it as a formatted code block with syntax highlighting and a link 
 
 **Accessibility note:** Embedded Gists are `<iframe>` elements. Screen readers will announce them as "frame" and allow navigation into the content.
 
----
 
 ## Cloning a Gist
 
@@ -101,7 +95,6 @@ git clone https://gist.github.com/username/gist-id.git
 
 Make changes locally, commit, and push just like a normal repo.
 
----
 
 ## Forking a Gist
 
@@ -113,7 +106,6 @@ You can fork someone else's Gist to create your own copy:
 
 **Use case:** Someone shares a useful script, you fork it, and customize it for your needs.
 
----
 
 ## Finding Your Gists
 
@@ -131,7 +123,6 @@ All your public and secret Gists are listed here. You can:
 - Press `2` or `H` to jump between Gists
 - Each Gist has links: "Edit," "Delete," "Star," "Embed"
 
----
 
 ## Discovering Public Gists
 
@@ -143,7 +134,6 @@ See popular Gists by language. Great for finding:
 - Configuration examples
 - Code snippets for learning
 
----
 
 ## Gist Comments
 
@@ -160,7 +150,6 @@ Public Gists support comments. Anyone with a GitHub account can leave a comment,
 3. Type your comment (Markdown supported)
 4. `Ctrl+Enter` or activate "Comment" button
 
----
 
 ## Security and Privacy
 
@@ -189,7 +178,6 @@ If you accidentally post sensitive data:
 2. Revoke/regenerate any exposed credentials
 3. Remember: Forks and clones may still exist
 
----
 
 ## Example Use Cases
 
@@ -224,7 +212,6 @@ Reference it later or share with workshop participants.
 
 When answering questions, paste your code as a Gist and link to it. Readers get syntax highlighting, version history, and the ability to fork your solution.
 
----
 
 ## Gists vs GitHub Repositories - Quick Comparison
 
@@ -240,7 +227,6 @@ When answering questions, paste your code as a Gist and link to it. Readers get 
 | Embeddable | Yes | No |
 | Comments | Yes | Yes (on issues/PRs) |
 
----
 
 ## Deleting a Gist
 
@@ -251,6 +237,5 @@ When answering questions, paste your code as a Gist and link to it. Readers get 
 
 **Warning:** Deletion is permanent. Forks of your Gist are not deleted.
 
----
 
 *Return to: [Resources](appendix-u-resources.md)*

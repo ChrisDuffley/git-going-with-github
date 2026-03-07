@@ -6,7 +6,6 @@
 
 > GitHub Pages lets you publish a static website straight from a GitHub repository - no server, no hosting bill, no deployment pipeline required for simple sites. This appendix explains how to enable it, what it can publish, and how to ensure the published site meets the same accessibility standards as your source code.
 
----
 
 ## Table of Contents
 
@@ -21,7 +20,6 @@
 9. [Limitations](#9-limitations)
 10. [Troubleshooting](#10-troubleshooting)
 
----
 
 ## 1. What GitHub Pages Is
 
@@ -47,7 +45,6 @@ https://<username>.github.io/
 - Personal portfolios
 - Simple blogs via Jekyll
 
----
 
 ## 2. Enabling GitHub Pages for a Repository
 
@@ -72,7 +69,6 @@ GitHub will build and deploy within a minute or two. The URL appears at the top 
 - The **Pages** option in the left sidebar is a link under the "Code and automation" group heading
 - The branch and folder dropdowns are standard `<select>` elements - navigate with arrow keys
 
----
 
 ## 3. Publishing Sources
 
@@ -101,7 +97,6 @@ A basic workflow for this project would:
 2. Run `node scripts/build-html.js`
 3. Upload the `html/` folder as the Pages artifact
 
----
 
 ## 4. The html/ Folder in This Project
 
@@ -193,7 +188,6 @@ jobs:
 
 This workflow triggers on every push to `master`, rebuilds the HTML, and deploys the `html/` folder.
 
----
 
 ## 5. Custom Domains
 
@@ -225,7 +219,6 @@ DNS changes can take up to 48 hours to propagate. GitHub Pages checks and verifi
 
 To prevent domain takeover attacks, GitHub recommends verifying your custom domain in your account or organization settings (Settings → Pages → Add a domain). This prevents others from claiming your domain for their GitHub Pages if you temporarily remove it.
 
----
 
 ## 6. HTTPS and Security
 
@@ -237,7 +230,6 @@ GitHub Pages enforces HTTPS automatically for `github.io` subdomains. For custom
 
 **Important:** Never store secrets, API keys, or private data in a GitHub Pages repository. The repository content is public (on public repositories) and is served as-is. Even deleted files remain in git history.
 
----
 
 ## 7. Accessibility Considerations for Published Sites
 
@@ -295,7 +287,6 @@ After deployment, test the live URL rather than only local files. Some issues (e
 3. Verify no broken links with a link checker (e.g. [W3C Link Checker](https://validator.w3.org/checklink))
 4. Test with a screen reader announcement of the page title and `<h1>`
 
----
 
 ## 8. GitHub Actions and Continuous Deployment
 
@@ -325,7 +316,6 @@ For more comprehensive checking, scan multiple pages:
           done
 ```
 
----
 
 ## 9. Limitations
 
@@ -339,7 +329,6 @@ For more comprehensive checking, scan multiple pages:
 | **Public repositories** | For free accounts, GitHub Pages requires the repository to be public |
 | **Private Pages** | Available on GitHub Enterprise plans only |
 
----
 
 ## 10. Troubleshooting
 
@@ -364,6 +353,5 @@ This usually indicates a **base URL mismatch**. If your site is at `https://user
 
 The published `<title>` element is set during the HTML build step. Update the template in `scripts/build-html.js` to ensure each page has a unique, descriptive title.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix E - GitHub Flavored Markdown](appendix-e-github-flavored-markdown.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

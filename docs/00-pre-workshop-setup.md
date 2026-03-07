@@ -58,7 +58,6 @@ You only need **one** of these. Use whichever you are most comfortable with.
 
 > **Note:** All workshop exercises are designed to work with any of these screen readers. Where specific key commands differ, we will note all three. You are not disadvantaged by using any particular screen reader.
 
----
 
 ## Step 1 - Create Your GitHub Account
 
@@ -162,7 +161,6 @@ For this workshop, participants need a GitHub account with 2FA enabled. The brow
 
 If you run into any authentication issues before the workshop, contact the workshop organizers at the email or issue link in this guide so we can help.
 
----
 
 ## Step 2 - Configure GitHub Accessibility Settings
 
@@ -268,7 +266,6 @@ Theme is on a separate page: [GitHub Appearance Settings](https://github.com/set
    - **Colorblind** variants - Protanopia, Deuteranopia, Tritanopia
 4. Select your preferred theme and activate **Save** if prompted (some changes apply immediately)
 
----
 
 ## Step 3 - Configure Your Profile
 
@@ -293,7 +290,6 @@ A profile picture humanizes your contributions. It can be a photo or any image. 
 1. Navigate to [Settings → Notifications](https://github.com/settings/notifications)
 2. Add a **custom routing** email if you want GitHub notifications to go to a different address than your account email
 
----
 
 ## Step 4 - Check GitHub Feature Preview Settings
 
@@ -371,7 +367,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 > **Why this matters:** Without these features enabled, the keyboard and screen reader workflows described throughout this workshop will not match what you see on screen. Enabling them before you begin ensures everything works as documented.
 
----
 
 ## Step 5 - Set Up Your Screen Reader & Browser
 
@@ -397,7 +392,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Your NVDA key:** By default it is `Insert`. It can also be set to `Caps Lock` in NVDA preferences if that is more comfortable.
 
----
 
 ### JAWS (Windows)
 
@@ -416,7 +410,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Your JAWS key:** `Insert` (or `Caps Lock` if using laptop layout)
 
----
 
 ### VoiceOver (macOS)
 
@@ -437,7 +430,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 - Press `Left Arrow + Right Arrow` simultaneously to toggle Quick Nav
 - With Quick Nav on: `H` = next heading, `L` = next link, `B` = next button (same as NVDA/JAWS browse mode keys)
 
----
 
 ### Browser Recommendations Summary
 
@@ -450,7 +442,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Before the workshop:** Open GitHub.com in your chosen browser with your screen reader running and confirm you can navigate the page using heading keys.
 
----
 
 ## Step 6 - Install Git and Visual Studio Code
 
@@ -487,7 +478,6 @@ Git is often already present via Xcode Command Line Tools. To check:
 
 Once Git is installed, you will configure your Git identity in Step 7 after VS Code is set up.
 
----
 
 ### Install Visual Studio Code
 
@@ -550,7 +540,6 @@ If VS Code did **not** prompt you automatically, enable it manually:
 | Focus Explorer panel | `Ctrl+Shift+E` |
 | Focus editor | `Ctrl+1` |
 
----
 
 ## Step 7 - Configure Git Identity
 
@@ -602,13 +591,11 @@ user.email=your-email@example.com
 
 Use the same email you registered with GitHub. If you're concerned about privacy, GitHub offers a no-reply email you can use: `username@users.noreply.github.com` - find it in [Settings → Emails](https://github.com/settings/emails).
 
----
 
 ## Step 8 - Install VS Code Extensions
 
 This workshop uses two VS Code extensions. GitHub Copilot is built into VS Code automatically. The GitHub Pull Requests extension needs to be installed manually. Both authenticate through your browser session - if you are signed into GitHub in your web browser, VS Code picks up the session automatically.
 
----
 
 ### GitHub Copilot (Built In)
 
@@ -627,7 +614,6 @@ GitHub Copilot is automatically included with Visual Studio Code. There is no ex
 
 > **That is it.** You do not need to use the Command Palette to sign in. If you are logged into GitHub in your browser, VS Code handles authentication automatically when you first interact with the agent.
 
----
 
 ### Extension 2 - GitHub Pull Requests
 
@@ -654,7 +640,6 @@ This extension lets you review and manage pull requests without leaving VS Code.
 
 > **Screen reader note:** The Pull Requests panel is a tree view. Navigate it with `Up` and `Down Arrow`. Press `Enter` or `Right Arrow` to expand a node.
 
----
 
 ### Copilot Free tier
 
@@ -665,7 +650,6 @@ Copilot Free is available to all GitHub users at no cost. It includes:
 
 For this workshop, Free tier is sufficient. If you want unlimited access, paid plans are available at [GitHub Copilot pricing](https://github.com/features/copilot#pricing).
 
----
 
 ## Step 9 - Verification Checklist
 
@@ -702,7 +686,6 @@ GIT & VS CODE (required before the workshop)
 [ ] Pull Requests panel opens (Ctrl+Shift+P → "Focus on Pull Requests View")
 ```
 
----
 
 ## Other GitHub Access Methods (Reference Only)
 
@@ -759,7 +742,6 @@ We are not covering Git commands in this workshop. If you want to learn Git, the
 - [Pro Git book (free)](https://git-scm.com/book/en/v2)
 - [GitHub Skills: Introduction to GitHub](https://github.com/skills/introduction-to-github)
 
----
 
 ## Getting Help Before the Event
 
@@ -771,7 +753,6 @@ If you cannot complete any step in this guide before the workshop:
 
 You will not be left behind. Every setup issue we can solve before Day 1 means more time for learning on the day.
 
----
 
 *Next: [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*
 *Back: [README](../README.md)*

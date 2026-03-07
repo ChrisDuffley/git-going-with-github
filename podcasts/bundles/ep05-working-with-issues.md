@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 15-18 min
 
----
 
 ### Audio Production Direction
 
@@ -36,7 +35,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Managing issues: assigning, labeling, closing, reopening
 - How issues connect to pull requests and project planning
 
----
 
 ### Concept Coverage Checklist
 
@@ -95,7 +93,6 @@ but keep the main narrative focused on the primary chapter.
 >
 > **Browse vs Focus Mode (NVDA):** Toggle between modes with `NVDA+Space` (NVDA key = `Insert` or `Caps Lock`). Use **Browse Mode** (the default) for reading lists, headings, and issue content. Switch to **Focus Mode** when typing in text fields and search boxes. Use `NVDA+F7` at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page - this is your orientation tool.
 
----
 
 ## What Is a GitHub Issue?
 
@@ -111,7 +108,6 @@ Every issue has a **number** (`#42`), a **state** (Open or Closed), a **title**,
 
 > **Learning Room connection:** In the `learning-room` repo, every challenge from `docs/CHALLENGES.md` becomes an issue. For example, Challenge 1 ("Fix Broken Link") is filed as an issue pointing to `docs/welcome.md`, describing the broken link and linking to the challenge success criteria. When you open a PR to fix it, you reference the issue with `Closes #XX` to automatically close it on merge.
 
----
 
 ## Navigating to the Issues List
 
@@ -169,7 +165,6 @@ gh issue list --state closed
 
 Navigate directly: `https://github.com/[owner]/[repo]/issues`
 
----
 
 ## The Issues List Page
 
@@ -219,7 +214,6 @@ When you navigate to an issue in the list, your screen reader will announce (in 
 - Who opened it and when ("Opened 3 days ago by username")
 - Number of comments ("5 comments")
 
----
 
 ## Filtering and Searching Issues
 
@@ -303,7 +297,6 @@ gh issue list --search "screen reader"
 
 The two state links "Open" and "Closed" appear near the top of the issue list. Press `K` to navigate links until you find them, or look for them as buttons near the search bar.
 
----
 
 ## Reading an Issue
 
@@ -383,7 +376,6 @@ Each comment announces:
 
 Other timeline events (label added, PR linked, issue closed) appear between comments in the activity stream. They are typically announced as text paragraphs.
 
----
 
 ## Leaving a Comment
 
@@ -496,7 +488,6 @@ For the full shortcut system, see [Screen Reader Cheat Sheet - GitHub Shortcuts 
 5. Make your changes
 6. Tab to "Update comment" button → Enter
 
----
 
 ## Filing a New Issue
 
@@ -633,7 +624,6 @@ The interactive mode walks you step-by-step through title, body (opens your edit
 
 </details>
 
----
 
 ## Cross-Referencing Issues
 
@@ -666,7 +656,6 @@ Step 4: Enter to insert the reference
 
 `owner/repo#42` - references issue #42 in a different repository.
 
----
 
 ## Sub-Issues - Parent and Child Relationships
 
@@ -722,7 +711,6 @@ Every child issue shows a "Parent issue" link near the top of the page (above th
 
 > **Workshop tip:** If you are working on a feature that requires multiple PRs or involves several team members, ask the maintainer to create a parent issue. You can then claim individual child issues without one person owning the whole feature.
 
----
 
 ## Managing Issues (for Maintainers and Triagers)
 
@@ -816,7 +804,6 @@ From the issue sidebar:
 ### Transferring or deleting an issue
 Available from the "..." (ellipsis) button at the top of the issue - navigate buttons with `B` to find it.
 
----
 
 ## The "good first issue" Label - Your Entry Point
 
@@ -830,7 +817,6 @@ When looking for your first open source contribution:
 
 **Remember:** It's respectful to ask before starting. Maintainers juggle many discussions and need to know who is working on what to avoid duplicated effort.
 
----
 
 ## Accessibility-Specific Issue Writing Tips
 
@@ -881,7 +867,6 @@ Safari 17 does announce "List updated" when filtering is applied,
 so the macOS behavior appears correct.
 ```
 
----
 
 ## Try It: File Your First Issue
 
@@ -899,7 +884,6 @@ Go to the Learning Room repository and file a real issue:
 
 > **What success feels like:** Your issue is live. Other participants can see it. You just contributed to a real repository - and it took less than three minutes.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@issue-tracker`
 >
@@ -912,14 +896,12 @@ Go to the Learning Room repository and file a real issue:
 >
 > *Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.*
 
----
 
 *Next: [Working with Pull Requests](05-working-with-pull-requests.md)*
 *Back: [The Learning Room](03-the-learning-room.md)*
 *Related: [Issue Templates Guide](15-issue-templates.md) | [Labels & Milestones](08-labels-milestones-projects.md) | [Culture & Etiquette](07-culture-etiquette.md)*
 
 
----
 
 ### Supplementary: Labels, Milestones, Projects - issue organization
 
@@ -930,7 +912,6 @@ Go to the Learning Room repository and file a real issue:
 
 > GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
 
----
 
 ## Table of Contents
 
@@ -947,7 +928,6 @@ Go to the Learning Room repository and file a real issue:
 11. [Accessibility Agents: `/project-status`](#11-accessibility-agents-project-status)
 12. [Exercises](#12-exercises)
 
----
 
 ## 1. Projects v2: What Changed
 
@@ -964,7 +944,6 @@ GitHub has two generations of project tooling. The current generation - called *
 
 If you see "Projects (Beta)" references in older documentation, those referred to the early rollout of v2. It is now stable and the default.
 
----
 
 ## 2. Creating a Project
 
@@ -998,7 +977,6 @@ Projects can be created at the **organization level** (shared across all repos i
 5. You land on the new empty project
 ```
 
----
 
 ## 3. The Three Layouts in Depth
 
@@ -1059,7 +1037,6 @@ A horizontal timeline. Items appear as bars spanning their start/due dates. Iter
 - Add a **Date** custom field (e.g., "Start Date", "Due Date") or use a **Milestone** field
 - Items without dates appear in the ungrouped section
 
----
 
 ## 4. Custom Fields
 
@@ -1100,7 +1077,6 @@ Tab to "+" column header button → Enter
 3. Type value (text/number) or select from dropdown (single select)
 4. `Enter` or `Tab` to confirm
 
----
 
 ## 5. Adding and Managing Items
 
@@ -1140,7 +1116,6 @@ In Table view:
 2. A bulk action bar appears at the top
 3. Options: change Status, assign label, change assignee, archive, delete
 
----
 
 ## 6. Built-In Automations
 
@@ -1183,7 +1158,6 @@ For more complex automations, Projects v2 has a full GraphQL API and works with 
 
 See [Appendix Q: GitHub Actions and Workflows](appendix-q-github-actions-workflows.md) for the foundation, and the [GitHub documentation on automating projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project) for advanced patterns.
 
----
 
 ## 7. Iterations (Sprints)
 
@@ -1211,7 +1185,6 @@ From any project:
 2. Select **"Current iteration"**
 3. See: items by status, completion rate, items added vs closed over time
 
----
 
 ## 8. Views and Filters
 
@@ -1253,7 +1226,6 @@ In Table or Board view, you can group rows:
 Multiple sort levels are supported. Primary sort → secondary sort:
 - Priority ascending, then due date ascending
 
----
 
 ## 9. Cross-Repository Projects
 
@@ -1277,7 +1249,6 @@ Filter: repo:community-access/accessibility-agents
 
 **Common use case:** An organization project tracking all accessibility bugs across every repo, labeled `accessibility`, with Auto-add enabled.
 
----
 
 ## 10. Screen Reader Navigation Reference
 
@@ -1339,7 +1310,6 @@ Backspace → Remove last filter token
 Escape → Clear focus from filter bar
 ```
 
----
 
 ## 11. Accessibility Agents: `/project-status`
 
@@ -1387,7 +1357,6 @@ After the overview: "Want to see a specific column or check a team member's work
 - During sprint planning: identify stale and blocked items before the next cycle
 - After a weekend: catch up on what moved while you were away
 
----
 
 ## 12. Exercises
 
@@ -1420,7 +1389,6 @@ After the overview: "Want to see a specific column or check a team member's work
 3. Create a view filtered to `is:issue label:accessibility`
 4. Set up Auto-add: any issue with the `accessibility` label in those repos goes to this project automatically
 
----
 
 > **From Chapter 08:** For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
 

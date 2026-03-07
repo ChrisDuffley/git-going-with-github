@@ -16,7 +16,6 @@ License: CC BY 4.0 | [Site](https://community-access.org/git-going-with-github/)
 | **Support** | [File an issue](https://github.com/community-access/git-going-with-github/issues) |
 | **Dates** | March 7-8, 2026 · 12-8 PM Eastern |
 
----
 
 > **The Central Project: Accessibility Agents**
 >
@@ -26,7 +25,6 @@ License: CC BY 4.0 | [Site](https://community-access.org/git-going-with-github/)
 >
 > **Accessibility Agents does not replace what you learn on Day 1. It amplifies it.** The agents only make sense when you already understand the skills they automate. That is why Day 1 comes first - and why every guide in this repository shows you the manual path before it shows you the agent path.
 
----
 
 ## What Is This Event?
 
@@ -38,7 +36,6 @@ During this two-day workshop, you will learn how to confidently navigate and con
 
 By the end of this event, you will have made **real contributions** to a real repository. Not simulated. Not pretend. Real.
 
----
 
 ## Who Is This For?
 
@@ -51,7 +48,6 @@ This event is designed for:
 
 You do **not** need to know how to code to participate and contribute meaningfully. Documentation improvements, issue filing, accessibility bug reports, and code reviews are all valuable contributions.
 
----
 
 ## Two-Day Overview
 
@@ -89,15 +85,13 @@ Every skill you build on Day 1 maps directly to an Accessibility Agents command 
 - Your name in the commit history of `community-access/accessibility-agents`
 - A working set of 55 AI agents across 3 teams that travel with your fork to any repository you apply them to
 
----
 
 ## How to Read These Docs
 
 All documentation lives in the `docs/` folder. Read them in order for the full experience, or jump to what you need.
 
----
 
-## 🎯 Your Challenges Are Waiting (Start Here!)
+##  Your Challenges Are Waiting (Start Here!)
 
 **You have 30+ challenges pre-assigned to you by your GitHub username.**
 
@@ -129,17 +123,16 @@ Each issue is your personal challenge tracker. Inside, you'll find:
 
 **You don't need to memorize anything.** Every challenge is in the Issues tab, waiting for you. Every step is documented. Every question has a "If You Get Stuck" section.
 
-### ⚙️ Facilitators: Challenge Management
+###  Facilitators: Challenge Management
 
 Are you running this workshop? See [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md) for:
-- 🎓 Pre-workshop setup (batch issue generation for your cohort)
-- 📊 Real-time monitoring and student support
-- 🤖 Understanding and configuring bot validation
-- 🔄 Cleaning up and refreshing between cohorts
+-  Pre-workshop setup (batch issue generation for your cohort)
+-  Real-time monitoring and student support
+-  Understanding and configuring bot validation
+-  Cleaning up and refreshing between cohorts
 
 The Facilitator guide includes templates, scripts, success metrics, and a final pre-workshop checklist.
 
----
 
 > **HTML Version Available:** All markdown documentation is automatically converted to HTML format. After cloning the repository, you can browse the `html/` directory for web-formatted versions of every document. See [BUILD.md](BUILD.md) for details.
 
@@ -210,7 +203,6 @@ The Facilitator guide includes templates, scripts, success metrics, and a final 
 | [Z](docs/appendix-z-github-skills-catalog.md) | **GitHub Skills - Complete Course Catalog** | All 36 GitHub Skills modules organized into six learning paths, with links, prerequisites, and integration guidance |
 > **Each guide from Lesson 03 onward includes a "Day 2 Amplifier" callout** that shows how Accessibility Agents extends that skill across three scopes: your VS Code editor → your repository (travels with every fork) → the cloud (GitHub Agentic Workflows running without VS Code). **Learn the manual skill first (Chapter 14), then see how it's automated (Chapter 16).**
 
----
 
 ## This Repository's Structure
 
@@ -308,7 +300,6 @@ The Facilitator guide includes templates, scripts, success metrics, and a final 
 
 > *Note: Appendices were renumbered during a February 2026 review. If you encounter external references to "Appendix D" or later letters, subtract one letter (e.g., the former Appendix D is now [Appendix C](docs/appendix-c-accessibility-standards.md)).*
 
----
 
 ## Quick Reference
 
@@ -324,7 +315,6 @@ These standalone documents provide additional guidance and resources:
 | [Security](SECURITY.md) | Security policy and vulnerability reporting |
 | [GitHub Proposal](GITHUB_PROPOSAL.md) | Original event proposal and curriculum overview (internal reference) |
 
----
 
 ## Screen Reader Users: Start Here
 
@@ -335,7 +325,6 @@ Before doing anything else, please read [**00 - Pre-Workshop Setup**](docs/00-pr
 - Turning off settings that make screen reader navigation harder
 - Verifying everything works before Day 1 begins
 
----
 
 ## The Goal of This Event
 
@@ -345,7 +334,6 @@ Open source software is built by people. Accessibility bugs in open source affec
 
 And by the end of Day 2, you will not just be a learner. You will be a product maker - someone who has shipped something real to a project that other people use.
 
----
 
 ## Questions Before the Event?
 
@@ -353,13 +341,11 @@ And by the end of Day 2, you will not just be a learner. You will be a product m
 - **File an issue** in this repository if something in these docs is unclear
 - **Community:** [GitHub Accessibility Discussions](https://github.com/orgs/community/discussions/categories/accessibility)
 
----
 
 ## License
 
 All workshop documentation is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) - you are free to share and adapt with attribution.
 
----
 
 *Last reviewed: February 2026*
 *A [Community Access](https://community-access.org) initiative.*

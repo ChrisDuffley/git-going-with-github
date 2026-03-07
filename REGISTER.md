@@ -13,11 +13,9 @@ Thank you to everyone who registered! We are excited to learn together.
 | **Location** | Online via [Zoom](https://zoom.us/) |
 | **Cost** | Free |
 
----
 
 **Already registered?** Complete the [**Pre-Workshop Setup Guide**](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) before March 7. It walks you through GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot) - with instructions for NVDA, JAWS, and VoiceOver.
 
----
 
 ### Questions?
 
@@ -42,7 +40,6 @@ The form asks for:
 
 After you submit, you will receive an automated confirmation comment on your issue. Your GitHub username is captured automatically - you do not need to enter it.
 
----
 
 ## What Happens Next
 
@@ -53,7 +50,6 @@ Once you have completed both steps:
 3. Complete the [Pre-Workshop Setup Guide](https://community-access.org/git-going-with-github/docs/00-pre-workshop-setup.html) before March 7 - it covers GitHub account setup, screen reader configuration, [VS Code](https://code.visualstudio.com/), and [GitHub Copilot](https://github.com/features/copilot)
 4. Questions? [File an issue](https://github.com/community-access/git-going-with-github/issues) in the workshop repository
 
----
 
 ## While You Wait
 

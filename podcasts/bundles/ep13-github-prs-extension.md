@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -36,7 +35,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Merging and managing PRs from the editor
 - How this connects to the web-based PR workflow from Day 1
 
----
 
 ### Concept Coverage Checklist
 
@@ -89,7 +87,6 @@ but keep the main narrative focused on the primary chapter.
 
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+` on Mac. For example: `Ctrl+Shift+P` → `Cmd+Shift+P`, `Ctrl+Shift+G` → `Cmd+Shift+G`, `Alt+F2` → `Option+F2`. Context menus (`Shift+F10` on Windows) use `Ctrl+Return` on Mac.
 
----
 
 ## Table of Contents
 
@@ -102,7 +99,6 @@ but keep the main narrative focused on the primary chapter.
 7. [Commenting and Requesting Changes](#7-commenting-and-requesting-changes)
 8. [Merging Pull Requests](#8-merging-pull-requests)
 
----
 
 ## 1. Installing the GitHub Pull Requests Extension
 
@@ -155,7 +151,6 @@ After installation, you gain:
 - **Inline PR review features** in the editor
 - **Issue linking** when writing commit messages
 
----
 
 ## 2. Viewing Pull Requests
 
@@ -274,7 +269,6 @@ A PR detail view opens in the editor area showing:
 - Headings mark each section ("Description", "Reviewers", "Files Changed", "Comments")
 - Links are clickable with `Enter`
 
----
 
 ## 3. Checking Out a Pull Request Branch
 
@@ -324,7 +318,6 @@ After reviewing:
 3. Select "Git: Checkout to..."
 4. Choose your original branch (usually `main` or your feature branch)
 
----
 
 ## 4. Reviewing Pull Requests in VS Code
 
@@ -402,7 +395,6 @@ As you review, note any problems:
 **Single Comment** posts immediately.  
 **Start Review** saves your comments as a draft until you submit the full review (see Section 7).
 
----
 
 ## 5. Creating a Pull Request from VS Code
 
@@ -518,7 +510,6 @@ gh pr create --web
 
 </details>
 
----
 
 ## 6. Pull Request Description Templates
 
@@ -575,7 +566,6 @@ When you create a PR in VS Code, the extension automatically loads the template 
 
 **Keyboard tip:** Use `Ctrl+F` (Mac: `Cmd+F`) to jump to each `<!--` placeholder, fill it in, then `F3` to jump to the next one.
 
----
 
 ## 7. Commenting and Requesting Changes
 
@@ -667,7 +657,6 @@ gh pr review 42 --comment --body "A few suggestions."
 
 </details>
 
----
 
 ## 8. Merging Pull Requests
 
@@ -778,7 +767,6 @@ gh pr merge 42 --auto --squash
 2. Type "git push"
 3. Select "Git: Push (delete remote branch)"
 
----
 
 ## Keyboard Shortcuts - GitHub Pull Requests Extension
 
@@ -793,7 +781,6 @@ gh pr merge 42 --auto --squash
 | Navigate diff hunks | `F7` (next), `Shift+F7` (previous) | `F7` (next), `Shift+F7` (previous) |
 | Accessible Diff Viewer | `Alt+F2` (in diff view) | `Option+F2` (in diff view) |
 
----
 
 ## Troubleshooting
 
@@ -824,7 +811,6 @@ gh pr merge 42 --auto --squash
 2. Check your GitHub Personal Access Token (see [Appendix D: Git Authentication](appendix-d-git-authentication.md))
 3. Verify network connection
 
----
 
 ## Try It: Review a PR from VS Code
 
@@ -840,14 +826,12 @@ gh pr merge 42 --auto --squash
 
 > **What success feels like:** You read a diff, heard the changes announced by your screen reader, and left feedback - all without opening a browser. This is how many developers review code every day.
 
----
 
 *Next: [GitHub Copilot](13-github-copilot.md)*  
 *Back: [Git & Source Control in VS Code](11-git-source-control.md)*  
 *Related: [Working with Pull Requests](05-working-with-pull-requests.md) | [Issue Templates](15-issue-templates.md)*
 
 
----
 
 ### Supplementary: Working with Pull Requests (web) - Ch 05
 
@@ -869,7 +853,6 @@ gh pr merge 42 --auto --squash
 >
 > **Browse vs Focus Mode (NVDA):** Use **Browse Mode** (the default) for reading PR conversations, navigating headings, and reviewing diffs. Switch to **Focus Mode** (`NVDA+Space`) only when you need to type in comment boxes or search fields. Switch back to Browse Mode to resume navigation. Maximize your browser window for consistent landmark layout.
 
----
 
 ## What Is a Pull Request?
 
@@ -888,7 +871,6 @@ A PR shows:
 
 > **Learning Room connection:** In the Learning Room repository, every hands-on contribution follows this pattern. For example, when you complete Challenge 3 (filling the `[TODO]` sections in `docs/welcome.md`), you open a PR that shows your added content as green `+` lines in the diff, your description explains which TODOs you completed and why, and the validation bot posts automated check results. The scenarios in this chapter use Learning Room files so you can follow along with real content.
 
----
 
 ## Navigating to Pull Requests
 
@@ -943,7 +925,6 @@ gh pr view 42 --web
 
 </details>
 
----
 
 ## The Pull Request List Page
 
@@ -957,7 +938,6 @@ The PR list works identically to the Issues list:
 >
 > **Hovercards:** Hovercards appear when you hover over usernames and links in the PR list, adding extra verbosity. To reduce this noise: go to your GitHub Profile → Accessibility settings → disable "Show link previews" and similar hover triggers. This makes sequential navigation significantly less cluttered.
 
----
 
 ## Anatomy of a Pull Request Page
 
@@ -991,7 +971,6 @@ A PR page has three main tabs:
 [Line-level comment threads within diffs]
 ```
 
----
 
 ## Navigating the PR Tab Bar
 
@@ -1024,7 +1003,6 @@ The three tabs - **Conversation**, **Commits**, and **Files changed** - appear j
 
 Each tab link reads with its name and the count: "Files changed, 3 files changed."
 
----
 
 ## Reading the Conversation Tab
 
@@ -1082,7 +1060,6 @@ Step 3: The reply text area appears - Focus Mode → type your reply
 Step 4: Ctrl+Enter to submit
 ```
 
----
 
 ## Reading the Commits Tab
 
@@ -1094,7 +1071,6 @@ Step 4: Each commit: SHA link, message, author, [Verified] badge if signed
 Step 5: Enter on a commit to open its diff
 ```
 
----
 
 ## Reading the Files Changed Tab
 
@@ -1218,7 +1194,6 @@ Hover over any line in the diff - a blue `+` button appears on the left margin. 
 
 Inline comments appear as expandable threads within the diff table. Navigate to them with `3` (they are h3 headings). Each thread shows the comment, any replies, and a "Reply" button.
 
----
 
 ## Opening a Pull Request
 
@@ -1404,7 +1379,6 @@ From the sidebar Reviewers section:
 
 > **Why some reviews are requested automatically:** A file called `CODEOWNERS` in many repositories maps file paths to specific people or teams. When your PR touches a file covered by a CODEOWNERS rule, GitHub automatically adds those people as required reviewers - you'll see them appear in the Reviewers sidebar without you adding them. You cannot remove a CODEOWNERS-required reviewer. If a required reviewer hasn't responded, reach out to them directly or leave a comment on the PR.
 
----
 
 ## Submitting a Review
 
@@ -1581,7 +1555,6 @@ your proposed text here
 6. Navigate to the radio buttons with arrow keys → select your verdict
 7. Tab to "Submit review" button → Enter
 
----
 
 ## Understanding Merge Options (for Maintainers)
 
@@ -1627,7 +1600,6 @@ gh pr merge 42 --auto --squash
 - The source branch can be deleted - a "Delete branch" button appears
 - Any linked issues with `Closes #N` in the description are automatically closed
 
----
 
 ## Auto-Merge - Merging When You Can't Wait Around
 
@@ -1670,7 +1642,6 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 
 > **Note:** Auto-merge is only available if the repository administrator has enabled it in Settings → General. Many open source repos have it on; some do not.
 
----
 
 ## Practical Scenarios
 
@@ -1709,7 +1680,6 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 4. Edit the file to resolve → Mark as resolved → Commit merge
 ```
 
----
 
 ## Common PR Mistakes to Avoid
 
@@ -1722,7 +1692,6 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 | Not testing your own changes | Test before requesting review |
 | Not responding to reviewer comments | Acknowledge all comments, even if you disagree |
 
----
 
 ## Try It: Read a Real Pull Request
 
@@ -1740,7 +1709,6 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 
 > **What success feels like:** You followed a PR from description to diff using only headings and landmarks. The next time you open a PR - yours or someone else's - you'll know exactly where everything is.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@pr-review`
 >
@@ -1753,7 +1721,6 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 >
 > *The agent documents the diff. You bring the context that no diff can contain.*
 
----
 
 *Next: [Merge Conflicts](06-merge-conflicts.md)*
 *Back: [Working with Issues](04-working-with-issues.md)*

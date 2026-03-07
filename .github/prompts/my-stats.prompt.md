@@ -1,4 +1,3 @@
----
 name: my-stats
 description: "Your personal GitHub metrics across all repos -- PRs authored/reviewed, issues closed, review turnaround, cycle time, and comparison vs. team averages"
 agent: analytics
@@ -7,7 +6,6 @@ tools:
   - createFile
   - createDirectory
   - ask_questions
----
 
 Generate a personal contribution and review metrics report for the authenticated user. Save both markdown and HTML versions.
 

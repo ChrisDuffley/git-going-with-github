@@ -1,4 +1,3 @@
----
 name: my-issues
 description: "Smart issue dashboard -- lists your open issues across all repos, sorted by priority with activity signals, reactions, release context, and discussion links"
 agent: issue-tracker
@@ -7,7 +6,6 @@ tools:
   - createFile
   - createDirectory
   - ask_questions
----
 
 Get the current authenticated user with #tool:mcp_github_github_get_me, then search for all **open** issues created by that user using #tool:mcp_github_github_search_issues.
 

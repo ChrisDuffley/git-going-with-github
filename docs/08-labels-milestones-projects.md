@@ -6,7 +6,6 @@
 
 > Labels, milestones, and projects are the organizational layer of GitHub. They turn a chaotic list of issues into a structured, navigable, prioritized body of work.
 
----
 
 ## Workshop Recommendation (Chapter 8)
 
@@ -52,7 +51,6 @@ This keeps the task simple and accessible for all students, including those with
 
 Triage is about clarity, not authority. Good recommendations reduce maintainer effort and speed up collaboration.
 
----
 
 ## Labels
 
@@ -255,7 +253,6 @@ gh label create "in progress" --description "Being actively worked on" --color "
 
 **Accessibility note for color:** Labels have color, but they also have a text name and description - the color is supplementary information. Screen readers announce the label name, not the color, so labels are fully accessible.
 
----
 
 ## Milestones
 
@@ -357,7 +354,6 @@ Requires write access:
 
 Screen readers handle date pickers inconsistently - typing the date is most reliable across browsers.
 
----
 
 ## Cross-References
 
@@ -400,7 +396,6 @@ The `Closes #42` keyword must appear in:
 
 It does **not** fire from comments on the PR. If you write "Closes #42" in a comment, it creates a reference but does not auto-close the issue on merge.
 
----
 
 ## GitHub Projects
 
@@ -460,7 +455,6 @@ Or from within a project:
 2. Type `#` to search for existing issues
 3. Select the issue → it's added to the project
 
----
 
 ## Practical Organization Strategy for the Hackathon
 
@@ -495,7 +489,6 @@ Description: All contributions made during Day 1 of the Open Source AT Hackathon
 4. PR merged → issue closes automatically → milestone progress updates
 ```
 
----
 
 ## Try It: Label and Link
 
@@ -510,7 +503,6 @@ Go to the Learning Room repository and do two things:
 
 > **What success feels like:** The label now appears on the issue, and your cross-reference is a clickable link that connects the two issues. That's project management on GitHub - and you did it in under two minutes.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@issue-tracker` with Labels
 >
@@ -524,7 +516,6 @@ Go to the Learning Room repository and do two things:
 >
 > *Labeling today is not overhead. It is configuring the input layer that every agent downstream depends on.*
 
----
 
 *Next: [Notifications](09-notifications.md)*
 *Back: [Culture and Etiquette](07-culture-etiquette.md)*

@@ -1,4 +1,3 @@
----
 name: draft-release
 description: "Draft release notes from merged PRs since last release -- auto-categorized as Features, Bug Fixes, Breaking Changes, with changelog and readiness checklist"
 agent: daily-briefing
@@ -8,7 +7,6 @@ tools:
   - createDirectory
   - editFiles
   - ask_questions
----
 
 Draft release notes for the next release based on merged PRs since the last release. Save both markdown and HTML versions.
 

@@ -1,4 +1,3 @@
----
 name: release-prep
 description: "Complete release preparation workflow -- milestone check, open PRs review, release notes, changelog, and readiness checklist"
 agent: daily-briefing
@@ -8,7 +7,6 @@ tools:
   - createDirectory
   - editFiles
   - ask_questions
----
 
 Run a complete release preparation workflow. This guides you through every step needed before publishing a release.
 

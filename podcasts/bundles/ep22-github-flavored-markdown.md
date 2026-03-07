@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Footnotes and heading anchors
 - Writing accessible markdown: alt text, descriptive links, heading hierarchy
 
----
 
 ### Concept Coverage Checklist
 
@@ -66,7 +64,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > **Who this is for:** You know how to write basic Markdown (bold, italic, links, code blocks). This appendix covers the GitHub-specific extensions and features you will encounter in real repositories - the things that make a file look polished but that aren't documented in standard Markdown guides.
 
----
 
 ## Quick Navigation
 
@@ -82,7 +79,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 10. [Screen Reader Considerations](#10-screen-reader-considerations)
 11. [GFM Quick-Reference Card](#11-gfm-quick-reference-card)
 
----
 
 ## 1. Alert / Callout Blocks (2023+)
 
@@ -124,7 +120,6 @@ Alert blocks render as `<blockquote>` elements with an SVG icon and a strong hea
 - VoiceOver: reads the type as bold text then the content
 - The colored icon is decorative (`aria-hidden`); it does not add information beyond the type label
 
----
 
 ## 2. Collapsible Sections with `<details>`
 
@@ -163,7 +158,6 @@ The `<details>` element renders as a disclosure widget:
 
 **After expanding:** The revealed content is immediately readable. No page reload occurs.
 
----
 
 ## 3. Task List Checkboxes
 
@@ -202,7 +196,6 @@ JAWS: Tab to checkbox → Space to toggle
 VoiceOver: VO+Space on the checkbox element
 ```
 
----
 
 ## 4. Mermaid Diagrams
 
@@ -264,7 +257,6 @@ flowchart LR
 ```
 ```
 
----
 
 ## 5. Math Expressions - LaTeX
 
@@ -299,7 +291,6 @@ Math expressions rendered by MathJax include `aria-label` attributes with the sp
 
 If writing documentation for an accessibility-focused audience, supplement complex equations with a plain English description.
 
----
 
 ## 6. Footnotes
 
@@ -327,7 +318,6 @@ The superscript `[^1]` becomes a link: **¹** - clicking it jumps to the footnot
 - VoiceOver: "link, footnote 1"
 - The back-link at the definition reads "return to footnote reference"
 
----
 
 ## 7. Linked Heading Anchors
 
@@ -360,7 +350,6 @@ GitHub converts the heading text to lowercase, replaces spaces with hyphens, and
 2. Right-click the icon → "Copy link address" to get the full URL with the anchor
 3. For screen reader users: navigate to the heading → Tab once → a link button appears → activate it → the URL in the address bar updates to show the anchor
 
----
 
 ## 8. Syntax Highlighting in Code Blocks
 
@@ -397,7 +386,6 @@ Use `plaintext` or just omit the language for content where no highlighting is n
 
 Syntax highlighting is visual only - screen readers read the code text without announcing color changes. The code block itself is announced as `code` region. This means the text content of well-written code is equally accessible whether highlighted or not.
 
----
 
 ## 9. HTML in Markdown
 
@@ -437,7 +425,6 @@ Line two on the next line, same paragraph.
 | `<div align="center">` | Purely visual; no accessibility impact |
 | `<kbd>` | Announced as "code" or the text content - no special handling needed |
 
----
 
 ## 10. Screen Reader Considerations for GFM
 
@@ -471,7 +458,6 @@ Line two on the next line, same paragraph.
 [ ] Task list items describe the task, not just say "item 1"
 ```
 
----
 
 ## 11. GFM Quick-Reference Card
 
@@ -517,6 +503,5 @@ Press <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to submit.
 H<sub>2</sub>O  |  x<sup>2</sup>
 ```
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix B - Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

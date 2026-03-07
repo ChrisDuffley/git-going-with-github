@@ -8,7 +8,6 @@ Listen to companion audio episodes for every chapter and appendix in this worksh
 
 **Transcripts:** Every episode includes a complete, readable transcript. Expand the "Read Transcript" section below any episode to follow along or search the conversation.
 
----
 
 ## How to Use These Episodes
 
@@ -16,7 +15,6 @@ Listen to companion audio episodes for every chapter and appendix in this worksh
 - **After a chapter:** Listen to reinforce what you learned and catch anything you missed.
 - **On the go:** Episodes are 8-18 minutes each. Listen during commutes, walks, or breaks.
 
----
 
 ## Day 1: GitHub Foundations
 
@@ -56,7 +54,6 @@ Based on: [Course Guide](docs/course-guide.md)
 
 **Alex:** I love that analogy. And what makes GitHub so powerful is that it provides the kitchen, the tables, and the recipe cards for that potluck. GitHub is the platform where millions of these open source projects live. It matters because much of the modern internet, including the tools we use for accessibility, runs on open source software. When you learn how to contribute, you get a voice in how the software you use every day is built.
 
----
 
 **Jamie:** Okay, so we are going to be cooking at the open source potluck. How exactly are we going to learn all of this in just two days?
 
@@ -78,7 +75,6 @@ Based on: [Course Guide](docs/course-guide.md)
 
 **Alex:** Exactly. But again, tying back to our philosophy, these agents only make sense if you already know what an issue or a pull request is. If you do not know how to manually review code, the agent's advice will not mean anything to you. That is why Day 2 is all about taking the manual skills you mastered on Day 1 and amplifying them with these fifty-five agents. By the end of Day 2, you will use these tools to ship a real contribution, and your name will be permanently recorded in the commit history of an open source project.
 
----
 
 **Jamie:** Alex, you just used a few terms that I want to make sure we define, because I remember being so confused by them. We have an entire glossary in Appendix A, but can we do a high-level preview of the core vocabulary right now? Let us start with Repository.
 
@@ -108,7 +104,6 @@ Based on: [Course Guide](docs/course-guide.md)
 
 **Alex:** Exactly. Merging is the act of combining your approved pull request into the main repository. Once it is merged, your code is officially part of the project. So, to recap the lifecycle. You find a problem in a Repository. You discuss it in an Issue. You propose a solution with a Pull Request. And the maintainer accepts it with a Merge.
 
----
 
 **Jamie:** Okay, that sounds like a lot of steps. And if I am being honest, thinking about doing all of this, plus moving over to VS Code on Day 2, feels a little intimidating. Especially for folks who might be totally new to the command line, or new to using version control.
 
@@ -138,7 +133,6 @@ Based on: [Course Guide](docs/course-guide.md)
 
 **Alex:** It really is. Let me give you an example. In Chapter One, there is an exercise called the Sixty Second Orientation. The Try It section asks you to navigate to a repository page, and press a sequence of keyboard shortcuts. Press the number 1 key, then the letter D, then the number 2 key, then the letter H. The You Are Done When section says you have successfully navigated between the main content, the repository details, and the file list. And the What Success Feels Like section explains the specific auditory feedback you will get from your screen reader as you jump between those landmarks. Every exercise takes between one and five minutes, and they are designed to be impossible to fail. They are just stepping stones.
 
----
 
 **Jamie:** I am feeling so much better about this. But what if I do get stuck? What if my screen reader starts reading a wall of text, or I press the wrong shortcut and suddenly I am in a completely different view?
 
@@ -158,7 +152,6 @@ Based on: [Course Guide](docs/course-guide.md)
 
 </details>
 
----
 
 ### Episode 1: Pre-Workshop Setup
 
@@ -188,7 +181,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 **Alex:** It does! But here is the thing, you have already done most of this on Day One of any new job or project. It is the exact same workflow, just with some new tools. Once we get the foundation set up today, the rest of the workshop is just learning how to use it.
 
----
 
 **Alex:** Let us start with the biggest question people usually have. What is the difference between Git and GitHub? They sound like the same thing, but they serve two very completely different purposes.
 
@@ -212,7 +204,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 **Alex:** I am really glad you brought that up. GitHub uses a visual capture puzzle to verify you are human, which is a known accessibility barrier. When your screen reader reaches that part of the form, you need to navigate to the button labeled Try an audio challenge. Activate that button. You will hear a short audio clip of spoken words or digits, and you will type what you hear into the text field. If that audio challenge does not load or fails, do not panic. Reach out to the workshop organizers and they can manually help verify your account.
 
----
 
 **Alex:** Once your account is created, GitHub will send a launch code to your email. You copy that code, paste it into the browser, and you are in. But before we do anything else, we need to talk about security. Specifically, Two-Factor Authentication, or as you will often hear it called, two F A.
 
@@ -248,7 +239,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 **Alex:** Which is exactly why, for this workshop, we recommend starting with a Personal Access Token. It is entirely web-based, highly accessible to set up in the browser, and you just paste it into your credential manager once.
 
----
 
 **Alex:** Now that we are authenticated, we need to adjust a few critical settings in the GitHub web interface. There is a dedicated Accessibility Settings page. You can reach it by opening the user navigation menu in the top right corner, selecting Settings, and then navigating to Accessibility in the left sidebar.
 
@@ -272,7 +262,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 **Alex:** Exactly. If you find them in the Feature Preview list, activate the Enable button for both. If you do not see them in the list at all, do not worry. That just means GitHub has already made them the default for everyone, and you are good to go.
 
----
 
 **Alex:** Alright, our GitHub account is ready. Now we need to set up our local computer. That means installing Git, and installing our code editor.
 
@@ -290,7 +279,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 **Jamie:** And a quick note here. The terminal is fully accessible. Whether you are using PowerShell on Windows with N V D A or JAWS, or the macOS Terminal with VoiceOver, you can read the output of your commands using your screen reader's review cursor or by simply arrowing up.
 
----
 
 **Alex:** Now for the centerpiece of our local setup. Visual Studio Code, commonly called VS Code.
 
@@ -322,7 +310,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 **Alex:** It does. Copilot Free is available to all GitHub users. It gives you a limited number of chat messages and code completions per month, which is more than enough for this workshop. You just need to sign into your GitHub account inside VS Code to activate it.
 
----
 
 **Jamie:** Alex, before we wrap up, I want to ask about something I heard some developers talking about. What if I am on a computer where I cannot install Git or VS Code? Like a library computer or a strict corporate laptop. Am I just locked out of contributing?
 
@@ -340,7 +327,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 **Alex:** It is incredibly handy for quick typo fixes or documentation updates. But for heavy development work, we still recommend the full desktop VS Code installation, because it gives you access to the local terminal and testing tools.
 
----
 
 **Alex:** So, let us review our verification checklist before Day One. First, you have created your GitHub account, verified your email, and turned on Two-Factor Authentication.
 
@@ -366,7 +352,6 @@ Based on: [Chapter 0: Pre-Workshop Setup](docs/00-pre-workshop-setup.md)
 
 </details>
 
----
 
 ### Episode 2: Understanding GitHub on the Web
 
@@ -416,7 +401,6 @@ Based on: [Chapter 1: Understanding GitHub on the Web](docs/01-understanding-git
 
 **Alex:** That is a perfect summary. And no matter which of these rooms you are in, there are certain structural elements that are always present. Let us talk about how to navigate them without spamming the Tab key.
 
----
 
 **Jamie:** So, if I am not supposed to just Tab through the page, what is the first thing I should do when I land on a GitHub page?
 
@@ -446,7 +430,6 @@ Based on: [Chapter 1: Understanding GitHub on the Web](docs/01-understanding-git
 
 **Alex:** There is! This is one of my favorite GitHub accessibility features. On any page where you can leave a comment, like an issue or a pull request, there is a specific landmark called Add a comment. You just press D until you hear Add a comment landmark, and you are right at the text box, ready to type.
 
----
 
 **Jamie:** Okay, so landmarks are like the major zones of the page. Global nav, repo nav, main content, and the comment box. What about the actual content itself? If I am in the Main landmark, how do I know what I am looking at?
 
@@ -488,7 +471,6 @@ Based on: [Chapter 1: Understanding GitHub on the Web](docs/01-understanding-git
 
 **Alex:** That is a fantastic point, Jamie. To get the most consistent heading and landmark experience, always keep your browser window maximized when working on GitHub.
 
----
 
 **Jamie:** So, navigating by headings and landmarks is great. But earlier you mentioned there are ways to jump around without even doing that. You mentioned built-in keyboard shortcuts.
 
@@ -534,7 +516,6 @@ Based on: [Chapter 1: Understanding GitHub on the Web](docs/01-understanding-git
 
 **Alex:** That is a perfect analogy. The Command Palette is incredibly powerful for accessibility because it completely bypasses the need to navigate through complex menus or nested tabs. You just declare your intent, and GitHub takes you there.
 
----
 
 **Jamie:** Alex, there is one more shortcut I have heard people talk about, and it sounds almost like magic. Something about pressing the period key?
 
@@ -566,7 +547,6 @@ Based on: [Chapter 1: Understanding GitHub on the Web](docs/01-understanding-git
 
 **Jamie:** Shift plus Period for a new tab. I am definitely writing that one down.
 
----
 
 **Alex:** We have covered a massive amount of ground today, Jamie. Let us wrap up with some concrete takeaways for our listeners to practice.
 
@@ -588,7 +568,6 @@ Based on: [Chapter 1: Understanding GitHub on the Web](docs/01-understanding-git
 
 </details>
 
----
 
 ### Episode 3: Navigating Repositories
 
@@ -618,7 +597,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Alex:** Exactly. If you are comfortable moving through landmarks and jumping to headings, everything we talk about today is going to feel very approachable.
 
----
 
 **Alex:** Let us start at the very beginning. What is a repository? At its most basic level, a repository is essentially a project folder that is tracked by Git. It holds all the files, all the folders, and the complete documentation for a specific project.
 
@@ -642,7 +620,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Alex:** And finally, depending on your permissions, you might find the Settings tab. This is the manager's office. It is usually only visible to the maintainers of the project, and it is where they control permissions and repository features.
 
----
 
 **Alex:** Let us focus on that first tab, the Code tab. When you are on the Code tab, the main piece of content is the files table. This table shows every file and folder currently in the project.
 
@@ -660,7 +637,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Jamie:** The read me is its own landmark region, so you can press D to jump to it. Because it is rendered markdown, it has a full heading structure. I always press the H key to read through the headings in the read me so I can quickly understand what the project does and how to install it.
 
----
 
 **Alex:** Before you reach the files table, there is a very important control called the branch selector. To understand this, we need to define what a branch is, and why repositories have them.
 
@@ -678,7 +654,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Jamie:** Then, you press the Tab key to move into the filtered results list, and use your Up and Down arrows to find the exact branch. Once you press Enter, the entire page reloads, and the files table will now show the code exactly as it exists on that specific branch.
 
----
 
 **Alex:** Let us talk about the history of those changes. When you are exploring the files table, you hear the message column. Those messages come from commits. A commit is a saved snapshot of your changes at a moment in time.
 
@@ -688,7 +663,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Jamie:** When you activate that link, you are taken to the commit history page. The commits are grouped by date, and you can use your heading navigation, pressing the H key or the number three key, to jump through the dates. Then you use the I key to move through the individual list items, which are the commits themselves. It is fascinating to read through the history and see how a project evolved day by day.
 
----
 
 **Alex:** So far, we have been browsing code on the GitHub website. But eventually, you will want to work on the code yourself. This brings us to two fundamental concepts, cloning and forking. Let us define cloning first. What does cloning mean?
 
@@ -708,7 +682,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Alex:** It does! But here is the thing, you have already done most of this on Day One. Same workflow, just with V S Code handling the heavy lifting. Once you understand the concepts, the actual execution becomes second nature.
 
----
 
 **Alex:** Let us talk about the actual mechanics of cloning. When you are on the Code tab, there is a very prominent button labeled simply, Code.
 
@@ -728,7 +701,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Alex:** Right. But remember, a downloaded zip folder is not tracked by Git. It is like printing out a physical photograph of the code instead of downloading the digital file. You can look at it, but you cannot push any changes back to GitHub from a downloaded zip file. You only use Download zip if you are just exploring.
 
----
 
 **Alex:** Before we wrap up, we need to talk about one more important region on the repository page. The sidebar.
 
@@ -740,7 +712,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 **Alex:** And right next to the About section, you will find the license. The license is fundamentally what makes open source work. It is a legal document that tells you exactly what you are allowed to do with this code. If a repository does not have a license, you technically do not have permission to use, modify, or distribute it, even if it is completely public on GitHub. Always check the license.
 
----
 
 **Alex:** We have covered a massive amount of ground today. Let us review our main takeaways.
 
@@ -760,7 +731,6 @@ Based on: [Chapter 2: Navigating Repositories](docs/02-navigating-repositories.m
 
 </details>
 
----
 
 ### Episode 4: The Learning Room
 
@@ -790,7 +760,6 @@ Based on: [Chapter 3: The Learning Room](docs/03-the-learning-room.md)
 
 **Alex:** Exactly. If you are feeling a little fuzzy on how to move through a repository using your screen reader, or how to explore a file tree, you might want to pause this and go back to episode three. But if you are ready to keep going, let us talk about the Learning Room.
 
----
 
 **Alex:** During your first day of learning GitHub, you are actually working on two parallel tracks. Track one is your individual skills track. This happens on your personal GitHub account. You work through modules at your own pace, and a friendly automated bot named Mona guides you step by step.
 
@@ -822,7 +791,6 @@ Based on: [Chapter 3: The Learning Room](docs/03-the-learning-room.md)
 
 **Alex:** In the Learning Room, we actually simplify it just a bit to keep us all in one space. Instead of everyone making their own separate fork, we give everyone permission to create branches directly inside the shared Learning Room repository. You will still create a branch, make your edit, and open a Pull Request. It is the exact same workflow you use with a fork, just contained within one big shared house so we can all see each other's pull requests easily.
 
----
 
 **Jamie:** Okay, so we are in this shared community kitchen. What are we actually cooking? What are the tasks?
 
@@ -848,7 +816,6 @@ Based on: [Chapter 3: The Learning Room](docs/03-the-learning-room.md)
 
 **Alex:** Not quite. You know you are done when your Pull Request is merged into the main project. Merging means your changes are officially accepted and combined with the original file. When that happens, an automated bot will actually post a celebration comment on your pull request and award you a digital badge.
 
----
 
 **Jamie:** Alright, let us talk about opening that Pull Request. I remember the first time I had to open a Pull Request. I was terrified. I felt like I was standing on a stage and everyone was about to judge my code.
 
@@ -874,7 +841,6 @@ Based on: [Chapter 3: The Learning Room](docs/03-the-learning-room.md)
 
 **Alex:** Exactly. It gives you instant feedback. And you can push a new commit to your branch to fix the issues, and the bot will run again and update its report. It is a completely low-stakes way to practice getting technical feedback.
 
----
 
 **Alex:** But the bot is only the first step. The second step is human peer review. And this is where the real magic of the Learning Room happens.
 
@@ -946,7 +912,6 @@ Based on: [Chapter 3: The Learning Room](docs/03-the-learning-room.md)
 
 **Alex:** Exactly. Once you select your option, you navigate to the Submit Review button and press Enter. The author gets a notification, and they can push a new commit to address your feedback.
 
----
 
 **Jamie:** I really like this process. But I have to ask, what if I am assigned to review someone's work, and I do not know if their code is right? I am a beginner too. I might approve something that is actually broken.
 
@@ -970,7 +935,6 @@ Based on: [Chapter 3: The Learning Room](docs/03-the-learning-room.md)
 
 **Jamie:** That is incredibly motivating. It takes the fear out of the process and replaces it with a sense of community.
 
----
 
 **Alex:** Let us wrap up with a few key takeaways from our discussion today. First, the Learning Room is a shared repository where everyone collaborates together. It is designed to simulate the bustling, collaborative nature of a real open source project.
 
@@ -988,7 +952,6 @@ Based on: [Chapter 3: The Learning Room](docs/03-the-learning-room.md)
 
 </details>
 
----
 
 ### Episode 5: Working with Issues
 
@@ -1022,7 +985,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** Exactly. That is a perfect analogy. If you want to add a new button to your application, you open a manila folder, write Add New Button on the tab, and put all your notes, questions, and checklists inside that folder. On GitHub, that folder is an issue. It keeps the conversation focused and gives everyone a place to collaborate before any code is actually written.
 
----
 
 **Jamie:** Okay, so how do I actually find these manila folders? Say I am on a repository page right now.
 
@@ -1044,7 +1006,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** It usually reads it as a single block of text when you land on the heading. If you want to explore a specific issue in more detail before opening it, you can use your down arrow to read the individual elements like the author and the timestamp.
 
----
 
 **Jamie:** Let us talk about that search and filter bar you mentioned. If a project has hundreds of open issues, pressing the number 3 to read all of them is going to take all day.
 
@@ -1070,7 +1031,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** A milestone is just a way to group issues together by a target date or a specific release. For example, a project might have a milestone called Version 2 point 0. Filtering by that milestone shows you all the issues that need to be finished before Version 2 point 0 can launch.
 
----
 
 **Jamie:** Okay, so I have filtered the list, I found an issue that sounds interesting, and I pressed Enter on the heading to open it. What does the actual issue page look like?
 
@@ -1092,7 +1052,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** Good question. No, it shows events too. If someone adds a label, or assigns someone, or references a pull request, those events appear in the timeline chronologically between the comments. They usually read as simple text paragraphs, like, Jamie added the bug label 2 days ago.
 
----
 
 **Jamie:** Let us flip the script. Instead of reading an issue, I want to file a new one. I found a bug where my screen reader is not announcing a button state, and I want to report it.
 
@@ -1126,7 +1085,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** Yes, always include your environment details. Tell them exactly which screen reader and version you are using, like NVDA 2025 point 3. Tell them your browser and your operating system. A bug might happen on Firefox but not on Chrome, so that context is crucial for the maintainer trying to fix it.
 
----
 
 **Jamie:** Okay, the issue is filed. What happens when someone replies? How do I comment back?
 
@@ -1148,7 +1106,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** That is perfectly stated. Nodding in a meeting. Use reactions to nod.
 
----
 
 **Jamie:** Let us talk about connecting things together. I have noticed people typing the number sign, or the hash symbol, followed by a number in their comments. What does that do?
 
@@ -1166,7 +1123,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** Right. When your pull request is approved and merged into the project, GitHub sees that keyword and automatically closes issue 42 for you. You do not have to go back and do it manually. You can also use words like Fixes or Resolves.
 
----
 
 **Jamie:** You mentioned closing an issue. As a beginner, closing an issue sounds scary. Like I am deleting it forever.
 
@@ -1192,7 +1148,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** Maintainers use the good first issue label to mark bugs or tasks that are perfect for people who are new to the project. The scope is usually small, and the maintainer is willing to mentor whoever picks it up. If you are looking to make your first open source contribution, searching for is colon open label colon quote good first issue unquote is the best way to start.
 
----
 
 **Jamie:** Everything we have talked about so far has been in the browser. But in earlier episodes, you showed me how to do things from my computer's terminal. Can I manage issues from the command line too?
 
@@ -1210,7 +1165,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 **Alex:** Yes, by typing g h issue create. It will launch an interactive prompt that asks you for the title, and then opens your default text editor so you can write the body. It is a fantastic alternative if you find web forms tedious.
 
----
 
 **Jamie:** This has been incredibly helpful, Alex. I feel like I understand the flow of conversation on GitHub so much better now.
 
@@ -1234,7 +1188,6 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 </details>
 
----
 
 ### Episode 6: Working with Pull Requests
 
@@ -1272,7 +1225,6 @@ Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requ
 
 **Alex:** Exactly. An issue is just text and ideas. A pull request contains actual, modified code.
 
----
 
 **Alex:** Before we talk about creating one, let us understand the anatomy of a pull request page on GitHub. When you navigate to a pull request, the page is divided into three main tabs.
 
@@ -1322,7 +1274,6 @@ Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requ
 
 **Jamie:** GitHub has a magic feature where if you use that exact phrasing, the moment your pull request is merged, GitHub will automatically close issue forty two for you. It keeps the project so tidy.
 
----
 
 **Jamie:** Okay, so what if I am working on that carousel keyboard navigation, and I have made some good progress, but I am stuck. The escape key is not closing the modal. I want to push my code and get your opinion, but I do not want you or the project maintainers to accidentally merge it, because it is broken.
 
@@ -1344,7 +1295,6 @@ Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requ
 
 **Alex:** That is usually because of a file called CODEOWNERS. Many large repositories use this file to map specific folders to specific people. If you modify a file in the accessibility folder, GitHub automatically requests a review from the accessibility team. You cannot remove them; their approval is required.
 
----
 
 **Alex:** So far, we have been the author. Now, let us flip the script. Jamie, I just requested your review on my pull request. You get an email notification, you follow the link, and you are on my pull request page. What is your workflow?
 
@@ -1406,7 +1356,6 @@ Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requ
 
 **Jamie:** I love having options. Browser, VS Code, or Terminal. You use whatever fits your brain best.
 
----
 
 **Alex:** Okay, so let us look at the timeline. I opened the pull request. You reviewed it and requested changes. I fixed the heading levels and pushed a new commit. You reviewed it again, and this time, you selected Approve. Are we ready to merge?
 
@@ -1444,7 +1393,6 @@ Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requ
 
 **Jamie:** And just like that, the pull request status changes to Merged. The code is officially part of the project.
 
----
 
 **Alex:** We have covered the entire lifecycle of a pull request today. Let us recap the key takeaways. First, a pull request is a proposal to merge code, while an issue is a discussion about work to be done.
 
@@ -1462,7 +1410,6 @@ Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requ
 
 </details>
 
----
 
 ### Episode 7: Merge Conflicts Are Not Scary
 
@@ -1500,7 +1447,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 **Alex:** That is a perfect analogy. Git is doing the exact same thing. It is pausing the merge and saying, hey, I have two different versions of line twelve. Which one do you want? Or do you want to combine them yourself? That pause, that request for human intervention, is all a merge conflict is.
 
----
 
 **Jamie:** Okay, so it is not an error. It is just Git asking a question. But how does it actually ask? When I am working on a pull request, how do I even know a conflict happened?
 
@@ -1534,7 +1480,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 **Alex:** Exactly. So the structure is always the same. Less than signs for the start of your code. Your code. Equals signs for the divider. Their code. Greater than signs for the end of the conflict.
 
----
 
 **Jamie:** So let us make this concrete. Imagine we are editing an HTML file. I am working on a button. Originally, the button just said Submit. On my branch, I changed the button text to say Send message. But someone else on the team added an accessibility label to the original button. They added an aria label that says Submit form.
 
@@ -1552,7 +1497,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 **Alex:** Exactly. Once you have deleted the markers and the code looks correct, you navigate to the top of the file in the GitHub web editor and activate the Mark as resolved button. If you have multiple files with conflicts, there is a file navigation panel you can reach with your screen reader commands, like N V D A plus F seven, or VoiceOver plus U, to move to the next file. Once all files are marked as resolved, you activate the Commit merge button. And you are done. The conflict is gone.
 
----
 
 **Jamie:** Okay, that is the web editor. But what if I am working locally on my own computer, using the command line? I know a lot of developers prefer to handle things in their terminal.
 
@@ -1580,7 +1524,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 **Jamie:** And if you are using GitHub Copilot, you can press Control plus Shift plus I to open Copilot Chat and ask it to explain the conflict to you. You can say, explain what these two changes are trying to do. But a quick warning here, you should always understand how to read the markers yourself before relying on AI. You need to verify that the final code actually makes sense.
 
----
 
 **Alex:** Absolutely. Now, before we move on, I want to mention a couple of really handy commands if you are using the GitHub Command Line Interface, or the G H tool. Sometimes you want to check if a pull request has conflicts before you even try to merge it.
 
@@ -1590,7 +1533,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 **Jamie:** That is super helpful for staying in the terminal and not having to bounce back and forth to the browser just to check the status.
 
----
 
 **Alex:** So we have talked about how to resolve conflicts. But there is a famous saying in software development. Prevention is easier than resolution.
 
@@ -1614,7 +1556,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 **Alex:** A fast forward merge is the ideal scenario. It happens when your branch is perfectly up to date with main, and you just added new commits on top. Because there are absolutely no diverging changes, Git does not even need to create a merge commit. It just fast forwards the main branch to point to your latest commit. Zero chance of conflicts. You can achieve this by rebasing your branch on main right before you merge, but rebasing is an advanced topic that rewrites history, so we will save the deep dive on that for another time.
 
----
 
 **Jamie:** Okay, Alex. I have tried to keep my branches small. I tried to communicate. But I still got a massive conflict, and I am sitting here looking at a file with ten different conflict markers, and I honestly do not understand what the incoming code is trying to do. I am stuck. What do I do?
 
@@ -1636,7 +1577,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 **Alex:** You definitely have not. Your first conflict resolution is always the hardest. It feels abstract and dangerous. But once you resolve one, once you delete those less than and greater than signs and see your code merge successfully, you will realize it is just a text editing puzzle.
 
----
 
 **Jamie:** This has been incredibly helpful. Let us wrap up with some concrete takeaways for everyone listening.
 
@@ -1656,7 +1596,6 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 </details>
 
----
 
 ### Episode 8: Open Source Culture and Etiquette
 
@@ -1694,7 +1633,6 @@ Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquet
 
 **Alex:** Precisely. Comments are not instant messages. You might be in a rush, but the reader is not receiving that urgency from your message. This means you need to provide all necessary context in every single message. Do not assume continuity. If you solved a problem, do not just write "Fixed it." Explain what you fixed and how, because the person reading it tomorrow will not have the context of what you were doing today. And finally, remember that everything is in public. Write as if your most supportive mentor and your most critical reviewer are both reading your comments, because anyone on the internet can find them.
 
----
 
 **Alex:** Now that we understand the environment, let us talk about the two main ways you will communicate: issues and pull requests. Let us start with writing a good issue description. Jamie, how would you define an issue?
 
@@ -1722,7 +1660,6 @@ Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquet
 
 **Alex:** That is a brilliant analogy. And here is a quick tip for our listeners using screen readers. When you are writing these descriptions on GitHub, you are often typing the same phrases over and over. GitHub has a feature called Saved Replies. You can save text snippets and insert them into any comment box. You just navigate to the comment text area, activate the Saved Replies button in the toolbar, or press Control plus period, and you can filter through your saved templates. It is a huge accessibility win to avoid retyping standard issue formats.
 
----
 
 **Jamie:** Okay, so we know how to write issues and pull requests. Let us talk about the rules of the community itself. When I look at an open source project, I almost always see a file called Code of Conduct. What exactly is that, and why does it exist?
 
@@ -1740,7 +1677,6 @@ Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquet
 
 **Alex:** Exactly. Preferring the word "we" is also a great strategy. "We need to update this logic," rather than "You need to update this logic." It frames the project as a collaborative effort. And when it comes to inclusive commenting specifically for accessibility issues, precision is key. Do not generalize and say, "This website is completely unusable for blind people." That might not be accurate, and it can sound dismissive. Instead, represent the specific gap. Frame it as, "Because the submit button lacks an accessible name, users relying on screen readers cannot determine its purpose." Quote your exact screen reader output, and specify whether you are using JAWS, NVDA, or VoiceOver, because the experiences can differ.
 
----
 
 **Jamie:** Let us move on to the part of open source that used to make me sweat: Code Review. This is when you submit your pull request, and other developers examine your code before it gets merged. How do we handle giving and receiving code review feedback gracefully?
 
@@ -1778,7 +1714,6 @@ Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquet
 
 **Alex:** Then you have to accept that the maintainer has the final say in their project. It is their house. If you strongly disagree, the beauty of open source is that you can always fork the project and take it in a different direction. But fighting endlessly in a comment thread is not productive.
 
----
 
 **Jamie:** Speaking of maintainers, I think it is important to talk about who these people actually are. When I started, I pictured a team of paid professionals sitting in a corporate office, waiting to review my code.
 
@@ -1800,7 +1735,6 @@ Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquet
 
 **Alex:** That is professional etiquette at its finest. One final note before we wrap up today. Many of you might be using AI assistive tools, like GitHub Copilot or other agentic workflows, to help draft code or even draft review comments. Remember this: Accessibility Agents' outputs are your responsibility. If an AI drafts a triage reply or a code review for you, your name appears on it in the repository's public history. The agent writes it, but you publish it. Always review an agent-generated comment against the anatomy of helpful feedback we discussed today. Ensure the tone is kind, the language is inclusive, and it does not sound like a cold, automated robot. You are responsible for the culture you help shape.
 
----
 
 **Jamie:** This has been such a great conversation, Alex. I feel like we have covered a lot of ground. What are the main takeaways our listeners should walk away with today?
 
@@ -1816,7 +1750,6 @@ Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquet
 
 </details>
 
----
 
 ### Episode 9: Labels, Milestones, and Projects
 
@@ -1890,7 +1823,6 @@ Based on: [Chapter 8: Labels, Milestones, and Projects](docs/08-labels-milestone
 
 **Alex:** The color field will usually auto populate with a random hex code. You can completely ignore it if you want to, or you can type in a specific hex code if your team has a visual design system. But again, the color is purely visual. The name and the description are what make the label accessible and useful to everyone. Once you fill those out, you tab to the Create label button, press Enter, and your new label is ready to be used by anyone on the project.
 
----
 
 **Jamie:** Okay, so labels help us categorize what an issue is. It is a bug, it is documentation, it is blocked. But what if we need to organize things by when they need to be finished? That brings us to our second topic, milestones.
 
@@ -1920,7 +1852,6 @@ Based on: [Chapter 8: Labels, Milestones, and Projects](docs/08-labels-milestone
 
 **Alex:** Exactly. GitHub provides a calendar widget, but my strong recommendation is to ignore it completely. The due date field is a standard text input field. The most reliable, accessible way to set the date is to simply type it out in the standard format. Type the four digit year, a dash, the two digit month, a dash, and the two digit day. So, 2024 dash 10 dash 31. It works perfectly every time, and you never have to fight with the calendar widget. Tab to the Create milestone button, press Enter, and you are done.
 
----
 
 **Jamie:** Alright, we have covered labels for categorization, and milestones for grouping things by a deadline. But both of those tools still just leave you with lists of issues. What if I want a bird's eye view of everything happening in my organization? What if I want to see who is working on what, what is in progress, and what is finished, all on one screen?
 
@@ -1958,7 +1889,6 @@ Based on: [Chapter 8: Labels, Milestones, and Projects](docs/08-labels-milestone
 
 **Alex:** That is exactly the right approach. Treat the Roadmap as a visual summary for stakeholders, but use the Table view to actually read and edit your project data.
 
----
 
 **Jamie:** So, how do I actually get my issues into this project? We talked about automation earlier, but what if I just want to add one specific issue manually?
 
@@ -1976,7 +1906,6 @@ Based on: [Chapter 8: Labels, Milestones, and Projects](docs/08-labels-milestone
 
 **Alex:** Exactly. And this is going to become critically important when we start talking about AI and Accessibility Agents later in the workshop. These labels and milestones are the exact language that automated workflows use to route work. If you do not apply labels properly, the automated agents will not know how to prioritize your issues. Labeling is not just overhead; it is how you program the project management system.
 
----
 
 **Jamie:** This has been incredibly helpful. I feel like I finally have a mental model for how large open source projects actually function without collapsing into chaos.
 
@@ -1994,7 +1923,6 @@ Based on: [Chapter 8: Labels, Milestones, and Projects](docs/08-labels-milestone
 
 </details>
 
----
 
 ### Episode 10: Notifications and Mentions
 
@@ -2024,7 +1952,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 **Alex:** You definitely did not break anything, but you did encounter one of the most common right of passage moments for new GitHub users. You probably accidentally subscribed to a very busy project. Today, we are going to make sure that never happens again. We are going to cover how GitHub generates notifications, the difference between participating and watching, how to manage your notification inbox, and how to use mentions to get someone else's attention.
 
----
 
 **Alex:** Let us start with the core concept. How does GitHub decide to send you a notification in the first place? It all comes down to two concepts, participating and watching.
 
@@ -2060,7 +1987,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 **Alex:** Ignore is very useful if you are part of a massive organization and you are automatically subscribed to repositories you have nothing to do with. It completely mutes that repository. Custom is also great because it lets you get granular. You can say, only notify me when a new release is published, but ignore all the day to day issue comments.
 
----
 
 **Jamie:** Okay, so we have covered how to control the fire hose of information. Let us talk about how we actually get someone else's attention. You mentioned that being mentioned makes you a participant. How does that work?
 
@@ -2078,7 +2004,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 **Alex:** Exactly. When you mention a team, GitHub sends a notification to everyone who is a member of that team. It is the best way to request a review from a specialized group without having to memorize everyone's individual usernames.
 
----
 
 **Jamie:** Alright, so people are mentioning me, they are requesting my review, my automated continuous integration tests are failing and sending me alerts. Where does all this information go? Earlier I mentioned my email inbox getting destroyed. Is email the only way to manage this?
 
@@ -2112,7 +2037,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 **Alex:** Spot on. That single announcement gives you all the context you need to decide what to do next. And if you want to open that notification to read the full thread, you just press Enter. It will take you directly to the issue or pull request page, and it will automatically scroll your focus down to the exact comment that triggered the notification.
 
----
 
 **Jamie:** Okay, so I tab to a notification, I hear what it is. Now I have to make a decision. This is where I struggle. I read it, but then it just sits in my inbox forever. How do I actually clear things out?
 
@@ -2138,7 +2062,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 **Alex:** No, you can unsubscribe right from the issue page. Navigate to the right sidebar, find the section called Notifications, and activate the Unsubscribe button. It does the exact same thing as pressing M in the inbox.
 
----
 
 **Jamie:** Let us talk about strategy. You mentioned earlier that some people have thousands of notifications. How do you personally manage your inbox without spending your entire day organizing it?
 
@@ -2164,7 +2087,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 **Alex:** Exactly. If your inbox is overflowing, just activate the Review requested filter. That instantly narrows your view to only the pull requests where a teammate is literally blocked waiting for your approval. It cuts through all the noise.
 
----
 
 **Jamie:** We talked earlier about email notifications. I still get emails along with my web notifications. It feels redundant. Should I turn one of them off?
 
@@ -2186,7 +2108,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 **Alex:** That is a very professional workflow. It puts you in control of the information, rather than letting the information control you.
 
----
 
 **Jamie:** Alright, we have covered a massive amount of ground today. This feels like the missing manual I needed two years ago. Let us recap the biggest takeaways for everyone listening.
 
@@ -2210,7 +2131,6 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 </details>
 
----
 
 ## Day 2: VS Code and Accessibility Agents
 
@@ -2266,7 +2186,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 **Alex:** The browser version does have limitations. Because it runs in your web browser, it does not have an integrated terminal. You cannot run command line scripts. It also does not support GitHub Copilot or running local accessibility agents. For those heavy duty tasks, you need the desktop application. But for quick edits, fixing a typo in documentation, or reviewing a pull request, pressing the period key is the fastest way to get to work.
 
----
 
 **Alex:** Now, whether you are using the browser version or the desktop app, the very first thing you need to do is turn on screen reader mode. VS Code is built using web technologies, which means it behaves a lot like a complex web application. By default, it presents a lot of visual information that can be incredibly noisy or confusing for a screen reader.
 
@@ -2290,7 +2209,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 **Alex:** Auto usually works if you are on Windows using NVDA or JAWS. VS Code will try to detect your screen reader and turn the mode on automatically. But sometimes, especially if you start your screen reader after opening the editor, it might miss the detection. Forcing editor dot accessibility support to on guarantees that all those screen reader announcements and optimizations are always active.
 
----
 
 **Jamie:** OK, so our screen reader is happy and talking to us properly. How do we actually do things in VS Code? There are so many menus and buttons. It can feel like being dropped into the cockpit of an airplane.
 
@@ -2316,7 +2234,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 **Alex:** Precisely. It will give you the specific accessibility commands for the terminal. It is your built in manual for wherever you happen to be standing at that exact moment. Use it as your first action whenever you land somewhere new in VS Code.
 
----
 
 **Alex:** Speaking of landing somewhere new, let us talk about the layout of VS Code and how to navigate between its different areas. The interface is divided into a few main regions. The Sidebar, the Editor, the Terminal, and the Panels.
 
@@ -2344,7 +2261,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 **Alex:** Search allows you to find text across every file in your entire folder. You can navigate to it by pressing Control plus Shift plus F. Source Control is where you stage and commit your changes to Git. You can reach that by pressing Control plus Shift plus G.
 
----
 
 **Jamie:** Earlier, you mentioned the Extensions view. You said VS Code is extensible, like bringing your own tools to a workbench. How do we actually install these tools?
 
@@ -2362,7 +2278,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 **Alex:** The backtick key is usually located in the top left corner of your keyboard, right above the Tab key, and just to the left of the number one. It shares a key with the tilde symbol. Pressing Control plus Backtick will instantly open the integrated terminal panel at the bottom of your window and move your focus into it. Pressing Control plus Backtick a second time will hide the terminal and return your focus to the editor.
 
----
 
 **Jamie:** Let us talk about something really fun. Audio cues. I think this is one of the best accessibility features Microsoft has ever added to an application.
 
@@ -2376,7 +2291,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 **Alex:** There are audio cues for everything. There is a cue for when a terminal command finishes successfully, a cue for when a terminal command fails, and cues for when you are navigating through changes in your code. You can configure all of these by opening your settings and searching for accessibility signals.
 
----
 
 **Jamie:** Speaking of navigating through changes, I want to ask about the Accessible Diff Viewer. This is a concept that took me a while to wrap my head around. First, what exactly is a diff?
 
@@ -2396,7 +2310,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 **Jamie:** That is a game changer. You get the complete picture of what changed, in reading order, without having to scan visually.
 
----
 
 **Alex:** Before we wrap up, there is one last piece of housekeeping regarding keyboard navigation. Sometimes, a built in VS Code shortcut might conflict with a screen reader command. For instance, NVDA or JAWS might intercept a keystroke before it ever reaches the editor.
 
@@ -2422,7 +2335,6 @@ Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md
 
 </details>
 
----
 
 ### Episode 12: Git and Source Control in VS Code
 
@@ -2452,7 +2364,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Alex:** That is a great point, Jamie. We are going to normalize that feeling of intimidation today. Because honestly, the workflow we are going to cover is the exact same workflow you will use whether it is your first day on a project or your tenth year as a senior developer.
 
----
 
 **Alex:** Let us start at the very beginning. To work on a project, you need a copy of it on your computer. In Git terminology, this is called cloning a repository.
 
@@ -2474,7 +2385,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Jamie:** Oh, that is clever! It saves you from having to copy and paste full web addresses. But for today, we will stick to the VS Code Command Palette method. So, I have cloned the repository. I have the files on my computer. Before I start typing and changing code, I feel like I need a mental model of how Git tracks these files.
 
----
 
 **Alex:** You absolutely do. Understanding the mental model is the secret to never getting lost in Git. There are three main areas you need to understand: the working tree, the staging area, and the repository.
 
@@ -2508,7 +2418,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Jamie:** Untracked, modified, staged. I wish I had known that when I started. It makes the error messages make so much more sense when Git complains about modified files. So, how do we actually see these states in VS Code?
 
----
 
 **Alex:** This brings us to the most important interface for Git in VS Code, which is the Source Control view. It lives in the Activity Bar on the far left of the screen, but you do not need to hunt for it. You just use the keyboard shortcut Control plus Shift plus G. That is G for Git. If you are on a Mac, it is Command plus Shift plus G.
 
@@ -2538,7 +2447,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Jamie:** Okay, that sounds very efficient. I do not have to guess what I changed today, VS Code just gives me a tidy list of my messy workbench. Before we start moving things into the staging box, though, we should probably talk about branches. Because I know I am not supposed to do my messy work on the main branch.
 
----
 
 **Alex:** That is a fantastic point. Whenever you want to make a change, whether it is fixing a bug or writing a new feature, you should create a new branch. A branch is basically an isolated copy of the code where you can experiment safely.
 
@@ -2560,7 +2468,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Jamie:** So I can bounce back and forth between branches just by searching for them. I love that. Okay, so I am on my new branch. I have made some changes to my files. I press Control plus Shift plus G to open the Source Control panel. I arrow down to the Changes section, and I hear that three of my files are modified. It is time to pack the shipping box. How do I stage a file?
 
----
 
 **Alex:** Staging is very satisfying in VS Code. When you are navigating the Source Control panel and your screen reader focus is on a specific file under the Changes list, you have a couple of options. The fastest way is to just press the Spacebar, or press Control plus Enter. For Mac users, that is Command plus Enter.
 
@@ -2594,7 +2501,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Jamie:** Okay, that is a total power user move. Staging just a few lines of a file while leaving the rest unstaged. That is amazing. But let us stick to the basics for now. I have staged my files. They are in the Staged Changes list. The box is packed. How do I tape it shut and write the label?
 
----
 
 **Alex:** It is time to commit. In the Source Control panel, you will press Tab or Shift plus Tab until your focus lands in the multi-line text field called Source Control Input. This is where you write your commit message.
 
@@ -2620,7 +2526,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Jamie:** Success! My code is safe. But wait, where is it safe? Is it on GitHub yet?
 
----
 
 **Alex:** Ah. This is the most common point of confusion for Git beginners. When you commit, you are only saving that snapshot to your local repository. The warehouse on your computer. GitHub has no idea that you just made a commit.
 
@@ -2668,7 +2573,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Alex:** Exactly. It is a very elegant way to keep history clean, and many open source projects prefer you to use rebase when pulling updates from the main branch.
 
----
 
 **Jamie:** So we have covered cloning, branching, staging, committing, pushing, and pulling, all using the VS Code interface. Are there other ways to do this? What if I am on a computer that does not have VS Code installed?
 
@@ -2688,7 +2592,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 **Jamie:** That makes sense. It is all about finding the tool that fits your brain. But I have to say, the VS Code Source Control panel with Control plus Shift plus G feels like the perfect middle ground. It organizes the information visually and structurally, but gives you complete keyboard control.
 
----
 
 **Alex:** Let us wrap up with some key takeaways from today's episode. Jamie, what is the first one?
 
@@ -2710,7 +2613,6 @@ Based on: [Chapter 11: Git and Source Control in VS Code](docs/11-git-source-con
 
 </details>
 
----
 
 ### Episode 13: The GitHub Pull Requests Extension
 
@@ -2752,7 +2654,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 **Alex:** Perfectly said. The extension lets you view, create, review, and merge pull requests without ever pressing Alt plus Tab to open a browser. So, let us talk about how to get it.
 
----
 
 **Alex:** To start using this, you need to install the extension and sign in.
 
@@ -2772,7 +2673,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 **Alex:** Absolutely. Just press Control plus Shift plus P, type GitHub Pull Requests Sign In, and press Enter. It does the exact same thing.
 
----
 
 **Jamie:** Okay, I am installed and signed in. Where did my pull requests go? How do I find them?
 
@@ -2794,7 +2694,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 **Alex:** Or use the GitHub Command Line Interface. If you have the gh CLI installed, you can open your terminal and type gh space pr space list. That prints out a beautifully clean text list of all open pull requests right in your console.
 
----
 
 **Jamie:** So let us say I find Pull Request number 42 in that tree view, and I want to read it. What happens when I press Enter on it?
 
@@ -2836,7 +2735,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 **Alex:** Exactly. Though if you are using the terminal, you can achieve the same thing by typing gh space pr space checkout space 42. It pulls down the branch for pull request 42 instantly.
 
----
 
 **Jamie:** Okay, so I am reading their code using the Accessible Diff Viewer, and I spot a mistake. They used a heading level two when it should have been a heading level three. How do I tell them?
 
@@ -2872,7 +2770,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 **Jamie:** For folks tracking the alternatives, you can do all of this on the web by navigating to the Files Changed tab, finding a line, and activating the Add Comment button. And if you are a terminal fan, you can submit your verdict by typing gh space pr space review, followed by dash dash approve, or dash dash request dash changes.
 
----
 
 **Alex:** So, we have covered reviewing other people's work. Let us flip the script. You have been writing code on a feature branch, you have committed your changes, and you have pushed them to GitHub. How do you create your own pull request from VS Code?
 
@@ -2906,7 +2803,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 **Jamie:** And again, just to map this out for everyone: on the web, you would do this by pushing your code and then clicking the yellow Compare and Pull Request banner. In the CLI, you would just type gh space pr space create.
 
----
 
 **Alex:** Alright, we have reached the final step of the lifecycle. The PR is open, the reviewers have approved it, and the CI checks are green. It is time to merge.
 
@@ -2940,7 +2836,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 **Jamie:** And to round out our alternatives: on the web, this is the big green Merge button on the conversation tab. In the CLI, it is gh space pr space merge.
 
----
 
 **Alex:** That covers the entire pull request lifecycle, entirely within VS Code. Let us recap our key takeaways.
 
@@ -2958,7 +2853,6 @@ Based on: [Chapter 12: The GitHub Pull Requests Extension](docs/12-github-pull-r
 
 </details>
 
----
 
 ### Episode 14: GitHub Copilot
 
@@ -3000,7 +2894,6 @@ Based on: [Chapter 13: GitHub Copilot](docs/13-github-copilot.md)
 
 **Alex:** Exactly. It looks at the file you are currently editing, where your cursor is positioned, other files you have open in your editor, and even the structure of your project. It gathers all of this context, sends it to the AI model, and returns a suggestion in milliseconds.
 
----
 
 **Alex:** Let us talk about how these suggestions actually appear while you are typing. This is a feature called inline code completions. As you are typing a sentence or a line of code, Copilot will suddenly offer a completion for the rest of the line, or sometimes even an entire paragraph.
 
@@ -3054,7 +2947,6 @@ Based on: [Chapter 13: GitHub Copilot](docs/13-github-copilot.md)
 
 **Jamie:** That changes everything. Alt plus F2 to read it, Control plus slash to insert it. That feels so much more controlled.
 
----
 
 **Alex:** Now that we have conquered inline suggestions, let us talk about the other half of GitHub Copilot. The Chat interface.
 
@@ -3106,7 +2998,6 @@ Based on: [Chapter 13: GitHub Copilot](docs/13-github-copilot.md)
 
 **Alex:** Slash tests will automatically generate unit tests for a function you have selected. And slash doc will automatically write the formal documentation block above a function or class. They are massive time savers for the repetitive parts of software development.
 
----
 
 **Jamie:** Okay, so we have participants like at workspace to set the context, and commands like slash explain to set the action. I feel like I am learning a new syntax. But you said earlier I could just use natural language. Is there a trick to getting good answers when I am just typing regular sentences?
 
@@ -3124,7 +3015,6 @@ Based on: [Chapter 13: GitHub Copilot](docs/13-github-copilot.md)
 
 **Alex:** Exactly. And the best part of effective prompting is iterating. Copilot remembers the conversation. So if it gives you an answer and it is a little too technical, you do not have to start over. You just reply, make that a little simpler, or, rewrite that in a friendlier tone. It will adjust the text immediately.
 
----
 
 **Jamie:** Alex, I noticed in the settings there is a place to choose different AI models. What does that mean? Why are there different models?
 
@@ -3148,7 +3038,6 @@ Based on: [Chapter 13: GitHub Copilot](docs/13-github-copilot.md)
 
 **Jamie:** I will definitely be leaving that on Auto.
 
----
 
 **Jamie:** So, Alex, I have a question about consistency. If I am working on an open source project, and we have very specific rules. For example, let us say our project requires all Markdown headings to use sentence case, and we never use the word click in our documentation. Do I have to type those rules into my prompt every single time I ask Copilot to write something?
 
@@ -3182,7 +3071,6 @@ Based on: [Chapter 13: GitHub Copilot](docs/13-github-copilot.md)
 
 **Alex:** Exactly. You type slash audit, and Copilot executes that massive, detailed prompt perfectly every single time. It saves you from having to type out complex requests over and over again.
 
----
 
 **Jamie:** Alex, this has been an incredibly packed episode. We went from ghost text to custom AI employees.
 
@@ -3192,7 +3080,6 @@ Based on: [Chapter 13: GitHub Copilot](docs/13-github-copilot.md)
 
 </details>
 
----
 
 ### Episode 15: Accessible Code Review
 
@@ -3222,7 +3109,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** Exactly. Now, in episode six, we talked about how a pull request, or PR, is a way to propose changes to a repository. You are literally requesting that the maintainers pull your code into their project. But before they do that, someone needs to review it.
 
----
 
 **Jamie:** So, Alex, let us start with the big picture. Why is code review so important? When I first started learning GitHub about two years ago, I thought code review was just a way for senior developers to catch my typos.
 
@@ -3240,7 +3126,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** Right. Clarity means, is it easy to understand? Style means, does it follow the project's conventions? And accessibility means, does this change introduce any barriers for users with disabilities? You do not have to be an expert in all four to leave a valuable review.
 
----
 
 **Jamie:** Okay, so I am sold on the why. Let us talk about the where. Where do we actually do these reviews?
 
@@ -3258,7 +3143,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** Yes, absolutely. The GitHub CLI is fantastic. You can open your terminal and type gh pr review to approve or request changes without ever leaving the command line. It is like the drive-through window of code review. Very fast, very efficient, but maybe not where you want to sit down and leave twenty detailed inline comments.
 
----
 
 **Jamie:** Let us start with the coffee shop. The web browser. When I open a pull request on GitHub, how do I actually read the changes?
 
@@ -3300,7 +3184,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** Precisely. Once you are interacting with the table, you can press the Down Arrow to move through the lines of code one at a time. To read across the columns of a specific line, you press Control plus Alt plus the Right Arrow key. It will read the line number, then the change type, meaning whether it was added or deleted, and then the actual code content.
 
----
 
 **Jamie:** Okay, so I am reading down the table, line by line. I hear a minus prefix, then a plus prefix, so I know a line was replaced. Let us say I spot a problem. The author changed a heading, but they skipped a heading level. They went from level two to level four. As an accessibility advocate, I know that breaks navigation for screen reader users. How do I tell them?
 
@@ -3334,7 +3217,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** If you use Add single comment, it posts immediately and sends an email notification to the author right then and there. If you leave ten comments, they get ten emails. Start a review batches all your comments together into a draft. When you are done looking at all the files, you submit the review all at once, and they get one single notification. It is much kinder to your teammates.
 
----
 
 **Jamie:** Let us talk about that final submission. I have gone through all the files, I have left my post-it notes on various lines. How do I wrap this up?
 
@@ -3348,7 +3230,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** Comment means you have observations or questions, but you do not have a strong position on whether it should be blocked or approved. You are just leaving notes. Once you select your radio button, tab to Submit review, and press Enter.
 
----
 
 **Jamie:** Okay, so that is the coffee shop experience. The web browser. It is incredibly powerful, but navigating those diff tables can get a little tedious if a pull request has hundreds of changes.
 
@@ -3386,7 +3267,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** Yes, they sync instantly. The author gets the exact same experience. They do not know or care which tool you used to write the review.
 
----
 
 **Jamie:** This is so empowering. Whether I use the browser for a quick check or VS Code for a deep dive, I have complete access to the review process.
 
@@ -3404,7 +3284,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 **Alex:** Exactly. The manual skill is the foundation. The AI is just an amplifier.
 
----
 
 **Jamie:** Let us wrap this up with a few concrete takeaways from today's episode. Number one, code review is a two-way street for quality and learning. It is not just about finding bugs, it is about improving the whole team.
 
@@ -3422,7 +3301,6 @@ Based on: [Chapter 14: Accessible Code Review](docs/14-accessible-code-review.md
 
 </details>
 
----
 
 ### Episode 16: Issue Templates
 
@@ -3460,7 +3338,6 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 **Alex:** Exactly. An issue template is an intake form for your GitHub repository. It turns that intimidating blank text editor into a structured guide. When contributors use a template, they provide the exact information you need to triage their issue. This drastically improves the quality of the issues you receive and reduces the burden on you as a maintainer. You spend less time asking follow up questions and more time actually fixing bugs.
 
----
 
 **Jamie:** So as a user, when I activate that New Issue button on a repository that has templates set up, what actually happens? Because I know I do not just drop straight into a text editor anymore.
 
@@ -3490,7 +3367,6 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 **Alex:** Exactly. For accessibility projects in particular, disabling blank issues is one of the most effective ways to improve the quality of incoming reports. An accessibility bug report without reproduction steps or assistive technology versions is almost impossible to triage.
 
----
 
 **Jamie:** Okay, so we have the template chooser page, which is controlled by the config dot y m l file. Where do all these files actually live in my project?
 
@@ -3526,7 +3402,6 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 **Jamie:** Markdown templates sound really easy to set up. But you mentioned there was a second type. A YAML form template. Why would we use that instead?
 
----
 
 **Alex:** Markdown templates are easy, but they have a massive flaw when it comes to accessibility and data consistency. Because a Markdown template just dumps text into a giant open text box, the user can do whatever they want. They can accidentally delete your headings. They can ignore your instructions. And most importantly, for a screen reader user, navigating a pre filled text box full of HTML comments and placeholder text can be incredibly noisy and confusing.
 
@@ -3564,7 +3439,6 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 **Jamie:** That is a game changer for maintainers. You can absolutely guarantee that every single bug report includes the screen reader version, because they literally cannot click submit until they provide it.
 
----
 
 **Alex:** So, let us put this together and talk about the specific templates you might want to create for your projects. Every repository should generally have at least two templates. A bug report, and a feature request.
 
@@ -3588,7 +3462,6 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 **Alex:** Exactly. And the beauty of this system is that you are not limited to just bugs and features. You can create custom templates for literally any purpose. If you run a documentation repository, you can create a template specifically for requesting new tutorials. If you run a design system, you can create a template for proposing a new color token. You just name the YAML file whatever you want, put it in the issue template folder, and it will appear on the chooser page.
 
----
 
 **Jamie:** Okay, so I have written my YAML file, I have added my dropdowns and textareas, and I have saved it in the dot github slash issue underscore template folder. How do I actually test it to make sure it works and is accessible?
 
@@ -3606,7 +3479,6 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 **Alex:** That is a beautiful way to put it. You are designing the contribution experience. A well designed YAML form template is an act of hospitality. It tells the contributor, we value your time, we want your feedback, and here is exactly how you can help us understand it.
 
----
 
 **Alex:** We have covered a lot of ground today. Let us recap with some concrete takeaways. First, issue templates turn a blank text box into a guided intake form, improving the quality of contributions and saving maintainers time.
 
@@ -3628,7 +3500,6 @@ Based on: [Chapter 15: Issue Templates](docs/15-issue-templates.md)
 
 </details>
 
----
 
 ### Episode 17: Accessibility Agents
 
@@ -3658,7 +3529,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** Exactly. You need to know how to open Copilot Chat, which you can do by pressing Control plus Shift plus I on Windows, or Command plus Shift plus I on a Mac. If you are comfortable with that, you are ready for today.
 
----
 
 **Alex:** Let us start with the big question. What exactly are accessibility agents?
 
@@ -3686,7 +3556,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** That is a perfect comparison. So before you run any agent, ask yourself, could I do this task manually right now? If the answer is no, learn the manual skill first. The agents are designed to amplify your abilities, not replace your understanding.
 
----
 
 **Alex:** Let us break down this ecosystem. I mentioned there are fifty five agents across three teams. Let us look at Team 1. This is the Accessibility team, and it is the largest, with twenty six agents.
 
@@ -3706,7 +3575,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** No, you can do everything right inside VS Code using GitHub Copilot. But the exact same fifty five agents are also available on Claude Code, Gemini Command Line Interface, Claude Desktop, and the Codex Command Line Interface. They are portable.
 
----
 
 **Jamie:** So how do these teams actually work together? If I have a complex problem, do I have to talk to the keyboard navigator, and then separately talk to the contrast master?
 
@@ -3720,7 +3588,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** Let us walk through a real world example. Say you start your morning by asking the daily briefing agent what needs your attention. It flags a new pull request. Then, you ask the PR review agent to generate a structured review of that pull request. The review agent notices some changes to ARIA attributes, so it suggests you talk to the ARIA specialist. You invoke the ARIA specialist, it finds a missing expanded state on a button, and then you fix it. The teams connect naturally. The workflow agent tells you what happened, the accessibility agent evaluates if it is correct, and the developer tools agent helps you implement the fix.
 
----
 
 **Jamie:** Okay, I am sold. How do I actually talk to these agents? You mentioned typing the at symbol.
 
@@ -3750,7 +3617,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** Exactly right. A few other massive time savers to try first. Forward slash triage, followed by an issue number. This will suggest labels, priorities, and assignments for a new issue. Forward slash daily dash briefing gives you a morning snapshot of repository activity. And forward slash a eleven y dash update gives you the latest accessibility improvements across your repositories, complete with cross references to the Web Content Accessibility Guidelines.
 
----
 
 **Jamie:** So how do I actually get all of these agents and slash commands onto my computer? Is it a complex installation?
 
@@ -3780,7 +3646,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** The second part is the system prompt. It is plain English instructions. It is basically like writing a highly specific company employee handbook or a job description. You tell the agent its purpose, its domain knowledge, the step by step behavioral rules it must follow, and exactly how to format its output.
 
----
 
 **Jamie:** If they are just markdown files, does that mean I can build my own custom agent?
 
@@ -3810,7 +3675,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** Yes. And if you want to change it later, you just tell the agent, add a checkbox for version compatibility, and it modifies the file for you. It takes a fifteen minute manual task and turns it into a two minute conversation.
 
----
 
 **Jamie:** Everything we have talked about so far happens inside VS Code on my local machine. But what if I want an agent to do something automatically when I am not at my computer? Like, when someone opens an issue in my repository at three in the morning.
 
@@ -3824,7 +3688,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 **Alex:** Yes. Understanding how to write local agent instructions in VS Code is the exact conceptual precursor to writing GitHub Agentic Workflows. Once you understand one, the other is immediately readable.
 
----
 
 **Jamie:** We have covered so much ground today. The fifty five agents, the three teams, slash commands, building custom agents, and agentic workflows.
 
@@ -3850,7 +3713,6 @@ Based on: [Chapter 16: Accessibility Agents](docs/16-accessibility-agents.md)
 
 </details>
 
----
 
 ## Appendices
 
@@ -3926,7 +3788,6 @@ Based on: [Appendix A: Glossary of Terms](docs/appendix-a-glossary.md)
 
 **Alex:** That is exactly right. You fork a repository to get your own copy on GitHub, and then you clone your fork to get it onto your laptop.
 
----
 
 **Alex:** Let us transition into our second category, GitHub specific collaboration terms. Once you have made your changes and you are ready to share them, you will interact with the GitHub website. The absolute core of GitHub collaboration is the pull request, often abbreviated as PR.
 
@@ -3946,7 +3807,6 @@ Based on: [Appendix A: Glossary of Terms](docs/appendix-a-glossary.md)
 
 **Alex:** Correct. An issue is a tracking item in a GitHub repository. Despite the name, an issue does not just mean a problem or a bug. Issues are used to request new features, ask questions, or discuss ideas. Think of the issues tab as a combination of a to do list and a discussion forum for the project. Every issue gets a unique number, like issue number forty two, which makes it very easy to reference later.
 
----
 
 **Alex:** Now we are moving into category three. This is where we untangle collaboration network terms. We are talking about local, remote, origin, upstream, and downstream. Jamie, I know this was a sticking point for you early on.
 
@@ -3970,7 +3830,6 @@ Based on: [Appendix A: Glossary of Terms](docs/appendix-a-glossary.md)
 
 **Alex:** That is a fantastic way to visualize it. And just to complete the metaphor, downstream refers to anyone who forks your repository. To them, you are the upstream. It is all relative to where you are standing.
 
----
 
 **Alex:** Let us shift gears to category four. Throughout this audio series and the two day workshop, we use specific accessibility terms to describe how to navigate GitHub and Visual Studio Code. We want to define those clearly so everyone is on the same page.
 
@@ -3990,7 +3849,6 @@ Based on: [Appendix A: Glossary of Terms](docs/appendix-a-glossary.md)
 
 **Alex:** And tab order is the sequential path that your focus takes when you press the Tab key to move forward, or Shift plus Tab to move backward. A well designed page has a logical tab order that follows the visual reading order. When we say, move your focus to the commit button, we generally mean to tab through the interface until that button is the active element.
 
----
 
 **Alex:** Finally, we arrive at category five. This workshop incorporates modern development tools, specifically artificial intelligence agents. The primary tool we use is GitHub Copilot.
 
@@ -4006,7 +3864,6 @@ Based on: [Appendix A: Glossary of Terms](docs/appendix-a-glossary.md)
 
 **Alex:** Exactly. And the last term in this category is the instruction file. An instruction file is a plain text file you can add to your repository to give Copilot custom rules for your specific project. You can tell it things like, always write explanations at a beginner level, or, never use certain outdated functions. It is a way to tailor the AI's behavior so it aligns with your project's standards.
 
----
 
 **Alex:** We have covered a massive amount of ground today. Let us quickly recap with some concrete takeaways. First, remember the fundamental Git workflow. You make a commit to save a snapshot of your work, you do this on a separate branch to isolate your changes, and then you merge it when you are done.
 
@@ -4022,7 +3879,6 @@ Based on: [Appendix A: Glossary of Terms](docs/appendix-a-glossary.md)
 
 </details>
 
----
 
 ### Episode 19: Screen Reader Cheat Sheet
 
@@ -4070,7 +3926,6 @@ Based on: [Appendix B: Screen Reader Cheat Sheet](docs/appendix-b-screen-reader-
 
 **Jamie:** VoiceOver interacting always reminds me of opening a Russian nesting doll. You step down into the container to play with the pieces inside, and then you step back up and close the doll when you are finished.
 
----
 
 **Alex:** So now that we understand our modes, let us talk about how we actually move around GitHub in Browse Mode. We will start with single-key navigation for NVDA and JAWS. VoiceOver users can also use these if they have Quick Nav turned on. The absolute most important key you will use on GitHub is the letter H, for Headings.
 
@@ -4100,7 +3955,6 @@ Based on: [Appendix B: Screen Reader Cheat Sheet](docs/appendix-b-screen-reader-
 
 **Jamie:** It feels like magic. And for our Mac users, VoiceOver has the exact same concept, called the Rotor. You open it by pressing VoiceOver keys plus the letter U. Then you use your left and right arrows to switch between lists of headings, links, form controls, and landmarks. You can type to filter the Rotor exactly the same way.
 
----
 
 **Alex:** Let us transition to something unique to GitHub. Everything we just discussed relies on your screen reader doing the heavy lifting. But GitHub actually has its own internal system of keyboard shortcuts built directly into the website. These are JavaScript shortcuts that trigger actions without you needing to navigate to a button at all.
 
@@ -4136,7 +3990,6 @@ Based on: [Appendix B: Screen Reader Cheat Sheet](docs/appendix-b-screen-reader-
 
 **Alex:** That is a brilliant explanation. The last GitHub shortcut we will mention here is the letter L. When you are viewing an issue or a Pull Request, pressing L will open the Labels menu. From there, you can easily use your arrow keys to check or uncheck labels to organize the work. Just remember, L is another conflict key. In NVDA, L means next list. So you must be in Focus Mode to use the GitHub shortcut.
 
----
 
 **Alex:** Now, the prompt for this episode specifically mentions our Concept Coverage Checklist, and one of the items we absolutely must cover is Visual Studio Code screen reader shortcuts. Even though this cheat sheet focuses primarily on the GitHub website, your workflow heavily involves taking code from GitHub and opening it in VS Code, or opening it directly in the browser using GitHub dot dev.
 
@@ -4156,7 +4009,6 @@ Based on: [Appendix B: Screen Reader Cheat Sheet](docs/appendix-b-screen-reader-
 
 **Alex:** That is exactly what it does. And you can use this same F7 navigation whether you are in your local desktop VS Code, or if you press the Period key on a GitHub repository to open the web-based VS Code editor in your browser.
 
----
 
 **Alex:** Before we wrap up, let us run through a few quick navigation patterns for everyday tasks. We already talked about using H to jump to headings, and D or R to jump to landmarks. But what about when you want to actually leave a comment?
 
@@ -4186,7 +4038,6 @@ Based on: [Appendix B: Screen Reader Cheat Sheet](docs/appendix-b-screen-reader-
 
 </details>
 
----
 
 ### Episode 20: Accessibility Standards Reference
 
@@ -4290,7 +4141,6 @@ Based on: [Appendix C: Accessibility Standards Reference](docs/appendix-c-access
 
 **Jamie:** That is a great addition. I use screen magnification sometimes, and trying to find a tiny, faint gray dotted line around a button is nearly impossible.
 
----
 
 **Alex:** So, we have covered the W C A G guidelines. Now we need to talk about the tools we use to meet those guidelines when standard HTML is not enough. This brings us to ARIA. A R I A.
 
@@ -4362,7 +4212,6 @@ Based on: [Appendix C: Accessibility Standards Reference](docs/appendix-c-access
 
 **Alex:** Yes, there are two main settings. Aria dash live equals polite, and aria dash live equals assertive. Polite means the screen reader will wait until it finishes its current sentence before announcing the update. This is what you should use 95 percent of the time. Assertive means the screen reader will immediately interrupt whatever it is currently saying to announce the update. You should only use assertive for critical, urgent errors.
 
----
 
 **Jamie:** Okay, so we have covered W C A G and the POUR principles. We have covered ARIA, including Roles, States, Properties, Landmarks, and Live Regions. Now, let us make this practical. I am working on an open source project on GitHub. I get assigned to review a pull request, or PR, from another contributor. How do I review their code for accessibility?
 
@@ -4396,7 +4245,6 @@ Based on: [Appendix C: Accessibility Standards Reference](docs/appendix-c-access
 
 **Alex:** It is. Automated tools are great for catching missing alt text or missing labels, but they cannot tell if the alt text actually makes sense, and they cannot test keyboard flow. That is why manual testing is required. The best way to test a PR is to pull the branch to your local machine, unplug your mouse, turn on your screen reader, and try to use the new feature. If you can complete the task smoothly, it is likely in good shape.
 
----
 
 **Jamie:** Wow, we covered a massive amount of ground today. I actually feel like I have a solid grasp on W C A G and ARIA now. It is not just alphabet soup anymore.
 
@@ -4418,7 +4266,6 @@ Based on: [Appendix C: Accessibility Standards Reference](docs/appendix-c-access
 
 </details>
 
----
 
 ### Episode 21: Git Authentication
 
@@ -4512,7 +4359,6 @@ Based on: [Appendix D: Git Authentication](docs/appendix-d-git-authentication.md
 
 **Alex:** If you are on Windows and you installed Git for Windows, it comes with something called Git Credential Manager. It is a fantastic, cross-platform credential helper. The first time you push, it will actually pop up a secure window asking you to authenticate, and once you provide your token, it saves it securely in the Windows Credential Manager. You never have to type it again until the token expires. On macOS, it integrates similarly with the macOS Keychain.
 
----
 
 **Jamie:** Alright, so that is HTTPS and Personal Access Tokens. Generate the token, save it in a password manager, paste it once, and let Git Credential Manager handle the rest. But you mentioned there is a second method. SSH keys. What are those, and why would someone choose SSH over a Personal Access Token?
 
@@ -4566,7 +4412,6 @@ Based on: [Appendix D: Git Authentication](docs/appendix-d-git-authentication.md
 
 **Alex:** No, you do not need to start over. You just need to change the remote URL. Remember from our earlier episodes, the remote is just the address book entry for GitHub. You can change it by typing git space remote space set dash url space origin space followed by the new SSH URL. The SSH URL always looks like git at github dot com colon your dash username slash the dash repository dot git.
 
----
 
 **Jamie:** Okay, so we have covered authenticating to prove who we are so we can push code. But there is another layer to this that is becoming really important in open source. Commit signing. I have noticed on GitHub, when I review pull requests, some commits have a little green badge next to them that says Verified, and others say Unverified. What is that about?
 
@@ -4608,7 +4453,6 @@ Based on: [Appendix D: Git Authentication](docs/appendix-d-git-authentication.md
 
 **Alex:** Vigilant Mode is an optional setting in your GitHub account. If you enable it, GitHub will actively mark any unsigned commit associated with your account with a yellow Unverified badge. It is a way of telling the world, Hey, I sign all my work. If you see a commit with my name on it that does not have a Verified badge, it is a fake. Do not trust it.
 
----
 
 **Jamie:** This has been so enlightening, Alex. Before we wrap up, let us do a quick troubleshooting round. What happens when things go wrong? Let us say I try to push, and the terminal says Authentication failed. What is the most likely culprit?
 
@@ -4638,7 +4482,6 @@ Based on: [Appendix D: Git Authentication](docs/appendix-d-git-authentication.md
 
 </details>
 
----
 
 ### Episode 22: GitHub Flavored Markdown
 
@@ -4690,7 +4533,6 @@ Based on: [Appendix E: GitHub Flavored Markdown](docs/appendix-e-github-flavored
 
 **Jamie:** Screen readers handle this quite well, depending on your verbosity settings. Some will change their pitch slightly when reading emphasized text.
 
----
 
 **Alex:** Let us move on to something that connects our documents together: links. Markdown gives us a few ways to create hyperlinks.
 
@@ -4726,7 +4568,6 @@ Based on: [Appendix E: GitHub Flavored Markdown](docs/appendix-e-github-flavored
 
 **Alex:** Exactly. If the image is a screenshot of a command line showing an error message, your alt text should actually include the text of the error message. If the image is a chart showing performance going up, say "Line chart showing a twenty percent increase in performance over three months."
 
----
 
 **Jamie:** Okay, so we have headings, paragraphs, links, and images. What about lists? I feel like half of my time on GitHub is spent writing lists.
 
@@ -4756,7 +4597,6 @@ Based on: [Appendix E: GitHub Flavored Markdown](docs/appendix-e-github-flavored
 
 **Alex:** And in a pull request, GitHub actually reads those checkboxes to create a progress bar. It will tell reviewers, "two of seven tasks completed." It is a brilliant way to manage a release checklist.
 
----
 
 **Jamie:** Let us pivot to writing code in our Markdown. We are developers, after all. We need to document our code.
 
@@ -4780,7 +4620,6 @@ Based on: [Appendix E: GitHub Flavored Markdown](docs/appendix-e-github-flavored
 
 **Jamie:** When GitHub renders this, it builds a proper HTML table. Screen readers like VoiceOver or JAWS will announce it as a table, tell you the number of columns and rows, and let you navigate cell by cell using your standard table commands, reading the column headers as you move.
 
----
 
 **Alex:** Now let us get into some of the newer, advanced GitHub extensions. Starting with Alert blocks, which were introduced in 2023.
 
@@ -4814,7 +4653,6 @@ Based on: [Appendix E: GitHub Flavored Markdown](docs/appendix-e-github-flavored
 
 **Jamie:** GitHub uses a tool called MathJax to render this. The good news is that MathJax includes an aria-label with the spoken form of the equation. So if you write E equals M C squared in LaTeX, most screen readers will actually read out "E equals M C squared". But for incredibly complex equations, it is still best practice to explain the formula in plain English right after it.
 
----
 
 **Alex:** Let us wrap up with a few features that help with document navigation. Specifically, footnotes and heading anchors.
 
@@ -4840,7 +4678,6 @@ Based on: [Appendix E: GitHub Flavored Markdown](docs/appendix-e-github-flavored
 
 **Jamie:** A screen reader will announce this as a collapsed button. You just press Enter or Space to expand it, and the content appears immediately without reloading the page. It keeps the issue clean while still providing all the data.
 
----
 
 **Alex:** We have covered a massive amount of syntax today. Jamie, what are the top takeaways our listeners should focus on?
 
@@ -4854,7 +4691,6 @@ Based on: [Appendix E: GitHub Flavored Markdown](docs/appendix-e-github-flavored
 
 </details>
 
----
 
 ### Episode 23: GitHub Gists
 
@@ -4888,7 +4724,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** That is a perfect analogy. You use a Gist when you want to share a single code snippet, post a configuration example, share error logs with a colleague, or just save some quick documentation for yourself. Gists do not have issues, they do not have pull requests, and they do not have project boards. They are streamlined specifically for sharing small bits of information quickly.
 
----
 
 **Jamie:** So how do we actually create one? Do I start from my normal GitHub dashboard?
 
@@ -4918,7 +4753,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** Exactly. Once your content is in there, you have a choice to make about visibility. If you Tab past the content area, you will reach the visibility options. You can choose either Create secret gist or Create public gist.
 
----
 
 **Jamie:** Let us talk about those visibility options, because I remember being very confused by the word secret. Secret means private, right? Only I can see it?
 
@@ -4944,7 +4778,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** They are great for sharing things you just do not want cluttering up your public profile. If you and I are troubleshooting a bug, and I want to send you a massive, messy error log, I will make it a secret Gist. I send you the link in our chat, you read it, we fix the bug. The log does not need to be searchable by the whole internet, but I also do not need military grade security for it.
 
----
 
 **Jamie:** Okay, so let us go back to our form. I have my description, my filename, my code, and I choose Create public gist. I activate that button, and then what happens?
 
@@ -4958,7 +4791,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** Exactly. It keeps related snippets bundled together perfectly.
 
----
 
 **Jamie:** Now, Alex, you know I am a huge fan of the command line. Doing all of this in the browser sounds fine, but switching windows, navigating form fields, pasting things in. Is there a way to create a Gist directly from my terminal?
 
@@ -4974,7 +4806,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Jamie:** I love that. That saves so many steps.
 
----
 
 **Alex:** So, earlier we called a Gist a version controlled sticky note. Let us talk about what that actually means under the hood.
 
@@ -5002,7 +4833,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** That is a wonderful analogy. And because it is connected through Git, your forked copy will always link back to the original author, so they get credit for the initial work.
 
----
 
 **Jamie:** What if I do not want to copy it, I just want to bookmark it so I can find it later?
 
@@ -5024,7 +4854,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** Yes. Deletion is permanent. To do it, you navigate to the Gist, activate the Edit button, and then look for the Delete button. GitHub will ask you to confirm, and once you do, it is removed entirely. But keep in mind, if someone else has already forked your Gist, their forked copy will not be deleted. They own their copy.
 
----
 
 **Jamie:** Let us talk about comments. You mentioned earlier that people can leave comments on public Gists. How does that work?
 
@@ -5038,7 +4867,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** There is. You can navigate to gist dot github dot com slash discover. The Discover page shows you a feed of public Gists that are currently popular. It is a fantastic place to find useful utilities, learn new coding techniques, and see how other developers structure their configuration files. You can even filter the Discover page by programming language.
 
----
 
 **Jamie:** Okay, there is one more concept from the checklist we need to cover. Embedding a Gist. What does it mean to embed a Gist, and why would I want to do it?
 
@@ -5056,7 +4884,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 **Alex:** That is a great accessibility question. Technically, the embed script generates an HTML iframe. So when a screen reader user lands on it, they will hear the word frame, followed by the title of the Gist. They can then navigate into the frame to read the code line by line, just like they would on GitHub. It is a very seamless reading experience.
 
----
 
 **Jamie:** This has been incredibly helpful. I feel like I finally understand where Gists fit into the ecosystem. They are not just plain text files, and they are not full repositories. They are the perfect middle ground for sharing.
 
@@ -5072,7 +4899,6 @@ Based on: [Appendix F: GitHub Gists](docs/appendix-f-github-gists.md)
 
 </details>
 
----
 
 ### Episode 24: GitHub Discussions
 
@@ -5106,7 +4932,6 @@ Based on: [Appendix G: GitHub Discussions](docs/appendix-g-github-discussions.md
 
 **Alex:** Perfectly summarized. So, we have repositories for storage, issues for tracking tasks, and pull requests for merging code. But what happens when you just want to ask a question? What happens when you want to brainstorm an idea, or the project maintainer wants to announce a new version? That is where GitHub Discussions comes in.
 
----
 
 **Jamie:** So Alex, let us start with the most basic question. What exactly is a GitHub Discussion?
 
@@ -5128,7 +4953,6 @@ Based on: [Appendix G: GitHub Discussions](docs/appendix-g-github-discussions.md
 
 **Alex:** Exactly right. And on the flip side, we use Discussions when we have a question about how something works, when we want to brainstorm ideas before we file a formal feature request, or when we just want community input on a topic that might not have one single right answer.
 
----
 
 **Jamie:** Okay, so if I am in a repository and I want to visit the dining room, how do I find these discussions?
 
@@ -5146,7 +4970,6 @@ Based on: [Appendix G: GitHub Discussions](docs/appendix-g-github-discussions.md
 
 **Alex:** Think of the organization level discussion as the town square, while the repository discussion is a specific building. The town square is for organization wide announcements, community introductions, cross project feature brainstorming, and community spotlights. You find them by navigating to the organization's main page and looking for the Discussions tab there.
 
----
 
 **Jamie:** Okay, so I have successfully navigated to the Discussions tab on a repository. What am I going to hear as I read down the page? Is it just a giant list of random posts?
 
@@ -5164,7 +4987,6 @@ Based on: [Appendix G: GitHub Discussions](docs/appendix-g-github-discussions.md
 
 **Alex:** Yes. There is a side panel, which might be on the left or the right depending on your browser width, that shows a list of all categories along with item counts. It also has a section for pinned announcements at the top. This is a great place to start if you want to filter the view to only show discussions from a specific category.
 
----
 
 **Jamie:** Alright, let us say I have searched through the existing discussions, and I cannot find the answer to my question. By the way, how do I search?
 
@@ -5184,7 +5006,6 @@ Based on: [Appendix G: GitHub Discussions](docs/appendix-g-github-discussions.md
 
 </details>
 
----
 
 ### Episode 25: Releases, Tags, and Insights
 
@@ -5252,7 +5073,6 @@ Based on: [Appendix H: Releases, Tags, and Insights](docs/appendix-h-releases-ta
 
 **Jamie:** That is a really helpful way to think about it. Patch is a fix, minor is a safe new feature, and major means read the instructions because things have changed.
 
----
 
 **Alex:** So now we understand Git tags and semantic versioning. But a Git tag is just a raw marker in your code history. GitHub takes that concept and builds a whole feature around it called a GitHub Release.
 
@@ -5276,7 +5096,6 @@ Based on: [Appendix H: Releases, Tags, and Insights](docs/appendix-h-releases-ta
 
 **Alex:** Assets are the actual files the user needs. GitHub automatically generates two source code archives for every release, a zip file and a tar dot gz file. This is just the raw code at that specific tag. But maintainers can also attach custom assets. If it is a desktop application, the assets might be the compiled executable file for Windows, and the dot app file for Mac. You can use the letter K to navigate through the links in the release section to find the asset downloads.
 
----
 
 **Jamie:** Okay, so that is how we consume releases. But what if I am a maintainer, or I am volunteering on an open source project, and they ask me to create the new release? That sounds like a lot of pressure. Do I have to manually write out every single thing that changed?
 
@@ -5306,7 +5125,6 @@ Based on: [Appendix H: Releases, Tags, and Insights](docs/appendix-h-releases-ta
 
 **Alex:** That is right. You can open the GitHub Copilot chat in VS Code, and type the command slash draft dash release, followed by the version number. The agent will analyze your repository, categorize all your merged pull requests into Features, Bug Fixes, and Dependencies, and output perfectly formatted markdown right in your chat window. You can just copy it and paste it wherever you need it.
 
----
 
 **Jamie:** Alright, so releases tell us what a project has shipped. But what if I am evaluating a new repository, and I want to know if it is actually healthy? I want to know if the maintainers are active, if people are contributing, and if it is a welcoming place. How do I find that out?
 
@@ -5336,7 +5154,6 @@ Based on: [Appendix H: Releases, Tags, and Insights](docs/appendix-h-releases-ta
 
 **Alex:** It matters for documentation and community growth. The Traffic view has a table called Popular Content that shows exactly which files get the most views. If you see that a specific tutorial file in your repository is getting thousands of views a week, you know that file is critical. You should probably spend time making sure that specific tutorial is perfectly accessible and up to date, because it is the front door to your project.
 
----
 
 **Jamie:** Let us talk about a view in the Insights tab that has major security implications. The Dependency graph.
 
@@ -5362,7 +5179,6 @@ Based on: [Appendix H: Releases, Tags, and Insights](docs/appendix-h-releases-ta
 
 **Alex:** And if you are working on a team, you can type slash team dash dashboard. It generates a text-based report of team-wide activity, showing who is reviewing code, what issues are open, and overall project health. It gives you the power of the Insights tab without ever leaving your code editor or fighting with a canvas graphic.
 
----
 
 **Jamie:** We covered a huge amount of ground today. From gluing bookmarks onto pages, to ingredient lists, to checking the heartbeat of a project.
 
@@ -5382,7 +5198,6 @@ Based on: [Appendix H: Releases, Tags, and Insights](docs/appendix-h-releases-ta
 
 </details>
 
----
 
 ### Episode 26: GitHub Projects Deep Dive
 
@@ -5420,7 +5235,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** A massive upgrade. If Classic Projects was a simple corkboard, Projects version two is like a smart digital spreadsheet that updates itself. You can add custom fields, switch between different views, and pull in work from anywhere in your organization. When it was first being tested, it was called Projects Beta, but it is fully stable now and it is the default.
 
----
 
 **Jamie:** So let us start at the very beginning. How do I actually create a new project?
 
@@ -5462,7 +5276,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** Yes! If you are focused on the Title cell of an issue, you can press F 2 to edit the title inline, without ever leaving the table. But the most important key is Enter. If you press Enter on any row, it opens the item detail panel in a right sidebar. You can tab through all the fields for that issue in one vertical list, make your changes, and then press Escape to close the panel and pop right back into your table.
 
----
 
 **Jamie:** Okay, so Table view is our heavy duty spreadsheet. What is the Board view?
 
@@ -5488,7 +5301,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** To be completely transparent, the Roadmap view is chart-based. While there is some basic navigation, the underlying data is what matters. For screen reader users, I always recommend treating the Roadmap as a visual summary for sighted colleagues, while you use the Table view for all of your actual planning and editing. Any dates you set in the Table view will automatically populate the Roadmap chart.
 
----
 
 **Jamie:** Okay, so we have our views. But a project is useless without actual work in it. How do I add my issues and pull requests to this project?
 
@@ -5510,7 +5322,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** Yes. And later, when you are ready to make it official, you can open that draft row, navigate to the button called Convert to issue, and select which repository it should live in. It instantly transforms into a real GitHub issue.
 
----
 
 **Jamie:** I love that napkin analogy. Okay, earlier you mentioned custom fields. You said this is where Projects version two really shines. What kind of fields can we create?
 
@@ -5528,7 +5339,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** Nope, GitHub handles the math. You create an Iteration field, tell it your sprints are two weeks long, and pick a start date. GitHub automatically generates the current sprint, the next sprint, and the ones after that. Then you just assign your issues to an iteration using that field, just like you would assign a priority.
 
----
 
 **Jamie:** Okay, so if I have a massive project board with custom fields, priorities, and sprints, it is going to get really crowded. How do I find exactly what I need without reading through a hundred rows?
 
@@ -5546,7 +5356,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** Yes. You navigate to the button called New view in the tab bar, set up your layout and filters, and it saves automatically. You can rename the tab to something like My Active Bugs. Every time you open the project, that tab is waiting for you.
 
----
 
 **Jamie:** Alright, Alex, you promised we would talk about tracking work across multiple repositories. How does that work?
 
@@ -5560,7 +5369,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** You use the Repository field! In your Table view, you can make the Repository column visible. Then, you can filter by it or even group by it. You can tell the table to visually group all the rows by repository, so you have a section for the frontend repository, a section for the backend, and so on.
 
----
 
 **Jamie:** Okay, we have reached the part I have been waiting for. Automations. You said I could hire a virtual assistant to move my papers around.
 
@@ -5582,7 +5390,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** It does. Projects version two has a full GraphQL API. Using GitHub Actions, which we cover deeply in the advanced appendices, you can do things like automatically assign issues to specific people based on which repository they came from, or automatically set due dates. The possibilities are endless.
 
----
 
 **Jamie:** Before we wrap up, I want to ask about our favorite coding companion. Does GitHub Copilot know anything about our project boards?
 
@@ -5600,7 +5407,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 **Alex:** Exactly. It keeps you in the flow of your coding environment while still staying on top of project management.
 
----
 
 **Jamie:** Alex, this has been an incredible deep dive. I feel like I am ready to upgrade my entire workflow from Classic to version two.
 
@@ -5620,7 +5426,6 @@ Based on: [Appendix I: GitHub Projects Deep Dive](docs/appendix-i-github-project
 
 </details>
 
----
 
 ### Episode 27: Advanced Search
 
@@ -5652,7 +5457,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 **Jamie:** I love anything that saves me keystrokes. Before we jump in, let us quickly remind everyone of the prerequisites. You should be familiar with the basic concepts of issues and pull requests, which we covered back in episodes 12 and 15. If you know what an issue is, and you know what a pull request is, you are perfectly positioned for today.
 
----
 
 **Alex:** Let us start with the interface. The global search bar is located at the top of nearly every page on GitHub. But you do not need to manually navigate your cursor to it. From almost anywhere on the site, you can simply press the forward slash key.
 
@@ -5672,7 +5476,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 **Alex:** Exactly. GitHub automatically inserts a piece of text into the search bar for you. It will say repo, a colon, and then the name of the repository. This brings us to the core concept of today's episode, which is qualifier syntax.
 
----
 
 **Jamie:** Qualifier syntax. That sounds like something out of a grammar textbook.
 
@@ -5714,7 +5517,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 **Alex:** It does! But here is the thing, you do not have to memorize them all at once. You are just learning a new way to ask for what you want. Think of it like ordering at a restaurant. You do not just say food. You say, item, colon, burger. Temperature, colon, medium. Side, colon, fries. You are just giving GitHub your exact order.
 
----
 
 **Alex:** Let us move over to pull requests. A pull request, and I love that name because you are literally requesting that someone pull your changes into their project, has its own set of qualifiers.
 
@@ -5738,7 +5540,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 **Alex:** Exactly. If you want to find all pull requests that are targeting the main branch, you type base, colon, main. If you want to find pull requests coming from a specific feature branch, you type head, colon, feature dash accessibility.
 
----
 
 **Jamie:** Alright, we have covered issues and pull requests. But what if I am looking for actual code? Like, what if I want to find every time a specific function is used in a project, so I can see an example of how to write it?
 
@@ -5760,7 +5561,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 **Alex:** That is a perfect query. You are narrowing the funnel step by step. First the repository, then the file type, then the folder, and finally the keyword. Your screen reader will then announce the number of code results found, and you can navigate through the actual snippets of code directly from the search results page.
 
----
 
 **Jamie:** This is making so much sense. We have talked about states, labels, people, and code. What about time? Sometimes I want to find issues that have been sitting around for a long time, or maybe pull requests that were opened just this week.
 
@@ -5786,7 +5586,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 **Alex:** Right. So you type sort, colon, created dash desc. If you wanted the oldest items first, you would type sort, colon, created dash asc.
 
----
 
 **Jamie:** Okay, Alex, I have to ask. I know a lot of our listeners, myself included, spend a lot of time in the terminal using the command line interface. Can we do all of this search magic without ever opening a web browser?
 
@@ -5806,7 +5605,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 **Jamie:** That is so practical. I am definitely going to create a bookmark folder just for my daily GitHub workflows. I will have one for my open pull requests, one for issues I need to review, and one for good first issues in the workshop repository.
 
----
 
 **Alex:** That is a fantastic strategy, Jamie. And that brings us to the end of our deep dive into advanced search. We covered a massive amount of ground today, but remember, you do not need to memorize every single qualifier right now.
 
@@ -5828,7 +5626,6 @@ Based on: [Appendix J: Advanced Search](docs/appendix-j-advanced-search.md)
 
 </details>
 
----
 
 ### Episode 28: Branch Protection and Rulesets
 
@@ -5858,7 +5655,6 @@ Based on: [Appendix K: Branch Protection and Rulesets](docs/appendix-k-branch-pr
 
 **Alex:** Exactly. Before branch protection existed, if you had write access to a repository, you could just push directly to main. And people make mistakes. We type the wrong command, or we push a branch that is not finished yet. Branch protection is a safety net. It is a set of rules, configured by the repository administrators, that dictate exactly what must happen before code is allowed to be merged into a protected branch.
 
----
 
 **Jamie:** So let us break down what those rules actually look like. We mentioned the classic approach to branch protection rules. How does that work?
 
@@ -5884,7 +5680,6 @@ Based on: [Appendix K: Branch Protection and Rulesets](docs/appendix-k-branch-pr
 
 **Alex:** Perfect analogies. You might have a status check that compiles the code to make sure there are no syntax errors. You might have a check that runs the entire automated test suite. You might even have an accessibility-check that scans your user interface changes for basic accessibility violations. If the rule says those checks are required, the merge button will literally be blocked until every single one of them reports back with a success status. If even one test fails, you cannot merge.
 
----
 
 **Jamie:** Okay, what about keeping things up to date? I sometimes get a message that says my branch is out of date with the base branch.
 
@@ -5910,7 +5705,6 @@ Based on: [Appendix K: Branch Protection and Rulesets](docs/appendix-k-branch-pr
 
 **Alex:** Exactly. For everyone else, they must use a pull request.
 
----
 
 **Jamie:** Okay, so that is classic branch protection. But the title of this episode is Branch Protection and Rulesets. What is a ruleset, and how is it different?
 
@@ -5952,7 +5746,6 @@ Based on: [Appendix K: Branch Protection and Rulesets](docs/appendix-k-branch-pr
 
 **Alex:** Exactly. It makes rolling out security changes much less stressful for administrators. Now, keep in mind, as a contributor or a workshop participant, you will probably encounter both systems. Many repositories still use classic branch protection rules because they have been around forever. Newer repositories, or large enterprise organizations, are moving toward rulesets. But for you, as the developer trying to merge a pull request, the experience is largely the same. The merge button will be blocked until you meet the requirements.
 
----
 
 **Jamie:** Okay, let us talk about that experience. Because that is the most stressful part for a learner. You open your pull request, you think you are done, and then you hit a wall. If my merge is blocked, how do I actually figure out what is wrong, especially using a screen reader?
 
@@ -5998,7 +5791,6 @@ Based on: [Appendix K: Branch Protection and Rulesets](docs/appendix-k-branch-pr
 
 **Alex:** Spot on. And if you hear, commits must have verified signatures, you know you need to go back to your terminal and sign your work. The merge box is your single source of truth for understanding exactly what the repository rules require from you.
 
----
 
 **Jamie:** So, as we wrap up, I am curious about how these rules look in the real world. Do most repositories have all of these rules turned on?
 
@@ -6016,7 +5808,6 @@ Based on: [Appendix K: Branch Protection and Rulesets](docs/appendix-k-branch-pr
 
 **Alex:** It really is. And as a developer, your job is not necessarily to configure all of these rules, unless you are the repository administrator. Your job is simply to understand that these rules exist, respect the velvet rope, and know how to read the merge box to satisfy the requirements.
 
----
 
 **Jamie:** This has been incredibly clarifying. I feel like I understand the why behind all those blocking messages now. Let us summarize the key takeaways for our listeners today. First, branch protection exists to prevent accidental or unverified changes from entering the main branch. It is a safety net, not a punishment.
 
@@ -6034,7 +5825,6 @@ Based on: [Appendix K: Branch Protection and Rulesets](docs/appendix-k-branch-pr
 
 </details>
 
----
 
 ### Episode 29: GitHub Security Features
 
@@ -6064,7 +5854,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 **Alex:** We are going to cover five main areas. First, why security matters so much in open source, specifically supply chain risks. Second, Dependabot, which is your automated dependency assistant. Third, secret scanning, which catches passwords before they leak. Fourth, code scanning using a tool called CodeQL. And finally, private security advisories, which is how you responsibly report a vulnerability if you find one.
 
----
 
 **Jamie:** Let us start with that first one. Supply chain risks. When I hear supply chain, I think of cargo ships and grocery stores. What does that mean in software?
 
@@ -6086,7 +5875,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 **Alex:** There is. If you turn on your screen reader's focus mode or forms mode, you can press G, and then S. G for go, S for security. That will jump you straight to the Security tab.
 
----
 
 **Jamie:** Okay, so I am on the Security tab. What is the first thing I am going to find there to help with those supply chain risks we talked about?
 
@@ -6128,7 +5916,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 **Alex:** You set it up using a configuration file in your repository. You create a folder called dot github, and inside it, a file called dependabot dot y m l. In that yaml file, you tell Dependabot which package ecosystems to check, like npm for JavaScript or pip for Python, and how often to check, like daily or weekly. Dependabot will then automatically open PRs to keep your project fresh.
 
----
 
 **Jamie:** Okay, so Dependabot handles the ingredients we bring into our project. But what about the code we write ourselves? I mentioned earlier that I was terrified of leaking something. When I was first learning to code, I accidentally committed an API key to a public repository. It was a nightmare. I had to scramble to figure out what to do.
 
@@ -6170,7 +5957,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 **Alex:** The best practice is to use environment variables. Instead of typing the actual password in your code, you write a variable name, like process dot env dot DATABASE PASSWORD. Then, you store the actual password securely on the server where your code runs, completely outside of Git.
 
----
 
 **Jamie:** Alright, we have secured our dependencies, and we have made sure we are not leaking passwords. But what if the logic of my code itself has a security flaw? Like, what if I write a function that accidentally allows a hacker to run their own code on my server?
 
@@ -6204,7 +5990,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 **Alex:** You have to set it up, but GitHub makes it very easy. You set it up using a GitHub Action. If you navigate to the Security tab and find the Code scanning section, GitHub will offer to configure CodeQL for you. It will generate a yaml workflow file for GitHub Actions. Once you commit that file, the GitHub Action will automatically run the CodeQL scan every time someone pushes new code or opens a pull request.
 
----
 
 **Jamie:** Okay, so we have covered all these automated tools. But what happens if the automated tools miss something, and a human being, like me or one of our listeners, discovers a security vulnerability in an open source project? Do I just go to the Issues tab and open a new issue?
 
@@ -6242,7 +6027,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 **Alex:** The industry standard window for a response is usually thirty to ninety days. If you do not hear back after a reasonable amount of time, you can send a polite follow up in the private thread. If the issue is absolutely critical and the project seems abandoned, you can actually contact GitHub directly, and their security team can assist with coordinated disclosure. But you must give the maintainers a fair chance to fix it first.
 
----
 
 **Jamie:** Alex, before we wrap up, I saw a strange acronym in the reading materials for this chapter. S B O M. What is an SBOM?
 
@@ -6262,7 +6046,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 **Jamie:** Oh, that is clever! I wish I had known that when I started. It puts all the critical information right in front of you without having to dig through multiple tabs and tables. I am definitely going to try running slash security-dashboard on my fork today.
 
----
 
 **Alex:** That brings us to the end of our deep dive into GitHub Security Features. Let us summarize the key takeaways. First, security is largely about managing your supply chain. Dependabot is your best friend. It alerts you to vulnerabilities in your dependencies and can even open automated pull requests to fix them.
 
@@ -6276,7 +6059,6 @@ Based on: [Appendix L: GitHub Security Features](docs/appendix-l-github-security
 
 </details>
 
----
 
 ### Episode 30: VS Code Accessibility Reference
 
@@ -6310,7 +6092,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Alex:** Let us jump right in.
 
----
 
 **Alex:** Everything in VS Code accessibility starts with one master switch. It is a setting called editor dot accessibility support.
 
@@ -6338,7 +6119,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Alex:** It is a huge help. Now, let us move from the visual to the audible. I want to talk about how VS Code communicates with you non-verbally.
 
----
 
 **Alex:** Let us talk about Audio Cues. VS Code has a brilliant system of sounds that play when certain things happen.
 
@@ -6368,7 +6148,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Jamie:** Alt plus F2 is a lifesaver. I use it for reading long error messages, hover documentation, and even Copilot suggestions.
 
----
 
 **Alex:** Speaking of navigating complex information, we need to talk about the Accessible Diff Viewer. This is arguably the most important feature we will cover today.
 
@@ -6396,7 +6175,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Alex:** Exactly like that. And you can jump forward to the next hunk by pressing F7 again, or jump backward by pressing Shift plus F7. It is incredibly efficient.
 
----
 
 **Alex:** Let us transition to the command line. We need to talk about Terminal accessibility. The integrated terminal in VS Code is where you will run your Git commands, start your servers, and run your tests.
 
@@ -6412,7 +6190,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Alex:** That is a fantastic productivity tip. And if you ever need to read the output of a command that scrolled way off the screen, you can use that same Alt plus F2 shortcut we mentioned earlier. If your focus is in the terminal, Alt plus F2 opens the Terminal Accessible View, which puts the entire terminal history into a static text editor so you can search it, copy from it, and read it at your own pace.
 
----
 
 **Alex:** Now we need to get into the weeds a bit. We are going to cover Screen reader-specific configurations. VS Code behaves slightly differently depending on whether you are using NVDA, JAWS, or VoiceOver. Let us start with NVDA on Windows.
 
@@ -6448,7 +6225,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Alex:** Right. In VoiceOver Utility, under Verbosity, then Text, you should set Punctuation to All. You need to hear every bracket, every semicolon, and every parenthesis. If VoiceOver filters them out to make it sound more like natural English, your code will just not make any sense.
 
----
 
 **Alex:** Let us talk about moving around. Keyboard-only navigation is the lifeblood of using VS Code with a screen reader.
 
@@ -6474,7 +6250,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Jamie:** One shortcut I use constantly is Control plus G. Go to line. When I run a test and it says there is an error on line one hundred and fifty, I just press Control plus G, type one five zero, hit Enter, and boom. I am exactly where I need to be.
 
----
 
 **Alex:** Let us wrap up with a crucial topic: Troubleshooting accessibility issues. Because no matter how perfectly you set things up, eventually, something will get stuck.
 
@@ -6494,7 +6269,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 **Alex:** That is a feature called Tab Trapping. Sometimes it gets toggled on by accident. If your Tab key stops inserting tabs or autocompleting, press Control plus M. That is Command plus M on Mac. That toggles whether the Tab key moves focus between interface elements, or acts like a normal Tab key inside text areas.
 
----
 
 **Alex:** We have covered a massive amount of ground today. Jamie, what are your top takeaways for our listeners?
 
@@ -6516,7 +6290,6 @@ Based on: [Appendix M: VS Code Accessibility Reference](docs/appendix-m-vscode-a
 
 </details>
 
----
 
 ### Episode 31: GitHub Codespaces
 
@@ -6562,7 +6335,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** Yes. If you pair a Bluetooth keyboard with a tablet, you can open a Codespace in your mobile web browser and have a full desktop class coding environment. The screen reader on your tablet will interact with the web interface. It is incredibly freeing to know you are not chained to a high end machine.
 
----
 
 **Jamie:** Okay, I am sold on the concept. How do I actually create one? Let us say I am on a repository page on GitHub.
 
@@ -6584,7 +6356,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** It does. The page has live regions that announce the progress, like connecting, or setting up environment. Once it finishes, focus automatically shifts into the VS Code editor.
 
----
 
 **Jamie:** You mentioned a moment ago that GitHub installs the tools the project specifically requested. How does GitHub know what tools the project needs?
 
@@ -6602,7 +6373,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** Precisely. It works exactly the same on everyone's machine, because everyone is using the exact same blueprint. This is especially amazing for workshops. As an instructor, I know that every single student has the exact same setup. Nobody is falling behind because their local environment is broken.
 
----
 
 **Jamie:** Okay, so the Codespace has loaded. I am sitting in a browser tab. What does it actually look and feel like to my screen reader? Is it a stripped down version of VS Code?
 
@@ -6624,7 +6394,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** They do. VS Code in Codespaces supports the exact same audio cues as the desktop version. You will hear a specific tone if your cursor lands on a line with an error, a different tone for a warning, and a little chime when a background task completes. The only catch is that sometimes modern web browsers mute audio for new tabs by default. If you are not hearing the cues, you might need to check your browser permissions and ensure that github dot com is allowed to play sound.
 
----
 
 **Jamie:** Let us talk about the terminal. The terminal is where I run my commands, and it can be notoriously tricky with screen readers. How does the integrated terminal work in a Codespace?
 
@@ -6648,7 +6417,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Jamie:** Oh, that is huge. Alt plus F2. I am writing that down.
 
----
 
 **Alex:** Now, we have been talking about using Codespaces in the web browser. But you do not actually have to use the browser. You can connect to a cloud Codespace using your local installation of VS Code on your computer.
 
@@ -6664,7 +6432,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** Exactly. Your screen reader is interacting with your local desktop application, which is usually faster and more responsive, but all the heavy lifting, the terminal commands, the file saving, is happening on the GitHub server. It is the best of both worlds.
 
----
 
 **Jamie:** Let us shift gears to something that always confused me. When I am developing locally, and I write a simple website, I usually run a command to start a local web server. Then I go to my browser and type local host colon three thousand to preview my site. But if my code is running on a cloud server in a Codespace, how do I preview my website?
 
@@ -6682,7 +6449,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** When the notification pops up, it usually includes a button to Open in Browser. If you miss the notification, which is easy to do, you can open the Command Palette with Control plus Shift plus P, and search for the command Ports colon Focus on Ports View. This opens a panel listing all your forwarded ports, and you can simply press Enter on the one you want to open. GitHub assigns it a unique, secure URL that only you can access.
 
----
 
 **Jamie:** Okay, this all sounds incredibly powerful, which leads me to my next logical question. How much does this cost? Because renting a cloud computer cannot be free forever.
 
@@ -6708,7 +6474,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** From that same dashboard, you just navigate to the stopped Codespace and activate the button that says Open in. It will spin up the machine again, and in a few seconds, you are right back where you left off.
 
----
 
 **Jamie:** Before we wrap up, I have seen another feature called GitHub dot dev. You just press the period key on any repository and a browser editor opens. Is that the same thing as a Codespace?
 
@@ -6726,7 +6491,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 **Alex:** Exactly.
 
----
 
 **Alex:** We have covered a massive amount of ground today. Let us recap our key takeaways. First, a Codespace is a cloud hosted virtual machine running VS Code, giving you a full, pre configured development environment without installing anything locally.
 
@@ -6742,7 +6506,6 @@ Based on: [Appendix N: GitHub Codespaces](docs/appendix-n-github-codespaces.md)
 
 </details>
 
----
 
 ### Episode 32: GitHub Mobile
 
@@ -6772,7 +6535,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Alex:** That is a very common feeling. And that is exactly why GitHub Mobile exists. We are going to cover what the app offers, how to install it on iOS and Android, and how to navigate it using VoiceOver and TalkBack. We will talk through viewing notifications, reading issues, reviewing pull requests, and browsing code. Finally, we will discuss some current accessibility limitations and when it makes sense to use mobile versus your desktop.
 
----
 
 **Alex:** Let us start with what GitHub Mobile actually is. It is an official app available for both iOS and Android devices. You can download it by opening the App Store on your iPhone or iPad, or the Google Play Store on your Android device, and searching for GitHub.
 
@@ -6792,7 +6554,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Alex:** You can move between these tabs by navigating to them and activating them, just like any other standard app on your phone. But before we get into the specific features, we need to talk about how to actually get around the app using screen readers.
 
----
 
 **Alex:** Let us talk about iOS and VoiceOver first. If you are using an iPhone or iPad, you likely already know that you can toggle VoiceOver on by triple-clicking the side button on newer phones, or the Home button on older ones. You can also turn it on by navigating to Settings, then Accessibility, then VoiceOver.
 
@@ -6816,7 +6577,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Alex:** That is a perfect analogy. You will also use the Form Controls option on the Rotor quite a bit. When you want to leave a comment on a pull request, selecting Form Controls and swiping down will jump your focus straight to the text input field, so you do not have to hunt for it.
 
----
 
 **Jamie:** OK, but what if I am on an Android device? I know we have a lot of Android users in the workshop who use TalkBack.
 
@@ -6842,7 +6602,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Alex:** Yes, Explore by Touch is fantastic on GitHub Mobile. Instead of swiping sequentially through every item, you just drag one finger slowly across the glass of your screen. TalkBack will announce whatever is underneath your finger. It is exactly like reading a tactile map with your hands. Once you learn the general layout of the app, dragging your finger directly to the tab bar is much faster than swiping fifty times to get there.
 
----
 
 **Jamie:** So now that we know how to move around, let us talk about the feature I use the most. The Notifications tab.
 
@@ -6866,7 +6625,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Jamie:** That is a lifesaver when you are working on a massive open-source project and there are hundreds of notifications a day. You just filter by "Review Requested," handle those three items, and get on with your day.
 
----
 
 **Alex:** Let us talk about what happens when you actually open an issue. Remember, an issue is where conversations happen about bugs or new ideas.
 
@@ -6888,7 +6646,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Jamie:** On Android, I usually just use the system back gesture, which is swiping right then left. That hides the keyboard, and then I can swipe right to find the Comment button. It feels natural once you do it a few times, but the first time it happens, it is definitely confusing.
 
----
 
 **Alex:** Now let us move on to pull requests. This is where GitHub Mobile really shines for developers on the go.
 
@@ -6920,7 +6677,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Alex:** Exactly. You can read the code, but there is no syntax highlighting, and more importantly, you cannot edit the files directly in the app. If you need to write code, you need to use a desktop environment or a cloud tool like GitHub Codespaces.
 
----
 
 **Alex:** Before we wrap up, we need to be honest about the current accessibility limitations of GitHub Mobile. While it is a fantastic tool, it is not perfect.
 
@@ -6940,7 +6696,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Alex:** Yes, like any app, GitHub Mobile can occasionally freeze or crash. If your screen reader suddenly stops responding while inside the app, the best step is to force close the application. On iOS, you swipe up from the bottom edge and hold to open the app switcher, then swipe up on GitHub to close it. On Android, you open your recent apps and swipe it away. Then just reopen it. If it keeps happening, you can navigate to your Profile, open Settings, and sign out, then sign back in.
 
----
 
 **Jamie:** So, comparing mobile to desktop, what is the final verdict?
 
@@ -6952,7 +6707,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 **Jamie:** And of course, for actually writing and editing code, desktop is the only way to go.
 
----
 
 **Alex:** That brings us to the end of Episode 32. Let us recap our main takeaways.
 
@@ -6974,7 +6728,6 @@ Based on: [Appendix O: GitHub Mobile](docs/appendix-o-github-mobile.md)
 
 </details>
 
----
 
 ### Episode 33: Publishing with GitHub Pages
 
@@ -7024,7 +6777,6 @@ Based on: [Appendix P: Publishing with GitHub Pages](docs/appendix-p-github-page
 
 **Alex:** Spot on. But for many things, a brochure is exactly what you need. GitHub Pages is perfect for documentation sites, project landing pages, personal portfolios, and even simple blogs. In fact, the workshop materials for this very audio series are hosted on GitHub Pages.
 
----
 
 **Jamie:** Okay, I am sold. How do I actually turn this on for my repository?
 
@@ -7058,7 +6810,6 @@ Based on: [Appendix P: Publishing with GitHub Pages](docs/appendix-p-github-page
 
 **Alex:** Almost instantly. GitHub will take a minute or two to build and deploy the site. Once the first deployment succeeds, a message will appear at the top of that Pages settings screen with your new live URL.
 
----
 
 **Jamie:** Let us talk about that URL. If I do not have my own domain name, what address does GitHub give me?
 
@@ -7076,7 +6827,6 @@ Based on: [Appendix P: Publishing with GitHub Pages](docs/appendix-p-github-page
 
 **Alex:** Yes. When GitHub Pages cannot find a file a visitor is looking for, it automatically serves that specific file. It is a great place to put a friendly message and a link back to your home page. Think of it like hiring a polite receptionist to tell visitors they have the wrong room, rather than just letting them walk face-first into a locked brick wall.
 
----
 
 **Jamie:** Okay, so we have talked about hosting plain HTML files. But writing a whole website in raw HTML sounds exhausting. If I have a blog with fifty posts, I do not want to copy and paste my navigation menu fifty times.
 
@@ -7110,7 +6860,6 @@ Based on: [Appendix P: Publishing with GitHub Pages](docs/appendix-p-github-page
 
 **Alex:** Tons of them. When you select GitHub Actions as your source in the settings, GitHub will actually suggest pre-written workflow files based on the code in your repository. If it sees a Next dot js project, it will offer you a Next dot js template. You just commit the file, and the robot takes over.
 
----
 
 **Jamie:** Alright, let us talk about domains. Because jamie codes dot github dot io is nice, but I really want my site to be at jamie codes dot com. Can I use a custom domain with a free GitHub Pages site?
 
@@ -7160,7 +6909,6 @@ Based on: [Appendix P: Publishing with GitHub Pages](docs/appendix-p-github-page
 
 **Alex:** Yes. And more importantly, if you are on a free GitHub account, your repository must be set to Public to use GitHub Pages. That means your entire source code history is visible to the world. Even if you delete a file with a password in it, that file still exists in your git history. So keep your secrets out of your repository.
 
----
 
 **Jamie:** Let us pivot to something I care deeply about. Accessibility. If I publish a website using GitHub Pages, is it automatically accessible to screen readers?
 
@@ -7196,7 +6944,6 @@ Based on: [Appendix P: Publishing with GitHub Pages](docs/appendix-p-github-page
 
 **Jamie:** That is brilliant. I am definitely setting that up for my next project. I wish I had known that when I started.
 
----
 
 **Alex:** We have covered a lot of ground today. Let us recap our main takeaways. First, GitHub Pages is a free hosting service that serves static files directly from your repository. It is perfect for documentation, portfolios, and blogs, but it does not run server-side code.
 
@@ -7214,7 +6961,6 @@ Based on: [Appendix P: Publishing with GitHub Pages](docs/appendix-p-github-page
 
 </details>
 
----
 
 ### Episode 34: GitHub Actions and Workflows
 
@@ -7252,7 +6998,6 @@ Based on: [Appendix Q: GitHub Actions and Workflows](docs/appendix-q-github-acti
 
 **Alex:** Precisely. It is event-driven automation. Something happens in the repository, which is the event, and that triggers the automation, which is the action. And as a contributor to open source, you usually do not need to write these automations from scratch. The repository maintainers have already set them up. But you absolutely need to understand how to read them, what they are doing, and what to do when they fail on your pull request.
 
----
 
 **Jamie:** Okay, so if the maintainers have set up this robot assistant, where do the instructions for the robot actually live? Is it a setting in the repository dashboard somewhere?
 
@@ -7318,7 +7063,6 @@ Based on: [Appendix Q: GitHub Actions and Workflows](docs/appendix-q-github-acti
 
 **Alex:** Thousands of them. GitHub hosts a directory called the GitHub Marketplace where anyone can publish an action. There are actions to set up specific versions of Python or Node. There are actions to send a message to a Slack channel when a job finishes. There are even actions that use artificial intelligence to scan your code for accessibility issues. It is basically an app store for automation.
 
----
 
 **Jamie:** Okay, so I understand the structure now. Workflows have events. Events trigger jobs. Jobs run on runners. And jobs are made of steps, which can either be shell commands or pre-built actions. That feels very logical. But let us talk about how this actually impacts me as a contributor. When I open a pull request, what are the most common workflows I am going to encounter?
 
@@ -7358,7 +7102,6 @@ Based on: [Appendix Q: GitHub Actions and Workflows](docs/appendix-q-github-acti
 
 **Jamie:** That makes sense. It is like putting the password in a locked safe, and only the robot assistant has the combination.
 
----
 
 **Alex:** So we have covered how workflows are built. But now we need to talk about the most important part for you as a contributor. Status checks. When you open a pull request, how do you know if the CI workflow passed or failed?
 
@@ -7394,7 +7137,6 @@ Based on: [Appendix Q: GitHub Actions and Workflows](docs/appendix-q-github-acti
 
 **Alex:** Usually, no. Because the workflow is listening for the pull underscore request event, pushing a new commit to your pull request branch will automatically trigger the workflow to run again. The yellow pending indicator will appear, and you can wait to see if it turns into a green checkmark.
 
----
 
 **Jamie:** Alex, before we wrap up, I want to ask about something specific to our audience. We are a community of blind and low-vision developers. Are there workflows that specifically help with accessibility?
 
@@ -7420,7 +7162,6 @@ Based on: [Appendix Q: GitHub Actions and Workflows](docs/appendix-q-github-acti
 
 **Alex:** Yes. You can leave a polite comment on your pull request saying, this is ready for review, could a maintainer please approve the workflow runs? Once they approve you that first time, future pull requests from you will trigger the workflows automatically.
 
----
 
 **Jamie:** This has been an incredibly enlightening episode. I feel like the black box of GitHub Actions is finally open. I understand what the robot assistant is doing.
 
@@ -7444,7 +7185,6 @@ Based on: [Appendix Q: GitHub Actions and Workflows](docs/appendix-q-github-acti
 
 </details>
 
----
 
 ### Episode 35: Profile, Sponsors, and Wikis
 
@@ -7514,7 +7254,6 @@ Based on: [Appendix R: Profile, Sponsors, and Wikis](docs/appendix-r-github-prof
 
 **Alex:** That is a perfect analogy. And just like a fitness tracker, it can be motivating, but it can also be a little toxic if you obsess over it. Some developers feel immense pressure to have a contribution every single day, to keep their streak going. But taking a break is healthy. From an accessibility standpoint, GitHub has improved the screen reader experience for this graph. You can navigate through the grid, and your screen reader will announce the date and the number of contributions made on that day. But remember, this graph is just one metric. It does not measure the quality of your code, your mentorship, or the time you spent reading documentation. It just measures activity.
 
----
 
 **Jamie:** Okay, so we have talked about how to present ourselves to the community using the profile README. But part of being in a community is supporting others. Let us talk about GitHub Sponsors. What exactly is it?
 
@@ -7544,7 +7283,6 @@ Based on: [Appendix R: Profile, Sponsors, and Wikis](docs/appendix-r-github-prof
 
 **Alex:** I am so glad you brought that up, Jamie. Accessibility work is highly specialized, and it absolutely deserves financial support. If you are doing that work, do not be shy about setting up a Sponsors profile and sharing the link in your pull requests or on social media.
 
----
 
 **Jamie:** All right, we have covered profiles and sponsors. Let us move to the third topic for today, which brings us back to repositories. GitHub Wikis. I know what Wikipedia is, but what is a GitHub Wiki?
 
@@ -7586,7 +7324,6 @@ Based on: [Appendix R: Profile, Sponsors, and Wikis](docs/appendix-r-github-prof
 
 **Alex:** It is. And that is the primary caveat. Because changes to the Wiki bypass your branch protection rules and pull request reviews, you should not use a Wiki for your primary, critical, version-controlled documentation. If your documentation needs to be tied to specific versions of your software, you should use a docs folder or a tool like GitHub Pages. But if you want a collaborative scratchpad, a community FAQ, or a lightweight reference guide, the Wiki is the perfect tool.
 
----
 
 **Jamie:** This has been a really refreshing episode. It is nice to zoom out from the command line and think about the community aspects of open source.
 
@@ -7606,7 +7343,6 @@ Based on: [Appendix R: Profile, Sponsors, and Wikis](docs/appendix-r-github-prof
 
 </details>
 
----
 
 ### Episode 36: Organizations and Templates
 
@@ -7668,7 +7404,6 @@ Based on: [Appendix S: Organizations and Templates](docs/appendix-s-github-organ
 
 **Alex:** Exactly. If you want people to know you are part of that community, you have to navigate to your organization settings and manually change your membership visibility from private to public. Once you do that, the organization's logo will appear on your public profile.
 
----
 
 **Jamie:** Okay, so we have our office building, we have our owners, and we have our members. But what happens when the organization gets really big? Like, hundreds of members. How do you keep track of who is working on what?
 
@@ -7682,7 +7417,6 @@ Based on: [Appendix S: Organizations and Templates](docs/appendix-s-github-organ
 
 **Alex:** Usually not. Creating teams is generally reserved for owners or specific team maintainers. But as a contributor, you need to understand what teams are so that you know why you are suddenly getting notifications when a team you belong to is mentioned, and so you know how to request reviews from teams yourself.
 
----
 
 **Jamie:** Let us talk about the repositories inside these organizations. In my personal account, a repository is either public, meaning anyone on the internet can see it, or private, meaning only I can see it unless I invite someone. Does an organization have those same options?
 
@@ -7700,7 +7434,6 @@ Based on: [Appendix S: Organizations and Templates](docs/appendix-s-github-organ
 
 **Alex:** When you open a repository page, the visibility badge is displayed very prominently at the top of the page. For screen reader users, the easiest way to find this is to press the number one key to navigate to the main heading level one, which is the repository name. Right next to that heading, your screen reader will announce a label that says Public, Private, or Internal. It is usually the very next element in the reading order.
 
----
 
 **Jamie:** Okay, let us shift gears a bit. We have talked about how to organize people and control visibility. But I want to talk about actually creating new projects. In the past, I have always just created a blank repository and started from scratch. But I have been seeing this button lately called Use this template. It sits right next to the Fork button. And honestly, it confuses me. What is a repository template, and how is it different from a fork?
 
@@ -7734,7 +7467,6 @@ Based on: [Appendix S: Organizations and Templates](docs/appendix-s-github-organ
 
 **Alex:** It is literally one checkbox. You must have maintainer or owner access to the repository to do this. You navigate to the repository, open the Settings tab, and stay on the General page. If you navigate down through the page, you will find a checkbox labeled Template repository. Just check that box. The moment you do, the Use this template button will appear for anyone who visits your repository.
 
----
 
 **Jamie:** Alright, we have covered how to build the office building, how to assign the teams, and how to stamp out new projects using templates. Let us talk about the end of a project's lifecycle. Sometimes projects die. Or they finish, which is a nicer way to think about it. I have noticed sometimes I land on a repository and my screen reader announces a big warning banner that says the repository has been archived. What does archiving a repository mean, and why do maintainers do it?
 
@@ -7756,7 +7488,6 @@ Based on: [Appendix S: Organizations and Templates](docs/appendix-s-github-organ
 
 **Alex:** Yes, you can! You can fork an archived repository and continue the work on your own account. In fact, if you find a repository that you planned to contribute to is archived, the best thing to do is to check the network graph or search GitHub to see if someone else has already forked it and created a successor project.
 
----
 
 **Jamie:** We have one last topic to cover today, and this is one that genuinely intimidated me the first time I had to do it. Transferring repository ownership. Sometimes you build a project on your personal account, it gets really popular, and you decide to move it into an organization. How does transferring work, and is it as scary as it feels?
 
@@ -7778,7 +7509,6 @@ Based on: [Appendix S: Organizations and Templates](docs/appendix-s-github-organ
 
 **Alex:** Exactly. It is designed to make you pause and think.
 
----
 
 **Jamie:** Wow. We covered a massive amount of ground today. We moved out of the personal apartment and into the corporate office building.
 
@@ -7798,7 +7528,6 @@ Based on: [Appendix S: Organizations and Templates](docs/appendix-s-github-organ
 
 </details>
 
----
 
 ### Episode 37: Contributing to Open Source
 
@@ -7840,7 +7569,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 **Alex:** Exactly. When you encounter a project with those issues, filing a bug report that explains exactly what your screen reader is announcing, and how it breaks your navigation, is a high-value contribution. Suggesting a fix, like adding an aria-label or fixing the heading levels, improves that project for everyone. You do not need anyone's permission to do this. If a repository's issues are public, you can suggest an improvement today.
 
----
 
 **Jamie:** Okay, so let us say I am convinced. I want to help fix the garden. How do I actually find my first issue? Because there are millions of repositories on GitHub. It feels like looking for a needle in a haystack.
 
@@ -7858,7 +7586,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 **Alex:** You can. You can use GitHub's global search. For example, if you type label colon quote good first issue quote, space, is colon open, space, language colon markdown. That search string will return open issues labeled as good first issue, specifically in repositories that use Markdown, which usually means documentation tasks. It is a fantastic way to find small typos or broken links to fix.
 
----
 
 **Jamie:** So, I run my search, and I find an issue that sounds interesting. How do I know if the project itself is a good place to contribute? Because some communities are more welcoming than others.
 
@@ -7874,7 +7601,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 **Jamie:** Going back to analogies, it is like staying at a guest house. Before you start rearranging the kitchen, you should read the house rules left on the counter. The contributing file might tell you that they want commit messages formatted a specific way, or that you need to run a certain command to test your code before opening a pull request. Reading that file saves everyone a lot of time.
 
----
 
 **Alex:** Let us talk about the issue itself. You found a welcoming project, you read the contributing file, and you found an issue labeled good first issue. Before you start typing, you need to read the issue carefully and scope your contribution.
 
@@ -7890,7 +7616,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 **Alex:** If the coast is clear, and the issue makes sense, leave a brief, polite comment. Something like, I would like to work on this, I will open a draft pull request shortly. This claims the issue and lets the maintainers know you are on it.
 
----
 
 **Jamie:** Alright, we have claimed the issue. Now we have to actually do the work. OK, this part sounds like a lot of steps when you first hear it.
 
@@ -7914,7 +7639,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 **Jamie:** And finally, step seven. The grand finale. You open a pull request. You navigate back to the original repository on GitHub, and GitHub will usually display a banner recognizing your recent push, with a button to Compare and pull request. You activate that, and you are literally requesting that the maintainer pull your changes from your recipe box back into their original recipe box.
 
----
 
 **Alex:** When you reach that pull request screen, you need to write a description. Writing a pull request description that maintainers will appreciate is an art form. You are handing them a piece of work to review, and they might have zero context about who you are or what you are doing.
 
@@ -7938,7 +7662,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 **Alex:** And remember, assume good intent. Maintainers are often volunteers managing these projects in their spare time. If they are brief, or if they take a week to reply, it is usually just because they are busy. If you are waiting for a review, it is completely appropriate to leave one polite follow up comment after a week or two, just saying, Hi, checking in on this when you have a moment.
 
----
 
 **Jamie:** So, the maintainer reviews it, they approve it, and they merge it. What happens next?
 
@@ -7966,7 +7689,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 **Jamie:** And the best part is, you can take your time. Each course takes maybe thirty to sixty minutes. You can track your progress by keeping a list of the courses you have completed. All the links are available in Appendix Z of the workshop materials.
 
----
 
 **Alex:** We have covered a lot of ground today. Let us wrap up with some concrete takeaways for contributing to open source. First, remember that code is only one type of contribution. Documentation, bug reports, and accessibility reviews are incredibly valuable and desperately needed.
 
@@ -7988,7 +7710,6 @@ Based on: [Appendix T: Contributing to Open Source](docs/appendix-t-contributing
 
 </details>
 
----
 
 ### Episode 38: Resources and Links
 
@@ -8022,7 +7743,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Alex:** No, actually, you only need one. The central project repository from this workshop. The Accessibility Agents repository that you forked on Day 1. That is your permanent reference.
 
----
 
 **Alex:** Let us talk about that fork. When you fork a repository, you are making your own personal copy of the project on GitHub. But the real magic happens when you bring it down to your own computer. We call that cloning. Cloning is creating a local copy of a repository on your own hard drive.
 
@@ -8048,7 +7768,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Jamie:** I wish I had known about those guides when I started. I spent a lot of time just pressing the Tab key and hoping for the best.
 
----
 
 **Alex:** Let us move on to how you can continue practicing these skills. Reading documentation is one thing, but muscle memory comes from doing. That brings us to GitHub Skills.
 
@@ -8076,7 +7795,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Alex:** If you want to reinforce what we learned here, start with the Introduction to GitHub course. It takes less than an hour and covers branches, commits, and pull requests. Then, take the Review Pull Requests course. It teaches you how to leave comments, suggest changes, and approve code. And finally, I highly recommend the Resolve Merge Conflicts course. Merge conflicts are usually the scariest part for beginners, but practicing them in a safe, automated environment takes all the fear away.
 
----
 
 **Jamie:** Okay, so GitHub Skills covers the GitHub side of things. But what about Git itself? Git is the underlying version control system that powers all of this, right? I still get confused sometimes between Git and GitHub.
 
@@ -8094,7 +7812,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Alex:** It is a mixed bag. They do have a command-line interface that you can interact with, which is readable, but the visual tree diagram is the main selling point, and that part is not conveyed well to screen readers. For our blind and low-vision listeners, I actually recommend leaning heavily on the official GitHub Git Cheat Sheet. It is a text-based PDF that lists every major Git command and explains exactly what it does in plain English. Keep that PDF open in a separate window, and practice the commands in your own VS Code terminal.
 
----
 
 **Alex:** Speaking of VS Code, we need to talk about your local development environment. VS Code is like your personal physical workshop. When you walk into a physical workshop, you want your tools arranged exactly how you like them, so you can reach out and grab a screwdriver or a wrench without even looking.
 
@@ -8108,7 +7825,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Jamie:** So if the GitHub Accessibility guides are the tour guide for the website, the VS Code Accessibility documentation is the blueprint for organizing your digital workshop.
 
----
 
 **Jamie:** Alex, what if someone wants to go beyond just learning Git and GitHub? What if they are a screen reader user who wants to learn how to code from scratch, or pick up a new programming language? Where should they go?
 
@@ -8126,7 +7842,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Alex:** Exactly. Both of these platforms are also entirely open source, hosted on GitHub. If you ever find an accessibility bug in their curriculum, you can open an issue or even submit a pull request to fix it.
 
----
 
 **Jamie:** That is a perfect transition. Let us talk about contributing. Once someone finishes this workshop, and maybe does a few GitHub Skills courses, how do they find real open source projects to contribute to? It feels like standing at the edge of the ocean. There are millions of repositories. Where do you even start?
 
@@ -8148,7 +7863,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Alex:** Exactly. You can combine search terms. You could search for is colon open, is colon issue, label colon help dash wanted, and topic colon screen dash reader. That query will give you a list of open issues where maintainers are explicitly asking for help with screen reader compatibility. It is a fantastic way to find projects where your specific skills are desperately needed.
 
----
 
 **Alex:** Finally, we need to talk about community. Learning all of this can sometimes feel isolating. When you hit a wall, or when a tool updates and suddenly your screen reader is not reading a specific menu correctly, you need a place to ask questions.
 
@@ -8164,7 +7878,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 **Alex:** You are absolutely not alone. There is a massive, vibrant community of blind and low-vision developers out there writing incredible code and shaping the future of open source. You are just taking your first steps to join them.
 
----
 
 **Alex:** Alright, let us wrap up this episode with a few concrete takeaways. Jamie, what should our listeners remember?
 
@@ -8178,7 +7891,6 @@ Based on: [Appendix U: Resources and Links](docs/appendix-u-resources.md)
 
 </details>
 
----
 
 ### Episode 39: Accessibility Agents - Complete Reference
 
@@ -8208,7 +7920,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Alex:** It does sound intimidating! But here is the thing. You have already done most of this on Day 1 of the workshop. You already know the workflow. The only difference now is that Visual Studio Code and GitHub Copilot are handling the heavy lifting. You do not have to memorize 55 agents. Think of it like walking into a massive digital agency. You do not need to know what every single employee does, you just need to know which department to walk into when you have a specific problem.
 
----
 
 **Alex:** Let us start with that digital agency analogy. The accessibility agents ecosystem is divided into three teams, or departments. The first is the Accessibility Team, which is the largest, with 26 agents.
 
@@ -8232,7 +7943,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Alex:** The Developer Tools Team. This has 6 agents focused on specific environments. For example, at python specialist for Python accessibility patterns, or at desktop a 11 y specialist for Windows, Mac, and Linux native app accessibility.
 
----
 
 **Alex:** Now, alongside those 55 conversational agents, we have over 54 slash commands.
 
@@ -8270,7 +7980,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Jamie:** Yes! Silent failures are the worst. If a section is just missing, I always wonder if the agent broke, or if my screen reader skipped it, or if there really was nothing there. Explicitly saying All Clear removes so much cognitive load.
 
----
 
 **Alex:** So, we know how the agents work out of the box. But every developer, every team, and every project is different. That brings us to customization. How do we teach the agents our specific rules?
 
@@ -8298,7 +8007,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Alex:** Yes. You literally just write, I use N V D A with Chrome on Windows 11. The agents read this, and suddenly, they stop giving you instructions for VoiceOver on a Mac. They tailor their output specifically to your technology stack.
 
----
 
 **Alex:** Now, Jamie, we just talked about project rules versus personal rules. This is a perfect transition to our next concept, which is workspace configuration and scope.
 
@@ -8314,7 +8022,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Alex:** The most specific, local scope always wins. Your Personal User profile has the highest priority. It overrides the Workspace, and the Workspace overrides the Organization. So your comments will be casual and friendly. Visual Studio Code collects all the instruction files from all three scopes, combines them, and sends them to the agent. Priority only matters when there is a direct contradiction.
 
----
 
 **Alex:** So far, we have been consumers. We are using the 55 agents that already exist, and we are tweaking their instructions. But what if you want to build your own custom, domain-specific agent?
 
@@ -8342,7 +8049,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Alex:** Yes, you can set a flag called user dash invocable to false. This hides the agent from the chat menu. It becomes a background worker that only other agents can talk to.
 
----
 
 **Alex:** Let us talk about version compatibility and update patterns. AI models are changing constantly. What happens if you build a custom agent that relies on a specific model, like Claude Sonnet, but then you share your project with a friend whose company only licenses GPT 4?
 
@@ -8358,7 +8064,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Alex:** Exactly. You can set a Pre Tool Use hook. Before the agent is allowed to use a tool to edit a file, the hook can run a script to validate the request. You can set a Post Tool Use hook to automatically run a code formatter every time the agent finishes writing a file. Hooks are deterministic. They run every single time, regardless of what the user typed in the chat.
 
----
 
 **Alex:** Alright Jamie, we have covered a massive amount of ground. We are at the final concept. Troubleshooting. What happens when you type at daily briefing, and Visual Studio Code just says, Agent not found?
 
@@ -8374,7 +8079,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 **Alex:** Press Control plus Shift plus P to open the Command Palette, type Reload Window, and press Enter. It takes about two seconds, and it completely refreshes the agent's brain, picking up any new files you just created.
 
----
 
 **Alex:** And that brings us to the end of our complete reference guide for Accessibility Agents. Jamie, what are your top takeaways from today?
 
@@ -8388,7 +8092,6 @@ Based on: [Appendix V: Accessibility Agents - Complete Reference](docs/appendix-
 
 </details>
 
----
 
 ### Episode 40: GitHub Copilot - Complete Reference
 
@@ -8436,7 +8139,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Jamie:** And the best part is, you do not even have to wait for the response to finish generating anymore. You can press Alt plus F 2 immediately after sending a prompt, and the Accessible View will dynamically update in a screen-reader-friendly way. Once you read the suggestion and decide you want it, you just press Control plus Slash, or Command plus Slash on Mac, and it inserts the code right at your cursor. You do not even have to close the panel first.
 
----
 
 **Alex:** Now let us move to the second pillar: Copilot Chat. You open this panel by pressing Control plus Shift plus I, or Command plus Shift plus I on Mac. This is where you can ask open-ended questions. But the real power comes from Chat Participants.
 
@@ -8456,7 +8158,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Alex:** You absolutely could. And that actually leads us perfectly into our next topic: Slash Commands.
 
----
 
 **Alex:** Slash commands are built-in shortcuts for the most common tasks you might want Copilot to do. Instead of typing out a long prompt, you just type a forward slash and a specific keyword.
 
@@ -8472,7 +8173,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Alex:** And if you ever forget these, just type slash help. It will list all the available commands and participants.
 
----
 
 **Jamie:** Okay, so built-in slash commands are great. But what if I want my own custom popcorn buttons? What if my team has very specific ways we write tests, or very specific accessibility rules we follow? I do not want to type those rules out every single time I ask Copilot to generate code.
 
@@ -8502,7 +8202,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Alex:** Exactly. And there is a priority system here that is important to understand. You can have instructions at the Organization level, the Workspace level, and the User level. The User level refers to files stored in your personal VS Code profile folder. If there is ever a conflict, your personal User instructions always win. They override the Workspace, and the Workspace overrides the Organization. But mostly, they are additive. VS Code combines all the relevant instructions and sends them together.
 
----
 
 **Jamie:** Let us talk about Model Selection. I noticed a dropdown menu at the bottom of the Copilot Chat input area. It lets me change the AI model. Why would I want to change it?
 
@@ -8512,7 +8211,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Alex:** Exactly. The interface lets you switch models on the fly depending on the complexity of the task. Keep in mind that as a screen reader user, you can navigate to this dropdown by tabbing through the bottom toolbar of the Chat view. Pressing Space or Enter will open the list of available models.
 
----
 
 **Jamie:** Okay, so we have covered the editor extensively. But I spend a lot of time in the command line. Does Copilot exist outside of VS Code?
 
@@ -8526,7 +8224,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Alex:** Exactly. And the second command is the reverse: g h copilot explain. If you come across a command in documentation that looks like alphabet soup, you can copy it, paste it after g h copilot explain, and it will break down exactly what every single flag and argument does.
 
----
 
 **Jamie:** Alright, let us tackle the jargon I mentioned earlier. MCP Servers. I see this acronym everywhere now. Model Context Protocol. What is it, and why should I care?
 
@@ -8540,7 +8237,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Alex:** That is right. Awesome dash copilot is a curated ecosystem of plugins, prompts, and MCP servers. You can explore it right from your chat by typing slash plugin. It acts as a marketplace browser for community-built tools.
 
----
 
 **Jamie:** We have one last pillar to cover from our feature inventory: Copilot for Pull Requests. This happens on GitHub dot com, not in VS Code, right?
 
@@ -8554,7 +8250,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 **Alex:** That is a technical preview feature that takes AI automation to the next level. Instead of interacting with an agent in your editor, you write a markdown file describing a goal, like, create a daily status report of all open issues. You push that file to your repository, and a cloud-based AI agent runs on a schedule, reads your repository, and completes the task automatically. It is like having a tireless project manager running in your GitHub Actions pipeline.
 
----
 
 **Jamie:** Wow. We have covered a massive amount of ground today. From ghost text to cloud agents. How do we summarize all of this?
 
@@ -8574,7 +8269,6 @@ Based on: [Appendix W: GitHub Copilot - Complete Reference](docs/appendix-w-gith
 
 </details>
 
----
 
 ### Episode 41: Copilot AI Models
 
@@ -8628,7 +8322,6 @@ Based on: [Appendix X: Copilot AI Models](docs/appendix-x-copilot-models.md)
 
 **Alex:** Yes, and they excel at understanding unfamiliar codebases. If you join a new open source project and you need someone to explain how their authentication flow works across ten different files, Claude Opus or Gemini 3 Pro are the models you want reading those files.
 
----
 
 **Jamie:** We should also talk about a term that has been popping up a lot lately. Agentic software development. I hear people saying Copilot has an Agent mode now. What does agentic actually mean in this context?
 
@@ -8644,7 +8337,6 @@ Based on: [Appendix X: Copilot AI Models](docs/appendix-x-copilot-models.md)
 
 **Jamie:** That is brilliant. I wish I had known that when I started. It completely removes the barrier of needing a sighted colleague to describe a screenshot to me.
 
----
 
 **Alex:** Now that we know about all these different models, we need to talk about how you actually get access to them. GitHub Copilot has several different subscription plans. There is Copilot Free, Copilot Pro, Copilot Pro Plus, Business, and Enterprise.
 
@@ -8664,7 +8356,6 @@ Based on: [Appendix X: Copilot AI Models](docs/appendix-x-copilot-models.md)
 
 **Alex:** Exactly. You want to save those premium requests for the truly demanding tasks. Now, if you are on Copilot Pro Plus or Copilot Enterprise, you have unlimited premium requests, so you do not have to worry about quotas. But for everyone else, managing that multiplier is an important part of your workflow.
 
----
 
 **Jamie:** Alright, let us get practical. I am in Visual Studio Code right now. How do I actually switch between these models?
 
@@ -8690,7 +8381,6 @@ Based on: [Appendix X: Copilot AI Models](docs/appendix-x-copilot-models.md)
 
 **Alex:** Because inline suggestions have to be instantaneous. If you are typing a function, you cannot wait five seconds for Claude Opus to ponder the meaning of your code. You need a suggestion in milliseconds. So GitHub exclusively uses highly specialized, hyper-fast models for inline completions. Right now, those are fine-tuned OpenAI models called Raptor mini and Goldeneye. You cannot manually switch those. GitHub manages them in the background to guarantee speed. You only choose models for the Chat and Agent interactions.
 
----
 
 **Jamie:** Earlier, my screen reader announced that my selected model was Auto. What exactly does Auto do?
 
@@ -8708,7 +8398,6 @@ Based on: [Appendix X: Copilot AI Models](docs/appendix-x-copilot-models.md)
 
 **Alex:** You just open the model picker dropdown again using the steps we discussed, arrow to the very top of the list, and select Auto. It is just another option in the menu.
 
----
 
 **Jamie:** One thing I have noticed over the last two years is that the models keep changing. I remember when everyone was talking about GPT 4, and now we are talking about GPT 5.2. It feels hard to keep up.
 
@@ -8722,7 +8411,6 @@ Based on: [Appendix X: Copilot AI Models](docs/appendix-x-copilot-models.md)
 
 **Alex:** Yes, the best place to track this is the official GitHub Copilot changelog on the GitHub blog. They announce all model additions and retirements there. It is a great resource to check once a month just to see what new tools have been added to your workshop.
 
----
 
 **Jamie:** This has been incredibly enlightening. I feel like I finally understand what is happening behind the scenes. What are our key takeaways for today?
 
@@ -8738,7 +8426,6 @@ Based on: [Appendix X: Copilot AI Models](docs/appendix-x-copilot-models.md)
 
 </details>
 
----
 
 ### Episode 42: Accessing Workshop Materials
 
@@ -8800,7 +8487,6 @@ Based on: [Appendix Y: Accessing Workshop Materials](docs/appendix-y-accessing-w
 
 **Alex:** Exactly. Our HTML files include breadcrumb navigation, skip-to-content links, and ARIA landmarks. ARIA stands for Accessible Rich Internet Applications, and landmarks are invisible signposts that tell your screen reader where the main content begins, where the navigation menu is, and so on.
 
----
 
 **Jamie:** So let us say I am attending the workshop, and I want the fully produced stage play. I want the HTML version with all those navigational signposts. How do I get to it? Do I have to download something?
 
@@ -8842,7 +8528,6 @@ Based on: [Appendix Y: Accessing Workshop Materials](docs/appendix-y-accessing-w
 
 **Alex:** Exactly. And once you open a Markdown file on GitHub dot com, GitHub automatically renders it. It turns the number signs into actual headings, and it formats the code blocks. So you can still use your H key to navigate by headings, even though it is technically a Markdown file.
 
----
 
 **Jamie:** Okay, so reading online is great. But what if I am going to be on a train with no internet, or what if I just want all the files on my own computer so I can open them in my own editor? That sounds like a lot of steps.
 
@@ -8876,7 +8561,6 @@ Based on: [Appendix Y: Accessing Workshop Materials](docs/appendix-y-accessing-w
 
 **Alex:** Exactly. But cloning with Git is like signing up for a smart digital subscription. You get all the current news today. And tomorrow, you can just ask the service for any updates, and it will only send you the new articles, slotting them perfectly into your existing app. Cloning keeps your local folder connected to the original source on GitHub.
 
----
 
 **Jamie:** That makes perfect sense. Okay, so I have used Git clone, and now I have a folder on my computer called Learning hyphen Room. It is full of stuff. I want to read chapter one offline. How do I do that?
 
@@ -8906,7 +8590,6 @@ Based on: [Appendix Y: Accessing Workshop Materials](docs/appendix-y-accessing-w
 
 **Alex:** It opens a new pane that renders the Markdown as rich text. Your screen reader will interact with it almost exactly like a web page. You can use your H key to jump by headings, your list commands to read bullet points, and it hides all the raw punctuation. It is a wonderful way to read offline if you prefer to stay inside VS Code rather than opening a browser.
 
----
 
 **Jamie:** I am learning so many shortcuts today. Control plus Shift plus E for the Explorer, Control plus Shift plus V for the Markdown preview. This is great. But let us go back to that smart subscription analogy. You said if I clone the repository, I can easily get updates. Let us say it is day two of the workshop. The instructor says, I just fixed a typo in chapter four and added a new cheat sheet. How do I get those updates into my local folder?
 
@@ -8928,7 +8611,6 @@ Based on: [Appendix Y: Accessing Workshop Materials](docs/appendix-y-accessing-w
 
 **Alex:** Sure. N P M, space, run, space, build, colon, html. That command runs a small program on your computer that reads all the Markdown files and generates fresh HTML files. So if you ever edit the materials yourself and want to see the changes in the browser, you just run that command.
 
----
 
 **Jamie:** Okay, we have covered reading online, downloading everything, reading offline, and staying updated. I have one last scenario. What if I do not want the whole repository? What if I literally just want the keyboard shortcut cheat sheet so I can print it out or emboss it in Braille? Can I download just one file?
 
@@ -8940,7 +8622,6 @@ Based on: [Appendix Y: Accessing Workshop Materials](docs/appendix-y-accessing-w
 
 </details>
 
----
 
 ### Episode 43: GitHub Skills - Complete Course Catalog
 
@@ -8998,7 +8679,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Alex:** That works too! You can also pin your favorite completed course repositories to your main GitHub profile. And finally, Appendix Z has a personal completion checklist. You can literally just copy that markdown list into a private issue or a local text file and check off the boxes as you go.
 
----
 
 **Jamie:** Alright, let us talk about the courses themselves. There are thirty-six modules in total, organized into different learning paths. But before we hit the advanced stuff, there are three courses that are actually woven into Day 1 of the workshop.
 
@@ -9012,7 +8692,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Alex:** If you are listening to this and you did not finish those three modules during Day 1, that is your very first prerequisite. Go finish those before you attempt anything else. They are the foundation of everything we do on GitHub.
 
----
 
 **Jamie:** Once those are done, we have six distinct learning paths to choose from. You do not have to do all of them, right? You just pick the path that matches your goals.
 
@@ -9026,7 +8705,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Alex:** It is time travel! Sometimes you make a typo in a commit message, or you want to combine five messy commits into one clean one before you share your work. This course teaches you how to amend commits, squash them together, and reorder your history using a tool called interactive rebase. It requires the Introduction to Git course as a prerequisite, but it is incredibly powerful once you learn it.
 
----
 
 **Jamie:** Path 2 is GitHub Collaboration. This feels like the path for people who want to become open source maintainers or run projects for their team.
 
@@ -9042,7 +8720,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Jamie:** I love that feature. It feels like magic. Then we have GitHub Pages, which teaches you how to host a website directly from your repository for free. And finally, Release-Based Workflow, where you learn how to tag specific points in your history as official version releases, like version 1 point 0.
 
----
 
 **Alex:** Moving on to Path 3, GitHub Actions and Automation. This is for the DevOps folks, or really anyone who is tired of doing repetitive tasks manually.
 
@@ -9062,7 +8739,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Alex:** Yes, the newest courses are AI in Actions and Create AI-Powered Actions. These teach you how to integrate artificial intelligence models directly into your automation pipelines. So your automated workflows can actually summarize pull requests, or categorize issues based on their text content, without human intervention.
 
----
 
 **Jamie:** Speaking of AI, that brings us to Path 4, GitHub Copilot. This is the biggest path in the catalog, with ten different courses.
 
@@ -9082,7 +8758,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Jamie:** Wow. From basic chat all the way to translating COBOL. That is quite a journey.
 
----
 
 **Alex:** Let us shift gears to Path 5, Security. Security is everyone's job, but it can feel overwhelming. This path breaks it down perfectly.
 
@@ -9094,7 +8769,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Alex:** Finally, we have Introduction to CodeQL and Configure CodeQL Language Matrix. CodeQL is GitHub's semantic code analysis engine. Think of it as a building inspector. It reads your code, understands the flow of data, and flags structural weaknesses, like a place where a hacker could inject malicious SQL commands into your database. These courses teach you how to enable and configure that inspector.
 
----
 
 **Jamie:** Alright, the final path. Path 6, Cloud and Migration.
 
@@ -9108,7 +8782,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 **Alex:** And the final course in the entire catalog is Idea to App with Spark. GitHub Spark is an AI tool that lets you build small web applications entirely through natural language, without writing the code yourself. It is a fantastic way to rapidly prototype ideas.
 
----
 
 **Jamie:** Okay, that is thirty-six courses across six paths. It is a lot to take in. How should someone actually approach this after the workshop?
 
@@ -9132,7 +8805,6 @@ Based on: [Appendix Z: GitHub Skills - Complete Course Catalog](docs/appendix-z-
 
 </details>
 
----
 
 ## Production
 

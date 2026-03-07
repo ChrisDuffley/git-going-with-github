@@ -5,7 +5,6 @@
 **Auditor:** GitHub Copilot  
 **Status:** Complete audit with critical findings
 
----
 
 ## Executive Summary
 
@@ -15,39 +14,37 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 
 | Chapter | Title | Status | Priority Issues |
 |---------|-------|--------|-----------------|
-| Ch 4 | Working with Issues | ✅ PASS | No issues found |
-| Ch 5 | Working with Pull Requests | ✅ PASS | No issues found |
-| Ch 6 | Merge Conflicts | ✅ PASS | No issues found |
-| Ch 7 | Culture & Etiquette | ⚠️ WARN | Optional challenge lacks clarity on evaluation |
-| Ch 8 | Labels/Milestones/Projects | ✅ PASS | No critical issues |
-| Ch 9 | Notifications | ⚠️ WARN | Time estimate may be optimistic; screen reader testing needed |
-| Ch 10 | VS Code Basics | ⚠️ WARN | Keyboard shortcut consistency; VoiceOver parity |
-| Ch 11 | Git & Source Control | ⚠️ WARN | Time estimates may be low for beginners; repository complexity |
-| Ch 12 | GitHub PR Extension | ⚠️ WARN | Write access assumption; authentication flow clarity |
-| Ch 13 | GitHub Copilot | ⚠️ WARN | Copilot subscription assumption not flagged upfront |
-| Ch 14 | Accessible Code Review | ✅ PASS | Wells structured with good "If You Get Stuck" guidance |
-| Ch 15 | Issue Templates | ⚠️ WARN | Prerequisites scattered; YAML syntax complexity underestimated |
-| Ch 16 | Accessibility Agents | ⚠️ WARN | Agent count (55) unprepared for; unclear agent discovery method |
+| Ch 4 | Working with Issues |  PASS | No issues found |
+| Ch 5 | Working with Pull Requests |  PASS | No issues found |
+| Ch 6 | Merge Conflicts |  PASS | No issues found |
+| Ch 7 | Culture & Etiquette |  WARN | Optional challenge lacks clarity on evaluation |
+| Ch 8 | Labels/Milestones/Projects |  PASS | No critical issues |
+| Ch 9 | Notifications |  WARN | Time estimate may be optimistic; screen reader testing needed |
+| Ch 10 | VS Code Basics |  WARN | Keyboard shortcut consistency; VoiceOver parity |
+| Ch 11 | Git & Source Control |  WARN | Time estimates may be low for beginners; repository complexity |
+| Ch 12 | GitHub PR Extension |  WARN | Write access assumption; authentication flow clarity |
+| Ch 13 | GitHub Copilot |  WARN | Copilot subscription assumption not flagged upfront |
+| Ch 14 | Accessible Code Review |  PASS | Wells structured with good "If You Get Stuck" guidance |
+| Ch 15 | Issue Templates |  WARN | Prerequisites scattered; YAML syntax complexity underestimated |
+| Ch 16 | Accessibility Agents |  WARN | Agent count (55) unprepared for; unclear agent discovery method |
 
----
 
 ## Detailed Chapter Analysis
 
----
 
 ### Chapter 4: Working with Issues
 
 **[PASS]** — Challenge is well-designed and achievable.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - Chapter 4 appears first in challenge work (after Chapter 2-3 orientation)
 - Prerequisites explicitly listed in documentation: "Complete Pre-Workshop Setup"
 - GitHub account and browser access is sufficient
 - All prerequisites realistic for absolute beginners
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - Challenge set is small: 3 micro-challenges
   - Create your first issue
   - Claim a challenge issue
@@ -56,15 +53,15 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Language is beginner-friendly with examples provided
 
 #### File/Link Validation
-✅ **All files and references verified:**
-- `learning-room/docs/CHALLENGES.md` exists ✓
-- `.github/ISSUE_TEMPLATE/challenge-hub.md` exists ✓
-- Guide links to Chapter 4 section in CHALLENGES.md ✓
-- Cross-reference to podcasts working (Episode 5) ✓
-- Screen reader cheatsheet reference (appendix-b) exists ✓
+ **All files and references verified:**
+- `learning-room/docs/CHALLENGES.md` exists 
+- `.github/ISSUE_TEMPLATE/challenge-hub.md` exists 
+- Guide links to Chapter 4 section in CHALLENGES.md 
+- Cross-reference to podcasts working (Episode 5) 
+- Screen reader cheatsheet reference (appendix-b) exists 
 
 #### Time Estimate Accuracy
-✅ **Verified:** 
+ **Verified:** 
 - Stated: "Under 10 minutes each challenge"
 - Assessment: **ACCURATE**
   - Issue creation: 2-3 minutes
@@ -73,14 +70,14 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Total: ~8 minutes is realistic
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - 4 specific remediation steps provided
 - Escalation path: re-read hub → search filter → retry → ask facilitator
 - Specific search filter example given: `is:open label:"challenge: beginner"`
 - No vague instructions ("just try again")
 
 #### Accessibility Assessment
-✅ **Verified:**
+ **Verified:**
 - Documentation tested with screen reader perspective
 - Search filters are keyboard-navigable following GitHub's standards
 - No emoji used as critical symbols
@@ -88,37 +85,36 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Link text is descriptive
 
 #### Recommendations
-✅ **No changes needed** — Chapter 4 is a model for other chapters.
+ **No changes needed** — Chapter 4 is a model for other chapters.
 
----
 
 ### Chapter 5: Working with Pull Requests
 
 **[PASS]** — Challenge progression builds naturally on Chapter 4.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - Explicit: "Complete Chapter 4 first"
 - All concepts from Chapter 4 (creating issues, understanding GitHub) carry forward
 - PR workflow assumes: GitHub account, basic issue understanding, web interface comfort
 - Realistic progression: small markdown fixes before tackling merge conflicts
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - Challenge set is focused: 3 steps (create branch change, open linked PR, pass checks)
 - Bot validation is clearly explained: "Watch bot feedback until required checks pass"
 - Clear linking instruction: "Include `Closes #XX`"
 - Examples provided in documentation with file paths and expected outcomes
 
 #### File/Link Validation
-✅ **All files verified:**
-- Reference to Chapter 5 docs (`docs/05-working-with-pull-requests.md`) ✓
-- Learning Room repo structure exists and is accessible ✓
-- Bot validation workflow references clear ✓
-- Template reference (PR template in `.github/`) exists ✓
+ **All files verified:**
+- Reference to Chapter 5 docs (`docs/05-working-with-pull-requests.md`) 
+- Learning Room repo structure exists and is accessible 
+- Bot validation workflow references clear 
+- Template reference (PR template in `.github/`) exists 
 
 #### Time Estimate Accuracy
-✅ **Verified:**
+ **Verified:**
 - Stated: "Under 10 minutes each"
 - Assessment: **ACCURATE for experienced users; OPTIMISTIC for complete beginners**
   - Create branch: 2-3 minutes
@@ -128,36 +124,35 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Reality check:** First-time PR authors may spend 8-12 minutes
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - Specific troubleshooting steps provided
 - "Check that changed files are only in learning-room/" — excellent specificity
 - Bot validation comment walkthrough explained
 - Escalation: "ask for peer or facilitator review with exact error message"
 
 #### Accessibility Assessment
-✅ **Verified:**
+ **Verified:**
 - PR diff reading instructions are well-documented in main chapter text
 - "Files Changed" tab navigation covered thoroughly
 - Inline comment buttons explained for screen readers
 - No accessibility gaps noted
 
 #### Recommendations
-✅ **No changes needed** — Chapter 5 maintains quality standard set by Chapter 4.
+ **No changes needed** — Chapter 5 maintains quality standard set by Chapter 4.
 
----
 
 ### Chapter 6: Merge Conflicts
 
 **[PASS]** — Single controlled challenge with appropriate scoping.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - Prerequisites: Ch 4, Ch 5, Ch 11 (Git basics)
 - Prerequisite documentation states: "Understand branch creation and PR workflow"
 - All prerequisites realistic and well-ordered
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - **Single challenge with clear scope**: "Resolve conflict markers"
 - **Step-by-step process documented**:
   1. Open assigned merge-conflict practice issue
@@ -167,14 +162,14 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Clear learning goal**: Distinguish between conflict marker lines and content
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - Reference to "designated practice file/section" is created as part of challenge setup
 - Examples of conflict marker syntax provided: `<<<<<<<, =======, >>>>>>>`
 - Main chapter documentation (`docs/06-merge-conflicts.md`) fully explains conflict resolution
 - Links to other chapters (Ch 4, 5, 11) all exist
 
 #### Time Estimate Accuracy
-✅ **Verified:**
+ **Verified:**
 - Stated: "Under 10 minutes"
 - Assessment: **ACCURATE**
   - Reading practice file: 2-3 minutes
@@ -184,7 +179,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Reality check:** Conflict resolution is cognitively simple but requires focus; 8-10 minutes realistic
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - Excellent specific steps:
   1. "Pause and read marker blocks line by line before editing" — prevents rushing
   2. "Keep one side, or combine both sides when both lines are valid" — addresses the decision point
@@ -192,28 +187,27 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   4. "Ask facilitator to sanity-check final content before opening PR" — safety valve
 
 #### Accessibility Assessment
-✅ **Verified:**
+ **Verified:**
 - Conflict marker documentation uses monospace formatting for clarity
 - Learning moment explains value of conflicts (not failure)
 - Screen reader navigation through markers is straightforward (text-based)
 
 #### Recommendations
-✅ **No changes needed** — Chapter 6 provides good model for teaching high-stakes tasks through controlled practice.
+ **No changes needed** — Chapter 6 provides good model for teaching high-stakes tasks through controlled practice.
 
----
 
 ### Chapter 7: Culture, Etiquette, and Community Standards
 
 **[WARN]** — Guidance is clear but optional challenge needs evaluation criteria clarification.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - No hard prerequisites stated; appears after PR workflow chapters
 - Implied: Students have read Chapters 4-6
 - Timing is appropriate (after technical practices, before code review)
 
 #### Instructions Clarity
-⚠️ **ISSUE FOUND:**
+ **ISSUE FOUND:**
 - Challenge is **explicitly optional** with provided reflection template
 - Template asks for 3 items:
   ```
@@ -225,13 +219,13 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Impact:** Students may not know if they've met expectations
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - Chapter 7 documentation (`docs/07-culture-etiquette.md`) exists
 - Podcast reference (Episode 8) links correctly
 - Learning moment is well-written
 
 #### Time Estimate Accuracy
-⚠️ **ISSUE FOUND:**
+ **ISSUE FOUND:**
 - Stated: "No bot-graded challenge"
 - Estimated time: Implied 5-10 minutes
 - **Problem:** No explicit time estimate provided
@@ -239,7 +233,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Risk:** Students may rush if they perceive it as quick
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - 4 specific steps provided:
   1. "Use one simple sentence per prompt"
   2. "Focus on one real behavior you can do today"
@@ -247,31 +241,30 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   4. "Ask facilitator for one example response and adapt it"
 
 #### Accessibility Assessment
-✅ **Verified:**
+ **Verified:**
 - Reflection template is unambiguous
 - Non-visual learners can engage with prompts
 - No accessibility barriers identified
 
 #### Recommendations
-🔴 **CHANGE REQUIRED:**
+ **CHANGE REQUIRED:**
 1. **Add explicit evaluation criteria:** "Your reflection is complete when you have posted one sentence for each of the three prompts. We will not judge your answers—honest reflection is the goal."
 2. **Add time estimate:** "Estimated time: 10-15 minutes"
 3. **Add clarity on optional nature:** Change "Optional" to "**Strongly Encouraged**" (optional implies students can skip; encouraged signals importance without making it required)
 
----
 
 ### Chapter 8: Labels, Milestones, and Projects
 
 **[PASS]** — Triage recommendation challenge is well-scoped and clear.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - Implicit: Complete Chapters 4-5 first (understand issues and PRs)
 - Triage context explained in main chapter documentation
 - Realistic for students who have filed and reviewed issues
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - Challenge is specific: "Post a triage recommendation comment"
 - Template provided with 4 fields:
   ```
@@ -283,20 +276,20 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Clear guidance for students **without write access**: "Write triage recommendation even if you can't apply labels"
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - `.github/ISSUE_TEMPLATE/` folder exists
 - Label, milestone, and project references are GitHub standard features
 - Main chapter documentation (`docs/08-labels-milestones-projects.md`) exists
 - Podcast reference (Episode 9) exists
 
 #### Time Estimate Accuracy
-✅ **Verified:**
+ **Verified:**
 - Stated: "1 guided challenge" with no specific time estimate visible in challenge summary
 - **Caveat:** Main chapter documentation should state time explicitly
 - Estimated actual time: 5-10 minutes (read issue, recommend, post comment)
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - 4 well-structured steps:
   1. "Start with one label only" — doesn't require mastery of all labels
   2. "If milestone is unclear, write `none` and explain why" — acceptable incompleteness
@@ -304,42 +297,41 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   4. "Ask facilitator to review your one-sentence reason before posting" — quality check option
 
 #### Learning Moment
-✅ **Verified:**
+ **Verified:**
 - "Triage is about clarity, not authority" — reframes triage as collaborative
 - Supports students who fear making wrong decisions
 
 #### Recommendations
-✅ **Minor improvement only:**
+ **Minor improvement only:**
 1. Add explicit time estimate in challenge overview: "Estimated time: 5-10 minutes"
 
----
 
 ### Chapter 9: Notifications
 
 **[WARN]** — Carefully designed but time estimate and screen reader testing may reveal gaps.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - No hard prerequisites; can be taken standalone
 - Assumes: GitHub account, browser, basic GitHub familiarity
 - Timing: Good placement after PR workflow chapters (students know what notifications they'll receive)
 
 #### Instructions Clarity
-⚠️ **ISSUE FOUND - Workflow clarity:**
+ **ISSUE FOUND - Workflow clarity:**
 - Challenge explicitly states: "No bot-graded challenge" and "No Actions-based validation"
 - **Problem:** Students may wonder if they've completed it correctly
 - **Documentation states:** Issue comment should be posted, but challenge description says "guided walkthrough"
 - **Ambiguity:** Is posting a completion comment required, or only the actions?
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - `.github/` templates reference correct
 - PODCASTS.md link (Episode 10) verified
 - Notification filters reference GitHub standard features
 - Main chapter documentation (`docs/09-notifications.md`) exists
 
 #### Time Estimate Accuracy
-⚠️ **ISSUE FOUND - Estimate optimism:**
+ **ISSUE FOUND - Estimate optimism:**
 - Stated: "5-8 minutes"
 - **Reality assessment:**
   - Navigate to Watch settings: 1-2 minutes
@@ -348,63 +340,62 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   - Apply Assigned filter: 1-2 minutes
   - Open one notification: 1 minute
   - Perform one inbox action: 1 minute
-- **Subtotal: 6-9 minutes** — consistent with estimate ✓
+- **Subtotal: 6-9 minutes** — consistent with estimate 
 - **BUT:** First-time users discovering filters might take 10-15 minutes
 - **CAVEAT:** If student has no notifications, exploring becomes slower
 
 #### "If You Get Stuck" Guidance
-✅ **Strong guidance provided:**
+ **Strong guidance provided:**
 1. "Reload the notifications page and reapply one filter at a time" — specific recovery
 2. "If inbox is empty, switch to `Done` and practice action flow there" — workaround for sparse notifications
 3. "If shortcuts conflict with screen reader mode, focus the notification row and retry" — accessibility-specific help
 4. "Ask facilitator to model one inbox action live, then repeat" — hands-on escalation
 
 #### Accessibility Assessment
-⚠️ **ISSUE FOUND - Screen reader variability:**
+ **ISSUE FOUND - Screen reader variability:**
 - Guidance assumes students know notification keyboard shortcuts
 - **Problem:** Shortcuts vary between screen readers (M = mute, E = mark done)
 - **Impact:** Screen reader users may not know shortcuts exist section mentions `M` and `E` shortcuts but doesn't confirm they work with all assistive tech
 - **Needs verification:** Testing with NVDA, JAWS, and VoiceOver on GitHub's notification UI
 
 #### Recommendations
-🟡 **Changes strongly recommended:**
+ **Changes strongly recommended:**
 1. **Add completion evidence requirement:** "After completing the walkthrough, post an issue comment saying: `Has completed Chapter 9 notification setup (Watch level set, filters applied, one action tested).`"
 2. **Add screen reader testing note:** "If keyboard shortcuts don't work with your screen reader, use the mouse/trackpad to perform actions. We're working to improve shortcut coverage."
 3. **Add time note:** "Note: Estimate assumes notifications exist. If your inbox is empty, use the Done or All tabs as shown in the 'If You Get Stuck' section."
 
----
 
 ### Chapter 10: VS Code Basics
 
 **[WARN]** — Platform accessibility varies; parity issues need flagging.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - Explicit: Complete [Pre-Workshop Setup](00-pre-workshop-setup.md) first
 - Assumes: GitHub account, browser, screen reader (implied)
 - Realistic progression: happens after GitHub web skills
 
 #### Instructions Clarity
-⚠️ **ISSUE FOUND - Platform assumption:**
+ **ISSUE FOUND - Platform assumption:**
 - Challenge explicitly uses **github.dev** (web-based VS Code)
 - **Issue:** Desktop VS Code installation is mentioned as alternative but not integrated into challenge steps
 - **Impact:** Students with desktop VS Code may be unclear if they should follow different steps
 - **Text says:** "Open github.dev with `.` (period key)" — but only works on GitHub.com
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - Reference to Accessible Help in VS Code (product feature) exists
 - Reference to Accessible View exists in VS Code Help
 - Main chapter documentation (`docs/10-vscode-basics.md`) exists
 - Podcast reference (Episode 11) verified
 
 #### Time Estimate Accuracy
-⚠️ **ISSUE FOUND - Competitive estimate:**
+ **ISSUE FOUND - Competitive estimate:**
 - Stated: "8-10 minutes"
 - **Reality assessment:**
   - Open github.dev with period key: 1 minute
   - Enable screen reader mode (Shift+Alt+F1): 1 minute
-  - **Verification/troubleshooting if not already enabled: 1-3 minutes** ⚠️
+  - **Verification/troubleshooting if not already enabled: 1-3 minutes** 
   - Open Explorer (Ctrl+Shift+E or menu): 1-2 minutes
   - Open README.md: 1 minute
   - Open Symbols (Ctrl+Shift+O): 1-2 minutes
@@ -414,7 +405,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Risk:** Keyboard shortcut discovery time can extend this significantly
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - 4 steps provided:
   1. "Confirm you are in a repository page before pressing `.`" — targets root cause
   2. "Retry screen reader mode toggle once, then verify in settings" — persistence + verification
@@ -422,7 +413,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   4. "Ask facilitator for a side-by-side demo and repeat the same 5 steps" — hands-on escalation
 
 #### Accessibility Assessment
-⚠️ **ISSUES FOUND:**
+ **ISSUES FOUND:**
 1. **Screen reader mode availability varies:**
    - `Shift+Alt+F1` (Windows) is documented
    - `Shift+Option+F1` (Mac) is documented
@@ -435,7 +426,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    - **Risk:** Students may search for extensions that don't exist
 
 #### Recommendations
-🔴 **Changes required:**
+ **Changes required:**
 1. **Clarify screen reader mode steps for Mac + VoiceOver:**
    ```
    If you use VoiceOver on Mac, skip the Shift+Option+F1 step. 
@@ -458,14 +449,13 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 4. **Separate section for desktop vs github.dev if length allows**, OR
    **Add footnote:** "This challenge uses github.dev (browser-based). You can also complete it with VS Code Desktop following the same steps. See [VS Code Desktop Guide](___) for setup."
 
----
 
 ### Chapter 11: Git & Source Control
 
 **[WARN]** — Important prerequisites and time estimates need review.
 
 #### Prerequisites Check
-⚠️ **ISSUE FOUND - Prerequisites incomplete:**
+ **ISSUE FOUND - Prerequisites incomplete:**
 - Challenge states prerequisites in chapter header but **not in challenge hub summary**
 - **Missing from CHALLENGES.md Hub:** Explicit statement: "Must have completed Chapter 10 first"
 - **Hub text says:** Challenge Set 1 = "Clone the sci-fi themes repository"
@@ -473,14 +463,14 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Risk:** Students attempt challenge without proper environment configured
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - Challenge set is clear: Clone → Commit → Push/PR
 - Examples provided with specific repository URL: `https://github.com/community-access/vscode-sci-fi-themes.git`
 - Fun context added (sci-fi themes) to motivate learners
 - Command examples clear and well-formatted
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - Reference to sci-fi themes repository is a real, public repository
 - Command examples reference real git commands
 - Main chapter documentation (`docs/11-git-source-control.md`) exists
@@ -488,7 +478,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Cross-references to Chapter 5, 6, 10 all exist
 
 #### Time Estimate Accuracy
-🔴 **ISSUE FOUND - Estimate is aggressive:**
+ **ISSUE FOUND - Estimate is aggressive:**
 - Stated: "Under 10 minutes each challenge"
 - **Detailed assessment:**
   - **Challenge 1: Clone repository**
@@ -498,8 +488,8 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Choose folder: 1-2 minutes (folder picker interaction)
     - Wait for clone: 1-3 minutes (network dependent)
     - Open folder when prompted: 1 minute
-    - **Subtotal: 6-10 minutes** ⚠️ at the edge
-  
+    - **Subtotal: 6-10 minutes**  at the edge
+
   - **Challenge 2: Make one small commit**
     - Open Source Control panel (`Ctrl+Shift+G`): 1 minute
     - Edit a file: 2-5 minutes (depends on file and change)
@@ -507,19 +497,19 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Write commit message: 2-3 minutes (short message, enter)
     - Commit (`Ctrl+Enter`): 1 minute
     - **Subtotal: 7-12 minutes** (exceeds estimate for slower users)
-  
+
   - **Challenge 3: Push and open PR**
     - Push branch: 1-2 minutes (find push button or use terminal)
     - Navigate to GitHub PR creation: 1 minute
     - Create PR title and description: 2-3 minutes
     - Reference issue with `Closes #XX`: 1 minute
     - Submit: 1 minute
-    - **Subtotal: 6-8 minutes** ✓
+    - **Subtotal: 6-8 minutes** 
 
-- **Total estimate: 19-30 minutes for all 3 challenges** vs. stated "Under 10 minutes each" ✓ (each is under 10, but barely)
+- **Total estimate: 19-30 minutes for all 3 challenges** vs. stated "Under 10 minutes each"  (each is under 10, but barely)
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - 5-step recovery plan provided:
   1. Confirm Command Palette works (`Ctrl+Shift+P`)
   2. Use keyboard shortcut for Source Control (`Ctrl+Shift+G`)
@@ -528,17 +518,17 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   5. Ask facilitator to verify clone and help with push
 
 #### Accessibility Assessment
-✅ **Verified:**
+ **Verified:**
 - All keyboard shortcuts provided with Windows and Mac variants
 - Source Control panel navigation explained for screen readers (uses tree structure)
 - Command Palette references how to access (searchable interface)
 - File navigation accessible with keyboard
 
 #### Learning Moment
-✅ **Well-written:** "Local Git operations give you full control and immediate feedback."
+ **Well-written:** "Local Git operations give you full control and immediate feedback."
 
 #### Recommendations
-🔴 **CHANGES REQUIRED:**
+ **CHANGES REQUIRED:**
 1. **Emphasize prerequisites in CHALLENGES.md hub:**
    ```
    **Prerequisites:** Complete Chapter 10 (VS Code Basics) and have github.dev or VS Code Desktop open.
@@ -557,34 +547,33 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    If download seems slow (>3 minutes), check your connection and resubmit the clone command.
    ```
 
----
 
 ### Chapter 12: GitHub Pull Requests Extension
 
 **[WARN]** — Critical assumption about write access not addressed upfront.
 
 #### Prerequisites Check
-⚠️ **ISSUE FOUND - Write access assumption:**
+ **ISSUE FOUND - Write access assumption:**
 - Challenge states: "Install the GitHub Pull Requests extension" and "Check out a challenge PR"
 - **Implicit assumption:** Students have write access to at least one repository to "check out" a PR branch
 - **Problem:** If student only has read access to the workshop repo, they cannot check out branches
 - **Risk:** Challenge becomes unachievable without remediation
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - Challenge set is clear: Install → Authenticate → Check out PR → Review → Post feedback
 - Steps are in logical order
 - Expected outcomes are specific
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - Main chapter documentation (`docs/12-github-pull-requests-extension.md`) exists
 - Podcast reference (Episode 13) verified
 - Cross-references to Chapter 5 and 11 exist
 - Extension reference is to official Microsoft/GitHub extension
 
 #### Time Estimate Accuracy
-⚠️ **ISSUE FOUND - Setup time underestimated:**
+ **ISSUE FOUND - Setup time underestimated:**
 - Stated: "2 guided challenges" with no time estimate visible in hub
 - **Detailed assessment:**
   - **Challenge 1: Install extension**
@@ -592,8 +581,8 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Search for "GitHub Pull Requests": 1-2 minutes
     - Install: 1-2 minutes (wait for download)
     - Reload VS Code if prompted: 1 minute
-    - **Subtotal: 4-6 minutes** ✓
-  
+    - **Subtotal: 4-6 minutes** 
+
   - **Challenge 2: Auth + check out + review**
     - Sign in with GitHub: 1-2 minutes (may open browser, return to VS Code)
     - Locate PR list in Explorer: 1-2 minutes (finding new UI element)
@@ -607,7 +596,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Total for Chapter 12: 17-30 minutes** — no time estimate provided in hub, but implied significance
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - 5-step recovery plan:
   1. Reload VS Code if install doesn't work
   2. Verify GitHub account active in browser first (before OAuth)
@@ -616,17 +605,17 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   5. Side-by-side facilitator demo for single checkout
 
 #### Accessibility Assessment
-⚠️ **ISSUE FOUND - Screen reader testing needed:**
+ **ISSUE FOUND - Screen reader testing needed:**
 - Extension is developed by Microsoft/GitHub and integrates VS Code UI
 - **Question:** Is PR list navigation accessible with screen readers?
 - **Risk:** VS Code extensions sometimes have accessibility gaps not documented
 - **Needs verification:** Test with NVDA, JAWS, VoiceOver before deployment
 
 #### Learning Moment
-✅ **Well-written:** "PR tooling multiplies your impact. Reviewing others' work refines your own standards and builds community trust."
+ **Well-written:** "PR tooling multiplies your impact. Reviewing others' work refines your own standards and builds community trust."
 
 #### Recommendations
-🔴 **CHANGES REQUIRED:**
+ **CHANGES REQUIRED:**
 1. **Add explicit write-access note:**
    ```
    **Write Access Note:** You can check out PR branches only if you have write access to the repository. 
@@ -645,35 +634,34 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    Authentication setup and discovering the PR list in VS Code are learning experiences.
    ```
 
----
 
 ### Chapter 13: GitHub Copilot
 
 **[WARN]** — Subscription prerequisite not clearly flagged; sci-fi theme is engaging but adds scope.
 
 #### Prerequisites Check
-⚠️ **ISSUE FOUND - Subscription requirement buried:**
+ **ISSUE FOUND - Subscription requirement buried:**
 - Challenge assumes: "GitHub Copilot Chat extension installed and authenticated"
 - **Problem:** GitHub Copilot requires a paid subscription ($20/month) OR organization access
 - **Risk:** Students without paid licenses will fail immediately
 - **Impact:** This is a major blocker not flagged in CHALLENGES.md hub
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - Challenge set is clear: Install → Configure → Use
 - Sci-fi theme context (vscode-sci-fi-themes repo) is fun and motivating
 - Examples of prompts provided (Ctrl+Shift+I)
 - Settings.json customization is explained (but assumes YAML familiarity)
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - Reference to vscode-sci-fi-themes repository is real and public
 - Main chapter documentation (`docs/13-github-copilot.md`) exists
 - Podcast reference (Episode 14) exists
 - Cross-references to Chapter 10, 11 exist
 
 #### Time Estimate Accuracy
-⚠️ **ISSUE FOUND - Reality testing needed:**
+ **ISSUE FOUND - Reality testing needed:**
 - Stated: "3 guided challenges" with no time estimate in hub
 - **Detailed assessment:**
   - **Challenge 1: Install and sign in**
@@ -681,8 +669,8 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Search "GitHub Copilot Chat": 1-2 minutes
     - Install: 1-2 minutes
     - Authenticate: 1-2 minutes (may open browser)
-    - **Subtotal: 4-7 minutes** ✓
-  
+    - **Subtotal: 4-7 minutes** 
+
   - **Challenge 2: Clone repo + ask Copilot**
     - Clone sci-fi themes repo: 2-5 minutes (depends on network)
     - Open Copilot Chat: 1 minute
@@ -692,7 +680,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Apply theme to settings.json: 2-3 minutes (if comfortable with JSON)
     - Reload VS Code: 1 minute
     - **Subtotal: 11-22 minutes**
-  
+
   - **Challenge 3: Create custom theme**
     - Ask Copilot for custom prompt: 1 minute
     - Wait for generation: 2-5 minutes
@@ -705,7 +693,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Total: 23-43 minutes** — no estimate provided, but likely 30-45 minutes for first-timers
 
 #### "If You Get Stuck" Guidance
-✅ **Verified:**
+ **Verified:**
 - 5-step recovery:
   1. Reload VS Code if install fails
   2. Verify GitHub account active in browser first
@@ -714,30 +702,30 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   5. Ask facilitator to verify Copilot activation and show one prompt
 
 #### Accessibility Assessment
-✅ **Verified:**
+ **Verified:**
 - Copilot Chat requires Accessible View (`Alt+F2` / `Option+F2`) for screen reader users to read responses
 - This is documented in main chapter text (lines discussing Accessible View)
 - Mac keyboard shortcuts provided
 - No emoji in challenge instructions themselves
 
 #### Learning Moment
-✅ **Excellent:** "AI assistance amplifies clarity... May your code always load with cosmic flair! ✨"
+ **Excellent:** "AI assistance amplifies clarity... May your code always load with cosmic flair! "
 
 #### Recommendations
-🔴 **CHANGES REQUIRED:**
+ **CHANGES REQUIRED:**
 1. **Add subscription warning at top of CHALLENGES.md Chapter 13 section:**
    ```
-   ⚠️ **Prerequisite: GitHub Copilot Subscription**
-   
+    **Prerequisite: GitHub Copilot Subscription**
+
    GitHub Copilot Chat requires either:
    - An active GitHub Copilot subscription ($20/month), OR
    - Access through your school/organization
-   
+
    If you don't have access:
    1. Ask your facilitator if the workshop has org access
    2. Start a free trial ($20/month but you can cancel immediately after workshop)
    3. Skip to next chapter and come back when you have access
-   
+
    This is a real constraint, not a learning challenge. We want you to know upfront!
    ```
 
@@ -757,20 +745,19 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    This includes waiting for API responses and learning settings.json syntax.
    ```
 
----
 
 ### Chapter 14: Accessible Code Review
 
 **[PASS]** — Well-structured review practice with excellent accessibility focus.
 
 #### Prerequisites Check
-✅ **Verified:**
+ **Verified:**
 - Explicit: Complete Chapter 5 (PRs) and Chapter 12 (PR extension)
 - Stated prerequisites: "Complete Ch 5 and Ch 12"
 - Accessible progression: move from opening PRs (Ch 5) to reviewing them (Ch 14)
 
 #### Instructions Clarity
-✅ **Verified:**
+ **Verified:**
 - Challenge set is clear: Review PR → Leave 2-3 comments → Submit verdict (approve/request-changes/comment)
 - Expected outcomes are specific:
   - Can navigate diff with screen reader
@@ -779,7 +766,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Learning Room examples explained (files from learning-room docs)
 
 #### File/Link Validation
-✅ **Verified:**
+ **Verified:**
 - References to chapter documentation files exist:
   - `docs/keyboard-shortcuts.md` (shortcut tables with intentional errors)
   - `docs/setup-guide.md` (broken links and incomplete steps)
@@ -789,7 +776,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Podcast reference (Episode 15) exists
 
 #### Time Estimate Accuracy
-✅ **Verified:**
+ **Verified:**
 - Stated: "2 guided challenges" with no explicit time in hub
 - **Detailed assessment:**
   - **Challenge 1: Review PR + leave 2-3 comments**
@@ -799,7 +786,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Find inline comment button on 3 lines: 3-5 minutes (screen reader users may need to use context menu / Shift+F10)
     - Write 3 constructive comments: 5-8 minutes (requires thought, not just typing)
     - **Subtotal: 13-21 minutes**
-  
+
   - **Challenge 2: Submit review verdict**
     - Find "Review changes" button: 1-2 minutes
     - Select verdict (Approve/Request changes/Comment): 1 minute
@@ -810,7 +797,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Total: 18-28 minutes** — reasonable for first code review
 
 #### "If You Get Stuck" Guidance
-✅ **EXCELLENT guidance provided:**
+ **EXCELLENT guidance provided:**
 1. "If Files Changed tab won't open, reload the PR page and retry" — specific recovery
 2. "If inline comment button is hard to find, use the file tree to jump between files (`Press 3` in NVDA/JAWS)" — screen reader–specific workaround
 3. "If you're unsure what to comment on, focus on clarity: heading structure, link text, missing steps, or typos" — concrete guidance
@@ -818,7 +805,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 5. "Ask facilitator to help you navigate one diff and model one constructive comment" — hands-on escalation
 
 #### Accessibility Assessment
-✅ **EXCEPTIONAL:**
+ **EXCEPTIONAL:**
 - Files Changed tab navigation for screen readers is thoroughly documented in main chapter
 - Inline comment button locations explained specifically for NVDA/JAWS (Press 3 in file tree)
 - Focus mode vs browse mode navigation explained
@@ -826,16 +813,15 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Learning moment connects review to community building (not just technical quality)
 
 #### Recommendations
-✅ **No changes required** — Chapter 14 is a strong model for teaching accessible workflows. The "If You Get Stuck" section is particularly well-written.
+ **No changes required** — Chapter 14 is a strong model for teaching accessible workflows. The "If You Get Stuck" section is particularly well-written.
 
----
 
 ### Chapter 15: Issue Templates
 
 **[WARN]** — Prerequisites scattered; YAML complexity underestimated; guidance clarity needs improvement.
 
 #### Prerequisites Check
-⚠️ **ISSUE FOUND - Prerequisites are fragmented:**
+ **ISSUE FOUND - Prerequisites are fragmented:**
 - Challenge mentions prerequisites in chapter header:
   - Chapter 4  (understand issues)
   - Chapter 13 (YAML highlighting)
@@ -846,24 +832,24 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Risk:** Students may not realize they need write access to their own repo BEFORE starting challenges
 
 #### Instructions Clarity
-⚠️ **ISSUE FOUND - Complexity underestimated:**
-- Challenge Set 1 (Analyze): "Read the registration template" — straightforward ✓
-- Challenge Set 2 (Remix): "Adapt registration template for new context" — **vague** ⚠️
+ **ISSUE FOUND - Complexity underestimated:**
+- Challenge Set 1 (Analyze): "Read the registration template" — straightforward 
+- Challenge Set 2 (Remix): "Adapt registration template for new context" — **vague** 
   - Says "Update field names, labels, descriptions, and dropdown options"
   - But doesn't show what a remixed template looks like
   - YAML syntax complexity not visualized upfront
 - Challenge Set 3 (Create): "Create a Markdown template" — **optional but needs syntax example**
 
 #### File/Link Validation
-✅ **Verified:**
-- `.github/ISSUE_TEMPLATE/workshop-registration.yml` exists and is readable ✓
+ **Verified:**
+- `.github/ISSUE_TEMPLATE/workshop-registration.yml` exists and is readable 
 - Main chapter documentation (`docs/15-issue-templates.md`) exists
 - Podcast reference (Episode 16) verified
 - Cross-reference to Chapter 16 provided
 - Appendix C (Accessibility Standards) referenced
 
 #### Time Estimate Accuracy
-🔴 **ISSUE FOUND - Time may be significantly high:**
+ **ISSUE FOUND - Time may be significantly high:**
 - Stated: In chapter header: "1.5 hours"
 - **Detailed assessment:**
   - **Challenge 1: Analyze registration template**
@@ -872,7 +858,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Compare with existing forms: 5 minutes
     - Write short analysis comment: 5-8 minutes
     - **Subtotal: 20-33 minutes** (potentially high for beginners)
-  
+
   - **Challenge 2: Remix template** 
     - Decide on new context (bug report, feedback, audit form): 3-5 minutes
     - Copy registration template: 2 minutes
@@ -880,7 +866,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Update dropdown options: 10-15 minutes
     - Commit and push: 5-10 minutes (or create PR)
     - **Subtotal: 30-52 minutes**
-  
+
   - **Challenge 3: Create Markdown template** (optional)
     - Create YAML frontmatter from scratch: 10-20 minutes (significant learning)
     - Write Markdown body with 3-4 sections: 15-25 minutes
@@ -892,7 +878,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Against stated estimate: "1.5 hours (90 minutes)"** = might fit baseline but is at ceiling for average students
 
 #### "If You Get Stuck" Guidance
-✅ **Adequate coverage:**
+ **Adequate coverage:**
 - 6-step recovery plan provided:
   1. Can't find registration template → direct path: `.github/ISSUE_TEMPLATE/workshop-registration.yml`
   2. YAML structure confusing → "Copy the registration template. Modify only field descriptions and labels first. Leave structure intact."
@@ -902,17 +888,17 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   6. Want to see how it works → ask facilitator to share their template
 
 #### Accessibility Assessment
-⚠️ **ISSUE FOUND - YAML syntax complexity:**
+ **ISSUE FOUND - YAML syntax complexity:**
 - YAML is inherently less accessible than Markdown due to whitespace sensitivity
 - **Problem:** Indentation errors are hard to catch with screen readers (spaces vs tabs)
 - **Problem:** No guidance provided for validating YAML syntax after editing
 - **Solution needed:** Show students how to validate YAML (VS Code linter, or online validator)
 
 #### Learning Moment
-✅ **Excellent:** Explains why professional templates exist and how students' remix becomes a teaching example.
+ **Excellent:** Explains why professional templates exist and how students' remix becomes a teaching example.
 
 #### Recommendations
-🔴 **CHANGES REQUIRED:**
+ **CHANGES REQUIRED:**
 1. **Add consolidated prerequisites block at top of CHALLENGES.md Chapter 15:**
    ```
    **Prerequisites:**
@@ -929,7 +915,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    - Ensure all lines starting content are indented with spaces (not tabs)
    - Every `key:` has a value or list below it
    - Curly braces `{}` and square brackets `[]` are balanced
-   
+
    If unsure, paste your YAML into https://www.yamllint.com/ to check before committing.
    ```
 
@@ -944,7 +930,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
        attributes:
          label: First Name
    ```
-   
+
    Remixed (bug report):
    ```yaml
    body:
@@ -962,14 +948,13 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    Don't hesitate to ask your facilitator if YAML indentation confuses you—this is a common question.
    ```
 
----
 
 ### Chapter 16: Accessibility Agents
 
 **[WARN]** — Unfocused scope (55 agents); discovery method unclear; prerequisite "Skill First" principle needs reinforcement.
 
 #### Prerequisites Check
-⚠️ **ISSUE FOUND - Skill-first prerequisite needs upfront validation:**
+ **ISSUE FOUND - Skill-first prerequisite needs upfront validation:**
 - Challenge states: "Verify you have completed manual skill before using agent"
 - Provides prerequisite table mapping agents to skills
 - **Problem:** Students may skip manual work and jump to agents (tempting!)
@@ -977,7 +962,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Risk:** Students use agents without understanding their limitations
 
 #### Instructions Clarity
-⚠️ **ISSUE FOUND - Discovery method is unclear:**
+ **ISSUE FOUND - Discovery method is unclear:**
 - Challenge describes 3 main activities:
   1. Agent Discovery Mapping (match agents to skills)
   2. Agent Skill Validation (run one agent, evaluate)
@@ -987,14 +972,14 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Problem:** 55 agents is overwhelming with no taxonomy or recommended starting points
 
 #### File/Link Validation
-⚠️ **ISSUE FOUND - External repo link:**
+ **ISSUE FOUND - External repo link:**
 - Challenge references: `https://github.com/community-access/accessibility-agents`
 - **Problem:** This is external to git-going-with-github repo
 - **Problem:** No offline fallback if external repo is down or changes
 - **Risk:** Challenge becomes inaccessible if upstream project changes structure
 
 #### Time Estimate Accuracy
-⚠️ **ISSUE FOUND - Highly variable scope:**
+ **ISSUE FOUND - Highly variable scope:**
 - Stated time in chapter header: "1.5 hours"
 - **Detailed assessment:**
   - **Challenge 1: Agent Discovery Mapping (20 min stated)**
@@ -1003,7 +988,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Match 3-5 agents to skills: 5-10 minutes
     - Write evidence comment: 3-5 minutes
     - **Subtotal: 18-35 minutes** (variable)
-  
+
   - **Challenge 2: Agent Skill Validation (30 min stated)**
     - Clone repo or open it: 2-5 minutes
     - Open Copilot Chat: 1 minute
@@ -1012,7 +997,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
     - Wait for response and understand: 3-10 minutes (depends on agent complexity)
     - Answer 3 evaluation questions: 5-10 minutes
     - **Subtotal: 15-31 minutes** (highly variable)
-  
+
   - **Challenge 3: Agent Instructions Deep Dive (15 min stated)**
     - Find `.agent.md` or `.prompt.md` file: 3-5 minutes
     - Read instructions: 5-15 minutes (length varies by agent)
@@ -1023,7 +1008,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - **Total (3 challenges): 49-101 minutes** against stated 1.5 hours (90 minutes) — tight fit
 
 #### "If You Get Stuck" Guidance
-✅ **Adequate coverage:**
+ **Adequate coverage:**
 - 6-step recovery:
   1. Can't find agents → examples: `@daily-briefing`, `@issue-tracker`
   2. Agent output doesn't make sense → file issue with error
@@ -1033,35 +1018,35 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
   6. Still stuck → show facilitator agent output and expected result
 
 #### Accessibility Assessment
-✅ **Generally accessible:**
+ **Generally accessible:**
 - Agents run in Copilot Chat (requires Accessible View for screen reader users)
 - Agent instructions are text-based (accessible)
 - GitHub agent file exploration is browser-based (accessible)
 - No specific accessibility concerns
 
 #### Learning Moment
-✅ **Excellent:** Explains "Skill First, Agent Second" principle and connects agents to manual expertise.
+ **Excellent:** Explains "Skill First, Agent Second" principle and connects agents to manual expertise.
 
 #### Recommendations
-🔴 **CHANGES REQUIRED:**
+ **CHANGES REQUIRED:**
 
 1. **Add Agent Discovery Framework:**
    ```
    **How to Find and Explore Agents:**
-   
+
    Agents are organized in the accessibility-agents repository in the `.github/agents/` folder.
-   
+
    **Three ways to discover agents:**
-   
+
    1. **Browse by filename:** Open `.github/agents/` on GitHub and look for `.agent.md` files (naming pattern: `@agent-name.agent.md`)
-   
+
    2. **Search by workflow:** Ask Copilot "Show me agents for [task]" — Copilot knows the agent ecosystem
-   
+
    3. **Start with these beginner agents:**
       - `@daily-briefing` — Summarizes your GitHub activity
       - `@issue-tracker` — Helps track and organize issues
       - `@pr-review` — Assists with code review
-   
+
    You do NOT need to use all 55 agents. Pick 3-5 that match YOUR workflows.
    ```
 
@@ -1069,10 +1054,10 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    ```
    **Before using any agent, answer this question:**
    "Could I do this task manually right now, without the agent?"
-   
+
    - If YES → You're ready to use the agent. It will amplify your skill.
    - If NO → Learn the manual skill first (see prerequisites table). The agent won't teach you the skill—only automate it.
-   
+
    This is not about limiting you. It's about using AI as a multiplier, not a crutch.
    ```
 
@@ -1083,10 +1068,10 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    # Clone the accessibility-agents repository
    git clone https://github.com/community-access/accessibility-agents.git
    cd accessibility-agents
-   
+
    # List all agents
    ls .github/agents/*.agent.md
-   
+
    # Read agent instructions
    cat .github/agents/daily-briefing.agent.md
    ```
@@ -1095,58 +1080,56 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 4. **Reduce overwhelm:**
    ```
    **Note:** There are 55 agents in the ecosystem. You are NOT expected to explore all of them.
-   
+
    For this workshop, focus on these 3-5 agents that match Day 1 skills:
    - `@daily-briefing` (repository navigation)
    - `@issue-tracker` (working with issues)
    - `@pr-review` (working with PRs)
    - (Pick 1-2 more based on your interests)
-   
+
    You can explore more agents after the workshop. This challenge is about understanding the principle, not seeing everything.
    ```
 
 5. **Add "Capstone" emphasis:**
    ```
    **Most Important: Capstone Feedback Challenge**
-   
+
    The feedback form is not optional, even though other challenges are optional.
-   
+
    Why? Your honest feedback shapes the next cohort. 
    We read every response. We act on patterns we see.
-   
+
    You've invested two days learning and building skills. 
    Your experience — what worked, what confused you, what you'll remember — 
    is the most valuable data we can collect.
-   
+
    **If time is short:** Answer just one question on the feedback form. 
    Any feedback is better than none.
    ```
 
----
 
 ## Summary Table: Issue Severity & Priority
 
 | Chapter | Issue Category | Severity | Action | Timeline |
 |---------|---|----------|--------|----------|
-| 4 | None | ✅ | Deploy as-is | - |
-| 5 | None | ✅ | Deploy as-is | - |
-| 6 | None | ✅ | Deploy as-is | - |
-| 7 | Evaluation criteria clarity | 🟡 Medium | Add eval criteria + time estimate | Before Day 2 |
-| 8 | Time estimate missing | 🟡 Minor | Add time estimate | Before Day 2 |
-| 9 | Time estimate + screen reader testing | 🟡 Medium | Add completion evidence, test with AT | Before Day 2 |
-| 10 | Platform + AT parity gaps | 🔴 High | Test Mac/VoiceOver; clarify github.dev vs desktop | Before Day 2 |
-| 11 | Prerequisites + time estimate | 🟡 Medium | Emphasize prereqs; revise time | Before Day 2 |
-| 12 | Write access assumption + AT testing | 🔴 High | Add access note; test extension with screen readers | Before Day 2 |
-| 13 | Subscription requirement buried | 🔴 High | Flag upfront; add warning; add time estimate | **Before Day 2** |
-| 14 | None | ✅ | Deploy as-is (model chapter) | - |
-| 15 | Prerequisites scattered + complexity underestimated | 🔴 High | Consolidate prereqs; add YAML validation; show example | Before Day 2 |
-| 16 | Overwhelm (55 agents) + discovery unclear + skill validation | 🔴 High | Add discovery framework; reduce scope guidance; emphasize capstone | Before Day 2 |
+| 4 | None |  | Deploy as-is | - |
+| 5 | None |  | Deploy as-is | - |
+| 6 | None |  | Deploy as-is | - |
+| 7 | Evaluation criteria clarity |  Medium | Add eval criteria + time estimate | Before Day 2 |
+| 8 | Time estimate missing |  Minor | Add time estimate | Before Day 2 |
+| 9 | Time estimate + screen reader testing |  Medium | Add completion evidence, test with AT | Before Day 2 |
+| 10 | Platform + AT parity gaps |  High | Test Mac/VoiceOver; clarify github.dev vs desktop | Before Day 2 |
+| 11 | Prerequisites + time estimate |  Medium | Emphasize prereqs; revise time | Before Day 2 |
+| 12 | Write access assumption + AT testing |  High | Add access note; test extension with screen readers | Before Day 2 |
+| 13 | Subscription requirement buried |  High | Flag upfront; add warning; add time estimate | **Before Day 2** |
+| 14 | None |  | Deploy as-is (model chapter) | - |
+| 15 | Prerequisites scattered + complexity underestimated |  High | Consolidate prereqs; add YAML validation; show example | Before Day 2 |
+| 16 | Overwhelm (55 agents) + discovery unclear + skill validation |  High | Add discovery framework; reduce scope guidance; emphasize capstone | Before Day 2 |
 
----
 
 ## Critical Issues Requiring Immediate Action
 
-### 🔴 Before Students Begin Day 2:
+###  Before Students Begin Day 2:
 
 1. **Chapter 13 (Copilot):** Add Subscription Requirement Warning
    - **Impact:** High — students may not discover subscription requirement until running into authentication errors
@@ -1164,13 +1147,12 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    - **Impact:** High — accessibility-first workshop cannot proceed without confirming AT compatibility
    - **Fix Time:** 2-4 hours (testing with NVDA, JAWS, VoiceOver)
 
-### 🟡 Before Students Begin (or Early Day 1 Follow-up):
+###  Before Students Begin (or Early Day 1 Follow-up):
 
 5. **Chapter 9:** Add completion evidence requirement + test notifications UI with screen readers
 6. **Chapter 11:** Emphasize prerequisites; test git clone UI accessibility
 7. **Chapters 7, 8:** Add missing time estimates
 
----
 
 ## Files Requiring Updates
 
@@ -1194,7 +1176,6 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 ### Issue Template
 - [ ] `.github/ISSUE_TEMPLATE/challenge-hub.md`: May need template variables for Chapter 13 subscription callout
 
----
 
 ## Testing &Validation Checklist
 
@@ -1217,15 +1198,13 @@ Before deploying challenges to students:
 - [ ] Students can complete Chapter N without having completed Chapter N-1 (if claimed as standalone)
 - [ ] Time estimates hold true for 3-5 real students of varying backgrounds
 
----
 
 ## Conclusion
 
 The challenges are **well-intentioned and generally well-designed**, with strong pedagogical progression and accessibility-focused documentation. However, **four chapters (10, 12, 13, 15, 16) require significant revisions before student deployment** to avoid frustration and blockers.
 
-**Recommended action:** Prioritize the 🔴 High-severity issues (Chapters 13, 15, 16) for immediate fixes, then conduct screen reader testing on Chapters 10 and 12. All changes can be completed in 4-6 hours.
+**Recommended action:** Prioritize the  High-severity issues (Chapters 13, 15, 16) for immediate fixes, then conduct screen reader testing on Chapters 10 and 12. All changes can be completed in 4-6 hours.
 
----
 
 **Audit Prepared:** March 5, 2026  
 **Audit Performed By:** GitHub Copilot (Validation Agent)  

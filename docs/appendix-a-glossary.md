@@ -6,7 +6,6 @@
 
 > This glossary is your reference for the entire two-day workshop. When you hear a term you don't recognize - check here first. Terms are grouped by category and also sorted alphabetically at the end.
 
----
 
 ## Part 1: The Building Blocks
 
@@ -18,13 +17,11 @@ A repository lives on GitHub at an address like: `https://github.com/owner/repo-
 
 **Related terms:** remote repository (the one on GitHub), local repository (a copy on your computer), upstream (the original repo), fork (your personal copy)
 
----
 
 ### Organization (Org)
 
 An organization is a group account on GitHub that multiple people can belong to. Open source projects typically live inside an organization rather than under a personal account. For example: `https://github.com/microsoft/vscode` - here `microsoft` is the organization and `vscode` is the repository.
 
----
 
 ### Fork
 
@@ -32,7 +29,6 @@ A fork is a personal copy of someone else's repository, living in your own GitHu
 
 **Why fork?** You do not have write access to most open source repos. Forking lets you work freely and then propose changes.
 
----
 
 ### Remote
 
@@ -55,7 +51,6 @@ git remote -v
 git remote add upstream https://github.com/original-owner/repo.git
 ```
 
----
 
 ### Origin
 
@@ -63,7 +58,6 @@ git remote add upstream https://github.com/original-owner/repo.git
 
 Commands like `git push` and `git pull` default to using `origin` unless you specify otherwise.
 
----
 
 ### .gitignore
 
@@ -109,7 +103,6 @@ git rm --cached filename
 
 Then add it to `.gitignore` and commit the change.
 
----
 
 ### Clone
 
@@ -121,7 +114,6 @@ git clone https://github.com/your-username/repo-name.git
 
 **Fork vs Clone:** Fork = your copy on GitHub. Clone = a copy on your computer. You usually clone your fork.
 
----
 
 ### Branch
 
@@ -137,7 +129,6 @@ Think of branches like parallel timelines - each branch is its own version of th
 - `fix/broken-button` - convention for bug fix branches
 - `docs/update-readme` - convention for documentation-only branches
 
----
 
 ### Commit
 
@@ -161,7 +152,6 @@ Updated to the current direct download page.
 Fixes #42
 ```
 
----
 
 ### Diff
 
@@ -169,7 +159,6 @@ A diff (short for difference) shows what changed between two versions of a file.
 
 Reading diffs is one of the core skills for code review. When you view a Pull Request's "Files Changed" tab, you are reading a diff.
 
----
 
 ## Part 2: Collaboration Workflow
 
@@ -185,7 +174,6 @@ An issue is a discussion item in a GitHub repository. Issues are used for:
 
 Every issue gets a sequential number (like `#42`) and can have labels, assignees, milestones, and comments. Issues are the starting point for most contributions - it's best practice to open or find an issue before making code changes.
 
----
 
 ### Pull Request (PR)
 
@@ -200,7 +188,6 @@ A PR shows:
 
 The name "pull request" means you are requesting that the maintainers pull your changes into their project.
 
----
 
 ### Code Review
 
@@ -212,7 +199,6 @@ Code review is the process of one or more collaborators reading and providing fe
 
 Good code reviews are kind, specific, and constructive.
 
----
 
 ### Merge
 
@@ -224,7 +210,6 @@ Merging is combining changes from one branch into another. When a PR is approved
 | **Squash and merge** | Combines all PR commits into one commit | Keeping history clean |
 | **Rebase and merge** | Replays commits on top of target branch | Linear history projects |
 
----
 
 ### Merge Conflict
 
@@ -244,7 +229,6 @@ You resolve a conflict by editing the file to have the correct final content, re
 
 See [Merge Conflicts Guide](06-merge-conflicts.md) for step-by-step instructions.
 
----
 
 ### Upstream
 
@@ -255,7 +239,6 @@ Your Fork → upstream → Original Repo
 Your changes flow this way: Original Repo ← Pull Request ← Your Fork
 ```
 
----
 
 ### Label
 
@@ -268,19 +251,16 @@ Labels are colored tags applied to issues and PRs to categorize them. Common lab
 - `help wanted` - maintainers want community help
 - `accessibility` - accessibility-related
 
----
 
 ### Milestone
 
 A milestone groups issues and PRs toward a goal or deadline. For example: "v2.0 Release" or "Hackathon Day 1." Milestones show progress as a percentage of closed versus open items.
 
----
 
 ### Project (GitHub Projects)
 
 A GitHub Project is a flexible board for tracking work. It can show issues and PRs in table view, board view (kanban), or roadmap view. Projects are especially useful for hackathon-style coordination.
 
----
 
 ## Part 3: People and Roles
 
@@ -288,25 +268,21 @@ A GitHub Project is a flexible board for tracking work. It can show issues and P
 
 A maintainer is someone with write or admin access to a repository. Maintainers review PRs, triage issues, manage releases, and make decisions about the project's direction. Most open source projects have between one and five core maintainers.
 
----
 
 ### Contributor
 
 Anyone who contributes to an open source project is a contributor. Contributing includes code, documentation, design, testing, translation, issue triage, and community support. You do not need commit access to contribute.
 
----
 
 ### Triage
 
 Triaging issues means reviewing new issues to categorize them, add labels, assign them, close duplicates, and communicate with the reporter. Triage is an important contribution that doesn't require coding skills.
 
----
 
 ### Collaborator
 
 A collaborator is someone who has been explicitly granted write access to a repository. Collaborators can commit directly to the repo without forking (though good practice is still to use branches and PRs).
 
----
 
 ## Part 4: Common Abbreviations and Slang
 
@@ -336,7 +312,6 @@ These abbreviations appear frequently in GitHub comments, PR descriptions, and c
 | **downstream** | - | A fork or project that depends on this one |
 | **breaking change** | - | A change that will break existing functionality for users |
 
----
 
 ## Part 5: Technical GitHub Concepts
 
@@ -355,7 +330,6 @@ git reset HEAD~1  # Undo the last commit
 git diff HEAD     # Show uncommitted changes
 ```
 
----
 
 ### Detached HEAD
 
@@ -383,7 +357,6 @@ git checkout new-branch-name
 
 **Screen reader note:** Git will warn you verbosely when entering detached HEAD state. Read the guidance carefully.
 
----
 
 ### Stash
 
@@ -410,7 +383,6 @@ git stash pop  # Restore your changes
 
 **Use case:** "I need to quickly switch branches to check something, but I'm in the middle of work I'm not ready to commit."
 
----
 
 ### Rebase
 
@@ -455,7 +427,6 @@ git push --force-with-lease  # See Force Push below
 
 **Screen reader note:** Rebase conflicts are resolved the same way as merge conflicts (edit file, remove markers, `git add`, `git rebase --continue`).
 
----
 
 ### Cherry-Pick
 
@@ -476,7 +447,6 @@ git cherry-pick a1b2c3d  # Apply commit a1b2c3d to main
 
 **Warning:** Cherry-picking duplicates commits (creates a new commit with the same changes). Avoid cherry-picking commits that are part of an active feature branch - it causes confusion.
 
----
 
 ### Fetch vs Pull
 
@@ -505,7 +475,6 @@ git pull origin main  # Fetch + merge origin/main into current branch
 
 **Best practice for collaboration:** Use `fetch` first, review with `git log origin/main`, then decide to merge or rebase.
 
----
 
 ### Force Push
 
@@ -536,19 +505,16 @@ When you rebase, Git rewrites commit history. The remote branch and your local b
 
 **Rule of thumb:** If you're not sure whether you need to force push, you probably shouldn't.
 
----
 
 ### SHA / Hash
 
 Every commit, file, and tree in Git is identified by a SHA hash - a 40-character string of letters and numbers (e.g., `a1b2c3d4e5f6...`). You will see shortened versions like `a1b2c3d` in the GitHub UI. These are unique fingerprints.
 
----
 
 ### Tag / Release
 
 A tag marks a specific commit as significant - usually a version release like `v1.0.0`. Tags are permanent references (unlike branches, which move with each new commit). GitHub Releases are built on top of tags and can include release notes and downloadable files.
 
----
 
 ### Actions / Workflow / CI/CD
 
@@ -556,7 +522,6 @@ GitHub Actions is an automation platform built into GitHub. Workflows are automa
 
 In practice: when you open a PR, you will often see automated checks run (tests, linting, accessibility checks). These are GitHub Actions. See [GitHub Actions & Workflows](appendix-q-github-actions-workflows.md) for a full explanation.
 
----
 
 ### Status Check
 
@@ -568,31 +533,26 @@ A status check is the result of an automated test or workflow run on a PR. Statu
 
 Maintainers often require status checks to pass before merging.
 
----
 
 ### Webhook
 
 A webhook is an automated notification that GitHub sends to another service when something happens (a push, a PR opened, etc.). Webhooks power integrations with tools like Slack, project management systems, and CI services. As a contributor, you typically don't configure webhooks - they are set up by maintainers.
 
----
 
 ### GitHub Discussions
 
 Discussions are a threaded forum built into GitHub, separate from Issues. They are used for open-ended conversation, Q&A, and community announcements. Not all projects use Discussions - some prefer issues or external forums.
 
----
 
 ### Profile
 
 Your GitHub profile is your public identity. It shows your name, bio, location, repositories, contribution activity (the green squares), and pinned projects. Your profile URL is `https://github.com/your-username`.
 
----
 
 ### GitHub Copilot
 
 GitHub Copilot is an AI-powered coding assistant. It suggests code, documentation, and commit messages. In this workshop, we use Copilot to help write issue descriptions, PR descriptions, documentation, and code. See [GitHub Copilot](13-github-copilot.md) for the full walkthrough.
 
----
 
 ## Part 6: Community Files
 
@@ -609,7 +569,6 @@ Every healthy open source project has these files in the root of the repository:
 | `.github/ISSUE_TEMPLATE/` | Templates for bug reports, feature requests, etc. |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Template for PR descriptions |
 
----
 
 ## Alphabetical Quick Reference
 
@@ -672,7 +631,6 @@ Every healthy open source project has these files in the root of the repository:
 | Triage | Reviewing and categorizing new issues |
 | Upstream | The original repo you forked from |
 
----
 
 *Appendix B - look up any term here at any point during the workshop.*
 *Return to: [Day 1 Agenda](02-day1-agenda.md) | [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*

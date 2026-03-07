@@ -1,7 +1,6 @@
 # Progress Tracker
 ## Track Your Learning Journey Through the GitHub Workshop
 
----
 
 ## How to Use This Tracker
 
@@ -10,7 +9,6 @@
 3. **Check off items** as you complete them
 4. **Return here** to see your learning path and next steps
 
----
 
 ## Pre-Workshop Setup
 
@@ -24,7 +22,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 0: Pre-Workshop Setup
 **Time:** 30 minutes  |  **What You'll Do:** Get your computer ready
@@ -37,7 +34,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 1: Understanding GitHub Web Structure
 **Time:** 1 hour  |  **What You'll Do:** Learn GitHub's layout and terminology
@@ -50,7 +46,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 2: Navigating Repositories
 **Time:** 45 minutes  |  **What You'll Do:** Practice exploring real repositories
@@ -63,7 +58,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 3: The Learning Room
 **Time:** 30 minutes  |  **What You'll Do:** Understand the shared practice environment
@@ -76,7 +70,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 4: Working with Issues
 **Time:** 1 hour  |  **What You'll Do:** Create, read, and comment on issues
@@ -90,7 +83,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 5: Working with Pull Requests
 **Time:** 1 hour  |  **What You'll Do:** Submit, review, and merge PRs
@@ -104,7 +96,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 6: Merge Conflicts
 **Time:** 1 hour  |  **What You'll Do:** Resolve conflicts between branches
@@ -117,7 +108,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 7: Culture & Etiquette
 **Time:** 30 minutes  |  **What You'll Do:** Learn collaborative best practices
@@ -130,7 +120,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 8: Labels, Milestones & Projects
 **Time:** 45 minutes  |  **What You'll Do:** Use GitHub's organizational tools
@@ -143,7 +132,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 9: Notifications
 **Time:** 30 minutes  |  **What You'll Do:** Master GitHub notifications
@@ -156,7 +144,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 10: VS Code Setup & Accessibility Basics
 **Time:** 45 minutes  |  **What You'll Do:** Set up VS Code for accessible development
@@ -169,7 +156,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 11: Git & Source Control in VS Code
 **Time:** 1 hour  |  **What You'll Do:** Master Git operations within VS Code
@@ -182,7 +168,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 12: GitHub Pull Requests Extension
 **Time:** 45 minutes  |  **What You'll Do:** Review and create PRs from VS Code
@@ -195,7 +180,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 13: GitHub Copilot
 **Time:** 1 hour  |  **What You'll Do:** Use AI-assisted coding and chat
@@ -208,7 +192,6 @@
 
 **Status:** Not started  In progress  Complete
 
----
 
 ## Chapter 14: Accessible Code Review
 **Time:** 1.5 hours + Exercises  |  **What You'll Do:** Review code accessibly
@@ -227,7 +210,6 @@
 **Status:** Not started  In progress  Complete  
 **Exercises Completed:** A  B  C  All
 
----
 
 ## Chapter 15: Issue Templates
 **Time:** 1.5 hours + Exercises  |  **What You'll Do:** Create accessible issue templates
@@ -247,7 +229,6 @@
 **Status:** Not started  In progress  Complete  
 **Exercises Completed:** A  B  C  D  All
 
----
 
 ## Chapter 16: Accessibility Agents
 **Time:** 1.5 hours + Exercises  |  **What You'll Do:** Automate with Copilot agents
@@ -278,7 +259,6 @@ Browse the ecosystem and try agents that match your skills (read Chapter 16 for 
 **Status:** Not started  In progress  Complete  
 **Exercises Completed:** 1  2  3  All
 
----
 
 ## Appendices (Reference)
 
@@ -291,7 +271,6 @@ Browse the ecosystem and try agents that match your skills (read Chapter 16 for 
   - [ ] JAWS commands bookmarked
   - [ ] VoiceOver commands bookmarked
 
----
 
 ## Overall Progress Summary
 
@@ -338,7 +317,6 @@ The workshop includes structured exercises in the following chapters. Use this t
 - All chapters + appendices: Not started  In progress  Complete
 - **Time:** ~13 hours total
 
----
 
 ## Estimated Time Breakdown
 
@@ -350,7 +328,6 @@ The workshop includes structured exercises in the following chapters. Use this t
 | Reference/Appendices | As needed | |
 | **Total** | **~13 hrs** | |
 
----
 
 ## Learning Path by Role
 
@@ -383,7 +360,6 @@ The workshop includes structured exercises in the following chapters. Use this t
 
 **Total: ~15 hours**
 
----
 
 ## Next Steps After Completing This Curriculum
 
@@ -404,7 +380,6 @@ The workshop includes structured exercises in the following chapters. Use this t
 - [ ] Codespaces for efficient development
 - [ ] GitHub Enterprise features
 
----
 
 ## Questions or Stuck?
 
@@ -414,7 +389,6 @@ The workshop includes structured exercises in the following chapters. Use this t
 - **Define:** `docs/appendix-a-glossary.md` (term definitions)
 - **Ask:** Open an issue or discussion on GitHub
 
----
 
 *Last updated: February 2026*  
 *Print or bookmark this progress tracker to chart your journey!*

@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Commit signing with GPG or SSH keys
 - Troubleshooting authentication failures
 
----
 
 ### Concept Coverage Checklist
 
@@ -65,7 +63,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > **Audience:** This appendix is for contributors who need to configure Git authentication for push access. If you're working entirely through the GitHub web interface or GitHub Desktop, you can skip this. If you're using VS Code with Git command line, this becomes relevant when you want to push commits to your fork.
 
----
 
 ## When You Need Authentication
 
@@ -79,7 +76,6 @@ You do **not** need authentication to:
 - View public repositories on GitHub.com
 - Read issues and pull requests
 
----
 
 ## Two Authentication Methods
 
@@ -110,7 +106,6 @@ SSH uses public-key cryptography. You generate a key pair on your computer (publ
 - Requires command-line setup (less accessible for some screen reader users)
 - Slightly more complex initial configuration
 
----
 
 ## Creating a Personal Access Token (Recommended for This Workshop)
 
@@ -161,7 +156,6 @@ Password: [paste-your-PAT-here]
 git config --global credential.helper cache
 ```
 
----
 
 ## Setting Up SSH Keys (Alternative Method)
 
@@ -235,7 +229,6 @@ git@github.com:owner/repo.git
 https://github.com/owner/repo.git
 ```
 
----
 
 ## Switching Between HTTPS and SSH
 
@@ -256,7 +249,6 @@ git remote set-url origin git@github.com:your-username/repo.git
 git remote set-url origin https://github.com/your-username/repo.git
 ```
 
----
 
 ## Troubleshooting
 
@@ -287,7 +279,6 @@ git remote set-url origin https://github.com/your-username/repo.git
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
 
----
 
 ## Security Best Practices
 
@@ -298,7 +289,6 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 5. **Revoke old tokens** when you're done with a project or device
 6. **Don't commit tokens or keys to Git** - use `.gitignore` for config files
 
----
 
 ## Commit Signing - Verified Badges and Vigilant Mode
 
@@ -381,7 +371,6 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 **Workshop recommendation:** SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to accessibility-agents will show as Verified.
 
----
 
 ## For This Workshop
 
@@ -393,6 +382,5 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 SSH keys are great for long-term use, but PATs are faster to set up and more accessible for screen reader users during a time-constrained workshop.
 
----
 
 *Return to: [Pre-Workshop Setup](00-pre-workshop-setup.md) | [Resources](appendix-u-resources.md)*

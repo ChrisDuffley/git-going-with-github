@@ -1,6 +1,5 @@
 # FAQ: Frequently Asked Questions
 
----
 
 ## Table of Contents
 
@@ -29,7 +28,6 @@
 - [Concepts and Terminology](#concepts-and-terminology)
 - [Still Stuck?](#still-stuck)
 
----
 
 ## About This Workshop
 
@@ -58,7 +56,6 @@
 ### Q: Where can I find the course outline and table of contents?
 **A:** See the [Course Guide](docs/course-guide.md) for the full table of contents, chapter sequence, timing, and exercises at a glance.
 
----
 
 ## Is This For Me?
 
@@ -86,7 +83,6 @@
 ### Q: I only have a few hours. What is the minimum I should read?
 **A:** Read Chapters 0, 1, 4, and 5. That covers setup, GitHub structure, issues, and pull requests - enough to start contributing to any project.
 
----
 
 ## Getting Started
 
@@ -124,7 +120,6 @@ Full instructions: [Chapter 0 (Pre-Workshop Setup)](docs/00-pre-workshop-setup.m
 ### Q: Can I use a Chromebook or tablet?
 **A:** Day 1 (browser-based) works on any device with a modern browser and a keyboard. Day 2 requires Visual Studio Code, which runs on Windows, macOS, and Linux desktops. If you have a Chromebook, consider [GitHub Codespaces](docs/appendix-n-github-codespaces.md) as an alternative to a local VS Code install.
 
----
 
 ## Screen Readers and Accessibility
 
@@ -184,7 +179,6 @@ Full reference: [Appendix B (Screen Reader Cheat Sheet)](docs/appendix-b-screen-
 ### Q: How do I know if a page element is interactive?
 **A:** Your screen reader announces the role of each element - "button," "link," "edit text," "checkbox," etc. If it announces "clickable" without a more specific role, it may not be fully accessible. In that case, try `Enter` or `Space` to activate it.
 
----
 
 ## GitHub Accounts and Authentication
 
@@ -216,7 +210,6 @@ Security note: We strongly recommend enabling 2FA on your GitHub account. If you
 ### Q: My organization uses SSO (Single Sign-On). Does that affect anything?
 **A:** Yes. After authenticating with SSO, you may need to authorize your SSH key or PAT for that organization. Go to https://github.com/settings/tokens → find your token → click "Configure SSO" → authorize for your org.
 
----
 
 ## Navigating GitHub on the Web
 
@@ -261,7 +254,6 @@ Full reference: [Appendix B (Screen Reader Cheat Sheet)](docs/appendix-b-screen-
 
 Full reference: [Appendix J (Advanced Search)](docs/appendix-j-advanced-search.md)
 
----
 
 ## Issues
 
@@ -306,7 +298,6 @@ When the PR is merged, the issue closes automatically.
 ### Q: How do I subscribe to or unsubscribe from an issue?
 **A:** On the issue sidebar, find the "Notifications" section. Click "Subscribe" to get notified of all comments, or "Unsubscribe" to stop notifications. You are automatically subscribed to issues you create or comment on.
 
----
 
 ## Pull Requests
 
@@ -361,7 +352,6 @@ Navigate between tabs using your screen reader's heading navigation or landmark 
 ### Q: Can I edit someone else's PR?
 **A:** Only if the PR author checked "Allow edits from maintainers" and you have write access to the target repository. Otherwise, you can suggest changes in a review comment using the suggestion feature.
 
----
 
 ## Merge Conflicts
 
@@ -398,7 +388,6 @@ After resolving: `git add [filename]` → `git commit -m "Resolved merge conflic
 - Communicate with your team about which files you are editing
 - Avoid editing the same lines as someone else
 
----
 
 ## Branches and Forks
 
@@ -427,7 +416,6 @@ After resolving: `git add [filename]` → `git commit -m "Resolved merge conflic
 - **On GitHub:** After merging, GitHub shows a "Delete branch" button on the PR page
 - **Locally:** `git branch -d branch-name` (safe delete - only works if merged) or `git branch -D branch-name` (force delete)
 
----
 
 ## Markdown
 
@@ -475,7 +463,6 @@ The `|` characters create columns. The `---` row separates the header from the b
 ### Q: How do I preview Markdown before submitting?
 **A:** On GitHub, click the "Preview" tab above any text input area. In VS Code, press `Ctrl+Shift+V` to open Markdown preview in a new tab, or `Ctrl+K V` for a side-by-side preview.
 
----
 
 ## Labels, Milestones, and Projects
 
@@ -491,7 +478,6 @@ The `|` characters create columns. The `---` row separates the header from the b
 ### Q: What is a GitHub Project?
 **A:** A flexible planning tool with boards (Kanban-style columns), tables, and roadmaps. You can add issues and PRs from multiple repositories. See [Appendix I (GitHub Projects Deep Dive)](docs/appendix-i-github-projects.md).
 
----
 
 ## Notifications
 
@@ -522,7 +508,6 @@ See [Chapter 9 (Notifications)](docs/09-notifications.md).
 - `Shift+I` to mark as Read
 - `Enter` to open the linked issue or PR
 
----
 
 ## VS Code
 
@@ -571,7 +556,6 @@ Within each view, use `Tab`, `Arrow keys`, and `Enter` to navigate.
 ### Q: What are audio cues (accessibility signals) in VS Code?
 **A:** VS Code can play short sounds for events like errors, warnings, breakpoints, and diff changes. Configure them at Settings → search `accessibility.signals`. Each signal can be set to "on," "off," or "auto" (only when a screen reader is detected). See [Appendix M](docs/appendix-m-vscode-accessibility-reference.md).
 
----
 
 ## Git and Source Control in VS Code
 
@@ -604,7 +588,6 @@ Within each view, use `Tab`, `Arrow keys`, and `Enter` to navigate.
 ### Q: How do I view a diff in VS Code?
 **A:** In the Source Control panel, click any changed file. VS Code opens a side-by-side diff view. For accessible navigation, press `F7` to open the Accessible Diff Viewer, which reads changes sequentially.
 
----
 
 ## GitHub Copilot
 
@@ -653,7 +636,6 @@ Full reference: [Appendix W (GitHub Copilot Reference)](docs/appendix-w-github-c
 ### Q: Can I choose which AI model Copilot uses?
 **A:** Yes. In Copilot Chat, click the model selector (announced by your screen reader near the input field) to choose from available models. Different models have different strengths. See [Appendix X (Copilot AI Models)](docs/appendix-x-copilot-models.md).
 
----
 
 ## Accessibility Agents
 
@@ -683,7 +665,6 @@ See [Appendix V](docs/appendix-v-accessibility-agents-reference.md) for the comp
 ### Q: Can I create my own agents?
 **A:** Yes. Create a new `.agent.md` file in `.github/agents/` following the existing file format. The file is plain Markdown with YAML frontmatter. See [Appendix V (Accessibility Agents Reference)](docs/appendix-v-accessibility-agents-reference.md).
 
----
 
 ## Issue Templates
 
@@ -705,7 +686,6 @@ See [TROUBLESHOOTING.md](TROUBLESHOOTING.md) → "Template not showing in GitHub
 ### Q: Can I use the @template-builder agent to create templates?
 **A:** Yes. The `@template-builder` agent in Copilot Chat walks you through creating templates interactively. It asks questions and generates the YAML for you. See [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md).
 
----
 
 ## Code Review
 
@@ -739,7 +719,6 @@ Example: "The `alt` attribute on this image is empty. Screen readers will skip i
 - **Approve:** You are satisfied the changes are ready to merge
 - **Request Changes:** You have identified issues that must be fixed before merging
 
----
 
 ## The Learning Room
 
@@ -759,7 +738,6 @@ Details in `learning-room/docs/CHALLENGES.md` and `learning-room/docs/GROUP_CHAL
 ### Q: Can I practice in the Learning Room on my own?
 **A:** Yes. Fork the repository, and the individual challenges work in your fork. Group challenges are designed for a live session but you can still practice the technical steps solo.
 
----
 
 ## Workshop Logistics
 
@@ -781,7 +759,6 @@ Details in `learning-room/docs/CHALLENGES.md` and `learning-room/docs/GROUP_CHAL
 ### Q: What if I have accessibility needs not covered by the workshop setup?
 **A:** Contact the facilitator. This workshop is designed for flexibility - if you need a specific accommodation (higher contrast, different font size, alternative input method, longer break time), ask.
 
----
 
 ## After the Workshop
 
@@ -815,7 +792,6 @@ Then rebuild the HTML: `npm run build:html`
 ### Q: How do I download all the workshop materials for offline reading?
 **A:** See [Appendix Y (Accessing Workshop Materials)](docs/appendix-y-accessing-workshop-materials.md) for complete instructions - clone via Git, download as ZIP, or read individual files on GitHub.com.
 
----
 
 ## Concepts and Terminology
 
@@ -855,7 +831,6 @@ See [Chapter 1](docs/01-understanding-github-web-structure.md) for detailed expl
 ### Q: What is ARIA?
 **A:** **Accessible Rich Internet Applications** - A set of HTML attributes that add accessibility information to web elements. For example, `aria-label` provides a text description for screen readers, and `role` identifies the purpose of an element (button, navigation, main content, etc.).
 
----
 
 ## Still Stuck?
 
@@ -869,7 +844,6 @@ This FAQ does not cover your question? Try these resources in order:
 6. **GitHub Issues** - Search existing issues or [open a new one](../../issues)
 7. [**FACILITATOR.md**](FACILITATOR.md) - If you are leading a workshop
 
----
 
 *Last updated: February 2026*  
 *Have more questions? Open an issue or discussion on GitHub!*

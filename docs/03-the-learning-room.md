@@ -6,7 +6,6 @@
 
 The **Learning Room** is a single, shared GitHub repository where all workshop participants collaborate together. It is not your personal fork. It is not your individual repository. It is one repo with many students, many branches, and many pull requests.
 
----
 
 ## Workshop Recommendation (Chapter 3)
 
@@ -41,7 +40,6 @@ learning-room (SHARED)
 - **Peer review** - You review the people sitting next to you
 - **Automation** - The bot serves one repo, coordinating all contributions
 
----
 
 ## Two Tracks, One Repository
 
@@ -84,7 +82,6 @@ Mona verifies your step         Human peer reviewer approves
 Next step unlocked             Ready to merge
 ```
 
----
 
 ## Learning Room Folder Structure
 
@@ -114,7 +111,6 @@ learning-room/
 └── [other files for practice]
 ```
 
----
 
 ## Your Practice Branch
 
@@ -146,7 +142,6 @@ When you join the workshop, the facilitator creates a **personal practice branch
 
 > **Note:** For GitHub web-based editing (Chapters 4-5), you can create temporary feature branches with descriptive names like `fix/welcome-todos` or `add/keyboard-shortcuts`. Your practice branch becomes essential when you start working locally with Git in Chapter 11.
 
----
 
 ## The Practice Files: What You Will Work On
 
@@ -213,7 +208,6 @@ Each challenge lists the file(s) to edit, estimated time, skills practiced, succ
 
 Seven group exercises for study groups, ranging from a Documentation Sprint (divide `docs/welcome.md` among group members) to a Full Repository Audit (each person audits a section of the workshop documentation). Groups of 2-6 students work together with coordinated PRs and cross-review.
 
----
 
 ## How PR Sharing Works
 
@@ -232,7 +226,7 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
    - Added contributor backgrounds paragraph
    - Added guidance on evaluating issues
    - Added note about GitHub profile impact
-   
+
    Closes #12
    ```
 
@@ -271,9 +265,9 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 
   ```text
   ## Peer Review Assigned
-  
+
   Hi @studentA! Your PR has been automatically paired with @studentC for peer review.
-  
+
   ### For @studentC:
   This is a great opportunity to practice code review skills! Here's what to look for:
   - Did all three [TODO] sections get completed in welcome.md?
@@ -346,7 +340,6 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 - Achievement comment is public
 - Progress reflected in Learning Paths documentation
 
----
 
 ## What All Students See
 
@@ -361,7 +354,6 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 | Your review request | Your notification inbox | You + PR author |
 | You assigned as reviewer | Your review requests filter | You + PR author |
 
----
 
 ## The Learning Automation System
 
@@ -392,7 +384,6 @@ When you open a PR in the Learning Room, you get **three types of feedback**:
 
 **Together:** Instant technical feedback + human mentorship + visible progress
 
----
 
 ## Study Groups (Optional)
 
@@ -415,7 +406,6 @@ This is your collaboration space!
 - Celebrate each other's achievements
 ```
 
----
 
 ## Key Differences: Skills Module vs. Learning Room
 
@@ -431,7 +421,6 @@ This is your collaboration space!
 | **Completion** | Badge on your profile | Progress appears in Learning Paths |
 | **Community** | You alone | All students together |
 
----
 
 ## Tips for PR Sharing
 
@@ -496,7 +485,7 @@ Conversation Tab (reading reviews):
   3. Your name appears as reviewer
   4. Read bot comment
   5. Read peer feedback
-  
+
 Files Changed Tab (what actually changed):
   1. Press H to navigate files
   2. Press T to explore file tree
@@ -515,7 +504,7 @@ Conversation Tab (reading reviews):
   2. Listen for "Reviewers" heading
   3. Your name appears as reviewer
   4. VO+Down to read bot comment and peer feedback
-  
+
 Files Changed Tab (what actually changed):
   1. Quick Nav H to navigate file headings
   2. VO+U → Landmarks → "File tree" to explore files
@@ -616,7 +605,6 @@ Files Changed Tab (what actually changed):
 
 </details>
 
----
 
 ## FAQ: PR Sharing in Learning Room
 
@@ -656,7 +644,6 @@ Comment explaining why. Request human review. The bot isn't perfect - that's why
 
 No! The Learning Room has challenges for all skill levels. You can pick what interests you, complete at your pace, and continue after the workshop.
 
----
 
 ## Celebration: You're Contributing
 
@@ -672,7 +659,6 @@ You merged your work
 
 This is not hypothetical. This is not simulation. This is real.
 
----
 
 *Next: [Working with Issues](04-working-with-issues.md)*
 *Back: [Navigating Repositories](02-navigating-repositories.md)*

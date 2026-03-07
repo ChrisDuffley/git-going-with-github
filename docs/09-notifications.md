@@ -6,7 +6,6 @@
 
 > GitHub notifications are how GitHub tells you when something needs your attention. This guide teaches you to keep the inbox useful - not overwhelming - using only your keyboard and screen reader.
 
----
 
 ## Workshop Recommendation (Chapter 9)
 
@@ -22,7 +21,6 @@ For this workshop, Chapter 9 is a **guided practice chapter**, not a graded auto
 - Notification state changes (watch level, mute, done, saved) are not part of repository file changes.
 - A forced graded check here would create busywork instead of meaningful skill practice.
 
----
 
 ## Guided Walkthrough Challenge (No Automation Check)
 
@@ -70,7 +68,6 @@ This keeps Chapter 9 practical and consistent without adding grading overhead.
 
 Notification management protects focus. You can stay responsive without drowning in updates.
 
----
 
 ## What Generates a Notification?
 
@@ -85,7 +82,6 @@ GitHub sends you a notification when:
 | A CI check fails on your PR | Actions sends a failure notification |
 | A release is published | You are watching the repo for all activity |
 
----
 
 ## Notification Subscription Levels
 
@@ -131,7 +127,6 @@ At the top of any repository page, find the **Watch** button (near Star and Fork
 
 **Recommended setting for most repos:** “Participating and @mentions only” - you stay in the loop on what involves you without noise.
 
----
 
 ## The Notifications Inbox
 
@@ -204,7 +199,6 @@ The inbox shows notifications grouped by date (Today, Yesterday, This week, Olde
 
 Components: **repo/org** | **thread title** | **event type** | **timestamp**
 
----
 
 ## Inbox Actions - Keyboard Shortcuts
 
@@ -221,7 +215,6 @@ These shortcuts work when a notification is focused in the inbox:
 
 > **Screen reader note:** These are GitHub's own keyboard shortcuts. In Browse Mode, some of these letters are also navigation keys. To use these shortcuts reliably, make sure focus is on the notification row (tab to it) rather than in browse/reading mode.
 
----
 
 ## Filtering the Inbox
 
@@ -269,7 +262,6 @@ Click the filter/search box at the top of the notification list and type a repos
 
 </details>
 
----
 
 ## Managing Notifications at Scale
 
@@ -323,7 +315,6 @@ If you were @mentioned in an unfamiliar thread:
 2. If it seems like a mistake, a simple "I don't think this mention was meant for me - feel free to remove it!" is enough
 3. Unsubscribe after reading if you don't need to stay in the loop
 
----
 
 ## Notification Settings - Per Your Account
 
@@ -346,7 +337,6 @@ F or E → navigate form fields within each section
 Tab → move between options within a form group
 ```
 
----
 
 ## Starring vs. Watching - What Is the Difference?
 
@@ -398,7 +388,6 @@ This immediately reduces notifications from that repository to only threads you 
 | Very busy popular repos | **Ignore** or **Participating** - do not watch for All Activity |
 | Repos you're evaluating | **Star only** - save without subscribing |
 
----
 
 ## Screen Reader Tips for the Notification Inbox
 
@@ -420,7 +409,6 @@ This immediately reduces notifications from that repository to only threads you 
 - `VO+Space` to activate a row, `VO+Escape` to return to the list
 - With Quick Nav on, `H` navigates the date group headings
 
----
 
 ## The GitHub Mobile App - A Reference Note
 
@@ -430,7 +418,6 @@ GitHub has an iOS and Android app that supports push notifications. While the ap
 - The mobile app does work with iOS VoiceOver and Android TalkBack
 - For primary contribution work, the desktop browser experience remains more fully featured
 
----
 
 ## Try It: Tame Your Inbox
 
@@ -446,7 +433,6 @@ Go to [github.com/notifications](https://github.com/notifications) and practice:
 
 > **What success feels like:** Your inbox has fewer items, and you chose what to watch. Notifications work *for* you now, not against you.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@daily-briefing`
 >
@@ -460,7 +446,6 @@ Go to [github.com/notifications](https://github.com/notifications) and practice:
 >
 > *Your notification discipline today becomes the standard the agent enforces at scale tomorrow.*
 
----
 
 *Next: [Day 2 Agenda](../DAY2_AGENDA.md)*
 *Back: [Labels, Milestones, and Projects](08-labels-milestones-projects.md)*

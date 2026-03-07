@@ -1,10 +1,8 @@
----
 name: "Challenge: {CHAPTER_NAME}"
 about: "Chapter {CHAPTER_NUM} Challenge - {CHALLENGE_SUMMARY}"
 title: "Chapter {CHAPTER_NUM}.{CHALLENGE_NUM}: {CHALLENGE_TITLE} (@{USERNAME})"
 labels: ["challenge", "challenge: {CHALLENGE_DIFFICULTY}", "skill: {SKILL_TAG}", "day: {DAY}"]
 assignees: ["{USERNAME}"]
----
 
 > [!WARNING]
 > This issue is part of the **GIT Going with GitHub** course.
@@ -16,7 +14,6 @@ assignees: ["{USERNAME}"]
 **Estimated Time:** {TIME_ESTIMATE}  
 **Skill Level:** {CHALLENGE_DIFFICULTY}  
 
----
 
 ## Challenge Overview
 
@@ -24,13 +21,11 @@ assignees: ["{USERNAME}"]
 
 **All challenges in this chapter are linked to the [Challenge Hub](https://github.com/Community-Access/learning-room/blob/main/docs/CHALLENGES.md#chapter-{CHAPTER_NUM}-{ANCHOR_TEXT}) for full context and instructions.**
 
----
 
 ## Your Challenge: {CHALLENGE_TITLE}
 
 {CHALLENGE_BODY_FROM_HUB}
 
----
 
 ## What You Need to Do
 
@@ -39,7 +34,6 @@ assignees: ["{USERNAME}"]
 3. **Submit your work** - your PR should include proof of completion
 4. **See your issue close** automatically when your PR merges
 
----
 
 ## How to Submit
 
@@ -70,13 +64,11 @@ Then open a PR with:
 ### Step 5: Watch for Validation
 {VALIDATION_TEXT}
 
----
 
 ## Expected Outcomes
 
 {EXPECTED_OUTCOMES}
 
----
 
 ## If You Get Stuck
 
@@ -86,7 +78,6 @@ Then open a PR with:
 4. **Ask in Slack** - tag @facilitator with `#help` and your challenge number
 5. **Comment on this issue** - describe what's blocking you; facilitator will help
 
----
 
 ## Learning Moment
 

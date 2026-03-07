@@ -23,19 +23,18 @@
 - **Progress suggestions** pointing to next challenges
 - **Encouragement** and next steps
 
----
 
 ## Your Role as Facilitator
 
 You don't need to do what the bot already handles! Focus on:
 
-✅ **What the bot handles:**
+ **What the bot handles:**
 - Welcomes students
 - Validates technical requirements
 - Provides instant, objective feedback
 - Tracks basic metrics
 
-❌ **What needs human review:**
+ **What needs human review:**
 - Quality of the work (not just technical correctness)
 - Understanding and learning (did they get the concept?)
 - Creative solutions and improvements
@@ -57,7 +56,6 @@ You don't need to do what the bot already handles! Focus on:
 - If student disagrees with bot → you can override the decision
 - Link to resources the bot recommended to reinforce learning
 
----
 
 ## Handling Common Scenarios
 
@@ -72,7 +70,7 @@ This is normal! The bot isn't perfect. **Your judgment matters.**
 4. Facilitator judgment overrides bot checks
 
 Example comment:
-> The bot flagged this link as broken, but I can see it works correctly. Great job! ✅
+> The bot flagged this link as broken, but I can see it works correctly. Great job! 
 
 ### Student Is Stuck on Bot Feedback
 
@@ -89,7 +87,6 @@ Example comment:
 2. **Needs work** (bot flagged issues) → Comment with guidance
 3. **Advanced** (complex changes) → Schedule deep review
 
----
 
 ## Customizing Feedback for Your Workshop
 
@@ -114,13 +111,12 @@ welcomeBody = [
 ```yaml
 # Change badge emoji and names:
 badges = {
-  'markdown': '🎖️ Your Custom Badge Name',
-  'accessibility': '♿ Your Custom Badge',
+  'markdown': ' Your Custom Badge Name',
+  'accessibility': ' Your Custom Badge',
   // ...
 }
 ```
 
----
 
 ## Monitoring Progress
 
@@ -141,7 +137,6 @@ All workflow runs are logged in **Actions** tab. Check there if:
 - You need to debug why a check failed
 - You want to see performance metrics
 
----
 
 ## Troubleshooting Issues
 
@@ -175,7 +170,6 @@ If workflow failed, you might need to:
 3. Pair program or pair review
 4. Celebrate when they fix it
 
----
 
 ## Student Pain Points & Solutions
 
@@ -186,7 +180,6 @@ If workflow failed, you might need to:
 | "The bot is wrong" | Validation rule is imperfect | Acknowledge + override if appropriate |
 | "I'm a screen reader user, this is hard" | Workflow isn't accessible | Offer alt workflows or helper options |
 
----
 
 ## Weekly Facilitator Checklist
 
@@ -196,23 +189,21 @@ If workflow failed, you might need to:
 - [ ] Celebrate merged PRs in a community forum post
 - [ ] Remove blockers preventing students from claiming issues
 
----
 
 ## Communication Examples
 
 ### Encouraging First-Timer
-> Great first PR! The bot's feedback is just technical housekeeping. Your understanding of the material is clear. Let's fix these two link references and merge! 💪
+> Great first PR! The bot's feedback is just technical housekeeping. Your understanding of the material is clear. Let's fix these two link references and merge! 
 
 ### Explaining Bot Decision
 > The bot flagged your link text as non-descriptive. Instead of "[read more](link)", try "[Understanding Git Branches](link)" so screen readers users know what they're clicking. Give it a try!
 
 ### Overriding Bot
-> The bot said this link is broken, but I can verify it works. You found a real edge case! Approved ✅
+> The bot said this link is broken, but I can verify it works. You found a real edge case! Approved 
 
 ### Celebrating Achievement  
-> You crushed this! Look at that bot badge 🎖️ Not only did you learn the skill, but you did it *right*. You're ready for the next challenge.
+> You crushed this! Look at that bot badge  Not only did you learn the skill, but you did it *right*. You're ready for the next challenge.
 
----
 
 ## Key Principles
 
@@ -223,7 +214,6 @@ Remember: **The bot enables human connection, not replaces it.**
 - Bot celebrates wins → You celebrate their learning journey
 - Bot sets standards → You uphold them with empathy
 
----
 
 ## Quick Links
 
@@ -232,6 +222,5 @@ Remember: **The bot enables human connection, not replaces it.**
 - [Challenge List](../docs/CHALLENGES.md)
 - [Group Challenges](../docs/GROUP_CHALLENGES.md)
 
----
 
 **Questions?** Check the setup guide or reach out in your facilitator Slack!

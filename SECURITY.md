@@ -65,6 +65,5 @@ This curriculum is designed to teach GitHub to workshop participants. The primar
 
 Security researchers who responsibly disclose valid vulnerabilities will be credited in the repository's release notes (unless they prefer to remain anonymous).
 
----
 
 *For general questions about the curriculum, open a regular issue. For security concerns, use private reporting above.*

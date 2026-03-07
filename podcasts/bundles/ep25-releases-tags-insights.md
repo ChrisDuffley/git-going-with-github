@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Repository Insights: pulse, contributors, traffic, dependency graph
 - Using Insights to understand project health
 
----
 
 ### Concept Coverage Checklist
 
@@ -65,7 +63,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > Two things help you understand a repository's health and your place in it: **releases** (the versioned snapshots your contributions land in) and **insights** (the activity metrics that show how a project grows). This appendix covers both.
 
----
 
 ## Table of Contents
 
@@ -94,7 +91,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 18. [Screen Reader Navigation Reference](#18-screen-reader-navigation-reference)
 19. [Accessibility Agents: `/my-stats` and `/team-dashboard`](#19-accessibility-agents-my-stats-and-team-dashboard)
 
----
 
 ## Part 1 - Releases and Tags
 
@@ -112,7 +108,6 @@ For documentation-only or non-software projects, releases are often used to mark
 
 **When your PR gets merged:** Your change becomes part of the code on the default branch. It will be *included* in the next release whenever the maintainer decides to publish one - this might be days, weeks, or months away depending on the project's release cadence.
 
----
 
 ## 2. Releases vs. Tags vs. Branches
 
@@ -129,7 +124,6 @@ These three concepts are closely related:
 - A tag without a release is just a version marker in the git history
 - GitHub automatically creates a tag when you create a release
 
----
 
 ## 3. Navigating Releases on GitHub
 
@@ -166,7 +160,6 @@ K → Navigate links (download assets, compare, tag links)
 ↓ → Read release notes
 ```
 
----
 
 ## 4. Understanding Version Numbers
 
@@ -197,7 +190,6 @@ PR opened → PR reviewed → PR merged → default branch updated
                           Tag created → Release published → v2.1.1
 ```
 
----
 
 ## 5. Reading Release Notes
 
@@ -225,7 +217,6 @@ Release notes document what changed. High-quality release notes categorize chang
 
 **The "Full Changelog" link** at the bottom of many release notes goes to a comparison view showing every merged PR between two tags. This is where you'll see your PR listed by name, with your username credited.
 
----
 
 ## 6. For Maintainers: Creating a Release
 
@@ -247,7 +238,6 @@ This section is relevant if you become a maintainer or contribute to a project t
 
 The `/draft-release` command generates structured release notes automatically from your merged PRs - much faster and more consistent than writing them manually. See [Section 8](#8-accessibility-agents-draft-release).
 
----
 
 ## 7. Draft and Pre-Release States
 
@@ -257,7 +247,6 @@ The `/draft-release` command generates structured release notes automatically fr
 
 **Latest release:** The most recent non-pre-release, non-draft release. This is what GitHub highlights in the sidebar and what `github.com/owner/repo/releases/latest` redirects to.
 
----
 
 ## 8. Accessibility Agents: `/draft-release`
 
@@ -295,7 +284,6 @@ The `/draft-release` command automates release note generation from your merged 
 
 > **See also:** The `/release-prep` command runs a complete pre-release checklist (milestone status, open PRs, CI health, security, and then generates release notes) - useful when preparing a release from scratch rather than just generating notes.
 
----
 
 ## Part 2 - Repository Insights
 
@@ -312,7 +300,6 @@ The Insights tab shows quantitative activity data for a repository. It is primar
 - Real-time data (most views update daily or weekly)
 - Code quality scores
 
----
 
 ## 10. Navigating to Insights
 
@@ -329,7 +316,6 @@ T → navigate the repository tab bar
 → K to navigate sidebar links → Enter to open each view
 ```
 
----
 
 ## 11. Pulse - Recent Activity Summary
 
@@ -354,7 +340,6 @@ T → navigate the repository tab bar
 K → Navigate all links
 ```
 
----
 
 ## 12. Contributors - Who Builds the Project
 
@@ -382,7 +367,6 @@ Tab → Column headers (click to sort: Commits, Additions, Deletions)
 K → Links to each contributor's filtered commit list
 ```
 
----
 
 ## 13. Traffic - Who Visits the Repo
 
@@ -401,7 +385,6 @@ K → Links to each contributor's filtered commit list
 - If the README is the most-viewed file, documentation improvements have high impact
 - If traffic spiked when a blog post linked the repo, that's a good signal for community growth
 
----
 
 ## 14. Commits and Code Frequency
 
@@ -419,7 +402,6 @@ K → Links to each contributor's filtered commit list
 
 **Screen reader note for both views:** The charts are visual canvas elements. For a text-based view of commit history, use the Commits tab on the main repository page instead.
 
----
 
 ## 15. Dependency Graph
 
@@ -435,7 +417,6 @@ The **Dependency Graph** shows:
 
 **Why it matters for security:** The dependency graph feeds Dependabot. If a vulnerability is found in a library, Dependabot uses this graph to identify which repos use the affected version and opens automated PRs to update them. See [Appendix L: GitHub Security Features](appendix-l-github-security-features.md) for more on Dependabot.
 
----
 
 ## 16. Network and Forks
 
@@ -445,7 +426,6 @@ The **Network** view shows a graphical branch/fork network - who has forked the 
 
 **The forks list** (at `/forks`) is a simple table of who forked the repo - navigable with standard table navigation.
 
----
 
 ## 17. Community Standards
 
@@ -453,14 +433,14 @@ The **Community Standards** view (found in the Insights sidebar or in the main r
 
 | File | Purpose | Status |
 |---|---|---|
-| Description | One-line repo summary | ✓ or ✗ |
-| README | Project overview | ✓ or ✗ |
-| Code of Conduct | Community behavior standards | ✓ or ✗ |
-| Contributing guide | How to contribute | ✓ or ✗ |
-| License | Usage rights | ✓ or ✗ |
-| Issue templates | Structured issue forms | ✓ or ✗ |
-| Pull request template | PR checklist | ✓ or ✗ |
-| Security policy | How to report vulnerabilities | ✓ or ✗ |
+| Description | One-line repo summary |  or  |
+| README | Project overview |  or  |
+| Code of Conduct | Community behavior standards |  or  |
+| Contributing guide | How to contribute |  or  |
+| License | Usage rights |  or  |
+| Issue templates | Structured issue forms |  or  |
+| Pull request template | PR checklist |  or  |
+| Security policy | How to report vulnerabilities |  or  |
 
 A fully green checklist signals a well-maintained project. For accessibility-agents contributors, **adding a missing community health file is always a welcome `good first issue` contribution.**
 
@@ -470,7 +450,6 @@ H / 2 → "Community Standards" section heading
 Tab → Each checklist item (links to add missing files)
 ```
 
----
 
 ## 18. Screen Reader Navigation Reference
 
@@ -532,7 +511,6 @@ I → List items (in Pulse views)
 K → Links to each item
 ```
 
----
 
 ## 19. Accessibility Agents: `/my-stats` and `/team-dashboard`
 
@@ -573,6 +551,5 @@ Output includes:
 
 **Use these instead of navigating the Insights UI** when you want contribution data without leaving VS Code and without dealing with canvas charts.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Glossary](appendix-a-glossary.md)*

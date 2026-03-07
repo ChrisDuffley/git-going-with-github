@@ -1,4 +1,3 @@
----
 name: my-prs
 description: "Dashboard of your open PRs across all repos -- review status, CI, merge state, reactions, release context, and what needs attention"
 agent: pr-review
@@ -7,7 +6,6 @@ tools:
   - createFile
   - createDirectory
   - ask_questions
----
 
 Get the current authenticated user with #tool:mcp_github_github_get_me, then search for all **open** pull requests authored by or assigned to that user.
 

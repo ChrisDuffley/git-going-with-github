@@ -66,7 +66,6 @@ Automates peer review assignment and study group formation:
 **Configuration:** `.github/data/student-roster.json`  
 **Triggers:** PR opened/ready_for_review, manual dispatch
 
----
 
 ## File Structure
 
@@ -92,7 +91,6 @@ learning-room/
     └── GROUP_CHALLENGES.md            ← Collaborative exercises
 ```
 
----
 
 ## Quick Start
 
@@ -118,7 +116,6 @@ When you open a PR:
 
 **See:** [Automation Guide](../learning-room/AUTOMATION.md) for how to use the bot
 
----
 
 ## Configuration
 
@@ -167,7 +164,6 @@ Customize checks:
 
 Add new validation functions to `required` or `suggestions` arrays.
 
----
 
 ## Workflow Jobs Reference
 
@@ -230,7 +226,6 @@ Add new validation functions to `required` or `suggestions` arrays.
   - timezone_match: Group by timezone
 - Creates issue per group with collaboration guide
 
----
 
 ## Educational Philosophy
 
@@ -260,7 +255,6 @@ All automation components:
 - Work fully with screen readers
 - Mention screen reader considerations in guidance
 
----
 
 ## Monitoring & Troubleshooting
 
@@ -288,7 +282,6 @@ All automation components:
 
 **See:** [Implementation Guide - Troubleshooting](docs/IMPLEMENTATION_GUIDE.md#step-7-troubleshooting)
 
----
 
 ## Success Metrics
 
@@ -312,7 +305,6 @@ Track these to evaluate automation impact:
 - Number of PRs requiring facilitator intervention
 - Student satisfaction with automation
 
----
 
 ## Customization Examples
 
@@ -366,7 +358,6 @@ Edit `.github/data/challenge-progression.json`:
 }
 ```
 
----
 
 ## Documentation Map
 
@@ -382,7 +373,6 @@ Edit `.github/data/challenge-progression.json`:
 - [Workflow Files](workflows/) - Automation source code
 - [Data Files](data/) - Configuration (roster, progression)
 
----
 
 ## Contributing to Automation
 
@@ -400,7 +390,6 @@ Found a bug? Have a suggestion?
 - Custom grouping strategies
 - Additional validation checks
 
----
 
 ## Version History
 
@@ -418,7 +407,6 @@ Found a bug? Have a suggestion?
 - Advanced analytics and visualizations
 - Custom achievement builder UI
 
----
 
 ## Acknowledgments
 
@@ -432,7 +420,6 @@ This automation system was designed with these principles:
 
 Built for the Open Source Assistive Technology Hackathon workshop.
 
----
 
 **Questions?** Open an issue or reach out to workshop facilitators!
 

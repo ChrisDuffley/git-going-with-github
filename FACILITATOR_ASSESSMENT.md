@@ -3,48 +3,46 @@
 ## Summary
 
 The `FACILITATOR.md` guide was **50% complete** with excellent coverage of:
-- ✅ Pre-workshop setup (2 weeks before)
-- ✅ Repository configuration (1 week before)
-- ✅ Pre-session checklists (Day 1 & 2)
-- ✅ GitHub Skills module facilitation
-- ✅ Learning Room automation management
+-  Pre-workshop setup (2 weeks before)
+-  Repository configuration (1 week before)
+-  Pre-session checklists (Day 1 & 2)
+-  GitHub Skills module facilitation
+-  Learning Room automation management
 
 However, it was **missing critical sections** for hands-on facilitation:
 
----
 
 ## What Was MISSING (Before)
 
-### 1. **Chapter-by-Chapter Facilitation Notes** ❌
+### 1. **Chapter-by-Chapter Facilitation Notes** 
 The guide referenced 16 chapters but provided **zero** facilitator talking points, discussion starters, or common misconceptions for any of them.
 
 **Impact:** Facilitators had to reverse-engineer from student chapters what students were learning and where they might struggle.
 
-### 2. **Accessibility Testing Checklist** ❌
+### 2. **Accessibility Testing Checklist** 
 No systematic guide for verifying screen reader functionality before the workshop.
 
 **Impact:** Starting a workshop with misconfigured screen readers derails the day—this was not prevented.
 
-### 3. **Facilitator Q&A Guide** ❌
+### 3. **Facilitator Q&A Guide** 
 No troubleshooting guide for common participant questions and errors.
 
 **Removed:** Facilitators had to troubleshoot in real-time, unsure if a problem was a setup issue, a misunderstanding, or a real bug.
 
-### 4. **Accessibility Pedagogy** ❌
+### 4. **Accessibility Pedagogy** 
 Little guidance on how to **explain** accessibility topics to learners encountering these tools for the first time.
 
 **Impact:** Accessibility teaching became inconsistent—some facilitators better at explaining than others.
 
-### 5. **Common Patterns Explained** ❌
+### 5. **Common Patterns Explained** 
 Complex workflows (fork-edit-PR, merge conflicts, automation) lacked clear mental models.
 
 **Impact:** Explanations rambled; students never got the 2-minute clear explanation they needed.
 
----
 
 ## What I've ADDED (Now)
 
-### ✅ Chapter-by-Chapter Facilitation Guide
+###  Chapter-by-Chapter Facilitation Guide
 
 **Coverage:** All 16 chapters plus introduction chapters (0-2)
 
@@ -67,7 +65,7 @@ Chapter 1: Understanding GitHub's Web Structure
 - Demo script: "I'm opening github.com/community-access/learning-room..."
 ```
 
-### ✅ Accessibility Testing Checklist
+###  Accessibility Testing Checklist
 
 **5 major categories:**
 1. **Screen Reader Setup (NVDA)** - 8 specific tests
@@ -88,7 +86,7 @@ Chapter 1: Understanding GitHub's Web Structure
 
 **Usage:** Print this, run it on your demo machine and each participant's setup before Day 1 starts. Prevents hours of troubleshooting.
 
-### ✅ Facilitator Q&A Guide
+###  Facilitator Q&A Guide
 
 **10 real participant questions with solutions:**
 
@@ -109,7 +107,7 @@ Chapter 1: Understanding GitHub's Web Structure
 - Escalation path if basic troubleshooting fails
 - Teaching point (connects to a larger lesson)
 
-### ✅ Accessibility Pedagogy Section
+###  Accessibility Pedagogy Section
 
 **Teaching methods for participant explanations:**
 
@@ -126,7 +124,7 @@ Chapter 1: Understanding GitHub's Web Structure
 listing all links or buttons gets you there faster than pressing K fifteen times."
 ```
 
-### ✅ Common Patterns Explained
+###  Common Patterns Explained
 
 **4 complex workflows with mental models:**
 
@@ -137,7 +135,6 @@ listing all links or buttons gets you there faster than pressing K fifteen times
 
 **Each includes a 3-5 minute clear explanation suitable for live teaching.**
 
----
 
 ## File Statistics
 
@@ -149,7 +146,6 @@ listing all links or buttons gets you there faster than pressing K fifteen times
 - **850+ lines** (2.15x larger)
 - Added: chapter guidance, testing, Q&A, pedagogy, patterns
 
----
 
 ## How to Use This Enhanced Guide
 
@@ -179,19 +175,17 @@ listing all links or buttons gets you there faster than pressing K fifteen times
 3. Contribute back: if you discovered a new common question, add it to the Q&A Guide
 4. File issues for any demo commands that need updating (GitHub UI changes)
 
----
 
 ## What Still Exists from Before
 
-✅ Pre-workshop setup (Section 1-3)  
-✅ GitHub Skills facilitator scripts (Section 5)  
-✅ Automation management (Section 6)  
-✅ Accessibility notes for facilitators (Section 7)  
-✅ Personalization guidance (Section 8)  
+ Pre-workshop setup (Section 1-3)  
+ GitHub Skills facilitator scripts (Section 5)  
+ Automation management (Section 6)  
+ Accessibility notes for facilitators (Section 7)  
+ Personalization guidance (Section 8)  
 
 All of this remains intact and is now **followed by** the new comprehensive facilitation sections.
 
----
 
 ## Next Step: Facilitator Handbook (Optional)
 
@@ -206,24 +200,22 @@ This guide is now **technically complete**. However, an optional next step would
 
 This guide gives you **what to teach and how**. A handbook would add **when** and **how to measure**.
 
----
 
 ## Completeness Rating
 
 | Category | Before | After | Notes |
 |---|---|---|---|
-| Repository setup guidance | ✅95% | ✅95% | No changes needed |
-| Pre-session checklists | ✅90% | ✅90% | No changes needed |
-| GitHub Skills facilitation | ✅85% | ✅85% | No changes needed |
-| Automation management | ✅80% | ✅80% | Added section on automation philosophy |
-| **Chapter guidance** | ❌0% | ✅95% | **ADDED: 400+ lines** |
-| **Troubleshooting** | ❌10% | ✅90% | **ADDED: Q&A guide, 10 scenarios** |
-| **Accessibility testing** | ❌5% | ✅98% | **ADDED: full checklist** |
-| **Teaching methodology** | ❌0% | ✅85% | **ADDED: pedagogy section** |
-| **Common concepts** | ❌5% | ✅90% | **ADDED: 4 major patterns explained** |
+| Repository setup guidance | 95% | 95% | No changes needed |
+| Pre-session checklists | 90% | 90% | No changes needed |
+| GitHub Skills facilitation | 85% | 85% | No changes needed |
+| Automation management | 80% | 80% | Added section on automation philosophy |
+| **Chapter guidance** | 0% | 95% | **ADDED: 400+ lines** |
+| **Troubleshooting** | 10% | 90% | **ADDED: Q&A guide, 10 scenarios** |
+| **Accessibility testing** | 5% | 98% | **ADDED: full checklist** |
+| **Teaching methodology** | 0% | 85% | **ADDED: pedagogy section** |
+| **Common concepts** | 5% | 90% | **ADDED: 4 major patterns explained** |
 | **Overall completeness** | **~40%** | **~92%** | **2.3x more content, all critical gaps filled** |
 
----
 
 ## Validation Checklist
 
@@ -236,6 +228,5 @@ Use this to verify the guide works for your workshop:
 - [ ] Have someone read the Common Patterns section and confirm the explanations are clear
 - [ ] After workshop, gather facilitator feedback: "Which sections were most useful?"
 
----
 
 *This assessment was generated March 5, 2026 during workshop preparation.*

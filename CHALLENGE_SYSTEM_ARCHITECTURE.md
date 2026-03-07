@@ -9,7 +9,6 @@ This document summarizes the complete challenge system architecture built for th
 - **Scalable**: Works for any cohort size with batch script
 - **Self-documenting**: Every issue explains what to do and how bot validation works
 
----
 
 ## System Components
 
@@ -25,7 +24,7 @@ This document summarizes the complete challenge system architecture built for th
 - Challenge Hub: [learning-room/docs/CHALLENGES.md](learning-room/docs/CHALLENGES.md) (expandable reference)
 
 **Documentation Updates:**
-- [README.md](README.md) - "🎯 Your Challenges Are Waiting" section (lines 100-120)
+- [README.md](README.md) - " Your Challenges Are Waiting" section (lines 100-120)
 - [learning-room/docs/CHALLENGES.md](learning-room/docs/CHALLENGES.md) - Welcome + discovery methods (top section)
 
 ### 2. Challenge Templates (Issue Infrastructure)
@@ -123,11 +122,11 @@ Creates the original 10 challenges (Ch 04, 05, 06, 11) by cloning from Weijun-Zh
 1. Student opens PR with `Closes #ISSUE_NUMBER` in title or body
 2. GitHub Actions workflow triggers (`.github/workflows/learning-room-pr-bot.yml`)
 3. Validation script (`.github/scripts/validate-pr.js`) checks:
-   - ✅ `Closes #XX` syntax is correct
-   - ✅ PR references an actual challenge issue
-   - ✅ Markdown syntax is valid
-   - ✅ No major accessibility violations (headings, links, alt text)
-   - ✅ Files changed are in appropriate directory
+   -  `Closes #XX` syntax is correct
+   -  PR references an actual challenge issue
+   -  Markdown syntax is valid
+   -  No major accessibility violations (headings, links, alt text)
+   -  Files changed are in appropriate directory
 4. Bot posts comment with pass/fail status
 5. If failed: student fixes and pushes again (bot re-validates automatically)
 6. When all checks pass: PR can be merged, issue auto-closes
@@ -142,7 +141,6 @@ Creates the original 10 challenges (Ch 04, 05, 06, 11) by cloning from Weijun-Zh
 - Rule exceptions: Can exclude specific files per cohort
 - Workflow schedule: Runs on every PR opened/updated to main
 
----
 
 ## Facilitator Operations
 
@@ -171,7 +169,6 @@ Creates the original 10 challenges (Ch 04, 05, 06, 11) by cloning from Weijun-Zh
 - Prepare for next cohort: Update `student-usernames.txt`, re-run batch script
 - No need to delete old issues; they remain searchable and valuable for reference
 
----
 
 ## Data Structures
 
@@ -231,7 +228,6 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 | **Evidence Posted** | Challenge work is complete | PR submitted for review | Checklist comment posted on issue |
 | **Closed** | Challenge confirmed complete | PR merged (auto-closes issue) | Student or facilitator closes issue |
 
----
 
 ## Success Metrics
 
@@ -269,7 +265,6 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 - **Motivation:** Do students attempt optional challenges (not required)?
   - Check: Any student attempts Chapters 12-16 (guided, not automated)
 
----
 
 ## File Structure
 
@@ -320,7 +315,6 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 └── student-usernames.txt                <- Input for legacy batch script
 ```
 
----
 
 ## Integration Points
 
@@ -340,7 +334,7 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 - [docs/16-accessibility-agents.md](docs/16-accessibility-agents.md) - links to Chapter 16 challenges
 
 ### From README
-- [README.md](README.md) section "🎯 Your Challenges Are Waiting" → directs students to Issues tab
+- [README.md](README.md) section " Your Challenges Are Waiting" → directs students to Issues tab
 - README → links to [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md) for facilitators
 
 ### From Challenge Hub
@@ -352,7 +346,6 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 - [FACILITATOR.md](FACILITATOR.md) → links to [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md)
 - [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md) → links to template files, scripts, chapter docs
 
----
 
 ## Naming Conventions
 
@@ -397,7 +390,6 @@ challenge/6-resolve-merge-conflict
 
 The PR bot validates branch names for Chapter 11 (Git challenges).
 
----
 
 ## Customization & Extension
 
@@ -432,7 +424,6 @@ This system works for any 2-day, 16-chapter technical workshop:
 4. Update facilitator guides with your timelines/agenda
 5. Run: `.\scripts\create_all_challenges.ps1 -DryRun` then `.\scripts\create_all_challenges.ps1`
 
----
 
 ## Common Issues & Solutions
 
@@ -454,7 +445,6 @@ This system works for any 2-day, 16-chapter technical workshop:
 - Permission issues (bot user doesn't have issue create permission)
 - GitHub API rate limiting - wait a few minutes and rerun
 
----
 
 ## Success Story (By the Numbers)
 
@@ -466,7 +456,6 @@ This system works for any 2-day, 16-chapter technical workshop:
 - Script is rerunnable: new members get their full set automatically
 - Labels: 4 levels, 14 skills, 2 days
 
----
 
 ## Next Steps (Future Enhancements)
 
@@ -485,7 +474,6 @@ This system works for any 2-day, 16-chapter technical workshop:
 - [ ] Difficulty curves: AI recommendation of next challenge based on pace
 - [ ] Mobile: GitHub Mobile app integration for easier issue tracking
 
----
 
 ## Document Control
 
@@ -496,7 +484,6 @@ This system works for any 2-day, 16-chapter technical workshop:
 | **Admins** | [scripts/create_all_challenges.ps1](scripts/create_all_challenges.ps1) | Run, troubleshoot |
 | **Developers** | `.github/workflows/`, `.github/scripts/` | Maintain bot logic and rules |
 
----
 
 **Last Updated:** March 2026
 **Archive Location:** [https://github.com/git-going-with-github/](https://github.com/git-going-with-github/)

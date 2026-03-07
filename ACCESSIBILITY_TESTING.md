@@ -3,7 +3,6 @@
 
 This checklist helps you test issue templates, PRs, and GitHub workflows to ensure they're usable by people with disabilities (especially screen reader users).
 
----
 
 ## Quick Checklist for Templates
 
@@ -36,7 +35,6 @@ Use before deploying any new issue template or form.
 - [ ] All required fields present: `name:`, `description:`, `body:`
 - [ ] Field IDs are unique and lowercase with hyphens (e.g., `browser_type`)
 
----
 
 ## Screen Reader Testing Workflow
 
@@ -110,7 +108,6 @@ Use before deploying any new issue template or form.
 - [ ] Field labels are adjacent to fields
 - [ ] Instructions are readable
 
----
 
 ## Accessibility Testing by Component
 
@@ -155,7 +152,6 @@ Use before deploying any new issue template or form.
 
 **Test:** Tab to field, screen reader should announce label, field type, help text, and required status.
 
----
 
 ## Color & Contrast Testing
 
@@ -163,12 +159,11 @@ Use before deploying any new issue template or form.
 - [ ] Color is not the only way to show information
   - Example: Bad: "Red fields are errors" (only color indicates error)
   - Example: Good: "Error" label + red color + error icon
-- [ ] Required fields marked with ✱ or "required" text (not just color)
+- [ ] Required fields marked with  or "required" text (not just color)
 - [ ] Disabled fields are visually distinct
 
 **Test:** Use WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/
 
----
 
 ## Keyboard Navigation Testing
 
@@ -185,7 +180,6 @@ Test WITHOUT using the mouse.
 
 **Test:** Close trackpad, use Tab/Shift+Tab/Enter/Space only.
 
----
 
 ## Mobile & Responsive Testing
 
@@ -197,7 +191,6 @@ Test WITHOUT using the mouse.
 
 **Test:** Resize browser to mobile width (375px), or use phone/tablet to fill form.
 
----
 
 ## Multilingual & Plain Language Testing
 
@@ -208,7 +201,6 @@ Test WITHOUT using the mouse.
 
 **Test:** Select browser zoom 200% (Ctrl+Plus / Cmd+Plus), or use browser reader mode.
 
----
 
 ## Testing Checklist Summary
 
@@ -233,7 +225,6 @@ Test WITHOUT using the mouse.
 - [ ] Tested with actual users with disabilities
 - [ ] Performance tested (forms load quickly)
 
----
 
 ## Common Accessibility Failures & How to Test Them
 
@@ -247,7 +238,6 @@ Test WITHOUT using the mouse.
 | Links say "click here" | Not descriptive; screen reader only hears "click here" | Read link text aloud; should make sense out of context |
 | No skip link | Can't skip repetitive navigation | Press Tab to first element; should offer "skip to content" |
 
----
 
 ## Testing Tools & Resources
 
@@ -268,7 +258,6 @@ Test WITHOUT using the mouse.
 - **WCAG Guidelines:** https://www.w3.org/WAI/WCAG21/quickref/
 - **Get Help:** Open an issue with accessibility testing results
 
----
 
 ## After Testing: Recording Issues
 
@@ -297,7 +286,6 @@ Browser: Chrome 130
 OS: Windows 11
 ```
 
----
 
 ## Testing the Built HTML Output
 
@@ -325,7 +313,6 @@ This repository includes a build system that converts all Markdown files to HTML
 
 **Quick test:** Open `html/index.html` in a browser, enable your screen reader, and navigate using `H` (headings) and `K` (links). Every heading and link should be announced clearly.
 
----
 
 ## Questions or Feedback?
 
@@ -333,7 +320,6 @@ This repository includes a build system that converts all Markdown files to HTML
 - **Need screen reader help?** See `docs/appendix-b-screen-reader-cheatsheet.md`
 - **Want resources?** See `docs/appendix-u-resources.md`
 
----
 
 *Last updated: February 2026*  
 *Accessibility is foundational to inclusive workflows.*

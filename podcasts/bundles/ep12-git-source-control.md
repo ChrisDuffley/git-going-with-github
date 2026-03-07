@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 15-18 min
 
----
 
 ### Audio Production Direction
 
@@ -37,7 +36,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Pushing to and pulling from GitHub
 - The relationship between local and remote repositories
 
----
 
 ### Concept Coverage Checklist
 
@@ -93,7 +91,6 @@ but keep the main narrative focused on the primary chapter.
 
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+`. Common equivalents: `Ctrl+Shift+G` → `Cmd+Shift+G`, `Ctrl+Shift+P` → `Cmd+Shift+P`, `Ctrl+Enter` → `Cmd+Enter`, `Ctrl+S` → `Cmd+S`.
 
----
 
 ## Table of Contents
 
@@ -110,7 +107,6 @@ but keep the main narrative focused on the primary chapter.
 11. [Emergency Recovery - git reflog](#10b-emergency-recovery--git-reflog)
 12. [Alternative Git Interfaces](#11-alternative-git-interfaces)
 
----
 
 ## 1. Cloning a Repository in VS Code
 
@@ -183,7 +179,6 @@ gh repo clone community-access/learning-room && code learning-room
 
 </details>
 
----
 
 ## 2. The Source Control Panel - Complete Walkthrough
 
@@ -272,7 +267,6 @@ When focused on any file in the Source Control panel:
 
 **Screen reader tip:** Use `Shift+F10` to open the context menu. Navigate options with `Up/Down Arrow`. Press `Enter` to select.
 
----
 
 ## 3. Branch Management
 
@@ -387,7 +381,6 @@ git branch          # Local branches only
 git branch -a       # All branches (including remote)
 ```
 
----
 
 ## 4. Staging Changes - Files, Lines, and Chunks
 
@@ -508,7 +501,6 @@ git status
 2. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) or `Space`
 3. File moves back to "Changes"
 
----
 
 ## 5. Committing with Screen Readers
 
@@ -581,7 +573,6 @@ git commit -am "docs: update screen reader instructions"
 - Your changes are now part of Git history
 - The commit exists locally only - you must **push** to send it to GitHub (see Section 6)
 
----
 
 ## 6. Push and Pull Operations
 
@@ -663,7 +654,6 @@ If your branch is behind `main`, look for the **"Update branch"** button on your
 - VS Code can check for remote changes automatically every few minutes
 - Enable: Settings (`Ctrl+,` - Mac: `Cmd+,`) → search "git autofetch" → set to `true`
 
----
 
 ## Syncing Your Fork with the Upstream Repository
 
@@ -741,7 +731,6 @@ If you've made changes to the same files the upstream has changed, merge conflic
 
 **Best practice:** Always sync before starting new work on a fork. A quick `git fetch upstream` at the start of each session prevents conflicts from accumulating.
 
----
 
 ## 7. Discarding Changes
 
@@ -795,7 +784,6 @@ The file is staged for deletion - you still need to commit to record the removal
 - Using `Git: Delete` (git rm) stages the deletion in one step
 - Use `git rm` when you want to track the file removal as part of your next commit
 
----
 
 ## 8. Timeline View - File History and Blame
 
@@ -866,7 +854,6 @@ This is incredibly useful for understanding:
 | `git.blame.ignoreWhitespace` | `false` | When `true`, whitespace-only changes (reformatting) are excluded from blame - useful when code was reformatted without logic changes |
 | `git.blame.editorDecoration.disableHover` | `false` | When `true`, disables the hover tooltip on blame annotations - reduces screen reader noise if you find the blame decorations intrusive |
 
----
 
 ## 9. Resolving Merge Conflicts in VS Code
 
@@ -945,7 +932,6 @@ If you want to cancel the merge and go back to before you started:
 
 Everything returns to the pre-merge state.
 
----
 
 ## 10. Stash Management
 
@@ -1020,7 +1006,6 @@ If you no longer need what's in a stash:
 3. Select "Git: Drop Stash..."
 4. Choose which stash to delete
 
----
 
 ## 10b. Emergency Recovery - git reflog
 
@@ -1092,7 +1077,6 @@ Reflog records are stored in your local `.git/` directory and are **not pushed t
 
 **Workshop tip:** If you run a reset or rebase during the workshop and lose something, immediately run `git reflog` before doing anything else. The recovery window is open as long as you haven't run `git gc`.
 
----
 
 ## 11. Alternative Git Interfaces
 
@@ -1141,7 +1125,6 @@ git log                        # View commit history
 
 **Screen reader tip:** Terminal output is plain text - more predictable than GUI elements for some operations.
 
----
 
 ## VS Code Keyboard Shortcuts - Git Operations Quick Reference
 
@@ -1160,7 +1143,6 @@ git log                        # View commit history
 | Integrated terminal | `Ctrl+Backtick` |
 | Delete file from repo (git rm) | `Ctrl+Shift+P` → "Git: Delete" |
 
----
 
 ## Try It: Clone, Branch, Commit
 
@@ -1179,14 +1161,12 @@ Do the complete Git workflow once, start to finish:
 
 > **What success feels like:** Your change is on GitHub. You can verify by visiting the repository and switching to your branch. Every future contribution follows this same six-step pattern.
 
----
 
 *Next: [GitHub Pull Requests Extension](12-github-pull-requests-extension.md)*  
 *Back: [VS Code Setup & Accessibility Basics](10-vscode-basics.md)*  
 *Related: [Merge Conflicts](06-merge-conflicts.md) | [Culture & Etiquette](07-culture-etiquette.md)*
 
 
----
 
 ### Supplementary: Git Authentication - tokens, SSH, credential helpers
 
@@ -1197,7 +1177,6 @@ Do the complete Git workflow once, start to finish:
 
 > **Audience:** This appendix is for contributors who need to configure Git authentication for push access. If you're working entirely through the GitHub web interface or GitHub Desktop, you can skip this. If you're using VS Code with Git command line, this becomes relevant when you want to push commits to your fork.
 
----
 
 ## When You Need Authentication
 
@@ -1211,7 +1190,6 @@ You do **not** need authentication to:
 - View public repositories on GitHub.com
 - Read issues and pull requests
 
----
 
 ## Two Authentication Methods
 
@@ -1242,7 +1220,6 @@ SSH uses public-key cryptography. You generate a key pair on your computer (publ
 - Requires command-line setup (less accessible for some screen reader users)
 - Slightly more complex initial configuration
 
----
 
 ## Creating a Personal Access Token (Recommended for This Workshop)
 
@@ -1293,7 +1270,6 @@ Password: [paste-your-PAT-here]
 git config --global credential.helper cache
 ```
 
----
 
 ## Setting Up SSH Keys (Alternative Method)
 
@@ -1367,7 +1343,6 @@ git@github.com:owner/repo.git
 https://github.com/owner/repo.git
 ```
 
----
 
 ## Switching Between HTTPS and SSH
 
@@ -1388,7 +1363,6 @@ git remote set-url origin git@github.com:your-username/repo.git
 git remote set-url origin https://github.com/your-username/repo.git
 ```
 
----
 
 ## Troubleshooting
 
@@ -1419,7 +1393,6 @@ git remote set-url origin https://github.com/your-username/repo.git
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
 
----
 
 ## Security Best Practices
 
@@ -1430,7 +1403,6 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 5. **Revoke old tokens** when you're done with a project or device
 6. **Don't commit tokens or keys to Git** - use `.gitignore` for config files
 
----
 
 ## Commit Signing - Verified Badges and Vigilant Mode
 
@@ -1513,7 +1485,6 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 **Workshop recommendation:** SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to accessibility-agents will show as Verified.
 
----
 
 ## For This Workshop
 
@@ -1525,6 +1496,5 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 SSH keys are great for long-term use, but PATs are faster to set up and more accessible for screen reader users during a time-constrained workshop.
 
----
 
 *Return to: [Pre-Workshop Setup](00-pre-workshop-setup.md) | [Resources](appendix-u-resources.md)*

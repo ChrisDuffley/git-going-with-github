@@ -1,7 +1,6 @@
 # GitHub Learning Curriculum
 ## Executive Summary & Proposal to GitHub
 
----
 
 ## Project Overview
 
@@ -11,7 +10,6 @@
 **Status:** Complete curriculum ready for deployment  
 **Note:** 2 additional agenda files (Day 1 & Day 2) provided for workshop facilitators (not part of learner sequence)  
 
----
 
 ## Problem Statement
 
@@ -35,7 +33,6 @@ Many organizations need structured, repeatable, accessible training that:
 - **Accessibility advocates** have no GitHub-specific guidance
 - **Facilitators** must recreate training materials from scratch
 
----
 
 ## Solution: Complete Learning Curriculum
 
@@ -91,7 +88,6 @@ Chapters 14-16 teach accessible code review, issue templates, and AI agent autom
 
 **Outcome:** Teams can design accessible workflows and automate GitHub processes with confidence.
 
----
 
 ## Curriculum Highlights
 
@@ -200,7 +196,6 @@ Result: 5-minute template creation vs. 30 minutes manual YAML editing
 
 **Why:** Users have context-specific help at their fingertips; facilitators have reference guides.
 
----
 
 ## Pedagogical Approach
 
@@ -244,7 +239,6 @@ Accessibility is woven into every chapter.
 
 **Why:** Builds inclusive habits from day one; not a retrofit.
 
----
 
 ## Implementation & Deployment
 
@@ -326,7 +320,6 @@ Root/
 | Customize for organization | 2-3 hrs | Add template examples, GitHub team |
 | **Total** | **9-12 hrs** | Ready to lead 2-day workshop |
 
----
 
 ## Success Criteria & Metrics
 
@@ -349,7 +342,6 @@ Root/
 - [ ] Keyboard-only functionality tested on all exercises
 - [ ] Color contrast verified (4.5:1 minimum for all text)
 
----
 
 ## Recommended Next Steps
 
@@ -377,7 +369,6 @@ Root/
 - [ ] Rotate facilitators for fresh perspectives
 - [ ] Expand to additional topics (GitHub Security, GitHub Actions deep dive, etc.)
 
----
 
 ## Why GitHub Should Support This
 
@@ -411,7 +402,6 @@ Open curriculum invites contributions:
 - Community suggests improvements and translations
 - Becomes standard reference (like "Pro Git" book)
 
----
 
 ## Risks & Mitigations
 
@@ -422,7 +412,6 @@ Open curriculum invites contributions:
 | Accessibility issues found in testing | Undermines credibility | Establish accessibility testing committee; fix issues before public release |
 | Low engagement/adoption | Low ROI | Partner with GitHub team to promote; integrate with GitHub Skills program |
 
----
 
 ## Budget & Resources
 
@@ -476,7 +465,6 @@ Open curriculum invites contributions:
 - **Community support:** 3 hrs/week (respond to feedback)
 - **Annual curriculum review:** 20 hrs (comprehensive update)
 
----
 
 ## Alignment with GitHub Strategic Goals
 
@@ -488,7 +476,6 @@ Open curriculum invites contributions:
 | Reduce support burden | Empower self-service learning | FAQ, Troubleshooting, Quick Reference guides |
 | Build partnerships | Ecosystem integration | Works with VS Code, GitHub CLI, Copilot, Actions |
 
----
 
 ## Call to Action
 
@@ -501,7 +488,6 @@ This curriculum is **ready for deployment**. The required next step is:
 ### Success Metric
 **If this curriculum launches:** We expect 10,000+ learners in year one, 50,000+ by year two.
 
----
 
 ## Appendices
 
@@ -532,7 +518,6 @@ See `README.md` for full chapter list and quick links.
 - **Accessibility Lead:** [A11y Champion]
 - **GitHub Contact:** [Product Manager]
 
----
 
 ## Signature & Approval
 
@@ -540,7 +525,6 @@ See `README.md` for full chapter list and quick links.
 **Date:** February 2026  
 **Status:** Ready for Phase 1 Finalization
 
----
 
 *This proposal demonstrates a complete, accessible, AI-integrated learning system designed to onboard users into GitHub, emphasize inclusive practices, and amplify human expertise with AI agents. We're ready to launch.*
 

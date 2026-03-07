@@ -1,4 +1,3 @@
----
 name: pr-author-checklist
 description: "PR self-review checklist for authors -- CI status, reviewer suggestions, description quality check, and pre-submit verification"
 agent: pr-review
@@ -8,7 +7,6 @@ tools:
   - textSearch
   - codebase
   - ask_questions
----
 
 Run a pre-submit self-review checklist for a PR you authored. Checks CI, description quality, reviewers, and common issues before requesting review.
 

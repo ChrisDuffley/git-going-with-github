@@ -6,7 +6,6 @@ GitHub Skills is GitHub's free, self-paced interactive learning platform. Every 
 
 This appendix catalogs every available GitHub Skills module, organized into learning paths that build on the skills you practiced in this workshop. Use it as a roadmap for continued learning after Day 2.
 
----
 
 ## How GitHub Skills Works
 
@@ -23,7 +22,6 @@ All interaction happens through GitHub's standard interface. The screen reader n
 
 For detailed screen reader navigation instructions, see [Appendix U Section 3 (GitHub Skills)](appendix-u-resources.md).
 
----
 
 ## Courses Used in This Workshop
 
@@ -39,7 +37,6 @@ The following table lists the three GitHub Skills modules used during Day 1, wit
 
 If you did not finish these during the workshop, complete them first before moving to the paths below.
 
----
 
 ## Learning Paths
 
@@ -59,7 +56,6 @@ The following table lists Git fundamentals courses in recommended order.
 
 **Workshop connection:** Day 1, Block 5 introduced merge conflicts in the learning room. Path 1 gives you deep practice with Git's conflict resolution and history tools.
 
----
 
 ### Path 2: GitHub Collaboration
 
@@ -76,7 +72,6 @@ The following table lists GitHub collaboration courses in recommended order.
 
 **Workshop connection:** Day 1, Block 6 covered labels, milestones, and notifications. Path 2 extends those skills into full repository management and publishing.
 
----
 
 ### Path 3: GitHub Actions and Automation
 
@@ -97,7 +92,6 @@ The following table lists GitHub Actions courses in recommended order.
 
 **Workshop connection:** Day 2 introduced GitHub Actions through the accessibility agents workflows. Path 3 teaches you to build your own automation from scratch.
 
----
 
 ### Path 4: GitHub Copilot
 
@@ -120,7 +114,6 @@ The following table lists GitHub Copilot courses in recommended order.
 
 **Workshop connection:** Day 2, Blocks 2-4 used Copilot for contributions and code review. Path 4 expands from basic chat to agent mode, MCP integration, CLI usage, and extension building.
 
----
 
 ### Path 5: Security
 
@@ -138,7 +131,6 @@ The following table lists security courses in recommended order.
 
 **Workshop connection:** Appendix L covers GitHub security features conceptually. Path 5 gives you hands-on practice enabling and using each one.
 
----
 
 ### Path 6: Cloud and Migration
 
@@ -154,7 +146,6 @@ The following table lists cloud and migration courses in recommended order.
 
 **Workshop connection:** Appendix N covers Codespaces conceptually. Path 6, course 1 gives you the hands-on setup experience.
 
----
 
 ## Quick Reference - All 36 Courses
 
@@ -199,7 +190,6 @@ The following table alphabetically lists every GitHub Skills course with its cat
 | Write JavaScript Actions | Actions | [Start course](https://github.com/skills/write-javascript-actions) |
 | Your First Extension for GitHub Copilot | Copilot | [Start course](https://github.com/skills/your-first-extension-for-github-copilot) |
 
----
 
 ## Integrating GitHub Skills into Your Learning Journey
 
@@ -286,7 +276,6 @@ Path 6: Cloud and Migration
 - [ ] Idea to App with Spark
 ```
 
----
 
 ## Additional Resources
 
@@ -295,6 +284,5 @@ Path 6: Cloud and Migration
 - [GitHub Skills Discussions](https://github.com/orgs/skills/discussions) - ask questions and share feedback with the GitHub Skills community
 - [Skills Exercise Creator](https://github.com/skills/exercise-creator) - build your own GitHub Skills courses using Copilot
 
----
 
 Last updated: March 2026

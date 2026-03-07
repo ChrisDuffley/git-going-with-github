@@ -6,7 +6,6 @@
 
 > GitHub's search engine is powerful and underused. For screen reader users in particular, using the search bar with precise query syntax is often *faster and more accessible* than navigating filter dropdowns and checkbox menus. This reference covers the query language so you can filter anything from the keyboard.
 
----
 
 ## Table of Contents
 
@@ -21,7 +20,6 @@
 9. [Practical Queries for This Workshop](#9-practical-queries-for-this-workshop)
 10. [Saving and Reusing Searches](#10-saving-and-reusing-searches)
 
----
 
 ## 1. The Search Interface
 
@@ -39,7 +37,6 @@ Type your query → Enter
 → Results page opens, grouped by type (Code, Issues, PRs, Repositories, etc.)
 ```
 
----
 
 ## 2. Search Scopes
 
@@ -56,7 +53,6 @@ By default, GitHub searches across all of GitHub. Scope modifiers restrict resul
 
 **Example:** `repo:community-access/accessibility-agents in:title keyboard` finds issues/PRs whose titles mention "keyboard" in the accessibility-agents repo.
 
----
 
 ## 3. The Core Query Language
 
@@ -105,7 +101,6 @@ By default, GitHub searches across all of GitHub. Scope modifiers restrict resul
 | `updated:>2025-06-01` | Updated after a date |
 | `closed:>2025-06-01` | Closed after a date |
 
----
 
 ## 4. Searching Issues and Pull Requests
 
@@ -157,7 +152,6 @@ is:issue is:open author:@me
 is:issue is:open repo:owner/name updated:<2024-08-01
 ```
 
----
 
 ## 5. Searching Code
 
@@ -192,7 +186,6 @@ org:community-access aria-hidden="true"
 | `symbol:functionName` | Search for a specific symbol/function name |
 | `content:"exact string"` | Exact string match in file content |
 
----
 
 ## 6. Searching Commits
 
@@ -220,7 +213,6 @@ repo:owner/name committer-date:2025-01-01..2025-03-31
 repo:owner/name path:docs/README.md
 ```
 
----
 
 ## 7. Searching Repositories
 
@@ -249,7 +241,6 @@ language:typescript topic:screen-reader sort:stars-desc
 | `size:<1000` | Repos smaller than 1000 KB |
 | `pushed:>2025-01-01` | Repos with recent activity |
 
----
 
 ## 8. Searching Users and Organizations
 
@@ -265,7 +256,6 @@ type:user location:Seattle followers:>100
 type:org topic:accessibility
 ```
 
----
 
 ## 9. Practical Queries for This Workshop
 
@@ -301,7 +291,6 @@ is:pr is:merged author:@me
 repo:community-access/accessibility-agents in:discussions screen reader
 ```
 
----
 
 ## 10. Saving and Reusing Searches
 
@@ -317,6 +306,5 @@ GitHub does not have a built-in saved-search feature, but you can:
 https://github.com/issues?q=is%3Aissue+is%3Aopen+assignee%3A%40me
 ```
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md)*

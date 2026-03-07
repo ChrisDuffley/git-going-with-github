@@ -6,7 +6,6 @@
 
 > This appendix covers three community-facing GitHub features: your profile README (how the world sees you), GitHub Sponsors (financially supporting the people whose work you depend on), and GitHub Wikis (community-editable documentation inside a repository).
 
----
 
 ## Profile Customization
 
@@ -94,7 +93,6 @@ I've been using screen readers for 8 years and believe accessible design is bett
 - Set a temporary status message (e.g., "On vacation until March 15")
 - Navigate to your profile → Select the smile icon → Set status
 
----
 
 ## GitHub Sponsors (Supporting Open Source)
 
@@ -139,7 +137,6 @@ Yes! If you maintain an open source project or contribute regularly:
 
 Many accessibility advocates successfully use Sponsors to fund their work improving assistive technology and inclusive design.
 
----
 
 ## GitHub Wikis
 
@@ -182,6 +179,5 @@ Wiki pages automatically appear in a sidebar for navigation.
 - Link between wiki pages: `[[Page Title]]`
 - **Screen reader caveat:** Wiki pages are a separate Git repository. Any changes pushed directly to the wiki's git remote are not tracked by the main repository's branch protection - meaning no PR review process applies. Treat wikis as community-editable supplementary docs, not your primary critical documentation source.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix S - Organizations and Templates](appendix-s-github-organizations-templates.md) | [Appendix G - GitHub Discussions](appendix-g-github-discussions.md) | [Appendix T - Contributing to Open Source](appendix-t-contributing-to-open-source.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

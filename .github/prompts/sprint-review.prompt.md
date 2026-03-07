@@ -1,4 +1,3 @@
----
 name: sprint-review
 description: "End-of-sprint summary across all repos -- completed items, carryover, velocity trends, blockers, team contributions, and retrospective insights"
 agent: analytics
@@ -7,7 +6,6 @@ tools:
   - createFile
   - createDirectory
   - ask_questions
----
 
 Generate an end-of-sprint review summary with completed work, carryover items, velocity metrics, and team contributions. Save both markdown and HTML versions.
 

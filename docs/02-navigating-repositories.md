@@ -6,7 +6,6 @@
 
 > This guide covers everything you need to explore a GitHub repository using your keyboard and screen reader. No mouse required.
 
----
 
 ## Workshop Recommendation (Chapter 2)
 
@@ -25,7 +24,6 @@ Use this sequence before moving to graded chapters:
 3. Confirm readiness with a peer or facilitator.
 4. Move to Chapter 4 for issue-based, traceable challenges.
 
----
 
 ## What Is a Repository Page?
 
@@ -53,7 +51,6 @@ When you navigate to a GitHub repository (e.g., `https://github.com/owner/repo-n
 └────────────────────────────────────────────────────┘
 ```
 
----
 
 ## Landing on a Repository - What to Expect
 
@@ -71,7 +68,6 @@ Step 2: Press D - navigate through landmarks to learn page structure
 Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what's on the page
 ```
 
----
 
 ## Navigating the Repository Tabs
 
@@ -106,7 +102,6 @@ The tab bar is visible just below the repository name. Click the tab you want - 
 
 Each tab link reads with its name and the count of items: "Issues, 14 open" or "Pull requests, 3 open." The active tab is marked with `aria-selected="true"` - your screen reader will announce it as "selected" or "current."
 
----
 
 ## The Files Table
 
@@ -154,7 +149,6 @@ Navigate to the Name column, hear the filename, then move right to read the comm
 - When you open a folder, the page reloads showing the contents of that folder
 - Press the back button or use the breadcrumb links to go back up
 
----
 
 ## The Branch Selector
 
@@ -213,7 +207,6 @@ Tags mark specific releases or versions. The branch dropdown also provides tag n
 
 The repository page reloads showing the code at that tagged version.
 
----
 
 ## Cloning a Repository
 
@@ -271,7 +264,6 @@ cd learning-room
 
 </details>
 
----
 
 ## Watching, Starring, and Forking
 
@@ -338,7 +330,6 @@ Click the **Star** button (top-right). The button changes to **Starred** with a 
 
 </details>
 
----
 
 ## Viewing a Single File
 
@@ -415,7 +406,6 @@ Press `B` from within the file area, OR use `D` to navigate to the "Repository f
 
 </details>
 
----
 
 ## The Blame View
 
@@ -434,7 +424,6 @@ Ctrl+Alt+↓ - move to the next line
 K - navigate the commit links (opens that commit's detail page)
 ```
 
----
 
 ## Commit History
 
@@ -468,7 +457,6 @@ T - navigate to the stats table (files changed, lines added/deleted)
 + - skip table navigation and read file diffs by line
 ```
 
----
 
 ## Searching for a File
 
@@ -490,7 +478,6 @@ The "Go to file" shortcut is extremely useful when you know what you are looking
 - **Option 2:** Use `F` key to find the "Go to file" or "Find file" edit field instead
 - **Recommended:** Option 2 is more reliable and doesn't require mode switching.
 
----
 
 ## GitHub Shortcuts for Repository Navigation - Spotlight
 
@@ -531,7 +518,6 @@ The sidebar content is inside the "Main" landmark, after the files table and REA
 
 **VoiceOver:** Navigate past the README section with `VO+Right` - the sidebar elements follow sequentially in the reading order.
 
----
 
 ## The Repository About Section
 
@@ -542,7 +528,6 @@ Quick way to check the project description, website link, and topics:
 3. `2` or `H` to jump to that "About" heading
 4. Then `↓` to read the description, URL, and topics
 
----
 
 ## Practical Scenarios
 
@@ -579,7 +564,6 @@ Quick way to check the project description, website link, and topics:
 3. Open it and read the contributing guidelines
 4. Then go to Issues tab and filter by `good first issue`
 
----
 
 ## Try It: The Five-Tab Tour
 
@@ -597,7 +581,6 @@ Navigate to the [Accessibility Agents repository](https://github.com/community-a
 
 > **What success feels like:** You visited four tabs and opened a file without touching a mouse. Every repository on GitHub has this same layout - you now know how to navigate all of them.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@daily-briefing`
 >
@@ -611,7 +594,6 @@ Navigate to the [Accessibility Agents repository](https://github.com/community-a
 >
 > *An agent's output only makes sense when you already know what it is describing. You are building that knowledge right now.*
 
----
 
 *Next: [The Learning Room](03-the-learning-room.md)*
 *Back: [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*

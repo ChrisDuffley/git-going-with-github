@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -34,7 +33,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - The pull request accessibility checklist
 - How accessibility standards apply to code you write and review
 
----
 
 ### Concept Coverage Checklist
 
@@ -59,7 +57,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > This appendix gives you a working understanding of the accessibility standards that govern the web, GitHub's interface, and the projects you will contribute to. You do not need to memorize these - use this as a lookup when a PR review mentions a specific standard or success criterion.
 
----
 
 ## Table of Contents
 
@@ -74,7 +71,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 9. [Quick Reference: What to Check in a PR](#9-quick-reference-what-to-check-in-a-pr)
 10. [Official References](#10-official-references)
 
----
 
 ## 1. WCAG 2.2 - The Four Principles
 
@@ -89,7 +85,6 @@ WCAG (Web Content Accessibility Guidelines) is organized around four principles,
 
 Every WCAG success criterion belongs to one of these four principles.
 
----
 
 ## 2. Conformance Levels: A, AA, AAA
 
@@ -101,7 +96,6 @@ Every WCAG success criterion belongs to one of these four principles.
 
 Most open source projects, and GitHub itself, target **WCAG 2.2 AA** compliance. When you file an accessibility bug or review a PR, AA is the standard to reference.
 
----
 
 ## 3. Key Success Criteria for Web Contributions
 
@@ -155,7 +149,6 @@ These are the criteria you will most commonly encounter when contributing to web
 | **4.1.2 Name, Role, Value** | A | All UI components have accessible names, roles, and states that can be programmatically determined |
 | **4.1.3 Status Messages** | AA | Status messages (e.g. "item added to cart") are announced without receiving focus |
 
----
 
 ## 4. ARIA - Roles, States, and Properties
 
@@ -175,7 +168,6 @@ WAI-ARIA (Accessible Rich Internet Applications) fills the gap between what HTML
 2. **All interactive ARIA widgets must be keyboard operable.** Adding `role="button"` means you must also handle `Enter` and `Space` keypresses in JavaScript.
 3. **ARIA only affects the accessibility tree.** It does not add visual styling or behavior - it only changes what assistive technologies announce.
 
----
 
 ## 5. ARIA Landmark Roles
 
@@ -194,7 +186,6 @@ Landmarks let screen reader users jump directly to major sections of a page. Git
 
 When multiple landmarks of the same type appear on a page, each should have a unique `aria-label` so screen readers can distinguish them. GitHub's Issues list page, for example, has multiple `navigation` regions each with distinct labels.
 
----
 
 ## 6. Common ARIA Patterns
 
@@ -238,7 +229,6 @@ Use `aria-live="assertive"` only for urgent interruptions (errors). Use `"polite
 
 When expanded: set `aria-expanded="true"` and remove the `hidden` attribute.
 
----
 
 ## 7. How Standards Apply to GitHub Contributions
 
@@ -270,7 +260,6 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 - Add alt text to images: `![Bar chart showing 40% improvement in task completion](chart.png)`
 - Use actual lists (`-` or `1.`) rather than faking them with symbols
 
----
 
 ## 8. Testing Against Standards
 
@@ -291,7 +280,6 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 4. **High contrast mode** - Windows High Contrast or macOS Increase Contrast; are all elements still visible?
 5. **Disable CSS** - does the content still make sense in reading order?
 
----
 
 ## 9. Quick Reference: What to Check in a PR
 
@@ -308,7 +296,6 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 | Dynamic content updates use aria-live | 4.1.3 |
 | New UI components have name, role, value | 4.1.2 |
 
----
 
 ## 10. Official References
 
@@ -323,6 +310,5 @@ Documentation in Markdown is converted to HTML. Accessible Markdown:
 | MDN Accessibility | [developer.mozilla.org/en-US/docs/Web/Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) |
 | GitHub Accessibility | [accessibility.github.com](https://accessibility.github.com) |
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix B - Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

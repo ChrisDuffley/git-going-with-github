@@ -18,7 +18,6 @@
 >
 > **Browse vs Focus Mode (NVDA):** Toggle between modes with `NVDA+Space` (NVDA key = `Insert` or `Caps Lock`). Use **Browse Mode** (the default) for reading lists, headings, and issue content. Switch to **Focus Mode** when typing in text fields and search boxes. Use `NVDA+F7` at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page - this is your orientation tool.
 
----
 
 ## Workshop Recommendation (Chapter 4)
 
@@ -62,7 +61,6 @@ Issues are not just task lists. They are collaborative spaces where clear commun
 3. Leave clear evidence in the issue timeline.
 4. Build momentum for PR work in Chapter 5.
 
----
 
 ## Local Git Alternative: Working from Your Clone
 
@@ -98,7 +96,6 @@ All of these produce the same result as the web interface. The chapter instructi
 
 </details>
 
----
 
 ## What Is a GitHub Issue?
 
@@ -114,7 +111,6 @@ Every issue has a **number** (`#42`), a **state** (Open or Closed), a **title**,
 
 > **Learning Room connection:** In the `learning-room` repo, every challenge from `docs/CHALLENGES.md` becomes an issue. For example, Challenge 1 ("Fix Broken Link") is filed as an issue pointing to `docs/welcome.md`, describing the broken link and linking to the challenge success criteria. When you open a PR to fix it, you reference the issue with `Closes #XX` to automatically close it on merge.
 
----
 
 ## Navigating to the Issues List
 
@@ -172,7 +168,6 @@ gh issue list --state closed
 
 Navigate directly: `https://github.com/[owner]/[repo]/issues`
 
----
 
 ## The Issues List Page
 
@@ -223,7 +218,6 @@ When you navigate to an issue in the list, your screen reader will announce (in 
 - Who opened it and when ("Opened 3 days ago by username")
 - Number of comments ("5 comments")
 
----
 
 ## Filtering and Searching Issues
 
@@ -308,7 +302,6 @@ gh issue list --search "screen reader"
 
 The two state links "Open" and "Closed" appear near the top of the issue list. Press `K` to navigate links until you find them, or look for them as buttons near the search bar.
 
----
 
 ## Reading an Issue
 
@@ -389,7 +382,6 @@ Each comment announces:
 
 Other timeline events (label added, PR linked, issue closed) appear between comments in the activity stream. They are typically announced as text paragraphs.
 
----
 
 ## Leaving a Comment
 
@@ -502,7 +494,6 @@ For the full shortcut system, see [Screen Reader Cheat Sheet - GitHub Shortcuts 
 5. Make your changes
 6. Tab to "Update comment" button → Enter
 
----
 
 ## Filing a New Issue
 
@@ -644,7 +635,6 @@ The interactive mode walks you step-by-step through title, body (opens your edit
 
 </details>
 
----
 
 ## Cross-Referencing Issues
 
@@ -677,7 +667,6 @@ Step 4: Enter to insert the reference
 
 `owner/repo#42` - references issue #42 in a different repository.
 
----
 
 ## Sub-Issues - Parent and Child Relationships
 
@@ -733,7 +722,6 @@ Every child issue shows a "Parent issue" link near the top of the page (above th
 
 > **Workshop tip:** If you are working on a feature that requires multiple PRs or involves several team members, ask the maintainer to create a parent issue. You can then claim individual child issues without one person owning the whole feature.
 
----
 
 ## Managing Issues (for Maintainers and Triagers)
 
@@ -833,7 +821,6 @@ From the issue sidebar:
 
 Available from the "..." (ellipsis) button at the top of the issue - navigate buttons with `B` to find it.
 
----
 
 ## The "good first issue" Label - Your Entry Point
 
@@ -847,7 +834,6 @@ When looking for your first open source contribution:
 
 **Remember:** It's respectful to ask before starting. Maintainers juggle many discussions and need to know who is working on what to avoid duplicated effort.
 
----
 
 ## Accessibility-Specific Issue Writing Tips
 
@@ -898,7 +884,6 @@ Safari 17 does announce "List updated" when filtering is applied,
 so the macOS behavior appears correct.
 ```
 
----
 
 ## Try It: File Your First Issue
 
@@ -916,7 +901,6 @@ Go to the Learning Room repository and file a real issue:
 
 > **What success feels like:** Your issue is live. Other participants can see it. You just contributed to a real repository - and it took less than three minutes.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@issue-tracker`
 >
@@ -930,7 +914,6 @@ Go to the Learning Room repository and file a real issue:
 >
 > *Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.*
 
----
 
 *Next: [Working with Pull Requests](05-working-with-pull-requests.md)*
 *Back: [The Learning Room](03-the-learning-room.md)*

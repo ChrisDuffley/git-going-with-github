@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 10-12 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Polls and announcements
 - Navigating discussions with a screen reader
 
----
 
 ### Concept Coverage Checklist
 
@@ -62,7 +60,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > GitHub Discussions is a built-in community forum for repositories and organizations. It's where open-ended conversations live - questions, ideas, announcements, polls, and community Q&A - separate from the action-oriented world of issues and pull requests.
 
----
 
 ## Table of Contents
 
@@ -77,7 +74,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 9. [Organization-Level Discussions](#9-organization-level-discussions)
 10. [Accessibility Agents: What's Different Here](#10-accessibility-agents-whats-different-here)
 
----
 
 ## 1. Discussions vs. Issues: When to Use Which
 
@@ -100,7 +96,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 - **General** - Everything else
 - **Show and Tell** - Community members showing what they built
 
----
 
 ## 2. Navigating to Discussions
 
@@ -121,7 +116,6 @@ Large organizations can have organization-level Discussions separate from any in
 2. Look for the Discussions tab at the organization level
 3. These are community-wide conversations, not repo-specific
 
----
 
 ## 3. Discussion Categories
 
@@ -140,7 +134,6 @@ Enter → Open a discussion
 - Most active discussions
 - Tags (if the repo uses them)
 
----
 
 ## 4. Creating a Discussion
 
@@ -163,7 +156,6 @@ Tab to "New discussion" button → Enter
 
 **Before posting a question:** Search existing discussions first. Use the search bar at the top of the Discussions page or GitHub's global search with `repo:owner/name in:discussions`.
 
----
 
 ## 5. Participating in Discussions
 
@@ -202,7 +194,6 @@ Tab to "Reply" button on the specific comment → Enter
 
 Instead of leaving "+1" comments, use the thumbs-up reaction on the original post or replies. Many maintainers sort discussion responses by upvotes to prioritize most-needed answers.
 
----
 
 ## 6. Marking an Answer
 
@@ -219,7 +210,6 @@ In the **Q&A** category, one reply can be marked as the accepted answer. This is
 
 **To unmark an answer:** Activate "Unmark as answer" on the same reply.
 
----
 
 ## 7. Polls
 
@@ -241,7 +231,6 @@ Navigate to the poll section
 
 **Poll results:** After voting, percentages appear next to each option. Screen readers announce the count and percentage per option.
 
----
 
 ## 8. Screen Reader Navigation Reference
 
@@ -280,7 +269,6 @@ Ctrl+Enter            → Submit a reply (when in text area)
 - VO+Command+L to list all links (useful for navigating many replies quickly)
 - VO+Space on the reply field to enter interaction mode
 
----
 
 ## 9. Organization-Level Discussions
 
@@ -294,7 +282,6 @@ Common uses:
 
 Find them at `github.com/ORGANIZATION/discussions`.
 
----
 
 ## 10. Accessibility Agents: What's Different Here
 
@@ -306,6 +293,5 @@ Accessibility Agents prompts currently operate on **issues, PRs, and code** - no
 
 This works well for first-response drafts on Q&A threads or community questions in your area of expertise.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Glossary](appendix-a-glossary.md)*

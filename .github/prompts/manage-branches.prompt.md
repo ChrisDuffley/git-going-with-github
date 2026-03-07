@@ -1,11 +1,9 @@
----
 name: manage-branches
 description: "Branch management -- list branches with activity, detect stale branches, compare ahead/behind, delete merged branches, show protection rules"
 agent: pr-review
 tools:
   - github/*
   - ask_questions
----
 
 Manage branches in a repository -- list, compare, clean up stale branches, and check protection rules.
 

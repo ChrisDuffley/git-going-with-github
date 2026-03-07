@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - How to orient yourself on any GitHub page using headings and regions
 - The difference between the dashboard, repository, and settings pages
 
----
 
 ### Concept Coverage Checklist
 
@@ -75,7 +73,6 @@ but keep the main narrative focused on the primary chapter.
 
 > **Read this before navigating GitHub for the first time.** This lesson gives you the mental model that makes every subsequent guide easier. Once you understand how GitHub pages are built - their landmark structure, heading hierarchy, and URL patterns - you will know how to orient yourself on any page you land on, even ones this guide never mentions.
 
----
 
 ## Table of Contents
 
@@ -90,7 +87,6 @@ but keep the main narrative focused on the primary chapter.
 9. [How GitHub's Layout Changes by Viewport](#9-how-githubs-layout-changes-by-viewport)
 10. [The Mental Model - Building Your Internal Map](#10-the-mental-model--building-your-internal-map)
 
----
 
 ## 1. GitHub's Three-Level Structure
 
@@ -117,7 +113,6 @@ Level 3: A Repository - where all the work happens
 
 > **Screen reader orientation tip:** The first heading (`H` then `1`) on any page tells you what level you are on. On a repository page, it reads "owner/repo-name." On your profile page, it reads your username. On a settings page, it reads the settings category name.
 
----
 
 ## 2. What Is Always on Every GitHub Page
 
@@ -151,7 +146,6 @@ Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights 
 
 **Screen reader landmark:** This is labeled **"Repository navigation"**. Press `D` to jump to it directly.
 
----
 
 ## 3. How to Tell Where You Are
 
@@ -204,7 +198,6 @@ Press `1` (in Browse Mode) on any GitHub page to jump to the first H1 heading. W
 | Your username | Your profile page |
 | A settings category name | A settings page |
 
----
 
 ## 4. The Five Key Page Types
 
@@ -266,7 +259,6 @@ Your personal home (`github.com`) shows activity from repositories you follow. Y
 - Pinned repositories
 - A list of your recent public activity
 
----
 
 ## 5. Visual Map of a Repository Page
 
@@ -307,7 +299,6 @@ This diagram shows the layout of a repository home page. It is presented as ASCI
 - `T` → jump to the file table → `Ctrl+Alt+Down Arrow` to navigate rows
 - `D` → "Repository files navigation" → read the README
 
----
 
 ## 6. Screen Reader Orientation Sequence
 
@@ -381,7 +372,6 @@ From there, navigate with purpose: `VO+U → Landmarks` to jump to regions, Quic
 
 </details>
 
----
 
 ## 7. Landmark Structure by Page Type
 
@@ -439,7 +429,6 @@ Each GitHub page type has a consistent landmark pattern. Knowing the pattern mea
 | Main | File tree + diff view |
 | (no "Add a comment" - inline commenting works differently) | - |
 
----
 
 ## 8. GitHub's Heading Hierarchy in Practice
 
@@ -493,7 +482,6 @@ H1: PR title
 
 > **Why this matters:** Pressing `3` on a PR Files Changed tab jumps between file headings - this is how you quickly navigate to a specific file without tabbing through the entire diff.
 
----
 
 ## 9. How GitHub's Layout Changes by Viewport
 
@@ -516,7 +504,6 @@ GitHub is a responsive web application. The layout shifts at different screen wi
 
 **Consistent experience recommendation:** Use your browser maximized or at full desktop width during this workshop. GitHub's landmark and heading structure is most consistent at desktop width. If you hear different landmarks or headings than described in this guide, maximize your browser window.
 
----
 
 ## 10. The Mental Model - Building Your Internal Map
 
@@ -558,7 +545,6 @@ When you get disoriented:
 
 You are never lost. You always have these three fallbacks.
 
----
 
 ## Try It: The 60-Second Orientation
 
@@ -575,20 +561,17 @@ Open any GitHub repository - try [github.com/community-access/accessibility-agen
 
 > **What success feels like:** You heard a repo name, at least two landmarks, and several headings. If you did, you can orient yourself on *any* GitHub page using these same four keys.
 
----
 
 ## Day 2 Amplifier
 
 > Once you have this mental model solid, the Accessibility Agents agents make more sense. The `@daily-briefing` agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.
 
----
 
 *Next: [Navigating Repositories](02-navigating-repositories.md)*
 *Back: [Pre-Workshop Setup](00-pre-workshop-setup.md)*
 *Reference: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [GitHub Concepts Glossary](appendix-a-glossary.md)*
 
 
----
 
 ### Supplementary: Screen Reader Cheat Sheet - GitHub shortcuts
 
@@ -599,7 +582,6 @@ Open any GitHub repository - try [github.com/community-access/accessibility-agen
 
 > **How to use this sheet:** Keep it open in a second window or print it. Commands are organized by task so you can find what you need quickly while you work. All commands are keyboard-only - no mouse required.
 
----
 
 ## Screen Reader Mode Basics
 
@@ -627,7 +609,6 @@ This mode is for **typing and interacting** with form fields, text areas, button
 
 > **Rule of thumb:** Browse mode to navigate, Focus mode to type.
 
----
 
 ## Quick Navigation Keys (Browse Mode)
 
@@ -693,7 +674,6 @@ Landmarks are named regions of a page (navigation, main content, sidebar, etc.).
 | `Ctrl+Alt+↓` | Move down in a table (next row) | Navigate file list rows |
 | `Ctrl+Alt+↑` | Move up in a table | |
 
----
 
 ## The Elements List - Your Navigation Superpower
 
@@ -711,7 +691,6 @@ This is one of the most powerful tools for navigating complex pages. It opens a 
 3. Type to filter the list (e.g., type "new issue" to find the New Issue button)
 4. Press `Enter` to jump to the item on the page
 
----
 
 ## Per-Screen-Reader Command Reference
 
@@ -789,7 +768,6 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 | `Ctrl` | Stop reading |
 | `Cmd+F5` | Start / stop VoiceOver |
 
----
 
 ## Navigating Specific GitHub Pages
 
@@ -900,7 +878,6 @@ GitHub Feature Previews are opt-in UI improvements. For screen reader users, two
 
 > See [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4-check-github-feature-preview-settings) for full details on what each feature enables and why it matters for screen reader users.
 
----
 
 ## Typing and Submitting Content
 
@@ -931,7 +908,6 @@ These work while in Focus Mode inside a GitHub text area:
 | `Ctrl+Shift+L` | Unordered list |
 | `Ctrl+Shift+7` | Ordered list |
 
----
 
 ## Dropdown Menus and Flyouts
 
@@ -954,7 +930,6 @@ Step 4: VO+Right/Left to navigate items
 Step 5: VO+Space to select, Esc to close
 ```
 
----
 
 ## GitHub Built-In Keyboard Shortcuts
 
@@ -1021,7 +996,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 - The dialog is divided into sections: Site-wide, Source code browsing, Issues, Pull requests, Notifications, etc. - only sections relevant to the current page appear
 - You do not need to be in Focus Mode to open it - `?` works from Browse Mode
 
----
 
 ### Site-wide - work on every GitHub page
 
@@ -1031,7 +1005,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 | `S` or `/` | Focus the search bar |
 | `G` then `N` | Go to your Notifications |
 
----
 
 ### Repository navigation - on any repository page
 
@@ -1049,7 +1022,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 
 > **Shortcut spotlight - `.` and `>`:** These open github.dev, which is VS Code running inside your browser - same keyboard shortcuts, same screen reader mode. `>` opens a new tab so you keep your current GitHub page. This is the fastest way to start editing a file without installing anything.
 
----
 
 ### Source code browsing - viewing a file
 
@@ -1063,7 +1035,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 | `A` | Show or hide annotations on diffs | - |
 | `B` | Open blame view (who changed each line, and when) | Conflicts with NVDA `B` = next button - use Focus Mode first |
 
----
 
 ### Issue and pull request lists
 
@@ -1079,7 +1050,6 @@ These shortcuts work on the Issues list page and the Pull Requests list page:
 | `A` | Filter by or edit assignee | Use Focus Mode first |
 | `O` or `Enter` | Open the currently selected issue or PR | - |
 
----
 
 ### Issue and pull request detail pages
 
@@ -1097,7 +1067,6 @@ When viewing an open issue or pull request:
 
 > **Tip for `R` - quote a specific part of a comment:** In Browse Mode, select the text you want to quote by holding `Shift` and pressing arrow keys. Then press `R` - GitHub puts it directly into the comment box as a Markdown blockquote, with the author attributed. This is much faster than manually typing `> `.
 
----
 
 ### Comments - inside any text area (Focus Mode required)
 
@@ -1122,7 +1091,6 @@ These shortcuts work while typing in any GitHub comment or description field:
 
 > **Insert suggestion (`Ctrl+G`):** Select the code you want to suggest a change to (in the diff), then press `Ctrl+G`. GitHub wraps it in a ` ```suggestion ` block. The PR author can apply your exact change with one button press.
 
----
 
 ### Files Changed tab in pull requests
 
@@ -1132,7 +1100,6 @@ These shortcuts work while typing in any GitHub comment or description field:
 | `T` | Move focus to the "Filter changed files" search field |
 | `Ctrl+Shift+Enter` (Win) or `Cmd+Shift+Enter` (Mac) | Submit a review comment |
 
----
 
 ### Notifications page
 
@@ -1145,7 +1112,6 @@ On your Notifications page ([github.com/notifications](https://github.com/notifi
 | `Shift+I` | Mark as read |
 | `Shift+M` | Unsubscribe from thread |
 
----
 
 ### GitHub Actions
 
@@ -1159,7 +1125,6 @@ On any Actions page in a repository:
 | `Esc` | Exit full-screen log view |
 | `Ctrl+Space` (Win) or `Cmd+Space` (Mac) | Get AI suggestions in the workflow editor |
 
----
 
 ### Projects (board and table view)
 
@@ -1173,11 +1138,9 @@ On any Actions page in a repository:
 | `E` | Archive selected items |
 | `Ctrl+Shift+\` or `Cmd+Shift+\` | Open row actions menu |
 
----
 
 > **Keep the official reference handy:** [github.com/keyboard-shortcuts](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) - and press `?` on any GitHub page for the context-specific subset.
 
----
 
 ## Common Navigation Patterns - Quick Reference
 
@@ -1199,7 +1162,6 @@ Print or bookmark this section:
 | Submit comment | `Ctrl+Enter` (in text area) |
 | Open dropdown | `Enter`, then `Up` or `Down Arrow`, then `Enter`, then `Escape` |
 
----
 
 ## Troubleshooting Common Issues
 
@@ -1231,7 +1193,6 @@ Print or bookmark this section:
 - Use `NVDA+Space` to enter Focus Mode, then use arrow keys
 - Use `Ctrl+Alt+Arrow` keys to move between table cells
 
----
 
 ## Official Screen Reader Resources
 
@@ -1246,7 +1207,6 @@ Print or bookmark this section:
 - [VoiceOver User Guide for Mac](https://support.apple.com/guide/voiceover/welcome/mac)
 - [GitHub Accessibility Community Discussions](https://github.com/orgs/community/discussions/categories/accessibility)
 
----
 
 ## Keyboard Shortcuts in Other Appendices
 
@@ -1259,7 +1219,6 @@ This cheat sheet covers GitHub web navigation and screen reader commands. Additi
 | VS Code setup and configuration shortcuts | [Chapter 10 - VS Code Basics](10-vscode-basics.md) |
 | GitHub Copilot activation and model switching | [Chapter 13 - GitHub Copilot](13-github-copilot.md) |
 
----
 
 ## Screen Reader Compatibility Notes
 
@@ -1277,7 +1236,6 @@ The commands in this cheat sheet have been written for and tested with the follo
 3. Check GitHub's own shortcut dialog (`?` key) for the current page's shortcuts
 4. See [Troubleshooting](#troubleshooting-common-issues) above for common fixes
 
----
 
 *Appendix B - keep this open as a reference throughout both days.*
 *Return to: [Day 1 Agenda](../DAY1_AGENDA.md) | [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*

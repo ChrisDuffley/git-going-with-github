@@ -11,7 +11,6 @@ The Learning Room uses **progressive skill-building**:
 - Apply skills in real-world scenarios
 - Teach others what you've learned
 
----
 
 ## Skill Levels Overview
 
@@ -22,7 +21,6 @@ The Learning Room uses **progressive skill-building**:
 | **Advanced** | 3+ | Complex accessibility & review | 3 challenges |
 | **Expert** | 5+ | Content creation & mentorship | 3+ challenges |
 
----
 
 ## Beginner Path (0+ merged PRs)
 
@@ -54,7 +52,6 @@ Get comfortable with GitHub workflow and Markdown basics.
 
 **Estimated Time:** 5-10 minutes
 
----
 
 #### 2. Add Keyboard Shortcut (`skill: markdown`)
 **Scenario:** The `docs/keyboard-shortcuts.md` file is missing several common shortcuts.
@@ -71,7 +68,6 @@ Get comfortable with GitHub workflow and Markdown basics.
 
 **Estimated Time:** 15-20 minutes
 
----
 
 #### 3. Complete Welcome Guide (`skill: markdown`)
 **Scenario:** The `docs/welcome.md` file has [TODO] sections that need completing.
@@ -88,7 +84,6 @@ Get comfortable with GitHub workflow and Markdown basics.
 
 **Estimated Time:** 20-30 minutes
 
----
 
 ## Intermediate Path (1+ merged PRs)
 
@@ -123,7 +118,6 @@ Master accessibility fundamentals and document structure.
 - [MDN: Heading Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 - [WebAIM: Headings](https://webaim.org/techniques/semanticstructure/#headings)
 
----
 
 #### 5. Improve Link Text (`skill: accessibility`)
 **Scenario:** Multiple docs use generic link text like "click here" and "read more".
@@ -143,7 +137,6 @@ Master accessibility fundamentals and document structure.
 **Resources:**
 - [WebAIM: Links and Hypertext](https://webaim.org/techniques/hypertext/)
 
----
 
 #### 6. Add Alt Text (`skill: accessibility`)
 **Scenario:** Images in documentation are missing alt text.
@@ -164,7 +157,6 @@ Master accessibility fundamentals and document structure.
 - [Alt Text Guide - WebAIM](https://webaim.org/techniques/alttext/)
 - [Workshop Section on Alt Text](../../docs/14-accessible-code-review.md#image-alt-text)
 
----
 
 ## Advanced Path (3+ merged PRs)
 
@@ -205,7 +197,6 @@ Conduct comprehensive accessibility reviews and mentor others.
 - [Code Review Guide](../../docs/05-working-with-pull-requests.md#reviewing-pull-requests)
 - [Giving Feedback](../../docs/07-culture-etiquette.md#giving-feedback)
 
----
 
 #### 8. Create Documentation (`skill: documentation`)
 **Scenario:** Pick an accessibility topic and create comprehensive documentation.
@@ -232,7 +223,6 @@ Conduct comprehensive accessibility reviews and mentor others.
 - Testing with screen readers
 - Accessible table creation
 
----
 
 #### 9. Mentor a Peer (`skill: collaboration`)
 **Scenario:** Help a beginner complete their first challenge.
@@ -258,7 +248,6 @@ Conduct comprehensive accessibility reviews and mentor others.
 - Be encouraging about mistakes
 - Point to resources, don't just give answers
 
----
 
 ## Expert Path (5+ merged PRs)
 
@@ -299,7 +288,6 @@ Create learning content and lead community initiatives.
 - Resources for learning
 - Success criteria
 
----
 
 #### 11. Accessibility Audit (`skill: accessibility`)
 **Scenario:** Conduct full accessibility audit of workshop repository.
@@ -326,7 +314,6 @@ Create learning content and lead community initiatives.
 - Suggested fixes
 - Priority rankings
 
----
 
 #### 12. Create Issue Template (`skill: creation`)
 **Scenario:** Design an issue template for a specific challenge type.
@@ -349,7 +336,6 @@ Create learning content and lead community initiatives.
 **Resources:**
 - [GitHub Issue Template Docs](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository)
 
----
 
 ## Cross-Level Challenges
 
@@ -373,7 +359,6 @@ Master a specific tool and teach others:
 - Browser DevTools accessibility features
 - GitHub keyboard shortcuts
 
----
 
 ## Tracking Your Progress
 
@@ -398,7 +383,6 @@ After each merged PR:
 - What related topics do you want to explore?
 - How has this changed your perspective?
 
----
 
 ## Graduation & Beyond
 
@@ -430,7 +414,6 @@ You "graduate" when you:
 - Contribute to workshop improvements
 - Build accessibility into everything you do
 
----
 
 ## Support & Questions
 
@@ -439,7 +422,6 @@ You "graduate" when you:
 - **Found a bug in a challenge?** Open an issue with details
 - **Want to suggest a new challenge?** Open an issue with label `challenge-idea`
 
----
 
 ## Additional Resources
 
@@ -457,6 +439,5 @@ You "graduate" when you:
 - [Markdown Guide](https://www.markdownguide.org/)
 - [GitHub Flavored Markdown](https://github.github.com/gfm/)
 
----
 
 *Progressive learning paths designed for diverse learners. Go at your own pace, support each other, and celebrate every achievement!*

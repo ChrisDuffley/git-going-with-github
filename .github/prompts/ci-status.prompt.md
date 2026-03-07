@@ -1,4 +1,3 @@
----
 name: ci-status
 description: "CI/CD health dashboard -- workflow runs, failures, flaky tests, and long-running jobs across your repos"
 agent: daily-briefing
@@ -7,7 +6,6 @@ tools:
   - createFile
   - createDirectory
   - ask_questions
----
 
 Generate a CI/CD health dashboard showing workflow status, failures, and health across your repos.
 

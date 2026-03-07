@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - MCP servers and tool integration
 - Custom instructions and prompt engineering tips
 
----
 
 ### Concept Coverage Checklist
 
@@ -67,7 +65,6 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 
 > Quick-reference card for GitHub Copilot in VS Code and the broader agentic ecosystem - plugins, MCP servers, and cloud-based automation. For the Copilot lesson, see [Chapter 13: GitHub Copilot](13-github-copilot.md). For Accessibility Agents specifically, see [Appendix V: Accessibility Agents Reference](appendix-v-accessibility-agents-reference.md).
 
----
 
 ## Table of Contents
 
@@ -86,7 +83,6 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 13. [awesome-copilot - Plugin Ecosystem](#13-awesome-copilot--plugin-ecosystem)
 14. [GitHub Agentic Workflows - Agents in the Cloud](#14-github-agentic-workflows--agents-in-the-cloud)
 
----
 
 ## 1. Keyboard Shortcuts
 
@@ -127,7 +123,6 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 
 **Use Accessible View (`Alt+F2`) every time Copilot responds.** It provides the complete response in a readable pane - no streaming, no live region noise, proper heading structure.
 
----
 
 ## 2. Chat Participants
 
@@ -172,7 +167,6 @@ What does this error mean? #terminalLastCommand
 Search #codebase for all screen reader navigation instructions
 ```
 
----
 
 ## 3. Chat Slash Commands
 
@@ -210,7 +204,6 @@ Select a broken YAML template → /fix
 → Copilot suggests what is wrong and how to correct it
 ```
 
----
 
 ## 4. Chat Modes
 
@@ -227,13 +220,11 @@ Copilot Chat has four modes. Select the current mode from the dropdown at the bo
 
 **Model selection** is a separate control, also at the bottom of the Chat input. See [Appendix X: AI Models Reference](appendix-x-copilot-models.md) for a complete guide to choosing models.
 
----
 
 ## 5. Custom Instructions - All Levels
 
 GitHub Copilot supports multiple ways to provide custom instructions. They differ by scope, priority, trigger mechanism, and which tools recognize them. This section documents every supported approach.
 
----
 
 ### 4A. Always-On Instructions - `.github/copilot-instructions.md`
 
@@ -275,7 +266,6 @@ GitHub Copilot supports multiple ways to provide custom instructions. They diffe
 3. VS Code analyzes your workspace and generates a tailored `copilot-instructions.md`
 4. Review and edit the result before committing
 
----
 
 ### 4B. Always-On Instructions - `AGENTS.md` (Multi-Tool / Monorepo)
 
@@ -302,7 +292,6 @@ repo-root/
 
 **Rule:** Choose either `copilot-instructions.md` OR `AGENTS.md` for your project - not both.
 
----
 
 ### 4C. Always-On Instructions - `CLAUDE.md` (Cross-Tool Compatibility)
 
@@ -326,16 +315,13 @@ repo-root/
 Use `.instructions.md` files under `.claude/rules/` using `paths:` instead of `applyTo:` for glob matching:
 
 ```markdown
----
 description: "Python coding standards"
 paths: ["**/*.py"]
----
 
 Follow PEP 8. Use type hints on all function signatures.
 Write docstrings for all public functions and classes.
 ```
 
----
 
 ### 4D. Conditional / Scoped Instructions - `.instructions.md`
 
@@ -354,11 +340,9 @@ Write docstrings for all public functions and classes.
 **Frontmatter:**
 
 ```yaml
----
 name: "Display Name"          # Optional - shown in UI and diagnostics; defaults to filename
 description: "Use when..."    # Optional - enables on-demand matching; make keyword-rich
 applyTo: "**/*.py"            # Optional glob - auto-attach when matching files are in context
----
 ```
 
 **`applyTo` glob patterns:**
@@ -384,11 +368,9 @@ applyTo: ".github/ISSUE_TEMPLATE/**"    # Issue template files only
 **Example - test file conventions:**
 
 ```markdown
----
 name: "Test File Standards"
 description: "Use when writing, generating, or reviewing test files. Covers test structure, naming, and coverage expectations."
 applyTo: "**/*.test.{js,ts}"
----
 
 # Test Standards
 
@@ -404,7 +386,6 @@ applyTo: "**/*.test.{js,ts}"
 - `Ctrl+Shift+P` → "Chat: New Instructions File" → choose scope (Workspace or User)
 - Or create the file manually in `.github/instructions/`
 
----
 
 ### 4E. Organization-Level Instructions (GitHub Enterprise and Teams)
 
@@ -426,7 +407,6 @@ applyTo: "**/*.test.{js,ts}"
 
 **Use for:** Organization-wide coding standards, security policies, legal disclaimers (open source license obligations), toolchain conventions.
 
----
 
 ### 4F. Settings-Based Instructions (Deprecated - Use Files Instead)
 
@@ -455,7 +435,6 @@ VS Code settings can inject instructions for specific task types:
 
 Each setting accepts an array of `{ text: "..." }` (inline) or `{ file: "relative/path.md" }` (from file).
 
----
 
 ### 4G. Comparison - When to Use Each Approach
 
@@ -468,7 +447,6 @@ Each setting accepts an array of `{ text: "..." }` (inline) or `{ file: "relativ
 | Organization setting | All repos in org | Yes | GitHub Copilot | Org-wide policy |
 | Settings-based | Workspace or user | Per-task | VS Code only | Deprecated - avoid for new work |
 
----
 
 ## 6. Accessible View Workflow
 
@@ -534,7 +512,6 @@ This is especially important for multi-line suggestions where ghost text is hard
 - Each line is on its own line (not run together)
 - Indentation is preserved
 
----
 
 ## 7. Configuration Scope Reference
 
@@ -583,7 +560,6 @@ Configured by administrators in GitHub organization settings. Automatically appl
 - Enable discovery: `github.copilot.chat.organizationInstructions.enabled: true`
 - Lowest priority - workspace and user instructions override when there is a conflict
 
----
 
 ## 8. Instruction Priority and Conflicts
 
@@ -610,7 +586,6 @@ Result: Copilot follows TypeScript strict mode (from workspace), British English
 
 Within a single scope (e.g., workspace), all matching instructions files are combined with no inherent priority. If two workspace-level `.instructions.md` files contradict each other, the behavior is undefined - avoid conflicting workspace instructions.
 
----
 
 ## 9. All File Types Quick Reference
 
@@ -630,7 +605,6 @@ Within a single scope (e.g., workspace), all matching instructions files are com
 **Create any new customization file:**
 `Ctrl+Shift+P` → "Chat: New Instructions File" (or "New Prompt File", "New Agent File")
 
----
 
 ## 10. VS Code Settings Reference
 
@@ -678,7 +652,6 @@ To sync your personal prompts, instructions, and agents across devices:
 
 Your personal `*.instructions.md`, `*.agent.md`, and `*.prompt.md` files will sync to all signed-in VS Code instances.
 
----
 
 ## 11. Diagnostics and Troubleshooting
 
@@ -730,7 +703,6 @@ The Diagnostics panel shows:
 - Use forward slashes or escaped backslashes
 - Relative paths are relative to the workspace root
 
----
 
 ## Quick Reference Card
 
@@ -773,9 +745,7 @@ The Diagnostics panel shows:
 | Configure instructions | `Ctrl+Shift+P` → "Chat: Configure Instructions" |
 | View all loaded files and errors | Chat gear → Diagnostics |
 
----
 
----
 
 ## 12. Screen Reader Workflow - Official Guide
 
@@ -890,7 +860,6 @@ Pressing `Ctrl+Enter` opens a **Suggestions Panel** - a separate editor tab that
 | Optimizing Copilot with custom instructions (accessibility) | [accessibility.github.com/documentation/guide/copilot-instructions/](https://accessibility.github.com/documentation/guide/copilot-instructions/) |
 | Getting started with custom agents for accessibility | [accessibility.github.com/documentation/guide/getting-started-with-agents/](https://accessibility.github.com/documentation/guide/getting-started-with-agents/) |
 
----
 
 ## 13. awesome-copilot - Plugin Ecosystem
 
@@ -912,7 +881,6 @@ Pressing `Ctrl+Enter` opens a **Suggestions Panel** - a separate editor tab that
 
 **LLM discovery:** `https://github.github.io/awesome-copilot/llms.txt` - a machine-readable index of all available resources.
 
----
 
 ### The `/plugin` Command - Browse and Install from Chat
 
@@ -931,7 +899,6 @@ The easiest way to explore awesome-copilot from VS Code:
 | **Copilot SDK** | Official SDK for C#, Go, Node.js, and Python development patterns |
 | **Partners** | 20+ partner agents from Azure, JetBrains, MongoDB, and others |
 
----
 
 ### CLI Plugin Installation
 
@@ -951,7 +918,6 @@ gh copilot plugin install @awesome-copilot/accessibility-toolkit
 gh copilot plugin list
 ```
 
----
 
 ### MCP Server Integration (Docker required)
 
@@ -980,7 +946,6 @@ Install in VS Code by clicking the button at `https://aka.ms/awesome-copilot/mcp
 
 > **Screen reader note:** The install buttons on the awesome-copilot page are standard links. Navigate with `K` in Browse Mode to find them. Each is labeled with the target IDE.
 
----
 
 ### awesome-copilot vs. Accessibility Agents
 
@@ -992,7 +957,6 @@ Install in VS Code by clicking the button at `https://aka.ms/awesome-copilot/mcp
 | **Storage** | Your version-controlled repository | GitHub-hosted public repository |
 | **Best for** | Project-specific workflows | Reusable templates and cross-project tools |
 
----
 
 ## 14. GitHub Agentic Workflows - Agents in the Cloud
 
@@ -1030,7 +994,6 @@ The AI agent (GitHub Copilot, Claude, or OpenAI Codex) reads your repository con
 Unlike standard GitHub Actions (YAML), agentic workflows are Markdown files:
 
 ```markdown
----
 on:
   schedule: daily
 permissions:
@@ -1042,7 +1005,6 @@ safe-outputs:
     title-prefix: "[team-status] "
     labels: [report, daily-status]
     close-older-issues: true
----
 
 ## Daily Issues Report
 
@@ -1117,7 +1079,6 @@ gh aw compile .github/workflows/daily-report.md
 
 > **Relationship to Accessibility Agents:** Accessibility Agents agents (`.agent.md` files) are designed for interactive use inside VS Code. GitHub Agentic Workflows are a separate, cloud-native system that uses its own Markdown workflow format and the `gh aw` CLI - they are complementary tools, not the same mechanism. See [Appendix V](appendix-v-accessibility-agents-reference.md) for the full Accessibility Agents reference.
 
----
 
 *Chapter: [GitHub Copilot](13-github-copilot.md)*
 *Related: [Appendix V: Accessibility Agents Reference](appendix-v-accessibility-agents-reference.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix X: AI Models Reference](appendix-x-copilot-models.md)*

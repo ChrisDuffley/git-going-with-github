@@ -3,9 +3,8 @@
 
 > This document is for workshop facilitators only. Participants should start with [README.md](README.md) and [docs/00-pre-workshop-setup.md](docs/00-pre-workshop-setup.md).
 
-**👉 If you're looking for Challenge Management (issue generation, monitoring, bot setup):  See [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md)**
+** If you're looking for Challenge Management (issue generation, monitoring, bot setup):  See [FACILITATOR_CHALLENGES.md](FACILITATOR_CHALLENGES.md)**
 
----
 
 ## Quick Reference Timeline
 
@@ -71,13 +70,11 @@
 - [ ] Archive student roster
 - [ ] Schedule retrospective
 
----
 
 ## Full Details
 
 (See sections below for complete instructions on each phase)
 
----
 
 ## Repository Structure
 
@@ -142,7 +139,6 @@ learning-room/                  ← workshop repository root
         └── setup-guide.md      ← has a broken URL and [TODO] markers
 ```
 
----
 
 ## Two Weeks Before the Workshop
 
@@ -175,7 +171,6 @@ Settings → Branches → Add rule:
 Settings → check "Template repository"
 This allows you to create a fresh copy for each cohort with one click.
 
----
 
 ## One Week Before the Workshop
 
@@ -276,7 +271,6 @@ Create a PR from a `practice-review` branch with a meaningful change to `learnin
 PR title: `Expand the "What Is Open Source?" section`
 Description: Use the PR template. Fill in all fields.
 
----
 
 ## Day 1 - Pre-Session Checklist
 
@@ -304,7 +298,6 @@ Test each module at least 3 days before the workshop:
 3. If the workflow failed: click it → read the error → the most common cause is a rate limit (wait 1-2 minutes and re-trigger by creating another commit)
 4. Have backup screenshots of Mona's expected responses ready for demo purposes
 
----
 
 ## Day 2 - Pre-Session Checklist
 
@@ -315,7 +308,6 @@ Test each module at least 3 days before the workshop:
 - [ ] Slash commands verified: type `/find-issues good first issue` → confirm a response
 - [ ] Each participant's upstream PR target ready (if doing the accessibility-agents contribution)
 
----
 
 ## GitHub Skills - Facilitator Script
 
@@ -343,7 +335,6 @@ When checking Skills module completions:
 
 > *"Navigate to github.com/skills/introduction-to-github. Do you see your completion badge? That's yours. It's tied to your GitHub profile. It will be there when you apply for jobs, when you introduce yourself to a new open source community, when you want to demonstrate that you know how to use GitHub."*
 
----
 
 ## Managing Learning Room Automation
 
@@ -560,7 +551,6 @@ Create issue labeled `automation-retrospective` asking:
 **Iterate:**
 Use feedback to improve validation scripts, messages, and workflows for next cohort.
 
----
 
 ## Accessibility Notes for Facilitators
 
@@ -572,7 +562,6 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 - If the room has mixed screen reader experience: pair advanced and new users during the contribution sprint - code review is a natural collaboration opportunity
 - **Bot accessibility:** Automation comments are standard GitHub comments, fully accessible with screen readers. Bot uses clear headings, lists, and links for easy navigation.
 
----
 
 ## Personalizing This Workshop
 
@@ -586,7 +575,6 @@ The curriculum, agent files, and practice documents are designed to be adapted:
 
 The workshop is licensed under Creative Commons Attribution. Attribution: "Based on the Open Source AT Hackathon Learning Room by [your name]."
 
----
 
 ## Chapter-by-Chapter Facilitation Guide
 
@@ -804,7 +792,6 @@ The workshop is licensed under Creative Commons Attribution. Attribution: "Based
 - **Facilitator role:** Enable not prescribe. Answer questions, don't drive choices.
 - **Common pattern:** "I found a bug in the agent tool. Can I fix it?" YES! That's a real contribution. Show them how to file an issue, fork, clone, edit, and PR.
 
----
 
 ## Accessibility Testing Checklist for Facilitators
 
@@ -859,7 +846,6 @@ Before Day 1 and Day 2 start, verify the following on your demo machine AND part
 - [ ] Markdown files in `learning-room/docs/` render without errors
 - [ ] No broken links in practice files (if they're supposed to be broken for the exercise, verify they display clearly as broken)
 
----
 
 ## Facilitator Q&A Guide
 
@@ -972,7 +958,6 @@ This resolves #42. JAWS users noted the shortcuts were missing from the docs."
 7. If you disagree with feedback, explain why in a comment. Conversation happens.  
 **Philosophy:** "There's no 'good enough' - there's 'what did you try?' and 'what did you learn?' Your first contribution might be small, but it counts."
 
----
 
 ## Common Patterns & How to Explain Them
 
@@ -985,15 +970,15 @@ This resolves #42. JAWS users noted the shortcuts were missing from the docs."
 
 1. Upstream repo - Community-Access/learning-room
    This is the official repository. You can't edit it directly.
-   
+
 2. Your fork - [your-name]/learning-room
    When you click Fork, GitHub copies the entire repo to your account.
    This is your personal copy. You CAN edit this one.
-   
+
 3. Your local clone - on your laptop, in a folder
    You get the fork onto your laptop with git clone.
    You edit here, in actual files, then push back to the fork.
-   
+
 The flow: Edit locally → commit → push to fork → open PR from fork to upstream.
 All three repositories are talking to each other, but you're the only one editing the one you control."
 ```
@@ -1028,6 +1013,5 @@ Then I commit the fix and push again.
 It's not a failure - it's just how parallel editing works."
 ```
 
----
 
 *Questions about facilitation? Open an issue with the `question` label. Contributions to this guide are welcome.*

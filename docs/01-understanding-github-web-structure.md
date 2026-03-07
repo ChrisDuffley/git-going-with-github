@@ -76,7 +76,6 @@ Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights 
 
 **Screen reader landmark:** This is labeled **"Repository navigation"**. Press `D` to jump to it directly.
 
----
 
 ## 3. How to Tell Where You Are
 
@@ -129,7 +128,6 @@ Press `1` (in Browse Mode) on any GitHub page to jump to the first H1 heading. W
 | Your username | Your profile page |
 | A settings category name | A settings page |
 
----
 
 ## 4. The Five Key Page Types
 
@@ -197,7 +195,6 @@ Your personal home (`github.com`) shows activity from repositories you follow. Y
 - Pinned repositories
 - A list of your recent public activity
 
----
 
 ## 5. Visual Map of a Repository Page
 
@@ -239,7 +236,6 @@ This diagram shows the layout of a repository home page. It is presented as ASCI
 - `T` → jump to the file table → `Ctrl+Alt+Down Arrow` to navigate rows
 - `D` → "Repository files navigation" → read the README
 
----
 
 ## 6. Screen Reader Orientation Sequence
 
@@ -315,7 +311,6 @@ From there, navigate with purpose: `VO+U → Landmarks` to jump to regions, Quic
 
 </details>
 
----
 
 ## 7. Landmark Structure by Page Type
 
@@ -373,7 +368,6 @@ Each GitHub page type has a consistent landmark pattern. Knowing the pattern mea
 | Main | File tree + diff view |
 | (no "Add a comment" - inline commenting works differently) | - |
 
----
 
 ## 8. GitHub's Heading Hierarchy in Practice
 
@@ -427,7 +421,6 @@ H1: PR title
 
 > **Why this matters:** Pressing `3` on a PR Files Changed tab jumps between file headings - this is how you quickly navigate to a specific file without tabbing through the entire diff.
 
----
 
 ## 9. How GitHub's Layout Changes by Viewport
 
@@ -453,7 +446,6 @@ GitHub is a responsive web application. The layout shifts at different screen wi
 
 **Consistent experience recommendation:** Use your browser maximized or at full desktop width during this workshop. GitHub's landmark and heading structure is most consistent at desktop width. If you hear different landmarks or headings than described in this guide, maximize your browser window.
 
----
 
 ## 10. The Mental Model - Building Your Internal Map
 
@@ -496,7 +488,6 @@ When you get disoriented:
 
 You are never lost. You always have these three fallbacks.
 
----
 
 ## Try It: The 60-Second Orientation
 
@@ -513,13 +504,11 @@ Open any GitHub repository - try [github.com/community-access/accessibility-agen
 
 > **What success feels like:** You heard a repo name, at least two landmarks, and several headings. If you did, you can orient yourself on *any* GitHub page using these same four keys.
 
----
 
 ## Day 2 Amplifier
 
 > Once you have this mental model solid, the Accessibility Agents agents make more sense. The `@daily-briefing` agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.
 
----
 
 *Next: [Navigating Repositories](02-navigating-repositories.md)*
 *Back: [Pre-Workshop Setup](00-pre-workshop-setup.md)*

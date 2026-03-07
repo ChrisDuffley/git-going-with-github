@@ -2,7 +2,6 @@
 
 This guide is for people who are new to contributing to open source software. It explains what contribution means, who it is for, and how to get started.
 
----
 
 ## What Is Open Source?
 
@@ -17,13 +16,11 @@ Open source software is software whose source code is publicly available. Anyone
 
 You do not need to be a professional developer to contribute. Documentation, accessibility improvements, and bug reports are among the most valuable contributions an open source project can receive.
 
----
 
 ## Who Can Contribute?
 
 [TODO: Add a paragraph explaining that contributors come from all backgrounds, skill levels, and countries. Emphasize that using assistive technology is not a barrier to contribution - in fact, AT users bring a perspective that improves projects for everyone.]
 
----
 
 ## What Makes a Good First Contribution?
 
@@ -34,7 +31,6 @@ A good first contribution is:
 - **Described** - the PR or issue explains what changed and why
 - **Tested** - for documentation, this means reading it aloud with your screen reader before submitting
 
----
 
 ## Finding Something to Work On
 
@@ -47,7 +43,6 @@ Most open source projects label issues that are suitable for new contributors. L
 
 [TODO: Add two or three sentences about how to read an issue to decide if it is right for you. What questions should you ask yourself? Is the description clear enough? Is anyone else already working on it?]
 
----
 
 ## Getting Help
 
@@ -57,7 +52,6 @@ It is always acceptable to ask a question on an issue or pull request. Good ques
 - Show what you tried: "I searched the repository for the correct URL but couldn't find it"
 - Are polite: assume good intent from maintainers, even if they are slow to respond
 
----
 
 ## After Your Contribution Is Merged
 
@@ -69,6 +63,5 @@ When your pull request is merged:
 
 [TODO: Add a sentence or two about what this means for someone's GitHub profile and open source portfolio.]
 
----
 
 *Last reviewed: [DATE]*

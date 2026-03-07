@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Cross-repository project management
 - Automating project workflows with built-in automation
 
----
 
 ### Concept Coverage Checklist
 
@@ -63,7 +61,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
 
----
 
 ## Table of Contents
 
@@ -80,7 +77,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 11. [Accessibility Agents: `/project-status`](#11-accessibility-agents-project-status)
 12. [Exercises](#12-exercises)
 
----
 
 ## 1. Projects v2: What Changed
 
@@ -97,7 +93,6 @@ GitHub has two generations of project tooling. The current generation - called *
 
 If you see "Projects (Beta)" references in older documentation, those referred to the early rollout of v2. It is now stable and the default.
 
----
 
 ## 2. Creating a Project
 
@@ -131,7 +126,6 @@ Projects can be created at the **organization level** (shared across all repos i
 5. You land on the new empty project
 ```
 
----
 
 ## 3. The Three Layouts in Depth
 
@@ -192,7 +186,6 @@ A horizontal timeline. Items appear as bars spanning their start/due dates. Iter
 - Add a **Date** custom field (e.g., "Start Date", "Due Date") or use a **Milestone** field
 - Items without dates appear in the ungrouped section
 
----
 
 ## 4. Custom Fields
 
@@ -233,7 +226,6 @@ Tab to "+" column header button → Enter
 3. Type value (text/number) or select from dropdown (single select)
 4. `Enter` or `Tab` to confirm
 
----
 
 ## 5. Adding and Managing Items
 
@@ -273,7 +265,6 @@ In Table view:
 2. A bulk action bar appears at the top
 3. Options: change Status, assign label, change assignee, archive, delete
 
----
 
 ## 6. Built-In Automations
 
@@ -316,7 +307,6 @@ For more complex automations, Projects v2 has a full GraphQL API and works with 
 
 See [Appendix Q: GitHub Actions and Workflows](appendix-q-github-actions-workflows.md) for the foundation, and the [GitHub documentation on automating projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project) for advanced patterns.
 
----
 
 ## 7. Iterations (Sprints)
 
@@ -344,7 +334,6 @@ From any project:
 2. Select **"Current iteration"**
 3. See: items by status, completion rate, items added vs closed over time
 
----
 
 ## 8. Views and Filters
 
@@ -386,7 +375,6 @@ In Table or Board view, you can group rows:
 Multiple sort levels are supported. Primary sort → secondary sort:
 - Priority ascending, then due date ascending
 
----
 
 ## 9. Cross-Repository Projects
 
@@ -410,7 +398,6 @@ Filter: repo:community-access/accessibility-agents
 
 **Common use case:** An organization project tracking all accessibility bugs across every repo, labeled `accessibility`, with Auto-add enabled.
 
----
 
 ## 10. Screen Reader Navigation Reference
 
@@ -472,7 +459,6 @@ Backspace → Remove last filter token
 Escape → Clear focus from filter bar
 ```
 
----
 
 ## 11. Accessibility Agents: `/project-status`
 
@@ -520,7 +506,6 @@ After the overview: "Want to see a specific column or check a team member's work
 - During sprint planning: identify stale and blocked items before the next cycle
 - After a weekend: catch up on what moved while you were away
 
----
 
 ## 12. Exercises
 
@@ -553,7 +538,6 @@ After the overview: "Want to see a specific column or check a team member's work
 3. Create a view filtered to `is:issue label:accessibility`
 4. Set up Auto-add: any issue with the `accessibility` label in those repos goes to this project automatically
 
----
 
 > **From Chapter 08:** For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
 

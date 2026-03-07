@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Screen reader-specific configurations for NVDA, JAWS, VoiceOver
 - Accessibility troubleshooting for common VS Code issues
 
----
 
 ### Concept Coverage Checklist
 
@@ -66,7 +64,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 >
 > **Referenced by:** [VS Code Setup & Accessibility Basics](10-vscode-basics.md), [GitHub Copilot](13-github-copilot.md)
 
----
 
 ## Table of Contents
 
@@ -78,7 +75,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 6. [Accessibility Signals Types and Customization](#6-accessibility-signals-types-and-customization)
 7. [Settings.json Configuration Examples](#7-settingsjson-configuration-examples)
 
----
 
 ## 1. Complete Accessibility Settings Reference
 
@@ -138,7 +134,6 @@ All settings can be accessed via Settings UI (`Ctrl+,`) or by editing `settings.
 | `accessibility.verbosity.settings-editor` | boolean | `true` | Announces settings editor context. |
 | `accessibility.verbosity.terminal` | boolean | `true` | Announces terminal operations. |
 
----
 
 ## 2. Audio Cues - All Options
 
@@ -210,7 +205,6 @@ Audio cues provide non-verbal feedback through sound. Each cue can be configured
 - Duration: Keep under 2 seconds
 - Volume: Normalize to avoid clipping
 
----
 
 ## 3. Accessible Diff Viewer - Complete Guide
 
@@ -323,7 +317,6 @@ The unchanged lines help you understand where in the file the change occurred.
 2. Search: "diffEditor.renderSideBySide"
 3. Uncheck the box (or set to `false` in settings.json)
 
----
 
 ## 4. Screen Reader-Specific Configurations
 
@@ -441,7 +434,6 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 
 **Note:** Quick Nav should be OFF when editing text (conflicts with text navigation).
 
----
 
 ## 5. Complete Keyboard Shortcuts
 
@@ -623,7 +615,6 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Toggle Preview | `Ctrl+Shift+V` | `Cmd+Shift+V` |
 | Open Preview to Side | `Ctrl+K V` | `Cmd+K V` |
 
----
 
 ## 6. Accessibility Signals Types and Customization
 
@@ -666,7 +657,6 @@ When multiple signals occur simultaneously, VS Code prioritizes them:
 
 This prevents overlapping announcements.
 
----
 
 ## 7. Settings.json Configuration Examples
 
@@ -802,7 +792,6 @@ This prevents overlapping announcements.
 }
 ```
 
----
 
 ## Quick Copy: Complete Recommended Settings
 
@@ -834,7 +823,6 @@ This prevents overlapping announcements.
 }
 ```
 
----
 
 *Back to: [VS Code Setup & Accessibility Basics](10-vscode-basics.md) | [GitHub Copilot](13-github-copilot.md) | [Accessibility Agents](16-accessibility-agents.md)*  
 *Related: [Appendix B: Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md)*

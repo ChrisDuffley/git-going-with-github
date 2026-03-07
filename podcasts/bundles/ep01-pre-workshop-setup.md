@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 10-12 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Configuring your screen reader for GitHub navigation
 - Verifying everything works before Day 1
 
----
 
 ### Concept Coverage Checklist
 
@@ -71,7 +69,6 @@ but keep the main narrative focused on the primary chapter.
 >
 > **Please complete this guide at least one day before the workshop.** If you run into any issues, [file an issue](https://github.com/community-access/git-going-with-github/issues) so we can help - we want Day 1 to start with everyone ready to go, not troubleshooting.
 
----
 
 ## Table of Contents
 
@@ -88,7 +85,6 @@ but keep the main narrative focused on the primary chapter.
 11. [Other GitHub Access Methods (Reference Only)](#other-github-access-methods-reference-only)
 12. [Getting Help Before the Event](#getting-help-before-the-event)
 
----
 
 ## What You Will Need
 
@@ -123,7 +119,6 @@ You only need **one** of these. Use whichever you are most comfortable with.
 
 > **Note:** All workshop exercises are designed to work with any of these screen readers. Where specific key commands differ, we will note all three. You are not disadvantaged by using any particular screen reader.
 
----
 
 ## Step 1 - Create Your GitHub Account
 
@@ -246,7 +241,6 @@ Copy-ready paragraph for `CONTRIBUTING.md` / registration forms
 
 > Security: We strongly recommend enabling Two-Factor Authentication (2FA) on your GitHub account. If you cannot enable 2FA, add an SSH key or create a Personal Access Token (PAT) with `repo` scope before contributing. If you need help, contact the workshop organizers.
 
----
 
 ## Step 2 - Configure GitHub Accessibility Settings
 
@@ -352,7 +346,6 @@ Theme is on a separate page: [GitHub Appearance Settings](https://github.com/set
    - **Colorblind** variants - Protanopia, Deuteranopia, Tritanopia
 4. Select your preferred theme and activate **Save** if prompted (some changes apply immediately)
 
----
 
 ## Step 3 - Configure Your Profile
 
@@ -377,7 +370,6 @@ A profile picture humanizes your contributions. It can be a photo or any image. 
 1. Navigate to [Settings → Notifications](https://github.com/settings/notifications)
 2. Add a **custom routing** email if you want GitHub notifications to go to a different address than your account email
 
----
 
 ## Step 4 - Check GitHub Feature Preview Settings
 
@@ -455,7 +447,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 > **Why this matters:** Without these features enabled, the keyboard and screen reader workflows described throughout this workshop will not match what you see on screen. Enabling them before you begin ensures everything works as documented.
 
----
 
 ## Step 5 - Set Up Your Screen Reader & Browser
 
@@ -478,7 +469,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Your NVDA key:** By default it is `Insert`. It can also be set to `Caps Lock` in NVDA preferences if that is more comfortable.
 
----
 
 ### JAWS (Windows)
 
@@ -495,7 +485,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Your JAWS key:** `Insert` (or `Caps Lock` if using laptop layout)
 
----
 
 ### VoiceOver (macOS)
 
@@ -514,7 +503,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 - Press `Left Arrow + Right Arrow` simultaneously to toggle Quick Nav
 - With Quick Nav on: `H` = next heading, `L` = next link, `B` = next button (same as NVDA/JAWS browse mode keys)
 
----
 
 ### Browser Recommendations Summary
 
@@ -527,7 +515,6 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 
 **Before the workshop:** Open GitHub.com in your chosen browser with your screen reader running and confirm you can navigate the page using heading keys.
 
----
 
 ## Step 6 - Install Git and Visual Studio Code
 
@@ -559,7 +546,6 @@ Git is often already present via Xcode Command Line Tools. To check:
 
 Once Git is installed, you will configure your Git identity in Step 7 after VS Code is set up.
 
----
 
 ### Install Visual Studio Code
 
@@ -617,7 +603,6 @@ If VS Code did **not** prompt you automatically, enable it manually:
 | Focus Explorer panel | `Ctrl+Shift+E` |
 | Focus editor | `Ctrl+1` |
 
----
 
 ## Step 7 - Configure Git Identity
 
@@ -666,13 +651,11 @@ user.email=your-email@example.com
 
 Use the same email you registered with GitHub. If you're concerned about privacy, GitHub offers a no-reply email you can use: `username@users.noreply.github.com` - find it in [Settings → Emails](https://github.com/settings/emails).
 
----
 
 ## Step 8 - Install VS Code Extensions
 
 This workshop uses two VS Code extensions. Both are published by GitHub and are free. Install them in the order shown below.
 
----
 
 ### Sign in to GitHub in VS Code first
 
@@ -688,7 +671,6 @@ Both extensions require you to be signed into GitHub. Do this once and both will
 
 > **Screen reader note:** The authentication happens in your browser. After authorizing, your browser will show a page saying "You can close this tab and return to VS Code." Switch back to VS Code with `Alt+Tab` (Windows) or `Cmd+Tab` (macOS).
 
----
 
 ### Extension 1 - GitHub Copilot Chat
 
@@ -722,7 +704,6 @@ This single extension provides both inline code completions and the conversation
 5. Press `Tab` to accept it, or `Esc` to dismiss
 6. If no suggestions appear: confirm Copilot icon shows in the status bar and that you are signed in
 
----
 
 ### Extension 2 - GitHub Pull Requests
 
@@ -747,7 +728,6 @@ This extension lets you review and manage pull requests without leaving VS Code.
 
 > **Screen reader note:** The Pull Requests panel is a tree view. Navigate it with `Up` and `Down Arrow`. Press `Enter` or `Right Arrow` to expand a node.
 
----
 
 ### Copilot Free tier
 
@@ -757,7 +737,6 @@ Copilot Free is available to all GitHub users at no cost. It includes:
 
 For this workshop, Free tier is sufficient. If you want unlimited access, paid plans are available at [GitHub Copilot pricing](https://github.com/features/copilot#pricing).
 
----
 
 ## Step 9 - Verification Checklist
 
@@ -796,7 +775,6 @@ GIT & VS CODE (required before the workshop)
 [ ] Pull Requests panel opens (Ctrl+Shift+P → "Focus on Pull Requests View")
 ```
 
----
 
 ## Other GitHub Access Methods (Reference Only)
 
@@ -853,7 +831,6 @@ We are not covering Git commands in this workshop. If you want to learn Git, the
 - [Pro Git book (free)](https://git-scm.com/book/en/v2)
 - [GitHub Skills: Introduction to GitHub](https://github.com/skills/introduction-to-github)
 
----
 
 ## Getting Help Before the Event
 
@@ -865,13 +842,11 @@ If you cannot complete any step in this guide before the workshop:
 
 You will not be left behind. Every setup issue we can solve before Day 1 means more time for learning on the day.
 
----
 
 *Next: [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*
 *Back: [README](../README.md)*
 
 
----
 
 ### Supplementary: Git Authentication (tokens, SSH, credential storage)
 
@@ -882,7 +857,6 @@ You will not be left behind. Every setup issue we can solve before Day 1 means m
 
 > **Audience:** This appendix is for contributors who need to configure Git authentication for push access. If you're working entirely through the GitHub web interface or GitHub Desktop, you can skip this. If you're using VS Code with Git command line, this becomes relevant when you want to push commits to your fork.
 
----
 
 ## When You Need Authentication
 
@@ -896,7 +870,6 @@ You do **not** need authentication to:
 - View public repositories on GitHub.com
 - Read issues and pull requests
 
----
 
 ## Two Authentication Methods
 
@@ -927,7 +900,6 @@ SSH uses public-key cryptography. You generate a key pair on your computer (publ
 - Requires command-line setup (less accessible for some screen reader users)
 - Slightly more complex initial configuration
 
----
 
 ## Creating a Personal Access Token (Recommended for This Workshop)
 
@@ -978,7 +950,6 @@ Password: [paste-your-PAT-here]
 git config --global credential.helper cache
 ```
 
----
 
 ## Setting Up SSH Keys (Alternative Method)
 
@@ -1052,7 +1023,6 @@ git@github.com:owner/repo.git
 https://github.com/owner/repo.git
 ```
 
----
 
 ## Switching Between HTTPS and SSH
 
@@ -1073,7 +1043,6 @@ git remote set-url origin git@github.com:your-username/repo.git
 git remote set-url origin https://github.com/your-username/repo.git
 ```
 
----
 
 ## Troubleshooting
 
@@ -1104,7 +1073,6 @@ git remote set-url origin https://github.com/your-username/repo.git
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
 
----
 
 ## Security Best Practices
 
@@ -1115,7 +1083,6 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 5. **Revoke old tokens** when you're done with a project or device
 6. **Don't commit tokens or keys to Git** - use `.gitignore` for config files
 
----
 
 ## Commit Signing - Verified Badges and Vigilant Mode
 
@@ -1198,7 +1165,6 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 **Workshop recommendation:** SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to accessibility-agents will show as Verified.
 
----
 
 ## For This Workshop
 
@@ -1210,6 +1176,5 @@ GitHub has an optional setting called **Vigilant Mode** (in Settings → SSH and
 
 SSH keys are great for long-term use, but PATs are faster to set up and more accessible for screen reader users during a time-constrained workshop.
 
----
 
 *Return to: [Pre-Workshop Setup](00-pre-workshop-setup.md) | [Resources](appendix-u-resources.md)*

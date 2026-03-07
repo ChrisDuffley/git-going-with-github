@@ -46,6 +46,5 @@ If applicable, add a screenshot, GIF, or link to a demo showing your changes:
 
 [Add screenshot or video link here]
 
----
 
 **Have questions?** Ask in the comments below, or review [Working with Pull Requests](../../docs/05-working-with-pull-requests.md) for guidance.

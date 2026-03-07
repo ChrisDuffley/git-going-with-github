@@ -2,9 +2,8 @@
 
 This section is for facilitators and administrators managing the workshop challenge system.
 
----
 
-## 🎓 Pre-Workshop Setup (Facilitator Only)
+##  Pre-Workshop Setup (Facilitator Only)
 
 ### Step 1: Prepare the Student List
 
@@ -53,11 +52,11 @@ gh issue list --label challenge --label "skill: github-issues" --limit 100
 ```
 
 Each issue should:
-- ✅ Have the student's `@username` in the title
-- ✅ Be assigned to that student
-- ✅ Have labels: `challenge`, level label, skill label, day label
-- ✅ Have a clear, complete description with links to this hub and the chapter docs
-- ✅ Have a link to the full Challenge Hub
+-  Have the student's `@username` in the title
+-  Be assigned to that student
+-  Have labels: `challenge`, level label, skill label, day label
+-  Have a clear, complete description with links to this hub and the chapter docs
+-  Have a link to the full Challenge Hub
 
 ### Step 4: Set Up Bot Validation (Optional)
 
@@ -81,9 +80,8 @@ In your opening welcome, say:
 
 **That's it.** Instructions are self-contained in the issues and the Challenge Hub.
 
----
 
-## 📋 Managing Challenges During the Workshop
+##  Managing Challenges During the Workshop
 
 ### Monitoring Student Progress
 
@@ -117,7 +115,7 @@ For challenges **without bot validation** (Chapters 7-10, 12-16):
 
 1. Review the student's PR or issue comment
 2. Look for: clear evidence, correct steps, good explanation
-3. Comment: "Great work! Your [X] shows you understand [concept]. ✅ Moving you to the next challenge."
+3. Comment: "Great work! Your [X] shows you understand [concept].  Moving you to the next challenge."
 4. Leave the PR open or issue open - don't auto-merge/close until you've reviewed
 
 ### Troubleshooting Failed Bot Validation
@@ -129,9 +127,8 @@ If a student's PR fails bot checks:
 3. Have them push again - bot re-validates automatically
 4. If it's a real bot bug, flag it for later and manually approve the PR
 
----
 
-## 🔄 Post-Workshop Cleanup
+##  Post-Workshop Cleanup
 
 ### Step 1: Archive Old Issues
 
@@ -168,9 +165,8 @@ git pull origin main
 
 The templates pull from the chapter documentation, so they're always fresh.
 
----
 
-## 📊 Challenge Metadata
+##  Challenge Metadata
 
 ### Issue Labels (Standard Across All Challenges)
 
@@ -196,9 +192,8 @@ Chapter 11.3: Push to GitHub (@andysq62)
 
 This makes it **instantly clear** which challenge, which chapter, which student.
 
----
 
-## 🤖 Automation & Bot Validation
+##  Automation & Bot Validation
 
 ### Challenges with Automatic Validation
 
@@ -206,10 +201,10 @@ These chapters have PR bot validation:
 
 | Chapter | Bot Checks | What It Validates |
 |---------|-----------|------------------|
-| **4: Issues** | ✅ PR bot | `Closes #XX`, evidence issue reference, created issue quality |
-| **5: Pull Requests** | ✅ PR bot | `Closes #XX` syntax, Markdown, accessibility |
-| **6: Merge Conflicts** | ✅ PR bot | Clean conflict resolution, commit message |
-| **11: Git & Source Control** | ✅ PR bot | Branch name, commit presence, push success |
+| **4: Issues** |  PR bot | `Closes #XX`, evidence issue reference, created issue quality |
+| **5: Pull Requests** |  PR bot | `Closes #XX` syntax, Markdown, accessibility |
+| **6: Merge Conflicts** |  PR bot | Clean conflict resolution, commit message |
+| **11: Git & Source Control** |  PR bot | Branch name, commit presence, push success |
 | **12-16** | Manual | Facilitator reviews |
 
 ### How PR Bot Works (Behind the Scenes)
@@ -217,10 +212,10 @@ These chapters have PR bot validation:
 1. Student opens PR with `Closes #ISSUE_NUMBER`
 2. GitHub workflow (`.github/workflows/learning-room-pr-bot.yml`) triggers
 3. Bot script (`.github/scripts/validate-pr.js`) checks:
-   - ✅ PR references an issue with `Closes #`
-   - ✅ Changed files are in appropriate folder (`learning-room/docs/`)
-   - ✅ Markdown syntax is valid
-   - ✅ No major accessibility violations (heading hierarchy, link text, alt text)
+   -  PR references an issue with `Closes #`
+   -  Changed files are in appropriate folder (`learning-room/docs/`)
+   -  Markdown syntax is valid
+   -  No major accessibility violations (heading hierarchy, link text, alt text)
 4. Bot posts a comment with pass/fail status and specific fixes
 5. Student pushes fixes, bot re-validates automatically
 6. When all checks pass, bot approves the PR
@@ -239,9 +234,8 @@ gh workflow enable learning-room-pr-bot
 
 Then manually approve the PR.
 
----
 
-## 🎯 Success Metrics
+##  Success Metrics
 
 ### Track These During the Workshop
 
@@ -267,9 +261,8 @@ gh issue list --label challenge --state closed --limit 50 | \
   xargs -I {} gh pr view {} --json statusCheckRollup
 ```
 
----
 
-## 🔗 File References
+##  File References
 
 ### Templates Used by Batch Script
 
@@ -291,9 +284,8 @@ gh issue list --label challenge --state closed --limit 50 | \
 - `docs/05-working-with-pull-requests.md` - Chapter 5 detailed guide
 - `docs/11-git-source-control.md` - Chapter 11 detailed guide
 
----
 
-## ❓ FAQ - Facilitators
+##  FAQ - Facilitators
 
 ### "A student claims they completed a challenge but I don't see evidence"
 
@@ -331,9 +323,8 @@ Track daily: "How many students needed bot help and retries?"
 
 If >80% of students need retries → bot might be too strict. Relax rules or add exceptions.
 
----
 
-## 🚀 Final Checklist (Pre-Workshop)
+##  Final Checklist (Pre-Workshop)
 
 - [ ] `student-usernames.txt` committed and updated
 - [ ] Batch script runs without errors: `python scripts/batch_create_challenges.py --dry-run`
@@ -347,5 +338,5 @@ If >80% of students need retries → bot might be too strict. Relax rules or add
 - [ ] Facilitators understand the "How to Monitor Progress" section
 - [ ] Dry run: one facilitator completes one challenge end-to-end as a test
 
-**This checklist ready? You're go for launch.** 🚀
+**This checklist ready? You're go for launch.** 
 

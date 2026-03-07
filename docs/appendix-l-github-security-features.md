@@ -6,7 +6,6 @@
 
 > **Who this is for:** Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in `community-access/accessibility-agents`.
 
----
 
 ## Quick Navigation
 
@@ -20,7 +19,6 @@
 8. [Screen Reader Navigation of the Security Tab](#8-screen-reader-navigation-of-the-security-tab)
 9. [Security and Accessibility Agents](#9-security-and-accessibility-agents)
 
----
 
 ## 1. The Security Tab - What It Contains
 
@@ -47,7 +45,6 @@ Tab navigation → secondary nav region → "Security" link → Enter
 Or: G then S (GitHub keyboard shortcut - enable Focus Mode first)
 ```
 
----
 
 ## 2. Dependabot - Automated Dependency Updates
 
@@ -117,7 +114,6 @@ updates:
     open-pull-requests-limit: 5
 ```
 
----
 
 ## 3. Secret Scanning - Preventing Credential Leaks
 
@@ -160,7 +156,6 @@ For public repositories, GitHub scans all existing commits and creates alerts fo
 
 **Priority action:** If you find a secret scanning alert in a project you contribute to - especially a token or API key - treat it as urgent. The credential may have been exposed for a long time.
 
----
 
 ## 4. Code Scanning and CodeQL
 
@@ -184,7 +179,7 @@ Line: 47
 
 Details:
   logging.info(user_input)  ← user_input flows unsanitized into format string
-  
+
   Flow:
   1. User input enters at: request.args.get('message') [line 12]
   2. Passed to: logger.info(message) [line 47]
@@ -197,7 +192,6 @@ Details:
 
 Security tab → Code scanning → filter by severity, rule, or file.
 
----
 
 ## 5. Private Vulnerability Reporting
 
@@ -237,7 +231,6 @@ If a maintainer doesn't respond within a reasonable time (30-90 days is the stan
 2. Contact GitHub directly if the issue is critical (GitHub can assist with coordinated disclosure)
 3. Follow the project's SECURITY.md for their stated disclosure policy
 
----
 
 ## 6. The SECURITY.md File
 
@@ -263,7 +256,6 @@ Screen reader path:
 Security tab → H → "Policy" heading → Link: "Security policy" → Enter
 ```
 
----
 
 ## 7. Software Bill of Materials (SBOM)
 
@@ -282,7 +274,6 @@ This export is useful when:
 - You're auditing a project's complete dependency chain
 - You want to identify license compatibility for a commercial product
 
----
 
 ## 8. Screen Reader Navigation of the Security Tab
 
@@ -328,7 +319,6 @@ Describe field: NVDA+Space → Focus Mode → type → NVDA+Space to leave
 Submit: Tab → "Submit report" button → Enter
 ```
 
----
 
 ## 9. Security and Accessibility Agents
 
@@ -364,6 +354,5 @@ Action needed: Review PR #47 (5 minutes - single file change)
 
 **Workshop exercise:** Run `/security-dashboard` on your fork after Day 2. Review any Dependabot PRs open on the upstream `community-access/accessibility-agents` - merging one is a real security contribution.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix Q - GitHub Actions](appendix-q-github-actions-workflows.md) | [Appendix K - Branch Protection](appendix-k-branch-protection-rulesets.md)*

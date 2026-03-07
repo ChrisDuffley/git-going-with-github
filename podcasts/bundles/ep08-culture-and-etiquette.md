@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 10-12 min
 
----
 
 ### Audio Production Direction
 
@@ -36,7 +35,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - When to ask questions and how to ask them well
 - Understanding maintainer workload and response times
 
----
 
 ### Concept Coverage Checklist
 
@@ -73,7 +71,6 @@ but keep the main narrative focused on the primary chapter.
 
 > Technical skills get your code into a project. Communication skills keep you welcomed in the community. This guide covers the human side of open source.
 
----
 
 ## GitHub Flow - The Standard Contribution Workflow
 
@@ -124,7 +121,6 @@ You may encounter "Git Flow" in older projects or enterprise environments. It us
 
 A branch and its PR should do **one thing**. If you are fixing a broken link and you notice a typo nearby, fix the typo in a **separate branch and PR**. This keeps reviews fast, history clean, and reduces the risk of one unrelated problem blocking an urgent fix.
 
----
 
 ## Keeping Your Fork Up to Date
 
@@ -202,7 +198,6 @@ git push origin main
 4. Choose **upstream/main**
 5. Push the changes to your fork on GitHub
 
----
 
 ## Writing Good Commit Messages
 
@@ -318,7 +313,6 @@ Part of #200
 
 **When you make a habit of writing good commit messages, you build trust.** Maintainers see that you care about the project's long-term health, not just your immediate contribution.
 
----
 
 ## The Nature of Open Source Communication
 
@@ -342,7 +336,6 @@ Open source collaboration happens primarily **in writing**, **asynchronously**, 
 - A dismissive reply to a beginner casts a shadow on the entire project
 - **Solution:** Write as if your most supportive and most critical reader are both watching.
 
----
 
 ## The Anatomy of Helpful Feedback
 
@@ -382,7 +375,6 @@ Help contributors understand what is a blocker versus a preference.
 - "This is a blocker because..."  - must be fixed before merge
 - "Just a thought, not a blocker..." - feedback but no requirement
 
----
 
 ## Language and Tone
 
@@ -411,7 +403,6 @@ Open source is global. Contributors may be:
 "I need this fixed ASAP"  
 "This is blocking our release scheduled for next Friday - is there capacity to look at it this week?"
 
----
 
 ## Commenting Etiquette
 
@@ -465,7 +456,6 @@ In a comment text area:
 
 **Limit:** GitHub allows up to 100 saved replies per account.
 
----
 
 ## Code Review Etiquette - For Reviewers
 
@@ -488,7 +478,6 @@ If something is your stylistic preference but NOT a bug or correctness issue, sa
 ### Approve explicitly
 When a PR is ready to merge, say so clearly - either by using the Approve review option, or in a comment: "This looks great to me! No blockers on my end."
 
----
 
 ## Code Review Etiquette - For Authors
 
@@ -508,7 +497,6 @@ If you are keeping your implementation despite feedback, explain why.
 ### Surface blockers early
 Don't wait until you have finished a 500-line PR to mention that you weren't sure about the approach. Open a Draft PR early and ask.
 
----
 
 ## Inclusive Commenting for Accessibility Issues
 
@@ -520,7 +508,6 @@ When filing or discussing accessibility bugs, additional context helps:
 - **Represent the gap** - "This means that [group of people] cannot [do the thing]" - frame in impact, not just symptoms
 - **Don't catastrophize or be dismissive** - "No blind person can use this" may be inaccurate; be precise about the specific failure and its scope
 
----
 
 ## The "Good First Issue" Social Contract
 
@@ -535,7 +522,6 @@ When you take a good first issue, your responsibilities:
 4. **Check in if unavailable** - "Life got busy and I can't finish this by the original estimate - is it okay if I extend by a week, or should you reassign?"
 5. **Don't disappear** - if you claim an issue, see it through or explicitly hand it back
 
----
 
 ## Handling Difficult Situations
 
@@ -560,7 +546,6 @@ When you take a good first issue, your responsibilities:
 2. Do not over-explain or defend excessively
 3. Adjust going forward
 
----
 
 ## Community Health Files
 
@@ -581,7 +566,6 @@ Specific instructions for how to contribute to this project:
 
 **Always read CONTRIBUTING.md before opening a PR.** Skipping it leads to rejected PRs and wasted effort.
 
----
 
 ## When to Use Different Communication Channels
 
@@ -595,7 +579,6 @@ Specific instructions for how to contribute to this project:
 
 **GitHub Discussions are separate from Issues.** Use Discussions for: "What do people think about X approach?" and Issues for: "The X button is broken."
 
----
 
 ## Quick Reference: Phrases That Work
 
@@ -610,7 +593,6 @@ Specific instructions for how to contribute to this project:
 | "Can't you just..." | "One approach that might work is..." |
 | "No." | "I don't think this approach is right for this project because..." |
 
----
 
 ## Try It: Rewrite One Comment
 
@@ -635,7 +617,6 @@ Notice: same feedback, completely different experience for the person receiving 
 
 > **What success feels like:** You turned a two-word dismissal into help that someone would actually want to receive. That's the difference between a comment that fixes code and a comment that also keeps a contributor coming back.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents Outputs Are Your Responsibility
 >
@@ -648,14 +629,12 @@ Notice: same feedback, completely different experience for the person receiving 
 >
 > *A community's culture is shaped by every message posted in its name - including the ones an agent wrote for you.*
 
----
 
 *Next: [Labels, Milestones, and Projects](08-labels-milestones-projects.md)*
 *Back: [Merge Conflicts](06-merge-conflicts.md)*
 *Related: [Working with Issues](04-working-with-issues.md) | [Working with Pull Requests](05-working-with-pull-requests.md)*
 
 
----
 
 ### Supplementary: Contributing to Open Source - workflow and finding issues
 
@@ -666,7 +645,6 @@ Notice: same feedback, completely different experience for the person receiving 
 
 > You do not need to be a professional developer to contribute to open source. Documentation, accessibility improvements, and bug reports are among the most valuable contributions any project can receive.
 
----
 
 ## Table of Contents
 
@@ -680,7 +658,6 @@ Notice: same feedback, completely different experience for the person receiving 
 8. [After Your Contribution Is Merged](#8-after-your-contribution-is-merged)
 9. [Building a Contribution Habit](#9-building-a-contribution-habit)
 
----
 
 ## 1. What Is Open Source?
 
@@ -695,7 +672,6 @@ Open source software is software whose source code is publicly available. Anyone
 
 The projects that power much of today's web infrastructure - operating systems, programming languages, screen readers, and developer tools - are maintained by contributors who started exactly where you are now.
 
----
 
 ## 2. Who Can Contribute?
 
@@ -705,7 +681,6 @@ Assistive technology users bring a perspective that most sighted, mouse-first de
 
 You do not need permission to start. If a repository's issues are public, you can file a bug or suggest an improvement today.
 
----
 
 ## 3. What Makes a Good First Contribution?
 
@@ -723,7 +698,6 @@ A good first contribution is:
 
 Start small. A well-executed small contribution is far more valuable than a large contribution that cannot be merged because it is out of scope.
 
----
 
 ## 4. Finding Something to Work On
 
@@ -740,7 +714,6 @@ Most open source projects label issues that are suitable for new contributors. L
 
 **How to search:** On any GitHub repository, go to Issues → filter by label. Or use GitHub's global search: `label:"good first issue" is:open language:markdown` to find documentation issues across all public repositories.
 
----
 
 ## 5. Reading an Issue Before You Start
 
@@ -753,7 +726,6 @@ Before commenting "I'll take this" on an issue, ask yourself:
 
 If the issue looks right for you, comment briefly to let the team know you are working on it: "I'd like to work on this. I'll open a draft PR shortly." This prevents duplicate work.
 
----
 
 ## 6. Making Your Contribution
 
@@ -780,7 +752,6 @@ Example:
 
 This gives the reviewer everything they need to approve quickly.
 
----
 
 ## 7. Getting Help
 
@@ -792,7 +763,6 @@ It is always acceptable to ask a question on an issue or pull request. Good ques
 
 If you opened a PR and are waiting for a review, it is appropriate to leave one polite follow-up comment after a week or two. Start with: "Hi, just checking in on this PR when you have a moment."
 
----
 
 ## 8. After Your Contribution Is Merged
 
@@ -806,7 +776,6 @@ This matters for your GitHub profile. Each merged contribution demonstrates real
 
 Over time, a series of contributions builds a portfolio that shows how you work - not just what you can do in isolation.
 
----
 
 ## 9. Building a Contribution Habit
 
@@ -819,6 +788,5 @@ The hardest part of open source contribution is starting. Once you have one merg
 - **Review other PRs.** Even as a new contributor, you can leave useful feedback: "Does this change affect screen reader users?" or "The example in the PR description is missing a step."
 - **Set a low bar.** A contribution does not need to be impressive. A fixed typo merged into a project used by thousands of people is more valuable than a perfect contribution never submitted.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 15-18 min
 
----
 
 ### Audio Production Direction
 
@@ -36,7 +35,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Writing review comments that are helpful and specific
 - Building a habit of reviewing others' work
 
----
 
 ### Concept Coverage Checklist
 
@@ -84,7 +82,6 @@ but keep the main narrative focused on the primary chapter.
 >
 > **Learning Room connection:** The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify `docs/keyboard-shortcuts.md` (shortcut tables with intentional errors), `docs/setup-guide.md` (broken links and incomplete steps), and `docs/welcome.md` (`[TODO]` sections to complete). These are the same files you work on during the Day 1 contribution sprint.
 
----
 
 ## Prerequisites Checklist
 
@@ -97,7 +94,6 @@ but keep the main narrative focused on the primary chapter.
 
 **Estimated time for this chapter:** 1 hour (including exercises)
 
----
 
 ## Two Environments for Code Review
 
@@ -139,7 +135,6 @@ gh pr review 42 --comment --body "A few observations - see details below."
 
 </details>
 
----
 
 ## Part 1 - Reviewing on GitHub.com
 
@@ -149,7 +144,6 @@ As of January 2026, GitHub's improved Files Changed experience is enabled by def
 
 If the interface seems different from what's described here, clear your browser cache and reload the page.
 
----
 
 ### Step 1: Reach the Files Changed Tab
 
@@ -186,7 +180,6 @@ VoiceOver announces the number of changed files: *"Files changed, 4 files change
 
 </details>
 
----
 
 ### Step 2: Use the File Tree to Orient Yourself
 
@@ -228,7 +221,6 @@ VO+Space on a file to scroll its diff into view
 - Which areas of the codebase are affected?
 - Are there unexpected files (generated files, lock files, configuration changes)?
 
----
 
 ### Step 3: Navigate Between File Diffs
 
@@ -267,7 +259,6 @@ If a diff is very long, the file tree is usually faster than using heading navig
 
 </details>
 
----
 
 ### Step 4: Read a Diff
 
@@ -323,7 +314,6 @@ VO+→/← to navigate columns, VO+↑/↓ to navigate rows
 
 **Tip:** If the code on a line is very long, the screen reader will read the full line. For minified or generated files, consider collapsing the file in the tree and skipping it.
 
----
 
 ### Step 5: Place an Inline Comment
 
@@ -406,7 +396,6 @@ Step 4: VO+Space to activate, then proceed as above
 
 </details>
 
----
 
 ### Step 6: Read Existing Comments and Threads
 
@@ -459,7 +448,6 @@ Tab to the "Resolve conversation" button → VO+Space
 
 </details>
 
----
 
 ### Step 7: Submit Your Review
 
@@ -516,7 +504,6 @@ Step 8: Tab to "Submit review" button → VO+Space
 | Approve | You've reviewed and are satisfied; signals readiness to merge |
 | Request changes | Changes are needed before this should merge; blocks merge |
 
----
 
 ### Step 8: Re-request Review (for Authors)
 
@@ -551,7 +538,6 @@ Step 3: VO+Space to activate - this re-notifies the reviewer that you've made ch
 
 </details>
 
----
 
 ## Part 2 - Reviewing in VS Code with the Accessible Diff Viewer
 
@@ -614,7 +600,6 @@ Step 5: Submit from the inline UI
 
 Comments placed in VS Code sync to GitHub - they appear in the PR's Files Changed tab and the author receives the same notification.
 
----
 
 ## Code Review Structure and Content
 
@@ -651,7 +636,6 @@ Using shorthand prefixes helps authors parse many comments quickly:
 
 There is no hard limit, but quantity without prioritization is noise. If you have 15 comments, make clear which 2-3 are blocking. Authors can then focus energy on what matters most and address preferences in follow-up PRs.
 
----
 
 ## Keyboard Reference
 
@@ -679,7 +663,6 @@ There is no hard limit, but quantity without prioritization is noise. If you hav
 | Accessible Help (any widget) | `Alt+H` |
 | Close Accessible Diff Viewer | `Escape` |
 
----
 
 ## Common Review Scenarios
 
@@ -721,13 +704,11 @@ There is no hard limit, but quantity without prioritization is noise. If you hav
 4. Or: reference a specific line in your reply using the line number
 ```
 
----
 
 ## Exercises
 
 These exercises use the files in `learning-room/docs/` in this repository. All examples involve documentation changes - no code required.
 
----
 
 ### Exercise A - Complete a Web Review
 
@@ -735,7 +716,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 
 **What You'll Learn:** How to use screen reader heading navigation to spot accessibility issues in a GitHub PR diff.
 
----
 
 #### Step 1: Navigate to the Pull Request
 
@@ -754,7 +734,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - Use `Ctrl+F` to search the PR list for "screen reader tips"
 - Or ask in the workshop Slack - someone can share the exact URL
 
----
 
 #### Step 2: Read the PR Description
 
@@ -773,7 +752,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - You can answer: "This PR adds [specific content] to [specific file] because [clear reason]"
 - Example: "This PR adds screen reader usage tips to the setup guide because new users need accessibility guidance"
 
----
 
 #### Step 3: Navigate to "Files Changed"
 
@@ -790,7 +768,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - Scroll up to see if there are other files. For this exercise, only `setup-guide.md` should be changed.
 - If you see other files, confirm they are not modified (the badge should show "+0 −0" or no changes)
 
----
 
 #### Step 4: Activate Focus Mode for Better Diff Reading
 
@@ -809,7 +786,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - VoiceOver: Navigate with `VO+Right Arrow` to find the table/content region
 - Read through the changes: `↓` arrow moves to each line
 
----
 
 #### Step 5: Find the Heading Hierarchy Issue
 
@@ -835,7 +811,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - You can say the line number and what heading text appears there
 - You understand *why* this is an accessibility problem
 
----
 
 #### Step 6: Place a Blocking Review Comment on the Heading
 
@@ -864,7 +839,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - Try refreshing the page and trying again
 - Or use the "Add a reply" field at the bottom of the PR and mention the line number manually
 
----
 
 #### Step 7: Find the Link Text Issue
 
@@ -882,7 +856,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - You found a link with non-descriptive text
 - You can explain why "click here" is bad and what would be better
 
----
 
 #### Step 8: Place a Comment on the Link
 
@@ -899,7 +872,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 
 **Note:** `nit:` means "nice-to-have improvement" (not blocking, but good to fix)
 
----
 
 #### Step 9: Submit Your Review
 
@@ -927,7 +899,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - It shows 2 comments you made
 - The PR status shows "Changes requested"
 
----
 
 #### Reflect on This Exercise
 
@@ -938,7 +909,6 @@ After submitting, answer:
 
 Keep your answers - you'll need them for Chapter 16's Accessibility Agents exercise to compare manual review with agent-assisted review.
 
----
 
 ### Exercise B - Use the VS Code Accessible Diff Viewer
 
@@ -946,7 +916,6 @@ Keep your answers - you'll need them for Chapter 16's Accessibility Agents exerc
 
 **What You'll Learn:** How the VS Code Accessible Diff Viewer announces changes differently than the browser diff, and when each environment is most useful.
 
----
 
 #### Prerequisites
 
@@ -955,7 +924,6 @@ Before starting:
 - The GitHub Pull Requests extension must be installed (see [Chapter 12](12-github-pull-requests-extension.md) for installation)
 - You must be signed into GitHub from VS Code (use `Ctrl+Shift+P` → "GitHub: Sign in")
 
----
 
 #### Step 1: Open the GitHub Pull Requests Extension
 
@@ -971,7 +939,6 @@ Before starting:
 - The extension is listed as active
 - It mentions: "Review and manage GitHub pull requests and issues"
 
----
 
 #### Step 2: Open the Pull Requests Sidebar
 
@@ -992,7 +959,6 @@ Before starting:
 - Paste the PR URL: `https://github.com/[owner]/[repo]/pull/[number]`
 - Press Enter
 
----
 
 #### Step 3: View the File Changes
 
@@ -1012,7 +978,6 @@ Before starting:
 - Use `Ctrl+Home` to jump to the start of the diff
 - Use `Ctrl+End` to jump to the end
 
----
 
 #### Step 4: Access the Accessible Diff Viewer
 
@@ -1032,7 +997,6 @@ Before starting:
 - Try `Ctrl+Shift+P` → search `Open Accessible Diff`
 - If available, select it
 
----
 
 #### Step 5: Listen to and Understand the First Change
 
@@ -1056,7 +1020,6 @@ Added: ## New Heading with More Details
 - NVDA/JAWS: The Accessible Diff Viewer announces "Removed:" and "Added:" labels, followed by the line content
 - VoiceOver: The announcement may be similar; listen for "removed" and "added" keywords
 
----
 
 #### Step 6: Find the Heading Hierarchy Issue
 
@@ -1082,7 +1045,6 @@ Added: ## New Heading with More Details
 - You can explain: "The added line with `####` directly follows a `##`, skipping level 3"
 - The Accessible Diff Viewer made this *pattern* clearer than scanning raw `+` characters
 
----
 
 #### Step 7: Locate the Heading Line and Add an Inline Comment
 
@@ -1102,7 +1064,6 @@ Added: ## New Heading with More Details
 - A comment box opens
 - You can type your comment
 
----
 
 #### Step 8: Write Your Accessible Diff Comment
 
@@ -1120,7 +1081,6 @@ Added: ## New Heading with More Details
 - It shows that the tool *itself* helps you see the issue
 - It documents how you caught the problem (useful for learning)
 
----
 
 #### Step 9: Create a GitHub Pull Request Comment
 
@@ -1155,7 +1115,6 @@ the story of what changed without scanning back and forth.
 
 3. Click **Comment**
 
----
 
 #### Reflect on This Exercise
 
@@ -1166,7 +1125,6 @@ After completing Steps 1-9, answer:
 
 **Record your answers.** In Chapter 16, you'll compare these manual reviews with the `@pr-review` agent's suggested changes.
 
----
 
 ### Exercise C - Compare and Reflect
 
@@ -1174,7 +1132,6 @@ After completing Steps 1-9, answer:
 
 **What You'll Learn:** Which tools work best for different scenarios, and how your manual review skills prepare you to use AI agents effectively.
 
----
 
 #### Step 1: Gather Your Data
 
@@ -1194,7 +1151,6 @@ Before writing your reflection, collect all the information you gathered:
 
 **Write these down** (in a text editor, on paper, or mentally) - you'll reference them in Steps 2-4.
 
----
 
 #### Step 2: Navigate to the PR and Leave Your Reflection Comment
 
@@ -1209,7 +1165,6 @@ Before writing your reflection, collect all the information you gathered:
 - A text editing area with formatting options (Bold, Italic, Link, etc.)
 - A **Comment** button below the text area
 
----
 
 #### Step 3: Write Your Comparison
 
@@ -1284,7 +1239,6 @@ The heading hierarchy skip in the published document matters because:
 [1-2 sentences about why screen reader users would be affected]
 ```
 
----
 
 #### Step 4: Review Your Comment
 
@@ -1298,7 +1252,6 @@ The heading hierarchy skip in the published document matters because:
 3. Make any corrections needed
 4. **Do not submit yet** - continue to Step 5
 
----
 
 #### Step 5: Submit Your Reflection
 
@@ -1318,7 +1271,6 @@ The heading hierarchy skip in the published document matters because:
 - It includes all three reflections
 - The PR author and other reviewers can see your thought process
 
----
 
 #### Step 6: Checkpoint - Validate Your Learning
 
@@ -1335,7 +1287,6 @@ Before moving forward, verify you understand:
 
 If you can answer all three, you're ready for the next chapter.
 
----
 
 ### What Comes Next
 
@@ -1353,7 +1304,6 @@ In **Chapter 16 (Accessibility Agents)**, you'll use the `@pr-review` agent to g
 
 That's the power of "manual skill first, agent second." You're building that skill right now.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@pr-review`
 >
@@ -1366,14 +1316,12 @@ That's the power of "manual skill first, agent second." You're building that ski
 >
 > *The Accessible Diff Viewer teaches you to hear changes. The agent drafts the notes. You bring the judgment.*
 
----
 
 *Next: [Issue Templates](15-issue-templates.md)*
 *Back: [GitHub Copilot](13-github-copilot.md)*
 *Related: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Merge Conflicts](06-merge-conflicts.md) | [Git & Source Control in VS Code](11-git-source-control.md)*
 
 
----
 
 ### Supplementary: Screen Reader Cheat Sheet - diff navigation keys
 
@@ -1384,7 +1332,6 @@ That's the power of "manual skill first, agent second." You're building that ski
 
 > **How to use this sheet:** Keep it open in a second window or print it. Commands are organized by task so you can find what you need quickly while you work. All commands are keyboard-only - no mouse required.
 
----
 
 ## Screen Reader Mode Basics
 
@@ -1412,7 +1359,6 @@ This mode is for **typing and interacting** with form fields, text areas, button
 
 > **Rule of thumb:** Browse mode to navigate, Focus mode to type.
 
----
 
 ## Quick Navigation Keys (Browse Mode)
 
@@ -1478,7 +1424,6 @@ Landmarks are named regions of a page (navigation, main content, sidebar, etc.).
 | `Ctrl+Alt+↓` | Move down in a table (next row) | Navigate file list rows |
 | `Ctrl+Alt+↑` | Move up in a table | |
 
----
 
 ## The Elements List - Your Navigation Superpower
 
@@ -1496,7 +1441,6 @@ This is one of the most powerful tools for navigating complex pages. It opens a 
 3. Type to filter the list (e.g., type "new issue" to find the New Issue button)
 4. Press `Enter` to jump to the item on the page
 
----
 
 ## Per-Screen-Reader Command Reference
 
@@ -1574,7 +1518,6 @@ Activate VoiceOver: `Cmd+F5`. The VO modifier key is `Control+Option` (abbreviat
 | `Ctrl` | Stop reading |
 | `Cmd+F5` | Start / stop VoiceOver |
 
----
 
 ## Navigating Specific GitHub Pages
 
@@ -1685,7 +1628,6 @@ GitHub Feature Previews are opt-in UI improvements. For screen reader users, two
 
 > See [Pre-Workshop Setup, Step 4](00-pre-workshop-setup.md#step-4-check-github-feature-preview-settings) for full details on what each feature enables and why it matters for screen reader users.
 
----
 
 ## Typing and Submitting Content
 
@@ -1716,7 +1658,6 @@ These work while in Focus Mode inside a GitHub text area:
 | `Ctrl+Shift+L` | Unordered list |
 | `Ctrl+Shift+7` | Ordered list |
 
----
 
 ## Dropdown Menus and Flyouts
 
@@ -1739,7 +1680,6 @@ Step 4: VO+Right/Left to navigate items
 Step 5: VO+Space to select, Esc to close
 ```
 
----
 
 ## GitHub Built-In Keyboard Shortcuts
 
@@ -1806,7 +1746,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 - The dialog is divided into sections: Site-wide, Source code browsing, Issues, Pull requests, Notifications, etc. - only sections relevant to the current page appear
 - You do not need to be in Focus Mode to open it - `?` works from Browse Mode
 
----
 
 ### Site-wide - work on every GitHub page
 
@@ -1816,7 +1755,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 | `S` or `/` | Focus the search bar |
 | `G` then `N` | Go to your Notifications |
 
----
 
 ### Repository navigation - on any repository page
 
@@ -1834,7 +1772,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 
 > **Shortcut spotlight - `.` and `>`:** These open github.dev, which is VS Code running inside your browser - same keyboard shortcuts, same screen reader mode. `>` opens a new tab so you keep your current GitHub page. This is the fastest way to start editing a file without installing anything.
 
----
 
 ### Source code browsing - viewing a file
 
@@ -1848,7 +1785,6 @@ Step 4: Press Escape or navigate to the Close button (VO+Space)
 | `A` | Show or hide annotations on diffs | - |
 | `B` | Open blame view (who changed each line, and when) | Conflicts with NVDA `B` = next button - use Focus Mode first |
 
----
 
 ### Issue and pull request lists
 
@@ -1864,7 +1800,6 @@ These shortcuts work on the Issues list page and the Pull Requests list page:
 | `A` | Filter by or edit assignee | Use Focus Mode first |
 | `O` or `Enter` | Open the currently selected issue or PR | - |
 
----
 
 ### Issue and pull request detail pages
 
@@ -1882,7 +1817,6 @@ When viewing an open issue or pull request:
 
 > **Tip for `R` - quote a specific part of a comment:** In Browse Mode, select the text you want to quote by holding `Shift` and pressing arrow keys. Then press `R` - GitHub puts it directly into the comment box as a Markdown blockquote, with the author attributed. This is much faster than manually typing `> `.
 
----
 
 ### Comments - inside any text area (Focus Mode required)
 
@@ -1907,7 +1841,6 @@ These shortcuts work while typing in any GitHub comment or description field:
 
 > **Insert suggestion (`Ctrl+G`):** Select the code you want to suggest a change to (in the diff), then press `Ctrl+G`. GitHub wraps it in a ` ```suggestion ` block. The PR author can apply your exact change with one button press.
 
----
 
 ### Files Changed tab in pull requests
 
@@ -1917,7 +1850,6 @@ These shortcuts work while typing in any GitHub comment or description field:
 | `T` | Move focus to the "Filter changed files" search field |
 | `Ctrl+Shift+Enter` (Win) or `Cmd+Shift+Enter` (Mac) | Submit a review comment |
 
----
 
 ### Notifications page
 
@@ -1930,7 +1862,6 @@ On your Notifications page ([github.com/notifications](https://github.com/notifi
 | `Shift+I` | Mark as read |
 | `Shift+M` | Unsubscribe from thread |
 
----
 
 ### GitHub Actions
 
@@ -1944,7 +1875,6 @@ On any Actions page in a repository:
 | `Esc` | Exit full-screen log view |
 | `Ctrl+Space` (Win) or `Cmd+Space` (Mac) | Get AI suggestions in the workflow editor |
 
----
 
 ### Projects (board and table view)
 
@@ -1958,11 +1888,9 @@ On any Actions page in a repository:
 | `E` | Archive selected items |
 | `Ctrl+Shift+\` or `Cmd+Shift+\` | Open row actions menu |
 
----
 
 > **Keep the official reference handy:** [github.com/keyboard-shortcuts](https://docs.github.com/en/get-started/accessibility/keyboard-shortcuts) - and press `?` on any GitHub page for the context-specific subset.
 
----
 
 ## Common Navigation Patterns - Quick Reference
 
@@ -1984,7 +1912,6 @@ Print or bookmark this section:
 | Submit comment | `Ctrl+Enter` (in text area) |
 | Open dropdown | `Enter`, then `Up` or `Down Arrow`, then `Enter`, then `Escape` |
 
----
 
 ## Troubleshooting Common Issues
 
@@ -2016,7 +1943,6 @@ Print or bookmark this section:
 - Use `NVDA+Space` to enter Focus Mode, then use arrow keys
 - Use `Ctrl+Alt+Arrow` keys to move between table cells
 
----
 
 ## Official Screen Reader Resources
 
@@ -2031,7 +1957,6 @@ Print or bookmark this section:
 - [VoiceOver User Guide for Mac](https://support.apple.com/guide/voiceover/welcome/mac)
 - [GitHub Accessibility Community Discussions](https://github.com/orgs/community/discussions/categories/accessibility)
 
----
 
 ## Keyboard Shortcuts in Other Appendices
 
@@ -2044,7 +1969,6 @@ This cheat sheet covers GitHub web navigation and screen reader commands. Additi
 | VS Code setup and configuration shortcuts | [Chapter 10 - VS Code Basics](10-vscode-basics.md) |
 | GitHub Copilot activation and model switching | [Chapter 13 - GitHub Copilot](13-github-copilot.md) |
 
----
 
 ## Screen Reader Compatibility Notes
 
@@ -2062,7 +1986,6 @@ The commands in this cheat sheet have been written for and tested with the follo
 3. Check GitHub's own shortcut dialog (`?` key) for the current page's shortcuts
 4. See [Troubleshooting](#troubleshooting-common-issues) above for common fixes
 
----
 
 *Appendix B - keep this open as a reference throughout both days.*
 *Return to: [Day 1 Agenda](../DAY1_AGENDA.md) | [Understanding GitHub's Web Structure](01-understanding-github-web-structure.md)*

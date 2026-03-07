@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -36,7 +35,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Navigating the sidebar, editor, terminal, and panels
 - Accessibility settings every screen reader user should configure
 
----
 
 ### Concept Coverage Checklist
 
@@ -85,7 +83,6 @@ but keep the main narrative focused on the primary chapter.
 > 
 > **Prerequisites:** Complete Day 1 walkthrough of GitHub's browser interface before working through VS Code material.
 
----
 
 ## Table of Contents
 
@@ -95,7 +92,6 @@ but keep the main narrative focused on the primary chapter.
 4. [Essential Keyboard Navigation and Find/Filter](#4-essential-keyboard-navigation-and-findfilter)
 5. [Accessible Help, Accessible View, and Accessible Diff](#5-accessible-help-accessible-view-and-accessible-diff)
 
----
 
 ## 1. Why VS Code for Open Source Contribution
 
@@ -114,7 +110,6 @@ GitHub's browser interface is excellent for reviewing, discussing, and triaging.
 
 For Markdown contributions (which is most of what `accessibility-agents` needs), VS Code gives you Copilot assistance, live preview, and the same Git workflow - with less tab switching and with agents available on every file you open.
 
----
 
 ## 2. The Bridge: github.dev - VS Code in Your Browser
 
@@ -170,7 +165,6 @@ Change the domain in any GitHub URL:
 
 </details>
 
----
 
 ### What You Get in github.dev
 
@@ -189,7 +183,6 @@ Everything in the list below works **exactly like desktop VS Code**:
 **Multiple editor tabs and split view**  
 **Settings sync** - if you sign in, your VS Code settings apply here too
 
----
 
 ### What github.dev Does NOT Have
 
@@ -202,7 +195,6 @@ Everything in the list below works **exactly like desktop VS Code**:
 
 These limitations are why **desktop VS Code exists**. github.dev is for quick edits and reading code. Desktop is for Copilot, agents, terminal workflows, and full development.
 
----
 
 ### Why github.dev Matters for This Workshop
 
@@ -225,7 +217,6 @@ These limitations are why **desktop VS Code exists**. github.dev is for quick ed
 - You're making multi-file changes that benefit from AI assistance
 - You need a terminal for git commands or running scripts
 
----
 
 ### Screen Reader Experience in github.dev
 
@@ -257,7 +248,6 @@ These limitations are why **desktop VS Code exists**. github.dev is for quick ed
 - Use `VO+Shift+Down` to interact with the editor area
 - Standard text navigation (`Control+A` for line start, `Control+E` for line end, etc.)
 
----
 
 ### Try It Right Now
 
@@ -275,7 +265,6 @@ Before reading the rest of this guide:
 
 **You just used VS Code.** The desktop version in the rest of this guide is the same experience - with Copilot and agents added.
 
----
 
 ## 3. Screen Reader Mode in VS Code
 
@@ -326,7 +315,6 @@ VS Code uses a web-based renderer. Configure NVDA for best results:
 3. Use Quick Nav OFF (`Left+Right Arrow`) when inside the editor - standard cursor navigation is more predictable
 4. Use `VO+Shift+Down` to interact with the editor, `VO+Shift+Up` to stop interacting
 
----
 
 ## 4. Essential Keyboard Navigation and Find/Filter
 
@@ -471,13 +459,11 @@ For navigating `accessibility-agents`'s longer reference documents, this is fast
 | Delete file | `Delete` |
 | New file | `Ctrl+N` (then save with `Ctrl+S`) |
 
----
 
 ## 5. Accessible Help, Accessible View, and Accessible Diff
 
 VS Code has a family of purpose-built accessibility features that give screen reader users complete, structured access to content that is otherwise conveyed visually or through dynamic regions. These three are the most important to know before working with Copilot and diffs.
 
----
 
 ### 5.1 Accessible Help - Context-Aware Keyboard Guide
 
@@ -513,7 +499,6 @@ Press Alt+H to view this help content again.
 
 Use Accessible Help as your first action whenever you land somewhere new in VS Code.
 
----
 
 ### 5.2 Accessible View - Reading Dynamic and Streamed Content
 
@@ -550,7 +535,6 @@ Use Accessible Help as your first action whenever you land somewhere new in VS C
 3. Press `Alt+F2` to open Accessible View with the full hover content
 4. Press `Escape` to dismiss
 
----
 
 ### 5.3 Accessible Diff Viewer - Reading Changes Without Visual Scanning
 
@@ -594,7 +578,6 @@ This gives you the complete picture of what changed, in reading order, without v
 
 With `accessibility.signals.diffLineInserted` and `accessibility.signals.diffLineDeleted` both set to `on` in Settings, VS Code plays a distinct tone when your cursor moves over an added line (higher pitched) or a removed line (lower pitched). You receive change-type information through sound before the line text is announced.
 
----
 
 ## Accessibility Signals and Audio Cues
 
@@ -637,14 +620,12 @@ Add this to your VS Code `settings.json` (Command Palette → "Open User Setting
 
 **Note:** `minimap.enabled: false` removes the visual minimap that adds no value for screen reader users and can cause some accessibility tools to announce additional regions.
 
----
 
 *Next: [Git & Source Control in VS Code](11-git-source-control.md)*  
 *Back: [Day 2 Agenda](../DAY2_AGENDA.md)*  
 *Related: [GitHub Pull Requests Extension](12-github-pull-requests-extension.md) | [GitHub Copilot](13-github-copilot.md)*
 
 
----
 
 ### Supplementary: VS Code Accessibility Reference - all settings
 
@@ -657,7 +638,6 @@ Add this to your VS Code `settings.json` (Command Palette → "Open User Setting
 >
 > **Referenced by:** [VS Code Setup & Accessibility Basics](10-vscode-basics.md), [GitHub Copilot](13-github-copilot.md)
 
----
 
 ## Table of Contents
 
@@ -669,7 +649,6 @@ Add this to your VS Code `settings.json` (Command Palette → "Open User Setting
 6. [Accessibility Signals Types and Customization](#6-accessibility-signals-types-and-customization)
 7. [Settings.json Configuration Examples](#7-settingsjson-configuration-examples)
 
----
 
 ## 1. Complete Accessibility Settings Reference
 
@@ -729,7 +708,6 @@ All settings can be accessed via Settings UI (`Ctrl+,`) or by editing `settings.
 | `accessibility.verbosity.settings-editor` | boolean | `true` | Announces settings editor context. |
 | `accessibility.verbosity.terminal` | boolean | `true` | Announces terminal operations. |
 
----
 
 ## 2. Audio Cues - All Options
 
@@ -801,7 +779,6 @@ Audio cues provide non-verbal feedback through sound. Each cue can be configured
 - Duration: Keep under 2 seconds
 - Volume: Normalize to avoid clipping
 
----
 
 ## 3. Accessible Diff Viewer - Complete Guide
 
@@ -914,7 +891,6 @@ The unchanged lines help you understand where in the file the change occurred.
 2. Search: "diffEditor.renderSideBySide"
 3. Uncheck the box (or set to `false` in settings.json)
 
----
 
 ## 4. Screen Reader-Specific Configurations
 
@@ -1032,7 +1008,6 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 
 **Note:** Quick Nav should be OFF when editing text (conflicts with text navigation).
 
----
 
 ## 5. Complete Keyboard Shortcuts
 
@@ -1214,7 +1189,6 @@ Custom JAWS scripts exist for VS Code. Check: [jaws-vscode-scripts (GitHub)](htt
 | Toggle Preview | `Ctrl+Shift+V` | `Cmd+Shift+V` |
 | Open Preview to Side | `Ctrl+K V` | `Cmd+K V` |
 
----
 
 ## 6. Accessibility Signals Types and Customization
 
@@ -1257,7 +1231,6 @@ When multiple signals occur simultaneously, VS Code prioritizes them:
 
 This prevents overlapping announcements.
 
----
 
 ## 7. Settings.json Configuration Examples
 
@@ -1393,7 +1366,6 @@ This prevents overlapping announcements.
 }
 ```
 
----
 
 ## Quick Copy: Complete Recommended Settings
 
@@ -1425,7 +1397,6 @@ This prevents overlapping announcements.
 }
 ```
 
----
 
 *Back to: [VS Code Setup & Accessibility Basics](10-vscode-basics.md) | [GitHub Copilot](13-github-copilot.md) | [Accessibility Agents](16-accessibility-agents.md)*  
 *Related: [Appendix B: Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md)*

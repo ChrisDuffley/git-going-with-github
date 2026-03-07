@@ -1,4 +1,3 @@
----
 name: create-issue
 description: "Create a new GitHub issue with smart drafting -- describe the problem and get a well-structured issue"
 agent: issue-tracker
@@ -7,7 +6,6 @@ tools:
   - readFile
   - codebase
   - ask_questions
----
 
 Create a new GitHub issue with smart formatting and metadata.
 

@@ -33,7 +33,6 @@ To ensure everyone gets reviewed:
 - **Creates study groups** for collaborative learning (when enabled by facilitators)
 - **Matches by skill level** to pair mentors with newcomers
 
----
 
 ## Understanding Bot Feedback
 
@@ -69,7 +68,6 @@ Each accessibility issue includes:
 #### **Learning Resources**
 Links to relevant documentation based on your PR content
 
----
 
 ## Common Validation Issues & Fixes
 
@@ -89,7 +87,6 @@ Resolves #42
 
 **Screen reader tip:** Use the "Reference in new issue" button in the GitHub UI, or type `#` followed by the issue number to get autocomplete.
 
----
 
 ### "Heading hierarchy violation"
 
@@ -114,7 +111,6 @@ Resolves #42
 - [MDN: HTML Heading Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 - [Workshop: Accessible Code Review](../docs/14-accessible-code-review.md)
 
----
 
 ### "Generic link text detected"
 
@@ -134,7 +130,6 @@ Read the [GitHub accessibility documentation](https://example.com).
 
 **Key principle:** Link text should make sense out of context.
 
----
 
 ### "Missing alt text"
 
@@ -162,7 +157,6 @@ Read the [GitHub accessibility documentation](https://example.com).
 - [Alternative Text - WebAIM](https://webaim.org/techniques/alttext/)
 - [Alt Text Workshop Section](../docs/14-accessible-code-review.md#image-alt-text)
 
----
 
 ### "Broken relative link"
 
@@ -184,7 +178,6 @@ See [installation guide](docs/install.md)  ← File doesn't exist
 - Parent directory: `[file](../file.md)`
 - Root of learning-room: `[file](../../learning-room/file.md)`
 
----
 
 ### "[TODO] markers remaining"
 
@@ -195,7 +188,6 @@ See [installation guide](docs/install.md)  ← File doesn't exist
 **How to fix:**
 Complete all TODO items or remove the markers if work is done.
 
----
 
 ## Getting Help
 
@@ -224,7 +216,6 @@ If you're stuck:
 2. Tag your peer reviewer or study group
 3. Facilitators monitor all PRs and will help
 
----
 
 ## Skills Progression System
 
@@ -266,7 +257,6 @@ If you're stuck:
 
 Special celebrations at: 1, 5, 10, 25, 50, and 100 merged PRs!
 
----
 
 ## Peer Review & Grouping
 
@@ -303,7 +293,6 @@ If assigned to a group, you'll get an issue thread for communication.
 - Don't take criticism personally
 - Learn from suggestions
 
----
 
 ## Troubleshooting
 
@@ -341,7 +330,6 @@ Each PR gets ONE comment that updates. If you're seeing multiple:
 1. This might be a bug - notify facilitators
 2. Check if comments are from different bots/workflows
 
----
 
 ## Philosophy: Automation + Human Review
 
@@ -369,7 +357,6 @@ By combining automation with peer review:
 
 **This mirrors professional development** where CI/CD handles checks and humans provide code review.
 
----
 
 ## Additional Resources
 
@@ -379,7 +366,6 @@ By combining automation with peer review:
 - [Learning Paths](../.github/docs/LEARNING_PATHS.md)
 - [Available Challenges](docs/CHALLENGES.md)
 
----
 
 ## Feedback on Automation
 
@@ -387,7 +373,6 @@ Found a bug? Have suggestions for improving the automation?
 
 Open an issue with label `automation-feedback` and let us know!
 
----
 
 ## Setting Up Automation for Your Workshop
 
@@ -404,6 +389,5 @@ The automation features described above (PR validation, skills progression, stud
 - [GitHub Actions Documentation](https://docs.github.com/en/actions) - Official reference
 - [Probot](https://probot.github.io/) - Framework for building GitHub bots
 
----
 
 *This system was designed with accessibility and inclusive learning at its core. Every student deserves instant, helpful feedback and supportive peer connections.*

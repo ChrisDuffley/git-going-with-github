@@ -6,7 +6,6 @@
 
 > Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them - step by step.
 
----
 
 ## Workshop Recommendation (Chapter 6)
 
@@ -49,7 +48,6 @@ Merge conflicts are not failures. They are a normal collaboration checkpoint and
 - Controlled practice keeps the experience safe and repeatable.
 - Students still get real issue and PR workflow practice.
 
----
 
 ## Local Git Alternative: Resolving Conflicts from Your Terminal
 
@@ -104,7 +102,6 @@ Your PR on GitHub updates automatically with the resolved content. The same bot 
 
 </details>
 
----
 
 ## What Is a Merge Conflict?
 
@@ -116,7 +113,6 @@ Git can merge changes automatically when they touch different parts of a file. C
 - Person B changed line 12 to say "Send message"
 - Git asks: which one do you want to keep?
 
----
 
 ## Why Conflicts Happen
 
@@ -129,7 +125,6 @@ The most common causes:
 | Two people restructured the same section | You reorganized a list; they added items to it |
 | A long-running PR diverged from main | Your branch is weeks old and main has changed significantly |
 
----
 
 ## How to Prevent Conflicts (Prevention is Easier Than Resolution)
 
@@ -200,7 +195,6 @@ The most effective contributors make many small PRs rather than one giant one.
 
 Open your PR as a draft while still working. Others can see what you're changing and avoid overlapping work. Convert to "Ready for review" when done.
 
----
 
 ## Advanced Prevention: Understanding Fast-Forward Merges
 
@@ -219,7 +213,6 @@ git push --force-with-lease  # See warning below about force pushing
 
 For more on force pushing and rebasing, see the [Glossary](appendix-a-glossary.md#force-push).
 
----
 
 ## When Conflicts Are Actually Good
 
@@ -233,7 +226,6 @@ If you never have conflicts, it might mean:
 
 **The goal isn't zero conflicts.** The goal is catching them early, resolving them cleanly, and learning patterns that reduce future conflicts.
 
----
 
 ## Spotting a Conflict on GitHub
 
@@ -269,7 +261,6 @@ Scroll to the bottom of the Conversation tab. The conflict message appears as a 
 
 </details>
 
----
 
 ## Conflict Markers - What They Mean
 
@@ -315,7 +306,6 @@ The content coming from the OTHER branch (or main)
 2. Keep their version: add only `Insert+F7`
 3. Keep both rows: add both shortcuts to the table (often the right answer when two students added different valid shortcuts)
 
----
 
 ## Resolving Conflicts on GitHub (Web Editor)
 
@@ -386,7 +376,6 @@ When the conflict editor opens, your screen reader will announce a text editor. 
 
 *(Note: screen readers may spell out the `<` and `>` characters letter by letter - this is normal)*
 
----
 
 ## Resolving Conflicts in VS Code (Day 2)
 
@@ -450,7 +439,6 @@ Click the link you want. The conflict markers disappear and your chosen content 
 
 </details>
 
----
 
 ## When You Feel Stuck
 
@@ -472,7 +460,6 @@ If a conflict is severe (the branch diverged a lot from main):
 
 This is legitimate - not a failure.
 
----
 
 ## Reading a Conflict Message from Git (Command Line Reference)
 
@@ -541,7 +528,6 @@ If conflicts exist, the `gh pr view` output shows "This branch has conflicts tha
 
 </details>
 
----
 
 ## Summary Checklist
 
@@ -564,7 +550,6 @@ After resolving:
   □ Request re-review if reviewers already approved before the conflict was introduced
 ```
 
----
 
 ## Try It: Read a Conflict (Without Fear)
 
@@ -592,7 +577,6 @@ Answer these three questions:
 
 > **What success feels like:** Conflicts aren't mysterious anymore. They're just two versions side by side with markers telling you which is which. You already know how to pick the right one.
 
----
 
 > ### Day 2 Amplifier - Copilot Chat & Conflict Prevention
 >
@@ -606,7 +590,6 @@ Answer these three questions:
 >
 > *Understanding conflict markers is not a stepping stone to letting AI handle conflicts. It is the skill that tells you when AI got it wrong.*
 
----
 
 *Next: [Culture and Etiquette](07-culture-etiquette.md)*
 *Back: [Working with Pull Requests](05-working-with-pull-requests.md)*

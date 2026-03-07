@@ -12,11 +12,10 @@
 >
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+` on Mac. Key equivalents: `Ctrl+Shift+I` → `Cmd+Shift+I` (Chat), `Ctrl+I` → `Cmd+I` (inline chat), `Alt+F2` → `Option+F2` (Accessible View), `Ctrl+/` → `Cmd+/` (insert suggestion). See the [Keyboard Shortcuts Reference](#8-keyboard-shortcuts-reference) at the end of this chapter for the complete list.
 
----
 
 ## Workshop Recommendation (Chapter 13)
 
-> **✅ Free to Use:** GitHub Copilot Free tier is included with all GitHub accounts at no cost. This workshop uses only the free tier. If you're on an organization with GitHub Enterprise, you may have Copilot Pro included—either way, you're covered.
+> ** Free to Use:** GitHub Copilot Free tier is included with all GitHub accounts at no cost. This workshop uses only the free tier. If you're on an organization with GitHub Enterprise, you may have Copilot Pro included—either way, you're covered.
 
 Chapter 13 introduces **GitHub Copilot** for AI-assisted documentation and writing.
 
@@ -62,7 +61,6 @@ For this workshop, Chapter 13 focuses on learning Copilot's interface and practi
 
 AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps you write documentation that others can actually understand.
 
----
 
 ## Table of Contents
 
@@ -75,7 +73,6 @@ AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps 
 7. [Using Accessible View with Copilot Responses](#7-using-accessible-view-with-copilot-responses)
 8. [Keyboard Shortcuts Reference](#8-keyboard-shortcuts-reference)
 
----
 
 ## 1. What is GitHub Copilot
 
@@ -94,7 +91,6 @@ GitHub Copilot is an AI pair programmer that suggests code and text completions 
 
 **Screen reader support:** Copilot is fully accessible with screen readers. Suggestions are announced via ARIA live regions, and Accessible View provides complete access to Chat responses.
 
----
 
 ## 2. Installing GitHub Copilot
 
@@ -140,7 +136,6 @@ After installation:
 - Copilot Chat
 - Limited monthly usage (usually sufficient for documentation work)
 
----
 
 ## 3. Inline Suggestions - Ghost Text Completions
 
@@ -277,7 +272,6 @@ If suggestions are distracting:
 
 </details>
 
----
 
 ## 4. GitHub Copilot Chat - Conversational Assistance
 
@@ -433,7 +427,6 @@ Type `/` in Copilot Chat to see available commands:
 3. Type `/explain`
 4. Copilot explains the structure and purpose
 
----
 
 ## 5. Effective Prompting for Documentation Work
 
@@ -542,7 +535,6 @@ Format this as a table instead of a bulleted list
 
 Copilot remembers the conversation context - just say what to change.
 
----
 
 ## 6. Custom Instructions vs Custom Agents
 
@@ -643,7 +635,6 @@ See [Chapter 16: Accessibility Agents](16-accessibility-agents.md) for complete 
 
 #### Both work together - instructions guide every response, agents automate specific workflows
 
----
 
 ### Writing Accessibility-Focused Custom Instructions
 
@@ -728,7 +719,6 @@ Be specific about skills and responsibilities; avoid broad personas that may int
 
 **Contribute effective instructions** to [github.com/github/awesome-copilot](https://github.com/github/awesome-copilot) so others benefit from your organization's work.
 
----
 
 ## 7. Using Accessible View with Copilot Responses
 
@@ -801,7 +791,6 @@ When Copilot suggests code or Markdown:
 
 **VoiceOver:** Interact with the code block (`VO+Shift+Down`) to read each line with proper structure.
 
----
 
 ## 8. Keyboard Shortcuts Reference
 
@@ -850,7 +839,6 @@ When Copilot suggests code or Markdown:
 
 **Complete keyboard reference:** See [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md)
 
----
 
 ## Troubleshooting
 
@@ -899,7 +887,6 @@ When Copilot suggests code or Markdown:
 3. Check [github.com/settings/copilot](https://github.com/settings/copilot) for subscription status
 4. Free tier users: ensure you haven't exceeded monthly limits
 
----
 
 ## Try It: Your First Copilot Conversation
 
@@ -914,7 +901,6 @@ When Copilot suggests code or Markdown:
 
 > **What success feels like:** Copilot answered a real question about real files in your repository. You can use this same pattern to ask about code, documentation, or anything else in the project - and the Accessible View ensures you can always read the response.
 
----
 
 *Next: [Accessible Code Review](14-accessible-code-review.md)*
 *Back: [GitHub Pull Requests Extension](12-github-pull-requests-extension.md)*

@@ -5,7 +5,6 @@
 >
 > **How learning works today:** Each participant works through two tracks in parallel. GitHub Skills modules give you a real repository in your own GitHub account, with a bot called Mona that responds to your actions automatically and guides you through each step. The shared `learning-room` repo is for group exercises and the collaborative contribution sprint. The two tracks reinforce exactly the same skills.
 
----
 
 ## GitHub Skills Modules Used Today
 
@@ -25,13 +24,11 @@ Three modules run across Day 1. You will set each one up during the block where 
 
 **Why this is different from a tutorial:** You are not reading about GitHub. You are doing GitHub, in your own repository, and an automated system is verifying each step and giving you feedback. The mechanics are identical to what happens when you contribute to any real open source project.
 
----
 
 ## Read This BEFORE Day 1 Starts
 
 **[Chapter 3: The Learning Room](docs/03-the-learning-room.md)** - Your complete guide to the shared repo, PR sharing workflow, and how the automation system works. Read this before Block 0 to understand the environment where you'll be making real contributions.
 
----
 
 ## At a Glance
 
@@ -51,7 +48,6 @@ Three modules run across Day 1. You will set each one up during the block where 
 
 **Total:** ~7.5 hours of structured time
 
----
 
 ## Pre-Day Checklist
 
@@ -59,7 +55,6 @@ Before entering the room (or joining the call), participants should have complet
 
 GitHub Skills modules require no pre-work - they are set up together, in-session, during the blocks where they are used.
 
----
 
 ## Block 0 - Welcome and Orientation (9:00 AM, 45 min)
 
@@ -99,7 +94,6 @@ Everyone will work in the shared `learning-room` repository today. Clone it now 
 **Introductions:**
 - Each participant: your name, your screen reader and OS, what brings you here
 
----
 
 ## Block 1 - Screen Reader Orientation to GitHub (9:30 AM, 40 min)
 
@@ -168,7 +162,6 @@ The `docs/` folder contains three files with intentional issues that you will fi
 ### Reference Document
 [Screen Reader Cheat Sheet](docs/appendix-b-screen-reader-cheatsheet.md)
 
----
 
 ## Block 2 - Navigating Repositories (10:10 AM, 50 min)
 
@@ -248,13 +241,11 @@ You will work through each Markdown step during the natural pauses in Blocks 3 a
 ### Reference Document
 [Navigating Repositories](docs/02-navigating-repositories.md)
 
----
 
 ## Break (11:00 AM, 15 min)
 
 Encourage participants to stand, stretch, and rest their ears. Screen reader listening is cognitively demanding work.
 
----
 
 ## Block 3 - Working with Issues and Pull Requests (11:15 AM, 55 min)
 
@@ -346,7 +337,7 @@ Getting started with open source AT contributions.
    ```markdown
    ## What I found
    The `[DATE]` placeholder at the bottom of `docs/welcome.md` needs to be updated with today's date.
-   
+
    ## Which challenge
    Challenge 1: Update [DATE] Placeholder (from CHALLENGES.md)
    ```
@@ -355,7 +346,6 @@ Getting started with open source AT contributions.
 ### Reference Document
 [Working with Issues](docs/04-working-with-issues.md) | [GitHub Concepts Glossary](docs/appendix-a-glossary.md)
 
----
 
 ## Block 4 - Understanding Pull Requests (12:10 PM, 50 min)
 
@@ -421,11 +411,9 @@ Return to your `introduction-to-github` Skills repo. Mona has been waiting for y
 ### Reference Document
 [Working with Pull Requests](docs/05-working-with-pull-requests.md)
 
----
 
 ## Lunch (1:00 PM, 60 min)
 
----
 
 ## Block 5 - Your First Real Contribution Sprint (2:00 PM, 60 min)
 
@@ -529,10 +517,10 @@ Step 5: Open the Pull Request
   Fill in the PR description using the template:
     ## What Changed
     Completed the three [TODO] sections in docs/welcome.md
-    
+
     ## Related Issue
     Closes #[your-issue-number]
-    
+
     ## Checklist
     - [x] All [TODO] markers removed
     - [x] Content matches the style of existing sections
@@ -611,13 +599,11 @@ The automation bot validates these things:
 
 **`docs/GROUP_CHALLENGES.md`** has 7 collaborative exercises if your study group wants to tackle something together after individual challenges.
 
----
 
 ## Break (3:00 PM, 15 min)
 
 Stand, stretch, and rest your ears. The contribution sprint demands focus. The final block is discussion-centered and lower intensity.
 
----
 
 ## Block 6 - Community: Culture, Etiquette, Labels, and Notifications (3:15 PM, 75 min)
 
@@ -705,7 +691,6 @@ Then write a review comment for this change: "A PR removes the `<main>` landmark
 3. Mark it as Done
 4. Change `learning-room` Watch settings to "Participating and @mentions only"
 
----
 
 ## Wrap-Up and Day 2 Preview (4:30 PM, 30 min)
 
@@ -747,7 +732,6 @@ Tomorrow we move from the browser to **Visual Studio Code**. Here is what is com
 - Fork [accessibility-agents](https://github.com/community-access/accessibility-agents) - it will be ready and waiting when you open VS Code tomorrow
 - Browse the [55 agents by team](docs/16-accessibility-agents.md#3-the-ecosystem-55-agents-3-teams-5-platforms) - which ones spark ideas for you?
 
----
 
 ## Facilitator Notes
 
@@ -806,7 +790,6 @@ learning-room/
 - **If a Skills module step gets stuck:** Do not spend more than 5 minutes unblocking one participant's bot issue. Have them watch your screen while you continue with the group, and revisit during activity periods.
 - **Completion badges:** Not all participants will complete every module in-session. This is fine - the repos are theirs, Mona is waiting, and they can finish on their own time.
 
----
 
 *Day 2: [Day 2 Agenda](DAY2_AGENDA.md)*
 *Related: [Navigating Repositories](docs/02-navigating-repositories.md) | [Working with Issues](docs/04-working-with-issues.md) | [Working with Pull Requests](docs/05-working-with-pull-requests.md)*

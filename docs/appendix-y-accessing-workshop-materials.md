@@ -6,7 +6,6 @@
 
 > **Why this appendix exists:** The workshop content is available in multiple formats - Markdown source files, pre-built HTML pages, and a live GitHub Pages site. This guide explains how to access each format, download materials for offline use, and keep your copy up to date.
 
----
 
 ## Table of Contents
 
@@ -19,7 +18,6 @@
 7. [Keeping Your Copy Updated](#7-keeping-your-copy-updated)
 8. [Which Format Should I Use?](#8-which-format-should-i-use)
 
----
 
 ## 1. Browsing Online (GitHub Pages)
 
@@ -41,7 +39,6 @@ Your facilitator will share the exact URL. Once you have it:
 
 For details on how GitHub Pages works, see [Appendix P - Publishing with GitHub Pages](appendix-p-github-pages.md).
 
----
 
 ## 2. Reading on GitHub.com
 
@@ -59,7 +56,6 @@ You can read every file directly on GitHub.com without downloading anything:
 - **Breadcrumbs:** At the top of each file view, breadcrumb links show the path (e.g., `Learning-Room / docs / 05-working-with-pull-requests.md`). Use these to navigate back
 - **Go to File shortcut:** Press `T` on the repository's main page to open the file finder - type any filename to jump to it
 
----
 
 ## 3. Downloading Everything
 
@@ -98,7 +94,6 @@ If you do not have Git installed or prefer not to use the command line:
 
 **Note:** A ZIP download is a snapshot. It does not update automatically - see [Section 7](#7-keeping-your-copy-updated) for how to get updates.
 
----
 
 ## 4. Downloading Individual Files
 
@@ -117,7 +112,6 @@ To download a single file (for example, one chapter or the screen reader cheat s
 
 If you have already cloned the repo, every file is already on your computer. Open the folder and copy whichever files you need.
 
----
 
 ## 5. What's in Each Folder
 
@@ -132,7 +126,6 @@ If you have already cloned the repo, every file is already on your computer. Ope
 | `scripts/` | Build script that converts Markdown to HTML | JavaScript |
 | Root (`/`) | README, agendas, facilitator guide, contributing guide, and other project files | Markdown (`.md`) |
 
----
 
 ## 6. Offline Reading
 
@@ -155,7 +148,6 @@ Open `.md` files in any text editor. They are plain text with lightweight format
 - **VS Code with Markdown:** Open the repo folder in VS Code, browse the Explorer, and read files directly in the editor. Use `Ctrl+Shift+V` to open the rendered preview
 - **Browser with HTML:** Open `html/index.html` and navigate from there - this gives the most polished reading experience
 
----
 
 ## 7. Keeping Your Copy Updated
 
@@ -181,7 +173,6 @@ npm run build:html
 
 Download a fresh ZIP from the repository and replace your local copy. There is no incremental update for ZIP downloads.
 
----
 
 ## 8. Which Format Should I Use?
 
@@ -194,6 +185,5 @@ Download a fresh ZIP from the repository and replace your local copy. There is n
 | Archiving a copy | **ZIP download** or **Git clone** | Full snapshot of all materials |
 | Staying updated long-term | **Git clone** | One-command updates with `git pull` |
 
----
 
 *Return to: [Appendix X - Copilot AI Models](appendix-x-copilot-models.md) | [Appendix A - Glossary](appendix-a-glossary.md) | [README](../README.md)*

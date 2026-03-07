@@ -1,4 +1,3 @@
----
 name: address-comments
 description: "Systematically address PR review comments -- track, resolve, and respond to all feedback with release awareness"
 agent: pr-review
@@ -8,7 +7,6 @@ tools:
   - codebase
   - editFiles
   - ask_questions
----
 
 Help me systematically address all review comments on a pull request.
 

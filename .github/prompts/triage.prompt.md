@@ -1,4 +1,3 @@
----
 name: triage
 description: "Generate a prioritized triage dashboard document (markdown + HTML) for your open issues across all repos with reactions, release context, and discussion links"
 agent: issue-tracker
@@ -7,7 +6,6 @@ tools:
   - createFile
   - createDirectory
   - ask_questions
----
 
 Generate a triage dashboard document and save it to the workspace in both markdown and HTML formats.
 

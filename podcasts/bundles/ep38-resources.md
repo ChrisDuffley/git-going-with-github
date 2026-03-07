@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 8-10 min
 
----
 
 ### Audio Production Direction
 
@@ -34,7 +33,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Communities for blind and low-vision developers
 - Continued learning paths for Git, GitHub, and accessibility
 
----
 
 ### Concept Coverage Checklist
 
@@ -58,7 +56,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > This is your permanent reference. Every link, tool, guide, and community resource from the two-day workshop in one place. Bookmark this page in your fork so it travels with you.
 
----
 
 ## Table of Contents
 
@@ -79,7 +76,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 15. [Community and Support](#15-community-and-support)
 16. [Your Workshop Documentation - Offline Reference](#16-your-workshop-documentation--offline-reference)
 
----
 
 ## 1. The Central Project - Accessibility Agents
 
@@ -114,7 +110,6 @@ https://github.com/[your-username]/accessibility-agents
 2. Add your GitHub username, your most-used repositories, and your preferred output format
 3. Commit the file - now the agents know who you are and what you work on
 
----
 
 ## 2. GitHub Accessibility Guides
 
@@ -130,7 +125,6 @@ Official guides from the GitHub Accessibility team. These were the primary resea
 | **Getting Started with Custom Agents for Accessibility** | [accessibility.github.com/documentation/guide/getting-started-with-agents](https://accessibility.github.com/documentation/guide/getting-started-with-agents/) | What agents are, custom agents vs custom instructions, informational vs task-oriented agents, step-by-step walkthroughs for building both types |
 | Accessibility Settings Overview | [docs.github.com/en/get-started/accessibility](https://docs.github.com/en/get-started/accessibility) | Hovercard settings, motion reduction, color modes |
 
----
 
 ## 3. GitHub Skills Learning Modules
 
@@ -182,7 +176,6 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 
 **Relationship to this workshop:** The introduction and PR courses reinforce everything you practiced here. The GitHub Actions course is the foundation for understanding the CI/CD workflows that run inside accessibility-agents.
 
----
 
 ## 4. Screen Reader Downloads and Documentation
 
@@ -235,7 +228,6 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 | Orca | Linux (GNOME) | [wiki.gnome.org/Projects/Orca](https://wiki.gnome.org/Projects/Orca) |
 | TalkBack | Android (built in) | Settings → Accessibility → TalkBack |
 
----
 
 ## 5. VS Code Resources
 
@@ -254,7 +246,6 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 2. Search: `GitHub Pull Requests`
 3. Install: publisher is "GitHub"
 
----
 
 ## 6. GitHub Copilot Resources
 
@@ -268,7 +259,6 @@ GitHub Skills courses are available 24/7 and are completely free. Recommended or
 | Copilot Coding Agent - Customize Environment | [docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment](https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment#switching-copilot-to-a-windows-development-environment) | Switch coding agent to Windows dev environment |
 | Copilot in VS Code - A11y Guide | [accessibility.github.com/documentation/guide/github-copilot-vsc](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) | Screen reader-optimized usage |
 
----
 
 ## 7. GitHub Agentic Workflows
 
@@ -290,7 +280,6 @@ During the workshop, you learned:
 
 All three live in `.github/`. All three are plain text. The only difference is where they run and how sophisticated their executor is.
 
----
 
 ## 8. Spec-Driven Development - Spec Kit
 
@@ -313,7 +302,6 @@ uvx --from git+https://github.com/github/spec-kit.git specify init YOUR_PROJECT_
 
 Works with GitHub Copilot, Claude Code, and Gemini CLI.
 
----
 
 ## 9. GitHub CLI, Desktop, and Copilot CLI
 
@@ -361,7 +349,6 @@ gh copilot suggest "undo my last commit but keep the changes staged"
 | Download | [desktop.github.com](https://desktop.github.com) |
 | Keyboard shortcuts | [docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/keyboard-shortcuts-in-github-desktop](https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/keyboard-shortcuts-in-github-desktop) |
 
----
 
 ## 10. GitHub Mobile Apps
 
@@ -392,7 +379,6 @@ Both apps support:
 
 **Pro tip:** Enable push notifications for mentions and reviews so you can respond quickly when your input is needed.
 
----
 
 ## 11. GitHub Best Practices and Power Features
 
@@ -678,7 +664,6 @@ Here is a statement that needs citation[^1].
 > Helpful advice for better outcomes
 ```
 
----
 
 ## 12. Finding More Contributions
 
@@ -701,7 +686,6 @@ is:open is:issue label:help-wanted topic:screen-reader
 is:open is:issue label:accessibility no:assignee
 ```
 
----
 
 ## 13. Accessibility Standards and References
 
@@ -733,7 +717,6 @@ is:open is:issue label:accessibility no:assignee
 | Pro Git Book (free) | [Pro Git Book](https://git-scm.com/book/en/v2) | Complete reference - free online |
 | Git Cheat Sheet | [GitHub Git Cheat Sheet (PDF)](https://github.github.com/training-kit/downloads/github-git-cheat-sheet.pdf) | Quick command reference PDF |
 
----
 
 ## 14. GitHub Keyboard Shortcuts
 
@@ -757,7 +740,6 @@ is:open is:issue label:accessibility no:assignee
 | `Shift+I` | Mark notification as read |
 | `M` | Mute thread (on Notifications page) |
 
----
 
 ## 14b. Learning Pathways
 
@@ -781,7 +763,6 @@ Not sure where to start after the workshop? Use these suggested paths.
 | 2 hours | Add: Pull Requests + Navigating Repositories |
 | 4+ hours | All core chapters → pick one advanced appendix topic |
 
----
 
 ## 15. Community and Support
 
@@ -809,7 +790,6 @@ Not sure where to start after the workshop? Use these suggested paths.
 | A11y Weekly Newsletter | [A11y Weekly Newsletter](https://a11yweekly.com) |
 | Inclusive Design Research Centre | [Inclusive Design Research Centre](https://idrc.ocadu.ca) |
 
----
 
 ## 16. Your Workshop Documentation - Offline Reference
 
@@ -870,7 +850,6 @@ The documentation set is in the `docs/` folder of this learning repository (sepa
 | **Appendix W:** GitHub Copilot Reference | [docs/appendix-w-github-copilot-reference.md](appendix-w-github-copilot-reference.md) |
 | **Appendix X:** GitHub Copilot AI Models | [docs/appendix-x-copilot-models.md](appendix-x-copilot-models.md) |
 
----
 
 *Back: [Issue Templates](15-issue-templates.md)*
 *Start over: [README ←](../README.md)*

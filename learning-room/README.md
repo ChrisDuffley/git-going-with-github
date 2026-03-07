@@ -9,7 +9,6 @@ This repository is the shared practice space for the Open Source Assistive Techn
 
 Everything in this repository is designed for learning. The files in `docs/` have intentional issues that you will find and fix during the workshop contribution sprint.
 
----
 
 ## What Is in This Repository
 
@@ -19,7 +18,6 @@ Everything in this repository is designed for learning. The files in `docs/` hav
 | `docs/keyboard-shortcuts.md` | Keyboard shortcut reference (has some errors to find and fix) |
 | `docs/setup-guide.md` | Setup instructions (has some broken links and gaps) |
 
----
 
 ## How to Contribute
 
@@ -40,7 +38,6 @@ Everything in this repository is designed for learning. The files in `docs/` hav
 
 See the [workshop documentation](../../docs/) for full step-by-step guidance.
 
----
 
 ## About the Automation Bot
 
@@ -75,7 +72,6 @@ The bot isn't always right! If you believe feedback is incorrect:
 
 [**Read the full Automation Guide →**](AUTOMATION.md)
 
----
 
 ## Skills & Progression
 
@@ -89,7 +85,6 @@ As you complete challenges, you'll:
 [**View Available Challenges →**](docs/CHALLENGES.md)  
 [**View Group Challenges →**](docs/GROUP_CHALLENGES.md)
 
----
 
 ## Study Groups
 
@@ -101,13 +96,11 @@ You may be assigned to a study group for collaborative learning. Groups:
 
 If assigned to a group, you'll receive an issue thread for communication.
 
----
 
 ## Code of Conduct
 
 All participants and contributors are expected to follow our [Code of Conduct](../CODE_OF_CONDUCT.md). This is a welcoming, accessible space.
 
----
 
 ## Questions?
 

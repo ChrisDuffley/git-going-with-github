@@ -9,7 +9,6 @@
 >
 > You will leave with your name in the commit history of a real open source project and a set of tools you can use on any GitHub repository you ever work on.
 
----
 
 ## At a Glance
 
@@ -27,7 +26,6 @@
 | 16:15-17:00 | Block 6 - Spec Kit: Design the Future | Group speccing session - what comes next |
 | 17:00-17:30 | Wrap-Up | Names in history, reflections, next steps |
 
----
 
 ## Block 0 - Day 1 Debrief
 **9:00-9:30**
@@ -48,7 +46,6 @@ Each participant states one contribution goal for the day. Examples:
 
 Write it down. You will check it against reality at 5pm.
 
----
 
 ## Block 1 - VS Code Setup
 **9:30-10:30**
@@ -138,7 +135,6 @@ Press `Ctrl+Shift+I` to open the Chat panel.
 
 **VoiceOver users:** `VO+Tab` to the chat input. `VO+Shift+Down` to interact with it. `VO+Escape` to stop interacting and navigate the response.
 
----
 
 ## Block 2 - Deep Contribution with Copilot
 **10:45-12:00**
@@ -210,7 +206,6 @@ Before leaving for lunch, check your progress:
 - **Almost there:** You have identified a file and started drafting but have not committed yet. Use the first 10 minutes after lunch to finalize your commit before the agent demonstrations begin.
 - **Still exploring:** You have not yet identified a file to improve. During lunch, read through the `.github/agents/` files and pick one. When Block 3 starts, the facilitator will demo agents on the repository - watching those demos will help you see where improvements are needed.
 
----
 
 ## Block 3 - Activate the Agents
 **13:00-14:00**
@@ -240,7 +235,6 @@ The facilitator runs each command live. Participants follow along in their own V
 
 Participants answer from their Day 1 knowledge. Then the command runs. Then the room compares the agent's output to the manual process.
 
----
 
 ### 1. `@daily-briefing morning briefing`
 
@@ -252,7 +246,6 @@ Participants answer from their Day 1 knowledge. Then the command runs. Then the 
 
 **Verify one item:** The agent lists an issue. Navigate to that issue in your browser using the link in the output. Confirm the information matches. This is your quality check - you still know how to verify independently.
 
----
 
 ### 2. `@issue-tracker find open issues labeled good-first-issue`
 
@@ -262,7 +255,6 @@ Participants answer from their Day 1 knowledge. Then the command runs. Then the 
 
 **Hands-on:** From the agent's list, pick one issue in a repository you have not contributed to before. Read the full issue - navigate to it in your browser. Is the agent's priority score reasonable? What context does the agent's summary miss?
 
----
 
 ### 3. `@pr-review review PR #[your PR number]`
 
@@ -277,7 +269,6 @@ Participants answer from their Day 1 knowledge. Then the command runs. Then the 
 
 Edit the agent's output before posting any of it. Your name goes on it.
 
----
 
 ### 4. `@insiders-a11y-tracker` - Accessibility Change Monitoring
 
@@ -291,7 +282,6 @@ This agent is quality assurance for the accessibility quality of your own contri
 
 The agents are running. Step away from the screen for five minutes. Screen reader listening for an hour after lunch is demanding. When you return, Block 4 shows you how these same agents run in the cloud - without you pressing a key.
 
----
 
 ## Block 4 - GitHub Agentic Workflows
 **14:00-15:00**
@@ -311,7 +301,6 @@ Open `accessibility-agents/.github/` in VS Code Explorer. If a `.github/workflow
 **Anatomy of a GitHub Agentic Workflow:**
 
 ```markdown
----
 on:
   issues:
     types: [opened]
@@ -322,7 +311,6 @@ safe-outputs:
   - add-label
 tools:
   - copilot
----
 
 When a new issue is opened, read its title and body.
 Determine which category it belongs to: bug report, feature request,
@@ -369,7 +357,6 @@ Do not close the issue. Do not merge anything. Do not modify any files.
 | Cloud, runs on any trigger | GitHub Agentic Workflows | GitHub Actions infrastructure |
 | Cloud, scheduled | Agentic Workflow with `schedule:` trigger | GitHub Actions, no human required |
 
----
 
 ## Block 5 - Ship Your Contribution
 **15:15-16:15**
@@ -430,7 +417,6 @@ While your PR is awaiting review, review a forge partner's PR:
 3. Post your review in the browser (or via GitHub PR extension)
 4. For each comment, ask: *"Is this the kind of feedback I would want to receive?"*
 
----
 
 ## Block 6 - Spec Kit: Design the Future
 **16:15-17:00**
@@ -463,7 +449,6 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 - Init command: `uvx --from git+https://github.com/github/spec-kit.git specify init accessibility-agents-v2`
 - Slash commands: `/specify` → `/plan` → `/tasks` → implement
 
----
 
 ## Wrap-Up
 **17:00-17:30**
@@ -509,7 +494,6 @@ The most important thing you take home is not a tool. It is the ability to look 
 
 Those skills are yours. No one can take them. Every project you ever encounter is now within reach.
 
----
 
 ## Facilitator Notes - Day 2
 
@@ -533,7 +517,6 @@ Day 2 has two peaks:
 
 Do not rush the wrap-up. The moment of seeing your name in a public commit history is one of the most meaningful things a first-time open source contributor experiences.
 
----
 
 *Previous: [Notifications ←](docs/09-notifications.md)*
 *Next: [VS Code: Setup & Accessibility Basics](docs/10-vscode-basics.md)*

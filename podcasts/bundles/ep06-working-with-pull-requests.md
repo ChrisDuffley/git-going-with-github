@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 15-18 min
 
----
 
 ### Audio Production Direction
 
@@ -36,7 +35,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Understanding merge options: merge commit, squash, rebase
 - Draft pull requests and when to use them
 
----
 
 ### Concept Coverage Checklist
 
@@ -97,7 +95,6 @@ but keep the main narrative focused on the primary chapter.
 >
 > **Browse vs Focus Mode (NVDA):** Use **Browse Mode** (the default) for reading PR conversations, navigating headings, and reviewing diffs. Switch to **Focus Mode** (`NVDA+Space`) only when you need to type in comment boxes or search fields. Switch back to Browse Mode to resume navigation. Maximize your browser window for consistent landmark layout.
 
----
 
 ## What Is a Pull Request?
 
@@ -116,7 +113,6 @@ A PR shows:
 
 > **Learning Room connection:** In the Learning Room repository, every hands-on contribution follows this pattern. For example, when you complete Challenge 3 (filling the `[TODO]` sections in `docs/welcome.md`), you open a PR that shows your added content as green `+` lines in the diff, your description explains which TODOs you completed and why, and the validation bot posts automated check results. The scenarios in this chapter use Learning Room files so you can follow along with real content.
 
----
 
 ## Navigating to Pull Requests
 
@@ -171,7 +167,6 @@ gh pr view 42 --web
 
 </details>
 
----
 
 ## The Pull Request List Page
 
@@ -185,7 +180,6 @@ The PR list works identically to the Issues list:
 >
 > **Hovercards:** Hovercards appear when you hover over usernames and links in the PR list, adding extra verbosity. To reduce this noise: go to your GitHub Profile → Accessibility settings → disable "Show link previews" and similar hover triggers. This makes sequential navigation significantly less cluttered.
 
----
 
 ## Anatomy of a Pull Request Page
 
@@ -219,7 +213,6 @@ A PR page has three main tabs:
 [Line-level comment threads within diffs]
 ```
 
----
 
 ## Navigating the PR Tab Bar
 
@@ -252,7 +245,6 @@ The three tabs - **Conversation**, **Commits**, and **Files changed** - appear j
 
 Each tab link reads with its name and the count: "Files changed, 3 files changed."
 
----
 
 ## Reading the Conversation Tab
 
@@ -310,7 +302,6 @@ Step 3: The reply text area appears - Focus Mode → type your reply
 Step 4: Ctrl+Enter to submit
 ```
 
----
 
 ## Reading the Commits Tab
 
@@ -322,7 +313,6 @@ Step 4: Each commit: SHA link, message, author, [Verified] badge if signed
 Step 5: Enter on a commit to open its diff
 ```
 
----
 
 ## Reading the Files Changed Tab
 
@@ -446,7 +436,6 @@ Hover over any line in the diff - a blue `+` button appears on the left margin. 
 
 Inline comments appear as expandable threads within the diff table. Navigate to them with `3` (they are h3 headings). Each thread shows the comment, any replies, and a "Reply" button.
 
----
 
 ## Opening a Pull Request
 
@@ -632,7 +621,6 @@ From the sidebar Reviewers section:
 
 > **Why some reviews are requested automatically:** A file called `CODEOWNERS` in many repositories maps file paths to specific people or teams. When your PR touches a file covered by a CODEOWNERS rule, GitHub automatically adds those people as required reviewers - you'll see them appear in the Reviewers sidebar without you adding them. You cannot remove a CODEOWNERS-required reviewer. If a required reviewer hasn't responded, reach out to them directly or leave a comment on the PR.
 
----
 
 ## Submitting a Review
 
@@ -809,7 +797,6 @@ your proposed text here
 6. Navigate to the radio buttons with arrow keys → select your verdict
 7. Tab to "Submit review" button → Enter
 
----
 
 ## Understanding Merge Options (for Maintainers)
 
@@ -855,7 +842,6 @@ gh pr merge 42 --auto --squash
 - The source branch can be deleted - a "Delete branch" button appears
 - Any linked issues with `Closes #N` in the description are automatically closed
 
----
 
 ## Auto-Merge - Merging When You Can't Wait Around
 
@@ -898,7 +884,6 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 
 > **Note:** Auto-merge is only available if the repository administrator has enabled it in Settings → General. Many open source repos have it on; some do not.
 
----
 
 ## Practical Scenarios
 
@@ -937,7 +922,6 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 4. Edit the file to resolve → Mark as resolved → Commit merge
 ```
 
----
 
 ## Common PR Mistakes to Avoid
 
@@ -950,7 +934,6 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 | Not testing your own changes | Test before requesting review |
 | Not responding to reviewer comments | Acknowledge all comments, even if you disagree |
 
----
 
 ## Try It: Read a Real Pull Request
 
@@ -968,7 +951,6 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 
 > **What success feels like:** You followed a PR from description to diff using only headings and landmarks. The next time you open a PR - yours or someone else's - you'll know exactly where everything is.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@pr-review`
 >
@@ -981,14 +963,12 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 >
 > *The agent documents the diff. You bring the context that no diff can contain.*
 
----
 
 *Next: [Merge Conflicts](06-merge-conflicts.md)*
 *Back: [Working with Issues](04-working-with-issues.md)*
 *Related: [Accessible Code Review](14-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture & Etiquette](07-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*
 
 
----
 
 ### Supplementary: Accessible Code Review - diff navigation and review habits
 
@@ -1001,7 +981,6 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 >
 > **Learning Room connection:** The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify `docs/keyboard-shortcuts.md` (shortcut tables with intentional errors), `docs/setup-guide.md` (broken links and incomplete steps), and `docs/welcome.md` (`[TODO]` sections to complete). These are the same files you work on during the Day 1 contribution sprint.
 
----
 
 ## Prerequisites Checklist
 
@@ -1014,7 +993,6 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 
 **Estimated time for this chapter:** 1 hour (including exercises)
 
----
 
 ## Two Environments for Code Review
 
@@ -1056,7 +1034,6 @@ gh pr review 42 --comment --body "A few observations - see details below."
 
 </details>
 
----
 
 ## Part 1 - Reviewing on GitHub.com
 
@@ -1066,7 +1043,6 @@ As of January 2026, GitHub's improved Files Changed experience is enabled by def
 
 If the interface seems different from what's described here, clear your browser cache and reload the page.
 
----
 
 ### Step 1: Reach the Files Changed Tab
 
@@ -1103,7 +1079,6 @@ VoiceOver announces the number of changed files: *"Files changed, 4 files change
 
 </details>
 
----
 
 ### Step 2: Use the File Tree to Orient Yourself
 
@@ -1145,7 +1120,6 @@ VO+Space on a file to scroll its diff into view
 - Which areas of the codebase are affected?
 - Are there unexpected files (generated files, lock files, configuration changes)?
 
----
 
 ### Step 3: Navigate Between File Diffs
 
@@ -1184,7 +1158,6 @@ If a diff is very long, the file tree is usually faster than using heading navig
 
 </details>
 
----
 
 ### Step 4: Read a Diff
 
@@ -1240,7 +1213,6 @@ VO+→/← to navigate columns, VO+↑/↓ to navigate rows
 
 **Tip:** If the code on a line is very long, the screen reader will read the full line. For minified or generated files, consider collapsing the file in the tree and skipping it.
 
----
 
 ### Step 5: Place an Inline Comment
 
@@ -1323,7 +1295,6 @@ Step 4: VO+Space to activate, then proceed as above
 
 </details>
 
----
 
 ### Step 6: Read Existing Comments and Threads
 
@@ -1376,7 +1347,6 @@ Tab to the "Resolve conversation" button → VO+Space
 
 </details>
 
----
 
 ### Step 7: Submit Your Review
 
@@ -1433,7 +1403,6 @@ Step 8: Tab to "Submit review" button → VO+Space
 | Approve | You've reviewed and are satisfied; signals readiness to merge |
 | Request changes | Changes are needed before this should merge; blocks merge |
 
----
 
 ### Step 8: Re-request Review (for Authors)
 
@@ -1468,7 +1437,6 @@ Step 3: VO+Space to activate - this re-notifies the reviewer that you've made ch
 
 </details>
 
----
 
 ## Part 2 - Reviewing in VS Code with the Accessible Diff Viewer
 
@@ -1531,7 +1499,6 @@ Step 5: Submit from the inline UI
 
 Comments placed in VS Code sync to GitHub - they appear in the PR's Files Changed tab and the author receives the same notification.
 
----
 
 ## Code Review Structure and Content
 
@@ -1568,7 +1535,6 @@ Using shorthand prefixes helps authors parse many comments quickly:
 
 There is no hard limit, but quantity without prioritization is noise. If you have 15 comments, make clear which 2-3 are blocking. Authors can then focus energy on what matters most and address preferences in follow-up PRs.
 
----
 
 ## Keyboard Reference
 
@@ -1596,7 +1562,6 @@ There is no hard limit, but quantity without prioritization is noise. If you hav
 | Accessible Help (any widget) | `Alt+H` |
 | Close Accessible Diff Viewer | `Escape` |
 
----
 
 ## Common Review Scenarios
 
@@ -1638,13 +1603,11 @@ There is no hard limit, but quantity without prioritization is noise. If you hav
 4. Or: reference a specific line in your reply using the line number
 ```
 
----
 
 ## Exercises
 
 These exercises use the files in `learning-room/docs/` in this repository. All examples involve documentation changes - no code required.
 
----
 
 ### Exercise A - Complete a Web Review
 
@@ -1652,7 +1615,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 
 **What You'll Learn:** How to use screen reader heading navigation to spot accessibility issues in a GitHub PR diff.
 
----
 
 #### Step 1: Navigate to the Pull Request
 
@@ -1671,7 +1633,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - Use `Ctrl+F` to search the PR list for "screen reader tips"
 - Or ask in the workshop Slack - someone can share the exact URL
 
----
 
 #### Step 2: Read the PR Description
 
@@ -1690,7 +1651,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - You can answer: "This PR adds [specific content] to [specific file] because [clear reason]"
 - Example: "This PR adds screen reader usage tips to the setup guide because new users need accessibility guidance"
 
----
 
 #### Step 3: Navigate to "Files Changed"
 
@@ -1707,7 +1667,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - Scroll up to see if there are other files. For this exercise, only `setup-guide.md` should be changed.
 - If you see other files, confirm they are not modified (the badge should show "+0 −0" or no changes)
 
----
 
 #### Step 4: Activate Focus Mode for Better Diff Reading
 
@@ -1726,7 +1685,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - VoiceOver: Navigate with `VO+Right Arrow` to find the table/content region
 - Read through the changes: `↓` arrow moves to each line
 
----
 
 #### Step 5: Find the Heading Hierarchy Issue
 
@@ -1752,7 +1710,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - You can say the line number and what heading text appears there
 - You understand *why* this is an accessibility problem
 
----
 
 #### Step 6: Place a Blocking Review Comment on the Heading
 
@@ -1781,7 +1738,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - Try refreshing the page and trying again
 - Or use the "Add a reply" field at the bottom of the PR and mention the line number manually
 
----
 
 #### Step 7: Find the Link Text Issue
 
@@ -1799,7 +1755,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - You found a link with non-descriptive text
 - You can explain why "click here" is bad and what would be better
 
----
 
 #### Step 8: Place a Comment on the Link
 
@@ -1816,7 +1771,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 
 **Note:** `nit:` means "nice-to-have improvement" (not blocking, but good to fix)
 
----
 
 #### Step 9: Submit Your Review
 
@@ -1844,7 +1798,6 @@ These exercises use the files in `learning-room/docs/` in this repository. All e
 - It shows 2 comments you made
 - The PR status shows "Changes requested"
 
----
 
 #### Reflect on This Exercise
 
@@ -1855,7 +1808,6 @@ After submitting, answer:
 
 Keep your answers - you'll need them for Chapter 16's Accessibility Agents exercise to compare manual review with agent-assisted review.
 
----
 
 ### Exercise B - Use the VS Code Accessible Diff Viewer
 
@@ -1863,7 +1815,6 @@ Keep your answers - you'll need them for Chapter 16's Accessibility Agents exerc
 
 **What You'll Learn:** How the VS Code Accessible Diff Viewer announces changes differently than the browser diff, and when each environment is most useful.
 
----
 
 #### Prerequisites
 
@@ -1872,7 +1823,6 @@ Before starting:
 - The GitHub Pull Requests extension must be installed (see [Chapter 12](12-github-pull-requests-extension.md) for installation)
 - You must be signed into GitHub from VS Code (use `Ctrl+Shift+P` → "GitHub: Sign in")
 
----
 
 #### Step 1: Open the GitHub Pull Requests Extension
 
@@ -1888,7 +1838,6 @@ Before starting:
 - The extension is listed as active
 - It mentions: "Review and manage GitHub pull requests and issues"
 
----
 
 #### Step 2: Open the Pull Requests Sidebar
 
@@ -1909,7 +1858,6 @@ Before starting:
 - Paste the PR URL: `https://github.com/[owner]/[repo]/pull/[number]`
 - Press Enter
 
----
 
 #### Step 3: View the File Changes
 
@@ -1929,7 +1877,6 @@ Before starting:
 - Use `Ctrl+Home` to jump to the start of the diff
 - Use `Ctrl+End` to jump to the end
 
----
 
 #### Step 4: Access the Accessible Diff Viewer
 
@@ -1949,7 +1896,6 @@ Before starting:
 - Try `Ctrl+Shift+P` → search `Open Accessible Diff`
 - If available, select it
 
----
 
 #### Step 5: Listen to and Understand the First Change
 
@@ -1973,7 +1919,6 @@ Added: ## New Heading with More Details
 - NVDA/JAWS: The Accessible Diff Viewer announces "Removed:" and "Added:" labels, followed by the line content
 - VoiceOver: The announcement may be similar; listen for "removed" and "added" keywords
 
----
 
 #### Step 6: Find the Heading Hierarchy Issue
 
@@ -1999,7 +1944,6 @@ Added: ## New Heading with More Details
 - You can explain: "The added line with `####` directly follows a `##`, skipping level 3"
 - The Accessible Diff Viewer made this *pattern* clearer than scanning raw `+` characters
 
----
 
 #### Step 7: Locate the Heading Line and Add an Inline Comment
 
@@ -2019,7 +1963,6 @@ Added: ## New Heading with More Details
 - A comment box opens
 - You can type your comment
 
----
 
 #### Step 8: Write Your Accessible Diff Comment
 
@@ -2037,7 +1980,6 @@ Added: ## New Heading with More Details
 - It shows that the tool *itself* helps you see the issue
 - It documents how you caught the problem (useful for learning)
 
----
 
 #### Step 9: Create a GitHub Pull Request Comment
 
@@ -2072,7 +2014,6 @@ the story of what changed without scanning back and forth.
 
 3. Click **Comment**
 
----
 
 #### Reflect on This Exercise
 
@@ -2083,7 +2024,6 @@ After completing Steps 1-9, answer:
 
 **Record your answers.** In Chapter 16, you'll compare these manual reviews with the `@pr-review` agent's suggested changes.
 
----
 
 ### Exercise C - Compare and Reflect
 
@@ -2091,7 +2031,6 @@ After completing Steps 1-9, answer:
 
 **What You'll Learn:** Which tools work best for different scenarios, and how your manual review skills prepare you to use AI agents effectively.
 
----
 
 #### Step 1: Gather Your Data
 
@@ -2111,7 +2050,6 @@ Before writing your reflection, collect all the information you gathered:
 
 **Write these down** (in a text editor, on paper, or mentally) - you'll reference them in Steps 2-4.
 
----
 
 #### Step 2: Navigate to the PR and Leave Your Reflection Comment
 
@@ -2126,7 +2064,6 @@ Before writing your reflection, collect all the information you gathered:
 - A text editing area with formatting options (Bold, Italic, Link, etc.)
 - A **Comment** button below the text area
 
----
 
 #### Step 3: Write Your Comparison
 
@@ -2201,7 +2138,6 @@ The heading hierarchy skip in the published document matters because:
 [1-2 sentences about why screen reader users would be affected]
 ```
 
----
 
 #### Step 4: Review Your Comment
 
@@ -2215,7 +2151,6 @@ The heading hierarchy skip in the published document matters because:
 3. Make any corrections needed
 4. **Do not submit yet** - continue to Step 5
 
----
 
 #### Step 5: Submit Your Reflection
 
@@ -2235,7 +2170,6 @@ The heading hierarchy skip in the published document matters because:
 - It includes all three reflections
 - The PR author and other reviewers can see your thought process
 
----
 
 #### Step 6: Checkpoint - Validate Your Learning
 
@@ -2252,7 +2186,6 @@ Before moving forward, verify you understand:
 
 If you can answer all three, you're ready for the next chapter.
 
----
 
 ### What Comes Next
 
@@ -2270,7 +2203,6 @@ In **Chapter 16 (Accessibility Agents)**, you'll use the `@pr-review` agent to g
 
 That's the power of "manual skill first, agent second." You're building that skill right now.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@pr-review`
 >
@@ -2283,7 +2215,6 @@ That's the power of "manual skill first, agent second." You're building that ski
 >
 > *The Accessible Diff Viewer teaches you to hear changes. The agent drafts the notes. You bring the judgment.*
 
----
 
 *Next: [Issue Templates](15-issue-templates.md)*
 *Back: [GitHub Copilot](13-github-copilot.md)*

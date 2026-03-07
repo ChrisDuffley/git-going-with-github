@@ -1,11 +1,9 @@
----
 name: merge-pr
 description: "Merge a pull request -- checks readiness, picks merge strategy, and handles post-merge cleanup"
 agent: pr-review
 tools:
   - github/*
   - ask_questions
----
 
 Merge a pull request after checking readiness.
 

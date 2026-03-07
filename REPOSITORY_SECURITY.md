@@ -5,7 +5,6 @@
 This repository is configured for a 2-day workshop with 67 blind/low-vision students.
 Safety, accessibility, and reliability are the top priorities.
 
----
 
 ## Access Control
 
@@ -45,7 +44,6 @@ Students are invited to the `Community-Access` organization as **Members** with:
   https://github.com/orgs/Community-Access/members
 - Branch push rejected? Verify you are a member of the org
 
----
 
 ## Branch Protection
 
@@ -75,7 +73,6 @@ Even if a student force-pushes to their branch, they cannot:
 - Block other students
 - Undo someone else's work
 
----
 
 ## Permission Model
 
@@ -91,7 +88,6 @@ Students have exactly the permissions they need:
 - CAN review other students' PRs
 - CAN merge PRs (with protection checks)
 
----
 
 ## Facilitator Access
 
@@ -116,7 +112,6 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 # Should return: "admin"
 ```
 
----
 
 ## GitHub Actions Security
 
@@ -142,7 +137,6 @@ Repository does not contain:
 
 **Safe to**: Public repos, student access, teaching
 
----
 
 ## Data Privacy
 
@@ -173,7 +167,6 @@ File: `.github/data/student-roster.json`
 - Sensitivity: LOW (only public GitHub usernames + opt-in profile)
 - Safe to: Share roster with facilitators, teaching staff
 
----
 
 ## Safety Checks
 
@@ -213,7 +206,6 @@ File: `.github/data/student-roster.json`
 - If branch access denied: Check org membership
 - If PR template missing: Check .github/PULL_REQUEST_TEMPLATE directory
 
----
 
 ## Daily Operations
 
@@ -256,7 +248,6 @@ File: `.github/data/student-roster.json`
    - Q&A
    - Next steps & resources
 
----
 
 ## Rollback & Emergency
 
@@ -282,7 +273,6 @@ File: `.github/data/student-roster.json`
 - Bad commit: Use `git revert` (don't force push)
 - Deleted branch: Can restore from GitHub's trash (within 90 days)
 
----
 
 ## Compliance & Audit
 
@@ -314,7 +304,6 @@ We can show students:
 - How the GitHub Actions bot validated their work
 - Example of a properly merged PR
 
----
 
 ## Contact & Support
 

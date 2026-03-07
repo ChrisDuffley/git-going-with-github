@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 15-18 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Troubleshooting agent issues
 - Building on the agent system for your own projects
 
----
 
 ### Concept Coverage Checklist
 
@@ -66,7 +64,6 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 
 > This is your comprehensive reference for Accessibility Agents and the full VS Code Copilot customization system. The ecosystem includes **55 agents** across **3 teams** and **5 platforms**, plus 54+ slash commands, 17 skills, and 6 instruction files. For the lesson, see [Chapter 16: Accessibility Agents](16-accessibility-agents.md). For Copilot keyboard shortcuts and Chat features, see [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md).
 
----
 
 ## Table of Contents
 
@@ -85,7 +82,6 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 13. [Diagnostics and Troubleshooting](#13-diagnostics-and-troubleshooting)
 14. [Further Reading](#14-further-reading)
 
----
 
 ## 1. The Full Agent Ecosystem
 
@@ -170,13 +166,11 @@ Accessibility Agents includes 55 agents organized into three specialized teams, 
 | Claude Code hooks | 3 | `.claude/hooks/` |
 | Example violations | 20+ | `example/` directory |
 
----
 
 ## 2. GitHub Workflow Agents - Quick Reference
 
 The GitHub Workflow team includes 12 agents that automate common repository operations. These are good starting points if you have completed the Day 1 skills - but explore any agent in the ecosystem that matches your workflow.\n\nInvoke any agent by typing `@agent-name` in Copilot Chat (`Ctrl+Shift+I`).
 
----
 
 ### `@daily-briefing` - Morning Briefing
 
@@ -199,7 +193,6 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
   - Security and Dependabot Alerts
 - All Clear (confirms checked but empty categories)
 
----
 
 ### `@issue-tracker` - Issue Management
 
@@ -214,7 +207,6 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 
 **Important:** The agent drafts replies. You post. Always review tone against the [Culture & Etiquette guide](07-culture-etiquette.md).
 
----
 
 ### `@pr-review` - Pull Request Review
 
@@ -238,7 +230,6 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 
 **Critical rule:** The agent produces a starting point. Read it, edit it, post it under your own name.
 
----
 
 ### `@analytics` - Team Analytics
 
@@ -251,7 +242,6 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 | `@analytics which files are changed most often?` | Code hotspot detection |
 | `@analytics how long does PR review take on average?` | Review turnaround time |
 
----
 
 ### `@insiders-a11y-tracker` - Accessibility Change Monitor
 
@@ -274,7 +264,6 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 
 **Risk levels:** High (regression), Medium (degraded), Low (improvement opportunity)
 
----
 
 ### `@template-builder` - Issue Template Wizard
 
@@ -294,7 +283,6 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 
 **Supported field types:** `markdown`, `input`, `textarea`, `dropdown`, `checkboxes`
 
----
 
 ## 3. Slash Commands and Prompts
 
@@ -345,7 +333,6 @@ The repository includes 54+ slash commands. Type `/` in Copilot Chat to open the
 | `/daily-briefing` | `/daily-briefing` - same output as `@daily-briefing` |
 | `/draft-release` | `/draft-release v2.0` - generate release notes from merged PRs |
 
----
 
 ## 4. Customization Primitives - Decision Guide
 
@@ -375,7 +362,6 @@ Before creating any file, choose the right primitive for the job. Each primitive
 **Instructions vs Hooks?**
 - Instructions *guide* the agent (non-deterministic). Hooks *enforce* behavior via shell commands at lifecycle events - they run regardless of what the agent was prompted to do.
 
----
 
 ## 5. Scope and Priority - All Levels
 
@@ -431,7 +417,6 @@ To sync user instructions/prompts/agents across devices:
 
 VS Code collects **all** matching instruction files from all scopes and includes them all in the chat context. There is no single winner - all are combined. Priority only resolves conflicts between contradictory instructions.
 
----
 
 ## 6. Always-On Instructions - All File Types
 
@@ -473,7 +458,6 @@ Always-on instructions are automatically included in every chat request. You nev
 
 **Auto-generate with:** Type `/init` in Copilot Chat - VS Code analyzes your workspace and generates a tailored `copilot-instructions.md`.
 
----
 
 ### Option B: `AGENTS.md` (Multi-Tool / Monorepo)
 
@@ -499,7 +483,6 @@ Enable nested file support: `chat.useNestedAgentsMdFiles: true` in VS Code setti
 
 **Rule:** Use either `AGENTS.md` or `copilot-instructions.md` - not both.
 
----
 
 ### Option C: `CLAUDE.md` (Claude Code Compatibility)
 
@@ -517,14 +500,11 @@ VS Code recognizes all four locations when `chat.useClaudeMdFile` is enabled (de
 For `.claude/rules/*.instructions.md` files using the Claude Rules format, use **`paths`** instead of `applyTo` for glob matching:
 
 ```markdown
----
 description: "Python coding standards"
 paths: ["**/*.py", "src/**"]
----
 Follow PEP 8. Use type hints. Write docstrings for public functions.
 ```
 
----
 
 ### Option D: Settings-Based Instructions (Deprecated)
 
@@ -554,7 +534,6 @@ For specialized scenarios, VS Code settings accept inline instructions or file r
 
 Each entry is an array of objects with either `text` (inline instruction) or `file` (path to an instructions file relative to workspace root).
 
----
 
 ### Organization-Level Instructions (GitHub Enterprise)
 
@@ -570,7 +549,6 @@ Organization administrators can define custom instructions that apply to all rep
 
 Organization instructions are the lowest priority - workspace and user instructions override them when they conflict.
 
----
 
 ## 7. File-Based Instructions (`.instructions.md`)
 
@@ -589,11 +567,9 @@ File-based instructions load conditionally - either when the files you are editi
 ### Frontmatter Fields
 
 ```yaml
----
 name: "Display Name"           # Optional - defaults to filename; shown in UI
 description: "Use when..."     # Optional - enables on-demand discovery; be keyword-rich
 applyTo: "**/*.py"             # Optional - glob pattern(s) for automatic application
----
 ```
 
 ### The `applyTo` Glob Pattern
@@ -624,11 +600,9 @@ applyTo: ".github/ISSUE_TEMPLATE/**"  # Only issue template files
 ### Example: Accessibility-Specific Instructions
 
 ```markdown
----
 name: "Accessible Markdown Standards"
 description: "Use when writing, editing, or reviewing Markdown documentation. Covers heading hierarchy, link text, alt text, and table structure."
 applyTo: "**/*.md"
----
 
 # Markdown Accessibility Standards
 
@@ -643,11 +617,9 @@ applyTo: "**/*.md"
 ### Example: YAML Issue Template Instructions
 
 ```markdown
----
 name: "Issue Template YAML"
 description: "Use when writing or reviewing GitHub issue templates in YAML format"
 applyTo: ".github/ISSUE_TEMPLATE/**/*.{yml,yaml}"
----
 
 # Issue Template YAML Standards
 
@@ -670,7 +642,6 @@ applyTo: ".github/ISSUE_TEMPLATE/**/*.{yml,yaml}"
 **Quick creation method:**
 Type `/instructions` in the Chat input to open the Configure Instructions menu.
 
----
 
 ## 8. `.agent.md` - Complete Format Reference
 
@@ -684,7 +655,6 @@ Type `/instructions` in the Chat input to open the Configure Instructions menu.
 ### Complete Frontmatter Reference
 
 ```yaml
----
 name: "agent-name"                        # Required - what you type after @ in Chat
 description: "Use when..."               # Required - triggers subagent delegation; keyword-rich
 tools: ["read", "search", "githubRepo"]  # Optional - tools this agent can use; omit = defaults; [] = none
@@ -695,7 +665,6 @@ agents: ["SubagentA", "SubagentB"]       # Optional - restrict which subagents t
 user-invocable: true                      # Optional - show in agent picker (default: true); false = subagent only
 disable-model-invocation: false          # Optional - prevent other agents from invoking this as subagent (default: false)
 handoffs: ["AgentB", "AgentC"]           # Optional - agents this agent can hand off to
----
 ```
 
 ### Model Fallback Array
@@ -769,12 +738,10 @@ tools: ["ask_questions", "createFile"]
 ### Body Structure Template
 
 ```markdown
----
 name: my-agent
 description: "Use when [specific task/trigger]. Handles [clear purpose]."
 tools: ["read", "search"]
 user-invocable: true
----
 
 You are a specialist at [specific role]. Your job is to [clear purpose].
 
@@ -822,7 +789,6 @@ When asked to [task]:
 
 **Tip:** Write keyword-rich descriptions. The description is how other agents decide whether to delegate to yours. "A helpful agent" will never get delegated to. "Use when auditing Markdown files for accessibility violations (missing alt text, heading skips, bare URLs)" will.
 
----
 
 ## 9. `.prompt.md` - Complete Format Reference
 
@@ -836,14 +802,12 @@ When asked to [task]:
 ### Complete Frontmatter Reference
 
 ```yaml
----
 name: "command-name"                    # Optional - defaults to filename; the /command name
 description: "One-sentence description" # Optional - shown in slash command picker
 argument-hint: "PR ref or repo name"   # Optional - hint in chat input when command is selected
 agent: "agent"                          # Optional - agent mode: ask | agent | plan | or custom @agent-name
 model: "GPT-5 (copilot)"               # Optional - override model for this command
 tools: ["github/*", "createFile"]       # Optional - tools this command can use
----
 ```
 
 ### Model Fallback
@@ -889,12 +853,10 @@ See the configuration in [preferences.md](.github/agents/preferences.md).
 ### Example - Accessibility Update Command
 
 ```markdown
----
 name: a11y-update
 description: "Get latest accessibility improvements with WCAG cross-references"
 agent: insiders-a11y-tracker
 tools: ["github/*", "createFile", "ask_questions"]
----
 
 Show the latest accessibility improvements across tracked repositories.
 
@@ -923,7 +885,6 @@ For each finding include:
 
 **Both prompts and agent skills appear as `/` slash commands.** The difference: prompts are single-task Markdown files; skills are folders with bundled scripts and references.
 
----
 
 ## 10. Agent Skills (`SKILL.md`) - Complete Format Reference
 
@@ -957,13 +918,11 @@ A Skill is a folder - not a single file. The folder contains `SKILL.md` plus any
 ### Complete Frontmatter Reference
 
 ```yaml
----
 name: skill-name                      # Required - 1-64 chars; lowercase alphanumeric + hyphens; must match folder name
 description: "Use when..."           # Required - keyword-rich trigger phrases for on-demand discovery
 argument-hint: "Optional input..."   # Optional - hint shown when skill is selected as slash command
 user-invocable: true                  # Optional - appear as slash command (default: true)
 disable-model-invocation: false       # Optional - prevent automatic loading by agents (default: false)
----
 ```
 
 ### Slash Command Behavior
@@ -986,10 +945,8 @@ disable-model-invocation: false       # Optional - prevent automatic loading by 
 ### SKILL.md Body Template
 
 ```markdown
----
 name: a11y-audit
 description: "Audit Markdown files for accessibility violations. Use for heading hierarchy, link text quality, alt text, and WCAG compliance checks."
----
 
 # Accessibility Audit Skill
 
@@ -1015,7 +972,6 @@ description: "Audit Markdown files for accessibility violations. Use for heading
 - Include WCAG criterion for each finding
 ```
 
----
 
 ## 11. Hooks (`.json`) - Lifecycle Automation
 
@@ -1115,7 +1071,6 @@ Permission decisions: `"allow"` | `"ask"` (prompt user) | `"deny"` (block the to
 - `2` - blocking error; agent stops
 - Other - non-blocking warning
 
----
 
 ## 12. `preferences.md` - Accessibility Agents Personal Settings
 
@@ -1196,7 +1151,6 @@ I use Narrator with Edge on Windows 11.
 I use TalkBack on Android.
 ```
 
----
 
 ## 13. Diagnostics and Troubleshooting
 
@@ -1231,7 +1185,6 @@ This shows: which files were found, which were loaded, which have errors, and fr
 2. `Ctrl+Shift+P` → "Reload Window"
 3. File must use `.prompt.md` extension (not just `.md`)
 
----
 
 ## Accessibility Agents Keyboard Shortcuts
 
@@ -1248,7 +1201,6 @@ This shows: which files were found, which were loaded, which have errors, and fr
 | Configure instructions | `Ctrl+Shift+P` → "Chat: Configure Instructions" |
 | View diagnostics | Configure Chat gear → Diagnostics |
 
----
 
 ## 14. Further Reading
 
@@ -1262,7 +1214,6 @@ For the broader ecosystem - the community plugin marketplace, MCP server integra
 | Optimizing Copilot with custom instructions (accessibility) | [accessibility.github.com/documentation/guide/copilot-instructions/](https://accessibility.github.com/documentation/guide/copilot-instructions/) |
 | GitHub Copilot for VS Code screen reader guide | [accessibility.github.com/documentation/guide/github-copilot-vsc/](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) |
 
----
 
 *Chapter: [Accessibility Agents](16-accessibility-agents.md)*
 *Related: [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md) | [Issue Templates](15-issue-templates.md) | [Chapter 13: GitHub Copilot](13-github-copilot.md)*

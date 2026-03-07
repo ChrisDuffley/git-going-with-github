@@ -1,8 +1,6 @@
----
 name: Template Builder
 description: Interactive guided assistant for creating GitHub issue templates with VS Code Ask Questions integration
 topics: ["github", "issue-templates", "form-fields", "yaml", "accessibility"]
----
 
 # Template Builder Agent
 
@@ -39,7 +37,6 @@ A magical interactive agent that guides you through building GitHub issue templa
 
 **Agent outputs:** Complete YAML template ready to paste
 
----
 
 ## Template Builder Guide: Step-by-Step
 
@@ -61,7 +58,6 @@ title: "[TAG] "
 labels: ["label1", "label2"]
 ```
 
----
 
 ### Phase 2: Build Form Fields Interactively
 
@@ -98,7 +94,6 @@ The agent walks through adding fields one-by-one:
       required: true
 ```
 
----
 
 ### Phase 3: Generate Complete Template
 
@@ -120,7 +115,6 @@ Once all fields are entered, the agent:
    - How to edit it later
    - How to add it to the template chooser via config.yml
 
----
 
 ## Pre-Built Workflow: Guided Accessibility Template
 
@@ -144,7 +138,6 @@ The agent skips to Phase 2 but pre-populates it with accessibility-specific fiel
 
 Output: Production-ready accessibility bug template you can immediately use.
 
----
 
 ## Advanced: Customize the Template Builder
 
@@ -156,7 +149,6 @@ The Template Builder agent itself can be extended. Students in the workshop can:
 4. **Export to markdown** → Generate Markdown templates in addition to YAML
 5. **Template sharing** → Generate a code block to share with other projects
 
----
 
 ## Integration with Accessibility Agents
 
@@ -172,7 +164,6 @@ The Template Builder works alongside the five core agents:
 
 **Together:** The five agents automate workflow; the Template Builder automates the infrastructure that makes workflows possible.
 
----
 
 ## Day 2 Amplifier: From Manual to Magical
 
@@ -181,7 +172,6 @@ The Template Builder works alongside the five core agents:
 | Learn to identify accessibility issues in code review | Learn to design templates that prevent those issues | Use Template Builder to generate templates interactively | Agent automates the entire cycle |
 | (Chapter 14) | (Chapter 15) | (Chapter 16) | (Capstone) |
 
----
 
 ## Hands-On Exercise: Build Your Own Template Builder
 
@@ -217,7 +207,6 @@ Collect anonymous templates built by workshop participants:
 3. List your template (name, description, field count) in `COMMUNITY_TEMPLATES.md`
 4. Other participants can reference or fork your template
 
----
 
 ## Technical Details: VS Code Ask Questions Integration
 
@@ -228,10 +217,10 @@ The Template Builder uses VS Code's Ask Questions feature to create an interacti
 Agent asks (via Ask Questions UI):
 - Template name?
   [Input field with placeholder "e.g., Bug Report"]
-  
+
 - What is this template for?
   [Text area with prompt text]
-  
+
 Accept / Cancel buttons below
 ```
 
@@ -267,7 +256,6 @@ When the user clicks "Copy to Clipboard", the agent provides instructions:
 4. Paste the YAML
 5. Save and commit
 
----
 
 ## Troubleshooting & Tips
 
@@ -298,7 +286,6 @@ This agent creates GitHub issue templates, but the same pattern works for:
 - Discussion templates
 - GitHub Forms on custom websites
 
----
 
 ## Related Resources
 
@@ -307,6 +294,5 @@ This agent creates GitHub issue templates, but the same pattern works for:
 - [Chapter 14: Accessible Code Review](../docs/14-accessible-code-review.md) - Learn what accessibility issues to prevent via templates
 - [YAML Field Types Reference](../docs/15-issue-templates.md#6-yaml-form-based-templates) - Deep-dive on every field type
 
----
 
 *This agent makes template creation magical: go from idea to production-ready YAML in seconds. Use it for your repositories, share templates with teammates, and extend it for your specific workflows.*

@@ -1,4 +1,3 @@
----
 name: a11y-update
 description: "Get the latest accessibility improvements across all tracked repos -- with WCAG cross-references and ARIA pattern mapping"
 agent: insiders-a11y-tracker
@@ -7,7 +6,6 @@ tools:
   - createFile
   - createDirectory
   - ask_questions
----
 
 Show me the latest accessibility improvements across tracked repositories.
 

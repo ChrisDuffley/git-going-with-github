@@ -13,7 +13,6 @@ The Learning Room automation provides:
 **Time to implement:** 2-3 hours  
 **Prerequisites:** GitHub repository with Actions enabled, basic Git/GitHub knowledge
 
----
 
 ## Pre-Implementation Checklist
 
@@ -26,7 +25,6 @@ Before starting, ensure you have:
 - [ ] Admin access to the repository
 - [ ] List of student GitHub usernames
 
----
 
 ## Step 1: Install Core Automation Files
 
@@ -72,7 +70,6 @@ Copy these docs:
 - **`learning-room/docs/CHALLENGES.md`** - Available challenge list
 - **`learning-room/docs/GROUP_CHALLENGES.md`** - Collaborative exercises
 
----
 
 ## Step 2: Configure for Your Repository
 
@@ -149,7 +146,6 @@ To personalize bot language, edit:
 - Update resource links to point to your docs
 - Customize accessibility error messages
 
----
 
 ## Step 3: Test the Automation
 
@@ -212,7 +208,6 @@ Verify:
 - [ ] Issues have label `study-group`
 - [ ] Group members are tagged
 
----
 
 ## Step 4: Prepare Learning Content
 
@@ -307,7 +302,6 @@ In all documentation, ensure links point correctly:
 
 Test all internal links before workshop.
 
----
 
 ## Step 5: Communicate to Students
 
@@ -337,7 +331,6 @@ Send to students before workshop:
 
 > **Pre-Workshop Note:** This workshop uses intelligent automation! When you open pull requests, a friendly bot will provide instant feedback on accessibility and document quality. The bot teaches alongside human reviewers - you'll experience both automated checks (like real CI/CD systems) and human code review. No need to prepare anything, just be ready to learn!
 
----
 
 ## Step 6: During the Workshop
 
@@ -380,7 +373,6 @@ If workshop has 6+ students:
 3. Announce group assignments
 4. Explain that groups will review each other's work
 
----
 
 ## Step 7: Troubleshooting
 
@@ -392,8 +384,8 @@ If workshop has 6+ students:
 - If no runs: workflow file may have syntax error
 
 **Check permissions:**
-- Settings → Actions → Workflow permissions → Read and write ✓
-- Settings → Actions → Allow GitHub Actions to create PRs ✓
+- Settings → Actions → Workflow permissions → Read and write 
+- Settings → Actions → Allow GitHub Actions to create PRs 
 
 **Check bot account:**
 - Comments are posted by `github-actions[bot]`
@@ -445,7 +437,6 @@ Edit `.github/data/student-roster.json`:
 - Use PR sidebar → "Reviewers" → select manually
 - Bot assignment is convenience, manual works too
 
----
 
 ## Step 8: Post-Workshop Review
 
@@ -500,7 +491,6 @@ Based on feedback:
 - Add new challenges based on gaps
 - Update student-facing documentation
 
----
 
 ## Advanced: Customizations
 
@@ -577,7 +567,6 @@ Create GitHub Pages site that reads `student-roster.json` and displays:
 - Badge gallery
 - Challenge completion matrix
 
----
 
 ## Additional Resources
 
@@ -594,7 +583,6 @@ Create GitHub Pages site that reads `student-roster.json` and displays:
 ### Example Implementation
 See this repository as working example of full system.
 
----
 
 ## Implementation Checklist
 
@@ -630,7 +618,6 @@ Print this before starting:
 - [ ] First issues assigned
 - [ ] Facilitators ready to monitor
 
----
 
 *Questions about implementation? Open an issue or reach out to facilitators!*
 
@@ -638,6 +625,5 @@ Print this before starting:
 **Ongoing maintenance:** ~15 minutes per cohort (update roster, create issues)  
 **Impact:** Instant feedback for all students, reduced facilitator burden, professional CI/CD experience
 
----
 
 This automation system transforms the Learning Room into a GitHub Skills-quality experience while maintaining the human connection that makes learning meaningful.

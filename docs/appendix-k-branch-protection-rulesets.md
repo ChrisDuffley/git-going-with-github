@@ -6,7 +6,6 @@
 
 > **Who this is for:** Contributors who have submitted a PR and are wondering why it cannot be merged yet, as well as workshop facilitators who configure branch protection for practice repositories.
 
----
 
 ## Quick Navigation
 
@@ -19,7 +18,6 @@
 7. [Who Can Configure Branch Protection](#7-who-can-configure-branch-protection)
 8. [Workshop Repository Configuration Reference](#8-workshop-repository-configuration-reference)
 
----
 
 ## 1. What Branch Protection Does
 
@@ -33,7 +31,6 @@ A **branch protection rule** is a set of requirements that must be satisfied bef
 
 Think of branch protection as the quality gate for a repository's primary branch.
 
----
 
 ## 2. Common Branch Protection Rules
 
@@ -90,7 +87,6 @@ If you see: "This repository requires a linear history" - the maintainer will sq
 
 A locked branch cannot receive any merges - it is effectively read-only. This is sometimes used for archived repositories or during release freezes.
 
----
 
 ## 3. Repository Rulesets - The Modern Approach
 
@@ -125,7 +121,6 @@ Or: Repository → Settings → Rules → Rulesets (admin only)
 
 Alternatively, PR merge box messages describe which rules are blocking - you don't need admin access to understand what's required.
 
----
 
 ## 4. Why Your PR Cannot Be Merged - Diagnosis Guide
 
@@ -180,7 +175,6 @@ When you open a PR and the merge button is grayed out or shows an error, the mer
 
 **What it means:** A ruleset or branch protection has explicitly blocked merging for a reason not covered by other messages. Check the PR for a pinned comment from the mergeable status check or a GitHub Actions check that posts a comment explaining the block.
 
----
 
 ## 5. Navigating the Merge Box with a Screen Reader
 
@@ -237,7 +231,6 @@ Or: Tab → each step accordion → Enter to expand → ↓ to read log lines
 Log content is usually in a scrollable region: ↓ key scrolls through lines
 ```
 
----
 
 ## 6. Status Checks - What They Are and What They Mean
 
@@ -272,7 +265,6 @@ Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitH
 | Grey circle | Skipped | Not relevant for this PR (conditional run) |
 | Neutral | Neutral | Informational - does not block merge |
 
----
 
 ## 7. Who Can Configure Branch Protection
 
@@ -288,7 +280,6 @@ Services like Netlify, Vercel, Codecov, and Snyk post status checks via the GitH
 
 As a workshop participant, you are typically a **contributor** to the main `community-access/accessibility-agents` repo and an **admin** of your own fork. On your fork, you can configure branch protection however you like - including disabling it entirely for practice purposes.
 
----
 
 ## 8. Workshop Repository Configuration Reference
 
@@ -315,7 +306,6 @@ Save changes
 
 Then practice opening a PR on your fork and requesting your workshop partner's review.
 
----
 
 ## Related Resources
 
@@ -325,6 +315,5 @@ Then practice opening a PR on your fork and requesting your workshop partner's r
 - [Chapter 05 - Working with Pull Requests](../docs/05-working-with-pull-requests.md)
 - [Chapter 06 - Merge Conflicts](../docs/06-merge-conflicts.md)
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix L - Security Features](appendix-l-github-security-features.md)*

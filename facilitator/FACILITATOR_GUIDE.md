@@ -8,7 +8,6 @@ This workshop runs **Saturday, March 8-9, 2026** from **12pm-8pm ET** both days.
 **Format:** Hybrid (streaming + learning room)  
 **Main Goal:** Get every student to merge their first pull request
 
----
 
 ## Before the Workshop (Friday, March 7)
 
@@ -38,7 +37,6 @@ python -c "import json; print(f\"Total students: {len(json.load(open('.github/da
 gh issue create --title "[TEST] Sample Assignment" --body "Test issue" --assignee $YOUR_USERNAME
 ```
 
----
 
 ## Day 1: Saturday, March 8, 12pm-8pm ET
 
@@ -63,7 +61,6 @@ gh issue create --title "[TEST] Sample Assignment" --body "Test issue" --assigne
 
 **Success Metric:** All 66 students in Zoom report "I found my issue"
 
----
 
 ### 1:00 PM - 1:30 PM: Demo - Your First PR (30 min)
 
@@ -83,13 +80,12 @@ gh issue create --title "[TEST] Sample Assignment" --body "Test issue" --assigne
    - "I request review by typing @peer_username"
    - "My peer reviews and I get approval"
    - "I click merge button"
-   - **✨ Done! My PR is merged!**
+   - ** Done! My PR is merged!**
 
 **This is the workflow EVERY student will repeat.** Make it crystal clear.
 
 **Success Metric:** Students report "I see how this works" in chat
 
----
 
 ### 1:30 PM - 6:00 PM: Silent Working Session (270 min)
 
@@ -127,11 +123,10 @@ If a peer review isn't happening:
 
 **Celebrate Merges:**
 ```
-🎉 Huge congrats @username! Your first PR is MERGED! 
+ Huge congrats @username! Your first PR is MERGED! 
 You're officially a contributor to an open source project!
 ```
 
----
 
 ### 6:00 PM - 6:30 PM: Q&A & Reflection (30 min)
 
@@ -150,7 +145,6 @@ You're officially a contributor to an open source project!
 - Sneak peek at what's next
 - Encouragement!
 
----
 
 ### 6:30 PM - 8:00 PM: Office Hours (Optional)
 
@@ -159,7 +153,6 @@ You're officially a contributor to an open source project!
 - Answer "How do I...?" questions about GitHub
 - Document common questions for tomorrow's content
 
----
 
 ## Day 2: Sunday, March 9, 12pm-8pm ET
 
@@ -170,7 +163,6 @@ You're officially a contributor to an open source project!
 - Acknowledge students who got stuck but persisted
 - Introduce next challenge level for students ready to go further
 
----
 
 ### 12:30 PM - 1:30 PM: Deep Dive - Code Review (60 min)
 
@@ -185,7 +177,6 @@ You're officially a contributor to an open source project!
 - Start with example feedback you provide
 - Let them practice the async review process
 
----
 
 ### 1:30 PM - 6:00 PM: Skill-Building Challenges (270 min)
 
@@ -208,20 +199,19 @@ You're officially a contributor to an open source project!
 - Help intermediate students with conflict resolution
 - Keep the energy positive
 
----
 
 ### 6:00 PM - 7:00 PM: Final Q&A & Celebration (60 min)
 
 **Metrics to share:**
 ```
-🎯 WORKSHOP RESULTS:
+ WORKSHOP RESULTS:
 - 66 students registered
 - X PRs merged (track real number)
 - X students got 2+ merges
 - X students completed code review cycle
 - 100% accessibility - screen readers worked flawlessly
 
-📊 Impact:
+ Impact:
 - X open source contributions submitted
 - X participants added to 66 projects' contributor lists
 - X% of students felt encouraged to contribute again
@@ -240,20 +230,19 @@ You're officially a contributor to an open source project!
 - Ask follow-up questions
 - Exchange GitHub usernames
 
----
 
 ## Facilitator Role Critical Points
 
 ### Communication Style
 
-✅ **DO:**
+ **DO:**
 - Use simple language: "Click the pencil icon to edit"
 - Narrate exactly what you're doing: "I'm clicking... now I'm typing..."
 - Normalize mistakes: "Oops I forgot something - let me fix it"
 - Celebrate effort not just success: "Nice work thinking through that!"
 - Answer the same question multiple times patiently
 
-❌ **DON'T:**
+ **DON'T:**
 - Use "obviously" or assume prior knowledge
 - Assume everyone is on the same screen area
 - Rush through demos
@@ -279,7 +268,6 @@ You're officially a contributor to an open source project!
 4. **Document what worked** - Feedback for next workshop
 5. **Tag students in commit credit** - Add to CONTRIBUTORS file
 
----
 
 ## Emergency Protocols
 

@@ -12,7 +12,6 @@
 >
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+` on Mac. For example: `Ctrl+Shift+P` → `Cmd+Shift+P`, `Ctrl+Shift+G` → `Cmd+Shift+G`, `Alt+F2` → `Option+F2`. Context menus (`Shift+F10` on Windows) use `Ctrl+Return` on Mac.
 
----
 
 ## Workshop Recommendation (Chapter 12)
 
@@ -55,7 +54,6 @@ For this workshop, Chapter 12 focuses on tooling setup and PR review workflow:
 
 PR tooling multiplies your impact. Reviewing others' work refines your own standards and builds community trust.
 
----
 
 ## Table of Contents
 
@@ -68,7 +66,6 @@ PR tooling multiplies your impact. Reviewing others' work refines your own stand
 7. [Commenting and Requesting Changes](#7-commenting-and-requesting-changes)
 8. [Merging Pull Requests](#8-merging-pull-requests)
 
----
 
 ## 1. Installing the GitHub Pull Requests Extension
 
@@ -122,7 +119,6 @@ After installation, you gain:
 - **Inline PR review features** in the editor
 - **Issue linking** when writing commit messages
 
----
 
 ## 2. Viewing Pull Requests
 
@@ -247,7 +243,6 @@ A PR detail view opens in the editor area showing:
 - Headings mark each section ("Description", "Reviewers", "Files Changed", "Comments")
 - Links are clickable with `Enter`
 
----
 
 ## 3. Checking Out a Pull Request Branch
 
@@ -298,7 +293,6 @@ After reviewing:
 3. Select "Git: Checkout to..."
 4. Choose your original branch (usually `main` or your feature branch)
 
----
 
 ## 4. Reviewing Pull Requests in VS Code
 
@@ -380,7 +374,6 @@ As you review, note any problems:
 **Single Comment** posts immediately.  
 **Start Review** saves your comments as a draft until you submit the full review (see Section 7).
 
----
 
 ## 5. Creating a Pull Request from VS Code
 
@@ -505,7 +498,6 @@ gh pr create --web
 
 </details>
 
----
 
 ## 6. Pull Request Description Templates
 
@@ -563,7 +555,6 @@ When you create a PR in VS Code, the extension automatically loads the template 
 
 **Keyboard tip:** Use `Ctrl+F` (Mac: `Cmd+F`) to jump to each `<!--` placeholder, fill it in, then `F3` to jump to the next one.
 
----
 
 ## 7. Commenting and Requesting Changes
 
@@ -657,7 +648,6 @@ gh pr review 42 --comment --body "A few suggestions."
 
 </details>
 
----
 
 ## 8. Merging Pull Requests
 
@@ -770,7 +760,6 @@ gh pr merge 42 --auto --squash
 2. Type "git push"
 3. Select "Git: Push (delete remote branch)"
 
----
 
 ## Keyboard Shortcuts - GitHub Pull Requests Extension
 
@@ -785,7 +774,6 @@ gh pr merge 42 --auto --squash
 | Navigate diff hunks | `F7` (next), `Shift+F7` (previous) | `F7` (next), `Shift+F7` (previous) |
 | Accessible Diff Viewer | `Alt+F2` (in diff view) | `Option+F2` (in diff view) |
 
----
 
 ## Troubleshooting
 
@@ -819,7 +807,6 @@ gh pr merge 42 --auto --squash
 2. Check your GitHub Personal Access Token (see [Appendix D: Git Authentication](appendix-d-git-authentication.md))
 3. Verify network connection
 
----
 
 ## Try It: Review a PR from VS Code
 
@@ -835,7 +822,6 @@ gh pr merge 42 --auto --squash
 
 > **What success feels like:** You read a diff, heard the changes announced by your screen reader, and left feedback - all without opening a browser. This is how many developers review code every day.
 
----
 
 *Next: [GitHub Copilot](13-github-copilot.md)*  
 *Back: [Git & Source Control in VS Code](11-git-source-control.md)*  

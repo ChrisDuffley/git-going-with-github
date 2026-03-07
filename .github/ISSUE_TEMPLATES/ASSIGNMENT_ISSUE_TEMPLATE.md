@@ -2,7 +2,6 @@
 
 Use this template when pre-seeding issues for the Day 1 contribution sprint. Copy and modify for each student participant.
 
----
 
 ## Title
 `Fix: [specific problem] in [filename]`
@@ -45,7 +44,6 @@ See [Working with Issues](../../docs/04-working-with-issues.md) and the [Day 1 A
 - [Markdown Syntax Guide](../../docs/appendix-e-github-flavored-markdown.md)
 ```
 
----
 
 ## Pre-Seeded Issues to Create
 
@@ -62,7 +60,6 @@ Use this table as a checklist. Create one issue per row per student, customizing
 | `welcome.md` | [TODO] What merged PR means for profile | Sentence about GitHub profile/portfolio | `documentation`, `good-first-issue` | Medium |
 | `welcome.md` | Missing "Last reviewed" date | Date placeholder replaced with today's date | `documentation`, `good-first-issue` | Easy |
 
----
 
 ## Tips for Assigning Issues
 

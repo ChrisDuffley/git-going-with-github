@@ -3,7 +3,6 @@
 
 This reference lists keyboard shortcuts for navigating GitHub with a screen reader. It covers three screen readers: NVDA, JAWS, and VoiceOver.
 
----
 
 #### NVDA (Windows)
 
@@ -41,7 +40,6 @@ Use these keys to jump to specific element types on any GitHub page.
 | NVDA+↑ | Read current line |
 | Ctrl | Stop reading |
 
----
 
 ## JAWS (Windows)
 
@@ -77,7 +75,6 @@ JAWS (Job Access With Speech) is a professional screen reader for Windows made b
 | Insert+↑ | Read current line |
 | Ctrl | Stop reading |
 
----
 
 ## VoiceOver (macOS)
 
@@ -104,7 +101,6 @@ Element types available in the Rotor: Headings, Links, Form Controls, Tables, La
 | VO+A | Start reading from cursor |
 | Ctrl | Stop reading |
 
----
 
 ## Screen-Reader-Neutral Shortcuts (All Screen Readers)
 
@@ -130,7 +126,6 @@ These shortcuts work in GitHub regardless of screen reader, because they are bro
 | Space | Check/uncheck a checkbox; activate a button |
 | Arrow keys | Navigate within a radio group, tab bar, or menu |
 
----
 
 ## Common Issues and Workarounds
 

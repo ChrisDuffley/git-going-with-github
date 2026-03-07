@@ -13,7 +13,6 @@
 - [Models Retiring Soon](#8-models-retiring-soon)
 <!-- /TOC -->
 
----
 
 ## 1. Overview
 
@@ -21,7 +20,6 @@ GitHub Copilot offers access to AI models from multiple providers including Open
 
 **Models are updated frequently.** This appendix reflects the model landscape as of February 2026. For the latest additions and retirements, see the [GitHub Copilot changelog](https://github.blog/changelog/label/copilot/) and [GitHub's official supported models documentation](https://docs.github.com/en/copilot/reference/ai-models/supported-models).
 
----
 
 ## 2. How to Choose a Model
 
@@ -83,7 +81,6 @@ For tasks that involve images, screenshots, diagrams, or UI mockups - paste an i
 | Claude Sonnet 4 / 4.5 / 4.6 | Yes |
 | Gemini 3 Pro | Yes |
 
----
 
 ## 3. Complete Model Reference
 
@@ -113,7 +110,6 @@ For tasks that involve images, screenshots, diagrams, or UI mockups - paste an i
 
 > **Note:** Model availability changes frequently. Check [GitHub's supported models page](https://docs.github.com/en/copilot/reference/ai-models/supported-models) for the current list.
 
----
 
 ## 4. Model Availability by Plan
 
@@ -127,7 +123,6 @@ For tasks that involve images, screenshots, diagrams, or UI mockups - paste an i
 
 Models marked with a premium multiplier consume premium requests proportionally. For example, Claude Opus 4.6 (3× multiplier) uses 3 premium requests per message. Free models (0× multiplier) never consume premium requests.
 
----
 
 ## 5. Premium Requests and Cost Multipliers
 
@@ -146,7 +141,6 @@ Models marked with a premium multiplier consume premium requests proportionally.
 - Save **Claude Opus** (3×) for the most demanding analyses - architecture decisions, complex debugging, sophisticated design review
 - Use **Auto** mode (see below) and let Copilot allocate model selection intelligently
 
----
 
 ## 6. Switching Models in VS Code
 
@@ -172,7 +166,6 @@ In the Chat panel, the model picker button is near the **bottom** of the chat vi
 - Listen for the model name announced - it appears between the "Attach" button and the send button
 - Press `Space` or `Enter` to open the picker
 
----
 
 ## 7. Auto Model Selection
 
@@ -194,7 +187,6 @@ In the Chat panel, the model picker button is near the **bottom** of the chat vi
 
 To switch back to Auto from a specific model, re-open the model picker and select **Auto** at the top of the list.
 
----
 
 ## 8. Models Retiring Soon
 
@@ -210,7 +202,6 @@ GitHub regularly updates the model roster. Older model versions are retired when
 
 To stay current, watch the [GitHub Copilot changelog](https://github.blog/changelog/label/copilot/) - model additions and retirements are announced there.
 
----
 
 ## Related Resources
 

@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 10-12 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Screen reader usage in the browser-based VS Code
 - When to use Codespaces versus local VS Code
 
----
 
 ### Concept Coverage Checklist
 
@@ -62,7 +60,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > GitHub Codespaces gives you a full VS Code development environment in your browser or connected to your local VS Code, running on a cloud machine. For screen reader users, this means a consistent, pre-configured environment with no local setup required.
 
----
 
 ## Table of Contents
 
@@ -77,7 +74,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 9. [Codespaces vs GitHub.dev](#9-codespaces-vs-githubdev)
 10. [Common Issues and Workarounds](#10-common-issues-and-workarounds)
 
----
 
 ## 1. What Is GitHub Codespaces?
 
@@ -92,7 +88,6 @@ A Codespace is a cloud-hosted development environment. When you open one, GitHub
 
 **Free tier:** GitHub provides a monthly free allowance of Codespace hours for personal accounts. Workshop usage typically falls well within the free tier.
 
----
 
 ## 2. Creating a Codespace
 
@@ -122,7 +117,6 @@ A Codespace is a cloud-hosted development environment. When you open one, GitHub
 
 For workshop exercises, the default 2-core machine is sufficient.
 
----
 
 ## 3. Codespace Environments
 
@@ -147,7 +141,6 @@ If you prefer your local VS Code setup with your extensions and settings:
 
 When connected via local VS Code, your screen reader interacts with your local VS Code installation - all your familiar settings apply.
 
----
 
 ## 4. Accessibility in Codespaces
 
@@ -186,7 +179,6 @@ The integrated terminal in a Codespace is a standard terminal:
 - In NVDA: Switch to Browse Mode to read static terminal output, then back to Focus Mode to type
 - VS Code also has **Accessible View** (`Alt+F2` when cursor is in the terminal) which renders terminal output in a navigable buffer
 
----
 
 ## 5. Screen Reader Configuration
 
@@ -210,7 +202,6 @@ No special NVDA profile is required for Codespaces in the browser. The same sett
 - The Rotor (VO+U) surfaces VS Code's landmark regions
 - If text in the editor is not reading fluently, ensure Screen Reader Optimized mode is active (see above)
 
----
 
 ## 6. Keyboard Shortcuts in Codespaces
 
@@ -247,7 +238,6 @@ Codespaces uses standard VS Code keyboard shortcuts. The most important ones for
 | Ctrl+Shift+G | Open Source Control panel |
 | Ctrl+Enter | Commit (when focus is on message field) |
 
----
 
 ## 7. Managing Your Codespaces
 
@@ -276,7 +266,6 @@ Stopped Codespaces retain your files and changes. They do not use compute hours 
 2. Find your stopped Codespace
 3. Activate **Open in …** to resume it in the browser or in VS Code Desktop
 
----
 
 ## 8. Dotfiles and Persistent Configuration
 
@@ -290,7 +279,6 @@ To set up dotfiles: create a repository named `dotfiles` and add an `install.sh`
 
 VS Code settings (themes, font size, keybindings) can be synchronized to Codespaces via **Settings Sync** (sign in with your GitHub account in VS Code settings).
 
----
 
 ## 9. Codespaces vs GitHub.dev
 
@@ -306,7 +294,6 @@ VS Code settings (themes, font size, keybindings) can be synchronized to Codespa
 
 For workshop exercises that involve running scripts or tests, use Codespaces. For quickly browsing or editing a file, GitHub.dev is faster to open.
 
----
 
 ## 10. Common Issues and Workarounds
 
@@ -328,6 +315,5 @@ If the branch exists on GitHub, you can create a new Codespace from it. Uncommit
 **My changes are not showing in GitHub after committing:**
 You may have committed but not pushed. In the Source Control panel, look for the **Sync Changes** or **Push** button. Run `git push` in the terminal if needed.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix M - VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

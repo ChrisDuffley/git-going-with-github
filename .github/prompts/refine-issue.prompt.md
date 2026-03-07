@@ -1,11 +1,9 @@
----
 name: refine-issue
 description: "Refine an issue with acceptance criteria, technical considerations, edge cases, and community context"
 agent: issue-tracker
 tools:
   - github/*
   - ask_questions
----
 
 Help refine a GitHub issue to make it actionable and well-defined.
 

@@ -128,6 +128,5 @@ When submitting pull requests:
 - [highlight.js documentation](https://highlightjs.org/) - Syntax highlighting
 - [GitHub Markdown spec](https://github.github.com/gfm/) - GitHub Flavored Markdown
 
----
 
 For complete contributor guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md#7-html-documentation-build-system).

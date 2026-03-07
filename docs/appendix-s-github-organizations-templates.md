@@ -6,7 +6,6 @@
 
 > This appendix covers three features that shape how repositories and communities are organized on GitHub: repository templates (how new projects are bootstrapped), GitHub organizations (the account type behind most open source projects and companies), and repository settings (the configuration that governs visibility, archiving, and other behavior contributors encounter in the wild).
 
----
 
 ## Repository Templates
 
@@ -47,7 +46,6 @@ B → navigate buttons → find "Use this template" → Enter
 ↓ → "Create a new repository" from the dropdown → Enter
 ```
 
----
 
 ## GitHub Organizations - A Contributor's View
 
@@ -95,7 +93,6 @@ Links → navigate to individual repositories, members, and projects
 
 Organization-level Projects (like the `community-access` project board) appear in the org's Projects tab, not inside any single repository.
 
----
 
 ## Repository Settings - What Contributors Need to Know
 
@@ -136,6 +133,5 @@ The default branch is the one all PRs target by default. Modern projects use `ma
 
 The default branch name appears in the branch selector at the top of the Code tab.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix R - GitHub Profile, Sponsors, and Wikis](appendix-r-github-profile-sponsors-wikis.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Writing pull request descriptions that maintainers appreciate
 - Building a sustainable contribution habit after the workshop
 
----
 
 ### Concept Coverage Checklist
 
@@ -71,7 +69,6 @@ but keep the main narrative focused on the primary chapter.
 
 > You do not need to be a professional developer to contribute to open source. Documentation, accessibility improvements, and bug reports are among the most valuable contributions any project can receive.
 
----
 
 ## Table of Contents
 
@@ -85,7 +82,6 @@ but keep the main narrative focused on the primary chapter.
 8. [After Your Contribution Is Merged](#8-after-your-contribution-is-merged)
 9. [Building a Contribution Habit](#9-building-a-contribution-habit)
 
----
 
 ## 1. What Is Open Source?
 
@@ -100,7 +96,6 @@ Open source software is software whose source code is publicly available. Anyone
 
 The projects that power much of today's web infrastructure - operating systems, programming languages, screen readers, and developer tools - are maintained by contributors who started exactly where you are now.
 
----
 
 ## 2. Who Can Contribute?
 
@@ -110,7 +105,6 @@ Assistive technology users bring a perspective that most sighted, mouse-first de
 
 You do not need permission to start. If a repository's issues are public, you can file a bug or suggest an improvement today.
 
----
 
 ## 3. What Makes a Good First Contribution?
 
@@ -128,7 +122,6 @@ A good first contribution is:
 
 Start small. A well-executed small contribution is far more valuable than a large contribution that cannot be merged because it is out of scope.
 
----
 
 ## 4. Finding Something to Work On
 
@@ -145,7 +138,6 @@ Most open source projects label issues that are suitable for new contributors. L
 
 **How to search:** On any GitHub repository, go to Issues → filter by label. Or use GitHub's global search: `label:"good first issue" is:open language:markdown` to find documentation issues across all public repositories.
 
----
 
 ## 5. Reading an Issue Before You Start
 
@@ -158,7 +150,6 @@ Before commenting "I'll take this" on an issue, ask yourself:
 
 If the issue looks right for you, comment briefly to let the team know you are working on it: "I'd like to work on this. I'll open a draft PR shortly." This prevents duplicate work.
 
----
 
 ## 6. Making Your Contribution
 
@@ -185,7 +176,6 @@ Example:
 
 This gives the reviewer everything they need to approve quickly.
 
----
 
 ## 7. Getting Help
 
@@ -197,7 +187,6 @@ It is always acceptable to ask a question on an issue or pull request. Good ques
 
 If you opened a PR and are waiting for a review, it is appropriate to leave one polite follow-up comment after a week or two. Start with: "Hi, just checking in on this PR when you have a moment."
 
----
 
 ## 8. After Your Contribution Is Merged
 
@@ -211,7 +200,6 @@ This matters for your GitHub profile. Each merged contribution demonstrates real
 
 Over time, a series of contributions builds a portfolio that shows how you work - not just what you can do in isolation.
 
----
 
 ## 9. Building a Contribution Habit
 
@@ -224,12 +212,10 @@ The hardest part of open source contribution is starting. Once you have one merg
 - **Review other PRs.** Even as a new contributor, you can leave useful feedback: "Does this change affect screen reader users?" or "The example in the PR description is missing a step."
 - **Set a low bar.** A contribution does not need to be impressive. A fixed typo merged into a project used by thousands of people is more valuable than a perfect contribution never submitted.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix A - Glossary](appendix-a-glossary.md)*
 
 
----
 
 ### Supplementary: GitHub Skills Catalog - continued learning
 
@@ -241,7 +227,6 @@ GitHub Skills is GitHub's free, self-paced interactive learning platform. Every 
 
 This appendix catalogs every available GitHub Skills module, organized into learning paths that build on the skills you practiced in this workshop. Use it as a roadmap for continued learning after Day 2.
 
----
 
 ## How GitHub Skills Works
 
@@ -258,7 +243,6 @@ All interaction happens through GitHub's standard interface. The screen reader n
 
 For detailed screen reader navigation instructions, see [Appendix U Section 3 (GitHub Skills)](appendix-u-resources.md).
 
----
 
 ## Courses Used in This Workshop
 
@@ -274,7 +258,6 @@ The following table lists the three GitHub Skills modules used during Day 1, wit
 
 If you did not finish these during the workshop, complete them first before moving to the paths below.
 
----
 
 ## Learning Paths
 
@@ -294,7 +277,6 @@ The following table lists Git fundamentals courses in recommended order.
 
 **Workshop connection:** Day 1, Block 5 introduced merge conflicts in the learning room. Path 1 gives you deep practice with Git's conflict resolution and history tools.
 
----
 
 ### Path 2: GitHub Collaboration
 
@@ -311,7 +293,6 @@ The following table lists GitHub collaboration courses in recommended order.
 
 **Workshop connection:** Day 1, Block 6 covered labels, milestones, and notifications. Path 2 extends those skills into full repository management and publishing.
 
----
 
 ### Path 3: GitHub Actions and Automation
 
@@ -332,7 +313,6 @@ The following table lists GitHub Actions courses in recommended order.
 
 **Workshop connection:** Day 2 introduced GitHub Actions through the accessibility agents workflows. Path 3 teaches you to build your own automation from scratch.
 
----
 
 ### Path 4: GitHub Copilot
 
@@ -355,7 +335,6 @@ The following table lists GitHub Copilot courses in recommended order.
 
 **Workshop connection:** Day 2, Blocks 2-4 used Copilot for contributions and code review. Path 4 expands from basic chat to agent mode, MCP integration, CLI usage, and extension building.
 
----
 
 ### Path 5: Security
 
@@ -373,7 +352,6 @@ The following table lists security courses in recommended order.
 
 **Workshop connection:** Appendix L covers GitHub security features conceptually. Path 5 gives you hands-on practice enabling and using each one.
 
----
 
 ### Path 6: Cloud and Migration
 
@@ -389,7 +367,6 @@ The following table lists cloud and migration courses in recommended order.
 
 **Workshop connection:** Appendix N covers Codespaces conceptually. Path 6, course 1 gives you the hands-on setup experience.
 
----
 
 ## Quick Reference - All 36 Courses
 
@@ -434,7 +411,6 @@ The following table alphabetically lists every GitHub Skills course with its cat
 | Write JavaScript Actions | Actions | [Start course](https://github.com/skills/write-javascript-actions) |
 | Your First Extension for GitHub Copilot | Copilot | [Start course](https://github.com/skills/your-first-extension-for-github-copilot) |
 
----
 
 ## Integrating GitHub Skills into Your Learning Journey
 
@@ -521,7 +497,6 @@ Path 6: Cloud and Migration
 - [ ] Idea to App with Spark
 ```
 
----
 
 ## Additional Resources
 
@@ -530,6 +505,5 @@ Path 6: Cloud and Migration
 - [GitHub Skills Discussions](https://github.com/orgs/skills/discussions) - ask questions and share feedback with the GitHub Skills community
 - [Skills Exercise Creator](https://github.com/skills/exercise-creator) - build your own GitHub Skills courses using Copilot
 
----
 
 *Last updated: March 2026*

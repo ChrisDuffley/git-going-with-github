@@ -1,11 +1,9 @@
----
 name: notifications
 description: "Manage GitHub notifications across all repos -- list unread, mark as read/done, unsubscribe, smart filtering by @mentions, review requests, and CI failures"
 agent: daily-briefing
 tools:
   - github/*
   - ask_questions
----
 
 Manage your GitHub notifications from the editor. List, filter, and act on notifications without opening a browser.
 

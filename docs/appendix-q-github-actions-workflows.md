@@ -6,7 +6,6 @@
 
 > **Why this matters for you:** Every time you open a pull request on a real open source project, automated processes will run. Understanding what they are, what they mean, and what to do when they fail is essential to being a confident contributor.
 
----
 
 ## Table of Contents
 
@@ -24,7 +23,6 @@
 12. [Hands-On Activity](#12-hands-on-activity)
 13. [What We Are NOT Covering (And Where to Learn More)](#13-what-we-are-not-covering-and-where-to-learn-more)
 
----
 
 ## 1. What Is GitHub Actions?
 
@@ -34,7 +32,6 @@ Think of it as a robot assistant that every repository can optionally configure.
 
 **As a contributor, you do not need to write workflows.** But you will see their results on nearly every pull request you open, and you need to understand what those results mean.
 
----
 
 ## 2. Key Vocabulary
 
@@ -53,7 +50,6 @@ Think of it as a robot assistant that every repository can optionally configure.
 | **`on:`** | The YAML key that defines what triggers a workflow. |
 | **`runs-on:`** | The YAML key that specifies the runner OS (`ubuntu-latest`, `windows-latest`, `macos-latest`). |
 
----
 
 ## 3. Where Workflows Live in a Repository
 
@@ -76,7 +72,6 @@ The `.github/` folder is hidden by convention (starts with a dot). To find it:
 
 > **Screen reader tip:** The `.github` folder reads as "dot github." The `workflows` folder is inside it. File names ending in `.yml` are YAML workflow files.
 
----
 
 ## 4. The Anatomy of a Workflow File
 
@@ -116,7 +111,6 @@ jobs:
 
 If `npm test` exits with an error, the job fails, and that failure shows up as a red on your pull request.
 
----
 
 ## 5. What Triggers a Workflow
 
@@ -135,7 +129,6 @@ The most common triggers you will encounter as a contributor:
 
 **The most important one for you:** `pull_request` - this is what triggers checks on your PR.
 
----
 
 ## 6. Understanding Status Checks on Pull Requests
 
@@ -173,7 +166,6 @@ When you open a pull request on a repo that uses GitHub Actions, you will see a 
 - **Non-required checks** are informational - a failure shown in grey/yellow usually won't block a merge.
 - If you're not sure whether a check is required, look for the phrase **"Required"** next to the check name.
 
----
 
 ## 7. Reading the Actions Tab with a Screen Reader
 
@@ -221,7 +213,6 @@ To find out **why a step failed:**
 
 > **Tip:** Log output can be very long. Use your screen reader's search (`NVDA+Ctrl+F`, `JAWS: Insert+F`, `VO+F`) to search for "error" or "failed" to jump directly to the problem.
 
----
 
 ## 8. Common Workflows You Will Encounter
 
@@ -275,7 +266,6 @@ As you contribute to open source repositories, you will see these types of workf
 
 **What it gives you:** A live preview of what the site will look like with your changes - very useful for visual review and for accessibility testing with your screen reader on the actual rendered output.
 
----
 
 ## 9. What To Do When a Check Fails
 
@@ -331,7 +321,6 @@ It is completely acceptable to comment on your PR:
 
 Asking for help is not weakness. It is collaboration.
 
----
 
 ## 10. Workflow Permissions and Security
 
@@ -355,7 +344,6 @@ This is a **security feature** - it prevents malicious code from running on the 
 
 **Dependabot** is an automated bot built into GitHub that creates pull requests to update outdated or vulnerable dependencies. You will see PRs in a repository from a user called `dependabot[bot]`. These are automated, not from a person. Maintainers typically review and merge these. As a contributor, you usually don't need to interact with them, but it is good to know they exist.
 
----
 
 ## 11. Accessibility-Focused Workflows
 
@@ -431,7 +419,6 @@ jobs:
 
 **Connection to Section 13 of the VS Code guide:** This is the infrastructure that enables Scope 3 (cloud execution) of the three-layer Accessibility Agents model. The same agent you run in VS Code with `@markdown-accessibility-assistant` can run on GitHub.com automatically - but only if the environment is prepared with this workflow.
 
----
 
 ## 12. Hands-On Activity
 
@@ -460,7 +447,6 @@ jobs:
 - Where would you look to find out what accessibility violation was detected?
 - If you disagreed with a failing lint check, what would be the appropriate way to raise that with a maintainer?
 
----
 
 ## 13. What We Are NOT Covering (And Where to Learn More)
 
@@ -483,7 +469,6 @@ When you are ready to go deeper, these are the best places to start:
 | GitHub Accessibility Scanner | [Accessibility Scanner action](https://github.com/marketplace/actions/accessibility-scanner) |
 | GitHub Actions Accessibility Conformance Report | [Accessibility conformance report](https://accessibility.github.com/conformance) |
 
----
 
 ## Summary
 
@@ -497,7 +482,6 @@ When you are ready to go deeper, these are the best places to start:
 | a11y workflows catch ~30-40% of issues | Human screen reader testing catches the rest |
 | First-time contributors may need approval | A security feature - ask a maintainer politely |
 
----
 
 > ### Day 2 Bridge - From Actions to Agentic Workflows
 >
@@ -513,7 +497,6 @@ When you are ready to go deeper, these are the best places to start:
 >
 > *You cannot skip a layer. Each one only makes sense because you understand the one before it.*
 
----
 
 *Back: [GitHub Concepts and Glossary](appendix-a-glossary.md)*
 *Related: [Day 1 Agenda](../DAY1_AGENDA.md) | [Day 2 Agenda](../DAY2_AGENDA.md)*

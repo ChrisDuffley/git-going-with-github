@@ -1,4 +1,3 @@
----
 name: pr-comment
 description: "Add line-specific review comments to a PR with interactive file selection"
 agent: pr-review
@@ -6,7 +5,6 @@ tools:
   - github/*
   - readFile
   - ask_questions
----
 
 Add targeted review comments to specific lines in a pull request.
 

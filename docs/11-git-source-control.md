@@ -12,7 +12,6 @@
 >
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+`. Common equivalents: `Ctrl+Shift+G` → `Cmd+Shift+G`, `Ctrl+Shift+P` → `Cmd+Shift+P`, `Ctrl+Enter` → `Cmd+Enter`, `Ctrl+S` → `Cmd+S`.
 
----
 
 ## Workshop Recommendation (Chapter 11)
 
@@ -50,7 +49,6 @@ Chapter 11 is the first **local Git workflow chapter** with hands-on repository 
 
 Local Git operations give you full control and immediate feedback. You can see your changes before they reach GitHub.
 
----
 
 ## Table of Contents
 
@@ -67,7 +65,6 @@ Local Git operations give you full control and immediate feedback. You can see y
 11. [Emergency Recovery - git reflog](#10b-emergency-recovery---git-reflog)
 12. [Alternative Git Interfaces](#11-alternative-git-interfaces)
 
----
 
 ## 1. Cloning a Repository in VS Code
 
@@ -109,7 +106,7 @@ Local Git operations give you full control and immediate feedback. You can see y
 
 **Why HTTPS over SSH for this workshop:** HTTPS works immediately with no setup. SSH requires key generation and configuration (see [Appendix D: Git Authentication](appendix-d-git-authentication.md) for SSH setup).
 
-### Try It Now: Clone the Sci-Fi Themes Repo 🚀
+### Try It Now: Clone the Sci-Fi Themes Repo 
 
 To make your first clone meaningful and fun, try cloning the **VS Code Sci-Fi Thinking Phrases** repository:
 
@@ -122,10 +119,10 @@ This repo contains custom loading phrases for GitHub Copilot Chat from three sci
 
 #### Why Clone This?
 
-- ✅ It's a real, working repository with multiple files to explore
-- ✅ You'll see a practical use of cloning (customizing your personal VS Code setup)
-- ✅ After cloning, you can pick a theme and apply it to your `settings.json`
-- ✅ When you open Copilot Chat, you'll see your custom phrases appear! 🌟
+-  It's a real, working repository with multiple files to explore
+-  You'll see a practical use of cloning (customizing your personal VS Code setup)
+-  After cloning, you can pick a theme and apply it to your `settings.json`
+-  When you open Copilot Chat, you'll see your custom phrases appear! 
 
 #### Quick Start
 
@@ -170,7 +167,6 @@ gh repo clone community-access/learning-room && code learning-room
 
 </details>
 
----
 
 ## 2. The Source Control Panel - Complete Walkthrough
 
@@ -262,7 +258,6 @@ When focused on any file in the Source Control panel:
 
 **Screen reader tip:** Use `Shift+F10` to open the context menu. Navigate options with `Up/Down Arrow`. Press `Enter` to select.
 
----
 
 ## 3. Branch Management
 
@@ -383,7 +378,6 @@ git branch          # Local branches only
 git branch -a       # All branches (including remote)
 ```
 
----
 
 ## 4. Staging Changes - Files, Lines, and Chunks
 
@@ -509,7 +503,6 @@ git status
 2. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) or `Space`
 3. File moves back to "Changes"
 
----
 
 ## 5. Committing with Screen Readers
 
@@ -585,7 +578,6 @@ git commit -am "docs: update screen reader instructions"
 - Your changes are now part of Git history
 - The commit exists locally only - you must **push** to send it to GitHub (see Section 6)
 
----
 
 ## 6. Push and Pull Operations
 
@@ -671,7 +663,6 @@ If your branch is behind `main`, look for the **"Update branch"** button on your
 - VS Code can check for remote changes automatically every few minutes
 - Enable: Settings (`Ctrl+,` - Mac: `Cmd+,`) → search "git autofetch" → set to `true`
 
----
 
 ## Syncing Your Fork with the Upstream Repository
 
@@ -752,7 +743,6 @@ If you've made changes to the same files the upstream has changed, merge conflic
 
 **Best practice:** Always sync before starting new work on a fork. A quick `git fetch upstream` at the start of each session prevents conflicts from accumulating.
 
----
 
 ## 7. Discarding Changes
 
@@ -807,7 +797,6 @@ The file is staged for deletion - you still need to commit to record the removal
 - Using `Git: Delete` (git rm) stages the deletion in one step
 - Use `git rm` when you want to track the file removal as part of your next commit
 
----
 
 ## 8. Timeline View - File History and Blame
 
@@ -881,7 +870,6 @@ This is incredibly useful for understanding:
 | `git.blame.ignoreWhitespace` | `false` | When `true`, whitespace-only changes (reformatting) are excluded from blame - useful when code was reformatted without logic changes |
 | `git.blame.editorDecoration.disableHover` | `false` | When `true`, disables the hover tooltip on blame annotations - reduces screen reader noise if you find the blame decorations intrusive |
 
----
 
 ## 9. Resolving Merge Conflicts in VS Code
 
@@ -961,7 +949,6 @@ If you want to cancel the merge and go back to before you started:
 
 Everything returns to the pre-merge state.
 
----
 
 ## 10. Stash Management
 
@@ -1039,7 +1026,6 @@ If you no longer need what's in a stash:
 3. Select "Git: Drop Stash..."
 4. Choose which stash to delete
 
----
 
 ## 10b. Emergency Recovery - git reflog
 
@@ -1111,7 +1097,6 @@ Reflog records are stored in your local `.git/` directory and are **not pushed t
 
 **Workshop tip:** If you run a reset or rebase during the workshop and lose something, immediately run `git reflog` before doing anything else. The recovery window is open as long as you haven't run `git gc`.
 
----
 
 ## 11. Alternative Git Interfaces
 
@@ -1160,7 +1145,6 @@ git log                        # View commit history
 
 **Screen reader tip:** Terminal output is plain text - more predictable than GUI elements for some operations.
 
----
 
 ## VS Code Keyboard Shortcuts - Git Operations Quick Reference
 
@@ -1179,7 +1163,6 @@ git log                        # View commit history
 | Integrated terminal | `Ctrl+Backtick` |
 | Delete file from repo (git rm) | `Ctrl+Shift+P` → "Git: Delete" |
 
----
 
 ## Try It: Clone, Branch, Commit
 
@@ -1198,7 +1181,6 @@ Do the complete Git workflow once, start to finish:
 
 > **What success feels like:** Your change is on GitHub. You can verify by visiting the repository and switching to your branch. Every future contribution follows this same six-step pattern.
 
----
 
 *Next: [GitHub Pull Requests Extension](12-github-pull-requests-extension.md)*  
 *Back: [VS Code Setup & Accessibility Basics](10-vscode-basics.md)*  

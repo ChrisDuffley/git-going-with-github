@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 12-15 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - GitHub Projects: boards, tables, and roadmap views
 - How these tools help teams coordinate at scale
 
----
 
 ### Concept Coverage Checklist
 
@@ -79,7 +77,6 @@ but keep the main narrative focused on the primary chapter.
 
 > Labels, milestones, and projects are the organizational layer of GitHub. They turn a chaotic list of issues into a structured, navigable, prioritized body of work.
 
----
 
 ## Labels
 
@@ -281,7 +278,6 @@ gh label create "in progress" --description "Being actively worked on" --color "
 
 **Accessibility note for color:** Labels have color, but they also have a text name and description - the color is supplementary information. Screen readers announce the label name, not the color, so labels are fully accessible.
 
----
 
 ## Milestones
 
@@ -377,7 +373,6 @@ Requires write access:
 
 Screen readers handle date pickers inconsistently - typing the date is most reliable across browsers.
 
----
 
 ## Cross-References
 
@@ -417,7 +412,6 @@ The `Closes #42` keyword must appear in:
 
 It does **not** fire from comments on the PR. If you write "Closes #42" in a comment, it creates a reference but does not auto-close the issue on merge.
 
----
 
 ## GitHub Projects
 
@@ -473,7 +467,6 @@ Or from within a project:
 2. Type `#` to search for existing issues
 3. Select the issue → it's added to the project
 
----
 
 ## Practical Organization Strategy for the Hackathon
 
@@ -505,7 +498,6 @@ Description: All contributions made during Day 1 of the Open Source AT Hackathon
 4. PR merged → issue closes automatically → milestone progress updates
 ```
 
----
 
 ## Try It: Label and Link
 
@@ -520,7 +512,6 @@ Go to the Learning Room repository and do two things:
 
 > **What success feels like:** The label now appears on the issue, and your cross-reference is a clickable link that connects the two issues. That's project management on GitHub - and you did it in under two minutes.
 
----
 
 > ### Day 2 Amplifier - Accessibility Agents: `@issue-tracker` with Labels
 >
@@ -533,14 +524,12 @@ Go to the Learning Room repository and do two things:
 >
 > *Labeling today is not overhead. It is configuring the input layer that every agent downstream depends on.*
 
----
 
 *Next: [Notifications](09-notifications.md)*
 *Back: [Culture and Etiquette](07-culture-etiquette.md)*
 *Related: [Working with Issues](04-working-with-issues.md) | [Day 1 Agenda](../DAY1_AGENDA.md)*
 
 
----
 
 ### Supplementary: GitHub Projects Deep Dive - boards, tables, custom fields
 
@@ -551,7 +540,6 @@ Go to the Learning Room repository and do two things:
 
 > GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
 
----
 
 ## Table of Contents
 
@@ -568,7 +556,6 @@ Go to the Learning Room repository and do two things:
 11. [Accessibility Agents: `/project-status`](#11-accessibility-agents-project-status)
 12. [Exercises](#12-exercises)
 
----
 
 ## 1. Projects v2: What Changed
 
@@ -585,7 +572,6 @@ GitHub has two generations of project tooling. The current generation - called *
 
 If you see "Projects (Beta)" references in older documentation, those referred to the early rollout of v2. It is now stable and the default.
 
----
 
 ## 2. Creating a Project
 
@@ -619,7 +605,6 @@ Projects can be created at the **organization level** (shared across all repos i
 5. You land on the new empty project
 ```
 
----
 
 ## 3. The Three Layouts in Depth
 
@@ -680,7 +665,6 @@ A horizontal timeline. Items appear as bars spanning their start/due dates. Iter
 - Add a **Date** custom field (e.g., "Start Date", "Due Date") or use a **Milestone** field
 - Items without dates appear in the ungrouped section
 
----
 
 ## 4. Custom Fields
 
@@ -721,7 +705,6 @@ Tab to "+" column header button → Enter
 3. Type value (text/number) or select from dropdown (single select)
 4. `Enter` or `Tab` to confirm
 
----
 
 ## 5. Adding and Managing Items
 
@@ -761,7 +744,6 @@ In Table view:
 2. A bulk action bar appears at the top
 3. Options: change Status, assign label, change assignee, archive, delete
 
----
 
 ## 6. Built-In Automations
 
@@ -804,7 +786,6 @@ For more complex automations, Projects v2 has a full GraphQL API and works with 
 
 See [Appendix Q: GitHub Actions and Workflows](appendix-q-github-actions-workflows.md) for the foundation, and the [GitHub documentation on automating projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project) for advanced patterns.
 
----
 
 ## 7. Iterations (Sprints)
 
@@ -832,7 +813,6 @@ From any project:
 2. Select **"Current iteration"**
 3. See: items by status, completion rate, items added vs closed over time
 
----
 
 ## 8. Views and Filters
 
@@ -874,7 +854,6 @@ In Table or Board view, you can group rows:
 Multiple sort levels are supported. Primary sort → secondary sort:
 - Priority ascending, then due date ascending
 
----
 
 ## 9. Cross-Repository Projects
 
@@ -898,7 +877,6 @@ Filter: repo:community-access/accessibility-agents
 
 **Common use case:** An organization project tracking all accessibility bugs across every repo, labeled `accessibility`, with Auto-add enabled.
 
----
 
 ## 10. Screen Reader Navigation Reference
 
@@ -960,7 +938,6 @@ Backspace → Remove last filter token
 Escape → Clear focus from filter bar
 ```
 
----
 
 ## 11. Accessibility Agents: `/project-status`
 
@@ -1008,7 +985,6 @@ After the overview: "Want to see a specific column or check a team member's work
 - During sprint planning: identify stale and blocked items before the next cycle
 - After a weekend: catch up on what moved while you were away
 
----
 
 ## 12. Exercises
 
@@ -1041,7 +1017,6 @@ After the overview: "Want to see a specific column or check a team member's work
 3. Create a view filtered to `is:issue label:accessibility`
 4. Set up Auto-add: any issue with the `accessibility` label in those repos goes to this project automatically
 
----
 
 > **From Chapter 08:** For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
 

@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 8-10 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Peer review: how students review each other's work
 - Building confidence through low-stakes practice
 
----
 
 ### Concept Coverage Checklist
 
@@ -82,7 +80,6 @@ learning-room (SHARED)
 - **Peer review** - You review the people sitting next to you
 - **Automation** - The bot serves one repo, coordinating all contributions
 
----
 
 ## Two Tracks, One Repository
 
@@ -122,7 +119,6 @@ Mona verifies your step         Human peer reviewer approves
 Next step unlocked             Ready to merge
 ```
 
----
 
 ## Learning Room Folder Structure
 
@@ -152,7 +148,6 @@ learning-room/
 └── [other files for practice]
 ```
 
----
 
 ## The Practice Files: What You Will Work On
 
@@ -214,7 +209,6 @@ Each challenge lists the file(s) to edit, estimated time, skills practiced, succ
 
 Seven group exercises for study groups, ranging from a Documentation Sprint (divide `docs/welcome.md` among group members) to a Full Repository Audit (each person audits a section of the workshop documentation). Groups of 2-6 students work together with coordinated PRs and cross-review.
 
----
 
 ## How PR Sharing Works
 
@@ -231,7 +225,7 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
    - Added contributor backgrounds paragraph
    - Added guidance on evaluating issues
    - Added note about GitHub profile impact
-   
+
    Closes #12
    ```
 5. **Submits the PR**
@@ -266,9 +260,9 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 - **Example:**
   ```
   ## Peer Review Assigned
-  
+
   Hi @studentA! Your PR has been automatically paired with @studentC for peer review.
-  
+
   ### For @studentC:
   This is a great opportunity to practice code review skills! Here's what to look for:
   - Did all three [TODO] sections get completed in welcome.md?
@@ -333,7 +327,6 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 - Achievement comment is public
 - Progress reflected in Learning Paths documentation
 
----
 
 ## What All Students See
 
@@ -348,7 +341,6 @@ Seven group exercises for study groups, ranging from a Documentation Sprint (div
 | Your review request | Your notification inbox | You + PR author |
 | You assigned as reviewer | Your review requests filter | You + PR author |
 
----
 
 ## The Learning Automation System
 
@@ -376,7 +368,6 @@ When you open a PR in the Learning Room, you get **three types of feedback**:
 
 **Together:** Instant technical feedback + human mentorship + visible progress
 
----
 
 ## Study Groups (Optional)
 
@@ -398,7 +389,6 @@ This is your collaboration space!
 - Celebrate each other's achievements
 ```
 
----
 
 ## Key Differences: Skills Module vs. Learning Room
 
@@ -414,7 +404,6 @@ This is your collaboration space!
 | **Completion** | Badge on your profile | Progress appears in Learning Paths |
 | **Community** | You alone | All students together |
 
----
 
 ## Tips for PR Sharing
 
@@ -479,7 +468,7 @@ Conversation Tab (reading reviews):
   3. Your name appears as reviewer
   4. Read bot comment
   5. Read peer feedback
-  
+
 Files Changed Tab (what actually changed):
   1. Press H to navigate files
   2. Press T to explore file tree
@@ -498,7 +487,7 @@ Conversation Tab (reading reviews):
   2. Listen for "Reviewers" heading
   3. Your name appears as reviewer
   4. VO+Down to read bot comment and peer feedback
-  
+
 Files Changed Tab (what actually changed):
   1. Quick Nav H to navigate file headings
   2. VO+U → Landmarks → "File tree" to explore files
@@ -599,7 +588,6 @@ Files Changed Tab (what actually changed):
 
 </details>
 
----
 
 ## FAQ: PR Sharing in Learning Room
 
@@ -630,7 +618,6 @@ Comment explaining why. Request human review. The bot isn't perfect - that's why
 ### "Do I need to complete every challenge?"
 No! The Learning Room has challenges for all skill levels. You can pick what interests you, complete at your pace, and continue after the workshop.
 
----
 
 ## Celebration: You're Contributing
 
@@ -648,7 +635,6 @@ This is not hypothetical. This is not simulation. This is real.
 
 
 
----
 
 *Next: [Working with Issues](04-working-with-issues.md)*
 *Back: [Navigating Repositories](02-navigating-repositories.md)*

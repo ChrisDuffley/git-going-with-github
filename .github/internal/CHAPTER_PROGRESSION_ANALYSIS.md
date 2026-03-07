@@ -6,7 +6,6 @@
 
 **New "The Learning Room" chapter (02a) fills a critical gap** - students now understand the shared environment before learning individual skills.
 
----
 
 ## Foundation Level: Understanding the Environment
 
@@ -41,52 +40,51 @@ NEW 02a. The Learning Room
 - Chapter 02a explains the shared environment (now they're READY)
 - They're ready to learn individual skills (03-09)
 
----
 
 ## Day 1: Skill Building (Progressive)
 
 ```
 Skill Level 1: Basic Repo Navigation
-03. Navigating Repositories☆☆☆
+03. Navigating Repositories
     └─ Dependency: 02a (know you're in a shared repo with others)
        Skills: Finding files, reading commits, switching branches
        Prerequisite for: 04 (can't file issue until you navigate)
 
 Skill Level 2: Issue Management
-04. Working with Issues☆☆☆
+04. Working with Issues
     └─ Dependency: 03 (must navigate to find the issue list)
        Skills: Filing, searching, filtering, commenting, @mentions
        Prerequisite for: 05 (issues and PRs are linked - "Closes #X")
 
 Skill Level 3: Pull Request Mechanics
-05. Working with Pull Requests☆☆
+05. Working with Pull Requests
     └─ Dependency: 04 (PRs reference issues with "Closes #XX")
        Skills: Creating, reviewing, merging, commit history
        Prerequisite for: 06 (conflicts only happen in PRs)
 
 Level 1 Problem-Solving: Merge Conflicts
-06. Merge Conflicts☆
+06. Merge Conflicts
     └─ Dependency: 05 (must understand PRs before fixing conflicts)
        Skills: Understanding conflict markers, resolving, communicating
        Prerequisite for: Nothing (reference when problem appears)
        Why NOT earlier: Students must try to merge before this makes sense
 
 Soft Skills / Interaction
-07. Culture and Etiquette☆☆☆
+07. Culture and Etiquette
     └─ Dependency: 05 (have written comments, now understand tone matters)
        Skills: Communication style, inclusive language, respect, asynchronous mindset
        Prerequisite for: 08 (labels/projects assume team coordination)
        Why after PRs: Students have actual experience now; advice lands better
 
 Level 2: Organizing Work
-08. Labels, Milestones, and Projects☆☆
+08. Labels, Milestones, and Projects
     └─ Dependency: 07 (assumes shared team culture)
        Skills: Categorization, filtering, cross-reference, project boards
        Prerequisite for: 09 (notifications filtered by labels)
        Why here: Students see their own work is now categorized
 
 Housekeeping/Optimization
-09. Notifications and Mentions☆☆☆
+09. Notifications and Mentions
     └─ Dependency: 08 (can filter notifications by label)
        Skills: Managing inbox, threading, subscribing, @mentions
        Prerequisite for: Nothing (reference after someone gets overwhelmed)
@@ -110,7 +108,6 @@ Housekeeping/Optimization
 - 08 (labels) → 04 (issues can be labeled)
 - 07 (culture) → ALL of 03-09 (tone matters in every interaction)
 
----
 
 ## Bridge: Day 1 → Day 2
 
@@ -122,27 +119,26 @@ Housekeeping/Optimization
        Leads to: 11 (introduces new tool: VS Code)
 ```
 
----
 
 ## Day 2: Skill Amplification
 
 ```
 Tool Foundation: IDE Setup
-11. VS Code: Setup & Accessibility Basics☆☆☆
+11. VS Code: Setup & Accessibility Basics
     └─ Dependency: 10 (understand why new tool)
        Skills: Screen reader mode, keyboard navigation, accessibility settings
        Prerequisite for: 12 (can't use git if VS Code is misconfigured)
        Why NOT on Day 1: New tool requires dedicated setup time
 
 Core Tool: Version Control in IDE
-12. VS Code: Git & Source Control☆☆
+12. VS Code: Git & Source Control
     └─ Dependency: 11 (VS Code operational) + 03 (understand branches)
        Skills: Cloning, branching, staging, committing, merge handling
        Prerequisite for: 13 (PR extension uses git state)
        Amplifies: Chapter 05 (PRs) but FROM THE IDE instead of browser
 
 IDE Integration: PR Extension
-13. VS Code: GitHub PR Extension☆☆
+13. VS Code: GitHub PR Extension
     └─ Dependency: 12 (git status visible in extension)
        Skills: Viewing PRs, reviewing in IDE, checking out branches
        Prerequisite for: Nothing (can use browser instead)
@@ -150,7 +146,7 @@ IDE Integration: PR Extension
        Why here not earlier: Need IDE + git working first
 
 AI Assistance: Copilot Inline
-14. GitHub Copilot Basics☆
+14. GitHub Copilot Basics
     └─ Dependency: 11 (Copilot runs in VS Code)
        Skills: Accepting/rejecting suggestions, effective prompting
        Prerequisite for: 19 (agents build on Copilot understanding)
@@ -165,13 +161,13 @@ Expert Culminating Skill: Code Review
        Pedagogical arc: Learn manual deep skill → show how to automate it
 
 Reference/Advanced: Infrastructure & Process
-16. Issue Templates☆☆
+16. Issue Templates
     └─ Dependency: 04 (issue filing mechanics)
        Skills: YAML form creation, structured issues, automation triggers
        Prerequisite for: Nothing (optional automation)
        Category: Advanced - for facilitators or interested students
 
-17. GitHub Actions & Workflows☆
+17. GitHub Actions & Workflows
     └─ Dependency: 05 (PRs trigger workflows) + 14 (Copilot context)
        Skills: YAML syntax, triggers, status checks, CI/CD basics
        Prerequisite for: Understanding Accessibility Agents cloud workflows
@@ -186,7 +182,6 @@ Expert: Agentic Automation Synthesis
        Pedagogical arc: FINISH - "Accessibility Agents does not replace what you learn. It amplifies it."
        Quote from README: This is the final synthesis showing automation of all manual skills
 
----
 
 ## Appendices: Reference Material (No Dependency)
 
@@ -227,7 +222,6 @@ G. Resources
 | 17 | GitHub Actions | Builds on 05 (PRs) + 14 (understanding automation) |
 | 18 | Accessibility Agents (agentic automation) | Builds on 14 (Copilot) + 15 (code review mastery); FINAL synthesis |
 
----
 
 ## Appendices: Reference Material (No Dependency)
 
@@ -257,7 +251,6 @@ F. VS Code Accessibility Reference
 - Can be skipped entirely (optional)
 - Support both Day 1 and Day 2
 
----
 
 ## Visualizing the Learning Arc
 
@@ -272,7 +265,7 @@ FOUNDATION (Understand the Tool)
    02a Learning Room [NEW]
     ↓
    ================================
-   
+
 SKILL BUILDING (Hands-On Practice) - DAY 1
    03 Navigate Repos
     ↓
@@ -289,12 +282,12 @@ SKILL BUILDING (Hands-On Practice) - DAY 1
    09 Inbox Management
     ↓
    ================================
-   
+
 TRANSITION (Tool Change)
    10 Day 2 Overview
     ↓
    ================================
-   
+
 SKILL AMPLIFICATION (Same Skills, New Tool) - DAY 2
    11 VS Code Setup
     ↓
@@ -311,26 +304,25 @@ SKILL AMPLIFICATION (Same Skills, New Tool) - DAY 2
    17 Accessibility Agents (automate everything you've mastered)
     ↓
    ================================
-   
+
 REFERENCE
    A-H Appendices (with G = GitHub Actions)
     (reference, open as needed)
 ```
 
----
 
 ## Dependency Chain: Critical Path
 
 **For a student to complete Block 5 (Real Contribution):**
 ```
 Must know:
-  ✓ 00: System ready
-  ✓ 01: GitHub structure (mental model)
-  ✓ 02: What we're doing today (schedule)
-  ✓ 02a: The shared learning room (our environment)
-  ✓ 03: How to navigate repos (find the issue)
-  ✓ 04: How to work with issues (read the assignment)
-  ✓ 05: How to create and review PRs (THE MAIN SKILL)
+   00: System ready
+   01: GitHub structure (mental model)
+   02: What we're doing today (schedule)
+   02a: The shared learning room (our environment)
+   03: How to navigate repos (find the issue)
+   04: How to work with issues (read the assignment)
+   05: How to create and review PRs (THE MAIN SKILL)
 
 Nice to know:
   ◇ 07: Culture/tone (makes comments better)
@@ -341,18 +333,18 @@ Nice to know:
 **For a student to complete Day 2:**
 ```
 Must complete:
-  ✓ All of Day 1 (11 depends on 01-09)
-  ✓ 10: Day 2 overview
-  ✓ 11: VS Code setup
-  ✓ 12: Git in VS Code
-  
+   All of Day 1 (11 depends on 01-09)
+   10: Day 2 overview
+   11: VS Code setup
+   12: Git in VS Code
+
 Then build:
   ◆ 13: PR extension (extends 05)
   ◆ 14: Copilot (new skill)
   ◆ 15: Code Review (culminating skill - master the manual deep skill)
   ◆ 16: Issue Templates (optional advanced)
   → 17: Accessibility Agents (automate what you've mastered in 15)
-  
+
 Optional post-workshop:
   Appendix E: GitHub Actions (infrastructure deep-dive)
   Appendix F: GitHub Projects (boards, tables, roadmaps)
@@ -366,7 +358,6 @@ Optional post-workshop:
   Appendix O: Resources (every link and reference)
 ```
 
----
 
 ## Verification: Is This Truly Progressive?
 
@@ -402,7 +393,6 @@ Optional post-workshop:
 - **PASS** - Chapter 14 (code review) comes BEFORE Chapter 16 (students learn manual skill first, then automation)
 - **PASS** - Chapter 16 (Accessibility Agents) is FINAL (student mastery of all prior skills gets automated and amplified)
 
----
 
 ## Additional Improvements Made with New Chapter 02a
 
@@ -418,7 +408,6 @@ Optional post-workshop:
 - [docs/02-day1-agenda.md](docs/02-day1-agenda.md) - Added "Read This BEFORE Day 1" section pointing to 02a
 - [docs/03a-the-learning-room.md](docs/03a-the-learning-room.md) - New comprehensive guide
 
----
 
 ## Final Recommendation
 
@@ -455,33 +444,32 @@ GitHub Actions is infrastructure-heavy (YAML, triggers, CI/CD) and doesn't belon
 ### Suggested Optional Enhancements
 
 1. **Add a "Prerequisites" section to each chapter** - at the top, list which chapters should be read first
-   
+
    Example:
    ```
    # 04. Working with Issues
-   
+
    **Prerequisites:** Chapters 03 (navigation), 02a (Learning Room)
    **Recommended before:** Chapter 05 (pull requests)
    ```
 
 2. **Add forward references in chapters** - hint at what's coming next
-   
+
    Example:
    ```
    Next chapter: Chapter 05 (Pull Requests) - you'll create PRs to resolve your issues
    ```
 
 3. **Add difficulty badges to the chapter list in README**
-   
+
    | # | Chapter | Difficulty |
    |-|-|-|
-   | 03 | Navigating Repositories |☆☆☆ Beginner |
-   | 04 | Working with Issues |☆☆☆ Beginner |
-   | 05 | Working with Pull Requests |☆☆ Intermediate |
+   | 03 | Navigating Repositories | Beginner |
+   | 04 | Working with Issues | Beginner |
+   | 05 | Working with Pull Requests | Intermediate |
 
 These are "nice to have" - not necessary, since the structure is already progressive.
 
----
 
 ## Summary Table: Complete Chapter Progression
 
@@ -517,6 +505,5 @@ These are "nice to have" - not necessary, since the structure is already progres
 | P | Branch Protection | | 05 | None | Appendix | Reference |
 | Q | Resources | | None | Any | Appendix | Reference |
 
----
 
 *Chapter Structure: 18 core chapters (00-17) plus 16 appendices (A-Q, no M). GitHub Actions moved to appendix for lighter intro course path. New appendices N, O, P added February 2026. All dependencies verified. Ship with confidence!*

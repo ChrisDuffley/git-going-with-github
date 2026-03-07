@@ -3,7 +3,6 @@
 
 This guide walks you through everything you need to set up before your first GitHub contribution. Complete all steps before the workshop begins.
 
----
 
 ## Step 1 - Create a GitHub Account
 
@@ -14,7 +13,6 @@ If you don't already have a GitHub account, create one at [github.com/join](http
 - Avoid special characters other than hyphens
 - Your username cannot be changed easily later
 
----
 
 ## Step 2 - Configure Accessibility Settings
 
@@ -25,7 +23,6 @@ GitHub has several accessibility settings that make navigation significantly eas
 3. Under "Tab size", set to your preferred number of spaces
 4. Confirm the page reads "Accessibility settings saved" before leaving
 
----
 
 ## Step 3 - GitHub Interface (No Action Needed)
 
@@ -40,7 +37,6 @@ You should automatically have:
 
 If something doesn't match the workshop materials, verify your Feature Preview settings as above, then try clearing your browser cache and reloading the page.
 
----
 
 ## Step 4 - Disable Hovercards
 
@@ -51,7 +47,6 @@ GitHub's hovercards appear when your mouse hovers over a username or repository.
 3. Uncheck "Show user hovercards"
 4. Save the changes
 
----
 
 ## Step 5 - Configure Your Screen Reader for GitHub
 
@@ -73,7 +68,6 @@ GitHub's hovercards appear when your mouse hovers over a username or repository.
 2. Verbosity → Punctuation: set to "Some" or "All" for reading code blocks
 3. Recommended browser: Safari (best VoiceOver compatibility) or Google Chrome
 
----
 
 ## Step 6 - Fork the Workshop Repository
 
@@ -86,7 +80,6 @@ To make your own contributions, you need your own copy of the repository.
 
 Your fork is at: `github.com/[your-username]/[repository-name]`
 
----
 
 ## Step 7 - Verify Your Setup
 
@@ -99,7 +92,6 @@ Before the workshop begins, confirm that you can:
 
 If any of these steps are difficult, bring your question to the workshop. There will be dedicated setup time at the start of Day 1.
 
----
 
 ## Getting Help Before the Workshop
 
@@ -107,6 +99,5 @@ If you run into setup issues before the workshop:
 - Open an issue in the workshop repository using the "Feature or Improvement Request" template
 - Ask your question in the issue - be specific about what step you are on and what happens when you try it
 
----
 
 *Note: Links marked [TODO] in this document need to be updated before the workshop. See the facilitator guide for details.*

@@ -8,7 +8,6 @@
 >
 > **Note:** Workshop content is being actively refined during the week of March 7, 2026. Students should expect updates to materials leading up to and during the course.
 
----
 
 ## How This Course Works
 
@@ -44,7 +43,6 @@ Day 2 - Deepen with VS Code + Accessibility Agents
 
 **The key principle:** Learn the manual skill first, then see how it is automated. The agents only make sense when you already understand what they are doing.
 
----
 
 ## Before You Begin
 
@@ -58,7 +56,6 @@ Complete everything in **[Chapter 0: Pre-Workshop Setup](00-pre-workshop-setup.m
 
 **Time needed:** About 30 minutes.
 
----
 
 ## Companion Audio Series
 
@@ -68,7 +65,6 @@ Every chapter and appendix has a companion podcast episode - a conversational tw
 - **[Subscribe via RSS](https://community-access.org/git-going-with-github/podcasts/feed.xml)** in your preferred podcast app
 - Episodes are 8-18 minutes each - perfect for commutes, walks, or screen reader breaks
 
----
 
 ## Day 1: GitHub Foundations
 
@@ -89,7 +85,6 @@ These chapters are designed to be read and practiced in order. Each builds on th
 
 **Day 1 Total:** ~7.5 hours of structured time
 
----
 
 ## Day 2: VS Code + Accessibility Agents
 
@@ -164,7 +159,6 @@ Open these at any time during the workshop. They are not part of the chapter seq
 | [Y](appendix-y-accessing-workshop-materials.md) | **Accessing Workshop Materials** | How to download, read offline, and keep updated |
 | [Z](appendix-z-github-skills-catalog.md) | **GitHub Skills - Complete Course Catalog** | All 36 modules in six learning paths with links and prerequisites |
 
----
 
 ## Exercises at a Glance
 
@@ -197,7 +191,6 @@ The workshop includes 24 structured exercises across the curriculum. Every exerc
 | **Ch 16** | Exercise 2 | Extend the @template-builder agent with new workflows |
 | **Ch 16** | Exercise 3 | Practice iterative refinement with agents |
 
----
 
 ## Getting Help
 
@@ -214,7 +207,6 @@ If you get stuck at any point during the workshop, these resources are always av
 
 **Still stuck?** Open an issue on this repository describing what you tried, what happened, and what you expected. Include your screen reader and operating system.
 
----
 
 ## Workshop at a Glance
 
@@ -226,10 +218,8 @@ If you get stuck at any point during the workshop, these resources are always av
 | **Outcome** | You can use GitHub independently | Your name is in a real project's commit history |
 | **Time** | ~7.5 hours | ~8 hours |
 
----
 
 *Ready to begin? Start with [Chapter 0: Pre-Workshop Setup](00-pre-workshop-setup.md).*
 
----
 
 Last updated: February 2026

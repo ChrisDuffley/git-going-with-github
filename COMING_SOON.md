@@ -6,14 +6,12 @@
 
 The full workshop curriculum, lesson materials, and reference guides are currently being finalized. They will be published here before the workshop begins on March 7, 2026.
 
----
 
 ### In the Meantime
 
 - [**Join the Discussion Forum**](https://github.com/community-access/git-going-with-github/discussions) - ask questions, connect with fellow participants
 - [**Return to the home page**](https://community-access.org/git-going-with-github/)
 
----
 
 ### Questions?
 

@@ -7,7 +7,6 @@
 **Audience:** Blind and low-vision developers learning GitHub and open source
 **Estimated length:** 10-12 min
 
----
 
 ### Audio Production Direction
 
@@ -35,7 +34,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 - Key features: notifications, issues, pull requests, code browsing
 - Mobile-specific gestures and accessibility considerations
 
----
 
 ### Concept Coverage Checklist
 
@@ -62,7 +60,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 > GitHub Mobile brings issues, pull requests, notifications, and code review to your iPhone, iPad, or Android device. This appendix covers setup, VoiceOver and TalkBack usage, and the tasks best suited to mobile.
 
----
 
 ## Table of Contents
 
@@ -76,7 +73,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 8. [What Mobile Does Well vs. Desktop](#8-what-mobile-does-well-vs-desktop)
 9. [Common Issues and Workarounds](#9-common-issues-and-workarounds)
 
----
 
 ## 1. Installing GitHub Mobile
 
@@ -87,7 +83,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 After installing, sign in with your GitHub account. Enable notifications when prompted - these are essential for staying on top of PR reviews and issue activity without constantly checking the web.
 
----
 
 ## 2. Getting Around the App
 
@@ -103,7 +98,6 @@ GitHub Mobile is organized into five main tabs at the bottom of the screen:
 
 Navigate between tabs with a single tap (or swipe on iOS with VoiceOver active).
 
----
 
 ## 3. VoiceOver on iOS
 
@@ -140,7 +134,6 @@ Open the Rotor by rotating two fingers on the screen as if turning a dial. Usefu
 3. Type your comment; VoiceOver announces each character
 4. When done, swipe to the **Comment** button and double tap to submit
 
----
 
 ## 4. TalkBack on Android
 
@@ -176,7 +169,6 @@ Tap with three fingers (or swipe down then right) to open the TalkBack menu. Fro
 3. Use the on-screen keyboard or dictation to type
 4. Locate the **Comment** button and double tap to submit
 
----
 
 ## 5. Working with Notifications
 
@@ -197,7 +189,6 @@ Use the filter icon at the top right to filter by:
 
 With VoiceOver or TalkBack, the filter controls are accessible form elements. Open the filter panel, navigate to each option, and activate to toggle it.
 
----
 
 ## 6. Reviewing Pull Requests
 
@@ -225,7 +216,6 @@ VoiceOver and TalkBack announce these as headings. Use heading navigation (Rotor
 
 The Files Changed tab shows a simplified diff - additions and removals are text-only (no table layout). Each changed line is announced as "Added: [content]" or "Removed: [content]", which is generally more accessible than the web diff table on small screens.
 
----
 
 ## 7. Working with Issues
 
@@ -242,7 +232,6 @@ The Files Changed tab shows a simplified diff - additions and removals are text-
 - Pull Requests tab → **Created by you** or **Assigned to you** filters
 - For issues: Home feed shows recent activity; or navigate to a specific repository → Issues → filter by Assignee, Label, or Author
 
----
 
 ## 8. What Mobile Does Well vs. Desktop
 
@@ -260,7 +249,6 @@ The Files Changed tab shows a simplified diff - additions and removals are text-
 
 **Best use of GitHub Mobile:** notification triage, quick approvals and comments, catching up on activity between sessions. For writing substantial code, descriptions, or reviewing complex diffs, use the web or VS Code.
 
----
 
 ## 9. Common Issues and Workarounds
 
@@ -279,6 +267,5 @@ Scroll down past the text field; buttons are below the keyboard dismiss area. On
 **GitHub Mobile crashes or freezes:**
 Force close the app and reopen. If the problem persists, sign out and back in via Profile → Settings → Sign out.
 
----
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix B - Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Appendix A - Glossary](appendix-a-glossary.md)*

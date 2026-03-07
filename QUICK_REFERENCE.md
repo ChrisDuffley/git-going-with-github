@@ -1,7 +1,6 @@
 # Quick Reference Guide
 ## Essential Commands, Shortcuts, and File Locations
 
----
 
 ## Screen Reader Commands for GitHub
 
@@ -47,7 +46,6 @@
 | Headings rotor | `VO+U` → `H` (then navigate) |
 | Form controls rotor | `VO+U` → `F` |
 
----
 
 ## GitHub Navigation Shortcuts (All Browsers)
 
@@ -62,7 +60,6 @@
 | Focus on search | `S` or `/` |
 | Go to code | `G` then `C` |
 
----
 
 ## VS Code Keyboard Shortcuts
 
@@ -80,7 +77,6 @@
 | Accessible View | `Alt+F2` | `Option+F2` |
 | Format document | `Shift+Alt+F` | `Shift+Option+F` |
 
----
 
 ## Git Commands (Terminal)
 
@@ -116,7 +112,6 @@ git pull upstream main                   # Pull latest from upstream
 git fetch upstream                       # Fetch without merging
 ```
 
----
 
 ## File Locations Reference
 
@@ -157,7 +152,6 @@ docs/
 └── appendix-a-glossary.md               ← Term definitions
 ```
 
----
 
 ## YAML Template Structure (Quick Template)
 
@@ -211,7 +205,6 @@ body:
           required: true
 ```
 
----
 
 ## Accessibility Testing Checklist (Quick)
 
@@ -223,7 +216,6 @@ body:
 - [ ] Color not the only way to convey information
 - [ ] Tested on: NVDA JAWS VoiceOver
 
----
 
 ## Common YAML Errors & Fixes
 
@@ -235,7 +227,6 @@ body:
 | Field not showing | Wrong `type:` or missing `id:` | Verify field has all required properties |
 | Dropdown no options | Missing `options:` list | Add `options:` with indented list |
 
----
 
 ## Where to Find Help
 
@@ -246,7 +237,6 @@ body:
 | Glossary & terms | `docs/appendix-a-glossary.md` |
 | Screen reader guide | `docs/appendix-b-screen-reader-cheatsheet.md` |
 
----
 
 ## Accessibility Hotkeys Summary
 
@@ -254,6 +244,5 @@ body:
 **VoiceOver:** Use VO+U to open rotor, then navigate by category (Headings, Links, Form Controls)  
 **VS Code:** F7 = Accessible Diff, Alt+F2 = Accessible View
 
----
 
 *Last updated: February 2026 | For latest, see README.md*

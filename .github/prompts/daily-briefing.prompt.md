@@ -1,4 +1,3 @@
----
 name: daily-briefing
 description: "Generate your daily GitHub briefing -- issues, PRs, releases, discussions, reactions, accessibility updates, and action items across all your repos in dual markdown + HTML format"
 agent: daily-briefing
@@ -8,7 +7,6 @@ tools:
   - createDirectory
   - editFiles
   - ask_questions
----
 
 Generate a comprehensive daily briefing document covering everything that needs my attention. Save both markdown and HTML versions.
 
