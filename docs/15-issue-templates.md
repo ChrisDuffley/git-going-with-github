@@ -193,15 +193,16 @@ Without this context, maintainers ask follow-up questions - which delays the fix
 
 Templates live in a specific folder in your repository:
 
-```text
-your-repo/
-+-- .github/
-    +-- ISSUE_TEMPLATE/
-    |   +-- bug_report.md         ← Markdown template
-    |   +-- feature_request.md    ← Markdown template
-    |   +-- accessibility-bug.yml ← YAML form template
-    |   +-- config.yml            ← Template chooser configuration
-    +-- pull_request_template.md  ← PR template (singular)
+```mermaid
+graph TD
+    REPO["your-repo/"]
+    REPO --> GH[".github/"]
+    GH --> IT["ISSUE_TEMPLATE/"]
+    IT --> BUG["bug_report.md\nMarkdown template"]
+    IT --> FEAT["feature_request.md\nMarkdown template"]
+    IT --> A11Y["accessibility-bug.yml\nYAML form template"]
+    IT --> CONFIG["config.yml\nTemplate chooser configuration"]
+    GH --> PRT["pull_request_template.md\nPR template (singular)"]
 ```
 
 **Markdown templates (`.md`):** Traditional template format. Pre-fills a text editor with structured Markdown content. Contributors edit the template directly, replacing instructions and placeholder text with their own content.

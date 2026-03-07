@@ -190,17 +190,18 @@ gh pr list --search "review-requested:@me"
 
 ### Pull Request Tree Structure
 
-```text
-GitHub Pull Requests
-+-- My Pull Requests
-|   +-- Assigned to Me
-|   +-- Created by Me
-|   +-- Waiting for my Review
-|   +-- All Open
-+-- [Repository Name]
-|   +-- Local Pull Request Branches (checked out locally)
-|   +-- All Open Pull Requests
-|   +-- All Closed Pull Requests
+```mermaid
+graph TD
+    ROOT["GitHub Pull Requests"]
+    ROOT --> MY["My Pull Requests"]
+    MY --> ASSIGNED["Assigned to Me"]
+    MY --> CREATED["Created by Me"]
+    MY --> WAITING["Waiting for my Review"]
+    MY --> ALLOPEN["All Open"]
+    ROOT --> REPO["Repository Name"]
+    REPO --> LOCAL["Local Pull Request Branches\n(checked out locally)"]
+    REPO --> OPEN["All Open Pull Requests"]
+    REPO --> CLOSED["All Closed Pull Requests"]
 ```
 
 #### Screen reader announcement example

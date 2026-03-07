@@ -23,14 +23,15 @@ Before starting Chapter 4 challenges, students should be able to:
 2. Explain issue -> branch -> PR -> review -> merge.
 3. Identify where bot feedback appears on PRs.
 
-```text
-learning-room (SHARED)
-+-- main branch (protected)
-+-- Student A's PR #12 (open, assigned to Student B for review)
-+-- Student B's PR #13 (open, assigned to Student C for review)
-+-- Student C's PR #14 (open, assigned to Student A for review)
-+-- Student A's PR #11 (merged, closed)
-+-- [More PRs as students contribute]
+```mermaid
+graph TD
+    LR["learning-room (SHARED)"]
+    LR --> MAIN["main branch (protected)"]
+    LR --> PR12["Student A's PR #12\nopen, assigned to Student B for review"]
+    LR --> PR13["Student B's PR #13\nopen, assigned to Student C for review"]
+    LR --> PR14["Student C's PR #14\nopen, assigned to Student A for review"]
+    LR --> PR11["Student A's PR #11\nmerged, closed"]
+    LR --> MORE["More PRs as students contribute"]
 ```
 
 ### Why one shared repo?
@@ -68,19 +69,13 @@ Throughout Day 1, you work on **two parallel learning tracks**:
 
 #### The Two Tracks Reinforce Each Other
 
-```text
-Skills Module (individual)      Learning Room (group)
-     ↓                               ↓
-Create a branch                 Create a branch (together)
-     ↓                               ↓
-Open a PR                       Open a PR (see others' too)
-     ↓                               ↓
-Get instant bot feedback        Get bot feedback + human review
-     ↓                               ↓
-Mona verifies your step         Human peer reviewer approves
-     ↓                               ↓
-Next step unlocked             Ready to merge
-```
+| Step | Skills Module (individual) | Learning Room (group) |
+| --- | --- | --- |
+| 1 | Create a branch | Create a branch (together) |
+| 2 | Open a PR | Open a PR (see others' too) |
+| 3 | Get instant bot feedback | Get bot feedback + human review |
+| 4 | Mona verifies your step | Human peer reviewer approves |
+| 5 | Next step unlocked | Ready to merge |
 
 
 ## Learning Room Folder Structure
