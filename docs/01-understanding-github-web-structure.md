@@ -24,7 +24,7 @@
 GitHub is not a single page or a single kind of page. It is three nested levels, and understanding which level you are on changes how you navigate.
 
 ```text
-Level 1: Your Account / Profile
+    Level 1: Your Account / Profile
    github.com/your-username
    github.com/settings/...
    github.com/notifications
@@ -507,7 +507,7 @@ Open any GitHub repository - try [github.com/community-access/accessibility-agen
 
 ## Day 2 Amplifier
 
-> Once you have this mental model solid, the Accessibility Agents agents make more sense. The `@daily-briefing` agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.
+> Once you have this mental model solid, the Accessibility Agents make more sense. The `@daily-briefing` agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.
 
 
 *Next: [Navigating Repositories](02-navigating-repositories.md)*
