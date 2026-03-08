@@ -35,16 +35,49 @@ jobs:
         run: node scripts/build-epub.js
 
       - name: Install liblouis (braille translator — no TTS needed)
-        run: sudo apt-get install -y liblouisutdml-bin
+        run: sudo apt-get install -y liblouis-bin python3-louis
 
       - name: Convert EPUB to BRF (Braille — no TTS required)
         continue-on-error: true
         run: |
           mkdir -p epub/brf
-          # --standalone produces a single well-formed HTML doc; file2brl requires valid XML
-          pandoc epub/git-going-with-github.epub -f epub -t html --standalone -o /tmp/book.html
-          file2brl /tmp/book.html epub/brf/git-going-with-github.brf || echo "BRF conversion failed"
-          ls -lh epub/brf/ || echo "No BRF output produced"
+          # Pandoc extracts plain text from EPUB
+          pandoc epub/git-going-with-github.epub -f epub -t plain -o /tmp/book.txt
+          # Python + liblouis translates text → Grade 2 braille → NABCC ASCII BRF (no TTS, pure text)
+          python3 - <<'EOF'
+import louis, sys
+
+NABCC = ' A1B\'K2L@CIF/MSP"E3H9O6R^DJG>NTQ,*5<-U8V.%[$+X!&;:4\\0Z7(_?W]#Y)='
+
+def to_brf(ub):
+    out = []
+    for ch in ub:
+        c = ord(ch)
+        if 0x2800 <= c <= 0x283F:
+            out.append(NABCC[c - 0x2800])
+        else:
+            out.append(ch if c < 128 else ' ')
+    return ''.join(out)
+
+with open('/tmp/book.txt', encoding='utf-8', errors='replace') as f:
+    lines = f.read().split('\n')
+
+brf = []
+for line in lines:
+    if line.strip():
+        try:
+            brf.append(to_brf(louis.translateString(['en-ueb-g2.ctb'], line)))
+        except Exception:
+            brf.append(line[:80])
+    else:
+        brf.append('')
+
+out = '\n'.join(brf)
+with open('epub/brf/git-going-with-github.brf', 'w', encoding='ascii', errors='replace') as f:
+    f.write(out)
+print(f"BRF written: {len(out)} bytes, {len(brf)} lines")
+EOF
+          ls -lh epub/brf/
 
       - name: Upload EPUB artifact
         uses: actions/upload-artifact@v4
