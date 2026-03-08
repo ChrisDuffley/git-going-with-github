@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Labels, Milestones, and Projects - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Labels, Milestones, and Projects</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Labels, Milestones, and Projects</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Labels, Milestones, and Projects</h1>
 <blockquote>
@@ -37,7 +66,6 @@
 <blockquote>
 <p>Labels, milestones, and projects are the organizational layer of GitHub. They turn a chaotic list of issues into a structured, navigable, prioritized body of work.</p>
 </blockquote>
-<hr>
 <h2>Workshop Recommendation (Chapter 8)</h2>
 <p>Chapter 8 is a <strong>guided triage chapter</strong> focused on organization skills.</p>
 <ul>
@@ -76,7 +104,6 @@
 </ol>
 <h3>Learning Moment</h3>
 <p>Triage is about clarity, not authority. Good recommendations reduce maintainer effort and speed up collaboration.</p>
-<hr>
 <h2>Labels</h2>
 <h3>What Are Labels?</h3>
 <p>Labels are colored tags applied to issues and pull requests. They communicate at a glance what category, priority, or status an item belongs to. When you scan the issue list with your screen reader, labels are announced alongside each issue title.</p>
@@ -285,7 +312,6 @@ gh label create <span class="hljs-string">&quot;in progress&quot;</span> --descr
 </details>
 
 <p><strong>Accessibility note for color:</strong> Labels have color, but they also have a text name and description - the color is supplementary information. Screen readers announce the label name, not the color, so labels are fully accessible.</p>
-<hr>
 <h2>Milestones</h2>
 <h3>What Are Milestones?</h3>
 <p>Milestones group issues and PRs toward a shared goal or deadline. Think of a milestone as a sprint, a version release, or an event (like &quot;Hackathon Day 1 Deliverables&quot;). A milestone shows:</p>
@@ -372,7 +398,6 @@ gh issue list --milestone <span class="hljs-string">&quot;Hackathon Day 1&quot;<
 <li>Or press <code>Space</code> or <code>Enter</code> to open a calendar widget (if your screen reader supports it) and arrow through dates</li>
 </ul>
 <p>Screen readers handle date pickers inconsistently - typing the date is most reliable across browsers.</p>
-<hr>
 <h2>Cross-References</h2>
 <p>Cross-references are links between issues, PRs, and commits. GitHub automatically renders <code>#42</code> as a link to issue or PR #42. This creates a web of context so any contributor can trace the history of a decision.</p>
 <h3>Types of Cross-References</h3>
@@ -437,7 +462,6 @@ gh issue list --milestone <span class="hljs-string">&quot;Hackathon Day 1&quot;<
 <li>A <strong>commit message</strong> pushed to the default branch</li>
 </ul>
 <p>It does <strong>not</strong> fire from comments on the PR. If you write &quot;Closes #42&quot; in a comment, it creates a reference but does not auto-close the issue on merge.</p>
-<hr>
 <h2>GitHub Projects</h2>
 <h3>What Is a GitHub Project?</h3>
 <p>GitHub Projects is a built-in project management tool. It can display issues and PRs from across multiple repositories in one view. Projects support three layouts:</p>
@@ -499,7 +523,6 @@ Step 5: Enter on a card to open the issue/PR panel</code></pre>
 <li>Type <code>#</code> to search for existing issues</li>
 <li>Select the issue → it&#39;s added to the project</li>
 </ol>
-<hr>
 <h2>Practical Organization Strategy for the Hackathon</h2>
 <p>Here is a recommended structure for the <code>learning-room</code> sandbox project:</p>
 <h3>Labels to create</h3>
@@ -519,7 +542,6 @@ Description: All contributions made during Day 1 of the Open Source AT Hackathon
 2. Comment &quot;I&#x27;ll work on this&quot; → add &quot;in progress&quot; label
 3. Make changes → open PR → link to issue
 4. PR merged → issue closes automatically → milestone progress updates</code></pre>
-<hr>
 <h2>Try It: Label and Link</h2>
 <p><strong>Time:</strong> 2 minutes | <strong>What you need:</strong> Browser, signed in to GitHub</p>
 <p>Go to the Learning Room repository and do two things:</p>
@@ -531,7 +553,6 @@ Description: All contributions made during Day 1 of the Open Source AT Hackathon
 <blockquote>
 <p><strong>What success feels like:</strong> The label now appears on the issue, and your cross-reference is a clickable link that connects the two issues. That&#39;s project management on GitHub - and you did it in under two minutes.</p>
 </blockquote>
-<hr>
 <blockquote>
 <h3>Day 2 Amplifier - Accessibility Agents: <code>@issue-tracker</code> with Labels</h3>
 <p><strong>Apply labels and milestones manually in today&#39;s exercises before using any agent.</strong> Labels are the language that automation uses to filter, route, and prioritize work. If you have not designed and applied them yourself, you cannot configure them correctly for automated use - and you cannot tell when automation is applying the wrong ones.</p>
@@ -543,7 +564,6 @@ Description: All contributions made during Day 1 of the Open Source AT Hackathon
 </ul>
 <p><em>Labeling today is not overhead. It is configuring the input layer that every agent downstream depends on.</em></p>
 </blockquote>
-<hr>
 <p><em>Next: <a href="09-notifications.html">Notifications</a></em>
 <em>Back: <a href="07-culture-etiquette.html">Culture and Etiquette</a></em>
 <em>Related: <a href="04-working-with-issues.html">Working with Issues</a> | <a href="../DAY1_AGENDA.html">Day 1 Agenda</a></em></p>

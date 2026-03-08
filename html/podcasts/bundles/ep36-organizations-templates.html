@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Git Going with GitHub - Audio Series</h1>
 <h2>Episode 36: Organizations and Templates</h2>
@@ -35,7 +64,6 @@
 <strong>Episode:</strong> 36 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 10-12 min</p>
-<hr>
 <h3>Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
@@ -60,7 +88,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Repository visibility: public, private, internal</li>
 <li>Archiving repositories</li>
 </ul>
-<hr>
 <h3>Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
@@ -85,7 +112,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <blockquote>
 <p>This appendix covers three features that shape how repositories and communities are organized on GitHub: repository templates (how new projects are bootstrapped), GitHub organizations (the account type behind most open source projects and companies), and repository settings (the configuration that governs visibility, archiving, and other behavior contributors encounter in the wild).</p>
 </blockquote>
-<hr>
 <h2>Repository Templates</h2>
 <h3>Template vs. Fork - Which One?</h3>
 <p>These are two very different actions that both appear near the &quot;Code&quot; button:</p>
@@ -129,7 +155,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <p><strong>Screen reader path:</strong></p>
 <pre><code class="hljs">B → navigate buttons → <span class="hljs-built_in">find</span> <span class="hljs-string">&quot;Use this template&quot;</span> → Enter
 ↓ → <span class="hljs-string">&quot;Create a new repository&quot;</span> <span class="hljs-keyword">from</span> the dropdown → Enter</code></pre>
-<hr>
 <h2>GitHub Organizations - A Contributor&#39;s View</h2>
 <h3>What Is an Organization?</h3>
 <p>A GitHub organization is an account that multiple people share. Instead of <code>github.com/username/repo</code>, organization repos live at <code>github.com/org-name/repo</code>. The workshop&#39;s central project lives at <code>github.com/community-access/accessibility-agents</code> - <code>community-access</code> is an organization.</p>
@@ -180,7 +205,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <span class="hljs-number">1</span> → jumps <span class="hljs-keyword">to</span> the org <span class="hljs-built_in">name</span> heading
 Links → navigate <span class="hljs-keyword">to</span> individual repositories, <span class="hljs-built_in">members</span>, <span class="hljs-built_in">and</span> projects</code></pre>
 <p>Organization-level Projects (like the <code>community-access</code> project board) appear in the org&#39;s Projects tab, not inside any single repository.</p>
-<hr>
 <h2>Repository Settings - What Contributors Need to Know</h2>
 <p>You may not have Settings access to most repositories (that requires maintainer role). But knowing what&#39;s there helps you understand why a repository behaves the way it does.</p>
 <h3>Repository Visibility</h3>
@@ -224,7 +248,6 @@ Links → navigate <span class="hljs-keyword">to</span> individual repositories,
 <h3>Default Branch Name</h3>
 <p>The default branch is the one all PRs target by default. Modern projects use <code>main</code>; older projects may use <code>master</code> or another name. When you clone and create a branch, you always branch from the repository&#39;s default branch.</p>
 <p>The default branch name appears in the branch selector at the top of the Code tab.</p>
-<hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-r-github-profile-sponsors-wikis.html">Appendix R - GitHub Profile, Sponsors, and Wikis</a> | <a href="appendix-a-glossary.html">Appendix A - Glossary</a></em></p>
 
   </main>

@@ -25,14 +25,42 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Accessibility Testing Checklist</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Accessibility Testing Checklist</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Accessibility Testing Checklist</h1>
 <h2>Verify GitHub Templates &amp; Workflows Are Accessible</h2>
 <p>This checklist helps you test issue templates, PRs, and GitHub workflows to ensure they&#39;re usable by people with disabilities (especially screen reader users).</p>
-<hr>
 <h2>Quick Checklist for Templates</h2>
 <p>Use before deploying any new issue template or form.</p>
 <h3>Form Fields &amp; Labels</h3>
@@ -66,7 +94,6 @@
 <li><input aria-label="All required fields present:" disabled="" type="checkbox"> All required fields present: <code>name:</code>, <code>description:</code>, <code>body:</code></li>
 <li><input aria-label="Field IDs are unique and lowercase with hyphens (e.g.," disabled="" type="checkbox"> Field IDs are unique and lowercase with hyphens (e.g., <code>browser_type</code>)</li>
 </ul>
-<hr>
 <h2>Screen Reader Testing Workflow</h2>
 <h3>Before Testing</h3>
 <ol>
@@ -133,7 +160,6 @@
 <li><input aria-label="Field labels are adjacent to fields" disabled="" type="checkbox"> Field labels are adjacent to fields</li>
 <li><input aria-label="Instructions are readable" disabled="" type="checkbox"> Instructions are readable</li>
 </ul>
-<hr>
 <h2>Accessibility Testing by Component</h2>
 <h3>Checkboxes &amp; Radio Buttons</h3>
 <ul>
@@ -176,7 +202,6 @@
 <li><input aria-label="No abbreviations without explanation" disabled="" type="checkbox"> No abbreviations without explanation</li>
 </ul>
 <p><strong>Test:</strong> Tab to field, screen reader should announce label, field type, help text, and required status.</p>
-<hr>
 <h2>Color &amp; Contrast Testing</h2>
 <ul>
 <li><input aria-label="Text contrast is 4.5:1 or higher (WCAG AA for normal text)" disabled="" type="checkbox"> Text contrast is 4.5:1 or higher (WCAG AA for normal text)</li>
@@ -185,11 +210,10 @@
 <li>Example: Good: &quot;Error&quot; label + red color + error icon</li>
 </ul>
 </li>
-<li><input aria-label="Required fields marked with ✱ or &quot;required&quot; text (not just color)" disabled="" type="checkbox"> Required fields marked with ✱ or &quot;required&quot; text (not just color)</li>
+<li><input aria-label="Required fields marked with  or &quot;required&quot; text (not just color)" disabled="" type="checkbox"> Required fields marked with  or &quot;required&quot; text (not just color)</li>
 <li><input aria-label="Disabled fields are visually distinct" disabled="" type="checkbox"> Disabled fields are visually distinct</li>
 </ul>
 <p><strong>Test:</strong> Use WebAIM Contrast Checker: <a href="https://webaim.org/resources/contrastchecker/">https://webaim.org/resources/contrastchecker/</a></p>
-<hr>
 <h2>Keyboard Navigation Testing</h2>
 <p>Test WITHOUT using the mouse.</p>
 <ul>
@@ -203,7 +227,6 @@
 <li><input aria-label="Can submit form with Enter from submit button" disabled="" type="checkbox"> Can submit form with Enter from submit button</li>
 </ul>
 <p><strong>Test:</strong> Close trackpad, use Tab/Shift+Tab/Enter/Space only.</p>
-<hr>
 <h2>Mobile &amp; Responsive Testing</h2>
 <ul>
 <li><input aria-label="Form is readable on small screens (mobile, tablet)" disabled="" type="checkbox"> Form is readable on small screens (mobile, tablet)</li>
@@ -213,7 +236,6 @@
 <li><input aria-label="No horizontal scrolling required to use form" disabled="" type="checkbox"> No horizontal scrolling required to use form</li>
 </ul>
 <p><strong>Test:</strong> Resize browser to mobile width (375px), or use phone/tablet to fill form.</p>
-<hr>
 <h2>Multilingual &amp; Plain Language Testing</h2>
 <ul>
 <li><input aria-label="Instructions use simple, clear language (avoid jargon)" disabled="" type="checkbox"> Instructions use simple, clear language (avoid jargon)</li>
@@ -222,7 +244,6 @@
 <li><input aria-label="If translated, consider cultural appropriateness of images/phrasings" disabled="" type="checkbox"> If translated, consider cultural appropriateness of images/phrasings</li>
 </ul>
 <p><strong>Test:</strong> Select browser zoom 200% (Ctrl+Plus / Cmd+Plus), or use browser reader mode.</p>
-<hr>
 <h2>Testing Checklist Summary</h2>
 <h3>Before Deploying (Must-Have)</h3>
 <ul>
@@ -248,7 +269,6 @@
 <li><input aria-label="Tested with actual users with disabilities" disabled="" type="checkbox"> Tested with actual users with disabilities</li>
 <li><input aria-label="Performance tested (forms load quickly)" disabled="" type="checkbox"> Performance tested (forms load quickly)</li>
 </ul>
-<hr>
 <h2>Common Accessibility Failures &amp; How to Test Them</h2>
 <table>
 <thead>
@@ -294,7 +314,6 @@
 <td>Press Tab to first element; should offer &quot;skip to content&quot;</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Testing Tools &amp; Resources</h2>
 <h3>Automated Testing</h3>
 <ul>
@@ -316,7 +335,6 @@
 <li><strong>WCAG Guidelines:</strong> <a href="https://www.w3.org/WAI/WCAG21/quickref/">https://www.w3.org/WAI/WCAG21/quickref/</a></li>
 <li><strong>Get Help:</strong> Open an issue with accessibility testing results</li>
 </ul>
-<hr>
 <h2>After Testing: Recording Issues</h2>
 <p>When you find an accessibility problem, document it:</p>
 <pre><code class="hljs"><span class="hljs-symbol">Title:</span> [Accessibility] Form label missing <span class="hljs-keyword">on</span> email field
@@ -339,7 +357,6 @@ Screen reader announces: <span class="hljs-string">&quot;Edit text, required&quo
 Screen reader tested: NVDA <span class="hljs-number">2025.3</span>.<span class="hljs-number">3</span>
 <span class="hljs-symbol">Browser:</span> Chrome <span class="hljs-number">130</span>
 <span class="hljs-symbol">OS:</span> Windows <span class="hljs-number">11</span></code></pre>
-<hr>
 <h2>Testing the Built HTML Output</h2>
 <p>This repository includes a build system that converts all Markdown files to HTML (see <code>BUILD.md</code>). If participants will use the HTML versions, test them separately:</p>
 <h3>Heading Hierarchy</h3>
@@ -367,14 +384,12 @@ Screen reader tested: NVDA <span class="hljs-number">2025.3</span>.<span class="
 <li><input aria-label="Verify syntax-highlighted code blocks are readable (not color-only)" disabled="" type="checkbox"> Verify syntax-highlighted code blocks are readable (not color-only)</li>
 </ul>
 <p><strong>Quick test:</strong> Open <code>html/index.html</code> in a browser, enable your screen reader, and navigate using <code>H</code> (headings) and <code>K</code> (links). Every heading and link should be announced clearly.</p>
-<hr>
 <h2>Questions or Feedback?</h2>
 <ul>
 <li><strong>Having trouble testing?</strong> See <code>TROUBLESHOOTING.md</code></li>
 <li><strong>Need screen reader help?</strong> See <code>docs/appendix-b-screen-reader-cheatsheet.md</code></li>
 <li><strong>Want resources?</strong> See <code>docs/appendix-u-resources.md</code></li>
 </ul>
-<hr>
 <p><em>Last updated: February 2026</em><br><em>Accessibility is foundational to inclusive workflows.</em></p>
 
   </main>

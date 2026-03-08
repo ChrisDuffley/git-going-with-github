@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Learning Room Automation Guide - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Learning Room Automation Guide</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Learning Room Automation Guide</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Learning Room Automation Guide</h1>
 <p>Welcome! The Learning Room uses intelligent automation to provide instant feedback while preserving the value of human peer review. This guide explains how the automation works and how to interpret its feedback.</p>
@@ -60,7 +89,6 @@
 <li><strong>Creates study groups</strong> for collaborative learning (when enabled by facilitators)</li>
 <li><strong>Matches by skill level</strong> to pair mentors with newcomers</li>
 </ul>
-<hr>
 <h2>Understanding Bot Feedback</h2>
 <h3>Validation Report Structure</h3>
 <p>When the bot comments on your PR, it provides:</p>
@@ -94,7 +122,6 @@
 </ul>
 <h4><strong>Learning Resources</strong></h4>
 <p>Links to relevant documentation based on your PR content</p>
-<hr>
 <h2>Common Validation Issues &amp; Fixes</h2>
 <h3>&quot;No issue reference found&quot;</h3>
 <p><strong>What this means:</strong> Your PR description doesn&#39;t link to an issue.</p>
@@ -105,7 +132,6 @@ Add one of these patterns to your PR description:</p>
 Fixes #42
 Resolves #42</code></pre>
 <p><strong>Screen reader tip:</strong> Use the &quot;Reference in new issue&quot; button in the GitHub UI, or type <code>#</code> followed by the issue number to get autocomplete.</p>
-<hr>
 <h3>&quot;Heading hierarchy violation&quot;</h3>
 <p><strong>What this means:</strong> Your document skips heading levels (e.g., H1 → H3 without H2).</p>
 <p><strong>Why it matters:</strong> Screen readers use headings for navigation. Skipping levels creates confusion.</p>
@@ -121,7 +147,6 @@ Resolves #42</code></pre>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements">MDN: HTML Heading Elements</a></li>
 <li><a href="../docs/14-accessible-code-review.html">Workshop: Accessible Code Review</a></li>
 </ul>
-<hr>
 <h3>&quot;Generic link text detected&quot;</h3>
 <p><strong>What this means:</strong> Your link text is &quot;click here&quot;, &quot;here&quot;, &quot;read more&quot;, etc.</p>
 <p><strong>Why it matters:</strong> Screen reader users often navigate by links. Generic text doesn&#39;t describe the destination.</p>
@@ -130,7 +155,6 @@ Resolves #42</code></pre>
 <p><strong>How to fix:</strong></p>
 <pre><code class="hljs language-markdown">Read the [<span class="hljs-string">GitHub accessibility documentation</span>](<span class="hljs-link">https://example.com</span>).</code></pre>
 <p><strong>Key principle:</strong> Link text should make sense out of context.</p>
-<hr>
 <h3>&quot;Missing alt text&quot;</h3>
 <p><strong>What this means:</strong> An image has no alt text or empty alt text.</p>
 <p><strong>Why it matters:</strong> Screen readers announce alt text so blind users understand images.</p>
@@ -150,7 +174,6 @@ Resolves #42</code></pre>
 <li><a href="https://webaim.org/techniques/alttext/">Alternative Text - WebAIM</a></li>
 <li><a href="../docs/14-accessible-code-review.html#image-alt-text">Alt Text Workshop Section</a></li>
 </ul>
-<hr>
 <h3>&quot;Broken relative link&quot;</h3>
 <p><strong>What this means:</strong> A link points to a file that doesn&#39;t exist.</p>
 <p><strong>Example problem:</strong></p>
@@ -168,13 +191,11 @@ Resolves #42</code></pre>
 <li>Parent directory: <code>[file](../file.md)</code></li>
 <li>Root of learning-room: <code>[file](../../learning-room/file.md)</code></li>
 </ul>
-<hr>
 <h3>&quot;[TODO] markers remaining&quot;</h3>
 <p><strong>What this means:</strong> Your file contains <code>[TODO]</code> placeholders.</p>
 <p><strong>Why it matters:</strong> Incomplete work shouldn&#39;t be merged.</p>
 <p><strong>How to fix:</strong>
 Complete all TODO items or remove the markers if work is done.</p>
-<hr>
 <h2>Getting Help</h2>
 <h3>Ask the Bot</h3>
 <p>You can interact with the bot by commenting on your PR:</p>
@@ -198,7 +219,6 @@ Complete all TODO items or remove the markers if work is done.</p>
 <li>Tag your peer reviewer or study group</li>
 <li>Facilitators monitor all PRs and will help</li>
 </ol>
-<hr>
 <h2>Skills Progression System</h2>
 <h3>Skill Levels</h3>
 <p><strong>Beginner</strong> (0+ merged PRs)</p>
@@ -239,7 +259,6 @@ Complete all TODO items or remove the markers if work is done.</p>
 </ul>
 <h3>Milestones</h3>
 <p>Special celebrations at: 1, 5, 10, 25, 50, and 100 merged PRs!</p>
-<hr>
 <h2>Peer Review &amp; Grouping</h2>
 <h3>Automatic Reviewer Assignment</h3>
 <p>When you open a PR:</p>
@@ -274,7 +293,6 @@ Complete all TODO items or remove the markers if work is done.</p>
 <li>Don&#39;t take criticism personally</li>
 <li>Learn from suggestions</li>
 </ul>
-<hr>
 <h2>Troubleshooting</h2>
 <h3>&quot;Bot comment is out of date&quot;</h3>
 <p>The bot updates its comment when you push changes. If it seems wrong:</p>
@@ -310,7 +328,6 @@ Complete all TODO items or remove the markers if work is done.</p>
 <li>This might be a bug - notify facilitators</li>
 <li>Check if comments are from different bots/workflows</li>
 </ol>
-<hr>
 <h2>Philosophy: Automation + Human Review</h2>
 <h3>Why Both?</h3>
 <p><strong>Automation provides:</strong></p>
@@ -336,7 +353,6 @@ Complete all TODO items or remove the markers if work is done.</p>
 <li>You experience real-world development workflows</li>
 </ul>
 <p><strong>This mirrors professional development</strong> where CI/CD handles checks and humans provide code review.</p>
-<hr>
 <h2>Additional Resources</h2>
 <ul>
 <li><a href="../docs/05-working-with-pull-requests.html">Working with Pull Requests</a></li>
@@ -345,11 +361,9 @@ Complete all TODO items or remove the markers if work is done.</p>
 <li><a href="../.github/docs/LEARNING_PATHS.html">Learning Paths</a></li>
 <li><a href="docs/CHALLENGES.html">Available Challenges</a></li>
 </ul>
-<hr>
 <h2>Feedback on Automation</h2>
 <p>Found a bug? Have suggestions for improving the automation?</p>
 <p>Open an issue with label <code>automation-feedback</code> and let us know!</p>
-<hr>
 <h2>Setting Up Automation for Your Workshop</h2>
 <p>The automation features described above (PR validation, skills progression, student pairing) require GitHub Actions workflows that facilitators must configure for their own deployment. These workflows are not included in this repository because each workshop instance may have different requirements.</p>
 <p><strong>What facilitators need to create:</strong></p>
@@ -364,7 +378,6 @@ Complete all TODO items or remove the markers if work is done.</p>
 <li><a href="https://docs.github.com/en/actions">GitHub Actions Documentation</a> - Official reference</li>
 <li><a href="https://probot.github.io/">Probot</a> - Framework for building GitHub bots</li>
 </ul>
-<hr>
 <p><em>This system was designed with accessibility and inclusive learning at its core. Every student deserves instant, helpful feedback and supportive peer connections.</em></p>
 
   </main>

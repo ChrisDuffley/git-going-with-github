@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Pre-Workshop Setup - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Pre-Workshop Setup - GIT Going with GitHub</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Pre-Workshop Setup - GIT Going with GitHub</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Pre-Workshop Setup - GIT Going with GitHub</h1>
 <blockquote>
@@ -38,7 +67,6 @@
 <p><strong>A <a href="https://community-access.org">Community Access</a> workshop.</strong></p>
 <p><strong>Please complete this guide at least one day before the workshop.</strong> If you run into any issues, <a href="https://github.com/community-access/git-going-with-github/issues">file an issue</a> so we can help - we want Day 1 to start with everyone ready to go, not troubleshooting.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#what-you-will-need">What You Will Need</a></li>
@@ -54,7 +82,6 @@
 <li><a href="#other-github-access-methods-reference-only">Other GitHub Access Methods (Reference Only)</a></li>
 <li><a href="#getting-help-before-the-event">Getting Help Before the Event</a></li>
 </ol>
-<hr>
 <h2>What You Will Need</h2>
 <h3>Hardware</h3>
 <ul>
@@ -112,7 +139,6 @@
 <blockquote>
 <p><strong>Note:</strong> All workshop exercises are designed to work with any of these screen readers. Where specific key commands differ, we will note all three. You are not disadvantaged by using any particular screen reader.</p>
 </blockquote>
-<hr>
 <h2>Step 1 - Create Your GitHub Account</h2>
 <p>If you already have a GitHub account, skip to <a href="#step-2---configure-github-accessibility-settings">Step 2</a>.</p>
 <blockquote>
@@ -235,7 +261,6 @@
 <p>Workshop policy</p>
 <p>For this workshop, participants need a GitHub account with 2FA enabled. The browser-based sign-in described above handles all Git authentication automatically - no additional setup is required beyond having a working GitHub account.</p>
 <p>If you run into any authentication issues before the workshop, contact the workshop organizers at the email or issue link in this guide so we can help.</p>
-<hr>
 <h2>Step 2 - Configure GitHub Accessibility Settings</h2>
 <p>These settings make GitHub significantly more usable with a screen reader. <strong>Do not skip this section</strong> - one setting in particular (hovercards) adds significant noise to every page if left on.</p>
 <h3>Navigate to Accessibility Settings</h3>
@@ -338,7 +363,6 @@
 </li>
 <li>Select your preferred theme and activate <strong>Save</strong> if prompted (some changes apply immediately)</li>
 </ol>
-<hr>
 <h2>Step 3 - Configure Your Profile</h2>
 <p>Your GitHub profile is your public identity in the open source community. Setting it up properly helps maintainers know who you are.</p>
 <h3>Update your profile</h3>
@@ -360,7 +384,6 @@
 <li>Navigate to <a href="https://github.com/settings/notifications">Settings → Notifications</a></li>
 <li>Add a <strong>custom routing</strong> email if you want GitHub notifications to go to a different address than your account email</li>
 </ol>
-<hr>
 <h2>Step 4 - Check GitHub Feature Preview Settings</h2>
 <p>GitHub continuously rolls out improvements to its interface. Some enhancements start as opt-in Feature Previews before becoming the standard experience. Two features matter most for screen reader users working through this workshop:</p>
 <ul>
@@ -448,7 +471,6 @@
 <blockquote>
 <p><strong>Why this matters:</strong> Without these features enabled, the keyboard and screen reader workflows described throughout this workshop will not match what you see on screen. Enabling them before you begin ensures everything works as documented.</p>
 </blockquote>
-<hr>
 <h2>Step 5 - Set Up Your Screen Reader &amp; Browser</h2>
 <h3>NVDA (Windows)</h3>
 <p><strong>Install NVDA</strong> if you haven&#39;t already:</p>
@@ -470,7 +492,6 @@
 <li>Punctuation: &quot;Most&quot; (reads important symbols like <code>#</code> and <code>@</code> without reading every period)</li>
 </ul>
 <p><strong>Your NVDA key:</strong> By default it is <code>Insert</code>. It can also be set to <code>Caps Lock</code> in NVDA preferences if that is more comfortable.</p>
-<hr>
 <h3>JAWS (Windows)</h3>
 <p><strong>If using a trial:</strong> JAWS runs in 40-minute sessions without a license. Restart it if you need more time.</p>
 <h4>Configure JAWS for web browsing</h4>
@@ -485,7 +506,6 @@
 <li>Verbosity → Punctuation: &quot;Most&quot; for same reason as NVDA</li>
 </ul>
 <p><strong>Your JAWS key:</strong> <code>Insert</code> (or <code>Caps Lock</code> if using laptop layout)</p>
-<hr>
 <h3>VoiceOver (macOS)</h3>
 <p><strong>Activate VoiceOver:</strong> <code>Command+F5</code> toggles VoiceOver on and off.</p>
 <h4>Essential VoiceOver setup for web</h4>
@@ -502,7 +522,6 @@
 <li>Press <code>Left Arrow + Right Arrow</code> simultaneously to toggle Quick Nav</li>
 <li>With Quick Nav on: <code>H</code> = next heading, <code>L</code> = next link, <code>B</code> = next button (same as NVDA/JAWS browse mode keys)</li>
 </ul>
-<hr>
 <h3>Browser Recommendations Summary</h3>
 <table>
 <thead>
@@ -539,7 +558,6 @@
 </tr>
 </tbody></table>
 <p><strong>Before the workshop:</strong> Open GitHub.com in your chosen browser with your screen reader running and confirm you can navigate the page using heading keys.</p>
-<hr>
 <h2>Step 6 - Install Git and Visual Studio Code</h2>
 <h3>Install Git First</h3>
 <blockquote>
@@ -572,7 +590,6 @@
 <li>Type <code>git --version</code>, press <code>Enter</code>, then press <code>↑</code> to re-read the output line</li>
 </ul>
 <p>Once Git is installed, you will configure your Git identity in Step 7 after VS Code is set up.</p>
-<hr>
 <h3>Install Visual Studio Code</h3>
 <p>Visual Studio Code (VS Code) is the development environment used throughout this workshop. It is free, open source, and has excellent built-in accessibility support.</p>
 <h3>Download and install</h3>
@@ -653,7 +670,6 @@
 <td><code>Ctrl+1</code></td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Step 7 - Configure Git Identity</h2>
 <p>Now that Git is installed, tell it who you are. Git embeds your name and email in every commit you make, and this affects how your contributions appear in project history.</p>
 <h3>Configure in VS Code</h3>
@@ -688,10 +704,8 @@ git config --global user.email <span class="hljs-string">&quot;your-email@exampl
 user.email=your-email@example.com</code></pre>
 <h3>Using the Correct Email</h3>
 <p>Use the same email you registered with GitHub. If you&#39;re concerned about privacy, GitHub offers a no-reply email you can use: <code>username@users.noreply.github.com</code> - find it in <a href="https://github.com/settings/emails">Settings → Emails</a>.</p>
-<hr>
 <h2>Step 8 - Install VS Code Extensions</h2>
 <p>This workshop uses two VS Code extensions. GitHub Copilot is built into VS Code automatically. The GitHub Pull Requests extension needs to be installed manually. Both authenticate through your browser session - if you are signed into GitHub in your web browser, VS Code picks up the session automatically.</p>
-<hr>
 <h3>GitHub Copilot (Built In)</h3>
 <p>GitHub Copilot is automatically included with Visual Studio Code. There is no extension to install separately. It provides both inline code completions and the conversational Agent mode panel used throughout the second half of the workshop.</p>
 <h4>Activate Copilot</h4>
@@ -710,7 +724,6 @@ user.email=your-email@example.com</code></pre>
 <blockquote>
 <p><strong>That is it.</strong> You do not need to use the Command Palette to sign in. If you are logged into GitHub in your browser, VS Code handles authentication automatically when you first interact with the agent.</p>
 </blockquote>
-<hr>
 <h3>Extension 2 - GitHub Pull Requests</h3>
 <p>This extension lets you review and manage pull requests without leaving VS Code. It is used in the code review chapters.</p>
 <h4>Install</h4>
@@ -741,7 +754,6 @@ user.email=your-email@example.com</code></pre>
 <blockquote>
 <p><strong>Screen reader note:</strong> The Pull Requests panel is a tree view. Navigate it with <code>Up</code> and <code>Down Arrow</code>. Press <code>Enter</code> or <code>Right Arrow</code> to expand a node.</p>
 </blockquote>
-<hr>
 <h3>Copilot Free tier</h3>
 <p>Copilot Free is available to all GitHub users at no cost. It includes:</p>
 <ul>
@@ -749,7 +761,6 @@ user.email=your-email@example.com</code></pre>
 <li>Limited Copilot Chat messages per month</li>
 </ul>
 <p>For this workshop, Free tier is sufficient. If you want unlimited access, paid plans are available at <a href="https://github.com/features/copilot#pricing">GitHub Copilot pricing</a>.</p>
-<hr>
 <h2>Step 9 - Verification Checklist</h2>
 <p>Work through this checklist before Day 1. Check off each item:</p>
 <pre><code class="hljs language-text">Pre-Workshop Checklist
@@ -780,7 +791,6 @@ GIT &amp; VS CODE (required before the workshop)
 [ ] GitHub Copilot responds in Agent mode (Ctrl+Shift+I, type Hello, get a response)
 [ ] GitHub Pull Requests extension installed (publisher: GitHub)
 [ ] Pull Requests panel opens (Ctrl+Shift+P → &quot;Focus on Pull Requests View&quot;)</code></pre>
-<hr>
 <h2>Other GitHub Access Methods (Reference Only)</h2>
 <p>This workshop focuses entirely on GitHub.com in the browser and VS Code. However, you should be aware that other ways to work with GitHub exist. We list them here for your reference - we will not be teaching these in depth.</p>
 <h3>GitHub Desktop</h3>
@@ -823,7 +833,6 @@ gh copilot explain <span class="hljs-string">&quot;git rebase -i HEAD~3&quot;</s
 <li><a href="https://git-scm.com/book/en/v2">Pro Git book (free)</a></li>
 <li><a href="https://github.com/skills/introduction-to-github">GitHub Skills: Introduction to GitHub</a></li>
 </ul>
-<hr>
 <h2>Getting Help Before the Event</h2>
 <p>If you cannot complete any step in this guide before the workshop:</p>
 <ol>
@@ -832,7 +841,6 @@ gh copilot explain <span class="hljs-string">&quot;git rebase -i HEAD~3&quot;</s
 <li><strong>Join the GitHub Accessibility Discussions</strong> - <a href="https://github.com/orgs/community/discussions/categories/accessibility">GitHub Community Accessibility Discussions</a> - the community is helpful and welcoming</li>
 </ol>
 <p>You will not be left behind. Every setup issue we can solve before Day 1 means more time for learning on the day.</p>
-<hr>
 <p><em>Next: <a href="01-understanding-github-web-structure.html">Understanding GitHub&#39;s Web Structure</a></em>
 <em>Back: <a href="../README.html">README</a></em></p>
 

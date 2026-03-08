@@ -1,0 +1,93 @@
+name: Wiki Issue
+description: Report a problem with a wiki page — wrong info, broken content, missing section, or accessibility issue
+labels: ["wiki", "needs triage"]
+assignees: ["taylorarndt"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the wiki! Answer as many questions as you can — every detail helps us find and fix the problem faster.
+
+  - type: input
+    id: page
+    attributes:
+      label: Which wiki page has the issue?
+      description: Paste the URL or the page title
+      placeholder: "e.g. https://github.com/Community-Access/git-going-with-github/wiki/03-the-learning-room"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - Wrong or outdated information
+        - Broken or missing image / diagram
+        - Formatting looks broken
+        - Link is broken or goes to the wrong place
+        - Content is hard to understand
+        - Accessibility issue (screen reader, keyboard, contrast)
+        - Missing content or section
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-is-wrong
+    attributes:
+      label: What is wrong?
+      description: Describe exactly what you see that looks incorrect or broken
+      placeholder: "e.g. The diagram image doesn't load, it shows a broken image icon instead of the SVG..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-expected
+    attributes:
+      label: What should it look like or say instead?
+      description: Tell us what the correct content or behaviour should be
+      placeholder: "e.g. The diagram should show a tree structure of the repository layout..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: how-accessing
+    attributes:
+      label: How were you viewing the wiki?
+      options:
+        - GitHub website (browser)
+        - GitHub mobile app
+        - Screen reader (NVDA, JAWS, VoiceOver, etc.)
+        - Keyboard only (no mouse)
+        - Other assistive technology
+    validations:
+      required: false
+
+  - type: input
+    id: assistive-tech
+    attributes:
+      label: If you use a screen reader or assistive technology, which one?
+      placeholder: "e.g. NVDA with Firefox, VoiceOver with Safari, JAWS with Chrome"
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How do we find the problem ourselves?
+      placeholder: |
+        1. Go to the wiki page...
+        2. Scroll to the section...
+        3. The image / link / text shows...
+    validations:
+      required: false
+
+  - type: textarea
+    id: anything-else
+    attributes:
+      label: Anything else we should know?
+      description: Screenshots, extra context, or related pages with the same issue
+    validations:
+      required: false

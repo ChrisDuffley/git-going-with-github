@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Git Going with GitHub - Audio Series</h1>
 <h2>Episode 33: Publishing with GitHub Pages</h2>
@@ -35,7 +64,6 @@
 <strong>Episode:</strong> 33 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 10-12 min</p>
-<hr>
 <h3>Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
@@ -60,7 +88,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Jekyll and static site generators</li>
 <li>Building an accessible website with GitHub Pages</li>
 </ul>
-<hr>
 <h3>Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
@@ -86,7 +113,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <blockquote>
 <p>GitHub Pages lets you publish a static website straight from a GitHub repository - no server, no hosting bill, no deployment pipeline required for simple sites. This appendix explains how to enable it, what it can publish, and how to ensure the published site meets the same accessibility standards as your source code.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-what-github-pages-is">What GitHub Pages Is</a></li>
@@ -100,7 +126,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li><a href="#9-limitations">Limitations</a></li>
 <li><a href="#10-troubleshooting">Troubleshooting</a></li>
 </ol>
-<hr>
 <h2>1. What GitHub Pages Is</h2>
 <p>GitHub Pages is a static site hosting service built into GitHub. It serves files directly from a branch or folder in your repository at a URL of the form:</p>
 <pre><code class="hljs language-text">https://&lt;username&gt;.github.io/&lt;repository-name&gt;/</code></pre>
@@ -115,7 +140,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Personal portfolios</li>
 <li>Simple blogs via Jekyll</li>
 </ul>
-<hr>
 <h2>2. Enabling GitHub Pages for a Repository</h2>
 <h3>Step-by-step (GitHub.com)</h3>
 <ol>
@@ -141,7 +165,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>The <strong>Pages</strong> option in the left sidebar is a link under the &quot;Code and automation&quot; group heading</li>
 <li>The branch and folder dropdowns are standard <code>&lt;select&gt;</code> elements - navigate with arrow keys</li>
 </ul>
-<hr>
 <h2>3. Publishing Sources</h2>
 <h3>Deploy from a branch</h3>
 <p>The simplest option. GitHub reads files directly from a branch.</p>
@@ -175,7 +198,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Run <code>node scripts/build-html.js</code></li>
 <li>Upload the <code>html/</code> folder as the Pages artifact</li>
 </ol>
-<hr>
 <h2>4. The html/ Folder in This Project</h2>
 <p>This project has a pre-built HTML mirror of all Markdown content in the <code>html/</code> folder, generated by <code>scripts/build-html.js</code>. To publish this as a GitHub Pages site:</p>
 <h3>Option A: Manual publishing from <code>html/</code> folder</h3>
@@ -245,7 +267,6 @@ git push</code></pre>
         <span class="hljs-attr">id:</span> <span class="hljs-string">deployment</span>
         <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/deploy-pages@v4</span></code></pre>
 <p>This workflow triggers on every push to <code>master</code>, rebuilds the HTML, and deploys the <code>html/</code> folder.</p>
-<hr>
 <h2>5. Custom Domains</h2>
 <p>GitHub Pages supports custom domains (e.g. <code>learning.community-access.org</code> instead of <code>community-access.github.io/Learning-Room</code>).</p>
 <h3>Setting up a custom domain</h3>
@@ -281,7 +302,6 @@ git push</code></pre>
 <p>DNS changes can take up to 48 hours to propagate. GitHub Pages checks and verifies the domain automatically once DNS is configured.</p>
 <h3>Domain verification</h3>
 <p>To prevent domain takeover attacks, GitHub recommends verifying your custom domain in your account or organization settings (Settings → Pages → Add a domain). This prevents others from claiming your domain for their GitHub Pages if you temporarily remove it.</p>
-<hr>
 <h2>6. HTTPS and Security</h2>
 <p>GitHub Pages enforces HTTPS automatically for <code>github.io</code> subdomains. For custom domains:</p>
 <ol>
@@ -290,7 +310,6 @@ git push</code></pre>
 <li>Enforcing HTTPS redirects all HTTP traffic to HTTPS</li>
 </ol>
 <p><strong>Important:</strong> Never store secrets, API keys, or private data in a GitHub Pages repository. The repository content is public (on public repositories) and is served as-is. Even deleted files remain in git history.</p>
-<hr>
 <h2>7. Accessibility Considerations for Published Sites</h2>
 <p>Publishing a site does not automatically make it accessible. Consider the following for the published HTML output:</p>
 <h3>Navigation and landmarks</h3>
@@ -327,7 +346,6 @@ git push</code></pre>
 <li>Verify no broken links with a link checker (e.g. <a href="https://validator.w3.org/checklink">W3C Link Checker</a>)</li>
 <li>Test with a screen reader announcement of the page title and <code>&lt;h1&gt;</code></li>
 </ol>
-<hr>
 <h2>8. GitHub Actions and Continuous Deployment</h2>
 <p>Using the Actions workflow described in <a href="#4-the-html-folder-in-this-project">Section 4</a> means every push to <code>master</code> automatically rebuilds and redeploys the site.</p>
 <h3>Adding automated accessibility checks to the workflow</h3>
@@ -344,7 +362,6 @@ git push</code></pre>
           for file in html/docs/*.html; do
             axe &quot;$file&quot; --exit
           done</span></code></pre>
-<hr>
 <h2>9. Limitations</h2>
 <table>
 <thead>
@@ -382,7 +399,6 @@ git push</code></pre>
 <td>Available on GitHub Enterprise plans only</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>10. Troubleshooting</h2>
 <h3>Site not updating after a push</h3>
 <ul>
@@ -401,7 +417,6 @@ git push</code></pre>
 </ul>
 <h3>Screen reader announces wrong page title</h3>
 <p>The published <code>&lt;title&gt;</code> element is set during the HTML build step. Update the template in <code>scripts/build-html.js</code> to ensure each page has a unique, descriptive title.</p>
-<hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-e-github-flavored-markdown.html">Appendix E - GitHub Flavored Markdown</a> | <a href="appendix-a-glossary.html">Appendix A - Glossary</a></em></p>
 
   </main>

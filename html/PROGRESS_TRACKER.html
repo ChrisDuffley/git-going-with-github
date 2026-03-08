@@ -25,13 +25,41 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Progress Tracker</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Progress Tracker</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Progress Tracker</h1>
 <h2>Track Your Learning Journey Through the GitHub Workshop</h2>
-<hr>
 <h2>How to Use This Tracker</h2>
 <ol>
 <li><strong>Print this page or save as PDF</strong> to mark progress offline</li>
@@ -39,7 +67,6 @@
 <li><strong>Check off items</strong> as you complete them</li>
 <li><strong>Return here</strong> to see your learning path and next steps</li>
 </ol>
-<hr>
 <h2>Pre-Workshop Setup</h2>
 <ul>
 <li><input aria-label="Created GitHub account (free tier is fine)" disabled="" type="checkbox"> Created GitHub account (free tier is fine)</li>
@@ -51,7 +78,6 @@
 <li><input aria-label="Verified:" disabled="" type="checkbox"> Verified: <code>gh auth status</code> shows you&#39;re logged in</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 0: Pre-Workshop Setup</h2>
 <p><strong>Time:</strong> 30 minutes  |  <strong>What You&#39;ll Do:</strong> Get your computer ready</p>
 <ul>
@@ -62,7 +88,6 @@
 <li><input aria-label="Test: Can you clone a repository? (" disabled="" type="checkbox"> Test: Can you clone a repository? (<code>git clone ...</code>)</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 1: Understanding GitHub Web Structure</h2>
 <p><strong>Time:</strong> 1 hour  |  <strong>What You&#39;ll Do:</strong> Learn GitHub&#39;s layout and terminology</p>
 <ul>
@@ -73,7 +98,6 @@
 <li><input aria-label="Can explain: What is a pull request?" disabled="" type="checkbox"> Can explain: What is a pull request?</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 2: Navigating Repositories</h2>
 <p><strong>Time:</strong> 45 minutes  |  <strong>What You&#39;ll Do:</strong> Practice exploring real repositories</p>
 <ul>
@@ -84,7 +108,6 @@
 <li><input aria-label="Understand the code structure and file tree" disabled="" type="checkbox"> Understand the code structure and file tree</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 3: The Learning Room</h2>
 <p><strong>Time:</strong> 30 minutes  |  <strong>What You&#39;ll Do:</strong> Understand the shared practice environment</p>
 <ul>
@@ -95,7 +118,6 @@
 <li><input aria-label="Understand: How bot feedback and peer review work" disabled="" type="checkbox"> Understand: How bot feedback and peer review work</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 4: Working with Issues</h2>
 <p><strong>Time:</strong> 1 hour  |  <strong>What You&#39;ll Do:</strong> Create, read, and comment on issues</p>
 <ul>
@@ -107,7 +129,6 @@
 <li><input aria-label="Understand: Issue lifecycle (Open → In Progress → Done)" disabled="" type="checkbox"> Understand: Issue lifecycle (Open → In Progress → Done)</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 5: Working with Pull Requests</h2>
 <p><strong>Time:</strong> 1 hour  |  <strong>What You&#39;ll Do:</strong> Submit, review, and merge PRs</p>
 <ul>
@@ -119,7 +140,6 @@
 <li><input aria-label="Understand: PR merge strategies (Merge, Squash, Rebase)" disabled="" type="checkbox"> Understand: PR merge strategies (Merge, Squash, Rebase)</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 6: Merge Conflicts</h2>
 <p><strong>Time:</strong> 1 hour  |  <strong>What You&#39;ll Do:</strong> Resolve conflicts between branches</p>
 <ul>
@@ -130,7 +150,6 @@
 <li><input aria-label="Know the &quot;abort&quot; option:" disabled="" type="checkbox"> Know the &quot;abort&quot; option: <code>git merge --abort</code></li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 7: Culture &amp; Etiquette</h2>
 <p><strong>Time:</strong> 30 minutes  |  <strong>What You&#39;ll Do:</strong> Learn collaborative best practices</p>
 <ul>
@@ -141,7 +160,6 @@
 <li><input aria-label="Understand: Inclusive language in issues/PRs" disabled="" type="checkbox"> Understand: Inclusive language in issues/PRs</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 8: Labels, Milestones &amp; Projects</h2>
 <p><strong>Time:</strong> 45 minutes  |  <strong>What You&#39;ll Do:</strong> Use GitHub&#39;s organizational tools</p>
 <ul>
@@ -152,7 +170,6 @@
 <li><input aria-label="Filtered issues using: Labels + Milestones" disabled="" type="checkbox"> Filtered issues using: Labels + Milestones</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 9: Notifications</h2>
 <p><strong>Time:</strong> 30 minutes  |  <strong>What You&#39;ll Do:</strong> Master GitHub notifications</p>
 <ul>
@@ -163,7 +180,6 @@
 <li><input aria-label="Know how to: Unsubscribe from threads you don&#39;t need" disabled="" type="checkbox"> Know how to: Unsubscribe from threads you don&#39;t need</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 10: VS Code Setup &amp; Accessibility Basics</h2>
 <p><strong>Time:</strong> 45 minutes  |  <strong>What You&#39;ll Do:</strong> Set up VS Code for accessible development</p>
 <ul>
@@ -174,7 +190,6 @@
 <li><input aria-label="Configured: Editor preferences for your workflow" disabled="" type="checkbox"> Configured: Editor preferences for your workflow</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 11: Git &amp; Source Control in VS Code</h2>
 <p><strong>Time:</strong> 1 hour  |  <strong>What You&#39;ll Do:</strong> Master Git operations within VS Code</p>
 <ul>
@@ -185,7 +200,6 @@
 <li><input aria-label="Configured: Git credentials and remote tracking" disabled="" type="checkbox"> Configured: Git credentials and remote tracking</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 12: GitHub Pull Requests Extension</h2>
 <p><strong>Time:</strong> 45 minutes  |  <strong>What You&#39;ll Do:</strong> Review and create PRs from VS Code</p>
 <ul>
@@ -196,7 +210,6 @@
 <li><input aria-label="Practice: Commented on a PR from within VS Code" disabled="" type="checkbox"> Practice: Commented on a PR from within VS Code</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 13: GitHub Copilot</h2>
 <p><strong>Time:</strong> 1 hour  |  <strong>What You&#39;ll Do:</strong> Use AI-assisted coding and chat</p>
 <ul>
@@ -207,7 +220,6 @@
 <li><input aria-label="Understand: Chat participants, agents, and model selection" disabled="" type="checkbox"> Understand: Chat participants, agents, and model selection</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete</p>
-<hr>
 <h2>Chapter 14: Accessible Code Review</h2>
 <p><strong>Time:</strong> 1.5 hours + Exercises  |  <strong>What You&#39;ll Do:</strong> Review code accessibly</p>
 <h3>Reading &amp; Concepts</h3>
@@ -224,7 +236,6 @@
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Exercise C:</strong> Comment on PR accessibility</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete<br><strong>Exercises Completed:</strong> A  B  C  All</p>
-<hr>
 <h2>Chapter 15: Issue Templates</h2>
 <p><strong>Time:</strong> 1.5 hours + Exercises  |  <strong>What You&#39;ll Do:</strong> Create accessible issue templates</p>
 <h3>Reading &amp; Concepts</h3>
@@ -242,7 +253,6 @@
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Exercise D:</strong> Design custom template for your project</li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete<br><strong>Exercises Completed:</strong> A  B  C  D  All</p>
-<hr>
 <h2>Chapter 16: Accessibility Agents</h2>
 <p><strong>Time:</strong> 1.5 hours + Exercises  |  <strong>What You&#39;ll Do:</strong> Automate with Copilot agents</p>
 <h3>Agents to Explore</h3>
@@ -277,7 +287,6 @@
 </li>
 </ul>
 <p><strong>Status:</strong> Not started  In progress  Complete<br><strong>Exercises Completed:</strong> 1  2  3  All</p>
-<hr>
 <h2>Appendices (Reference)</h2>
 <ul>
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Appendix A: Glossary</strong> - Read as needed for term definitions<ul>
@@ -293,7 +302,6 @@
 </ul>
 </li>
 </ul>
-<hr>
 <h2>Overall Progress Summary</h2>
 <h3>Exercises by Chapter</h3>
 <p>The workshop includes structured exercises in the following chapters. Use this table to track your exercise completion separately from chapter reading:</p>
@@ -466,7 +474,6 @@
 <li>All chapters + appendices: Not started  In progress  Complete</li>
 <li><strong>Time:</strong> ~13 hours total</li>
 </ul>
-<hr>
 <h2>Estimated Time Breakdown</h2>
 <table>
 <thead>
@@ -502,7 +509,6 @@
 <td></td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Learning Path by Role</h2>
 <h3>If You&#39;re a <strong>Contributor</strong> (New to collaborative coding)</h3>
 <p><strong>Recommended order:</strong></p>
@@ -533,7 +539,6 @@
 <li>Practice all exercises before leading workshop</li>
 </ol>
 <p><strong>Total: ~15 hours</strong></p>
-<hr>
 <h2>Next Steps After Completing This Curriculum</h2>
 <h3>Keep Learning</h3>
 <ul>
@@ -555,7 +560,6 @@
 <li><input aria-label="Codespaces for efficient development" disabled="" type="checkbox"> Codespaces for efficient development</li>
 <li><input aria-label="GitHub Enterprise features" disabled="" type="checkbox"> GitHub Enterprise features</li>
 </ul>
-<hr>
 <h2>Questions or Stuck?</h2>
 <ul>
 <li><strong>Check:</strong> <code>TROUBLESHOOTING.md</code> (common issues &amp; fixes)</li>
@@ -564,7 +568,6 @@
 <li><strong>Define:</strong> <code>docs/appendix-a-glossary.md</code> (term definitions)</li>
 <li><strong>Ask:</strong> Open an issue or discussion on GitHub</li>
 </ul>
-<hr>
 <p><em>Last updated: February 2026</em><br><em>Print or bookmark this progress tracker to chart your journey!</em></p>
 
   </main>

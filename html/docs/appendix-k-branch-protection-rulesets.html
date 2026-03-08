@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix K: Branch Protection Rules and Repository Rulesets - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix K: Branch Protection Rules and Repository Rulesets</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix K: Branch Protection Rules and Repository Rulesets</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix K: Branch Protection Rules and Repository Rulesets</h1>
 <blockquote>
@@ -37,7 +66,6 @@
 <blockquote>
 <p><strong>Who this is for:</strong> Contributors who have submitted a PR and are wondering why it cannot be merged yet, as well as workshop facilitators who configure branch protection for practice repositories.</p>
 </blockquote>
-<hr>
 <h2>Quick Navigation</h2>
 <ol>
 <li><a href="#1-what-branch-protection-does">What Branch Protection Does</a></li>
@@ -49,7 +77,6 @@
 <li><a href="#7-who-can-configure-branch-protection">Who Can Configure Branch Protection</a></li>
 <li><a href="#8-workshop-repository-configuration-reference">Workshop Repository Configuration Reference</a></li>
 </ol>
-<hr>
 <h2>1. What Branch Protection Does</h2>
 <p>A <strong>branch protection rule</strong> is a set of requirements that must be satisfied before a PR can be merged into a specific branch (typically <code>main</code>). Branch protection exists to:</p>
 <ul>
@@ -60,7 +87,6 @@
 <li>Require commits to be signed (GPG or SSH signatures)</li>
 </ul>
 <p>Think of branch protection as the quality gate for a repository&#39;s primary branch.</p>
-<hr>
 <h2>2. Common Branch Protection Rules</h2>
 <h3>Required Reviews</h3>
 <p>The most common rule. The maintainer requires a minimum number of approving reviews before the PR can be merged.</p>
@@ -99,7 +125,6 @@
 <p>If you see: &quot;This repository requires a linear history&quot; - the maintainer will squash or rebase merge your PR, not create a merge commit.</p>
 <h3>Lock Branch</h3>
 <p>A locked branch cannot receive any merges - it is effectively read-only. This is sometimes used for archived repositories or during release freezes.</p>
-<hr>
 <h2>3. Repository Rulesets - The Modern Approach</h2>
 <p><strong>Repository Rulesets</strong> (introduced in late 2023) are the next generation of branch protection. They extend branch protection rules with:</p>
 <ul>
@@ -150,7 +175,6 @@
 <pre><code class="hljs language-text">Repository → Insights tab → Rulesets (if you have access - contributors usually don&#x27;t)
 Or: Repository → Settings → Rules → Rulesets (admin only)</code></pre>
 <p>Alternatively, PR merge box messages describe which rules are blocking - you don&#39;t need admin access to understand what&#39;s required.</p>
-<hr>
 <h2>4. Why Your PR Cannot Be Merged - Diagnosis Guide</h2>
 <p>When you open a PR and the merge button is grayed out or shows an error, the merge box tells you exactly what needs to happen. Here is how to read it.</p>
 <h3>&quot;X review required / X reviews required&quot;</h3>
@@ -190,7 +214,6 @@ Or: Repository → Settings → Rules → Rulesets (admin only)</code></pre>
 </ol>
 <h3>&quot;Merging is blocked&quot;</h3>
 <p><strong>What it means:</strong> A ruleset or branch protection has explicitly blocked merging for a reason not covered by other messages. Check the PR for a pinned comment from the mergeable status check or a GitHub Actions check that posts a comment explaining the block.</p>
-<hr>
 <h2>5. Navigating the Merge Box with a Screen Reader</h2>
 <p>The merge box lives at the bottom of every PR page. With a screen reader, navigating to it efficiently is important.</p>
 <h3>Reaching the Merge Box</h3>
@@ -219,7 +242,6 @@ Tab through each check → &quot;Details&quot; link → Enter to open the check 
 To read the full log: F → form controls → step dropdown (if multi-step)
 Or: Tab → each step accordion → Enter to expand → ↓ to read log lines
 Log content is usually in a scrollable region: ↓ key scrolls through lines</code></pre>
-<hr>
 <h2>6. Status Checks - What They Are and What They Mean</h2>
 <p>Status checks come from two sources:</p>
 <h3>GitHub Actions Status Checks</h3>
@@ -273,7 +295,6 @@ Log content is usually in a scrollable region: ↓ key scrolls through lines</co
 <td>Informational - does not block merge</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>7. Who Can Configure Branch Protection</h2>
 <table>
 <thead>
@@ -320,7 +341,6 @@ Log content is usually in a scrollable region: ↓ key scrolls through lines</co
 </tr>
 </tbody></table>
 <p>As a workshop participant, you are typically a <strong>contributor</strong> to the main <code>community-access/accessibility-agents</code> repo and an <strong>admin</strong> of your own fork. On your fork, you can configure branch protection however you like - including disabling it entirely for practice purposes.</p>
-<hr>
 <h2>8. Workshop Repository Configuration Reference</h2>
 <p>The <code>community-access/accessibility-agents</code> repository uses the following branch protection configuration on <code>main</code>:</p>
 <table>
@@ -362,7 +382,6 @@ Check: Require a pull request before merging
 Check: Require approvals → 1
 Save changes</code></pre>
 <p>Then practice opening a PR on your fork and requesting your workshop partner&#39;s review.</p>
-<hr>
 <h2>Related Resources</h2>
 <ul>
 <li><a href="appendix-d-git-authentication.html">Appendix D - Git Authentication and Commit Signing</a></li>
@@ -371,7 +390,6 @@ Save changes</code></pre>
 <li><a href="../docs/05-working-with-pull-requests.html">Chapter 05 - Working with Pull Requests</a></li>
 <li><a href="../docs/06-merge-conflicts.html">Chapter 06 - Merge Conflicts</a></li>
 </ul>
-<hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-l-github-security-features.html">Appendix L - Security Features</a></em></p>
 
   </main>

@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Day 2 Agenda</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Day 2 Agenda</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Day 2 Agenda</h1>
 <h2>From Contributor to Product Maker - Igniting the Forge</h2>
@@ -37,7 +66,6 @@
 <p>Day 2 is about what you can build with those skills. You will deepen your contributions using VS Code and GitHub Copilot. You will use Accessibility Agents - a live, public accessibility project built by your facilitator - not as a shortcut around the skills you learned, but as a <strong>product you can understand, evaluate, critique, and improve</strong> because you now know exactly what it is doing and why.</p>
 <p>You will leave with your name in the commit history of a real open source project and a set of tools you can use on any GitHub repository you ever work on.</p>
 </blockquote>
-<hr>
 <h2>At a Glance</h2>
 <table>
 <thead>
@@ -103,7 +131,6 @@
 <td>Names in history, reflections, next steps</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Block 0 - Day 1 Debrief</h2>
 <p><strong>9:00-9:30</strong></p>
 <h3>Purpose</h3>
@@ -122,7 +149,6 @@
 <li><em>&quot;I want to write documentation for the <code>@insiders-a11y-tracker</code> agent.&quot;</em></li>
 </ul>
 <p>Write it down. You will check it against reality at 5pm.</p>
-<hr>
 <h2>Block 1 - VS Code Setup</h2>
 <p><strong>9:30-10:30</strong></p>
 <blockquote>
@@ -238,7 +264,6 @@
 <p><strong>NVDA users:</strong> The chat input field is announced as &quot;Chat input.&quot; Use <code>Tab</code> to move between the input and the response area. Use <code>Ctrl+Alt+Arrow</code> to navigate within the response.</p>
 <p><strong>JAWS users:</strong> The chat interface is a web-based panel. Switch to Forms Mode (<code>Enter</code> on the input field) to type. Tab out of the input to reach the conversation area in Virtual/Reading mode.</p>
 <p><strong>VoiceOver users:</strong> <code>VO+Tab</code> to the chat input. <code>VO+Shift+Down</code> to interact with it. <code>VO+Escape</code> to stop interacting and navigate the response.</p>
-<hr>
 <h2>Block 2 - Deep Contribution with Copilot</h2>
 <p><strong>10:45-12:00</strong></p>
 <h3>Copilot Orientation (15 min)</h3>
@@ -324,7 +349,6 @@
 <li><strong>Almost there:</strong> You have identified a file and started drafting but have not committed yet. Use the first 10 minutes after lunch to finalize your commit before the agent demonstrations begin.</li>
 <li><strong>Still exploring:</strong> You have not yet identified a file to improve. During lunch, read through the <code>.github/agents/</code> files and pick one. When Block 3 starts, the facilitator will demo agents on the repository - watching those demos will help you see where improvements are needed.</li>
 </ul>
-<hr>
 <h2>Block 3 - Activate the Agents</h2>
 <p><strong>13:00-14:00</strong></p>
 <blockquote>
@@ -373,18 +397,15 @@
 <p><strong>Before each command, the facilitator asks:</strong>
 <em>&quot;If you ran this command manually - without an agent - what would you do? Where would you go? What would you look for?&quot;</em></p>
 <p>Participants answer from their Day 1 knowledge. Then the command runs. Then the room compares the agent&#39;s output to the manual process.</p>
-<hr>
 <h3>1. <code>@daily-briefing morning briefing</code></h3>
 <p><strong>What the agent does:</strong> Sweeps every repository you have access to - issues opened in the last 24 hours, PR review requests awaiting you, CI failures on your branches, security alerts, community reactions to your comments - and delivers it as one prioritized document.</p>
 <p><strong>What you already know:</strong> You navigated each of these areas manually yesterday. The Issues tab. The Pull Requests tab. The Actions tab. The notification inbox. The agent is visiting all of those places - you know exactly what it found because you know where it went.</p>
 <p><strong>Screen reader tip:</strong> The briefing output is announced as a long document. Use <code>H</code> (heading navigation in virtual mode) to jump between sections: &quot;Open Issues,&quot; &quot;Review Requests,&quot; &quot;CI Alerts,&quot; etc. Each section is a heading level 2.</p>
 <p><strong>Verify one item:</strong> The agent lists an issue. Navigate to that issue in your browser using the link in the output. Confirm the information matches. This is your quality check - you still know how to verify independently.</p>
-<hr>
 <h3>2. <code>@issue-tracker find open issues labeled good-first-issue</code></h3>
 <p><strong>What the agent does:</strong> Searches every repository you have access to for issues labeled <code>good-first-issue</code>, scores them by community engagement and release timing, and returns a prioritized list with discussion context.</p>
 <p><strong>What you already know:</strong> Yesterday you filtered the Issues tab by label. You read issue descriptions. You identified which ones had active discussion. The agent is applying a scoring algorithm to the same information.</p>
 <p><strong>Hands-on:</strong> From the agent&#39;s list, pick one issue in a repository you have not contributed to before. Read the full issue - navigate to it in your browser. Is the agent&#39;s priority score reasonable? What context does the agent&#39;s summary miss?</p>
-<hr>
 <h3>3. <code>@pr-review review PR #[your PR number]</code></h3>
 <p><strong>What the agent does:</strong> Generates a full review document for your pull request: line-numbered diff, change map, risk assessment, before-and-after snapshot, CI results, and suggested inline review comments.</p>
 <p><strong>What you already know:</strong> Yesterday you read diffs manually on the Files Changed tab. You wrote inline comments. You submitted a batched review. You know what a good review looks like.</p>
@@ -395,14 +416,12 @@
 <li>Is the agent&#39;s tone aligned with the community standards from <a href="docs/07-culture-etiquette.html">Culture and Etiquette</a>?</li>
 </ul>
 <p>Edit the agent&#39;s output before posting any of it. Your name goes on it.</p>
-<hr>
 <h3>4. <code>@insiders-a11y-tracker</code> - Accessibility Change Monitoring</h3>
 <p><strong>What the agent does:</strong> Monitors accessibility-relevant changes across your configured repositories - WCAG/ARIA cross-referenced, tracking anything that touches keyboard navigation, ARIA attributes, focus management, color contrast, or screen reader labels.</p>
 <p><strong>Hands-on:</strong> Run <code>@insiders-a11y-tracker check recent changes in accessibility-agents</code>. Look at the HTML output files. Does your Day 2 contribution affect any accessibility-sensitive areas? If yes, the agent flags it. If no, confirm that is accurate.</p>
 <p>This agent is quality assurance for the accessibility quality of your own contribution - before you submit it for review.</p>
 <h3>Stand and Stretch (5 min)</h3>
 <p>The agents are running. Step away from the screen for five minutes. Screen reader listening for an hour after lunch is demanding. When you return, Block 4 shows you how these same agents run in the cloud - without you pressing a key.</p>
-<hr>
 <h2>Block 4 - GitHub Agentic Workflows</h2>
 <p><strong>14:00-15:00</strong></p>
 <blockquote>
@@ -414,8 +433,7 @@
 <h3>Reading a Workflow File - Step by Step</h3>
 <p>Open <code>accessibility-agents/.github/</code> in VS Code Explorer. If a <code>.github/workflows/</code> directory exists, navigate to it. The facilitator will walk through an example agentic workflow file.</p>
 <p><strong>Anatomy of a GitHub Agentic Workflow:</strong></p>
-<pre><code class="hljs language-markdown">---
-on:
+<pre><code class="hljs language-markdown">on:
   issues:
 <span class="hljs-code">    types: [opened]
 permissions:
@@ -425,7 +443,6 @@ safe-outputs:
   - add-label
 tools:
   - copilot
----
 </span>
 When a new issue is opened, read its title and body.
 Determine which category it belongs to: bug report, feature request,
@@ -513,7 +530,6 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
 <td>GitHub Actions, no human required</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Block 5 - Ship Your Contribution</h2>
 <p><strong>15:15-16:15</strong></p>
 <h3>Purpose</h3>
@@ -568,7 +584,6 @@ Do not close the issue. Do not merge anything. Do not modify any files.</code></
 <li>Post your review in the browser (or via GitHub PR extension)</li>
 <li>For each comment, ask: <em>&quot;Is this the kind of feedback I would want to receive?&quot;</em></li>
 </ol>
-<hr>
 <h2>Block 6 - Spec Kit: Design the Future</h2>
 <p><strong>16:15-17:00</strong></p>
 <blockquote>
@@ -599,7 +614,6 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <li>Init command: <code>uvx --from git+https://github.com/github/spec-kit.git specify init accessibility-agents-v2</code></li>
 <li>Slash commands: <code>/specify</code> → <code>/plan</code> → <code>/tasks</code> → implement</li>
 </ul>
-<hr>
 <h2>Wrap-Up</h2>
 <p><strong>17:00-17:30</strong></p>
 <h3>The Moment: Find Your Name in History</h3>
@@ -664,7 +678,6 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <li>How to give feedback that helps rather than discourages</li>
 </ul>
 <p>Those skills are yours. No one can take them. Every project you ever encounter is now within reach.</p>
-<hr>
 <h2>Facilitator Notes - Day 2</h2>
 <h3>Pre-Day Setup</h3>
 <ul>
@@ -688,7 +701,6 @@ Speak your requirements aloud. The facilitator types them. Copilot helps convert
 <li><strong>The name in history</strong> (Wrap-Up) - this should have a moment of silence and genuine acknowledgment</li>
 </ol>
 <p>Do not rush the wrap-up. The moment of seeing your name in a public commit history is one of the most meaningful things a first-time open source contributor experiences.</p>
-<hr>
 <p><em>Previous: <a href="docs/09-notifications.html">Notifications ←</a></em>
 <em>Next: <a href="docs/10-vscode-basics.html">VS Code: Setup &amp; Accessibility Basics</a></em>
 <em>Related: <a href="DAY1_AGENDA.html">Day 1 Agenda</a> | <a href="docs/appendix-q-github-actions-workflows.html">GitHub Actions &amp; Workflows</a> | <a href="docs/appendix-u-resources.html">Resources</a></em></p>

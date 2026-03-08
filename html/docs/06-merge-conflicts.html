@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Merge Conflicts - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Merge Conflicts</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Merge Conflicts</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Merge Conflicts</h1>
 <blockquote>
@@ -37,7 +66,6 @@
 <blockquote>
 <p>Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them - step by step.</p>
 </blockquote>
-<hr>
 <h2>Workshop Recommendation (Chapter 6)</h2>
 <p>Chapter 6 uses <strong>one controlled practice challenge</strong> so students can learn conflict resolution without high-pressure scenarios.</p>
 <ul>
@@ -75,7 +103,6 @@
 <li>Controlled practice keeps the experience safe and repeatable.</li>
 <li>Students still get real issue and PR workflow practice.</li>
 </ul>
-<hr>
 <h2>Local Git Alternative: Resolving Conflicts from Your Terminal</h2>
 <details>
 <summary>If you cloned the learning-room in Block 0 and prefer resolving conflicts locally</summary>
@@ -109,7 +136,7 @@ git push</code></pre>
 <p>Your PR on GitHub updates automatically with the resolved content. The same bot checks and human review process apply.</p>
 </details>
 
-<hr>
+
 <h2>What Is a Merge Conflict?</h2>
 <p>A merge conflict occurs when two people have both changed the <strong>same part of the same file</strong> in <strong>different ways</strong>, and Git cannot automatically decide which version is correct.</p>
 <p>Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap - for example:</p>
@@ -118,7 +145,6 @@ git push</code></pre>
 <li>Person B changed line 12 to say &quot;Send message&quot;</li>
 <li>Git asks: which one do you want to keep?</li>
 </ul>
-<hr>
 <h2>Why Conflicts Happen</h2>
 <p>The most common causes:</p>
 <table>
@@ -145,7 +171,6 @@ git push</code></pre>
 <td>Your branch is weeks old and main has changed significantly</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>How to Prevent Conflicts (Prevention is Easier Than Resolution)</h2>
 <p>Avoiding conflicts in the first place saves time and reduces stress. Here are the most effective strategies:</p>
 <h3>1. <strong>Keep your branches short-lived</strong></h3>
@@ -189,7 +214,6 @@ git push              <span class="hljs-comment"># Now push</span></code></pre>
 <p>The most effective contributors make many small PRs rather than one giant one.</p>
 <h3>8. <strong>Use Draft PRs for early visibility</strong></h3>
 <p>Open your PR as a draft while still working. Others can see what you&#39;re changing and avoid overlapping work. Convert to &quot;Ready for review&quot; when done.</p>
-<hr>
 <h2>Advanced Prevention: Understanding Fast-Forward Merges</h2>
 <p>When your branch is perfectly up to date with main and adds new commits on top, GitHub can do a &quot;fast-forward&quot; merge - main simply moves forward to your latest commit. No merge commit needed. No possibility of conflicts.</p>
 <p><strong>How to achieve this:</strong> Rebase your branch on main right before merging:</p>
@@ -199,7 +223,6 @@ git rebase origin/main
 git push --force-with-lease  <span class="hljs-comment"># See warning below about force pushing</span></code></pre>
 <p><strong>Warning:</strong> Force pushing rewrites history. Only do this on branches you alone control (not shared branches). Never force push to <code>main</code>.</p>
 <p>For more on force pushing and rebasing, see the <a href="appendix-a-glossary.html#force-push">Glossary</a>.</p>
-<hr>
 <h2>When Conflicts Are Actually Good</h2>
 <p>Conflicts indicate that multiple people are actively improving the project. In a healthy, collaborative environment, occasional conflicts are normal and manageable.</p>
 <p>If you never have conflicts, it might mean:</p>
@@ -209,7 +232,6 @@ git push --force-with-lease  <span class="hljs-comment"># See warning below abou
 <li>People are avoiding working on important files (technical debt)</li>
 </ul>
 <p><strong>The goal isn&#39;t zero conflicts.</strong> The goal is catching them early, resolving them cleanly, and learning patterns that reduce future conflicts.</p>
-<hr>
 <h2>Spotting a Conflict on GitHub</h2>
 <p>When a PR has a merge conflict, you will see this message on the Conversation tab, near the merge section:</p>
 <blockquote>
@@ -243,7 +265,7 @@ git push --force-with-lease  <span class="hljs-comment"># See warning below abou
 </ol>
 </details>
 
-<hr>
+
 <h2>Conflict Markers - What They Mean</h2>
 <p>When conflict markers appear in a file, your editor is showing you both versions of the conflicted content so you can choose. The format is always:</p>
 <pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
@@ -261,20 +283,19 @@ The content coming from the OTHER branch (or main)
 <h4>Original file (<code>docs/keyboard-shortcuts.md</code>) before conflict</h4>
 <pre><code class="hljs language-markdown">| Insert+Space | Toggle between Browse Mode and Focus Mode |</code></pre>
 <h4>After two students both added a shortcut to the same table row</h4>
-<pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-| Insert+Space | Toggle between Browse Mode and Focus Mode |
-| Insert+F5 | List elements by type |
-=======
-| Insert+Space | Toggle between Browse Mode and Focus Mode |
-| Insert+F7 | Elements list (links, headings, form fields) |
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; add-nvda-shortcut</code></pre>
+<pre><code class="hljs"><span class="hljs-operator">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="hljs-variable">HEAD</span>
+  <span class="hljs-built_in">Insert</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> <span class="hljs-operator">--</span> <span class="hljs-built_in">Toggle</span> <span class="hljs-variable">between</span> <span class="hljs-variable">Browse</span> <span class="hljs-built_in">Mode</span> <span class="hljs-variable">and</span> <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span>
+  <span class="hljs-built_in">Insert</span><span class="hljs-operator">+</span><span class="hljs-variable">F5</span> <span class="hljs-operator">--</span> <span class="hljs-built_in">List</span> <span class="hljs-variable">elements</span> <span class="hljs-variable">by</span> <span class="hljs-variable">type</span>
+<span class="hljs-operator">=======</span>
+  <span class="hljs-built_in">Insert</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> <span class="hljs-operator">--</span> <span class="hljs-built_in">Toggle</span> <span class="hljs-variable">between</span> <span class="hljs-variable">Browse</span> <span class="hljs-built_in">Mode</span> <span class="hljs-variable">and</span> <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span>
+  <span class="hljs-built_in">Insert</span><span class="hljs-operator">+</span><span class="hljs-variable">F7</span> <span class="hljs-operator">--</span> <span class="hljs-variable">Elements</span> <span class="hljs-variable">list</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">links</span><span class="hljs-operator">,</span> <span class="hljs-variable">headings</span><span class="hljs-operator">,</span> <span class="hljs-variable">form</span> <span class="hljs-variable">fields</span><span class="hljs-punctuation">)</span>
+<span class="hljs-operator">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="hljs-variable">add</span><span class="hljs-operator">-</span><span class="hljs-variable">nvda</span><span class="hljs-operator">-</span><span class="hljs-variable">shortcut</span></code></pre>
 <h4>Resolution options</h4>
 <ol>
 <li>Keep your version: add only <code>Insert+F5</code></li>
 <li>Keep their version: add only <code>Insert+F7</code></li>
 <li>Keep both rows: add both shortcuts to the table (often the right answer when two students added different valid shortcuts)</li>
 </ol>
-<hr>
 <h2>Resolving Conflicts on GitHub (Web Editor)</h2>
 <p>GitHub has a built-in conflict editor that you can use without any local tools.</p>
 <h3>Step-by-step: GitHub Conflict Editor</h3>
@@ -342,15 +363,14 @@ The content coming from the OTHER branch (or main)
 &lt;button type=&quot;submit&quot;&gt;Send message&lt;/button&gt;
 &gt;  &gt;  &gt;  &gt;  &gt;  &gt;  &gt;  f  e  a  t  u  r  e  /  f  o  r  m - i  m  p  r  o  v  e  m  e  n  t  s</code></pre>
 <p><em>(Note: screen readers may spell out the <code>&lt;</code> and <code>&gt;</code> characters letter by letter - this is normal)</em></p>
-<hr>
 <h2>Resolving Conflicts in VS Code (Day 2)</h2>
 <p>VS Code has excellent merge conflict tooling with full screen reader support. This is covered in depth in <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a>, but here is an overview:</p>
 <h3>VS Code shows conflicts as</h3>
-<pre><code class="hljs language-text">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
+<pre><code class="hljs">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
 Your version
-||||||| original                   ← (3-way merge, if enabled)
-Original version before both edits
-=======
+======= original                   -- (3-way merge, if enabled)
+<span class="hljs-section">Original version before both edits
+=======</span>
 Incoming version
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name (Incoming Change)</code></pre>
 <h3>VS Code merge conflict actions</h3>
@@ -397,7 +417,7 @@ Incoming version
 <p><strong>GitHub Copilot can help:</strong> With the cursor in a conflict region, open Copilot Chat (<code>Cmd+Option+I</code>) and type: &quot;Resolve this merge conflict - keep meaningful changes from both sides.&quot; Copilot will suggest a resolution that you can review and accept.</p>
 </details>
 
-<hr>
+
 <h2>When You Feel Stuck</h2>
 <h3>Ask for help - it&#39;s normal</h3>
 <p>If you are unsure which version to keep:</p>
@@ -414,7 +434,6 @@ Incoming version
 <li>Open a new PR</li>
 </ol>
 <p>This is legitimate - not a failure.</p>
-<hr>
 <h2>Reading a Conflict Message from Git (Command Line Reference)</h2>
 <p>If you work locally, <code>git merge</code> or <code>git pull</code> will say:</p>
 <pre><code class="hljs language-text">CONFLICT (content): Merge conflict in src/index.html
@@ -463,7 +482,7 @@ gh <span class="hljs-built_in">pr</span> diff 42</code></pre>
 <p>If conflicts exist, the <code>gh pr view</code> output shows &quot;This branch has conflicts that must be resolved.&quot; Resolve locally using <code>git merge</code> (above) then push, or use the web editor.</p>
 </details>
 
-<hr>
+
 <h2>Summary Checklist</h2>
 <pre><code class="hljs language-text">Before you start:
   □ My PR is small and focused (fewer conflicts = easier life)
@@ -481,7 +500,6 @@ After resolving:
   □ Re-check that the PR description and issue link are still accurate
   □ Comment on the PR: &quot;Resolved merge conflict - kept both the aria-label and type attribute&quot;
   □ Request re-review if reviewers already approved before the conflict was introduced</code></pre>
-<hr>
 <h2>Try It: Read a Conflict (Without Fear)</h2>
 <p><strong>Time:</strong> 2 minutes | <strong>What you need:</strong> Any text editor or just read below</p>
 <p>Read this merge conflict aloud. The goal is not to resolve it - just to understand what you&#39;re hearing:</p>
@@ -502,7 +520,6 @@ attribute for screen readers.</code></pre>
 <blockquote>
 <p><strong>What success feels like:</strong> Conflicts aren&#39;t mysterious anymore. They&#39;re just two versions side by side with markers telling you which is which. You already know how to pick the right one.</p>
 </blockquote>
-<hr>
 <blockquote>
 <h3>Day 2 Amplifier - Copilot Chat &amp; Conflict Prevention</h3>
 <p><strong>Resolve at least one conflict completely by hand before using any AI assistance.</strong> You must be able to read <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers and understand what each version represents. An AI-suggested resolution you cannot independently verify is a liability - you are accepting a change you do not understand into a codebase other people depend on.</p>
@@ -514,7 +531,6 @@ attribute for screen readers.</code></pre>
 </ul>
 <p><em>Understanding conflict markers is not a stepping stone to letting AI handle conflicts. It is the skill that tells you when AI got it wrong.</em></p>
 </blockquote>
-<hr>
 <p><em>Next: <a href="07-culture-etiquette.html">Culture and Etiquette</a></em>
 <em>Back: <a href="05-working-with-pull-requests.html">Working with Pull Requests</a></em>
 <em>Related: <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></em></p>

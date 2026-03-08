@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix J: GitHub Advanced Search - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix J: GitHub Advanced Search</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix J: GitHub Advanced Search</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix J: GitHub Advanced Search</h1>
 <blockquote>
@@ -37,7 +66,6 @@
 <blockquote>
 <p>GitHub&#39;s search engine is powerful and underused. For screen reader users in particular, using the search bar with precise query syntax is often <em>faster and more accessible</em> than navigating filter dropdowns and checkbox menus. This reference covers the query language so you can filter anything from the keyboard.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-the-search-interface">The Search Interface</a></li>
@@ -51,7 +79,6 @@
 <li><a href="#9-practical-queries-for-this-workshop">Practical Queries for This Workshop</a></li>
 <li><a href="#10-saving-and-reusing-searches">Saving and Reusing Searches</a></li>
 </ol>
-<hr>
 <h2>1. The Search Interface</h2>
 <p>GitHub&#39;s search is accessible from nearly any page:</p>
 <ul>
@@ -63,7 +90,6 @@
 <pre><code class="hljs language-text">/ → Focus the global search bar (works on most GitHub pages)
 Type your query → Enter
 → Results page opens, grouped by type (Code, Issues, PRs, Repositories, etc.)</code></pre>
-<hr>
 <h2>2. Search Scopes</h2>
 <p>By default, GitHub searches across all of GitHub. Scope modifiers restrict results:</p>
 <table>
@@ -99,7 +125,6 @@ Type your query → Enter
 </tr>
 </tbody></table>
 <p><strong>Example:</strong> <code>repo:community-access/accessibility-agents in:title keyboard</code> finds issues/PRs whose titles mention &quot;keyboard&quot; in the accessibility-agents repo.</p>
-<hr>
 <h2>3. The Core Query Language</h2>
 <h3>Boolean Logic</h3>
 <table>
@@ -248,7 +273,6 @@ Type your query → Enter
 <td>Closed after a date</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>4. Searching Issues and Pull Requests</h2>
 <h3>Going to the Issues search directly</h3>
 <p>GitHub&#39;s issue/PR search is at <code>github.com/issues</code> (your issues) or <code>github.com/pulls</code> (your PRs). The search bar there is pre-scoped to &quot;repos you have access to involving you.&quot;</p>
@@ -267,7 +291,6 @@ Type your query → Enter
 <pre><code class="hljs language-text">is:issue is:open author:@me</code></pre>
 <h4>Find issues that are stale (open, not updated in 6+ months)</h4>
 <pre><code class="hljs language-text">is:issue is:open repo:owner/name updated:&lt;2024-08-01</code></pre>
-<hr>
 <h2>5. Searching Code</h2>
 <p>Code search operates differently from issue search. As of 2024, GitHub uses an improved code search engine (sometimes called &quot;code search v2&quot;) with better indexing.</p>
 <h3>Basic code search</h3>
@@ -309,7 +332,6 @@ Type your query → Enter
 <td>Exact string match in file content</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>6. Searching Commits</h2>
 <h3>Find commits with a keyword in the message</h3>
 <pre><code class="hljs language-text">repo:owner/name fix keyboard navigation</code></pre>
@@ -319,7 +341,6 @@ Type your query → Enter
 <pre><code class="hljs language-text">repo:owner/name committer-date:2025-01-01..2025-03-31</code></pre>
 <h3>Find commits that touched a specific file</h3>
 <pre><code class="hljs language-text">repo:owner/name path:docs/README.md</code></pre>
-<hr>
 <h2>7. Searching Repositories</h2>
 <h3>Find accessible repos by topic</h3>
 <pre><code class="hljs language-text">topic:accessibility stars:&gt;50 is:public</code></pre>
@@ -366,13 +387,11 @@ Type your query → Enter
 <td>Repos with recent activity</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>8. Searching Users and Organizations</h2>
 <h3>Find users</h3>
 <pre><code class="hljs language-text">type:user location:Seattle followers:&gt;100</code></pre>
 <h3>Find organizations</h3>
 <pre><code class="hljs language-text">type:org topic:accessibility</code></pre>
-<hr>
 <h2>9. Practical Queries for This Workshop</h2>
 <p>Bookmark these for use during the hackathon:</p>
 <h3>Find open contributions you can make right now in accessibility-agents</h3>
@@ -385,7 +404,6 @@ Type your query → Enter
 <pre><code class="hljs language-text">is:pr is:merged author:@me</code></pre>
 <h3>Find recent discussions about a topic</h3>
 <pre><code class="hljs language-text">repo:community-access/accessibility-agents in:discussions screen reader</code></pre>
-<hr>
 <h2>10. Saving and Reusing Searches</h2>
 <p>GitHub does not have a built-in saved-search feature, but you can:</p>
 <ol>
@@ -395,7 +413,6 @@ Type your query → Enter
 </ol>
 <h3>Example bookmarkable URL</h3>
 <pre><code class="hljs language-text">https://github.com/issues?q=is%3Aissue+is%3Aopen+assignee%3A%40me</code></pre>
-<hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a></em></p>
 
   </main>

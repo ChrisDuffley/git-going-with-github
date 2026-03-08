@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Challenge System Architecture Summary</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Challenge System Architecture Summary</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Challenge System Architecture Summary</h1>
 <h2>Overview</h2>
@@ -38,7 +67,6 @@
 <li><strong>Scalable</strong>: Works for any cohort size with batch script</li>
 <li><strong>Self-documenting</strong>: Every issue explains what to do and how bot validation works</li>
 </ul>
-<hr>
 <h2>System Components</h2>
 <h3>1. Challenge Discovery (Student-Facing)</h3>
 <p><strong>Primary Path:</strong> GitHub Issues tab (pre-assigned by @username)</p>
@@ -54,7 +82,7 @@
 </ul>
 <p><strong>Documentation Updates:</strong></p>
 <ul>
-<li><a href="README.html">README.md</a> - &quot;🎯 Your Challenges Are Waiting&quot; section (lines 100-120)</li>
+<li><a href="README.html">README.md</a> - &quot; Your Challenges Are Waiting&quot; section (lines 100-120)</li>
 <li><a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> - Welcome + discovery methods (top section)</li>
 </ul>
 <h3>2. Challenge Templates (Issue Infrastructure)</h3>
@@ -74,7 +102,7 @@
 <tbody><tr>
 <td><strong>04</strong> Issues</td>
 <td>3</td>
-<td>PR with <code>Closes #XX</code></td>
+<td>Issue comment (evidence links)</td>
 <td>No (manual)</td>
 <td>github-issues</td>
 <td>1</td>
@@ -190,7 +218,7 @@
 </tr>
 </tbody></table>
 <p><strong>Total: 26 challenges per student</strong></p>
-<p>Chapters 4, 5, 6, and 11 use PR-based submission with <code>Closes #XX</code> syntax. All other chapters use issue-comment-based submission where students post evidence as a checklist comment.</p>
+<p>Chapters 5, 6, and 11 use PR-based submission with <code>Closes #XX</code> syntax. Chapter 4 uses issue-comment-based submission where students post evidence links on their assigned challenge issue (no branch or file editing required). All other chapters use issue-comment-based submission where students post evidence as a checklist comment.</p>
 <p><strong>Template Contents:</strong></p>
 <ul>
 <li>YAML frontmatter with placeholders: <code>{CHAPTER}</code>, <code>{CHALLENGE_NUM}</code>, <code>{CHALLENGE_TITLE}</code>, <code>{USERNAME}</code>, <code>{ISSUE_NUMBER}</code></li>
@@ -268,11 +296,11 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <li>Student opens PR with <code>Closes #ISSUE_NUMBER</code> in title or body</li>
 <li>GitHub Actions workflow triggers (<code>.github/workflows/learning-room-pr-bot.yml</code>)</li>
 <li>Validation script (<code>.github/scripts/validate-pr.js</code>) checks:<ul>
-<li>✅ <code>Closes #XX</code> syntax is correct</li>
-<li>✅ PR references an actual challenge issue</li>
-<li>✅ Markdown syntax is valid</li>
-<li>✅ No major accessibility violations (headings, links, alt text)</li>
-<li>✅ Files changed are in appropriate directory</li>
+<li><code>Closes #XX</code> syntax is correct</li>
+<li>PR references an actual challenge issue</li>
+<li>Markdown syntax is valid</li>
+<li>No major accessibility violations (headings, links, alt text)</li>
+<li>Files changed are in appropriate directory</li>
 </ul>
 </li>
 <li>Bot posts comment with pass/fail status</li>
@@ -291,7 +319,6 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <li>Rule exceptions: Can exclude specific files per cohort</li>
 <li>Workflow schedule: Runs on every PR opened/updated to main</li>
 </ul>
-<hr>
 <h2>Facilitator Operations</h2>
 <p><strong>Complete guide:</strong> <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></p>
 <h3>Pre-Workshop Setup (1 hour)</h3>
@@ -317,7 +344,6 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <li>Prepare for next cohort: Update <code>student-usernames.txt</code>, re-run batch script</li>
 <li>No need to delete old issues; they remain searchable and valuable for reference</li>
 </ul>
-<hr>
 <h2>Data Structures</h2>
 <h3>Issue Title Convention</h3>
 <pre><code class="hljs"><span class="language-xml">Chapter </span><span class="hljs-template-variable">{XX}</span><span class="language-xml">.</span><span class="hljs-template-variable">{Y}</span><span class="language-xml">: </span><span class="hljs-template-variable">{Challenge_Title}</span><span class="language-xml"> (@</span><span class="hljs-template-variable">{USERNAME}</span><span class="language-xml">)</span></code></pre>
@@ -410,7 +436,6 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 <td>Student or facilitator closes issue</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Success Metrics</h2>
 <h3>For Students</h3>
 <ul>
@@ -463,7 +488,6 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 </ul>
 </li>
 </ul>
-<hr>
 <h2>File Structure</h2>
 <pre><code class="hljs">.
 ├── .github/
@@ -509,7 +533,6 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 ├── FACILITATOR_CHALLENGES<span class="hljs-selector-class">.md</span>            &lt;- Challenge-specific facilitator ops
 ├── CHALLENGE_SYSTEM_ARCHITECTURE<span class="hljs-selector-class">.md</span>     &lt;- This document
 └── student-usernames<span class="hljs-selector-class">.txt</span>                &lt;- Input <span class="hljs-keyword">for</span> legacy batch script</code></pre>
-<hr>
 <h2>Integration Points</h2>
 <h3>From Student Docs</h3>
 <ul>
@@ -529,7 +552,7 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 </ul>
 <h3>From README</h3>
 <ul>
-<li><a href="README.html">README.md</a> section &quot;🎯 Your Challenges Are Waiting&quot; → directs students to Issues tab</li>
+<li><a href="README.html">README.md</a> section &quot; Your Challenges Are Waiting&quot; → directs students to Issues tab</li>
 <li>README → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> for facilitators</li>
 </ul>
 <h3>From Challenge Hub</h3>
@@ -543,7 +566,6 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 <li><a href="FACILITATOR.html">FACILITATOR.md</a> → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></li>
 <li><a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> → links to template files, scripts, chapter docs</li>
 </ul>
-<hr>
 <h2>Naming Conventions</h2>
 <h3>Github Usernames (from <code>student-usernames.txt</code>)</h3>
 <ul>
@@ -573,7 +595,6 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 <pre><code class="hljs">challenge/<span class="hljs-number">11</span>-<span class="hljs-keyword">add</span>-sci-fi-themes
 challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-keyword">conflict</span></code></pre>
 <p>The PR bot validates branch names for Chapter 11 (Git challenges).</p>
-<hr>
 <h2>Customization &amp; Extension</h2>
 <h3>Adding a New Chapter to Challenges</h3>
 <ol>
@@ -602,7 +623,6 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <li>Update facilitator guides with your timelines/agenda</li>
 <li>Run: <code>.\scripts\create_all_challenges.ps1 -DryRun</code> then <code>.\scripts\create_all_challenges.ps1</code></li>
 </ol>
-<hr>
 <h2>Common Issues &amp; Solutions</h2>
 <h3>Issue: &quot;I can&#39;t find my challenges&quot;</h3>
 <p><strong>Solution:</strong> Remind student to go to the <strong>Issues</strong> tab and check <strong>Filters</strong> for their username. They can also use the Challenge Hub as a reference.</p>
@@ -622,7 +642,6 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <li>Permission issues (bot user doesn&#39;t have issue create permission)</li>
 <li>GitHub API rate limiting - wait a few minutes and rerun</li>
 </ul>
-<hr>
 <h2>Success Story (By the Numbers)</h2>
 <h3>Generated for a 30-person cohort:</h3>
 <ul>
@@ -633,7 +652,6 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <li>Script is rerunnable: new members get their full set automatically</li>
 <li>Labels: 4 levels, 14 skills, 2 days</li>
 </ul>
-<hr>
 <h2>Next Steps (Future Enhancements)</h2>
 <h3>Short Term</h3>
 <ul>
@@ -653,7 +671,6 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <li><input aria-label="Difficulty curves: AI recommendation of next challenge based on pace" disabled="" type="checkbox"> Difficulty curves: AI recommendation of next challenge based on pace</li>
 <li><input aria-label="Mobile: GitHub Mobile app integration for easier issue tracking" disabled="" type="checkbox"> Mobile: GitHub Mobile app integration for easier issue tracking</li>
 </ul>
-<hr>
 <h2>Document Control</h2>
 <table>
 <thead>
@@ -684,7 +701,6 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <td>Maintain bot logic and rules</td>
 </tr>
 </tbody></table>
-<hr>
 <p><strong>Last Updated:</strong> March 2026
 <strong>Archive Location:</strong> <a href="https://github.com/git-going-with-github/">https://github.com/git-going-with-github/</a>
 <strong>Questions?</strong> See <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> FAQ section.</p>

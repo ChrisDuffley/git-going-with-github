@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix I: GitHub Projects Deep Dive - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix I: GitHub Projects Deep Dive</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix I: GitHub Projects Deep Dive</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix I: GitHub Projects Deep Dive</h1>
 <blockquote>
@@ -37,7 +66,6 @@
 <blockquote>
 <p>GitHub Projects is GitHub&#39;s built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in <a href="08-labels-milestones-projects.html">Chapter 08: Labels, Milestones, and Projects</a>.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-projects-v2-what-changed">Projects v2: What Changed</a></li>
@@ -53,50 +81,15 @@
 <li><a href="#11-accessibility-agents-project-status">Accessibility Agents: <code>/project-status</code></a></li>
 <li><a href="#12-exercises">Exercises</a></li>
 </ol>
-<hr>
 <h2>1. Projects v2: What Changed</h2>
 <p>GitHub has two generations of project tooling. The current generation - called <strong>Projects (v2)</strong> - is what you&#39;ll find on any repository or organization page today.</p>
-<table>
-<thead>
-<tr>
-<th scope="col">Feature</th>
-<th scope="col">Classic Projects (v1)</th>
-<th scope="col">Projects v2 (current)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Layouts</td>
-<td>Kanban board only</td>
-<td>Board, Table, Roadmap</td>
-</tr>
-<tr>
-<td>Custom fields</td>
-<td>None</td>
-<td>Text, Number, Date, Select, Iteration</td>
-</tr>
-<tr>
-<td>Automations</td>
-<td>None built-in</td>
-<td>Native GitHub Actions integration</td>
-</tr>
-<tr>
-<td>Cross-repo</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td>Filtering</td>
-<td>Limited</td>
-<td>Full field/label/assignee/status queries</td>
-</tr>
-<tr>
-<td>API</td>
-<td>Limited</td>
-<td>Full GraphQL support</td>
-</tr>
-</tbody></table>
+<p><strong>Layouts:</strong> Classic v1 offered Kanban board only. V2 offers Board, Table, and Roadmap.</p>
+<p><strong>Custom fields:</strong> Classic v1 had none. V2 supports Text, Number, Date, Single Select, and Iteration fields.</p>
+<p><strong>Automations:</strong> Classic v1 had no built-in automations. V2 has native GitHub Actions integration.</p>
+<p><strong>Cross-repo support:</strong> Classic v1 did not support cross-repository tracking. V2 does.</p>
+<p><strong>Filtering:</strong> Classic v1 had limited filtering. V2 supports full field, label, assignee, and status queries.</p>
+<p><strong>API:</strong> Classic v1 had a limited API. V2 has full GraphQL support.</p>
 <p>If you see &quot;Projects (Beta)&quot; references in older documentation, those referred to the early rollout of v2. It is now stable and the default.</p>
-<hr>
 <h2>2. Creating a Project</h2>
 <p>Projects can be created at the <strong>organization level</strong> (shared across all repos in an org) or at the <strong>repository level</strong> (scoped to one repo).</p>
 <h3>Create from an Organization</h3>
@@ -123,7 +116,6 @@
 3. Name field: type your project name
 4. &quot;Create project&quot; button: Tab → Enter
 5. You land on the new empty project</code></pre>
-<hr>
 <h2>3. The Three Layouts in Depth</h2>
 <h3>Table View</h3>
 <p>The default layout. A spreadsheet-style grid where each row is an issue, PR, or draft item. Columns are fields (Title, Status, Assignee, Labels, Priority, custom fields you create).</p>
@@ -168,44 +160,14 @@ Within a card:
 <li>Add a <strong>Date</strong> custom field (e.g., &quot;Start Date&quot;, &quot;Due Date&quot;) or use a <strong>Milestone</strong> field</li>
 <li>Items without dates appear in the ungrouped section</li>
 </ul>
-<hr>
 <h2>4. Custom Fields</h2>
 <p>This is one of Projects v2&#39;s most powerful features. You can add fields beyond the GitHub defaults (Title, Assignee, Labels, Milestone, Repository).</p>
 <h3>Field Types</h3>
-<table>
-<thead>
-<tr>
-<th scope="col">Type</th>
-<th scope="col">Use Case</th>
-<th scope="col">Example</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Text</strong></td>
-<td>Free-form notes</td>
-<td>&quot;Acceptance criteria&quot;, &quot;Design link&quot;</td>
-</tr>
-<tr>
-<td><strong>Number</strong></td>
-<td>Story points, estimates</td>
-<td>&quot;Points: 3&quot;</td>
-</tr>
-<tr>
-<td><strong>Date</strong></td>
-<td>Deadlines, start dates</td>
-<td>&quot;Due: 2025-06-15&quot;</td>
-</tr>
-<tr>
-<td><strong>Single select</strong></td>
-<td>Priority, size, type</td>
-<td>Priority: P0 / P1 / P2</td>
-</tr>
-<tr>
-<td><strong>Iteration</strong></td>
-<td>Sprint/cycle tracking</td>
-<td>See Section 7</td>
-</tr>
-</tbody></table>
+<p><strong>Text:</strong> Free-form notes for things like acceptance criteria or design links.</p>
+<p><strong>Number:</strong> Numeric values such as story points or estimates (for example, &quot;Points: 3&quot;).</p>
+<p><strong>Date:</strong> Deadlines or start dates (for example, &quot;Due: 2025-06-15&quot;).</p>
+<p><strong>Single select:</strong> A dropdown with predefined options, useful for priority, size, or type fields (for example, Priority: P0, P1, or P2).</p>
+<p><strong>Iteration:</strong> Sprint or cycle tracking. See Section 7 for details.</p>
 <h3>Creating a Custom Field</h3>
 <p>From any project view:</p>
 <ol>
@@ -228,7 +190,6 @@ Within a card:
 <li>Type value (text/number) or select from dropdown (single select)</li>
 <li><code>Enter</code> or <code>Tab</code> to confirm</li>
 </ol>
-<hr>
 <h2>5. Adding and Managing Items</h2>
 <h3>Add an Existing Issue or PR</h3>
 <p>From any project view:</p>
@@ -263,7 +224,6 @@ Within a card:
 <li>A bulk action bar appears at the top</li>
 <li>Options: change Status, assign label, change assignee, archive, delete</li>
 </ol>
-<hr>
 <h2>6. Built-In Automations</h2>
 <p>Projects v2 has native automation rules - no GitHub Actions YAML required.</p>
 <h3>Accessing Automations</h3>
@@ -274,34 +234,11 @@ Within a card:
 <li>You&#39;ll see a list of built-in automation rules you can enable/disable</li>
 </ol>
 <h3>Available Built-In Workflows</h3>
-<table>
-<thead>
-<tr>
-<th scope="col">Workflow</th>
-<th scope="col">What It Does</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Item added to project</strong></td>
-<td>When an item is manually added, set its Status to a chosen value</td>
-</tr>
-<tr>
-<td><strong>Item reopened</strong></td>
-<td>When an issue/PR is reopened, change its Status (e.g., back to &quot;In Progress&quot;)</td>
-</tr>
-<tr>
-<td><strong>Item closed</strong></td>
-<td>When an issue/PR is closed, set Status to &quot;Done&quot; automatically</td>
-</tr>
-<tr>
-<td><strong>Pull request merged</strong></td>
-<td>When a PR is merged, set its Status to &quot;Done&quot;</td>
-</tr>
-<tr>
-<td><strong>Auto-add to project</strong></td>
-<td>Items matching a filter (by label, type, repo) are automatically added to the project</td>
-</tr>
-</tbody></table>
+<p><strong>Item added to project:</strong> When an item is manually added, its Status is set to a value you choose.</p>
+<p><strong>Item reopened:</strong> When an issue or pull request is reopened, its Status changes back (for example, to &quot;In Progress&quot;).</p>
+<p><strong>Item closed:</strong> When an issue or pull request is closed, its Status is automatically set to &quot;Done.&quot;</p>
+<p><strong>Pull request merged:</strong> When a pull request is merged, its Status is set to &quot;Done.&quot;</p>
+<p><strong>Auto-add to project:</strong> Items matching a filter (by label, type, or repository) are automatically added to the project.</p>
 <h3>Setting Up Auto-Add</h3>
 <p>This is the most powerful workflow for maintainers:</p>
 <ol>
@@ -319,7 +256,6 @@ Within a card:
 <li>Send Slack notifications when high-priority items are added</li>
 </ul>
 <p>See <a href="appendix-q-github-actions-workflows.html">Appendix Q: GitHub Actions and Workflows</a> for the foundation, and the <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project">GitHub documentation on automating projects</a> for advanced patterns.</p>
-<hr>
 <h2>7. Iterations (Sprints)</h2>
 <p>An <strong>iteration</strong> field lets you group work into time-boxed cycles - sprints, weeks, or any cadence you choose.</p>
 <h3>Creating an Iteration Field</h3>
@@ -344,7 +280,6 @@ Within a card:
 <li>Select <strong>&quot;Current iteration&quot;</strong></li>
 <li>See: items by status, completion rate, items added vs closed over time</li>
 </ol>
-<hr>
 <h2>8. Views and Filters</h2>
 <p>A <strong>view</strong> is a saved configuration of layout + filters + grouping + sort. You can have many views on one project, each showing a different slice of the data.</p>
 <h3>Creating a View</h3>
@@ -356,47 +291,14 @@ Within a card:
 </ol>
 <h3>Filter Syntax</h3>
 <p>The filter bar accepts a query language similar to GitHub&#39;s issue search:</p>
-<table>
-<thead>
-<tr>
-<th scope="col">Query</th>
-<th scope="col">Meaning</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>status:In Progress</code></td>
-<td>Show only items with that Status value</td>
-</tr>
-<tr>
-<td><code>assignee:@me</code></td>
-<td>Show only items assigned to you</td>
-</tr>
-<tr>
-<td><code>label:accessibility</code></td>
-<td>Items with the accessibility label</td>
-</tr>
-<tr>
-<td><code>milestone:&quot;v2.0&quot;</code></td>
-<td>Items in a specific milestone</td>
-</tr>
-<tr>
-<td><code>no:assignee</code></td>
-<td>Items with no assignee</td>
-</tr>
-<tr>
-<td><code>is:pr</code></td>
-<td>Only pull requests</td>
-</tr>
-<tr>
-<td><code>is:issue</code></td>
-<td>Only issues</td>
-</tr>
-<tr>
-<td><code>repo:owner/name</code></td>
-<td>Items from a specific repo (cross-repo projects)</td>
-</tr>
-</tbody></table>
-<p>Combine filters: <code>assignee:@me status:&quot;In Progress&quot;</code> shows your in-progress work.</p>
+<p><code>status:In Progress</code> shows only items with that Status value.</p>
+<p><code>assignee:@me</code> shows only items assigned to you.</p>
+<p><code>label:accessibility</code> shows items with the accessibility label.</p>
+<p><code>milestone:&quot;v2.0&quot;</code> shows items in a specific milestone.</p>
+<p><code>no:assignee</code> shows items with no assignee.</p>
+<p><code>is:pr</code> shows only pull requests. <code>is:issue</code> shows only issues.</p>
+<p><code>repo:owner/name</code> shows items from a specific repository, useful in cross-repo projects.</p>
+<p>You can combine filters: <code>assignee:@me status:&quot;In Progress&quot;</code> shows your in-progress work.</p>
 <h3>Grouping</h3>
 <p>In Table or Board view, you can group rows:</p>
 <ol>
@@ -409,7 +311,6 @@ Within a card:
 <ul>
 <li>Priority ascending, then due date ascending</li>
 </ul>
-<hr>
 <h2>9. Cross-Repository Projects</h2>
 <p>A single project can track issues and PRs from <strong>multiple repositories</strong> - including repos in different organizations (if you have access).</p>
 <h3>Add a Repository to a Project</h3>
@@ -424,7 +325,6 @@ Within a card:
 <pre><code class="hljs language-text">Filter: repo:community-access/accessibility-agents
 → Show only accessibility-agents issues in this cross-repo project</code></pre>
 <p><strong>Common use case:</strong> An organization project tracking all accessibility bugs across every repo, labeled <code>accessibility</code>, with Auto-add enabled.</p>
-<hr>
 <h2>10. Screen Reader Navigation Reference</h2>
 <h3>Project Home Page (list of projects)</h3>
 <pre><code class="hljs language-text">3 → Jump to project titles (they are h3 links)
@@ -457,7 +357,6 @@ Escape → Close the dropdown or the panel</code></pre>
 <pre><code class="hljs language-text">Click/Tab to filter bar → type query → Enter to apply
 Backspace → Remove last filter token
 Escape → Clear focus from filter bar</code></pre>
-<hr>
 <h2>11. Accessibility Agents: <code>/project-status</code></h2>
 <p>The <strong><code>/project-status</code></strong> command from Accessibility Agents gives you a live project board overview directly in VS Code Copilot Chat, without opening a browser.</p>
 <h3>What It Shows</h3>
@@ -471,23 +370,53 @@ Escape → Clear focus from filter bar</code></pre>
 <li>Sprint/iteration progress if an Iteration field is configured</li>
 </ul>
 <h3>Example Output</h3>
-<pre><code class="hljs language-text">GitHub Project: Accessibility Agents Roadmap (3 active views)
-
-Column Breakdown:
-┌─────────────┬───────┬──────────────────┬─────────┬──────────────┐
-│ Column      │ Items │ Assignees        │ Avg Age │ Stale (7d+) │
-├─────────────┼───────┼──────────────────┼─────────┼──────────────┤
-│ To Do       │   8   │ @alice(3),@bob(2) │ 5 days  │     1       │
-│ In Progress │   4   │ @charlie(2)       │ 3 days  │     0       │
-│ In Review   │   2   │ --               │ 2 days  │     0       │
-│ Done        │  23   │ --               │  --     │    --       │
-└─────────────┴───────┴──────────────────┴─────────┴──────────────┘
-
-Attention Items:
-  Stale: &quot;Update screen reader navigation guide&quot; - In Review for 9 days, no activity
-  Unassigned: &quot;Triage accessibility bug backlog&quot; in In Progress
-
-After the overview: &quot;Want to see a specific column or check a team member&#x27;s workload?&quot;</code></pre>
+<p><strong>GitHub Project: Accessibility Agents Roadmap</strong> (3 active views)</p>
+<p><strong>Column Breakdown:</strong></p>
+<table>
+<thead>
+<tr>
+<th scope="col">Column</th>
+<th scope="col">Items</th>
+<th scope="col">Assignees</th>
+<th scope="col">Avg Age</th>
+<th scope="col">Stale (7d+)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>To Do</td>
+<td>8</td>
+<td>@alice (3), @bob (2)</td>
+<td>5 days</td>
+<td>1</td>
+</tr>
+<tr>
+<td>In Progress</td>
+<td>4</td>
+<td>@charlie (2)</td>
+<td>3 days</td>
+<td>0</td>
+</tr>
+<tr>
+<td>In Review</td>
+<td>2</td>
+<td>--</td>
+<td>2 days</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Done</td>
+<td>23</td>
+<td>--</td>
+<td>--</td>
+<td>--</td>
+</tr>
+</tbody></table>
+<p><strong>Attention Items:</strong></p>
+<ul>
+<li>Stale: &quot;Update screen reader navigation guide&quot; - In Review for 9 days, no activity</li>
+<li>Unassigned: &quot;Triage accessibility bug backlog&quot; in In Progress</li>
+</ul>
+<p>After the overview: &quot;Want to see a specific column or check a team member&#39;s workload?&quot;</p>
 <h3>When to Use It</h3>
 <ul>
 <li>During standup: quick status snapshot without leaving VS Code</li>
@@ -495,7 +424,6 @@ After the overview: &quot;Want to see a specific column or check a team member&#
 <li>During sprint planning: identify stale and blocked items before the next cycle</li>
 <li>After a weekend: catch up on what moved while you were away</li>
 </ul>
-<hr>
 <h2>12. Exercises</h2>
 <h3>Exercise 1: Create a Personal Tracking Project</h3>
 <ol>
@@ -526,7 +454,6 @@ After the overview: &quot;Want to see a specific column or check a team member&#
 <li>Create a view filtered to <code>is:issue label:accessibility</code></li>
 <li>Set up Auto-add: any issue with the <code>accessibility</code> label in those repos goes to this project automatically</li>
 </ol>
-<hr>
 <blockquote>
 <p><strong>From Chapter 08:</strong> For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see <a href="08-labels-milestones-projects.html">Chapter 08: Labels, Milestones, and Projects</a>.</p>
 </blockquote>

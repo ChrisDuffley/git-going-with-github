@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Understanding GitHub's Web Structure - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,38 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Understanding GitHub's Web Structure</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Understanding GitHub's Web Structure</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Understanding GitHub&#39;s Web Structure</h1>
 <blockquote>
@@ -37,7 +66,6 @@
 <blockquote>
 <p><strong>Read this before navigating GitHub for the first time.</strong> This lesson gives you the mental model that makes every subsequent guide easier. Once you understand how GitHub pages are built - their landmark structure, heading hierarchy, and URL patterns - you will know how to orient yourself on any page you land on, even ones this guide never mentions.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-githubs-three-level-structure">GitHub&#39;s Three-Level Structure</a></li>
@@ -51,10 +79,9 @@
 <li><a href="#9-how-githubs-layout-changes-by-viewport">How GitHub&#39;s Layout Changes by Viewport</a></li>
 <li><a href="#10-the-mental-model---building-your-internal-map">The Mental Model - Building Your Internal Map</a></li>
 </ol>
-<hr>
 <h2>1. GitHub&#39;s Three-Level Structure</h2>
 <p>GitHub is not a single page or a single kind of page. It is three nested levels, and understanding which level you are on changes how you navigate.</p>
-<pre><code class="hljs language-text">Level 1: Your Account / Profile
+<pre><code class="hljs language-text">    Level 1: Your Account / Profile
    github.com/your-username
    github.com/settings/...
    github.com/notifications
@@ -72,7 +99,6 @@ Level 3: A Repository - where all the work happens
 <blockquote>
 <p><strong>Screen reader orientation tip:</strong> The first heading (<code>H</code> then <code>1</code>) on any page tells you what level you are on. On a repository page, it reads &quot;owner/repo-name.&quot; On your profile page, it reads your username. On a settings page, it reads the settings category name.</p>
 </blockquote>
-<hr>
 <h2>2. What Is Always on Every GitHub Page</h2>
 <p>No matter where you navigate on GitHub, the same global navigation bar is at the top of every page. Understanding its landmark structure means you always have a fixed orientation point.</p>
 <h3>The Global Navigation Bar (always present)</h3>
@@ -126,10 +152,8 @@ Level 3: A Repository - where all the work happens
 <p><strong>Important:</strong> These are standard anchor links. You do not need to switch to Focus Mode to activate them. Press <code>Enter</code> in Browse Mode and they work.</p>
 </blockquote>
 <h3>Secondary navigation (repository pages only)</h3>
-<p>When you are inside a repository, a second navigation bar appears below the global bar. This contains the repository&#39;s tabs:</p>
-<pre><code class="hljs language-text">Code | Issues | Pull requests | Actions | Projects | Wiki | Security | Insights | Settings</code></pre>
+<p>When you are inside a repository, a second navigation bar appears below the global bar. This contains the repository&#39;s tabs: Code, Issues, Pull requests, Actions, Projects, Wiki, Security, Insights, and Settings.</p>
 <p><strong>Screen reader landmark:</strong> This is labeled <strong>&quot;Repository navigation&quot;</strong>. Press <code>D</code> to jump to it directly.</p>
-<hr>
 <h2>3. How to Tell Where You Are</h2>
 <p>Three signals tell you exactly where you are on GitHub, without needing to see the visual layout:</p>
 <h3>Signal 1: The URL</h3>
@@ -259,7 +283,6 @@ Level 3: A Repository - where all the work happens
 <td>A settings page</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>4. The Five Key Page Types</h2>
 <h3>Page Type 1: Repository Home (Code Tab)</h3>
 <p>This is the central hub of any project. It is where you find the file tree, the README, branch information, and links to all other parts of the repository.</p>
@@ -315,43 +338,12 @@ Level 3: A Repository - where all the work happens
 <li>Pinned repositories</li>
 <li>A list of your recent public activity</li>
 </ul>
-<hr>
 <h2>5. Visual Map of a Repository Page</h2>
-<p>This diagram shows the layout of a repository home page. It is presented as ASCII art - every screen reader will read it correctly as text, left to right, top to bottom.</p>
-<pre><code class="hljs language-text">+----------------------------------------------------------+
-|  GLOBAL NAVIGATION (landmark: &quot;Navigation Menu&quot;)         |
-|  [GitHub] [Search] [Copilot] [PRs] [Issues] [Bell] [You]|
-+----------------------------------------------------------+
-|  REPOSITORY TABS (landmark: &quot;Repository navigation&quot;)     |
-|  [Code] [Issues 12] [Pull requests 3] [Actions] [...]   |
-+----------------------------------------------------------+
-|  REPOSITORY HEADER                                        |
-|  owner / repo-name  (this is the H1 heading)             |
-|  [Star 42]  [Watch]  [Fork 8]                             |
-+-----------------------------+----------------------------+
-|  FILE AREA                  |  SIDEBAR                   |
-|  Branch: [main v]           |  About                     |
-|  [Go to file]  [Code v]     |  Description text          |
-|                             |  Topics: accessibility     |
-|  FILE TABLE (landmark)      |  Releases: 3               |
-|  .github/     3 days ago    |  Contributors: 5           |
-|  docs/        2 days ago    |  Languages: Markdown 100%  |
-|  README.md    yesterday     |                            |
-+-----------------------------+----------------------------+
-|  README (landmark: &quot;Repository files navigation&quot;)         |
-|  # Rendered README content here                           |
-|  ...                                                      |
-+----------------------------------------------------------+
-|  FOOTER                                                   |
-+----------------------------------------------------------+</code></pre>
+<p><img src="images/repo-page-layout-01.svg" alt=""></p>
+<h3>Description</h3>
+<p>A repository home page is laid out from top to bottom as follows. The Global Navigation bar (landmark: &quot;Navigation Menu&quot;) contains the GitHub logo, Search, Copilot, Pull Requests, Issues, Notifications bell, and your avatar. Below that are the Repository Tabs (landmark: &quot;Repository navigation&quot;) showing Code, Issues (12), Pull requests (3), Actions, and more. Next is the Repository Header, which is the H1 heading &quot;owner / repo-name&quot; plus Star (42), Watch, and Fork (8) buttons. The main content area is split into two columns. On the left is the File Area with the branch selector (main), Go to file button, Code button, and the File Table (a landmark) listing files like .github/, docs/, and README.md with dates. On the right is the Sidebar with the About section, description text, topics (accessibility), Releases (3), Contributors (5), and Languages (Markdown 100%). Below both columns is the rendered README (landmark: &quot;Repository files navigation&quot;), and at the bottom is the Footer.</p>
 <h3>Screen reader navigation of this page</h3>
-<ul>
-<li><code>1</code> → hear &quot;owner/repo-name&quot; (the H1, confirms you are on the right repo)</li>
-<li><code>D</code> → &quot;Navigation Menu&quot; → <code>D</code> → &quot;Repository navigation&quot; → <code>D</code> → &quot;Main&quot; (file tree area)</li>
-<li><code>T</code> → jump to the file table → <code>Ctrl+Alt+Down Arrow</code> to navigate rows</li>
-<li><code>D</code> → &quot;Repository files navigation&quot; → read the README</li>
-</ul>
-<hr>
+<p>Press 1 to hear &quot;owner/repo-name&quot; (the H1, confirms you are on the right repo). Press D to hear &quot;Navigation Menu,&quot; then D again for &quot;Repository navigation,&quot; then D again for &quot;Main&quot; (the file tree area). Press T to jump to the file table, then Ctrl+Alt+Down Arrow to navigate rows. Press D again to reach &quot;Repository files navigation&quot; and read the README.</p>
 <h2>6. Screen Reader Orientation Sequence</h2>
 <p>Do this every time you land on a new GitHub page. It takes about 10 seconds once you are practiced. Make it automatic.</p>
 <details>
@@ -416,7 +408,7 @@ Step 3: VO+U → press Left/Right Arrow to choose &quot;Headings&quot;
 </blockquote>
 </details>
 
-<hr>
+
 <h2>7. Landmark Structure by Page Type</h2>
 <p>Each GitHub page type has a consistent landmark pattern. Knowing the pattern means you can skip steps 2 and 3 above for familiar pages.</p>
 <blockquote>
@@ -559,7 +551,6 @@ Step 3: VO+U → press Left/Right Arrow to choose &quot;Headings&quot;
 <td>-</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>8. GitHub&#39;s Heading Hierarchy in Practice</h2>
 <p>GitHub uses a predictable heading structure. Learning this pattern means you can navigate any page by heading level alone.</p>
 <h3>Repository home</h3>
@@ -591,7 +582,6 @@ Step 3: VO+U → press Left/Right Arrow to choose &quot;Headings&quot;
 <blockquote>
 <p><strong>Why this matters:</strong> Pressing <code>3</code> on a PR Files Changed tab jumps between file headings - this is how you quickly navigate to a specific file without tabbing through the entire diff.</p>
 </blockquote>
-<hr>
 <h2>9. How GitHub&#39;s Layout Changes by Viewport</h2>
 <p>GitHub is a responsive web application. The layout shifts at different screen widths, and this affects what landmarks and headings you encounter.</p>
 <h3>At full desktop width (1200px+)</h3>
@@ -613,7 +603,6 @@ Step 3: VO+U → press Left/Right Arrow to choose &quot;Headings&quot;
 <li>The landmark structure is the same but the &quot;Navigation Menu&quot; landmark becomes a toggle</li>
 </ul>
 <p><strong>Consistent experience recommendation:</strong> Use your browser maximized or at full desktop width during this workshop. GitHub&#39;s landmark and heading structure is most consistent at desktop width. If you hear different landmarks or headings than described in this guide, maximize your browser window.</p>
-<hr>
 <h2>10. The Mental Model - Building Your Internal Map</h2>
 <p>After your first day of using GitHub, you will have an internal map. Here is what that map should look like:</p>
 <pre><code class="hljs language-text">GitHub as a building:
@@ -649,7 +638,6 @@ ELEVATOR BUTTONS (keyboard shortcuts)
 <li>Press <code>NVDA+F7</code> - see the full outline - know what&#39;s in the room</li>
 </ol>
 <p>You are never lost. You always have these three fallbacks.</p>
-<hr>
 <h2>Try It: The 60-Second Orientation</h2>
 <p><strong>Time:</strong> 1 minute | <strong>What you need:</strong> A browser with your screen reader running</p>
 <p>Open any GitHub repository - try <a href="https://github.com/community-access/accessibility-agents">github.com/community-access/accessibility-agents</a> - and prove to yourself that the mental model works:</p>
@@ -663,12 +651,10 @@ ELEVATOR BUTTONS (keyboard shortcuts)
 <blockquote>
 <p><strong>What success feels like:</strong> You heard a repo name, at least two landmarks, and several headings. If you did, you can orient yourself on <em>any</em> GitHub page using these same four keys.</p>
 </blockquote>
-<hr>
 <h2>Day 2 Amplifier</h2>
 <blockquote>
-<p>Once you have this mental model solid, the Accessibility Agents agents make more sense. The <code>@daily-briefing</code> agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.</p>
+<p>Once you have this mental model solid, the Accessibility Agents make more sense. The <code>@daily-briefing</code> agent reads your GitHub notifications and presents a structured report - but the report structure mirrors the landmark structure of GitHub itself: global activity, then per-repo activity, then per-issue and per-PR detail. The agent describes the same building you have already walked through manually.</p>
 </blockquote>
-<hr>
 <p><em>Next: <a href="02-navigating-repositories.html">Navigating Repositories</a></em>
 <em>Back: <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a></em>
 <em>Reference: <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a> | <a href="appendix-a-glossary.html">GitHub Concepts Glossary</a></em></p>

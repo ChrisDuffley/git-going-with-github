@@ -6,6 +6,9 @@ const { marked, Renderer } = require('marked');
 const hljs = require('highlight.js');
 const chokidar = require('chokidar');
 
+// Accumulates page data for search index
+const searchPages = [];
+
 // Configure marked with syntax highlighting via custom renderer (marked v11+)
 const renderer = new Renderer();
 renderer.code = function(code, infostring, escaped) {
@@ -74,12 +77,41 @@ const htmlTemplate = (content, title, relativePath) => {
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    ${isHome
-      ? '<span aria-current="page">Home</span>'
-      : `<a href="${prefix}index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">${title}</span>`
-    }
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        ${isHome
+          ? '<span aria-current="page">Home</span>'
+          : `<a href="${prefix}index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">${title}</span>`
+        }
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="${prefix}search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     ${content}
   </main>
@@ -166,6 +198,18 @@ function convertMarkdownFile(mdPath, outputDir) {
     // Get relative path for template
     const relativeFromOutput = path.relative(outputDir, outputPath);
     
+    // Collect page data for search index (strip HTML tags for plain text)
+    const plainText = htmlContent
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+    searchPages.push({
+      id: relativeFromOutput.replace(/\\/g, '/'),
+      title,
+      url: relativeFromOutput.replace(/\\/g, '/'),
+      body: plainText.slice(0, 5000)
+    });
+
     // Create full HTML
     const html = htmlTemplate(htmlContent, title, relativeFromOutput);
     
@@ -219,21 +263,34 @@ function setupStyles(outputDir) {
   
   // Create custom CSS for additional accessibility and styling
   const customCss = `
-/* Custom styles for GitHub Learning Room HTML documentation */
+/* Site header with search */
+.site-header {
+  border-bottom: 1px solid var(--borderColor-default, #d0d7de);
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #ffffff;
-  color: #24292f;
+.site-header-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0.6rem 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .breadcrumb {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 1rem 45px 0;
   font-size: 0.875rem;
   color: #57606a;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .breadcrumb a {
@@ -243,6 +300,136 @@ body {
 
 .breadcrumb a:hover {
   text-decoration: underline;
+}
+
+/* Header actions: wiki link + search form */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.wiki-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #24292f;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.wiki-link:hover {
+  background: #eaeef2;
+  border-color: #bec5cc;
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .wiki-link span { display: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .wiki-link { color: #e6edf3; background: #161b22; border-color: #30363d; }
+  .wiki-link:hover { background: #1c2128; border-color: #3d444d; }
+}
+
+@media (prefers-contrast: high) {
+  .wiki-link { color: #ffffff; background: #000000; border-color: #ffffff; }
+}
+
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.search-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.search-input {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  width: 200px;
+  background: #f6f8fa;
+  color: #24292f;
+  line-height: 1.4;
+  transition: border-color 0.15s, box-shadow 0.15s, width 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9,105,218,0.3);
+  width: 260px;
+  background: #ffffff;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.6rem;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #57606a;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.search-button:hover {
+  background: #eaeef2;
+  border-color: #bec5cc;
+}
+
+@media (max-width: 767px) {
+  .site-header-inner { padding: 0.5rem 15px; }
+  .search-input { width: 130px; }
+  .search-input:focus { width: 160px; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .site-header { background: #0d1117; border-bottom-color: #30363d; }
+  .search-input { background: #161b22; border-color: #30363d; color: #e6edf3; }
+  .search-input:focus { border-color: #58a6ff; box-shadow: 0 0 0 3px rgba(88,166,255,0.3); background: #0d1117; }
+  .search-button { background: #161b22; border-color: #30363d; color: #9ca3af; }
+  .search-button:hover { background: #1c2128; border-color: #3d444d; }
+}
+
+@media (prefers-contrast: high) {
+  .search-input { border-color: #ffffff; background: #000000; color: #ffffff; }
+  .search-input:focus { box-shadow: 0 0 0 3px #ffffff; }
+  .search-button { border-color: #ffffff; background: #000000; color: #ffffff; }
+}
+
+
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #24292f;
 }
 
 /* Improve focus visibility for keyboard navigation */
@@ -309,12 +496,6 @@ textarea:focus-visible {
   .markdown-body hr {
     background-color: #ffffff;
   }
-  .breadcrumb {
-    color: #ffffff;
-  }
-  .breadcrumb a {
-    color: #6db3f2;
-  }
   .site-footer {
     border-color: #ffffff;
     color: #ffffff;
@@ -341,12 +522,6 @@ textarea:focus-visible {
   }
   .markdown-body {
     color: #e6edf3;
-  }
-  .breadcrumb {
-    color: #9ca3af;
-  }
-  .breadcrumb a {
-    color: #58a6ff;
   }
   .site-footer {
     border-color: #30363d;
@@ -466,6 +641,195 @@ textarea:focus-visible {
   console.log('✓ CSS files copied');
 }
 
+// Write search-index.json to the output directory
+function buildSearchIndex(outputDir) {
+  const indexPath = path.join(outputDir, 'search-index.json');
+  fs.writeFileSync(indexPath, JSON.stringify(searchPages, null, 2), 'utf-8');
+  console.log(`✓ Search index written: ${searchPages.length} pages`);
+}
+
+// Copy lunr.min.js into html/scripts/
+function copyLunr(outputDir) {
+  const scriptsDir = path.join(outputDir, 'scripts');
+  ensureDir(scriptsDir);
+  const lunrSrc = require.resolve('lunr');
+  const lunrDest = path.join(scriptsDir, 'lunr.min.js');
+  fs.copyFileSync(lunrSrc, lunrDest);
+  console.log('✓ lunr.min.js copied');
+}
+
+// Generate the search results page
+function buildSearchPage(outputDir) {
+  const html = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search - GIT Going with GitHub</title>
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
+  <style>
+    .markdown-body {
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+    @media (max-width: 767px) { .markdown-body { padding: 15px; } }
+    .search-results-list { list-style: none; padding: 0; margin: 0; }
+    .search-result-item { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--borderColor-default, #d0d7de); }
+    .search-result-item:last-child { border-bottom: none; }
+    .search-result-title { font-size: 1.2rem; font-weight: 600; margin: 0 0 0.25rem 0; padding: 0; border: none; }
+    .search-result-title a { color: #0969da; text-decoration: none; }
+    .search-result-title a:hover { text-decoration: underline; }
+    .search-result-url { font-size: 0.8rem; color: #57606a; margin-bottom: 0.4rem; }
+    .search-result-snippet { font-size: 0.9rem; color: #24292f; line-height: 1.5; }
+    .search-result-snippet mark { background: #fff8c5; color: inherit; padding: 0 2px; border-radius: 2px; }
+    #search-status { margin-bottom: 1.5rem; color: #57606a; }
+    @media (prefers-color-scheme: dark) {
+      .search-result-title a { color: #58a6ff; }
+      .search-result-url { color: #9ca3af; }
+      .search-result-snippet { color: #e6edf3; }
+      .search-result-snippet mark { background: #3d2b00; color: #e6edf3; }
+      #search-status { color: #9ca3af; }
+      .search-result-item { border-bottom-color: #30363d; }
+    }
+    @media (prefers-contrast: high) {
+      .search-result-title a { color: #6db3f2; }
+      .search-result-snippet mark { background: #ffff00; color: #000000; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">Search</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" id="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
+  <main id="main-content" class="markdown-body">
+    <h1>Search</h1>
+    <p id="search-status" aria-live="polite" aria-atomic="true"></p>
+    <ul class="search-results-list" id="search-results" role="list" aria-label="Search results"></ul>
+  </main>
+  <footer role="contentinfo" class="site-footer">
+    <p><strong>GIT Going with GitHub</strong> - A workshop by <a href="https://community-access.org">Community Access</a></p>
+    <p><a href="https://github.com/community-access/git-going-with-github">View on GitHub</a> · <a href="https://community-access.org">community-access.org</a></p>
+  </footer>
+  <script src="./scripts/lunr.min.js"></script>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var query = (params.get('q') || '').trim();
+      var statusEl = document.getElementById('search-status');
+      var resultsEl = document.getElementById('search-results');
+      var searchInput = document.getElementById('site-search');
+
+      if (query) searchInput.value = query;
+      if (!query) { statusEl.textContent = 'Enter a search term above.'; return; }
+
+      statusEl.textContent = 'Loading…';
+
+      fetch('./search-index.json')
+        .then(function (r) { return r.json(); })
+        .then(function (pages) {
+          var idx = lunr(function () {
+            this.ref('id');
+            this.field('title', { boost: 10 });
+            this.field('body');
+            pages.forEach(function (p) { this.add(p); }, this);
+          });
+
+          var results = idx.search(query);
+
+          if (results.length === 0) {
+            statusEl.textContent = 'No results found for "' + query + '".';
+            return;
+          }
+
+          statusEl.textContent = results.length + ' result' + (results.length === 1 ? '' : 's') + ' found for "' + query + '"';
+
+          var pageMap = {};
+          pages.forEach(function (p) { pageMap[p.id] = p; });
+
+          results.forEach(function (r) {
+            var page = pageMap[r.ref];
+            if (!page) return;
+
+            // Build snippet: find sentence containing a query word
+            var words = query.toLowerCase().split(/\\s+/);
+            var bodyLower = page.body.toLowerCase();
+            var snippetStart = 0;
+            for (var i = 0; i < words.length; i++) {
+              var pos = bodyLower.indexOf(words[i]);
+              if (pos > -1) { snippetStart = Math.max(0, pos - 80); break; }
+            }
+            var snippet = page.body.slice(snippetStart, snippetStart + 200);
+            if (snippetStart > 0) snippet = '…' + snippet;
+            if (snippetStart + 200 < page.body.length) snippet += '…';
+
+            // Highlight matching words in snippet
+            words.forEach(function (w) {
+              if (!w) return;
+              var escaped = w.replace(/[^a-zA-Z0-9]/g, '');
+              if (!escaped) return;
+              var re = new RegExp('(' + escaped + ')', 'gi');
+              snippet = snippet.replace(re, '<mark>$1</mark>');
+            });
+
+            var li = document.createElement('li');
+            li.className = 'search-result-item';
+            li.innerHTML =
+              '<h2 class="search-result-title"><a href="./' + page.url + '">' + page.title + '</a></h2>' +
+              '<div class="search-result-url">' + page.url + '</div>' +
+              '<div class="search-result-snippet">' + snippet + '</div>';
+            resultsEl.appendChild(li);
+          });
+        })
+        .catch(function () {
+          statusEl.textContent = 'Search is unavailable. Please try again later.';
+        });
+    })();
+  </script>
+</body>
+</html>`;
+
+  const outPath = path.join(outputDir, 'search.html');
+  fs.writeFileSync(outPath, html, 'utf-8');
+  console.log('✓ search.html generated');
+}
+
 // Build all HTML files
 function buildAll() {
   console.log('Starting HTML build...\n');
@@ -485,6 +849,15 @@ function buildAll() {
       convertedCount++;
     }
   });
+  
+  // Write search index JSON
+  buildSearchIndex(outputDir);
+
+  // Generate search page
+  buildSearchPage(outputDir);
+
+  // Copy lunr.min.js
+  copyLunr(outputDir);
   
   console.log(`\n✓ Build complete! Converted ${convertedCount}/${markdownFiles.length} files`);
   console.log(`Output directory: ${outputDir}`);

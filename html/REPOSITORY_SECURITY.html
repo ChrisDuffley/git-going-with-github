@@ -25,15 +25,43 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Repository Security & Access Guidelines</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Repository Security & Access Guidelines</span>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.06l-2.573 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1ZM1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.749.749 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.457 1.457 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 1 1 1.06-1.06l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h.25a.25.25 0 0 0 .25-.25v-5.5Z"/>
+          </svg>
+          Wiki
+        </a>
+        <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+      </div>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Repository Security &amp; Access Guidelines</h1>
 <h2>Overview</h2>
 <p>This repository is configured for a 2-day workshop with 67 blind/low-vision students.
 Safety, accessibility, and reliability are the top priorities.</p>
-<hr>
 <h2>Access Control</h2>
 <h3>Who Can Access What</h3>
 <table>
@@ -105,7 +133,6 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <a href="https://github.com/orgs/Community-Access/members">https://github.com/orgs/Community-Access/members</a></li>
 <li>Branch push rejected? Verify you are a member of the org</li>
 </ul>
-<hr>
 <h2>Branch Protection</h2>
 <h3>Main Branch (<code>main</code>)</h3>
 <p><strong>Protection Rules:</strong></p>
@@ -133,7 +160,6 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li>Block other students</li>
 <li>Undo someone else&#39;s work</li>
 </ul>
-<hr>
 <h2>Permission Model</h2>
 <h3>Least Privilege</h3>
 <p>Students have exactly the permissions they need:</p>
@@ -147,7 +173,6 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li>CAN review other students&#39; PRs</li>
 <li>CAN merge PRs (with protection checks)</li>
 </ul>
-<hr>
 <h2>Facilitator Access</h2>
 <h3>Facilitators MUST be Organization Owners</h3>
 <p>Facilitators need:</p>
@@ -165,7 +190,6 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <span class="hljs-comment"># Verify</span>
 gh api /orgs/Community-Access/members/[username] --jq .role
 <span class="hljs-comment"># Should return: &quot;admin&quot;</span></code></pre>
-<hr>
 <h2>GitHub Actions Security</h2>
 <h3>Workflows</h3>
 <p><strong>Learning Room PR Validation</strong> (learning-room-validation.yml)</p>
@@ -187,7 +211,6 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Passwords</li>
 </ul>
 <p><strong>Safe to</strong>: Public repos, student access, teaching</p>
-<hr>
 <h2>Data Privacy</h2>
 <h3>What Data Is Stored</h3>
 <p>In the repository:</p>
@@ -216,7 +239,6 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Sensitivity: LOW (only public GitHub usernames + opt-in profile)</li>
 <li>Safe to: Share roster with facilitators, teaching staff</li>
 </ul>
-<hr>
 <h2>Safety Checks</h2>
 <h3>Before Workshop (Friday, March 7)</h3>
 <p><strong>Repository Readiness:</strong></p>
@@ -257,7 +279,6 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>If branch access denied: Check org membership</li>
 <li>If PR template missing: Check .github/PULL_REQUEST_TEMPLATE directory</li>
 </ul>
-<hr>
 <h2>Daily Operations</h2>
 <h3>Day 1 (Saturday, March 8, 12pm-8pm ET)</h3>
 <ol>
@@ -314,7 +335,6 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 </ul>
 </li>
 </ol>
-<hr>
 <h2>Rollback &amp; Emergency</h2>
 <h3>If Something Goes Wrong</h3>
 <p><strong>GitHub Down:</strong></p>
@@ -341,7 +361,6 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Bad commit: Use <code>git revert</code> (don&#39;t force push)</li>
 <li>Deleted branch: Can restore from GitHub&#39;s trash (within 90 days)</li>
 </ul>
-<hr>
 <h2>Compliance &amp; Audit</h2>
 <h3>What&#39;s Logged</h3>
 <p>GitHub logs:</p>
@@ -372,7 +391,6 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>How the GitHub Actions bot validated their work</li>
 <li>Example of a properly merged PR</li>
 </ul>
-<hr>
 <h2>Contact &amp; Support</h2>
 <p><strong>Workshop Coordinator:</strong> [Facilitator Name]
 <strong>Emergency Contact:</strong> [Phone/Email]
