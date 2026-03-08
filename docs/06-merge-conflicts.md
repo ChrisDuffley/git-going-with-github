@@ -290,13 +290,13 @@ The content coming from the OTHER branch (or main)
 
 #### After two students both added a shortcut to the same table row
 
-```text
+```
 <<<<<<< HEAD
-| Insert+Space | Toggle between Browse Mode and Focus Mode |
-| Insert+F5 | List elements by type |
+  Insert+Space -- Toggle between Browse Mode and Focus Mode
+  Insert+F5 -- List elements by type
 =======
-| Insert+Space | Toggle between Browse Mode and Focus Mode |
-| Insert+F7 | Elements list (links, headings, form fields) |
+  Insert+Space -- Toggle between Browse Mode and Focus Mode
+  Insert+F7 -- Elements list (links, headings, form fields)
 >>>>>>> add-nvda-shortcut
 ```
 
@@ -383,10 +383,10 @@ VS Code has excellent merge conflict tooling with full screen reader support. Th
 
 ### VS Code shows conflicts as
 
-```text
+```
 <<<<<<< HEAD (Current Change)
 Your version
-||||||| original                   ← (3-way merge, if enabled)
+======= original                   -- (3-way merge, if enabled)
 Original version before both edits
 =======
 Incoming version

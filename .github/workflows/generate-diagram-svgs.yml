@@ -1,0 +1,41 @@
+name: Generate Diagram SVGs
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/generate-diagram-svgs.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate SVGs
+        run: python scripts/generate-diagram-svgs.py
+
+      - name: Commit and push SVGs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/images/*.svg
+          if [ -n "$(git status --porcelain)" ]; then
+            git commit -m "chore: regenerate diagram SVGs from script"
+            git push
+          else
+            echo "No SVG changes to commit"
+          fi

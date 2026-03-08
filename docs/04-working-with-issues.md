@@ -251,11 +251,11 @@ Navigate directly: `https://github.com/[owner]/[repo]/issues`
 
 ### Page structure
 
-```text
-[Search / filter bar]          ← controls at the top
-[State tabs: Open | Closed]    ← filter by status
-[Issues list]                  ← each issue is one list item or heading
-[Pagination]                   ← at the bottom
+```
+[Search / filter bar]          -- controls at the top
+[State tabs: Open / Closed]    -- filter by status
+[Issues list]                  -- each issue is one list item or heading
+[Pagination]                   -- at the bottom
 ```
 
 ### How to read the issue list

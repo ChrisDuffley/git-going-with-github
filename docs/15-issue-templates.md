@@ -193,16 +193,11 @@ Without this context, maintainers ask follow-up questions - which delays the fix
 
 Templates live in a specific folder in your repository:
 
-```text
-your-repo/
-└── .github/
-    ├── ISSUE_TEMPLATE/
-    │   ├── bug_report.md         ← Markdown template
-    │   ├── feature_request.md    ← Markdown template
-    │   ├── accessibility-bug.yml ← YAML form template
-    │   └── config.yml            ← Template chooser configuration
-    └── pull_request_template.md  ← PR template (singular)
-```
+![](images/template-folder-tree.svg)
+
+### Description
+
+Templates live inside your-repo/.github/. The ISSUE_TEMPLATE/ subfolder contains: bug_report.md (Markdown template), feature_request.md (Markdown template), accessibility-bug.yml (YAML form template), and config.yml (template chooser configuration). The pull_request_template.md file sits directly in .github/, not inside ISSUE_TEMPLATE/.
 
 **Markdown templates (`.md`):** Traditional template format. Pre-fills a text editor with structured Markdown content. Contributors edit the template directly, replacing instructions and placeholder text with their own content.
 
@@ -1927,9 +1922,9 @@ After completing Steps 1-7, verify:
 
 1. Create a table:
 
-   ```text
-   Field Name | Type (dropdown/input/textarea) | Why Required? | Options (if dropdown)
-   [name]     | [type]                        | [reason]      | [choices]
+   ```
+   Field Name -- Type (dropdown/input/textarea) -- Why Required? -- Options (if dropdown)
+   [name]     -- [type]                        -- [reason]      -- [choices]
    ```
 
 2. For each issue type from Part 2, add 2-4 required fields:

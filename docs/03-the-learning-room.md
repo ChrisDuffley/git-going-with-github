@@ -23,15 +23,11 @@ Before starting Chapter 4 challenges, students should be able to:
 2. Explain issue -> branch -> PR -> review -> merge.
 3. Identify where bot feedback appears on PRs.
 
-```text
-learning-room (SHARED)
-├── main branch (protected)
-├── Student A's PR #12 (open, assigned to Student B for review)
-├── Student B's PR #13 (open, assigned to Student C for review)
-├── Student C's PR #14 (open, assigned to Student A for review)
-├── Student A's PR #11 (merged, closed)
-└── [More PRs as students contribute]
-```
+![](images/learning-room-tree.svg)
+
+#### Description
+
+The learning-room is a single shared repository. It has a protected main branch, and each student opens pull requests against it. For example: Student A's PR #12 is open and assigned to Student B for review, Student B's PR #13 is assigned to Student C, Student C's PR #14 is assigned to Student A, and Student A's earlier PR #11 has already been merged. More PRs appear as students contribute.
 
 ### Why one shared repo?
 
@@ -68,48 +64,41 @@ Throughout Day 1, you work on **two parallel learning tracks**:
 
 #### The Two Tracks Reinforce Each Other
 
-```text
-Skills Module (individual)      Learning Room (group)
-     ↓                               ↓
-Create a branch                 Create a branch (together)
-     ↓                               ↓
-Open a PR                       Open a PR (see others' too)
-     ↓                               ↓
-Get instant bot feedback        Get bot feedback + human review
-     ↓                               ↓
-Mona verifies your step         Human peer reviewer approves
-     ↓                               ↓
-Next step unlocked             Ready to merge
-```
+| Step | Skills Module (individual) | Learning Room (group) |
+| --- | --- | --- |
+| 1 | Create a branch | Create a branch (together) |
+| 2 | Open a PR | Open a PR (see others' too) |
+| 3 | Get instant bot feedback | Get bot feedback + human review |
+| 4 | Mona verifies your step | Human peer reviewer approves |
+| 5 | Next step unlocked | Ready to merge |
 
 
 ## Learning Room Folder Structure
 
-```text
-learning-room/
-├── README.md                           ← Getting started guide
-├── AUTOMATION.md                       ← How the bot works
-├── .github/
-│   ├── workflows/                      ← 3 automation workflows
-│   │   ├── learning-room-pr-bot.yml            (PR validation)
-│   │   ├── skills-progression.yml              (progress tracking)
-│   │   └── student-grouping.yml                (peer pairing)
-│   ├── scripts/
-│   │   └── validate-pr.js                      (validation logic)
-│   ├── data/
-│   │   ├── student-roster.json                 (your cohort info)
-│   │   └── challenge-progression.json          (levels, badges)
-│   └── docs/
-│       ├── LEARNING_PATHS.md                   (skill progression guide)
-│       └── IMPLEMENTATION_GUIDE.md             (facilitator setup)
-├── docs/
-│   ├── CHALLENGES.md                   ← 12 challenges (Beginner → Expert)
-│   ├── GROUP_CHALLENGES.md             ← 7 collaborative exercises
-│   ├── welcome.md                      ← Has [TODO] to complete
-│   ├── keyboard-shortcuts.md           ← Has intentional errors
-│   └── setup-guide.md                  ← Has broken links
-└── [other files for practice]
-```
+The learning-room repository contains these files and folders:
+
+- **README.md** -- Getting started guide
+- **AUTOMATION.md** -- How the bot works
+- **.github/**
+  - **workflows/** -- 3 automation workflows
+    - learning-room-pr-bot.yml (PR validation)
+    - skills-progression.yml (progress tracking)
+    - student-grouping.yml (peer pairing)
+  - **scripts/**
+    - validate-pr.js (validation logic)
+  - **data/**
+    - student-roster.json (your cohort info)
+    - challenge-progression.json (levels, badges)
+  - **docs/**
+    - LEARNING_PATHS.md (skill progression guide)
+    - IMPLEMENTATION_GUIDE.md (facilitator setup)
+- **docs/**
+  - CHALLENGES.md -- 12 challenges (Beginner to Expert)
+  - GROUP_CHALLENGES.md -- 7 collaborative exercises
+  - welcome.md -- Has a TODO to complete
+  - keyboard-shortcuts.md -- Has intentional errors
+  - setup-guide.md -- Has broken links
+- Other files for practice
 
 
 ## Your Practice Branch

@@ -27,14 +27,17 @@
 
 GitHub has two generations of project tooling. The current generation - called **Projects (v2)** - is what you'll find on any repository or organization page today.
 
-| Feature | Classic Projects (v1) | Projects v2 (current) |
-| ---  | ---  | ---  |
-| Layouts | Kanban board only | Board, Table, Roadmap |
-| Custom fields | None | Text, Number, Date, Select, Iteration |
-| Automations | None built-in | Native GitHub Actions integration |
-| Cross-repo | No | Yes |
-| Filtering | Limited | Full field/label/assignee/status queries |
-| API | Limited | Full GraphQL support |
+**Layouts:** Classic v1 offered Kanban board only. V2 offers Board, Table, and Roadmap.
+
+**Custom fields:** Classic v1 had none. V2 supports Text, Number, Date, Single Select, and Iteration fields.
+
+**Automations:** Classic v1 had no built-in automations. V2 has native GitHub Actions integration.
+
+**Cross-repo support:** Classic v1 did not support cross-repository tracking. V2 does.
+
+**Filtering:** Classic v1 had limited filtering. V2 supports full field, label, assignee, and status queries.
+
+**API:** Classic v1 had a limited API. V2 has full GraphQL support.
 
 If you see "Projects (Beta)" references in older documentation, those referred to the early rollout of v2. It is now stable and the default.
 
@@ -143,13 +146,15 @@ This is one of Projects v2's most powerful features. You can add fields beyond t
 
 ### Field Types
 
-| Type | Use Case | Example |
-| ---  | ---  | ---  |
-| **Text** | Free-form notes | "Acceptance criteria", "Design link" |
-| **Number** | Story points, estimates | "Points: 3" |
-| **Date** | Deadlines, start dates | "Due: 2025-06-15" |
-| **Single select** | Priority, size, type | Priority: P0 / P1 / P2 |
-| **Iteration** | Sprint/cycle tracking | See Section 7 |
+**Text:** Free-form notes for things like acceptance criteria or design links.
+
+**Number:** Numeric values such as story points or estimates (for example, "Points: 3").
+
+**Date:** Deadlines or start dates (for example, "Due: 2025-06-15").
+
+**Single select:** A dropdown with predefined options, useful for priority, size, or type fields (for example, Priority: P0, P1, or P2).
+
+**Iteration:** Sprint or cycle tracking. See Section 7 for details.
 
 ### Creating a Custom Field
 
@@ -234,13 +239,15 @@ From a project:
 
 ### Available Built-In Workflows
 
-| Workflow | What It Does |
-| ---  | ---  |
-| **Item added to project** | When an item is manually added, set its Status to a chosen value |
-| **Item reopened** | When an issue/PR is reopened, change its Status (e.g., back to "In Progress") |
-| **Item closed** | When an issue/PR is closed, set Status to "Done" automatically |
-| **Pull request merged** | When a PR is merged, set its Status to "Done" |
-| **Auto-add to project** | Items matching a filter (by label, type, repo) are automatically added to the project |
+**Item added to project:** When an item is manually added, its Status is set to a value you choose.
+
+**Item reopened:** When an issue or pull request is reopened, its Status changes back (for example, to "In Progress").
+
+**Item closed:** When an issue or pull request is closed, its Status is automatically set to "Done."
+
+**Pull request merged:** When a pull request is merged, its Status is set to "Done."
+
+**Auto-add to project:** Items matching a filter (by label, type, or repository) are automatically added to the project.
 
 ### Setting Up Auto-Add
 
@@ -307,18 +314,21 @@ A **view** is a saved configuration of layout + filters + grouping + sort. You c
 
 The filter bar accepts a query language similar to GitHub's issue search:
 
-| Query | Meaning |
-| ---  | ---  |
-| `status:In Progress` | Show only items with that Status value |
-| `assignee:@me` | Show only items assigned to you |
-| `label:accessibility` | Items with the accessibility label |
-| `milestone:"v2.0"` | Items in a specific milestone |
-| `no:assignee` | Items with no assignee |
-| `is:pr` | Only pull requests |
-| `is:issue` | Only issues |
-| `repo:owner/name` | Items from a specific repo (cross-repo projects) |
+`status:In Progress` shows only items with that Status value.
 
-Combine filters: `assignee:@me status:"In Progress"` shows your in-progress work.
+`assignee:@me` shows only items assigned to you.
+
+`label:accessibility` shows items with the accessibility label.
+
+`milestone:"v2.0"` shows items in a specific milestone.
+
+`no:assignee` shows items with no assignee.
+
+`is:pr` shows only pull requests. `is:issue` shows only issues.
+
+`repo:owner/name` shows items from a specific repository, useful in cross-repo projects.
+
+You can combine filters: `assignee:@me status:"In Progress"` shows your in-progress work.
 
 ### Grouping
 
@@ -438,25 +448,22 @@ The **`/project-status`** command from Accessibility Agents gives you a live pro
 
 ### Example Output
 
-```text
-GitHub Project: Accessibility Agents Roadmap (3 active views)
+**GitHub Project: Accessibility Agents Roadmap** (3 active views)
 
-Column Breakdown:
-┌─────────────┬───────┬──────────────────┬─────────┬──────────────┐
-│ Column      │ Items │ Assignees        │ Avg Age │ Stale (7d+) │
-├─────────────┼───────┼──────────────────┼─────────┼──────────────┤
-│ To Do       │   8   │ @alice(3),@bob(2) │ 5 days  │     1       │
-│ In Progress │   4   │ @charlie(2)       │ 3 days  │     0       │
-│ In Review   │   2   │ --               │ 2 days  │     0       │
-│ Done        │  23   │ --               │  --     │    --       │
-└─────────────┴───────┴──────────────────┴─────────┴──────────────┘
+**Column Breakdown:**
 
-Attention Items:
-  Stale: "Update screen reader navigation guide" - In Review for 9 days, no activity
-  Unassigned: "Triage accessibility bug backlog" in In Progress
+| Column | Items | Assignees | Avg Age | Stale (7d+) |
+| --- | --- | --- | --- | --- |
+| To Do | 8 | @alice (3), @bob (2) | 5 days | 1 |
+| In Progress | 4 | @charlie (2) | 3 days | 0 |
+| In Review | 2 | -- | 2 days | 0 |
+| Done | 23 | -- | -- | -- |
+
+**Attention Items:**
+- Stale: "Update screen reader navigation guide" - In Review for 9 days, no activity
+- Unassigned: "Triage accessibility bug backlog" in In Progress
 
 After the overview: "Want to see a specific column or check a team member's workload?"
-```
 
 ### When to Use It
 
