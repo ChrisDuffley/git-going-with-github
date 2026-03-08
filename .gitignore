@@ -166,3 +166,4 @@ podcasts/tts/samples/
 *.onnx.json
 *.wav
 epub/git-going-with-github.epub
+epub/git-going-with-github.docx
