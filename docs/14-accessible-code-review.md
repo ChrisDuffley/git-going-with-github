@@ -16,35 +16,111 @@ Chapter 14 is the **code review chapter** focused on practicing constructive fee
 - **Challenge count:** 2 guided challenges
 - **Automation check:** none (review quality is subjective and human-focused)
 - **Evidence:** issue comment with summary of review and feedback posted
-- **Pattern:** review -> comment -> verdict
+- **Pattern:** navigate diff, comment on specifics, submit verdict
 
-### Chapter 14 Guided Challenges (No Bot Validation)
+### Chapter 14 Challenge Set
 
-For this workshop, Chapter 14 focuses on building review skills and giving constructive feedback:
+1. **Review a practice PR and leave 2-3 inline comments** - read the diff line by line, find specific items to comment on, and post constructive feedback.
+2. **Submit a formal review verdict** - complete your review by choosing approve, request changes, or comment only.
 
-1. **Review a practice PR and leave 2-3 inline comments**
-   - Check out or view an assigned practice PR, read the diff, and post constructive feedback on 2-3 specific lines.
+### Challenge 14.1 Step-by-Step: Review a PR and Leave Inline Comments
 
-2. **Submit a formal review verdict**
-   - Complete your review by submitting an approval, request-changes, or comment-only verdict on the PR.
+**Goal:** Navigate a PR diff using screen reader-friendly tools and post 2-3 specific, constructive inline comments.
+
+**Where you are working:** GitHub.com (Files changed tab of a PR) or VS Code with the GitHub Pull Requests extension.
+
+**Estimated time:** 15-20 minutes.
+
+1. Open the `learning-room` repository on GitHub.com and navigate to the **Pull requests** tab.
+2. Find a classmate's open PR (from Chapter 5, 6, or 11). Open it.
+3. Activate the **Files changed** tab. This shows the diff - lines added in green, lines removed in red.
+4. Navigate the diff:
+   - **On GitHub.com:** Use heading navigation to jump between files (`H` in NVDA). Each file header is a heading. Within a file, use arrow keys to move line by line.
+   - **In VS Code:** Press `F7` to open the Accessible Diff Viewer (see Chapter 12). Use `F7`/`Shift+F7` to move between changes.
+5. Read through the changes carefully. Look for:
+   - Typos or grammar issues
+   - Unclear headings or link text
+   - Missing steps in instructions
+   - Accessibility concerns (missing alt text, unclear structure)
+   - Things the author did well (note these too)
+6. To leave an inline comment on GitHub.com: activate the `+` button that appears to the left of a line number when you hover or Tab to it. (Screen reader users: this button may be announced as "Add a comment to this line.") Type your comment in the text box that opens.
+7. Post 2-3 inline comments. Each comment should be:
+   - **Specific:** reference the exact line or phrase
+   - **Constructive:** suggest an improvement or explain why something works well
+   - **Kind:** frame suggestions as questions or "consider" statements
+8. Examples of good inline comments:
+   - "Line 12: 'Click here' should be more descriptive. Consider: 'Open the notification settings page'"
+   - "Nice clear heading structure - the reader can scan this section quickly."
+   - "Step 3 says 'do the thing' - could you add which menu or keyboard shortcut to use?"
+
+**Screen reader tip:** On GitHub.com, the Files Changed tab uses a table-like layout. Each row is a line of the diff. The `+` button for commenting may not be visible until you Tab through the row controls. If you cannot find it, use the "Review changes" button at the top to add a general comment instead.
+
+**You are done when:** You have posted 2-3 inline comments on a classmate's PR.
+
+### Challenge 14.2 Step-by-Step: Submit a Formal Review Verdict
+
+**Goal:** Complete your review by selecting a verdict that tells the author what action to take next.
+
+**Where you are working:** GitHub.com (the same PR you reviewed in 14.1).
+
+1. After posting your inline comments, scroll to the top of the **Files changed** tab.
+2. Activate the **Review changes** button (at the top-right of the files changed area, or use heading navigation).
+3. A dropdown opens with three options:
+   - **Comment** - general feedback, no explicit approval or rejection
+   - **Approve** - you think the PR is ready to merge
+   - **Request changes** - you found something that should be fixed before merging
+4. Choose the verdict that matches your review:
+   - If the PR has clear documentation with only minor suggestions, choose **Approve**.
+   - If you found issues that would confuse readers, choose **Request changes** and explain what needs fixing in the summary.
+   - If you are unsure, choose **Comment** - this is always a safe option.
+5. Write a brief summary in the review body (1-2 sentences). Example: "Clear improvement to the shortcut table. Two minor suggestions for link text clarity."
+6. Activate **Submit review**.
+
+**You are done when:** Your review verdict appears on the PR's conversation tab as a green (approved), red (changes requested), or gray (comment) review badge.
+
+### Completing Chapter 14: Submit Your Evidence
+
+Open your **assigned Chapter 14 challenge issue** and post a completion comment:
+
+```text
+Chapter 14 completed:
+- PR reviewed: #[PR number]
+- Inline comments posted: [number, e.g., 3]
+- Review verdict: [Approve / Request Changes / Comment]
+- One thing I learned from reviewing: [one sentence]
+```
+
+Close your Chapter 14 challenge issues when done.
 
 ### Expected Outcomes
 
 - Student can navigate PR diffs with a screen reader.
-- Student can post inline comments on specific lines.
-- Student can write constructive feedback that helps the author improve.
+- Student can post inline comments on specific lines of a diff.
+- Student can write constructive, specific feedback that helps the author improve.
+- Student can submit a formal review verdict.
 
 ### If You Get Stuck
 
-1. If Files Changed tab won't open, reload the PR page and retry.
-2. If inline comment button is hard to find, use the file tree to jump between files (`Press 3` in NVDA/JAWS).
-3. If you're unsure what to comment on, focus on clarity: heading structure, link text, missing steps, or typos.
-4. If submitting the review fails, check that you're not in draft mode and have write access to the repo.
-5. Ask facilitator to help you navigate one diff and model one constructive comment.
+1. Files Changed tab will not open? Reload the PR page and retry. Make sure you are on the PR page, not the issue page.
+2. Cannot find the inline comment button? Tab through the line controls in the diff. The button may be announced as "Add a comment" or have a `+` label. If you cannot find it, use the "Review changes" button at the top to add a general comment instead.
+3. Not sure what to comment on? Focus on clarity: is every heading descriptive? Is every link meaningful? Are steps complete? Are keyboard shortcuts correct?
+4. Review verdict button not working? Make sure you have at least one comment or have written summary text. Try reloading the page.
+5. Submitting the review fails? Check that you are not in draft mode and have at least read access to the repo.
+6. Ask facilitator to model one inline comment and one verdict submission.
+
+> **Continue learning:** The GitHub Skills courses [Review Pull Requests](https://github.com/skills/review-pull-requests) and [Code Review with GitHub Copilot](https://github.com/skills/copilot-codereview) cover review workflows and AI-assisted code review. See [Appendix Z](appendix-z-github-skills-catalog.md) for the full catalog.
 
 ### Learning Moment
 
-Constructive review is a gift. Specific, kind feedback helps authors improve and builds trust in the community.
+Constructive review is a gift. Specific, kind feedback helps authors improve and builds trust in the community. Every comment you write is practice for the professional code review you will do on real projects.
+
+### Learning Pattern Used in This Chapter
+
+1. Read the full diff before commenting (understand the author's intent first).
+2. Find specific items to comment on (lines, phrases, missing steps).
+3. Write comments that help, not just criticize (suggest improvements, note what works).
+4. Choose a verdict that matches the substance of your feedback.
+5. Summarize your overall impression in 1-2 sentences.
 
 
 ## Prerequisites Checklist

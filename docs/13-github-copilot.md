@@ -22,44 +22,116 @@ Chapter 13 introduces **GitHub Copilot** for AI-assisted documentation and writi
 - **Challenge count:** 3 guided challenges
 - **Automation check:** none (tool configuration is account-local and account-specific)
 - **Evidence:** issue comment with checklist of completed actions
-- **Pattern:** install -> prompt -> use
+- **Pattern:** install, prompt, apply, reflect
 
-### Chapter 13 Guided Challenges (No Bot Validation)
+### Chapter 13 Challenge Set
 
-For this workshop, Chapter 13 focuses on learning Copilot's interface and practicing effective prompting:
+1. **Install GitHub Copilot and sign in** - add the Copilot Chat extension and authenticate.
+2. **Ask Copilot to explain a codebase** - clone the sci-fi themes repo and use Copilot Chat to understand it.
+3. **Ask Copilot to create something new** - prompt Copilot to generate a custom theme and apply it.
 
-1. **Install GitHub Copilot and sign in**
-   - Install the GitHub Copilot Chat extension from Extensions sidebar and authenticate.
+### Challenge 13.1 Step-by-Step: Install and Sign In
 
-2. **Clone the sci-fi themes repo and ask Copilot to explain it**
-   - Clone `https://github.com/community-access/vscode-sci-fi-themes.git`
-   - Open Copilot Chat (`Ctrl+Shift+I` / Mac: `Cmd+Shift+I`)
-   - Ask: "What does the `chat.agent.thinking.phrases` setting do in VS Code?"
-   - Read Copilot's explanation and apply one theme to your settings.json
+**Goal:** Install the GitHub Copilot Chat extension and verify it responds to prompts.
 
-3. **Ask Copilot to create a custom theme**
-   - In Copilot Chat, ask: "Create a custom GitHub Copilot thinking phrases theme for [your favorite universe - Dune, Marvel, Studio Ghibli, etc.]"
-   - Copilot generates a new theme
-   - Copy the result into a new file and apply it to your settings.json
-   - Reload VS Code and enjoy your personalized Copilot experience!
+**Where you are working:** VS Code desktop with the `learning-room` repository open.
+
+**Estimated time:** 3-5 minutes.
+
+1. Open the Extensions sidebar: `Ctrl+Shift+X` (Mac: `Cmd+Shift+X`).
+2. Type `GitHub Copilot` in the search box and press `Enter`.
+3. Find **GitHub Copilot** (publisher: GitHub) in the results. Activate **Install**.
+4. VS Code may also install **GitHub Copilot Chat** automatically. If not, search for it separately and install it.
+5. After installation, VS Code prompts you to sign in. Activate **Sign in to GitHub** and complete the OAuth flow in your browser.
+6. Verify Copilot is active: open Copilot Chat with `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`). Type `Hello, are you working?` and press `Enter`. Copilot should respond.
+
+**Screen reader tip:** The Copilot Chat panel opens as a sidebar. Your screen reader announces responses as they stream in. Press `Alt+F2` (Accessible View) to read the full response in a plain text buffer if streaming is hard to follow.
+
+**You are done when:** Copilot Chat responds to a test prompt.
+
+### Challenge 13.2 Step-by-Step: Explain a Codebase
+
+**Goal:** Use Copilot Chat to understand an unfamiliar repository by asking targeted questions.
+
+**Where you are working:** VS Code with the sci-fi themes repository cloned.
+
+**Estimated time:** 10-15 minutes.
+
+1. Open the Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).
+2. Run `Git: Clone` and paste: `https://github.com/community-access/vscode-sci-fi-themes.git`
+3. Open the cloned repository when VS Code prompts.
+4. Open Copilot Chat: `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`).
+5. Ask Copilot: "What does the `chat.agent.thinking.phrases` setting do in VS Code?"
+6. Read the response. Use `Alt+F2` (Accessible View) if needed to read the full text.
+7. Ask a follow-up: "How do I apply one of these themes to my settings.json?"
+8. Follow Copilot's instructions to apply one theme to your `settings.json` file.
+
+**You are done when:** You have asked Copilot at least two questions and applied one setting change.
+
+### Challenge 13.3 Step-by-Step: Create Something New
+
+**Goal:** Use Copilot as a creative collaborator to generate a custom config and apply it.
+
+**Where you are working:** VS Code with Copilot Chat open.
+
+**Estimated time:** 10-15 minutes.
+
+1. Open Copilot Chat: `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`).
+2. Type a creative prompt: "Create a custom GitHub Copilot thinking phrases theme for [your favorite universe - Dune, Marvel, Studio Ghibli, Star Trek, etc.]"
+3. Read Copilot's generated theme. It should include an array of themed phrases.
+4. Copy the generated content: select all text in the Copilot response, then `Ctrl+C` (Mac: `Cmd+C`).
+5. Open your `settings.json`: Command Palette, then `Preferences: Open User Settings (JSON)`.
+6. Paste the theme configuration into your settings.
+7. Save with `Ctrl+S` and reload VS Code: Command Palette, then `Developer: Reload Window`.
+8. Test your new theme by asking Copilot a question and watching the thinking phrases.
+
+**Screen reader tip:** Copilot Chat responses can be long. Use `Alt+F2` (Accessible View) to read them in a plain text buffer where you can copy text more easily.
+
+**You are done when:** Your personalized thinking phrases appear when Copilot is processing a response.
+
+### Completing Chapter 13: Submit Your Evidence
+
+Open your **assigned Chapter 13 challenge issue** and post a completion comment:
+
+```text
+Chapter 13 completed:
+- Copilot installed and signed in: yes / no
+- Asked Copilot to explain a setting: yes / no
+- Applied a setting from Copilot's suggestion: yes / no
+- Created a custom theme: yes / no
+- My theme universe: [your choice]
+```
+
+Close your Chapter 13 challenge issues when done.
 
 ### Expected Outcomes
 
 - Student can install and authenticate GitHub Copilot Chat.
 - Student can ask Copilot effective questions about code and settings.
-- Student can use Copilot's output to customize their development environment in fun and creative ways.
+- Student can use Copilot's output to customize their development environment.
+- Student understands Copilot as a tool to explain and create, not just autocomplete.
 
 ### If You Get Stuck
 
-1. If extension installation fails, reload VS Code with `Ctrl+Shift+P` → "Developer: Reload Window".
-2. If OAuth sign-in fails, verify your GitHub account is active in the browser first.
-3. If Chat panel doesn't open, try `Ctrl+Shift+I` (Windows) or `Cmd+Shift+I` (Mac).
-4. If Chat seems unresponsive, click the model selector at bottom of Chat and confirm you're signed in.
-5. Ask facilitator to help verify Copilot is activated and show you one prompt.
+1. Extension installation fails? Reload VS Code: `Ctrl+Shift+P`, then `Developer: Reload Window`.
+2. OAuth sign-in fails? Verify your GitHub account is active in the browser first, close VS Code and retry.
+3. Chat panel does not open? Try `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`). If still nothing, check that the Copilot Chat extension is installed (not just the base Copilot extension).
+4. Copilot seems unresponsive? Click the model selector at the bottom of Chat panel and confirm you are signed in.
+5. Cannot copy from Copilot response? Use `Alt+F2` (Accessible View) to get the text in a copyable buffer.
+6. Ask facilitator to verify Copilot is activated and show you one example prompt.
+
+> **Continue learning:** The GitHub Skills courses [Getting Started with GitHub Copilot](https://github.com/skills/getting-started-with-github-copilot) and [Customize Your GitHub Copilot Experience](https://github.com/skills/customize-copilot) cover Copilot setup, prompting, and personalization. See [Appendix Z](appendix-z-github-skills-catalog.md) for the full catalog.
 
 ### Learning Moment
 
-AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps you write documentation that others can actually understand.
+AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps you write documentation that others can actually understand. The prompting skill you practiced here - asking specific questions, iterating on responses, applying results - transfers to every AI tool you will use in your career.
+
+### Learning Pattern Used in This Chapter
+
+1. Install the tool and verify it works before starting the task.
+2. Use the tool to explore and understand (ask questions, read responses).
+3. Use the tool to create something new (generate, customize, apply).
+4. Reflect on when the tool helped and when your own judgment was better.
 
 
 ## Table of Contents

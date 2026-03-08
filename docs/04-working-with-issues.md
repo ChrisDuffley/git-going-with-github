@@ -31,12 +31,12 @@ Chapter 4 is the first **issue-based challenge chapter** with short, confidence-
 ### Chapter 4 Challenge Set
 
 1. **Create your first issue** - file a new issue with a clear title and description.
-2. **Claim a challenge issue** - comment on an existing beginner issue to claim it.
-3. **Ask one clarifying question** - add a question comment on your claimed issue.
+2. **Comment and @mention** - leave a comment on a classmate's issue and tag them with an @mention.
+3. **Add a sub-issue** - break a larger issue into smaller, trackable pieces.
 
 > **Branch guidance for Chapter 4:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.
 >
-> **How completion works:** When you finish all three challenges, post a comment on your assigned Chapter 4 challenge issue with links to the issues you created, claimed, and commented on. The facilitator reviews your issue activity directly. No pull request is required for Chapter 4.
+> **How completion works:** When you finish all three challenges, post a comment on your assigned Chapter 4 challenge issue with links to the issues you created, commented on, and organized. The facilitator reviews your issue activity directly. No pull request is required for Chapter 4.
 
 ### Challenge 4.1 Step-by-Step: Create Your First Issue
 
@@ -61,46 +61,45 @@ Chapter 4 is the first **issue-based challenge chapter** with short, confidence-
 
 **You are done when:** Your new issue appears in the Issues list with your username as the author, a clear title, and a detailed description.
 
-### Challenge 4.2 Step-by-Step: Claim a Challenge Issue
+### Challenge 4.2 Step-by-Step: Comment and @Mention
 
-**Goal:** Find an existing beginner challenge issue and claim it by leaving a comment.
+**Goal:** Leave a comment on another student's issue and use an @mention to notify them.
 
 **Where you are working:** the Issues tab of the `learning-room` repository on GitHub.com.
 
-1. Open the Issues tab in the `learning-room` repository.
-2. Use the search filter to find beginner issues. Type in the filter bar:
-   ```text
-   is:open label:"challenge: beginner"
-   ```
-3. Browse the results and pick one issue that interests you.
-4. Open the issue by activating its title link.
-5. Read the issue description to understand what needs to be done.
-6. Scroll to the comment box at the bottom of the issue.
-7. Type: `I'd like to try this!`
-8. Activate the **Comment** button (or press `Ctrl+Enter`).
-9. Note the issue number (for example, `#42`). This is the issue you will fix in Chapter 5.
+1. Open the **Issues** tab in the `learning-room` repository.
+2. Find an issue created by a classmate (look for issues from Challenge 4.1, or browse recent open issues).
+3. Open the issue by activating its title link.
+4. Read the issue description to understand what they reported.
+5. Scroll to the comment box at the bottom of the issue.
+6. Write a helpful comment that **@mentions the issue author by username**. Examples:
+   - "@classmate I can confirm this - the link in setup-guide.md goes to a 404 page."
+   - "@classmate Good catch! I think the correct shortcut is Insert+F7, not Insert+F5."
+   - "@classmate I'd suggest adding the paragraph right after the 'Who Can Contribute' heading."
+7. Activate the **Comment** button (or press `Ctrl+Enter`).
 
-**You are done when:** Your comment appears in the issue thread, and other participants can see you have claimed the work.
+**Why @mentions matter:** When you type `@username`, GitHub sends that person a notification. This is how real open source teams communicate - you signal who needs to see your message. It also bridges into Chapter 9 (Notifications) where you will configure how you receive these alerts.
 
-### Challenge 4.3 Step-by-Step: Ask One Clarifying Question
+**You are done when:** Your comment appears in the thread and includes an @mention (the username renders as a clickable link).
 
-**Goal:** Practice asking a useful question before starting implementation work.
+### Challenge 4.3 Step-by-Step: Add a Sub-Issue
 
-**Where you are working:** the issue you claimed in Challenge 4.2.
+**Goal:** Break a larger issue into smaller, trackable pieces using GitHub's sub-issue feature.
 
-1. Open the issue you claimed in Challenge 4.2.
-2. Re-read the issue description carefully. Think about:
-   - Is anything unclear about what needs to change?
-   - Do you know which file to edit?
-   - Do you understand the expected result?
-3. Scroll to the comment box.
-4. Write one specific question. Examples:
-   - "Should I add the paragraph after the existing heading or create a new subsection?"
-   - "The issue mentions a broken link. Is the correct URL documented somewhere else in the repo?"
-   - "Should the shortcut table keep the same column order, or can I reorganize it?"
-5. Activate the **Comment** button.
+**Where you are working:** the issue you created in Challenge 4.1 (or any open issue you have permission to edit).
 
-**You are done when:** Your question comment appears in the issue thread. A facilitator or peer will respond.
+> **What are sub-issues?** Sub-issues let you decompose a big task into smaller steps, each tracked independently. The parent issue shows a progress bar as sub-issues are completed. This is how teams organize real work - a single "Fix accessibility in welcome.md" issue might have sub-issues for each specific fix.
+
+1. Open the issue you created in Challenge 4.1.
+2. Look for the **Sub-issues** section in the issue sidebar (right side on desktop). If you do not see it, look for an **Add sub-issue** button or the **Create sub-issue** option below the issue description.
+3. Activate **Add sub-issue** and choose **Create new sub-issue**.
+4. Give the sub-issue a clear title that describes one specific piece of the parent issue. For example, if the parent is "Fix accessibility in welcome.md":
+   - Sub-issue: "Add alt text to welcome banner image"
+   - Sub-issue: "Fix heading hierarchy in Getting Started section"
+5. Add a short description and activate **Create**.
+6. The sub-issue now appears nested under the parent issue with a progress indicator.
+
+**You are done when:** Your parent issue shows at least one sub-issue in the Sub-issues section.
 
 ### Completing Chapter 4: Submit Your Evidence
 
@@ -109,35 +108,36 @@ When you have finished all three challenges, go to your **assigned Chapter 4 cha
 ```text
 Chapter 4 completed:
 - Challenge 4.1: Created issue #[number]
-- Challenge 4.2: Claimed issue #[number] (commented)
-- Challenge 4.3: Asked question on issue #[number]
+- Challenge 4.2: Commented with @mention on issue #[number]
+- Challenge 4.3: Added sub-issue to issue #[number]
 ```
 
-Replace `[number]` with the actual issue numbers. The facilitator will review your issue activity and mark the challenge complete.
+Replace `[number]` with the actual issue numbers. Then close your Chapter 4 challenge issues. The facilitator will review your issue activity.
 
 ### Expected Outcomes
 
 - Student can create an issue with a clear title and description.
-- Student can claim a challenge issue in a public thread.
-- Student can ask a useful question before starting implementation.
+- Student can communicate in issue threads using @mentions.
+- Student can organize work by breaking issues into sub-issues.
 
 ### If You Get Stuck
 
-1. Re-open `learning-room/docs/CHALLENGES.md` and pick one beginner issue.
-2. Use the issue search filter: `is:open label:"challenge: beginner"`.
-3. If claim/comment fails, refresh and retry once.
-4. Ask facilitator for a direct issue link and continue.
+1. Can't find a classmate's issue? Filter the Issues tab by `is:open` and look for recent ones.
+2. @mention not working? Make sure you type `@` immediately followed by the username with no space.
+3. Sub-issue option not visible? Ask a facilitator - the feature may need to be enabled for the repository.
+4. Still stuck? Ask a facilitator for a direct issue link.
 
 ### Learning Moment
 
-Issues are not just task lists. They are collaborative spaces where clear communication reduces confusion and prevents rework.
+Issues are collaborative spaces, not just task lists. An @mention tells someone "I need your attention here." Sub-issues turn vague tasks into clear checklists. Both skills are used daily in real open source projects.
 
 ### Learning Pattern Used in This Chapter
 
 1. Start with a small, safe action (create an issue).
-2. Practice communication in public issue threads (claim and question).
-3. Leave clear evidence in the issue timeline.
-4. Build momentum for file editing and PR work in Chapter 5.
+2. Practice communication in public issue threads (@mention a peer).
+3. Organize work into smaller pieces (sub-issues).
+4. Leave clear evidence in the issue timeline.
+5. Build momentum for file editing and PR work in Chapter 5.
 
 
 ## Local Git Alternative: Working from Your Clone

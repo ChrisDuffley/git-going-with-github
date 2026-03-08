@@ -11,62 +11,75 @@
 
 For this workshop, Chapter 9 is a **guided practice chapter**, not a graded automation chapter.
 
-- **No Actions-based validation:** Notification settings and inbox actions are account-level behaviors and are not reliably validated by the Learning Room PR bot.
-- **Keep it teachable and simple:** Focus on one clear routine students can repeat daily.
-- **Use a consistent pattern:** Demonstrate once, then have students complete a short guided walkthrough.
+- **Challenge count:** 1 guided walkthrough
+- **Automation check:** none - notification settings are account-level and cannot be validated by the Learning Room PR bot
+- **Evidence:** structured completion comment on your assigned challenge issue
+- **Pattern:** configure, filter, act
 
-### Why this chapter has no bot-graded challenge
+### Chapter 9 Challenge Set
 
-- The current validation workflow checks PR and markdown quality, not personal notification preferences.
-- Notification state changes (watch level, mute, done, saved) are not part of repository file changes.
-- A forced graded check here would create busywork instead of meaningful skill practice.
+1. **Configure notifications and practice inbox management** - set your watch level, use filters to find relevant notifications, and perform one inbox action.
 
+### Challenge 9.1 Step-by-Step: Notification Inbox Walkthrough
 
-## Guided Walkthrough Challenge (No Automation Check)
+**Goal:** Set up a useful notification workflow so you can keep up with reviews, mentions, and assignments without inbox overload.
 
-Use this as the chapter exercise. It should take about 5-8 minutes.
+**Where you are working:** the GitHub.com notifications page and the `learning-room` repository settings.
 
-### Goal
+**Estimated time:** 5-8 minutes.
 
-Set up a useful notification workflow so students can keep up with reviews, mentions, and assignments without inbox overload.
+1. Open the `learning-room` repository on GitHub.com.
+2. Find the **Watch** button near the top-right of the repository page (next to Star and Fork).
+3. Activate the **Watch** dropdown and select **Participating and @mentions**. This means you only get notified when someone @mentions you or you are directly participating in a thread.
+4. Open the notifications inbox by navigating to `https://github.com/notifications` (or activate the bell icon in the GitHub header).
+5. In the notification filters, activate the **Review requested** filter. This shows only notifications where someone has asked you to review their PR.
+6. Clear that filter and activate the **Assigned** filter. This shows notifications for issues and PRs assigned to you.
+7. Open one notification by activating its title link. Read it briefly, then navigate back to the inbox.
+8. Perform one inbox action on a non-critical notification thread:
+   - Press `M` to **mute** the thread (you will not receive future updates), or
+   - Press `E` to **mark done** (removes it from inbox but you can still get future updates).
 
-### Student Steps
+**Screen reader tip:** The notification list is a standard list of links. Each notification announces its title, repository, and reason (mention, review request, assignment). Use arrow keys to move between notifications and `Enter` to open one.
 
-1. Open the workshop repository and set **Watch** to **Participating and @mentions**.
-2. Open the notifications inbox: `https://github.com/notifications`.
-3. Activate the **Review requested** filter.
-4. Activate the **Assigned** filter.
-5. Open one notification and return to inbox.
-6. Perform one inbox action on a non-critical thread:
-	- `M` to mute, or
-	- `E` to mark done.
+**You are done when:** You have changed your watch level, used two different filters, and performed one inbox action (mute or done).
 
-### Expected Outcome
+### Completing Chapter 9: Submit Your Evidence
 
-- Student can find review requests quickly.
-- Student can find assigned work quickly.
-- Student can reduce noise with one inbox action.
+Open your **assigned Chapter 9 challenge issue** and post a completion comment:
 
-### Facilitator Verification (Lightweight)
+```text
+Chapter 9 completed:
+- Watch level set to: Participating and @mentions
+- Filters tested: Review requested, Assigned
+- Inbox action performed: [mute / mark done] on [thread description]
+```
 
-Ask each student to report the following verbally or in chat:
+Close your Chapter 9 challenge issue when done.
 
-1. Their selected watch level.
-2. Which two filters they used.
-3. Which inbox action they tested (`M` or `E`).
+### Expected Outcomes
 
-This keeps Chapter 9 practical and consistent without adding grading overhead.
+- Student can configure repository watch levels to reduce noise.
+- Student can find review requests and assigned work quickly using filters.
+- Student can reduce notification noise with mute or done actions.
 
 ### If You Get Stuck
 
-1. Reload the notifications page and reapply one filter at a time.
-2. If inbox is empty, switch to `Done` and practice action flow there.
-3. If shortcuts conflict with screen reader mode, focus the notification row and retry.
-4. Ask facilitator to model one inbox action live, then repeat.
+1. Can't find the Watch button? It is near the top-right of the repository page, in the same row as Star and Fork.
+2. Notification inbox is empty? You may not have any notifications yet - that is fine. Switch to the **Done** tab and practice the mute/done action flow on an older notification.
+3. Keyboard shortcuts not working? If your screen reader intercepts `M` or `E`, click on the notification row first to give it focus, then press the shortcut.
+4. Filters not showing results? Clear all filters first (click the X next to each active filter), then apply one filter at a time.
+5. Ask facilitator to model one inbox action live, then repeat the steps yourself.
 
 ### Learning Moment
 
-Notification management protects focus. You can stay responsive without drowning in updates.
+Notification management protects focus. You can stay responsive to your team without drowning in updates. The habit you build here - checking filtered notifications once or twice a day - is how productive open source contributors stay on top of their work.
+
+### Learning Pattern Used in This Chapter
+
+1. Configure settings proactively (watch level) before work generates noise.
+2. Use filters to find signal in noise (review requests, assignments).
+3. Take decisive action on each notification (mute, done, or respond).
+4. Build a daily routine that keeps your inbox manageable.
 
 
 ## What Generates a Notification?

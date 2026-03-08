@@ -20,39 +20,103 @@ Chapter 12 introduces the **GitHub Pull Requests extension** for managing PRs di
 - **Challenge count:** 2 guided challenges
 - **Automation check:** none (extension installation and review state are account-local)
 - **Evidence:** issue comment with confirmation of actions completed
-- **Pattern:** install -> check out -> review
+- **Pattern:** install, check out, review, comment
 
-### Chapter 12 Guided Challenges (No Bot Validation)
+### Chapter 12 Challenge Set
 
-For this workshop, Chapter 12 focuses on tooling setup and PR review workflow:
+1. **Install the GitHub Pull Requests extension** - add the extension to VS Code and sign in with your GitHub account.
+2. **Check out a PR and post a review comment** - download a PR branch locally, read the diff, and post one constructive review comment.
 
-**Estimated time:** 15-25 minutes
+### Challenge 12.1 Step-by-Step: Install the Extension
 
-1. **Install the GitHub Pull Requests extension**
-   - Add the extension to VS Code and sign in with your GitHub account.
+**Goal:** Install the GitHub Pull Requests and Issues extension and authenticate with your GitHub account.
 
-2. **Check out a challenge PR and post a review**
-   - Download a PR branch locally and write one constructive review comment.
-   - If checkout is blocked by permissions, complete the challenge in read-only mode by reviewing the PR and posting one specific comment.
+**Where you are working:** VS Code desktop with the `learning-room` repository open.
+
+**Estimated time:** 3-5 minutes.
+
+1. Open the Extensions sidebar: `Ctrl+Shift+X` (Mac: `Cmd+Shift+X`).
+2. Your screen reader announces "Extensions: Marketplace." The search box has focus.
+3. Type `GitHub Pull Requests` in the search box and press `Enter`.
+4. Navigate down the results list. Select **GitHub Pull Requests** (publisher: GitHub).
+5. Activate the **Install** button. VS Code installs the extension and may show a notification.
+6. After installation, VS Code prompts you to sign in. Activate **Sign in to GitHub**.
+7. A browser window opens for GitHub OAuth. Approve the authorization and return to VS Code.
+8. Verify: open the Explorer sidebar (`Ctrl+Shift+E`). You should now see a **GitHub** section in the sidebar showing Pull Requests and Issues.
+
+**Screen reader tip:** After step 5, if the install notification disappears before you can read it, open Command Palette (`Ctrl+Shift+P`) and run `Notifications: Focus Notification Toast`.
+
+**You are done when:** The GitHub section appears in your Explorer sidebar and shows pull requests from the `learning-room` repository.
+
+### Challenge 12.2 Step-by-Step: Check Out a PR and Post a Comment
+
+**Goal:** Check out someone else's PR branch locally, read the diff in VS Code, and post one constructive review comment.
+
+**Where you are working:** VS Code with the GitHub Pull Requests extension installed.
+
+**Estimated time:** 10-15 minutes.
+
+1. Open the Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).
+2. Type `GitHub Pull Requests: Focus on Pull Requests View` and select it. The Pull Requests panel opens.
+3. Navigate the list of open PRs. Find one that is **not yours** (a classmate's PR from Chapter 5, 6, or 11).
+4. With the PR focused, press `Enter` or activate **Checkout** from the context menu (`Shift+F10` on Windows). VS Code switches to that PR's branch.
+5. Open the Command Palette again and run `GitHub Pull Requests: Open Changed Files`. This shows the list of files the PR changed.
+6. Open one changed file. VS Code opens the **Diff Editor** showing old content on the left and new content on the right.
+7. Navigate the diff with the **Accessible Diff Viewer**: press `F7` to move to the next change, `Shift+F7` for the previous change. Your screen reader announces each change (added lines, removed lines).
+8. Find one specific thing to comment on: a typo, an unclear sentence, a missing step, or something the author did well.
+9. To add an inline comment: position your cursor on the line you want to comment on, then open Command Palette and run `GitHub Pull Requests: Add Comment`. Type your constructive comment and activate **Add Comment**.
+10. If the inline comment method is difficult, navigate to the PR on GitHub.com instead and add your comment in the **Files changed** tab.
+
+**If checkout is blocked by permissions:** You can still complete this challenge in read-only mode. Skip step 4 and instead open the PR on GitHub.com. Use the **Files changed** tab to read the diff and post your comment there.
+
+**Screen reader tip:** In the Diff Editor, `F7` (Accessible Diff Viewer) is the most reliable way to navigate changes. It reads each hunk as a single block, which is much easier than navigating line by line.
+
+**You are done when:** You have posted at least one constructive review comment on someone else's PR.
+
+### Completing Chapter 12: Submit Your Evidence
+
+Open your **assigned Chapter 12 challenge issue** and post a completion comment:
+
+```text
+Chapter 12 completed:
+- Extension installed: yes / no
+- Signed in to GitHub: yes / no
+- PR reviewed: #[PR number by classmate]
+- Comment posted: yes (inline / on GitHub.com)
+- My comment was about: [one-sentence summary]
+```
+
+Close your Chapter 12 challenge issues when done.
 
 ### Expected Outcomes
 
 - Student can install and authenticate the GitHub PR extension.
-- Student can check out a PR branch in VS Code.
-- Student can interactively review changes and post feedback.
+- Student can check out a PR branch in VS Code (or view it on GitHub.com).
+- Student can navigate diffs using the Accessible Diff Viewer (`F7`).
+- Student can post constructive, specific feedback on a classmate's work.
 
 ### If You Get Stuck
 
-1. If extension doesn't install, reload VS Code with `Ctrl+Shift+P` → "Developer: Reload Window".
-2. If OAuth sign-in fails, verify your GitHub account is active in the browser first, then retry.
-3. If PR list is empty, switch to "All Open" view in the GitHub section of Explorer.
-4. If checkout fails, confirm you have write access to the repository or ask facilitator.
-5. Ask facilitator to verify the GitHub PR view in Explorer and help with one checkout.
-6. If Activity Bar focus is difficult with a screen reader, use Command Palette and run `GitHub Pull Requests: Focus on Pull Requests View`.
+1. Extension does not install? Reload VS Code: `Ctrl+Shift+P`, then run `Developer: Reload Window`.
+2. OAuth sign-in fails? Verify your GitHub account is active in the browser first, close VS Code, reopen, and retry.
+3. PR list is empty? Switch to "All Open" view in the GitHub Pull Requests panel.
+4. Checkout fails? Confirm you have write access to the repository. If not, use the read-only GitHub.com fallback.
+5. Diff Editor is hard to navigate? Press `F7` for the Accessible Diff Viewer mode, which is purpose-built for screen readers.
+6. Cannot find the Add Comment command? Use Command Palette and search for `GitHub Pull Requests: Add Comment`.
+7. Ask facilitator to help verify the GitHub PR panel and model one review comment.
+
+> **Continue learning:** The GitHub Skills course [Review Pull Requests](https://github.com/skills/review-pull-requests) practices approving, requesting changes, and using suggestions in an interactive format. See [Appendix Z](appendix-z-github-skills-catalog.md) for the full catalog.
 
 ### Learning Moment
 
-PR tooling multiplies your impact. Reviewing others' work refines your own standards and builds community trust.
+PR tooling multiplies your impact. Reviewing others' work refines your own standards and builds community trust. The comment you just wrote helps another student learn - and you learn by articulating what makes documentation clear.
+
+### Learning Pattern Used in This Chapter
+
+1. Install and configure the tool before starting the task.
+2. Practice on someone else's work first (reviewing is safer than authoring).
+3. Use accessibility tools (`F7` Accessible Diff Viewer) to navigate efficiently.
+4. Write specific, constructive feedback (not just "looks good").
 
 
 ## Table of Contents

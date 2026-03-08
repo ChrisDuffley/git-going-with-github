@@ -20,34 +20,123 @@ Chapter 11 is the first **local Git workflow chapter** with hands-on repository 
 - **Challenge count:** 3
 - **Time per challenge:** under 10 minutes each
 - **Evidence:** PR metadata, branch names, and committed changes
-- **Pattern:** clone -> edit -> commit -> push -> PR
+- **Pattern:** clone, branch, edit, commit, push, PR
 
 ### Chapter 11 Challenge Set
 
-1. **Clone the learning room repository**
-   - Clone `learning-room` to your local machine using VS Code.
-2. **Make one small commit**
-   - Edit a file, stage changes, write a clear commit message, and commit locally.
-3. **Push and open a linked PR**
-   - Push your branch and open a PR that references a challenge issue with `Closes #XX`.
+1. **Clone the sci-fi themes repository** - clone `vscode-sci-fi-themes` to your local machine using VS Code.
+2. **Create a branch and make one commit** - create a named branch, edit a theme file, stage, write a clear commit message, and commit locally.
+3. **Push and open a linked PR** - push your branch and open a PR that references your challenge issue.
+
+### Challenge 11.1 Step-by-Step: Clone the Sci-Fi Themes Repository
+
+**Goal:** Get a local copy of the `vscode-sci-fi-themes` repository on your machine using VS Code.
+
+**Where you are working:** VS Code desktop (or github.dev if you cannot install desktop VS Code).
+
+This repo contains custom Copilot Chat loading phrases from three sci-fi universes (Star Trek, Hitchhiker's Guide, and Star Wars). Cloning it gives you a fun, real codebase to explore while learning Git.
+
+1. Open VS Code. If no folder is open, you should see the Welcome tab.
+2. Open the Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).
+3. Type `git clone` and select **Git: Clone**.
+4. VS Code asks for a repository URL. Paste: `https://github.com/Community-Access/vscode-sci-fi-themes.git`
+5. Press `Enter`.
+6. A file browser dialog opens asking where to save the clone. Choose a folder you can find easily (for example, `Documents` or `Desktop`). Press **Select as Repository Destination**.
+7. VS Code clones the repository. When it finishes, a notification appears asking "Would you like to open the cloned repository?" Activate **Open**.
+8. Verify the clone worked: press `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`) to open Explorer. Your screen reader should announce the file tree with files like `README.md`, `CLONE-THIS-REPO.md`, and a `themes/` folder containing three JSON files.
+
+**Screen reader tip:** After step 6, VS Code shows a progress notification. NVDA reads this automatically. If you hear nothing for 30 seconds, open the Command Palette and run `Notifications: Focus Notification Toast` to check status.
+
+**You are done when:** The `vscode-sci-fi-themes` folder is open in VS Code and you can see the `themes/` folder with its three JSON files (star-trek, hitchhikers, star-wars) in the Explorer panel.
+
+### Challenge 11.2 Step-by-Step: Create a Branch and Commit
+
+**Goal:** Create a properly named branch, edit a theme file, stage the change, and commit with a clear message.
+
+**Where you are working:** VS Code with the cloned `vscode-sci-fi-themes` repository open.
+
+1. Open the Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).
+2. Type `git create branch` and select **Git: Create Branch...**
+3. VS Code asks for a branch name. Type: `chapter11/yourname-issueXX` (replace `yourname` with your GitHub username and `XX` with your Chapter 11.2 challenge issue number). Press `Enter`.
+4. The status bar at the bottom of VS Code now shows your new branch name instead of `main`. Your screen reader announces the branch name when you focus the status bar.
+5. Open the Explorer (`Ctrl+Shift+E`) and navigate to the `themes/` folder. Open any theme file (for example, `star-trek-settings.json`).
+6. Make one small, meaningful edit. For example, add a new thinking phrase to the array, fix a typo, or improve a description. Save the file with `Ctrl+S` (Mac: `Cmd+S`).
+7. Open the Source Control panel: `Ctrl+Shift+G` (Mac: `Cmd+Shift+G`). Your screen reader announces "Source Control" and shows your changed file under "Changes."
+8. Navigate to your changed file in the Changes list. Press `Enter` or activate the `+` (Stage Changes) button next to the filename. The file moves from "Changes" to "Staged Changes."
+9. Move focus to the **Message** input box at the top of the Source Control panel. Type a clear commit message, for example: `feat: add new thinking phrase to Star Trek theme`
+10. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) to commit. The staged changes disappear, which means your commit succeeded.
+
+**Screen reader tip:** In the Source Control panel, use arrow keys to navigate between changed files. Each file announces its name and change status (modified, added, deleted). The `+` button is announced as "Stage Changes" when you Tab to it.
+
+**You are done when:** Your commit appears in the Source Control panel's history (no more staged or unstaged changes visible) and the status bar still shows your branch name.
+
+### Challenge 11.3 Step-by-Step: Push and Open a Linked PR
+
+**Goal:** Push your branch to GitHub and open a PR that references your challenge issue.
+
+**Where you are working:** VS Code (for the push) and GitHub.com (for the PR).
+
+1. Open the Command Palette: `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).
+2. Type `git push` and select **Git: Push**. If VS Code asks to publish the branch (because it is new), confirm by selecting **OK** or **Publish Branch**.
+3. Wait for the push to complete. VS Code shows a progress notification. When done, the sync indicator in the status bar should show no pending changes.
+4. Open your browser and navigate to `https://github.com/Community-Access/vscode-sci-fi-themes`.
+5. GitHub usually shows a yellow banner: "yourname recently pushed to chapter11/yourname-issueXX." Activate the **Compare & pull request** button in that banner.
+6. If you do not see the banner, activate the **Pull requests** tab, then activate **New pull request**. Set the base branch to `main` and the compare branch to your `chapter11/yourname-issueXX` branch.
+7. In the PR title, write a descriptive title (for example: "Add new thinking phrase to Star Trek theme").
+8. In the PR description, type `Closes Community-Access/learning-room#XX` (replace `XX` with your Chapter 11.3 challenge issue number). This cross-repo reference tells GitHub to automatically close that issue in the learning-room when this PR is merged.
+9. Activate the **Create pull request** button.
+
+**Screen reader tip:** The "Compare & pull request" banner is a standard link element near the top of the repository page. If your screen reader does not find it, use the heading navigation to jump to the Pull Requests tab instead.
+
+**Cross-repo linking:** Because your challenge issue lives in `learning-room` but your PR is in `vscode-sci-fi-themes`, you use the full format `Closes Community-Access/learning-room#XX` instead of just `Closes #XX`. GitHub resolves cross-repo references automatically.
+
+**You are done when:** Your PR appears on the Pull requests tab of `vscode-sci-fi-themes`, shows your branch name, and the description contains the cross-repo reference to your challenge issue.
+
+### Completing Chapter 11: Submit Your Evidence
+
+Open your **assigned Chapter 11.3 challenge issue** in the `learning-room` repo and post a completion comment:
+
+```text
+Chapter 11 completed:
+- Repository cloned: vscode-sci-fi-themes
+- Branch name: chapter11/[yourname]-[issueXX]
+- Commit message: [your commit message]
+- PR number: Community-Access/vscode-sci-fi-themes#[your PR number]
+- PR links to issue: yes (Closes Community-Access/learning-room#XX in description)
+```
+
+Close your Chapter 11 challenge issues (11.1, 11.2, 11.3) when your PR is open.
 
 ### Expected Outcomes
 
 - Student can clone a repository using VS Code Command Palette.
-- Student can navigate the Source Control panel and stage files.
-- Student can write a clear commit message and push a branch to GitHub.
+- Student can create a named branch following the workshop naming convention.
+- Student can navigate the Source Control panel, stage files, and commit with a descriptive message.
+- Student can push a branch and open a PR with cross-repo issue linking.
 
 ### If You Get Stuck
 
-1. Confirm Command Palette opens with `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac).
-2. If Source Control panel doesn't open, use `Ctrl+Shift+G` (Windows) or `Cmd+Shift+G` (Mac).
-3. If push fails, verify authentication: `Ctrl+Shift+P` → "Git: Fetch" to test connection.
-4. If branch won't create, confirm VS Code is in the cloned repository folder (status bar shows branch name).
-5. Ask facilitator to verify your clone location and help with one push.
+1. Command Palette does not open? Confirm you are in VS Code (not the browser) and press `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`).
+2. Source Control panel is empty? You may not have saved your file yet. Press `Ctrl+S` to save, then check again.
+3. Push fails with authentication error? Open Command Palette, run `Git: Fetch` to test your connection. If it fails, run `GitHub: Sign In` from Command Palette.
+4. Branch name wrong? Open Command Palette, run `Git: Rename Branch...` to fix it before pushing.
+5. Cannot find the "Compare & pull request" banner on GitHub? Navigate to Pull requests tab and create the PR manually (step 6 above).
+6. Cross-repo link not working? Make sure the format is exactly `Closes Community-Access/learning-room#XX` with no extra spaces. The org/repo prefix is required when linking across repositories.
+7. Ask facilitator to verify your clone location, branch name, and help with one push.
+
+> **Continue learning:** The GitHub Skills course [Introduction to Git](https://github.com/skills/introduction-to-git) walks through commits, branches, and merges in an interactive, self-paced format. See [Appendix Z](appendix-z-github-skills-catalog.md) for the full catalog.
 
 ### Learning Moment
 
-Local Git operations give you full control and immediate feedback. You can see your changes before they reach GitHub.
+Local Git operations give you full control and immediate feedback. You can see your changes, review them, and fix mistakes before they reach GitHub. The clone-branch-edit-commit-push-PR cycle you just completed is the daily workflow of every open source contributor. And now your Copilot Chat has custom sci-fi loading phrases as a bonus.
+
+### Learning Pattern Used in This Chapter
+
+1. Clone once to get a local copy of the project.
+2. Branch before editing (never work directly on `main`).
+3. Make small, focused edits with clear commit messages.
+4. Push and open a PR that links to an issue for traceability.
+5. Verify each step before moving to the next.
 
 
 ## Table of Contents
@@ -156,13 +245,13 @@ Clone a repository with one command:
 
 ```bash
 # Clone using owner/name (no URL needed)
-gh repo clone community-access/learning-room
+gh repo clone community-access/vscode-sci-fi-themes
 
 # Clone and cd into the folder
-gh repo clone community-access/learning-room && cd learning-room
+gh repo clone community-access/vscode-sci-fi-themes && cd vscode-sci-fi-themes
 
 # Open the cloned repo in VS Code
-gh repo clone community-access/learning-room && code learning-room
+gh repo clone community-access/vscode-sci-fi-themes && code vscode-sci-fi-themes
 ```
 
 </details>
@@ -1170,16 +1259,16 @@ git log                        # View commit history
 
 Do the complete Git workflow once, start to finish:
 
-1. **Clone** - Press `Ctrl+Shift+P`, type `Git: Clone`, press `Enter`. Paste the Learning Room URL and choose a folder. VS Code opens the repo.
-2. **Create a branch** - Click the branch name in the status bar (bottom left) or press `Ctrl+Shift+P` → `Git: Create Branch`. Name it `practice/your-name`.
-3. **Make a change** - Open `learning-room/docs/welcome.md`. Add a line at the bottom: `- [Your Name] was here!`
+1. **Clone** - Press `Ctrl+Shift+P`, type `Git: Clone`, press `Enter`. Paste `https://github.com/Community-Access/vscode-sci-fi-themes.git` and choose a folder. VS Code opens the repo.
+2. **Create a branch** - Click the branch name in the status bar (bottom left) or press `Ctrl+Shift+P` → `Git: Create Branch`. Name it `chapter11/your-name`.
+3. **Make a change** - Open a theme file in the `themes/` folder (for example, `star-trek-settings.json`). Add a new thinking phrase to the array.
 4. **Stage** - Press `Ctrl+Shift+G` to open Source Control. Navigate to your changed file and press `Enter` to stage it (or use the `+` button).
-5. **Commit** - Tab to the message input, type `Add my name to the welcome file`, press `Ctrl+Enter`.
+5. **Commit** - Tab to the message input, type `feat: add new thinking phrase`, press `Ctrl+Enter`.
 6. **Push** - Press `Ctrl+Shift+P` → `Git: Push`.
 
 **You're done.** You just completed the full Git cycle: clone → branch → edit → stage → commit → push.
 
-> **What success feels like:** Your change is on GitHub. You can verify by visiting the repository and switching to your branch. Every future contribution follows this same six-step pattern.
+> **What success feels like:** Your change is on GitHub. You can verify by visiting the repository and switching to your branch. Every future contribution follows this same six-step pattern. And your Copilot Chat now has a custom sci-fi loading phrase you wrote.
 
 
 *Next: [GitHub Pull Requests Extension](12-github-pull-requests-extension.md)*  

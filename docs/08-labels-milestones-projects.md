@@ -14,42 +14,72 @@ Chapter 8 is a **guided triage chapter** focused on organization skills.
 - **Challenge count:** 1 guided challenge
 - **Automation check:** none by default
 - **Evidence:** structured issue comment in assigned challenge issue
-- **Pattern:** inspect -> classify -> explain
+- **Pattern:** inspect, classify, explain
 
-### Chapter 8 Guided Challenge: Triage Recommendation Comment
+### Chapter 8 Challenge Set
 
-1. Open your assigned challenge issue.
-2. Review issue title, description, and target file.
-3. Post a triage recommendation comment using this format:
+1. **Post a triage recommendation** - read an issue, recommend labels/milestone/project placement, and explain your reasoning.
+
+### Challenge 8.1 Step-by-Step: Triage Recommendation Comment
+
+**Goal:** Read the details of a Learning Room issue and post a structured triage recommendation that a maintainer could act on immediately.
+
+**Where you are working:** your assigned Chapter 8 challenge issue in the `learning-room` repository on GitHub.com, plus one other open issue you will triage.
+
+1. Open the **Issues** tab in the `learning-room` repository.
+2. Find any **open issue** that does not already have labels applied (or pick one your facilitator assigns).
+3. Read the issue title and full description carefully. Note:
+   - What type of work is it? (documentation fix, bug report, accessibility improvement, new content)
+   - How urgent does it seem? (blocking other work, nice-to-have, unclear)
+   - Which file or area of the repo does it affect?
+4. Open your **assigned Chapter 8 challenge issue** (the one titled "Chapter 8.1: Triage Recommendation (@yourname)").
+5. Scroll to the comment box and post a triage recommendation using this format:
 
 ```text
-Chapter 8 triage recommendation:
-- Suggested labels:
-- Suggested milestone:
-- Suggested project board column:
-- One-sentence reason:
+Chapter 8 triage recommendation for issue #[number]:
+- Suggested labels: [pick 1-3 from: documentation, bug, accessibility, enhancement, good first issue]
+- Suggested milestone: [pick one or write "none - reason"]
+- Suggested project board column: [To Do, In Progress, or Needs Triage]
+- One-sentence reason: [why you chose these categories]
 ```
 
-4. If you have write access, apply the recommended labels/milestone directly.
+6. If you have write access to the repository, apply the recommended labels and milestone directly on the issue you triaged.
+7. Activate the **Comment** button.
 
-This keeps the task simple and accessible for all students, including those without triage permissions.
+**Screen reader tip:** When browsing available labels, open the Labels page (`/labels` path on the repo) to see all label names and descriptions. Your screen reader will read each label name and its description text.
+
+**You are done when:** Your triage recommendation comment appears on your assigned challenge issue with all four fields filled in.
+
+### Completing Chapter 8: Submit Your Evidence
+
+Your triage recommendation comment is your evidence. Close your Chapter 8 challenge issue when done. If you also applied labels directly, mention that in your comment.
 
 ### Expected Outcomes
 
-- Student can recommend labels/milestone/project placement using issue context.
-- Student understands triage even without maintainer permissions.
-- Student leaves a clear, reusable triage note for maintainers.
+- Student can read an issue and recommend appropriate labels, milestone, and project placement.
+- Student understands triage reasoning even without maintainer permissions.
+- Student leaves a clear, reusable triage note that a maintainer could act on immediately.
 
 ### If You Get Stuck
 
-1. Start with one label only (`documentation`, `bug`, or `accessibility`).
-2. If milestone is unclear, write `none` and explain why.
-3. If project board is unknown, write `needs triage` and continue.
-4. Ask facilitator to review your one-sentence reason before posting.
+1. Not sure which label to pick? Start with just one: `documentation`, `bug`, or `accessibility`. You can always add more.
+2. Milestone is unclear? Write `none` and explain why - that is a valid triage decision.
+3. Project board is unknown? Write `Needs Triage` - that is the correct default.
+4. Not sure what the issue is about? Re-read the title and first paragraph. If still unclear, that itself is useful triage feedback ("Issue description is unclear - needs more detail").
+5. Ask facilitator to review your one-sentence reason before posting.
 
 ### Learning Moment
 
-Triage is about clarity, not authority. Good recommendations reduce maintainer effort and speed up collaboration.
+Triage is about clarity, not authority. You do not need maintainer permissions to help organize work. A clear recommendation saves maintainers time and speeds up collaboration. This is a skill used daily in open source.
+
+> **Continue learning:** The GitHub Skills course [Introduction to Repository Management](https://github.com/skills/introduction-to-repository-management) covers labels, milestones, and contributor settings in an interactive, self-paced format. See [Appendix Z](appendix-z-github-skills-catalog.md) for the full catalog.
+
+### Learning Pattern Used in This Chapter
+
+1. Inspect an issue carefully before acting (read before you write).
+2. Classify work using a consistent vocabulary (labels, milestones).
+3. Explain your reasoning in writing (one-sentence justification).
+4. Build triage instincts that transfer to any open source project.
 
 
 ## Labels

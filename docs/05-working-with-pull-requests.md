@@ -30,7 +30,7 @@ Chapter 5 is the first **PR-validated chapter** where students convert issue wor
 
 ### Chapter 5 Challenge Set
 
-1. **Create one small branch change** - edit the file specified in your claimed issue.
+1. **Create one small branch change** - edit a practice file on a new branch.
 2. **Open a linked PR** - use the PR template and include `Closes #XX`.
 3. **Pass required checks** - respond to bot feedback until all required checks pass.
 
@@ -43,11 +43,13 @@ Chapter 5 is the first **PR-validated chapter** where students convert issue wor
 
 ### Challenge 5.1 Step-by-Step: Create One Small Branch Change
 
-**Goal:** Edit the file referenced in the issue you claimed in Chapter 4 (Challenge 4.2).
+**Goal:** Edit one of the practice files and save your change on a new branch.
 
 **Where you are working:** the `learning-room` repository on GitHub.com, using the web editor.
 
-**Before you start:** Open the issue you claimed in Chapter 4.2 and note which file needs editing. The issue description tells you the file path and what to fix. The practice files are:
+**Before you start:** Open your **assigned Chapter 5.1 challenge issue** (the one titled "Chapter 5.1: Create One Small Branch Change (@yourname)"). The issue description tells you which file to edit and what to fix.
+
+The Learning Room has three practice files with intentional problems. Your assigned issue points you to one of them:
 
 The following table summarizes the practice files in the learning-room, what each file contains, and the type of issues to look for.
 
@@ -90,8 +92,7 @@ The following table summarizes the practice files in the learning-room, what eac
    - "Correct NVDA modifier key in keyboard-shortcuts.md"
 2. In the **Body** field, use the PR template if one is provided. Make sure to include:
    - A summary of what you changed and why (at least 50 characters).
-   - The line `Closes #XX` where `XX` is the number of your **assigned Chapter 5 challenge issue** (not the issue you claimed in Chapter 4, unless they are the same).
-   - If you are also closing the issue you claimed in Chapter 4, add that reference too: `Also addresses #YY`.
+   - The line `Closes #XX` where `XX` is the number of your **assigned Chapter 5 challenge issue**.
 3. Verify the **base branch** is `main` and the **compare branch** is your `fix/yourname-issueXX` branch.
 4. Activate the **Create pull request** button.
 
@@ -194,7 +195,7 @@ The GitHub CLI walks you through title, body, base branch, and reviewers.
 
 **What happens next is identical:** the Learning Room bot validates your PR, posts feedback, and you request a human reviewer - the same as the web workflow.
 
-> **Tip:** You can also use your `username-practice` branch instead of creating a feature branch. Switch to it with `git checkout username-practice` (replacing `username` with your GitHub username, all lowercase).
+> **Tip:** You can also create a named feature branch with `git checkout -b fix/yourname-issueXX` if you prefer that naming convention over the practice branch.
 
 </details>
 

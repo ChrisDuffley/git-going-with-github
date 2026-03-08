@@ -14,39 +14,81 @@ Chapter 6 uses **one controlled practice challenge** so students can learn confl
 - **Challenge count:** 1
 - **Time:** under 10 minutes
 - **Evidence:** issue-linked PR and completion comment
-- **Pattern:** observe -> resolve -> verify
+- **Pattern:** observe, resolve, verify
 
-### Chapter 6 Challenge: Resolve Conflict Markers
+### Chapter 6 Challenge Set
+
+1. **Resolve conflict markers** - identify and clean up conflict markers in a practice file, then open a linked PR.
+
+> **Branch guidance for Chapter 6:** Use a short-lived feature branch: `fix/yourname-issueXX` (for example, `fix/maria-issue48`). The same pattern you used in Chapter 5.
+
+### Challenge 6.1 Step-by-Step: Resolve Conflict Markers
+
+**Goal:** Identify the three types of conflict markers in a practice file, decide which content to keep, remove the markers, and submit a clean PR.
+
+**Where you are working:** the `learning-room` repository on GitHub.com (web editor) or in VS Code if you cloned locally.
+
+**Before you start:** Open your **assigned Chapter 6 challenge issue** (the one titled "Chapter 6.1: Resolve Conflict Markers (@yourname)"). The issue description tells you which practice file contains the conflict markers.
 
 Practice sample: [`learning-room/docs/samples/chapter-6-conflict-practice-sample.md`](../learning-room/docs/samples/chapter-6-conflict-practice-sample.md)
 
-1. Open the assigned merge-conflict practice issue.
-2. Edit only the designated practice file/section.
-3. Remove conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) and keep the intended final content.
-4. Open PR with `Closes #XX` and complete with a short issue comment summary.
+1. Open the practice file specified in your challenge issue.
+2. Search the file for `<<<<<<<`. This is the **start marker** - it shows where the conflict begins.
+3. Read the content between `<<<<<<<` and `=======`. This is **your version** (the current branch).
+4. Read the content between `=======` and `>>>>>>>`. This is **their version** (the incoming branch).
+5. Decide which content to keep:
+   - Keep only your version, or
+   - Keep only their version, or
+   - Combine both versions into one clean paragraph.
+6. Delete all three marker lines:
+   - The `<<<<<<< HEAD` line (or similar)
+   - The `=======` separator line
+   - The `>>>>>>> branch-name` line
+7. Review the file to confirm no marker lines remain. Search for `<<<<<<<` again - there should be zero results.
+8. Commit your changes on a branch named `fix/yourname-issueXX`.
+9. Open a pull request with:
+   - Title: `fix: resolve conflict markers in [filename]`
+   - Body: Include `Closes #XX` (your challenge issue number) and a 1-2 sentence description of which content you kept and why.
+
+**Screen reader tip:** Use your screen reader's find command (`Ctrl+F` in browser, `Ctrl+H` in VS Code) to jump directly to `<<<<<<<`. The markers are plain text, so they are fully readable.
+
+**You are done when:** Your PR passes bot validation checks and contains no remaining conflict markers.
+
+### Completing Chapter 6: Submit Your Evidence
+
+When your PR is open and passing checks, post a comment on your assigned Chapter 6 challenge issue:
+
+```text
+Chapter 6 completed:
+- Challenge 6.1: Opened PR #[number] resolving conflict markers in [filename]
+- Content decision: kept [your version / their version / combined both] because [reason]
+```
 
 ### Expected Outcomes
 
-- Student can identify conflict markers immediately.
-- Student can remove markers and keep intended content.
-- Student can submit a clean, issue-linked PR after resolution.
+- Student can identify the three conflict marker lines (`<<<<<<<`, `=======`, `>>>>>>>`) immediately.
+- Student can read both sides of a conflict and make an intentional content decision.
+- Student can remove all markers and submit a clean, issue-linked PR.
 
 ### If You Get Stuck
 
-1. Pause and read marker blocks line by line before editing.
-2. Keep one side, or combine both sides when both lines are valid.
-3. Delete all marker lines (`<<<<<<<`, `=======`, `>>>>>>>`).
-4. Ask facilitator to sanity-check final content before opening PR.
+1. Can't find the markers? Use `Ctrl+F` and search for `<<<<<<<` - they are always in sets of three.
+2. Not sure which side to keep? Read both versions aloud. Pick the one that is clearer, or combine them.
+3. Accidentally deleted too much? Undo with `Ctrl+Z` and start the section over.
+4. PR bot says content is wrong? Double-check that zero marker lines remain - search for `<<<<<<<`, `=======`, and `>>>>>>>`.
+5. Ask facilitator to sanity-check your final content before opening the PR.
 
 ### Learning Moment
 
-Merge conflicts are not failures. They are a normal collaboration checkpoint and a chance to make an intentional content decision.
+Merge conflicts are not failures. They are a normal collaboration checkpoint and a chance to make an intentional content decision. In real open source projects, conflicts happen whenever two people edit near the same lines. The skill is not avoiding them - it is resolving them calmly and clearly.
 
-### Why this chapter is structured this way
+### Learning Pattern Used in This Chapter
 
-- Real conflicts can be unpredictable for new contributors.
-- Controlled practice keeps the experience safe and repeatable.
-- Students still get real issue and PR workflow practice.
+1. Start with a controlled, safe conflict (practice file with known markers).
+2. Learn to read the conflict structure (your version vs. their version).
+3. Make a deliberate content decision (not just deleting randomly).
+4. Submit clean evidence through the PR workflow.
+5. Build confidence for real conflicts in future contributions.
 
 
 ## Local Git Alternative: Resolving Conflicts from Your Terminal

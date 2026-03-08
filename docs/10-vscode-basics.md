@@ -15,67 +15,76 @@
 
 For this workshop, Chapter 10 is a **guided setup chapter** with a lightweight completion challenge.
 
-- **Primary goal:** make sure every student can open and navigate VS Code accessibly.
-- **No strict bot grading:** setup state is local/account-level and not fully reliable for Actions-based validation.
-- **Issue-linked evidence:** students still complete work through their challenge issue workflow.
+- **Challenge count:** 1 guided walkthrough
+- **Automation check:** none - setup state is local/account-level and cannot be validated by the Learning Room PR bot
+- **Evidence:** structured completion comment on your assigned challenge issue
+- **Pattern:** open, configure, navigate, verify
 
-### Challenge Type
+### Chapter 10 Challenge Set
 
-Use a guided checklist challenge and record completion in a GitHub issue comment.
+1. **VS Code accessibility baseline** - open VS Code (github.dev or desktop), enable screen reader mode, and navigate core surfaces.
 
+### Challenge 10.1 Step-by-Step: VS Code Accessibility Baseline
 
-## Guided Walkthrough Challenge: VS Code Accessibility Baseline (No Bot Check)
+**Goal:** Confirm you can access VS Code (github.dev or desktop), enable screen reader support, and perform core file navigation.
 
-Use this challenge for Chapter 10. Estimated time: 8-10 minutes.
+**Where you are working:** github.dev (VS Code in the browser) or desktop VS Code if you installed it in Block 0.
 
-### Goal
+**Estimated time:** 8-10 minutes.
 
-Confirm students can access VS Code (github.dev or desktop), enable screen reader support, and perform core file navigation.
+1. Open the `learning-room` repository on GitHub.com.
+2. Press `.` (the period key) on your keyboard. This launches **github.dev** - a full VS Code editor running in your browser. Wait a few seconds for it to load.
+3. Enable screen reader mode:
+   - **Windows (NVDA/JAWS):** Press `Shift+Alt+F1`. You should hear an announcement confirming screen reader mode is on.
+   - **Mac (VoiceOver):** Screen reader mode is usually already optimized. If navigation feels wrong, open Command Palette (`Cmd+Shift+P`) and run `Toggle Screen Reader Accessibility Mode`.
+4. Open the **Explorer** panel with `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`). Your screen reader should announce the file tree.
+5. Navigate to and open `README.md` from the file tree. Use arrow keys to move through files and `Enter` to open.
+6. Open the **outline/symbols** view with `Ctrl+Shift+O` (Mac: `Cmd+Shift+O`). This shows all headings and sections in the current file - a key navigation tool for screen reader users.
+7. Open the **Command Palette** with `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`). Type any command name (for example, `Toggle Word Wrap`) and press `Enter` to run it. Press `Escape` to close without running.
 
-### Student Steps
+**You are done when:** You have successfully opened github.dev, enabled screen reader mode, opened a file, viewed its outline, and run a command from the Command Palette.
 
-1. Open any repository and launch github.dev with `.` (period key).
-2. Screen reader mode setup:
-  - Windows (NVDA/JAWS): enable with `Shift+Alt+F1`.
-  - Mac (VoiceOver): mode is usually already optimized. If needed, open Command Palette and run `Toggle Screen Reader Accessibility Mode`.
-3. Open Explorer with `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`).
-4. Open `README.md` from the file tree.
-5. Open outline/symbols with `Ctrl+Shift+O` (Mac: `Cmd+Shift+O`).
-6. Open Command Palette with `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`) and run any command.
-7. Return to your assigned challenge issue and post a completion comment using this format:
+### Completing Chapter 10: Submit Your Evidence
+
+Return to GitHub.com, open your **assigned Chapter 10 challenge issue**, and post a completion comment:
 
 ```text
-Chapter 10 complete:
-- Opened github.dev: yes
-- Screen reader mode enabled: yes
-- Opened file in Explorer: yes
-- Opened outline/symbols: yes
-- Opened Command Palette: yes
+Chapter 10 completed:
+- Opened github.dev: yes / no
+- Screen reader mode enabled: yes / no
+- Opened file in Explorer: yes / no
+- Opened outline/symbols: yes / no
+- Opened Command Palette: yes / no
 ```
 
-### Facilitator Verification (Lightweight)
-
-- Confirm the completion comment exists on the student's assigned issue.
-- If a student is blocked, ask for the exact step and shortcut where they got stuck.
-- Treat this as readiness verification for later PR-focused chapters, not pass/fail grading.
+If any step was "no," add a note explaining where you got stuck so the facilitator can help. Close your Chapter 10 challenge issue when done.
 
 ### Expected Outcomes
 
 - Student can launch and navigate github.dev or desktop VS Code.
-- Student can enable screen reader mode and open core navigation surfaces.
-- Student is ready for VS Code-based contribution chapters.
+- Student can enable screen reader mode and hear navigation announcements.
+- Student can open core navigation surfaces (Explorer, Outline, Command Palette).
+- Student is ready for VS Code-based contribution chapters (11-16).
 
 ### If You Get Stuck
 
-1. Confirm you are in a repository page before pressing `.`.
-2. Retry screen reader mode toggle once, then verify in settings.
-3. On Mac with VoiceOver, run `Toggle Screen Reader Accessibility Mode` from Command Palette if navigation is inconsistent.
-4. Use Command Palette to run commands when shortcut memory is hard.
-5. Ask facilitator for a side-by-side demo and repeat the same 5 steps.
+1. Nothing happens when you press `.`? Make sure you are on the repository's main page (not inside an issue or PR). The `.` shortcut only works on repository code pages.
+2. Screen reader mode toggle did not announce anything? Open Command Palette (`Ctrl+Shift+P`) and type `Screen Reader` to find the toggle manually.
+3. Explorer panel is empty? VS Code may still be loading the repository. Wait 5-10 seconds and press `Ctrl+Shift+E` again.
+4. On Mac with VoiceOver, navigation feels wrong? Run `Toggle Screen Reader Accessibility Mode` from Command Palette. VoiceOver sometimes needs the explicit toggle.
+5. Shortcut not working? Use Command Palette as a fallback for any action - type what you want to do and VS Code will find the command.
+6. Ask facilitator for a side-by-side demo and repeat the same steps.
 
 ### Learning Moment
 
-Tool setup is part of contribution skill. A stable, accessible editor reduces stress and increases contribution quality.
+Tool setup is part of contribution skill. A stable, accessible editor reduces stress and increases contribution quality. The five surfaces you just tested - github.dev launch, screen reader mode, Explorer, Outline, and Command Palette - are the foundation for everything in Day 2.
+
+### Learning Pattern Used in This Chapter
+
+1. Open the tool in the simplest way possible (`.` key for github.dev).
+2. Configure accessibility before doing any work (screen reader mode first).
+3. Verify each navigation surface works with your assistive technology.
+4. Record what worked and what didn't (evidence comment).
 
 
 ## Table of Contents

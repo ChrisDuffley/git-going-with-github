@@ -11,13 +11,26 @@
 
 Chapter 7 is a **communication and culture chapter**.
 
-- **Challenge count:** no bot-graded challenge
-- **Automation check:** none
-- **Why:** communication quality is important but too subjective for fair automated scoring.
+- **Challenge count:** 1 guided reflection (no bot grading)
+- **Automation check:** none - communication quality is too subjective for fair automated scoring
+- **Evidence:** structured reflection comment on your assigned challenge issue
+- **Pattern:** read, reflect, commit to one behavior
 
-### Optional Guided Reflection (Issue Comment Evidence)
+### Chapter 7 Challenge Set
 
-Students can post one short comment on their assigned issue:
+1. **Guided reflection** - read the chapter, then post a short reflection comment committing to three specific collaboration behaviors.
+
+### Challenge 7.1 Step-by-Step: Guided Reflection
+
+**Goal:** Identify three concrete communication behaviors you will practice during the rest of the workshop.
+
+**Where you are working:** your assigned Chapter 7 challenge issue in the `learning-room` repository on GitHub.com.
+
+1. Read through the chapter content below, paying attention to the sections on GitHub Flow, constructive feedback, and asking for help.
+2. As you read, think about one situation from Day 1 where communication helped (or could have helped) you.
+3. Open your **assigned Chapter 7 challenge issue** (the one titled "Chapter 7.1: Guided Reflection (@yourname)").
+4. Scroll to the comment box at the bottom of the issue.
+5. Post a reflection comment using this format:
 
 ```text
 Chapter 7 reflection:
@@ -26,24 +39,43 @@ Chapter 7 reflection:
 - One way I will respond to feedback constructively:
 ```
 
-This keeps learning visible without creating a pass/fail pressure point.
+6. For each prompt, write one specific, actionable sentence - not a vague goal. Examples:
+   - Good: "I will start review comments with what the author did well before suggesting changes."
+   - Vague: "I will be nice."
+   - Good: "I will include the exact step where I got stuck and what I already tried."
+   - Vague: "I will ask good questions."
+7. Activate the **Comment** button (or press `Ctrl+Enter`).
+
+**You are done when:** Your reflection comment appears on the issue with three specific, actionable behaviors.
+
+### Completing Chapter 7: Submit Your Evidence
+
+The reflection comment itself is your evidence. No additional steps are needed. The facilitator reviews your comment for specificity. Close your Chapter 7 challenge issue when done.
 
 ### Expected Outcomes
 
-- Student can name respectful collaboration behaviors.
-- Student can prepare a constructive feedback style before review work.
+- Student can name specific, actionable respectful collaboration behaviors.
+- Student can prepare a constructive feedback style before review work in later chapters.
 - Student feels safer asking for help in public threads.
 
 ### If You Get Stuck
 
-1. Use one simple sentence per prompt.
-2. Focus on one real behavior you can do today.
-3. If writing feels hard, draft bullet points first, then post.
-4. Ask facilitator for one example response and adapt it.
+1. Use one simple sentence per prompt - do not overthink it.
+2. Focus on one real behavior you can start doing today, not an abstract principle.
+3. If writing feels hard, draft bullet points first in a text editor, then paste into the comment.
+4. Look at the "Giving Feedback" and "Asking for Help" sections in this chapter for concrete examples.
+5. Ask facilitator for one example response and adapt it to your own words.
 
 ### Learning Moment
 
-Technical quality and communication quality work together. Respectful, clear communication helps good code get merged faster.
+Technical quality and communication quality work together. Respectful, clear communication helps good code get merged faster. The behaviors you commit to here will directly improve your PR reviews in Chapters 12 and 14.
+
+### Learning Pattern Used in This Chapter
+
+1. Read and absorb community norms (not just rules, but reasons).
+2. Reflect on personal experience (what worked, what was hard).
+3. Commit to specific behaviors in writing (public accountability).
+4. Apply those behaviors in upcoming chapters (reviews, comments, PRs).
 
 
 ## GitHub Flow - The Standard Contribution Workflow
