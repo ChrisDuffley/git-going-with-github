@@ -92,19 +92,19 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
 <ul>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>What issue templates are and why projects use them</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Where templates live: .github/ISSUE_TEMPLATE/ directory</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>YAML front matter: name, description, title, labels, assignees</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Markdown body templates with placeholder sections</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Creating a bug report template with steps to reproduce</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Creating a feature request template</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Creating custom templates for any purpose</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>The template chooser page: what users see when filing an issue</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>config.yml: adding external links and configuring the chooser</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Form-based templates: input types (textarea, input, dropdown, checkboxes)</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Validation and required fields in form templates</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>How templates improve issue quality and reduce back-and-forth</strong></li>
-<li><input aria-label="" disabled="" type="checkbox"> <strong>Testing your templates by filing an issue</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>What issue templates are and why projects use them</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Where templates live: .github/ISSUE_TEMPLATE/ directory</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>YAML front matter: name, description, title, labels, assignees</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Markdown body templates with placeholder sections</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Creating a bug report template with steps to reproduce</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Creating a feature request template</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Creating custom templates for any purpose</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>The template chooser page: what users see when filing an issue</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>config.yml: adding external links and configuring the chooser</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Form-based templates: input types (textarea, input, dropdown, checkboxes)</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Validation and required fields in form templates</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>How templates improve issue quality and reduce back-and-forth</strong></li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <strong>Testing your templates by filing an issue</strong></li>
 </ul>
 <h3 id="prerequisites-briefly-recap-these">Prerequisites (briefly recap these)</h3>
 <p>Listeners may have heard these earlier episodes. Briefly remind them of:</p>
@@ -123,11 +123,11 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <h2 id="prerequisites-checklist">Prerequisites Checklist</h2>
 <p><strong>Before starting this chapter, verify you have completed:</strong></p>
 <ul>
-<li><input aria-label="Chapter 4:" disabled="" type="checkbox"> Chapter 4: <a href="04-working-with-issues.html">Working with Issues</a> - Know how to create, read, and navigate issues</li>
-<li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - VS Code installed with YAML syntax highlighting enabled</li>
-<li><input aria-label="Chapter 10:" disabled="" type="checkbox"> Chapter 10: <a href="10-notifications.html">Notifications</a> - Basic understanding of workflow triggers</li>
-<li><input aria-label="A GitHub repository where you have write access (your fork or personal repo)" disabled="" type="checkbox"> A GitHub repository where you have write access (your fork or personal repo)</li>
-<li><input aria-label="Terminal/Command line basic comfort (Chapter 6 mentions git workflows)" disabled="" type="checkbox"> Terminal/Command line basic comfort (Chapter 6 mentions git workflows)</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 4:" disabled="" type="checkbox"> Chapter 4: <a href="04-working-with-issues.html">Working with Issues</a> - Know how to create, read, and navigate issues</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - VS Code installed with YAML syntax highlighting enabled</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 10:" disabled="" type="checkbox"> Chapter 10: <a href="10-notifications.html">Notifications</a> - Basic understanding of workflow triggers</li>
+<li><input type="checkbox" disabled> <input aria-label="A GitHub repository where you have write access (your fork or personal repo)" disabled="" type="checkbox"> A GitHub repository where you have write access (your fork or personal repo)</li>
+<li><input type="checkbox" disabled> <input aria-label="Terminal/Command line basic comfort (Chapter 6 mentions git workflows)" disabled="" type="checkbox"> Terminal/Command line basic comfort (Chapter 6 mentions git workflows)</li>
 </ul>
 <p><strong>Day 2 Amplifier:</strong> In <a href="16-accessibility-agents.html">Chapter 16 (Accessibility Agents)</a>, you&#39;ll use <code>@template-builder</code> to automate template creation. Complete this chapter first, then come back to Chapter 16.</p>
 <p><strong>Estimated time for this chapter:</strong> 1.5 hours (including exercises)</p>
@@ -493,13 +493,10 @@ Screen reader and browser information is especially important for us to reproduc
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
 <ol>
-<li><p>Navigate to your fork of <code>accessibility-agents</code> on GitHub</p>
-</li>
-<li><p>Go to the Settings tab (press <code>T</code> from the tabs landmark, then navigate to &quot;Settings&quot;)</p>
-</li>
-<li><p>Scroll to the &quot;Features&quot; section → find &quot;Issues&quot; → activate &quot;Set up templates&quot;</p>
-<p><em>Alternative:</em> Navigate directly to <code>.github/ISSUE_TEMPLATE/</code> → activate the &quot;+&quot; button → &quot;Create new file&quot;</p>
-</li>
+<li>Navigate to your fork of <code>accessibility-agents</code> on GitHub</li>
+<li>Go to the Settings tab (press <code>T</code> from the tabs landmark, then navigate to &quot;Settings&quot;)</li>
+<li>Scroll to the &quot;Features&quot; section → find &quot;Issues&quot; → activate &quot;Set up templates&quot;</p>
+<p><em>Alternative:</em> Navigate directly to <code>.github/ISSUE_TEMPLATE/</code> → activate the &quot;+&quot; button → &quot;Create new file&quot;</li>
 <li><p>GitHub opens a template editor. Fill in:</p>
 <ul>
 <li>Template name: what appears in the chooser heading</li>
@@ -507,10 +504,8 @@ Screen reader and browser information is especially important for us to reproduc
 <li>Template content: the Markdown body</li>
 </ul>
 </li>
-<li><p>GitHub auto-populates the filename based on your template name</p>
-</li>
-<li><p>&quot;Propose changes&quot; → create a PR to add the template</p>
-</li>
+<li>GitHub auto-populates the filename based on your template name</li>
+<li>&quot;Propose changes&quot; → create a PR to add the template</li>
 </ol>
 </details>
 
@@ -1947,8 +1942,7 @@ Required Field <span class="hljs-number">2</span>: [<span class="hljs-type">name
 <li>Would they suggest different field options?</li>
 </ul>
 </li>
-<li><p><strong>Refine your template</strong> based on their feedback</p>
-</li>
+<li><strong>Refine your template</strong> based on their feedback</li>
 </ol>
 <h4 id="part-8-reflect-on-your-template-design">Part 8: Reflect on Your Template Design</h4>
 <p><strong>Your task:</strong> Document what you learned from this exercise.</p>

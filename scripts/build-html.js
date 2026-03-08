@@ -41,6 +41,17 @@ renderer.heading = function(text, level) {
   return `<h${level} id="${id}">${text}</h${level}>\n`;
 };
 
+// Unwrap single <p> from list items so screen readers don't announce a
+// separate paragraph element before reading the bullet text (loose list fix)
+renderer.listitem = function(text, task, checked) {
+  const unwrapped = text.replace(/^<p>([\s\S]*?)<\/p>\n?$/, '$1');
+  if (task) {
+    const checkbox = `<input type="checkbox"${checked ? ' checked' : ''} disabled> `;
+    return `<li>${checkbox}${unwrapped}</li>\n`;
+  }
+  return `<li>${unwrapped}</li>\n`;
+};
+
 // Add scope="col" to all <th> elements for WCAG 1.3.1
 renderer.tablecell = function(content, flags) {
   const tag = flags.header ? 'th' : 'td';

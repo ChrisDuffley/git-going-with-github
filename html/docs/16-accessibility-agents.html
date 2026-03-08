@@ -74,10 +74,10 @@
 <h3 id="before-starting-this-chapter-verify-you-have-completed">Before starting this chapter, verify you have completed</h3>
 <h3 id="core-prerequisites-required-for-all-agents">Core Prerequisites (Required for All Agents)</h3>
 <ul>
-<li><input aria-label="Chapter 0:" disabled="" type="checkbox"> Chapter 0: <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a> - Git, VS Code, and GitHub account</li>
-<li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - GitHub Copilot Chat installed and working</li>
-<li><input aria-label="GitHub Copilot access (Copilot Free tier is enough for this workshop)" disabled="" type="checkbox"> GitHub Copilot access (Copilot Free tier is enough for this workshop)</li>
-<li><input aria-label="" disabled="" type="checkbox"> <code>.github/agents/</code> folder exists in your repository (or will create custom agents)</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 0:" disabled="" type="checkbox"> Chapter 0: <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a> - Git, VS Code, and GitHub account</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - GitHub Copilot Chat installed and working</li>
+<li><input type="checkbox" disabled> <input aria-label="GitHub Copilot access (Copilot Free tier is enough for this workshop)" disabled="" type="checkbox"> GitHub Copilot access (Copilot Free tier is enough for this workshop)</li>
+<li><input type="checkbox" disabled> <input aria-label="" disabled="" type="checkbox"> <code>.github/agents/</code> folder exists in your repository (or will create custom agents)</li>
 </ul>
 <h3 id="agent-prerequisites-the-quotskill-firstquot-principle">Agent Prerequisites (The &quot;Skill First&quot; Principle)</h3>
 <p>Every agent automates a skill you should already know by hand. Before using any agent, verify you have done the corresponding manual work. This table maps common agent categories to the skills they require:</p>
@@ -332,17 +332,13 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 <h3 id="workshop-setup-fork-and-clone">Workshop Setup (Fork and Clone)</h3>
 <p>For the workshop, you will also fork and clone the repository so you can make contributions:</p>
 <ol>
-<li><p><strong>Fork</strong> <a href="https://github.com/community-access/accessibility-agents">accessibility-agents</a> to your GitHub account (you did this on Day 1 or Day 2 morning)</p>
-</li>
+<li><strong>Fork</strong> <a href="https://github.com/community-access/accessibility-agents">accessibility-agents</a> to your GitHub account (you did this on Day 1 or Day 2 morning)</li>
 <li><p><strong>Clone</strong> your fork:</p>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[your-username]/accessibility-agents.git</code></pre>
 </li>
-<li><p><strong>Open in VS Code</strong>: navigate to the folder and run <code>code .</code> (or File, then Open Folder)</p>
-</li>
-<li><p><strong>Open Copilot Chat</strong>: <code>Ctrl+Shift+I</code></p>
-</li>
-<li><p><strong>Test</strong>: type <code>@daily-briefing morning briefing</code> and press <code>Enter</code></p>
-</li>
+<li><strong>Open in VS Code</strong>: navigate to the folder and run <code>code .</code> (or File, then Open Folder)</li>
+<li><strong>Open Copilot Chat</strong>: <code>Ctrl+Shift+I</code></li>
+<li><strong>Test</strong>: type <code>@daily-briefing morning briefing</code> and press <code>Enter</code></li>
 </ol>
 <p><strong>No API keys. No configuration files. The installer handles everything.</strong> If Copilot Chat works, the agents work.</p>
 <h3 id="prerequisites">Prerequisites</h3>
@@ -1812,12 +1808,9 @@ A security vulnerability report template ready for your project&#x27;s use.</cod
 <h5 id="step-5-test-the-extended-agent">Step 5: Test the Extended Agent</h5>
 <h6 id="what-to-do">What to do</h6>
 <ol>
-<li><p>Open Copilot Chat again: <code>Ctrl+Shift+I</code></p>
-</li>
-<li><p>Type: <code>@template-builder create security template</code></p>
-</li>
-<li><p>Press <code>Enter</code></p>
-</li>
+<li>Open Copilot Chat again: <code>Ctrl+Shift+I</code></li>
+<li>Type: <code>@template-builder create security template</code></li>
+<li>Press <code>Enter</code></li>
 <li><p>The agent should now ask vulnerability-specific questions:</p>
 <pre><code class="hljs language-text">Q: Template name?
 A: Security Vulnerability Report
@@ -1852,10 +1845,8 @@ A: SQL Injection, XSS, Authentication Bypass, Privilege Escalation, DoS, Other</
 git commit -m <span class="hljs-string">&quot;feat: add security vulnerability template workflow to template-builder agent&quot;</span>
 git push origin main</code></pre>
 </li>
-<li><p>The extended agent is now in your fork</p>
-</li>
-<li><p>Anyone who forks your fork gets the security workflow too</p>
-</li>
+<li>The extended agent is now in your fork</li>
+<li>Anyone who forks your fork gets the security workflow too</li>
 </ol>
 <h6 id="what-success-looks-like">What success looks like</h6>
 <ul>
@@ -1884,8 +1875,7 @@ git push origin main</code></pre>
 <h5 id="step-1-start-fresh">Step 1: Start Fresh</h5>
 <h6 id="what-to-do">What to do</h6>
 <ol>
-<li><p>In Copilot Chat, type: <code>@template-builder create a feature request template</code></p>
-</li>
+<li>In Copilot Chat, type: <code>@template-builder create a feature request template</code></li>
 <li><p>Answer the agent&#39;s questions to build a feature request form:</p>
 <pre><code class="hljs language-text">Name: Feature Request
 Purpose: Propose new functionality
@@ -1894,10 +1884,8 @@ Fields:
 - Proposed Solution (textarea, required)
 - Version Interested (input, optional)</code></pre>
 </li>
-<li><p>Let the agent generate the YAML</p>
-</li>
-<li><p>Copy it to a file: <code>.github/ISSUE_TEMPLATE/feature-request.yml</code></p>
-</li>
+<li>Let the agent generate the YAML</li>
+<li>Copy it to a file: <code>.github/ISSUE_TEMPLATE/feature-request.yml</code></li>
 </ol>
 <h6 id="what-you39re-doing">What you&#39;re doing</h6>
 <ul>
@@ -1909,8 +1897,7 @@ Fields:
 <li><p>Once the template is generated, <strong>while still in the same chat conversation</strong>, ask:</p>
 <pre><code class="hljs language-text">@template-builder add a checkbox field: &quot;I have searched for existing feature requests&quot;</code></pre>
 </li>
-<li><p>The agent regenerates the YAML with your new checkbox added in the right place (usually as required field pre-validation)</p>
-</li>
+<li>The agent regenerates the YAML with your new checkbox added in the right place (usually as required field pre-validation)</li>
 </ol>
 <h6 id="what-happens">What happens</h6>
 <ul>
@@ -1924,8 +1911,7 @@ Fields:
 <li><p>Follow up with:</p>
 <pre><code class="hljs language-text">@template-builder change &quot;Proposed Solution&quot; field to include markdown code block support</code></pre>
 </li>
-<li><p>The agent modifies the textarea field&#39;s attributes to enable code highlighting</p>
-</li>
+<li>The agent modifies the textarea field&#39;s attributes to enable code highlighting</li>
 </ol>
 <h6 id="what-changes">What changes</h6>
 <ul>

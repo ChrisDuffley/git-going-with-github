@@ -179,10 +179,10 @@
 <h2 id="prerequisites-checklist">Prerequisites Checklist</h2>
 <h3 id="before-starting-this-chapter-verify-you-have-completed">Before starting this chapter, verify you have completed</h3>
 <ul>
-<li><input aria-label="Chapter 6:" disabled="" type="checkbox"> Chapter 6: <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> - Understand PR structure, diffs, and comment workflows</li>
-<li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - VS Code installed and configured</li>
-<li><input aria-label="Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use" disabled="" type="checkbox"> Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use</li>
-<li><input aria-label="Access to at least one pull request to review (your own fork or a practice repo)" disabled="" type="checkbox"> Access to at least one pull request to review (your own fork or a practice repo)</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 6:" disabled="" type="checkbox"> Chapter 6: <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> - Understand PR structure, diffs, and comment workflows</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - VS Code installed and configured</li>
+<li><input type="checkbox" disabled> <input aria-label="Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use" disabled="" type="checkbox"> Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use</li>
+<li><input type="checkbox" disabled> <input aria-label="Access to at least one pull request to review (your own fork or a practice repo)" disabled="" type="checkbox"> Access to at least one pull request to review (your own fork or a practice repo)</li>
 </ul>
 <p><strong>Estimated time for this chapter:</strong> 1 hour (including exercises)</p>
 <h2 id="two-environments-for-code-review">Two Environments for Code Review</h2>
@@ -997,15 +997,13 @@ Step 5: Submit from the inline UI</code></pre>
 </ol>
 <h5 id="in-the-comment-box">In the comment box</h5>
 <ol>
-<li><p>Type: <code>blocking:</code> (tells reviewers this stops the PR from merging)</p>
-</li>
+<li>Type: <code>blocking:</code> (tells reviewers this stops the PR from merging)</li>
 <li><p>Press Space, then explain:</p>
 <pre><code class="hljs language-text">Heading hierarchy violation. This heading uses #### (level 4) directly 
 after ## (level 2), skipping level 3. Screen reader users navigating 
 by heading level will miss this section. Change to ### (level 3).</code></pre>
 </li>
-<li><p>Click the <strong>Comment</strong> button (or press <code>Ctrl+Enter</code> for keyboard submit)</p>
-</li>
+<li>Click the <strong>Comment</strong> button (or press <code>Ctrl+Enter</code> for keyboard submit)</li>
 </ol>
 <h5 id="what-happens-next">What happens next</h5>
 <ul>
@@ -1039,17 +1037,14 @@ by heading level will miss this section. Change to ### (level 3).</code></pre>
 <h4 id="step-8-place-a-comment-on-the-link">Step 8: Place a Comment on the Link</h4>
 <h5 id="what-to-do">What to do</h5>
 <ol>
-<li><p>Find the line in the diff with the problematic link</p>
-</li>
-<li><p>Hover over the line number and click to open a comment box (or press <code>C</code>)</p>
-</li>
+<li>Find the line in the diff with the problematic link</li>
+<li>Hover over the line number and click to open a comment box (or press <code>C</code>)</li>
 <li><p>Type:</p>
 <pre><code class="hljs language-text">nit: Link text &quot;click here&quot; is not descriptive. Screen reader users 
 who list links won&#x27;t know the context. Suggest: &quot;Read the accessibility 
 checklist&quot; or another descriptive phrase.</code></pre>
 </li>
-<li><p>Click <strong>Comment</strong> or press <code>Ctrl+Enter</code></p>
-</li>
+<li>Click <strong>Comment</strong> or press <code>Ctrl+Enter</code></li>
 </ol>
 <p><strong>Note:</strong> <code>nit:</code> means &quot;nice-to-have improvement&quot; (not blocking, but good to fix)</p>
 <h4 id="step-9-submit-your-review">Step 9: Submit Your Review</h4>
@@ -1188,16 +1183,13 @@ checklist&quot; or another descriptive phrase.</code></pre>
 <h4 id="step-5-listen-to-and-understand-the-first-change">Step 5: Listen to and Understand the First Change</h4>
 <h5 id="what-to-do">What to do</h5>
 <ol>
-<li><p>The first change is automatically announced when you open the Accessible Diff Viewer</p>
-</li>
-<li><p><strong>Let your screen reader read it completely</strong> - don&#39;t interrupt</p>
-</li>
+<li>The first change is automatically announced when you open the Accessible Diff Viewer</li>
+<li><strong>Let your screen reader read it completely</strong> - don&#39;t interrupt</li>
 <li><p>Write down the exact text announced:</p>
 <pre><code class="hljs language-text">Removed: [write what the viewer said]
 Added: [write what the viewer said]</code></pre>
 </li>
-<li><p>Press the <strong>Down arrow</strong> to move to the next change</p>
-</li>
+<li>Press the <strong>Down arrow</strong> to move to the next change</li>
 </ol>
 <h5 id="what-to-expect-example">What to expect (example)</h5>
 <pre><code class="hljs language-text">Removed: ## Old Heading
@@ -1210,12 +1202,9 @@ Added: ## New Heading with More Details</code></pre>
 <h4 id="step-6-find-the-heading-hierarchy-issue">Step 6: Find the Heading Hierarchy Issue</h4>
 <h5 id="what-to-do">What to do</h5>
 <ol>
-<li><p>Continue pressing <strong>Down arrow</strong> to move through changes</p>
-</li>
-<li><p>Listen carefully for a change involving headings (lines starting with <code>#</code>)</p>
-</li>
-<li><p>Specifically, listen for: &quot;Added: ####&quot; (four hashes)</p>
-</li>
+<li>Continue pressing <strong>Down arrow</strong> to move through changes</li>
+<li>Listen carefully for a change involving headings (lines starting with <code>#</code>)</li>
+<li>Specifically, listen for: &quot;Added: ####&quot; (four hashes)</li>
 <li><p>When you hear this, <strong>stop and write it down:</strong></p>
 <pre><code class="hljs language-text">Line number: [if available]
 Removed: [what was removed, if anything]
@@ -1267,8 +1256,7 @@ clearly showed this #### heading appearing directly after ##, skipping
 level 3. Screen reader users navigating by heading level will miss this 
 content. Change to ###.</code></pre>
 </li>
-<li><p>Press <code>Ctrl+Enter</code> or click <strong>Comment</strong> to submit</p>
-</li>
+<li>Press <code>Ctrl+Enter</code> or click <strong>Comment</strong> to submit</li>
 </ol>
 <h5 id="why-mention-the-accessible-diff-viewer">Why mention the Accessible Diff Viewer?</h5>
 <ul>

@@ -70,19 +70,19 @@
 <h3 id="before-starting-this-chapter-verify-you-have-completed">Before starting this chapter, verify you have completed</h3>
 <p><strong>Hard Requirements:</strong></p>
 <ul>
-<li><input aria-label="Chapter 4:" disabled="" type="checkbox"> Chapter 4: <a href="04-working-with-issues.html">Working with Issues</a> - Know how to create, read, and navigate issues</li>
-<li><input aria-label="A GitHub repository where you have write access (your fork or personal repo)" disabled="" type="checkbox"> A GitHub repository where you have write access (your fork or personal repo)</li>
-<li><input aria-label="A text editor with YAML syntax highlighting (VS Code, or any editor showing" disabled="" type="checkbox"> A text editor with YAML syntax highlighting (VS Code, or any editor showing <code>.yml</code> files with color)</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 4:" disabled="" type="checkbox"> Chapter 4: <a href="04-working-with-issues.html">Working with Issues</a> - Know how to create, read, and navigate issues</li>
+<li><input type="checkbox" disabled> <input aria-label="A GitHub repository where you have write access (your fork or personal repo)" disabled="" type="checkbox"> A GitHub repository where you have write access (your fork or personal repo)</li>
+<li><input type="checkbox" disabled> <input aria-label="A text editor with YAML syntax highlighting (VS Code, or any editor showing" disabled="" type="checkbox"> A text editor with YAML syntax highlighting (VS Code, or any editor showing <code>.yml</code> files with color)</li>
 </ul>
 <p><strong>Recommended (but not blocking):</strong></p>
 <ul>
-<li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - Optional but helpful for generating template variations</li>
-<li><input aria-label="Chapter 10:" disabled="" type="checkbox"> Chapter 10: <a href="10-notifications.html">Notifications</a> - Basic understanding of workflow triggers</li>
-<li><input aria-label="Terminal/Command line basic comfort (useful but you can GitHub web editor if needed)" disabled="" type="checkbox"> Terminal/Command line basic comfort (useful but you can GitHub web editor if needed)</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - Optional but helpful for generating template variations</li>
+<li><input type="checkbox" disabled> <input aria-label="Chapter 10:" disabled="" type="checkbox"> Chapter 10: <a href="10-notifications.html">Notifications</a> - Basic understanding of workflow triggers</li>
+<li><input type="checkbox" disabled> <input aria-label="Terminal/Command line basic comfort (useful but you can GitHub web editor if needed)" disabled="" type="checkbox"> Terminal/Command line basic comfort (useful but you can GitHub web editor if needed)</li>
 </ul>
 <p><strong>What you already have:</strong></p>
 <ul>
-<li><input aria-label="You filled out the" disabled="" type="checkbox"> You filled out the <strong>Workshop Registration template</strong> to join this workshop — this is your learning tool for Chapter 15</li>
+<li><input type="checkbox" disabled> <input aria-label="You filled out the" disabled="" type="checkbox"> You filled out the <strong>Workshop Registration template</strong> to join this workshop — this is your learning tool for Chapter 15</li>
 </ul>
 <p><strong>Day 2 Amplifier:</strong> In <a href="16-accessibility-agents.html">Chapter 16 (Accessibility Agents)</a>, you&#39;ll use <code>@template-builder</code> to automate template creation. Complete this chapter first, then come back to Chapter 16.</p>
 <p><strong>Estimated time for this chapter:</strong> 2-2.5 hours (including exercises and YAML troubleshooting time)</p>
@@ -595,13 +595,10 @@ Screen reader and browser information is especially important for us to reproduc
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
 <ol>
-<li><p>Navigate to your fork of <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> on GitHub</p>
-</li>
-<li><p>Go to the Settings tab (press <code>T</code> from the tabs landmark, then navigate to &quot;Settings&quot;)</p>
-</li>
-<li><p>Scroll to the &quot;Features&quot; section → find &quot;Issues&quot; → activate &quot;Set up templates&quot;</p>
-<p><em>Alternative:</em> Navigate directly to <code>.github/ISSUE_TEMPLATE/</code> → activate the &quot;+&quot; button → &quot;Create new file&quot;</p>
-</li>
+<li>Navigate to your fork of <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> on GitHub</li>
+<li>Go to the Settings tab (press <code>T</code> from the tabs landmark, then navigate to &quot;Settings&quot;)</li>
+<li>Scroll to the &quot;Features&quot; section → find &quot;Issues&quot; → activate &quot;Set up templates&quot;</p>
+<p><em>Alternative:</em> Navigate directly to <code>.github/ISSUE_TEMPLATE/</code> → activate the &quot;+&quot; button → &quot;Create new file&quot;</li>
 <li><p>GitHub opens a template editor. Fill in:</p>
 <ul>
 <li>Template name: what appears in the chooser heading</li>
@@ -609,10 +606,8 @@ Screen reader and browser information is especially important for us to reproduc
 <li>Template content: the Markdown body</li>
 </ul>
 </li>
-<li><p>GitHub auto-populates the filename based on your template name</p>
-</li>
-<li><p>&quot;Propose changes&quot; → create a PR to add the template</p>
-</li>
+<li>GitHub auto-populates the filename based on your template name</li>
+<li>&quot;Propose changes&quot; → create a PR to add the template</li>
 </ol>
 </details>
 
@@ -1363,18 +1358,14 @@ Screen reader and browser information is especially important for us to reproduc
 <h4 id="step-1-clone-your-fork-to-your-machine">Step 1: Clone Your Fork to Your Machine</h4>
 <h5 id="what-to-do">What to do</h5>
 <ol>
-<li><p>Open a terminal (PowerShell on Windows, Terminal on macOS/Linux)</p>
-</li>
-<li><p>Navigate to a folder where you want to store the project:</p>
+<li>Open a terminal (PowerShell on Windows, Terminal on macOS/Linux)</li>
+<li>Navigate to a folder where you want to store the project:</p>
 <pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> ~/projects</code></pre>
-<p>(Or wherever you keep code projects)</p>
-</li>
-<li><p>Clone your fork:</p>
+<p>(Or wherever you keep code projects)</li>
+<li>Clone your fork:</p>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[YOUR-USERNAME]/accessibility-agents.git</code></pre>
-<p>Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</p>
-</li>
-<li><p>Wait for the clone to complete (should take 10-30 seconds)</p>
-</li>
+<p>Replace <code>[YOUR-USERNAME]</code> with your actual GitHub username</li>
+<li>Wait for the clone to complete (should take 10-30 seconds)</li>
 <li><p>Navigate into the folder:</p>
 <pre><code class="hljs language-bash"><span class="hljs-built_in">cd</span> accessibility-agents</code></pre>
 </li>
@@ -1396,10 +1387,8 @@ Screen reader and browser information is especially important for us to reproduc
 <li><p>From the terminal, while in your <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> folder, type:</p>
 <pre><code class="hljs language-bash">code .</code></pre>
 </li>
-<li><p>Press Enter</p>
-</li>
-<li><p>VS Code opens with your fork loaded</p>
-</li>
+<li>Press Enter</li>
+<li>VS Code opens with your fork loaded</li>
 </ol>
 <h5 id="what-you-should-see">What you should see</h5>
 <ul>
@@ -1483,10 +1472,8 @@ Screen reader and browser information is especially important for us to reproduc
 <h4 id="step-7-create-a-branch-and-commit">Step 7: Create a Branch and Commit</h4>
 <h5 id="what-to-do">What to do</h5>
 <ol>
-<li><p>Open the terminal in VS Code: <strong>Terminal</strong> → <strong>New Terminal</strong> (or <code>Ctrl+</code> ` on Windows)</p>
-</li>
-<li><p>You should be in the <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> folder already</p>
-</li>
+<li>Open the terminal in VS Code: <strong>Terminal</strong> → <strong>New Terminal</strong> (or <code>Ctrl+</code> ` on Windows)</li>
+<li>You should be in the <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> folder already</li>
 <li><p>Create a new branch for this change:</p>
 <pre><code class="hljs language-bash">git checkout -b feat/add-accessibility-template</code></pre>
 </li>
@@ -1720,31 +1707,25 @@ Closes #[issue number] (if there is an open issue requesting this feature)</code
 <h5 id="if-maintainers-leave-comments">If maintainers leave comments</h5>
 <h5 id="what-to-do">What to do</h5>
 <ol>
-<li><p>Read their feedback carefully using your screen reader</p>
-</li>
-<li><p>Understand what changes they&#39;re requesting (or what they&#39;re praising!)</p>
-</li>
+<li>Read their feedback carefully using your screen reader</li>
+<li>Understand what changes they&#39;re requesting (or what they&#39;re praising!)</li>
 <li><p><strong>If changes are needed:</strong></p>
 <ul>
-<li><p>Go back to your fork in VS Code</p>
-</li>
-<li><p>Edit the <code>accessibility-bug.yml</code> file accordingly</p>
-</li>
+<li>Go back to your fork in VS Code</li>
+<li>Edit the <code>accessibility-bug.yml</code> file accordingly</li>
 <li><p>Commit and push:</p>
 <pre><code class="hljs language-bash">git add .github/ISSUE_TEMPLATE/accessibility-bug.yml
 git commit -m <span class="hljs-string">&quot;Address feedback from maintainers: [brief description]&quot;</span>
 git push origin feat/add-accessibility-template</code></pre>
 </li>
-<li><p>Your changes automatically appear in the PR (linked to the branch)</p>
-</li>
+<li>Your changes automatically appear in the PR (linked to the branch)</li>
 </ul>
 </li>
 <li><p><strong>Leave a reply comment</strong> on the PR:</p>
 <pre><code class="hljs language-text">Thanks for the feedback! I&#x27;ve made the changes you requested 
 in commit [commit hash]. The template now includes [what you changed].</code></pre>
 </li>
-<li><p>Click <strong>Reply</strong></p>
-</li>
+<li>Click <strong>Reply</strong></li>
 </ol>
 <h5 id="if-no-feedback-after-48-hours">If no feedback after 48 hours</h5>
 <ul>
@@ -1814,10 +1795,8 @@ Current state: Exists, I maintain it
 <h5 id="what-to-do">What to do</h5>
 <h5 id="if-your-project-already-has-issues">If your project already has issues</h5>
 <ol>
-<li><p>Open your issue list in GitHub</p>
-</li>
-<li><p><strong>Read the last 5-10 issues</strong> (or all open issues if fewer)</p>
-</li>
+<li>Open your issue list in GitHub</li>
+<li><strong>Read the last 5-10 issues</strong> (or all open issues if fewer)</li>
 <li><p>For each issue, ask yourself:</p>
 <ul>
 <li>What problem was the reporter describing?</li>
@@ -1845,8 +1824,7 @@ Issue Type 2: [second most common type]
 <li>All of the above?</li>
 </ul>
 </li>
-<li><p>For each type, ask: &quot;If someone reported this issue, what would I need to know?&quot;</p>
-</li>
+<li>For each type, ask: &quot;If someone reported this issue, what would I need to know?&quot;</li>
 <li><p>Write down:</p>
 <pre><code class="hljs language-text">Issue Type 1: [e.g., &quot;Bug Report&quot;]
 - Essential info needed: [e.g., &quot;What OS? Browser? Steps to reproduce?&quot;]
@@ -2083,8 +2061,7 @@ Placeholder: [example]</code></pre>
 <li>Would they suggest different field options?</li>
 </ul>
 </li>
-<li><p><strong>Refine your template</strong> based on their feedback</p>
-</li>
+<li><strong>Refine your template</strong> based on their feedback</li>
 </ol>
 <h4 id="part-8-reflect-on-your-template-design">Part 8: Reflect on Your Template Design</h4>
 <p><strong>Your task:</strong> Document what you learned from this exercise.</p>
