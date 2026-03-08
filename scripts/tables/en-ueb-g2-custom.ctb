@@ -4,5 +4,21 @@
 include en-ueb-g2.ctb
 
 # Local overrides requested for this project.
-always er 12456
-always ow 246
+# ER = dots 1-2-4-5-6, OW = dots 2-4-6
+# Using multiple directives to ensure these override base table rules
+
+nocont er 12456
+noback always er 12456
+nofor always er 12456
+begword er 12456
+midword er 12456
+endword er 12456
+word er 12456
+
+nocont ow 246
+noback always ow 246
+nofor always ow 246
+begword ow 246
+midword ow 246
+endword ow 246
+word ow 246
