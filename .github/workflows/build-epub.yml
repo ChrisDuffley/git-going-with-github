@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-      uses: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: Install Pandoc
         run: |
@@ -62,10 +62,18 @@ jobs:
           path: epub/git-going-with-github.docx
           retention-days: 90
 
-      - name: Upload BRF artifact
+      - name: Upload BRF UEB artifact
         uses: actions/upload-artifact@v4
         with:
-          name: git-going-with-github-brf
-          path: epub/brf/
+          name: git-going-with-github-brf-ueb-g2
+          path: epub/brf/git-going-with-github.ueb-g2.brf
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Upload BRF US English artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: git-going-with-github-brf-us-g2
+          path: epub/brf/git-going-with-github.us-g2.brf
           if-no-files-found: warn
           retention-days: 90
