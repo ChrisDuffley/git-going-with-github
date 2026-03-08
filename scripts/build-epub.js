@@ -119,7 +119,7 @@ const epubCmd = [
   '--toc',
   '--toc-depth=2',
   '--split-level=1',
-  '--syntax-highlighting=tango',
+  '--highlight-style=tango',
   '--wrap=none',
   fileArgs
 ].join(' \\\n  ');
