@@ -362,8 +362,8 @@ Optional post-workshop:
 ## Verification: Is This Truly Progressive?
 
 ### Criterion 1: Foundation Before Complexity
-- **PASS** - Chapters 00-02a establish context; chapters 03-05 teach basic mechanics
-- **PASS** - Chapters 06-09 assume all prior skills understood
+- **PASS** - Chapters 00-02a establish context; chapters 03-06 teach basic mechanics
+- **PASS** - Chapters 07-10 assume all prior skills understood
 - **PASS** - Chapter 10 explicitly marks transition
 
 ### Criterion 2: Prerequisites Met

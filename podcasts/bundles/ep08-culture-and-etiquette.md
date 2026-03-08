@@ -630,9 +630,9 @@ Notice: same feedback, completely different experience for the person receiving 
 > *A community's culture is shaped by every message posted in its name - including the ones an agent wrote for you.*
 
 
-*Next: [Labels, Milestones, and Projects](08-labels-milestones-projects.md)*
-*Back: [Merge Conflicts](06-merge-conflicts.md)*
-*Related: [Working with Issues](04-working-with-issues.md) | [Working with Pull Requests](05-working-with-pull-requests.md)*
+*Next: [Labels, Milestones, and Projects](09-labels-milestones-projects.md)*
+*Back: [Merge Conflicts](07-merge-conflicts.md)*
+*Related: [Working with Issues](04-working-with-issues.md) | [Working with Pull Requests](06-working-with-pull-requests.md)*
 
 
 

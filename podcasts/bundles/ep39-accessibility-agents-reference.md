@@ -205,7 +205,7 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 | `@issue-tracker is there a duplicate of issue #42?` | Duplicate check |
 | `@issue-tracker draft a reply to issue #15` | Draft a response (you review before posting) |
 
-**Important:** The agent drafts replies. You post. Always review tone against the [Culture & Etiquette guide](07-culture-etiquette.md).
+**Important:** The agent drafts replies. You post. Always review tone against the [Culture & Etiquette guide](08-culture-etiquette.md).
 
 
 ### `@pr-review` - Pull Request Review

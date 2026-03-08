@@ -740,7 +740,7 @@ Not sure where to start after the workshop? Use these suggested paths.
 | Role | Start Here | Then |
 | ------  | -----------  | ------  |
 | New contributor | `00-pre-workshop-setup.md` | Issues → Pull Requests → Merge Conflicts |
-| Maintainer | `08-labels-milestones-projects.md` | Issue templates → Branch protection → Notifications |
+| Maintainer | `09-labels-milestones-projects.md` | Issue templates → Branch protection → Notifications |
 | Accessibility advocate | `14-accessible-code-review.md` | Screen reader cheat sheet → Appendix C (Standards) |
 | Facilitator | `FACILITATOR.md` | Day 1 and Day 2 agendas → FAQ |
 
@@ -800,14 +800,14 @@ The documentation set is in the `docs/` folder of this learning repository (sepa
 | Navigating repositories | [docs/02-navigating-repositories.md](02-navigating-repositories.md) |
 | The Learning Room | [docs/03-the-learning-room.md](03-the-learning-room.md) |
 | Working with issues | [docs/04-working-with-issues.md](04-working-with-issues.md) |
-| Working with pull requests | [docs/05-working-with-pull-requests.md](05-working-with-pull-requests.md) |
-| Merge conflicts | [docs/06-merge-conflicts.md](06-merge-conflicts.md) |
-| Culture and etiquette | [docs/07-culture-etiquette.md](07-culture-etiquette.md) |
-| Labels, milestones, projects | [docs/08-labels-milestones-projects.md](08-labels-milestones-projects.md) |
-| Notifications | [docs/09-notifications.md](09-notifications.md) |
+| Working with pull requests | [docs/06-working-with-pull-requests.md](06-working-with-pull-requests.md) |
+| Merge conflicts | [docs/07-merge-conflicts.md](07-merge-conflicts.md) |
+| Culture and etiquette | [docs/08-culture-etiquette.md](08-culture-etiquette.md) |
+| Labels, milestones, projects | [docs/09-labels-milestones-projects.md](09-labels-milestones-projects.md) |
+| Notifications | [docs/10-notifications.md](10-notifications.md) |
 | Day 1 agenda | [DAY1_AGENDA.md](../DAY1_AGENDA.md) |
 | Day 2 agenda | [DAY2_AGENDA.md](../DAY2_AGENDA.md) |
-| VS Code: Setup & Accessibility Basics | [docs/10-vscode-basics.md](10-vscode-basics.md) |
+| VS Code: Setup & Accessibility Basics | [docs/05-vscode-accessibility.md](05-vscode-accessibility.md) |
 | VS Code: Git & Source Control | [docs/11-git-source-control.md](11-git-source-control.md) |
 | VS Code: GitHub Pull Requests Extension | [docs/12-github-pull-requests-extension.md](12-github-pull-requests-extension.md) |
 | VS Code: GitHub Copilot | [docs/13-github-copilot.md](13-github-copilot.md) |

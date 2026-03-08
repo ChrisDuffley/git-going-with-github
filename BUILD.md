@@ -34,7 +34,7 @@ The build is run **locally** before committing. There is no CI pipeline - you bu
 **Typical workflow:**
 1. Edit one or more `.md` files
 2. Run `npm run build:html`
-3. Stage and commit everything: `git add -A && git commit -m "docs: update chapter 5 and rebuild HTML"`
+3. Stage and commit everything: `git add -A && git commit -m "docs: update chapter 6 and rebuild HTML"`
 4. Push
 
 ### What Gets Converted

@@ -312,7 +312,7 @@ After editing any `.md` file, run `npm run build:html` and include the updated `
 # Edit your .md files, then:
 npm run build:html
 git add -A
-git commit -m "docs: update chapter 5 and rebuild HTML"
+git commit -m "docs: update chapter 6 and rebuild HTML"
 ```
 
 **Testing the HTML locally (optional):**

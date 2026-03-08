@@ -4,7 +4,7 @@
 
 ## Conducting Pull Request Reviews with a Screen Reader
 
-> This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).
+> This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](06-working-with-pull-requests.md).
 >
 > **Learning Room connection:** The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify `docs/keyboard-shortcuts.md` (shortcut tables with intentional errors), `docs/setup-guide.md` (broken links and incomplete steps), and `docs/welcome.md` (`[TODO]` sections to complete). These are the same files you work on during the Day 1 contribution sprint.
 
@@ -32,7 +32,7 @@ Chapter 14 is the **code review chapter** focused on practicing constructive fee
 **Estimated time:** 15-20 minutes.
 
 1. Open the `learning-room` repository on GitHub.com and navigate to the **Pull requests** tab.
-2. Find a classmate's open PR (from Chapter 5, 6, or 11). Open it.
+2. Find a classmate's open PR (from Chapter 6, 7, or 11). Open it.
 3. Activate the **Files changed** tab. This shows the diff - lines added in green, lines removed in red.
 4. Navigate the diff:
    - **On GitHub.com:** Use heading navigation to jump between files (`H` in NVDA). Each file header is a heading. Within a file, use arrow keys to move line by line.
@@ -127,7 +127,7 @@ Constructive review is a gift. Specific, kind feedback helps authors improve and
 
 ### Before starting this chapter, verify you have completed
 
-- [ ] Chapter 5: [Working with Pull Requests](05-working-with-pull-requests.md) - Understand PR structure, diffs, and comment workflows
+- [ ] Chapter 6: [Working with Pull Requests](06-working-with-pull-requests.md) - Understand PR structure, diffs, and comment workflows
 - [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) - VS Code installed and configured
 - [ ] Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use
 - [ ] Access to at least one pull request to review (your own fork or a practice repo)
@@ -1585,4 +1585,4 @@ Your manual skills + agent efficiency = **leverage.**
 
 *Next: [Issue Templates](15-issue-templates.md)*
 *Back: [GitHub Copilot](13-github-copilot.md)*
-*Related: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Merge Conflicts](06-merge-conflicts.md) | [Git & Source Control in VS Code](11-git-source-control.md)*
+*Related: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Merge Conflicts](07-merge-conflicts.md) | [Git & Source Control in VS Code](11-git-source-control.md)*

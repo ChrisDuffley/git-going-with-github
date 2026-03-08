@@ -132,11 +132,11 @@ When you join the workshop, the facilitator creates a **personal practice branch
 > | Chapter | Branch needed? | What to use |
 > |---------|---------------|-------------|
 > | Chapter 4 (Issues) | No | Work happens in issue threads directly. No branch or file editing required. |
-> | Chapter 5 (PRs, web editor) | Yes, auto-created | GitHub creates a branch when you click "Propose changes." Name it `fix/yourname-issueXX`. |
-> | Chapter 5 (PRs, local clone) | Yes, create manually | `git checkout -b fix/yourname-issueXX` from `main`. |
+> | Chapter 6 (PRs, web editor) | Yes, auto-created | GitHub creates a branch when you click "Propose changes." Name it `fix/yourname-issueXX`. |
+> | Chapter 6 (PRs, local clone) | Yes, create manually | `git checkout -b fix/yourname-issueXX` from `main`. |
 > | Chapter 11+ (Local Git) | Yes | Use your `username-practice` branch or create `fix/yourname-issueXX` branches from `main`. |
 >
-> **Summary:** Chapter 4 needs no branch. Chapters 5-10 use short-lived `fix/` branches. Your `username-practice` branch becomes essential starting in Chapter 11 when you work locally with Git and VS Code.
+> **Summary:** Chapter 4 needs no branch. Chapters 6-7 use short-lived `fix/` branches. Your `username-practice` branch becomes essential starting in Chapter 11 when you work locally with Git and VS Code.
 
 
 ## The Practice Files: What You Will Work On

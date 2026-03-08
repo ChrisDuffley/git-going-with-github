@@ -145,7 +145,7 @@ docs/
 ├── 00-pre-workshop-setup.md             ← Start here
 ├── 01-understanding-github-web-structure.md
 ├── 04-working-with-issues.md            ← File issues
-├── 05-working-with-pull-requests.md     ← Review PRs
+├── 06-working-with-pull-requests.md     ← Review PRs
 ├── 14-accessible-code-review.md         ← Day 2 manual skill
 ├── 15-issue-templates.md                ← Design templates (manual)
 ├── 16-accessibility-agents.md                    ← Automate with agents

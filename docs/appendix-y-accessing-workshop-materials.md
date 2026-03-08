@@ -53,7 +53,7 @@ You can read every file directly on GitHub.com without downloading anything:
 
 - **File list:** The repository file listing is a grid. Use `T` to jump to the file table, then arrow keys to navigate rows
 - **File content:** Once inside a file, GitHub renders the Markdown. Use `H` to navigate headings
-- **Breadcrumbs:** At the top of each file view, breadcrumb links show the path (e.g., `Learning-Room / docs / 05-working-with-pull-requests.md`). Use these to navigate back
+- **Breadcrumbs:** At the top of each file view, breadcrumb links show the path (e.g., `Learning-Room / docs / 06-working-with-pull-requests.md`). Use these to navigate back
 - **Go to File shortcut:** Press `T` on the repository's main page to open the file finder - type any filename to jump to it
 
 
@@ -161,7 +161,7 @@ cd Learning-Room
 git pull
 ```
 
-If you have not made local changes, this updates your copy cleanly. If you have local edits, Git will attempt to merge - see [Chapter 6 - Merge Conflicts](06-merge-conflicts.md) if needed.
+If you have not made local changes, this updates your copy cleanly. If you have local edits, Git will attempt to merge - see [Chapter 7 - Merge Conflicts](07-merge-conflicts.md) if needed.
 
 After pulling, rebuild the HTML to ensure it matches:
 

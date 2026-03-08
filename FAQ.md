@@ -35,13 +35,13 @@
 **A:** No. While it focuses on GitHub (a platform developers use), the concepts apply to anyone collaborating on projects. Documentation improvements, issue filing, accessibility testing, and code reviews are all valuable contributions that require no coding. **Start:** [Chapter 1](docs/01-understanding-github-web-structure.md) - no coding required.
 
 ### Q: Do I need to know how to code to understand this guide?
-**A:** Not for most chapters. Chapters 0-9 teach GitHub concepts without requiring code knowledge. Chapters 10-16 introduce programming tools and concepts but explain them for beginners. If you are non-technical, you can skip code examples and still understand the workflows.
+**A:** Not for most chapters. Chapters 0-10 teach GitHub concepts without requiring code knowledge. Chapters 5 and 11-16 introduce programming tools and concepts but explain them for beginners. If you are non-technical, you can skip code examples and still understand the workflows.
 
 ### Q: How long will this take?
 **A:** Depends on your path:
 - **Core path (Day 1 only):** ~7.5 hours of structured time
 - **Full curriculum (Day 1 + Day 2):** ~15 hours total
-- **Just the essentials:** 3-4 hours (Chapters 0, 1, 4, 5)
+- **Just the essentials:** 3-4 hours (Chapters 0, 1, 4, 6)
 - **Self-paced:** Read at your own speed - there is no timer
 
 ### Q: Can I do this workshop on my own, or do I need a group?
@@ -63,10 +63,10 @@
 **A:** Start with [Chapter 0 (Pre-Workshop Setup)](docs/00-pre-workshop-setup.md) to install tools, then [Chapter 1 (Understanding GitHub Web Structure)](docs/01-understanding-github-web-structure.md). Both assume zero prior knowledge.
 
 ### Q: I use GitHub at work but do not understand how to use it well. Can this help?
-**A:** Yes. [Chapter 4 (Working with Issues)](docs/04-working-with-issues.md) and [Chapter 5 (Working with Pull Requests)](docs/05-working-with-pull-requests.md) will deepen your understanding. Then jump to [Chapter 14 (Accessible Code Review)](docs/14-accessible-code-review.md) for best practices.
+**A:** Yes. [Chapter 4 (Working with Issues)](docs/04-working-with-issues.md) and [Chapter 6 (Working with Pull Requests)](docs/06-working-with-pull-requests.md) will deepen your understanding. Then jump to [Chapter 14 (Accessible Code Review)](docs/14-accessible-code-review.md) for best practices.
 
 ### Q: I am a maintainer of an open-source project. What should I read?
-**A:** [Chapter 8 (Labels, Milestones & Projects)](docs/08-labels-milestones-projects.md) → [Chapter 15 (Issue Templates)](docs/15-issue-templates.md) → [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md). These focus on organizing projects and automating common tasks.
+**A:** [Chapter 9 (Labels, Milestones & Projects)](docs/09-labels-milestones-projects.md) → [Chapter 15 (Issue Templates)](docs/15-issue-templates.md) → [Chapter 16 (Accessibility Agents)](docs/16-accessibility-agents.md). These focus on organizing projects and automating common tasks.
 
 ### Q: I am teaching GitHub to a group. Do I need to know everything?
 **A:** Yes, read the full curriculum first. Also read [FACILITATOR.md](FACILITATOR.md), [DAY1_AGENDA.md](DAY1_AGENDA.md), and [DAY2_AGENDA.md](DAY2_AGENDA.md) for lesson plans and pacing tips.
@@ -81,7 +81,7 @@
 **A:** All technical terms are defined in [Appendix A (Glossary)](docs/appendix-a-glossary.md). The language is intentionally simple and direct. If anything is unclear, open an issue on GitHub or check [QUICK_REFERENCE.md](QUICK_REFERENCE.md).
 
 ### Q: I only have a few hours. What is the minimum I should read?
-**A:** Read Chapters 0, 1, 4, and 5. That covers setup, GitHub structure, issues, and pull requests - enough to start contributing to any project.
+**A:** Read Chapters 0, 1, 4, and 6. That covers setup, GitHub structure, issues, and pull requests - enough to start contributing to any project.
 
 
 ## Getting Started
@@ -93,7 +93,7 @@
 **A:** You likely need to set up authentication (SSH key or HTTPS personal access token). See [Chapter 0 (Pre-Workshop Setup)](docs/00-pre-workshop-setup.md) or [Appendix D (Git Authentication)](docs/appendix-d-git-authentication.md).
 
 ### Q: Do I need to understand branching and merging before starting?
-**A:** No. Branching is covered in [Chapter 5 (Pull Requests)](docs/05-working-with-pull-requests.md) and merge conflicts are covered in [Chapter 6](docs/06-merge-conflicts.md). You learn as you go.
+**A:** No. Branching is covered in [Chapter 6 (Pull Requests)](docs/06-working-with-pull-requests.md) and merge conflicts are covered in [Chapter 7](docs/07-merge-conflicts.md). You learn as you go.
 
 ### Q: What software do I need to install before Day 1?
 **A:** For Day 1 (browser only):
@@ -262,7 +262,7 @@ Full reference: [Appendix J (Advanced Search)](docs/appendix-j-advanced-search.m
 - **Issue** = A problem or request (e.g., "Fix login bug" or "Add dark mode")
 - **Pull request** = Your solution - the actual changed code or documentation that fixes the issue
 - An issue describes what needs to happen. A PR makes it happen.
-- See [Chapter 4](docs/04-working-with-issues.md) for issues and [Chapter 5](docs/05-working-with-pull-requests.md) for PRs.
+- See [Chapter 4](docs/04-working-with-issues.md) for issues and [Chapter 6](docs/06-working-with-pull-requests.md) for PRs.
 
 ### Q: How do I know if I should open an issue or a PR?
 **A:**
@@ -306,7 +306,7 @@ When the PR is merged, the issue closes automatically.
 - A pull request (PR) asks the maintainer to "pull" your changes into their repository
 - Literally: "I have changes on my branch. Please pull them into the main branch."
 - GitLab calls the same concept a "merge request"
-- See [Chapter 5 (Working with Pull Requests)](docs/05-working-with-pull-requests.md)
+- See [Chapter 6 (Working with Pull Requests)](docs/06-working-with-pull-requests.md)
 
 ### Q: What are the three tabs of a pull request?
 **A:**
@@ -334,7 +334,7 @@ Navigate between tabs using your screen reader's heading navigation or landmark 
 - **Which to use:** Follow the project's convention. When in doubt, "Squash and merge" is usually safe.
 
 ### Q: My PR says "This branch has conflicts that must be resolved." What do I do?
-**A:** See [Chapter 6 (Merge Conflicts)](docs/06-merge-conflicts.md). In short:
+**A:** See [Chapter 7 (Merge Conflicts)](docs/07-merge-conflicts.md). In short:
 1. Pull the latest main: `git pull upstream main`
 2. Merge main into your branch: `git merge main`
 3. Resolve the conflicts in your editor
@@ -368,7 +368,7 @@ Your changes
 Their changes
 >>>>>>> branch-name
 ```
-Your screen reader will read these markers as text. See [Chapter 6](docs/06-merge-conflicts.md) for how to interpret them.
+Your screen reader will read these markers as text. See [Chapter 7](docs/07-merge-conflicts.md) for how to interpret them.
 
 ### Q: How do I resolve a merge conflict?
 **A:** Three approaches:
@@ -467,7 +467,7 @@ The `|` characters create columns. The `---` row separates the header from the b
 ## Labels, Milestones, and Projects
 
 ### Q: What are labels for?
-**A:** Labels categorize issues and PRs. Common labels: `bug`, `enhancement`, `documentation`, `good first issue`, `accessibility`, `help wanted`. They help maintainers prioritize and contributors find work. See [Chapter 8](docs/08-labels-milestones-projects.md).
+**A:** Labels categorize issues and PRs. Common labels: `bug`, `enhancement`, `documentation`, `good first issue`, `accessibility`, `help wanted`. They help maintainers prioritize and contributors find work. See [Chapter 9](docs/09-labels-milestones-projects.md).
 
 ### Q: How do I filter issues by label?
 **A:** On the Issues tab, click "Labels" (or use the filter bar and type `label:bug`). You can combine labels: `label:bug label:accessibility` finds issues with both labels.
@@ -489,7 +489,7 @@ The `|` characters create columns. The `---` row separates the header from the b
 4. Set watch preferences per repository: "Participating and @mentions" is usually best
 5. Configure email preferences at https://github.com/settings/notifications
 
-See [Chapter 9 (Notifications)](docs/09-notifications.md).
+See [Chapter 10 (Notifications)](docs/10-notifications.md).
 
 ### Q: What is the difference between "Watching," "Participating," and "@mentioned"?
 **A:**

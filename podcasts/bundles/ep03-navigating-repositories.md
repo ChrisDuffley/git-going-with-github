@@ -856,7 +856,7 @@ The incoming content from the other branch
 
 You resolve a conflict by editing the file to have the correct final content, removing the conflict markers, and then committing.
 
-See [Merge Conflicts Guide](06-merge-conflicts.md) for step-by-step instructions.
+See [Merge Conflicts Guide](07-merge-conflicts.md) for step-by-step instructions.
 
 
 ### Upstream

@@ -7,28 +7,28 @@
 > Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them - step by step.
 
 
-## Workshop Recommendation (Chapter 6)
+## Workshop Recommendation (Chapter 7)
 
-Chapter 6 uses **one controlled practice challenge** so students can learn conflict resolution without high-pressure scenarios.
+Chapter 7 uses **one controlled practice challenge** so students can learn conflict resolution without high-pressure scenarios.
 
 - **Challenge count:** 1
 - **Time:** under 10 minutes
 - **Evidence:** issue-linked PR and completion comment
 - **Pattern:** observe, resolve, verify
 
-### Chapter 6 Challenge Set
+### Chapter 7 Challenge Set
 
 1. **Resolve conflict markers** - identify and clean up conflict markers in a practice file, then open a linked PR.
 
-> **Branch guidance for Chapter 6:** Use a short-lived feature branch: `fix/yourname-issueXX` (for example, `fix/maria-issue48`). The same pattern you used in Chapter 5.
+> **Branch guidance for Chapter 7:** Use a short-lived feature branch: `fix/yourname-issueXX` (for example, `fix/maria-issue48`). The same pattern you used in Chapter 6.
 
-### Challenge 6.1 Step-by-Step: Resolve Conflict Markers
+### Challenge 7.1 Step-by-Step: Resolve Conflict Markers
 
 **Goal:** Identify the three types of conflict markers in a practice file, decide which content to keep, remove the markers, and submit a clean PR.
 
 **Where you are working:** the `learning-room` repository on GitHub.com (web editor) or in VS Code if you cloned locally.
 
-**Before you start:** Open your **assigned Chapter 6 challenge issue** (the one titled "Chapter 6.1: Resolve Conflict Markers (@yourname)"). The issue description tells you which practice file contains the conflict markers.
+**Before you start:** Open your **assigned Chapter 7 challenge issue** (the one titled "Chapter 7.1: Resolve Conflict Markers (@yourname)"). The issue description tells you which practice file contains the conflict markers.
 
 Practice sample: [`learning-room/docs/samples/chapter-6-conflict-practice-sample.md`](../learning-room/docs/samples/chapter-6-conflict-practice-sample.md)
 
@@ -54,13 +54,13 @@ Practice sample: [`learning-room/docs/samples/chapter-6-conflict-practice-sample
 
 **You are done when:** Your PR passes bot validation checks and contains no remaining conflict markers.
 
-### Completing Chapter 6: Submit Your Evidence
+### Completing Chapter 7: Submit Your Evidence
 
-When your PR is open and passing checks, post a comment on your assigned Chapter 6 challenge issue:
+When your PR is open and passing checks, post a comment on your assigned Chapter 7 challenge issue:
 
 ```text
-Chapter 6 completed:
-- Challenge 6.1: Opened PR #[number] resolving conflict markers in [filename]
+Chapter 7 completed:
+- Challenge 7.1: Opened PR #[number] resolving conflict markers in [filename]
 - Content decision: kept [your version / their version / combined both] because [reason]
 ```
 
@@ -633,6 +633,6 @@ Answer these three questions:
 > *Understanding conflict markers is not a stepping stone to letting AI handle conflicts. It is the skill that tells you when AI got it wrong.*
 
 
-*Next: [Culture and Etiquette](07-culture-etiquette.md)*
-*Back: [Working with Pull Requests](05-working-with-pull-requests.md)*
+*Next: [Culture and Etiquette](08-culture-etiquette.md)*
+*Back: [Working with Pull Requests](06-working-with-pull-requests.md)*
 *Related: [Git & Source Control in VS Code](11-git-source-control.md)*

@@ -84,10 +84,22 @@
 **Status:** Not started  In progress  Complete
 
 
-## Chapter 5: Working with Pull Requests
+## Chapter 5: VS Code Accessibility
+**Time:** 45 minutes  |  **What You'll Do:** Set up VS Code for accessible development
+
+- [ ] Read `docs/05-vscode-accessibility.md`
+- [ ] Installed: VS Code with accessibility settings configured
+- [ ] Enabled: Screen reader mode and keyboard navigation
+- [ ] Know how to: Use the Command Palette (`Ctrl+Shift+P`)
+- [ ] Configured: Accessibility signals and editor preferences for your workflow
+
+**Status:** Not started  In progress  Complete
+
+
+## Chapter 6: Working with Pull Requests
 **Time:** 1 hour  |  **What You'll Do:** Submit, review, and merge PRs
 
-- [ ] Read `docs/05-working-with-pull-requests.md`
+- [ ] Read `docs/06-working-with-pull-requests.md`
 - [ ] Create a pull request
 - [ ] Review a PR and add comments
 - [ ] Respond to PR feedback
@@ -97,10 +109,10 @@
 **Status:** Not started  In progress  Complete
 
 
-## Chapter 6: Merge Conflicts
+## Chapter 7: Merge Conflicts
 **Time:** 1 hour  |  **What You'll Do:** Resolve conflicts between branches
 
-- [ ] Read `docs/06-merge-conflicts.md`
+- [ ] Read `docs/07-merge-conflicts.md`
 - [ ] Understand: Why conflicts happen
 - [ ] Know how to: Identify conflict markers (<<<< ==== >>>>)
 - [ ] Successfully resolved: 1+ real merge conflict
@@ -109,10 +121,10 @@
 **Status:** Not started  In progress  Complete
 
 
-## Chapter 7: Culture & Etiquette
+## Chapter 8: Culture & Etiquette
 **Time:** 30 minutes  |  **What You'll Do:** Learn collaborative best practices
 
-- [ ] Read `docs/07-culture-etiquette.md`
+- [ ] Read `docs/08-culture-etiquette.md`
 - [ ] Understand: Respectful code review
 - [ ] Know the difference: Suggestion vs. Requirement
 - [ ] Can give constructive feedback on code
@@ -121,10 +133,10 @@
 **Status:** Not started  In progress  Complete
 
 
-## Chapter 8: Labels, Milestones & Projects
+## Chapter 9: Labels, Milestones & Projects
 **Time:** 45 minutes  |  **What You'll Do:** Use GitHub's organizational tools
 
-- [ ] Read `docs/08-labels-milestones-projects.md`
+- [ ] Read `docs/09-labels-milestones-projects.md`
 - [ ] Created: 3+ labels for a repo or issue
 - [ ] Created: 1+ milestone (release or sprint)
 - [ ] Used project board to organize work (optional: add columns and cards)
@@ -133,26 +145,14 @@
 **Status:** Not started  In progress  Complete
 
 
-## Chapter 9: Notifications
+## Chapter 10: Notifications
 **Time:** 30 minutes  |  **What You'll Do:** Master GitHub notifications
 
-- [ ] Read `docs/09-notifications.md`
+- [ ] Read `docs/10-notifications.md`
 - [ ] Set up notifications: Email or in-app
 - [ ] Understand: @mentions, subscriptions, digest settings
 - [ ] Configured: Notifications for your projects
 - [ ] Know how to: Unsubscribe from threads you don't need
-
-**Status:** Not started  In progress  Complete
-
-
-## Chapter 10: VS Code Setup & Accessibility Basics
-**Time:** 45 minutes  |  **What You'll Do:** Set up VS Code for accessible development
-
-- [ ] Read `docs/10-vscode-basics.md`
-- [ ] Installed: VS Code with accessibility settings configured
-- [ ] Enabled: Screen reader mode and keyboard navigation
-- [ ] Know how to: Use the Command Palette (`Ctrl+Shift+P`)
-- [ ] Configured: Editor preferences for your workflow
 
 **Status:** Not started  In progress  Complete
 
@@ -285,12 +285,12 @@ The workshop includes structured exercises in the following chapters. Use this t
 | **Ch 3** | Individual Challenges | 12 progressive challenges in `learning-room/docs/CHALLENGES.md` | |
 | **Ch 3** | Group Challenges | 7 collaborative exercises in `learning-room/docs/GROUP_CHALLENGES.md` | |
 | **Ch 4** | File Your First Issue | Create an introduction issue in the Learning Room | |
-| **Ch 5** | Read a Real PR | Navigate a PR's description, conversation, and diff | |
-| **Ch 6** | Read a Conflict | Read merge conflict markers and identify both versions | |
-| **Ch 7** | Rewrite One Comment | Transform a dismissive review comment into constructive feedback | |
-| **Ch 8** | Label and Link | Add a label to an issue and create a cross-reference | |
-| **Ch 9** | Tame Your Inbox | Mark a notification as done and configure watch settings | |
-| **Ch 10** | Try It Right Now | Open a repo in github.dev, enable screen reader mode, explore the interface | |
+| **Ch 5** | Try It Right Now | Open a repo in github.dev, enable screen reader mode, explore the interface | |
+| **Ch 6** | Read a Real PR | Navigate a PR's description, conversation, and diff | |
+| **Ch 7** | Read a Conflict | Read merge conflict markers and identify both versions | |
+| **Ch 8** | Rewrite One Comment | Transform a dismissive review comment into constructive feedback | |
+| **Ch 9** | Label and Link | Add a label to an issue and create a cross-reference | |
+| **Ch 10** | Tame Your Inbox | Mark a notification as done and configure watch settings | |
 | **Ch 11** | Clone, Branch, Commit | Complete the full Git cycle: clone → branch → edit → stage → commit → push | |
 | **Ch 12** | Review a PR from VS Code | Open a diff, use Accessible Diff Viewer (`F7`), leave a comment | |
 | **Ch 13** | First Copilot Conversation | Ask Copilot Chat a question about your repo and read the response | |
@@ -306,11 +306,11 @@ The workshop includes structured exercises in the following chapters. Use this t
 | **Ch 16** | Exercise 3 | Practice iterative refinement with agents | |
 
 ### Core Path (Recommended first)
-- Chapters 0-9: Not started  In progress  Complete
+- Chapters 0-10: Not started  In progress  Complete
 - **Time:** ~8 hours (includes workshop time)
 
 ### Advanced Path (Day 2)
-- Chapters 10-16: Not started  In progress  Complete
+- Chapters 11-16: Not started  In progress  Complete
 - **Time:** ~5 hours (includes exercises)
 
 ### Full Curriculum
@@ -323,8 +323,8 @@ The workshop includes structured exercises in the following chapters. Use this t
 | Section | Time | Status |
 |---------|------|--------|
 | Pre-Workshop | 30 min | |
-| Day 1 Core (Ch 0-9) | 7.5 hrs | |
-| Day 2 Advanced (Ch 10-16) | 5 hrs | |
+| Day 1 Core (Ch 0-10) | 8 hrs | |
+| Day 2 Advanced (Ch 11-16) | 5 hrs | |
 | Reference/Appendices | As needed | |
 | **Total** | **~13 hrs** | |
 
@@ -336,7 +336,7 @@ The workshop includes structured exercises in the following chapters. Use this t
 1. Ch 0 (Setup) - 30 min
 2. Ch 1 (Structure) - 1 hr
 3. Ch 4 (Issues) - 1 hr
-4. Ch 5 (PRs) - 1 hr
+4. Ch 6 (PRs) - 1 hr
 5. Ch 14 (Accessible Review) - 1.5 hrs
 6. Ch 16 (Accessibility Agents) - 1.5 hrs
 
@@ -345,7 +345,7 @@ The workshop includes structured exercises in the following chapters. Use this t
 ### If You're a **Maintainer** (Manage projects)
 **Recommended order:**
 1. Ch 0 (Setup) - 30 min
-2. Ch 8 (Labels/Milestones) - 45 min
+2. Ch 9 (Labels/Milestones) - 45 min
 3. Ch 15 (Issue Templates) - 1.5 hrs
 4. Ch 14 (Accessible Code Review) - 1.5 hrs
 5. Ch 16 (Accessibility Agents) - 1.5 hrs

@@ -29,17 +29,17 @@ This document summarizes the complete challenge system architecture built for th
 
 ### 2. Challenge Templates (Issue Infrastructure)
 
-Located in `.github/ISSUE_TEMPLATE/` (Chapters 4-6, 11) and inline in `scripts/create_all_challenges.ps1` (Chapters 7-16):
+Located in `.github/ISSUE_TEMPLATE/` (Chapters 4, 6, 11) and inline in `scripts/create_all_challenges.ps1` (Chapters 5, 8-10, 12-16):
 
 | Chapter | Challenges | Submission | Bot Validated | Skill | Day | Status |
 |---------|-----------|------------|---------------|-------|-----|--------|
 | **04** Issues | 3 | Issue comment (evidence links) | No (manual) | github-issues | 1 | Created |
-| **05** Pull Requests | 3 | PR with `Closes #XX` | Yes | pull-requests | 1 | Created |
-| **06** Merge Conflicts | 1 | PR with `Closes #XX` | Yes | merge-conflicts | 1 | Created |
-| **07** Culture and Etiquette | 1 | Issue comment | No | collaboration | 1 | Created |
-| **08** Labels, Milestones, Projects | 1 | Issue comment | No | triage | 1 | Created |
-| **09** Notifications | 1 | Issue comment | No | notifications | 1 | Created |
-| **10** VS Code Basics | 1 | Issue comment | No | vs-code | 2 | Created |
+| **05** VS Code Accessibility | 1 | Issue comment | No | vs-code | 1 | Created |
+| **06** Pull Requests | 3 | PR with `Closes #XX` | Yes | pull-requests | 1 | Created |
+| **07** Merge Conflicts | 1 | PR with `Closes #XX` | Yes | merge-conflicts | 1 | Created |
+| **08** Culture and Etiquette | 1 | Issue comment | No | collaboration | 1 | Created |
+| **09** Labels, Milestones, Projects | 1 | Issue comment | No | triage | 1 | Created |
+| **10** Notifications | 1 | Issue comment | No | notifications | 1 | Created |
 | **11** Git Source Control | 3 | PR with `Closes #XX` | Yes | git-source-control | 2 | Created |
 | **12** PR Extension | 2 | Issue comment | No | pr-extension | 2 | Created |
 | **13** GitHub Copilot | 3 | Issue comment | No | copilot | 2 | Created |
@@ -49,7 +49,7 @@ Located in `.github/ISSUE_TEMPLATE/` (Chapters 4-6, 11) and inline in `scripts/c
 
 **Total: 26 challenges per student**
 
-Chapters 5, 6, and 11 use PR-based submission with `Closes #XX` syntax. Chapter 4 uses issue-comment-based submission where students post evidence links on their assigned challenge issue (no branch or file editing required). All other chapters use issue-comment-based submission where students post evidence as a checklist comment.
+Chapters 6, 7, and 11 use PR-based submission with `Closes #XX` syntax. Chapter 4 uses issue-comment-based submission where students post evidence links on their assigned challenge issue (no branch or file editing required). All other chapters use issue-comment-based submission where students post evidence as a checklist comment.
 
 **Template Contents:**
 - YAML frontmatter with placeholders: `{CHAPTER}`, `{CHALLENGE_NUM}`, `{CHALLENGE_TITLE}`, `{USERNAME}`, `{ISSUE_NUMBER}`
@@ -72,8 +72,8 @@ assignees: ["{USERNAME}"]
 
 | Script | Purpose | Chapters |
 |--------|---------|----------|
-| `scripts/create_student_issues.ps1` | Original 10 challenges (template-based) | 04, 05, 06, 11 |
-| `scripts/create_all_challenges.ps1` | All 26 challenges (self-contained) | 07-10, 12-16 |
+| `scripts/create_student_issues.ps1` | Original 10 challenges (template-based) | 04, 06, 07, 11 |
+| `scripts/create_all_challenges.ps1` | All 26 challenges (self-contained) | 05, 08-10, 12-16 |
 
 #### Primary Script: `create_all_challenges.ps1`
 
@@ -86,11 +86,11 @@ assignees: ["{USERNAME}"]
 .\scripts\create_all_challenges.ps1
 
 # Create only specific chapters (e.g., just the new ones)
-.\scripts\create_all_challenges.ps1 -ChaptersOnly "07,08,09,10,12,13,14,15,16"
+.\scripts\create_all_challenges.ps1 -ChaptersOnly "05,08,09,10,12,13,14,15,16"
 ```
 
 **What It Does:**
-1. Defines all 16 challenge templates inline (Chapters 7-16, 16 challenges)
+1. Defines all 16 challenge templates inline (Chapters 5, 8-10, 12-16; 16 challenges)
 2. Loads org members via `gh api`
 3. Checks all existing open challenge issues (paginated)
 4. Compares each student's existing issues against the full template set
@@ -103,7 +103,7 @@ The script is designed to be rerun periodically. It only creates issues for chal
 
 #### Legacy Script: `create_student_issues.ps1`
 
-Creates the original 10 challenges (Ch 04, 05, 06, 11) by cloning from Weijun-Zhang-1996's template issues. Still functional but superseded by `create_all_challenges.ps1` for new chapters.
+Creates the original 10 challenges (Ch 04, 06, 07, 11) by cloning from Weijun-Zhang-1996's template issues. Still functional but superseded by `create_all_challenges.ps1` for new chapters.
 
 **Prerequisites for Both Scripts:**
 - GitHub CLI (`gh`) installed and authenticated
@@ -114,8 +114,8 @@ Creates the original 10 challenges (Ch 04, 05, 06, 11) by cloning from Weijun-Zh
 
 **Applicable Chapters:**
 - Chapter 4: Working with Issues (issue evidence + quality validation)
-- Chapter 5: Pull Requests (PR workflow validation)
-- Chapter 6: Merge Conflicts (conflict resolution validation)
+- Chapter 6: Pull Requests (PR workflow validation)
+- Chapter 7: Merge Conflicts (conflict resolution validation)
 - Chapter 11: Git & Source Control (Git operations validation)
 
 **How It Works:**
@@ -183,7 +183,7 @@ Chapter numbers are zero-padded to two digits (04, 05, 06, 07... 16) so issues s
 **Example:**
 ```
 Chapter 04.1: Create Your First Issue (@accesswatch)
-Chapter 05.2: Open Your First Pull Request (@amandarush)
+Chapter 6.2: Open Your First Pull Request (@amandarush)
 Chapter 11.3: Push to GitHub (@andysq62)
 Chapter 13.2: Ask Copilot to Explain a Repo (@apelli95)
 ```
@@ -219,7 +219,7 @@ gh issue list --label "challenge: intermediate" --state open
 
 ### Lifecycle States
 
-Each challenge issue transitions through states. PR-based challenges (Ch 04, 05, 06, 11) auto-close when a PR merges. Comment-based challenges (Ch 07-10, 12-16) are closed manually by the student or facilitator after evidence is posted.
+Each challenge issue transitions through states. PR-based challenges (Ch 04, 05, 06, 11) auto-close when a PR merges. Comment-based challenges (Ch 8-10, 12-16) are closed manually by the student or facilitator after evidence is posted.
 
 | State | Condition | PR-Based | Comment-Based |
 |-------|-----------|----------|---------------|
@@ -261,7 +261,7 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 - **Relevance:** Does each challenge teach intended concept?
   - Check: Students successfully demonstrate skill in PR
 - **Pacing:** Are challenges completable in allotted time?
-  - Check: 80%+ of students reach Chapter 6 on Day 1
+  - Check: 80%+ of students reach Chapter 7 on Day 1
 - **Motivation:** Do students attempt optional challenges (not required)?
   - Check: Any student attempts Chapters 12-16 (guided, not automated)
 
@@ -273,8 +273,8 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   │   ├── challenge-chapter-4.md       <- Issue template (Chapter 4)
-│   │   ├── challenge-chapter-5.md       <- Issue template (Chapter 5)
-│   │   ├── challenge-chapter-6.md       <- Issue template (Chapter 6)
+│   │   ├── challenge-chapter-5.md       <- Issue template (Chapter 6)
+│   │   ├── challenge-chapter-6.md       <- Issue template (Chapter 7)
 │   │   ├── challenge-chapter-11.md      <- Issue template (Chapter 11)
 │   │   └── challenge-hub.md             <- Generic template with placeholders
 │   ├── data/
@@ -287,7 +287,7 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 │
 ├── scripts/
 │   ├── create_student_issues.ps1        <- Original 10-challenge creator (Ch 04/05/06/11)
-│   └── create_all_challenges.ps1        <- Full 26-challenge creator (Ch 07-16)
+│   └── create_all_challenges.ps1        <- Full 26-challenge creator (Ch 8-16)
 │
 ├── learning-room/
 │   └── docs/
@@ -295,12 +295,12 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 │
 ├── docs/
 │   ├── 04-working-with-issues.md
-│   ├── 05-working-with-pull-requests.md
-│   ├── 06-merge-conflicts.md
-│   ├── 07-culture-etiquette.md
-│   ├── 08-labels-milestones-projects.md
-│   ├── 09-notifications.md
-│   ├── 10-vscode-basics.md
+│   ├── 06-working-with-pull-requests.md
+│   ├── 07-merge-conflicts.md
+│   ├── 08-culture-etiquette.md
+│   ├── 09-labels-milestones-projects.md
+│   ├── 10-notifications.md
+│   ├── 05-vscode-accessibility.md
 │   ├── 11-git-source-control.md
 │   ├── 12-github-pull-requests-extension.md
 │   ├── 13-github-copilot.md
@@ -320,12 +320,12 @@ Each challenge issue transitions through states. PR-based challenges (Ch 04, 05,
 
 ### From Student Docs
 - [docs/04-working-with-issues.md](docs/04-working-with-issues.md) - links to Chapter 4 challenges
-- [docs/05-working-with-pull-requests.md](docs/05-working-with-pull-requests.md) - links to Chapter 5 challenges
-- [docs/06-merge-conflicts.md](docs/06-merge-conflicts.md) - links to Chapter 6 challenges
-- [docs/07-culture-etiquette.md](docs/07-culture-etiquette.md) - links to Chapter 7 challenges
-- [docs/08-labels-milestones-projects.md](docs/08-labels-milestones-projects.md) - links to Chapter 8 challenges
-- [docs/09-notifications.md](docs/09-notifications.md) - links to Chapter 9 challenges
-- [docs/10-vscode-basics.md](docs/10-vscode-basics.md) - links to Chapter 10 challenges
+- [docs/06-working-with-pull-requests.md](docs/06-working-with-pull-requests.md) - links to Chapter 6 challenges
+- [docs/07-merge-conflicts.md](docs/07-merge-conflicts.md) - links to Chapter 7 challenges
+- [docs/08-culture-etiquette.md](docs/08-culture-etiquette.md) - links to Chapter 8 challenges
+- [docs/09-labels-milestones-projects.md](docs/09-labels-milestones-projects.md) - links to Chapter 9 challenges
+- [docs/10-notifications.md](docs/10-notifications.md) - links to Chapter 10 challenges
+- [docs/05-vscode-accessibility.md](docs/05-vscode-accessibility.md) - links to Chapter 5 challenges
 - [docs/11-git-source-control.md](docs/11-git-source-control.md) - links to Chapter 11 challenges
 - [docs/12-github-pull-requests-extension.md](docs/12-github-pull-requests-extension.md) - links to Chapter 12 challenges
 - [docs/13-github-copilot.md](docs/13-github-copilot.md) - links to Chapter 13 challenges
@@ -368,8 +368,8 @@ Chapter {X}.{Y}: {Challenge_Title} (@{USERNAME})
 **Valid Examples:**
 ```
 Chapter 04.1: Create Your First Issue (@accesswatch)
-Chapter 05.2: Review and Approve a Pull Request (@amandarush)
-Chapter 06.1: Resolve a Merge Conflict (@andysq62)
+Chapter 6.2: Review and Approve a Pull Request (@amandarush)
+Chapter 7.1: Resolve a Merge Conflict (@andysq62)
 Chapter 11.3: Push Your Work to GitHub (@apelli95)
 Chapter 14.1: Review a PR with Inline Comments (@JeffBlumentworker)
 Chapter 16.3: Agent Instructions Deep Dive (@ChrisDuffley)

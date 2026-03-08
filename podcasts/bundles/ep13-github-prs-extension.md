@@ -70,7 +70,7 @@ The following supplementary content is included after the primary source.
 Reference it naturally when a concept would benefit from additional context,
 but keep the main narrative focused on the primary chapter.
 
-- Working with Pull Requests (web) - Ch 05
+- Working with Pull Requests (web) - Ch 7
 
 ### Primary Source Material
 
@@ -83,7 +83,7 @@ but keep the main narrative focused on the primary chapter.
 >
 > This guide covers the GitHub Pull Requests and Issues extension: viewing open PRs, checking out PR branches for local testing, reviewing PRs with screen reader-accessible tools, creating PRs directly from VS Code, using PR templates, and syncing PR status with GitHub.
 >
-> **Prerequisites:** [Working with Pull Requests](05-working-with-pull-requests.md), [Git & Source Control in VS Code](11-git-source-control.md)
+> **Prerequisites:** [Working with Pull Requests](06-working-with-pull-requests.md), [Git & Source Control in VS Code](11-git-source-control.md)
 
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+` on Mac. For example: `Ctrl+Shift+P` → `Cmd+Shift+P`, `Ctrl+Shift+G` → `Cmd+Shift+G`, `Alt+F2` → `Option+F2`. Context menus (`Shift+F10` on Windows) use `Ctrl+Return` on Mac.
 
@@ -188,7 +188,7 @@ View pull requests directly on GitHub without VS Code:
 3. Click any PR title to view its conversation, commits, and changed files
 4. Use the **Files changed** tab to review diffs
 
-See [Working with Pull Requests](05-working-with-pull-requests.md) for the full web-based PR workflow.
+See [Working with Pull Requests](06-working-with-pull-requests.md) for the full web-based PR workflow.
 
 </details>
 
@@ -487,7 +487,7 @@ Create a PR from your browser after pushing your branch:
 4. Fill in the title and description
 5. Click **Create pull request**
 
-See [Working with Pull Requests - Opening a PR](05-working-with-pull-requests.md#opening-a-pull-request) for detailed screen reader steps.
+See [Working with Pull Requests - Opening a PR](06-working-with-pull-requests.md#opening-a-pull-request) for detailed screen reader steps.
 
 </details>
 
@@ -829,11 +829,11 @@ gh pr merge 42 --auto --squash
 
 *Next: [GitHub Copilot](13-github-copilot.md)*  
 *Back: [Git & Source Control in VS Code](11-git-source-control.md)*  
-*Related: [Working with Pull Requests](05-working-with-pull-requests.md) | [Issue Templates](15-issue-templates.md)*
+*Related: [Working with Pull Requests](06-working-with-pull-requests.md) | [Issue Templates](15-issue-templates.md)*
 
 
 
-### Supplementary: Working with Pull Requests (web) - Ch 05
+### Supplementary: Working with Pull Requests (web) - Ch 7
 
 # Working with Pull Requests
 > **Listen to Episode 6:** [Working with Pull Requests](../PODCASTS.md) - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.
@@ -1676,7 +1676,7 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 ```
 1. You will see a "This branch has conflicts that must be resolved" message near the bottom
 2. Tab to "Resolve conflicts" button → GitHub opens a web conflict editor
-3. The editor shows conflict markers - see Merge Conflicts guide (06-merge-conflicts.md)
+3. The editor shows conflict markers - see Merge Conflicts guide (07-merge-conflicts.md)
 4. Edit the file to resolve → Mark as resolved → Commit merge
 ```
 
@@ -1722,6 +1722,6 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 > *The agent documents the diff. You bring the context that no diff can contain.*
 
 
-*Next: [Merge Conflicts](06-merge-conflicts.md)*
+*Next: [Merge Conflicts](07-merge-conflicts.md)*
 *Back: [Working with Issues](04-working-with-issues.md)*
-*Related: [Accessible Code Review](14-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture & Etiquette](07-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*
+*Related: [Accessible Code Review](14-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture & Etiquette](08-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*

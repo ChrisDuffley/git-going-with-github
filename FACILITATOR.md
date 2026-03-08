@@ -81,62 +81,62 @@
 This is the single repository students clone. Everything they need for both days is here:
 
 ```
-learning-room/                  <- workshop repository root
-+-- README.md                   <- participant-facing start page
-+-- CONTRIBUTING.md             <- contribution guide
-+-- CODE_OF_CONDUCT.md          <- community standards
-+-- FACILITATOR.md              <- this file
-+-- .gitignore
-+-- .github/
-|   +-- ISSUE_TEMPLATE/
-|   |   +-- config.yml          <- disables blank issues, links to Skills modules
-|   |   +-- accessibility-bug.yml <- accessibility bug report YAML form
-|   |   +-- feature-request.yml <- feature/improvement request YAML form
-|   +-- PULL_REQUEST_TEMPLATE.md <- PR template with accessibility checklist
-|   +-- agents/                 <- Accessibility Agents - 55 Copilot agents across 3 teams
-|   |   +-- daily-briefing.agent.md
-|   |   +-- issue-tracker.agent.md
-|   |   +-- pr-review.agent.md
-|   |   +-- analytics.agent.md
-|   |   +-- insiders-a11y-tracker.agent.md
-|   |   +-- template-builder.agent.md
-|   |   +-- preferences.example.md
-|   +-- prompts/                <- 54+ slash commands for Copilot Chat
-|       +-- a11y-update.prompt.md
-|       +-- create-issue.prompt.md
-|       +-- daily-briefing.prompt.md
-|       +-- explain-code.prompt.md
-|       +-- review-pr.prompt.md
-|       +-- triage.prompt.md
-|       +-- ... (48 more - see docs/appendix-v-accessibility-agents-reference.md)
-+-- docs/                       <- full workshop curriculum (16 chapters + appendices A-X)
-|   +-- 00-pre-workshop-setup.md
-|   +-- 01-understanding-github-web-structure.md
-|   +-- 02-navigating-repositories.md
-|   +-- 03-the-learning-room.md
-|   +-- 04-working-with-issues.md
-|   +-- 05-working-with-pull-requests.md
-|   +-- 06-merge-conflicts.md
-|   +-- 07-culture-etiquette.md
-|   +-- 08-labels-milestones-projects.md
-|   +-- 09-notifications.md
-|   +-- 10-vscode-basics.md
-|   +-- 11-git-source-control.md
-|   +-- 12-github-pull-requests-extension.md
-|   +-- 13-github-copilot.md
-|   +-- 14-accessible-code-review.md
-|   +-- 15-issue-templates.md
-|   +-- 16-accessibility-agents.md
-|   +-- appendix-a-glossary.md              <- every term explained
-|   +-- appendix-b-screen-reader-cheatsheet.md <- full shortcut reference
-|   +-- appendix-c through appendix-x      <- deep-dive references (C-X)
-|   +-- (see appendix-u-resources.md for complete file listing)
-+-- learning-room/              <- practice content (contribution sprint targets)
-    +-- README.md
-    +-- docs/
-        +-- welcome.md          <- has [TODO] gaps for participants to complete
-        +-- keyboard-shortcuts.md <- has intentional errors and a heading hierarchy problem
-        +-- setup-guide.md      <- has a broken URL and [TODO] markers
+learning-room/                  ← workshop repository root
+├── README.md                   ← participant-facing start page
+├── CONTRIBUTING.md             ← contribution guide
+├── CODE_OF_CONDUCT.md          ← community standards
+├── FACILITATOR.md              ← this file
+├── .gitignore
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── config.yml          ← disables blank issues, links to Skills modules
+│   │   ├── accessibility-bug.yml ← accessibility bug report YAML form
+│   │   └── feature-request.yml ← feature/improvement request YAML form
+│   ├── PULL_REQUEST_TEMPLATE.md ← PR template with accessibility checklist
+│   ├── agents/                 ← Accessibility Agents - 55 Copilot agents across 3 teams
+│   │   ├── daily-briefing.agent.md
+│   │   ├── issue-tracker.agent.md
+│   │   ├── pr-review.agent.md
+│   │   ├── analytics.agent.md
+│   │   ├── insiders-a11y-tracker.agent.md
+│   │   ├── template-builder.agent.md
+│   │   └── preferences.example.md
+│   └── prompts/                ← 54+ slash commands for Copilot Chat
+│       ├── a11y-update.prompt.md
+│       ├── create-issue.prompt.md
+│       ├── daily-briefing.prompt.md
+│       ├── explain-code.prompt.md
+│       ├── review-pr.prompt.md
+│       ├── triage.prompt.md
+│       └── ... (48 more - see docs/appendix-v-accessibility-agents-reference.md)
+├── docs/                       ← full workshop curriculum (17 chapters + appendices A-Z)
+│   ├── 00-pre-workshop-setup.md
+│   ├── 01-understanding-github-web-structure.md
+│   ├── 02-navigating-repositories.md
+│   ├── 03-the-learning-room.md
+│   ├── 04-working-with-issues.md
+│   ├── 05-vscode-accessibility.md
+│   ├── 06-working-with-pull-requests.md
+│   ├── 07-merge-conflicts.md
+│   ├── 08-culture-etiquette.md
+│   ├── 09-labels-milestones-projects.md
+│   ├── 10-notifications.md
+│   ├── 11-git-source-control.md
+│   ├── 12-github-pull-requests-extension.md
+│   ├── 13-github-copilot.md
+│   ├── 14-accessible-code-review.md
+│   ├── 15-issue-templates.md
+│   ├── 16-accessibility-agents.md
+│   ├── appendix-a-glossary.md              ← every term explained
+│   ├── appendix-b-screen-reader-cheatsheet.md ← full shortcut reference
+│   ├── appendix-c through appendix-x      ← deep-dive references (C-X)
+│   └── (see appendix-u-resources.md for complete file listing)
+└── learning-room/              ← practice content (contribution sprint targets)
+    ├── README.md
+    └── docs/
+        ├── welcome.md          ← has [TODO] gaps for participants to complete
+        ├── keyboard-shortcuts.md ← has intentional errors and a heading hierarchy problem
+        └── setup-guide.md      ← has a broken URL and [TODO] markers
 ```
 
 
@@ -642,7 +642,7 @@ The workshop is licensed under Creative Commons Attribution. Attribution: "Based
    It's teaching. You can learn from the bot feedback and still ask your reviewers for human judgment."
   ```
 
-### Chapters 4-5: Issues & Pull Requests (Day 1 Blocks 2-4)
+### Chapters 4-6: Issues, VS Code Accessibility & Pull Requests (Day 1 Blocks 2-4)
 
 **Chapter 4: Working with Issues**
 - **Purpose:** Understanding issue lifecycle, templates, labeling
@@ -665,7 +665,7 @@ The workshop is licensed under Creative Commons Attribution. Attribution: "Based
    because they're in the same accessibility tree."
   ```
 
-**Chapter 5: Working with Pull Requests**
+**Chapter 6: Working with Pull Requests**
 - **Purpose:** Understanding PR anatomy, creating a PR, reviewing, merging
 - **Emphasize:** A PR is a proposal. It asks, "Can you merge these commits to main?" It is not automatic.
 - **Interactive activity:** Have everyone read the sample PR (pre-seeded on practice-review branch) with their screen reader
@@ -680,14 +680,14 @@ The workshop is licensed under Creative Commons Attribution. Attribution: "Based
    Much more readable."
   ```
 
-### Chapter 6: Merge Conflicts (Reference; covered in-context)
+### Chapter 7: Merge Conflicts (Reference; covered in-context)
 
 **When it matters:** Usually NOT during the workshop, but valuable for future contribution
 - **Facilitator talking point:** "Merge conflicts happen when two people edit the same line. GitHub shows you both changes and asks you to pick. You will probably not see this in the workshop - we'll stagger everyone working on different files."
 - **If conflict occurs:** Don't panic. Open the file. You'll see markers like `<<<<<<` and `======` and `>>>>>>`. They show the conflicting sections. You delete one, keep the other.
 - **Common error:** Thinking a merge conflict is a failure. It's not - it's normal in large projects.
 
-### Chapter 7: Culture & Etiquette (Day 1 Block 6)
+### Chapter 8: Culture & Etiquette (Day 1 Block 6)
 
 **Purpose:** Building inclusive communities, understanding norms
 - **Facilitator role:** Model the behavior described
@@ -695,21 +695,21 @@ The workshop is licensed under Creative Commons Attribution. Attribution: "Based
 - **Common misunderstanding:** "I don't want to break the build." Reassure participants that CI failures are learning moments, not disasters.
 - **Demo:** Show a PR with a helpful, kind review comment versus a curt one. Discuss the difference.
 
-### Chapters 8-9: Tracking & Notifications (Day 1 Block 6)
+### Chapters 9-10: Tracking & Notifications (Day 1 Block 6)
 
-**Chapter 8: Labels, Milestones, Projects**
+**Chapter 9: Labels, Milestones, Projects**
 - **In practice:** Students won't be creating labels, but they will see them and need to understand what they mean
 - **Facilitator tip:** "Before Block 5, create a quick reference list of your labels and what they mean. Pin it to a document. Students can refer to it."
 - **Interactive activity:** Show the learning-room repo's label bar. Have everyone navigate labels on an issue: press `K` to move through links until they find a label link, press Enter, they see all issues with that label
 
-**Chapter 9: Notifications**
+**Chapter 10: Notifications**
 - **Value:** "Notifications let you stay aware without being overwhelmed. You control what creates a notification - starring, watching, participating in a conversation."
 - **Accessibility point:** "Your notification inbox is more reliable than email forwarding. GitHub's inbox is fully accessible."
 - **Demo:** Open the notification bell. Navigate to the inbox. Show how to navigate notification history.
 
-### Chapters 10-16: Day 2 Deep Dives (Day 2 Blocks 1-5)
+### Chapters 5 and 11-16: Day 2 Deep Dives (Day 2 Blocks 1-5)
 
-**Chapter 10: VS Code Basics**
+**Chapter 5: VS Code Accessibility**
 - **Before starting:** Everyone should have VS Code installed and VS Code Insiders Extension Pack installed
 - **Screen reader mode:** This is critical. Demo it - `Shift+Alt+F1` to toggle
 - **Navigation shortcuts:**

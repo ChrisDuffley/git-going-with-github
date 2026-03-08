@@ -8,7 +8,7 @@
 >
 > This guide covers GitHub Copilot: inline code suggestions, Copilot Chat (conversational assistance), custom instructions vs custom agents, effective prompting for non-code contributions, and using Accessible View to read AI-generated responses.
 >
-> **Prerequisites:** [VS Code Setup & Accessibility Basics](10-vscode-basics.md), [Git & Source Control in VS Code](11-git-source-control.md)
+> **Prerequisites:** [VS Code Setup & Accessibility Basics](05-vscode-accessibility.md), [Git & Source Control in VS Code](11-git-source-control.md)
 >
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+` on Mac. Key equivalents: `Ctrl+Shift+I` → `Cmd+Shift+I` (Chat), `Ctrl+I` → `Cmd+I` (inline chat), `Alt+F2` → `Option+F2` (Accessible View), `Ctrl+/` → `Cmd+/` (insert suggestion). See the [Keyboard Shortcuts Reference](#8-keyboard-shortcuts-reference) at the end of this chapter for the complete list.
 
@@ -446,7 +446,7 @@ For the complete model comparison, strengths, weaknesses, and plan availability,
 
 | Goal | Example Prompt |
 | ------  | ----------------  |
-| Understand a file | `Explain what @10-vscode-basics.md covers in plain language` |
+| Understand a file | `Explain what @05-vscode-accessibility.md covers in plain language` |
 | Improve documentation | `This section is unclear. Rewrite it for a first-time contributor using a screen reader: [paste text]` |
 | Check tone | `Review this PR description for tone. Is it clear, respectful, and helpful? Suggest improvements.` |
 | Draft content | `Write a section on keyboard navigation in VS Code for screen reader users` |
@@ -976,4 +976,4 @@ When Copilot suggests code or Markdown:
 
 *Next: [Accessible Code Review](14-accessible-code-review.md)*
 *Back: [GitHub Pull Requests Extension](12-github-pull-requests-extension.md)*
-*Related: [VS Code Setup & Accessibility Basics](10-vscode-basics.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md) | [Appendix X: AI Models Reference](appendix-x-copilot-models.md)*
+*Related: [VS Code Setup & Accessibility Basics](05-vscode-accessibility.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) | [Appendix W: GitHub Copilot Reference](appendix-w-github-copilot-reference.md) | [Appendix X: AI Models Reference](appendix-x-copilot-models.md)*

@@ -897,9 +897,9 @@ Go to the Learning Room repository and file a real issue:
 > *Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.*
 
 
-*Next: [Working with Pull Requests](05-working-with-pull-requests.md)*
+*Next: [Working with Pull Requests](06-working-with-pull-requests.md)*
 *Back: [The Learning Room](03-the-learning-room.md)*
-*Related: [Issue Templates Guide](15-issue-templates.md) | [Labels & Milestones](08-labels-milestones-projects.md) | [Culture & Etiquette](07-culture-etiquette.md)*
+*Related: [Issue Templates Guide](15-issue-templates.md) | [Labels & Milestones](09-labels-milestones-projects.md) | [Culture & Etiquette](08-culture-etiquette.md)*
 
 
 
@@ -910,7 +910,7 @@ Go to the Learning Room repository and file a real issue:
 
 ## Boards, Tables, Roadmaps, Automations, and Accessible Navigation
 
-> GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
+> GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 9: Labels, Milestones, and Projects](09-labels-milestones-projects.md).
 
 
 ## Table of Contents
@@ -1390,6 +1390,6 @@ After the overview: "Want to see a specific column or check a team member's work
 4. Set up Auto-add: any issue with the `accessibility` label in those repos goes to this project automatically
 
 
-> **From Chapter 08:** For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
+> **From Chapter 9:** For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see [Chapter 9: Labels, Milestones, and Projects](09-labels-milestones-projects.md).
 
 *Return to: [Resources](appendix-u-resources.md) | [Glossary](appendix-a-glossary.md)*

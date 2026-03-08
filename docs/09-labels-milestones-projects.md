@@ -7,24 +7,24 @@
 > Labels, milestones, and projects are the organizational layer of GitHub. They turn a chaotic list of issues into a structured, navigable, prioritized body of work.
 
 
-## Workshop Recommendation (Chapter 8)
+## Workshop Recommendation (Chapter 9)
 
-Chapter 8 is a **guided triage chapter** focused on organization skills.
+Chapter 9 is a **guided triage chapter** focused on organization skills.
 
 - **Challenge count:** 1 guided challenge
 - **Automation check:** none by default
 - **Evidence:** structured issue comment in assigned challenge issue
 - **Pattern:** inspect, classify, explain
 
-### Chapter 8 Challenge Set
+### Chapter 9 Challenge Set
 
 1. **Post a triage recommendation** - read an issue, recommend labels/milestone/project placement, and explain your reasoning.
 
-### Challenge 8.1 Step-by-Step: Triage Recommendation Comment
+### Challenge 9.1 Step-by-Step: Triage Recommendation Comment
 
 **Goal:** Read the details of a Learning Room issue and post a structured triage recommendation that a maintainer could act on immediately.
 
-**Where you are working:** your assigned Chapter 8 challenge issue in the `learning-room` repository on GitHub.com, plus one other open issue you will triage.
+**Where you are working:** your assigned Chapter 9 challenge issue in the `learning-room` repository on GitHub.com, plus one other open issue you will triage.
 
 1. Open the **Issues** tab in the `learning-room` repository.
 2. Find any **open issue** that does not already have labels applied (or pick one your facilitator assigns).
@@ -32,11 +32,11 @@ Chapter 8 is a **guided triage chapter** focused on organization skills.
    - What type of work is it? (documentation fix, bug report, accessibility improvement, new content)
    - How urgent does it seem? (blocking other work, nice-to-have, unclear)
    - Which file or area of the repo does it affect?
-4. Open your **assigned Chapter 8 challenge issue** (the one titled "Chapter 8.1: Triage Recommendation (@yourname)").
+4. Open your **assigned Chapter 9 challenge issue** (the one titled "Chapter 9.1: Triage Recommendation (@yourname)").
 5. Scroll to the comment box and post a triage recommendation using this format:
 
 ```text
-Chapter 8 triage recommendation for issue #[number]:
+Chapter 9 triage recommendation for issue #[number]:
 - Suggested labels: [pick 1-3 from: documentation, bug, accessibility, enhancement, good first issue]
 - Suggested milestone: [pick one or write "none - reason"]
 - Suggested project board column: [To Do, In Progress, or Needs Triage]
@@ -50,9 +50,9 @@ Chapter 8 triage recommendation for issue #[number]:
 
 **You are done when:** Your triage recommendation comment appears on your assigned challenge issue with all four fields filled in.
 
-### Completing Chapter 8: Submit Your Evidence
+### Completing Chapter 9: Submit Your Evidence
 
-Your triage recommendation comment is your evidence. Close your Chapter 8 challenge issue when done. If you also applied labels directly, mention that in your comment.
+Your triage recommendation comment is your evidence. Close your Chapter 9 challenge issue when done. If you also applied labels directly, mention that in your comment.
 
 ### Expected Outcomes
 
@@ -547,6 +547,6 @@ Go to the Learning Room repository and do two things:
 > *Labeling today is not overhead. It is configuring the input layer that every agent downstream depends on.*
 
 
-*Next: [Notifications](09-notifications.md)*
-*Back: [Culture and Etiquette](07-culture-etiquette.md)*
+*Next: [Notifications](10-notifications.md)*
+*Back: [Culture and Etiquette](08-culture-etiquette.md)*
 *Related: [Working with Issues](04-working-with-issues.md) | [Day 1 Agenda](../DAY1_AGENDA.md)*

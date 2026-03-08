@@ -15,12 +15,12 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 | Chapter | Title | Status | Priority Issues |
 |---------|-------|--------|-----------------|
 | Ch 4 | Working with Issues |  PASS | No issues found |
-| Ch 5 | Working with Pull Requests |  PASS | No issues found |
-| Ch 6 | Merge Conflicts |  PASS | No issues found |
-| Ch 7 | Culture & Etiquette |  WARN | Optional challenge lacks clarity on evaluation |
-| Ch 8 | Labels/Milestones/Projects |  PASS | No critical issues |
-| Ch 9 | Notifications |  WARN | Time estimate may be optimistic; screen reader testing needed |
-| Ch 10 | VS Code Basics |  WARN | Keyboard shortcut consistency; VoiceOver parity |
+| Ch 5 | VS Code Accessibility |  WARN | Keyboard shortcut consistency; VoiceOver parity |
+| Ch 6 | Working with Pull Requests |  PASS | No issues found |
+| Ch 7 | Merge Conflicts |  PASS | No issues found |
+| Ch 8 | Culture & Etiquette |  WARN | Optional challenge lacks clarity on evaluation |
+| Ch 9 | Labels/Milestones/Projects |  PASS | No critical issues |
+| Ch 10 | Notifications |  WARN | Time estimate may be optimistic; screen reader testing needed |
 | Ch 11 | Git & Source Control |  WARN | Time estimates may be low for beginners; repository complexity |
 | Ch 12 | GitHub PR Extension |  WARN | Write access assumption; authentication flow clarity |
 | Ch 13 | GitHub Copilot |  WARN | Copilot subscription assumption not flagged upfront |
@@ -88,7 +88,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
  **No changes needed** — Chapter 4 is a model for other chapters.
 
 
-### Chapter 5: Working with Pull Requests
+### Chapter 6: Working with Pull Requests
 
 **[PASS]** — Challenge progression builds naturally on Chapter 4.
 
@@ -108,7 +108,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 
 #### File/Link Validation
  **All files verified:**
-- Reference to Chapter 5 docs (`docs/05-working-with-pull-requests.md`) 
+- Reference to Chapter 6 docs (`docs/06-working-with-pull-requests.md`) 
 - Learning Room repo structure exists and is accessible 
 - Bot validation workflow references clear 
 - Template reference (PR template in `.github/`) exists 
@@ -138,16 +138,16 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - No accessibility gaps noted
 
 #### Recommendations
- **No changes needed** — Chapter 5 maintains quality standard set by Chapter 4.
+ **No changes needed** — Chapter 6 maintains quality standard set by Chapter 4.
 
 
-### Chapter 6: Merge Conflicts
+### Chapter 7: Merge Conflicts
 
 **[PASS]** — Single controlled challenge with appropriate scoping.
 
 #### Prerequisites Check
  **Verified:**
-- Prerequisites: Ch 4, Ch 5, Ch 11 (Git basics)
+- Prerequisites: Ch 4, Ch 6, Ch 11 (Git basics)
 - Prerequisite documentation states: "Understand branch creation and PR workflow"
 - All prerequisites realistic and well-ordered
 
@@ -165,7 +165,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
  **Verified:**
 - Reference to "designated practice file/section" is created as part of challenge setup
 - Examples of conflict marker syntax provided: `<<<<<<<, =======, >>>>>>>`
-- Main chapter documentation (`docs/06-merge-conflicts.md`) fully explains conflict resolution
+- Main chapter documentation (`docs/07-merge-conflicts.md`) fully explains conflict resolution
 - Links to other chapters (Ch 4, 5, 11) all exist
 
 #### Time Estimate Accuracy
@@ -193,10 +193,10 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Screen reader navigation through markers is straightforward (text-based)
 
 #### Recommendations
- **No changes needed** — Chapter 6 provides good model for teaching high-stakes tasks through controlled practice.
+ **No changes needed** — Chapter 7 provides good model for teaching high-stakes tasks through controlled practice.
 
 
-### Chapter 7: Culture, Etiquette, and Community Standards
+### Chapter 8: Culture, Etiquette, and Community Standards
 
 **[WARN]** — Guidance is clear but optional challenge needs evaluation criteria clarification.
 
@@ -220,7 +220,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 
 #### File/Link Validation
  **Verified:**
-- Chapter 7 documentation (`docs/07-culture-etiquette.md`) exists
+- Chapter 8 documentation (`docs/08-culture-etiquette.md`) exists
 - Podcast reference (Episode 8) links correctly
 - Learning moment is well-written
 
@@ -253,13 +253,13 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 3. **Add clarity on optional nature:** Change "Optional" to "**Strongly Encouraged**" (optional implies students can skip; encouraged signals importance without making it required)
 
 
-### Chapter 8: Labels, Milestones, and Projects
+### Chapter 9: Labels, Milestones, and Projects
 
 **[PASS]** — Triage recommendation challenge is well-scoped and clear.
 
 #### Prerequisites Check
  **Verified:**
-- Implicit: Complete Chapters 4-5 first (understand issues and PRs)
+- Implicit: Complete Chapters 4-6 first (understand issues, VS Code, and PRs)
 - Triage context explained in main chapter documentation
 - Realistic for students who have filed and reviewed issues
 
@@ -279,7 +279,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
  **Verified:**
 - `.github/ISSUE_TEMPLATE/` folder exists
 - Label, milestone, and project references are GitHub standard features
-- Main chapter documentation (`docs/08-labels-milestones-projects.md`) exists
+- Main chapter documentation (`docs/09-labels-milestones-projects.md`) exists
 - Podcast reference (Episode 9) exists
 
 #### Time Estimate Accuracy
@@ -306,7 +306,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 1. Add explicit time estimate in challenge overview: "Estimated time: 5-10 minutes"
 
 
-### Chapter 9: Notifications
+### Chapter 10: Notifications
 
 **[WARN]** — Carefully designed but time estimate and screen reader testing may reveal gaps.
 
@@ -328,7 +328,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - `.github/` templates reference correct
 - PODCASTS.md link (Episode 10) verified
 - Notification filters reference GitHub standard features
-- Main chapter documentation (`docs/09-notifications.md`) exists
+- Main chapter documentation (`docs/10-notifications.md`) exists
 
 #### Time Estimate Accuracy
  **ISSUE FOUND - Estimate optimism:**
@@ -360,12 +360,12 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 
 #### Recommendations
  **Changes strongly recommended:**
-1. **Add completion evidence requirement:** "After completing the walkthrough, post an issue comment saying: `Has completed Chapter 9 notification setup (Watch level set, filters applied, one action tested).`"
+1. **Add completion evidence requirement:** "After completing the walkthrough, post an issue comment saying: `Has completed Chapter 10 notification setup (Watch level set, filters applied, one action tested).`"
 2. **Add screen reader testing note:** "If keyboard shortcuts don't work with your screen reader, use the mouse/trackpad to perform actions. We're working to improve shortcut coverage."
 3. **Add time note:** "Note: Estimate assumes notifications exist. If your inbox is empty, use the Done or All tabs as shown in the 'If You Get Stuck' section."
 
 
-### Chapter 10: VS Code Basics
+### Chapter 5: VS Code Accessibility
 
 **[WARN]** — Platform accessibility varies; parity issues need flagging.
 
@@ -386,7 +386,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
  **Verified:**
 - Reference to Accessible Help in VS Code (product feature) exists
 - Reference to Accessible View exists in VS Code Help
-- Main chapter documentation (`docs/10-vscode-basics.md`) exists
+- Main chapter documentation (`docs/05-vscode-accessibility.md`) exists
 - Podcast reference (Episode 11) verified
 
 #### Time Estimate Accuracy
@@ -457,7 +457,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 #### Prerequisites Check
  **ISSUE FOUND - Prerequisites incomplete:**
 - Challenge states prerequisites in chapter header but **not in challenge hub summary**
-- **Missing from CHALLENGES.md Hub:** Explicit statement: "Must have completed Chapter 10 first"
+- **Missing from CHALLENGES.md Hub:** Explicit statement: "Must have completed Chapter 6 first"
 - **Hub text says:** Challenge Set 1 = "Clone the sci-fi themes repository"
 - **Problem:** Students may not know they need github.dev or VS Code setup first
 - **Risk:** Students attempt challenge without proper environment configured
@@ -475,7 +475,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Command examples reference real git commands
 - Main chapter documentation (`docs/11-git-source-control.md`) exists
 - Podcast reference (Episode 12) exists
-- Cross-references to Chapter 5, 6, 10 all exist
+- Cross-references to Chapter 6, 7, 5 all exist
 
 #### Time Estimate Accuracy
  **ISSUE FOUND - Estimate is aggressive:**
@@ -531,7 +531,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
  **CHANGES REQUIRED:**
 1. **Emphasize prerequisites in CHALLENGES.md hub:**
    ```
-   **Prerequisites:** Complete Chapter 10 (VS Code Basics) and have github.dev or VS Code Desktop open.
+   **Prerequisites:** Complete Chapter 5 (VS Code Accessibility) and have github.dev or VS Code Desktop open.
    ```
 
 2. **Revise time estimate:**
@@ -569,7 +569,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
  **Verified:**
 - Main chapter documentation (`docs/12-github-pull-requests-extension.md`) exists
 - Podcast reference (Episode 13) verified
-- Cross-references to Chapter 5 and 11 exist
+- Cross-references to Chapter 6 and 11 exist
 - Extension reference is to official Microsoft/GitHub extension
 
 #### Time Estimate Accuracy
@@ -658,7 +658,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Reference to vscode-sci-fi-themes repository is real and public
 - Main chapter documentation (`docs/13-github-copilot.md`) exists
 - Podcast reference (Episode 14) exists
-- Cross-references to Chapter 10, 11 exist
+- Cross-references to Chapter 6, 11 exist
 
 #### Time Estimate Accuracy
  **ISSUE FOUND - Reality testing needed:**
@@ -752,9 +752,9 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 
 #### Prerequisites Check
  **Verified:**
-- Explicit: Complete Chapter 5 (PRs) and Chapter 12 (PR extension)
-- Stated prerequisites: "Complete Ch 5 and Ch 12"
-- Accessible progression: move from opening PRs (Ch 5) to reviewing them (Ch 14)
+- Explicit: Complete Chapter 6 (PRs) and Chapter 12 (PR extension)
+- Stated prerequisites: "Complete Ch 6 and Ch 12"
+- Accessible progression: move from opening PRs (Ch 6) to reviewing them (Ch 14)
 
 #### Instructions Clarity
  **Verified:**
@@ -825,7 +825,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - Challenge mentions prerequisites in chapter header:
   - Chapter 4  (understand issues)
   - Chapter 13 (YAML highlighting)
-  - Chapter 9  (notifications)
+  - Chapter 10  (notifications)
   - "A GitHub repository where you have write access"
   - "Terminal/Command line basic comfort"
 - **Problem:** Scattered across chapter instead of single prerequisite block
@@ -1143,24 +1143,24 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
    - **Impact:** High — 55 agents without guidance leads to overwhelm and low completion
    - **Fix Time:** 45 minutes
 
-4. **Chapter 10 (VS Code) + Chapter 12 (PR Extension):** Screen Reader Testing
+4. **Chapter 5 (VS Code) + Chapter 12 (PR Extension):** Screen Reader Testing
    - **Impact:** High — accessibility-first workshop cannot proceed without confirming AT compatibility
    - **Fix Time:** 2-4 hours (testing with NVDA, JAWS, VoiceOver)
 
 ###  Before Students Begin (or Early Day 1 Follow-up):
 
-5. **Chapter 9:** Add completion evidence requirement + test notifications UI with screen readers
+5. **Chapter 10:** Add completion evidence requirement + test notifications UI with screen readers
 6. **Chapter 11:** Emphasize prerequisites; test git clone UI accessibility
-7. **Chapters 7, 8:** Add missing time estimates
+7. **Chapters 8, 8:** Add missing time estimates
 
 
 ## Files Requiring Updates
 
 ### CHALLENGES.md (learning-room/docs/)
-- [ ] Chapter 7: Add evaluation criteria and time estimate
-- [ ] Chapter 8: Add time estimate
-- [ ] Chapter 9: Add completion evidence requirement
-- [ ] Chapter 10: Clarify Mac/VoiceOver; add realistic time range
+- [ ] Chapter 8: Add evaluation criteria and time estimate
+- [ ] Chapter 9: Add time estimate
+- [ ] Chapter 10: Add completion evidence requirement
+- [ ] Chapter 5: Clarify Mac/VoiceOver; add realistic time range
 - [ ] Chapter 11: Emphasize prerequisites in hub summary
 - [ ] Chapter 12: Add write-access assumption note
 - [ ] **Chapter 13: ADD SUBSCRIPTION WARNING (URGENT)**
@@ -1168,7 +1168,7 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 - [ ] **Chapter 16: Add discovery framework and scope reduction (URGENT)**
 
 ### Chapter-specific docs (docs/NN-*.md)
-- [ ] `10-vscode-basics.md`: Clarify Mac/VoiceOver; github.dev vs desktop distinction
+- [ ] `05-vscode-accessibility.md`: Clarify Mac/VoiceOver; github.dev vs desktop distinction
 - [ ] `13-github-copilot.md`: Add JSON editing guidance and real-world time expectations
 - [ ] `15-issue-templates.md`: Add YAML validation section; show before/after remix example
 - [ ] `16-accessibility-agents.md`: Add local exploration alternative; agent discovery framework
@@ -1182,15 +1182,15 @@ All 13 chapters (4-16) have challenge content defined with generally clear instr
 Before deploying challenges to students:
 
 ### Screen Reader Testing (NVDA, JAWS, VoiceOver)
-- [ ] Ch 9: Notification inbox navigation and shortcuts
-- [ ] Ch 10: VS Code screen reader mode (Windows + Mac) and feature discovery
+- [ ] Ch 10: Notification inbox navigation and shortcuts
+- [ ] Ch 5: VS Code screen reader mode (Windows + Mac) and feature discovery
 - [ ] Ch 12: GitHub PR Extension UI accessibility
 - [ ] Ch 13: Copilot Chat response reading with Accessible View
 
 ### Hands-on Flow Testing (Windows + Mac)
 - [ ] Ch 4: Issue creation and claim workflow (end-to-end)
-- [ ] Ch 5: PR opening with `Closes #XX` template
-- [ ] Ch 6: Conflict marker resolution workflow
+- [ ] Ch 6: PR opening with `Closes #XX` template
+- [ ] Ch 7: Conflict marker resolution workflow
 - [ ] Ch 11: `git clone` → commit → push (on both platforms)
 - [ ] Ch 13: Copilot Chat without subscription (confirm error message is clear)
 
@@ -1203,7 +1203,7 @@ Before deploying challenges to students:
 
 The challenges are **well-intentioned and generally well-designed**, with strong pedagogical progression and accessibility-focused documentation. However, **four chapters (10, 12, 13, 15, 16) require significant revisions before student deployment** to avoid frustration and blockers.
 
-**Recommended action:** Prioritize the  High-severity issues (Chapters 13, 15, 16) for immediate fixes, then conduct screen reader testing on Chapters 10 and 12. All changes can be completed in 4-6 hours.
+**Recommended action:** Prioritize the  High-severity issues (Chapters 13, 15, 16) for immediate fixes, then conduct screen reader testing on Chapters 5 and 12. All changes can be completed in 4-6 hours.
 
 
 **Audit Prepared:** March 5, 2026  

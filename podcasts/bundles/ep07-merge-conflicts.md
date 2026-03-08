@@ -549,6 +549,6 @@ Answer these three questions:
 > *Understanding conflict markers is not a stepping stone to letting AI handle conflicts. It is the skill that tells you when AI got it wrong.*
 
 
-*Next: [Culture and Etiquette](07-culture-etiquette.md)*
-*Back: [Working with Pull Requests](05-working-with-pull-requests.md)*
+*Next: [Culture and Etiquette](08-culture-etiquette.md)*
+*Back: [Working with Pull Requests](06-working-with-pull-requests.md)*
 *Related: [Git & Source Control in VS Code](11-git-source-control.md)*

@@ -19,35 +19,35 @@
 > **Browse vs Focus Mode (NVDA):** Use **Browse Mode** (the default) for reading PR conversations, navigating headings, and reviewing diffs. Switch to **Focus Mode** (`NVDA+Space`) only when you need to type in comment boxes or search fields. Switch back to Browse Mode to resume navigation. Maximize your browser window for consistent landmark layout.
 
 
-## Workshop Recommendation (Chapter 5)
+## Workshop Recommendation (Chapter 6)
 
-Chapter 5 is the first **PR-validated chapter** where students convert issue work into merge-ready contributions.
+Chapter 6 is the first **PR-validated chapter** where students convert issue work into merge-ready contributions.
 
 - **Challenge count:** 3
 - **Time per challenge:** under 10 minutes each
 - **Evidence:** PR metadata, bot checks, and merged issue linkage
 - **Pattern:** small change -> linked PR -> green checks
 
-### Chapter 5 Challenge Set
+### Chapter 6 Challenge Set
 
 1. **Create one small branch change** - edit a practice file on a new branch.
 2. **Open a linked PR** - use the PR template and include `Closes #XX`.
 3. **Pass required checks** - respond to bot feedback until all required checks pass.
 
-> **Branch guidance for Chapter 5:** This is the first chapter where you edit files and create branches. Use one of these two paths:
+> **Branch guidance for Chapter 6:** This is the first chapter where you edit files and create branches. Use one of these two paths:
 >
 > - **Web editor (recommended for beginners):** When you edit a file on GitHub.com and click "Propose changes," GitHub creates a branch for you automatically. Name it `fix/yourname-issueXX` (for example, `fix/maria-issue42`).
 > - **Local Git (if you cloned in Block 0):** Create a feature branch with `git checkout -b fix/yourname-issueXX` from `main`. See the "Local Git Alternative" section below for the full command sequence.
 >
-> **Do NOT use your `username-practice` branch yet.** The practice branch is for Chapter 11 and beyond when you work locally with Git and VS Code. For Chapter 5, use a short-lived feature branch as described above.
+> **Do NOT use your `username-practice` branch yet.** The practice branch is for Chapter 11 and beyond when you work locally with Git and VS Code. For Chapter 6, use a short-lived feature branch as described above.
 
-### Challenge 5.1 Step-by-Step: Create One Small Branch Change
+### Challenge 6.1 Step-by-Step: Create One Small Branch Change
 
 **Goal:** Edit one of the practice files and save your change on a new branch.
 
 **Where you are working:** the `learning-room` repository on GitHub.com, using the web editor.
 
-**Before you start:** Open your **assigned Chapter 5.1 challenge issue** (the one titled "Chapter 5.1: Create One Small Branch Change (@yourname)"). The issue description tells you which file to edit and what to fix.
+**Before you start:** Open your **assigned Chapter 6.1 challenge issue** (the one titled "Chapter 6.1: Create One Small Branch Change (@yourname)"). The issue description tells you which file to edit and what to fix.
 
 The Learning Room has three practice files with intentional problems. Your assigned issue points you to one of them:
 
@@ -78,13 +78,13 @@ The following table summarizes the practice files in the learning-room, what eac
 7. Select **Create a new branch for this commit and start a pull request**.
 8. Activate **Propose changes**.
 
-**You are done when:** GitHub shows the "Open a pull request" page. Your file change is saved on a new branch. Continue to Challenge 5.2.
+**You are done when:** GitHub shows the "Open a pull request" page. Your file change is saved on a new branch. Continue to Challenge 6.2.
 
-### Challenge 5.2 Step-by-Step: Open a Linked PR
+### Challenge 6.2 Step-by-Step: Open a Linked PR
 
 **Goal:** Open a pull request that links to your challenge issue so it closes automatically on merge.
 
-**Where you are working:** the "Open a pull request" page that appeared after Challenge 5.1 (or navigate to Pull Requests tab and select "Compare and pull request").
+**Where you are working:** the "Open a pull request" page that appeared after Challenge 6.1 (or navigate to Pull Requests tab and select "Compare and pull request").
 
 1. In the **Title** field, write a short description of your change. Examples:
    - "Complete the Who Can Contribute section in welcome.md"
@@ -92,13 +92,13 @@ The following table summarizes the practice files in the learning-room, what eac
    - "Correct NVDA modifier key in keyboard-shortcuts.md"
 2. In the **Body** field, use the PR template if one is provided. Make sure to include:
    - A summary of what you changed and why (at least 50 characters).
-   - The line `Closes #XX` where `XX` is the number of your **assigned Chapter 5 challenge issue**.
+   - The line `Closes #XX` where `XX` is the number of your **assigned Chapter 6 challenge issue**.
 3. Verify the **base branch** is `main` and the **compare branch** is your `fix/yourname-issueXX` branch.
 4. Activate the **Create pull request** button.
 
-**You are done when:** Your PR appears in the Pull Requests list. The bot will begin running checks within about 30 seconds. Continue to Challenge 5.3.
+**You are done when:** Your PR appears in the Pull Requests list. The bot will begin running checks within about 30 seconds. Continue to Challenge 6.3.
 
-### Challenge 5.3 Step-by-Step: Pass Required Checks
+### Challenge 6.3 Step-by-Step: Pass Required Checks
 
 **Goal:** Read bot feedback, fix any issues it finds, and get all required checks to pass.
 
@@ -1061,7 +1061,7 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 ```text
 1. You will see a "This branch has conflicts that must be resolved" message near the bottom
 2. Tab to "Resolve conflicts" button → GitHub opens a web conflict editor
-3. The editor shows conflict markers - see Merge Conflicts guide (06-merge-conflicts.md)
+3. The editor shows conflict markers - see Merge Conflicts guide (07-merge-conflicts.md)
 4. Edit the file to resolve → Mark as resolved → Commit merge
 ```
 
@@ -1108,6 +1108,6 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 > *The agent documents the diff. You bring the context that no diff can contain.*
 
 
-*Next: [Merge Conflicts](06-merge-conflicts.md)*
-*Back: [Working with Issues](04-working-with-issues.md)*
-*Related: [Accessible Code Review](14-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture & Etiquette](07-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*
+*Next: [Merge Conflicts](07-merge-conflicts.md)*
+*Back: [VS Code Accessibility](05-vscode-accessibility.md)*
+*Related: [Accessible Code Review](14-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture & Etiquette](08-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*

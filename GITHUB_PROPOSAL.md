@@ -41,7 +41,7 @@ Many organizations need structured, repeatable, accessible training that:
 **Three-Part Modular Design:**
 
 #### Part 1: Foundation (Day 1 - 7.5 hours)
-Chapters 0-9 teach GitHub essentials and collaborative workflows.
+Chapters 0-10 teach GitHub essentials and collaborative workflows.
 
 | Chapter | Duration | Focus | Hands-On |
 |---------|----------|-------|----------|
@@ -50,22 +50,22 @@ Chapters 0-9 teach GitHub essentials and collaborative workflows.
 | 2 | 45 min | Navigation | Explore real repositories |
 | 3 | 30 min | The Learning Room | Practice repository orientation |
 | 4 | 1 hr | Issues | Create, comment, label (2 exercises) |
-| 5 | 1 hr | Pull requests | Submit, review, merge (2 exercises) |
-| 6 | 1 hr | Merge conflicts | Resolve real conflicts |
-| 7 | 30 min | Culture & etiquette | Respectful collaboration |
-| 8 | 45 min | Organization tools | Labels, milestones, projects |
-| 9 | 30 min | Notifications | Manage subscriptions |
+| 5 | 45 min | VS Code Accessibility | Editor setup, accessibility features |
+| 6 | 1 hr | Pull requests | Submit, review, merge (2 exercises) |
+| 7 | 1 hr | Merge conflicts | Resolve real conflicts |
+| 8 | 30 min | Culture & etiquette | Respectful collaboration |
+| 9 | 45 min | Organization tools | Labels, milestones, projects |
+| 10 | 30 min | Notifications | Manage subscriptions |
 
 **Outcome:** Users comfortable with GitHub fundamentals; ready for advanced topics and automation (Day 2).
 
 **Note:** Day 1 and Day 2 agenda files provided separately for facilitators (not counted in learner time).
 
 #### Part 2: VS Code & Development Environment (Day 2 Foundation - 2.5 hours)
-Chapters 10-13 introduce VS Code, Git integration, and GitHub Copilot.
+Chapters 11-13 introduce Git integration, GitHub PR tooling, and GitHub Copilot.
 
 | Chapter | Duration | Focus | New Concepts |
 |---------|----------|-------|-------------|
-| 10 | 45 min | VS Code basics | Editor setup, accessibility features |
 | 11 | 45 min | Git source control | VS Code Git integration |
 | 12 | 30 min | GitHub PR extension | Review PRs from VS Code |
 | 13 | 45 min | GitHub Copilot | AI-powered code assistance |
@@ -100,12 +100,12 @@ Chapters 14-16 teach accessible code review, issue templates, and AI agent autom
 **Why:** ~15% of population has disabilities; GitHub should be usable by all.
 
 ### 2. Hands-On Exercises
-- **10+ guided exercises** across Chapters 4-5, 10-16 (all hands-on chapters)
+- **10+ guided exercises** across Chapters 4-6, 11-16 (all hands-on chapters)
 - **Step-by-step walkthroughs:** 300-900 lines per exercise
 - **"What you should see":" Checkpoint validation at each step
 - **Troubleshooting:** "If not, try this" guidance embedded in every exercise
 
-**Note on Chapters 10-13:** These VS Code chapters teach through integrated practice rather than standalone exercises - users configure tools, explore features, and practice workflows as they learn. Formal numbered exercises resume at Chapter 14.
+**Note on Chapters 5 and 11-13:** These VS Code chapters teach through integrated practice rather than standalone exercises - users configure tools, explore features, and practice workflows as they learn. Formal numbered exercises resume at Chapter 14.
 
 **Example:** Exercise A (Ch 15) walks users through:
 1. Navigating to template selector
@@ -122,16 +122,16 @@ Chapters 14-16 teach accessible code review, issue templates, and AI agent autom
 
 Comprehensive breakdown of every hands-on exercise across the curriculum:
 
-**Day 1 Exercises (Chapters 4-5):**
+**Day 1 Exercises (Chapters 4-6):**
 
 | # | Chapter | Exercise | Focus | Steps | Key Skills |
 |---|---------|----------|-------|-------|-----------|
 | 1 | Ch 4 | Create & Comment on Issues | Issue workflow | 7 | Issue creation, navigation, commenting |
 | 2 | Ch 4 | Label & Triage | Issue organization | 6 | Applying labels, milestone assignment |
-| 3 | Ch 5 | Submit PR | Branching & PR creation | 8 | Branch creation, commit, PR opening |
-| 4 | Ch 5 | Review & Feedback | Code review & response | 7 | Reading diffs, leaving comments, responding |
+| 3 | Ch 7 | Submit PR | Branching & PR creation | 8 | Branch creation, commit, PR opening |
+| 4 | Ch 7 | Review & Feedback | Code review & response | 7 | Reading diffs, leaving comments, responding |
 
-**Day 2 Foundation (Chapters 10-13):** No formal exercises - integrated hands-on practice throughout (VS Code setup, Git workflows, PR extension, Copilot basics)
+**Day 2 Foundation (Chapters 11-13):** No formal exercises - integrated hands-on practice throughout (Git workflows, PR extension, Copilot basics)
 
 **Day 2 Advanced Exercises (Chapters 14-16):**
 
@@ -326,7 +326,7 @@ Root/
 ### Learner Outcomes (Measurable)
 - [ ] 100% of learners complete setup chapter successfully
 - [ ] 90%+ of learners complete at least one hands-on exercise
-- [ ] 80%+ of learners understand PR review process after Chapter 5
+- [ ] 80%+ of learners understand PR review process after Chapter 6
 - [ ] 70%+ of learners use agents in their workflows within 30 days
 - **Satisfaction:** Post-workshop survey shows 4.5+/5.0 average
 
@@ -432,7 +432,7 @@ Open curriculum invites contributions:
   - 54+ slash commands total
 - **10+ detailed exercises** (300-900 lines each, hand-holding walkthroughs)
   - 2 exercises in Chapter 4 (Issues)
-  - 2 exercises in Chapter 5 (Pull Requests)
+  - 2 exercises in Chapter 6 (Pull Requests)
   - 3 exercises in Chapter 14 (Accessible Code Review)
   - 4 exercises in Chapter 15 (Issue Templates)
   - 3 exercises in Chapter 16 (Accessibility Agents)
@@ -498,7 +498,7 @@ See `README.md` for full chapter list and quick links.
 - **Total content:** ~110,000 words (chapters + appendices + guides + exercises)
 - **Exercises:** 10+ (300-900 lines each, hand-holding walkthroughs)
   - Ch 4: 2 exercises (issues)
-  - Ch 5: 2 exercises (pull requests)
+  - Ch 6: 2 exercises (pull requests)
   - Ch 14: 3 exercises (accessible code review)
   - Ch 15: 4 exercises (issue templates, including optional custom template)
   - Ch 16: 3 exercises (agent integration)

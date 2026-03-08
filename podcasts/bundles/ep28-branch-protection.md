@@ -359,8 +359,8 @@ Then practice opening a PR on your fork and requesting your workshop partner's r
 - [Appendix D - Git Authentication and Commit Signing](appendix-d-git-authentication.md)
 - [Appendix Q - GitHub Actions Workflows](appendix-q-github-actions-workflows.md)
 - [Appendix L - GitHub Security Features](appendix-l-github-security-features.md)
-- [Chapter 05 - Working with Pull Requests](../docs/05-working-with-pull-requests.md)
-- [Chapter 06 - Merge Conflicts](../docs/06-merge-conflicts.md)
+- [Chapter 6 - Working with Pull Requests](../docs/06-working-with-pull-requests.md)
+- [Chapter 7 - Merge Conflicts](../docs/07-merge-conflicts.md)
 
 
 *Return to: [Resources](appendix-u-resources.md) | [Appendix L - Security Features](appendix-l-github-security-features.md)*

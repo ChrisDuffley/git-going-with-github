@@ -409,7 +409,7 @@ Return to your `introduction-to-github` Skills repo. Mona has been waiting for y
 > **Magic Moment #4:** The `introduction-to-github` course is now complete. Navigate to the [Introduction to GitHub skills course](https://github.com/skills/introduction-to-github) - your completion badge appears on the course page. Your GitHub profile now shows this course as completed.
 
 ### Reference Document
-[Working with Pull Requests](docs/05-working-with-pull-requests.md)
+[Working with Pull Requests](docs/06-working-with-pull-requests.md)
 
 
 ## Lunch (1:00 PM, 60 min)
@@ -430,7 +430,7 @@ Every participant makes at least one real contribution to the `learning-room` re
 
 When multiple contributors edit the same file at the same time, Git cannot automatically combine the changes. This is called a **merge conflict**. During this sprint, conflicts are likely because several participants will be editing `docs/welcome.md` simultaneously.
 
-**Before you start your challenge**, read the conflict prevention strategies and resolution steps in [Chapter 6: Merge Conflicts](docs/06-merge-conflicts.md). Key points:
+**Before you start your challenge**, read the conflict prevention strategies and resolution steps in [Chapter 7: Merge Conflicts](docs/07-merge-conflicts.md). Key points:
 
 - **Communicate with your team.** If two people are both working on `docs/welcome.md`, coordinate who edits which `[TODO]` section.
 - **Pull before you push.** Always sync with the latest `main` before opening a PR.
@@ -792,4 +792,4 @@ learning-room/
 
 
 *Day 2: [Day 2 Agenda](DAY2_AGENDA.md)*
-*Related: [Navigating Repositories](docs/02-navigating-repositories.md) | [Working with Issues](docs/04-working-with-issues.md) | [Working with Pull Requests](docs/05-working-with-pull-requests.md)*
+*Related: [Navigating Repositories](docs/02-navigating-repositories.md) | [Working with Issues](docs/04-working-with-issues.md) | [Working with Pull Requests](docs/06-working-with-pull-requests.md)*

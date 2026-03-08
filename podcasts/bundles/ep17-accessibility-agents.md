@@ -115,7 +115,7 @@ Every agent automates a skill you should already know by hand. Before using any 
 
 | Agent Category | You Must Have Done First | Reference |
 |----------------|--------------------------|----------|
-| GitHub Workflow agents (`@daily-briefing`, `@issue-tracker`, `@pr-review`, `@analytics`) | Navigated repositories, filed issues, reviewed PRs, explored Insights | [Ch 2](02-navigating-repositories.md), [Ch 4](04-working-with-issues.md), [Ch 5](05-working-with-pull-requests.md) |
+| GitHub Workflow agents (`@daily-briefing`, `@issue-tracker`, `@pr-review`, `@analytics`) | Navigated repositories, filed issues, reviewed PRs, explored Insights | [Ch 2](02-navigating-repositories.md), [Ch 4](04-working-with-issues.md), [Ch 6](06-working-with-pull-requests.md) |
 | Accessibility monitoring (`@insiders-a11y-tracker`) | Filed an accessibility bug, applied WCAG labels, checked heading hierarchy | [Ch 4](04-working-with-issues.md), [Ch 15](15-issue-templates.md) |
 | Template creation (`@template-builder`) | Designed a template manually, tested field types | [Ch 15](15-issue-templates.md#7-building-an-accessibility-bug-report-template) |
 | Web accessibility auditing (`@web-accessibility-wizard`, `@contrast-master`, `@keyboard-navigator`, etc.) | Understand WCAG success criteria, tested pages with a screen reader | [Appendix C](appendix-c-accessibility-standards.md) |
@@ -568,7 +568,7 @@ Many agents do both - they explain what they found (informational) and optionall
 
 **File:** `.github/agents/daily-briefing.agent.md`
 
-**Before you run this agent:** You should have manually navigated a repository's Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to [Navigating Repositories](02-navigating-repositories.md) and [Notifications](09-notifications.md) first. The briefing output only makes sense when you already know what each section of it is describing.
+**Before you run this agent:** You should have manually navigated a repository's Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to [Navigating Repositories](02-navigating-repositories.md) and [Notifications](10-notifications.md) first. The briefing output only makes sense when you already know what each section of it is describing.
 
 **What it does:**
 
@@ -618,7 +618,7 @@ Sweeps every repository you have access to and builds a prioritized dashboard:
 
 **File:** `.github/agents/issue-tracker.agent.md`
 
-**Before you run this agent:** You should have filed at least one issue using the full manual process - writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent's priority scores and draft replies will mean nothing to you. Return to [Working with Issues](04-working-with-issues.md) and [Labels, Milestones & Projects](08-labels-milestones-projects.md) first.
+**Before you run this agent:** You should have filed at least one issue using the full manual process - writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent's priority scores and draft replies will mean nothing to you. Return to [Working with Issues](04-working-with-issues.md) and [Labels, Milestones & Projects](09-labels-milestones-projects.md) first.
 
 **What it does:**
 
@@ -640,7 +640,7 @@ Finds, prioritizes, and helps you manage issues across all your repositories:
 @issue-tracker draft a reply to issue #15 acknowledging it and asking for more context
 ```
 
-**Important:** The agent can draft a reply. You review the tone against the [Culture & Etiquette guide](07-culture-etiquette.md) before posting. Your name goes on it.
+**Important:** The agent can draft a reply. You review the tone against the [Culture & Etiquette guide](08-culture-etiquette.md) before posting. Your name goes on it.
 
 **Output example:**
 
@@ -677,7 +677,7 @@ This will help us diagnose the issue faster.
 
 **File:** `.github/agents/pr-review.agent.md`
 
-**Before you run this agent:** You should have manually reviewed at least one pull request diff in the GitHub browser interface - navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces. Return to [Working with Pull Requests](05-working-with-pull-requests.md) if this is not yet familiar.
+**Before you run this agent:** You should have manually reviewed at least one pull request diff in the GitHub browser interface - navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces. Return to [Working with Pull Requests](06-working-with-pull-requests.md) if this is not yet familiar.
 
 **What it does:**
 
@@ -2026,7 +2026,7 @@ Run this command? (Y/n)
 
 *Back: [Issue Templates](15-issue-templates.md)*  
 *Reference: [Appendix V: Accessibility Agents Reference](appendix-v-accessibility-agents-reference.md)*  
-*Related: [Culture & Etiquette](07-culture-etiquette.md) | [Working with Issues](04-working-with-issues.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md)*
+*Related: [Culture & Etiquette](08-culture-etiquette.md) | [Working with Issues](04-working-with-issues.md) | [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md)*
 
 
 
@@ -2180,7 +2180,7 @@ The GitHub Workflow team includes 12 agents that automate common repository oper
 | `@issue-tracker is there a duplicate of issue #42?` | Duplicate check |
 | `@issue-tracker draft a reply to issue #15` | Draft a response (you review before posting) |
 
-**Important:** The agent drafts replies. You post. Always review tone against the [Culture & Etiquette guide](07-culture-etiquette.md).
+**Important:** The agent drafts replies. You post. Always review tone against the [Culture & Etiquette guide](08-culture-etiquette.md).
 
 
 ### `@pr-review` - Pull Request Review

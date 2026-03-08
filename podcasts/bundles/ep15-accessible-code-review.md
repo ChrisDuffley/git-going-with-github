@@ -78,7 +78,7 @@ but keep the main narrative focused on the primary chapter.
 
 ## Conducting Pull Request Reviews with a Screen Reader
 
-> This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).
+> This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](06-working-with-pull-requests.md).
 >
 > **Learning Room connection:** The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify `docs/keyboard-shortcuts.md` (shortcut tables with intentional errors), `docs/setup-guide.md` (broken links and incomplete steps), and `docs/welcome.md` (`[TODO]` sections to complete). These are the same files you work on during the Day 1 contribution sprint.
 
@@ -87,7 +87,7 @@ but keep the main narrative focused on the primary chapter.
 
 **Before starting this chapter, verify you have completed:**
 
-- [ ] Chapter 5: [Working with Pull Requests](05-working-with-pull-requests.md) - Understand PR structure, diffs, and comment workflows
+- [ ] Chapter 6: [Working with Pull Requests](06-working-with-pull-requests.md) - Understand PR structure, diffs, and comment workflows
 - [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) - VS Code installed and configured
 - [ ] Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use
 - [ ] Access to at least one pull request to review (your own fork or a practice repo)
@@ -1319,7 +1319,7 @@ That's the power of "manual skill first, agent second." You're building that ski
 
 *Next: [Issue Templates](15-issue-templates.md)*
 *Back: [GitHub Copilot](13-github-copilot.md)*
-*Related: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Merge Conflicts](06-merge-conflicts.md) | [Git & Source Control in VS Code](11-git-source-control.md)*
+*Related: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Merge Conflicts](07-merge-conflicts.md) | [Git & Source Control in VS Code](11-git-source-control.md)*
 
 
 
@@ -1966,7 +1966,7 @@ This cheat sheet covers GitHub web navigation and screen reader commands. Additi
 |-------|----------|
 | VS Code keyboard navigation and accessibility | [Appendix M - VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) |
 | GitHub Copilot Chat and inline suggestions | [Appendix W - GitHub Copilot Reference](appendix-w-github-copilot-reference.md) |
-| VS Code setup and configuration shortcuts | [Chapter 10 - VS Code Basics](10-vscode-basics.md) |
+| VS Code setup and configuration shortcuts | [Chapter 5 - VS Code Basics](05-vscode-accessibility.md) |
 | GitHub Copilot activation and model switching | [Chapter 13 - GitHub Copilot](13-github-copilot.md) |
 
 

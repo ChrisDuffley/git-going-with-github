@@ -50,7 +50,7 @@ Write it down. You will check it against reality at 5pm.
 ## Block 1 - VS Code Setup
 **9:30-10:30**
 
-> This block builds on [VS Code: Setup & Accessibility Basics](docs/10-vscode-basics.md), [Git & Source Control in VS Code](docs/11-git-source-control.md), and [GitHub Pull Requests Extension](docs/12-github-pull-requests-extension.md) for full reference.
+> This block builds on [VS Code: Setup & Accessibility Basics](docs/05-vscode-accessibility.md), [Git & Source Control in VS Code](docs/11-git-source-control.md), and [GitHub Pull Requests Extension](docs/12-github-pull-requests-extension.md) for full reference.
 
 ### Purpose
 Move from browser-based GitHub to VS Code as your contribution environment. Set up screen reader mode. Open `accessibility-agents` as a workspace. Understand what you are looking at before any agent runs.
@@ -220,10 +220,10 @@ Agents are run in a specific sequence - from broadest to most specific, from obs
 
 | Step | Agent | Skill It Amplifies | Day 1 Source |
 |------|-------|-------------------|-------------|
-| 1 | `@daily-briefing` | Reading your notification inbox and activity summary | [Navigating Repos](docs/02-navigating-repositories.md) + [Notifications](docs/09-notifications.md) |
-| 2 | `@issue-tracker` | Triaging and prioritizing issues manually | [Working with Issues](docs/04-working-with-issues.md) + [Labels & Milestones](docs/08-labels-milestones-projects.md) |
-| 3 | `@pr-review` | Manually reviewing a PR diff and writing inline comments | [Working with Pull Requests](docs/05-working-with-pull-requests.md) |
-| 4 | `@insiders-a11y-tracker` | Filing accessibility bugs and applying WCAG labels | [Working with Issues](docs/04-working-with-issues.md) + [Labels & Milestones](docs/08-labels-milestones-projects.md) |
+| 1 | `@daily-briefing` | Reading your notification inbox and activity summary | [Navigating Repos](docs/02-navigating-repositories.md) + [Notifications](docs/10-notifications.md) |
+| 2 | `@issue-tracker` | Triaging and prioritizing issues manually | [Working with Issues](docs/04-working-with-issues.md) + [Labels & Milestones](docs/09-labels-milestones-projects.md) |
+| 3 | `@pr-review` | Manually reviewing a PR diff and writing inline comments | [Working with Pull Requests](docs/06-working-with-pull-requests.md) |
+| 4 | `@insiders-a11y-tracker` | Filing accessibility bugs and applying WCAG labels | [Working with Issues](docs/04-working-with-issues.md) + [Labels & Milestones](docs/09-labels-milestones-projects.md) |
 
 `@analytics` is available as an extension if Block 3 runs ahead of schedule - it requires understanding contribution graphs and activity history.
 
@@ -265,7 +265,7 @@ Participants answer from their Day 1 knowledge. Then the command runs. Then the 
 **Critical exercise:** Compare the agent's suggested comments to what you wrote manually in your Day 1 review.
 - Did the agent catch things you missed?
 - Did the agent miss context you knew from the issue thread?
-- Is the agent's tone aligned with the community standards from [Culture and Etiquette](docs/07-culture-etiquette.md)?
+- Is the agent's tone aligned with the community standards from [Culture and Etiquette](docs/08-culture-etiquette.md)?
 
 Edit the agent's output before posting any of it. Your name goes on it.
 
@@ -518,6 +518,6 @@ Day 2 has two peaks:
 Do not rush the wrap-up. The moment of seeing your name in a public commit history is one of the most meaningful things a first-time open source contributor experiences.
 
 
-*Previous: [Notifications ←](docs/09-notifications.md)*
-*Next: [VS Code: Setup & Accessibility Basics](docs/10-vscode-basics.md)*
+*Previous: [Notifications ←](docs/10-notifications.md)*
+*Next: [VS Code: Setup & Accessibility Basics](docs/05-vscode-accessibility.md)*
 *Related: [Day 1 Agenda](DAY1_AGENDA.md) | [GitHub Actions & Workflows](docs/appendix-q-github-actions-workflows.md) | [Resources](docs/appendix-u-resources.md)*

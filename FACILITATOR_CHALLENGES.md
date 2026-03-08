@@ -33,8 +33,8 @@ python scripts/batch_create_challenges.py \
 
 This creates:
 - Challenge 4.1, 4.2, 4.3 (one set per student)
-- Challenge 5.1, 5.2, 5.3 (one set per student)
-- Challenge 6.1 (one per student)
+- Challenge 6.1, 5.2, 5.3 (one set per student)
+- Challenge 7.1 (one per student)
 - Challenge 11.1, 11.2, 11.3 (one set per student)
 
 **Total generated:** 10 issues per student (for these 4 chapters). Example: 12 students = 120 issues.
@@ -111,7 +111,7 @@ The issue becomes a support thread. Every comment builds evidence of learning.
 
 ### Validating Difficult Challenges
 
-For challenges **without bot validation** (Chapters 7-10, 12-16):
+For challenges **without bot validation** (Chapters 5, 8-10, 12-16):
 
 1. Review the student's PR or issue comment
 2. Look for: clear evidence, correct steps, good explanation
@@ -186,7 +186,7 @@ Chapter X.Y: [Challenge Name] (@YOUR_USERNAME)
 **Example:**
 ```
 Chapter 4.1: Create Your First Issue (@accesswatch)
-Chapter 5.2: Open Your First Pull Request (@amandarush)
+Chapter 6.2: Open Your First Pull Request (@amandarush)
 Chapter 11.3: Push to GitHub (@andysq62)
 ```
 
@@ -267,8 +267,8 @@ gh issue list --label challenge --state closed --limit 50 | \
 ### Templates Used by Batch Script
 
 - `.github/ISSUE_TEMPLATE/challenge-chapter-4.md` - Chapter 4 issues
-- `.github/ISSUE_TEMPLATE/challenge-chapter-5.md` - Chapter 5 issues
-- `.github/ISSUE_TEMPLATE/challenge-chapter-6.md` - Chapter 6 issues
+- `.github/ISSUE_TEMPLATE/challenge-chapter-5.md` - Chapter 6 issues
+- `.github/ISSUE_TEMPLATE/challenge-chapter-6.md` - Chapter 7 issues
 - `.github/ISSUE_TEMPLATE/challenge-chapter-11.md` - Chapter 11 issues
 
 ### Bot Validation
@@ -281,7 +281,7 @@ gh issue list --label challenge --state closed --limit 50 | \
 
 - `learning-room/docs/CHALLENGES.md` - Master challenge hub (YOU ARE HERE)
 - `docs/04-working-with-issues.md` - Chapter 4 detailed guide
-- `docs/05-working-with-pull-requests.md` - Chapter 5 detailed guide
+- `docs/06-working-with-pull-requests.md` - Chapter 6 detailed guide
 - `docs/11-git-source-control.md` - Chapter 11 detailed guide
 
 
@@ -313,7 +313,7 @@ The challenge hub already has them! But they're **manual validation** (no bot). 
 
 ### "Can students skip chapters?"
 
-It's possible but not recommended. The arc builds: Ch 4 (issues) → Ch 5 (PRs) → Ch 6 (conflicts) → Ch 11 (local Git). Each depends on the previous.
+It's possible but not recommended. The arc builds: Ch 4 (issues) → Ch 6 (PRs) → Ch 7 (conflicts) → Ch 11 (local Git). Each depends on the previous.
 
 *Recommended:* "Try them in order first. You can skip only if you've already mastered that skill."
 

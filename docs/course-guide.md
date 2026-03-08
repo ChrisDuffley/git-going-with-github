@@ -77,11 +77,11 @@ These chapters are designed to be read and practiced in order. Each builds on th
 | [02](02-navigating-repositories.md) | **Navigating Repositories** | Explore any repo using your screen reader - tabs, files, commits, branches | 45 min |
 | [03](03-the-learning-room.md) | **The Learning Room** | Your shared practice environment - challenges, PR workflow, bot feedback, peer review | 30 min |
 | [04](04-working-with-issues.md) | **Working with Issues** | File, search, filter, comment on, and manage issues | 1 hr |
-| [05](05-working-with-pull-requests.md) | **Working with Pull Requests** | Create, review, comment on, and merge pull requests | 1 hr |
-| [06](06-merge-conflicts.md) | **Merge Conflicts** | Understand why conflicts happen and how to resolve them | 1 hr |
-| [07](07-culture-etiquette.md) | **Culture and Etiquette** | Open source communication - tone, reviews, inclusive language | 30 min |
-| [08](08-labels-milestones-projects.md) | **Labels, Milestones and Projects** | Organize and cross-reference work | 45 min |
-| [09](09-notifications.md) | **Notifications and Mentions** | Manage your inbox, @mentions, and subscriptions | 30 min |
+| [05](06-working-with-pull-requests.md) | **Working with Pull Requests** | Create, review, comment on, and merge pull requests | 1 hr |
+| [06](07-merge-conflicts.md) | **Merge Conflicts** | Understand why conflicts happen and how to resolve them | 1 hr |
+| [07](08-culture-etiquette.md) | **Culture and Etiquette** | Open source communication - tone, reviews, inclusive language | 30 min |
+| [08](09-labels-milestones-projects.md) | **Labels, Milestones and Projects** | Organize and cross-reference work | 45 min |
+| [09](10-notifications.md) | **Notifications and Mentions** | Manage your inbox, @mentions, and subscriptions | 30 min |
 
 **Day 1 Total:** ~7.5 hours of structured time
 
@@ -92,7 +92,7 @@ Day 2 moves you from the browser to the desktop. Every skill maps directly to wh
 
 | # | Chapter | What You Will Learn | Time |
 |---|---------|-------------------|------|
-| [10](10-vscode-basics.md) | **VS Code: Setup & Accessibility Basics** | VS Code interface, github.dev, screen reader mode, keyboard navigation, Accessible Help and Diff | 45 min |
+| [10](05-vscode-accessibility.md) | **VS Code: Setup & Accessibility Basics** | VS Code interface, github.dev, screen reader mode, keyboard navigation, Accessible Help and Diff | 45 min |
 | [11](11-git-source-control.md) | **VS Code: Git & Source Control** | Clone, branch, stage, commit, push, merge - all from VS Code | 1 hr |
 | [12](12-github-pull-requests-extension.md) | **VS Code: GitHub Pull Requests Extension** | View, review, create, and merge PRs from inside VS Code | 45 min |
 | [13](13-github-copilot.md) | **VS Code: GitHub Copilot** | Inline suggestions, Copilot Chat, effective prompting, custom instructions | 1 hr |
@@ -171,12 +171,12 @@ The workshop includes 24 structured exercises across the curriculum. Every exerc
 | **Ch 3** | Individual Challenges | 12 progressive challenges in the Learning Room |
 | **Ch 3** | Group Challenges | 7 collaborative exercises in the Learning Room |
 | **Ch 4** | File Your First Issue | Create an introduction issue in the Learning Room |
-| **Ch 5** | Read a Real PR | Navigate a PR's description, conversation, and diff |
-| **Ch 6** | Read a Conflict | Read merge conflict markers and identify both versions |
-| **Ch 7** | Rewrite One Comment | Transform a dismissive review comment into constructive feedback |
-| **Ch 8** | Label and Link | Add a label to an issue and create a cross-reference |
-| **Ch 9** | Tame Your Inbox | Mark a notification as done and configure watch settings |
-| **Ch 10** | Try It Right Now | Open a repo in github.dev, enable screen reader mode, explore |
+| **Ch 5** | Try It Right Now | Open a repo in github.dev, enable screen reader mode, explore |
+| **Ch 6** | Read a Real PR | Navigate a PR's description, conversation, and diff |
+| **Ch 7** | Read a Conflict | Read merge conflict markers and identify both versions |
+| **Ch 8** | Rewrite One Comment | Transform a dismissive review comment into constructive feedback |
+| **Ch 9** | Label and Link | Add a label to an issue and create a cross-reference |
+| **Ch 10** | Tame Your Inbox | Mark a notification as done and configure watch settings |
 | **Ch 11** | Clone, Branch, Commit | Complete the full Git cycle: clone → branch → edit → stage → commit → push |
 | **Ch 12** | Review a PR from VS Code | Open a diff, use Accessible Diff Viewer (`F7`), leave a comment |
 | **Ch 13** | First Copilot Conversation | Ask Copilot Chat a question about your repo and read the response |

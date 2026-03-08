@@ -7,33 +7,33 @@
 > Technical skills get your code into a project. Communication skills keep you welcomed in the community. This guide covers the human side of open source.
 
 
-## Workshop Recommendation (Chapter 7)
+## Workshop Recommendation (Chapter 8)
 
-Chapter 7 is a **communication and culture chapter**.
+Chapter 8 is a **communication and culture chapter**.
 
 - **Challenge count:** 1 guided reflection (no bot grading)
 - **Automation check:** none - communication quality is too subjective for fair automated scoring
 - **Evidence:** structured reflection comment on your assigned challenge issue
 - **Pattern:** read, reflect, commit to one behavior
 
-### Chapter 7 Challenge Set
+### Chapter 8 Challenge Set
 
 1. **Guided reflection** - read the chapter, then post a short reflection comment committing to three specific collaboration behaviors.
 
-### Challenge 7.1 Step-by-Step: Guided Reflection
+### Challenge 8.1 Step-by-Step: Guided Reflection
 
 **Goal:** Identify three concrete communication behaviors you will practice during the rest of the workshop.
 
-**Where you are working:** your assigned Chapter 7 challenge issue in the `learning-room` repository on GitHub.com.
+**Where you are working:** your assigned Chapter 8 challenge issue in the `learning-room` repository on GitHub.com.
 
 1. Read through the chapter content below, paying attention to the sections on GitHub Flow, constructive feedback, and asking for help.
 2. As you read, think about one situation from Day 1 where communication helped (or could have helped) you.
-3. Open your **assigned Chapter 7 challenge issue** (the one titled "Chapter 7.1: Guided Reflection (@yourname)").
+3. Open your **assigned Chapter 8 challenge issue** (the one titled "Chapter 8.1: Guided Reflection (@yourname)").
 4. Scroll to the comment box at the bottom of the issue.
 5. Post a reflection comment using this format:
 
 ```text
-Chapter 7 reflection:
+Chapter 8 reflection:
 - One respectful review habit I will use:
 - One way I will ask for help clearly:
 - One way I will respond to feedback constructively:
@@ -48,9 +48,9 @@ Chapter 7 reflection:
 
 **You are done when:** Your reflection comment appears on the issue with three specific, actionable behaviors.
 
-### Completing Chapter 7: Submit Your Evidence
+### Completing Chapter 8: Submit Your Evidence
 
-The reflection comment itself is your evidence. No additional steps are needed. The facilitator reviews your comment for specificity. Close your Chapter 7 challenge issue when done.
+The reflection comment itself is your evidence. No additional steps are needed. The facilitator reviews your comment for specificity. Close your Chapter 8 challenge issue when done.
 
 ### Expected Outcomes
 
@@ -672,6 +672,6 @@ Notice: same feedback, completely different experience for the person receiving 
 > *A community's culture is shaped by every message posted in its name - including the ones an agent wrote for you.*
 
 
-*Next: [Labels, Milestones, and Projects](08-labels-milestones-projects.md)*
-*Back: [Merge Conflicts](06-merge-conflicts.md)*
-*Related: [Working with Issues](04-working-with-issues.md) | [Working with Pull Requests](05-working-with-pull-requests.md)*
+*Next: [Labels, Milestones, and Projects](09-labels-milestones-projects.md)*
+*Back: [Merge Conflicts](07-merge-conflicts.md)*
+*Related: [Working with Issues](04-working-with-issues.md) | [Working with Pull Requests](06-working-with-pull-requests.md)*

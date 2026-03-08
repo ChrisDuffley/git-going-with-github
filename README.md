@@ -100,7 +100,7 @@ Go to the **Issues** tab of this repository and filter by your username. You'll 
 ```
 Chapter 4.1: Create Your First Issue (@YOUR_USERNAME)
 Chapter 4.2: Claim a Challenge (@YOUR_USERNAME)
-Chapter 5.1: Open Your First Pull Request (@YOUR_USERNAME)
+Chapter 6.1: Open Your First Pull Request (@YOUR_USERNAME)
 ... and 27 more
 ```
 
@@ -151,12 +151,12 @@ The Facilitator guide includes templates, scripts, success metrics, and a final 
 | [02](docs/02-navigating-repositories.md) | **Navigating Repositories** | Step-by-step repository navigation with your screen reader |
 | [03](docs/03-the-learning-room.md) | **The Learning Room: Shared Practice Repo** | Your shared contribution environment, PR sharing workflow, automation system, peer reviewing, and how everything works together |
 | [04](docs/04-working-with-issues.md) | **Working with Issues** | Filing, managing, and participating in issues |
-| [05](docs/05-working-with-pull-requests.md) | **Working with Pull Requests** | Creating, reviewing, and merging pull requests |
-| [06](docs/06-merge-conflicts.md) | **Merge Conflicts** | Understanding, preventing, and resolving merge conflicts |
-| [07](docs/07-culture-etiquette.md) | **Culture and Etiquette** | Open source language, tone, commenting, review etiquette |
-| [08](docs/08-labels-milestones-projects.md) | **Labels, Milestones and Projects** | Organizing and cross-referencing work |
-| [09](docs/09-notifications.md) | **Notifications and Mentions** | Managing your inbox, @mentions, and subscriptions |
-| [10](docs/10-vscode-basics.md) | **VS Code: Setup & Accessibility Basics** | VS Code interface, github.dev (VS Code in the browser), screen reader mode, keyboard navigation, Accessible Help/View/Diff, audio cues |
+| [05](docs/05-vscode-accessibility.md) | **VS Code Accessibility** | VS Code interface, github.dev, screen reader mode, keyboard navigation, accessibility signals, Accessible Help/View/Diff, git operations overview |
+| [06](docs/06-working-with-pull-requests.md) | **Working with Pull Requests** | Creating, reviewing, and merging pull requests |
+| [07](docs/07-merge-conflicts.md) | **Merge Conflicts** | Understanding, preventing, and resolving merge conflicts |
+| [08](docs/08-culture-etiquette.md) | **Culture and Etiquette** | Open source language, tone, commenting, review etiquette |
+| [09](docs/09-labels-milestones-projects.md) | **Labels, Milestones and Projects** | Organizing and cross-referencing work |
+| [10](docs/10-notifications.md) | **Notifications and Mentions** | Managing your inbox, @mentions, and subscriptions |
 | [11](docs/11-git-source-control.md) | **VS Code: Git & Source Control** | Cloning, Source Control panel, branching, staging, committing, Timeline view, merge conflicts, stash management |
 | [12](docs/12-github-pull-requests-extension.md) | **VS Code: GitHub Pull Requests Extension** | Viewing PRs, checking out branches, reviewing with Accessible Diff, creating PRs, commenting, merging |
 | [13](docs/13-github-copilot.md) | **VS Code: GitHub Copilot** | Inline suggestions, Copilot Chat, effective prompting for documentation work, custom instructions vs custom agents, Accessible View workflow |
@@ -259,12 +259,12 @@ The Facilitator guide includes templates, scripts, success metrics, and a final 
     ├── 02-navigating-repositories.md  ← Accessibility Agents: @daily-briefing
     ├── 03-the-learning-room.md        ← Read this early: your shared space and PR workflow
     ├── 04-working-with-issues.md      ← Accessibility Agents: @issue-tracker
-    ├── 05-working-with-pull-requests.md ← Accessibility Agents: @pr-review
-    ├── 06-merge-conflicts.md          ← Accessibility Agents: Copilot conflict prevention
-    ├── 07-culture-etiquette.md        ← Accessibility Agents: output responsibility
-    ├── 08-labels-milestones-projects.md ← Accessibility Agents: @issue-tracker + labels
-    ├── 09-notifications.md            ← Accessibility Agents: @daily-briefing + inbox
-    ├── 10-vscode-basics.md            ← VS Code setup, github.dev, screen reader mode, accessibility basics
+    ├── 05-vscode-accessibility.md     ← VS Code accessibility: screen reader mode, accessibility signals, interface tour
+    ├── 06-working-with-pull-requests.md ← Accessibility Agents: @pr-review
+    ├── 07-merge-conflicts.md          ← Accessibility Agents: Copilot conflict prevention
+    ├── 08-culture-etiquette.md        ← Accessibility Agents: output responsibility
+    ├── 09-labels-milestones-projects.md ← Accessibility Agents: @issue-tracker + labels
+    ├── 10-notifications.md            ← Accessibility Agents: @daily-briefing + inbox
     ├── 11-git-source-control.md       ← Git operations in VS Code: clone, branch, commit, merge, stash
     ├── 12-github-pull-requests-extension.md ← GitHub PR extension: view, review, create, merge PRs
     ├── 13-github-copilot.md           ← GitHub Copilot: inline suggestions, Chat, prompting, custom agents

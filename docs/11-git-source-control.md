@@ -8,7 +8,7 @@
 >
 > This guide covers all Git operations in VS Code: cloning repositories, navigating the Source Control panel with screen readers, branch management, staging changes (including individual lines), push/pull operations, viewing file history with Timeline, resolving merge conflicts, and stash management.
 >
-> **Prerequisites:** [VS Code Setup & Accessibility Basics](10-vscode-basics.md), [Working with Pull Requests](05-working-with-pull-requests.md), [Merge Conflicts](06-merge-conflicts.md)
+> **Prerequisites:** [VS Code Setup & Accessibility Basics](05-vscode-accessibility.md), [Working with Pull Requests](06-working-with-pull-requests.md), [Merge Conflicts](07-merge-conflicts.md)
 >
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+`. Common equivalents: `Ctrl+Shift+G` → `Cmd+Shift+G`, `Ctrl+Shift+P` → `Cmd+Shift+P`, `Ctrl+Enter` → `Cmd+Enter`, `Ctrl+S` → `Cmd+S`.
 
@@ -624,7 +624,7 @@ git status
 
 ### Writing Good Commit Messages
 
-See [Culture & Etiquette: Writing Good Commit Messages](07-culture-etiquette.md#writing-good-commit-messages) for format guidance.
+See [Culture & Etiquette: Writing Good Commit Messages](08-culture-etiquette.md#writing-good-commit-messages) for format guidance.
 
 #### Quick reference
 
@@ -964,7 +964,7 @@ This is incredibly useful for understanding:
 
 Merge conflicts happen when two people edit the same lines of a file. Git can't decide which version to keep, so it asks you to choose.
 
-**Prerequisite:** Read [Merge Conflicts](06-merge-conflicts.md) for the underlying concepts. This section covers the VS Code-specific workflow.
+**Prerequisite:** Read [Merge Conflicts](07-merge-conflicts.md) for the underlying concepts. This section covers the VS Code-specific workflow.
 
 ### How VS Code Displays Conflicts
 
@@ -1214,7 +1214,7 @@ gh pr list                     # List your PRs
 gh pr view 14                  # Read PR #14
 ```
 
-See [Culture & Etiquette](07-culture-etiquette.md) for more `gh` examples.
+See [Culture & Etiquette](08-culture-etiquette.md) for more `gh` examples.
 
 ### Git CLI (Terminal)
 
@@ -1272,5 +1272,5 @@ Do the complete Git workflow once, start to finish:
 
 
 *Next: [GitHub Pull Requests Extension](12-github-pull-requests-extension.md)*  
-*Back: [VS Code Setup & Accessibility Basics](10-vscode-basics.md)*  
-*Related: [Merge Conflicts](06-merge-conflicts.md) | [Culture & Etiquette](07-culture-etiquette.md)*
+*Back: [VS Code Setup & Accessibility Basics](05-vscode-accessibility.md)*  
+*Related: [Merge Conflicts](07-merge-conflicts.md) | [Culture & Etiquette](08-culture-etiquette.md)*

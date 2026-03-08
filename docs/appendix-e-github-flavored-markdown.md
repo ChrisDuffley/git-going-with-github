@@ -109,7 +109,7 @@ The following table lists every Day 1 activity where Markdown is used.
 | Reading course materials | Every chapter and appendix is a `.md` file |
 | Filing an issue (Chapter 4) | The issue body is Markdown - you format your bug report with headings, lists, and code blocks |
 | Commenting on issues | Every comment is Markdown |
-| Opening a pull request (Chapter 5) | The PR description is Markdown - you reference issues, add checklists, and explain your changes |
+| Opening a pull request (Chapter 6) | The PR description is Markdown - you reference issues, add checklists, and explain your changes |
 | Reviewing a pull request | Review comments are Markdown |
 | Reading the README | The first file you see in any repository is `README.md` |
 

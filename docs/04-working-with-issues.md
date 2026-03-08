@@ -34,7 +34,7 @@ Chapter 4 is the first **issue-based challenge chapter** with short, confidence-
 2. **Comment and @mention** - leave a comment on a classmate's issue and tag them with an @mention.
 3. **Add a sub-issue** - break a larger issue into smaller, trackable pieces.
 
-> **Branch guidance for Chapter 4:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.
+> **Branch guidance for Chapter 4:** Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 6.
 >
 > **How completion works:** When you finish all three challenges, post a comment on your assigned Chapter 4 challenge issue with links to the issues you created, commented on, and organized. The facilitator reviews your issue activity directly. No pull request is required for Chapter 4.
 
@@ -78,7 +78,7 @@ Chapter 4 is the first **issue-based challenge chapter** with short, confidence-
    - "@classmate I'd suggest adding the paragraph right after the 'Who Can Contribute' heading."
 7. Activate the **Comment** button (or press `Ctrl+Enter`).
 
-**Why @mentions matter:** When you type `@username`, GitHub sends that person a notification. This is how real open source teams communicate - you signal who needs to see your message. It also bridges into Chapter 9 (Notifications) where you will configure how you receive these alerts.
+**Why @mentions matter:** When you type `@username`, GitHub sends that person a notification. This is how real open source teams communicate - you signal who needs to see your message. It also bridges into Chapter 10 (Notifications) where you will configure how you receive these alerts.
 
 **You are done when:** Your comment appears in the thread and includes an @mention (the username renders as a clickable link).
 
@@ -137,7 +137,7 @@ Issues are collaborative spaces, not just task lists. An @mention tells someone 
 2. Practice communication in public issue threads (@mention a peer).
 3. Organize work into smaller pieces (sub-issues).
 4. Leave clear evidence in the issue timeline.
-5. Build momentum for file editing and PR work in Chapter 5.
+5. Build momentum for file editing and PR work in Chapter 6.
 
 
 ## Local Git Alternative: Working from Your Clone
@@ -993,6 +993,6 @@ Go to the Learning Room repository and file a real issue:
 > *Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.*
 
 
-*Next: [Working with Pull Requests](05-working-with-pull-requests.md)*
+*Next: [VS Code Accessibility](05-vscode-accessibility.md)*
 *Back: [The Learning Room](03-the-learning-room.md)*
-*Related: [Issue Templates Guide](15-issue-templates.md) | [Labels & Milestones](08-labels-milestones-projects.md) | [Culture & Etiquette](07-culture-etiquette.md)*
+*Related: [Issue Templates Guide](15-issue-templates.md) | [Labels & Milestones](09-labels-milestones-projects.md) | [Culture & Etiquette](08-culture-etiquette.md)*

@@ -7,20 +7,20 @@
 > GitHub notifications are how GitHub tells you when something needs your attention. This guide teaches you to keep the inbox useful - not overwhelming - using only your keyboard and screen reader.
 
 
-## Workshop Recommendation (Chapter 9)
+## Workshop Recommendation (Chapter 10)
 
-For this workshop, Chapter 9 is a **guided practice chapter**, not a graded automation chapter.
+For this workshop, Chapter 10 is a **guided practice chapter**, not a graded automation chapter.
 
 - **Challenge count:** 1 guided walkthrough
 - **Automation check:** none - notification settings are account-level and cannot be validated by the Learning Room PR bot
 - **Evidence:** structured completion comment on your assigned challenge issue
 - **Pattern:** configure, filter, act
 
-### Chapter 9 Challenge Set
+### Chapter 10 Challenge Set
 
 1. **Configure notifications and practice inbox management** - set your watch level, use filters to find relevant notifications, and perform one inbox action.
 
-### Challenge 9.1 Step-by-Step: Notification Inbox Walkthrough
+### Challenge 10.1 Step-by-Step: Notification Inbox Walkthrough
 
 **Goal:** Set up a useful notification workflow so you can keep up with reviews, mentions, and assignments without inbox overload.
 
@@ -43,18 +43,18 @@ For this workshop, Chapter 9 is a **guided practice chapter**, not a graded auto
 
 **You are done when:** You have changed your watch level, used two different filters, and performed one inbox action (mute or done).
 
-### Completing Chapter 9: Submit Your Evidence
+### Completing Chapter 10: Submit Your Evidence
 
-Open your **assigned Chapter 9 challenge issue** and post a completion comment:
+Open your **assigned Chapter 10 challenge issue** and post a completion comment:
 
 ```text
-Chapter 9 completed:
+Chapter 10 completed:
 - Watch level set to: Participating and @mentions
 - Filters tested: Review requested, Assigned
 - Inbox action performed: [mute / mark done] on [thread description]
 ```
 
-Close your Chapter 9 challenge issue when done.
+Close your Chapter 10 challenge issue when done.
 
 ### Expected Outcomes
 
@@ -461,5 +461,5 @@ Go to [github.com/notifications](https://github.com/notifications) and practice:
 
 
 *Next: [Day 2 Agenda](../DAY2_AGENDA.md)*
-*Back: [Labels, Milestones, and Projects](08-labels-milestones-projects.md)*
-*Related: [Culture & Etiquette](07-culture-etiquette.md) | [Working with Issues](04-working-with-issues.md)*
+*Back: [Labels, Milestones, and Projects](09-labels-milestones-projects.md)*
+*Related: [Culture & Etiquette](08-culture-etiquette.md) | [Working with Issues](04-working-with-issues.md)*

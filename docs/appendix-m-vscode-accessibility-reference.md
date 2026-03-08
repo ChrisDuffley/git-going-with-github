@@ -6,7 +6,7 @@
 
 > **Purpose:** This appendix provides comprehensive technical documentation for all VS Code accessibility features, settings, and keyboard shortcuts. The main chapters cover essentials; this appendix is your complete reference manual.
 >
-> **Referenced by:** [VS Code Setup & Accessibility Basics](10-vscode-basics.md), [GitHub Copilot](13-github-copilot.md)
+> **Referenced by:** [VS Code Setup & Accessibility Basics](05-vscode-accessibility.md), [GitHub Copilot](13-github-copilot.md)
 
 
 ## Table of Contents
@@ -765,5 +765,5 @@ This prevents overlapping announcements.
 ```
 
 
-*Back to: [VS Code Setup & Accessibility Basics](10-vscode-basics.md) | [GitHub Copilot](13-github-copilot.md) | [Accessibility Agents](16-accessibility-agents.md)*  
+*Back to: [VS Code Setup & Accessibility Basics](05-vscode-accessibility.md) | [GitHub Copilot](13-github-copilot.md) | [Accessibility Agents](16-accessibility-agents.md)*  
 *Related: [Appendix B: Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md)*

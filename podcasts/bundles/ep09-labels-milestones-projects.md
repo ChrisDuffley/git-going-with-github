@@ -525,8 +525,8 @@ Go to the Learning Room repository and do two things:
 > *Labeling today is not overhead. It is configuring the input layer that every agent downstream depends on.*
 
 
-*Next: [Notifications](09-notifications.md)*
-*Back: [Culture and Etiquette](07-culture-etiquette.md)*
+*Next: [Notifications](10-notifications.md)*
+*Back: [Culture and Etiquette](08-culture-etiquette.md)*
 *Related: [Working with Issues](04-working-with-issues.md) | [Day 1 Agenda](../DAY1_AGENDA.md)*
 
 
@@ -538,7 +538,7 @@ Go to the Learning Room repository and do two things:
 
 ## Boards, Tables, Roadmaps, Automations, and Accessible Navigation
 
-> GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
+> GitHub Projects is GitHub's built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in [Chapter 9: Labels, Milestones, and Projects](09-labels-milestones-projects.md).
 
 
 ## Table of Contents
@@ -1018,6 +1018,6 @@ After the overview: "Want to see a specific column or check a team member's work
 4. Set up Auto-add: any issue with the `accessibility` label in those repos goes to this project automatically
 
 
-> **From Chapter 08:** For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see [Chapter 08: Labels, Milestones, and Projects](08-labels-milestones-projects.md).
+> **From Chapter 9:** For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see [Chapter 9: Labels, Milestones, and Projects](09-labels-milestones-projects.md).
 
 *Return to: [Resources](appendix-u-resources.md) | [Glossary](appendix-a-glossary.md)*

@@ -156,9 +156,9 @@ Collaborative exercises designed for study groups to work on together. These cha
 **Objective:** Conduct comprehensive accessibility audit of entire workshop repository.
 
 **Division of Labor:**
-- **Person A:** Chapters 1-5
-- **Person B:** Chapters 6-10
-- **Person C:** Chapters 11-15 & Appendices
+- **Person A:** Chapters 1-6
+- **Person B:** Chapters 7-10
+- **Person C:** Chapters 11-16 & Appendices
 - **Person D:** Learning-room and meta docs
 - **Everyone:** Cross-check each other's findings
 

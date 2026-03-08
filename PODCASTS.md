@@ -1193,7 +1193,7 @@ Based on: [Chapter 4: Working with Issues](docs/04-working-with-issues.md)
 
 Creating, reviewing, commenting on, and merging pull requests.
 
-Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requests.md)
+Based on: [Chapter 6: Working with Pull Requests](docs/06-working-with-pull-requests.md)
 
 <audio controls preload="none">
   <source src="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep06-working-with-pull-requests.mp3" type="audio/mpeg">
@@ -1415,7 +1415,7 @@ Based on: [Chapter 5: Working with Pull Requests](docs/05-working-with-pull-requ
 
 Why conflicts happen, how to read conflict markers, and resolving them confidently.
 
-Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
+Based on: [Chapter 7: Merge Conflicts Are Not Scary](docs/07-merge-conflicts.md)
 
 <audio controls preload="none">
   <source src="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep07-merge-conflicts.mp3" type="audio/mpeg">
@@ -1601,7 +1601,7 @@ Based on: [Chapter 6: Merge Conflicts Are Not Scary](docs/06-merge-conflicts.md)
 
 Communication norms, code review etiquette, inclusive language, and asking questions.
 
-Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquette.md)
+Based on: [Chapter 8: Open Source Culture and Etiquette](docs/08-culture-etiquette.md)
 
 <audio controls preload="none">
   <source src="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep08-culture-and-etiquette.mp3" type="audio/mpeg">
@@ -1755,7 +1755,7 @@ Based on: [Chapter 7: Open Source Culture and Etiquette](docs/07-culture-etiquet
 
 Organizing and tracking work with labels, milestones, and GitHub Projects.
 
-Based on: [Chapter 8: Labels, Milestones, and Projects](docs/08-labels-milestones-projects.md)
+Based on: [Chapter 9: Labels, Milestones, and Projects](docs/09-labels-milestones-projects.md)
 
 <audio controls preload="none">
   <source src="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep09-labels-milestones-projects.mp3" type="audio/mpeg">
@@ -1928,7 +1928,7 @@ Based on: [Chapter 8: Labels, Milestones, and Projects](docs/08-labels-milestone
 
 Managing your notification inbox, @mentions, and strategies for avoiding overload.
 
-Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
+Based on: [Chapter 10: Notifications and Mentions](docs/10-notifications.md)
 
 <audio controls preload="none">
   <source src="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep10-notifications.mp3" type="audio/mpeg">
@@ -2138,7 +2138,7 @@ Based on: [Chapter 9: Notifications and Mentions](docs/09-notifications.md)
 
 Screen reader mode, Command Palette, sidebar navigation, and accessibility settings.
 
-Based on: [Chapter 10: VS Code Setup and Accessibility](docs/10-vscode-basics.md)
+Based on: [Chapter 5: VS Code Setup and Accessibility](docs/05-vscode-accessibility.md)
 
 <audio controls preload="none">
   <source src="https://github.com/Community-Access/git-going-with-github/releases/download/podcasts/ep11-vscode-basics.mp3" type="audio/mpeg">

@@ -76,9 +76,9 @@ Listeners may have heard these earlier episodes. Briefly remind them of:
 
 - [ ] Chapter 4: [Working with Issues](04-working-with-issues.md) - Know how to create, read, and navigate issues
 - [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) - VS Code installed with YAML syntax highlighting enabled
-- [ ] Chapter 9: [Notifications](09-notifications.md) - Basic understanding of workflow triggers
+- [ ] Chapter 10: [Notifications](10-notifications.md) - Basic understanding of workflow triggers
 - [ ] A GitHub repository where you have write access (your fork or personal repo)
-- [ ] Terminal/Command line basic comfort (Chapter 5 mentions git workflows)
+- [ ] Terminal/Command line basic comfort (Chapter 6 mentions git workflows)
 
 **Day 2 Amplifier:** In [Chapter 16 (Accessibility Agents)](16-accessibility-agents.md), you'll use `@template-builder` to automate template creation. Complete this chapter first, then come back to Chapter 16.
 
@@ -2058,4 +2058,4 @@ The Template Builder does not teach you to design templates - Section 5 taught y
 
 *Next: [Accessibility Agents](16-accessibility-agents.md)*
 *Back: [Accessible Code Review](14-accessible-code-review.md)*
-*Related: [Working with Issues](04-working-with-issues.md) | [Culture & Etiquette](07-culture-etiquette.md) | [Accessibility Agents](16-accessibility-agents.md)*
+*Related: [Working with Issues](04-working-with-issues.md) | [Culture & Etiquette](08-culture-etiquette.md) | [Accessibility Agents](16-accessibility-agents.md)*

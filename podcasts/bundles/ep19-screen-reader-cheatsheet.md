@@ -691,7 +691,7 @@ This cheat sheet covers GitHub web navigation and screen reader commands. Additi
 |-------|----------|
 | VS Code keyboard navigation and accessibility | [Appendix M - VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md) |
 | GitHub Copilot Chat and inline suggestions | [Appendix W - GitHub Copilot Reference](appendix-w-github-copilot-reference.md) |
-| VS Code setup and configuration shortcuts | [Chapter 10 - VS Code Basics](10-vscode-basics.md) |
+| VS Code setup and configuration shortcuts | [Chapter 5 - VS Code Basics](05-vscode-accessibility.md) |
 | GitHub Copilot activation and model switching | [Chapter 13 - GitHub Copilot](13-github-copilot.md) |
 
 

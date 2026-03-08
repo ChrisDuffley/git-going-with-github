@@ -18,7 +18,7 @@
 
 **Recommended (but not blocking):**
 - [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) - Optional but helpful for generating template variations
-- [ ] Chapter 9: [Notifications](09-notifications.md) - Basic understanding of workflow triggers
+- [ ] Chapter 10: [Notifications](10-notifications.md) - Basic understanding of workflow triggers
 - [ ] Terminal/Command line basic comfort (useful but you can GitHub web editor if needed)
 
 **What you already have:**
@@ -2294,4 +2294,4 @@ The Template Builder does not teach you to design templates - Section 5 taught y
 
 *Next: [Accessibility Agents](16-accessibility-agents.md)*
 *Back: [Accessible Code Review](14-accessible-code-review.md)*
-*Related: [Working with Issues](04-working-with-issues.md) | [Culture & Etiquette](07-culture-etiquette.md) | [Accessibility Agents](16-accessibility-agents.md)*
+*Related: [Working with Issues](04-working-with-issues.md) | [Culture & Etiquette](08-culture-etiquette.md) | [Accessibility Agents](16-accessibility-agents.md)*

@@ -918,7 +918,7 @@ Merge box → Tab → "Disable auto-merge" button → Enter
 ```
 1. You will see a "This branch has conflicts that must be resolved" message near the bottom
 2. Tab to "Resolve conflicts" button → GitHub opens a web conflict editor
-3. The editor shows conflict markers - see Merge Conflicts guide (06-merge-conflicts.md)
+3. The editor shows conflict markers - see Merge Conflicts guide (07-merge-conflicts.md)
 4. Edit the file to resolve → Mark as resolved → Commit merge
 ```
 
@@ -964,9 +964,9 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 > *The agent documents the diff. You bring the context that no diff can contain.*
 
 
-*Next: [Merge Conflicts](06-merge-conflicts.md)*
+*Next: [Merge Conflicts](07-merge-conflicts.md)*
 *Back: [Working with Issues](04-working-with-issues.md)*
-*Related: [Accessible Code Review](14-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture & Etiquette](07-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*
+*Related: [Accessible Code Review](14-accessible-code-review.md) | [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Culture & Etiquette](08-culture-etiquette.md) | [GitHub Actions](appendix-q-github-actions-workflows.md)*
 
 
 
@@ -977,7 +977,7 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 
 ## Conducting Pull Request Reviews with a Screen Reader
 
-> This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](05-working-with-pull-requests.md).
+> This guide is focused entirely on the **reviewer experience** - navigating diffs, reading changes, leaving comments, and submitting a review - using only your keyboard and screen reader. For the full pull request lifecycle (opening PRs, merge options, conflict resolution), see [Working with Pull Requests](06-working-with-pull-requests.md).
 >
 > **Learning Room connection:** The exercises in this chapter use files from the Learning Room repository. You will review PRs that modify `docs/keyboard-shortcuts.md` (shortcut tables with intentional errors), `docs/setup-guide.md` (broken links and incomplete steps), and `docs/welcome.md` (`[TODO]` sections to complete). These are the same files you work on during the Day 1 contribution sprint.
 
@@ -986,7 +986,7 @@ Go to the Learning Room repository's Pull Requests tab and find any open or rece
 
 **Before starting this chapter, verify you have completed:**
 
-- [ ] Chapter 5: [Working with Pull Requests](05-working-with-pull-requests.md) - Understand PR structure, diffs, and comment workflows
+- [ ] Chapter 6: [Working with Pull Requests](06-working-with-pull-requests.md) - Understand PR structure, diffs, and comment workflows
 - [ ] Chapter 13: [GitHub Copilot](13-github-copilot.md) - VS Code installed and configured
 - [ ] Screen Reader Setup - NVDA, JAWS, or VoiceOver installed and ready to use
 - [ ] Access to at least one pull request to review (your own fork or a practice repo)
@@ -2218,4 +2218,4 @@ That's the power of "manual skill first, agent second." You're building that ski
 
 *Next: [Issue Templates](15-issue-templates.md)*
 *Back: [GitHub Copilot](13-github-copilot.md)*
-*Related: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Merge Conflicts](06-merge-conflicts.md) | [Git & Source Control in VS Code](11-git-source-control.md)*
+*Related: [Screen Reader Cheat Sheet](appendix-b-screen-reader-cheatsheet.md) | [Merge Conflicts](07-merge-conflicts.md) | [Git & Source Control in VS Code](11-git-source-control.md)*
