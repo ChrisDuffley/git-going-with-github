@@ -59,9 +59,10 @@ jobs:
           mkdir -p epub/brf
           # Create a minimal TTS config (required by DAISY Pipeline even for braille scripts)
           echo '<?xml version="1.0" encoding="UTF-8"?><config></config>' > /tmp/tts-config.xml
+          # Use file:// URI as DAISY Pipeline requires it for local files
           pipeline2/daisy-pipeline/cli/dp2 epub3-to-pef \
-            --source "$(pwd)/epub/git-going-with-github.epub" \
-            --data /tmp/tts-config.xml \
+            --source "file://$(pwd)/epub/git-going-with-github.epub" \
+            --data "file:///tmp/tts-config.xml" \
             --output "$(pwd)/epub/brf/" || echo "BRF conversion failed - check dp2 logs above"
           ls epub/brf/ || echo "No BRF output produced"
 
