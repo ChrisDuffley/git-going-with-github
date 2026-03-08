@@ -1,0 +1,67 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Version tag (e.g. v1.0, v2025.03)'
+        required: true
+      release_name:
+        description: 'Release title (e.g. "March 2026 Workshop Materials")'
+        required: true
+      prerelease:
+        description: 'Mark as pre-release?'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y pandoc
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build EPUB and Word
+        run: node scripts/build-epub.js
+
+      - name: Install liblouis (braille translator)
+        run: sudo apt-get install -y liblouis-bin python3-louis
+
+      - name: Build BRF
+        run: |
+          pandoc epub/git-going-with-github.epub -f epub -t plain -o /tmp/book.txt
+          python3 scripts/build-brf.py /tmp/book.txt epub/git-going-with-github.brf
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag }}
+          name: ${{ github.event.inputs.release_name }}
+          prerelease: ${{ github.event.inputs.prerelease }}
+          body: |
+            ## Workshop Materials
+
+            Download the format that works best for you:
+
+            | Format | Best for |
+            |--------|----------|
+            | **EPUB** | E-readers, Apple Books, Voice Dream, DAISY players |
+            | **Word (.docx)** | Windows screen readers (JAWS, NVDA), Microsoft Word |
+            | **BRF** | Braille displays and embossers (UEB Grade 2) |
+          files: |
+            epub/git-going-with-github.epub
+            epub/git-going-with-github.docx
+            epub/git-going-with-github.brf
