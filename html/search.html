@@ -19,7 +19,7 @@
     .search-results-list { list-style: none; padding: 0; margin: 0; }
     .search-result-item { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--borderColor-default, #d0d7de); }
     .search-result-item:last-child { border-bottom: none; }
-    .search-result-title { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.25rem; }
+    .search-result-title { font-size: 1.2rem; font-weight: 600; margin: 0 0 0.25rem 0; padding: 0; border: none; }
     .search-result-title a { color: #0969da; text-decoration: none; }
     .search-result-title a:hover { text-decoration: underline; }
     .search-result-url { font-size: 0.8rem; color: #57606a; margin-bottom: 0.4rem; }
@@ -116,7 +116,7 @@
             return;
           }
 
-          statusEl.textContent = results.length + ' result' + (results.length === 1 ? '' : 's') + ' for "' + query + '"';
+          statusEl.textContent = results.length + ' result' + (results.length === 1 ? '' : 's') + ' found for "' + query + '"';
 
           var pageMap = {};
           pages.forEach(function (p) { pageMap[p.id] = p; });
@@ -149,7 +149,7 @@
             var li = document.createElement('li');
             li.className = 'search-result-item';
             li.innerHTML =
-              '<div class="search-result-title"><a href="./' + page.url + '">' + page.title + '</a></div>' +
+              '<h2 class="search-result-title"><a href="./' + page.url + '">' + page.title + '</a></h2>' +
               '<div class="search-result-url">' + page.url + '</div>' +
               '<div class="search-result-snippet">' + snippet + '</div>';
             resultsEl.appendChild(li);
