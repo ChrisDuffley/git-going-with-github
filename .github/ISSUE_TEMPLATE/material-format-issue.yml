@@ -1,0 +1,68 @@
+name: Material Format Issue
+description: Report a problem with the EPUB, Word, or Braille (BRF) workshop materials
+labels: ["materials", "needs triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to report an issue with one of the downloadable workshop material formats. This could be a problem opening the file, content that does not display correctly, or compatibility issues with your assistive technology.
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Which format are you having trouble with?
+      options:
+        - EPUB (git-going-with-github.epub)
+        - Word (.docx) (git-going-with-github.docx)
+        - Braille BRF (git-going-with-github.brf)
+        - More than one format
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What is the issue?
+      description: Describe what is wrong with the file or how it is not working as expected.
+      placeholder: "For example: the file will not open, a chapter is missing, formatting is broken, my screen reader skips a section..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: "Describe what you expected..."
+    validations:
+      required: true
+
+  - type: input
+    id: release
+    attributes:
+      label: Which release version?
+      description: Check the release page if you are not sure.
+      placeholder: "e.g. v1.0.0"
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Your setup
+      description: Tell us about the device, app, or assistive technology you are using so we can reproduce the problem.
+      placeholder: |
+        - Operating System: Windows / macOS / iOS / Android / Linux
+        - Reading app or software: Apple Books / Voice Dream / Microsoft Word / Google Docs / other
+        - Screen reader or Braille device: JAWS / NVDA / VoiceOver / BrailleNote / other
+        - Any other relevant details
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Screenshots, screen recordings, or any other context that might help.
+    validations:
+      required: false
