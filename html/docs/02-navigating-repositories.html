@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Navigating Repositories - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="../styles/github-markdown.css">
-  <link rel="stylesheet" href="../styles/highlight.css">
-  <link rel="stylesheet" href="../styles/custom.css">
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Navigating Repositories</span>
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Navigating Repositories</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="../search.html" method="get">
+        <form role="search" class="search-form" action="./search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -66,6 +66,9 @@
 <blockquote>
 <p>This guide covers everything you need to explore a GitHub repository using your keyboard and screen reader. No mouse required.</p>
 </blockquote>
+<blockquote>
+<p><strong>Official GitHub Accessibility Guide:</strong> GitHub publishes an NVDA-focused guide for navigating repositories with a screen reader at <a href="https://accessibility.github.com/documentation/guide/repos/">Using GitHub Repositories with a Screen Reader</a>. This chapter covers the same material with additional perspectives (VoiceOver, low vision, CLI) and workshop-specific guidance. Use the official guide as a companion reference.</p>
+</blockquote>
 <h2>Workshop Recommendation (Chapter 2)</h2>
 <p>Chapter 2 is a <strong>confidence-building orientation chapter</strong>.</p>
 <ul>
@@ -81,9 +84,40 @@
 <li>Confirm readiness with a peer or facilitator.</li>
 <li>Move to Chapter 4 for issue-based, traceable challenges.</li>
 </ol>
+<h3>About Learning Cards in This Chapter</h3>
+<p>This chapter provides learning cards: expandable blocks that offer perspective-specific guidance for different ways of working. Not every card appears at every step. Open the ones that match how you work.</p>
+<p>The following table describes the four learning card types used in this chapter.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Card</th>
+<th scope="col">Who it helps</th>
+<th scope="col">What it covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Visual / mouse</td>
+<td>Sighted users navigating with a mouse or trackpad</td>
+<td>Click targets, visual cues, layout orientation</td>
+</tr>
+<tr>
+<td>Low vision</td>
+<td>Users with magnification, zoom, or high-contrast themes</td>
+<td>Zoom-friendly navigation, locating controls at high magnification</td>
+</tr>
+<tr>
+<td>Screen reader (NVDA / JAWS)</td>
+<td>Screen reader users on Windows</td>
+<td>Keystroke sequences, Focus and Browse mode, landmark navigation</td>
+</tr>
+<tr>
+<td>Screen reader (VoiceOver)</td>
+<td>Screen reader users on macOS</td>
+<td>VO key sequences, rotor usage, interaction model</td>
+</tr>
+</tbody></table>
 <h2>What Is a Repository Page?</h2>
 <p>When you navigate to a GitHub repository (e.g., <code>https://github.com/owner/repo-name</code>), you land on the <strong>repository home page</strong> (also called the Code tab). This page has several distinct regions:</p>
-<p><img src="images/repo-page-layout-02.svg" alt=""></p>
 <h3>Description</h3>
 <p>The repository home page is organized from top to bottom as follows. The Navigation bar (GitHub global nav) contains the avatar menu, Notifications, and search. Below that is the Repository header showing &quot;owner / repo-name&quot; as the H1 heading, plus Star, Watch, and Fork buttons. Next are the Repository navigation tabs (a landmark) with Code (active), Issues, Pull requests, Actions, and more. The main content area is split into two columns: on the left is the File tree / code panel with the branch selector, Files table (navigable as a table), and last commit message; on the right is the Sidebar with the About section, topics, and releases. Below both columns is the rendered README.md in a separate landmark region.</p>
 <h2>Landing on a Repository - What to Expect</h2>
@@ -97,6 +131,9 @@
 <pre><code class="hljs language-text">Step 1: Press 1 - hear the repo name
 Step 2: Press D - navigate through landmarks to learn page structure
 Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what&#x27;s on the page</code></pre>
+<blockquote>
+<p><strong>Key landmark names you will hear with <code>D</code>:</strong> Repository pages have three main landmark sections: <strong>&quot;Repository Navigation&quot;</strong> (the tab bar), <strong>&quot;Main&quot;</strong> (the file tree, branch selector, repo details, and contributors), and <strong>&quot;Repository Files Navigation&quot;</strong> (the rendered README content). Within each landmark, press <code>H</code> or <code>2</code> to navigate subsections - most are organized under heading level 2.</p>
+</blockquote>
 <h2>Navigating the Repository Tabs</h2>
 <p>The main tabs are: <strong>Code</strong>, <strong>Issues</strong>, <strong>Pull Requests</strong>, <strong>Discussions</strong>, <strong>Actions</strong>, <strong>Projects</strong>, <strong>Wiki</strong>, <strong>Security</strong>, <strong>Insights</strong>, and <strong>Settings</strong> (Settings only visible to maintainers). Not all tabs appear on every repository - Discussions, Wiki, and Projects must be enabled by the repository owner.</p>
 <h3>How to reach the tabs</h3>
@@ -104,6 +141,19 @@ Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what&#x27;s on the
 <summary>Visual / mouse users</summary>
 
 <p>The tab bar is visible just below the repository name. Click the tab you want - <strong>Code</strong>, <strong>Issues</strong>, <strong>Pull requests</strong>, etc. The active tab is underlined. The number next to a tab (e.g., &quot;Issues · 14&quot;) shows how many open items are in that section.</p>
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+<p>The tab bar is just below the repository name. At 200% browser zoom or higher:</p>
+<ul>
+<li>The tabs may wrap to two lines. Each tab remains a standard link.</li>
+<li>The active tab is indicated by an underline. In Windows High Contrast mode, the underline uses the system accent color.</li>
+<li>Tab counts (&quot;Issues · 14&quot;) appear as part of each tab&#39;s text and remain readable at high magnification.</li>
+<li>If tabs are hard to click at high zoom, press <code>Tab</code> from the repo heading to cycle through each tab link sequentially.</li>
+<li><strong>Keyboard shortcut:</strong> Press <code>G</code> then <code>I</code> to jump directly to Issues, or <code>G</code> then <code>P</code> for Pull requests. These two-key shortcuts work from any page in the repository.</li>
+</ul>
 </details>
 
 <details>
@@ -135,8 +185,19 @@ Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what&#x27;s on the
 <p>The file table is the main panel of the Code tab, showing folders and files with their most recent commit message and how long ago each was changed. It’s visible immediately below the branch selector. Click any folder name to open it, or click a file name to view the file.</p>
 </details>
 
-<details>
-<summary>Screen reader users</summary>
+<details><summary>Low vision users (zoom, high contrast)</summary>
+
+<p>The file table occupies the main content area of the Code tab. At high magnification:</p>
+<ul>
+<li>The table has three columns: Name, Message (last commit), and Date. At 200%+ zoom, the Message and Date columns may be truncated. Hover over truncated text to see the full message in a tooltip.</li>
+<li>Folder icons appear before folder names; file icons appear before file names. In Windows High Contrast mode, these icons use system colors with visible outlines.</li>
+<li>Click any folder or file name to navigate into it. The names are standard links with hover underlines.</li>
+<li>Use <code>Ctrl+F</code> (browser Find) to search for a specific file name rather than scrolling a long file list at high zoom.</li>
+<li>The <strong>Go to file</strong> button (<code>T</code> keyboard shortcut) opens a search-as-you-type file finder. This is the fastest way to navigate to a specific file at any zoom level.</li>
+</ul>
+</details>
+
+<details><summary>Screen reader users</summary>
 
 <p>Press <code>T</code> to jump to the next table on the page. The first table you will hit is usually the files table. NVDA will announce: “Table with [N] rows and 3 columns.”</p>
 </details>
@@ -197,6 +258,19 @@ Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what&#x27;s on the
 <summary>Visual / mouse users</summary>
 
 <p>Mouse users see the current branch name as a button with a dropdown arrow (e.g., <code>main ▼</code>) just above the file table. Click it to open the branch list. Type to filter branches, then click a branch name to switch.</p>
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+<p>The branch selector button shows the current branch name (e.g., &quot;main&quot;) with a dropdown arrow. It sits just above the file table.</p>
+<ul>
+<li>At high magnification, the button may wrap next to other controls. It is a standard button with visible border and text.</li>
+<li>Click it to open a dropdown with a search field and branch list. Type part of a branch name to filter the list.</li>
+<li>In the dropdown, branch names can be long. At high zoom, they may truncate. Hover for the full name.</li>
+<li>In Windows High Contrast mode, the currently active branch is highlighted with the system selection color.</li>
+<li><strong>Alternative:</strong> Press <code>W</code> to open the branch/tag picker directly from the keyboard. This avoids needing to find and click the button.</li>
+</ul>
 </details>
 
 <details>
@@ -285,6 +359,56 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 </details>
 
 
+<h2>Fork vs. Clone vs. Branch - What Is the Difference?</h2>
+<p>These three concepts are related but serve different purposes. Students often confuse them, so here is a side-by-side comparison.</p>
+<p>The following table compares forks, clones, and branches across six dimensions.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Dimension</th>
+<th scope="col">Fork</th>
+<th scope="col">Clone</th>
+<th scope="col">Branch</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>What it creates</strong></td>
+<td>A new repository on GitHub under your account</td>
+<td>A local copy of a repository on your computer</td>
+<td>A named pointer to a line of commits within the same repository</td>
+</tr>
+<tr>
+<td><strong>Where it lives</strong></td>
+<td>On GitHub (your account)</td>
+<td>On your local machine</td>
+<td>Inside any repository (local or remote)</td>
+</tr>
+<tr>
+<td><strong>Relationship to original</strong></td>
+<td>Linked (GitHub tracks the &quot;parent&quot; repo)</td>
+<td>Independent copy (but has <code>origin</code> remote pointing to GitHub)</td>
+<td>Part of the same repository</td>
+</tr>
+<tr>
+<td><strong>When to use it</strong></td>
+<td>Contributing to a repo where you do not have write access (most open source)</td>
+<td>Working locally with Git and VS Code</td>
+<td>Creating an isolated workspace for a feature, fix, or experiment</td>
+</tr>
+<tr>
+<td><strong>How to contribute back</strong></td>
+<td>Open a pull request from your fork to the original (upstream) repo</td>
+<td>Push your branch to the remote, then open a PR</td>
+<td>Open a pull request from your branch to <code>main</code></td>
+</tr>
+<tr>
+<td><strong>Workshop usage</strong></td>
+<td>Not required for the Learning Room (you have direct write access)</td>
+<td>Optional in Block 0 (for local Git work in Ch11+)</td>
+<td>Required from Chapter 6 onward (feature branches for every PR)</td>
+</tr>
+</tbody></table>
+<p><strong>In this workshop,</strong> you will primarily use <strong>branches</strong> (Chapter 6 onward) and optionally <strong>clone</strong> the Learning Room for local work (Chapter 11). Forking is the standard workflow when contributing to repositories where you are not a collaborator, which is covered in <a href="appendix-t-contributing-to-open-source.html">Contributing to Open Source</a>.</p>
 <h2>Watching, Starring, and Forking</h2>
 <p>These three actions let you follow, bookmark, or copy a repository.</p>
 <h3>Watching (subscribe to notifications)</h3>
@@ -301,8 +425,9 @@ gh repo <span class="hljs-built_in">clone</span> community-access/learning-room 
 <li>Press <code>L</code> to navigate through list items to reach the <strong>Main</strong> landmark</li>
 <li>Continue pressing <code>L</code> until you find the <strong>Watch</strong> button (reads as “Watch this repository”)</li>
 <li>Press <code>Enter</code> to open the subscription submenu</li>
-<li>Press <code>↑/↓</code> to browse options: Participating, All Activity, Ignore</li>
+<li>Press <code>↑/↓</code> to browse options: Participating, All Activity, Ignore, Custom</li>
 <li>Press <code>Enter</code> to confirm</li>
+<li>If you choose <strong>Custom</strong>, a dialog opens with checkboxes for specific activity types (Issues, Pull requests, Releases, Discussions, Security alerts). Check the boxes you want and activate the <strong>Apply</strong> button.</li>
 </ol>
 </details>
 

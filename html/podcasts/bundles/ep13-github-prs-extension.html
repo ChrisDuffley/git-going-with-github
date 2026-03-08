@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="../../styles/github-markdown.css">
-  <link rel="stylesheet" href="../../styles/highlight.css">
-  <link rel="stylesheet" href="../../styles/custom.css">
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="../../search.html" method="get">
+        <form role="search" class="search-form" action="./search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -120,7 +120,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 Reference it naturally when a concept would benefit from additional context,
 but keep the main narrative focused on the primary chapter.</p>
 <ul>
-<li>Working with Pull Requests (web) - Ch 05</li>
+<li>Working with Pull Requests (web) - Ch 7</li>
 </ul>
 <h3>Primary Source Material</h3>
 <h1>GitHub Pull Requests Extension</h1>
@@ -131,7 +131,7 @@ but keep the main narrative focused on the primary chapter.</p>
 <blockquote>
 <p><strong>Day 2, Block 2 Material</strong></p>
 <p>This guide covers the GitHub Pull Requests and Issues extension: viewing open PRs, checking out PR branches for local testing, reviewing PRs with screen reader-accessible tools, creating PRs directly from VS Code, using PR templates, and syncing PR status with GitHub.</p>
-<p><strong>Prerequisites:</strong> <a href="05-working-with-pull-requests.html">Working with Pull Requests</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
+<p><strong>Prerequisites:</strong> <a href="06-working-with-pull-requests.html">Working with Pull Requests</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
 </blockquote>
 <blockquote>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code> on Mac. For example: <code>Ctrl+Shift+P</code> → <code>Cmd+Shift+P</code>, <code>Ctrl+Shift+G</code> → <code>Cmd+Shift+G</code>, <code>Alt+F2</code> → <code>Option+F2</code>. Context menus (<code>Shift+F10</code> on Windows) use <code>Ctrl+Return</code> on Mac.</p>
@@ -227,7 +227,7 @@ but keep the main narrative focused on the primary chapter.</p>
 <li>Click any PR title to view its conversation, commits, and changed files</li>
 <li>Use the <strong>Files changed</strong> tab to review diffs</li>
 </ol>
-<p>See <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> for the full web-based PR workflow.</p>
+<p>See <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> for the full web-based PR workflow.</p>
 </details>
 
 <details>
@@ -504,7 +504,7 @@ The tree organizes PRs by repository. Expand a repo to see its PRs.</p>
 <li>Fill in the title and description</li>
 <li>Click <strong>Create pull request</strong></li>
 </ol>
-<p>See <a href="05-working-with-pull-requests.html#opening-a-pull-request">Working with Pull Requests - Opening a PR</a> for detailed screen reader steps.</p>
+<p>See <a href="06-working-with-pull-requests.html#opening-a-pull-request">Working with Pull Requests - Opening a PR</a> for detailed screen reader steps.</p>
 </details>
 
 <details>
@@ -856,8 +856,8 @@ gh <span class="hljs-built_in">pr</span> merge 42 --auto --squash</code></pre>
 <blockquote>
 <p><strong>What success feels like:</strong> You read a diff, heard the changes announced by your screen reader, and left feedback - all without opening a browser. This is how many developers review code every day.</p>
 </blockquote>
-<p><em>Next: <a href="13-github-copilot.html">GitHub Copilot</a></em><br><em>Back: <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></em><br><em>Related: <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> | <a href="15-issue-templates.html">Issue Templates</a></em></p>
-<h3>Supplementary: Working with Pull Requests (web) - Ch 05</h3>
+<p><em>Next: <a href="13-github-copilot.html">GitHub Copilot</a></em><br><em>Back: <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></em><br><em>Related: <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> | <a href="15-issue-templates.html">Issue Templates</a></em></p>
+<h3>Supplementary: Working with Pull Requests (web) - Ch 7</h3>
 <h1>Working with Pull Requests</h1>
 <blockquote>
 <p><strong>Listen to Episode 6:</strong> <a href="../PODCASTS.html">Working with Pull Requests</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
@@ -1672,7 +1672,7 @@ gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</spa
 <h3>Scenario C: &quot;My PR has a merge conflict&quot;</h3>
 <pre><code class="hljs"><span class="hljs-number">1.</span> You will see a &quot;This branch has conflicts that must be resolved&quot; message near the bottom
 <span class="hljs-number">2.</span> Tab <span class="hljs-keyword">to</span> &quot;Resolve conflicts&quot; button → GitHub opens a web <span class="hljs-keyword">conflict</span> editor
-<span class="hljs-number">3.</span> The editor shows <span class="hljs-keyword">conflict</span> markers - see Merge Conflicts guide (<span class="hljs-number">06</span>-merge-conflicts.md)
+<span class="hljs-number">3.</span> The editor shows <span class="hljs-keyword">conflict</span> markers - see Merge Conflicts guide (<span class="hljs-number">07</span>-merge-conflicts.md)
 <span class="hljs-number">4.</span> Edit the file <span class="hljs-keyword">to</span> resolve → Mark <span class="hljs-keyword">as</span> resolved → <span class="hljs-keyword">Commit</span> merge</code></pre>
 <h2>Common PR Mistakes to Avoid</h2>
 <table>
@@ -1732,9 +1732,9 @@ gh pr <span class="hljs-built_in">merge</span> <span class="hljs-number">42</spa
 </ul>
 <p><em>The agent documents the diff. You bring the context that no diff can contain.</em></p>
 </blockquote>
-<p><em>Next: <a href="06-merge-conflicts.html">Merge Conflicts</a></em>
+<p><em>Next: <a href="07-merge-conflicts.html">Merge Conflicts</a></em>
 <em>Back: <a href="04-working-with-issues.html">Working with Issues</a></em>
-<em>Related: <a href="14-accessible-code-review.html">Accessible Code Review</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a> | <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a> | <a href="appendix-q-github-actions-workflows.html">GitHub Actions</a></em></p>
+<em>Related: <a href="14-accessible-code-review.html">Accessible Code Review</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a> | <a href="08-culture-etiquette.html">Culture &amp; Etiquette</a> | <a href="appendix-q-github-actions-workflows.html">GitHub Actions</a></em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

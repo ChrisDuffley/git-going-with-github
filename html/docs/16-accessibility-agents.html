@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Accessibility Agents - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="../styles/github-markdown.css">
-  <link rel="stylesheet" href="../styles/highlight.css">
-  <link rel="stylesheet" href="../styles/custom.css">
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Accessibility Agents</span>
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Accessibility Agents</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="../search.html" method="get">
+        <form role="search" class="search-form" action="./search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -92,7 +92,7 @@
 <tbody><tr>
 <td>GitHub Workflow agents (<code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@pr-review</code>, <code>@analytics</code>)</td>
 <td>Navigated repositories, filed issues, reviewed PRs, explored Insights</td>
-<td><a href="02-navigating-repositories.html">Ch 2</a>, <a href="04-working-with-issues.html">Ch 4</a>, <a href="05-working-with-pull-requests.html">Ch 5</a></td>
+<td><a href="02-navigating-repositories.html">Ch 2</a>, <a href="04-working-with-issues.html">Ch 4</a>, <a href="06-working-with-pull-requests.html">Ch 6</a></td>
 </tr>
 <tr>
 <td>Accessibility monitoring (<code>@insiders-a11y-tracker</code>)</td>
@@ -122,103 +122,153 @@
 <ul>
 <li><strong>Challenge count:</strong> 3 guided + 1-2 optional contribution challenges</li>
 <li><strong>Automation check:</strong> none (agent output requires human judgment before use)</li>
-<li><strong>Evidence:</strong> Slack/Discord message or facilitator chat showing agent output and your evaluation of it</li>
-<li><strong>Pattern:</strong> explore → validate → improve → optionally contribute</li>
+<li><strong>Evidence:</strong> issue comment showing agent output and your evaluation of it</li>
+<li><strong>Pattern:</strong> explore, validate, read internals, optionally contribute</li>
 <li><strong>Key principle:</strong> Skill First, Agent Second - <strong>every agent requires manual prerequisite skills</strong></li>
 </ul>
-<h3>Chapter 16 Guided Challenges (No Bot Validation - Skill-First Focus)</h3>
-<p>For this workshop, Chapter 16 focuses on agent exploration and validation:</p>
+<h3>Chapter 16 Challenge Set</h3>
+<ol>
+<li><strong>Agent Discovery Mapping</strong> - identify 3-5 agents that match skills you already have from Day 1.</li>
+<li><strong>Agent Skill Validation</strong> - run one agent and evaluate its output against your manual experience.</li>
+<li><strong>Agent Instructions Deep Dive</strong> - read one agent&#39;s source file and assess what it can and cannot do.</li>
+<li><strong>Improve an Existing Agent</strong> (optional hackathon) - find a gap in an agent&#39;s instructions and fix it via PR.</li>
+<li><strong>Propose a New Agent</strong> (optional hackathon) - file an issue proposing an agent for an uncovered workflow.</li>
+</ol>
+<h3>Challenge 16.1 Step-by-Step: Agent Discovery Mapping</h3>
+<p><strong>Goal:</strong> Map your Day 1 manual skills to specific agents in the ecosystem so you know which agents you are ready to use.</p>
+<p><strong>Where you are working:</strong> GitHub.com - the <code>accessibility-agents</code> repository and your assigned Chapter 16 challenge issue.</p>
+<p><strong>Estimated time:</strong> 20 minutes.</p>
 <p>If 55 agents feels too broad, start with this beginner sequence:</p>
-<ol>
-<li><code>@daily-briefing</code> (maps to repository and issue awareness)</li>
+<ul>
+<li><code>@daily-briefing</code> (maps to repository and issue awareness from Chapters 2-4)</li>
 <li><code>@issue-tracker</code> (maps to Chapter 4 issue workflow)</li>
-<li><code>@pr-review</code> (maps to Chapter 5 and Chapter 14 review workflow)</li>
-</ol>
-<p>Use the discovery framework for each agent you pick:</p>
-<ul>
-<li>Skill you already have</li>
-<li>Matching agent</li>
-<li>One safe first prompt</li>
+<li><code>@pr-review</code> (maps to Chapter 6 and Chapter 14 review workflow)</li>
 </ul>
 <ol>
-<li><p><strong>Agent Discovery Mapping</strong> (20 min)</p>
-<ul>
-<li>Fork the <code>accessibility-agents</code> repository</li>
-<li>Read the list of 55 agents in the ecosystem (Section 3)</li>
-<li>Identify 3-5 agents that match workflows you already do by hand from Day 1:<ul>
-<li>Example: You filed issues manually → you can use <code>@issue-tracker</code></li>
-<li>Example: You reviewed a PR with diffs → you can use <code>@pr-review</code>  </li>
-<li>Example: You checked colors for contrast → you can use <code>@contrast-master</code></li>
+<li>Fork the <code>accessibility-agents</code> repository on GitHub.com.</li>
+<li>Open the repository and navigate to Section 3 of the README (or this chapter&#39;s Section 3 below) to see the full list of 55 agents organized by team.</li>
+<li>Read through the agent names and descriptions. For each one, ask yourself: &quot;Have I done this task manually during the workshop?&quot;</li>
+<li>Identify 3-5 agents that match workflows you already practiced:<ul>
+<li>Example: You filed issues manually (Ch 4) - you can use <code>@issue-tracker</code></li>
+<li>Example: You reviewed a PR with diffs (Ch 6/14) - you can use <code>@pr-review</code></li>
+<li>Example: You checked colors for contrast - you can use <code>@contrast-master</code></li>
 </ul>
 </li>
-<li>For each agent, write a one-sentence answer: <em>&quot;I am ready for this agent because I have already [skill]&quot;</em></li>
-<li>Screenshot/paste in an issue comment on accessibility-agents repo (use <code>#16-agent-discovery</code> label)</li>
-</ul>
-</li>
-<li><p><strong>Agent Skill Validation</strong> (30 min)</p>
-<ul>
-<li>Clone your fork of <code>accessibility-agents</code> to VS Code</li>
-<li>Open Copilot Chat (<code>Ctrl+Shift+I</code>)</li>
-<li>Choose one agent from your discovery list (suggest starting with <code>@daily-briefing</code> or <code>@issue-tracker</code>)</li>
-<li>Run it once with a simple prompt (e.g., <code>@daily-briefing morning briefing</code> or <code>@issue-tracker find open issues labeled good-first-issue in accessibility-agents</code>)</li>
-<li>Read the agent&#39;s output carefully</li>
-<li>In a new issue comment, answer these three evaluation questions:<ul>
-<li>What did the agent output? (2-3 sentences)</li>
-<li>Does this output match what you expected based on manual experience?</li>
-<li>Did the agent miss anything important that you (as a human) would catch?</li>
-</ul>
-</li>
-<li>Use <code>#16-agent-validation</code> label</li>
-</ul>
-</li>
-<li><p><strong>Agent Instructions Deep Dive</strong> (15 min)</p>
-<ul>
-<li>Open one <code>.agent.md</code> or <code>.prompt.md</code> file from the repository</li>
-<li>Read the agent&#39;s system instructions and tool permissions</li>
-<li>Answer: <em>What is this agent trying to do, and what tools does it have access to?</em></li>
-<li>Answer: <em>Could this agent make a mistake?</em> If so, what kind?</li>
-<li>Post your answers in an issue comment with <code>#16-agent-internals</code> label</li>
-</ul>
-</li>
+<li>Open your <strong>assigned Chapter 16.1 challenge issue</strong>.</li>
+<li>Post a discovery mapping comment using this format:</li>
 </ol>
-<h3>Optional Contribution Challenges (For Day 2 Hackathon)</h3>
-<ol start="4">
-<li><p><strong>Improve an Existing Agent</strong> (45 min - hackathon activity)</p>
-<ul>
-<li>Find an agent whose instructions have a gap (use Section 6 suggestions or file an issue)</li>
-<li>Fork the repo, edit the agent&#39;s <code>.agent.md</code> file</li>
-<li>Get a facilitator review</li>
-<li>Open a PR with your improvement</li>
-<li><strong>Evidence:</strong> Your merged PR</li>
+<pre><code class="hljs language-text">Chapter 16.1 - Agent Discovery Mapping:
+
+Agent 1: @[agent-name]
+I am ready because I have already: [specific skill from Day 1]
+
+Agent 2: @[agent-name]
+I am ready because I have already: [specific skill from Day 1]
+
+Agent 3: @[agent-name]
+I am ready because I have already: [specific skill from Day 1]</code></pre>
+<p><strong>You are done when:</strong> Your discovery mapping comment is posted with at least 3 agent-to-skill matches.</p>
+<h3>Challenge 16.2 Step-by-Step: Agent Skill Validation</h3>
+<p><strong>Goal:</strong> Run one agent, read its output, and evaluate whether it matches your manual experience.</p>
+<p><strong>Where you are working:</strong> VS Code with the <code>accessibility-agents</code> repository cloned and Copilot Chat open.</p>
+<p><strong>Estimated time:</strong> 30 minutes.</p>
+<ol>
+<li>Clone your fork of <code>accessibility-agents</code> to VS Code (or open it in github.dev).</li>
+<li>Open Copilot Chat: <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>).</li>
+<li>Choose one agent from your discovery list. If unsure, start with <code>@daily-briefing</code> or <code>@issue-tracker</code>.</li>
+<li>Run it with a simple prompt. Examples:<ul>
+<li><code>@daily-briefing morning briefing</code></li>
+<li><code>@issue-tracker find open issues labeled good-first-issue in accessibility-agents</code></li>
+<li><code>@pr-review show open PRs in accessibility-agents</code></li>
 </ul>
 </li>
-<li><p><strong>Propose a New Agent</strong> (60 min - hackathon activity)</p>
-<ul>
-<li>Identify a workflow that is not yet covered by any of the 55 agents</li>
-<li>File an issue describing what the agent should do and why it matters</li>
-<li>Include 3 example prompts people would use</li>
-<li><strong>Evidence:</strong> Your issue with facilitator/maintainer discussion</li>
-</ul>
-</li>
+<li>Read the agent&#39;s output carefully. Take a moment to think about what you expected.</li>
+<li>Open your <strong>assigned Chapter 16.2 challenge issue</strong> and post an evaluation comment:</li>
 </ol>
+<pre><code class="hljs language-text">Chapter 16.2 - Agent Validation:
+
+Agent used: @[agent-name]
+Prompt: [exact prompt you used]
+
+What did the agent output? (2-3 sentences)
+[your answer]
+
+Does this match what you expected from manual experience?
+[your answer]
+
+Did the agent miss anything important that you would catch?
+[your answer]</code></pre>
+<p><strong>You are done when:</strong> Your evaluation comment is posted with all three questions answered.</p>
+<h3>Challenge 16.3 Step-by-Step: Agent Instructions Deep Dive</h3>
+<p><strong>Goal:</strong> Read one agent&#39;s source file to understand what instructions it follows, what tools it can use, and what mistakes it could make.</p>
+<p><strong>Where you are working:</strong> VS Code or GitHub.com - reading files in the <code>accessibility-agents</code> repository.</p>
+<p><strong>Estimated time:</strong> 15 minutes.</p>
+<ol>
+<li>In the <code>accessibility-agents</code> repository, navigate to the <code>.github/</code> folder (or wherever agent definition files are stored).</li>
+<li>Open one <code>.agent.md</code> or <code>.prompt.md</code> file for an agent you used or are curious about.</li>
+<li>Read the file and identify:<ul>
+<li>What is this agent trying to do? (its purpose)</li>
+<li>What tools does it have access to? (tool permissions)</li>
+<li>What constraints or guardrails are in the instructions?</li>
+</ul>
+</li>
+<li>Think critically: could this agent make a mistake? What kind?</li>
+<li>Open your <strong>assigned Chapter 16.3 challenge issue</strong> and post your analysis:</li>
+</ol>
+<pre><code class="hljs language-text">Chapter 16.3 - Agent Internals:
+
+Agent file: [filename]
+Purpose: [one sentence]
+Tools available: [list]
+Guardrails: [what constraints are in the instructions]
+Could it make a mistake? [your answer and what kind]</code></pre>
+<p><strong>You are done when:</strong> Your analysis comment is posted.</p>
+<h3>Optional Challenges 16.4-16.5 (Hackathon)</h3>
+<p><strong>Challenge 16.4: Improve an Existing Agent</strong> (45 min)</p>
+<ul>
+<li>Find an agent whose instructions have a gap (use Section 6 suggestions or file an issue).</li>
+<li>Fork the repo, edit the agent&#39;s <code>.agent.md</code> file.</li>
+<li>Get a facilitator review.</li>
+<li>Open a PR with your improvement.</li>
+<li>Evidence: your merged PR.</li>
+</ul>
+<p><strong>Challenge 16.5: Propose a New Agent</strong> (60 min)</p>
+<ul>
+<li>Identify a workflow not yet covered by any of the 55 agents.</li>
+<li>File an issue describing what the agent should do and why it matters.</li>
+<li>Include 3 example prompts people would use.</li>
+<li>Evidence: your issue with facilitator/maintainer discussion.</li>
+</ul>
+<h3>Completing Chapter 16: Submit Your Evidence</h3>
+<p>Your evidence is the individual challenge issue comments (16.1, 16.2, 16.3). Close each challenge issue as you complete it. For optional challenges, your PR or proposal issue is the evidence.</p>
 <h3>Expected Outcomes</h3>
 <ul>
-<li>Student can map personal Day 1 skills to specific accessible agents in the ecosystem</li>
-<li>Student understands the <strong>Skill First, Agent Second</strong> principle and can articulate why agent output requires human judgment</li>
-<li>Student can read agent instructions and evaluate what an agent can and cannot do</li>
-<li>Student has used at least one agent and verified it against manual skills</li>
-<li>(Optional) Student has contributed to the accessibility-agents ecosystem with a bug fix, improvement, or feature proposal</li>
+<li>Student can map personal Day 1 skills to specific agents in the ecosystem.</li>
+<li>Student understands the <strong>Skill First, Agent Second</strong> principle and can articulate why agent output requires human judgment.</li>
+<li>Student can read agent instructions and evaluate what an agent can and cannot do.</li>
+<li>Student has used at least one agent and verified it against manual skills.</li>
+<li>(Optional) Student has contributed to the accessibility-agents ecosystem with a fix, improvement, or proposal.</li>
 </ul>
 <h3>If You Get Stuck</h3>
 <ol>
-<li><strong>I can&#39;t find an agent that matches my skills</strong> → Start with <code>@daily-briefing</code> or <code>@issue-tracker</code> - those build directly on Chapter 2-5 material. If you haven&#39;t done those manual steps yet, go back to those chapters first.</li>
-<li><strong>The agent output doesn&#39;t make sense</strong> → That is the right response. Paste the output in an issue comment along with your confusion. That is valuable feedback. The agent may need better instructions or guardrails.</li>
-<li><strong>I can&#39;t access the agents in Copilot Chat</strong> → Verify: Is Copilot Chat extension installed (not just Copilot)? Are you signed in to GitHub in VS Code? Does <code>.github/agents/</code> folder exist in your cloned repository? Run <code>ls -la .github/agents/</code> to confirm.</li>
-<li><strong>The repository won&#39;t clone</strong> → Use the terminal: <code>git clone https://github.com/[your-username]/accessibility-agents.git</code> then <code>cd accessibility-agents &amp;&amp; code .</code></li>
-<li><strong>Ask facilitator:</strong> Show them what agent you wanted to run, what output you got, and what you expected. They can verify the agent is set up correctly.</li>
+<li>Cannot find an agent that matches your skills? Start with <code>@daily-briefing</code> or <code>@issue-tracker</code> - those build directly on Chapter 2-5 material. If you have not done those manual steps yet, go back to those chapters first.</li>
+<li>Agent output does not make sense? That is the right response. Paste the output in an issue comment along with your confusion. That is valuable feedback - the agent may need better instructions or guardrails.</li>
+<li>Cannot access the agents in Copilot Chat? Verify: Is Copilot Chat extension installed (not just base Copilot)? Are you signed in to GitHub in VS Code? Does <code>.github/agents/</code> folder exist in your cloned repository?</li>
+<li>Repository will not clone? Use the terminal: <code>git clone https://github.com/[your-username]/accessibility-agents.git</code> then open the folder in VS Code.</li>
+<li>Ask facilitator to show them what agent you wanted to run, what output you got, and what you expected.</li>
 </ol>
+<blockquote>
+<p><strong>Continue learning:</strong> The GitHub Skills courses <a href="https://github.com/skills/build-with-copilot-agent-mode">Build Applications with Copilot Agent Mode</a> and <a href="https://github.com/skills/expand-your-team-with-copilot">Expand Your Team with Copilot</a> explore agent-powered development workflows. See <a href="appendix-z-github-skills-catalog.html">Appendix Z</a> for the full catalog.</p>
+</blockquote>
 <h3>Learning Moment</h3>
 <p>The 55 agents exist because someone did the manual work first, then automated the repetitive parts. As you explore agents, you are not just learning tools - you are learning what automation looks like when it is built on real expertise and real constraints. That is the foundation for contributing back: you already know the limits of automation because you have done the work by hand.</p>
+<h3>Learning Pattern Used in This Chapter</h3>
+<ol>
+<li>Map your existing skills to available tools (discovery before action).</li>
+<li>Run one tool and evaluate its output critically (trust but verify).</li>
+<li>Read the source to understand capabilities and limits (internals matter).</li>
+<li>Contribute improvements based on your evaluation (close the feedback loop).</li>
+</ol>
 <h2>Capstone: Share Your Feedback (The Most Important Task!)</h2>
 <p>You have now explored the full agent ecosystem, completed the workshop, and have valuable perspective on what worked, what confused you, and what we should improve for the next cohort.</p>
 <p><strong>Your feedback directly shapes the future of this project.</strong> We read every response, discuss improvements, and act on suggestions.</p>
@@ -791,7 +841,7 @@ Response appears below the Send button; use H to find the response section headi
 <h3>Agent 1: <code>@daily-briefing</code> - Morning Briefing</h3>
 <p><strong>Type:</strong> Informational</p>
 <p><strong>File:</strong> <code>.github/agents/daily-briefing.agent.md</code></p>
-<p><strong>Before you run this agent:</strong> You should have manually navigated a repository&#39;s Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to <a href="02-navigating-repositories.html">Navigating Repositories</a> and <a href="09-notifications.html">Notifications</a> first.
+<p><strong>Before you run this agent:</strong> You should have manually navigated a repository&#39;s Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to <a href="02-navigating-repositories.html">Navigating Repositories</a> and <a href="10-notifications.html">Notifications</a> first.
 The briefing output only makes sense when you already know what each section of it is describing.</p>
 <h4>What it does</h4>
 <p>Sweeps every repository you have access to and builds a prioritized dashboard:</p>
@@ -829,7 +879,7 @@ The briefing output only makes sense when you already know what each section of 
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/issue-tracker.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have filed at least one issue using the full manual process - writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent&#39;s priority scores and draft replies will mean nothing to you.
-Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a href="08-labels-milestones-projects.html">Labels, Milestones &amp; Projects</a> first.</p>
+Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a href="09-labels-milestones-projects.html">Labels, Milestones &amp; Projects</a> first.</p>
 <h4>What it does</h4>
 <p>Finds, prioritizes, and helps you manage issues across all your repositories:</p>
 <ul>
@@ -846,7 +896,7 @@ Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a h
 @issue-tracker is there a duplicate of issue #42 in accessibility-agents?
 
 @issue-tracker draft a reply to issue #15 acknowledging it and asking for more context</code></pre>
-<p><strong>Important:</strong> The agent can draft a reply. You review the tone against the <a href="07-culture-etiquette.html">Culture &amp; Etiquette guide</a> before posting. Your name goes on it.</p>
+<p><strong>Important:</strong> The agent can draft a reply. You review the tone against the <a href="08-culture-etiquette.html">Culture &amp; Etiquette guide</a> before posting. Your name goes on it.</p>
 <h4>Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Open Issues Labeled &quot;good-first-issue&quot;</span>
 
@@ -875,7 +925,7 @@ This will help us diagnose the issue faster.
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/pr-review.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have manually reviewed at least one pull request diff in the GitHub browser interface - navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces.
-Return to <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> if this is not yet familiar.</p>
+Return to <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> if this is not yet familiar.</p>
 <h4>What it does</h4>
 <p>Generates full review documents for pull requests:</p>
 <ul>
@@ -2198,7 +2248,7 @@ Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 <li>Check file naming: must be a <code>.md</code> file in <code>.github/prompts/</code></li>
 <li>Try typing the full command name (autocomplete may be incomplete)</li>
 </ol>
-<p><em>Back: <a href="15-issue-templates.html">Issue Templates</a></em><br><em>Reference: <a href="appendix-v-accessibility-agents-reference.html">Appendix V: Accessibility Agents Reference</a></em><br><em>Related: <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a> | <a href="04-working-with-issues.html">Working with Issues</a> | <a href="appendix-m-vscode-accessibility-reference.html">Appendix M: VS Code Accessibility Reference</a></em></p>
+<p><em>Back: <a href="15-issue-templates.html">Issue Templates</a></em><br><em>Reference: <a href="appendix-v-accessibility-agents-reference.html">Appendix V: Accessibility Agents Reference</a></em><br><em>Related: <a href="08-culture-etiquette.html">Culture &amp; Etiquette</a> | <a href="04-working-with-issues.html">Working with Issues</a> | <a href="appendix-m-vscode-accessibility-reference.html">Appendix M: VS Code Accessibility Reference</a></em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

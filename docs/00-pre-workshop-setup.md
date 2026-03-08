@@ -153,6 +153,14 @@ That is it. No tokens to generate, no keys to create, no strings to paste. If yo
 
 > **Screen reader note:** The authorization page opens in your default browser. After approving, the browser shows a message saying you can return to VS Code. Use `Alt+Tab` (Windows) or `Cmd+Tab` (macOS) to switch back.
 
+> **Default browser warning:** VS Code opens the GitHub authorization page in your operating system's **default browser**, not necessarily the browser you use day-to-day. If your default browser is set to something unexpected (for example, an older browser without your screen reader configured), the OAuth page may open in an unfamiliar environment.
+>
+> **Before the workshop:** Verify which browser is your OS default:
+> - **Windows:** Settings, Apps, Default apps, look for "Web browser"
+> - **macOS:** System Settings, Desktop and Dock, Default web browser
+>
+> Set it to the browser where your screen reader and GitHub login are already configured. This avoids a confusing moment during the first `git push` when the authorization page opens somewhere you did not expect.
+
 > **Tip - GitHub Mobile for push notification 2FA:** If you have not already, install the free [GitHub Mobile](https://github.com/mobile) app (iOS and Android). Once linked to your account, every 2FA prompt becomes a single tap on a push notification instead of typing a 6-digit code. The app supports VoiceOver (iOS) and TalkBack (Android).
 
 Workshop policy
@@ -293,10 +301,11 @@ A profile picture humanizes your contributions. It can be a photo or any image. 
 
 ## Step 4 - Check GitHub Feature Preview Settings
 
-GitHub continuously rolls out improvements to its interface. Some enhancements start as opt-in Feature Previews before becoming the standard experience. Two features matter most for screen reader users working through this workshop:
+GitHub continuously rolls out improvements to its interface. Some enhancements start as opt-in Feature Previews before becoming the standard experience. Three features matter most for screen reader users working through this workshop:
 
 - **New Issues Experience** - improves heading hierarchy, ARIA landmark structure, and live-region announcements on the Issues pages
 - **New Files Changed Experience** - adds proper landmark structure, an accessible file tree, and better keyboard navigation to the Files Changed tab in Pull Requests
+- **GitHub Command Palette** - a keyboard-first command launcher (`Ctrl+K` on Windows, `Cmd+K` on macOS) that lets you navigate to any repository, issue, PR, file, or page by typing its name. Faster than clicking through menus and fully accessible with screen readers
 
 Both have been broadly rolled out and may already be active on your account. Check before the workshop begins.
 
@@ -335,6 +344,7 @@ Both have been broadly rolled out and may already be active on your account. Che
     - An **"Enable"** button - press `Enter` to enable the feature
     - A **"Disable"** button - the feature is already enabled; no action needed
 11. Go back and repeat steps 9-10 for **"New Files Changed Experience"**
+12. Repeat again for **"GitHub Command Palette"** if it appears in the list
 
 </details>
 
@@ -351,6 +361,7 @@ Both have been broadly rolled out and may already be active on your account. Che
 8. Press `Tab` to move to the end of the feature detail section
 9. If you hear **"Enable"**, press `VO+Space` to activate it. If you hear **"Disable"**, it is already on.
 10. Repeat for **"New Files Changed Experience"**
+11. Repeat for **"GitHub Command Palette"** if it appears in the list
 
 </details>
 
@@ -364,6 +375,7 @@ If you open Feature Preview and neither **"New Issues Experience"** nor **"New F
 | ---------  | ------------------------------------------  |
 | **New Issues Experience** | Issues list uses proper `<ul>` list structure. Issue titles are h3 headings. ARIA live regions announce filter result updates. Toolbar uses arrow key navigation. Close issue via `Ctrl+Shift+Enter` from the comment box. |
 | **New Files Changed Experience** | Files Changed tab includes a navigable file tree region. Diffs are structured as tables with row/column navigation. Filter changed files field is reachable with `E`. Inline comment mode activates with `Enter` on a focused diff line. |
+| **GitHub Command Palette** | Press `Ctrl+K` (Windows) or `Cmd+K` (macOS) from any GitHub page to open a command palette. Type to search for repositories, issues, PRs, files, settings, or actions. Results appear in a list navigable with `Arrow` keys. Press `Enter` to go. Screen readers announce each result as you arrow through the list. Scope the search with prefixes: `#` for issues/PRs, `!` for projects, `>` for commands, `/` for files. |
 
 > **Why this matters:** Without these features enabled, the keyboard and screen reader workflows described throughout this workshop will not match what you see on screen. Enabling them before you begin ensures everything works as documented.
 
@@ -626,6 +638,13 @@ This extension lets you review and manage pull requests without leaving VS Code.
 3. Press `Tab` to move into the results list
 4. Arrow down to find **"GitHub Pull Requests"** with publisher **"GitHub"**
    - This extension was formerly named "GitHub Pull Requests and Issues" - either name is correct
+
+> **Extension imposter warning:** The VS Code Marketplace contains third-party extensions with similar names. Always verify the **publisher** before installing. The correct extensions for this workshop are:
+>
+> - **GitHub Pull Requests** - publisher must be **GitHub** (verified badge)
+> - **GitHub Copilot** - publisher must be **GitHub** (built in, no manual install needed)
+>
+> If the publisher name says anything other than "GitHub" (for example, a personal username or an unfamiliar company), **do not install it**. A screen reader user can verify the publisher: after arrowing to a search result, `Tab` forward past the extension name to hear "Publisher: GitHub" or similar. If you accidentally install a wrong extension, press `Ctrl+Shift+X`, find it, and select **Uninstall**.
 5. Press `Enter` to open the details page
 6. Press `Tab` to the **Install** button and press `Enter` or `Space`
 7. VS Code will announce when installation is complete

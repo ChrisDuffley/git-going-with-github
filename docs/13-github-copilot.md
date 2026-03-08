@@ -8,6 +8,14 @@
 >
 > This guide covers GitHub Copilot: inline code suggestions, Copilot Chat (conversational assistance), custom instructions vs custom agents, effective prompting for non-code contributions, and using Accessible View to read AI-generated responses.
 >
+> **Official GitHub Accessibility Guides:** GitHub publishes two developer guides and an NVDA-focused screen reader guide for Copilot:
+>
+> - [Using GitHub Copilot in Visual Studio Code with a Screen Reader](https://accessibility.github.com/documentation/guide/github-copilot-vsc/) - NVDA-specific setup, audio cues, inline suggestions, inline chat, chat view, and built-in actions
+> - [Optimizing GitHub Copilot for Accessibility with Custom Instructions](https://accessibility.github.com/documentation/guide/copilot-instructions/) - writing effective custom instructions at org, repo, and personal levels
+> - [Getting Started with GitHub Copilot Custom Agents for Accessibility](https://accessibility.github.com/documentation/guide/getting-started-with-agents/) - creating and invoking custom agents in VS Code and on GitHub.com
+>
+> This chapter covers the same material with additional perspectives and workshop context. Use the official guides as companion references.
+>
 > **Prerequisites:** [VS Code Setup & Accessibility Basics](05-vscode-accessibility.md), [Git & Source Control in VS Code](11-git-source-control.md)
 >
 > **Mac keyboard shortcuts:** Throughout this chapter, all `Ctrl+` shortcuts use `Cmd+` on Mac, and `Alt+` shortcuts use `Option+` on Mac. Key equivalents: `Ctrl+Shift+I` → `Cmd+Shift+I` (Chat), `Ctrl+I` → `Cmd+I` (inline chat), `Alt+F2` → `Option+F2` (Accessible View), `Ctrl+/` → `Cmd+/` (insert suggestion). See the [Keyboard Shortcuts Reference](#8-keyboard-shortcuts-reference) at the end of this chapter for the complete list.
@@ -133,6 +141,18 @@ AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps 
 3. Use the tool to create something new (generate, customize, apply).
 4. Reflect on when the tool helped and when your own judgment was better.
 
+### About Learning Cards in This Chapter
+
+Throughout this chapter, look for expandable "learning cards" that show how to accomplish each task from different perspectives. Not every section has every card - only the cards that add meaningful guidance for that topic are included.
+
+| Card | Who it helps |
+| ---- | ------------ |
+| Visual / mouse | Sighted users who primarily use a mouse or trackpad |
+| Low vision | Users who zoom to 200%+, use high contrast, or increase font sizes |
+| NVDA / JAWS (Windows) | Screen reader users on Windows |
+| VoiceOver (macOS) | Screen reader users on Mac |
+| CLI | Users who prefer the terminal with `gh copilot` commands |
+
 
 ## Table of Contents
 
@@ -162,6 +182,8 @@ GitHub Copilot is an AI pair programmer that suggests code and text completions 
 **Copilot Free tier:** Available for all GitHub users. Provides access to inline suggestions and Copilot Chat with usage limits. No payment required for this workshop.
 
 **Screen reader support:** Copilot is fully accessible with screen readers. Suggestions are announced via ARIA live regions, and Accessible View provides complete access to Chat responses.
+
+> **Screen reader optimized mode:** Press `Shift+Alt+F1` (Mac: `Shift+Option+F1`) to toggle VS Code's screen reader optimized mode. This adjusts how Copilot suggestions are announced, disables ghost text that cannot be read by screen readers, and routes all suggestion content through Accessible View. If your screen reader is detected at startup, VS Code enables this mode automatically. You can also set it manually in Settings: `editor.accessibilitySupport: "on"`.
 
 
 ## 2. Installing GitHub Copilot
@@ -225,6 +247,18 @@ Copilot suggests completions as you type, displayed as gray "ghost text" after y
 <summary>Visual / mouse users</summary>
 
 The suggestion appears as **gray "ghost text"** after your cursor - a preview of what Copilot thinks you want to type next. It's there but not inserted; press `Tab` to accept it or `Escape` to dismiss.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast, enlarged fonts)</summary>
+
+Ghost text is intentionally low-contrast (gray on white). At high zoom levels this can be nearly invisible.
+
+- **Increase ghost text contrast:** Open Settings (`Ctrl+,`), search `editorGhostText`, then customize `editor.ghostText.foreground` in your color theme to a darker shade such as `#555555`.
+- **Use Accessible View instead:** Press `Alt+F2` when a suggestion appears. The suggestion text renders at your configured font size in a separate pane, making it far easier to read at 200%+ zoom.
+- **Word-by-word acceptance** (`Ctrl+Right Arrow`) lets you watch each word appear at full contrast before deciding whether to continue.
+- **High Contrast themes** do not automatically restyle ghost text. The color customization above is the most reliable fix.
 
 </details>
 
@@ -331,6 +365,16 @@ If suggestions are distracting:
 </details>
 
 <details>
+<summary>Low vision users</summary>
+
+The Copilot status bar icon (`><`) can be tiny at standard DPI. Use the Command Palette approach instead:
+
+- `Ctrl+Shift+P` → type "Copilot: Toggle Completions" → press `Enter`
+- This toggles inline suggestions on/off without needing to find a small icon.
+
+</details>
+
+<details>
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
 #### Temporarily disable via Command Palette
@@ -362,6 +406,49 @@ Opens a chat prompt directly in the editor, anchored to your cursor. Results app
 **Quick Chat (floating):** `Ctrl+Shift+Alt+I` (Windows) / `Cmd+Shift+Ctrl+I` (macOS)
 
 Opens a floating chat dialog that doesn't take up sidebar space.
+
+<details>
+<summary>Low vision users (zoom, high contrast, enlarged fonts)</summary>
+
+At 200%+ zoom the Chat sidebar can squeeze the editor to a narrow column.
+
+- **Use Quick Chat** (`Ctrl+Shift+Alt+I`) instead of the panel - it floats over the editor and closes when you press `Escape`, so you keep your full editor width.
+- **Resize the Chat panel** by dragging its left edge or pressing `Ctrl+Shift+P` and running `View: Reset Panel Size`.
+- **Increase Chat font size:** Settings (`Ctrl+,`), search `chat.editor.fontSize`, and set it to match your editor font size.
+- **Mode and model selectors:** At high zoom the bottom toolbar may wrap to two lines. Tab through the controls - the mode dropdown and model picker are always present even if visually cut off.
+
+</details>
+
+<details>
+<summary>CLI users (gh copilot)</summary>
+
+If you prefer the terminal, `gh copilot` lets you ask Copilot questions without opening VS Code Chat at all.
+
+**Install the extension (one time):**
+
+```bash
+gh extension install github/gh-copilot
+```
+
+**Ask a general question:**
+
+```bash
+gh copilot suggest "How do I squash the last 3 commits?"
+```
+
+Copilot responds with a suggested command you can copy and run.
+
+**Explain a command you don't recognize:**
+
+```bash
+gh copilot explain "git rebase -i HEAD~3"
+```
+
+Copilot returns a plain-language explanation.
+
+**When to use CLI vs Chat:** Use `gh copilot` when you are already in a terminal session and want a quick answer without switching windows. Use VS Code Chat when you need workspace context (`@workspace`), file references, or multi-turn conversations.
+
+</details>
 
 ### Chat Modes
 
@@ -398,6 +485,18 @@ Copilot gives you access to AI models from OpenAI, Anthropic (Claude), Google (G
 - **High cost to avoid unless needed:** Claude Opus 4.6 (3× cost) - powerful but reserve for the most demanding work
 
 For the complete model comparison, strengths, weaknesses, and plan availability, see [Appendix X: GitHub Copilot AI Models Reference](appendix-x-copilot-models.md).
+
+<details>
+<summary>Low vision users - finding the mode and model controls</summary>
+
+Both the **mode selector** and **model picker** sit in the toolbar at the bottom of the Chat input area. At 200%+ zoom they may be cropped or wrapped.
+
+- **Keyboard access:** From the Chat input field, press `Tab` repeatedly to move through the toolbar controls. Each control announces its current value (for example, "Ask" for the mode or "Auto" for the model).
+- **Opening the dropdown:** Press `Space` or `Enter` on the control, then use `Arrow` keys to browse options. Press `Enter` to select.
+- **If the controls are visually hidden at high zoom:** They are still in the Tab order. Keep pressing `Tab` past the Send button and you will reach them.
+- **Alternative:** Open the Command Palette (`Ctrl+Shift+P`) and type "Copilot: Select Model" or "Copilot: Change Chat Mode" to access these controls without finding them visually.
+
+</details>
 
 ### Chat Interface Structure
 
@@ -498,6 +597,26 @@ Type `/` in Copilot Chat to see available commands:
 2. Open Chat: `Ctrl+Shift+I` (Mac: `Cmd+Shift+I`)
 3. Type `/explain`
 4. Copilot explains the structure and purpose
+
+### Built-in Actions via Command Palette
+
+Copilot registers actions directly in the Command Palette. This provides a discoverable way to use Copilot without remembering slash commands or keyboard shortcuts.
+
+1. Open Command Palette: `F1` or `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`)
+2. Type `copilot`
+3. Browse the list of available actions
+
+Useful built-in actions include:
+
+| Action | What It Does |
+| ------ | ------------ |
+| Copilot: Explain This | Explains the selected code or text |
+| Copilot: Generate Docs | Generates documentation for the selected code |
+| Copilot: Generate Tests | Creates test cases for the selected code |
+| Copilot: Fix This | Suggests a fix for the selected code |
+| Copilot: Review and Comment | Reviews selected code and adds comments |
+
+> **Screen reader tip:** After pressing `F1` and typing `copilot`, use `Down Arrow` to browse the filtered list. Your screen reader announces each action name. Press `Enter` to run the selected action on your current selection.
 
 
 ## 5. Effective Prompting for Documentation Work
@@ -791,10 +910,20 @@ Be specific about skills and responsibilities; avoid broad personas that may int
 
 **Contribute effective instructions** to [github.com/github/awesome-copilot](https://github.com/github/awesome-copilot) so others benefit from your organization's work.
 
+#### Accessibility Resources for Custom Instructions
+
+These resources can help you write better accessibility-focused custom instructions and evaluate Copilot's output:
+
+- **A11y LLM Evaluation Report** - GitHub's own evaluation of how well LLMs handle accessibility tasks, with practical benchmarks: [Accessibility LLM Evaluation](https://githubnext.com/projects/a11y-llm-eval)
+- **Beast Mode Accessibility Prompt** - A community-maintained, comprehensive accessibility prompt that you can adapt for your own instructions: referenced in [github.com/github/awesome-copilot](https://github.com/github/awesome-copilot)
+- **Markdown Accessibility Review Guidelines** - A practical guide for reviewing Markdown output for accessibility, useful as a reference when writing documentation-focused instructions: [Markdown Accessibility](https://github.com/github/accessibility/blob/main/docs/markdown-accessibility.md)
+
 
 ## 7. Using Accessible View with Copilot Responses
 
 Copilot Chat responses stream in token by token. This is visually nice but can fragment screen reader announcements. **Accessible View** provides complete, structured access to generated content.
+
+> **Not just for screen readers:** Accessible View is also valuable for low vision users. It renders text at your configured editor font size in a clean pane without the Chat panel's smaller default font, cramped layout, or streaming animation.
 
 ### Why Use Accessible View for Copilot
 
@@ -893,6 +1022,7 @@ When Copilot suggests code or Markdown:
 
 | Action | Windows/Linux | macOS |
 | --------  | ---------------  | -------  |
+| Toggle screen reader optimized mode | `Shift+Alt+F1` | `Shift+Option+F1` |
 | Open Accessible View | `Alt+F2` | `Option+F2` |
 | Open Accessible Help | `Alt+H` | `Option+H` |
 | Close Accessible View | `Escape` | `Escape` |
@@ -909,7 +1039,31 @@ When Copilot suggests code or Markdown:
 | Explorer | `Ctrl+Shift+E` | `Cmd+Shift+E` |
 | Terminal | `Ctrl+Backtick` | `Ctrl+Backtick` |
 
+### GitHub.com Shortcuts (Not VS Code)
+
+These shortcuts work on GitHub.com in your browser, not inside VS Code. Students sometimes confuse them with Copilot shortcuts because they involve similar key combinations.
+
+| Action | Shortcut | What it opens |
+| ------ | -------- | ------------- |
+| Open github.dev web editor | `.` (period key) | A lightweight VS Code editor in your browser tab. Read-only for most operations. Copilot is **not** available here. |
+| Open in a Codespace | `,` (comma key) | A full cloud development environment with a terminal. Copilot **is** available if your account has access. |
+
+> **Ctrl+. versus the period key:** On a GitHub repository page, pressing the `.` (period) key alone opens github.dev. This is different from `Ctrl+.` inside VS Code, which opens the Quick Fix menu. If you press `Ctrl+.` on GitHub.com, it opens the GitHub Command Palette, not github.dev. These three actions share similar keys but do completely different things depending on where you press them.
+
+> **Screen reader note:** When github.dev opens, your browser tab reloads into a VS Code-like interface. Your screen reader may announce "Visual Studio Code" or "GitHub Dev Editor." This is a web page, not the desktop application. Press `Ctrl+Shift+P` to confirm you are in github.dev by reading the title bar.
+
 **Complete keyboard reference:** See [Appendix M: VS Code Accessibility Reference](appendix-m-vscode-accessibility-reference.md)
+
+### Video Tutorials (Screen Reader Demonstrations)
+
+GitHub's accessibility team has published screen reader walkthroughs for each major Copilot feature:
+
+- [Inline suggestions with a screen reader](https://www.youtube.com/watch?v=SaqemiAR1yk) - accepting, rejecting, and reviewing ghost text suggestions with NVDA
+- [Inline chat with a screen reader](https://www.youtube.com/watch?v=wJfiVSaq7HA) - using `Ctrl+I` to edit code in place with screen reader feedback
+- [Chat view with a screen reader](https://www.youtube.com/watch?v=4pGMzWqFnSQ) - navigating the Chat panel, reading responses, and using Accessible View
+- [Built-in actions with a screen reader](https://www.youtube.com/watch?v=GalGp3kMPKY) - running Copilot commands from the Command Palette
+
+> **Tip:** These videos show NVDA with VS Code on Windows. The workflows apply to JAWS and VoiceOver with minor shortcut differences noted in each section above.
 
 
 ## Troubleshooting

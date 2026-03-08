@@ -115,7 +115,8 @@ Tool setup is part of contribution skill. A stable, accessible editor reduces st
 15. [Copilot Chat Window](#15-copilot-chat-window)
 16. [Accessible Help, Accessible View, and Accessible Diff](#16-accessible-help-accessible-view-and-accessible-diff)
 17. [Accessibility Signals](#17-accessibility-signals)
-18. [Git Operations Inside VS Code](#18-git-operations-inside-vs-code)
+18. [VS Code Speech - Voice Input and Output](#18-vs-code-speech---voice-input-and-output)
+19. [Git Operations Inside VS Code](#19-git-operations-inside-vs-code)
 
 
 ---
@@ -1630,7 +1631,219 @@ If you previously configured the older `audioCues.*` settings (deprecated since 
 
 ---
 
-## 18. Git Operations Inside VS Code
+## 18. VS Code Speech - Voice Input and Output
+
+The VS Code Speech extension adds speech-to-text and text-to-speech capabilities to VS Code. All voice processing happens locally on your machine - no audio data is sent to any online service. This makes it useful for dictation, talking to Copilot Chat, and having Chat responses read aloud.
+
+### Installing VS Code Speech
+
+1. Open Extensions: `Ctrl+Shift+X` (Mac: `Cmd+Shift+X`)
+2. Search for **VS Code Speech**
+3. Find **VS Code Speech** (publisher: Microsoft, identifier: `ms-vscode.vscode-speech`)
+4. Press `Enter` to open the extension detail page, then `Tab` to "Install" and press `Enter`
+
+After installation, a microphone icon appears in all Chat input fields and new voice commands become available in the Command Palette.
+
+> **Microphone permissions:** On macOS, go to System Settings, Privacy and Security, Microphone, and confirm Visual Studio Code is enabled. On Windows, go to Settings, Privacy and security, Microphone, and confirm that "Let desktop apps access your microphone" is on. Without this permission, voice input fails silently.
+
+### Editor Dictation - Type with Your Voice
+
+Editor dictation lets you speak and have your words appear as text wherever your cursor is. This works in the code editor, the SCM commit input box, and the comments field when reviewing pull requests.
+
+| Action | Windows/Linux | macOS |
+| ------ | ------------- | ----- |
+| Start dictation | `Ctrl+Alt+V` | `Cmd+Alt+V` |
+| Stop dictation | `Escape` | `Escape` |
+| Walky-talky mode | Press and hold `Ctrl+Alt+V`, speak, release to stop | Press and hold `Cmd+Alt+V`, speak, release to stop |
+
+When dictation is active, a small microphone icon appears at the cursor position. Speak naturally and your words are transcribed into text. Press `Escape` to stop.
+
+**Walky-talky mode:** Press and hold the keyboard shortcut instead of tapping it. Voice recognition stays active as long as you hold the keys. When you release, dictation stops automatically. This is the fastest way to dictate a short phrase.
+
+<details>
+<summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
+
+- When dictation starts, the accessibility signal `voiceRecordingStarted` plays (if configured in section 17). Your screen reader may also announce "Recording started."
+- Dictated text appears at the cursor position and is announced by your screen reader as it is inserted, just like typed text.
+- Press `Escape` to stop. The `voiceRecordingStopped` signal plays.
+- If you do not hear dictated text being announced, check that your screen reader is in focus mode (NVDA: `Insert+Space` to toggle) so it reads editor changes.
+
+</details>
+
+<details>
+<summary>Low vision users</summary>
+
+- The microphone icon that appears at the cursor is small. At 200%+ zoom it may be hard to spot, but dictation works regardless of whether you see the icon.
+- Dictated text appears at your configured editor font size with full contrast - no ghost text or gray previews.
+- **Check status bar:** When dictation is active, the status bar shows a recording indicator. Press `F6` to cycle to the status bar and confirm.
+
+</details>
+
+### Voice in Copilot Chat - Talk to Copilot
+
+Instead of typing prompts, you can speak them. This works in the Chat panel, inline chat, and quick chat.
+
+| Action | Windows/Linux | macOS |
+| ------ | ------------- | ----- |
+| Start voice chat (auto-selects best location) | `Ctrl+I` | `Cmd+I` |
+| Start voice in Chat panel specifically | Command Palette: "Chat: Voice Chat in Chat View" | Same |
+| Start inline voice chat | Command Palette: "Chat: Inline Voice Chat" | Same |
+| Start quick voice chat | Command Palette: "Chat: Quick Voice Chat" | Same |
+
+When voice chat is active, a microphone icon appears in the chat input field. Speak your prompt naturally. When you pause, the prompt is automatically submitted.
+
+> **Automatic submission:** By default, VS Code submits your voice prompt after a pause. You can adjust the wait time with the `accessibility.voice.speechTimeout` setting (in milliseconds), or set it to `0` to disable auto-submit entirely so you can review before sending.
+
+**Walky-talky mode in chat:** Press and hold `Ctrl+I` (Mac: `Cmd+I`). Speak your prompt. When you release the keys, voice recognition stops and the prompt is submitted automatically.
+
+<details>
+<summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
+
+- `Ctrl+I` with Speech installed starts voice input. If the Chat view is not focused, it opens the Chat view. If you are in the editor, it opens inline chat.
+- Speak your prompt instead of typing. Your screen reader announces the transcribed text as it appears in the input field.
+- When the response arrives, press `Alt+F2` (Accessible View) to read it at your own pace, just as you would with a typed prompt.
+- The automatic submission after a pause may catch you off guard. If you need more time to compose a multi-sentence prompt, set `accessibility.voice.speechTimeout` to `0` and submit manually with `Ctrl+Enter`.
+
+</details>
+
+### Text-to-Speech - Listen to Chat Responses
+
+VS Code Speech can read Copilot Chat responses aloud. Each chat response shows a speaker icon you can activate to hear that specific response.
+
+#### Automatic read-aloud after voice input
+
+Enable this setting to have every Chat response automatically spoken aloud when you used voice to ask the question:
+
+```json
+{
+  "accessibility.voice.autoSynthesize": true
+}
+```
+
+When auto-synthesize is on:
+
+1. You speak a question using voice chat
+2. Copilot responds in text
+3. The response is automatically read aloud
+4. To stop playback mid-sentence, press `Escape` or activate the stop icon
+
+#### Manual read-aloud for any response
+
+Even without `autoSynthesize`, every Chat response has a speaker icon. Activate it to hear that specific response read aloud. This works for responses from typed prompts too, not just voice prompts.
+
+<details>
+<summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
+
+- Text-to-speech uses a separate audio channel from your screen reader. Both may speak at the same time, which can be confusing.
+- **Recommended approach:** If you use a screen reader, you may prefer to keep `autoSynthesize` off and use Accessible View (`Alt+F2`) to read responses yourself. The text-to-speech voice is more useful for sighted users who want a hands-free experience.
+- If you do want to try text-to-speech alongside your screen reader, reduce your screen reader volume or temporarily mute it while Copilot speaks.
+
+</details>
+
+### "Hey Code" - Hands-Free Activation
+
+You can configure VS Code to listen continuously for the wake phrase "Hey Code" to start a voice chat session without touching the keyboard.
+
+Enable it in Settings:
+
+```json
+{
+  "accessibility.voice.keywordActivation": "chatInView"
+}
+```
+
+| Setting value | What happens when you say "Hey Code" |
+| ------------- | ------------------------------------- |
+| `"off"` | Disabled (default) |
+| `"chatInView"` | Opens voice chat in the Chat view |
+| `"quickChat"` | Opens voice quick chat (floating) |
+| `"inlineChat"` | Opens voice inline chat in the editor |
+| `"chatInContext"` | Opens voice chat in whichever chat location is most relevant |
+
+When "Hey Code" listening is active, a microphone icon appears in the status bar to show that VS Code is listening for the wake phrase.
+
+> **Privacy note:** Even with "Hey Code" enabled, all processing is local. No audio leaves your machine. The extension listens for the wake phrase only and starts transcription only after detecting it.
+
+### Language Configuration
+
+VS Code Speech supports 26 languages. By default it matches your VS Code display language. To change it:
+
+```json
+{
+  "accessibility.voice.speechLanguage": "en-US"
+}
+```
+
+When you start speech recognition for the first time with a new language, VS Code may install an additional language extension automatically.
+
+### All Voice Settings Reference
+
+| Setting | Default | Purpose |
+| ------- | ------- | ------- |
+| `accessibility.voice.speechLanguage` | `"auto"` | Language for speech recognition and synthesis. `"auto"` uses your VS Code display language. |
+| `accessibility.voice.speechTimeout` | `1250` | Milliseconds of silence before auto-submitting a voice chat prompt. Set to `0` to disable auto-submit. |
+| `accessibility.voice.autoSynthesize` | `false` | Automatically read Chat responses aloud when voice was used as input. |
+| `accessibility.voice.keywordActivation` | `"off"` | Enable "Hey Code" wake phrase. Values: `"off"`, `"chatInView"`, `"quickChat"`, `"inlineChat"`, `"chatInContext"`. |
+
+### All Voice Commands Reference
+
+| Command | Default shortcut | What it does |
+| ------- | ---------------- | ------------ |
+| Voice: Start Dictation in Editor | `Ctrl+Alt+V` (Mac: `Cmd+Alt+V`) | Begin dictating text at the cursor |
+| Voice: Stop Dictation in Editor | `Escape` | Stop dictation |
+| Chat: Start Voice Chat | `Ctrl+I` (Mac: `Cmd+I`) | Start voice input in the most appropriate chat location |
+| Chat: Voice Chat in Chat View | None | Start voice chat specifically in the Chat panel |
+| Chat: Inline Voice Chat | None | Start voice chat inline in the editor |
+| Chat: Quick Voice Chat | None | Start voice chat in the floating quick chat |
+| Chat: Stop Listening and Submit | None | End voice input and submit the prompt |
+| Chat: Read Aloud | None | Read a specific chat response using text-to-speech |
+| Chat: Stop Reading Aloud | `Escape` | Stop text-to-speech playback |
+
+### Custom Keybindings for Voice
+
+You can assign your own shortcuts for voice commands. Open the Keyboard Shortcuts editor (`Ctrl+K Ctrl+S`) and search for "voice" or "dictation". Example custom keybinding in `keybindings.json`:
+
+```json
+[
+  {
+    "key": "ctrl+u",
+    "command": "workbench.action.chat.startVoiceChat",
+    "when": "!voiceChatInProgress"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "workbench.action.chat.stopListeningAndSubmit",
+    "when": "voiceChatInProgress"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.editorDictation.start",
+    "when": "!editorDictation.inProgress"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "workbench.action.editorDictation.stop",
+    "when": "editorDictation.inProgress"
+  }
+]
+```
+
+The `when` clauses ensure the same key toggles the feature on and off.
+
+### Supported Platforms
+
+| Platform | Architecture |
+| -------- | ------------ |
+| Windows | x64, ARM |
+| macOS | x64 (Intel), ARM (Apple Silicon) |
+| Linux | x64, ARM32, ARM64 (Ubuntu 20.04/22.04/24.04, Debian 11/12, RHEL 8, CentOS 8) |
+
+On Linux, the extension requires the ALSA shared library (`libasound`). Install it with `sudo apt install libasound2` on Debian/Ubuntu if it is not already present.
+
+
+---
+
+## 19. Git Operations Inside VS Code
 
 This section previews the key Git operations you will perform inside VS Code. [Chapter 6 (Git & Source Control)](11-git-source-control.md) covers each in full detail with step-by-step walkthroughs. This is your orientation.
 

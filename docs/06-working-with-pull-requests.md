@@ -6,6 +6,8 @@
 
 > Pull requests are where your work becomes a contribution. This guide takes you through the full pull request workflow - from opening one to participating in review - using only your keyboard and screen reader.
 >
+> **Official GitHub Accessibility Guide:** GitHub publishes an NVDA-focused guide for working with pull requests using a screen reader at [Using GitHub Pull Requests with a Screen Reader](https://accessibility.github.com/documentation/guide/pull-requests/). This chapter covers the same material with additional perspectives (VoiceOver, low vision, CLI) and workshop-specific challenges. Use the official guide as a companion reference.
+>
 > **Screen reader note - New Files Changed Experience:** This guide uses GitHub's improved Files Changed experience, which adds proper ARIA landmark structure to the Files Changed tab, including the file tree and diff navigation. This feature may already be active for your account - it has been broadly rolled out and may no longer appear as a Feature Preview toggle at all.
 >
 > **To verify:** Activate the **User Menu** button (top-right of any GitHub page) → activate **"Feature preview"** → scan the list for **"New Files Changed Experience"**:
@@ -144,6 +146,22 @@ A great PR is small, linked to an issue, and easy to review. Faster feedback bui
 - Success is visible (green checks + closed issue).
 
 
+### About Learning Cards in This Chapter
+
+This chapter provides learning cards: expandable blocks that offer perspective-specific guidance for different ways of working. Not every card appears at every step. Open the ones that match how you work.
+
+The following table describes the six learning card types used in this chapter.
+
+| Card | Who it helps | What it covers |
+| --- | --- | --- |
+| Visual / mouse | Sighted users navigating with a mouse or trackpad | Click targets, visual cues, layout orientation |
+| Low vision | Users with magnification, zoom, or high-contrast themes | Zoom-friendly navigation, finding controls at high magnification, high contrast visibility |
+| NVDA / JAWS (Windows) | Screen reader users on Windows | Keystroke sequences, Focus and Browse mode, landmark paths |
+| VoiceOver (macOS) | Screen reader users on macOS | VO key sequences, rotor usage, interaction model |
+| GitHub.com web | All users working in the browser | Browser-based workflows without local tools |
+| CLI (git / gh) | Terminal users on any platform | Git and GitHub CLI commands for PR management |
+
+
 ## Local Git Alternative: The Full Branch-Edit-PR Workflow
 
 <details>
@@ -226,6 +244,17 @@ A PR shows:
 <summary>Visual / mouse users</summary>
 
 Click the **Pull requests** tab in the repository navigation bar. The tab shows the count of open PRs. Click any PR title to open it.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The **Pull requests** tab is in the repository navigation bar near the top of the page. At 200% browser zoom or higher, the tab bar may wrap to a second line. The tab text includes the open PR count in parentheses.
+
+- In **Windows High Contrast** mode, the active tab is indicated by a system-colored underline, not just a color change.
+- At high magnification, use `Tab` to move through the repository navigation links if the tab bar is hard to target with a pointer.
+- Once in the PR list, PR titles are links with standard hover underlines. They remain clickable at any zoom level.
 
 </details>
 
@@ -334,6 +363,18 @@ The three tabs - **Conversation**, **Commits**, and **Files changed** - appear j
 </details>
 
 <details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The PR tab bar sits just below the PR title and state badge. At high zoom levels:
+
+- The three tabs (**Conversation**, **Commits**, **Files changed**) may stack or wrap. Each tab remains a distinct clickable link.
+- The active tab is distinguished by an underline. In Windows High Contrast mode, the underline uses a system accent color for visibility.
+- The **Files changed** tab includes a count (for example, "Files changed 3"). This count is part of the link text, not a separate element.
+- If the tabs are hard to click at high magnification, use `Tab` key navigation from the PR title area to reach each tab link sequentially.
+
+</details>
+
+<details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
 1. Press `D` → navigate to “Pull request navigation tabs”
@@ -413,6 +454,17 @@ Step 3: The reply text area appears - Focus Mode → type your reply
 Step 4: Ctrl+Enter to submit
 ```
 
+#### Resolving conversations
+
+When a review comment has been addressed, you can mark the conversation as resolved:
+
+1. Navigate to the conversation thread (`3` to jump between comment headings)
+2. `Tab` to the end of the thread to find the **"Resolve conversation"** button
+3. Press `Enter` to mark it resolved
+4. The conversation collapses and shows as "Resolved"
+
+Resolved conversations are still accessible - they collapse but can be expanded again. This helps both reviewers and authors track which feedback items have been addressed.
+
 
 ## Reading the Commits Tab
 
@@ -423,6 +475,35 @@ Step 3: I to navigate individual commits within a date group
 Step 4: Each commit: SHA link, message, author, [Verified] badge if signed
 Step 5: Enter on a commit to open its diff
 ```
+
+
+## Reading the Checks Tab
+
+The Checks tab shows the status of automated tests, CI workflows, and other verification processes running on your PR. It helps you verify whether your changes pass all required tests before merging.
+
+<details>
+<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
+
+1. Navigate to the **"Pull request tabs"** landmark (`D`)
+2. Navigate between tab links (`K` or `Tab`) and activate "Checks"
+3. Press `D` to jump to the **"check suites"** section - this moves focus to the collapsed details button of the first check
+4. Press `B` or `Tab` to navigate between check buttons; each button is labeled with the check's name
+5. Press `Enter` or `Space` to expand a check and reveal its logs:
+   - Navigate through the check steps with `K` or `Tab`
+   - Activate a step for more details
+6. For a summary view: press `D` to navigate to the **"check run summary"** section
+
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver - macOS)</summary>
+
+1. `VO+U` -> Landmarks -> "Pull request tabs" -> activate "Checks"
+2. `VO+U` -> Landmarks -> navigate to "check suites" section
+3. `VO+Right` to move through check buttons, `VO+Space` to expand
+4. For summary: `VO+U` -> Landmarks -> "check run summary"
+
+</details>
 
 
 ## Reading the Files Changed Tab
@@ -439,6 +520,18 @@ The file tree lists every changed file. Use it to jump directly to a specific fi
 <summary>Visual / mouse users</summary>
 
 The file tree panel is on the left side of the Files Changed tab. It lists every modified file. Click a filename to scroll the diff view to that file. You can collapse or expand folders by clicking the arrow. Type in the filter box at the top to narrow the file list.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The file tree panel is on the left side of the Files Changed tab. At 200% zoom or higher:
+
+- The panel may collapse into a toggle button or hamburger menu. Look for a sidebar toggle icon in the top-left area of the Files Changed tab.
+- File names in the tree may be truncated. Hover over a truncated name to see the full path in a tooltip.
+- The filter box at the top of the file tree lets you type a filename to narrow the list. This is faster than scrolling through a long file list at high magnification.
+- Each file entry shows an icon indicating the change type (added, modified, deleted). In high-contrast themes, these icons use distinct system colors rather than relying on green/red alone.
 
 </details>
 
@@ -484,13 +577,31 @@ Each file’s diff shows added lines in green and removed lines in red. Scroll t
 </details>
 
 <details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The diff view uses color-coded backgrounds: green for added lines, red for removed lines, and white or grey for unchanged context.
+
+**Tips for reading diffs at high magnification:**
+
+- Enable **Split diff** view (dropdown at the top of Files Changed tab) to see old and new versions side-by-side. At very high zoom, **Unified diff** may be more comfortable because it uses a single column.
+- Each line has a `+` or `-` prefix in addition to the color. In Windows High Contrast mode, the color backgrounds are replaced with system contrast colors and the `+`/`-` prefixes remain visible.
+- Use `Ctrl+F` (browser Find) to search for specific text within the visible diffs. This is often faster than scrolling through long diffs at high zoom.
+- Line numbers appear on the left margin. At extreme zoom levels, these may overlap the code text. Hover over a line number to see the full number in a tooltip.
+- To collapse a long diff and reduce visual clutter, click the arrow next to the file heading.
+
+</details>
+
+<details>
 <summary>Screen reader users (NVDA / JAWS)</summary>
 
 1. `T` to jump to the next diff table
 2. Switch to Focus Mode: `Insert+Space` (NVDA) or `Insert+Z` (JAWS)
-3. `↓` to move through lines one by one
+3. `Ctrl+Alt+↓` to move down one row (next diff line), `Ctrl+Alt+↑` to move up
 4. `Ctrl+Alt+→` to read across columns (line number | change type | content)
 5. The screen reader reads: “+  Add accessible name to submit button”
+6. Collapsed sections contain unchanged code. Focus the expand/disclosure control and activate it (`Enter` or `Space`) to reveal the hidden lines.
+
+> **Tip:** You can also use `↓` and `↑` in Focus Mode for simpler line-by-line reading when you don’t need column-level detail. Use `NVDA+F7` to get a headings overview of all changed files before diving into individual diffs.
 
 </details>
 
@@ -509,6 +620,17 @@ Each file’s diff shows added lines in green and removed lines in red. Scroll t
 <summary>Visual / mouse users</summary>
 
 Hover over any line in the diff - a blue `+` button appears on the left margin. Click it to open a comment box for that line. Type your comment, then click **Add single comment** (posts immediately) or **Start a review** (batches the comment with others). To select a range of lines, click and drag across the line numbers on the left.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The inline comment button (a blue `+` icon) appears on hover near the left margin of each diff line. At high magnification:
+
+- The `+` button can be small and hard to target. **Keyboard alternative:** `Tab` into the diff line area, then press `Enter` on the focused line to open the comment box.
+- Once the comment box opens, it spans the full width of the diff area. At 200% zoom, you may need to scroll down to see the **Add single comment** and **Start a review** buttons below the text area.
+- In Windows High Contrast mode, the `+` button uses the system link color rather than blue, and the comment box border uses the system window frame color.
 
 </details>
 
@@ -610,6 +732,8 @@ Step 4: Bad: "Fix bugs"
 Step 1: Tab to the body text area
 Step 2: Focus Mode → type using the PR template (if provided)
 ```
+
+> **Copilot can write your PR description:** If your account has Copilot access, a **"Copilot actions"** button appears in the description toolbar. Activate it to open a menu with options to generate a summary of your changes or an outline of the most important changes in the PR. Screen reader users: `Tab` from the description text area to find the "Copilot actions" button, then press `Enter` to open the menu and `↑/↓` to choose an option.
 
 If no template, use this structure:
 
@@ -772,6 +896,18 @@ After adding your inline comments via “Start a review,” you must submit the 
 3. Optionally type a summary comment
 4. Select your verdict by clicking the radio button
 5. Click **Submit review**
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The **Finish your review** button is in the top-right area of the Files Changed tab. It shows a badge with the number of pending comments. At high magnification:
+
+- The button may scroll off-screen to the right. Use horizontal scrolling or press `Tab` from the page top to cycle through focusable elements until you reach it.
+- When clicked, a popover appears with a summary text area and three radio buttons (**Comment**, **Approve**, **Request changes**). At 200%+ zoom, the popover may extend below the visible viewport. Scroll down within the popover to see the **Submit review** button.
+- The radio buttons are standard HTML radio buttons. In Windows High Contrast mode, the selected radio button uses the system highlight color.
+- **Keyboard shortcut:** If the button is hard to find visually, press `Ctrl+Shift+Enter` from within any review comment text area to open the submit review dialog directly.
 
 </details>
 
@@ -981,6 +1117,8 @@ gh pr merge 42 --auto --squash
 - The PR status badge changes to "Merged" (purple)
 - The source branch can be deleted - a "Delete branch" button appears
 - Any linked issues with `Closes #N` in the description are automatically closed
+
+> **Screen reader tip - deleting the branch after merge:** Navigate to the "Add a comment" section (`D`), then press `Shift+B` to navigate backwards to the **"Delete branch"** button and activate it. This keeps your repository clean by removing the now-merged feature branch.
 
 
 ## Auto-Merge - Merging When You Can't Wait Around

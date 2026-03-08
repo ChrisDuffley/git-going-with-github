@@ -86,7 +86,7 @@
 <li><a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> - Welcome + discovery methods (top section)</li>
 </ul>
 <h3>2. Challenge Templates (Issue Infrastructure)</h3>
-<p>Located in <code>.github/ISSUE_TEMPLATE/</code> (Chapters 4-6, 11) and inline in <code>scripts/create_all_challenges.ps1</code> (Chapters 7-16):</p>
+<p>Located in <code>.github/ISSUE_TEMPLATE/</code> (Chapters 4, 6, 11) and inline in <code>scripts/create_all_challenges.ps1</code> (Chapters 5, 8-10, 12-16):</p>
 <table>
 <thead>
 <tr>
@@ -109,7 +109,16 @@
 <td>Created</td>
 </tr>
 <tr>
-<td><strong>05</strong> Pull Requests</td>
+<td><strong>05</strong> VS Code Accessibility</td>
+<td>1</td>
+<td>Issue comment</td>
+<td>No</td>
+<td>vs-code</td>
+<td>1</td>
+<td>Created</td>
+</tr>
+<tr>
+<td><strong>06</strong> Pull Requests</td>
 <td>3</td>
 <td>PR with <code>Closes #XX</code></td>
 <td>Yes</td>
@@ -118,7 +127,7 @@
 <td>Created</td>
 </tr>
 <tr>
-<td><strong>06</strong> Merge Conflicts</td>
+<td><strong>07</strong> Merge Conflicts</td>
 <td>1</td>
 <td>PR with <code>Closes #XX</code></td>
 <td>Yes</td>
@@ -127,7 +136,7 @@
 <td>Created</td>
 </tr>
 <tr>
-<td><strong>07</strong> Culture and Etiquette</td>
+<td><strong>08</strong> Culture and Etiquette</td>
 <td>1</td>
 <td>Issue comment</td>
 <td>No</td>
@@ -136,7 +145,7 @@
 <td>Created</td>
 </tr>
 <tr>
-<td><strong>08</strong> Labels, Milestones, Projects</td>
+<td><strong>09</strong> Labels, Milestones, Projects</td>
 <td>1</td>
 <td>Issue comment</td>
 <td>No</td>
@@ -145,21 +154,12 @@
 <td>Created</td>
 </tr>
 <tr>
-<td><strong>09</strong> Notifications</td>
+<td><strong>10</strong> Notifications</td>
 <td>1</td>
 <td>Issue comment</td>
 <td>No</td>
 <td>notifications</td>
 <td>1</td>
-<td>Created</td>
-</tr>
-<tr>
-<td><strong>10</strong> VS Code Basics</td>
-<td>1</td>
-<td>Issue comment</td>
-<td>No</td>
-<td>vs-code</td>
-<td>2</td>
 <td>Created</td>
 </tr>
 <tr>
@@ -218,7 +218,7 @@
 </tr>
 </tbody></table>
 <p><strong>Total: 26 challenges per student</strong></p>
-<p>Chapters 5, 6, and 11 use PR-based submission with <code>Closes #XX</code> syntax. Chapter 4 uses issue-comment-based submission where students post evidence links on their assigned challenge issue (no branch or file editing required). All other chapters use issue-comment-based submission where students post evidence as a checklist comment.</p>
+<p>Chapters 6, 7, and 11 use PR-based submission with <code>Closes #XX</code> syntax. Chapter 4 uses issue-comment-based submission where students post evidence links on their assigned challenge issue (no branch or file editing required). All other chapters use issue-comment-based submission where students post evidence as a checklist comment.</p>
 <p><strong>Template Contents:</strong></p>
 <ul>
 <li>YAML frontmatter with placeholders: <code>{CHAPTER}</code>, <code>{CHALLENGE_NUM}</code>, <code>{CHALLENGE_TITLE}</code>, <code>{USERNAME}</code>, <code>{ISSUE_NUMBER}</code></li>
@@ -245,12 +245,12 @@
 <tbody><tr>
 <td><code>scripts/create_student_issues.ps1</code></td>
 <td>Original 10 challenges (template-based)</td>
-<td>04, 05, 06, 11</td>
+<td>04, 06, 07, 11</td>
 </tr>
 <tr>
 <td><code>scripts/create_all_challenges.ps1</code></td>
 <td>All 26 challenges (self-contained)</td>
-<td>07-10, 12-16</td>
+<td>05, 08-10, 12-16</td>
 </tr>
 </tbody></table>
 <h4>Primary Script: <code>create_all_challenges.ps1</code></h4>
@@ -262,10 +262,10 @@
 .\scripts\create_all_challenges.ps1
 
 <span class="hljs-comment"># Create only specific chapters (e.g., just the new ones)</span>
-.\scripts\create_all_challenges.ps1 <span class="hljs-literal">-ChaptersOnly</span> <span class="hljs-string">&quot;07,08,09,10,12,13,14,15,16&quot;</span></code></pre>
+.\scripts\create_all_challenges.ps1 <span class="hljs-literal">-ChaptersOnly</span> <span class="hljs-string">&quot;05,08,09,10,12,13,14,15,16&quot;</span></code></pre>
 <p><strong>What It Does:</strong></p>
 <ol>
-<li>Defines all 16 challenge templates inline (Chapters 7-16, 16 challenges)</li>
+<li>Defines all 16 challenge templates inline (Chapters 5, 8-10, 12-16; 16 challenges)</li>
 <li>Loads org members via <code>gh api</code></li>
 <li>Checks all existing open challenge issues (paginated)</li>
 <li>Compares each student&#39;s existing issues against the full template set</li>
@@ -276,7 +276,7 @@
 <p><strong>Rerunning for New Members:</strong>
 The script is designed to be rerun periodically. It only creates issues for challenges a student does not already have, so running it again after new members join will create their full set without duplicating existing students&#39; issues.</p>
 <h4>Legacy Script: <code>create_student_issues.ps1</code></h4>
-<p>Creates the original 10 challenges (Ch 04, 05, 06, 11) by cloning from Weijun-Zhang-1996&#39;s template issues. Still functional but superseded by <code>create_all_challenges.ps1</code> for new chapters.</p>
+<p>Creates the original 10 challenges (Ch 04, 06, 07, 11) by cloning from Weijun-Zhang-1996&#39;s template issues. Still functional but superseded by <code>create_all_challenges.ps1</code> for new chapters.</p>
 <p><strong>Prerequisites for Both Scripts:</strong></p>
 <ul>
 <li>GitHub CLI (<code>gh</code>) installed and authenticated</li>
@@ -287,8 +287,8 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <p><strong>Applicable Chapters:</strong></p>
 <ul>
 <li>Chapter 4: Working with Issues (issue evidence + quality validation)</li>
-<li>Chapter 5: Pull Requests (PR workflow validation)</li>
-<li>Chapter 6: Merge Conflicts (conflict resolution validation)</li>
+<li>Chapter 6: Pull Requests (PR workflow validation)</li>
+<li>Chapter 7: Merge Conflicts (conflict resolution validation)</li>
 <li>Chapter 11: Git &amp; Source Control (Git operations validation)</li>
 </ul>
 <p><strong>How It Works:</strong></p>
@@ -350,7 +350,7 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <p>Chapter numbers are zero-padded to two digits (04, 05, 06, 07... 16) so issues sort correctly when filtered alphabetically.</p>
 <p><strong>Example:</strong></p>
 <pre><code class="hljs"><span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">04.1</span>: <span class="hljs-selector-tag">Create</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Issue</span> (<span class="hljs-variable">@accesswatch</span>)
-<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">05.2</span>: <span class="hljs-selector-tag">Open</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">6.2</span>: <span class="hljs-selector-tag">Open</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">11.3</span>: <span class="hljs-selector-tag">Push</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">GitHub</span> (<span class="hljs-variable">@andysq62</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">13.2</span>: <span class="hljs-selector-tag">Ask</span> <span class="hljs-selector-tag">Copilot</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">Explain</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Repo</span> (<span class="hljs-variable">@apelli95</span>)</code></pre>
 <p><strong>Why This Works:</strong></p>
@@ -401,7 +401,7 @@ gh issue list --label <span class="hljs-string">&quot;day: 1&quot;</span> --labe
 <span class="hljs-comment"># All intermediate challenges</span>
 gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&quot;</span> --state open</code></pre>
 <h3>Lifecycle States</h3>
-<p>Each challenge issue transitions through states. PR-based challenges (Ch 04, 05, 06, 11) auto-close when a PR merges. Comment-based challenges (Ch 07-10, 12-16) are closed manually by the student or facilitator after evidence is posted.</p>
+<p>Each challenge issue transitions through states. PR-based challenges (Ch 04, 05, 06, 11) auto-close when a PR merges. Comment-based challenges (Ch 8-10, 12-16) are closed manually by the student or facilitator after evidence is posted.</p>
 <table>
 <thead>
 <tr>
@@ -480,7 +480,7 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 </ul>
 </li>
 <li><strong>Pacing:</strong> Are challenges completable in allotted time?<ul>
-<li>Check: 80%+ of students reach Chapter 6 on Day 1</li>
+<li>Check: 80%+ of students reach Chapter 7 on Day 1</li>
 </ul>
 </li>
 <li><strong>Motivation:</strong> Do students attempt optional challenges (not required)?<ul>
@@ -493,8 +493,8 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
 │   │   ├── challenge-chapter-<span class="hljs-number">4</span><span class="hljs-selector-class">.md</span>       &lt;- Issue template (Chapter <span class="hljs-number">4</span>)
-│   │   ├── challenge-chapter-<span class="hljs-number">5</span><span class="hljs-selector-class">.md</span>       &lt;- Issue template (Chapter <span class="hljs-number">5</span>)
-│   │   ├── challenge-chapter-<span class="hljs-number">6</span><span class="hljs-selector-class">.md</span>       &lt;- Issue template (Chapter <span class="hljs-number">6</span>)
+│   │   ├── challenge-chapter-<span class="hljs-number">5</span><span class="hljs-selector-class">.md</span>       &lt;- Issue template (Chapter <span class="hljs-number">6</span>)
+│   │   ├── challenge-chapter-<span class="hljs-number">6</span><span class="hljs-selector-class">.md</span>       &lt;- Issue template (Chapter <span class="hljs-number">7</span>)
 │   │   ├── challenge-chapter-<span class="hljs-number">11</span><span class="hljs-selector-class">.md</span>      &lt;- Issue template (Chapter <span class="hljs-number">11</span>)
 │   │   └── challenge-hub<span class="hljs-selector-class">.md</span>             &lt;- Generic template with placeholders
 │   ├── data/
@@ -507,7 +507,7 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 │
 ├── scripts/
 │   ├── create_student_issues<span class="hljs-selector-class">.ps1</span>        &lt;- Original <span class="hljs-number">10</span>-challenge creator (Ch <span class="hljs-number">04</span>/<span class="hljs-number">05</span>/<span class="hljs-number">06</span>/<span class="hljs-number">11</span>)
-│   └── create_all_challenges<span class="hljs-selector-class">.ps1</span>        &lt;- Full <span class="hljs-number">26</span>-challenge creator (Ch <span class="hljs-number">07</span>-<span class="hljs-number">16</span>)
+│   └── create_all_challenges<span class="hljs-selector-class">.ps1</span>        &lt;- Full <span class="hljs-number">26</span>-challenge creator (Ch <span class="hljs-number">8</span>-<span class="hljs-number">16</span>)
 │
 ├── learning-room/
 │   └── docs/
@@ -515,12 +515,12 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 │
 ├── docs/
 │   ├── <span class="hljs-number">04</span>-working-with-issues<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">05</span>-working-with-pull-requests<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">06</span>-merge-conflicts<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">07</span>-culture-etiquette<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">08</span>-labels-milestones-projects<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">09</span>-notifications<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">10</span>-vscode-basics<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">06</span>-working-with-pull-requests<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">07</span>-merge-conflicts<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">08</span>-culture-etiquette<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">09</span>-labels-milestones-projects<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">10</span>-notifications<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">05</span>-vscode-accessibility<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">11</span>-git-source-control<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">12</span>-github-pull-requests-extension<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">13</span>-github-copilot<span class="hljs-selector-class">.md</span>
@@ -537,12 +537,12 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 <h3>From Student Docs</h3>
 <ul>
 <li><a href="docs/04-working-with-issues.html">docs/04-working-with-issues.md</a> - links to Chapter 4 challenges</li>
-<li><a href="docs/05-working-with-pull-requests.html">docs/05-working-with-pull-requests.md</a> - links to Chapter 5 challenges</li>
-<li><a href="docs/06-merge-conflicts.html">docs/06-merge-conflicts.md</a> - links to Chapter 6 challenges</li>
-<li><a href="docs/07-culture-etiquette.html">docs/07-culture-etiquette.md</a> - links to Chapter 7 challenges</li>
-<li><a href="docs/08-labels-milestones-projects.html">docs/08-labels-milestones-projects.md</a> - links to Chapter 8 challenges</li>
-<li><a href="docs/09-notifications.html">docs/09-notifications.md</a> - links to Chapter 9 challenges</li>
-<li><a href="docs/10-vscode-basics.html">docs/10-vscode-basics.md</a> - links to Chapter 10 challenges</li>
+<li><a href="docs/06-working-with-pull-requests.html">docs/06-working-with-pull-requests.md</a> - links to Chapter 6 challenges</li>
+<li><a href="docs/07-merge-conflicts.html">docs/07-merge-conflicts.md</a> - links to Chapter 7 challenges</li>
+<li><a href="docs/08-culture-etiquette.html">docs/08-culture-etiquette.md</a> - links to Chapter 8 challenges</li>
+<li><a href="docs/09-labels-milestones-projects.html">docs/09-labels-milestones-projects.md</a> - links to Chapter 9 challenges</li>
+<li><a href="docs/10-notifications.html">docs/10-notifications.md</a> - links to Chapter 10 challenges</li>
+<li><a href="docs/05-vscode-accessibility.html">docs/05-vscode-accessibility.md</a> - links to Chapter 5 challenges</li>
 <li><a href="docs/11-git-source-control.html">docs/11-git-source-control.md</a> - links to Chapter 11 challenges</li>
 <li><a href="docs/12-github-pull-requests-extension.html">docs/12-github-pull-requests-extension.md</a> - links to Chapter 12 challenges</li>
 <li><a href="docs/13-github-copilot.html">docs/13-github-copilot.md</a> - links to Chapter 13 challenges</li>
@@ -583,8 +583,8 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 </ul>
 <p><strong>Valid Examples:</strong></p>
 <pre><code class="hljs"><span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">04.1</span>: <span class="hljs-selector-tag">Create</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Issue</span> (<span class="hljs-variable">@accesswatch</span>)
-<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">05.2</span>: <span class="hljs-selector-tag">Review</span> <span class="hljs-selector-tag">and</span> <span class="hljs-selector-tag">Approve</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
-<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">06.1</span>: <span class="hljs-selector-tag">Resolve</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Merge</span> <span class="hljs-selector-tag">Conflict</span> (<span class="hljs-variable">@andysq62</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">6.2</span>: <span class="hljs-selector-tag">Review</span> <span class="hljs-selector-tag">and</span> <span class="hljs-selector-tag">Approve</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">7.1</span>: <span class="hljs-selector-tag">Resolve</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Merge</span> <span class="hljs-selector-tag">Conflict</span> (<span class="hljs-variable">@andysq62</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">11.3</span>: <span class="hljs-selector-tag">Push</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">Work</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">GitHub</span> (<span class="hljs-variable">@apelli95</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">14.1</span>: <span class="hljs-selector-tag">Review</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">PR</span> <span class="hljs-selector-tag">with</span> <span class="hljs-selector-tag">Inline</span> <span class="hljs-selector-tag">Comments</span> (<span class="hljs-variable">@JeffBlumentworker</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">16.3</span>: <span class="hljs-selector-tag">Agent</span> <span class="hljs-selector-tag">Instructions</span> <span class="hljs-selector-tag">Deep</span> <span class="hljs-selector-tag">Dive</span> (<span class="hljs-variable">@ChrisDuffley</span>)</code></pre>

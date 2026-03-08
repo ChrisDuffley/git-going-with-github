@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Available Challenges - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="../../styles/github-markdown.css">
-  <link rel="stylesheet" href="../../styles/highlight.css">
-  <link rel="stylesheet" href="../../styles/custom.css">
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Available Challenges</span>
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Available Challenges</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="../../search.html" method="get">
+        <form role="search" class="search-form" action="./search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -67,8 +67,8 @@
 <li>Look for issues titled <code>Chapter X.Y: [Challenge Name] (@YOUR_USERNAME)</code></li>
 <li>Click to open YOUR issue</li>
 <li>Follow the steps in the issue description and this hub</li>
-<li>Open a PR that references the issue (<code>Closes #XX</code>)</li>
-<li>Watch the magic happen - bot validation, auto-close, and you&#39;ve leveled up!</li>
+<li>Complete the challenge: <strong>comment on the issue</strong> (Chapters 4-5, 8-10, 12-14, 16) or <strong>open a PR</strong> (Chapters 6, 7, 11, 15)</li>
+<li>Close the issue when done - you&#39;ve leveled up!</li>
 </ol>
 <h3>Facilitators and Admins</h3>
 <p>Are you managing this workshop? See <a href="../../FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> for:</p>
@@ -87,28 +87,88 @@
 <li>Each issue title shows the chapter and challenge number</li>
 <li>Click any issue to start</li>
 </ol>
-<p><strong>Example:</strong> You&#39;ll see an issue like:</p>
+<p><strong>Example:</strong> You&#39;ll see issues like:</p>
 <pre><code class="hljs"><span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.1</span>: <span class="hljs-selector-tag">Create</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Issue</span> (<span class="hljs-variable">@yourname</span>)
-<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.2</span>: <span class="hljs-selector-tag">Claim</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Challenge</span> (<span class="hljs-variable">@yourname</span>)
-<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.3</span>: <span class="hljs-selector-tag">Ask</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Question</span> (<span class="hljs-variable">@yourname</span>)</code></pre>
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.2</span>: <span class="hljs-selector-tag">Comment</span> <span class="hljs-selector-tag">and</span> @<span class="hljs-selector-tag">Mention</span> (<span class="hljs-variable">@yourname</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.3</span>: <span class="hljs-selector-tag">Add</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">Sub-Issue</span> (<span class="hljs-variable">@yourname</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">6.1</span>: <span class="hljs-selector-tag">Create</span> <span class="hljs-selector-tag">One</span> <span class="hljs-selector-tag">Small</span> <span class="hljs-selector-tag">Branch</span> <span class="hljs-selector-tag">Change</span> (<span class="hljs-variable">@yourname</span>)</code></pre>
 <h3>Method 2: Use Advanced Search</h3>
 <p>In the GitHub search bar at the top:</p>
 <pre><code class="hljs"><span class="hljs-keyword">is</span>:issue assignee:<span class="hljs-meta">@yourname</span> label:challenge</code></pre>
 <p>This shows all challenges assigned to you.</p>
 <h3>Method 3: This Challenge Hub (Below)</h3>
 <p>Expand any chapter section below to see the full instructions. The hub is the <strong>detailed reference</strong> - issues are the <strong>lightweight tracker</strong>.</p>
-<h2>Challenge to Issue Lifecycle</h2>
-<p>Here&#39;s the flow every time you complete a challenge:</p>
-<pre><code class="hljs"><span class="hljs-number">1.</span> FIND        → Spot your issue <span class="hljs-keyword">in</span> the Issues tab
-<span class="hljs-number">2.</span> CLAIM       → <span class="hljs-keyword">Comment</span> &quot;I&#x27;m working on this!&quot;
-<span class="hljs-number">3.</span> <span class="hljs-keyword">WORK</span>        → Follow the steps <span class="hljs-keyword">in</span> the issue + hub
-<span class="hljs-number">4.</span> PUSH        → <span class="hljs-keyword">Create</span> a branch, <span class="hljs-keyword">commit</span>, push (git)
-<span class="hljs-number">5.</span> <span class="hljs-keyword">OPEN</span> PR     → <span class="hljs-keyword">Open</span> PR that says &quot;Closes #&lt;issue_number&gt;&quot;
-<span class="hljs-number">6.</span> <span class="hljs-keyword">VALIDATE</span>    → Bot checks your <span class="hljs-keyword">work</span> automatically
-<span class="hljs-number">7.</span> FIX         → <span class="hljs-keyword">If</span> bot finds issues, fix <span class="hljs-keyword">and</span> push again
-<span class="hljs-number">8.</span> MERGE       → <span class="hljs-keyword">When</span> bot says checks passed, merge your PR
-<span class="hljs-number">9.</span> COMPLETE    → Issue auto-closes, you <span class="hljs-keyword">move</span> <span class="hljs-keyword">to</span> next challenge!</code></pre>
-<p>Each step is explained in the issue description. The issue is your <strong>contract with GitHub</strong> - it proves you did the work.</p>
+<h2>Challenge Lifecycle</h2>
+<p>There are two kinds of challenges. The type determines how you complete it.</p>
+<h3>Comment-Based Challenges (Chapters 4, 7-10, 12-14, 16)</h3>
+<p>No branches, no PRs, no file editing. Your work happens entirely in issue threads.</p>
+<pre><code class="hljs"><span class="hljs-number">1.</span> FIND      → <span class="hljs-keyword">Open</span> your assigned issue <span class="hljs-keyword">in</span> the Issues tab
+<span class="hljs-number">2.</span> <span class="hljs-keyword">WORK</span>      → Follow the steps <span class="hljs-keyword">in</span> the issue + this hub
+<span class="hljs-number">3.</span> <span class="hljs-keyword">COMMENT</span>   → Post your evidence <span class="hljs-keyword">as</span> an issue <span class="hljs-keyword">comment</span>
+<span class="hljs-number">4.</span> <span class="hljs-keyword">CLOSE</span>     → <span class="hljs-keyword">Close</span> the issue <span class="hljs-keyword">when</span> done</code></pre>
+<h3>PR-Based Challenges (Chapters 6, 7, 11, 15)</h3>
+<p>You edit a file, create a branch, and open a pull request that references the issue.</p>
+<pre><code class="hljs"><span class="hljs-number">1.</span> FIND      → Open your assigned issue <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> Issues <span class="hljs-literal">tab</span>
+<span class="hljs-number">2.</span> BRANCH    → Create <span class="hljs-keyword">a</span> branch (naming convention below)
+<span class="hljs-number">3.</span> EDIT      → Make <span class="hljs-keyword">the</span> change described <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> issue
+<span class="hljs-number">4.</span> PR        → Open <span class="hljs-keyword">a</span> PR <span class="hljs-keyword">with</span> <span class="hljs-string">&quot;Closes #XX&quot;</span> <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> body
+<span class="hljs-number">5.</span> VALIDATE  → Bot checks your work (Chapters <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">11</span>)
+<span class="hljs-number">6.</span> FIX       → If bot finds issues, fix <span class="hljs-keyword">and</span> push again
+<span class="hljs-number">7.</span> MERGE     → When checks pass, <span class="hljs-built_in">merge</span> your PR
+<span class="hljs-number">8.</span> COMPLETE  → Issue auto-closes!</code></pre>
+<h3>Branch Naming Convention</h3>
+<table>
+<thead>
+<tr>
+<th scope="col">Chapter</th>
+<th scope="col">Branch name pattern</th>
+<th scope="col">Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chapter 4</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapter 5</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapters 6-7</td>
+<td><code>fix/yourname-issueXX</code></td>
+<td><code>fix/maria-issue42</code></td>
+</tr>
+<tr>
+<td>Chapters 8-10</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapter 11</td>
+<td><code>chapter11/yourname-issueXX</code></td>
+<td><code>chapter11/maria-issue55</code></td>
+</tr>
+<tr>
+<td>Chapters 12-14</td>
+<td>No branch needed</td>
+<td>Work happens in issue threads</td>
+</tr>
+<tr>
+<td>Chapter 15</td>
+<td><code>templates/yourname-issueXX</code></td>
+<td><code>templates/maria-issue60</code></td>
+</tr>
+<tr>
+<td>Chapter 16</td>
+<td>No branch needed (optional: <code>agents/yourname-issueXX</code>)</td>
+<td><code>agents/maria-issue65</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>What about your <code>username-practice</code> branch?</strong> That branch was created for you in Chapter 3. It becomes useful starting in Chapter 11 when you work locally with Git and VS Code. For Chapters 6-7, use short-lived <code>fix/</code> branches instead.</p>
+</blockquote>
 <h2>Chapter Challenge Map (Chapters 2-16)</h2>
 <p>Use this map for a consistent student experience: safe start, small actions, visible progress.</p>
 <h3>Shared Learning Pattern</h3>
@@ -147,47 +207,47 @@
 <td>Chapter 4: Working with Issues</td>
 <td>Micro issue challenges (no branch needed)</td>
 <td>3</td>
-<td>Issue creation + claim + question comment on challenge issue</td>
+<td>Issue creation + @mention comment + sub-issue</td>
 <td>Manual/facilitator</td>
 </tr>
 <tr>
-<td>Chapter 5: Working with Pull Requests</td>
+<td>Chapter 5: VS Code Accessibility</td>
+<td>Guided setup baseline</td>
+<td>1</td>
+<td>Completion comment checklist</td>
+<td>None</td>
+</tr>
+<tr>
+<td>Chapter 6: Working with Pull Requests</td>
 <td>Bot-validated PR challenges (first branch + file edit)</td>
 <td>3</td>
 <td>Linked PR (<code>Closes #XX</code>) + passing checks</td>
 <td>PR bot validation</td>
 </tr>
 <tr>
-<td>Chapter 6: Merge Conflicts</td>
+<td>Chapter 7: Merge Conflicts</td>
 <td>Controlled single drill</td>
 <td>1</td>
 <td>Issue-linked PR resolving conflict markers</td>
 <td>Manual by default</td>
 </tr>
 <tr>
-<td>Chapter 7: Culture and Etiquette</td>
+<td>Chapter 8: Culture and Etiquette</td>
 <td>Guided reflection</td>
 <td>1 optional</td>
 <td>Structured reflection comment</td>
 <td>None</td>
 </tr>
 <tr>
-<td>Chapter 8: Labels/Milestones/Projects</td>
+<td>Chapter 9: Labels/Milestones/Projects</td>
 <td>Guided triage recommendation</td>
 <td>1</td>
 <td>Triage recommendation comment (or apply labels if permitted)</td>
 <td>None by default</td>
 </tr>
 <tr>
-<td>Chapter 9: Notifications</td>
+<td>Chapter 10: Notifications</td>
 <td>Guided setup walkthrough</td>
-<td>1</td>
-<td>Completion comment checklist</td>
-<td>None</td>
-</tr>
-<tr>
-<td>Chapter 10: VS Code Basics</td>
-<td>Guided setup baseline</td>
 <td>1</td>
 <td>Completion comment checklist</td>
 <td>None</td>
@@ -249,63 +309,138 @@
 <summary><strong>Chapter 4: Working with Issues</strong> - 3 Micro-Challenges</summary>
 
 <blockquote>
-<p><strong>Branch guidance:</strong> Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.</p>
+<p><strong>Branch guidance:</strong> Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 6.</p>
 </blockquote>
 <h3>Challenge Set</h3>
 <ol>
 <li><strong>Create your first issue</strong> - file a new issue with a clear title and description.</li>
-<li><strong>Claim a challenge issue</strong> - comment on an existing beginner issue to claim it.</li>
-<li><strong>Ask one clarifying question</strong> - add a question comment on your claimed issue.</li>
+<li><strong>Comment and @mention</strong> - leave a comment on a classmate&#39;s issue and tag them with an @mention.</li>
+<li><strong>Add a sub-issue</strong> - break a larger issue into smaller, trackable pieces.</li>
 </ol>
 <h3>Challenge 4.1: Create Your First Issue</h3>
+<p><strong>Goal:</strong> File a new issue in the Learning Room repository.</p>
 <ol>
 <li>Open the <code>learning-room</code> repository in your browser.</li>
-<li>Navigate to the <strong>Issues</strong> tab.</li>
+<li>Navigate to the <strong>Issues</strong> tab (keyboard shortcut: press <code>G</code> then <code>I</code>).</li>
 <li>Activate the <strong>New issue</strong> button.</li>
-<li>Type a clear, specific title (at least 12 characters). For example: &quot;Add missing contributor background paragraph in welcome.md&quot;.</li>
-<li>Write a meaningful description (at least 80 characters) explaining the problem and where it is.</li>
+<li>If a template picker appears, select <strong>Open a blank issue</strong>.</li>
+<li>Type a clear, specific title (at least 12 characters). Examples:<ul>
+<li>&quot;Add missing contributor background paragraph in welcome.md&quot;</li>
+<li>&quot;Keyboard shortcuts table has incorrect NVDA modifier key&quot;</li>
+<li>&quot;Setup guide link to accessibility settings is broken&quot;</li>
+</ul>
+</li>
+<li>Write a meaningful description (at least 80 characters). Include what the problem is, where it exists (file name and section), and what a fix might look like.</li>
 <li>Activate <strong>Submit new issue</strong>.</li>
-<li>Note the issue number for your evidence.</li>
+<li>Note the issue number (for example, <code>#150</code>). You will reference this later.</li>
 </ol>
-<h3>Challenge 4.2: Claim a Challenge Issue</h3>
+<p><strong>You are done when:</strong> Your new issue appears in the Issues list with your username as the author.</p>
+<h3>Challenge 4.2: Comment and @Mention</h3>
+<p><strong>Goal:</strong> Leave a comment on another student&#39;s issue and use an @mention to notify them.</p>
 <ol>
-<li>Open the Issues tab and filter: <code>is:open label:&quot;challenge: beginner&quot;</code>.</li>
-<li>Pick an issue that interests you and open it.</li>
-<li>Read the description to understand what needs to be done.</li>
-<li>Comment: <code>I&#39;d like to try this!</code></li>
-<li>Note the issue number. This is the issue you will fix in Chapter 5.</li>
+<li>Open the <strong>Issues</strong> tab in the <code>learning-room</code> repository.</li>
+<li>Find an issue created by a classmate (look for issues from Challenge 4.1, or browse open issues).</li>
+<li>Open the issue by activating its title link.</li>
+<li>Read the issue description to understand what they reported.</li>
+<li>Scroll to the comment box at the bottom.</li>
+<li>Write a helpful comment that <strong>@mentions the issue author by username</strong>. Examples:<ul>
+<li>&quot;@classmate I can confirm this - the link in setup-guide.md goes to a 404 page.&quot;</li>
+<li>&quot;@classmate Good catch! I think the correct shortcut is Insert+F7, not Insert+F5.&quot;</li>
+<li>&quot;@classmate I&#39;d suggest adding the paragraph right after the &#39;Who Can Contribute&#39; heading.&quot;</li>
+</ul>
+</li>
+<li>Activate the <strong>Comment</strong> button (or press <code>Ctrl+Enter</code>).</li>
 </ol>
-<h3>Challenge 4.3: Ask One Clarifying Question</h3>
+<p><strong>Why @mentions matter:</strong> When you type <code>@username</code>, GitHub sends that person a notification. This is how real open source teams communicate - you signal who needs to see your message. It also bridges into Chapter 10 (Notifications) where you will configure how you receive these alerts.</p>
+<p><strong>You are done when:</strong> Your comment appears in the thread and includes an @mention (the username will render as a clickable link).</p>
+<h3>Challenge 4.3: Add a Sub-Issue</h3>
+<p><strong>Goal:</strong> Break a larger issue into smaller, trackable pieces using GitHub&#39;s sub-issue feature.</p>
+<blockquote>
+<p><strong>What are sub-issues?</strong> Sub-issues let you decompose a big task into smaller steps, each tracked independently. The parent issue shows a progress bar as sub-issues are completed. This is how teams organize real work - a single &quot;Fix accessibility in welcome.md&quot; issue might have sub-issues for each specific fix.</p>
+</blockquote>
 <ol>
-<li>Open the issue you claimed in Challenge 4.2.</li>
-<li>Re-read the description. Think about what is unclear.</li>
-<li>Post one specific question as a comment (for example: &quot;Should I add the paragraph after the existing heading or create a new subsection?&quot;).</li>
+<li>Open the issue you created in Challenge 4.1 (or any open issue you have permission to edit).</li>
+<li>Look for the <strong>Sub-issues</strong> section in the issue sidebar (right side on desktop). If you do not see it, look for an <strong>Add sub-issue</strong> button or the <strong>Create sub-issue</strong> option below the issue description.</li>
+<li>Activate <strong>Add sub-issue</strong> and choose <strong>Create new sub-issue</strong>.</li>
+<li>Give the sub-issue a clear title that describes one specific piece of the parent issue. For example, if the parent is &quot;Fix accessibility in welcome.md&quot;:<ul>
+<li>Sub-issue: &quot;Add alt text to welcome banner image&quot;</li>
+<li>Sub-issue: &quot;Fix heading hierarchy in Getting Started section&quot;</li>
+</ul>
+</li>
+<li>Add a short description and activate <strong>Create</strong>.</li>
+<li>The sub-issue now appears nested under the parent issue with a progress indicator.</li>
 </ol>
+<p><strong>You are done when:</strong> Your parent issue shows at least one sub-issue in the Sub-issues section.</p>
 <h3>Completing Chapter 4</h3>
-<p>Post a comment on your assigned Chapter 4 challenge issue with your evidence:</p>
+<p>Post a comment on your <strong>assigned Chapter 4.1 challenge issue</strong> with your evidence:</p>
 <pre><code class="hljs language-text">Chapter 4 completed:
 - Challenge 4.1: Created issue #[number]
-- Challenge 4.2: Claimed issue #[number]
-- Challenge 4.3: Asked question on issue #[number]</code></pre>
+- Challenge 4.2: Commented with @mention on issue #[number]
+- Challenge 4.3: Added sub-issue to issue #[number]</code></pre>
+<p>Replace <code>[number]</code> with actual issue numbers. Then close your Chapter 4 challenge issues.</p>
 <h3>Expected Outcomes</h3>
 <ul>
 <li>Student can create an issue with a clear title and description.</li>
-<li>Student can claim a challenge issue in a public thread.</li>
-<li>Student can ask a useful question before starting implementation.</li>
+<li>Student can communicate in issue threads using @mentions.</li>
+<li>Student can organize work by breaking issues into sub-issues.</li>
 </ul>
 <h3>If You Get Stuck</h3>
 <ol>
-<li>Re-open <code>learning-room/docs/CHALLENGES.md</code> and pick one beginner issue.</li>
-<li>Use the issue search filter: <code>is:open label:&quot;challenge: beginner&quot;</code>.</li>
-<li>If claim/comment fails, refresh and retry once.</li>
-<li>Ask facilitator for a direct issue link and continue.</li>
+<li>Can&#39;t find a classmate&#39;s issue? Filter the Issues tab by <code>is:open</code> and look for recent ones.</li>
+<li>@mention not working? Make sure you type <code>@</code> immediately followed by the username with no space.</li>
+<li>Sub-issue option not visible? Ask a facilitator - the feature may need to be enabled for the repository.</li>
+<li>Still stuck? Ask a facilitator for a direct issue link.</li>
 </ol>
 <h3>Learning Moment</h3>
-<p>Issues are not just task lists. They are collaborative spaces where clear communication reduces confusion and prevents rework.</p>
+<p>Issues are collaborative spaces, not just task lists. An @mention tells someone &quot;I need your attention here.&quot; Sub-issues turn vague tasks into clear checklists. Both skills are used daily in real open source projects.</p>
+</details>
+
+
+<details>
+<summary><strong>Chapter 5: VS Code Accessibility</strong> - Guided VS Code Accessibility Baseline (No Bot Check)</summary>
+
+<h3>Goal</h3>
+<p>Confirm students can access VS Code (github.dev or desktop), enable screen reader support, and perform core file navigation.</p>
+<h3>Student Steps</h3>
+<ol>
+<li>Open any repository and launch github.dev with <code>.</code> (period key).</li>
+<li>Screen reader mode setup:<ul>
+<li>Windows (NVDA/JAWS): enable with <code>Shift+Alt+F1</code>.</li>
+<li>Mac (VoiceOver): mode is usually already optimized. If needed, run Command Palette and search <code>Toggle Screen Reader Accessibility Mode</code>.</li>
+</ul>
+</li>
+<li>Open Explorer with <code>Ctrl+Shift+E</code> (Mac: <code>Cmd+Shift+E</code>).</li>
+<li>Open <code>README.md</code> from the file tree.</li>
+<li>Open outline/symbols with <code>Ctrl+Shift+O</code> (Mac: <code>Cmd+Shift+O</code>).</li>
+<li>Open Command Palette with <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) and run any command.</li>
+<li>Return to your assigned challenge issue and post a completion comment using this format:</li>
+</ol>
+<pre><code class="hljs language-text">Chapter 5 complete:
+- Opened github.dev: yes
+- Screen reader mode enabled: yes
+- Opened file in Explorer: yes
+- Opened outline/symbols: yes
+- Opened Command Palette: yes</code></pre>
+<h3>Expected Outcomes</h3>
+<ul>
+<li>Student can launch and navigate github.dev or desktop VS Code.</li>
+<li>Student can enable screen reader mode and open core navigation surfaces.</li>
+<li>Student is ready for VS Code-based contribution chapters.</li>
+</ul>
+<h3>If You Get Stuck</h3>
+<ol>
+<li>Confirm you are in a repository page before pressing <code>.</code>.</li>
+<li>Retry screen reader mode toggle once, then verify in settings.</li>
+<li>On Mac with VoiceOver, use Command Palette (<code>Cmd+Shift+P</code>) and run <code>Toggle Screen Reader Accessibility Mode</code> if keyboard navigation feels inconsistent.</li>
+<li>Use Command Palette to run commands when shortcut memory is hard.</li>
+<li>Ask facilitator for a side-by-side demo and repeat the same 5 steps.</li>
+</ol>
+<h3>Learning Moment</h3>
+<p>Tool setup is part of contribution skill. A stable, accessible editor reduces stress and increases contribution quality.</p>
 </details>
 
 <details>
-<summary><strong>Chapter 5: Working with Pull Requests</strong> - 3 PR-Validated Challenges</summary>
+<summary><strong>Chapter 6: Working with Pull Requests</strong> - 3 PR-Validated Challenges</summary>
 
 <blockquote>
 <p><strong>Branch guidance:</strong> This is the first chapter where you edit files and create branches.</p>
@@ -317,13 +452,14 @@
 </blockquote>
 <h3>Challenge Set</h3>
 <ol>
-<li><strong>Create one small branch change</strong> - edit the file specified in your claimed issue.</li>
+<li><strong>Create one small branch change</strong> - edit a practice file on a new branch.</li>
 <li><strong>Open a linked PR</strong> - use the PR template and include <code>Closes #XX</code>.</li>
 <li><strong>Pass required checks</strong> - respond to bot feedback until all required checks pass.</li>
 </ol>
-<h3>Challenge 5.1: Create One Small Branch Change</h3>
-<p>Open the issue you claimed in Chapter 4.2. It tells you which file to edit.</p>
-<p>The following table summarizes the practice files.</p>
+<h3>Challenge 6.1: Create One Small Branch Change</h3>
+<p><strong>Goal:</strong> Edit one of the practice files and save your change on a new branch.</p>
+<p>Open your <strong>assigned Chapter 6.1 challenge issue</strong> (the one titled &quot;Chapter 6.1: Create One Small Branch Change (@yourname)&quot;). The issue description tells you which file to edit and what to fix.</p>
+<p>The Learning Room has three practice files with intentional problems. Your assigned issue points you to one of them:</p>
 <table>
 <thead>
 <tr>
@@ -354,14 +490,14 @@
 <li>Select <strong>Create a new branch for this commit and start a pull request</strong>.</li>
 <li>Activate <strong>Propose changes</strong>.</li>
 </ol>
-<h3>Challenge 5.2: Open a Linked PR</h3>
+<h3>Challenge 6.2: Open a Linked PR</h3>
 <ol>
 <li>On the &quot;Open a pull request&quot; page, write a descriptive title.</li>
-<li>In the body, include a summary of your change (at least 50 characters) and the line <code>Closes #XX</code> (where XX is your Chapter 5 challenge issue number).</li>
+<li>In the body, include a summary of your change (at least 50 characters) and the line <code>Closes #XX</code> (where XX is your Chapter 6 challenge issue number).</li>
 <li>Verify the base branch is <code>main</code> and the compare branch is your <code>fix/</code> branch.</li>
 <li>Activate <strong>Create pull request</strong>.</li>
 </ol>
-<h3>Challenge 5.3: Pass Required Checks</h3>
+<h3>Challenge 6.3: Pass Required Checks</h3>
 <ol>
 <li>Wait about 30 seconds. The bot posts a validation comment.</li>
 <li>Read the bot feedback. It checks: issue reference, description length, file location, and accessibility.</li>
@@ -387,7 +523,7 @@
 </details>
 
 <details>
-<summary><strong>Chapter 6: Merge Conflicts</strong> - 1 Controlled Conflict Drill</summary>
+<summary><strong>Chapter 7: Merge Conflicts</strong> - 1 Controlled Conflict Drill</summary>
 
 <h3>Challenge: Resolve Conflict Markers</h3>
 <p><strong>Sample file:</strong> <a href="./samples/chapter-6-conflict-practice-sample.html"><code>learning-room/docs/samples/chapter-6-conflict-practice-sample.md</code></a></p>
@@ -415,11 +551,11 @@
 </details>
 
 <details>
-<summary><strong>Chapter 7: Culture and Etiquette</strong> - Optional Guided Reflection</summary>
+<summary><strong>Chapter 8: Culture and Etiquette</strong> - Optional Guided Reflection</summary>
 
 <h3>Optional Guided Reflection (Issue Comment Evidence)</h3>
 <p>Students can post one short comment on their assigned issue:</p>
-<pre><code class="hljs language-text">Chapter 7 reflection:
+<pre><code class="hljs language-text">Chapter 8 reflection:
 - One respectful review habit I will use:
 - One way I will ask for help clearly:
 - One way I will respond to feedback constructively:</code></pre>
@@ -443,7 +579,7 @@
 </details>
 
 <details>
-<summary><strong>Chapter 8: Labels, Milestones, and Projects</strong> - 1 Guided Triage Recommendation</summary>
+<summary><strong>Chapter 9: Labels, Milestones, and Projects</strong> - 1 Guided Triage Recommendation</summary>
 
 <h3>Challenge: Triage Recommendation Comment</h3>
 <p><strong>Estimated time:</strong> 5-10 minutes</p>
@@ -452,7 +588,7 @@
 <li>Review issue title, description, and target file.</li>
 <li>Post a triage recommendation comment using this format:</li>
 </ol>
-<pre><code class="hljs language-text">Chapter 8 triage recommendation:
+<pre><code class="hljs language-text">Chapter 9 triage recommendation:
 - Suggested labels:
 - Suggested milestone:
 - Suggested project board column:
@@ -479,7 +615,7 @@
 </details>
 
 <details>
-<summary><strong>Chapter 9: Notifications</strong> - Guided Setup Walkthrough (No Bot Check)</summary>
+<summary><strong>Chapter 10: Notifications</strong> - Guided Setup Walkthrough (No Bot Check)</summary>
 
 <h3>Goal</h3>
 <p>Set up a useful notification workflow so students can keep up with reviews, mentions, and assignments without inbox overload.</p>
@@ -514,55 +650,13 @@
 <p>Notification management protects focus. You can stay responsive without drowning in updates.</p>
 </details>
 
-<details>
-<summary><strong>Chapter 10: VS Code Basics</strong> - Guided VS Code Accessibility Baseline (No Bot Check)</summary>
-
-<h3>Goal</h3>
-<p>Confirm students can access VS Code (github.dev or desktop), enable screen reader support, and perform core file navigation.</p>
-<h3>Student Steps</h3>
-<ol>
-<li>Open any repository and launch github.dev with <code>.</code> (period key).</li>
-<li>Screen reader mode setup:<ul>
-<li>Windows (NVDA/JAWS): enable with <code>Shift+Alt+F1</code>.</li>
-<li>Mac (VoiceOver): mode is usually already optimized. If needed, run Command Palette and search <code>Toggle Screen Reader Accessibility Mode</code>.</li>
-</ul>
-</li>
-<li>Open Explorer with <code>Ctrl+Shift+E</code> (Mac: <code>Cmd+Shift+E</code>).</li>
-<li>Open <code>README.md</code> from the file tree.</li>
-<li>Open outline/symbols with <code>Ctrl+Shift+O</code> (Mac: <code>Cmd+Shift+O</code>).</li>
-<li>Open Command Palette with <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) and run any command.</li>
-<li>Return to your assigned challenge issue and post a completion comment using this format:</li>
-</ol>
-<pre><code class="hljs language-text">Chapter 10 complete:
-- Opened github.dev: yes
-- Screen reader mode enabled: yes
-- Opened file in Explorer: yes
-- Opened outline/symbols: yes
-- Opened Command Palette: yes</code></pre>
-<h3>Expected Outcomes</h3>
-<ul>
-<li>Student can launch and navigate github.dev or desktop VS Code.</li>
-<li>Student can enable screen reader mode and open core navigation surfaces.</li>
-<li>Student is ready for VS Code-based contribution chapters.</li>
-</ul>
-<h3>If You Get Stuck</h3>
-<ol>
-<li>Confirm you are in a repository page before pressing <code>.</code>.</li>
-<li>Retry screen reader mode toggle once, then verify in settings.</li>
-<li>On Mac with VoiceOver, use Command Palette (<code>Cmd+Shift+P</code>) and run <code>Toggle Screen Reader Accessibility Mode</code> if keyboard navigation feels inconsistent.</li>
-<li>Use Command Palette to run commands when shortcut memory is hard.</li>
-<li>Ask facilitator for a side-by-side demo and repeat the same 5 steps.</li>
-</ol>
-<h3>Learning Moment</h3>
-<p>Tool setup is part of contribution skill. A stable, accessible editor reduces stress and increases contribution quality.</p>
-</details>
 
 <details>
 <summary><strong>Chapter 11: Git & Source Control in VS Code</strong> - 3 Bot-Validated Local Git Challenges</summary>
 
 <h3>Challenge Set</h3>
 <p><strong>Estimated time:</strong> 20-30 minutes</p>
-<p><strong>Prerequisite checkpoint:</strong> Complete Chapter 10 first so VS Code navigation and accessibility settings are already stable.</p>
+<p><strong>Prerequisite checkpoint:</strong> Complete Chapter 5 first so VS Code navigation and accessibility settings are already stable.</p>
 <ol>
 <li><p><strong>Clone the sci-fi themes repository</strong></p>
 <ul>
@@ -792,7 +886,7 @@
 <ol>
 <li><code>@daily-briefing</code> (maps to repository navigation and issue awareness)</li>
 <li><code>@issue-tracker</code> (maps to Chapter 4 issue workflow)</li>
-<li><code>@pr-review</code> (maps to Chapter 5 and Chapter 14 review skills)</li>
+<li><code>@pr-review</code> (maps to Chapter 6 and Chapter 14 review skills)</li>
 </ol>
 <p>Once these feel comfortable, expand to specialist agents.</p>
 <h3>Challenge Set</h3>
@@ -895,298 +989,6 @@
 </details>
 
 
-<h2>How to Start a Challenge</h2>
-<ol>
-<li><strong>Find an available issue</strong> labeled with <code>challenge</code> and your skill level</li>
-<li><strong>Comment &quot;I&#39;d like to try this!&quot;</strong> to claim the issue</li>
-<li><strong>Create a branch</strong> for your work</li>
-<li><strong>Make your changes</strong> following the challenge description</li>
-<li><strong>Open a pull request</strong> that references the issue (<code>Closes #XX</code>)</li>
-<li><strong>Get peer review</strong> and incorporate feedback</li>
-<li><strong>Merge</strong> when approved!</li>
-</ol>
-<h2>Beginner Challenges (0+ PRs)</h2>
-<h3>Challenge 1: Fix Broken Link</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: beginner</code>, <code>skill: markdown</code></li>
-<li><strong>Estimated Time:</strong> 5-10 minutes</li>
-<li><strong>Skills:</strong> Markdown basics, finding placeholders</li>
-<li><strong>Files:</strong> <code>docs/welcome.md</code></li>
-</ul>
-<p><strong>Description:</strong> Find and update the <code>[DATE]</code> placeholder at the bottom of the welcome guide with today&#39;s date.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Reading through documentation</li>
-<li>Updating metadata and timestamps</li>
-<li>Creating focused, single-purpose commits</li>
-<li>Writing clear pull request descriptions</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li><code>[DATE]</code> placeholder replaced with today&#39;s date (format: YYYY-MM-DD)</li>
-<li>No other changes to the file</li>
-<li>PR description explains the change</li>
-<li>Commit message is clear and specific</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#1-fix-broken-link-skill-markdown"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 2: Add Keyboard Shortcut</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: beginner</code>, <code>skill: markdown</code></li>
-<li><strong>Estimated Time:</strong> 15-20 minutes</li>
-<li><strong>Skills:</strong> Markdown tables, documentation</li>
-<li><strong>Files:</strong> <code>docs/keyboard-shortcuts.md</code></li>
-</ul>
-<p><strong>Description:</strong> Add a new keyboard shortcut to the reference guide.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Markdown table syntax</li>
-<li>Finding official documentation</li>
-<li>Clear technical writing</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>Shortcut added to correct section</li>
-<li>Table formatting preserved</li>
-<li>Description is clear and accurate</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#2-add-keyboard-shortcut-skill-markdown"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 3: Complete Welcome Guide</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: beginner</code>, <code>skill: markdown</code></li>
-<li><strong>Estimated Time:</strong> 20-30 minutes</li>
-<li><strong>Skills:</strong> Document structure, writing</li>
-<li><strong>Files:</strong> <code>docs/welcome.md</code></li>
-</ul>
-<p><strong>Description:</strong> Fill in the [TODO] sections in the welcome guide.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Consistent documentation style</li>
-<li>Heading hierarchy basics</li>
-<li>Writing for diverse audiences</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>All [TODO] markers removed</li>
-<li>Content is helpful and clear</li>
-<li>Heading hierarchy is correct</li>
-<li>Style matches existing content</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#3-complete-welcome-guide-skill-markdown"><strong>View Detailed Instructions →</strong></a></p>
-<h2>Intermediate Challenges (1+ PRs)</h2>
-<h3>Challenge 4: Fix Heading Hierarchy</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: intermediate</code>, <code>skill: accessibility</code></li>
-<li><strong>Estimated Time:</strong> 15-20 minutes</li>
-<li><strong>Skills:</strong> Semantic HTML, screen reader navigation</li>
-<li><strong>Files:</strong> Multiple docs</li>
-</ul>
-<p><strong>Description:</strong> Find and fix heading hierarchy violations throughout the docs.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Why heading order matters</li>
-<li>How screen readers use headings</li>
-<li>Document accessibility auditing</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>No heading level skips (H1→H2→H3)</li>
-<li>Each document has exactly one H1</li>
-<li>Document outline is logical</li>
-<li>Bot validation passes</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#4-fix-heading-hierarchy-skill-accessibility"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 5: Improve Link Text</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: intermediate</code>, <code>skill: accessibility</code></li>
-<li><strong>Estimated Time:</strong> 20-30 minutes</li>
-<li><strong>Skills:</strong> Descriptive text, context awareness</li>
-<li><strong>Files:</strong> Multiple docs</li>
-</ul>
-<p><strong>Description:</strong> Replace generic link text (&quot;click here&quot;, &quot;read more&quot;) with descriptive alternatives.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Link text best practices</li>
-<li>Context-independent descriptions</li>
-<li>Screen reader user experience</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>No generic link text patterns</li>
-<li>Links make sense out of context</li>
-<li>Surrounding text reads naturally</li>
-<li>Bot validation passes</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#5-improve-link-text-skill-accessibility"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 6: Add Alt Text</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: intermediate</code>, <code>skill: accessibility</code></li>
-<li><strong>Estimated Time:</strong> 20-30 minutes</li>
-<li><strong>Skills:</strong> Descriptive writing, image context</li>
-<li><strong>Files:</strong> Multiple docs with images</li>
-</ul>
-<p><strong>Description:</strong> Add descriptive alt text to images missing it.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Writing effective alt text</li>
-<li>Informative vs. decorative images</li>
-<li>What screen reader users need</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>All images have alt text</li>
-<li>Alt text is descriptive and complete</li>
-<li>Includes relevant text from images</li>
-<li>Appropriate for context</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#6-add-alt-text-skill-accessibility"><strong>View Detailed Instructions →</strong></a></p>
-<h2>Advanced Challenges (3+ PRs)</h2>
-<h3>Challenge 7: Review for Accessibility</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: advanced</code>, <code>skill: review</code></li>
-<li><strong>Estimated Time:</strong> 30-45 minutes</li>
-<li><strong>Skills:</strong> Code review, constructive feedback</li>
-<li><strong>Context:</strong> Assigned as reviewer on peer PR</li>
-</ul>
-<p><strong>Description:</strong> Conduct comprehensive accessibility review of a peer&#39;s PR.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Systematic review process</li>
-<li>Writing helpful feedback</li>
-<li>Balancing thoroughness and kindness</li>
-<li>Identifying subtle issues</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>All accessibility aspects checked</li>
-<li>Constructive comments provided</li>
-<li>Clear explanation of issues</li>
-<li>Suggestions for improvement</li>
-<li>Final approve/request changes decision</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#7-review-for-accessibility-skill-review"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 8: Create Documentation</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: advanced</code>, <code>skill: documentation</code></li>
-<li><strong>Estimated Time:</strong> 2-3 hours</li>
-<li><strong>Skills:</strong> Technical writing, research</li>
-<li><strong>Files:</strong> New file creation</li>
-</ul>
-<p><strong>Description:</strong> Create comprehensive documentation for an accessibility topic.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Technical writing process</li>
-<li>Researching documentation</li>
-<li>Creating learning materials</li>
-<li>Practicing what you teach</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>Topic thoroughly covered</li>
-<li>Includes practical examples</li>
-<li>Links to quality resources</li>
-<li>Document itself is accessible</li>
-<li>Clear and actionable guidance</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#8-create-documentation-skill-documentation"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 9: Mentor a Peer</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: advanced</code>, <code>skill: collaboration</code></li>
-<li><strong>Estimated Time:</strong> 1-2 hours (async)</li>
-<li><strong>Skills:</strong> Teaching, empathy, patience</li>
-<li><strong>Context:</strong> Assigned as reviewer for beginner</li>
-</ul>
-<p><strong>Description:</strong> Guide a beginner through completing their first challenge.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Teaching complex concepts simply</li>
-<li>Patient, encouraging feedback</li>
-<li>Breaking down problems</li>
-<li>Building confidence in others</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>Timely, thoughtful review</li>
-<li>Questions that prompt discovery</li>
-<li>Explanations of WHY, not just WHAT</li>
-<li>Encouragement and celebration</li>
-<li>Beginner successfully completes challenge</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#9-mentor-a-peer-skill-collaboration"><strong>View Detailed Instructions →</strong></a></p>
-<h2>Expert Challenges (5+ PRs)</h2>
-<h3>Challenge 10: Design a Challenge</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: expert</code>, <code>skill: creation</code></li>
-<li><strong>Estimated Time:</strong> 3-5 hours</li>
-<li><strong>Skills:</strong> Instructional design, scoping</li>
-<li><strong>Files:</strong> Challenge documentation</li>
-</ul>
-<p><strong>Description:</strong> Identify a learning gap and create a new challenge.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Instructional design principles</li>
-<li>Defining learning objectives</li>
-<li>Appropriate scoping</li>
-<li>Creating evaluation criteria</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>Clear learning objective</li>
-<li>Appropriate difficulty</li>
-<li>Estimated time provided</li>
-<li>Resources included</li>
-<li>Success criteria defined</li>
-<li>Example solution created</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#10-design-a-challenge-skill-creation"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 11: Accessibility Audit</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: expert</code>, <code>skill: accessibility</code></li>
-<li><strong>Estimated Time:</strong> 4-6 hours</li>
-<li><strong>Skills:</strong> Systematic testing, prioritization</li>
-<li><strong>Files:</strong> Audit report + issues</li>
-</ul>
-<p><strong>Description:</strong> Conduct comprehensive accessibility audit of entire repository.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Systematic testing methodology</li>
-<li>Real-world evaluation process</li>
-<li>Issue triage and prioritization</li>
-<li>Writing actionable bug reports</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>All docs reviewed</li>
-<li>Screen reader testing completed</li>
-<li>Issues filed for each problem</li>
-<li>Problems prioritized by severity</li>
-<li>Comprehensive audit report written</li>
-<li>Suggested fixes included</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#11-accessibility-audit-skill-accessibility"><strong>View Detailed Instructions →</strong></a></p>
-<h3>Challenge 12: Create Issue Template</h3>
-<ul>
-<li><strong>Issue Label:</strong> <code>challenge: expert</code>, <code>skill: creation</code></li>
-<li><strong>Estimated Time:</strong> 2-3 hours</li>
-<li><strong>Skills:</strong> Template design, workflow optimization</li>
-<li><strong>Files:</strong> <code>.github/ISSUE_TEMPLATE/</code></li>
-</ul>
-<p><strong>Description:</strong> Design an issue template for a specific challenge type.</p>
-<p><strong>What You&#39;ll Learn:</strong></p>
-<ul>
-<li>Template design patterns</li>
-<li>Guiding user input effectively</li>
-<li>Workflow optimization</li>
-<li>GitHub community tools</li>
-</ul>
-<p><strong>Success Criteria:</strong></p>
-<ul>
-<li>Template structure is clear</li>
-<li>Includes helpful guidance</li>
-<li>Appropriate labels/metadata</li>
-<li>Tested with sample issue</li>
-<li>Documentation updated</li>
-</ul>
-<p><a href="../../.github/docs/LEARNING_PATHS.html#12-create-issue-template-skill-creation"><strong>View Detailed Instructions →</strong></a></p>
 <h2>Group Challenges</h2>
 <p>These challenges require collaboration with your study group:</p>
 <ul>
@@ -1196,88 +998,21 @@
 <li><strong>Challenge Creation</strong>: Design new challenges together</li>
 </ul>
 <p><a href="GROUP_CHALLENGES.html"><strong>View Group Challenges →</strong></a></p>
-<h2>Guided Chapter Walkthroughs (No Bot Grading)</h2>
-<p>These are still challenge activities, but they are not scored by the PR validation bot. Students should record completion in their assigned issue comments.</p>
-<h3>Chapter 9: Notifications Setup Walkthrough</h3>
-<ul>
-<li><strong>Type:</strong> Guided setup</li>
-<li><strong>Estimated Time:</strong> 5-8 minutes</li>
-<li><strong>Automation:</strong> No Actions validation</li>
-<li><strong>Evidence:</strong> Completion comment in assigned issue (watch level, filters used, inbox action tested)</li>
-<li><strong>Reference:</strong> <code>docs/09-notifications.md#guided-walkthrough-challenge-no-automation-check</code></li>
-</ul>
-<h3>Chapter 10: VS Code Accessibility Baseline</h3>
-<ul>
-<li><strong>Type:</strong> Guided setup</li>
-<li><strong>Estimated Time:</strong> 8-10 minutes</li>
-<li><strong>Automation:</strong> No Actions validation</li>
-<li><strong>Evidence:</strong> Completion comment in assigned issue (github.dev open, screen reader mode, Explorer, symbols, Command Palette)</li>
-<li><strong>Reference:</strong> <code>docs/10-vscode-basics.md#guided-walkthrough-challenge-vs-code-accessibility-baseline-no-bot-check</code></li>
-</ul>
-<h2>Custom Challenges</h2>
-<h3>Have an idea not listed here?</h3>
-<p><strong>Open an issue</strong> with:</p>
-<ul>
-<li>Descriptive title</li>
-<li>What you want to learn</li>
-<li>What you plan to change/create</li>
-<li>Estimated difficulty level</li>
-<li>Label: <code>challenge: custom</code></li>
-</ul>
-<p>Facilitators will review and may approve custom challenges!</p>
-<h2>Challenge Status</h2>
-<h3>Currently Available</h3>
-<p>Check open issues with label <code>challenge</code> to see what&#39;s available right now.</p>
-<h3>Claimed</h3>
-<p>Issues assigned to someone are currently claimed. You can watch them to see solutions!</p>
-<h3>Completed</h3>
-<p>Closed issues with merged PRs represent completed challenges. Great for inspiration!</p>
 <h2>Need Help?</h2>
-<h3>Appendix T: Resources</h3>
-<ul>
-<li><a href="../../.github/docs/LEARNING_PATHS.html">Learning Paths Guide</a> - Detailed challenge instructions</li>
-<li><a href="../AUTOMATION.html">Automation Guide</a> - Understanding bot feedback</li>
-<li><a href="../../docs/05-working-with-pull-requests.html">PR Workflow</a> - Step-by-step PR process</li>
-<li><a href="../../docs/14-accessible-code-review.html">Accessibility Guide</a> - A11y principles</li>
-</ul>
 <h3>Getting Unstuck</h3>
 <ol>
-<li><strong>Read bot feedback</strong> - It includes specific fixes</li>
-<li><strong>Check documentation</strong> - Bot links to relevant resources</li>
-<li><strong>Ask your peer reviewer</strong> - Comment on your PR</li>
-<li><strong>Ask study group</strong> - Use your group issue thread</li>
-<li><strong>Ask facilitators</strong> - Tag them in your PR</li>
+<li><strong>Read bot feedback</strong> (PR chapters only) - it includes specific fixes</li>
+<li><strong>Check the chapter documentation</strong> - each chapter file has full walkthroughs</li>
+<li><strong>Ask your peer reviewer</strong> - comment on your PR or issue</li>
+<li><strong>Ask your study group</strong> - use your group issue thread</li>
+<li><strong>Ask facilitators</strong> - @mention them in your issue or PR</li>
 </ol>
-<h2>Tips for Success</h2>
-<p><strong>Before Starting:</strong></p>
+<h3>Resources</h3>
 <ul>
-<li>Read the full challenge description</li>
-<li>Check the learning objectives</li>
-<li>Review linked resources</li>
-<li>Make sure you have time to complete it</li>
+<li><a href="../AUTOMATION.html">Automation Guide</a> - Understanding bot feedback</li>
+<li><a href="../../docs/06-working-with-pull-requests.html">PR Workflow</a> - Step-by-step PR process</li>
+<li><a href="../../docs/14-accessible-code-review.html">Accessibility Guide</a> - Accessibility principles</li>
 </ul>
-<p><strong>While Working:</strong></p>
-<ul>
-<li>Commit early and often</li>
-<li>Use descriptive commit messages</li>
-<li>Reference the issue number</li>
-<li>Test your changes</li>
-</ul>
-<p><strong>During Review:</strong></p>
-<ul>
-<li>Respond to feedback promptly</li>
-<li>Ask questions if unclear</li>
-<li>Make requested changes</li>
-<li>Thank your reviewers</li>
-</ul>
-<p><strong>After Merging:</strong></p>
-<ul>
-<li>Celebrate your achievement!</li>
-<li>Reflect on what you learned</li>
-<li>Review the resources again</li>
-<li>Help others with similar challenges</li>
-</ul>
-<p><em>Challenges designed for progressive skill building and real-world applicability. Every challenge completed makes you a better contributor!</em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

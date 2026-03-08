@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Working with Issues - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="../styles/github-markdown.css">
-  <link rel="stylesheet" href="../styles/highlight.css">
-  <link rel="stylesheet" href="../styles/custom.css">
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Working with Issues</span>
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Working with Issues</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="../search.html" method="get">
+        <form role="search" class="search-form" action="./search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -65,6 +65,7 @@
 <h2>Filing, Managing, and Participating in GitHub Issues</h2>
 <blockquote>
 <p>Issues are where open source collaboration begins. This guide covers everything from finding the right issue to file a perfect bug report - all with your keyboard and screen reader.</p>
+<p><strong>Official GitHub Accessibility Guide:</strong> GitHub publishes an NVDA-focused guide for working with issues using a screen reader at <a href="https://accessibility.github.com/documentation/guide/issues/">Using GitHub Issues with a Screen Reader</a>. This chapter covers the same material with additional perspectives (VoiceOver, low vision, CLI) and workshop-specific challenges. Use the official guide as a companion reference.</p>
 <p><strong>Screen reader note - New Issues Experience:</strong> This guide uses GitHub&#39;s improved Issues experience, which provides better ARIA landmark structure and live-region announcements for screen readers. This feature may already be active for your account - it has been broadly rolled out and may no longer appear as a Feature Preview toggle at all.</p>
 <p><strong>To verify:</strong> Activate the <strong>User Menu</strong> button (top-right of any GitHub page) → activate <strong>&quot;Feature preview&quot;</strong> → scan the list for <strong>&quot;New Issues Experience&quot;</strong>:</p>
 <ul>
@@ -86,12 +87,12 @@
 <h3>Chapter 4 Challenge Set</h3>
 <ol>
 <li><strong>Create your first issue</strong> - file a new issue with a clear title and description.</li>
-<li><strong>Claim a challenge issue</strong> - comment on an existing beginner issue to claim it.</li>
-<li><strong>Ask one clarifying question</strong> - add a question comment on your claimed issue.</li>
+<li><strong>Comment and @mention</strong> - leave a comment on a classmate&#39;s issue and tag them with an @mention.</li>
+<li><strong>Add a sub-issue</strong> - break a larger issue into smaller, trackable pieces.</li>
 </ol>
 <blockquote>
-<p><strong>Branch guidance for Chapter 4:</strong> Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 5.</p>
-<p><strong>How completion works:</strong> When you finish all three challenges, post a comment on your assigned Chapter 4 challenge issue with links to the issues you created, claimed, and commented on. The facilitator reviews your issue activity directly. No pull request is required for Chapter 4.</p>
+<p><strong>Branch guidance for Chapter 4:</strong> Chapter 4 focuses on issue skills. You do NOT need to create a branch or edit any files for these challenges. All your work happens in GitHub issue threads. File editing and branches start in Chapter 6.</p>
+<p><strong>How completion works:</strong> When you finish all three challenges, post a comment on your assigned Chapter 4 challenge issue with links to the issues you created, commented on, and organized. The facilitator reviews your issue activity directly. No pull request is required for Chapter 4.</p>
 </blockquote>
 <h3>Challenge 4.1 Step-by-Step: Create Your First Issue</h3>
 <p><strong>Goal:</strong> File a new issue in the Learning Room repository with a specific title and a meaningful description.</p>
@@ -117,72 +118,111 @@
 <li>Copy the issue URL or note the issue number (for example, <code>#150</code>). You will reference this later.</li>
 </ol>
 <p><strong>You are done when:</strong> Your new issue appears in the Issues list with your username as the author, a clear title, and a detailed description.</p>
-<h3>Challenge 4.2 Step-by-Step: Claim a Challenge Issue</h3>
-<p><strong>Goal:</strong> Find an existing beginner challenge issue and claim it by leaving a comment.</p>
+<h3>Challenge 4.2 Step-by-Step: Comment and @Mention</h3>
+<p><strong>Goal:</strong> Leave a comment on another student&#39;s issue and use an @mention to notify them.</p>
 <p><strong>Where you are working:</strong> the Issues tab of the <code>learning-room</code> repository on GitHub.com.</p>
 <ol>
-<li>Open the Issues tab in the <code>learning-room</code> repository.</li>
-<li>Use the search filter to find beginner issues. Type in the filter bar:<pre><code class="hljs language-text">is:open label:&quot;challenge: beginner&quot;</code></pre>
-</li>
-<li>Browse the results and pick one issue that interests you.</li>
+<li>Open the <strong>Issues</strong> tab in the <code>learning-room</code> repository.</li>
+<li>Find an issue created by a classmate (look for issues from Challenge 4.1, or browse recent open issues).</li>
 <li>Open the issue by activating its title link.</li>
-<li>Read the issue description to understand what needs to be done.</li>
+<li>Read the issue description to understand what they reported.</li>
 <li>Scroll to the comment box at the bottom of the issue.</li>
-<li>Type: <code>I&#39;d like to try this!</code></li>
+<li>Write a helpful comment that <strong>@mentions the issue author by username</strong>. Examples:<ul>
+<li>&quot;@classmate I can confirm this - the link in setup-guide.md goes to a 404 page.&quot;</li>
+<li>&quot;@classmate Good catch! I think the correct shortcut is Insert+F7, not Insert+F5.&quot;</li>
+<li>&quot;@classmate I&#39;d suggest adding the paragraph right after the &#39;Who Can Contribute&#39; heading.&quot;</li>
+</ul>
+</li>
 <li>Activate the <strong>Comment</strong> button (or press <code>Ctrl+Enter</code>).</li>
-<li>Note the issue number (for example, <code>#42</code>). This is the issue you will fix in Chapter 5.</li>
 </ol>
-<p><strong>You are done when:</strong> Your comment appears in the issue thread, and other participants can see you have claimed the work.</p>
-<h3>Challenge 4.3 Step-by-Step: Ask One Clarifying Question</h3>
-<p><strong>Goal:</strong> Practice asking a useful question before starting implementation work.</p>
-<p><strong>Where you are working:</strong> the issue you claimed in Challenge 4.2.</p>
+<p><strong>Why @mentions matter:</strong> When you type <code>@username</code>, GitHub sends that person a notification. This is how real open source teams communicate - you signal who needs to see your message. It also bridges into Chapter 10 (Notifications) where you will configure how you receive these alerts.</p>
+<p><strong>You are done when:</strong> Your comment appears in the thread and includes an @mention (the username renders as a clickable link).</p>
+<h3>Challenge 4.3 Step-by-Step: Add a Sub-Issue</h3>
+<p><strong>Goal:</strong> Break a larger issue into smaller, trackable pieces using GitHub&#39;s sub-issue feature.</p>
+<p><strong>Where you are working:</strong> the issue you created in Challenge 4.1 (or any open issue you have permission to edit).</p>
+<blockquote>
+<p><strong>What are sub-issues?</strong> Sub-issues let you decompose a big task into smaller steps, each tracked independently. The parent issue shows a progress bar as sub-issues are completed. This is how teams organize real work - a single &quot;Fix accessibility in welcome.md&quot; issue might have sub-issues for each specific fix.</p>
+</blockquote>
 <ol>
-<li>Open the issue you claimed in Challenge 4.2.</li>
-<li>Re-read the issue description carefully. Think about:<ul>
-<li>Is anything unclear about what needs to change?</li>
-<li>Do you know which file to edit?</li>
-<li>Do you understand the expected result?</li>
+<li>Open the issue you created in Challenge 4.1.</li>
+<li>Look for the <strong>Sub-issues</strong> section in the issue sidebar (right side on desktop). If you do not see it, look for an <strong>Add sub-issue</strong> button or the <strong>Create sub-issue</strong> option below the issue description.</li>
+<li>Activate <strong>Add sub-issue</strong> and choose <strong>Create new sub-issue</strong>.</li>
+<li>Give the sub-issue a clear title that describes one specific piece of the parent issue. For example, if the parent is &quot;Fix accessibility in welcome.md&quot;:<ul>
+<li>Sub-issue: &quot;Add alt text to welcome banner image&quot;</li>
+<li>Sub-issue: &quot;Fix heading hierarchy in Getting Started section&quot;</li>
 </ul>
 </li>
-<li>Scroll to the comment box.</li>
-<li>Write one specific question. Examples:<ul>
-<li>&quot;Should I add the paragraph after the existing heading or create a new subsection?&quot;</li>
-<li>&quot;The issue mentions a broken link. Is the correct URL documented somewhere else in the repo?&quot;</li>
-<li>&quot;Should the shortcut table keep the same column order, or can I reorganize it?&quot;</li>
-</ul>
-</li>
-<li>Activate the <strong>Comment</strong> button.</li>
+<li>Add a short description and activate <strong>Create</strong>.</li>
+<li>The sub-issue now appears nested under the parent issue with a progress indicator.</li>
 </ol>
-<p><strong>You are done when:</strong> Your question comment appears in the issue thread. A facilitator or peer will respond.</p>
+<p><strong>You are done when:</strong> Your parent issue shows at least one sub-issue in the Sub-issues section.</p>
 <h3>Completing Chapter 4: Submit Your Evidence</h3>
 <p>When you have finished all three challenges, go to your <strong>assigned Chapter 4 challenge issue</strong> (the one titled &quot;Chapter 4.1: Create Your First Issue (@yourusername)&quot; or similar) and post a comment with your evidence:</p>
 <pre><code class="hljs language-text">Chapter 4 completed:
 - Challenge 4.1: Created issue #[number]
-- Challenge 4.2: Claimed issue #[number] (commented)
-- Challenge 4.3: Asked question on issue #[number]</code></pre>
-<p>Replace <code>[number]</code> with the actual issue numbers. The facilitator will review your issue activity and mark the challenge complete.</p>
+- Challenge 4.2: Commented with @mention on issue #[number]
+- Challenge 4.3: Added sub-issue to issue #[number]</code></pre>
+<p>Replace <code>[number]</code> with the actual issue numbers. Then close your Chapter 4 challenge issues. The facilitator will review your issue activity.</p>
 <h3>Expected Outcomes</h3>
 <ul>
 <li>Student can create an issue with a clear title and description.</li>
-<li>Student can claim a challenge issue in a public thread.</li>
-<li>Student can ask a useful question before starting implementation.</li>
+<li>Student can communicate in issue threads using @mentions.</li>
+<li>Student can organize work by breaking issues into sub-issues.</li>
 </ul>
 <h3>If You Get Stuck</h3>
 <ol>
-<li>Re-open <code>learning-room/docs/CHALLENGES.md</code> and pick one beginner issue.</li>
-<li>Use the issue search filter: <code>is:open label:&quot;challenge: beginner&quot;</code>.</li>
-<li>If claim/comment fails, refresh and retry once.</li>
-<li>Ask facilitator for a direct issue link and continue.</li>
+<li>Can&#39;t find a classmate&#39;s issue? Filter the Issues tab by <code>is:open</code> and look for recent ones.</li>
+<li>@mention not working? Make sure you type <code>@</code> immediately followed by the username with no space.</li>
+<li>Sub-issue option not visible? Ask a facilitator - the feature may need to be enabled for the repository.</li>
+<li>Still stuck? Ask a facilitator for a direct issue link.</li>
 </ol>
 <h3>Learning Moment</h3>
-<p>Issues are not just task lists. They are collaborative spaces where clear communication reduces confusion and prevents rework.</p>
+<p>Issues are collaborative spaces, not just task lists. An @mention tells someone &quot;I need your attention here.&quot; Sub-issues turn vague tasks into clear checklists. Both skills are used daily in real open source projects.</p>
 <h3>Learning Pattern Used in This Chapter</h3>
 <ol>
 <li>Start with a small, safe action (create an issue).</li>
-<li>Practice communication in public issue threads (claim and question).</li>
+<li>Practice communication in public issue threads (@mention a peer).</li>
+<li>Organize work into smaller pieces (sub-issues).</li>
 <li>Leave clear evidence in the issue timeline.</li>
-<li>Build momentum for file editing and PR work in Chapter 5.</li>
+<li>Build momentum for file editing and PR work in Chapter 6.</li>
 </ol>
+<h3>About Learning Cards in This Chapter</h3>
+<p>This chapter provides learning cards: expandable blocks that offer perspective-specific guidance for different ways of working. Not every card appears at every step. Open the ones that match how you work.</p>
+<p>The following table describes the five learning card types used in this chapter.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">Card</th>
+<th scope="col">Who it helps</th>
+<th scope="col">What it covers</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Visual / mouse</td>
+<td>Sighted users navigating with a mouse or trackpad</td>
+<td>Click targets, visual cues, layout orientation</td>
+</tr>
+<tr>
+<td>Low vision</td>
+<td>Users with magnification, zoom, or high-contrast themes</td>
+<td>Zoom-friendly navigation, finding controls at high magnification, high contrast visibility</td>
+</tr>
+<tr>
+<td>NVDA / JAWS (Windows)</td>
+<td>Screen reader users on Windows</td>
+<td>Keystroke sequences, Focus and Browse mode, landmark navigation</td>
+</tr>
+<tr>
+<td>VoiceOver (macOS)</td>
+<td>Screen reader users on macOS</td>
+<td>VO key sequences, rotor usage, interaction model</td>
+</tr>
+<tr>
+<td>CLI (gh)</td>
+<td>Terminal users on any platform</td>
+<td>GitHub CLI commands for issue management</td>
+</tr>
+</tbody></table>
 <h2>Local Git Alternative: Working from Your Clone</h2>
 <details>
 <summary>If you cloned the learning-room in Block 0 and prefer working locally</summary>
@@ -270,11 +310,27 @@ gh issue list --state closed</code></pre>
 [State tabs: <span class="hljs-keyword">Open</span> <span class="hljs-operator">/</span> Closed]    <span class="hljs-comment">-- filter by status</span>
 [Issues list]                  <span class="hljs-comment">-- each issue is one list item or heading</span>
 [Pagination]                   <span class="hljs-comment">-- at the bottom</span></code></pre>
+<blockquote>
+<p><strong>Quick orientation tip:</strong> Press <code>NVDA+F7</code> (or <code>VO+U</code> on macOS) to open a list of all headings, links, form fields, and buttons on the page. This is often faster than tabbing through many elements and helps you understand the full page structure before diving in. Use <code>Ctrl+/</code> (Windows) or <code>Cmd+/</code> (Mac) to jump directly to the search field from anywhere on the page.</p>
+</blockquote>
 <h3>How to read the issue list</h3>
 <details>
 <summary>Visual / mouse users</summary>
 
 <p>The issues list shows each issue as a row with its title, labels, number, assignee avatars, and comment count. Closed issues show a purple merged/closed badge. Click any issue title to open it. Use the <strong>Open</strong> and <strong>Closed</strong> toggle links above the list to switch between states.</p>
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+<p>Each issue row shows the title, labels (colored badges), number, and comment count. At high magnification:</p>
+<ul>
+<li>Issue titles are the largest text in each row and remain readable at 200%+ zoom.</li>
+<li>Label badges use colored backgrounds with text inside. In Windows High Contrast mode, labels display with system border colors and readable text rather than colored backgrounds.</li>
+<li>The <strong>Open</strong> and <strong>Closed</strong> toggle links above the list let you switch views. The active toggle is bold or underlined.</li>
+<li>The comment count icon (a speech bubble) may be small at high zoom. It appears to the right of each issue row. Hover to see &quot;N comments&quot; tooltip.</li>
+<li>Use <code>Ctrl+F</code> (browser Find) to search for a specific issue title if the list is long.</li>
+</ul>
 </details>
 
 <details>
@@ -326,10 +382,25 @@ mentions:@me                        ← where you were @mentioned
 is:open is:unread                   ← issues with unread activity</code></pre>
 <h3>Using the filter buttons</h3>
 <p>Above the issue list, there is an <strong>actions toolbar</strong> with filter buttons for Labels, Milestones, Assignees, etc.</p>
+<blockquote>
+<p><strong>Screen reader note:</strong> The filter buttons do not indicate the current filter state. After applying a filter, the button text does not change to reflect what is selected. To verify which filters are active, check the search/filter bar text - it updates to show the active filter conditions (for example, <code>is:open label:accessibility</code>).</p>
+</blockquote>
 <details>
 <summary>Visual / mouse users</summary>
 
 <p>The filter bar sits above the issue list. Click <strong>Label</strong>, <strong>Milestone</strong>, or <strong>Assignee</strong> to open a dropdown, select the values you want, then click anywhere outside to close. The issue list updates immediately.</p>
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+<p>The filter bar sits above the issue list. At high magnification:</p>
+<ul>
+<li>The <strong>Label</strong>, <strong>Milestone</strong>, and <strong>Assignee</strong> buttons may wrap to a second row. Each button opens a dropdown with searchable options.</li>
+<li>Dropdown menus from filter buttons can extend below the visible viewport at high zoom. Scroll within the dropdown to see all options.</li>
+<li>Type in the search field at the top of each dropdown to narrow the list (for example, type &quot;accessibility&quot; in the Label dropdown).</li>
+<li>In Windows High Contrast mode, the selected filter values are indicated with a checkmark icon and system highlight color, not just a background color change.</li>
+</ul>
 </details>
 
 <details>
@@ -477,6 +548,20 @@ gh issue view 42 --comments</code></pre>
 <li>Click the green <strong>Comment</strong> button to post</li>
 </ol>
 <p>To close the issue while commenting: click the arrow on the <strong>Close issue</strong> button and choose <strong>Close with comment</strong>.</p>
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+<p>The comment area is at the bottom of the issue page. At high magnification:</p>
+<ol>
+<li>Scroll to the bottom to find the <strong>Leave a comment</strong> text area. At 200%+ zoom, this may require significant scrolling past the timeline.</li>
+<li>The text area expands as you type. The formatting toolbar above it (bold, italic, code, etc.) wraps at high zoom but remains functional.</li>
+<li>The <strong>Preview</strong> tab next to <strong>Write</strong> lets you check Markdown rendering before posting.</li>
+<li>The green <strong>Comment</strong> button is full-width at high zoom and easy to target.</li>
+<li><strong>Keyboard shortcut:</strong> Press <code>Ctrl+Enter</code> (Windows) or <code>Cmd+Return</code> (macOS) from inside the text area to submit the comment without finding the button.</li>
+<li>In Windows High Contrast mode, the text area border and the Comment button use system colors for clear visibility.</li>
+</ol>
 </details>
 
 <details>
@@ -637,6 +722,19 @@ gh issue comment 42 --body <span class="hljs-string">&quot;Thanks for reporting 
 <summary>Visual / mouse users</summary>
 
 <p>From the Issues list page, click the green <strong>New issue</strong> button in the top-right of the issue list. If the repository has templates, a template picker page appears - click <strong>Get started</strong> next to the template that fits your needs, or click <strong>Open a blank issue</strong> to skip templates.</p>
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+<p>The green <strong>New issue</strong> button is in the top-right of the issue list page. At high magnification:</p>
+<ul>
+<li>At 200%+ zoom, the button may move below the search bar or wrap to its own line. It remains a prominent green button.</li>
+<li>If the repository has issue templates, a template picker page appears with each template as a card. Template descriptions may truncate at high zoom. Hover over a truncated description for the full text.</li>
+<li>The <strong>Get started</strong> button next to each template is small but uses standard link styling. Press <code>Tab</code> to move between templates and their Get started buttons.</li>
+<li><strong>Open a blank issue</strong> link appears at the bottom of the template list. At high zoom, scroll down to find it.</li>
+<li>In Windows High Contrast mode, the New issue button uses the system button colors and the template cards have visible borders.</li>
+</ul>
 </details>
 
 <details>
@@ -1038,9 +1136,9 @@ so the macOS behavior appears correct.</code></pre>
 </ul>
 <p><em>Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.</em></p>
 </blockquote>
-<p><em>Next: <a href="05-working-with-pull-requests.html">Working with Pull Requests</a></em>
+<p><em>Next: <a href="05-vscode-accessibility.html">VS Code Accessibility</a></em>
 <em>Back: <a href="03-the-learning-room.html">The Learning Room</a></em>
-<em>Related: <a href="15-issue-templates.html">Issue Templates Guide</a> | <a href="08-labels-milestones-projects.html">Labels &amp; Milestones</a> | <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a></em></p>
+<em>Related: <a href="15-issue-templates.html">Issue Templates Guide</a> | <a href="09-labels-milestones-projects.html">Labels &amp; Milestones</a> | <a href="08-culture-etiquette.html">Culture &amp; Etiquette</a></em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

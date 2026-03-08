@@ -6,6 +6,8 @@
 
 > Issues are where open source collaboration begins. This guide covers everything from finding the right issue to file a perfect bug report - all with your keyboard and screen reader.
 >
+> **Official GitHub Accessibility Guide:** GitHub publishes an NVDA-focused guide for working with issues using a screen reader at [Using GitHub Issues with a Screen Reader](https://accessibility.github.com/documentation/guide/issues/). This chapter covers the same material with additional perspectives (VoiceOver, low vision, CLI) and workshop-specific challenges. Use the official guide as a companion reference.
+>
 > **Screen reader note - New Issues Experience:** This guide uses GitHub's improved Issues experience, which provides better ARIA landmark structure and live-region announcements for screen readers. This feature may already be active for your account - it has been broadly rolled out and may no longer appear as a Feature Preview toggle at all.
 >
 > **To verify:** Activate the **User Menu** button (top-right of any GitHub page) → activate **"Feature preview"** → scan the list for **"New Issues Experience"**:
@@ -140,6 +142,21 @@ Issues are collaborative spaces, not just task lists. An @mention tells someone 
 5. Build momentum for file editing and PR work in Chapter 6.
 
 
+### About Learning Cards in This Chapter
+
+This chapter provides learning cards: expandable blocks that offer perspective-specific guidance for different ways of working. Not every card appears at every step. Open the ones that match how you work.
+
+The following table describes the five learning card types used in this chapter.
+
+| Card | Who it helps | What it covers |
+| --- | --- | --- |
+| Visual / mouse | Sighted users navigating with a mouse or trackpad | Click targets, visual cues, layout orientation |
+| Low vision | Users with magnification, zoom, or high-contrast themes | Zoom-friendly navigation, finding controls at high magnification, high contrast visibility |
+| NVDA / JAWS (Windows) | Screen reader users on Windows | Keystroke sequences, Focus and Browse mode, landmark navigation |
+| VoiceOver (macOS) | Screen reader users on macOS | VO key sequences, rotor usage, interaction model |
+| CLI (gh) | Terminal users on any platform | GitHub CLI commands for issue management |
+
+
 ## Local Git Alternative: Working from Your Clone
 
 <details>
@@ -258,12 +275,27 @@ Navigate directly: `https://github.com/[owner]/[repo]/issues`
 [Pagination]                   -- at the bottom
 ```
 
+> **Quick orientation tip:** Press `NVDA+F7` (or `VO+U` on macOS) to open a list of all headings, links, form fields, and buttons on the page. This is often faster than tabbing through many elements and helps you understand the full page structure before diving in. Use `Ctrl+/` (Windows) or `Cmd+/` (Mac) to jump directly to the search field from anywhere on the page.
+
 ### How to read the issue list
 
 <details>
 <summary>Visual / mouse users</summary>
 
 The issues list shows each issue as a row with its title, labels, number, assignee avatars, and comment count. Closed issues show a purple merged/closed badge. Click any issue title to open it. Use the **Open** and **Closed** toggle links above the list to switch between states.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+Each issue row shows the title, labels (colored badges), number, and comment count. At high magnification:
+
+- Issue titles are the largest text in each row and remain readable at 200%+ zoom.
+- Label badges use colored backgrounds with text inside. In Windows High Contrast mode, labels display with system border colors and readable text rather than colored backgrounds.
+- The **Open** and **Closed** toggle links above the list let you switch views. The active toggle is bold or underlined.
+- The comment count icon (a speech bubble) may be small at high zoom. It appears to the right of each issue row. Hover to see "N comments" tooltip.
+- Use `Ctrl+F` (browser Find) to search for a specific issue title if the list is long.
 
 </details>
 
@@ -324,10 +356,24 @@ is:open is:unread                   ← issues with unread activity
 
 Above the issue list, there is an **actions toolbar** with filter buttons for Labels, Milestones, Assignees, etc.
 
+> **Screen reader note:** The filter buttons do not indicate the current filter state. After applying a filter, the button text does not change to reflect what is selected. To verify which filters are active, check the search/filter bar text - it updates to show the active filter conditions (for example, `is:open label:accessibility`).
+
 <details>
 <summary>Visual / mouse users</summary>
 
 The filter bar sits above the issue list. Click **Label**, **Milestone**, or **Assignee** to open a dropdown, select the values you want, then click anywhere outside to close. The issue list updates immediately.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The filter bar sits above the issue list. At high magnification:
+
+- The **Label**, **Milestone**, and **Assignee** buttons may wrap to a second row. Each button opens a dropdown with searchable options.
+- Dropdown menus from filter buttons can extend below the visible viewport at high zoom. Scroll within the dropdown to see all options.
+- Type in the search field at the top of each dropdown to narrow the list (for example, type "accessibility" in the Label dropdown).
+- In Windows High Contrast mode, the selected filter values are indicated with a checkmark icon and system highlight color, not just a background color change.
 
 </details>
 
@@ -479,6 +525,20 @@ To close the issue while commenting: click the arrow on the **Close issue** butt
 </details>
 
 <details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The comment area is at the bottom of the issue page. At high magnification:
+
+1. Scroll to the bottom to find the **Leave a comment** text area. At 200%+ zoom, this may require significant scrolling past the timeline.
+2. The text area expands as you type. The formatting toolbar above it (bold, italic, code, etc.) wraps at high zoom but remains functional.
+3. The **Preview** tab next to **Write** lets you check Markdown rendering before posting.
+4. The green **Comment** button is full-width at high zoom and easy to target.
+5. **Keyboard shortcut:** Press `Ctrl+Enter` (Windows) or `Cmd+Return` (macOS) from inside the text area to submit the comment without finding the button.
+6. In Windows High Contrast mode, the text area border and the Comment button use system colors for clear visibility.
+
+</details>
+
+<details>
 <summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Navigate to the comment box: `D` → "Add a comment" landmark, or press `E` or `F` to focus the text area
@@ -581,6 +641,19 @@ For the full shortcut system, see [Screen Reader Cheat Sheet - GitHub Shortcuts 
 <summary>Visual / mouse users</summary>
 
 From the Issues list page, click the green **New issue** button in the top-right of the issue list. If the repository has templates, a template picker page appears - click **Get started** next to the template that fits your needs, or click **Open a blank issue** to skip templates.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The green **New issue** button is in the top-right of the issue list page. At high magnification:
+
+- At 200%+ zoom, the button may move below the search bar or wrap to its own line. It remains a prominent green button.
+- If the repository has issue templates, a template picker page appears with each template as a card. Template descriptions may truncate at high zoom. Hover over a truncated description for the full text.
+- The **Get started** button next to each template is small but uses standard link styling. Press `Tab` to move between templates and their Get started buttons.
+- **Open a blank issue** link appears at the bottom of the template list. At high zoom, scroll down to find it.
+- In Windows High Contrast mode, the New issue button uses the system button colors and the template cards have visible borders.
 
 </details>
 

@@ -49,6 +49,23 @@ This repo contains custom Copilot Chat loading phrases from three sci-fi univers
 
 **You are done when:** The `vscode-sci-fi-themes` folder is open in VS Code and you can see the `themes/` folder with its three JSON files (star-trek, hitchhikers, star-wars) in the Explorer panel.
 
+> **After cloning: check what branches exist.** A fresh clone only checks out the default branch (usually `main`), but the remote may have other branches. Run `git branch -a` in the terminal (`Ctrl+`` `) to see all branches - local and remote:
+>
+> ```bash
+> git branch -a
+> ```
+>
+> You will see output like:
+>
+> ```text
+> * main
+>   remotes/origin/HEAD -> origin/main
+>   remotes/origin/main
+>   remotes/origin/chapter11/example-branch
+> ```
+>
+> The `*` marks your current branch. Lines starting with `remotes/origin/` are branches on GitHub that you can check out locally with `git checkout branch-name` or `git switch branch-name`. This is especially useful in the Learning Room, where facilitators may have pre-created branches for challenges.
+
 ### Challenge 11.2 Step-by-Step: Create a Branch and Commit
 
 **Goal:** Create a properly named branch, edit a theme file, stage the change, and commit with a clear message.
@@ -138,6 +155,23 @@ Local Git operations give you full control and immediate feedback. You can see y
 4. Push and open a PR that links to an issue for traceability.
 5. Verify each step before moving to the next.
 
+### About Learning Cards
+
+Throughout this chapter, each major operation includes **learning cards** - expandable sections showing how to accomplish the same task from multiple perspectives. Open the card that matches how you work:
+
+The following table describes each learning card type and who it is for.
+
+| Card | Who it is for |
+| --- | --- |
+| **Visual / mouse users** | Sighted users navigating with a mouse or trackpad |
+| **Low vision users** | Users working with zoom (200%+), magnification, high contrast themes, or large cursors |
+| **Screen reader users (NVDA / JAWS)** | Windows users navigating with NVDA or JAWS in Browse/Virtual mode |
+| **Screen reader users (VoiceOver)** | macOS users navigating with VoiceOver |
+| **GitHub.com web interface** | Browser-only workflow - no local tools required |
+| **CLI (git / gh)** | Terminal commands for Git and GitHub CLI - predictable text output, scriptable |
+
+You do not need to read every card. Pick the one or two that match your setup and skip the rest.
+
 
 ## Table of Contents
 
@@ -192,6 +226,69 @@ Local Git operations give you full control and immediate feedback. You can see y
 3. Open VS Code → `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`) → "Git: Clone"
 4. Paste URL → `Enter`
 5. Choose destination → Open
+
+### Learning Cards: Cloning a Repository
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+Cloning works the same as the Command Palette method above. A few tips for zoomed or magnified displays:
+
+1. The Command Palette (`Ctrl+Shift+P`) appears at the top-center of VS Code and scales with your zoom level - it remains visible even at 200%+ zoom.
+2. When the folder picker dialog opens, it may extend beyond your visible area at high zoom. Use `Alt+Up Arrow` to navigate up in the folder tree and `Enter` to select. The dialog title bar shows your current location.
+3. After cloning, the Explorer panel (`Ctrl+Shift+E`) shows the file tree. At high zoom, use `Ctrl+-` to temporarily reduce zoom if the tree is hard to scan, then `Ctrl+=` to restore.
+4. If you use a high contrast theme (Settings: `Ctrl+,` then search "color theme"), file status colours in the Explorer (green for added, yellow for modified) may be subtle. Enable **Editor Decorator Colors** or rely on the Source Control panel (`Ctrl+Shift+G`) where status letters (M, A, D) are shown as text.
+
+</details>
+
+<details>
+<summary>GitHub.com web interface (no local tools needed)</summary>
+
+If you cannot install Git or VS Code, you can work directly in the browser:
+
+1. Navigate to the repository on GitHub.com
+2. Press `.` (period) to open **github.dev** - a browser-based VS Code editor
+3. The full repository opens in an editor with file tree, search, and editing
+4. Changes are committed directly to GitHub from the browser
+
+Alternatively, for quick edits:
+
+1. Navigate to any file on GitHub
+2. Press `E` to open the file editor
+3. Make changes and commit from the web editor
+
+**Note:** github.dev does not support terminal commands or local Git operations. For full Git workflows (branching, staging individual lines, stash), use desktop VS Code.
+
+</details>
+
+<details>
+<summary>CLI (git / gh)</summary>
+
+Clone from your terminal using either standard Git or GitHub CLI:
+
+```bash
+# Standard Git clone
+git clone https://github.com/Community-Access/vscode-sci-fi-themes.git
+cd vscode-sci-fi-themes
+
+# GitHub CLI clone (shorter syntax, handles auth automatically)
+gh repo clone Community-Access/vscode-sci-fi-themes
+cd vscode-sci-fi-themes
+
+# Clone into a specific folder
+git clone https://github.com/Community-Access/vscode-sci-fi-themes.git ~/projects/themes
+
+# Clone only the default branch (faster for large repos)
+gh repo clone Community-Access/vscode-sci-fi-themes -- --single-branch
+
+# Verify the clone
+git status
+git remote -v
+```
+
+**Screen reader advantage:** Terminal output is plain text. After cloning, `git status` confirms you are on the default branch with a clean working tree.
+
+</details>
 
 **Why HTTPS over SSH for this workshop:** HTTPS works immediately with no setup. SSH requires key generation and configuration (see [Appendix D: Git Authentication](appendix-d-git-authentication.md) for SSH setup).
 
@@ -347,6 +444,48 @@ When focused on any file in the Source Control panel:
 
 **Screen reader tip:** Use `Shift+F10` to open the context menu. Navigate options with `Up/Down Arrow`. Press `Enter` to select.
 
+### Learning Cards: Source Control Panel
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The Source Control panel adapts well to zoom and high contrast settings:
+
+1. **At high zoom (200%+):** The panel may narrow. File names truncate but the status letter (M, A, D) remains visible at the end of each row. Hover over truncated names to see the full path in a tooltip.
+2. **High contrast themes:** Status colours are reinforced by the status letter (M/A/D/R/U/C), so you do not rely on colour alone. To switch to a high contrast theme: `Ctrl+Shift+P` then type "Preferences: Color Theme" and select "High Contrast" or "High Contrast Light."
+3. **The commit message input** is a multi-line text area. At high zoom it may appear narrow - it expands vertically as you type. Use `Ctrl+Enter` to commit from anywhere in the input (not `Enter`, which adds a new line).
+4. **Diff views** opened from the panel use red/green highlighting. In high contrast themes these use distinct border patterns instead of subtle colour shading. Press `F7` to jump between change hunks rather than scrolling through large diffs visually.
+5. **Minimap:** If the minimap (the narrow code preview strip on the right edge of the editor) is distracting at high zoom, disable it: Settings (`Ctrl+,`) then search "minimap enabled" and uncheck it.
+
+</details>
+
+<details>
+<summary>CLI equivalent: viewing Git status</summary>
+
+The Source Control panel shows the same information as these terminal commands:
+
+```bash
+# See all modified, staged, and untracked files
+git status
+
+# Short format (one letter per file, compact)
+git status -s
+
+# See what is staged (ready to commit)
+git diff --cached --name-only
+
+# See what is modified but not staged
+git diff --name-only
+
+# See both staged and unstaged differences with content
+git diff          # unstaged changes
+git diff --cached # staged changes
+```
+
+**The letters match:** `M` = modified, `A` = added, `D` = deleted, `R` = renamed, `??` = untracked.
+
+</details>
+
 
 ## 3. Branch Management
 
@@ -467,6 +606,148 @@ git branch          # Local branches only
 git branch -a       # All branches (including remote)
 ```
 
+### Learning Cards: Branch Management
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. **Branch name in the status bar:** The current branch name appears in the bottom-left corner of VS Code. At high zoom, the status bar may be partially off-screen. Use `Ctrl+Shift+P` then type "Git: Checkout to..." to see and switch branches from the Command Palette instead.
+2. **Branch picker list:** When you open the branch picker from the Command Palette, the list shows all available branches. At high zoom, long branch names may truncate. Type the first few characters to filter the list - the filter is instant.
+3. **Visual branch indicators in the Explorer:** Modified files on a branch show a coloured dot in the Explorer panel. In high contrast themes, these dots use distinct shapes or borders. The Source Control panel (`Ctrl+Shift+G`) is more reliable for seeing which files changed on your branch.
+
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS on Windows)</summary>
+
+#### Creating a branch
+
+1. Press `Ctrl+Shift+P` to open the Command Palette
+2. Type "git create branch" - NVDA/JAWS announces results as you type
+3. Press `Enter` on "Git: Create Branch..."
+4. The input focus moves to a text field - type your branch name (e.g., `feature/add-docs`)
+5. Press `Enter` - VS Code creates and switches to the branch
+6. NVDA/JAWS announces the new branch name in the status bar notification
+
+#### Switching branches
+
+1. Press `Ctrl+Shift+P`, type "git checkout"
+2. Select "Git: Checkout to..."
+3. A list of branches appears - navigate with `Up/Down Arrow`
+4. Each item is announced as the branch name (e.g., "main", "feature/add-docs")
+5. Press `Enter` to switch
+6. VS Code reloads files for that branch - you hear a status bar update
+
+#### Deleting a branch
+
+1. Switch to a different branch first (you cannot delete the branch you are on)
+2. Press `Ctrl+Shift+P`, type "git delete branch"
+3. Select "Git: Delete Branch..."
+4. Navigate the list to find the branch to delete, press `Enter`
+
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+#### Creating a branch
+
+1. Press `Cmd+Shift+P` to open the Command Palette
+2. Type "git create branch" - VoiceOver announces filtered results
+3. Press `Return` on "Git: Create Branch..."
+4. Type the branch name in the input field
+5. Press `Return` to create and switch
+
+#### Switching branches
+
+1. Press `Cmd+Shift+P`, type "git checkout"
+2. Select "Git: Checkout to..."
+3. Use `VO+Down Arrow` to navigate the branch list
+4. Press `Return` to switch
+
+#### Getting the current branch name
+
+1. Press `VO+M` to move to the menu bar, then `VO+Right Arrow` to the status bar area
+2. Or use the Command Palette: `Cmd+Shift+P` then type "Git: Show Git Output" - the output pane includes the current branch
+
+</details>
+
+<details>
+<summary>GitHub.com web interface</summary>
+
+Create and switch branches without leaving your browser:
+
+1. On the repository page, find the **branch dropdown** button (shows "main" by default) - it is above the file table
+2. Click or activate the dropdown
+3. Type a new branch name in the search field
+4. Click **"Create branch: your-branch-name from main"** when it appears
+5. GitHub switches to the new branch immediately
+6. Any file edits in the browser will be on this branch
+
+To switch between branches:
+
+1. Click the branch dropdown
+2. Select the branch you want - the page reloads with that branch's files
+
+To delete a branch:
+
+1. Navigate to the repository's Branches page: click the branch count link (e.g., "3 branches") near the branch dropdown, or go to `github.com/owner/repo/branches`
+2. Find the branch
+3. Click the trash can icon next to it
+
+</details>
+
+<details>
+<summary>CLI (git / gh)</summary>
+
+Manage branches from your terminal:
+
+```bash
+# Create and switch to a new branch
+git checkout -b feature/improve-docs
+
+# Or use the newer 'switch' command
+git switch -c feature/improve-docs
+
+# List local branches (current branch marked with *)
+git branch
+
+# List all branches including remote-tracking
+git branch -a
+
+# Switch to an existing branch
+git checkout main
+# or
+git switch main
+
+# Delete a branch (safe - only if merged)
+git branch -d feature/improve-docs
+
+# Force delete a branch (even if not merged)
+git branch -D feature/improve-docs
+
+# Rename the current branch
+git branch -m new-name
+
+# Push a new branch to GitHub for the first time
+git push -u origin feature/improve-docs
+
+# Delete a remote branch
+git push origin --delete feature/improve-docs
+```
+
+Using GitHub CLI:
+
+```bash
+# Create a branch linked to an issue (auto-names from issue title)
+gh issue develop 42 --checkout
+
+# List remote branches
+gh api repos/{owner}/{repo}/branches --jq '.[].name'
+```
+
+</details>
+
 
 ## 4. Staging Changes - Files, Lines, and Chunks
 
@@ -486,6 +767,18 @@ This lets you commit only part of your work, leaving the rest for a later commit
 2. Hover over a file in the "Changes" list - a **+** icon appears to its right
 3. Click the **+** to stage that file
 4. Or right-click a file → "Stage Changes"
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. Open Source Control: `Ctrl+Shift+G` (Mac: `Cmd+Shift+G`)
+2. At high zoom, the **+** (stage), **undo** (discard), and **open file** icons may be small. Instead of hovering:
+   - Right-click any file in the Changes list to get a full-size context menu with "Stage Changes", "Discard Changes", and other options
+   - Or use `Ctrl+Shift+P` then type "Git: Stage Changes" to stage the currently open file
+3. The file moves from "Changes" to "Staged Changes" - both section headings include a count (e.g., "Changes 2", "Staged Changes 1") so you can confirm the move without relying on colour alone.
+4. In high contrast themes, staged files show a distinct background or border in the Staged Changes section.
 
 </details>
 
@@ -605,6 +898,30 @@ git status
 4. Type your commit message
 5. Press `Ctrl+Enter` (Mac: `Cmd+Enter`) to commit
 
+### Learning Cards: Committing
+
+<details>
+<summary>Visual / mouse users</summary>
+
+1. Open Source Control (`Ctrl+Shift+G`)
+2. Stage your files (click the **+** icon next to each file, or click **Stage All Changes** above the Changes section header)
+3. Click in the **"Message"** text area at the top of the Source Control panel
+4. Type your commit message
+5. Click the **Commit** button (checkmark icon) or press `Ctrl+Enter`
+6. If nothing is staged, VS Code asks if you want to stage all changes and commit directly - click "Yes" if that is what you want
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. The commit message input is at the top of the Source Control panel. At high zoom it may appear as a narrow rectangle - it expands vertically as you type.
+2. The **Commit button** may show only as a small checkmark icon at high zoom. Use `Ctrl+Enter` from inside the message input instead - this is more reliable than finding the button visually.
+3. After committing, the Staged Changes section clears. The count next to the section heading drops to 0, confirming the commit was recorded.
+4. If you need to see your recent commits, use the Timeline view (`Ctrl+Shift+E`, navigate to the Timeline section at the bottom of Explorer) where each commit shows full message text at a readable size.
+
+</details>
+
 #### Screen reader experience
 
 #### NVDA/JAWS
@@ -687,6 +1004,59 @@ git commit -am "docs: update screen reader instructions"
 2. Type "git push"
 3. Select "Git: Push"
 4. VS Code pushes your commits to GitHub
+
+### Learning Cards: Push and Pull
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. **The Sync/Publish button** appears in the Source Control panel header area. At high zoom it may display as a small cloud icon with an arrow. If you cannot find it, use the Command Palette (`Ctrl+Shift+P` then type "Git: Push") - this is always reliable.
+2. **Progress indication:** While pushing, VS Code shows a spinning icon in the status bar (bottom-left). At high zoom this may be off-screen. After pushing, run `Ctrl+Shift+P` then "Git: Show Git Output" to read the push log as scrollable text.
+3. **Pull indicators:** When your branch is behind the remote, the status bar shows a down-arrow with a number (e.g., "↓2" means 2 commits to pull). At high zoom, the Command Palette approach (`Ctrl+Shift+P` then "Git: Pull") avoids needing to read the status bar.
+4. **Auto-fetch:** Enable auto-fetch (Settings: search "git autofetch") so VS Code checks for remote changes every few minutes. This prevents surprise conflicts when you push.
+
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS on Windows)</summary>
+
+#### Pushing
+
+1. After committing, press `Ctrl+Shift+P`, type "git push", select "Git: Push"
+2. NVDA/JAWS announces "Pushing..." in the status bar
+3. On success, a notification appears: "Successfully pushed" - if using NVDA, check `NVDA+N` to read recent notifications
+4. For a new branch (first push), use "Git: Publish Branch" instead - this sets up the upstream tracking
+
+#### Pulling
+
+1. Press `Ctrl+Shift+P`, type "git pull", select "Git: Pull"
+2. NVDA/JAWS announces "Pulling..." then the status changes
+3. If there are conflicts, the Source Control panel shows a "Merge Changes" section - navigate there with `Ctrl+Shift+G` then `Down Arrow`
+
+#### Checking sync status
+
+1. Press `Ctrl+Shift+P`, type "Git: Show Git Output"
+2. The output pane opens with push/pull log messages in plain text
+3. Use `Up/Down Arrow` to read line by line
+
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+#### Pushing
+
+1. Press `Cmd+Shift+P`, type "git push", select "Git: Push"
+2. VoiceOver announces progress from the status bar
+3. On success, a notification toast appears - press `VO+F3` to read the latest notification
+
+#### Pulling
+
+1. Press `Cmd+Shift+P`, type "git pull", select "Git: Pull"
+2. VoiceOver announces when the pull completes
+3. If conflicts exist, navigate to Source Control (`Cmd+Shift+G`) and review the Merge Changes section
+
+</details>
 
 #### Screen reader feedback
 
@@ -863,6 +1233,77 @@ If you've made changes to the same files the upstream has changed, merge conflic
 
 **Screen reader warning:** VS Code shows a modal confirmation dialog. Navigate with `Tab`, select "Discard" or "Cancel" with `Enter`.
 
+### Learning Cards: Discarding Changes
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. The **discard icon** (an undo arrow) appears when hovering over a file in the Changes list. At high zoom, right-click the file instead to get a full-size context menu with "Discard Changes."
+2. The **confirmation dialog** that appears is a modal - it dims the background. In high contrast themes, the dialog has a clear border. The "Discard" button is typically the focused (primary) button.
+3. For "Discard All Changes", right-click the "Changes" section heading to get the context menu.
+4. After discarding, the file disappears from the Changes list. Check the file count in the section heading to confirm (e.g., "Changes 2" becomes "Changes 1").
+
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS on Windows)</summary>
+
+#### Single file
+
+1. Press `Ctrl+Shift+G` to open Source Control
+2. Navigate to the file in the Changes section with `Down Arrow`
+3. Press `Shift+F10` to open the context menu
+4. Navigate to "Discard Changes" with `Down Arrow`, press `Enter`
+5. A confirmation dialog appears - NVDA announces "Are you sure you want to discard changes" or similar
+6. Press `Tab` to navigate between "Discard" and "Cancel", press `Enter` on your choice
+
+#### All files
+
+1. Navigate to the "Changes" section heading (announced as "Changes, expanded, N items")
+2. Press `Shift+F10`, select "Discard All Changes"
+3. Confirm in the dialog
+
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+1. Press `Cmd+Shift+G` to open Source Control
+2. Use `VO+Arrow` keys to navigate to the file
+3. Press `VO+Shift+M` to open the context menu (or `Ctrl+Return`)
+4. Navigate to "Discard Changes", press `VO+Space`
+5. In the confirmation dialog, use `VO+Right Arrow` to reach the buttons, `VO+Space` to activate
+
+</details>
+
+<details>
+<summary>CLI (git / gh)</summary>
+
+Discard changes from your terminal:
+
+```bash
+# Discard changes to a specific file (restore to last commit)
+git restore docs/GUIDE.md
+
+# Discard all unstaged changes
+git restore .
+
+# Discard staged changes (unstage first, then restore)
+git restore --staged docs/GUIDE.md
+git restore docs/GUIDE.md
+
+# Nuclear option: discard ALL changes (staged and unstaged)
+git checkout -- .
+
+# Preview what would be discarded before doing it
+git diff              # shows unstaged changes
+git diff --cached     # shows staged changes
+```
+
+> **Safety tip:** Run `git diff` before `git restore` to review what you are about to lose. Unlike VS Code's discard, there is no confirmation prompt in the terminal.
+
+</details>
+
 ### Safer Alternative: Stash Instead of Discard
 
 If you're not sure whether you'll need these changes later, use **stash** (Section 10) instead of discard. Stash saves your changes temporarily without committing them.
@@ -885,6 +1326,78 @@ The file is staged for deletion - you still need to commit to record the removal
 - Simply deleting a file from Explorer leaves it as an "untracked deletion" in Git
 - Using `Git: Delete` (git rm) stages the deletion in one step
 - Use `git rm` when you want to track the file removal as part of your next commit
+
+### Learning Cards: Deleting a File from the Repository
+
+<details>
+<summary>Visual / mouse users</summary>
+
+1. Right-click the file in the Explorer panel (`Ctrl+Shift+E`)
+2. Select "Delete" to delete from your file system
+3. The file appears in Source Control (`Ctrl+Shift+G`) under Changes with a "D" (deleted) status
+4. Stage and commit the deletion to record it in Git
+
+Alternatively: `Ctrl+Shift+P` then "Git: Delete" removes the file and stages the deletion in one step.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. The easiest approach at high zoom is `Ctrl+Shift+P` then type "Git: Delete" - this works on the currently open file and avoids finding small context menu targets.
+2. After deletion, confirm in Source Control (`Ctrl+Shift+G`) - the file appears with a "D" status letter. The "D" is text, not colour-only, so it works in all themes.
+3. Stage and commit as normal.
+
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
+
+1. Open the file you want to remove in the editor
+2. Press `Ctrl+Shift+P` (Mac: `Cmd+Shift+P`), type "Git: Delete"
+3. Select the command - the file is deleted and staged for removal
+4. Navigate to Source Control (`Ctrl+Shift+G`) - the file is announced as "filename, Deleted" in the Staged Changes section
+5. Write a commit message and press `Ctrl+Enter` to commit the removal
+
+**NVDA/JAWS note:** The file disappears from the Explorer tree. If you navigate there, you will no longer hear the filename.
+
+</details>
+
+<details>
+<summary>GitHub.com web interface</summary>
+
+1. Navigate to the file on GitHub
+2. Click the three-dot menu ("...") in the file header
+3. Select "Delete file"
+4. Write a commit message describing why the file was removed
+5. Choose to commit directly or open a PR
+6. Click "Commit changes"
+
+For screen reader users on GitHub: press `Tab` to navigate to the file actions menu, then `Enter` to open it.
+
+</details>
+
+<details>
+<summary>CLI (git / gh)</summary>
+
+```bash
+# Remove a file and stage the deletion in one step
+git rm docs/old-file.md
+
+# Remove a file but keep it locally (stop tracking only)
+git rm --cached docs/old-file.md
+
+# Remove an entire directory
+git rm -r old-folder/
+
+# Commit the deletion
+git commit -m "chore: remove outdated documentation file"
+
+# Verify the file is no longer tracked
+git status
+```
+
+</details>
 
 
 ## 8. Timeline View - File History and Blame
@@ -958,6 +1471,110 @@ This is incredibly useful for understanding:
 | ---------  | ---------  | -------------  |
 | `git.blame.ignoreWhitespace` | `false` | When `true`, whitespace-only changes (reformatting) are excluded from blame - useful when code was reformatted without logic changes |
 | `git.blame.editorDecoration.disableHover` | `false` | When `true`, disables the hover tooltip on blame annotations - reduces screen reader noise if you find the blame decorations intrusive |
+
+### Learning Cards: Timeline and History
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. **Timeline panel location:** It is at the bottom of the Explorer sidebar (`Ctrl+Shift+E`). At high zoom you may need to scroll down in the Explorer to find it. If the Timeline section is collapsed, click the **Timeline** heading to expand it.
+2. **Reading commit entries:** Each entry shows the commit message, author, and time. At high zoom, long commit messages may truncate. Click any entry to open the diff view, which shows the full message in the editor tab title.
+3. **Diff view at high zoom:** Red/green highlighting shows removed/added lines. In high contrast themes, changes use distinct borders or backgrounds. Press `F7` to jump through changes with a visible highlight that is easier to track than scrolling.
+4. **Git Blame at high zoom:** The inline blame annotations are small grey text at the end of each line. At high zoom they may overlap with code. Use Timeline view instead for a more readable list of who changed what.
+
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS on Windows)</summary>
+
+#### Opening Timeline
+
+1. Press `Ctrl+Shift+E` to open Explorer
+2. Press `Tab` repeatedly or `Down Arrow` to navigate past the file tree to the "Timeline" section
+3. Press `Right Arrow` to expand it if collapsed
+4. Navigate commit entries with `Up/Down Arrow`
+5. Each entry is announced as: "commit message, author, time" (e.g., "docs: add Timeline Guide, Jeff, 2 days ago")
+6. Press `Enter` on any entry to open its diff view
+
+#### Reading a diff with screen reader
+
+1. In the diff view, press `Alt+F2` to open the Accessible Diff Viewer
+2. The Accessible Diff Viewer presents changes as a text list: each line shows `+` (added), `-` (removed), or unchanged
+3. Navigate with `Up/Down Arrow` to read each line
+4. Press `Escape` to close the Accessible Diff Viewer
+
+#### Git Blame
+
+1. Open a file, press `Ctrl+Shift+P`, type "Git: Toggle Blame"
+2. Blame annotations appear inline - NVDA reads them when navigating lines
+3. To reduce noise, disable blame (repeat the toggle command) and use Timeline instead
+
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+#### Opening Timeline
+
+1. Press `Cmd+Shift+E` to open Explorer
+2. Use `VO+Down Arrow` to navigate below the file tree to the Timeline section
+3. Press `VO+Space` to expand if collapsed
+4. Navigate entries with `VO+Down Arrow`
+5. Press `VO+Space` on a commit to open its diff
+
+#### Accessible Diff Viewer
+
+1. In any diff view, press `Option+F2` to open the Accessible Diff Viewer
+2. Read changes line by line with `VO+Down Arrow`
+3. Press `Escape` to close
+
+</details>
+
+<details>
+<summary>CLI (git / gh) - history and blame</summary>
+
+```bash
+# View commit history for the entire repo
+git log --oneline
+
+# View history for a specific file
+git log --oneline docs/GUIDE.md
+
+# View history with what changed in each commit
+git log -p docs/GUIDE.md
+
+# View who last changed each line (blame)
+git blame docs/GUIDE.md
+
+# Blame with short commit hashes and author
+git blame --date=short docs/GUIDE.md
+
+# Show a specific commit's changes
+git show abc1234
+
+# Show what changed between two commits
+git diff abc1234..def5678
+
+# Show commits by a specific author
+git log --author="Jeff" --oneline
+
+# Show commits in the last 7 days
+git log --since="7 days ago" --oneline
+```
+
+Using GitHub CLI:
+
+```bash
+# View recent commits from the web
+gh api repos/{owner}/{repo}/commits --jq '.[0:5] | .[] | .commit.message'
+
+# View PR history
+gh pr list --state all --limit 10
+```
+
+**Screen reader advantage:** `git log --oneline` and `git blame` produce clean, columnar text output. Read line by line with arrow keys in the terminal.
+
+</details>
 
 
 ## 9. Resolving Merge Conflicts in VS Code
@@ -1114,6 +1731,111 @@ If you no longer need what's in a stash:
 2. Type "git stash drop"
 3. Select "Git: Drop Stash..."
 4. Choose which stash to delete
+
+### Learning Cards: Stash Management
+
+<details>
+<summary>Visual / mouse users</summary>
+
+1. Open Source Control: `Ctrl+Shift+G`
+2. In the Source Control panel, there may be a **"Stashes"** section below Staged Changes (visible when stashes exist)
+3. Click a stash to see what it contains
+4. Right-click a stash to Apply, Pop, or Drop it
+
+If the Stashes section is not visible, use the Command Palette: `Ctrl+Shift+P` then type "git stash" to access all stash commands.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. The Stashes section in the Source Control panel may be below the fold at high zoom. Scroll down in the panel, or use the Command Palette (`Ctrl+Shift+P` then "git stash") which is always accessible regardless of zoom level.
+2. Stash names in the Command Palette list are full text (e.g., "stash@{0}: WIP on feature/docs: add Timeline guide") and respect your font size settings.
+3. After applying a stash, your files reappear in the Changes section of Source Control. Check the file count to confirm.
+
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS on Windows)</summary>
+
+#### Creating a stash
+
+1. Press `Ctrl+Shift+P`, type "git stash"
+2. Select "Git: Stash" - NVDA announces the result
+3. An input appears asking for a stash message - type something descriptive (e.g., "WIP: documentation changes for Timeline section")
+4. Press `Enter` - your changes disappear from Source Control and are saved in the stash
+5. NVDA announces the Source Control panel update (file counts drop to 0)
+
+#### Applying a stash
+
+1. Press `Ctrl+Shift+P`, type "git stash pop"
+2. Select "Git: Pop Stash..."
+3. A list of stashes appears - navigate with `Up/Down Arrow`
+4. Each item is announced with the stash message you wrote
+5. Press `Enter` to apply and delete the stash
+6. Your changes reappear in the Changes section
+
+#### Viewing stashes
+
+1. Press `Ctrl+Shift+P`, type "git stash list"
+2. Or in the terminal: type `git stash list` and read the output line by line
+
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+1. Press `Cmd+Shift+P`, type "git stash"
+2. Select "Git: Stash" and provide a message
+3. Press `Return`
+4. To apply: `Cmd+Shift+P`, type "git stash pop", select from the list with `VO+Down Arrow`, press `Return`
+
+</details>
+
+<details>
+<summary>GitHub.com web interface</summary>
+
+GitHub.com does not have a stash feature. Stash is a local Git operation only. If you need to save work-in-progress without committing on GitHub.com:
+
+1. Create a draft commit on a temporary branch
+2. Or use GitHub Codespaces (which runs a full VS Code environment in the browser and supports `git stash` in the terminal)
+
+</details>
+
+<details>
+<summary>CLI (git / gh) - stash commands</summary>
+
+```bash
+# Stash all uncommitted changes with a message
+git stash push -m "WIP: documentation changes"
+
+# Stash including untracked (new) files
+git stash push -u -m "WIP: including new files"
+
+# List all stashes
+git stash list
+
+# Show what a specific stash contains
+git stash show stash@{0}
+git stash show -p stash@{0}    # with full diff
+
+# Apply the most recent stash (keep stash)
+git stash apply
+
+# Apply and delete the most recent stash
+git stash pop
+
+# Apply a specific stash
+git stash apply stash@{1}
+
+# Delete a specific stash
+git stash drop stash@{0}
+
+# Delete ALL stashes (careful)
+git stash clear
+```
+
+</details>
 
 
 ## 10b. Emergency Recovery - git reflog

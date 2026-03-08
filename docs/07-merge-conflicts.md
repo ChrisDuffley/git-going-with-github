@@ -91,6 +91,21 @@ Merge conflicts are not failures. They are a normal collaboration checkpoint and
 5. Build confidence for real conflicts in future contributions.
 
 
+### About Learning Cards in This Chapter
+
+This chapter provides learning cards: expandable blocks that offer perspective-specific guidance for different ways of working. Not every card appears at every step. Open the ones that match how you work.
+
+The following table describes the five learning card types used in this chapter.
+
+| Card | Who it helps | What it covers |
+| --- | --- | --- |
+| Visual / mouse | Sighted users navigating with a mouse or trackpad | Click targets, visual cues, color-coded conflict regions |
+| Low vision | Users with magnification, zoom, or high-contrast themes | Zoom-friendly navigation, high contrast marker visibility, enlargement tips |
+| NVDA / JAWS (Windows) | Screen reader users on Windows | Keystroke sequences, Focus and Browse mode, verbosity tips |
+| VoiceOver (macOS) | Screen reader users on macOS | VO key sequences, rotor navigation, interaction model |
+| CLI (git / gh) | Terminal users on any platform | Git and GitHub CLI commands for conflict detection and resolution |
+
+
 ## Local Git Alternative: Resolving Conflicts from Your Terminal
 
 <details>
@@ -285,6 +300,17 @@ Scroll to the bottom of the Conversation tab. The conflict message appears as a 
 </details>
 
 <details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The conflict banner sits near the bottom of the Conversation tab, above the merge button area. If your browser zoom is at 200% or higher, you may need to scroll past lengthy comment threads to reach it.
+
+- The banner uses a yellow or orange background. In **Windows High Contrast** mode, it renders with the system alert color so it remains visible.
+- The **Resolve conflicts** button is a standard link-style button. If it is hard to target at high zoom, use `Tab` to reach it after the merge status section and press `Enter`.
+- If the button does not appear, you may lack write access to the repository. Ask the PR author or a maintainer for help.
+
+</details>
+
+<details>
 <summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Press `D` to reach the bottom of the Conversation tab
@@ -368,8 +394,21 @@ GitHub has a built-in conflict editor that you can use without any local tools.
 
 </details>
 
-<details>
-<summary>Screen reader users (NVDA / JAWS - Windows)</summary>
+<details><summary>Low vision users (zoom, high contrast)</summary>
+
+1. Open the conflict editor from the **Resolve conflicts** button on the PR Conversation tab.
+2. GitHub opens a monospace text editor. At 200% zoom or higher, the editor scrolls horizontally. Use `Shift+Scroll` or horizontal scrollbar to navigate wide lines.
+3. Conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) are displayed in highlighted bands. In high-contrast themes, the markers use distinct system colors for good visibility.
+4. The file list panel (left side) may collapse at high zoom levels. Look for a toggle or hamburger icon in the top-left corner to reopen it.
+5. Edit directly in the editor: delete unwanted lines, including all three marker lines.
+6. Click **Mark as resolved** in the top-right. At high zoom, this button may require horizontal scrolling to find. You can also `Tab` to reach it.
+7. After all files are resolved, click **Commit merge**.
+
+**Tip:** Increase your browser's minimum font size (Settings, Appearance, Font size) for a more comfortable editing experience in the conflict editor. This setting persists across GitHub pages.
+
+</details>
+
+<details><summary>Screen reader users (NVDA / JAWS - Windows)</summary>
 
 1. Activate the **Resolve conflicts** button from the PR Conversation tab
 2. GitHub opens the conflict editor - a full-page text editor
@@ -448,6 +487,25 @@ When your cursor is on a conflict region, VS Code shows **CodeLens action links*
 - **Compare Changes** - opens a side-by-side diff
 
 Click the link you want. The conflict markers disappear and your chosen content remains. Save the file with `Ctrl+S`.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+VS Code highlights conflict regions with colored background bands:
+
+- **Current Change** (your version) appears with a green-tinted background
+- **Incoming Change** (their version) appears with a blue-tinted background
+
+In high-contrast themes, these colors map to system theme colors that remain distinguishable. The **CodeLens action links** (Accept Current Change, Accept Incoming Change, Accept Both Changes, Compare Changes) appear as small text links above the conflict block.
+
+**Tips for comfort at high zoom:**
+
+- At 200% editor zoom (`Ctrl+=`), the CodeLens links remain clickable. If they feel small, use `Ctrl+Shift+P` and type `Merge Conflict: Accept Current` (or `Incoming`, `Both`) to trigger the same actions from the Command Palette without clicking.
+- Enable **Editor, Minimap: Enabled = false** in settings to reclaim horizontal space at high zoom.
+- Use `Ctrl+Shift+M` to open the Problems panel. After resolving markers, this panel confirms no remaining conflict errors.
+- Use `F8` (Next Problem) to jump between remaining conflict regions across the file without scrolling.
 
 </details>
 

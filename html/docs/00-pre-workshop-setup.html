@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Pre-Workshop Setup - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="../styles/github-markdown.css">
-  <link rel="stylesheet" href="../styles/highlight.css">
-  <link rel="stylesheet" href="../styles/custom.css">
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Pre-Workshop Setup - GIT Going with GitHub</span>
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Pre-Workshop Setup - GIT Going with GitHub</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="../search.html" method="get">
+        <form role="search" class="search-form" action="./search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -256,6 +256,15 @@
 <p><strong>Screen reader note:</strong> The authorization page opens in your default browser. After approving, the browser shows a message saying you can return to VS Code. Use <code>Alt+Tab</code> (Windows) or <code>Cmd+Tab</code> (macOS) to switch back.</p>
 </blockquote>
 <blockquote>
+<p><strong>Default browser warning:</strong> VS Code opens the GitHub authorization page in your operating system&#39;s <strong>default browser</strong>, not necessarily the browser you use day-to-day. If your default browser is set to something unexpected (for example, an older browser without your screen reader configured), the OAuth page may open in an unfamiliar environment.</p>
+<p><strong>Before the workshop:</strong> Verify which browser is your OS default:</p>
+<ul>
+<li><strong>Windows:</strong> Settings, Apps, Default apps, look for &quot;Web browser&quot;</li>
+<li><strong>macOS:</strong> System Settings, Desktop and Dock, Default web browser</li>
+</ul>
+<p>Set it to the browser where your screen reader and GitHub login are already configured. This avoids a confusing moment during the first <code>git push</code> when the authorization page opens somewhere you did not expect.</p>
+</blockquote>
+<blockquote>
 <p><strong>Tip - GitHub Mobile for push notification 2FA:</strong> If you have not already, install the free <a href="https://github.com/mobile">GitHub Mobile</a> app (iOS and Android). Once linked to your account, every 2FA prompt becomes a single tap on a push notification instead of typing a 6-digit code. The app supports VoiceOver (iOS) and TalkBack (Android).</p>
 </blockquote>
 <p>Workshop policy</p>
@@ -385,10 +394,11 @@
 <li>Add a <strong>custom routing</strong> email if you want GitHub notifications to go to a different address than your account email</li>
 </ol>
 <h2>Step 4 - Check GitHub Feature Preview Settings</h2>
-<p>GitHub continuously rolls out improvements to its interface. Some enhancements start as opt-in Feature Previews before becoming the standard experience. Two features matter most for screen reader users working through this workshop:</p>
+<p>GitHub continuously rolls out improvements to its interface. Some enhancements start as opt-in Feature Previews before becoming the standard experience. Three features matter most for screen reader users working through this workshop:</p>
 <ul>
 <li><strong>New Issues Experience</strong> - improves heading hierarchy, ARIA landmark structure, and live-region announcements on the Issues pages</li>
 <li><strong>New Files Changed Experience</strong> - adds proper landmark structure, an accessible file tree, and better keyboard navigation to the Files Changed tab in Pull Requests</li>
+<li><strong>GitHub Command Palette</strong> - a keyboard-first command launcher (<code>Ctrl+K</code> on Windows, <code>Cmd+K</code> on macOS) that lets you navigate to any repository, issue, PR, file, or page by typing its name. Faster than clicking through menus and fully accessible with screen readers</li>
 </ul>
 <p>Both have been broadly rolled out and may already be active on your account. Check before the workshop begins.</p>
 <h3>How to Check and Enable Feature Previews</h3>
@@ -429,6 +439,7 @@
 </ul>
 </li>
 <li>Go back and repeat steps 9-10 for <strong>&quot;New Files Changed Experience&quot;</strong></li>
+<li>Repeat again for <strong>&quot;GitHub Command Palette&quot;</strong> if it appears in the list</li>
 </ol>
 </details>
 
@@ -446,6 +457,7 @@
 <li>Press <code>Tab</code> to move to the end of the feature detail section</li>
 <li>If you hear <strong>&quot;Enable&quot;</strong>, press <code>VO+Space</code> to activate it. If you hear <strong>&quot;Disable&quot;</strong>, it is already on.</li>
 <li>Repeat for <strong>&quot;New Files Changed Experience&quot;</strong></li>
+<li>Repeat for <strong>&quot;GitHub Command Palette&quot;</strong> if it appears in the list</li>
 </ol>
 </details>
 
@@ -466,6 +478,10 @@
 <tr>
 <td><strong>New Files Changed Experience</strong></td>
 <td>Files Changed tab includes a navigable file tree region. Diffs are structured as tables with row/column navigation. Filter changed files field is reachable with <code>E</code>. Inline comment mode activates with <code>Enter</code> on a focused diff line.</td>
+</tr>
+<tr>
+<td><strong>GitHub Command Palette</strong></td>
+<td>Press <code>Ctrl+K</code> (Windows) or <code>Cmd+K</code> (macOS) from any GitHub page to open a command palette. Type to search for repositories, issues, PRs, files, settings, or actions. Results appear in a list navigable with <code>Arrow</code> keys. Press <code>Enter</code> to go. Screen readers announce each result as you arrow through the list. Scope the search with prefixes: <code>#</code> for issues/PRs, <code>!</code> for projects, <code>&gt;</code> for commands, <code>/</code> for files.</td>
 </tr>
 </tbody></table>
 <blockquote>
@@ -735,10 +751,18 @@ user.email=your-email@example.com</code></pre>
 <li>This extension was formerly named &quot;GitHub Pull Requests and Issues&quot; - either name is correct</li>
 </ul>
 </li>
-<li>Press <code>Enter</code> to open the details page</li>
-<li>Press <code>Tab</code> to the <strong>Install</strong> button and press <code>Enter</code> or <code>Space</code></li>
-<li>VS Code will announce when installation is complete</li>
 </ol>
+<blockquote>
+<p><strong>Extension imposter warning:</strong> The VS Code Marketplace contains third-party extensions with similar names. Always verify the <strong>publisher</strong> before installing. The correct extensions for this workshop are:</p>
+<ul>
+<li><strong>GitHub Pull Requests</strong> - publisher must be <strong>GitHub</strong> (verified badge)</li>
+<li><strong>GitHub Copilot</strong> - publisher must be <strong>GitHub</strong> (built in, no manual install needed)</li>
+</ul>
+<p>If the publisher name says anything other than &quot;GitHub&quot; (for example, a personal username or an unfamiliar company), <strong>do not install it</strong>. A screen reader user can verify the publisher: after arrowing to a search result, <code>Tab</code> forward past the extension name to hear &quot;Publisher: GitHub&quot; or similar. If you accidentally install a wrong extension, press <code>Ctrl+Shift+X</code>, find it, and select <strong>Uninstall</strong>.
+5. Press <code>Enter</code> to open the details page
+6. Press <code>Tab</code> to the <strong>Install</strong> button and press <code>Enter</code> or <code>Space</code>
+7. VS Code will announce when installation is complete</p>
+</blockquote>
 <h4>Verify it is working</h4>
 <ol>
 <li>Press <code>Ctrl+Shift+P</code> and type: <code>GitHub Pull Requests: Sign in</code><ul>

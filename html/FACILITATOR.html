@@ -165,18 +165,18 @@
 │       ├── review-pr<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
 │       ├── triage<span class="hljs-selector-class">.prompt</span><span class="hljs-selector-class">.md</span>
 │       └── ... (<span class="hljs-number">48</span> more - see docs/appendix-v-accessibility-agents-reference.md)
-├── docs/                       ← full workshop curriculum (<span class="hljs-number">16</span> chapters + appendices A-X)
+├── docs/                       ← full workshop curriculum (<span class="hljs-number">17</span> chapters + appendices A-Z)
 │   ├── <span class="hljs-number">00</span>-pre-workshop-setup<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">01</span>-understanding-github-web-structure<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">02</span>-navigating-repositories<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">03</span>-the-learning-room<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">04</span>-working-with-issues<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">05</span>-working-with-pull-requests<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">06</span>-merge-conflicts<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">07</span>-culture-etiquette<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">08</span>-labels-milestones-projects<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">09</span>-notifications<span class="hljs-selector-class">.md</span>
-│   ├── <span class="hljs-number">10</span>-vscode-basics<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">05</span>-vscode-accessibility<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">06</span>-working-with-pull-requests<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">07</span>-merge-conflicts<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">08</span>-culture-etiquette<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">09</span>-labels-milestones-projects<span class="hljs-selector-class">.md</span>
+│   ├── <span class="hljs-number">10</span>-notifications<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">11</span>-git-source-control<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">12</span>-github-pull-requests-extension<span class="hljs-selector-class">.md</span>
 │   ├── <span class="hljs-number">13</span>-github-copilot<span class="hljs-selector-class">.md</span>
@@ -749,7 +749,7 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
  It&#x27;s teaching. You can learn from the bot feedback and still ask your reviewers for human judgment.&quot;</span></code></pre>
 </li>
 </ul>
-<h3>Chapters 4-5: Issues &amp; Pull Requests (Day 1 Blocks 2-4)</h3>
+<h3>Chapters 4-6: Issues, VS Code Accessibility &amp; Pull Requests (Day 1 Blocks 2-4)</h3>
 <p><strong>Chapter 4: Working with Issues</strong></p>
 <ul>
 <li><strong>Purpose:</strong> Understanding issue lifecycle, templates, labeling</li>
@@ -772,7 +772,7 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
  because they&#x27;re in the same accessibility tree.&quot;</span></code></pre>
 </li>
 </ul>
-<p><strong>Chapter 5: Working with Pull Requests</strong></p>
+<p><strong>Chapter 6: Working with Pull Requests</strong></p>
 <ul>
 <li><strong>Purpose:</strong> Understanding PR anatomy, creating a PR, reviewing, merging</li>
 <li><strong>Emphasize:</strong> A PR is a proposal. It asks, &quot;Can you merge these commits to main?&quot; It is not automatic.</li>
@@ -786,14 +786,14 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
  Much more readable.&quot;</code></pre>
 </li>
 </ul>
-<h3>Chapter 6: Merge Conflicts (Reference; covered in-context)</h3>
+<h3>Chapter 7: Merge Conflicts (Reference; covered in-context)</h3>
 <p><strong>When it matters:</strong> Usually NOT during the workshop, but valuable for future contribution</p>
 <ul>
 <li><strong>Facilitator talking point:</strong> &quot;Merge conflicts happen when two people edit the same line. GitHub shows you both changes and asks you to pick. You will probably not see this in the workshop - we&#39;ll stagger everyone working on different files.&quot;</li>
 <li><strong>If conflict occurs:</strong> Don&#39;t panic. Open the file. You&#39;ll see markers like <code>&lt;&lt;&lt;&lt;&lt;&lt;</code> and <code>======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;</code>. They show the conflicting sections. You delete one, keep the other.</li>
 <li><strong>Common error:</strong> Thinking a merge conflict is a failure. It&#39;s not - it&#39;s normal in large projects.</li>
 </ul>
-<h3>Chapter 7: Culture &amp; Etiquette (Day 1 Block 6)</h3>
+<h3>Chapter 8: Culture &amp; Etiquette (Day 1 Block 6)</h3>
 <p><strong>Purpose:</strong> Building inclusive communities, understanding norms</p>
 <ul>
 <li><strong>Facilitator role:</strong> Model the behavior described</li>
@@ -801,21 +801,21 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 <li><strong>Common misunderstanding:</strong> &quot;I don&#39;t want to break the build.&quot; Reassure participants that CI failures are learning moments, not disasters.</li>
 <li><strong>Demo:</strong> Show a PR with a helpful, kind review comment versus a curt one. Discuss the difference.</li>
 </ul>
-<h3>Chapters 8-9: Tracking &amp; Notifications (Day 1 Block 6)</h3>
-<p><strong>Chapter 8: Labels, Milestones, Projects</strong></p>
+<h3>Chapters 9-10: Tracking &amp; Notifications (Day 1 Block 6)</h3>
+<p><strong>Chapter 9: Labels, Milestones, Projects</strong></p>
 <ul>
 <li><strong>In practice:</strong> Students won&#39;t be creating labels, but they will see them and need to understand what they mean</li>
 <li><strong>Facilitator tip:</strong> &quot;Before Block 5, create a quick reference list of your labels and what they mean. Pin it to a document. Students can refer to it.&quot;</li>
 <li><strong>Interactive activity:</strong> Show the learning-room repo&#39;s label bar. Have everyone navigate labels on an issue: press <code>K</code> to move through links until they find a label link, press Enter, they see all issues with that label</li>
 </ul>
-<p><strong>Chapter 9: Notifications</strong></p>
+<p><strong>Chapter 10: Notifications</strong></p>
 <ul>
 <li><strong>Value:</strong> &quot;Notifications let you stay aware without being overwhelmed. You control what creates a notification - starring, watching, participating in a conversation.&quot;</li>
 <li><strong>Accessibility point:</strong> &quot;Your notification inbox is more reliable than email forwarding. GitHub&#39;s inbox is fully accessible.&quot;</li>
 <li><strong>Demo:</strong> Open the notification bell. Navigate to the inbox. Show how to navigate notification history.</li>
 </ul>
-<h3>Chapters 10-16: Day 2 Deep Dives (Day 2 Blocks 1-5)</h3>
-<p><strong>Chapter 10: VS Code Basics</strong></p>
+<h3>Chapters 5 and 11-16: Day 2 Deep Dives (Day 2 Blocks 1-5)</h3>
+<p><strong>Chapter 5: VS Code Accessibility</strong></p>
 <ul>
 <li><strong>Before starting:</strong> Everyone should have VS Code installed and VS Code Insiders Extension Pack installed</li>
 <li><strong>Screen reader mode:</strong> This is critical. Demo it - <code>Shift+Alt+F1</code> to toggle</li>

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>GitHub Pull Requests Extension - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="../styles/github-markdown.css">
-  <link rel="stylesheet" href="../styles/highlight.css">
-  <link rel="stylesheet" href="../styles/custom.css">
+  <link rel="stylesheet" href="./styles/github-markdown.css">
+  <link rel="stylesheet" href="./styles/highlight.css">
+  <link rel="stylesheet" href="./styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Pull Requests Extension</span>
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Pull Requests Extension</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="../search.html" method="get">
+        <form role="search" class="search-form" action="./search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -66,7 +66,7 @@
 <blockquote>
 <p><strong>Day 2, Block 2 Material</strong></p>
 <p>This guide covers the GitHub Pull Requests and Issues extension: viewing open PRs, checking out PR branches for local testing, reviewing PRs with screen reader-accessible tools, creating PRs directly from VS Code, using PR templates, and syncing PR status with GitHub.</p>
-<p><strong>Prerequisites:</strong> <a href="05-working-with-pull-requests.html">Working with Pull Requests</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
+<p><strong>Prerequisites:</strong> <a href="06-working-with-pull-requests.html">Working with Pull Requests</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code> on Mac. For example: <code>Ctrl+Shift+P</code> → <code>Cmd+Shift+P</code>, <code>Ctrl+Shift+G</code> → <code>Cmd+Shift+G</code>, <code>Alt+F2</code> → <code>Option+F2</code>. Context menus (<code>Shift+F10</code> on Windows) use <code>Ctrl+Return</code> on Mac.</p>
 </blockquote>
 <h2>Workshop Recommendation (Chapter 12)</h2>
@@ -75,41 +75,86 @@
 <li><strong>Challenge count:</strong> 2 guided challenges</li>
 <li><strong>Automation check:</strong> none (extension installation and review state are account-local)</li>
 <li><strong>Evidence:</strong> issue comment with confirmation of actions completed</li>
-<li><strong>Pattern:</strong> install -&gt; check out -&gt; review</li>
+<li><strong>Pattern:</strong> install, check out, review, comment</li>
 </ul>
-<h3>Chapter 12 Guided Challenges (No Bot Validation)</h3>
-<p>For this workshop, Chapter 12 focuses on tooling setup and PR review workflow:</p>
-<p><strong>Estimated time:</strong> 15-25 minutes</p>
+<h3>Chapter 12 Challenge Set</h3>
 <ol>
-<li><p><strong>Install the GitHub Pull Requests extension</strong></p>
-<ul>
-<li>Add the extension to VS Code and sign in with your GitHub account.</li>
-</ul>
-</li>
-<li><p><strong>Check out a challenge PR and post a review</strong></p>
-<ul>
-<li>Download a PR branch locally and write one constructive review comment.</li>
-<li>If checkout is blocked by permissions, complete the challenge in read-only mode by reviewing the PR and posting one specific comment.</li>
-</ul>
-</li>
+<li><strong>Install the GitHub Pull Requests extension</strong> - add the extension to VS Code and sign in with your GitHub account.</li>
+<li><strong>Check out a PR and post a review comment</strong> - download a PR branch locally, read the diff, and post one constructive review comment.</li>
 </ol>
+<h3>Challenge 12.1 Step-by-Step: Install the Extension</h3>
+<p><strong>Goal:</strong> Install the GitHub Pull Requests and Issues extension and authenticate with your GitHub account.</p>
+<p><strong>Where you are working:</strong> VS Code desktop with the <code>learning-room</code> repository open.</p>
+<p><strong>Estimated time:</strong> 3-5 minutes.</p>
+<ol>
+<li>Open the Extensions sidebar: <code>Ctrl+Shift+X</code> (Mac: <code>Cmd+Shift+X</code>).</li>
+<li>Your screen reader announces &quot;Extensions: Marketplace.&quot; The search box has focus.</li>
+<li>Type <code>GitHub Pull Requests</code> in the search box and press <code>Enter</code>.</li>
+<li>Navigate down the results list. Select <strong>GitHub Pull Requests</strong> (publisher: GitHub).</li>
+<li>Activate the <strong>Install</strong> button. VS Code installs the extension and may show a notification.</li>
+<li>After installation, VS Code prompts you to sign in. Activate <strong>Sign in to GitHub</strong>.</li>
+<li>A browser window opens for GitHub OAuth. Approve the authorization and return to VS Code.</li>
+<li>Verify: open the Explorer sidebar (<code>Ctrl+Shift+E</code>). You should now see a <strong>GitHub</strong> section in the sidebar showing Pull Requests and Issues.</li>
+</ol>
+<p><strong>Screen reader tip:</strong> After step 5, if the install notification disappears before you can read it, open Command Palette (<code>Ctrl+Shift+P</code>) and run <code>Notifications: Focus Notification Toast</code>.</p>
+<p><strong>You are done when:</strong> The GitHub section appears in your Explorer sidebar and shows pull requests from the <code>learning-room</code> repository.</p>
+<h3>Challenge 12.2 Step-by-Step: Check Out a PR and Post a Comment</h3>
+<p><strong>Goal:</strong> Check out someone else&#39;s PR branch locally, read the diff in VS Code, and post one constructive review comment.</p>
+<p><strong>Where you are working:</strong> VS Code with the GitHub Pull Requests extension installed.</p>
+<p><strong>Estimated time:</strong> 10-15 minutes.</p>
+<ol>
+<li>Open the Command Palette: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>).</li>
+<li>Type <code>GitHub Pull Requests: Focus on Pull Requests View</code> and select it. The Pull Requests panel opens.</li>
+<li>Navigate the list of open PRs. Find one that is <strong>not yours</strong> (a classmate&#39;s PR from Chapter 6, 7, or 11).</li>
+<li>With the PR focused, press <code>Enter</code> or activate <strong>Checkout</strong> from the context menu (<code>Shift+F10</code> on Windows). VS Code switches to that PR&#39;s branch.</li>
+<li>Open the Command Palette again and run <code>GitHub Pull Requests: Open Changed Files</code>. This shows the list of files the PR changed.</li>
+<li>Open one changed file. VS Code opens the <strong>Diff Editor</strong> showing old content on the left and new content on the right.</li>
+<li>Navigate the diff with the <strong>Accessible Diff Viewer</strong>: press <code>F7</code> to move to the next change, <code>Shift+F7</code> for the previous change. Your screen reader announces each change (added lines, removed lines).</li>
+<li>Find one specific thing to comment on: a typo, an unclear sentence, a missing step, or something the author did well.</li>
+<li>To add an inline comment: position your cursor on the line you want to comment on, then open Command Palette and run <code>GitHub Pull Requests: Add Comment</code>. Type your constructive comment and activate <strong>Add Comment</strong>.</li>
+<li>If the inline comment method is difficult, navigate to the PR on GitHub.com instead and add your comment in the <strong>Files changed</strong> tab.</li>
+</ol>
+<p><strong>If checkout is blocked by permissions:</strong> You can still complete this challenge in read-only mode. Skip step 4 and instead open the PR on GitHub.com. Use the <strong>Files changed</strong> tab to read the diff and post your comment there.</p>
+<p><strong>Screen reader tip:</strong> In the Diff Editor, <code>F7</code> (Accessible Diff Viewer) is the most reliable way to navigate changes. It reads each hunk as a single block, which is much easier than navigating line by line.</p>
+<p><strong>You are done when:</strong> You have posted at least one constructive review comment on someone else&#39;s PR.</p>
+<h3>Completing Chapter 12: Submit Your Evidence</h3>
+<p>Open your <strong>assigned Chapter 12 challenge issue</strong> and post a completion comment:</p>
+<pre><code class="hljs language-text">Chapter 12 completed:
+- Extension installed: yes / no
+- Signed in to GitHub: yes / no
+- PR reviewed: #[PR number by classmate]
+- Comment posted: yes (inline / on GitHub.com)
+- My comment was about: [one-sentence summary]</code></pre>
+<p>Close your Chapter 12 challenge issues when done.</p>
 <h3>Expected Outcomes</h3>
 <ul>
 <li>Student can install and authenticate the GitHub PR extension.</li>
-<li>Student can check out a PR branch in VS Code.</li>
-<li>Student can interactively review changes and post feedback.</li>
+<li>Student can check out a PR branch in VS Code (or view it on GitHub.com).</li>
+<li>Student can navigate diffs using the Accessible Diff Viewer (<code>F7</code>).</li>
+<li>Student can post constructive, specific feedback on a classmate&#39;s work.</li>
 </ul>
 <h3>If You Get Stuck</h3>
 <ol>
-<li>If extension doesn&#39;t install, reload VS Code with <code>Ctrl+Shift+P</code> → &quot;Developer: Reload Window&quot;.</li>
-<li>If OAuth sign-in fails, verify your GitHub account is active in the browser first, then retry.</li>
-<li>If PR list is empty, switch to &quot;All Open&quot; view in the GitHub section of Explorer.</li>
-<li>If checkout fails, confirm you have write access to the repository or ask facilitator.</li>
-<li>Ask facilitator to verify the GitHub PR view in Explorer and help with one checkout.</li>
-<li>If Activity Bar focus is difficult with a screen reader, use Command Palette and run <code>GitHub Pull Requests: Focus on Pull Requests View</code>.</li>
+<li>Extension does not install? Reload VS Code: <code>Ctrl+Shift+P</code>, then run <code>Developer: Reload Window</code>.</li>
+<li>OAuth sign-in fails? Verify your GitHub account is active in the browser first, close VS Code, reopen, and retry.</li>
+<li>PR list is empty? Switch to &quot;All Open&quot; view in the GitHub Pull Requests panel.</li>
+<li>Checkout fails? Confirm you have write access to the repository. If not, use the read-only GitHub.com fallback.</li>
+<li>Diff Editor is hard to navigate? Press <code>F7</code> for the Accessible Diff Viewer mode, which is purpose-built for screen readers.</li>
+<li>Cannot find the Add Comment command? Use Command Palette and search for <code>GitHub Pull Requests: Add Comment</code>.</li>
+<li>Ask facilitator to help verify the GitHub PR panel and model one review comment.</li>
 </ol>
+<blockquote>
+<p><strong>Continue learning:</strong> The GitHub Skills course <a href="https://github.com/skills/review-pull-requests">Review Pull Requests</a> practices approving, requesting changes, and using suggestions in an interactive format. See <a href="appendix-z-github-skills-catalog.html">Appendix Z</a> for the full catalog.</p>
+</blockquote>
 <h3>Learning Moment</h3>
-<p>PR tooling multiplies your impact. Reviewing others&#39; work refines your own standards and builds community trust.</p>
+<p>PR tooling multiplies your impact. Reviewing others&#39; work refines your own standards and builds community trust. The comment you just wrote helps another student learn - and you learn by articulating what makes documentation clear.</p>
+<h3>Learning Pattern Used in This Chapter</h3>
+<ol>
+<li>Install and configure the tool before starting the task.</li>
+<li>Practice on someone else&#39;s work first (reviewing is safer than authoring).</li>
+<li>Use accessibility tools (<code>F7</code> Accessible Diff Viewer) to navigate efficiently.</li>
+<li>Write specific, constructive feedback (not just &quot;looks good&quot;).</li>
+</ol>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-installing-the-github-pull-requests-extension">Installing the GitHub Pull Requests Extension</a></li>
@@ -201,7 +246,7 @@
 <li>Click any PR title to view its conversation, commits, and changed files</li>
 <li>Use the <strong>Files changed</strong> tab to review diffs</li>
 </ol>
-<p>See <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> for the full web-based PR workflow.</p>
+<p>See <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> for the full web-based PR workflow.</p>
 </details>
 
 <details>
@@ -228,7 +273,6 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Expand it with <code>Right Arrow</code></li>
 </ol>
 <h3>Pull Request Tree Structure</h3>
-<p><img src="images/pr-tree.svg" alt=""></p>
 <h4>Description</h4>
 <p>The GitHub Pull Requests panel has two top-level sections. &quot;My Pull Requests&quot; contains four filters: Assigned to Me, Created by Me, Waiting for my Review, and All Open. The repository section shows Local Pull Request Branches (checked out locally), All Open Pull Requests, and All Closed Pull Requests.</p>
 <h4>Screen reader announcement example</h4>
@@ -321,7 +365,7 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Press <code>Enter</code> on a file to open its diff view</li>
 </ol>
 <h4>Screen reader announcement</h4>
-<p>&quot;docs/11-vscode-basics.md, 42 additions, 3 deletions&quot;</p>
+<p>&quot;docs/05-vscode-accessibility.md, 42 additions, 3 deletions&quot;</p>
 <h3>Understanding the Diff View</h3>
 <p>When you open a file from &quot;Files Changed&quot;:</p>
 <h4>Split view mode (default)</h4>
@@ -471,7 +515,7 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Fill in the title and description</li>
 <li>Click <strong>Create pull request</strong></li>
 </ol>
-<p>See <a href="05-working-with-pull-requests.html#opening-a-pull-request">Working with Pull Requests - Opening a PR</a> for detailed screen reader steps.</p>
+<p>See <a href="06-working-with-pull-requests.html#opening-a-pull-request">Working with Pull Requests - Opening a PR</a> for detailed screen reader steps.</p>
 </details>
 
 <details>
@@ -823,7 +867,7 @@ gh <span class="hljs-built_in">pr</span> merge 42 --auto --squash</code></pre>
 <blockquote>
 <p><strong>What success feels like:</strong> You read a diff, heard the changes announced by your screen reader, and left feedback - all without opening a browser. This is how many developers review code every day.</p>
 </blockquote>
-<p><em>Next: <a href="13-github-copilot.html">GitHub Copilot</a></em><br><em>Back: <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></em><br><em>Related: <a href="05-working-with-pull-requests.html">Working with Pull Requests</a> | <a href="15-issue-templates.html">Issue Templates</a></em></p>
+<p><em>Next: <a href="13-github-copilot.html">GitHub Copilot</a></em><br><em>Back: <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></em><br><em>Related: <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> | <a href="15-issue-templates.html">Issue Templates</a></em></p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

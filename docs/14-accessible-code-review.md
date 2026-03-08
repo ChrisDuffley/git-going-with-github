@@ -146,6 +146,20 @@ You can review pull requests in two places - each with different strengths:
 
 Both environments give you full keyboard and screen reader access. Your choice depends on context, not accessibility.
 
+### About Learning Cards in This Chapter
+
+Each review step includes expandable learning cards for different interaction styles. Open the one that matches how you work:
+
+The following table describes each learning card type and who it is for.
+
+| Card | Who it is for |
+| --- | --- |
+| **Visual / mouse users** | Sighted users navigating with a mouse or trackpad |
+| **Low vision users** | Users working with zoom (200%+), magnification, high contrast themes, or large cursors |
+| **Screen reader users (NVDA / JAWS)** | Windows users navigating with NVDA or JAWS |
+| **Screen reader users (VoiceOver)** | macOS users navigating with VoiceOver |
+| **CLI (gh)** | Terminal review commands - predictable text output |
+
 <details>
 <summary>GitHub CLI (gh) alternative - review from your terminal</summary>
 
@@ -193,6 +207,17 @@ From any pull request page:
 <summary>Visual / mouse users</summary>
 
 Click the **Files changed** tab at the top of the PR page. The tab label shows the number of changed files (e.g., "Files changed 4").
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. The PR tabs (Conversation, Commits, Checks, Files changed) are across the top of the PR page. At high zoom they may wrap to multiple lines.
+2. The **Files changed** tab includes a badge with the number of changed files. This badge uses text (not colour alone) so it is visible in all themes.
+3. After clicking Files changed, the diff page loads. At high zoom, the file tree panel on the left may collapse automatically. Click the **file tree toggle** (a small panel icon) or press `T` to toggle it back.
+4. Added lines use a green background; removed lines use red. In high contrast browser settings (Windows: Settings > Accessibility > Contrast themes), these colours map to strong border indicators.
+5. Use `Ctrl++` to zoom the browser if the diff text is too small, and `Ctrl+-` to zoom out.
 
 </details>
 
@@ -262,6 +287,15 @@ VO+Space on a file to scroll its diff into view
 - Which areas of the codebase are affected?
 - Are there unexpected files (generated files, lock files, configuration changes)?
 
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. The file tree shows each filename with a colour-coded bar indicating lines added (green) and removed (red). In high contrast mode, these bars may be less visible - the `+N / -N` text badge next to each file is the reliable indicator.
+2. At high zoom, long file paths truncate. Hover over a truncated name to see the full path in a tooltip.
+3. If the file tree panel is too narrow at high zoom, drag its right edge to widen it, or toggle it off and use heading navigation (`H` key) to move between file diffs.
+
+</details>
+
 
 ### Step 3: Navigate Between File Diffs
 
@@ -312,6 +346,17 @@ Each file's diff is a table. Every row is one line of code.
 - **Red highlighted lines** (with a `-`) = lines removed
 - **Plain/white lines** = unchanged context
 - Use `Ctrl+F` to search within the page for specific text in the diff
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+1. **Colour is not the only indicator.** Every added line has a `+` character in the gutter; every removed line has a `-`. These text characters are reliable regardless of colour settings.
+2. At high zoom, long lines of code wrap. The `+`/`-` gutter character stays at the beginning of the first line, so look left to determine the change type.
+3. Use `Ctrl+F` (browser find) to search for specific text across the entire diff page.
+4. If the diff is split view (side by side), it may be very wide at high zoom. Switch to **unified diff** mode: click the gear icon in the Files Changed toolbar and select "Unified" - this shows old and new in a single column.
+5. High contrast themes in Windows (Settings > Accessibility > Contrast themes) make the `+`/`-` lines use bold border patterns instead of subtle colour shading.
 
 </details>
 
@@ -598,6 +643,76 @@ If you have the GitHub Pull Requests extension:
 3. Navigate to any file in the tree and press `Enter` to open its diff view
 
 Without the extension, any `git diff` operation also opens the diff editor.
+
+### Learning Cards: VS Code Code Review
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+VS Code's diff editor works well at high zoom:
+
+1. **Split view vs. inline:** By default, VS Code shows diffs in a split (side-by-side) view. At high zoom this can be very cramped. Switch to inline mode: `Ctrl+Shift+P` then type "Toggle Inline View" in any diff editor. Inline mode shows old and new code in a single column.
+2. **Colour indicators:** Added lines have a green gutter bar; removed lines have a red gutter bar. In high contrast themes, these use heavy solid borders that are visible even at extreme zoom levels.
+3. **Change navigation:** Press `F7` to jump to the next change and `Shift+F7` for the previous. Each change is highlighted with a visible focus box that moves with your position - much easier than scrolling at high zoom.
+4. **Minimap in diff view:** The minimap (right edge) shows an overview of changes as coloured blocks. At high zoom the minimap may be too small to be useful - disable it via Settings if it adds visual noise.
+5. **Font size for diffs:** Diff editors use your configured editor font size (`editor.fontSize`). Increase this in Settings (`Ctrl+,`) if the diff text is too small at your zoom level.
+6. **Comment highlight:** When you add a comment through the GitHub PR extension, the commented line gets a distinct background. In high contrast themes this is a solid colour band.
+
+</details>
+
+<details>
+<summary>Screen reader users (NVDA / JAWS on Windows)</summary>
+
+#### Opening the PR for review
+
+1. Press `Ctrl+Shift+P`, type "GitHub Pull Requests: View Pull Request"
+2. The PR tree appears in the sidebar - navigate with `Down Arrow`
+3. Each changed file is announced with its name and change summary
+4. Press `Enter` on a file to open its diff editor
+5. The diff editor opens with the standard VS Code diff layout
+
+#### Using the Accessible Diff Viewer
+
+1. In the diff editor, press `F7` to open the Accessible Diff Viewer
+2. NVDA announces: "Changed lines X to Y in filename, Change 1 of N"
+3. The viewer shows each change with "Removed:" and "Added:" labels
+4. Press `F7` to move to the next change, `Shift+F7` for previous
+5. Press `Escape` when done to close the viewer
+
+#### Placing a comment
+
+1. Navigate to the line you want to comment on in the diff
+2. Press `Ctrl+Shift+P`, type "GitHub Pull Requests: Add Comment"
+3. A text area opens below the line - NVDA announces the input focus
+4. Type your comment
+5. Press `Tab` to the Submit button, then `Enter`
+
+</details>
+
+<details>
+<summary>Screen reader users (VoiceOver on macOS)</summary>
+
+#### Opening the PR
+
+1. Press `Cmd+Shift+P`, type "GitHub Pull Requests: View Pull Request"
+2. Navigate the PR tree with `VO+Down Arrow`
+3. Press `Return` on a file to open its diff
+
+#### Accessible Diff Viewer
+
+1. Press `F7` in the diff editor
+2. VoiceOver announces each change with clear "Removed" and "Added" labels
+3. Navigate with `F7`/`Shift+F7`
+4. Press `Escape` to close
+
+#### Comment placement
+
+1. Press `Cmd+Shift+P`, type "GitHub Pull Requests: Add Comment"
+2. `VO+Shift+Down Arrow` to interact with the comment text area
+3. Type your comment
+4. `VO+Shift+Up Arrow` to stop interacting, then `Tab` to Submit
+
+</details>
 
 ### Using the Accessible Diff Viewer (`F7`)
 

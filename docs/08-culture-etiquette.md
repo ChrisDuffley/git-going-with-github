@@ -121,7 +121,56 @@ Before diving into communication norms, it helps to understand the workflow that
 
 ### GitHub Flow vs Git Flow
 
-You may encounter "Git Flow" in older projects or enterprise environments. It uses longer-lived branches (`develop`, `release/`, `hotfix/`) and is more complex. For open source contribution - especially at a hackathon - **GitHub Flow is what you want**. It is what GitHub itself uses and what most modern open source projects follow.
+You may encounter "Git Flow" (sometimes written "GitFlow") in older projects or enterprise environments. This section explains what Git Flow is, how it differs from GitHub Flow, and why this workshop teaches GitHub Flow.
+
+#### What Git Flow Is
+
+Git Flow is a branching model published by Vincent Driessen in 2010. It was designed for teams that ship versioned releases on a schedule (desktop software, mobile apps, embedded systems). It defines five branch types:
+
+The following table describes each Git Flow branch type, its lifetime, and its purpose.
+
+| Branch | Lifetime | Purpose |
+| --- | --- | --- |
+| `main` (or `master`) | Permanent | Always reflects the latest production release. Only receives merges from `release/` or `hotfix/` branches. |
+| `develop` | Permanent | Integration branch where completed features accumulate. Represents the next planned release. |
+| `feature/` | Temporary | Branched from `develop`. One branch per feature. Merged back into `develop` when complete. Deleted after merge. |
+| `release/` | Temporary | Branched from `develop` when enough features are ready. Used for final testing, version bumps, and changelog updates. Merged into both `main` and `develop`, then deleted. |
+| `hotfix/` | Temporary | Branched from `main` to patch a critical production bug. Merged into both `main` and `develop`, then deleted. |
+
+#### How the Git Flow Cycle Works
+
+1. Developers branch `feature/my-feature` off `develop` and work there.
+2. Completed features merge back into `develop` via pull request.
+3. When `develop` has enough features for a release, a `release/1.2.0` branch is created.
+4. The release branch gets final testing, bug fixes, and version number updates.
+5. The release branch merges into `main` (tagged with the version) and back into `develop`.
+6. If a critical bug is found in production, a `hotfix/` branch is created from `main`, fixed, and merged into both `main` and `develop`.
+
+#### How GitHub Flow Differs
+
+The following table compares GitHub Flow and Git Flow across key dimensions.
+
+| Dimension | GitHub Flow | Git Flow |
+| --- | --- | --- |
+| Long-lived branches | `main` only | `main` and `develop` (plus temporary `release/` and `hotfix/`) |
+| Feature work | Branch off `main`, PR back to `main` | Branch off `develop`, PR back to `develop` |
+| Releases | Every merge to `main` is deployable | Explicit `release/` branches with version numbers |
+| Hotfixes | Same as any other PR to `main` | Dedicated `hotfix/` branch merged to both `main` and `develop` |
+| Complexity | Low - one rule: `main` is always deployable | High - multiple branch types with specific merge targets |
+| Best for | Continuous deployment, web apps, open source | Scheduled releases, versioned software, large enterprise teams |
+
+#### When You Might See Git Flow
+
+- **Enterprise products** with quarterly or annual release cycles
+- **Mobile apps** that go through app store review before release
+- **Embedded systems or firmware** where "deploying" means shipping hardware
+- **Legacy projects** that adopted it before continuous deployment became common
+
+#### Why This Workshop Uses GitHub Flow
+
+For open source contribution - especially at a hackathon or when contributing to web-based projects - **GitHub Flow is what you want**. It is what GitHub itself uses and what most modern open source projects follow. The single-branch simplicity means you can focus on your contribution rather than navigating branch logistics.
+
+If you join a project that uses Git Flow, the pull request skills you learn here transfer directly. The difference is which branch you target (usually `develop` instead of `main`) and the additional coordination around release timing.
 
 ### The Unwritten Rule: One Thing Per Branch
 

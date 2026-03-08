@@ -6,6 +6,8 @@
 
 > This guide covers everything you need to explore a GitHub repository using your keyboard and screen reader. No mouse required.
 
+> **Official GitHub Accessibility Guide:** GitHub publishes an NVDA-focused guide for navigating repositories with a screen reader at [Using GitHub Repositories with a Screen Reader](https://accessibility.github.com/documentation/guide/repos/). This chapter covers the same material with additional perspectives (VoiceOver, low vision, CLI) and workshop-specific guidance. Use the official guide as a companion reference.
+
 
 ## Workshop Recommendation (Chapter 2)
 
@@ -23,6 +25,20 @@ Use this sequence before moving to graded chapters:
 2. Practice orientation (`1`, `D`, heading list).
 3. Confirm readiness with a peer or facilitator.
 4. Move to Chapter 4 for issue-based, traceable challenges.
+
+
+### About Learning Cards in This Chapter
+
+This chapter provides learning cards: expandable blocks that offer perspective-specific guidance for different ways of working. Not every card appears at every step. Open the ones that match how you work.
+
+The following table describes the four learning card types used in this chapter.
+
+| Card | Who it helps | What it covers |
+| --- | --- | --- |
+| Visual / mouse | Sighted users navigating with a mouse or trackpad | Click targets, visual cues, layout orientation |
+| Low vision | Users with magnification, zoom, or high-contrast themes | Zoom-friendly navigation, locating controls at high magnification |
+| Screen reader (NVDA / JAWS) | Screen reader users on Windows | Keystroke sequences, Focus and Browse mode, landmark navigation |
+| Screen reader (VoiceOver) | Screen reader users on macOS | VO key sequences, rotor usage, interaction model |
 
 
 ## What Is a Repository Page?
@@ -50,6 +66,8 @@ Step 2: Press D - navigate through landmarks to learn page structure
 Step 3: Press NVDA+F7 (or VO+U) - scan headings to understand what's on the page
 ```
 
+> **Key landmark names you will hear with `D`:** Repository pages have three main landmark sections: **"Repository Navigation"** (the tab bar), **"Main"** (the file tree, branch selector, repo details, and contributors), and **"Repository Files Navigation"** (the rendered README content). Within each landmark, press `H` or `2` to navigate subsections - most are organized under heading level 2.
+
 
 ## Navigating the Repository Tabs
 
@@ -61,6 +79,19 @@ The main tabs are: **Code**, **Issues**, **Pull Requests**, **Discussions**, **A
 <summary>Visual / mouse users</summary>
 
 The tab bar is visible just below the repository name. Click the tab you want - **Code**, **Issues**, **Pull requests**, etc. The active tab is underlined. The number next to a tab (e.g., "Issues · 14") shows how many open items are in that section.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The tab bar is just below the repository name. At 200% browser zoom or higher:
+
+- The tabs may wrap to two lines. Each tab remains a standard link.
+- The active tab is indicated by an underline. In Windows High Contrast mode, the underline uses the system accent color.
+- Tab counts ("Issues · 14") appear as part of each tab's text and remain readable at high magnification.
+- If tabs are hard to click at high zoom, press `Tab` from the repo heading to cycle through each tab link sequentially.
+- **Keyboard shortcut:** Press `G` then `I` to jump directly to Issues, or `G` then `P` for Pull requests. These two-key shortcuts work from any page in the repository.
 
 </details>
 
@@ -98,8 +129,19 @@ The file table is the main panel of the Code tab, showing folders and files with
 
 </details>
 
-<details>
-<summary>Screen reader users</summary>
+<details><summary>Low vision users (zoom, high contrast)</summary>
+
+The file table occupies the main content area of the Code tab. At high magnification:
+
+- The table has three columns: Name, Message (last commit), and Date. At 200%+ zoom, the Message and Date columns may be truncated. Hover over truncated text to see the full message in a tooltip.
+- Folder icons appear before folder names; file icons appear before file names. In Windows High Contrast mode, these icons use system colors with visible outlines.
+- Click any folder or file name to navigate into it. The names are standard links with hover underlines.
+- Use `Ctrl+F` (browser Find) to search for a specific file name rather than scrolling a long file list at high zoom.
+- The **Go to file** button (`T` keyboard shortcut) opens a search-as-you-type file finder. This is the fastest way to navigate to a specific file at any zoom level.
+
+</details>
+
+<details><summary>Screen reader users</summary>
 
 Press `T` to jump to the next table on the page. The first table you will hit is usually the files table. NVDA will announce: “Table with [N] rows and 3 columns.”
 
@@ -142,6 +184,19 @@ The branch selector button sits just above the files table. It lets you switch w
 <summary>Visual / mouse users</summary>
 
 Mouse users see the current branch name as a button with a dropdown arrow (e.g., `main ▼`) just above the file table. Click it to open the branch list. Type to filter branches, then click a branch name to switch.
+
+</details>
+
+<details>
+<summary>Low vision users (zoom, high contrast)</summary>
+
+The branch selector button shows the current branch name (e.g., "main") with a dropdown arrow. It sits just above the file table.
+
+- At high magnification, the button may wrap next to other controls. It is a standard button with visible border and text.
+- Click it to open a dropdown with a search field and branch list. Type part of a branch name to filter the list.
+- In the dropdown, branch names can be long. At high zoom, they may truncate. Hover for the full name.
+- In Windows High Contrast mode, the currently active branch is highlighted with the system selection color.
+- **Alternative:** Press `W` to open the branch/tag picker directly from the keyboard. This avoids needing to find and click the button.
 
 </details>
 
@@ -247,6 +302,24 @@ cd learning-room
 </details>
 
 
+## Fork vs. Clone vs. Branch - What Is the Difference?
+
+These three concepts are related but serve different purposes. Students often confuse them, so here is a side-by-side comparison.
+
+The following table compares forks, clones, and branches across six dimensions.
+
+| Dimension | Fork | Clone | Branch |
+| --- | --- | --- | --- |
+| **What it creates** | A new repository on GitHub under your account | A local copy of a repository on your computer | A named pointer to a line of commits within the same repository |
+| **Where it lives** | On GitHub (your account) | On your local machine | Inside any repository (local or remote) |
+| **Relationship to original** | Linked (GitHub tracks the "parent" repo) | Independent copy (but has `origin` remote pointing to GitHub) | Part of the same repository |
+| **When to use it** | Contributing to a repo where you do not have write access (most open source) | Working locally with Git and VS Code | Creating an isolated workspace for a feature, fix, or experiment |
+| **How to contribute back** | Open a pull request from your fork to the original (upstream) repo | Push your branch to the remote, then open a PR | Open a pull request from your branch to `main` |
+| **Workshop usage** | Not required for the Learning Room (you have direct write access) | Optional in Block 0 (for local Git work in Ch11+) | Required from Chapter 6 onward (feature branches for every PR) |
+
+**In this workshop,** you will primarily use **branches** (Chapter 6 onward) and optionally **clone** the Learning Room for local work (Chapter 11). Forking is the standard workflow when contributing to repositories where you are not a collaborator, which is covered in [Contributing to Open Source](appendix-t-contributing-to-open-source.md).
+
+
 ## Watching, Starring, and Forking
 
 These three actions let you follow, bookmark, or copy a repository.
@@ -266,8 +339,9 @@ The **Watch**, **Star**, and **Fork** buttons are at the top-right of the reposi
 1. Press `L` to navigate through list items to reach the **Main** landmark
 2. Continue pressing `L` until you find the **Watch** button (reads as “Watch this repository”)
 3. Press `Enter` to open the subscription submenu
-4. Press `↑/↓` to browse options: Participating, All Activity, Ignore
+4. Press `↑/↓` to browse options: Participating, All Activity, Ignore, Custom
 5. Press `Enter` to confirm
+6. If you choose **Custom**, a dialog opens with checkboxes for specific activity types (Issues, Pull requests, Releases, Discussions, Security alerts). Check the boxes you want and activate the **Apply** button.
 
 </details>
 

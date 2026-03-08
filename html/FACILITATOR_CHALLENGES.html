@@ -79,8 +79,8 @@ arqamgrt
 <p>This creates:</p>
 <ul>
 <li>Challenge 4.1, 4.2, 4.3 (one set per student)</li>
-<li>Challenge 5.1, 5.2, 5.3 (one set per student)</li>
-<li>Challenge 6.1 (one per student)</li>
+<li>Challenge 6.1, 5.2, 5.3 (one set per student)</li>
+<li>Challenge 7.1 (one per student)</li>
 <li>Challenge 11.1, 11.2, 11.3 (one set per student)</li>
 </ul>
 <p><strong>Total generated:</strong> 10 issues per student (for these 4 chapters). Example: 12 students = 120 issues.</p>
@@ -134,7 +134,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 </ol>
 <p>The issue becomes a support thread. Every comment builds evidence of learning.</p>
 <h3>Validating Difficult Challenges</h3>
-<p>For challenges <strong>without bot validation</strong> (Chapters 7-10, 12-16):</p>
+<p>For challenges <strong>without bot validation</strong> (Chapters 5, 8-10, 12-16):</p>
 <ol>
 <li>Review the student&#39;s PR or issue comment</li>
 <li>Look for: clear evidence, correct steps, good explanation</li>
@@ -207,7 +207,7 @@ git pull origin main</code></pre>
 <pre><code class="hljs"><span class="hljs-selector-tag">Chapter</span> <span class="hljs-selector-tag">X</span><span class="hljs-selector-class">.Y</span>: <span class="hljs-selector-attr">[Challenge Name]</span> (<span class="hljs-variable">@YOUR_USERNAME</span>)</code></pre>
 <p><strong>Example:</strong></p>
 <pre><code class="hljs"><span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">4.1</span>: <span class="hljs-selector-tag">Create</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Issue</span> (<span class="hljs-variable">@accesswatch</span>)
-<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">5.2</span>: <span class="hljs-selector-tag">Open</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
+<span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">6.2</span>: <span class="hljs-selector-tag">Open</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">11.3</span>: <span class="hljs-selector-tag">Push</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">GitHub</span> (<span class="hljs-variable">@andysq62</span>)</code></pre>
 <p>This makes it <strong>instantly clear</strong> which challenge, which chapter, which student.</p>
 <h2>Automation &amp; Bot Validation</h2>
@@ -298,8 +298,8 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <h3>Templates Used by Batch Script</h3>
 <ul>
 <li><code>.github/ISSUE_TEMPLATE/challenge-chapter-4.md</code> - Chapter 4 issues</li>
-<li><code>.github/ISSUE_TEMPLATE/challenge-chapter-5.md</code> - Chapter 5 issues</li>
-<li><code>.github/ISSUE_TEMPLATE/challenge-chapter-6.md</code> - Chapter 6 issues</li>
+<li><code>.github/ISSUE_TEMPLATE/challenge-chapter-5.md</code> - Chapter 6 issues</li>
+<li><code>.github/ISSUE_TEMPLATE/challenge-chapter-6.md</code> - Chapter 7 issues</li>
 <li><code>.github/ISSUE_TEMPLATE/challenge-chapter-11.md</code> - Chapter 11 issues</li>
 </ul>
 <h3>Bot Validation</h3>
@@ -312,7 +312,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <ul>
 <li><code>learning-room/docs/CHALLENGES.md</code> - Master challenge hub (YOU ARE HERE)</li>
 <li><code>docs/04-working-with-issues.md</code> - Chapter 4 detailed guide</li>
-<li><code>docs/05-working-with-pull-requests.md</code> - Chapter 5 detailed guide</li>
+<li><code>docs/06-working-with-pull-requests.md</code> - Chapter 6 detailed guide</li>
 <li><code>docs/11-git-source-control.md</code> - Chapter 11 detailed guide</li>
 </ul>
 <h2>FAQ - Facilitators</h2>
@@ -336,7 +336,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <li>Close issues when quality is good</li>
 </ol>
 <h3>&quot;Can students skip chapters?&quot;</h3>
-<p>It&#39;s possible but not recommended. The arc builds: Ch 4 (issues) → Ch 5 (PRs) → Ch 6 (conflicts) → Ch 11 (local Git). Each depends on the previous.</p>
+<p>It&#39;s possible but not recommended. The arc builds: Ch 4 (issues) → Ch 6 (PRs) → Ch 7 (conflicts) → Ch 11 (local Git). Each depends on the previous.</p>
 <p><em>Recommended:</em> &quot;Try them in order first. You can skip only if you&#39;ve already mastered that skill.&quot;</p>
 <h3>&quot;How do I know if my bot configuration is too strict?&quot;</h3>
 <p>Track daily: &quot;How many students needed bot help and retries?&quot;</p>
