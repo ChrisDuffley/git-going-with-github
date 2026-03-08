@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Accessibility Agents - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Accessibility Agents</span>
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Accessibility Agents</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,11 +58,11 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Accessibility Agents</h1>
+    <h1 id="accessibility-agents">Accessibility Agents</h1>
 <blockquote>
 <p><strong>Listen to Episode 17:</strong> <a href="../PODCASTS.html">Accessibility Agents</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
 </blockquote>
-<h2>55 AI Agents Across 3 Teams and 5 Platforms</h2>
+<h2 id="55-ai-agents-across-3-teams-and-5-platforms">55 AI Agents Across 3 Teams and 5 Platforms</h2>
 <blockquote>
 <p><strong>Day 2, Block 3 Material</strong></p>
 <p><strong>Before you read this guide:</strong></p>
@@ -70,16 +70,16 @@
 <p><strong>The agents are only useful if you have already done the work manually.</strong> An agent that summarizes issues is useless to someone who has never read an issue. An agent that reviews a diff is useless to someone who has never read a diff. The agent does not teach you the skill - it multiplies a skill you already have.</p>
 <p>Day 1 built those skills. This chapter shows how to amplify them with automation - and how you can contribute new agents, improve existing ones, and shape the project&#39;s future.</p>
 </blockquote>
-<h2>Prerequisites Checklist</h2>
-<h3>Before starting this chapter, verify you have completed</h3>
-<h3>Core Prerequisites (Required for All Agents)</h3>
+<h2 id="prerequisites-checklist">Prerequisites Checklist</h2>
+<h3 id="before-starting-this-chapter-verify-you-have-completed">Before starting this chapter, verify you have completed</h3>
+<h3 id="core-prerequisites-required-for-all-agents">Core Prerequisites (Required for All Agents)</h3>
 <ul>
 <li><input aria-label="Chapter 0:" disabled="" type="checkbox"> Chapter 0: <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a> - Git, VS Code, and GitHub account</li>
 <li><input aria-label="Chapter 13:" disabled="" type="checkbox"> Chapter 13: <a href="13-github-copilot.html">GitHub Copilot</a> - GitHub Copilot Chat installed and working</li>
 <li><input aria-label="GitHub Copilot access (Copilot Free tier is enough for this workshop)" disabled="" type="checkbox"> GitHub Copilot access (Copilot Free tier is enough for this workshop)</li>
 <li><input aria-label="" disabled="" type="checkbox"> <code>.github/agents/</code> folder exists in your repository (or will create custom agents)</li>
 </ul>
-<h3>Agent Prerequisites (The &quot;Skill First&quot; Principle)</h3>
+<h3 id="agent-prerequisites-the-quotskill-firstquot-principle">Agent Prerequisites (The &quot;Skill First&quot; Principle)</h3>
 <p>Every agent automates a skill you should already know by hand. Before using any agent, verify you have done the corresponding manual work. This table maps common agent categories to the skills they require:</p>
 <table>
 <thead>
@@ -117,7 +117,7 @@
 </tbody></table>
 <p>This is not an exhaustive list - it illustrates the principle. Before running any agent, ask yourself: <em>could I do this task manually right now?</em> If the answer is no, learn the manual skill first.</p>
 <p><strong>Estimated time for this chapter:</strong> 1.5 hours (including exercises)</p>
-<h2>Workshop Recommendation (Chapter 16)</h2>
+<h2 id="workshop-recommendation-chapter-16">Workshop Recommendation (Chapter 16)</h2>
 <p>Chapter 16 is the <strong>agent exploration and hands-on validation chapter</strong> - where students match agents to skills they already have and learn how to trust, evaluate, and improve AI-powered workflow automation.</p>
 <ul>
 <li><strong>Challenge count:</strong> 3 guided + 1-2 optional contribution challenges</li>
@@ -126,7 +126,7 @@
 <li><strong>Pattern:</strong> explore, validate, read internals, optionally contribute</li>
 <li><strong>Key principle:</strong> Skill First, Agent Second - <strong>every agent requires manual prerequisite skills</strong></li>
 </ul>
-<h3>Chapter 16 Challenge Set</h3>
+<h3 id="chapter-16-challenge-set">Chapter 16 Challenge Set</h3>
 <ol>
 <li><strong>Agent Discovery Mapping</strong> - identify 3-5 agents that match skills you already have from Day 1.</li>
 <li><strong>Agent Skill Validation</strong> - run one agent and evaluate its output against your manual experience.</li>
@@ -134,9 +134,9 @@
 <li><strong>Improve an Existing Agent</strong> (optional hackathon) - find a gap in an agent&#39;s instructions and fix it via PR.</li>
 <li><strong>Propose a New Agent</strong> (optional hackathon) - file an issue proposing an agent for an uncovered workflow.</li>
 </ol>
-<h3>Challenge 16.1 Step-by-Step: Agent Discovery Mapping</h3>
+<h3 id="challenge-161-step-by-step-agent-discovery-mapping">Challenge 16.1 Step-by-Step: Agent Discovery Mapping</h3>
 <p><strong>Goal:</strong> Map your Day 1 manual skills to specific agents in the ecosystem so you know which agents you are ready to use.</p>
-<p><strong>Where you are working:</strong> GitHub.com - the <code>accessibility-agents</code> repository and your assigned Chapter 16 challenge issue.</p>
+<p><strong>Where you are working:</strong> GitHub.com - the <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> repository and your assigned Chapter 16 challenge issue.</p>
 <p><strong>Estimated time:</strong> 20 minutes.</p>
 <p>If 55 agents feels too broad, start with this beginner sequence:</p>
 <ul>
@@ -145,7 +145,7 @@
 <li><code>@pr-review</code> (maps to Chapter 6 and Chapter 14 review workflow)</li>
 </ul>
 <ol>
-<li>Fork the <code>accessibility-agents</code> repository on GitHub.com.</li>
+<li>Fork the <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> repository on GitHub.com.</li>
 <li>Open the repository and navigate to Section 3 of the README (or this chapter&#39;s Section 3 below) to see the full list of 55 agents organized by team.</li>
 <li>Read through the agent names and descriptions. For each one, ask yourself: &quot;Have I done this task manually during the workshop?&quot;</li>
 <li>Identify 3-5 agents that match workflows you already practiced:<ul>
@@ -168,12 +168,12 @@ I am ready because I have already: [specific skill from Day 1]
 Agent 3: @[agent-name]
 I am ready because I have already: [specific skill from Day 1]</code></pre>
 <p><strong>You are done when:</strong> Your discovery mapping comment is posted with at least 3 agent-to-skill matches.</p>
-<h3>Challenge 16.2 Step-by-Step: Agent Skill Validation</h3>
+<h3 id="challenge-162-step-by-step-agent-skill-validation">Challenge 16.2 Step-by-Step: Agent Skill Validation</h3>
 <p><strong>Goal:</strong> Run one agent, read its output, and evaluate whether it matches your manual experience.</p>
-<p><strong>Where you are working:</strong> VS Code with the <code>accessibility-agents</code> repository cloned and Copilot Chat open.</p>
+<p><strong>Where you are working:</strong> VS Code with the <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> repository cloned and Copilot Chat open.</p>
 <p><strong>Estimated time:</strong> 30 minutes.</p>
 <ol>
-<li>Clone your fork of <code>accessibility-agents</code> to VS Code (or open it in github.dev).</li>
+<li>Clone your fork of <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> to VS Code (or open it in github.dev).</li>
 <li>Open Copilot Chat: <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>).</li>
 <li>Choose one agent from your discovery list. If unsure, start with <code>@daily-briefing</code> or <code>@issue-tracker</code>.</li>
 <li>Run it with a simple prompt. Examples:<ul>
@@ -199,12 +199,12 @@ Does this match what you expected from manual experience?
 Did the agent miss anything important that you would catch?
 [your answer]</code></pre>
 <p><strong>You are done when:</strong> Your evaluation comment is posted with all three questions answered.</p>
-<h3>Challenge 16.3 Step-by-Step: Agent Instructions Deep Dive</h3>
+<h3 id="challenge-163-step-by-step-agent-instructions-deep-dive">Challenge 16.3 Step-by-Step: Agent Instructions Deep Dive</h3>
 <p><strong>Goal:</strong> Read one agent&#39;s source file to understand what instructions it follows, what tools it can use, and what mistakes it could make.</p>
-<p><strong>Where you are working:</strong> VS Code or GitHub.com - reading files in the <code>accessibility-agents</code> repository.</p>
+<p><strong>Where you are working:</strong> VS Code or GitHub.com - reading files in the <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> repository.</p>
 <p><strong>Estimated time:</strong> 15 minutes.</p>
 <ol>
-<li>In the <code>accessibility-agents</code> repository, navigate to the <code>.github/</code> folder (or wherever agent definition files are stored).</li>
+<li>In the <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> repository, navigate to the <code>.github/</code> folder (or wherever agent definition files are stored).</li>
 <li>Open one <code>.agent.md</code> or <code>.prompt.md</code> file for an agent you used or are curious about.</li>
 <li>Read the file and identify:<ul>
 <li>What is this agent trying to do? (its purpose)</li>
@@ -223,7 +223,7 @@ Tools available: [list]
 Guardrails: [what constraints are in the instructions]
 Could it make a mistake? [your answer and what kind]</code></pre>
 <p><strong>You are done when:</strong> Your analysis comment is posted.</p>
-<h3>Optional Challenges 16.4-16.5 (Hackathon)</h3>
+<h3 id="optional-challenges-164-165-hackathon">Optional Challenges 16.4-16.5 (Hackathon)</h3>
 <p><strong>Challenge 16.4: Improve an Existing Agent</strong> (45 min)</p>
 <ul>
 <li>Find an agent whose instructions have a gap (use Section 6 suggestions or file an issue).</li>
@@ -239,9 +239,9 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 <li>Include 3 example prompts people would use.</li>
 <li>Evidence: your issue with facilitator/maintainer discussion.</li>
 </ul>
-<h3>Completing Chapter 16: Submit Your Evidence</h3>
+<h3 id="completing-chapter-16-submit-your-evidence">Completing Chapter 16: Submit Your Evidence</h3>
 <p>Your evidence is the individual challenge issue comments (16.1, 16.2, 16.3). Close each challenge issue as you complete it. For optional challenges, your PR or proposal issue is the evidence.</p>
-<h3>Expected Outcomes</h3>
+<h3 id="expected-outcomes">Expected Outcomes</h3>
 <ul>
 <li>Student can map personal Day 1 skills to specific agents in the ecosystem.</li>
 <li>Student understands the <strong>Skill First, Agent Second</strong> principle and can articulate why agent output requires human judgment.</li>
@@ -249,7 +249,7 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 <li>Student has used at least one agent and verified it against manual skills.</li>
 <li>(Optional) Student has contributed to the accessibility-agents ecosystem with a fix, improvement, or proposal.</li>
 </ul>
-<h3>If You Get Stuck</h3>
+<h3 id="if-you-get-stuck">If You Get Stuck</h3>
 <ol>
 <li>Cannot find an agent that matches your skills? Start with <code>@daily-briefing</code> or <code>@issue-tracker</code> - those build directly on Chapter 2-5 material. If you have not done those manual steps yet, go back to those chapters first.</li>
 <li>Agent output does not make sense? That is the right response. Paste the output in an issue comment along with your confusion. That is valuable feedback - the agent may need better instructions or guardrails.</li>
@@ -260,19 +260,19 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 <blockquote>
 <p><strong>Continue learning:</strong> The GitHub Skills courses <a href="https://github.com/skills/build-with-copilot-agent-mode">Build Applications with Copilot Agent Mode</a> and <a href="https://github.com/skills/expand-your-team-with-copilot">Expand Your Team with Copilot</a> explore agent-powered development workflows. See <a href="appendix-z-github-skills-catalog.html">Appendix Z</a> for the full catalog.</p>
 </blockquote>
-<h3>Learning Moment</h3>
+<h3 id="learning-moment">Learning Moment</h3>
 <p>The 55 agents exist because someone did the manual work first, then automated the repetitive parts. As you explore agents, you are not just learning tools - you are learning what automation looks like when it is built on real expertise and real constraints. That is the foundation for contributing back: you already know the limits of automation because you have done the work by hand.</p>
-<h3>Learning Pattern Used in This Chapter</h3>
+<h3 id="learning-pattern-used-in-this-chapter">Learning Pattern Used in This Chapter</h3>
 <ol>
 <li>Map your existing skills to available tools (discovery before action).</li>
 <li>Run one tool and evaluate its output critically (trust but verify).</li>
 <li>Read the source to understand capabilities and limits (internals matter).</li>
 <li>Contribute improvements based on your evaluation (close the feedback loop).</li>
 </ol>
-<h2>Capstone: Share Your Feedback (The Most Important Task!)</h2>
+<h2 id="capstone-share-your-feedback-the-most-important-task">Capstone: Share Your Feedback (The Most Important Task!)</h2>
 <p>You have now explored the full agent ecosystem, completed the workshop, and have valuable perspective on what worked, what confused you, and what we should improve for the next cohort.</p>
 <p><strong>Your feedback directly shapes the future of this project.</strong> We read every response, discuss improvements, and act on suggestions.</p>
-<h3>Submit Workshop Feedback</h3>
+<h3 id="submit-workshop-feedback">Submit Workshop Feedback</h3>
 <p><a href="https://github.com/community-access/git-going-with-github/issues/new?template=feedback-workshop.yml"><strong>File a Feedback Issue</strong> →</a></p>
 <p>Use the <strong>Workshop Feedback</strong> form to share:</p>
 <ul>
@@ -286,7 +286,7 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 </ul>
 <p><strong>Answer as much or as little as you&#39;re comfortable sharing.</strong> Even one thoughtful answer is valuable. This feedback becomes part of our workshop archive and roadmap for future cohorts.</p>
 <p><strong>Your honest perspective is how this project improves. Thank you for being part of building a more accessible technical future.</strong></p>
-<h2>Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ol>
 <li><a href="#1-the-principle-skill-first-agent-second">The Principle: Skill First, Agent Second</a></li>
 <li><a href="#2-setup-and-configuration">Setup and Configuration</a></li>
@@ -297,7 +297,7 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 <li><a href="#7-the-bigger-picture-teams-orchestration-and-beyond-vs-code">The Bigger Picture: Teams, Orchestration, and Beyond VS Code</a></li>
 <li><a href="#8-github-desktop-github-cli-and-copilot-cli">GitHub Desktop, GitHub CLI, and Copilot CLI</a></li>
 </ol>
-<h2>1. The Principle: Skill First, Agent Second</h2>
+<h2 id="1-the-principle-skill-first-agent-second">1. The Principle: Skill First, Agent Second</h2>
 <p>Accessibility Agents is not a way to skip learning GitHub. It is a way to amplify skills you have already built through deliberate practice.</p>
 <p>The ecosystem includes 55 agents across three specialized teams, running on five different AI platforms. That scale makes this principle critical: every agent automates a sequence of steps you should already know how to do manually. If you do not know those steps by hand, you cannot:</p>
 <ul>
@@ -306,7 +306,7 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 <li>Edit the agent&#39;s drafts into something worth posting under your name</li>
 <li>Know when the agent is confidently wrong</li>
 </ul>
-<h3>Every agent has a manual prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it</h3>
+<h3 id="every-agent-has-a-manual-prerequisite-if-you-have-not-done-the-corresponding-skill-by-hand-the-agent-is-not-ready-for-you-yet---and-you-are-not-ready-for-it">Every agent has a manual prerequisite. If you have not done the corresponding skill by hand, the agent is not ready for you yet - and you are not ready for it</h3>
 <p>This applies across all three teams and all 55 agents:</p>
 <ul>
 <li><strong>GitHub Workflow agents</strong> automate repository navigation, issue triage, PR review, and contribution analytics - skills you practiced on Day 1</li>
@@ -321,15 +321,15 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 <blockquote>
 <p><strong>Exploration prompt:</strong> As you browse the <a href="#3-the-ecosystem-55-agents-3-teams-5-platforms">full agent ecosystem</a>, identify which agents match workflows you already do by hand. Those are your starting points. On Day 2, you will also have the opportunity to contribute improvements, new patterns, or entirely new agents back to the project.</p>
 </blockquote>
-<h2>2. Setup and Configuration</h2>
-<h3>Quick Install (One Command)</h3>
+<h2 id="2-setup-and-configuration">2. Setup and Configuration</h2>
+<h3 id="quick-install-one-command">Quick Install (One Command)</h3>
 <p>Accessibility Agents now ships with a one-liner installer that sets up all 55 agents for your platform:</p>
-<h4>macOS / Linux</h4>
+<h4 id="macos--linux">macOS / Linux</h4>
 <pre><code class="hljs language-bash">curl -fsSL https://raw.githubusercontent.com/Community-Access/accessibility-agents/main/install.sh | bash</code></pre>
-<h4>Windows (PowerShell)</h4>
+<h4 id="windows-powershell">Windows (PowerShell)</h4>
 <pre><code class="hljs language-powershell"><span class="hljs-built_in">irm</span> https://raw.githubusercontent.com/Community<span class="hljs-literal">-Access</span>/accessibility<span class="hljs-literal">-agents</span>/main/install.ps1 | <span class="hljs-built_in">iex</span></code></pre>
 <p>The installer detects which AI tools you have installed (VS Code with Copilot, Claude Code, Gemini CLI, Claude Desktop, Codex CLI) and configures the appropriate agent files for each platform. To uninstall, run the corresponding uninstall script from the repository.</p>
-<h3>Workshop Setup (Fork and Clone)</h3>
+<h3 id="workshop-setup-fork-and-clone">Workshop Setup (Fork and Clone)</h3>
 <p>For the workshop, you will also fork and clone the repository so you can make contributions:</p>
 <ol>
 <li><p><strong>Fork</strong> <a href="https://github.com/community-access/accessibility-agents">accessibility-agents</a> to your GitHub account (you did this on Day 1 or Day 2 morning)</p>
@@ -345,13 +345,13 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 </li>
 </ol>
 <p><strong>No API keys. No configuration files. The installer handles everything.</strong> If Copilot Chat works, the agents work.</p>
-<h3>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li>GitHub Copilot Chat extension installed (see <a href="13-github-copilot.html#2-installing-github-copilot">GitHub Copilot: Installation</a>)</li>
 <li>Signed in to GitHub via VS Code</li>
 <li>A workspace open containing <code>.github/agents/</code> folder with <code>.agent.md</code> files</li>
 </ul>
-<h3>How Agents Are Discovered</h3>
+<h3 id="how-agents-are-discovered">How Agents Are Discovered</h3>
 <p>When you type <code>@</code> in Copilot Chat, VS Code scans:</p>
 <ol>
 <li><code>.github/agents/*.agent.md</code> in your current workspace</li>
@@ -394,7 +394,7 @@ Could it make a mistake? [your answer and what kind]</code></pre>
 </tr>
 </tbody></table>
 <p>For this workshop, we focus on GitHub Copilot in VS Code. The same 55 agent personalities are available on all five platforms.</p>
-<h3>Optional: Personalize Your Instance</h3>
+<h3 id="optional-personalize-your-instance">Optional: Personalize Your Instance</h3>
 <p>Copy the example preferences file:</p>
 <pre><code class="hljs language-bash"><span class="hljs-built_in">cp</span> .github/agents/preferences.example.md .github/agents/preferences.md</code></pre>
 <p>Open <code>preferences.md</code> in VS Code and edit:</p>
@@ -414,17 +414,17 @@ Long-form with sections and headings (screen reader optimized)
 Accessibility issues first, then review requests, then CI failures</code></pre>
 <p>Commit <code>preferences.md</code> to your fork. Now the agents know who you are and what you care about most.</p>
 <p><strong>Note:</strong> <code>preferences.md</code> is in <code>.gitignore</code> in the upstream repo - your personal preferences will not be included if you submit a PR. They stay in your fork only.</p>
-<h3>How Agents Travel with Your Repo</h3>
-<p>When you fork <code>accessibility-agents</code>, the <code>.github/agents/</code> folder comes with it. This means:</p>
+<h3 id="how-agents-travel-with-your-repo">How Agents Travel with Your Repo</h3>
+<p>When you fork <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a>, the <code>.github/agents/</code> folder comes with it. This means:</p>
 <ul>
 <li>Any collaborator who clones your fork gets all 55 agents automatically</li>
 <li>You can customize agents for your specific project by editing the <code>.agent.md</code> files in your fork</li>
 <li>Any project can have agents - create a <code>.github/agents/</code> folder in any repository and add <code>.agent.md</code> files using the same pattern</li>
 <li>The one-liner installer can also set up agents globally, so they are available in every workspace you open</li>
 </ul>
-<h3>Invoking Agents on GitHub.com</h3>
+<h3 id="invoking-agents-on-githubcom">Invoking Agents on GitHub.com</h3>
 <p>Accessibility Agents agents run in VS Code. But the same <code>.agent.md</code> files can also be invoked directly on GitHub.com - no VS Code, no local clone required.</p>
-<h4>Option 1: Copilot Chat with Task mode</h4>
+<h4 id="option-1-copilot-chat-with-task-mode">Option 1: Copilot Chat with Task mode</h4>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -449,7 +449,7 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 </ol>
 </details>
 
-<h4>Option 2: Assign an issue to Copilot</h4>
+<h4 id="option-2-assign-an-issue-to-copilot">Option 2: Assign an issue to Copilot</h4>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -475,9 +475,9 @@ Accessibility issues first, then review requests, then CI failures</code></pre>
 </details>
 
 <p>This is the bridge to Section 6 (The Cloud Extension). The same agent file, three execution contexts: your editor, GitHub.com interactively, and GitHub Actions on a schedule.</p>
-<h3>Copilot on GitHub.com - Browser-Native Features</h3>
+<h3 id="copilot-on-githubcom---browser-native-features">Copilot on GitHub.com - Browser-Native Features</h3>
 <p>Beyond assigning Copilot to issues and using Task mode in Chat, GitHub.com now has several standalone Copilot features built directly into the web interface. These work <strong>entirely in your browser</strong> - no VS Code, no local clone needed.</p>
-<h4>Copilot PR Summary</h4>
+<h4 id="copilot-pr-summary">Copilot PR Summary</h4>
 <p>On any open pull request, GitHub adds a <strong>&quot;Summarize&quot; button</strong> in the PR description area. Selecting it generates a plain-language summary of what the PR changes, why, and what reviewers should focus on.</p>
 <p><strong>When to use it:</strong> Before doing a full accessible diff review (Chapter 14), read the Copilot summary first to orient yourself. This is especially helpful with large PRs.</p>
 <details>
@@ -496,10 +496,10 @@ Copilot summary appears as a new blockquote or section above/below the descripti
 H or 2 → navigate to the summary heading to read it</code></pre>
 </details>
 
-<h4>Copilot PR Review</h4>
+<h4 id="copilot-pr-review">Copilot PR Review</h4>
 <p>On open PRs you have write access to review, a <strong>&quot;Review&quot;</strong> button (or Copilot icon) appears in the Files changed tab. Copilot generates inline review comments across the diff.</p>
 <p><strong>When to use it:</strong> As a starting point for a code review. Always read the Copilot-generated comments critically before adopting them - Copilot can miss context that a human reviewer would catch.</p>
-<h4>Copilot in Issues</h4>
+<h4 id="copilot-in-issues">Copilot in Issues</h4>
 <p>On any issue page, Copilot adds sidebar buttons that appear once the page loads:</p>
 <ul>
 <li><strong>&quot;Explain this issue&quot;</strong> - generates a plain-language explanation of a complex technical issue</li>
@@ -520,9 +520,9 @@ B → activate &quot;Explain&quot; or &quot;Suggest fix&quot; button
 Copilot response appears below the button; use H to navigate to it</code></pre>
 </details>
 
-<h4>GitHub Models - Free AI Playground</h4>
+<h4 id="github-models---free-ai-playground">GitHub Models - Free AI Playground</h4>
 <p><a href="https://github.com/marketplace/models">github.com/marketplace/models</a> is a free playground where you can test AI models (OpenAI GPT-4o, Meta Llama 3, Mistral, Phi-4 Mini, and others) directly in your browser.</p>
-<h5>What you can do</h5>
+<h5 id="what-you-can-do">What you can do</h5>
 <ul>
 <li>Send prompts to any listed model and compare responses side by side</li>
 <li>Adjust parameters (temperature, max tokens) without any setup</li>
@@ -547,12 +547,12 @@ In the playground: E or F → navigate to the prompt textarea → NVDA+Space (Fo
 Response appears below the Send button; use H to find the response section heading</code></pre>
 </details>
 
-<h4>Copilot-Drafted Release Notes</h4>
+<h4 id="copilot-drafted-release-notes">Copilot-Drafted Release Notes</h4>
 <p>When creating a release (Releases tab → Draft a new release), GitHub provides a <strong>&quot;Generate release notes&quot;</strong> button. It scans merged PRs since the last release and drafts categorized release notes automatically.</p>
 <p>This directly connects to the <code>/draft-release</code> slash command in Accessibility Agents - use the browser button for one-click generation, or use the agent when you want to customize the structure and add narrative context.</p>
-<h2>3. The Ecosystem: 55 Agents, 3 Teams, 5 Platforms</h2>
+<h2 id="3-the-ecosystem-55-agents-3-teams-5-platforms">3. The Ecosystem: 55 Agents, 3 Teams, 5 Platforms</h2>
 <p>Accessibility Agents is an ecosystem of 55 specialized agents organized into three teams, each addressing a different dimension of accessible software development. Browse all three teams below, then choose the agents that match your current skills and interests.</p>
-<h3>Team 1: Accessibility (26 agents)</h3>
+<h3 id="team-1-accessibility-26-agents">Team 1: Accessibility (26 agents)</h3>
 <p>These agents audit, fix, and enforce accessibility across web, document, and mobile platforms.</p>
 <table>
 <thead>
@@ -666,7 +666,7 @@ Response appears below the Send button; use H to find the response section headi
 <td>ePub scan configuration and rule management</td>
 </tr>
 </tbody></table>
-<h3>Team 2: GitHub Workflow (12 agents)</h3>
+<h3 id="team-2-github-workflow-12-agents">Team 2: GitHub Workflow (12 agents)</h3>
 <p>These agents automate GitHub operations - issue triage, PR review, contribution analytics, and repository management.</p>
 <table>
 <thead>
@@ -724,7 +724,7 @@ Response appears below the Send button; use H to find the response section headi
 <td>Cross-agent orchestration and workflow coordination</td>
 </tr>
 </tbody></table>
-<h3>Team 3: Developer Tools (6 agents)</h3>
+<h3 id="team-3-developer-tools-6-agents">Team 3: Developer Tools (6 agents)</h3>
 <p>These agents support accessible application development across desktop and cross-platform frameworks.</p>
 <table>
 <thead>
@@ -758,7 +758,7 @@ Response appears below the Send button; use H to find the response section headi
 <td>Build custom accessibility testing tools and utilities</td>
 </tr>
 </tbody></table>
-<h3>Beyond Agents: The Supporting Ecosystem</h3>
+<h3 id="beyond-agents-the-supporting-ecosystem">Beyond Agents: The Supporting Ecosystem</h3>
 <p>The 55 agents are backed by additional resources in the repository:</p>
 <table>
 <thead>
@@ -794,7 +794,7 @@ Response appears below the Send button; use H to find the response section headi
 <td>Intentional accessibility issues in <code>example/</code> for practice</td>
 </tr>
 </tbody></table>
-<h3>Hook-Based Enforcement (Claude Code)</h3>
+<h3 id="hook-based-enforcement-claude-code">Hook-Based Enforcement (Claude Code)</h3>
 <p>On Claude Code, Accessibility Agents includes a hook system that enforces accessibility standards automatically:</p>
 <ol>
 <li><strong>Proactive detection hook</strong> - scans every file edit for accessibility regressions before they are committed</li>
@@ -802,7 +802,7 @@ Response appears below the Send button; use H to find the response section headi
 <li><strong>Session marker hook</strong> - tracks which accessibility checks have run during the current session</li>
 </ol>
 <p>This means accessibility enforcement happens whether or not the developer remembers to ask for it. The hooks run as part of the Claude Code lifecycle, not as an afterthought.</p>
-<h3>What Would You Build?</h3>
+<h3 id="what-would-you-build">What Would You Build?</h3>
 <p>This is the question that matters most. The 55 agents that exist today were built by contributors who saw a gap and filled it. The ecosystem grows when someone asks:</p>
 <ul>
 <li>&quot;Why is there no agent for [framework] accessibility patterns?&quot;</li>
@@ -810,7 +810,7 @@ Response appears below the Send button; use H to find the response section headi
 <li>&quot;This agent is good but it misses [specific edge case] - I could improve those instructions&quot;</li>
 <li>&quot;Mobile native accessibility testing has no agent coverage yet - I could start one&quot;</li>
 </ul>
-<h4>The contribution paths are</h4>
+<h4 id="the-contribution-paths-are">The contribution paths are</h4>
 <ol>
 <li><strong>Report an agent gap</strong> - file an issue describing what is missing and why it matters</li>
 <li><strong>Improve existing agent instructions</strong> - make an agent smarter about edge cases it misses</li>
@@ -819,7 +819,7 @@ Response appears below the Send button; use H to find the response section headi
 <li><strong>Write documentation</strong> - help others understand how to use and contribute to agents</li>
 </ol>
 <p>See the <a href="https://github.com/community-access/accessibility-agents/blob/main/CONTRIBUTING.md">Accessibility Agents CONTRIBUTING guide</a> for detailed instructions on each path.</p>
-<h3>Roadmap: What Is Coming Next</h3>
+<h3 id="roadmap-what-is-coming-next">Roadmap: What Is Coming Next</h3>
 <p>The project roadmap includes:</p>
 <ul>
 <li><strong>Mobile native agents</strong> - agents specialized for iOS (VoiceOver) and Android (TalkBack) native app accessibility</li>
@@ -830,20 +830,20 @@ Response appears below the Send button; use H to find the response section headi
 <li><strong>Multi-language support</strong> - agent instructions in languages beyond English</li>
 </ul>
 <p><strong>Your contribution could be the next item that ships.</strong> Every agent started as one person&#39;s idea and one pull request.</p>
-<h2>4. Agents in Detail - Hands-On Reference</h2>
+<h2 id="4-agents-in-detail---hands-on-reference">4. Agents in Detail - Hands-On Reference</h2>
 <p>This section walks through several agents in depth so you can see how they work, what they produce, and how to evaluate their output. These examples use GitHub Workflow agents because they build directly on Day 1 skills - but the same patterns apply to every agent in the ecosystem. After working through these examples, explore agents from any team that match your interests.</p>
 <p>Open any agent file in VS Code to read its full instructions: <code>.github/agents/[name].agent.md</code></p>
-<h3>Two Types of Agents</h3>
+<h3 id="two-types-of-agents">Two Types of Agents</h3>
 <p>Before diving in, it helps to know that custom agents fall into two categories - this distinction affects what tool permissions they need and what they can do:</p>
 <p><strong>Informational agents</strong> search, analyze, and report. They respond in chat without modifying files. Examples: <code>@daily-briefing</code>, <code>@issue-tracker</code>, <code>@analytics</code>. These agents need only read and search tools (like <code>github/search_issues</code>, <code>github/issue_read</code>) - they are safer to trust with broad repository access and are simpler to build.</p>
 <p><strong>Task-oriented agents</strong> take action. They can read and edit files, run shell commands, create commits, and open pull requests. Examples: <code>@pr-review</code>, <code>@insiders-a11y-tracker</code>. These agents need a broader toolset (<code>read</code>, <code>edit</code>, <code>execute</code>, <code>github/*</code>) - and because they can make changes, their output always warrants human review before anything is posted or merged.</p>
 <p>Many agents do both - they explain what they found (informational) and optionally make changes if you ask (task-oriented). The key question when you build your own is: <em>does this agent need to change files, or only to report?</em> Start informational. Expand to task-oriented only when the reporting alone is not enough.</p>
-<h3>Agent 1: <code>@daily-briefing</code> - Morning Briefing</h3>
+<h3 id="agent-1-daily-briefing---morning-briefing">Agent 1: <code>@daily-briefing</code> - Morning Briefing</h3>
 <p><strong>Type:</strong> Informational</p>
 <p><strong>File:</strong> <code>.github/agents/daily-briefing.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have manually navigated a repository&#39;s Issues tab, read your GitHub Notifications page, understood what a pull request waiting for review looks like, and know the difference between subscribed and participating notifications. If those steps are not familiar yet, return to <a href="02-navigating-repositories.html">Navigating Repositories</a> and <a href="10-notifications.html">Notifications</a> first.
 The briefing output only makes sense when you already know what each section of it is describing.</p>
-<h4>What it does</h4>
+<h4 id="what-it-does">What it does</h4>
 <p>Sweeps every repository you have access to and builds a prioritized dashboard:</p>
 <ul>
 <li>Issues opened in the last 24 hours</li>
@@ -852,14 +852,14 @@ The briefing output only makes sense when you already know what each section of 
 <li>Security and Dependabot alerts</li>
 <li>Community reactions to your recent comments</li>
 </ul>
-<h4>Example commands</h4>
+<h4 id="example-commands">Example commands</h4>
 <pre><code class="hljs language-text">@daily-briefing morning briefing
 
 @daily-briefing what needs my attention today in accessibility-agents?
 
 @daily-briefing summarize activity in community-access/accessibility-agents from the last week</code></pre>
 <p><strong>Screen reader tip:</strong> The briefing output uses heading level 2 for each section. Use <code>H</code> key (NVDA/JAWS virtual mode) or <code>VO+Command+H</code> (VoiceOver) to jump between: Open Issues, Review Requests, CI Status, Security Alerts, Community Activity.</p>
-<h4>Output format</h4>
+<h4 id="output-format">Output format</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Issues Opened (Last 24 Hours)</span>
 <span class="hljs-bullet">-</span> #42 [accessibility-agents] Add Timeline View documentation (opened 3 hours ago)
 <span class="hljs-bullet">-</span> #41 [accessibility-agents] Fix heading hierarchy in GUIDE.md (opened 18 hours ago)
@@ -875,12 +875,12 @@ The briefing output only makes sense when you already know what each section of 
 
 <span class="hljs-section">## Community Activity</span>
 <span class="hljs-bullet">-</span> Your comment on #38 received 3 reactions (×2, ×1)</code></pre>
-<h3>Agent 2: <code>@issue-tracker</code> - Issue Management</h3>
+<h3 id="agent-2-issue-tracker---issue-management">Agent 2: <code>@issue-tracker</code> - Issue Management</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/issue-tracker.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have filed at least one issue using the full manual process - writing a title, description, and reproduction steps; applying labels and a milestone; and reading at least five existing issues to understand what a well-formed issue looks like. If you have not done this, the agent&#39;s priority scores and draft replies will mean nothing to you.
 Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a href="09-labels-milestones-projects.html">Labels, Milestones &amp; Projects</a> first.</p>
-<h4>What it does</h4>
+<h4 id="what-it-does">What it does</h4>
 <p>Finds, prioritizes, and helps you manage issues across all your repositories:</p>
 <ul>
 <li>Cross-repository priority scoring with community sentiment</li>
@@ -888,7 +888,7 @@ Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a h
 <li>Saved search support</li>
 <li>Release-awareness (flags issues that affect upcoming releases)</li>
 </ul>
-<h4>Example commands</h4>
+<h4 id="example-commands">Example commands</h4>
 <pre><code class="hljs language-text">@issue-tracker find open issues labeled good-first-issue
 
 @issue-tracker find accessibility issues across all my repos
@@ -897,7 +897,7 @@ Return to <a href="04-working-with-issues.html">Working with Issues</a> and <a h
 
 @issue-tracker draft a reply to issue #15 acknowledging it and asking for more context</code></pre>
 <p><strong>Important:</strong> The agent can draft a reply. You review the tone against the <a href="08-culture-etiquette.html">Culture &amp; Etiquette guide</a> before posting. Your name goes on it.</p>
-<h4>Output example</h4>
+<h4 id="output-example">Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Open Issues Labeled &quot;good-first-issue&quot;</span>
 
 <span class="hljs-section">### High Priority</span>
@@ -921,12 +921,12 @@ Thanks for opening this issue. To help us reproduce the problem, could you provi
 This will help us diagnose the issue faster.
 
 <span class="hljs-bullet">-</span> Draft by @issue-tracker (review before posting)</code></pre>
-<h3>Agent 3: <code>@pr-review</code> - Pull Request Review</h3>
+<h3 id="agent-3-pr-review---pull-request-review">Agent 3: <code>@pr-review</code> - Pull Request Review</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/pr-review.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have manually reviewed at least one pull request diff in the GitHub browser interface - navigating the Files Changed tab with your screen reader, reading added and removed lines, leaving at least one inline comment, and submitting a review. The agent generates a review document; you need to know what a good review looks like in order to edit, improve, and take ownership of what it produces.
 Return to <a href="06-working-with-pull-requests.html">Working with Pull Requests</a> if this is not yet familiar.</p>
-<h4>What it does</h4>
+<h4 id="what-it-does">What it does</h4>
 <p>Generates full review documents for pull requests:</p>
 <ul>
 <li>Line-numbered diffs with change maps</li>
@@ -935,7 +935,7 @@ Return to <a href="06-working-with-pull-requests.html">Working with Pull Request
 <li>CI results and test coverage information</li>
 <li>Suggested inline review comments with line number references</li>
 </ul>
-<h4>Example commands</h4>
+<h4 id="example-commands">Example commands</h4>
 <pre><code class="hljs language-text">@pr-review review PR #14 in accessibility-agents
 
 @pr-review what is the risk level of PR #8?
@@ -944,7 +944,7 @@ Return to <a href="06-working-with-pull-requests.html">Working with Pull Request
 
 @pr-review summarize what changed in PR #14 in two sentences</code></pre>
 <p><strong>Critical rule:</strong> Read the agent&#39;s review. Edit it. Make it yours. Post your edited version. The agent produces a starting point - it does not know the project&#39;s history, the contributor&#39;s background, or the community&#39;s implicit standards the way you do.</p>
-<h4>Output example</h4>
+<h4 id="output-example">Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## PR Review: #14 - Improve screen reader navigation guide</span>
 
 <span class="hljs-section">### Summary</span>
@@ -991,11 +991,11 @@ This PR adds 3 new sections to the screen reader navigation guide and updates 2 
 This is a valuable addition to the guide. The three typos and one clarification request are minor. Once those are addressed, this is ready to merge.
 
 <span class="hljs-bullet">-</span> Review generated by @pr-review (edit before posting)</code></pre>
-<h3>Agent 4: <code>@analytics</code> - Team Analytics</h3>
+<h3 id="agent-4-analytics---team-analytics">Agent 4: <code>@analytics</code> - Team Analytics</h3>
 <p><strong>Type:</strong> Informational</p>
 <p><strong>File:</strong> <code>.github/agents/analytics.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have explored the Insights tab of at least one repository - looked at the contribution graph, understood what commit frequency means, and thought about what &quot;high-churn files&quot; implies for a project&#39;s stability. The analytics output describes patterns in data you should already be able to read manually. Return to <a href="02-navigating-repositories.html">Navigating Repositories</a> if the Insights tab is unfamiliar.</p>
-<h4>What it does</h4>
+<h4 id="what-it-does">What it does</h4>
 <p>Surfaces team contribution patterns, velocity metrics, and bottleneck detection:</p>
 <ul>
 <li>Contribution velocity over time</li>
@@ -1003,7 +1003,7 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <li>Code hotspot detection (files with the most churn)</li>
 <li>Workload distribution across contributors</li>
 </ul>
-<h4>Example commands</h4>
+<h4 id="example-commands">Example commands</h4>
 <pre><code class="hljs language-text">@analytics team velocity in accessibility-agents this month
 
 @analytics who are the most active contributors to accessibility-agents?
@@ -1012,7 +1012,7 @@ This is a valuable addition to the guide. The three typos and one clarification 
 
 @analytics how long does PR review take on average in accessibility-agents?</code></pre>
 <p><strong>Accessibility use case:</strong> After Day 2&#39;s contribution wave, run <code>@analytics team velocity in accessibility-agents today</code> to see the hackathon&#39;s collective output. A moment of real-time team celebration.</p>
-<h4>Output example</h4>
+<h4 id="output-example">Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Team Velocity - accessibility-agents (January 2026)</span>
 
 <span class="hljs-section">### Contribution Summary</span>
@@ -1040,12 +1040,12 @@ This is a valuable addition to the guide. The three typos and one clarification 
 <span class="hljs-bullet">-</span> Commit velocity up 40% compared to December 2025
 <span class="hljs-bullet">-</span> New contributors joining at healthy rate (3 this month)
 <span class="hljs-bullet">-</span> Review times improving (down from 24-hour average last month)</code></pre>
-<h3>Agent 5: <code>@insiders-a11y-tracker</code> - Accessibility Change Monitoring</h3>
+<h3 id="agent-5-insiders-a11y-tracker---accessibility-change-monitoring">Agent 5: <code>@insiders-a11y-tracker</code> - Accessibility Change Monitoring</h3>
 <p><strong>Type:</strong> Both (Informational + Task-oriented)</p>
 <p><strong>File:</strong> <code>.github/agents/insiders-a11y-tracker.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have filed at least one accessibility bug report using the workshop&#39;s issue template, applied a WCAG label to an issue, and manually reviewed a Markdown file for heading hierarchy - knowing what H1 means, what H2 means, what H3 means, what a skip means, and why it matters to screen reader navigation. The tracker flags accessibility issues in your contributions; you need to understand the standard it is measuring against before you can act on its output.
 Return to <a href="15-issue-templates.html">Issue Templates</a> and <a href="04-working-with-issues.html">Working with Issues</a> if these are not yet familiar.</p>
-<h4>What it does</h4>
+<h4 id="what-it-does">What it does</h4>
 <p>Monitors accessibility-sensitive changes across configured repositories:</p>
 <ul>
 <li>WCAG/ARIA cross-referenced change tracking</li>
@@ -1053,14 +1053,14 @@ Return to <a href="15-issue-templates.html">Issue Templates</a> and <a href="04-
 <li>Monitors for heading hierarchy violations in Markdown</li>
 <li>Tracks link text quality (flags bare URLs, non-descriptive labels)</li>
 </ul>
-<h4>Example commands</h4>
+<h4 id="example-commands">Example commands</h4>
 <pre><code class="hljs language-text">@insiders-a11y-tracker check recent changes in accessibility-agents
 
 @insiders-a11y-tracker review my PR #14 for accessibility impact
 
 @insiders-a11y-tracker are there any accessibility regressions in the last 5 commits?</code></pre>
 <p><strong>Day 2 workflow:</strong> Run this before submitting any PR. If the agent flags an issue, fix it before requesting review - not after.</p>
-<h4>Output example</h4>
+<h4 id="output-example">Output example</h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Accessibility Changes - accessibility-agents (Last 5 Commits)</span>
 
 <span class="hljs-section">### Issues Found: 2</span>
@@ -1129,13 +1129,13 @@ For more information, [click here](https://example.com/guide).
 <span class="hljs-bullet">2.</span> Update link text in README.md (low priority - not in active workflow path)
 <span class="hljs-bullet">3.</span> Continue using descriptive ARIA labels for icon-only controls (positive trend)
 </code></pre>
-<h3>Agent 6: <code>@template-builder</code> - Interactive Issue Template Wizard</h3>
+<h3 id="agent-6-template-builder---interactive-issue-template-wizard">Agent 6: <code>@template-builder</code> - Interactive Issue Template Wizard</h3>
 <p><strong>Type:</strong> Informational with guided output</p>
 <p><strong>File:</strong> <code>.github/agents/template-builder.agent.md</code></p>
 <p><strong>Before you run this agent:</strong> You should have read <a href="15-issue-templates.html">Issue Templates</a> thoroughly - understanding YAML field types, creating a template manually (Exercise B), and designing your own template (Exercise D). The Template Builder does not teach template design - it automates the YAML writing. You need to know what you want to ask for before the agent can guide you through the form structure.</p>
-<h4>What it does</h4>
+<h4 id="what-it-does">What it does</h4>
 <p>An interactive wizard that guides you through building GitHub issue templates step-by-step using VS Code&#39;s Ask Questions feature. Instead of writing YAML syntax, answer simple questions and the agent generates production-ready templates.</p>
-<h4>Example workflow</h4>
+<h4 id="example-workflow">Example workflow</h4>
 <pre><code class="hljs language-text">
 You: @template-builder create accessibility bug template
 
@@ -1160,7 +1160,7 @@ Agent: [Ask Questions interface]
 Agent: [Syntax-highlighted YAML output]
         Ready to copy and save to .github/ISSUE_TEMPLATE/
 </code></pre>
-<h4>Example commands</h4>
+<h4 id="example-commands">Example commands</h4>
 <pre><code class="hljs language-text">
 @template-builder create accessibility template
 
@@ -1170,9 +1170,9 @@ Agent: [Syntax-highlighted YAML output]
 </code></pre>
 <p><strong>Why use it?</strong> Manual YAML template creation takes 15-20 minutes and is error-prone. The Template Builder generates correct, tested templates in 2-3 minutes via guided questions.</p>
 <p><strong>Advanced:</strong> After generating a template, you can ask: <code>@template-builder reorder the fields</code> or <code>@template-builder add a checkbox field for version compatibility</code> - the agent regenerates your YAML with the changes applied.</p>
-<h2>5. Slash Commands and Prompts</h2>
+<h2 id="5-slash-commands-and-prompts">5. Slash Commands and Prompts</h2>
 <p>The repository includes 54+ slash commands defined as <code>.prompt.md</code> files in <code>.github/prompts/</code>. Type <code>/</code> in Copilot Chat to see the full command menu.</p>
-<h3>Most Useful for This Workshop</h3>
+<h3 id="most-useful-for-this-workshop">Most Useful for This Workshop</h3>
 <table>
 <thead>
 <tr>
@@ -1227,7 +1227,7 @@ Agent: [Syntax-highlighted YAML output]
 <td><code>/my-prs</code></td>
 </tr>
 </tbody></table>
-<h3>Workshop Slash Command Quick Reference</h3>
+<h3 id="workshop-slash-command-quick-reference">Workshop Slash Command Quick Reference</h3>
 <p>The commands listed below are the ones most relevant to this workshop. The full repository contains 54+ commands covering accessibility auditing, document scanning, framework-specific checks, and more. See <a href="appendix-v-accessibility-agents-reference.html">Appendix V</a> for the complete list.</p>
 <pre><code class="hljs language-text">
 /address-comments     Address all open review comments on your PR
@@ -1259,9 +1259,9 @@ Agent: [Syntax-highlighted YAML output]
 /team-dashboard       Team activity and contribution overview
 /triage               Triage a new issue with label and priority suggestions
 </code></pre>
-<h3>Reading Slash Command Definitions</h3>
+<h3 id="reading-slash-command-definitions">Reading Slash Command Definitions</h3>
 <p>Each <code>/command</code> corresponds to a <code>.prompt.md</code> file in <code>.github/prompts/</code>. Open any of them in VS Code to read what instructions it gives Copilot.</p>
-<h4>Example: <code>/a11y-update</code></h4>
+<h4 id="example-a11y-update">Example: <code>/a11y-update</code></h4>
 <p>File: <code>.github/prompts/a11y-update.prompt.md</code></p>
 <pre><code class="hljs language-markdown">name: a11y-update
 description: &quot;Get the latest accessibility improvements across all tracked repos -- with WCAG cross-references and ARIA pattern mapping&quot;
@@ -1282,13 +1282,13 @@ Load accessibility tracking configuration from `.github/agents/preferences.md`
 (repos, labels, channels). If no preferences exist, use defaults
 (microsoft/vscode with accessibility labels).</span></code></pre>
 <p><strong>This is how you learn to write your own.</strong> Copy an existing file, edit the instructions, save it with a new name - you have just created a new slash command for your fork.</p>
-<h2>6. Contributing to the Ecosystem</h2>
+<h2 id="6-contributing-to-the-ecosystem">6. Contributing to the Ecosystem</h2>
 <p>The 55 Accessibility Agents and 54+ slash commands are starting points. The <code>.agent.md</code> format is open - you can create your own agents for any repeatable workflow, and contribute them back to the project.</p>
 <blockquote>
 <p><strong>Think strategically about impact.</strong> Before you build, ask: &quot;Who benefits from this agent, and how often?&quot; An agent that saves 100 people five minutes each week has more impact than an agent that saves one person an hour once. The best contributions solve problems that many people share.</p>
 <p>Source: <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents/</a></p>
 </blockquote>
-<h3>Two Types of Custom Agents</h3>
+<h3 id="two-types-of-custom-agents">Two Types of Custom Agents</h3>
 <p><strong>Informational agents</strong> - conversational; search, analyze, and present results:</p>
 <ul>
 <li>Perform GitHub searches with predefined scopes and filters</li>
@@ -1302,7 +1302,7 @@ Load accessibility tracking configuration from `.github/agents/preferences.md`
 <li>Create pull requests with proposed changes</li>
 <li>Combine both: explain issues (informational) and fix them (task-oriented)</li>
 </ul>
-<h3>Agent File Structure</h3>
+<h3 id="agent-file-structure">Agent File Structure</h3>
 <p>Every <code>.agent.md</code> file has two parts: <strong>YAML frontmatter</strong> (metadata) and a <strong>system prompt</strong> (markdown body).</p>
 <pre><code class="hljs language-markdown">name: agent-name
 description: One-sentence description of what the agent does
@@ -1324,7 +1324,7 @@ Step-by-step behavioral rules
 
 <span class="hljs-section">## Response Guidelines</span>
 How to format output</code></pre>
-<h3>Frontmatter fields</h3>
+<h3 id="frontmatter-fields">Frontmatter fields</h3>
 <table>
 <thead>
 <tr>
@@ -1360,16 +1360,16 @@ How to format output</code></pre>
   <span class="hljs-bullet">-</span> <span class="hljs-string">search</span>
   <span class="hljs-bullet">-</span> <span class="hljs-string">execute</span>
   <span class="hljs-bullet">-</span> <span class="hljs-string">github/*</span></code></pre>
-<h3>Example: Informational Agent - <code>@insiders-a11y-tracker</code></h3>
+<h3 id="example-informational-agent---insiders-a11y-tracker">Example: Informational Agent - <code>@insiders-a11y-tracker</code></h3>
 <p>This agent monitors VS Code Insiders releases for accessibility improvements. It searches the <code>microsoft/vscode</code> repository using predefined GitHub query syntax, so you never have to remember the exact filter parameters.</p>
-<h4>Use it</h4>
+<h4 id="use-it">Use it</h4>
 <ol>
 <li>Select <code>@insiders-a11y-tracker</code> from the agent picker</li>
 <li>Ask: <code>what shipped this month?</code> or <code>any keyboard navigation improvements in January?</code></li>
 <li>The agent searches with <code>repo:microsoft/vscode is:closed milestone:&quot;[Month] [Year]&quot; label:accessibility label:insiders-released</code> and returns formatted results</li>
 </ol>
 <p><strong>Prerequisite:</strong> GitHub MCP server installed (<a href="https://github.com/github/github-mcp-server">github.com/github/github-mcp-server</a>)</p>
-<h3>Example: Task-Oriented Agent - The Markdown Accessibility Assistant</h3>
+<h3 id="example-task-oriented-agent---the-markdown-accessibility-assistant">Example: Task-Oriented Agent - The Markdown Accessibility Assistant</h3>
 <p>The GitHub Accessibility team published a complete walkthrough for building a <strong>Markdown Accessibility Assistant</strong> - a task-oriented agent that reviews Markdown files for accessibility issues and makes direct fixes. It:</p>
 <ul>
 <li>Runs <code>markdownlint-cli2</code> to catch structural problems (heading skips, bare URLs, missing blank lines)</li>
@@ -1380,7 +1380,7 @@ How to format output</code></pre>
 </ul>
 <p>This agent is the automated version of the accessibility review skills you built during Day 1. The five principles it enforces are directly from GitHub&#39;s accessibility documentation.</p>
 <p><strong>To build it:</strong> Follow the step-by-step guide at <a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents</a> - the YAML frontmatter, each section of the system prompt, and the complete agent file are all shown.</p>
-<h3>Key Pattern: Tiered Decision-Making</h3>
+<h3 id="key-pattern-tiered-decision-making">Key Pattern: Tiered Decision-Making</h3>
 <p>From the guide:</p>
 <pre><code class="hljs language-text">For objective issues (link text, heading hierarchy, list structure):
   → Agent makes the fix directly
@@ -1389,33 +1389,33 @@ For subjective issues (alt text, plain language):
   → Agent flags the issue, explains why it matters, suggests a fix,
     and waits for human approval before making changes</code></pre>
 <p>This tiered approach - automate what can be objectively evaluated, flag what needs human judgment - is the right model for any accessibility agent. It maximizes the agent&#39;s value while keeping humans in control of decisions that require context.</p>
-<h3>Required Prerequisites for the Markdown Accessibility Assistant</h3>
+<h3 id="required-prerequisites-for-the-markdown-accessibility-assistant">Required Prerequisites for the Markdown Accessibility Assistant</h3>
 <ul>
 <li>GitHub MCP server installed and configured (<a href="https://github.com/github/github-mcp-server">github.com/github/github-mcp-server</a>)</li>
 <li>Node.js installed (for <code>npx markdownlint-cli2</code>)</li>
 </ul>
-<h3>Invoking Custom Agents</h3>
-<h4>From VS Code</h4>
+<h3 id="invoking-custom-agents">Invoking Custom Agents</h3>
+<h4 id="from-vs-code">From VS Code</h4>
 <ol>
 <li>Open Copilot Chat (<code>Ctrl+Shift+I</code> / <code>Cmd+Shift+I</code> on macOS)</li>
 <li>In the Chat input toolbar, select the <strong>Set Agent</strong> button</li>
 <li>Select your custom agent from the agent picker</li>
 <li>Type your request - the agent executes in your local workspace</li>
 </ol>
-<h4>From GitHub.com (Task mode)</h4>
+<h4 id="from-githubcom-task-mode">From GitHub.com (Task mode)</h4>
 <ol>
 <li>Open Copilot Chat on GitHub.com</li>
 <li>Select <strong>Task</strong> from the mode picker</li>
 <li>Optionally select a custom agent from the agent picker</li>
 <li>Submit your request - the agent can create a PR automatically</li>
 </ol>
-<h4>From an issue (Issue Assignment)</h4>
+<h4 id="from-an-issue-issue-assignment">From an issue (Issue Assignment)</h4>
 <ol>
 <li>Open any issue → <strong>Assignees</strong> → assign <strong>Copilot</strong></li>
 <li>In the dialog, optionally select a custom agent</li>
 <li>Select <strong>Assign</strong> - Copilot creates a branch, makes changes, and opens a PR</li>
 </ol>
-<h3>Environment Setup for GitHub (Cloud Agents)</h3>
+<h3 id="environment-setup-for-github-cloud-agents">Environment Setup for GitHub (Cloud Agents)</h3>
 <p>When agents run on GitHub (not locally), they may need additional tools. Create a workflow file at <code>.github/workflows/copilot-setup-steps.yml</code> with a single job named <code>copilot-setup-steps</code>. GitHub runs this before the agent starts:</p>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Copilot</span> <span class="hljs-string">Setup</span> <span class="hljs-string">Steps</span>
 <span class="hljs-attr">on:</span> <span class="hljs-string">workflow_dispatch</span>
@@ -1426,7 +1426,7 @@ For subjective issues (alt text, plain language):
       <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">accessibility</span> <span class="hljs-string">tools</span>
         <span class="hljs-attr">run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">install</span> <span class="hljs-string">-g</span> <span class="hljs-string">markdownlint-cli2</span> <span class="hljs-string">axe-cli</span></code></pre>
 <p><strong>Windows users:</strong> If your project requires a Windows development environment for Copilot coding agent sessions, you can switch the runner from Ubuntu to Windows. See <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/coding-agent/customize-the-agent-environment#switching-copilot-to-a-windows-development-environment">Switching Copilot to a Windows development environment</a> for configuration details.</p>
-<h3>To Create Your Own Agent</h3>
+<h3 id="to-create-your-own-agent">To Create Your Own Agent</h3>
 <ol>
 <li>Create <code>.github/agents/your-agent-name.agent.md</code></li>
 <li>Write YAML frontmatter (<code>name</code>, <code>description</code>, <code>tools</code>)</li>
@@ -1434,34 +1434,34 @@ For subjective issues (alt text, plain language):
 <li>Save and reload VS Code (<code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;)</li>
 <li>Type <code>@your-agent-name</code> in Copilot Chat</li>
 </ol>
-<h3>Exercise: Extend the Template Builder Agent</h3>
+<h3 id="exercise-extend-the-template-builder-agent">Exercise: Extend the Template Builder Agent</h3>
 <p>You&#39;ve built templates manually (Chapters 15-16) and seen them in action. Now see how to harness AI to generate templates interactively, and learn to customize agents for your own projects.</p>
 <p><strong>What You&#39;ll Learn:</strong> How agents work, how to interact with the <code>@template-builder</code> agent, and how to extend it for project-specific needs.</p>
 <p><strong>Prerequisites:</strong></p>
 <ul>
 <li>Complete Chapters 15-16 (especially Exercise D - designing your own template)</li>
 <li>VS Code is installed and GitHub Copilot is active</li>
-<li>You have forked <code>accessibility-agents</code> to your GitHub account</li>
+<li>You have forked <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> to your GitHub account</li>
 <li>You have cloned your fork locally: <code>git clone https://github.com/[your-username]/accessibility-agents.git</code></li>
 </ul>
-<h4>Exercise 1: Generate a Template with the Agent</h4>
+<h4 id="exercise-1-generate-a-template-with-the-agent">Exercise 1: Generate a Template with the Agent</h4>
 <p><strong>Your Mission:</strong> Use the <code>@template-builder</code> agent to generate an accessibility bug report template interactively. You&#39;ll experience the agent as an end-user and see what production-ready agent output looks like.</p>
 <p><strong>Time estimate:</strong> 5-10 minutes</p>
-<h5>Step 1: Open Your Fork in VS Code</h5>
-<h6>What to do</h6>
+<h5 id="step-1-open-your-fork-in-vs-code">Step 1: Open Your Fork in VS Code</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>Open VS Code</li>
-<li><strong>File</strong> → <strong>Open Folder</strong> → select your locally cloned <code>accessibility-agents</code> folder</li>
+<li><strong>File</strong> → <strong>Open Folder</strong> → select your locally cloned <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> folder</li>
 <li>The folder tree appears on the left showing the repository structure</li>
-<li><strong>Verify you&#39;re in the right place:</strong> The folder name should be <code>accessibility-agents</code> at the top of the sidebar</li>
+<li><strong>Verify you&#39;re in the right place:</strong> The folder name should be <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a> at the top of the sidebar</li>
 </ol>
-<h6>What you should see</h6>
+<h6 id="what-you-should-see">What you should see</h6>
 <ul>
 <li>Left sidebar showing: <code>.github/</code>, <code>docs/</code>, <code>learning-room/</code>, <code>README.md</code>, etc.</li>
 <li>The status bar at the bottom shows your current git branch (probably <code>main</code>)</li>
 </ul>
-<h5>Step 2: Open Copilot Chat</h5>
-<h6>What to do</h6>
+<h5 id="step-2-open-copilot-chat">Step 2: Open Copilot Chat</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li><strong>Keyboard shortcut:</strong> Press <code>Ctrl+Shift+I</code> (Windows/Linux) or <code>Cmd+Shift+I</code> (macOS)<ul>
 <li><strong>Alternative:</strong> Use menu: <strong>View</strong> → <strong>Copilot Chat</strong></li>
@@ -1470,19 +1470,19 @@ For subjective issues (alt text, plain language):
 <li>A chat panel opens on the right side of VS Code</li>
 <li>At the top, you see &quot;Copilot Chat&quot; and probably a text input at the bottom saying &quot;Ask Copilot...&quot;</li>
 </ol>
-<h6>What happens</h6>
+<h6 id="what-happens">What happens</h6>
 <ul>
 <li>Copilot is now ready to receive instructions</li>
 <li>You have access to all agents in <code>.github/agents/</code> (because you opened that folder)</li>
 </ul>
-<h6>If Copilot Chat doesn&#39;t open</h6>
+<h6 id="if-copilot-chat-doesn39t-open">If Copilot Chat doesn&#39;t open</h6>
 <ul>
 <li>Make sure GitHub Copilot Chat extension is installed (Extensions sidebar → search &quot;GitHub Copilot Chat&quot;)</li>
 <li>Make sure you&#39;re signed into GitHub (top right of VS Code)</li>
 <li>Restart VS Code if neither of the above is the problem</li>
 </ul>
-<h5>Step 3: Invoke the Template Builder Agent</h5>
-<h6>What to do</h6>
+<h5 id="step-3-invoke-the-template-builder-agent">Step 3: Invoke the Template Builder Agent</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>Click in the chat input box (bottom of Copilot Chat panel)</li>
 <li>Type: <code>@template-builder</code> (the <code>@</code> prefix invokes an agent)</li>
@@ -1490,20 +1490,20 @@ For subjective issues (alt text, plain language):
 <li>If <code>@template-builder</code> appears, click it or press <code>Enter</code> to select it</li>
 <li>The input now shows: <code>@template-builder</code></li>
 </ol>
-<h6>What to do next</h6>
+<h6 id="what-to-do-next">What to do next</h6>
 <ol>
 <li>Type: <code>create accessibility template</code></li>
 <li>Your full message should read: <code>@template-builder create accessibility template</code></li>
 <li>Press <code>Enter</code> to send</li>
 </ol>
-<h6>What happens</h6>
+<h6 id="what-happens">What happens</h6>
 <ul>
 <li>The agent processes your request</li>
 <li>It starts asking questions via VS Code&#39;s Ask Questions interface</li>
 <li>A series of prompts appear asking you to define your template</li>
 </ul>
-<h5>Step 4: Answer the Agent&#39;s Questions</h5>
-<h6>What to expect</h6>
+<h5 id="step-4-answer-the-agent39s-questions">Step 4: Answer the Agent&#39;s Questions</h5>
+<h6 id="what-to-expect">What to expect</h6>
 <p>The <code>@template-builder</code> agent will ask (via Ask Questions UI):</p>
 <ol>
 <li>&quot;What&#39;s your template name?&quot; (text input)</li>
@@ -1514,13 +1514,13 @@ For subjective issues (alt text, plain language):
 <li>&quot;More fields?&quot; (yes/no)</li>
 <li>[Repeat for each field you want]</li>
 </ol>
-<h6>How to interact</h6>
+<h6 id="how-to-interact">How to interact</h6>
 <ul>
 <li><strong>For text inputs:</strong> Type your answer and press <code>Tab</code> or <code>Enter</code> to move to the next prompt</li>
 <li><strong>For dropdowns:</strong> Use <code>↑↓ Arrow keys</code> to navigate options, <code>Enter</code> to select</li>
 <li><strong>For toggles:</strong> Press <code>Space</code> to switch between yes/no</li>
 </ul>
-<h6>Example responses</h6>
+<h6 id="example-responses">Example responses</h6>
 <pre><code class="hljs language-text">Q: Template name?
 A: Accessibility Bug Report
 
@@ -1556,34 +1556,34 @@ A: Yes
 
 Q: Add another field?
 A: No</code></pre>
-<h6>As you answer</h6>
+<h6 id="as-you-answer">As you answer</h6>
 <ul>
 <li>Read each question carefully</li>
 <li>Provide clear, brief answers</li>
 <li>Don&#39;t worry about perfect wording - the agent will format it correctly</li>
 </ul>
-<h6>What success looks like</h6>
+<h6 id="what-success-looks-like">What success looks like</h6>
 <ul>
 <li>You&#39;ve answered at least 3-4 fields</li>
 <li>Each field has a name, type, and requirement status</li>
 <li>The agent confirms: &quot;Ready to generate your template? Yes/No&quot;</li>
 </ul>
-<h5>Step 5: Generate and Review the Output</h5>
-<h6>What to do</h6>
+<h5 id="step-5-generate-and-review-the-output">Step 5: Generate and Review the Output</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>When the agent asks &quot;Ready to generate?&quot;, select <strong>Yes</strong></li>
 <li>The agent produces a <strong>complete YAML template</strong> in the chat</li>
 <li>The template appears in a code block with syntax highlighting</li>
 <li>The code block has buttons: <strong>Copy</strong> and <strong>Insert into File</strong> (or similar)</li>
 </ol>
-<h6>What to look for</h6>
+<h6 id="what-to-look-for">What to look for</h6>
 <ul>
 <li>The template starts with <code>name:</code>, <code>description:</code>, <code>title:</code>, <code>labels:</code></li>
 <li>Under <code>body:</code>, each field appears with <code>type:</code>, <code>id:</code>, <code>attributes:</code>, <code>validations:</code></li>
 <li>Dropdown fields show <code>options:</code> with your specified choices</li>
 <li>Required fields show <code>required: true</code></li>
 </ul>
-<h6>Example output (truncated)</h6>
+<h6 id="example-output-truncated">Example output (truncated)</h6>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Accessibility</span> <span class="hljs-string">Bug</span> <span class="hljs-string">Report</span>
 <span class="hljs-attr">description:</span> <span class="hljs-string">Report</span> <span class="hljs-string">screen</span> <span class="hljs-string">reader</span> <span class="hljs-string">and</span> <span class="hljs-string">keyboard</span> <span class="hljs-string">navigation</span> <span class="hljs-string">issues</span>
 <span class="hljs-attr">title:</span> <span class="hljs-string">&quot;[A11Y] &quot;</span>
@@ -1615,21 +1615,21 @@ A: No</code></pre>
         <span class="hljs-bullet">-</span> <span class="hljs-string">Other</span>
     <span class="hljs-attr">validations:</span>
       <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span></code></pre>
-<h6>Validate the output</h6>
+<h6 id="validate-the-output">Validate the output</h6>
 <ul>
 <li>Does the YAML syntax look correct? (colons, indentation, no red squiggles if VS Code is open)</li>
 <li>Are all your fields present?</li>
 <li>Are dropdowns showing the options you specified?</li>
 <li>Are required fields marked as <code>required: true</code>?</li>
 </ul>
-<h6>If something looks wrong</h6>
+<h6 id="if-something-looks-wrong">If something looks wrong</h6>
 <ul>
 <li>Don&#39;t edit the YAML yet - just note what&#39;s off</li>
 <li>You can ask the agent: &quot;@template-builder fix the browser field, should be an input not a dropdown&quot;</li>
 <li>The agent regenerates with corrections</li>
 </ul>
-<h5>Step 6: Copy the Template</h5>
-<h6>What to do</h6>
+<h5 id="step-6-copy-the-template">Step 6: Copy the Template</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>In the code block, click the <strong>Copy</strong> button (usually top-right of the code block)<ul>
 <li><strong>Keyboard alternative:</strong> Select all the code (<code>Ctrl+A</code> while in code block), then <code>Ctrl+C</code></li>
@@ -1637,13 +1637,13 @@ A: No</code></pre>
 </li>
 <li>The template is copied to your clipboard</li>
 </ol>
-<h6>Verify</h6>
+<h6 id="verify">Verify</h6>
 <ul>
 <li>A notification may appear: &quot;Copied to clipboard&quot;</li>
 <li>The text is ready to paste</li>
 </ul>
-<h5>Step 7: Save the Template to Your Fork</h5>
-<h6>What to do</h6>
+<h5 id="step-7-save-the-template-to-your-fork">Step 7: Save the Template to Your Fork</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>In VS Code, open the file explorer (left sidebar)</li>
 <li>Navigate to: <code>.github/ISSUE_TEMPLATE/</code></li>
@@ -1653,7 +1653,7 @@ A: No</code></pre>
 <li><strong>Click and paste</strong> your copied YAML: <code>Ctrl+V</code></li>
 <li>Save the file: <code>Ctrl+S</code></li>
 </ol>
-<h6>What you should see</h6>
+<h6 id="what-you-should-see">What you should see</h6>
 <ul>
 <li>The YAML fills the file</li>
 <li>Syntax highlighting colors the code</li>
@@ -1667,12 +1667,12 @@ git commit -m <span class="hljs-string">&quot;feat: add accessibility template (
 git push origin main</code></pre>
 </li>
 </ol>
-<h6>If there&#39;s a merge conflict</h6>
+<h6 id="if-there39s-a-merge-conflict">If there&#39;s a merge conflict</h6>
 <ul>
 <li>Ask your facilitator for help (unlikely at this point)</li>
 </ul>
-<h5>Step 8: Test the Template in Your Fork</h5>
-<h6>What to do</h6>
+<h5 id="step-8-test-the-template-in-your-fork">Step 8: Test the Template in Your Fork</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>Go to your fork on GitHub in your browser</li>
 <li>Click <strong>Issues</strong> tab</li>
@@ -1687,14 +1687,14 @@ git push origin main</code></pre>
 </ul>
 </li>
 </ol>
-<h6>What success looks like</h6>
+<h6 id="what-success-looks-like">What success looks like</h6>
 <ul>
 <li>The template appears when you click &quot;New issue&quot;</li>
 <li>All fields display and behave correctly</li>
 <li>Dropdowns work as expected</li>
 <li>Screen reader announces everything clearly</li>
 </ul>
-<h5>Checkpoint: Exercise 1 Complete</h5>
+<h5 id="checkpoint-exercise-1-complete">Checkpoint: Exercise 1 Complete</h5>
 <p>Verify you&#39;ve accomplished:</p>
 <ul>
 <li>Used <code>@template-builder</code> to generate a template via Ask Questions</li>
@@ -1704,31 +1704,31 @@ git push origin main</code></pre>
 <li>Tested it in your fork&#39;s issue form</li>
 <li>Confirmed it&#39;s accessible with screen reader</li>
 </ul>
-<h6>What you learned</h6>
+<h6 id="what-you-learned">What you learned</h6>
 <ul>
 <li>How AI agents can automate the mechanical parts of GitHub workflows</li>
 <li>The interaction pattern: you describe, agent generates, you refine/deploy</li>
 <li>That the agent&#39;s output still needs human review and testing</li>
 </ul>
-<h4>Exercise 2: Extend the Agent for Your Project</h4>
+<h4 id="exercise-2-extend-the-agent-for-your-project">Exercise 2: Extend the Agent for Your Project</h4>
 <p><strong>Your Mission:</strong> Customize the Template Builder agent to recognize and guide a <strong>Security Vulnerability Report</strong> template. This teaches you how to tailor agents for project-specific needs.</p>
 <p><strong>Time estimate:</strong> 10-15 minutes</p>
-<h5>Step 1: Open the Agent File</h5>
-<h6>What to do</h6>
+<h5 id="step-1-open-the-agent-file">Step 1: Open the Agent File</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>In VS Code, navigate to <code>.github/agents/</code></li>
 <li>File: <code>template-builder.agent.md</code></li>
 <li>Double-click to open it in the editor</li>
 <li>You see the agent&#39;s instructions in Markdown format</li>
 </ol>
-<h6>What to notice</h6>
+<h6 id="what-to-notice">What to notice</h6>
 <ul>
 <li>The file starts with YAML frontmatter (name, description, topics)</li>
 <li>Below that, sections like &quot;## How to Use&quot;, &quot;## Pre-Built Workflow&quot;</li>
 <li>Search for the text &quot;Pre-Built Workflow: Guided Accessibility Template&quot;</li>
 </ul>
-<h5>Step 2: Find the Pre-Built Workflows Section</h5>
-<h6>What to do</h6>
+<h5 id="step-2-find-the-pre-built-workflows-section">Step 2: Find the Pre-Built Workflows Section</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>Use <code>Ctrl+F</code> to open Find</li>
 <li>Search for: <code>Pre-Built Workflow</code></li>
@@ -1736,7 +1736,7 @@ git push origin main</code></pre>
 <li>You should land on the &quot;Pre-Built Workflow: Guided Accessibility Template&quot; section</li>
 <li>This section explains how to invoke the agent with a specific behavior</li>
 </ol>
-<h6>What to look for</h6>
+<h6 id="what-to-look-for">What to look for</h6>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Pre-Built Workflow: Guided Accessibility Template</span>
 
 The agent includes a guided workflow for the most common case: building 
@@ -1748,8 +1748,8 @@ an accessibility bug report template.
 
 <span class="hljs-section">### Workflow</span>
 The agent skips to Phase 2 but pre-populates it with ...</code></pre>
-<h5>Step 3: Add a New Pre-Built Workflow</h5>
-<h6>What to do</h6>
+<h5 id="step-3-add-a-new-pre-built-workflow">Step 3: Add a New Pre-Built Workflow</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>Position your cursor at the end of the &quot;Accessibility Template&quot; section (before the next <code>##</code> or <code>---</code>)</li>
 <li>Press <code>Enter</code> twice to create space</li>
@@ -1790,27 +1790,27 @@ The agent guides you through vulnerability-specific fields:
 
 <span class="hljs-section">### Output</span>
 A security vulnerability report template ready for your project&#x27;s use.</code></pre>
-<h4>What you&#39;re adding</h4>
+<h4 id="what-you39re-adding">What you&#39;re adding</h4>
 <ul>
 <li>A clear label for the new workflow</li>
 <li>Instructions on how to invoke it</li>
 <li>Pre-defined fields that make sense for security reports</li>
 <li>Specific options for severity and vulnerability type</li>
 </ul>
-<h5>Step 4: Save the Updated Agent</h5>
-<h6>What to do</h6>
+<h5 id="step-4-save-the-updated-agent">Step 4: Save the Updated Agent</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li>Save the file: <code>Ctrl+S</code></li>
 <li>You should see no error messages</li>
 <li>The agent file now includes your new Pre-Built Workflow</li>
 </ol>
-<h6>What happens</h6>
+<h6 id="what-happens">What happens</h6>
 <ul>
 <li>The agent recognizes your new workflow</li>
 <li>Next time you invoke <code>@template-builder</code> with &quot;create security template&quot;, it will follow your new guidance</li>
 </ul>
-<h5>Step 5: Test the Extended Agent</h5>
-<h6>What to do</h6>
+<h5 id="step-5-test-the-extended-agent">Step 5: Test the Extended Agent</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li><p>Open Copilot Chat again: <code>Ctrl+Shift+I</code></p>
 </li>
@@ -1832,20 +1832,20 @@ Q: Options?
 A: SQL Injection, XSS, Authentication Bypass, Privilege Escalation, DoS, Other</code></pre>
 </li>
 </ol>
-<h6>What success looks like</h6>
+<h6 id="what-success-looks-like">What success looks like</h6>
 <ul>
 <li>The agent recognizes &quot;create security template&quot;</li>
 <li>It guides you through security-specific fields</li>
 <li>The output is a different template than the accessibility one</li>
 </ul>
-<h6>If the agent doesn&#39;t recognize your new workflow</h6>
+<h6 id="if-the-agent-doesn39t-recognize-your-new-workflow">If the agent doesn&#39;t recognize your new workflow</h6>
 <ul>
 <li>Make sure you saved the file</li>
 <li>Try reloading VS Code: <code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;</li>
 <li>Try the agent invocation again</li>
 </ul>
-<h5>Step 6: Deploy Your Extended Agent</h5>
-<h6>What to do</h6>
+<h5 id="step-6-deploy-your-extended-agent">Step 6: Deploy Your Extended Agent</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li><p>Commit your agent change:</p>
 <pre><code class="hljs language-bash">git add .github/agents/template-builder.agent.md
@@ -1857,13 +1857,13 @@ git push origin main</code></pre>
 <li><p>Anyone who forks your fork gets the security workflow too</p>
 </li>
 </ol>
-<h6>What success looks like</h6>
+<h6 id="what-success-looks-like">What success looks like</h6>
 <ul>
 <li>Your commit appears on GitHub</li>
 <li>The agent file shows the new Pre-Built Workflow section</li>
 <li>You can prove the template-builder agent is now customized for your project</li>
 </ul>
-<h5>Checkpoint: Exercise 2 Complete</h5>
+<h5 id="checkpoint-exercise-2-complete">Checkpoint: Exercise 2 Complete</h5>
 <p>Verify you&#39;ve accomplished:</p>
 <ul>
 <li>Located the agent file (template-builder.agent.md)</li>
@@ -1872,17 +1872,17 @@ git push origin main</code></pre>
 <li>Tested the agent to confirm it recognizes your new workflow</li>
 <li>Committed and pushed the changes</li>
 </ul>
-<h6>What you learned</h6>
+<h6 id="what-you-learned">What you learned</h6>
 <ul>
 <li>How agents are just structured Markdown instructions</li>
 <li>How to tailor agent behavior for specific domains (accessibility, security, etc.)</li>
 <li>That you can extend agents without rewriting them completely</li>
 </ul>
-<h4>Exercise 3: Iterative Refinement with Agents</h4>
+<h4 id="exercise-3-iterative-refinement-with-agents">Exercise 3: Iterative Refinement with Agents</h4>
 <p><strong>Your Mission:</strong> Generate a template, then ask the agent to modify it incrementally. This teaches you the iterative pattern that scales to all agent-assisted workflows.</p>
 <p><strong>Time estimate:</strong> 5-10 minutes</p>
-<h5>Step 1: Start Fresh</h5>
-<h6>What to do</h6>
+<h5 id="step-1-start-fresh">Step 1: Start Fresh</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li><p>In Copilot Chat, type: <code>@template-builder create a feature request template</code></p>
 </li>
@@ -1899,12 +1899,12 @@ Fields:
 <li><p>Copy it to a file: <code>.github/ISSUE_TEMPLATE/feature-request.yml</code></p>
 </li>
 </ol>
-<h6>What you&#39;re doing</h6>
+<h6 id="what-you39re-doing">What you&#39;re doing</h6>
 <ul>
 <li>Running a complete template generation (same as Exercise 1)</li>
 </ul>
-<h5>Step 2: Ask for a Modification</h5>
-<h6>What to do</h6>
+<h5 id="step-2-ask-for-a-modification">Step 2: Ask for a Modification</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li><p>Once the template is generated, <strong>while still in the same chat conversation</strong>, ask:</p>
 <pre><code class="hljs language-text">@template-builder add a checkbox field: &quot;I have searched for existing feature requests&quot;</code></pre>
@@ -1912,14 +1912,14 @@ Fields:
 <li><p>The agent regenerates the YAML with your new checkbox added in the right place (usually as required field pre-validation)</p>
 </li>
 </ol>
-<h6>What happens</h6>
+<h6 id="what-happens">What happens</h6>
 <ul>
 <li>The agent <strong>modifies</strong> the YAML it generated</li>
 <li>The new checkbox appears in the YAML with proper formatting and indentation</li>
 <li>It doesn&#39;t regenerate from scratch - just adds your change</li>
 </ul>
-<h5>Step 3: Request Another Refinement</h5>
-<h6>What to do</h6>
+<h5 id="step-3-request-another-refinement">Step 3: Request Another Refinement</h5>
+<h6 id="what-to-do">What to do</h6>
 <ol>
 <li><p>Follow up with:</p>
 <pre><code class="hljs language-text">@template-builder change &quot;Proposed Solution&quot; field to include markdown code block support</code></pre>
@@ -1927,13 +1927,13 @@ Fields:
 <li><p>The agent modifies the textarea field&#39;s attributes to enable code highlighting</p>
 </li>
 </ol>
-<h6>What changes</h6>
+<h6 id="what-changes">What changes</h6>
 <ul>
 <li>The field now includes <code>render: &quot;a11y friendly code rendering&quot;</code> or similar</li>
 <li>The YAML structure is preserved; only the specific field is enhanced</li>
 </ul>
-<h5>Step 4: Observe the Iterative Pattern</h5>
-<h6>What to reflect on</h6>
+<h5 id="step-4-observe-the-iterative-pattern">Step 4: Observe the Iterative Pattern</h5>
+<h6 id="what-to-reflect-on">What to reflect on</h6>
 <ol>
 <li>You gave the agent <strong>one goal</strong> (generate a feature request template)</li>
 <li>The agent produced <strong>complete output</strong> (full YAML)</li>
@@ -1941,7 +1941,7 @@ Fields:
 <li>At each step, the agent <strong>understood context</strong> (which field, how to modify it)</li>
 <li>You <strong>didn&#39;t start over</strong> - just evolved the template</li>
 </ol>
-<h6>This is the pattern that scales</h6>
+<h6 id="this-is-the-pattern-that-scales">This is the pattern that scales</h6>
 <ul>
 <li><strong>Template generation:</strong> &quot;Create a template with these fields&quot;</li>
 <li><strong>Code review:</strong> &quot;Review this PR and flag accessibility issues&quot;</li>
@@ -1949,7 +1949,7 @@ Fields:
 <li><strong>Documentation:</strong> &quot;Generate release notes from these commits&quot;</li>
 </ul>
 <p>Each one follows: describe → generate → refine → deploy.</p>
-<h5>Checkpoint: Exercise 3 Complete</h5>
+<h5 id="checkpoint-exercise-3-complete">Checkpoint: Exercise 3 Complete</h5>
 <p>Verify you&#39;ve accomplished:</p>
 <ul>
 <li>Generated a feature request template with the agent</li>
@@ -1957,14 +1957,14 @@ Fields:
 <li>Requested further refinement (enhance field)</li>
 <li>Observed how the agent maintains context across requests</li>
 </ul>
-<h6>What you learned</h6>
+<h6 id="what-you-learned">What you learned</h6>
 <ul>
 <li>Agents work best with <strong>iterative dialogue</strong>, not one-shot requests</li>
 <li>You can build complex outputs through successive refinements</li>
 <li>The agent remembers context and can modify instead of regenerate</li>
 <li>This pattern applies to any repeatable GitHub workflow</li>
 </ul>
-<h3>What Comes Next</h3>
+<h3 id="what-comes-next">What Comes Next</h3>
 <p>You&#39;ve now:</p>
 <ol>
 <li><strong>Generated a template</strong> using an agent (Exercise 1)</li>
@@ -1980,9 +1980,9 @@ Fields:
 <li>Pick any agent that interests you and run it - the pattern is always the same: <strong>manual skill first, agent second, you refine and decide</strong></li>
 </ul>
 <p>That is Accessibility Agents&#39; promise: not to replace your thinking, but to amplify your skills across all 55 agents - and to grow through the contributions of everyone who uses it.</p>
-<h2>7. The Bigger Picture: Teams, Orchestration, and Beyond VS Code</h2>
+<h2 id="7-the-bigger-picture-teams-orchestration-and-beyond-vs-code">7. The Bigger Picture: Teams, Orchestration, and Beyond VS Code</h2>
 <p>The 55 agents are not 55 independent tools. They are organized into three teams that work together, and several orchestrator agents exist specifically to coordinate multi-agent workflows.</p>
-<h3>How the Three Teams Connect</h3>
+<h3 id="how-the-three-teams-connect">How the Three Teams Connect</h3>
 <p>In practice, a single task often spans multiple teams:</p>
 <ul>
 <li>You ask <code>@daily-briefing</code> (GitHub Workflow) for your morning report. It flags a PR that changes ARIA attributes.</li>
@@ -1991,7 +1991,7 @@ Fields:
 <li>You fix the issue using patterns from <code>@desktop-a11y-specialist</code> (Developer Tools) if it is a desktop application, or directly in the HTML if it is a web project.</li>
 </ul>
 <p>No single agent covers the entire workflow. The teams complement each other: GitHub Workflow agents surface <em>what happened</em>, Accessibility agents evaluate <em>whether it is correct</em>, and Developer Tools agents help you <em>implement the fix</em>.</p>
-<h3>Orchestrator Agents</h3>
+<h3 id="orchestrator-agents">Orchestrator Agents</h3>
 <p>Four agents are specifically designed to coordinate others:</p>
 <table>
 <thead>
@@ -2023,7 +2023,7 @@ Fields:
 </tr>
 </tbody></table>
 <p>You do not need to use orchestrators to get value from individual agents. But when a task is complex enough to span multiple agents, orchestrators save you the work of manually chaining requests.</p>
-<h3>High-Impact Agents to Try First</h3>
+<h3 id="high-impact-agents-to-try-first">High-Impact Agents to Try First</h3>
 <p>Rather than exploring all 55 agents at once, start with the ones that deliver immediate value based on Day 1 skills you already have:</p>
 <table>
 <thead>
@@ -2074,7 +2074,7 @@ Fields:
 <td>(invoke directly)</td>
 </tr>
 </tbody></table>
-<h3>Slash Commands That Save the Most Time</h3>
+<h3 id="slash-commands-that-save-the-most-time">Slash Commands That Save the Most Time</h3>
 <p>These commands work without invoking a full agent - type them directly in Copilot Chat:</p>
 <ul>
 <li><strong><code>/my-issues</code></strong> and <strong><code>/my-prs</code></strong> - Instant dashboard of your open work across all repos</li>
@@ -2086,10 +2086,10 @@ Fields:
 <li><strong><code>/onboard-repo</code></strong> - First-time scan of a repo with health assessment and recommended actions</li>
 </ul>
 <p>The full list of 54+ commands is in <a href="appendix-v-accessibility-agents-reference.html">Appendix V</a>, and <a href="../PODCASTS.html">Episode 39</a> walks through all of them with examples.</p>
-<h3>Running Agents Beyond VS Code</h3>
+<h3 id="running-agents-beyond-vs-code">Running Agents Beyond VS Code</h3>
 <p>Accessibility Agents&#39; agents run on your machine, in your editor, when you ask for them. That is one scope.</p>
 <p>The same Markdown-authored pattern extends further:</p>
-<h3>Scope 1: Your Editor (Accessibility Agents)</h3>
+<h3 id="scope-1-your-editor-accessibility-agents">Scope 1: Your Editor (Accessibility Agents)</h3>
 <ul>
 <li><strong>File lives in:</strong> <code>.github/agents/[name].agent.md</code> in your workspace</li>
 <li><strong>Triggered by:</strong> You, when you type <code>@[agent-name]</code> in Copilot Chat</li>
@@ -2097,15 +2097,15 @@ Fields:
 <li><strong>Reaches:</strong> Every repository your GitHub account has access to</li>
 <li><strong>Scale:</strong> All 55 agents available when the workspace is open</li>
 </ul>
-<h3>Scope 2: Your Repository (Travels with Forks)</h3>
+<h3 id="scope-2-your-repository-travels-with-forks">Scope 2: Your Repository (Travels with Forks)</h3>
 <ul>
 <li><strong>File lives in:</strong> <code>.github/agents/[name].agent.md</code> in the repo</li>
 <li><strong>Triggered by:</strong> Any contributor who has Copilot and opens the repo as a VS Code workspace</li>
 <li><strong>Runs on:</strong> Their machine, using their Copilot subscription</li>
 <li><strong>Reaches:</strong> Their GitHub account&#39;s repositories</li>
 </ul>
-<p>When you fork <code>accessibility-agents</code>, all 55 agents come with it. You can edit them for your project&#39;s context. You can add new ones. You can share them with every contributor who clones your fork.</p>
-<h3>Scope 3: The Cloud (GitHub Agentic Workflows)</h3>
+<p>When you fork <a href="https://github.com/Community-Access/accessibility-agents">accessibility-agents</a>, all 55 agents come with it. You can edit them for your project&#39;s context. You can add new ones. You can share them with every contributor who clones your fork.</p>
+<h3 id="scope-3-the-cloud-github-agentic-workflows">Scope 3: The Cloud (GitHub Agentic Workflows)</h3>
 <ul>
 <li><strong>File lives in:</strong> <code>.github/workflows/[name].md</code> (same folder as standard Actions YAML)</li>
 <li><strong>Triggered by:</strong> Any GitHub event - <code>issues: opened</code>, <code>pull_request: created</code>, <code>schedule:</code></li>
@@ -2114,9 +2114,9 @@ Fields:
 </ul>
 <p>No VS Code required. No local machine required. The workflow runs whether or not anyone is watching - when an issue is opened at 3am, the agentic response fires.</p>
 <p><strong>The link between Accessibility Agents and Agentic Workflows:</strong> Both use Markdown-authored instructions. Both define intent in plain language. Both travel with the repository. The Accessibility Agents pattern <em>is</em> a conceptual precursor to GitHub Agentic Workflows - understanding one makes the other immediately readable.</p>
-<h3>Go Deeper</h3>
+<h3 id="go-deeper">Go Deeper</h3>
 <p>For full documentation on every agent, all 54+ slash commands, customization formats, and troubleshooting, see <a href="appendix-v-accessibility-agents-reference.html">Appendix V: Accessibility Agents Reference</a>. For the audio version, listen to <a href="../PODCASTS.html">Episode 39: Accessibility Agents - Complete Reference</a>.</p>
-<h4>Example: Auto-triage accessibility issues</h4>
+<h4 id="example-auto-triage-accessibility-issues">Example: Auto-triage accessibility issues</h4>
 <p>File: <code>.github/workflows/auto-triage-a11y.md</code></p>
 <pre><code class="hljs language-markdown">name: Auto-Triage Accessibility Issues
 on:
@@ -2140,9 +2140,9 @@ When an issue is opened with &quot;accessibility&quot; or &quot;a11y&quot; or &q
 
 <span class="hljs-bullet">4.</span> If the issue body already includes those details, remove the <span class="hljs-code">`needs-triage`</span> label</code></pre>
 <p>This runs automatically on every new issue. No human intervention required.</p>
-<h2>8. GitHub Desktop, GitHub CLI, and Copilot CLI</h2>
+<h2 id="8-github-desktop-github-cli-and-copilot-cli">8. GitHub Desktop, GitHub CLI, and Copilot CLI</h2>
 <p>These tools are not required for this workshop, but are worth knowing as options for different workflows.</p>
-<h3>GitHub Desktop</h3>
+<h3 id="github-desktop">GitHub Desktop</h3>
 <p>A graphical Git application with an accessible interface.</p>
 <ul>
 <li><strong>Download:</strong> <a href="https://desktop.github.com">desktop.github.com</a></li>
@@ -2150,14 +2150,14 @@ When an issue is opened with &quot;accessibility&quot; or &quot;a11y&quot; or &q
 <li><strong>Screen reader support:</strong> Partial - keyboard navigation works for core flows</li>
 </ul>
 <p><strong>When to use:</strong> If command-line Git feels overwhelming, GitHub Desktop provides a GUI alternative.</p>
-<h3>GitHub CLI (<code>gh</code>)</h3>
+<h3 id="github-cli-gh">GitHub CLI (<code>gh</code>)</h3>
 <p>A command-line interface for GitHub operations.</p>
-<h4>Install</h4>
+<h4 id="install">Install</h4>
 <pre><code class="hljs language-bash">winget install GitHub.cli       <span class="hljs-comment"># Windows</span>
 brew install gh                 <span class="hljs-comment"># macOS</span></code></pre>
-<h4>Authenticate</h4>
+<h4 id="authenticate">Authenticate</h4>
 <pre><code class="hljs language-bash">gh auth login</code></pre>
-<h4>Common commands</h4>
+<h4 id="common-commands">Common commands</h4>
 <pre><code class="hljs language-bash">gh issue list                   <span class="hljs-comment"># List issues in current repo</span>
 gh issue view 42                <span class="hljs-comment"># Read issue #42</span>
 gh <span class="hljs-built_in">pr</span> list                      <span class="hljs-comment"># List pull requests</span>
@@ -2167,11 +2167,11 @@ gh <span class="hljs-built_in">pr</span> merge 14                  <span class="
 gh repo <span class="hljs-built_in">clone</span> owner/repo        <span class="hljs-comment"># Clone a repository</span>
 gh repo fork owner/repo         <span class="hljs-comment"># Fork a repository</span></code></pre>
 <p><strong>Screen reader advantage:</strong> <code>gh</code> output is plain text with no dynamic regions - more predictable than the browser for certain operations.</p>
-<h3>GitHub Copilot CLI (<code>gh copilot</code>)</h3>
+<h3 id="github-copilot-cli-gh-copilot">GitHub Copilot CLI (<code>gh copilot</code>)</h3>
 <p>An extension that adds Copilot to the terminal.</p>
-<h4>Install</h4>
+<h4 id="install">Install</h4>
 <pre><code class="hljs language-bash">gh extension install github/gh-copilot</code></pre>
-<h4>Commands</h4>
+<h4 id="commands">Commands</h4>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Ask Copilot to explain a command</span>
 gh copilot explain <span class="hljs-string">&quot;git rebase -i HEAD~3&quot;</span>
 
@@ -2181,13 +2181,13 @@ gh copilot suggest <span class="hljs-string">&quot;undo my last commit but keep 
 <span class="hljs-comment"># Ask Copilot to write a shell script</span>
 gh copilot suggest <span class="hljs-string">&quot;create a script that finds all Markdown files and checks for heading hierarchy&quot;</span></code></pre>
 <p><strong>Use case:</strong> When you know <em>what</em> you want to do but are unsure of the exact git command syntax.</p>
-<h2>Example session</h2>
+<h2 id="example-session">Example session</h2>
 <pre><code class="hljs language-bash">$ gh copilot suggest <span class="hljs-string">&quot;show me all commits from last week&quot;</span>
 
 Suggestion: git <span class="hljs-built_in">log</span> --since=<span class="hljs-string">&quot;1 week ago&quot;</span> --oneline
 
 Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
-<h2>Keyboard Shortcuts - Accessibility Agents Quick Reference</h2>
+<h2 id="keyboard-shortcuts---accessibility-agents-quick-reference">Keyboard Shortcuts - Accessibility Agents Quick Reference</h2>
 <table>
 <thead>
 <tr>
@@ -2220,28 +2220,28 @@ Run this <span class="hljs-built_in">command</span>? (Y/n)</code></pre>
 <td><code>Ctrl+Shift+P</code></td>
 </tr>
 </tbody></table>
-<h2>Troubleshooting</h2>
-<h3>&quot;Agent not found&quot;</h3>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="quotagent-not-foundquot">&quot;Agent not found&quot;</h3>
 <p><strong>Issue:</strong> Typing <code>@agent-name</code> shows &quot;No agent found.&quot;</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Verify <code>.github/agents/[name].agent.md</code> exists in your workspace</li>
 <li>Reload VS Code window: <code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;</li>
 <li>Check file naming: must end with <code>.agent.md</code></li>
 <li>Verify YAML frontmatter is valid (no syntax errors)</li>
 </ol>
-<h3>Agent produces incorrect output</h3>
+<h3 id="agent-produces-incorrect-output">Agent produces incorrect output</h3>
 <p><strong>Issue:</strong> Agent&#39;s response is wrong or misses context.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li><strong>Provide more context in your prompt:</strong> Be specific about what you need</li>
 <li><strong>Use @ mentions:</strong> Reference specific files or selections (<code>@filename.md</code>, <code>#selection</code>)</li>
 <li><strong>Check the agent&#39;s prerequisites:</strong> Did you do the manual work first?</li>
 <li><strong>Review the agent&#39;s instructions:</strong> Open <code>.github/agents/[name].agent.md</code> and read what it&#39;s supposed to do</li>
 </ol>
-<h3>Slash command doesn&#39;t work</h3>
+<h3 id="slash-command-doesn39t-work">Slash command doesn&#39;t work</h3>
 <p><strong>Issue:</strong> <code>/command</code> shows &quot;Command not found.&quot;</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Verify <code>.github/prompts/[name].md</code> exists</li>
 <li>Reload window: <code>Ctrl+Shift+P</code> → &quot;Reload Window&quot;</li>

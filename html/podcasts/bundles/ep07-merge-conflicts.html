@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,13 +58,13 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Git Going with GitHub - Audio Series</h1>
-<h2>Episode 7: Merge Conflicts Are Not Scary</h2>
+    <h1 id="git-going-with-github---audio-series">Git Going with GitHub - Audio Series</h1>
+<h2 id="episode-7-merge-conflicts-are-not-scary">Episode 7: Merge Conflicts Are Not Scary</h2>
 <p><strong>Series:</strong> Git Going with GitHub
 <strong>Episode:</strong> 7 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 12-15 min</p>
-<h3>Audio Production Direction</h3>
+<h3 id="audio-production-direction">Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
 <p><strong>Tone and style:</strong></p>
@@ -89,7 +89,7 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Preventing conflicts through communication and small changes</li>
 <li>Building confidence: conflicts are normal, not errors</li>
 </ul>
-<h3>Concept Coverage Checklist</h3>
+<h3 id="concept-coverage-checklist">Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
 <ul>
@@ -106,22 +106,22 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Using gh pr checks and gh pr diff to inspect conflicts from the terminal</strong></li>
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Confidence building: your first conflict resolution is the hardest</strong></li>
 </ul>
-<h3>Prerequisites (briefly recap these)</h3>
+<h3 id="prerequisites-briefly-recap-these">Prerequisites (briefly recap these)</h3>
 <p>Listeners may have heard these earlier episodes. Briefly remind them of:</p>
 <ul>
 <li>Episode 6: Pull requests and merging</li>
 <li>Episode 3: Branches and commits</li>
 </ul>
-<h3>Primary Source Material</h3>
-<h1>Merge Conflicts</h1>
+<h3 id="primary-source-material">Primary Source Material</h3>
+<h1 id="merge-conflicts">Merge Conflicts</h1>
 <blockquote>
 <p><strong>Listen to Episode 7:</strong> <a href="../PODCASTS.html">Merge Conflicts Are Not Scary</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
 </blockquote>
-<h2>Understanding, Preventing, and Resolving Conflicts</h2>
+<h2 id="understanding-preventing-and-resolving-conflicts">Understanding, Preventing, and Resolving Conflicts</h2>
 <blockquote>
 <p>Merge conflicts sound intimidating but are a normal, manageable part of collaborative development. This guide explains what conflicts are, how to read conflict markers, and how to resolve them - step by step.</p>
 </blockquote>
-<h2>What Is a Merge Conflict?</h2>
+<h2 id="what-is-a-merge-conflict">What Is a Merge Conflict?</h2>
 <p>A merge conflict occurs when two people have both changed the <strong>same part of the same file</strong> in <strong>different ways</strong>, and Git cannot automatically decide which version is correct.</p>
 <p>Git can merge changes automatically when they touch different parts of a file. Conflicts only happen when two changes overlap - for example:</p>
 <ul>
@@ -129,7 +129,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Person B changed line 12 to say &quot;Send message&quot;</li>
 <li>Git asks: which one do you want to keep?</li>
 </ul>
-<h2>Why Conflicts Happen</h2>
+<h2 id="why-conflicts-happen">Why Conflicts Happen</h2>
 <p>The most common causes:</p>
 <table>
 <thead>
@@ -155,15 +155,15 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <td>Your branch is weeks old and main has changed significantly</td>
 </tr>
 </tbody></table>
-<h2>How to Prevent Conflicts (Prevention is Easier Than Resolution)</h2>
+<h2 id="how-to-prevent-conflicts-prevention-is-easier-than-resolution">How to Prevent Conflicts (Prevention is Easier Than Resolution)</h2>
 <p>Avoiding conflicts in the first place saves time and reduces stress. Here are the most effective strategies:</p>
-<h3>1. <strong>Keep your branches short-lived</strong></h3>
+<h3 id="1-keep-your-branches-short-lived">1. <strong>Keep your branches short-lived</strong></h3>
 <p>Work in small, focused chunks. A branch that lives for 3 days has far fewer conflicts than one that lives for 3 weeks.</p>
 <ul>
 <li>Target: 1-3 days from branch to merge</li>
 <li>If a feature takes longer, break it into smaller PRs</li>
 </ul>
-<h3>2. <strong>Sync with main frequently</strong></h3>
+<h3 id="2-sync-with-main-frequently">2. <strong>Sync with main frequently</strong></h3>
 <p>The longer your branch diverges from main, the more likely conflicts become.</p>
 <p><strong>Best practice:</strong> Sync daily if main is active:</p>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># From your feature branch:</span>
@@ -171,34 +171,34 @@ git fetch origin
 git merge origin/main
 <span class="hljs-comment"># Or: git rebase origin/main (if comfortable with rebasing)</span></code></pre>
 <p><strong>GitHub web method:</strong> Use the &quot;Update branch&quot; button on your PR if it appears.</p>
-<h3>3. <strong>Communicate with your team</strong></h3>
+<h3 id="3-communicate-with-your-team">3. <strong>Communicate with your team</strong></h3>
 <p>Let others know what files you&#39;re working on. Use issue comments:</p>
 <blockquote>
 <p>&quot;Heads up: I&#39;m working on the <code>[TODO]</code> sections in <code>docs/welcome.md</code> for Challenge 3. If you&#39;re also editing welcome.md, let&#39;s coordinate so we don&#39;t conflict.&quot;</p>
 </blockquote>
 <p>In the Learning Room, this is especially important because multiple students may claim challenges that touch the same file. Challenges 1 and 3 both modify <code>docs/welcome.md</code> - if two students work on both simultaneously without coordinating, a merge conflict will occur.</p>
-<h3>4. <strong>Avoid mass reformatting</strong></h3>
+<h3 id="4-avoid-mass-reformatting">4. <strong>Avoid mass reformatting</strong></h3>
 <p>Running a formatter on an entire file creates conflicts with anyone else editing that file. If you must:</p>
 <ul>
 <li>Do it in a <strong>separate PR</strong> before functional changes</li>
 <li>Announce it to the team</li>
 <li>Merge it quickly so everyone can sync</li>
 </ul>
-<h3>5. <strong>Pull before you push</strong></h3>
+<h3 id="5-pull-before-you-push">5. <strong>Pull before you push</strong></h3>
 <p>Always fetch and merge (or pull) before pushing your changes:</p>
 <pre><code class="hljs language-bash">git pull origin main  <span class="hljs-comment"># Sync your local main</span>
 git checkout your-branch
 git merge main        <span class="hljs-comment"># Merge main into your branch</span>
 git push              <span class="hljs-comment"># Now push</span></code></pre>
 <p>This catches conflicts locally where they&#39;re easier to resolve.</p>
-<h3>6. <strong>Work on separate files when possible</strong></h3>
+<h3 id="6-work-on-separate-files-when-possible">6. <strong>Work on separate files when possible</strong></h3>
 <p>If multiple people are working simultaneously, divide tasks by files or modules rather than everyone touching the same code.</p>
-<h3>7. <strong>Keep PRs small</strong></h3>
+<h3 id="7-keep-prs-small">7. <strong>Keep PRs small</strong></h3>
 <p>A 50-file PR will almost certainly conflict with something. A 5-file PR merges quickly and cleanly.</p>
 <p>The most effective contributors make many small PRs rather than one giant one.</p>
-<h3>8. <strong>Use Draft PRs for early visibility</strong></h3>
+<h3 id="8-use-draft-prs-for-early-visibility">8. <strong>Use Draft PRs for early visibility</strong></h3>
 <p>Open your PR as a draft while still working. Others can see what you&#39;re changing and avoid overlapping work. Convert to &quot;Ready for review&quot; when done.</p>
-<h2>Advanced Prevention: Understanding Fast-Forward Merges</h2>
+<h2 id="advanced-prevention-understanding-fast-forward-merges">Advanced Prevention: Understanding Fast-Forward Merges</h2>
 <p>When your branch is perfectly up to date with main and adds new commits on top, GitHub can do a &quot;fast-forward&quot; merge - main simply moves forward to your latest commit. No merge commit needed. No possibility of conflicts.</p>
 <p><strong>How to achieve this:</strong> Rebase your branch on main right before merging:</p>
 <pre><code class="hljs language-bash">git checkout your-branch
@@ -207,7 +207,7 @@ git rebase origin/main
 git push --force-with-lease  <span class="hljs-comment"># See warning below about force pushing</span></code></pre>
 <p><strong>Warning:</strong> Force pushing rewrites history. Only do this on branches you alone control (not shared branches). Never force push to <code>main</code>.</p>
 <p>For more on force pushing and rebasing, see the <a href="appendix-a-glossary.html#force-push">Glossary</a>.</p>
-<h2>When Conflicts Are Actually Good</h2>
+<h2 id="when-conflicts-are-actually-good">When Conflicts Are Actually Good</h2>
 <p>Conflicts indicate that multiple people are actively improving the project. In a healthy, collaborative environment, occasional conflicts are normal and manageable.</p>
 <p>If you never have conflicts, it might mean:</p>
 <ul>
@@ -216,7 +216,7 @@ git push --force-with-lease  <span class="hljs-comment"># See warning below abou
 <li>People are avoiding working on important files (technical debt)</li>
 </ul>
 <p><strong>The goal isn&#39;t zero conflicts.</strong> The goal is catching them early, resolving them cleanly, and learning patterns that reduce future conflicts.</p>
-<h2>Spotting a Conflict on GitHub</h2>
+<h2 id="spotting-a-conflict-on-github">Spotting a Conflict on GitHub</h2>
 <p>When a PR has a merge conflict, you will see this message on the Conversation tab, near the merge section:</p>
 <blockquote>
 <p>“This branch has conflicts that must be resolved”</p>
@@ -250,7 +250,7 @@ git push --force-with-lease  <span class="hljs-comment"># See warning below abou
 </details>
 
 
-<h2>Conflict Markers - What They Mean</h2>
+<h2 id="conflict-markers---what-they-mean">Conflict Markers - What They Mean</h2>
 <p>When conflict markers appear in a file, your editor is showing you both versions of the conflicted content so you can choose. The format is always:</p>
 <pre><code class="hljs">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
 <span class="hljs-section">The content that is on YOUR current branch
@@ -263,7 +263,7 @@ The content coming from the OTHER branch (or main)
 <li><code>=======</code> - the dividing line between the two versions</li>
 <li><code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name</code> - the end of the INCOMING version (from the branch being merged in)</li>
 </ul>
-<h3>Example in a real file</h3>
+<h3 id="example-in-a-real-file">Example in a real file</h3>
 <p><strong>Original file (<code>docs/keyboard-shortcuts.md</code>) before conflict:</strong></p>
 <pre><code class="hljs language-markdown">| Insert+Space | Toggle between Browse Mode and Focus Mode |</code></pre>
 <p><strong>After two students both added a shortcut to the same table row:</strong></p>
@@ -280,9 +280,9 @@ The content coming from the OTHER branch (or main)
 <li>Keep their version: add only <code>Insert+F7</code></li>
 <li>Keep both rows: add both shortcuts to the table (often the right answer when two students added different valid shortcuts)</li>
 </ol>
-<h2>Resolving Conflicts on GitHub (Web Editor)</h2>
+<h2 id="resolving-conflicts-on-github-web-editor">Resolving Conflicts on GitHub (Web Editor)</h2>
 <p>GitHub has a built-in conflict editor that you can use without any local tools.</p>
-<h3>Step-by-step: GitHub Conflict Editor</h3>
+<h3 id="step-by-step-github-conflict-editor">Step-by-step: GitHub Conflict Editor</h3>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -339,7 +339,7 @@ The content coming from the OTHER branch (or main)
 </ol>
 </details>
 
-<h3>What it looks like in the editor</h3>
+<h3 id="what-it-looks-like-in-the-editor">What it looks like in the editor</h3>
 <p>When the conflict editor opens, your screen reader will announce a text editor. In Focus Mode, navigate with arrow keys. The content reads:</p>
 <pre><code class="hljs language-text">&lt;  &lt;  &lt;  &lt;  &lt;  &lt;  &lt;  H  E  A  D
 &lt;button aria-label=&quot;Submit form&quot;&gt;Submit&lt;/button&gt;
@@ -347,9 +347,9 @@ The content coming from the OTHER branch (or main)
 &lt;button type=&quot;submit&quot;&gt;Send message&lt;/button&gt;
 &gt;  &gt;  &gt;  &gt;  &gt;  &gt;  &gt;  f  e  a  t  u  r  e  /  f  o  r  m - i  m  p  r  o  v  e  m  e  n  t  s</code></pre>
 <p><em>(Note: screen readers may spell out the <code>&lt;</code> and <code>&gt;</code> characters letter by letter - this is normal)</em></p>
-<h2>Resolving Conflicts in VS Code (Day 2)</h2>
+<h2 id="resolving-conflicts-in-vs-code-day-2">Resolving Conflicts in VS Code (Day 2)</h2>
 <p>VS Code has excellent merge conflict tooling with full screen reader support. This is covered in depth in <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a>, but here is an overview:</p>
-<h3>VS Code shows conflicts as:</h3>
+<h3 id="vs-code-shows-conflicts-as">VS Code shows conflicts as:</h3>
 <pre><code class="hljs">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
 Your version
 ||||||| original                   ← (3-way merge, if enabled)
@@ -357,7 +357,7 @@ Your version
 =======</span>
 Incoming version
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; branch-name (Incoming Change)</code></pre>
-<h3>VS Code merge conflict actions</h3>
+<h3 id="vs-code-merge-conflict-actions">VS Code merge conflict actions</h3>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -402,14 +402,14 @@ Incoming version
 </details>
 
 
-<h2>When You Feel Stuck</h2>
-<h3>Ask for help - it&#39;s normal</h3>
+<h2 id="when-you-feel-stuck">When You Feel Stuck</h2>
+<h3 id="ask-for-help---it39s-normal">Ask for help - it&#39;s normal</h3>
 <p>If you are unsure which version to keep:</p>
 <ol>
 <li>Leave a comment on the PR: &quot;I have a merge conflict in <code>filename.js</code> and I&#39;m not sure which version to keep - could someone help me understand the intent of these two changes?&quot;</li>
 <li>Tag the PR author or a maintainer with <code>@username</code></li>
 </ol>
-<h3>Abandon and start fresh (nuclear option)</h3>
+<h3 id="abandon-and-start-fresh-nuclear-option">Abandon and start fresh (nuclear option)</h3>
 <p>If a conflict is severe (the branch diverged a lot from main):</p>
 <ol>
 <li>Close the PR without merging</li>
@@ -418,7 +418,7 @@ Incoming version
 <li>Open a new PR</li>
 </ol>
 <p>This is legitimate - not a failure.</p>
-<h2>Reading a Conflict Message from Git (Command Line Reference)</h2>
+<h2 id="reading-a-conflict-message-from-git-command-line-reference">Reading a Conflict Message from Git (Command Line Reference)</h2>
 <p>If you work locally, <code>git merge</code> or <code>git pull</code> will say:</p>
 <pre><code class="hljs"><span class="hljs-keyword">CONFLICT</span> (content): Merge <span class="hljs-keyword">conflict</span> <span class="hljs-keyword">in</span> src/<span class="hljs-keyword">index</span>.html
 Automatic merge failed; fix conflicts <span class="hljs-keyword">and</span> <span class="hljs-keyword">then</span> <span class="hljs-keyword">commit</span> the result.</code></pre>
@@ -467,7 +467,7 @@ gh <span class="hljs-built_in">pr</span> diff 42</code></pre>
 </details>
 
 
-<h2>Summary Checklist</h2>
+<h2 id="summary-checklist">Summary Checklist</h2>
 <pre><code class="hljs">Before you <span class="hljs-keyword">start</span>:
   □ My PR <span class="hljs-keyword">is</span> small <span class="hljs-keyword">and</span> focused (fewer conflicts <span class="hljs-operator">=</span> easier life)
   □ I checked that others aren<span class="hljs-string">&#x27;t editing the same files
@@ -484,7 +484,7 @@ After resolving:
   □ Re<span class="hljs-operator">-</span><span class="hljs-keyword">check</span> that the PR description <span class="hljs-keyword">and</span> issue link <span class="hljs-keyword">are</span> still accurate
   □ Comment <span class="hljs-keyword">on</span> the PR: &quot;Resolved merge conflict - kept both the aria-label and type attribute&quot;
   □ Request re<span class="hljs-operator">-</span>review if reviewers already approved before the conflict was introduced</code></pre>
-<h2>Try It: Read a Conflict (Without Fear)</h2>
+<h2 id="try-it-read-a-conflict-without-fear">Try It: Read a Conflict (Without Fear)</h2>
 <p><strong>Time:</strong> 2 minutes | <strong>What you need:</strong> Any text editor or just read below</p>
 <p>Read this merge conflict aloud. The goal is not to resolve it - just to understand what you&#39;re hearing:</p>
 <pre><code class="hljs">The button should have an
@@ -505,7 +505,7 @@ attribute for screen readers.</code></pre>
 <p><strong>What success feels like:</strong> Conflicts aren&#39;t mysterious anymore. They&#39;re just two versions side by side with markers telling you which is which. You already know how to pick the right one.</p>
 </blockquote>
 <blockquote>
-<h3>Day 2 Amplifier - Copilot Chat &amp; Conflict Prevention</h3>
+<h3 id="day-2-amplifier---copilot-chat-amp-conflict-prevention">Day 2 Amplifier - Copilot Chat &amp; Conflict Prevention</h3>
 <p><strong>Resolve at least one conflict completely by hand before using any AI assistance.</strong> You must be able to read <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> markers and understand what each version represents. An AI-suggested resolution you cannot independently verify is a liability - you are accepting a change you do not understand into a codebase other people depend on.</p>
 <p>Once you have mastered manual conflict resolution:</p>
 <ul>

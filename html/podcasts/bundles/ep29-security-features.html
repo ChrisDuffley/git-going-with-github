@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,13 +58,13 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Git Going with GitHub - Audio Series</h1>
-<h2>Episode 29: GitHub Security Features</h2>
+    <h1 id="git-going-with-github---audio-series">Git Going with GitHub - Audio Series</h1>
+<h2 id="episode-29-github-security-features">Episode 29: GitHub Security Features</h2>
 <p><strong>Series:</strong> Git Going with GitHub
 <strong>Episode:</strong> 29 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 12-15 min</p>
-<h3>Audio Production Direction</h3>
+<h3 id="audio-production-direction">Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
 <p><strong>Tone and style:</strong></p>
@@ -88,7 +88,7 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Private security advisories</li>
 <li>How to respond when a vulnerability is detected</li>
 </ul>
-<h3>Concept Coverage Checklist</h3>
+<h3 id="concept-coverage-checklist">Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
 <ul>
@@ -104,16 +104,16 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li><input aria-label="" disabled="" type="checkbox"> <strong>The Security tab on a repository</strong></li>
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Security policies: SECURITY.md file</strong></li>
 </ul>
-<h3>Primary Source Material</h3>
-<h1>Appendix L: GitHub Security Features</h1>
+<h3 id="primary-source-material">Primary Source Material</h3>
+<h1 id="appendix-l-github-security-features">Appendix L: GitHub Security Features</h1>
 <blockquote>
 <p><strong>Listen to Episode 29:</strong> <a href="../PODCASTS.html">GitHub Security Features</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
 </blockquote>
-<h2>Dependabot, Secret Scanning, Code Scanning, and Private Advisories</h2>
+<h2 id="dependabot-secret-scanning-code-scanning-and-private-advisories">Dependabot, Secret Scanning, Code Scanning, and Private Advisories</h2>
 <blockquote>
 <p><strong>Who this is for:</strong> Anyone contributing to open source repositories needs to understand how GitHub protects code and what security alerts mean. This appendix explains the GitHub Security tab, how to interpret and respond to alerts, and how to responsibly report vulnerabilities - including in <code>community-access/accessibility-agents</code>.</p>
 </blockquote>
-<h2>Quick Navigation</h2>
+<h2 id="quick-navigation">Quick Navigation</h2>
 <ol>
 <li><a href="#1-the-security-tab--what-it-contains">The Security Tab - What It Contains</a></li>
 <li><a href="#2-dependabot--automated-dependency-updates">Dependabot - Automated Dependency Updates</a></li>
@@ -125,7 +125,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li><a href="#8-screen-reader-navigation-of-the-security-tab">Screen Reader Navigation of the Security Tab</a></li>
 <li><a href="#9-security-and-accessibility-agents">Security and Accessibility Agents</a></li>
 </ol>
-<h2>1. The Security Tab - What It Contains</h2>
+<h2 id="1-the-security-tab---what-it-contains">1. The Security Tab - What It Contains</h2>
 <p>Every GitHub repository has a <strong>Security tab</strong> in its navigation bar. What you see there depends on whether you are a contributor with elevated access or a public viewer.</p>
 <p><strong>Public viewers see:</strong></p>
 <ul>
@@ -140,13 +140,13 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Security advisories</li>
 <li>The ability to manage security settings</li>
 </ul>
-<h3>Screen Reader Path to the Security Tab</h3>
+<h3 id="screen-reader-path-to-the-security-tab">Screen Reader Path to the Security Tab</h3>
 <pre><code class="hljs"><span class="hljs-built_in">On</span> <span class="hljs-variable">any</span> <span class="hljs-variable">repository</span> <span class="hljs-variable">page</span><span class="hljs-operator">:</span>
 <span class="hljs-built_in">Tab</span> <span class="hljs-variable">navigation</span> → <span class="hljs-variable">secondary</span> <span class="hljs-variable">nav</span> <span class="hljs-variable">region</span> → <span class="hljs-string">&quot;Security&quot;</span> <span class="hljs-variable">link</span> → <span class="hljs-built_in">Enter</span>
 <span class="hljs-built_in">Or</span><span class="hljs-operator">:</span> <span class="hljs-variable">G</span> <span class="hljs-variable">then</span> <span class="hljs-variable">S</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">GitHub</span> <span class="hljs-variable">keyboard</span> <span class="hljs-variable">shortcut</span> <span class="hljs-operator">-</span> <span class="hljs-variable">enable</span> <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> <span class="hljs-variable">first</span><span class="hljs-punctuation">)</span></code></pre>
-<h2>2. Dependabot - Automated Dependency Updates</h2>
+<h2 id="2-dependabot---automated-dependency-updates">2. Dependabot - Automated Dependency Updates</h2>
 <p>Dependabot is GitHub&#39;s automated dependency monitoring and update system. It does two things:</p>
-<h3>Dependabot Alerts</h3>
+<h3 id="dependabot-alerts">Dependabot Alerts</h3>
 <p>When a known security vulnerability (CVE - Common Vulnerability and Exposure) is discovered in a package your project depends on, GitHub creates a <strong>Dependabot alert</strong>.</p>
 <p><strong>Alert severity levels:</strong></p>
 <table>
@@ -194,7 +194,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>The fix is almost always: update the dependency to the fixed version</li>
 <li>Dependabot Security Updates may have already opened a PR - check the PRs tab</li>
 </ol>
-<h3>Dependabot Security Updates</h3>
+<h3 id="dependabot-security-updates">Dependabot Security Updates</h3>
 <p>If enabled, Dependabot automatically opens a PR to update the vulnerable dependency. The PR will look like:</p>
 <pre><code class="hljs"><span class="hljs-symbol">Title:</span> Bump lodash <span class="hljs-keyword">from</span> <span class="hljs-number">4.17</span>.<span class="hljs-number">20</span> <span class="hljs-keyword">to</span> <span class="hljs-number">4.17</span>.<span class="hljs-number">21</span>
 <span class="hljs-symbol">Author:</span> dependabot[bot]
@@ -203,7 +203,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
   - Changelog
   - Commits (linked)</code></pre>
 <p>As a contributor with access, reviewing and merging these Dependabot PRs is a high-value, low-risk way to contribute.</p>
-<h3>Dependabot Version Updates</h3>
+<h3 id="dependabot-version-updates">Dependabot Version Updates</h3>
 <p>Beyond security fixes, Dependabot can be configured to open PRs keeping all dependencies at their latest versions (not just security fixes). This is configured in <code>.github/dependabot.yml</code>.</p>
 <p><strong>Example <code>dependabot.yml</code>:</strong></p>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">version:</span> <span class="hljs-number">2</span>
@@ -213,9 +213,9 @@ When a concept is complex, use an analogy or real-world comparison to make it co
     <span class="hljs-attr">schedule:</span>
       <span class="hljs-attr">interval:</span> <span class="hljs-string">&quot;weekly&quot;</span>
     <span class="hljs-attr">open-pull-requests-limit:</span> <span class="hljs-number">5</span></code></pre>
-<h2>3. Secret Scanning - Preventing Credential Leaks</h2>
+<h2 id="3-secret-scanning---preventing-credential-leaks">3. Secret Scanning - Preventing Credential Leaks</h2>
 <p>Secret scanning detects if you accidentally commit tokens, API keys, passwords, or other credentials to a repository.</p>
-<h3>Push Protection (Real-Time Prevention)</h3>
+<h3 id="push-protection-real-time-prevention">Push Protection (Real-Time Prevention)</h3>
 <p><strong>Push Protection</strong> intercepts a <code>git push</code> before it reaches GitHub and blocks it if it detects a known secret pattern.</p>
 <p>If your push is blocked:</p>
 <pre><code class="hljs"><span class="hljs-comment">remote: error: GH013: Repository rule violations found for refs/heads/main.</span>
@@ -236,10 +236,10 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 
 <span class="hljs-comment">// GOOD</span>
 <span class="hljs-keyword">const</span> token = process.<span class="hljs-property">env</span>.<span class="hljs-property">GITHUB_TOKEN</span>;</code></pre>
-<h3>Secret Scanning Alerts</h3>
+<h3 id="secret-scanning-alerts">Secret Scanning Alerts</h3>
 <p>For public repositories, GitHub scans all existing commits and creates alerts for any detected secrets. These appear in Security → Secret scanning.</p>
 <p><strong>Priority action:</strong> If you find a secret scanning alert in a project you contribute to - especially a token or API key - treat it as urgent. The credential may have been exposed for a long time.</p>
-<h2>4. Code Scanning and CodeQL</h2>
+<h2 id="4-code-scanning-and-codeql">4. Code Scanning and CodeQL</h2>
 <p>Code scanning uses static analysis to find security vulnerabilities in the code itself (not dependencies). GitHub&#39;s built-in tool is <strong>CodeQL</strong>, which understands the code&#39;s logic and can detect:</p>
 <ul>
 <li>SQL injection risks</li>
@@ -249,7 +249,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Authentication bypasses</li>
 <li>Command injection risks</li>
 </ul>
-<h3>Reading a Code Scanning Alert</h3>
+<h3 id="reading-a-code-scanning-alert">Reading a Code Scanning Alert</h3>
 <pre><code class="hljs">Alert: Uncontrolled <span class="hljs-built_in">format</span> <span class="hljs-keyword">string</span>
 Rule: py/tainted-<span class="hljs-built_in">format</span>-<span class="hljs-keyword">string</span>
 Severity: High
@@ -264,12 +264,12 @@ Details:
   <span class="hljs-number">2.</span> Passed <span class="hljs-built_in">to</span>: logger.info(message) [<span class="hljs-built_in">line</span> <span class="hljs-number">47</span>]
   <span class="hljs-number">3.</span> Risk: <span class="hljs-built_in">format</span> <span class="hljs-keyword">string</span> injection <span class="hljs-keyword">if</span> message <span class="hljs-keyword">contains</span> %s, %d patterns</code></pre>
 <p><strong>As a contributor:</strong> Code scanning alerts are excellent, well-scoped contribution opportunities. Each alert shows you the exact file, line, and the data flow causing the issue. Fixing it is often a one-line change.</p>
-<h3>Where to Find Code Scanning Alerts</h3>
+<h3 id="where-to-find-code-scanning-alerts">Where to Find Code Scanning Alerts</h3>
 <p>Security tab → Code scanning → filter by severity, rule, or file.</p>
-<h2>5. Private Vulnerability Reporting</h2>
+<h2 id="5-private-vulnerability-reporting">5. Private Vulnerability Reporting</h2>
 <p>When you discover a security vulnerability in a project, <strong>never report it as a public issue</strong>. A public issue immediately broadcasts the vulnerability to anyone who could exploit it.</p>
 <p>GitHub provides <strong>Private Vulnerability Reporting</strong> - a disclosure form that sends your report only to the repository&#39;s security team, not to the public.</p>
-<h3>How to Submit a Private Report</h3>
+<h3 id="how-to-submit-a-private-report">How to Submit a Private Report</h3>
 <ol>
 <li>Navigate to the repository&#39;s <strong>Security tab</strong></li>
 <li>Select <strong>&quot;Report a vulnerability&quot;</strong> (this button only appears if the maintainer has enabled private reporting)</li>
@@ -283,7 +283,7 @@ Details:
 </li>
 <li>Submit - only the maintainers see your report</li>
 </ol>
-<h3>The Responsible Disclosure Process</h3>
+<h3 id="the-responsible-disclosure-process">The Responsible Disclosure Process</h3>
 <p>After you submit:</p>
 <ol>
 <li>Maintainers acknowledge your report (typically within 1-7 days for active projects)</li>
@@ -294,14 +294,14 @@ Details:
 <li>They publish a public security advisory - you may be credited as the reporter</li>
 <li>The CVE is published publicly (usually 90 days after report or after the fix is released)</li>
 </ol>
-<h3>What If the Maintainer Doesn&#39;t Respond?</h3>
+<h3 id="what-if-the-maintainer-doesn39t-respond">What If the Maintainer Doesn&#39;t Respond?</h3>
 <p>If a maintainer doesn&#39;t respond within a reasonable time (30-90 days is the standard window):</p>
 <ol>
 <li>Send a follow-up in the private advisory thread</li>
 <li>Contact GitHub directly if the issue is critical (GitHub can assist with coordinated disclosure)</li>
 <li>Follow the project&#39;s SECURITY.md for their stated disclosure policy</li>
 </ol>
-<h2>6. The SECURITY.md File</h2>
+<h2 id="6-the-securitymd-file">6. The SECURITY.md File</h2>
 <p>A <code>SECURITY.md</code> file at the repository root defines the project&#39;s security policy. It typically contains:</p>
 <ul>
 <li><strong>Supported versions:</strong> Which versions receive security patches</li>
@@ -310,7 +310,7 @@ Details:
 <li><strong>Disclosure policy:</strong> When the project will publish a fix publicly</li>
 </ul>
 <p><strong>accessibility-agents&#39;s security policy:</strong> <code>community-access/accessibility-agents</code> has a <code>SECURITY.md</code> that points to GitHub&#39;s private advisory form. If you find a security issue in accessibility-agents - even a potential one - use the private advisory form rather than opening a public issue.</p>
-<h3>Navigating to a Repository&#39;s SECURITY.md</h3>
+<h3 id="navigating-to-a-repository39s-securitymd">Navigating to a Repository&#39;s SECURITY.md</h3>
 <p>From the repository:</p>
 <ol>
 <li>Security tab → Policies section → &quot;Security policy&quot; link</li>
@@ -318,9 +318,9 @@ Details:
 </ol>
 <p>Screen reader path:</p>
 <pre><code class="hljs">Security <span class="hljs-literal">tab</span> → H → <span class="hljs-string">&quot;Policy&quot;</span> heading → Link: <span class="hljs-string">&quot;Security policy&quot;</span> → Enter</code></pre>
-<h2>7. Software Bill of Materials (SBOM)</h2>
+<h2 id="7-software-bill-of-materials-sbom">7. Software Bill of Materials (SBOM)</h2>
 <p>An SBOM is a machine-readable inventory of every component (libraries, packages, dependencies) in a software project. It is increasingly required by enterprise and government organizations for supply chain security compliance.</p>
-<h3>Exporting an SBOM from GitHub</h3>
+<h3 id="exporting-an-sbom-from-github">Exporting an SBOM from GitHub</h3>
 <ol>
 <li>Navigate to the repository&#39;s <strong>Insights tab</strong></li>
 <li>Select <strong>&quot;Dependency graph&quot;</strong></li>
@@ -333,12 +333,12 @@ Details:
 <li>You&#39;re auditing a project&#39;s complete dependency chain</li>
 <li>You want to identify license compatibility for a commercial product</li>
 </ul>
-<h2>8. Screen Reader Navigation of the Security Tab</h2>
-<h3>Reaching the Security Tab</h3>
+<h2 id="8-screen-reader-navigation-of-the-security-tab">8. Screen Reader Navigation of the Security Tab</h2>
+<h3 id="reaching-the-security-tab">Reaching the Security Tab</h3>
 <pre><code class="hljs"><span class="hljs-keyword">From</span> any repo page:
 Secondary navigation landmark → Tab through: Code, Issues, PRs, Actions, Projects, Wiki, Security
 Or: <span class="hljs-keyword">Focus</span> <span class="hljs-keyword">Mode</span> → G <span class="hljs-keyword">then</span> S (GitHub shortcut)</code></pre>
-<h3>Navigating Dependabot Alerts</h3>
+<h3 id="navigating-dependabot-alerts">Navigating Dependabot Alerts</h3>
 <pre><code class="hljs">Security <span class="hljs-literal">tab</span> → select <span class="hljs-string">&quot;Dependabot alerts&quot;</span> link
 Alert list is <span class="hljs-keyword">a</span> table: T (NVDA/JAWS Browse Mode) → navigate rows
 Each row: Tab <span class="hljs-built_in">to</span> expand → Enter <span class="hljs-built_in">to</span> <span class="hljs-built_in">open</span> full alert details
@@ -346,7 +346,7 @@ Inside <span class="hljs-keyword">an</span> alert:
   H → navigate: Alert title, Package details, Description, References headings
   <span class="hljs-number">2</span> → jump between major sections
   Links → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> GHSA advisory, <span class="hljs-keyword">the</span> vulnerable package, <span class="hljs-keyword">the</span> Dependabot PR</code></pre>
-<h3>Navigating Code Scanning Alerts</h3>
+<h3 id="navigating-code-scanning-alerts">Navigating Code Scanning Alerts</h3>
 <pre><code class="hljs">Security <span class="hljs-literal">tab</span> → select <span class="hljs-string">&quot;Code scanning&quot;</span> link
 Alert list: T <span class="hljs-built_in">to</span> find <span class="hljs-keyword">the</span> table → ↑/↓ <span class="hljs-built_in">to</span> navigate rows
 Open <span class="hljs-keyword">an</span> alert: Enter
@@ -355,12 +355,12 @@ Inside <span class="hljs-keyword">the</span> alert:
   Links → navigate <span class="hljs-built_in">to</span> <span class="hljs-keyword">the</span> specific <span class="hljs-built_in">file</span> <span class="hljs-keyword">and</span> <span class="hljs-built_in">line</span>
   The code flow section shows <span class="hljs-keyword">the</span> path <span class="hljs-built_in">from</span> source <span class="hljs-built_in">to</span> sink:
   Navigate <span class="hljs-keyword">with</span> ↓ through <span class="hljs-keyword">the</span> flow steps</code></pre>
-<h3>The Private Vulnerability Reporting Form</h3>
+<h3 id="the-private-vulnerability-reporting-form">The Private Vulnerability Reporting Form</h3>
 <pre><code class="hljs"><span class="hljs-variable">Security</span> <span class="hljs-variable">tab</span> → <span class="hljs-string">&quot;Report a vulnerability&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span>
 <span class="hljs-variable">Form</span> <span class="hljs-variable">fields</span><span class="hljs-operator">:</span> <span class="hljs-variable">F</span> <span class="hljs-variable">or</span> <span class="hljs-built_in">E</span> → <span class="hljs-variable">cycle</span> <span class="hljs-variable">through</span><span class="hljs-operator">:</span> <span class="hljs-variable">Title</span><span class="hljs-operator">,</span> <span class="hljs-variable">Description</span><span class="hljs-operator">,</span> <span class="hljs-variable">Severity</span> <span class="hljs-punctuation">(</span><span class="hljs-variable">select</span><span class="hljs-punctuation">)</span><span class="hljs-operator">,</span> <span class="hljs-variable">Versions</span><span class="hljs-operator">,</span> <span class="hljs-variable">CVSS</span>
 <span class="hljs-variable">Describe</span> <span class="hljs-variable">field</span><span class="hljs-operator">:</span> <span class="hljs-variable">NVDA</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> → <span class="hljs-variable">Focus</span> <span class="hljs-built_in">Mode</span> → <span class="hljs-variable">type</span> → <span class="hljs-variable">NVDA</span><span class="hljs-operator">+</span><span class="hljs-built_in">Space</span> <span class="hljs-variable">to</span> <span class="hljs-variable">leave</span>
 <span class="hljs-variable">Submit</span><span class="hljs-operator">:</span> <span class="hljs-built_in">Tab</span> → <span class="hljs-string">&quot;Submit report&quot;</span> <span class="hljs-variable">button</span> → <span class="hljs-built_in">Enter</span></code></pre>
-<h2>9. Security and Accessibility Agents</h2>
+<h2 id="9-security-and-accessibility-agents">9. Security and Accessibility Agents</h2>
 <p>Accessibility Agents&#39; <code>/security-dashboard</code> slash command gives you a quick security overview without visiting the Security tab in the browser:</p>
 <pre><code class="hljs">/security-dashboard</code></pre>
 <p><strong>Sample output:</strong></p>

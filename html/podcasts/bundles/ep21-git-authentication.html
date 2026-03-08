@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,13 +58,13 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Git Going with GitHub - Audio Series</h1>
-<h2>Episode 21: Git Authentication</h2>
+    <h1 id="git-going-with-github---audio-series">Git Going with GitHub - Audio Series</h1>
+<h2 id="episode-21-git-authentication">Episode 21: Git Authentication</h2>
 <p><strong>Series:</strong> Git Going with GitHub
 <strong>Episode:</strong> 21 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 12-15 min</p>
-<h3>Audio Production Direction</h3>
+<h3 id="audio-production-direction">Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
 <p><strong>Tone and style:</strong></p>
@@ -88,7 +88,7 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Commit signing with GPG or SSH keys</li>
 <li>Troubleshooting authentication failures</li>
 </ul>
-<h3>Concept Coverage Checklist</h3>
+<h3 id="concept-coverage-checklist">Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
 <ul>
@@ -106,16 +106,16 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Signing with GPG keys versus SSH keys</strong></li>
 <li><input aria-label="" disabled="" type="checkbox"> <strong>Troubleshooting: permission denied, token expired, wrong remote URL</strong></li>
 </ul>
-<h3>Primary Source Material</h3>
-<h1>Appendix D: Git Authentication</h1>
+<h3 id="primary-source-material">Primary Source Material</h3>
+<h1 id="appendix-d-git-authentication">Appendix D: Git Authentication</h1>
 <blockquote>
 <p><strong>Listen to Episode 21:</strong> <a href="../PODCASTS.html">Git Authentication</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
 </blockquote>
-<h2>SSH Keys &amp; Personal Access Tokens</h2>
+<h2 id="ssh-keys-amp-personal-access-tokens">SSH Keys &amp; Personal Access Tokens</h2>
 <blockquote>
 <p><strong>Audience:</strong> This appendix is for contributors who need to configure Git authentication for push access. If you&#39;re working entirely through the GitHub web interface or GitHub Desktop, you can skip this. If you&#39;re using VS Code with Git command line, this becomes relevant when you want to push commits to your fork.</p>
 </blockquote>
-<h2>When You Need Authentication</h2>
+<h2 id="when-you-need-authentication">When You Need Authentication</h2>
 <p>GitHub requires authentication when you:</p>
 <ul>
 <li><strong>Push</strong> commits to a repository</li>
@@ -128,8 +128,8 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>View public repositories on GitHub.com</li>
 <li>Read issues and pull requests</li>
 </ul>
-<h2>Two Authentication Methods</h2>
-<h3>Personal Access Token (PAT)</h3>
+<h2 id="two-authentication-methods">Two Authentication Methods</h2>
+<h3 id="personal-access-token-pat">Personal Access Token (PAT)</h3>
 <p>A Personal Access Token is a password-like string you generate on GitHub and use instead of your account password when Git asks for credentials.</p>
 <p><strong>Pros:</strong></p>
 <ul>
@@ -143,7 +143,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>You have to store it securely</li>
 <li>Expires after a set time (you must regenerate)</li>
 </ul>
-<h3>SSH Keys</h3>
+<h3 id="ssh-keys">SSH Keys</h3>
 <p>SSH uses public-key cryptography. You generate a key pair on your computer (public + private), upload the public key to GitHub, and Git uses the private key to prove your identity.</p>
 <p><strong>Pros:</strong></p>
 <ul>
@@ -156,9 +156,9 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Requires command-line setup (less accessible for some screen reader users)</li>
 <li>Slightly more complex initial configuration</li>
 </ul>
-<h2>Creating a Personal Access Token (Recommended for This Workshop)</h2>
+<h2 id="creating-a-personal-access-token-recommended-for-this-workshop">Creating a Personal Access Token (Recommended for This Workshop)</h2>
 <p><strong>Why this method:</strong> It&#39;s screen reader accessible through the GitHub web interface, and you can complete it without command-line Git configuration.</p>
-<h3>Step 1: Generate the Token</h3>
+<h3 id="step-1-generate-the-token">Step 1: Generate the Token</h3>
 <ol>
 <li>Navigate to <a href="https://github.com/settings/tokens">github.com/settings/tokens</a></li>
 <li>Select <strong>&quot;Tokens (classic)&quot;</strong> from the left sidebar</li>
@@ -174,7 +174,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li><strong>CRITICAL:</strong> Copy the token immediately - you cannot see it again</li>
 </ol>
 <p><strong>Screen reader note:</strong> The token appears as a long string in a text field. Select all (<code>Ctrl+A</code>), copy (<code>Ctrl+C</code>), and paste it into a secure note or password manager.</p>
-<h3>Step 2: Store It Securely</h3>
+<h3 id="step-2-store-it-securely">Step 2: Store It Securely</h3>
 <p><strong>Options:</strong></p>
 <ul>
 <li><strong>Password manager</strong> (1Password, Bitwarden, LastPass) - best option</li>
@@ -187,7 +187,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Email it to yourself</li>
 <li>Save it in a public GitHub file</li>
 </ul>
-<h3>Step 3: Use It</h3>
+<h3 id="step-3-use-it">Step 3: Use It</h3>
 <p>The next time Git asks for your password (when you push, pull from a private repo, or clone a private repo):</p>
 <pre><code class="hljs"><span class="hljs-attribute">Username</span>:<span class="hljs-meta"> [your-github-username]</span>
 <span class="hljs-attribute">Password</span>:<span class="hljs-meta"> [paste-your-PAT-here]</span></code></pre>
@@ -195,12 +195,12 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <p><strong>macOS Keychain:</strong> macOS will offer to save it to Keychain. Select &quot;Always Allow.&quot;</p>
 <p><strong>Linux:</strong> You can configure Git to cache credentials:</p>
 <pre><code class="hljs language-bash">git config --global credential.helper cache</code></pre>
-<h2>Setting Up SSH Keys (Alternative Method)</h2>
+<h2 id="setting-up-ssh-keys-alternative-method">Setting Up SSH Keys (Alternative Method)</h2>
 <p>If you prefer SSH and are comfortable with terminal commands:</p>
-<h3>Step 1: Check If You Already Have a Key</h3>
+<h3 id="step-1-check-if-you-already-have-a-key">Step 1: Check If You Already Have a Key</h3>
 <pre><code class="hljs language-bash"><span class="hljs-built_in">ls</span> -al ~/.ssh</code></pre>
 <p>Look for files named <code>id_rsa.pub</code>, <code>id_ed25519.pub</code>, or similar. If you see these, you already have a key.</p>
-<h3>Step 2: Generate a New SSH Key</h3>
+<h3 id="step-2-generate-a-new-ssh-key">Step 2: Generate a New SSH Key</h3>
 <pre><code class="hljs language-bash">ssh-keygen -t ed25519 -C <span class="hljs-string">&quot;your-email@example.com&quot;</span></code></pre>
 <p>When prompted:</p>
 <ul>
@@ -208,7 +208,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Enter a passphrase (optional but recommended)</li>
 </ul>
 <p><strong>Screen reader note:</strong> Git will print output showing where the key was saved. It generates two files: <code>id_ed25519</code> (private) and <code>id_ed25519.pub</code> (public).</p>
-<h3>Step 3: Copy Your Public Key</h3>
+<h3 id="step-3-copy-your-public-key">Step 3: Copy Your Public Key</h3>
 <p><strong>Windows (PowerShell):</strong></p>
 <pre><code class="hljs language-powershell"><span class="hljs-built_in">Get-Content</span> ~/.ssh/id_ed25519.pub | <span class="hljs-built_in">Set-Clipboard</span></code></pre>
 <p><strong>macOS:</strong></p>
@@ -216,7 +216,7 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <p><strong>Linux:</strong></p>
 <pre><code class="hljs language-bash"><span class="hljs-built_in">cat</span> ~/.ssh/id_ed25519.pub
 <span class="hljs-comment"># Manually select and copy the output</span></code></pre>
-<h3>Step 4: Add to GitHub</h3>
+<h3 id="step-4-add-to-github">Step 4: Add to GitHub</h3>
 <ol>
 <li>Navigate to <a href="https://github.com/settings/keys">github.com/settings/keys</a></li>
 <li>Select <strong>&quot;New SSH key&quot;</strong></li>
@@ -226,17 +226,17 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Select <strong>&quot;Add SSH key&quot;</strong></li>
 <li>Confirm with your password or 2FA code</li>
 </ol>
-<h3>Step 5: Test the Connection</h3>
+<h3 id="step-5-test-the-connection">Step 5: Test the Connection</h3>
 <pre><code class="hljs language-bash">ssh -T git@github.com</code></pre>
 <p>You should see: <code>Hi username! You&#39;ve successfully authenticated...</code></p>
-<h3>Step 6: Use SSH URLs</h3>
+<h3 id="step-6-use-ssh-urls">Step 6: Use SSH URLs</h3>
 <p>When cloning or adding remotes, use SSH URLs instead of HTTPS:</p>
 <pre><code class="hljs"><span class="hljs-comment"># SSH format:</span>
 git@github.com:owner/repo.git
 
 <span class="hljs-comment"># Instead of HTTPS:</span>
 https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/owner/</span>repo.git</code></pre>
-<h2>Switching Between HTTPS and SSH</h2>
+<h2 id="switching-between-https-and-ssh">Switching Between HTTPS and SSH</h2>
 <p>If you cloned with HTTPS but want to use SSH (or vice versa), update the remote:</p>
 <p><strong>Check your current remote:</strong></p>
 <pre><code class="hljs language-bash">git remote -v</code></pre>
@@ -244,8 +244,8 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <pre><code class="hljs language-bash">git remote set-url origin git@github.com:your-username/repo.git</code></pre>
 <p><strong>Switch to HTTPS:</strong></p>
 <pre><code class="hljs language-bash">git remote set-url origin https://github.com/your-username/repo.git</code></pre>
-<h2>Troubleshooting</h2>
-<h3>&quot;Authentication failed&quot; when pushing</h3>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="quotauthentication-failedquot-when-pushing">&quot;Authentication failed&quot; when pushing</h3>
 <p><strong>Problem:</strong> Your token expired or is incorrect.</p>
 <p><strong>Solution:</strong></p>
 <ul>
@@ -253,7 +253,7 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <li>Clear your credential cache (Windows: Credential Manager; macOS: Keychain; Linux: <code>git credential-cache exit</code>)</li>
 <li>Try pushing again - Git will ask for credentials</li>
 </ul>
-<h3>&quot;Permission denied (publickey)&quot;</h3>
+<h3 id="quotpermission-denied-publickeyquot">&quot;Permission denied (publickey)&quot;</h3>
 <p><strong>Problem:</strong> SSH key not properly set up.</p>
 <p><strong>Solution:</strong></p>
 <ul>
@@ -261,11 +261,11 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <li>Check SSH agent is running: <code>ssh-add -l</code></li>
 <li>Add your key to the agent: <code>ssh-add ~/.ssh/id_ed25519</code></li>
 </ul>
-<h3>&quot;Host key verification failed&quot;</h3>
+<h3 id="quothost-key-verification-failedquot">&quot;Host key verification failed&quot;</h3>
 <p><strong>Problem:</strong> SSH doesn&#39;t recognize GitHub&#39;s host key.</p>
 <p><strong>Solution:</strong></p>
 <pre><code class="hljs language-bash">ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</code></pre>
-<h2>Security Best Practices</h2>
+<h2 id="security-best-practices">Security Best Practices</h2>
 <ol>
 <li><strong>Never share your private key or PAT</strong> - treat them like passwords</li>
 <li><strong>Use scoped PATs</strong> - only grant the minimum permissions needed</li>
@@ -274,12 +274,12 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <li><strong>Revoke old tokens</strong> when you&#39;re done with a project or device</li>
 <li><strong>Don&#39;t commit tokens or keys to Git</strong> - use <code>.gitignore</code> for config files</li>
 </ol>
-<h2>Commit Signing - Verified Badges and Vigilant Mode</h2>
+<h2 id="commit-signing---verified-badges-and-vigilant-mode">Commit Signing - Verified Badges and Vigilant Mode</h2>
 <p>When you push commits to GitHub, each commit shows a small badge: <strong>Verified</strong> or <strong>Unverified</strong>. This badge tells anyone viewing the commit history whether the commit was cryptographically signed - proving it came from you and was not tampered with.</p>
-<h3>Why It Matters</h3>
+<h3 id="why-it-matters">Why It Matters</h3>
 <p>Open source maintainers increasingly require signed commits before merging. Some repositories enforce this with branch protection rules. If you contribute to <code>accessibility-agents</code> and your commits show &quot;Unverified,&quot; a maintainer may ask you to sign them before the PR can be merged.</p>
-<h3>Two Methods for Signing Commits</h3>
-<h4>SSH Signing (simpler - reuses your existing SSH key)</h4>
+<h3 id="two-methods-for-signing-commits">Two Methods for Signing Commits</h3>
+<h4 id="ssh-signing-simpler---reuses-your-existing-ssh-key">SSH Signing (simpler - reuses your existing SSH key)</h4>
 <p>If you already have an SSH key set up for authentication, you can use it for signing too.</p>
 <p><strong>Step 1: Configure Git to use SSH for signing:</strong></p>
 <pre><code class="hljs language-bash">git config --global gpg.format ssh
@@ -293,7 +293,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <li>Paste your public key and save</li>
 </ol>
 <p>Your commits now show the <strong>Verified</strong> badge in GitHub&#39;s commit history.</p>
-<h4>GPG Signing (traditional method)</h4>
+<h4 id="gpg-signing-traditional-method">GPG Signing (traditional method)</h4>
 <p><strong>Step 1: Generate a GPG key:</strong></p>
 <pre><code class="hljs language-bash">gpg --full-generate-key
 <span class="hljs-comment"># Choose: RSA and RSA, 4096 bits, never expires</span>
@@ -313,7 +313,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <p><strong>Step 5: Configure Git to sign all commits:</strong></p>
 <pre><code class="hljs language-bash">git config --global user.signingkey YOUR_KEY_ID
 git config --global commit.gpgsign <span class="hljs-literal">true</span></code></pre>
-<h3>Vigilant Mode</h3>
+<h3 id="vigilant-mode">Vigilant Mode</h3>
 <p>GitHub has an optional setting called <strong>Vigilant Mode</strong> (in Settings → SSH and GPG Keys → Vigilant mode). When enabled, GitHub marks <strong>all</strong> commits from your account as &quot;Unverified&quot; unless they are signed - even commits that were previously shown without a badge.</p>
 <p><strong>Why some maintainers enable Vigilant Mode:</strong></p>
 <ul>
@@ -333,7 +333,7 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <li>VoiceOver: use <code>VO+Right</code> through the commit row; the badge is read as a button with the text &quot;Verified&quot; (clicking it shows the certificate)</li>
 </ul>
 <p><strong>Workshop recommendation:</strong> SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to accessibility-agents will show as Verified.</p>
-<h2>For This Workshop</h2>
+<h2 id="for-this-workshop">For This Workshop</h2>
 <p><strong>Recommended approach:</strong></p>
 <ol>
 <li>Generate a Personal Access Token with 30-day expiration</li>

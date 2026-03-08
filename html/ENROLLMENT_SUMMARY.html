@@ -58,17 +58,17 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Workshop Setup - March 5, 2026 Status Report</h1>
-<h2>Summary</h2>
+    <h1 id="workshop-setup---march-5-2026-status-report">Workshop Setup - March 5, 2026 Status Report</h1>
+<h2 id="summary">Summary</h2>
 <p>Successfully added <strong>beckyk102125</strong> as the 67th student and established student organization invitations + security/reliability framework for the upcoming GitHub workshop (March 8-9, 2026).</p>
-<h2>Completed Tasks (March 5)</h2>
-<h3>1. Student Enrollment</h3>
+<h2 id="completed-tasks-march-5">Completed Tasks (March 5)</h2>
+<h3 id="1-student-enrollment">1. Student Enrollment</h3>
 <ul>
 <li><strong>Added</strong>: beckyk102125 to student roster (→ 67 total students)</li>
 <li><strong>Branch</strong>: Created and pushed <code>student/beckyk102125</code> branch</li>
 <li><strong>Status</strong>: Student ready to join organization and receive assignment</li>
 </ul>
-<h3>2. Organization Invitations Framework</h3>
+<h3 id="2-organization-invitations-framework">2. Organization Invitations Framework</h3>
 <ul>
 <li><strong>Script Created</strong>: <code>scripts/invite_students.py</code><ul>
 <li>Invites all 67 students to Community-Access organization</li>
@@ -78,7 +78,7 @@
 </ul>
 </li>
 </ul>
-<h3>3. Security &amp; Reliability Configuration</h3>
+<h3 id="3-security-amp-reliability-configuration">3. Security &amp; Reliability Configuration</h3>
 <ul>
 <li><p><strong>Document Created</strong>: <code>REPOSITORY_SECURITY.md</code></p>
 <ul>
@@ -102,7 +102,7 @@
 </ul>
 </li>
 </ul>
-<h3>4. Admin Testing Plan Updates</h3>
+<h3 id="4-admin-testing-plan-updates">4. Admin Testing Plan Updates</h3>
 <ul>
 <li><strong>Updated</strong>: <code>ADMIN_TEST_PLAN.md</code> <ul>
 <li>Added critical org membership prerequisite section</li>
@@ -113,7 +113,7 @@
 </ul>
 </li>
 </ul>
-<h3>5. GitHub Actions Workflows</h3>
+<h3 id="5-github-actions-workflows">5. GitHub Actions Workflows</h3>
 <ul>
 <li><p><strong>Created</strong>: <code>.github/workflows/learning-room-validation.yml</code></p>
 <ul>
@@ -140,7 +140,7 @@
 </ul>
 </li>
 </ul>
-<h3>6. Git Commits</h3>
+<h3 id="6-git-commits">6. Git Commits</h3>
 <p><strong>Commit Hash</strong>: 95ef63d</p>
 <ul>
 <li>Added student roster(67 students)</li>
@@ -148,8 +148,8 @@
 <li>Added security and testing documentation</li>
 <li>Staged GitHub Actions workflows</li>
 </ul>
-<h2>⏳ Critical Next Steps (March 6-7)</h2>
-<h3>IMMEDIATE PRIORITY: Send Organization Invitations</h3>
+<h2 id="-critical-next-steps-march-6-7">⏳ Critical Next Steps (March 6-7)</h2>
+<h3 id="immediate-priority-send-organization-invitations">IMMEDIATE PRIORITY: Send Organization Invitations</h3>
 <p><strong>Who</strong>: GitHub Organization Owner (admin permissions required)</p>
 <p><strong>What</strong>: Send invitations to all 67 students to join Community-Access organization</p>
 <p><strong>How</strong>:</p>
@@ -166,7 +166,7 @@ python scripts/invite_students.py
 <li>Students must click link to join org</li>
 <li>Once joined, assign issues: <code>python scripts/batch_create_issues.py</code></li>
 </ul>
-<h3>Timeline</h3>
+<h3 id="timeline">Timeline</h3>
 <table>
 <thead>
 <tr>
@@ -225,23 +225,23 @@ python scripts/invite_students.py
 <td>Facilitators</td>
 </tr>
 </tbody></table>
-<h2>Verification Checklist (Friday)</h2>
+<h2 id="verification-checklist-friday">Verification Checklist (Friday)</h2>
 <p>Before Saturday workshop, verify:</p>
-<h3>Organization Setup</h3>
+<h3 id="organization-setup">Organization Setup</h3>
 <ul>
 <li><input aria-label="All 67 invitations sent to students" disabled="" type="checkbox"> All 67 invitations sent to students</li>
 <li><input aria-label="Check pending invitations:" disabled="" type="checkbox"> Check pending invitations: <a href="https://github.com/orgs/Community-Access/pending_invitations">https://github.com/orgs/Community-Access/pending_invitations</a></li>
 <li><input aria-label="Track acceptance rate (aim for 100% by 3pm Friday)" disabled="" type="checkbox"> Track acceptance rate (aim for 100% by 3pm Friday)</li>
 <li><input aria-label="Document any students who don&#39;t accept" disabled="" type="checkbox"> Document any students who don&#39;t accept</li>
 </ul>
-<h3>Repository Readiness</h3>
+<h3 id="repository-readiness">Repository Readiness</h3>
 <ul>
 <li><input aria-label="67 student branches visible in repository" disabled="" type="checkbox"> 67 student branches visible in repository</li>
 <li><input aria-label="Main branch protection enabled" disabled="" type="checkbox"> Main branch protection enabled</li>
 <li><input aria-label="GitHub Actions workflows enabled and tested" disabled="" type="checkbox"> GitHub Actions workflows enabled and tested</li>
 <li><input aria-label="Assignment issues created (run" disabled="" type="checkbox"> Assignment issues created (run <code>python scripts/batch_create_issues.py</code> once members join)</li>
 </ul>
-<h3>Facilitator Readiness</h3>
+<h3 id="facilitator-readiness">Facilitator Readiness</h3>
 <ul>
 <li><input aria-label="2-3 admins added as organization admin role" disabled="" type="checkbox"> 2-3 admins added as organization admin role<pre><code class="hljs language-bash">gh api /orgs/Community-Access/members/[username] -X PUT -f role=admin</code></pre>
 </li>
@@ -249,14 +249,14 @@ python scripts/invite_students.py
 <li><input aria-label="Facilitators understand peer review assignments" disabled="" type="checkbox"> Facilitators understand peer review assignments</li>
 <li><input aria-label="Facilitators have access to progress tracker" disabled="" type="checkbox"> Facilitators have access to progress tracker</li>
 </ul>
-<h3>Documentation Complete</h3>
+<h3 id="documentation-complete">Documentation Complete</h3>
 <ul>
 <li><input aria-label="ADMIN_TEST_PLAN.md reviewed (8 test scenarios)" disabled="" type="checkbox"> ADMIN_TEST_PLAN.md reviewed (8 test scenarios)</li>
 <li><input aria-label="REPOSITORY_SECURITY.md accessible to facilitators" disabled="" type="checkbox"> REPOSITORY_SECURITY.md accessible to facilitators</li>
 <li><input aria-label="Facilitator guide has key timestamps" disabled="" type="checkbox"> Facilitator guide has key timestamps</li>
 <li><input aria-label="Learning paths with challenge solutions ready" disabled="" type="checkbox"> Learning paths with challenge solutions ready</li>
 </ul>
-<h3>Test Runs (Friday 2-3pm)</h3>
+<h3 id="test-runs-friday-2-3pm">Test Runs (Friday 2-3pm)</h3>
 <ul>
 <li><input aria-label="Admin Test Scenario 1: Student branch access" disabled="" type="checkbox"> Admin Test Scenario 1: Student branch access </li>
 <li><input aria-label="Admin Test Scenario 2: Assignment issue visibility" disabled="" type="checkbox"> Admin Test Scenario 2: Assignment issue visibility </li>
@@ -267,8 +267,8 @@ python scripts/invite_students.py
 <li><input aria-label="Admin Test Scenario 7: Progress tracker setup" disabled="" type="checkbox"> Admin Test Scenario 7: Progress tracker setup </li>
 <li><input aria-label="Admin Test Scenario 8: End-to-end workflow" disabled="" type="checkbox"> Admin Test Scenario 8: End-to-end workflow</li>
 </ul>
-<h2>Known Blockers / Constraints</h2>
-<h3>HTTP 422 Validation Error on Invitations</h3>
+<h2 id="known-blockers--constraints">Known Blockers / Constraints</h2>
+<h3 id="http-422-validation-error-on-invitations">HTTP 422 Validation Error on Invitations</h3>
 <p><strong>Issue</strong>: Running <code>python scripts/invite_students.py</code> returns &quot;HTTP 422 Validation Failed&quot; for all users.</p>
 <p><strong>Root Cause</strong>: GitHub organization API authentication likely needs elevated permissions or specific PAT token scopes.</p>
 <p><strong>Solution</strong>: Use GitHub web UI for manual invitations:</p>
@@ -280,10 +280,10 @@ python scripts/invite_students.py
 <li>Send invitations</li>
 </ol>
 <p><strong>Alternative</strong>: If org admin user runs the script directly, may work.</p>
-<h3>.github/data/ in .gitignore</h3>
+<h3 id="githubdata-in-gitignore">.github/data/ in .gitignore</h3>
 <p><strong>Issue</strong>: Student roster file (.github/data/student-roster.json) is in .gitignore, so changes may not persist across commits.</p>
 <p><strong>Solution</strong>: File was force-added in commit 95ef63d. Keep roster.json in repo for workshop admin purposes.</p>
-<h2>Reference Documents Created</h2>
+<h2 id="reference-documents-created">Reference Documents Created</h2>
 <table>
 <thead>
 <tr>
@@ -318,7 +318,7 @@ python scripts/invite_students.py
 <td>Project stakeholders</td>
 </tr>
 </tbody></table>
-<h2>Success Metrics (Saturday 12pm)</h2>
+<h2 id="success-metrics-saturday-12pm">Success Metrics (Saturday 12pm)</h2>
 <p>Workshop infrastructure is <strong>ready</strong> when:</p>
 <ol>
 <li>All 67 students members of Community-Access org</li>
@@ -329,7 +329,7 @@ python scripts/invite_students.py
 <li>Peer review pairings documented and accessible</li>
 <li>Progress tracker initialized for real-time updates</li>
 </ol>
-<h2>Scripts Ready to Run (in order)</h2>
+<h2 id="scripts-ready-to-run-in-order">Scripts Ready to Run (in order)</h2>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># 1. Invite all students (CRITICAL - do first)</span>
 python scripts/invite_students.py
 <span class="hljs-comment"># Wait for students to accept invitations (email links)</span>
@@ -342,7 +342,7 @@ python scripts/batch_create_issues.py
 
 <span class="hljs-comment"># 4. Validate everything works (Friday afternoon)</span>
 <span class="hljs-comment"># Run 8 test scenarios from ADMIN_TEST_PLAN.md manually</span></code></pre>
-<h2>Questions / Support</h2>
+<h2 id="questions--support">Questions / Support</h2>
 <p><strong>Organization invitation issues?</strong></p>
 <ul>
 <li>Check: <a href="https://github.com/settings/applications">https://github.com/settings/applications</a></li>

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Podcast Audio Pipeline - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Podcast Audio Pipeline</span>
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Podcast Audio Pipeline</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,9 +58,9 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Podcast Audio Pipeline</h1>
+    <h1 id="podcast-audio-pipeline">Podcast Audio Pipeline</h1>
 <p>This directory contains the complete pipeline for producing the Git Going with GitHub companion audio series: 44 episodes of two-host conversational content designed for blind and low-vision developers.</p>
-<h2>Pipeline Overview</h2>
+<h2 id="pipeline-overview">Pipeline Overview</h2>
 <pre><code class="hljs">build-bundles.js     Generate <span class="hljs-keyword">source</span> bundles <span class="hljs-keyword">from</span> chapter content
         |
         v
@@ -78,7 +78,7 @@
         v
 generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</span></code></pre>
 <p>Audio is generated locally using <a href="https://github.com/rhasspy/piper">Piper</a> neural text-to-speech. No cloud APIs, no API keys, no billing. Runs entirely on your machine.</p>
-<h2>Directory Structure</h2>
+<h2 id="directory-structure">Directory Structure</h2>
 <pre><code class="hljs">podcasts/
   README<span class="hljs-selector-class">.md</span>             This guide
   build-bundles<span class="hljs-selector-class">.js</span>      Generates <span class="hljs-selector-tag">source</span> bundles + manifest<span class="hljs-selector-class">.json</span>
@@ -96,28 +96,28 @@ generate-site.js     Build PODCASTS.md player page and RSS feed from manifest</s
     lexicon<span class="hljs-selector-class">.txt</span>         Pronunciation dictionary <span class="hljs-keyword">for</span> technical terms
     models/             Piper ONNX voice models
     samples/            Voice sample WAVs</code></pre>
-<h2>Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <ul>
 <li>Python 3.10 or later</li>
 <li>Piper TTS: <code>pip install piper-tts</code></li>
 <li>Node.js 18 or later (for bundle/site generation only)</li>
 </ul>
-<h2>Quick Start</h2>
-<h3>1. Install Piper</h3>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="1-install-piper">1. Install Piper</h3>
 <pre><code class="hljs language-bash">pip install piper-tts</code></pre>
-<h3>2. Download voice models (if not already present)</h3>
+<h3 id="2-download-voice-models-if-not-already-present">2. Download voice models (if not already present)</h3>
 <pre><code class="hljs language-bash">python -m podcasts.tts.download_samples</code></pre>
 <p>This downloads en_US Piper ONNX models to <code>podcasts/tts/models/</code>.</p>
-<h3>3. Generate all episodes</h3>
+<h3 id="3-generate-all-episodes">3. Generate all episodes</h3>
 <pre><code class="hljs language-bash">python -m podcasts.tts.generate_all</code></pre>
 <p>Or generate a single episode:</p>
 <pre><code class="hljs language-bash">python -m podcasts.tts.generate_episode ep00-welcome
 python -m podcasts.tts.generate_episode ep05-pull-requests</code></pre>
 <p>Or a range:</p>
 <pre><code class="hljs language-bash">python -m podcasts.tts.generate_all --start 0 --end 10</code></pre>
-<h3>4. Build player page and RSS feed</h3>
+<h3 id="4-build-player-page-and-rss-feed">4. Build player page and RSS feed</h3>
 <pre><code class="hljs language-bash">npm run build:podcast-site</code></pre>
-<h2>Voice Configuration</h2>
+<h2 id="voice-configuration">Voice Configuration</h2>
 <p>The default voices are:</p>
 <table>
 <thead>
@@ -143,7 +143,7 @@ python -m podcasts.tts.generate_episode ep05-pull-requests</code></pre>
 </tbody></table>
 <p>26 en_US voice models are included. Listen to samples in <code>podcasts/tts/samples/</code> to try different voices.</p>
 <p>To change voices, edit the <code>MALE_MODEL</code> and <code>FEMALE_MODEL</code> paths in <code>podcasts/tts/generate_episode.py</code>.</p>
-<h2>Pronunciation Lexicon</h2>
+<h2 id="pronunciation-lexicon">Pronunciation Lexicon</h2>
 <p>The file <code>podcasts/tts/lexicon.txt</code> contains pronunciation overrides for technical terms, acronyms, and jargon. The lexicon is applied as text substitution before Piper synthesizes each segment.</p>
 <p>Format: one entry per line, tab-separated <code>WORD&lt;tab&gt;REPLACEMENT</code>. Lines starting with <code>#</code> are comments.</p>
 <p>Example entries:</p>
@@ -153,11 +153,11 @@ python -m podcasts.tts.generate_episode ep05-pull-requests</code></pre>
 <span class="hljs-variable">JSON</span>    <span class="hljs-variable">Jason</span></code></pre>
 <p>Add new entries when Piper mispronounces a word. The lexicon is loaded once per run and uses word-boundary matching so entries like <code>GUI</code> do not affect words like &quot;guidelines&quot;.</p>
 <p>Piper uses espeak-ng for phonemization. For precise control, you can also use espeak-ng phoneme syntax directly in the script text: <code>[[...]]</code> for inline phoneme overrides.</p>
-<h2>Manifest Status Flow</h2>
+<h2 id="manifest-status-flow">Manifest Status Flow</h2>
 <p>Each episode in manifest.json progresses through these statuses:</p>
 <pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">bundle</span>-ready  --&gt;</span>  <span class="hljs-function"><span class="hljs-title">script</span>-ready  --&gt;</span>  <span class="hljs-function"><span class="hljs-title">audio</span>-ready  --&gt;</span>  published
 (build-bundles)    (scripts/)         (tts/)            (GitHub Release)</code></pre>
-<h2>All npm Scripts</h2>
+<h2 id="all-npm-scripts">All npm Scripts</h2>
 <table>
 <thead>
 <tr>
@@ -186,7 +186,7 @@ python -m podcasts.tts.generate_episode ep05-pull-requests</code></pre>
 <td>Full build: podcasts + HTML site</td>
 </tr>
 </tbody></table>
-<h2>Publishing Audio</h2>
+<h2 id="publishing-audio">Publishing Audio</h2>
 <p>Audio files are hosted on GitHub Releases (not in the repository, they are gitignored).</p>
 <ol>
 <li>Generate all audio: <code>python -m podcasts.tts.generate_all</code></li>
@@ -195,7 +195,7 @@ python -m podcasts.tts.generate_episode ep05-pull-requests</code></pre>
 <li>The RSS feed already points to release asset URLs</li>
 <li>Update manifest status to <code>published</code> and rebuild the site</li>
 </ol>
-<h2>Updating Episodes</h2>
+<h2 id="updating-episodes">Updating Episodes</h2>
 <p>When chapter content changes:</p>
 <ol>
 <li><code>npm run build:podcast-bundles</code> to regenerate bundles</li>
@@ -205,39 +205,39 @@ python -m podcasts.tts.generate_episode ep05-pull-requests</code></pre>
 <li>Upload new audio to the GitHub Release</li>
 <li>Commit and push</li>
 </ol>
-<h2>Troubleshooting</h2>
-<h3>Piper command not found</h3>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="piper-command-not-found">Piper command not found</h3>
 <p>Ensure Piper TTS is installed:</p>
 <pre><code class="hljs language-bash">pip install piper-tts
 python -m piper --<span class="hljs-built_in">help</span></code></pre>
-<h3>Model not found</h3>
+<h3 id="model-not-found">Model not found</h3>
 <p>Download models first:</p>
 <pre><code class="hljs language-bash">python -m podcasts.tts.download_samples</code></pre>
 <p>Or download specific models manually:</p>
 <pre><code class="hljs language-bash">python -m piper.download_voices en_US-hfc_male-medium --download-dir podcasts/tts/models
 python -m piper.download_voices en_US-hfc_female-medium --download-dir podcasts/tts/models</code></pre>
-<h3>Mispronounced word</h3>
+<h3 id="mispronounced-word">Mispronounced word</h3>
 <p>Add an entry to <code>podcasts/tts/lexicon.txt</code> with the correct pronunciation and regenerate the episode.</p>
-<h3>&quot;Rate limited&quot; messages</h3>
+<h3 id="quotrate-limitedquot-messages">&quot;Rate limited&quot; messages</h3>
 <p>Both APIs have generous free-tier limits. If you hit rate limits:</p>
 <ul>
 <li>The scripts automatically retry with exponential backoff</li>
 <li>Process smaller batches: <code>node podcasts/generate-audio.js 0 10</code></li>
 </ul>
-<h3>Script quality issues</h3>
+<h3 id="script-quality-issues">Script quality issues</h3>
 <p>If Gemini produces scripts that miss concepts or have formatting issues:</p>
 <ul>
 <li>Try a different model: <code>$env:GEMINI_MODEL = &quot;gemini-2.0-pro&quot;</code></li>
 <li>Edit the script manually in <code>podcasts/scripts/</code> before generating audio</li>
 <li>Re-run with <code>--force</code> for that episode</li>
 </ul>
-<h3>Audio sounds robotic or unnatural</h3>
+<h3 id="audio-sounds-robotic-or-unnatural">Audio sounds robotic or unnatural</h3>
 <ul>
 <li>Confirm Journey voices are selected: <code>--list-voices</code></li>
 <li>Try a slower rate: <code>$env:TTS_RATE = &quot;0.90&quot;</code></li>
 <li>Journey voices sound best at rates between 0.85 and 1.0</li>
 </ul>
-<h2>Cost Summary</h2>
+<h2 id="cost-summary">Cost Summary</h2>
 <table>
 <thead>
 <tr>

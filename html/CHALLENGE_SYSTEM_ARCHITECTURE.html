@@ -58,8 +58,8 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Challenge System Architecture Summary</h1>
-<h2>Overview</h2>
+    <h1 id="challenge-system-architecture-summary">Challenge System Architecture Summary</h1>
+<h2 id="overview">Overview</h2>
 <p>This document summarizes the complete challenge system architecture built for the Git-Going-With-GitHub workshop. It&#39;s designed to be:</p>
 <ul>
 <li><strong>Student-friendly</strong>: Easy to discover, claim, complete, and track challenges</li>
@@ -67,8 +67,8 @@
 <li><strong>Scalable</strong>: Works for any cohort size with batch script</li>
 <li><strong>Self-documenting</strong>: Every issue explains what to do and how bot validation works</li>
 </ul>
-<h2>System Components</h2>
-<h3>1. Challenge Discovery (Student-Facing)</h3>
+<h2 id="system-components">System Components</h2>
+<h3 id="1-challenge-discovery-student-facing">1. Challenge Discovery (Student-Facing)</h3>
 <p><strong>Primary Path:</strong> GitHub Issues tab (pre-assigned by @username)</p>
 <ul>
 <li>Students go to Issues → filter by assignee</li>
@@ -85,7 +85,7 @@
 <li><a href="README.html">README.md</a> - &quot; Your Challenges Are Waiting&quot; section (lines 100-120)</li>
 <li><a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> - Welcome + discovery methods (top section)</li>
 </ul>
-<h3>2. Challenge Templates (Issue Infrastructure)</h3>
+<h3 id="2-challenge-templates-issue-infrastructure">2. Challenge Templates (Issue Infrastructure)</h3>
 <p>Located in <code>.github/ISSUE_TEMPLATE/</code> (Chapters 4, 6, 11) and inline in <code>scripts/create_all_challenges.ps1</code> (Chapters 5, 8-10, 12-16):</p>
 <table>
 <thead>
@@ -232,7 +232,7 @@
 <pre><code class="hljs language-yaml"><span class="hljs-attr">title:</span> <span class="hljs-string">&quot;Chapter {CHAPTER}.{CHALLENGE_NUM}: {CHALLENGE_TITLE} (@{USERNAME})&quot;</span>
 <span class="hljs-attr">labels:</span> [<span class="hljs-string">&quot;challenge&quot;</span>, <span class="hljs-string">&quot;challenge: beginner&quot;</span>, <span class="hljs-string">&quot;skill: {SKILL_TAG}&quot;</span>, <span class="hljs-string">&quot;day: {DAY}&quot;</span>]
 <span class="hljs-attr">assignees:</span> [<span class="hljs-string">&quot;{USERNAME}&quot;</span>]</code></pre>
-<h3>3. Batch Issue Generation (Facilitator Tool)</h3>
+<h3 id="3-batch-issue-generation-facilitator-tool">3. Batch Issue Generation (Facilitator Tool)</h3>
 <p><strong>Scripts:</strong></p>
 <table>
 <thead>
@@ -253,7 +253,7 @@
 <td>05, 08-10, 12-16</td>
 </tr>
 </tbody></table>
-<h4>Primary Script: <code>create_all_challenges.ps1</code></h4>
+<h4 id="primary-script-create_all_challengesps1">Primary Script: <code>create_all_challenges.ps1</code></h4>
 <p><strong>Usage:</strong></p>
 <pre><code class="hljs language-powershell"><span class="hljs-comment"># Preview what would be created</span>
 .\scripts\create_all_challenges.ps1 <span class="hljs-literal">-DryRun</span>
@@ -275,7 +275,7 @@
 </ol>
 <p><strong>Rerunning for New Members:</strong>
 The script is designed to be rerun periodically. It only creates issues for challenges a student does not already have, so running it again after new members join will create their full set without duplicating existing students&#39; issues.</p>
-<h4>Legacy Script: <code>create_student_issues.ps1</code></h4>
+<h4 id="legacy-script-create_student_issuesps1">Legacy Script: <code>create_student_issues.ps1</code></h4>
 <p>Creates the original 10 challenges (Ch 04, 06, 07, 11) by cloning from Weijun-Zhang-1996&#39;s template issues. Still functional but superseded by <code>create_all_challenges.ps1</code> for new chapters.</p>
 <p><strong>Prerequisites for Both Scripts:</strong></p>
 <ul>
@@ -283,7 +283,7 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <li>Org admin or owner access (to list members and assign issues)</li>
 <li>Labels must exist in the learning-room repo (see Issue Labels section)</li>
 </ul>
-<h3>4. Bot Validation System (Automation)</h3>
+<h3 id="4-bot-validation-system-automation">4. Bot Validation System (Automation)</h3>
 <p><strong>Applicable Chapters:</strong></p>
 <ul>
 <li>Chapter 4: Working with Issues (issue evidence + quality validation)</li>
@@ -319,9 +319,9 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <li>Rule exceptions: Can exclude specific files per cohort</li>
 <li>Workflow schedule: Runs on every PR opened/updated to main</li>
 </ul>
-<h2>Facilitator Operations</h2>
+<h2 id="facilitator-operations">Facilitator Operations</h2>
 <p><strong>Complete guide:</strong> <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></p>
-<h3>Pre-Workshop Setup (1 hour)</h3>
+<h3 id="pre-workshop-setup-1-hour">Pre-Workshop Setup (1 hour)</h3>
 <ol>
 <li>Ensure all students have accepted org invitations (check org members list)</li>
 <li>Run dry run: <code>.\scripts\create_all_challenges.ps1 -DryRun</code> (verify student count and challenge count)</li>
@@ -331,21 +331,21 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <li>Do a dry run: one facilitator completes one challenge end-to-end</li>
 <li>Communicate to students where to find challenges</li>
 </ol>
-<h3>During Workshop</h3>
+<h3 id="during-workshop">During Workshop</h3>
 <ul>
 <li><strong>Monitor progress:</strong> <code>gh issue list -R Community-Access/learning-room --label challenge --state open --limit 100</code></li>
 <li><strong>Help stuck students:</strong> Review their issue, guide them through &quot;If You Get Stuck&quot; section</li>
 <li><strong>Track bot failures:</strong> Students needing help → look at bot feedback comment</li>
 <li><strong>Measure success:</strong> % of issues closed = % of students completing challenges</li>
 </ul>
-<h3>Post-Workshop</h3>
+<h3 id="post-workshop">Post-Workshop</h3>
 <ul>
 <li>Archive issues: <code>gh issue close --comment &quot;Cohort complete&quot; [issue_ids]</code></li>
 <li>Prepare for next cohort: Update <code>student-usernames.txt</code>, re-run batch script</li>
 <li>No need to delete old issues; they remain searchable and valuable for reference</li>
 </ul>
-<h2>Data Structures</h2>
-<h3>Issue Title Convention</h3>
+<h2 id="data-structures">Data Structures</h2>
+<h3 id="issue-title-convention">Issue Title Convention</h3>
 <pre><code class="hljs"><span class="language-xml">Chapter </span><span class="hljs-template-variable">{XX}</span><span class="language-xml">.</span><span class="hljs-template-variable">{Y}</span><span class="language-xml">: </span><span class="hljs-template-variable">{Challenge_Title}</span><span class="language-xml"> (@</span><span class="hljs-template-variable">{USERNAME}</span><span class="language-xml">)</span></code></pre>
 <p>Chapter numbers are zero-padded to two digits (04, 05, 06, 07... 16) so issues sort correctly when filtered alphabetically.</p>
 <p><strong>Example:</strong></p>
@@ -360,7 +360,7 @@ The script is designed to be rerun periodically. It only creates issues for chal
 <li>Username is visible (students instantly recognize their issue)</li>
 <li>Sortable by chapter and student</li>
 </ul>
-<h3>Issue Labels</h3>
+<h3 id="issue-labels">Issue Labels</h3>
 <p>Applied consistently across all challenges:</p>
 <table>
 <thead>
@@ -400,7 +400,7 @@ gh issue list --label <span class="hljs-string">&quot;day: 1&quot;</span> --labe
 
 <span class="hljs-comment"># All intermediate challenges</span>
 gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&quot;</span> --state open</code></pre>
-<h3>Lifecycle States</h3>
+<h3 id="lifecycle-states">Lifecycle States</h3>
 <p>Each challenge issue transitions through states. PR-based challenges (Ch 04, 05, 06, 11) auto-close when a PR merges. Comment-based challenges (Ch 8-10, 12-16) are closed manually by the student or facilitator after evidence is posted.</p>
 <table>
 <thead>
@@ -436,8 +436,8 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 <td>Student or facilitator closes issue</td>
 </tr>
 </tbody></table>
-<h2>Success Metrics</h2>
-<h3>For Students</h3>
+<h2 id="success-metrics">Success Metrics</h2>
+<h3 id="for-students">For Students</h3>
 <ul>
 <li><p><strong>Participation:</strong> How many challenges did you complete?</p>
 <ul>
@@ -454,7 +454,7 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 </ul>
 </li>
 </ul>
-<h3>For Workshop Facilitators</h3>
+<h3 id="for-workshop-facilitators">For Workshop Facilitators</h3>
 <ul>
 <li><strong>Generation:</strong> Did all expected issues create without error (<code>students x 26</code> for all chapters)?</li>
 <li><strong>Adoption:</strong> What % of students have at least one open challenge?</li>
@@ -469,7 +469,7 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 </ul>
 </li>
 </ul>
-<h3>For Workshop Design</h3>
+<h3 id="for-workshop-design">For Workshop Design</h3>
 <ul>
 <li><strong>Clarity:</strong> Do issue descriptions match Challenge Hub documentation?<ul>
 <li>Check: No student asks for clarification on challenge requirements</li>
@@ -488,7 +488,7 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 </ul>
 </li>
 </ul>
-<h2>File Structure</h2>
+<h2 id="file-structure">File Structure</h2>
 <pre><code class="hljs">.
 ├── .github/
 │   ├── ISSUE_TEMPLATE/
@@ -533,8 +533,8 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 ├── FACILITATOR_CHALLENGES<span class="hljs-selector-class">.md</span>            &lt;- Challenge-specific facilitator ops
 ├── CHALLENGE_SYSTEM_ARCHITECTURE<span class="hljs-selector-class">.md</span>     &lt;- This document
 └── student-usernames<span class="hljs-selector-class">.txt</span>                &lt;- Input <span class="hljs-keyword">for</span> legacy batch script</code></pre>
-<h2>Integration Points</h2>
-<h3>From Student Docs</h3>
+<h2 id="integration-points">Integration Points</h2>
+<h3 id="from-student-docs">From Student Docs</h3>
 <ul>
 <li><a href="docs/04-working-with-issues.html">docs/04-working-with-issues.md</a> - links to Chapter 4 challenges</li>
 <li><a href="docs/06-working-with-pull-requests.html">docs/06-working-with-pull-requests.md</a> - links to Chapter 6 challenges</li>
@@ -550,29 +550,29 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 <li><a href="docs/15-issue-templates.html">docs/15-issue-templates.md</a> - links to Chapter 15 challenges</li>
 <li><a href="docs/16-accessibility-agents.html">docs/16-accessibility-agents.md</a> - links to Chapter 16 challenges</li>
 </ul>
-<h3>From README</h3>
+<h3 id="from-readme">From README</h3>
 <ul>
 <li><a href="README.html">README.md</a> section &quot; Your Challenges Are Waiting&quot; → directs students to Issues tab</li>
 <li>README → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> for facilitators</li>
 </ul>
-<h3>From Challenge Hub</h3>
+<h3 id="from-challenge-hub">From Challenge Hub</h3>
 <ul>
 <li><a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> → links back to chapter docs</li>
 <li>Challenge Hub → links to individual issue URLs</li>
 <li>Challenge Hub → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> for facilitators</li>
 </ul>
-<h3>From Facilitator Docs</h3>
+<h3 id="from-facilitator-docs">From Facilitator Docs</h3>
 <ul>
 <li><a href="FACILITATOR.html">FACILITATOR.md</a> → links to <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></li>
 <li><a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a> → links to template files, scripts, chapter docs</li>
 </ul>
-<h2>Naming Conventions</h2>
-<h3>Github Usernames (from <code>student-usernames.txt</code>)</h3>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<h3 id="github-usernames-from-student-usernamestxt">Github Usernames (from <code>student-usernames.txt</code>)</h3>
 <ul>
 <li>Lowercase, no spaces, @-prefixed in issues</li>
 <li>Examples: <code>@accesswatch</code>, <code>@amandarush</code>, <code>@andysq62</code></li>
 </ul>
-<h3>Issue Titles</h3>
+<h3 id="issue-titles">Issue Titles</h3>
 <pre><code class="hljs"><span class="language-xml">Chapter </span><span class="hljs-template-variable">{X}</span><span class="language-xml">.</span><span class="hljs-template-variable">{Y}</span><span class="language-xml">: </span><span class="hljs-template-variable">{Challenge_Title}</span><span class="language-xml"> (@</span><span class="hljs-template-variable">{USERNAME}</span><span class="language-xml">)</span></code></pre>
 <p><strong>Constraints:</strong></p>
 <ul>
@@ -588,15 +588,15 @@ gh issue list --label <span class="hljs-string">&quot;challenge: intermediate&qu
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">11.3</span>: <span class="hljs-selector-tag">Push</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">Work</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">GitHub</span> (<span class="hljs-variable">@apelli95</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">14.1</span>: <span class="hljs-selector-tag">Review</span> <span class="hljs-selector-tag">a</span> <span class="hljs-selector-tag">PR</span> <span class="hljs-selector-tag">with</span> <span class="hljs-selector-tag">Inline</span> <span class="hljs-selector-tag">Comments</span> (<span class="hljs-variable">@JeffBlumentworker</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">16.3</span>: <span class="hljs-selector-tag">Agent</span> <span class="hljs-selector-tag">Instructions</span> <span class="hljs-selector-tag">Deep</span> <span class="hljs-selector-tag">Dive</span> (<span class="hljs-variable">@ChrisDuffley</span>)</code></pre>
-<h3>Branch Names (for Git challenges)</h3>
+<h3 id="branch-names-for-git-challenges">Branch Names (for Git challenges)</h3>
 <p>Students create branches following pattern:</p>
 <pre><code class="hljs">challenge/XX-<span class="hljs-keyword">short</span>-<span class="hljs-keyword">description</span></code></pre>
 <p><strong>Example:</strong></p>
 <pre><code class="hljs">challenge/<span class="hljs-number">11</span>-<span class="hljs-keyword">add</span>-sci-fi-themes
 challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-keyword">conflict</span></code></pre>
 <p>The PR bot validates branch names for Chapter 11 (Git challenges).</p>
-<h2>Customization &amp; Extension</h2>
-<h3>Adding a New Chapter to Challenges</h3>
+<h2 id="customization-amp-extension">Customization &amp; Extension</h2>
+<h3 id="adding-a-new-chapter-to-challenges">Adding a New Chapter to Challenges</h3>
 <ol>
 <li>Add challenge definition to <code>scripts/create_all_challenges.ps1</code> in the <code>$challengeDefs</code> hashtable</li>
 <li>Define: title template, labels array, and body template using <code>New-ChallengeBody</code></li>
@@ -605,7 +605,7 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <li>Add to <a href="learning-room/docs/CHALLENGES.html">learning-room/docs/CHALLENGES.md</a> Challenge Map</li>
 <li>Run script: <code>.\scripts\create_all_challenges.ps1 -ChaptersOnly &quot;NEWNUM&quot;</code></li>
 </ol>
-<h3>Changing Bot Validation Rules</h3>
+<h3 id="changing-bot-validation-rules">Changing Bot Validation Rules</h3>
 <p>Edit <code>.github/scripts/validate-pr.js</code>:</p>
 <ul>
 <li>Make checks stricter (fail more PRs early)</li>
@@ -614,7 +614,7 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 </ul>
 <p>After changes, test with <code>-DryRun</code>:</p>
 <pre><code class="hljs language-powershell">.\scripts\create_all_challenges.ps1 <span class="hljs-literal">-DryRun</span> <span class="hljs-literal">-ChaptersOnly</span> <span class="hljs-string">&quot;NEWNUM&quot;</span></code></pre>
-<h3>Reusing for Other Workshops</h3>
+<h3 id="reusing-for-other-workshops">Reusing for Other Workshops</h3>
 <p>This system works for any 2-day, 16-chapter technical workshop:</p>
 <ol>
 <li>Copy <code>create_all_challenges.ps1</code>, update challenge definitions</li>
@@ -623,27 +623,27 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <li>Update facilitator guides with your timelines/agenda</li>
 <li>Run: <code>.\scripts\create_all_challenges.ps1 -DryRun</code> then <code>.\scripts\create_all_challenges.ps1</code></li>
 </ol>
-<h2>Common Issues &amp; Solutions</h2>
-<h3>Issue: &quot;I can&#39;t find my challenges&quot;</h3>
+<h2 id="common-issues-amp-solutions">Common Issues &amp; Solutions</h2>
+<h3 id="issue-quoti-can39t-find-my-challengesquot">Issue: &quot;I can&#39;t find my challenges&quot;</h3>
 <p><strong>Solution:</strong> Remind student to go to the <strong>Issues</strong> tab and check <strong>Filters</strong> for their username. They can also use the Challenge Hub as a reference.</p>
-<h3>Issue: &quot;Bot rejected my PR but I don&#39;t understand why&quot;</h3>
+<h3 id="issue-quotbot-rejected-my-pr-but-i-don39t-understand-whyquot">Issue: &quot;Bot rejected my PR but I don&#39;t understand why&quot;</h3>
 <p><strong>Solution:</strong> Read the bot&#39;s comment carefully. It explains exactly what failed. Have student look at the suggested fix and try again.</p>
-<h3>Issue: &quot;Many students are failing the same bot check&quot;</h3>
+<h3 id="issue-quotmany-students-are-failing-the-same-bot-checkquot">Issue: &quot;Many students are failing the same bot check&quot;</h3>
 <p><strong>Solution:</strong> This means the bot rule might be too strict. Either:</p>
 <ul>
 <li>Loosen the rule in <code>.github/scripts/validate-pr.js</code></li>
 <li>Update student docs to be clearer about the requirement</li>
 <li>Manually approve PRs for this cohort while you improve documentation</li>
 </ul>
-<h3>Issue: &quot;I generated issues but some are missing&quot;</h3>
+<h3 id="issue-quoti-generated-issues-but-some-are-missingquot">Issue: &quot;I generated issues but some are missing&quot;</h3>
 <p><strong>Solution:</strong> Check the script output for failures. Some issues might not have created due to:</p>
 <ul>
 <li>Duplicate issue titles (same challenge, same student) - check for re-runs</li>
 <li>Permission issues (bot user doesn&#39;t have issue create permission)</li>
 <li>GitHub API rate limiting - wait a few minutes and rerun</li>
 </ul>
-<h2>Success Story (By the Numbers)</h2>
-<h3>Generated for a 30-person cohort:</h3>
+<h2 id="success-story-by-the-numbers">Success Story (By the Numbers)</h2>
+<h3 id="generated-for-a-30-person-cohort">Generated for a 30-person cohort:</h3>
 <ul>
 <li>780 individual challenge issues (26 per student)</li>
 <li>0 collisions (each student has their own issues)</li>
@@ -652,26 +652,26 @@ challenge/<span class="hljs-number">6</span>-resolve-merge-<span class="hljs-key
 <li>Script is rerunnable: new members get their full set automatically</li>
 <li>Labels: 4 levels, 14 skills, 2 days</li>
 </ul>
-<h2>Next Steps (Future Enhancements)</h2>
-<h3>Short Term</h3>
+<h2 id="next-steps-future-enhancements">Next Steps (Future Enhancements)</h2>
+<h3 id="short-term">Short Term</h3>
 <ul>
 <li><input checked="" disabled="" type="checkbox"> Add templates for guided chapters (7-10, 12-16) -- completed via <code>create_all_challenges.ps1</code></li>
 <li><input aria-label="Create facilitator monitoring dashboard (custom actions)" disabled="" type="checkbox"> Create facilitator monitoring dashboard (custom actions)</li>
 <li><input aria-label="Add bulk archive script for end-of-workshop cleanup" disabled="" type="checkbox"> Add bulk archive script for end-of-workshop cleanup</li>
 </ul>
-<h3>Medium Term</h3>
+<h3 id="medium-term">Medium Term</h3>
 <ul>
 <li><input aria-label="Student self-assessment: &quot;Did this challenge teach the concept?&quot;" disabled="" type="checkbox"> Student self-assessment: &quot;Did this challenge teach the concept?&quot;</li>
 <li><input aria-label="Difficulty calibration: Track which challenges take longest" disabled="" type="checkbox"> Difficulty calibration: Track which challenges take longest</li>
 <li><input aria-label="Peer feedback: Students comment on each other&#39;s solutions" disabled="" type="checkbox"> Peer feedback: Students comment on each other&#39;s solutions</li>
 </ul>
-<h3>Long Term</h3>
+<h3 id="long-term">Long Term</h3>
 <ul>
 <li><input aria-label="Gamification: Badges for challenge streaks, skill level badges" disabled="" type="checkbox"> Gamification: Badges for challenge streaks, skill level badges</li>
 <li><input aria-label="Difficulty curves: AI recommendation of next challenge based on pace" disabled="" type="checkbox"> Difficulty curves: AI recommendation of next challenge based on pace</li>
 <li><input aria-label="Mobile: GitHub Mobile app integration for easier issue tracking" disabled="" type="checkbox"> Mobile: GitHub Mobile app integration for easier issue tracking</li>
 </ul>
-<h2>Document Control</h2>
+<h2 id="document-control">Document Control</h2>
 <table>
 <thead>
 <tr>

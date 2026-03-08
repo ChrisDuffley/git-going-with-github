@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>GitHub Copilot - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Copilot</span>
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Copilot</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,11 +58,11 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>GitHub Copilot</h1>
+    <h1 id="github-copilot">GitHub Copilot</h1>
 <blockquote>
 <p><strong>Listen to Episode 14:</strong> <a href="../PODCASTS.html">GitHub Copilot</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
 </blockquote>
-<h2>AI-Powered Code Assistance in VS Code</h2>
+<h2 id="ai-powered-code-assistance-in-vs-code">AI-Powered Code Assistance in VS Code</h2>
 <blockquote>
 <p><strong>Day 2, Block 2-3 Material</strong></p>
 <p>This guide covers GitHub Copilot: inline code suggestions, Copilot Chat (conversational assistance), custom instructions vs custom agents, effective prompting for non-code contributions, and using Accessible View to read AI-generated responses.</p>
@@ -76,7 +76,7 @@
 <p><strong>Prerequisites:</strong> <a href="05-vscode-accessibility.html">VS Code Setup &amp; Accessibility Basics</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code> on Mac. Key equivalents: <code>Ctrl+Shift+I</code> → <code>Cmd+Shift+I</code> (Chat), <code>Ctrl+I</code> → <code>Cmd+I</code> (inline chat), <code>Alt+F2</code> → <code>Option+F2</code> (Accessible View), <code>Ctrl+/</code> → <code>Cmd+/</code> (insert suggestion). See the <a href="#8-keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a> at the end of this chapter for the complete list.</p>
 </blockquote>
-<h2>Workshop Recommendation (Chapter 13)</h2>
+<h2 id="workshop-recommendation-chapter-13">Workshop Recommendation (Chapter 13)</h2>
 <blockquote>
 <p>** Free to Use:** GitHub Copilot Free tier is included with all GitHub accounts at no cost. This workshop uses only the free tier. If you&#39;re on an organization with GitHub Enterprise, you may have Copilot Pro included—either way, you&#39;re covered.</p>
 </blockquote>
@@ -87,15 +87,15 @@
 <li><strong>Evidence:</strong> issue comment with checklist of completed actions</li>
 <li><strong>Pattern:</strong> install, prompt, apply, reflect</li>
 </ul>
-<h3>Chapter 13 Challenge Set</h3>
+<h3 id="chapter-13-challenge-set">Chapter 13 Challenge Set</h3>
 <ol>
 <li><strong>Install GitHub Copilot and sign in</strong> - add the Copilot Chat extension and authenticate.</li>
 <li><strong>Ask Copilot to explain a codebase</strong> - clone the sci-fi themes repo and use Copilot Chat to understand it.</li>
 <li><strong>Ask Copilot to create something new</strong> - prompt Copilot to generate a custom theme and apply it.</li>
 </ol>
-<h3>Challenge 13.1 Step-by-Step: Install and Sign In</h3>
+<h3 id="challenge-131-step-by-step-install-and-sign-in">Challenge 13.1 Step-by-Step: Install and Sign In</h3>
 <p><strong>Goal:</strong> Install the GitHub Copilot Chat extension and verify it responds to prompts.</p>
-<p><strong>Where you are working:</strong> VS Code desktop with the <code>learning-room</code> repository open.</p>
+<p><strong>Where you are working:</strong> VS Code desktop with the <a href="https://github.com/Community-Access/learning-room">learning-room</a> repository open.</p>
 <p><strong>Estimated time:</strong> 3-5 minutes.</p>
 <ol>
 <li>Open the Extensions sidebar: <code>Ctrl+Shift+X</code> (Mac: <code>Cmd+Shift+X</code>).</li>
@@ -107,7 +107,7 @@
 </ol>
 <p><strong>Screen reader tip:</strong> The Copilot Chat panel opens as a sidebar. Your screen reader announces responses as they stream in. Press <code>Alt+F2</code> (Accessible View) to read the full response in a plain text buffer if streaming is hard to follow.</p>
 <p><strong>You are done when:</strong> Copilot Chat responds to a test prompt.</p>
-<h3>Challenge 13.2 Step-by-Step: Explain a Codebase</h3>
+<h3 id="challenge-132-step-by-step-explain-a-codebase">Challenge 13.2 Step-by-Step: Explain a Codebase</h3>
 <p><strong>Goal:</strong> Use Copilot Chat to understand an unfamiliar repository by asking targeted questions.</p>
 <p><strong>Where you are working:</strong> VS Code with the sci-fi themes repository cloned.</p>
 <p><strong>Estimated time:</strong> 10-15 minutes.</p>
@@ -122,7 +122,7 @@
 <li>Follow Copilot&#39;s instructions to apply one theme to your <code>settings.json</code> file.</li>
 </ol>
 <p><strong>You are done when:</strong> You have asked Copilot at least two questions and applied one setting change.</p>
-<h3>Challenge 13.3 Step-by-Step: Create Something New</h3>
+<h3 id="challenge-133-step-by-step-create-something-new">Challenge 13.3 Step-by-Step: Create Something New</h3>
 <p><strong>Goal:</strong> Use Copilot as a creative collaborator to generate a custom config and apply it.</p>
 <p><strong>Where you are working:</strong> VS Code with Copilot Chat open.</p>
 <p><strong>Estimated time:</strong> 10-15 minutes.</p>
@@ -138,7 +138,7 @@
 </ol>
 <p><strong>Screen reader tip:</strong> Copilot Chat responses can be long. Use <code>Alt+F2</code> (Accessible View) to read them in a plain text buffer where you can copy text more easily.</p>
 <p><strong>You are done when:</strong> Your personalized thinking phrases appear when Copilot is processing a response.</p>
-<h3>Completing Chapter 13: Submit Your Evidence</h3>
+<h3 id="completing-chapter-13-submit-your-evidence">Completing Chapter 13: Submit Your Evidence</h3>
 <p>Open your <strong>assigned Chapter 13 challenge issue</strong> and post a completion comment:</p>
 <pre><code class="hljs language-text">Chapter 13 completed:
 - Copilot installed and signed in: yes / no
@@ -147,14 +147,14 @@
 - Created a custom theme: yes / no
 - My theme universe: [your choice]</code></pre>
 <p>Close your Chapter 13 challenge issues when done.</p>
-<h3>Expected Outcomes</h3>
+<h3 id="expected-outcomes">Expected Outcomes</h3>
 <ul>
 <li>Student can install and authenticate GitHub Copilot Chat.</li>
 <li>Student can ask Copilot effective questions about code and settings.</li>
 <li>Student can use Copilot&#39;s output to customize their development environment.</li>
 <li>Student understands Copilot as a tool to explain and create, not just autocomplete.</li>
 </ul>
-<h3>If You Get Stuck</h3>
+<h3 id="if-you-get-stuck">If You Get Stuck</h3>
 <ol>
 <li>Extension installation fails? Reload VS Code: <code>Ctrl+Shift+P</code>, then <code>Developer: Reload Window</code>.</li>
 <li>OAuth sign-in fails? Verify your GitHub account is active in the browser first, close VS Code and retry.</li>
@@ -166,16 +166,16 @@
 <blockquote>
 <p><strong>Continue learning:</strong> The GitHub Skills courses <a href="https://github.com/skills/getting-started-with-github-copilot">Getting Started with GitHub Copilot</a> and <a href="https://github.com/skills/customize-copilot">Customize Your GitHub Copilot Experience</a> cover Copilot setup, prompting, and personalization. See <a href="appendix-z-github-skills-catalog.html">Appendix Z</a> for the full catalog.</p>
 </blockquote>
-<h3>Learning Moment</h3>
+<h3 id="learning-moment">Learning Moment</h3>
 <p>AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps you write documentation that others can actually understand. The prompting skill you practiced here - asking specific questions, iterating on responses, applying results - transfers to every AI tool you will use in your career.</p>
-<h3>Learning Pattern Used in This Chapter</h3>
+<h3 id="learning-pattern-used-in-this-chapter">Learning Pattern Used in This Chapter</h3>
 <ol>
 <li>Install the tool and verify it works before starting the task.</li>
 <li>Use the tool to explore and understand (ask questions, read responses).</li>
 <li>Use the tool to create something new (generate, customize, apply).</li>
 <li>Reflect on when the tool helped and when your own judgment was better.</li>
 </ol>
-<h3>About Learning Cards in This Chapter</h3>
+<h3 id="about-learning-cards-in-this-chapter">About Learning Cards in This Chapter</h3>
 <p>Throughout this chapter, look for expandable &quot;learning cards&quot; that show how to accomplish each task from different perspectives. Not every section has every card - only the cards that add meaningful guidance for that topic are included.</p>
 <table>
 <thead>
@@ -205,7 +205,7 @@
 <td>Users who prefer the terminal with <code>gh copilot</code> commands</td>
 </tr>
 </tbody></table>
-<h2>Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ol>
 <li><a href="#1-what-is-github-copilot">What is GitHub Copilot</a></li>
 <li><a href="#2-installing-github-copilot">Installing GitHub Copilot</a></li>
@@ -216,7 +216,7 @@
 <li><a href="#7-using-accessible-view-with-copilot-responses">Using Accessible View with Copilot Responses</a></li>
 <li><a href="#8-keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a></li>
 </ol>
-<h2>1. What is GitHub Copilot</h2>
+<h2 id="1-what-is-github-copilot">1. What is GitHub Copilot</h2>
 <p>GitHub Copilot is an AI pair programmer that suggests code and text completions as you type. It can:</p>
 <ul>
 <li>Complete lines of code or documentation</li>
@@ -232,8 +232,8 @@
 <blockquote>
 <p><strong>Screen reader optimized mode:</strong> Press <code>Shift+Alt+F1</code> (Mac: <code>Shift+Option+F1</code>) to toggle VS Code&#39;s screen reader optimized mode. This adjusts how Copilot suggestions are announced, disables ghost text that cannot be read by screen readers, and routes all suggestion content through Accessible View. If your screen reader is detected at startup, VS Code enables this mode automatically. You can also set it manually in Settings: <code>editor.accessibilitySupport: &quot;on&quot;</code>.</p>
 </blockquote>
-<h2>2. Installing GitHub Copilot</h2>
-<h3>Installation Steps</h3>
+<h2 id="2-installing-github-copilot">2. Installing GitHub Copilot</h2>
+<h3 id="installation-steps">Installation Steps</h3>
 <ol>
 <li>Open Extensions sidebar: <code>Ctrl+Shift+X</code> (Mac: <code>Cmd+Shift+X</code>)</li>
 <li>Search for &quot;GitHub Copilot Chat&quot;</li>
@@ -243,7 +243,7 @@
 <li>Wait for installation to complete</li>
 </ol>
 <p><strong>One extension, all features:</strong> GitHub Copilot Chat is now the single all-in-one extension. It provides inline code suggestions, the Chat panel (<code>Ctrl+Shift+I</code> / Mac: <code>Cmd+Shift+I</code>), inline chat (<code>Ctrl+I</code> / Mac: <code>Cmd+I</code>), and all agent features. The older separate &quot;GitHub Copilot&quot; extension has been deprecated.</p>
-<h3>Signing In</h3>
+<h3 id="signing-in">Signing In</h3>
 <p>After installation:</p>
 <ol>
 <li>VS Code prompts: &quot;Sign in to use GitHub Copilot&quot;</li>
@@ -253,29 +253,29 @@
 <li>Authorize the Copilot extension</li>
 <li>Return to VS Code</li>
 </ol>
-<h4>Verify activation</h4>
+<h4 id="verify-activation">Verify activation</h4>
 <ul>
 <li>Bottom-right status bar shows Copilot icon (looks like <code>&gt;&lt;</code>)</li>
 <li>Icon should be active (not grayed out)</li>
 <li>If grayed out, click it to sign in</li>
 </ul>
-<h3>Checking Subscription Status</h3>
-<h4>Command Palette</h4>
+<h3 id="checking-subscription-status">Checking Subscription Status</h3>
+<h4 id="command-palette">Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;Copilot: Check Status&quot;</li>
 <li>Select it to see your subscription tier (Free, Pro, Enterprise)</li>
 </ol>
-<h4>Free tier includes</h4>
+<h4 id="free-tier-includes">Free tier includes</h4>
 <ul>
 <li>Completions and multi-line suggestions</li>
 <li>Copilot Chat</li>
 <li>Limited monthly usage (usually sufficient for documentation work)</li>
 </ul>
-<h2>3. Inline Suggestions - Ghost Text Completions</h2>
+<h2 id="3-inline-suggestions---ghost-text-completions">3. Inline Suggestions - Ghost Text Completions</h2>
 <p>Copilot suggests completions as you type, displayed as gray &quot;ghost text&quot; after your cursor. In screen reader mode, VS Code announces suggestions rather than showing them visually.</p>
-<h3>How Inline Suggestions Work</h3>
-<h4>While typing</h4>
+<h3 id="how-inline-suggestions-work">How Inline Suggestions Work</h3>
+<h4 id="while-typing">While typing</h4>
 <ol>
 <li>Copilot analyzes your context (file content, cursor position, nearby files)</li>
 <li>Generates a suggestion</li>
@@ -310,7 +310,7 @@
 <p>Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) to open the suggestion in <strong>Accessible View</strong> - this gives you the complete suggestion text in a static, fully readable panel without streaming.</p>
 </details>
 
-<h3>Accepting Suggestions</h3>
+<h3 id="accepting-suggestions">Accepting Suggestions</h3>
 <table>
 <thead>
 <tr>
@@ -360,45 +360,45 @@
 <td><code>Cmd+/</code></td>
 </tr>
 </tbody></table>
-<h4>Accepting word-by-word (<code>Ctrl+Right Arrow</code> / Mac: <code>Cmd+Right Arrow</code>) is particularly useful when</h4>
+<h4 id="accepting-word-by-word-ctrlright-arrow--mac-cmdright-arrow-is-particularly-useful-when">Accepting word-by-word (<code>Ctrl+Right Arrow</code> / Mac: <code>Cmd+Right Arrow</code>) is particularly useful when</h4>
 <ul>
 <li>The suggestion starts correctly but you want to finish differently</li>
 <li>You want to review the suggestion incrementally</li>
 <li>You&#39;re learning and want to see how Copilot structures responses</li>
 </ul>
-<h3>Reading Suggestions with Screen Readers</h3>
+<h3 id="reading-suggestions-with-screen-readers">Reading Suggestions with Screen Readers</h3>
 <blockquote>
 <p><strong>Visual users:</strong> If Copilot&#39;s ghost text is getting in the way, skip to &quot;Disabling Inline Suggestions&quot; below.</p>
 </blockquote>
 <details>
 <summary>Screen reader users - tuning announcement verbosity</summary>
 
-<h4>If suggestions are announced too frequently or are intrusive</h4>
-<h4>NVDA</h4>
+<h4 id="if-suggestions-are-announced-too-frequently-or-are-intrusive">If suggestions are announced too frequently or are intrusive</h4>
+<h4 id="nvda">NVDA</h4>
 <ol>
 <li>NVDA Menu → Preferences → Settings → Presentation</li>
 <li>Find &quot;Report dynamic content changes&quot;</li>
 <li>Reduce verbosity level or set specific delays</li>
 </ol>
-<h4>JAWS</h4>
+<h4 id="jaws">JAWS</h4>
 <ol>
 <li>Settings Center → HTML/PDF/Accessibility</li>
 <li>Adjust &quot;Auto Forms Mode&quot; and &quot;ARIA Live Region&quot; settings</li>
 </ol>
-<h4>VoiceOver</h4>
+<h4 id="voiceover">VoiceOver</h4>
 <ol>
 <li>VoiceOver Utility → Verbosity</li>
 <li>Reduce &quot;Announcements&quot; level</li>
 </ol>
-<h4>Alternative: Use Accessible View</h4>
+<h4 id="alternative-use-accessible-view">Alternative: Use Accessible View</h4>
 <p>Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>) when a suggestion appears to read it in the Accessible View (full text, no streaming).</p>
 </details>
 
-<h3>Prompting Through Comments</h3>
+<h3 id="prompting-through-comments">Prompting Through Comments</h3>
 <p>Copilot reads inline comments as instructions. For Markdown files:</p>
 <pre><code class="hljs language-markdown">&lt;!-- Write a step-by-step guide for screen reader users on how to create a GitHub issue --&gt;</code></pre>
 <p>Type this comment, press <code>Enter</code>, and Copilot drafts content based on your instruction. You review, edit, and refine.</p>
-<h4>Example prompts for this workshop</h4>
+<h4 id="example-prompts-for-this-workshop">Example prompts for this workshop</h4>
 <pre><code class="hljs language-markdown">&lt;!-- Explain how to navigate the GitHub Issues list with NVDA --&gt;
 
 &lt;!-- Create a checklist for accessible Markdown documentation --&gt;
@@ -406,17 +406,17 @@
 &lt;!-- Write alt text for a screenshot showing the GitHub PR review interface --&gt;
 
 &lt;!-- Draft a commit message for fixing heading hierarchy in GUIDE.md --&gt;</code></pre>
-<h3>Disabling Inline Suggestions</h3>
+<h3 id="disabling-inline-suggestions">Disabling Inline Suggestions</h3>
 <p>If suggestions are distracting:</p>
 <details>
 <summary>Visual / mouse users</summary>
 
-<h4>Temporarily disable for current language</h4>
+<h4 id="temporarily-disable-for-current-language">Temporarily disable for current language</h4>
 <ul>
 <li>Click the Copilot icon in the status bar (bottom-right <code>&gt;&lt;</code> icon)</li>
 <li>Select &quot;Disable Completions for [language]&quot;</li>
 </ul>
-<h4>Permanently disable completions</h4>
+<h4 id="permanently-disable-completions">Permanently disable completions</h4>
 <ul>
 <li>Open Settings: <code>Ctrl+,</code> (Mac: <code>Cmd+,</code>) → search &quot;Copilot enable&quot; → uncheck &quot;Enable Inline Suggestions&quot;</li>
 </ul>
@@ -435,21 +435,21 @@
 <details>
 <summary>Screen reader users (NVDA / JAWS / VoiceOver)</summary>
 
-<h4>Temporarily disable via Command Palette</h4>
+<h4 id="temporarily-disable-via-command-palette">Temporarily disable via Command Palette</h4>
 <ul>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → type &quot;Copilot: Disable Completions&quot; → press <code>Enter</code></li>
 <li>Or navigate to the Copilot status bar item and activate it (depends on screen reader and focus)</li>
 </ul>
-<h4>Permanently disable via Settings</h4>
+<h4 id="permanently-disable-via-settings">Permanently disable via Settings</h4>
 <ul>
 <li><code>Ctrl+,</code> (Mac: <code>Cmd+,</code>) → search &quot;inline suggestions&quot; → toggle off &quot;GitHub Copilot: Enable Inline Completions&quot;</li>
 </ul>
 </details>
 
 
-<h2>4. GitHub Copilot Chat - Conversational Assistance</h2>
+<h2 id="4-github-copilot-chat---conversational-assistance">4. GitHub Copilot Chat - Conversational Assistance</h2>
 <p>Copilot Chat is a full conversation interface where you ask questions, request explanations, and have content drafted.</p>
-<h3>Opening Copilot Chat</h3>
+<h3 id="opening-copilot-chat">Opening Copilot Chat</h3>
 <p><strong>Primary panel:</strong> <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>)</p>
 <p>Opens the Chat panel on the right side of VS Code.</p>
 <p><strong>Inline chat (in-file):</strong> <code>Ctrl+I</code> (Mac: <code>Cmd+I</code>)</p>
@@ -483,7 +483,7 @@
 <p><strong>When to use CLI vs Chat:</strong> Use <code>gh copilot</code> when you are already in a terminal session and want a quick answer without switching windows. Use VS Code Chat when you need workspace context (<code>@workspace</code>), file references, or multi-turn conversations.</p>
 </details>
 
-<h3>Chat Modes</h3>
+<h3 id="chat-modes">Chat Modes</h3>
 <p>Copilot Chat has four modes, selected from a dropdown at the bottom of the Chat input area. Each mode changes how Copilot interprets your request and what it can do.</p>
 <table>
 <thead>
@@ -514,7 +514,7 @@
 <td>Complex features where you want to validate the approach before any changes are made</td>
 </tr>
 </tbody></table>
-<h4>Switching modes</h4>
+<h4 id="switching-modes">Switching modes</h4>
 <ul>
 <li>The mode selector is a dropdown at the <strong>bottom of the Chat input area</strong>, just above the text field</li>
 <li>Tab through the toolbar at the bottom of Chat to find it, or click on the current mode name</li>
@@ -524,10 +524,10 @@
 <blockquote>
 <p><strong>Note:</strong> <strong>Plan</strong> mode was introduced in October 2025 (VS Code 1.106) and is available as a public preview. Plan mode lets you get an AI-generated implementation plan before any code is written - useful for understanding what a complex change will involve.</p>
 </blockquote>
-<h3>Choosing a Model</h3>
+<h3 id="choosing-a-model">Choosing a Model</h3>
 <p>Copilot gives you access to AI models from OpenAI, Anthropic (Claude), Google (Gemini), xAI (Grok), and others. The <strong>model picker</strong> is a button at the bottom of the Chat input area, next to the mode selector, showing the current model name (e.g., &quot;Auto&quot; or &quot;Claude Sonnet 4.6&quot;).</p>
 <p><strong>When &quot;Auto&quot; is selected</strong> (the default), Copilot automatically chooses the best model for each request - lighter models for quick questions, more capable models for complex reasoning. Auto mode has been generally available since December 2025. You can override it whenever you want a specific model.</p>
-<h4>Quick guidance</h4>
+<h4 id="quick-guidance">Quick guidance</h4>
 <ul>
 <li><strong>Free-tier users:</strong> GPT-4.1 and GPT-5 mini are available at no cost and handle most everyday tasks well</li>
 <li><strong>Need deep reasoning/debugging?</strong> Try Claude Sonnet 4.6 or GPT-5.2 (1× premium requests)</li>
@@ -547,8 +547,8 @@
 </ul>
 </details>
 
-<h3>Chat Interface Structure</h3>
-<h4>Panel layout (top to bottom)</h4>
+<h3 id="chat-interface-structure">Chat Interface Structure</h3>
+<h4 id="panel-layout-top-to-bottom">Panel layout (top to bottom)</h4>
 <ol>
 <li><p><strong>Chat input field</strong> (multi-line text area)</p>
 <ul>
@@ -576,8 +576,8 @@
 </ul>
 </li>
 </ol>
-<h3>Screen Reader Navigation in Chat</h3>
-<h4>NVDA/JAWS</h4>
+<h3 id="screen-reader-navigation-in-chat">Screen Reader Navigation in Chat</h3>
+<h4 id="nvdajaws">NVDA/JAWS</h4>
 <ul>
 <li>Chat input is a web-based text field</li>
 <li>Switch to Forms Mode (<code>Enter</code> or automatic when focused)</li>
@@ -586,7 +586,7 @@
 <li>Response appears in a live region (announced as it streams in)</li>
 <li>For complete reading: press <code>Alt+F2</code> for Accessible View</li>
 </ul>
-<h4>VoiceOver</h4>
+<h4 id="voiceover">VoiceOver</h4>
 <ul>
 <li><code>VO+Tab</code> to navigate to chat input</li>
 <li><code>VO+Shift+Down</code> to interact</li>
@@ -595,8 +595,8 @@
 <li>Navigate down to response area</li>
 <li>For complete reading: <code>Alt+F2</code> for Accessible View</li>
 </ul>
-<h3>What to Ask Copilot Chat</h3>
-<h4>For this workshop (non-coding examples)</h4>
+<h3 id="what-to-ask-copilot-chat">What to Ask Copilot Chat</h3>
+<h4 id="for-this-workshop-non-coding-examples">For this workshop (non-coding examples)</h4>
 <table>
 <thead>
 <tr>
@@ -637,8 +637,8 @@
 <td><code>Check this Markdown for accessibility issues: [paste content]</code></td>
 </tr>
 </tbody></table>
-<h3>Using @ Mentions in Chat</h3>
-<h4>@ symbols let you provide context to Copilot</h4>
+<h3 id="using--mentions-in-chat">Using @ Mentions in Chat</h3>
+<h4 id="-symbols-let-you-provide-context-to-copilot">@ symbols let you provide context to Copilot</h4>
 <table>
 <thead>
 <tr>
@@ -667,7 +667,7 @@
 <td>References the last terminal command and output</td>
 </tr>
 </tbody></table>
-<h4>Example prompts with context</h4>
+<h4 id="example-prompts-with-context">Example prompts with context</h4>
 <pre><code class="hljs language-text">Explain what @README.md covers for a new contributor
 
 Review #selection for accessibility issues
@@ -675,7 +675,7 @@ Review #selection for accessibility issues
 Search @workspace for all references to &quot;screen reader mode&quot;
 
 What does this error mean? #terminalLastCommand</code></pre>
-<h3>Using Slash Commands</h3>
+<h3 id="using-slash-commands">Using Slash Commands</h3>
 <p>Type <code>/</code> in Copilot Chat to see available commands:</p>
 <table>
 <thead>
@@ -709,14 +709,14 @@ What does this error mean? #terminalLastCommand</code></pre>
 <td>Saves the current chat conversation as a reusable <code>.prompt.md</code> file</td>
 </tr>
 </tbody></table>
-<h4>Example</h4>
+<h4 id="example">Example</h4>
 <ol>
 <li>Select a block of complex Markdown</li>
 <li>Open Chat: <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>)</li>
 <li>Type <code>/explain</code></li>
 <li>Copilot explains the structure and purpose</li>
 </ol>
-<h3>Built-in Actions via Command Palette</h3>
+<h3 id="built-in-actions-via-command-palette">Built-in Actions via Command Palette</h3>
 <p>Copilot registers actions directly in the Command Palette. This provides a discoverable way to use Copilot without remembering slash commands or keyboard shortcuts.</p>
 <ol>
 <li>Open Command Palette: <code>F1</code> or <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
@@ -755,14 +755,14 @@ What does this error mean? #terminalLastCommand</code></pre>
 <blockquote>
 <p><strong>Screen reader tip:</strong> After pressing <code>F1</code> and typing <code>copilot</code>, use <code>Down Arrow</code> to browse the filtered list. Your screen reader announces each action name. Press <code>Enter</code> to run the selected action on your current selection.</p>
 </blockquote>
-<h2>5. Effective Prompting for Documentation Work</h2>
+<h2 id="5-effective-prompting-for-documentation-work">5. Effective Prompting for Documentation Work</h2>
 <p>Copilot works best with clear, specific prompts. The more context you provide, the better the response.</p>
-<h3>Anatomy of a Good Prompt</h3>
-<h4>Bad prompt</h4>
+<h3 id="anatomy-of-a-good-prompt">Anatomy of a Good Prompt</h3>
+<h4 id="bad-prompt">Bad prompt</h4>
 <pre><code class="hljs language-text">Write about accessibility</code></pre>
-<h4>Good prompt</h4>
+<h4 id="good-prompt">Good prompt</h4>
 <pre><code class="hljs language-text">Write a 3-paragraph section explaining how screen reader users can navigate the VS Code Explorer sidebar. Include keyboard shortcuts for NVDA and JAWS. Assume the reader has never used VS Code before. Use clear headings and bullet points.</code></pre>
-<h4>What makes it good</h4>
+<h4 id="what-makes-it-good">What makes it good</h4>
 <ol>
 <li><strong>Specific scope:</strong> &quot;3-paragraph section&quot;</li>
 <li><strong>Clear topic:</strong> &quot;navigate the VS Code Explorer sidebar&quot;</li>
@@ -770,20 +770,20 @@ What does this error mean? #terminalLastCommand</code></pre>
 <li><strong>Required details:</strong> &quot;keyboard shortcuts for NVDA and JAWS&quot;</li>
 <li><strong>Format guidance:</strong> &quot;headings and bullet points&quot;</li>
 </ol>
-<h3>Prompting Patterns for This Workshop</h3>
-<h4>Pattern 1: Contextual Rewrite</h4>
+<h3 id="prompting-patterns-for-this-workshop">Prompting Patterns for This Workshop</h3>
+<h4 id="pattern-1-contextual-rewrite">Pattern 1: Contextual Rewrite</h4>
 <pre><code class="hljs language-text">This section is too technical for beginners. Rewrite it in plain language:
 
 [paste existing text]
 
 Target audience: Screen reader users trying VS Code for the first time</code></pre>
-<h4>Pattern 2: Generate with Constraints</h4>
+<h4 id="pattern-2-generate-with-constraints">Pattern 2: Generate with Constraints</h4>
 <pre><code class="hljs language-text">Write a step-by-step guide for creating a GitHub issue using only keyboard navigation. Include:
 - NVDA screen reader announcements
 - Exact keyboard shortcuts
 - What to do if the form field is not announced correctly
 Format as a numbered list</code></pre>
-<h4>Pattern 3: Review and Improve</h4>
+<h4 id="pattern-3-review-and-improve">Pattern 3: Review and Improve</h4>
 <pre><code class="hljs language-text">Review this PR description for:
 1. Clarity for maintainers
 2. Respect and positive tone
@@ -792,7 +792,7 @@ Format as a numbered list</code></pre>
 
 Here&#x27;s the description:
 [paste your PR description]</code></pre>
-<h4>Pattern 4: Accessibility Audit</h4>
+<h4 id="pattern-4-accessibility-audit">Pattern 4: Accessibility Audit</h4>
 <pre><code class="hljs language-text">Check this Markdown for accessibility problems:
 - Heading hierarchy (H1 → H2 → H3, no skips)
 - Link text (no &quot;click here&quot; or bare URLs)
@@ -800,7 +800,7 @@ Here&#x27;s the description:
 - List structure
 
 [paste Markdown content]</code></pre>
-<h4>Pattern 5: Draft from Outline</h4>
+<h4 id="pattern-5-draft-from-outline">Pattern 5: Draft from Outline</h4>
 <pre><code class="hljs language-text">Write a section based on this outline:
 
 ## Timeline View - File History
@@ -810,9 +810,9 @@ Here&#x27;s the description:
 - How to view a specific commit&#x27;s changes
 
 Write for screen reader users. Use H3 subheadings. Include a table for keyboard shortcuts.</code></pre>
-<h3>Iterating on Responses</h3>
+<h3 id="iterating-on-responses">Iterating on Responses</h3>
 <p>Copilot&#39;s first response is a draft. Refine it:</p>
-<h4>Follow-up prompts</h4>
+<h4 id="follow-up-prompts">Follow-up prompts</h4>
 <pre><code class="hljs language-text">Make it shorter - reduce to 5 bullet points
 
 Add more detail about what NVDA announces at each step
@@ -823,19 +823,19 @@ Add a &quot;Common Mistakes&quot; section at the end
 
 Format this as a table instead of a bulleted list</code></pre>
 <p>Copilot remembers the conversation context - just say what to change.</p>
-<h2>6. Custom Instructions vs Custom Agents</h2>
+<h2 id="6-custom-instructions-vs-custom-agents">6. Custom Instructions vs Custom Agents</h2>
 <p>Two distinct tools shape how Copilot behaves. Understanding the difference is critical for working with Accessibility Agents (see <a href="16-accessibility-agents.html">Chapter 16: Accessibility Agents</a>).</p>
-<h3>Custom Instructions</h3>
+<h3 id="custom-instructions">Custom Instructions</h3>
 <p><strong>File:</strong> <code>.github/copilot-instructions.md</code></p>
 <p><strong>Purpose:</strong> Always-on background guidance for every Copilot interaction.</p>
-<h4>What they do</h4>
+<h4 id="what-they-do">What they do</h4>
 <ul>
 <li>Apply to all code suggestions automatically</li>
 <li>Set project-wide standards</li>
 <li>Influence tone and style</li>
 <li>Provide context about your project&#39;s conventions</li>
 </ul>
-<h4>Example <code>.github/copilot-instructions.md</code></h4>
+<h4 id="example-githubcopilot-instructionsmd">Example <code>.github/copilot-instructions.md</code></h4>
 <pre><code class="hljs language-markdown"><span class="hljs-section"># Copilot Instructions for accessibility-agents</span>
 
 <span class="hljs-section">## Accessibility Standards</span>
@@ -859,18 +859,18 @@ Format this as a table instead of a bulleted list</code></pre>
 <span class="hljs-bullet">-</span> Direct and actionable
 <span class="hljs-bullet">-</span> Assume readers are competent but may be new to this specific tool</code></pre>
 <p><strong>When active:</strong> Every time Copilot generates a suggestion (inline or in Chat)</p>
-<h3>You never have to ask for these - Copilot simply follows them</h3>
-<h3>Custom Agents</h3>
+<h3 id="you-never-have-to-ask-for-these---copilot-simply-follows-them">You never have to ask for these - Copilot simply follows them</h3>
+<h3 id="custom-agents">Custom Agents</h3>
 <p><strong>Files:</strong> <code>.github/agents/[name].agent.md</code></p>
 <p><strong>Purpose:</strong> On-demand, focused workflows that you deliberately invoke.</p>
-<h4>What they do</h4>
+<h4 id="what-they-do">What they do</h4>
 <ul>
 <li>Perform specific, repeatable tasks</li>
 <li>Can access specific tools (GitHub API, file system, terminal)</li>
 <li>Generate structured output (reports, reviews, analysis)</li>
 <li>Execute multi-step workflows</li>
 </ul>
-<h4>Example agent names</h4>
+<h4 id="example-agent-names">Example agent names</h4>
 <ul>
 <li><code>@daily-briefing</code> - Summarize repository activity</li>
 <li><code>@issue-tracker</code> - Find and prioritize issues</li>
@@ -880,7 +880,7 @@ Format this as a table instead of a bulleted list</code></pre>
 </ul>
 <p><strong>When active:</strong> Only when you type <code>@agent-name</code> in Copilot Chat</p>
 <p>See <a href="16-accessibility-agents.html">Chapter 16: Accessibility Agents</a> for complete agent documentation.</p>
-<h3>Comparison Table</h3>
+<h3 id="comparison-table">Comparison Table</h3>
 <table>
 <thead>
 <tr>
@@ -915,10 +915,10 @@ Format this as a table instead of a bulleted list</code></pre>
 <td>Yes - explicit trigger</td>
 </tr>
 </tbody></table>
-<h3>Using Both Together</h3>
+<h3 id="using-both-together">Using Both Together</h3>
 <p><strong>Custom instructions</strong> ensure Copilot follows your accessibility standards on every suggestion.</p>
 <p><strong>Custom agents</strong> handle specific workflows like auditing, issue tracking, or automated remediation.</p>
-<h4>Example workflow</h4>
+<h4 id="example-workflow">Example workflow</h4>
 <ol>
 <li>Your <code>.github/copilot-instructions.md</code> says: &quot;Always check heading hierarchy in Markdown&quot;</li>
 <li>You invoke <code>@insiders-a11y-tracker</code> to scan recent changes</li>
@@ -926,8 +926,8 @@ Format this as a table instead of a bulleted list</code></pre>
 <li>You ask Copilot Chat to fix it: &quot;Fix the heading hierarchy in this file&quot;</li>
 <li>Copilot&#39;s fix follows your custom instructions (uses semantic HTML, adds ARIA where needed)</li>
 </ol>
-<h4>Both work together - instructions guide every response, agents automate specific workflows</h4>
-<h3>Writing Accessibility-Focused Custom Instructions</h3>
+<h4 id="both-work-together---instructions-guide-every-response-agents-automate-specific-workflows">Both work together - instructions guide every response, agents automate specific workflows</h4>
+<h3 id="writing-accessibility-focused-custom-instructions">Writing Accessibility-Focused Custom Instructions</h3>
 <blockquote>
 <p>Source: <a href="https://accessibility.github.com/documentation/guide/copilot-instructions/">accessibility.github.com/documentation/guide/copilot-instructions/</a></p>
 </blockquote>
@@ -956,62 +956,62 @@ Format this as a table instead of a bulleted list</code></pre>
 <td>Your own preferences; highest priority</td>
 </tr>
 </tbody></table>
-<h4>Do&#39;s - What Makes Instructions Effective</h4>
-<h5>Use normative language: MUST, MUST NOT, SHOULD, SHOULD NOT</h5>
+<h4 id="do39s---what-makes-instructions-effective">Do&#39;s - What Makes Instructions Effective</h4>
+<h5 id="use-normative-language-must-must-not-should-should-not">Use normative language: MUST, MUST NOT, SHOULD, SHOULD NOT</h5>
 <p>Most language models respond well to normative language. These terms reduce ambiguity and make rules clearly mandatory versus optional - the same approach WCAG itself uses:</p>
 <pre><code class="hljs language-text">## Keyboard Navigation
 - Keyboard shortcuts SHOULD NOT override high-priority browser or OS shortcuts.
 - A keyboard shortcut MUST use at most 4 simultaneous keys.
 - All interactive components MUST be reachable by Tab key.</code></pre>
-<h3>Focus on team-specific standards, not generic principles</h3>
+<h3 id="focus-on-team-specific-standards-not-generic-principles">Focus on team-specific standards, not generic principles</h3>
 <p>Copilot already knows WCAG. Tell it what <em>your team</em> does specifically:</p>
 <pre><code class="hljs language-text">This application MUST conform to WCAG 2.2 Level AA.
 DeprecatedButton SHOULD NOT be used; use NewAccessibleButton instead.</code></pre>
-<h3>Use lists and checklists to structure instructions</h3>
+<h3 id="use-lists-and-checklists-to-structure-instructions">Use lists and checklists to structure instructions</h3>
 <p>Lists provide clear guardrails - Copilot follows them step by step:</p>
 <pre><code class="hljs language-text">## Checklist for evaluating 1.3.1 Info and Relationships
 - [ ] role=&quot;presentation&quot; MUST NOT be applied to semantic elements.
 - [ ] Error messages MUST be programmatically associated with inputs.
 - [ ] Name-value pairs MUST NOT use headings; use &lt;p&gt;.</code></pre>
-<h3>Reference and enforce your design system</h3>
+<h3 id="reference-and-enforce-your-design-system">Reference and enforce your design system</h3>
 <p>Document which components to use and which are deprecated. Design systems evolve - keep instructions current:</p>
 <pre><code class="hljs language-text">Use AccessibleModal from @company/ui-kit@3.x.
 LegacyDialog MUST NOT be used in any new code.</code></pre>
-<h4>Don&#39;ts - Common Instruction Mistakes</h4>
-<h5>Don&#39;t paste entire WCAG guidelines</h5>
+<h4 id="don39ts---common-instruction-mistakes">Don&#39;ts - Common Instruction Mistakes</h4>
+<h5 id="don39t-paste-entire-wcag-guidelines">Don&#39;t paste entire WCAG guidelines</h5>
 <p>Copilot is already trained on WCAG. Pasting the full text wastes context space and dilutes your specific instructions. Instead, write concise, actionable rules that give <em>net-new</em> information: your team&#39;s specific practices, exceptions, and priorities.</p>
-<h5>Don&#39;t reference external links</h5>
+<h5 id="don39t-reference-external-links">Don&#39;t reference external links</h5>
 <p>By default, Copilot does not access external links in custom instructions - this is a deliberate security feature. A URL like <code>https://www.w3.org/WAI/WCAG21/</code> will not be fetched. Write the relevant rule directly.</p>
-<h5>Don&#39;t reference private repositories</h5>
+<h5 id="don39t-reference-private-repositories">Don&#39;t reference private repositories</h5>
 <p>Copilot cannot access private repository content from within custom instructions unless the content is already present in the active repo.</p>
-<h4>Additional Guidance</h4>
+<h4 id="additional-guidance">Additional Guidance</h4>
 <p><strong>Role-based prompting</strong> - You can give Copilot a persona to shape how it responds:</p>
 <pre><code class="hljs language-text">As the lead accessibility expert on your team, your primary focus is ensuring
 all UI is accessible by default, relying on semantic HTML before ARIA attributes.</code></pre>
 <p>Be specific about skills and responsibilities; avoid broad personas that may introduce unintended assumptions.</p>
 <p><strong>Keep instructions concise.</strong> There is no hard character limit, but overly long instructions reduce precision. Summarize the most important, actionable rules rather than listing every possible guideline.</p>
 <p><strong>Contribute effective instructions</strong> to <a href="https://github.com/github/awesome-copilot">github.com/github/awesome-copilot</a> so others benefit from your organization&#39;s work.</p>
-<h4>Accessibility Resources for Custom Instructions</h4>
+<h4 id="accessibility-resources-for-custom-instructions">Accessibility Resources for Custom Instructions</h4>
 <p>These resources can help you write better accessibility-focused custom instructions and evaluate Copilot&#39;s output:</p>
 <ul>
 <li><strong>A11y LLM Evaluation Report</strong> - GitHub&#39;s own evaluation of how well LLMs handle accessibility tasks, with practical benchmarks: <a href="https://githubnext.com/projects/a11y-llm-eval">Accessibility LLM Evaluation</a></li>
 <li><strong>Beast Mode Accessibility Prompt</strong> - A community-maintained, comprehensive accessibility prompt that you can adapt for your own instructions: referenced in <a href="https://github.com/github/awesome-copilot">github.com/github/awesome-copilot</a></li>
 <li><strong>Markdown Accessibility Review Guidelines</strong> - A practical guide for reviewing Markdown output for accessibility, useful as a reference when writing documentation-focused instructions: <a href="https://github.com/github/accessibility/blob/main/docs/markdown-accessibility.md">Markdown Accessibility</a></li>
 </ul>
-<h2>7. Using Accessible View with Copilot Responses</h2>
+<h2 id="7-using-accessible-view-with-copilot-responses">7. Using Accessible View with Copilot Responses</h2>
 <p>Copilot Chat responses stream in token by token. This is visually nice but can fragment screen reader announcements. <strong>Accessible View</strong> provides complete, structured access to generated content.</p>
 <blockquote>
 <p><strong>Not just for screen readers:</strong> Accessible View is also valuable for low vision users. It renders text at your configured editor font size in a clean pane without the Chat panel&#39;s smaller default font, cramped layout, or streaming animation.</p>
 </blockquote>
-<h3>Why Use Accessible View for Copilot</h3>
-<h4>Without Accessible View</h4>
+<h3 id="why-use-accessible-view-for-copilot">Why Use Accessible View for Copilot</h3>
+<h4 id="without-accessible-view">Without Accessible View</h4>
 <ul>
 <li>Responses announced in fragments as tokens arrive</li>
 <li>Live region updates may interrupt or overlap</li>
 <li>Difficult to re-read specific parts</li>
 <li>Context can be lost in streaming</li>
 </ul>
-<h4>With Accessible View (<code>Alt+F2</code> / Mac: <code>Option+F2</code>)</h4>
+<h4 id="with-accessible-view-altf2--mac-optionf2">With Accessible View (<code>Alt+F2</code> / Mac: <code>Option+F2</code>)</h4>
 <ul>
 <li>Full complete response in a readable pane</li>
 <li>Navigate with <code>Up/Down Arrow</code> at your own pace</li>
@@ -1019,8 +1019,8 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <li>Headings and lists structured</li>
 <li>No interruptions or live region noise</li>
 </ul>
-<h3>Recommended Workflow</h3>
-<h4>Every time you ask Copilot something</h4>
+<h3 id="recommended-workflow">Recommended Workflow</h3>
+<h4 id="every-time-you-ask-copilot-something">Every time you ask Copilot something</h4>
 <ol>
 <li>Type your prompt in Chat input</li>
 <li>Press <code>Ctrl+Enter</code> (Mac: <code>Cmd+Enter</code>) to send</li>
@@ -1032,15 +1032,15 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <blockquote>
 <p><strong>VS Code December 2025 update:</strong> The Accessible View now updates dynamically as responses stream in. You no longer need to wait for a response to finish before opening it - open <code>Alt+F2</code> right after sending and follow the response as it arrives.</p>
 </blockquote>
-<h4>Benefits</h4>
+<h4 id="benefits">Benefits</h4>
 <ul>
 <li>Follow responses live without waiting</li>
 <li>Navigate and re-read at your own pace</li>
 <li>Code blocks and lists are properly structured</li>
 <li>Headings are announced correctly</li>
 </ul>
-<h3>Accessible View for Inline Suggestions</h3>
-<h4>When a suggestion appears</h4>
+<h3 id="accessible-view-for-inline-suggestions">Accessible View for Inline Suggestions</h3>
+<h4 id="when-a-suggestion-appears">When a suggestion appears</h4>
 <ol>
 <li>Don&#39;t accept it immediately</li>
 <li>Press <code>Alt+F2</code> (Mac: <code>Option+F2</code>)</li>
@@ -1050,10 +1050,10 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <li>To close without inserting: press <code>Escape</code>, then <code>Tab</code> to accept or <code>Escape</code> to reject</li>
 </ol>
 <p><strong><code>Ctrl+/</code> (Mac: <code>Cmd+/</code>) inserts the suggestion directly from Accessible View</strong> - you don’t need to close the view first and then press <code>Tab</code>. This is the recommended workflow for screen reader users.</p>
-<h4>This is especially useful for multi-line suggestions where the ghost text is hard to review</h4>
-<h3>Code Blocks in Accessible View</h3>
+<h4 id="this-is-especially-useful-for-multi-line-suggestions-where-the-ghost-text-is-hard-to-review">This is especially useful for multi-line suggestions where the ghost text is hard to review</h4>
+<h3 id="code-blocks-in-accessible-view">Code Blocks in Accessible View</h3>
 <p>When Copilot suggests code or Markdown:</p>
-<h4>In Accessible View</h4>
+<h4 id="in-accessible-view">In Accessible View</h4>
 <ul>
 <li>Code blocks are in <code>&lt;pre&gt;</code> elements</li>
 <li>Screen readers announce &quot;code block&quot; or &quot;pre-formatted text&quot;</li>
@@ -1062,8 +1062,8 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 </ul>
 <p><strong>NVDA/JAWS:</strong> Use <code>Arrow</code> keys to read line by line. Use <code>Ctrl+Home</code> to jump to the start.</p>
 <p><strong>VoiceOver:</strong> Interact with the code block (<code>VO+Shift+Down</code>) to read each line with proper structure.</p>
-<h2>8. Keyboard Shortcuts Reference</h2>
-<h3>Copilot Inline Suggestions</h3>
+<h2 id="8-keyboard-shortcuts-reference">8. Keyboard Shortcuts Reference</h2>
+<h3 id="copilot-inline-suggestions">Copilot Inline Suggestions</h3>
 <table>
 <thead>
 <tr>
@@ -1113,7 +1113,7 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <td><code>Cmd+/</code></td>
 </tr>
 </tbody></table>
-<h3>Copilot Chat</h3>
+<h3 id="copilot-chat">Copilot Chat</h3>
 <table>
 <thead>
 <tr>
@@ -1148,7 +1148,7 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <td><code>Cmd+L</code></td>
 </tr>
 </tbody></table>
-<h3>Accessibility</h3>
+<h3 id="accessibility">Accessibility</h3>
 <table>
 <thead>
 <tr>
@@ -1178,7 +1178,7 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <td><code>Escape</code></td>
 </tr>
 </tbody></table>
-<h3>VS Code General (Quick Reference)</h3>
+<h3 id="vs-code-general-quick-reference">VS Code General (Quick Reference)</h3>
 <table>
 <thead>
 <tr>
@@ -1223,7 +1223,7 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <td><code>Ctrl+Backtick</code></td>
 </tr>
 </tbody></table>
-<h3>GitHub.com Shortcuts (Not VS Code)</h3>
+<h3 id="githubcom-shortcuts-not-vs-code">GitHub.com Shortcuts (Not VS Code)</h3>
 <p>These shortcuts work on GitHub.com in your browser, not inside VS Code. Students sometimes confuse them with Copilot shortcuts because they involve similar key combinations.</p>
 <table>
 <thead>
@@ -1251,7 +1251,7 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <p><strong>Screen reader note:</strong> When github.dev opens, your browser tab reloads into a VS Code-like interface. Your screen reader may announce &quot;Visual Studio Code&quot; or &quot;GitHub Dev Editor.&quot; This is a web page, not the desktop application. Press <code>Ctrl+Shift+P</code> to confirm you are in github.dev by reading the title bar.</p>
 </blockquote>
 <p><strong>Complete keyboard reference:</strong> See <a href="appendix-m-vscode-accessibility-reference.html">Appendix M: VS Code Accessibility Reference</a></p>
-<h3>Video Tutorials (Screen Reader Demonstrations)</h3>
+<h3 id="video-tutorials-screen-reader-demonstrations">Video Tutorials (Screen Reader Demonstrations)</h3>
 <p>GitHub&#39;s accessibility team has published screen reader walkthroughs for each major Copilot feature:</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=SaqemiAR1yk">Inline suggestions with a screen reader</a> - accepting, rejecting, and reviewing ghost text suggestions with NVDA</li>
@@ -1262,10 +1262,10 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <blockquote>
 <p><strong>Tip:</strong> These videos show NVDA with VS Code on Windows. The workflows apply to JAWS and VoiceOver with minor shortcut differences noted in each section above.</p>
 </blockquote>
-<h2>Troubleshooting</h2>
-<h3>Copilot Not Suggesting Anything</h3>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="copilot-not-suggesting-anything">Copilot Not Suggesting Anything</h3>
 <p><strong>Issue:</strong> No suggestions appear as you type.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Check Copilot is active: status bar icon should not be grayed out</li>
 <li>Click the Copilot icon → verify &quot;Completions enabled&quot;</li>
@@ -1273,34 +1273,34 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <li>Restart VS Code</li>
 <li>Sign out and sign back in: <code>Ctrl+Shift+P</code> → &quot;Copilot: Sign Out&quot;</li>
 </ol>
-<h3>Suggestions Are Too Frequent/Distracting</h3>
+<h3 id="suggestions-are-too-frequentdistracting">Suggestions Are Too Frequent/Distracting</h3>
 <p><strong>Issue:</strong> Constant interruptions from suggestions.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Use word-by-word acceptance: <code>Ctrl+Right Arrow</code></li>
 <li>Reduce screen reader verbosity (see Section 3)</li>
 <li>Use Accessible View (<code>Alt+F2</code>) to review suggestions without live announcements</li>
 <li>Disable inline suggestions temporarily: Copilot icon → &quot;Disable Completions&quot;</li>
 </ol>
-<h3>Chat Responses Not Announced</h3>
+<h3 id="chat-responses-not-announced">Chat Responses Not Announced</h3>
 <p><strong>Issue:</strong> Screen reader silent when Copilot responds.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Wait for response to complete, then press <code>Alt+F2</code> for Accessible View</li>
 <li>Check ARIA live region settings in your screen reader</li>
 <li>Navigate manually to the response area with <code>Tab</code> or <code>Arrow</code> keys</li>
 <li>Use Quick Chat (<code>Ctrl+Shift+Alt+I</code>) instead of panel chat</li>
 </ol>
-<h3>&quot;Copilot Subscription Required&quot;</h3>
+<h3 id="quotcopilot-subscription-requiredquot">&quot;Copilot Subscription Required&quot;</h3>
 <p><strong>Issue:</strong> Extension installed but asks for subscription.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Sign in to GitHub: Copilot icon → &quot;Sign in&quot;</li>
 <li>Verify GitHub account has Copilot access (free tier or paid)</li>
 <li>Check <a href="https://github.com/settings/copilot">github.com/settings/copilot</a> for subscription status</li>
 <li>Free tier users: ensure you haven&#39;t exceeded monthly limits</li>
 </ol>
-<h2>Try It: Your First Copilot Conversation</h2>
+<h2 id="try-it-your-first-copilot-conversation">Try It: Your First Copilot Conversation</h2>
 <p><strong>Time:</strong> 3 minutes | <strong>What you need:</strong> VS Code with Copilot Chat extension installed</p>
 <ol>
 <li><strong>Open Copilot Chat</strong> - Press <code>Ctrl+Shift+I</code> (Mac: <code>Cmd+Shift+I</code>). Your screen reader announces the chat panel.</li>

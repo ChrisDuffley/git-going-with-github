@@ -26,6 +26,21 @@ renderer.code = function(code, infostring, escaped) {
   return `<pre><code${cls}>${highlighted}</code></pre>\n`;
 };
 
+// Generate heading IDs matching GitHub's anchor algorithm so TOC links work
+function headingAnchor(text) {
+  // Strip inline HTML tags (e.g. <code>, <strong>)
+  const plain = text.replace(/<[^>]+>/g, '');
+  return plain
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, '')  // remove punctuation except hyphens
+    .replace(/ /g, '-');        // spaces → hyphens (preserve consecutive hyphens)
+}
+
+renderer.heading = function(text, level) {
+  const id = headingAnchor(text);
+  return `<h${level} id="${id}">${text}</h${level}>\n`;
+};
+
 // Add scope="col" to all <th> elements for WCAG 1.3.1
 renderer.tablecell = function(content, flags) {
   const tag = flags.header ? 'th' : 'td';

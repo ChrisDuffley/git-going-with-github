@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix F: GitHub Gists - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix F: GitHub Gists</span>
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix F: GitHub Gists</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,15 +58,15 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Appendix F: GitHub Gists</h1>
+    <h1 id="appendix-f-github-gists">Appendix F: GitHub Gists</h1>
 <blockquote>
 <p><strong>Listen to Episode 23:</strong> <a href="../PODCASTS.html">GitHub Gists</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
 </blockquote>
-<h2>Shareable Code Snippets and Notes</h2>
+<h2 id="shareable-code-snippets-and-notes">Shareable Code Snippets and Notes</h2>
 <blockquote>
 <p>Gists are a simple way to share code snippets, notes, or small files without creating a full repository. Think of them as lightweight, version-controlled pastebins.</p>
 </blockquote>
-<h2>What Is a Gist?</h2>
+<h2 id="what-is-a-gist">What Is a Gist?</h2>
 <p>A Gist is a Git repository that holds a single file or a small collection of files. Every Gist:</p>
 <ul>
 <li>Has its own URL (e.g., <code>gist.github.com/username/a1b2c3d4</code>)</li>
@@ -77,7 +77,7 @@
 <li>Can be cloned, forked, and starred just like repos</li>
 </ul>
 <p><strong>Secret does not mean private.</strong> Anyone with the URL can view a secret Gist. It&#39;s just not listed publicly on your profile.</p>
-<h2>When to Use a Gist vs a Repository</h2>
+<h2 id="when-to-use-a-gist-vs-a-repository">When to Use a Gist vs a Repository</h2>
 <table>
 <thead>
 <tr>
@@ -106,8 +106,8 @@
 <td>Need multiple branches</td>
 </tr>
 </tbody></table>
-<h2>Creating a Gist</h2>
-<h3>Via GitHub Web Interface</h3>
+<h2 id="creating-a-gist">Creating a Gist</h2>
+<h3 id="via-github-web-interface">Via GitHub Web Interface</h3>
 <ol>
 <li>Navigate to <a href="https://gist.github.com">gist.github.com</a></li>
 <li><strong>Gist description:</strong> A short title (e.g., &quot;NVDA configuration for GitHub&quot;)</li>
@@ -120,13 +120,13 @@
 </li>
 <li>The Gist is created with a unique URL you can share</li>
 </ol>
-<h4>Screen reader navigation</h4>
+<h4 id="screen-reader-navigation">Screen reader navigation</h4>
 <ul>
 <li><code>D</code> to cycle landmarks to &quot;Main&quot;</li>
 <li><code>F</code> to navigate form fields</li>
 <li>Tab through: Description → Filename → Content textbox → Visibility buttons</li>
 </ul>
-<h3>Adding Multiple Files to a Gist</h3>
+<h3 id="adding-multiple-files-to-a-gist">Adding Multiple Files to a Gist</h3>
 <p>You can add multiple files to a single Gist:</p>
 <ol>
 <li>After typing the first filename and content, select <strong>&quot;Add file&quot;</strong> (button below the editor)</li>
@@ -134,7 +134,7 @@
 <li>Create the Gist</li>
 </ol>
 <p><strong>Use case:</strong> Share related config files together (e.g., <code>.vscode/settings.json</code> + <code>.vscode/keybindings.json</code>)</p>
-<h2>Editing a Gist</h2>
+<h2 id="editing-a-gist">Editing a Gist</h2>
 <ol>
 <li>Navigate to your Gist&#39;s URL</li>
 <li>Select <strong>&quot;Edit&quot;</strong> (button in the top-right)</li>
@@ -142,16 +142,16 @@
 <li>Select <strong>&quot;Update public gist&quot;</strong> or <strong>&quot;Update secret gist&quot;</strong></li>
 </ol>
 <p>Every edit creates a new revision. Click <strong>&quot;Revisions&quot;</strong> to see the full edit history.</p>
-<h2>Embedding a Gist</h2>
+<h2 id="embedding-a-gist">Embedding a Gist</h2>
 <p>You can embed Gists in web pages, blog posts, or documentation:</p>
 <pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;https://gist.github.com/username/gist-id.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
 <p>GitHub renders it as a formatted code block with syntax highlighting and a link back to the Gist.</p>
 <p><strong>Accessibility note:</strong> Embedded Gists are <code>&lt;iframe&gt;</code> elements. Screen readers will announce them as &quot;frame&quot; and allow navigation into the content.</p>
-<h2>Cloning a Gist</h2>
+<h2 id="cloning-a-gist">Cloning a Gist</h2>
 <p>Every Gist is a Git repository. You can clone it:</p>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://gist.github.com/username/gist-id.git</code></pre>
 <p>Make changes locally, commit, and push just like a normal repo.</p>
-<h2>Forking a Gist</h2>
+<h2 id="forking-a-gist">Forking a Gist</h2>
 <p>You can fork someone else&#39;s Gist to create your own copy:</p>
 <ol>
 <li>View the Gist</li>
@@ -159,7 +159,7 @@
 <li>GitHub creates a new Gist under your account</li>
 </ol>
 <p><strong>Use case:</strong> Someone shares a useful script, you fork it, and customize it for your needs.</p>
-<h2>Finding Your Gists</h2>
+<h2 id="finding-your-gists">Finding Your Gists</h2>
 <p><strong>Your Gists page:</strong> <a href="https://gist.github.com/">gist.github.com/your-username</a></p>
 <p>All your public and secret Gists are listed here. You can:</p>
 <ul>
@@ -167,13 +167,13 @@
 <li>Star Gists you want to reference later</li>
 <li>Delete old Gists</li>
 </ul>
-<h3>Screen reader navigation</h3>
+<h3 id="screen-reader-navigation">Screen reader navigation</h3>
 <ul>
 <li>Each Gist appears as a heading (H2) with its description</li>
 <li>Press <code>2</code> or <code>H</code> to jump between Gists</li>
 <li>Each Gist has links: &quot;Edit,&quot; &quot;Delete,&quot; &quot;Star,&quot; &quot;Embed&quot;</li>
 </ul>
-<h2>Discovering Public Gists</h2>
+<h2 id="discovering-public-gists">Discovering Public Gists</h2>
 <p><strong>Browse trending Gists:</strong> <a href="https://gist.github.com/discover">gist.github.com/discover</a></p>
 <p>See popular Gists by language. Great for finding:</p>
 <ul>
@@ -181,35 +181,35 @@
 <li>Configuration examples</li>
 <li>Code snippets for learning</li>
 </ul>
-<h2>Gist Comments</h2>
+<h2 id="gist-comments">Gist Comments</h2>
 <p>Public Gists support comments. Anyone with a GitHub account can leave a comment, making Gists useful for:</p>
 <ul>
 <li>Asking questions about a snippet</li>
 <li>Suggesting improvements</li>
 <li>Discussing implementation details</li>
 </ul>
-<h3>To add a comment</h3>
+<h3 id="to-add-a-comment">To add a comment</h3>
 <ol>
 <li>Scroll to the bottom of the Gist page</li>
 <li><code>F</code> to navigate form fields → Find the comment textarea</li>
 <li>Type your comment (Markdown supported)</li>
 <li><code>Ctrl+Enter</code> or activate &quot;Comment&quot; button</li>
 </ol>
-<h2>Security and Privacy</h2>
-<h3>Public Gists</h3>
+<h2 id="security-and-privacy">Security and Privacy</h2>
+<h3 id="public-gists">Public Gists</h3>
 <ul>
 <li>Appear on your profile</li>
 <li>Are indexed by search engines</li>
 <li>Anyone can view, fork, and comment</li>
 </ul>
-<h3>Secret Gists</h3>
+<h3 id="secret-gists">Secret Gists</h3>
 <ul>
 <li>Do not appear on your profile</li>
 <li>Are not indexed by search engines</li>
 <li>Anyone with the URL can view</li>
 <li>Still version-controlled and can be starred</li>
 </ul>
-<h3>Never put sensitive data in Gists</h3>
+<h3 id="never-put-sensitive-data-in-gists">Never put sensitive data in Gists</h3>
 <ul>
 <li>Passwords or API keys</li>
 <li>Personal identifying information</li>
@@ -221,8 +221,8 @@
 <li>Revoke/regenerate any exposed credentials</li>
 <li>Remember: Forks and clones may still exist</li>
 </ol>
-<h2>Example Use Cases</h2>
-<h3>1. Sharing Screen Reader Config</h3>
+<h2 id="example-use-cases">Example Use Cases</h2>
+<h3 id="1-sharing-screen-reader-config">1. Sharing Screen Reader Config</h3>
 <pre><code class="hljs language-text">Filename: nvda-github-config.txt
 Content:
 # NVDA Settings for GitHub Web Navigation
@@ -231,7 +231,7 @@ Content:
 - Rate: 65%
 - Keyboard shortcuts: Use standard GitHub shortcuts (G+I, G+P, etc.)</code></pre>
 <p>Share the Gist URL with other screen reader users.</p>
-<h3>2. Quick Markdown Note</h3>
+<h3 id="2-quick-markdown-note">2. Quick Markdown Note</h3>
 <pre><code class="hljs language-text">Filename: workshop-notes.md
 Content:
 # Workshop Day 1 Notes
@@ -239,9 +239,9 @@ Content:
 - Keyboard shortcuts: G+I (issues), G+P (PRs), / (search)
 - Always link PRs to issues with &quot;Closes #N&quot;</code></pre>
 <p>Reference it later or share with workshop participants.</p>
-<h3>3. Code Snippet for a StackOverflow Answer</h3>
+<h3 id="3-code-snippet-for-a-stackoverflow-answer">3. Code Snippet for a StackOverflow Answer</h3>
 <p>When answering questions, paste your code as a Gist and link to it. Readers get syntax highlighting, version history, and the ability to fork your solution.</p>
-<h2>Gists vs GitHub Repositories - Quick Comparison</h2>
+<h2 id="gists-vs-github-repositories---quick-comparison">Gists vs GitHub Repositories - Quick Comparison</h2>
 <table>
 <thead>
 <tr>
@@ -296,7 +296,7 @@ Content:
 <td>Yes (on issues/PRs)</td>
 </tr>
 </tbody></table>
-<h2>Deleting a Gist</h2>
+<h2 id="deleting-a-gist">Deleting a Gist</h2>
 <ol>
 <li>Navigate to the Gist</li>
 <li>Select <strong>&quot;Edit&quot;</strong></li>

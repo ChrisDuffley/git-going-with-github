@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Facilitator Guide & Workshop Timeline - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Guide & Workshop Timeline</span>
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Guide & Workshop Timeline</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,12 +58,12 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Facilitator Guide &amp; Workshop Timeline</h1>
-<h2>Overview</h2>
+    <h1 id="facilitator-guide-amp-workshop-timeline">Facilitator Guide &amp; Workshop Timeline</h1>
+<h2 id="overview">Overview</h2>
 <p>This workshop runs <strong>Saturday, March 8-9, 2026</strong> from <strong>12pm-8pm ET</strong> both days.</p>
 <p><strong>Participants:</strong> 66 blind and low-vision students<br><strong>Format:</strong> Hybrid (streaming + learning room)<br><strong>Main Goal:</strong> Get every student to merge their first pull request</p>
-<h2>Before the Workshop (Friday, March 7)</h2>
-<h3>Facilitator Checklist</h3>
+<h2 id="before-the-workshop-friday-march-7">Before the Workshop (Friday, March 7)</h2>
+<h3 id="facilitator-checklist">Facilitator Checklist</h3>
 <ul>
 <li><input aria-label="Verify all 66 student branches exist" disabled="" type="checkbox"> Verify all 66 student branches exist</li>
 <li><input aria-label="Test assignment issues load without errors" disabled="" type="checkbox"> Test assignment issues load without errors</li>
@@ -78,7 +78,7 @@
 </ul>
 </li>
 </ul>
-<h3>Verify Infrastructure</h3>
+<h3 id="verify-infrastructure">Verify Infrastructure</h3>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Check all branches exist</span>
 git branch | Select-String <span class="hljs-string">&quot;student/&quot;</span> | Measure-Object
 
@@ -87,8 +87,8 @@ python -c <span class="hljs-string">&quot;import json; print(f\&quot;Total stude
 
 <span class="hljs-comment"># Test one assignment issue creation (run on practice student)</span>
 gh issue create --title <span class="hljs-string">&quot;[TEST] Sample Assignment&quot;</span> --body <span class="hljs-string">&quot;Test issue&quot;</span> --assignee <span class="hljs-variable">$YOUR_USERNAME</span></code></pre>
-<h2>Day 1: Saturday, March 8, 12pm-8pm ET</h2>
-<h3>12:00 PM - 1:00 PM: Welcome &amp; GitHub Orientation (60 min)</h3>
+<h2 id="day-1-saturday-march-8-12pm-8pm-et">Day 1: Saturday, March 8, 12pm-8pm ET</h2>
+<h3 id="1200-pm---100-pm-welcome-amp-github-orientation-60-min">12:00 PM - 1:00 PM: Welcome &amp; GitHub Orientation (60 min)</h3>
 <p><strong>Facilitator Role:</strong></p>
 <ul>
 <li>Create welcoming opening acknowledging everyone&#39;s accessibility needs</li>
@@ -110,7 +110,7 @@ gh issue create --title <span class="hljs-string">&quot;[TEST] Sample Assignment
 <li>Zoom chat moderator who watches for questions</li>
 </ul>
 <p><strong>Success Metric:</strong> All 66 students in Zoom report &quot;I found my issue&quot;</p>
-<h3>1:00 PM - 1:30 PM: Demo - Your First PR (30 min)</h3>
+<h3 id="100-pm---130-pm-demo---your-first-pr-30-min">1:00 PM - 1:30 PM: Demo - Your First PR (30 min)</h3>
 <p><strong>You (facilitator) will:</strong></p>
 <ol>
 <li>Show a completed example on screen with narration</li>
@@ -134,7 +134,7 @@ gh issue create --title <span class="hljs-string">&quot;[TEST] Sample Assignment
 </ol>
 <p><strong>This is the workflow EVERY student will repeat.</strong> Make it crystal clear.</p>
 <p><strong>Success Metric:</strong> Students report &quot;I see how this works&quot; in chat</p>
-<h3>1:30 PM - 6:00 PM: Silent Working Session (270 min)</h3>
+<h3 id="130-pm---600-pm-silent-working-session-270-min">1:30 PM - 6:00 PM: Silent Working Session (270 min)</h3>
 <p><strong>Students work independently on their assignment issues.</strong></p>
 <p>This is THE MAIN ENGAGEMENT. They&#39;re making their first real contribution.</p>
 <p><strong>Facilitator Role:</strong></p>
@@ -172,7 +172,7 @@ gh issue create --title <span class="hljs-string">&quot;[TEST] Sample Assignment
 <p><strong>Celebrate Merges:</strong></p>
 <pre><code class="hljs"> Huge congrats @username! Your first PR <span class="hljs-keyword">is</span> MERGED! 
 You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span class="hljs-keyword">to</span> an <span class="hljs-keyword">open</span> source project!</code></pre>
-<h3>6:00 PM - 6:30 PM: Q&amp;A &amp; Reflection (30 min)</h3>
+<h3 id="600-pm---630-pm-qampa-amp-reflection-30-min">6:00 PM - 6:30 PM: Q&amp;A &amp; Reflection (30 min)</h3>
 <p><strong>Prompt for Discussion:</strong></p>
 <blockquote>
 <p>&quot;Tell us in chat: What was one thing you learned today about GitHub?&quot;</p>
@@ -190,22 +190,22 @@ You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span clas
 <li>Sneak peek at what&#39;s next</li>
 <li>Encouragement!</li>
 </ul>
-<h3>6:30 PM - 8:00 PM: Office Hours (Optional)</h3>
+<h3 id="630-pm---800-pm-office-hours-optional">6:30 PM - 8:00 PM: Office Hours (Optional)</h3>
 <ul>
 <li>Available for 1:1 troubleshooting</li>
 <li>Help students finish PRs</li>
 <li>Answer &quot;How do I...?&quot; questions about GitHub</li>
 <li>Document common questions for tomorrow&#39;s content</li>
 </ul>
-<h2>Day 2: Sunday, March 9, 12pm-8pm ET</h2>
-<h3>12:00 PM - 12:30 PM: Recap &amp; Wins (30 min)</h3>
+<h2 id="day-2-sunday-march-9-12pm-8pm-et">Day 2: Sunday, March 9, 12pm-8pm ET</h2>
+<h3 id="1200-pm---1230-pm-recap-amp-wins-30-min">12:00 PM - 12:30 PM: Recap &amp; Wins (30 min)</h3>
 <p><strong>Facilitator:</strong></p>
 <ul>
 <li>Show stats: &quot;66 students, X PRs merged on Day 1&quot;</li>
 <li>Acknowledge students who got stuck but persisted</li>
 <li>Introduce next challenge level for students ready to go further</li>
 </ul>
-<h3>12:30 PM - 1:30 PM: Deep Dive - Code Review (60 min)</h3>
+<h3 id="1230-pm---130-pm-deep-dive---code-review-60-min">12:30 PM - 1:30 PM: Deep Dive - Code Review (60 min)</h3>
 <p><strong>Teach:</strong></p>
 <ul>
 <li>How to review someone else&#39;s PR  </li>
@@ -219,7 +219,7 @@ You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span clas
 <li>Start with example feedback you provide</li>
 <li>Let them practice the async review process</li>
 </ul>
-<h3>1:30 PM - 6:00 PM: Skill-Building Challenges (270 min)</h3>
+<h3 id="130-pm---600-pm-skill-building-challenges-270-min">1:30 PM - 6:00 PM: Skill-Building Challenges (270 min)</h3>
 <p><strong>Now students work on progressively harder challenges:</strong></p>
 <table>
 <thead>
@@ -262,7 +262,7 @@ You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span clas
 <li>Help intermediate students with conflict resolution</li>
 <li>Keep the energy positive</li>
 </ul>
-<h3>6:00 PM - 7:00 PM: Final Q&amp;A &amp; Celebration (60 min)</h3>
+<h3 id="600-pm---700-pm-final-qampa-amp-celebration-60-min">6:00 PM - 7:00 PM: Final Q&amp;A &amp; Celebration (60 min)</h3>
 <p><strong>Metrics to share:</strong></p>
 <pre><code class="hljs"> <span class="hljs-attribute">WORKSHOP RESULTS</span><span class="hljs-punctuation">:</span>
 <span class="hljs-bullet">-</span> <span class="hljs-string">66 students registered</span>
@@ -282,15 +282,15 @@ You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span clas
 <li>Give them the RESOURCES appendix</li>
 <li>Offer alumni community channel</li>
 </ul>
-<h3>7:00 PM - 8:00 PM: Informal Hangout (60 min)</h3>
+<h3 id="700-pm---800-pm-informal-hangout-60-min">7:00 PM - 8:00 PM: Informal Hangout (60 min)</h3>
 <ul>
 <li>Students &quot;hang out&quot; on Zoom</li>
 <li>Chat with peers and facilitators</li>
 <li>Ask follow-up questions</li>
 <li>Exchange GitHub usernames</li>
 </ul>
-<h2>Facilitator Role Critical Points</h2>
-<h3>Communication Style</h3>
+<h2 id="facilitator-role-critical-points">Facilitator Role Critical Points</h2>
+<h3 id="communication-style">Communication Style</h3>
 <p> <strong>DO:</strong></p>
 <ul>
 <li>Use simple language: &quot;Click the pencil icon to edit&quot;</li>
@@ -307,7 +307,7 @@ You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span clas
 <li>Make anyone feel bad about getting stuck</li>
 <li>Focus on speed - focus on understanding</li>
 </ul>
-<h3>Responding to Common Issues</h3>
+<h3 id="responding-to-common-issues">Responding to Common Issues</h3>
 <table>
 <thead>
 <tr>
@@ -340,7 +340,7 @@ You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span clas
 <td>Option 1: Do another challenge. Option 2: Review someone&#39;s PR. Option 3: Help a peer.</td>
 </tr>
 </tbody></table>
-<h3>End of Workshop Facilitator Duties</h3>
+<h3 id="end-of-workshop-facilitator-duties">End of Workshop Facilitator Duties</h3>
 <ol>
 <li><strong>Export metrics</strong> - Use progress tracker to generate final report</li>
 <li><strong>Write thank you email</strong> - Personal note to each student (use template)</li>
@@ -348,25 +348,25 @@ You<span class="hljs-symbol">&#x27;re</span> officially a contributor <span clas
 <li><strong>Document what worked</strong> - Feedback for next workshop</li>
 <li><strong>Tag students in commit credit</strong> - Add to CONTRIBUTORS file</li>
 </ol>
-<h2>Emergency Protocols</h2>
-<h3>Bot stops responding to PRs</h3>
+<h2 id="emergency-protocols">Emergency Protocols</h2>
+<h3 id="bot-stops-responding-to-prs">Bot stops responding to PRs</h3>
 <ul>
 <li>Check GitHub Actions status page</li>
 <li>Manually review PRs and comment with feedback format bot would use</li>
 <li>Post in Discussions: &quot;Facing technical issue, we&#39;ll handle this manually&quot;</li>
 </ul>
-<h3>Student GitHub account locked</h3>
+<h3 id="student-github-account-locked">Student GitHub account locked</h3>
 <ul>
 <li>Have them reset password via GitHub</li>
 <li>Or create temporary escalation issue for them to move forward</li>
 </ul>
-<h3>Zoom connectivity issues</h3>
+<h3 id="zoom-connectivity-issues">Zoom connectivity issues</h3>
 <ul>
 <li>Have phone dial-in number as backup</li>
 <li>Offer to continue in Discussions if needed</li>
 <li>Record session for students who lose connection</li>
 </ul>
-<h3>Workshop needs to end early</h3>
+<h3 id="workshop-needs-to-end-early">Workshop needs to end early</h3>
 <ul>
 <li>Stop at natural break point</li>
 <li>Students can continue async after</li>

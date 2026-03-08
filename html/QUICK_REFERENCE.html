@@ -58,10 +58,10 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Quick Reference Guide</h1>
-<h2>Essential Commands, Shortcuts, and File Locations</h2>
-<h2>Screen Reader Commands for GitHub</h2>
-<h3>NVDA (Windows)</h3>
+    <h1 id="quick-reference-guide">Quick Reference Guide</h1>
+<h2 id="essential-commands-shortcuts-and-file-locations">Essential Commands, Shortcuts, and File Locations</h2>
+<h2 id="screen-reader-commands-for-github">Screen Reader Commands for GitHub</h2>
+<h3 id="nvda-windows">NVDA (Windows)</h3>
 <table>
 <thead>
 <tr>
@@ -110,7 +110,7 @@
 <td><code>NVDA+Space</code> (in a page)</td>
 </tr>
 </tbody></table>
-<h3>JAWS (Windows)</h3>
+<h3 id="jaws-windows">JAWS (Windows)</h3>
 <table>
 <thead>
 <tr>
@@ -155,7 +155,7 @@
 <td><code>Control</code></td>
 </tr>
 </tbody></table>
-<h3>VoiceOver (macOS)</h3>
+<h3 id="voiceover-macos">VoiceOver (macOS)</h3>
 <table>
 <thead>
 <tr>
@@ -196,7 +196,7 @@
 <td><code>VO+U</code> → <code>F</code></td>
 </tr>
 </tbody></table>
-<h2>GitHub Navigation Shortcuts (All Browsers)</h2>
+<h2 id="github-navigation-shortcuts-all-browsers">GitHub Navigation Shortcuts (All Browsers)</h2>
 <table>
 <thead>
 <tr>
@@ -237,7 +237,7 @@
 <td><code>G</code> then <code>C</code></td>
 </tr>
 </tbody></table>
-<h2>VS Code Keyboard Shortcuts</h2>
+<h2 id="vs-code-keyboard-shortcuts">VS Code Keyboard Shortcuts</h2>
 <table>
 <thead>
 <tr>
@@ -302,29 +302,29 @@
 <td><code>Shift+Option+F</code></td>
 </tr>
 </tbody></table>
-<h2>Git Commands (Terminal)</h2>
-<h3>Repository Setup</h3>
+<h2 id="git-commands-terminal">Git Commands (Terminal)</h2>
+<h3 id="repository-setup">Repository Setup</h3>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[USERNAME]/[REPO].git    <span class="hljs-comment"># Clone your fork</span>
 <span class="hljs-built_in">cd</span> [REPO]                                               <span class="hljs-comment"># Enter folder</span>
 git remote -v                                           <span class="hljs-comment"># View remotes</span>
 git remote add upstream https://github.com/[ORIGINAL]   <span class="hljs-comment"># Add upstream</span></code></pre>
-<h3>Branch Workflow</h3>
+<h3 id="branch-workflow">Branch Workflow</h3>
 <pre><code class="hljs language-bash">git checkout -b [branch-name]           <span class="hljs-comment"># Create and switch to branch</span>
 git branch -a                            <span class="hljs-comment"># List all branches</span>
 git branch -d [branch-name]              <span class="hljs-comment"># Delete local branch</span>
 git push origin [branch-name]            <span class="hljs-comment"># Push branch to GitHub</span></code></pre>
-<h3>Staging and Committing</h3>
+<h3 id="staging-and-committing">Staging and Committing</h3>
 <pre><code class="hljs language-bash">git status                               <span class="hljs-comment"># See what changed</span>
 git add [file]                           <span class="hljs-comment"># Stage specific file</span>
 git add .                                <span class="hljs-comment"># Stage all changes</span>
 git commit -m <span class="hljs-string">&quot;message&quot;</span>                  <span class="hljs-comment"># Commit with message</span>
 git push origin [branch-name]            <span class="hljs-comment"># Push commits</span></code></pre>
-<h3>Pulling Updates</h3>
+<h3 id="pulling-updates">Pulling Updates</h3>
 <pre><code class="hljs language-bash">git pull origin main                     <span class="hljs-comment"># Pull latest from your fork</span>
 git pull upstream main                   <span class="hljs-comment"># Pull latest from upstream</span>
 git fetch upstream                       <span class="hljs-comment"># Fetch without merging</span></code></pre>
-<h2>File Locations Reference</h2>
-<h3>Template &amp; Agent Files</h3>
+<h2 id="file-locations-reference">File Locations Reference</h2>
+<h3 id="template-amp-agent-files">Template &amp; Agent Files</h3>
 <pre><code class="hljs">.github/
 ├── ISSUE_TEMPLATE/
 │   ├── accessibility-bug<span class="hljs-selector-class">.yml</span>            ← Accessibility issue template
@@ -345,7 +345,7 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 └── data/
     ├── challenge-progression<span class="hljs-selector-class">.json</span>
     └── student-roster.json</code></pre>
-<h3>Documentation Files</h3>
+<h3 id="documentation-files">Documentation Files</h3>
 <pre><code class="hljs">docs/
 ├── <span class="hljs-number">00</span>-pre-workshop-setup.<span class="hljs-built_in">md</span>             ← <span class="hljs-built_in">Start</span> here
 ├── <span class="hljs-number">01</span>-understanding-github-web-structure.<span class="hljs-built_in">md</span>
@@ -355,7 +355,7 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 ├── <span class="hljs-number">15</span>-issue-templates.<span class="hljs-built_in">md</span>                ← Design templates (manual)
 ├── <span class="hljs-number">16</span>-accessibility-agents.<span class="hljs-built_in">md</span>                    ← Automate with agents
 └── appendix-a-glossary.<span class="hljs-built_in">md</span>               ← Term definitions</code></pre>
-<h2>YAML Template Structure (Quick Template)</h2>
+<h2 id="yaml-template-structure-quick-template">YAML Template Structure (Quick Template)</h2>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Template</span> <span class="hljs-string">Name</span>
 <span class="hljs-attr">description:</span> <span class="hljs-string">One</span> <span class="hljs-string">line</span> <span class="hljs-string">description</span>
 <span class="hljs-attr">title:</span> <span class="hljs-string">&quot;[TAG] &quot;</span>
@@ -403,7 +403,7 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
       <span class="hljs-attr">options:</span>
         <span class="hljs-bullet">-</span> <span class="hljs-attr">label:</span> <span class="hljs-string">I</span> <span class="hljs-string">searched</span> <span class="hljs-string">for</span> <span class="hljs-string">existing</span> <span class="hljs-string">issues</span>
           <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span></code></pre>
-<h2>Accessibility Testing Checklist (Quick)</h2>
+<h2 id="accessibility-testing-checklist-quick">Accessibility Testing Checklist (Quick)</h2>
 <ul>
 <li><input aria-label="All form labels announced by screen reader" disabled="" type="checkbox"> All form labels announced by screen reader</li>
 <li><input aria-label="Required fields marked and announced as required" disabled="" type="checkbox"> Required fields marked and announced as required</li>
@@ -413,7 +413,7 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 <li><input aria-label="Color not the only way to convey information" disabled="" type="checkbox"> Color not the only way to convey information</li>
 <li><input aria-label="Tested on: NVDA JAWS VoiceOver" disabled="" type="checkbox"> Tested on: NVDA JAWS VoiceOver</li>
 </ul>
-<h2>Common YAML Errors &amp; Fixes</h2>
+<h2 id="common-yaml-errors-amp-fixes">Common YAML Errors &amp; Fixes</h2>
 <table>
 <thead>
 <tr>
@@ -448,7 +448,7 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 <td>Add <code>options:</code> with indented list</td>
 </tr>
 </tbody></table>
-<h2>Where to Find Help</h2>
+<h2 id="where-to-find-help">Where to Find Help</h2>
 <table>
 <thead>
 <tr>
@@ -473,7 +473,7 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 <td><code>docs/appendix-b-screen-reader-cheatsheet.md</code></td>
 </tr>
 </tbody></table>
-<h2>Accessibility Hotkeys Summary</h2>
+<h2 id="accessibility-hotkeys-summary">Accessibility Hotkeys Summary</h2>
 <p><strong>NVDA + JAWS (same):</strong> Browse web content with H (headings), T (tables), B (buttons), L (lists)<br><strong>VoiceOver:</strong> Use VO+U to open rotor, then navigate by category (Headings, Links, Form Controls)<br><strong>VS Code:</strong> F7 = Accessible Diff, Alt+F2 = Accessible View</p>
 <p><em>Last updated: February 2026 | For latest, see README.md</em></p>
 

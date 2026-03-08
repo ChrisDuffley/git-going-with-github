@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>GitHub Pull Requests Extension - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -28,7 +28,7 @@
   <header class="site-header" role="banner">
     <div class="site-header-inner">
       <nav aria-label="Breadcrumb" class="breadcrumb">
-        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Pull Requests Extension</span>
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Pull Requests Extension</span>
       </nav>
       <div class="header-actions">
         <a href="https://github.com/Community-Access/git-going-with-github/wiki" class="wiki-link" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
           </svg>
           Wiki
         </a>
-        <form role="search" class="search-form" action="./search.html" method="get">
+        <form role="search" class="search-form" action="../search.html" method="get">
         <label for="site-search" class="search-label">Search docs</label>
         <input
           type="search"
@@ -58,18 +58,18 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>GitHub Pull Requests Extension</h1>
+    <h1 id="github-pull-requests-extension">GitHub Pull Requests Extension</h1>
 <blockquote>
 <p><strong>Listen to Episode 13:</strong> <a href="../PODCASTS.html">The GitHub Pull Requests Extension</a> - a conversational audio overview of this chapter. Listen before reading to preview the concepts, or after to reinforce what you learned.</p>
 </blockquote>
-<h2>Managing Pull Requests from VS Code</h2>
+<h2 id="managing-pull-requests-from-vs-code">Managing Pull Requests from VS Code</h2>
 <blockquote>
 <p><strong>Day 2, Block 2 Material</strong></p>
 <p>This guide covers the GitHub Pull Requests and Issues extension: viewing open PRs, checking out PR branches for local testing, reviewing PRs with screen reader-accessible tools, creating PRs directly from VS Code, using PR templates, and syncing PR status with GitHub.</p>
 <p><strong>Prerequisites:</strong> <a href="06-working-with-pull-requests.html">Working with Pull Requests</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code> on Mac. For example: <code>Ctrl+Shift+P</code> → <code>Cmd+Shift+P</code>, <code>Ctrl+Shift+G</code> → <code>Cmd+Shift+G</code>, <code>Alt+F2</code> → <code>Option+F2</code>. Context menus (<code>Shift+F10</code> on Windows) use <code>Ctrl+Return</code> on Mac.</p>
 </blockquote>
-<h2>Workshop Recommendation (Chapter 12)</h2>
+<h2 id="workshop-recommendation-chapter-12">Workshop Recommendation (Chapter 12)</h2>
 <p>Chapter 12 introduces the <strong>GitHub Pull Requests extension</strong> for managing PRs directly from VS Code.</p>
 <ul>
 <li><strong>Challenge count:</strong> 2 guided challenges</li>
@@ -77,14 +77,14 @@
 <li><strong>Evidence:</strong> issue comment with confirmation of actions completed</li>
 <li><strong>Pattern:</strong> install, check out, review, comment</li>
 </ul>
-<h3>Chapter 12 Challenge Set</h3>
+<h3 id="chapter-12-challenge-set">Chapter 12 Challenge Set</h3>
 <ol>
 <li><strong>Install the GitHub Pull Requests extension</strong> - add the extension to VS Code and sign in with your GitHub account.</li>
 <li><strong>Check out a PR and post a review comment</strong> - download a PR branch locally, read the diff, and post one constructive review comment.</li>
 </ol>
-<h3>Challenge 12.1 Step-by-Step: Install the Extension</h3>
+<h3 id="challenge-121-step-by-step-install-the-extension">Challenge 12.1 Step-by-Step: Install the Extension</h3>
 <p><strong>Goal:</strong> Install the GitHub Pull Requests and Issues extension and authenticate with your GitHub account.</p>
-<p><strong>Where you are working:</strong> VS Code desktop with the <code>learning-room</code> repository open.</p>
+<p><strong>Where you are working:</strong> VS Code desktop with the <a href="https://github.com/Community-Access/learning-room">learning-room</a> repository open.</p>
 <p><strong>Estimated time:</strong> 3-5 minutes.</p>
 <ol>
 <li>Open the Extensions sidebar: <code>Ctrl+Shift+X</code> (Mac: <code>Cmd+Shift+X</code>).</li>
@@ -97,8 +97,8 @@
 <li>Verify: open the Explorer sidebar (<code>Ctrl+Shift+E</code>). You should now see a <strong>GitHub</strong> section in the sidebar showing Pull Requests and Issues.</li>
 </ol>
 <p><strong>Screen reader tip:</strong> After step 5, if the install notification disappears before you can read it, open Command Palette (<code>Ctrl+Shift+P</code>) and run <code>Notifications: Focus Notification Toast</code>.</p>
-<p><strong>You are done when:</strong> The GitHub section appears in your Explorer sidebar and shows pull requests from the <code>learning-room</code> repository.</p>
-<h3>Challenge 12.2 Step-by-Step: Check Out a PR and Post a Comment</h3>
+<p><strong>You are done when:</strong> The GitHub section appears in your Explorer sidebar and shows pull requests from the <a href="https://github.com/Community-Access/learning-room">learning-room</a> repository.</p>
+<h3 id="challenge-122-step-by-step-check-out-a-pr-and-post-a-comment">Challenge 12.2 Step-by-Step: Check Out a PR and Post a Comment</h3>
 <p><strong>Goal:</strong> Check out someone else&#39;s PR branch locally, read the diff in VS Code, and post one constructive review comment.</p>
 <p><strong>Where you are working:</strong> VS Code with the GitHub Pull Requests extension installed.</p>
 <p><strong>Estimated time:</strong> 10-15 minutes.</p>
@@ -117,7 +117,7 @@
 <p><strong>If checkout is blocked by permissions:</strong> You can still complete this challenge in read-only mode. Skip step 4 and instead open the PR on GitHub.com. Use the <strong>Files changed</strong> tab to read the diff and post your comment there.</p>
 <p><strong>Screen reader tip:</strong> In the Diff Editor, <code>F7</code> (Accessible Diff Viewer) is the most reliable way to navigate changes. It reads each hunk as a single block, which is much easier than navigating line by line.</p>
 <p><strong>You are done when:</strong> You have posted at least one constructive review comment on someone else&#39;s PR.</p>
-<h3>Completing Chapter 12: Submit Your Evidence</h3>
+<h3 id="completing-chapter-12-submit-your-evidence">Completing Chapter 12: Submit Your Evidence</h3>
 <p>Open your <strong>assigned Chapter 12 challenge issue</strong> and post a completion comment:</p>
 <pre><code class="hljs language-text">Chapter 12 completed:
 - Extension installed: yes / no
@@ -126,14 +126,14 @@
 - Comment posted: yes (inline / on GitHub.com)
 - My comment was about: [one-sentence summary]</code></pre>
 <p>Close your Chapter 12 challenge issues when done.</p>
-<h3>Expected Outcomes</h3>
+<h3 id="expected-outcomes">Expected Outcomes</h3>
 <ul>
 <li>Student can install and authenticate the GitHub PR extension.</li>
 <li>Student can check out a PR branch in VS Code (or view it on GitHub.com).</li>
 <li>Student can navigate diffs using the Accessible Diff Viewer (<code>F7</code>).</li>
 <li>Student can post constructive, specific feedback on a classmate&#39;s work.</li>
 </ul>
-<h3>If You Get Stuck</h3>
+<h3 id="if-you-get-stuck">If You Get Stuck</h3>
 <ol>
 <li>Extension does not install? Reload VS Code: <code>Ctrl+Shift+P</code>, then run <code>Developer: Reload Window</code>.</li>
 <li>OAuth sign-in fails? Verify your GitHub account is active in the browser first, close VS Code, reopen, and retry.</li>
@@ -146,16 +146,16 @@
 <blockquote>
 <p><strong>Continue learning:</strong> The GitHub Skills course <a href="https://github.com/skills/review-pull-requests">Review Pull Requests</a> practices approving, requesting changes, and using suggestions in an interactive format. See <a href="appendix-z-github-skills-catalog.html">Appendix Z</a> for the full catalog.</p>
 </blockquote>
-<h3>Learning Moment</h3>
+<h3 id="learning-moment">Learning Moment</h3>
 <p>PR tooling multiplies your impact. Reviewing others&#39; work refines your own standards and builds community trust. The comment you just wrote helps another student learn - and you learn by articulating what makes documentation clear.</p>
-<h3>Learning Pattern Used in This Chapter</h3>
+<h3 id="learning-pattern-used-in-this-chapter">Learning Pattern Used in This Chapter</h3>
 <ol>
 <li>Install and configure the tool before starting the task.</li>
 <li>Practice on someone else&#39;s work first (reviewing is safer than authoring).</li>
 <li>Use accessibility tools (<code>F7</code> Accessible Diff Viewer) to navigate efficiently.</li>
 <li>Write specific, constructive feedback (not just &quot;looks good&quot;).</li>
 </ol>
-<h2>Table of Contents</h2>
+<h2 id="table-of-contents">Table of Contents</h2>
 <ol>
 <li><a href="#1-installing-the-github-pull-requests-extension">Installing the GitHub Pull Requests Extension</a></li>
 <li><a href="#2-viewing-pull-requests">Viewing Pull Requests</a></li>
@@ -166,10 +166,10 @@
 <li><a href="#7-commenting-and-requesting-changes">Commenting and Requesting Changes</a></li>
 <li><a href="#8-merging-pull-requests">Merging Pull Requests</a></li>
 </ol>
-<h2>1. Installing the GitHub Pull Requests Extension</h2>
+<h2 id="1-installing-the-github-pull-requests-extension">1. Installing the GitHub Pull Requests Extension</h2>
 <p>The GitHub Pull Requests and Issues extension integrates GitHub&#39;s PR workflow directly into VS Code - no browser tab switching required.</p>
-<h3>Installation Steps</h3>
-<h4>Method 1: Extensions Sidebar</h4>
+<h3 id="installation-steps">Installation Steps</h3>
+<h4 id="method-1-extensions-sidebar">Method 1: Extensions Sidebar</h4>
 <ol>
 <li>Open Extensions sidebar: <code>Ctrl+Shift+X</code> (Mac: <code>Cmd+Shift+X</code>)</li>
 <li>Type &quot;GitHub Pull Requests&quot; in the search box</li>
@@ -178,7 +178,7 @@
 <li>Press <code>Enter</code> to open the extension detail page</li>
 <li><code>Tab</code> to &quot;Install&quot; button → press <code>Enter</code></li>
 </ol>
-<h4>Method 2: Command Palette</h4>
+<h4 id="method-2-command-palette">Method 2: Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code></li>
 <li>Type &quot;install extensions&quot;</li>
@@ -187,7 +187,7 @@
 <li>Install &quot;GitHub Pull Requests and Issues&quot;</li>
 </ol>
 <p><strong>Screen reader note:</strong> The Extensions sidebar is a tree view. Use <code>Up/Down Arrow</code> to navigate, <code>Enter</code> to open an extension&#39;s detail page.</p>
-<h3>Signing In to GitHub</h3>
+<h3 id="signing-in-to-github">Signing In to GitHub</h3>
 <p>After installation, VS Code prompts you to sign in:</p>
 <ol>
 <li>A notification appears: &quot;Sign in to GitHub to use Pull Requests&quot;</li>
@@ -197,13 +197,13 @@
 <li>Authorize VS Code in the browser</li>
 <li>Return to VS Code - you&#39;re now signed in</li>
 </ol>
-<h4>Verify sign-in</h4>
+<h4 id="verify-sign-in">Verify sign-in</h4>
 <ul>
 <li>Open Command Palette: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;GitHub Pull Requests: Sign in&quot;</li>
 <li>If already signed in, the option shows &quot;Sign out&quot; instead</li>
 </ul>
-<h3>What the Extension Adds</h3>
+<h3 id="what-the-extension-adds">What the Extension Adds</h3>
 <p>After installation, you gain:</p>
 <ul>
 <li><strong>GitHub view in the Activity Bar</strong> (sidebar icon that looks like the GitHub logo)</li>
@@ -212,9 +212,9 @@
 <li><strong>Inline PR review features</strong> in the editor</li>
 <li><strong>Issue linking</strong> when writing commit messages</li>
 </ul>
-<h2>2. Viewing Pull Requests</h2>
-<h3>Opening the GitHub Pull Requests Panel</h3>
-<h4>Method 1: Activity Bar</h4>
+<h2 id="2-viewing-pull-requests">2. Viewing Pull Requests</h2>
+<h3 id="opening-the-github-pull-requests-panel">Opening the GitHub Pull Requests Panel</h3>
+<h4 id="method-1-activity-bar">Method 1: Activity Bar</h4>
 <details>
 <summary>Visual / mouse users</summary>
 
@@ -266,28 +266,28 @@ gh <span class="hljs-built_in">pr</span> view 42 --web
 gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string">&quot;review-requested:@me&quot;</span></code></pre>
 </details>
 
-<h2>Method 2: Explorer Section</h2>
+<h2 id="method-2-explorer-section">Method 2: Explorer Section</h2>
 <ol>
 <li>Open Explorer: <code>Ctrl+Shift+E</code> (Mac: <code>Cmd+Shift+E</code>)</li>
 <li>Navigate with <code>Arrow</code> keys to find the &quot;GitHub Pull Requests&quot; section</li>
 <li>Expand it with <code>Right Arrow</code></li>
 </ol>
-<h3>Pull Request Tree Structure</h3>
-<h4>Description</h4>
+<h3 id="pull-request-tree-structure">Pull Request Tree Structure</h3>
+<h4 id="description">Description</h4>
 <p>The GitHub Pull Requests panel has two top-level sections. &quot;My Pull Requests&quot; contains four filters: Assigned to Me, Created by Me, Waiting for my Review, and All Open. The repository section shows Local Pull Request Branches (checked out locally), All Open Pull Requests, and All Closed Pull Requests.</p>
-<h4>Screen reader announcement example</h4>
+<h4 id="screen-reader-announcement-example">Screen reader announcement example</h4>
 <p>&quot;Pull Request #42: Add Timeline Guide, opened by jeffb, 2 days ago, 3 files changed&quot;</p>
-<h3>Filtering PR Lists</h3>
-<h4>By status</h4>
+<h3 id="filtering-pr-lists">Filtering PR Lists</h3>
+<h4 id="by-status">By status</h4>
 <ul>
 <li>&quot;All Open&quot; - every open PR</li>
 <li>&quot;Assigned to Me&quot; - PRs where you&#39;re an assignee</li>
 <li>&quot;Waiting for my Review&quot; - PRs where you&#39;re requested as reviewer</li>
 <li>&quot;Draft&quot; - PRs marked as work-in-progress</li>
 </ul>
-<h4>By repository</h4>
+<h4 id="by-repository">By repository</h4>
 <p>The tree organizes PRs by repository. Expand a repo to see its PRs.</p>
-<h3>Viewing PR Details</h3>
+<h3 id="viewing-pr-details">Viewing PR Details</h3>
 <ol>
 <li>Navigate to a PR in the tree</li>
 <li>Press <code>Enter</code></li>
@@ -303,24 +303,24 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Files changed (clickable list)</li>
 <li>Comments timeline</li>
 </ul>
-<h4>Screen reader experience</h4>
+<h4 id="screen-reader-experience">Screen reader experience</h4>
 <ul>
 <li>The detail view is Markdown-rendered HTML</li>
 <li>Use standard screen reader reading commands (<code>Arrow</code> keys in NVDA/JAWS virtual mode)</li>
 <li>Headings mark each section (&quot;Description&quot;, &quot;Reviewers&quot;, &quot;Files Changed&quot;, &quot;Comments&quot;)</li>
 <li>Links are clickable with <code>Enter</code></li>
 </ul>
-<h2>3. Checking Out a Pull Request Branch</h2>
+<h2 id="3-checking-out-a-pull-request-branch">3. Checking Out a Pull Request Branch</h2>
 <p><strong>Checking out a PR</strong> means downloading its branch to your local machine so you can test it, review it interactively, or add commits to it.</p>
-<h3>Why Check Out a PR</h3>
+<h3 id="why-check-out-a-pr">Why Check Out a PR</h3>
 <ul>
 <li><strong>Test functionality:</strong> Run the code locally to verify it works</li>
 <li><strong>Review with full context:</strong> See the changes in your editor with full file access</li>
 <li><strong>Make suggestions:</strong> Add commits to someone else&#39;s PR (if you have write access)</li>
 <li><strong>Verify accessibility:</strong> Test with your screen reader to ensure changes don&#39;t break navigation</li>
 </ul>
-<h3>How to Check Out a PR</h3>
-<h4>Method 1: From the PR Detail View</h4>
+<h3 id="how-to-check-out-a-pr">How to Check Out a PR</h3>
+<h4 id="method-1-from-the-pr-detail-view">Method 1: From the PR Detail View</h4>
 <ol>
 <li>Open a PR (see Section 2)</li>
 <li>In the PR detail view, navigate to &quot;Checkout&quot; button</li>
@@ -332,13 +332,13 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Switches your local repository to that branch</li>
 <li>Opens the changed files in the editor</li>
 </ul>
-<h4>Method 2: From the PR Tree</h4>
+<h4 id="method-2-from-the-pr-tree">Method 2: From the PR Tree</h4>
 <ol>
 <li>Navigate to the PR in the GitHub Pull Requests tree</li>
 <li>Press <code>Shift+F10</code> (Mac: <code>Ctrl+Return</code>) to open context menu</li>
 <li>Select &quot;Checkout Pull Request&quot;</li>
 </ol>
-<h4>Method 3: Command Palette</h4>
+<h4 id="method-3-command-palette">Method 3: Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;GitHub Pull Requests: Checkout&quot;</li>
@@ -346,7 +346,7 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Choose the PR from the list</li>
 </ol>
 <p><strong>Screen reader note:</strong> After checkout, the bottom-left status bar shows the branch name (example: &quot;jeffb/add-timeline-guide&quot;). Your local files now match that branch.</p>
-<h3>Returning to Your Original Branch</h3>
+<h3 id="returning-to-your-original-branch">Returning to Your Original Branch</h3>
 <p>After reviewing:</p>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
@@ -354,38 +354,38 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Select &quot;Git: Checkout to...&quot;</li>
 <li>Choose your original branch (usually <code>main</code> or your feature branch)</li>
 </ol>
-<h2>4. Reviewing Pull Requests in VS Code</h2>
+<h2 id="4-reviewing-pull-requests-in-vs-code">4. Reviewing Pull Requests in VS Code</h2>
 <p>Once you&#39;ve checked out a PR (or opened it in the detail view), you can review its changes fully within VS Code.</p>
-<h3>Reading the Files Changed List</h3>
-<h4>In the PR detail view</h4>
+<h3 id="reading-the-files-changed-list">Reading the Files Changed List</h3>
+<h4 id="in-the-pr-detail-view">In the PR detail view</h4>
 <ol>
 <li>Scroll down to &quot;Files Changed&quot; section</li>
 <li>Each file is a link</li>
 <li>Navigate with <code>Arrow</code> keys</li>
 <li>Press <code>Enter</code> on a file to open its diff view</li>
 </ol>
-<h4>Screen reader announcement</h4>
+<h4 id="screen-reader-announcement">Screen reader announcement</h4>
 <p>&quot;docs/05-vscode-accessibility.md, 42 additions, 3 deletions&quot;</p>
-<h3>Understanding the Diff View</h3>
+<h3 id="understanding-the-diff-view">Understanding the Diff View</h3>
 <p>When you open a file from &quot;Files Changed&quot;:</p>
-<h4>Split view mode (default)</h4>
+<h4 id="split-view-mode-default">Split view mode (default)</h4>
 <ul>
 <li>Left side: original file (before changes)</li>
 <li>Right side: modified file (after changes)</li>
 <li>Changed lines highlighted (added = green, removed = red)</li>
 </ul>
-<h4>Inline view mode</h4>
+<h4 id="inline-view-mode">Inline view mode</h4>
 <ul>
 <li>Single editor</li>
 <li>Removed lines shown with <code>-</code> prefix</li>
 <li>Added lines shown with <code>+</code> prefix</li>
 </ul>
-<h4>To toggle between views</h4>
+<h4 id="to-toggle-between-views">To toggle between views</h4>
 <ul>
 <li>Command Palette: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → &quot;Diff: Toggle Inline View&quot;</li>
 </ul>
-<h3>Screen Reader Diff Review with Accessible Diff Viewer</h3>
-<h4>Recommended workflow for screen reader users</h4>
+<h3 id="screen-reader-diff-review-with-accessible-diff-viewer">Screen Reader Diff Review with Accessible Diff Viewer</h3>
+<h4 id="recommended-workflow-for-screen-reader-users">Recommended workflow for screen reader users</h4>
 <ol>
 <li>Open a changed file from the PR detail view</li>
 <li>Press <code>F7</code> to jump to the first diff hunk</li>
@@ -400,18 +400,18 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Press <code>F7</code> to jump to the next hunk</li>
 <li>Repeat until all hunks reviewed</li>
 </ol>
-<h4>Example Accessible Diff output</h4>
+<h4 id="example-accessible-diff-output">Example Accessible Diff output</h4>
 <pre><code class="hljs language-text">Hunk 1 of 3 - lines 12 to 18
   Unchanged: ## VS Code Setup
 - Removed: This guide covers VS Code basics.
 + Added: This guide covers VS Code basics and accessibility features.
   Unchanged:
   Unchanged: **Prerequisites:** Day 1 completion</code></pre>
-<h4>This structured reading is far superior to navigating the visual diff manually</h4>
+<h4 id="this-structured-reading-is-far-superior-to-navigating-the-visual-diff-manually">This structured reading is far superior to navigating the visual diff manually</h4>
 <blockquote>
 <p><strong>VS Code October 2025 update:</strong> Deleted lines (shown with the <code>-</code> prefix) are now fully selectable and copyable in the diff editor. Previously, deleted code could only be read, not selected. This is useful when you want to copy a deleted function signature, old variable name, or removed text for reference while writing your review comment.</p>
 </blockquote>
-<h3>Flagging Issues During Review</h3>
+<h3 id="flagging-issues-during-review">Flagging Issues During Review</h3>
 <p>As you review, note any problems:</p>
 <ol>
 <li>Navigate to the specific line in the diff</li>
@@ -421,83 +421,83 @@ gh <span class="hljs-built_in">pr</span> list --search <span class="hljs-string"
 <li>Choose &quot;Single Comment&quot; or &quot;Start Review&quot;</li>
 </ol>
 <p><strong>Single Comment</strong> posts immediately.<br><strong>Start Review</strong> saves your comments as a draft until you submit the full review (see Section 7).</p>
-<h2>5. Creating a Pull Request from VS Code</h2>
+<h2 id="5-creating-a-pull-request-from-vs-code">5. Creating a Pull Request from VS Code</h2>
 <p>After you&#39;ve pushed commits to a feature branch, you can create a PR without leaving VS Code.</p>
-<h3>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ol>
 <li>You&#39;ve created a branch (see <a href="11-git-source-control.html#3-branch-management">Git &amp; Source Control: Branch Management</a>)</li>
 <li>You&#39;ve made commits</li>
 <li>You&#39;ve pushed the branch to GitHub (<code>Ctrl+Shift+P</code> / Mac: <code>Cmd+Shift+P</code> → &quot;Git: Push&quot;)</li>
 </ol>
-<h3>Creating the PR</h3>
-<h4>Method 1: Command Palette (Recommended)</h4>
+<h3 id="creating-the-pr">Creating the PR</h3>
+<h4 id="method-1-command-palette-recommended">Method 1: Command Palette (Recommended)</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;GitHub Pull Requests: Create&quot;</li>
 <li>Select &quot;GitHub Pull Requests: Create Pull Request&quot;</li>
 <li>A form opens in the editor</li>
 </ol>
-<h4>Method 2: Source Control Panel</h4>
+<h4 id="method-2-source-control-panel">Method 2: Source Control Panel</h4>
 <ol>
 <li>Open Source Control: <code>Ctrl+Shift+G</code> (Mac: <code>Cmd+Shift+G</code>)</li>
 <li>After pushing, a &quot;Create Pull Request&quot; button appears</li>
 <li>Press <code>Enter</code> on that button</li>
 </ol>
-<h4>Method 3: GitHub Panel</h4>
+<h4 id="method-3-github-panel">Method 3: GitHub Panel</h4>
 <ol>
 <li>Open GitHub view (Activity Bar → GitHub icon)</li>
 <li>Right-click your branch in the tree</li>
 <li>Select &quot;Create Pull Request&quot;</li>
 </ol>
-<h3>Filling Out the PR Form</h3>
+<h3 id="filling-out-the-pr-form">Filling Out the PR Form</h3>
 <p>The form has these fields:</p>
-<h4>Title (required)</h4>
+<h4 id="title-required">Title (required)</h4>
 <ul>
 <li>Auto-filled with your most recent commit message</li>
 <li>Edit to make it descriptive (example: &quot;Add Timeline View documentation&quot;)</li>
 </ul>
-<h4>Description (optional but recommended)</h4>
+<h4 id="description-optional-but-recommended">Description (optional but recommended)</h4>
 <ul>
 <li>Explain what changed and why</li>
 <li>Reference the issue you&#39;re fixing: &quot;Fixes #42&quot;</li>
 <li>If a PR template exists, VS Code loads it here (see Section 6)</li>
 <li><strong>Copilot-assisted description:</strong> An AI sparkle icon in the description toolbar lets you generate a description from your commits. When a PR template exists, Copilot fills in the template sections intelligently rather than replacing the template - it populates the checklist items and description sections with content derived from your changes.</li>
 </ul>
-<h4>Base branch (target)</h4>
+<h4 id="base-branch-target">Base branch (target)</h4>
 <ul>
 <li>Usually <code>main</code> or <code>develop</code></li>
 <li>This is the branch your changes will merge into</li>
 </ul>
-<h4>Compare branch (source)</h4>
+<h4 id="compare-branch-source">Compare branch (source)</h4>
 <ul>
 <li>Your feature branch (auto-selected)</li>
 <li>This is the branch with your changes</li>
 </ul>
-<h4>Reviewers (optional)</h4>
+<h4 id="reviewers-optional">Reviewers (optional)</h4>
 <ul>
 <li>Select people to review your PR</li>
 <li>Navigate the list with <code>Arrow</code> keys</li>
 </ul>
-<h4>Labels (optional)</h4>
+<h4 id="labels-optional">Labels (optional)</h4>
 <ul>
 <li>Add labels like <code>documentation</code>, <code>accessibility</code>, <code>good-first-issue</code></li>
 </ul>
-<h4>Milestone (optional)</h4>
+<h4 id="milestone-optional">Milestone (optional)</h4>
 <ul>
 <li>Link the PR to a project milestone</li>
 </ul>
-<h4>Draft PR checkbox</h4>
+<h4 id="draft-pr-checkbox">Draft PR checkbox</h4>
 <ul>
 <li>Check this if the PR is not ready for review yet</li>
 <li>Unchecked = &quot;Ready for review&quot;</li>
 </ul>
-<h4>Screen reader navigation</h4>
+<h4 id="screen-reader-navigation">Screen reader navigation</h4>
 <ul>
 <li>All fields are standard form inputs</li>
 <li><code>Tab</code> to move between fields</li>
 <li>Use <code>Arrow</code> keys in dropdowns (reviewers, labels, milestones)</li>
 </ul>
-<h3>Submitting the PR</h3>
+<h3 id="submitting-the-pr">Submitting the PR</h3>
 <ol>
 <li>Review all fields</li>
 <li><code>Tab</code> to &quot;Create&quot; button</li>
@@ -535,9 +535,9 @@ gh <span class="hljs-built_in">pr</span> create --web</code></pre>
 </details>
 
 
-<h2>6. Pull Request Description Templates</h2>
+<h2 id="6-pull-request-description-templates">6. Pull Request Description Templates</h2>
 <p>Many repositories include a <strong>PR template</strong> - a Markdown file that pre-fills the PR description with a checklist or structure.</p>
-<h3>Where Templates Are Stored</h3>
+<h3 id="where-templates-are-stored">Where Templates Are Stored</h3>
 <p>Common locations:</p>
 <ul>
 <li><code>.github/pull_request_template.md</code> (root)</li>
@@ -546,7 +546,7 @@ gh <span class="hljs-built_in">pr</span> create --web</code></pre>
 <li><code>docs/pull_request_template.md</code></li>
 </ul>
 <p>When you create a PR in VS Code, the extension automatically loads the template into the description field.</p>
-<h3>Example PR Template</h3>
+<h3 id="example-pr-template">Example PR Template</h3>
 <pre><code class="hljs language-markdown"><span class="hljs-section">## Description</span>
 &lt;!-- Briefly describe what this PR changes and why --&gt;
 
@@ -571,8 +571,8 @@ gh <span class="hljs-built_in">pr</span> create --web</code></pre>
 
 <span class="hljs-section">## Screenshots (if applicable)</span>
 &lt;!-- Add screenshots or screen recordings --&gt;</code></pre>
-<h3>Filling Out a Template</h3>
-<h4>Screen reader workflow</h4>
+<h3 id="filling-out-a-template">Filling Out a Template</h3>
+<h4 id="screen-reader-workflow">Screen reader workflow</h4>
 <ol>
 <li>Create PR (Method 1-3 from Section 5)</li>
 <li>The description field is pre-filled with the template</li>
@@ -581,7 +581,7 @@ gh <span class="hljs-built_in">pr</span> create --web</code></pre>
 <li>Check checkboxes by typing <code>x</code> between the brackets: <code>- [x]</code></li>
 </ol>
 <p><strong>Keyboard tip:</strong> Use <code>Ctrl+F</code> (Mac: <code>Cmd+F</code>) to jump to each <code>&lt;!--</code> placeholder, fill it in, then <code>F3</code> to jump to the next one.</p>
-<h2>7. Commenting and Requesting Changes</h2>
+<h2 id="7-commenting-and-requesting-changes">7. Commenting and Requesting Changes</h2>
 <p>When reviewing a PR, you can:</p>
 <ul>
 <li>Leave inline comments on specific lines</li>
@@ -589,7 +589,7 @@ gh <span class="hljs-built_in">pr</span> create --web</code></pre>
 <li>Approve the PR</li>
 <li>Submit general feedback</li>
 </ul>
-<h3>Adding an Inline Comment</h3>
+<h3 id="adding-an-inline-comment">Adding an Inline Comment</h3>
 <ol>
 <li>Open a file from the PR&#39;s &quot;Files Changed&quot; list</li>
 <li>Navigate to the line you want to comment on</li>
@@ -598,20 +598,20 @@ gh <span class="hljs-built_in">pr</span> create --web</code></pre>
 <li>Type your comment</li>
 <li>Choose &quot;Add Single Comment&quot; (posts immediately) or &quot;Start Review&quot; (saves as a draft)</li>
 </ol>
-<h4>Comment format tips</h4>
+<h4 id="comment-format-tips">Comment format tips</h4>
 <ul>
 <li>Be specific: &quot;This heading should be H3, not H2&quot;</li>
 <li>Provide context: &quot;Screen readers announce this as &#39;list with 1 item&#39; - should be a paragraph instead&quot;</li>
 <li>Suggest a fix: &quot;Consider rewording to: &#39;Click the button to save&#39;&quot;</li>
 </ul>
-<h3>Starting a Review</h3>
-<h4>If you have multiple comments to make, use &quot;Start Review&quot;</h4>
+<h3 id="starting-a-review">Starting a Review</h3>
+<h4 id="if-you-have-multiple-comments-to-make-use-quotstart-reviewquot">If you have multiple comments to make, use &quot;Start Review&quot;</h4>
 <ol>
 <li>Add your first inline comment → select &quot;Start Review&quot;</li>
 <li>Continue adding comments to other lines</li>
 <li>All comments are saved as drafts (not visible to others yet)</li>
 </ol>
-<h3>Submitting Your Review</h3>
+<h3 id="submitting-your-review">Submitting Your Review</h3>
 <p>When you&#39;ve reviewed all files:</p>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
@@ -627,7 +627,7 @@ gh <span class="hljs-built_in">pr</span> create --web</code></pre>
 <li>Press <code>Enter</code> to submit</li>
 </ol>
 <p><strong>Screen reader note:</strong> The review type selector is a radio button group. Use <code>Arrow</code> keys to choose, <code>Enter</code> to confirm.</p>
-<h3>What Happens After Submission</h3>
+<h3 id="what-happens-after-submission">What Happens After Submission</h3>
 <ul>
 <li>All your draft comments post to GitHub</li>
 <li>The PR author receives a notification</li>
@@ -667,9 +667,9 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 </details>
 
 
-<h2>8. Merging Pull Requests</h2>
+<h2 id="8-merging-pull-requests">8. Merging Pull Requests</h2>
 <p><strong>Who can merge:</strong> Repository maintainers, or contributors with write access.</p>
-<h3>Prerequisites for Merging</h3>
+<h3 id="prerequisites-for-merging">Prerequisites for Merging</h3>
 <p>Before merging, verify:</p>
 <ol>
 <li>All required reviews are approved</li>
@@ -679,8 +679,8 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 </ol>
 <p><strong>Changing the base branch:</strong> If the PR was opened against the wrong base branch, you can change it from the PR detail view in VS Code. Scroll to the base branch field in the PR detail view and activate the dropdown to select a different target branch. This saves opening the PR on GitHub.com.</p>
 <p><strong>Converting to/from draft:</strong> You can also convert a ready PR back to a draft (or mark a draft as ready for review) directly from the PR detail view. Scroll to the Status section and use the context menu on the PR title or the &quot;...&quot; more actions button.</p>
-<h3>Merging from VS Code</h3>
-<h4>Method 1: PR Detail View</h4>
+<h3 id="merging-from-vs-code">Merging from VS Code</h3>
+<h4 id="method-1-pr-detail-view">Method 1: PR Detail View</h4>
 <ol>
 <li>Open the PR in VS Code</li>
 <li>Scroll to the bottom of the PR detail view</li>
@@ -689,7 +689,7 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 <li>Choose merge type (see below)</li>
 <li>Confirm</li>
 </ol>
-<h4>Method 2: Command Palette</h4>
+<h4 id="method-2-command-palette">Method 2: Command Palette</h4>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
 <li>Type &quot;GitHub Pull Requests: Merge&quot;</li>
@@ -698,7 +698,7 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 <li>Select merge type</li>
 <li>Confirm</li>
 </ol>
-<h3>Merge Types</h3>
+<h3 id="merge-types">Merge Types</h3>
 <table>
 <thead>
 <tr>
@@ -724,22 +724,22 @@ gh <span class="hljs-built_in">pr</span> review 42 --comment --body <span class=
 </tr>
 </tbody></table>
 <p><strong>Screen reader note:</strong> The merge type selector is a dropdown or radio group. Navigate with <code>Arrow</code> keys, confirm with <code>Enter</code>.</p>
-<h4>Which merge type to use</h4>
+<h4 id="which-merge-type-to-use">Which merge type to use</h4>
 <ul>
 <li>Check the repository&#39;s CONTRIBUTING.md for guidance</li>
 <li>If unsure, use <strong>Merge Commit</strong> (the default and safest option)</li>
 </ul>
-<h3>After Merging</h3>
+<h3 id="after-merging">After Merging</h3>
 <ol>
 <li>The PR closes automatically</li>
 <li>The feature branch can be deleted (VS Code prompts: &quot;Delete branch?&quot;)</li>
 <li>Recommended: switch back to <code>main</code> and pull the merged changes</li>
 </ol>
-<h4>Switching to main and pulling</h4>
+<h4 id="switching-to-main-and-pulling">Switching to main and pulling</h4>
 <pre><code class="hljs language-text">Ctrl+Shift+P → &quot;Git: Checkout to...&quot; → select &quot;main&quot;
 Ctrl+Shift+P → &quot;Git: Pull&quot;</code></pre>
 <p><em>(Mac users: use <code>Cmd+Shift+P</code> instead of <code>Ctrl+Shift+P</code>)</em></p>
-<h3>Deleting the Feature Branch</h3>
+<h3 id="deleting-the-feature-branch">Deleting the Feature Branch</h3>
 <p>After merging, the feature branch is no longer needed:</p>
 <ol>
 <li><code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>)</li>
@@ -779,7 +779,7 @@ gh <span class="hljs-built_in">pr</span> merge 42 --auto --squash</code></pre>
 <li>Type &quot;git push&quot;</li>
 <li>Select &quot;Git: Push (delete remote branch)&quot;</li>
 </ol>
-<h2>Keyboard Shortcuts - GitHub Pull Requests Extension</h2>
+<h2 id="keyboard-shortcuts---github-pull-requests-extension">Keyboard Shortcuts - GitHub Pull Requests Extension</h2>
 <table>
 <thead>
 <tr>
@@ -829,32 +829,32 @@ gh <span class="hljs-built_in">pr</span> merge 42 --auto --squash</code></pre>
 <td><code>Option+F2</code> (in diff view)</td>
 </tr>
 </tbody></table>
-<h2>Troubleshooting</h2>
-<h3>&quot;No pull requests found&quot;</h3>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="quotno-pull-requests-foundquot">&quot;No pull requests found&quot;</h3>
 <p><strong>Issue:</strong> The GitHub Pull Requests panel is empty.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Verify you&#39;re signed in: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → &quot;GitHub Pull Requests: Sign in&quot;</li>
 <li>Check you have a folder open containing a Git repository</li>
 <li>Refresh the panel: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → &quot;GitHub Pull Requests: Refresh Pull Requests List&quot;</li>
 </ol>
-<h3>&quot;Could not create pull request&quot;</h3>
+<h3 id="quotcould-not-create-pull-requestquot">&quot;Could not create pull request&quot;</h3>
 <p><strong>Issue:</strong> PR creation fails.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Verify you&#39;ve pushed your branch: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → &quot;Git: Push&quot;</li>
 <li>Check you have write access to the repository</li>
 <li>Ensure your branch is ahead of the base branch (has new commits)</li>
 </ol>
-<h3>&quot;Authentication failed&quot;</h3>
+<h3 id="quotauthentication-failedquot">&quot;Authentication failed&quot;</h3>
 <p><strong>Issue:</strong> VS Code can&#39;t connect to GitHub.</p>
-<h4>Solutions</h4>
+<h4 id="solutions">Solutions</h4>
 <ol>
 <li>Sign out and sign back in: <code>Ctrl+Shift+P</code> (Mac: <code>Cmd+Shift+P</code>) → &quot;GitHub Pull Requests: Sign out&quot; → then sign in again</li>
 <li>Check your GitHub Personal Access Token (see <a href="appendix-d-git-authentication.html">Appendix D: Git Authentication</a>)</li>
 <li>Verify network connection</li>
 </ol>
-<h2>Try It: Review a PR from VS Code</h2>
+<h2 id="try-it-review-a-pr-from-vs-code">Try It: Review a PR from VS Code</h2>
 <p><strong>Time:</strong> 3 minutes | <strong>What you need:</strong> VS Code with GitHub Pull Requests extension installed and signed in</p>
 <ol>
 <li><strong>Open the PR view</strong> - Press <code>Ctrl+Shift+P</code> → type <code>Pull Requests: Focus on GitHub Pull Requests View</code> → <code>Enter</code>.</li>

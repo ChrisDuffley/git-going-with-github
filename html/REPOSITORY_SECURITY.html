@@ -58,12 +58,12 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Repository Security &amp; Access Guidelines</h1>
-<h2>Overview</h2>
+    <h1 id="repository-security-amp-access-guidelines">Repository Security &amp; Access Guidelines</h1>
+<h2 id="overview">Overview</h2>
 <p>This repository is configured for a 2-day workshop with 67 blind/low-vision students.
 Safety, accessibility, and reliability are the top priorities.</p>
-<h2>Access Control</h2>
-<h3>Who Can Access What</h3>
+<h2 id="access-control">Access Control</h2>
+<h3 id="who-can-access-what">Who Can Access What</h3>
 <table>
 <thead>
 <tr>
@@ -103,7 +103,7 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <td>N/A</td>
 </tr>
 </tbody></table>
-<h3>Organization Invitations</h3>
+<h3 id="organization-invitations">Organization Invitations</h3>
 <p>Students are invited to the <code>Community-Access</code> organization as <strong>Members</strong> with:</p>
 <ul>
 <li><strong>Role</strong>: Member (not Admin or Owner)</li>
@@ -111,7 +111,7 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li><strong>No permissions</strong> to access organization settings or other repos</li>
 <li><strong>Team assignment</strong>: Optional - for grouping during reviews</li>
 </ul>
-<h3>Joining the Organization</h3>
+<h3 id="joining-the-organization">Joining the Organization</h3>
 <p><strong>Process:</strong></p>
 <ol>
 <li>Student receives GitHub organization invitation via email</li>
@@ -133,8 +133,8 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <a href="https://github.com/orgs/Community-Access/members">https://github.com/orgs/Community-Access/members</a></li>
 <li>Branch push rejected? Verify you are a member of the org</li>
 </ul>
-<h2>Branch Protection</h2>
-<h3>Main Branch (<code>main</code>)</h3>
+<h2 id="branch-protection">Branch Protection</h2>
+<h3 id="main-branch-main">Main Branch (<code>main</code>)</h3>
 <p><strong>Protection Rules:</strong></p>
 <ul>
 <li>Require pull request reviews: YES (1 approval minimum)</li>
@@ -144,7 +144,7 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li>Allow force pushes: NO (protect history)</li>
 <li>Allow deletions: NO (protect branch)</li>
 </ul>
-<h3>Student Branches (<code>student/*</code>)</h3>
+<h3 id="student-branches-student">Student Branches (<code>student/*</code>)</h3>
 <p><strong>Protection Rules:</strong></p>
 <ul>
 <li>Creation allowed: Students can create at any time</li>
@@ -152,7 +152,7 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li>Deletion allowed: Only by admins (prevent data loss)</li>
 <li>Protected from accidental overwrites</li>
 </ul>
-<h3>Action: Student Cannot Break Main</h3>
+<h3 id="action-student-cannot-break-main">Action: Student Cannot Break Main</h3>
 <p>Even if a student force-pushes to their branch, they cannot:</p>
 <ul>
 <li>Delete their branch</li>
@@ -160,8 +160,8 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li>Block other students</li>
 <li>Undo someone else&#39;s work</li>
 </ul>
-<h2>Permission Model</h2>
-<h3>Least Privilege</h3>
+<h2 id="permission-model">Permission Model</h2>
+<h3 id="least-privilege">Least Privilege</h3>
 <p>Students have exactly the permissions they need:</p>
 <ul>
 <li>NOT admins of org/repo</li>
@@ -173,8 +173,8 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li>CAN review other students&#39; PRs</li>
 <li>CAN merge PRs (with protection checks)</li>
 </ul>
-<h2>Facilitator Access</h2>
-<h3>Facilitators MUST be Organization Owners</h3>
+<h2 id="facilitator-access">Facilitator Access</h2>
+<h3 id="facilitators-must-be-organization-owners">Facilitators MUST be Organization Owners</h3>
 <p>Facilitators need:</p>
 <ul>
 <li>Create/edit issues</li>
@@ -183,15 +183,15 @@ Safety, accessibility, and reliability are the top priorities.</p>
 <li>Review and comment on PRs</li>
 <li>Monitor workshop progress</li>
 </ul>
-<h3>Setup</h3>
+<h3 id="setup">Setup</h3>
 <p>Run these commands (one per facilitator username):</p>
 <pre><code class="hljs language-bash">gh api /orgs/Community-Access/members/[username] -X PUT -f role=admin
 
 <span class="hljs-comment"># Verify</span>
 gh api /orgs/Community-Access/members/[username] --jq .role
 <span class="hljs-comment"># Should return: &quot;admin&quot;</span></code></pre>
-<h2>GitHub Actions Security</h2>
-<h3>Workflows</h3>
+<h2 id="github-actions-security">GitHub Actions Security</h2>
+<h3 id="workflows">Workflows</h3>
 <p><strong>Learning Room PR Validation</strong> (learning-room-validation.yml)</p>
 <ul>
 <li>Triggers: On PR to <code>main</code> modifying <code>learning-room/**</code></li>
@@ -200,7 +200,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Output: Single comment on PR with feedback</li>
 <li>Safety: Cannot modify code or create commits</li>
 </ul>
-<h3>Secrets</h3>
+<h3 id="secrets">Secrets</h3>
 <p><strong>No sensitive secrets stored in repo</strong></p>
 <p>Repository does not contain:</p>
 <ul>
@@ -211,8 +211,8 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Passwords</li>
 </ul>
 <p><strong>Safe to</strong>: Public repos, student access, teaching</p>
-<h2>Data Privacy</h2>
-<h3>What Data Is Stored</h3>
+<h2 id="data-privacy">Data Privacy</h2>
+<h3 id="what-data-is-stored">What Data Is Stored</h3>
 <p>In the repository:</p>
 <ul>
 <li>Student usernames (GitHub public)</li>
@@ -221,7 +221,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Commit history (who wrote what)</li>
 <li>PR/issue history (who said what)</li>
 </ul>
-<h3>What Data Is NOT Stored</h3>
+<h3 id="what-data-is-not-stored">What Data Is NOT Stored</h3>
 <p>Protected from accidental exposure:</p>
 <ul>
 <li>Real names (optional, in roster under &quot;name&quot; field)</li>
@@ -231,7 +231,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Payment information</li>
 <li>Health information beyond &quot;uses screen reader&quot;</li>
 </ul>
-<h3>Access to Roster</h3>
+<h3 id="access-to-roster">Access to Roster</h3>
 <p>File: <code>.github/data/student-roster.json</code></p>
 <ul>
 <li>Visible in: Repository code</li>
@@ -239,8 +239,8 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Sensitivity: LOW (only public GitHub usernames + opt-in profile)</li>
 <li>Safe to: Share roster with facilitators, teaching staff</li>
 </ul>
-<h2>Safety Checks</h2>
-<h3>Before Workshop (Friday, March 7)</h3>
+<h2 id="safety-checks">Safety Checks</h2>
+<h3 id="before-workshop-friday-march-7">Before Workshop (Friday, March 7)</h3>
 <p><strong>Repository Readiness:</strong></p>
 <ul>
 <li>All 67 student branches created</li>
@@ -264,7 +264,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Assignment issues accessible</li>
 <li>PR templates accessible</li>
 </ul>
-<h3>During Workshop (Saturday, March 8-9)</h3>
+<h3 id="during-workshop-saturday-march-8-9">During Workshop (Saturday, March 8-9)</h3>
 <p><strong>Monitoring:</strong></p>
 <ul>
 <li>GitHub status page monitored (<a href="https://www.githubstatus.com/">https://www.githubstatus.com/</a>)</li>
@@ -279,8 +279,8 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>If branch access denied: Check org membership</li>
 <li>If PR template missing: Check .github/PULL_REQUEST_TEMPLATE directory</li>
 </ul>
-<h2>Daily Operations</h2>
-<h3>Day 1 (Saturday, March 8, 12pm-8pm ET)</h3>
+<h2 id="daily-operations">Daily Operations</h2>
+<h3 id="day-1-saturday-march-8-12pm-8pm-et">Day 1 (Saturday, March 8, 12pm-8pm ET)</h3>
 <ol>
 <li><p><strong>Orientation (12pm-1pm)</strong></p>
 <ul>
@@ -305,7 +305,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 </ul>
 </li>
 </ol>
-<h3>Day 2 (Sunday, March 9, 12pm-8pm ET)</h3>
+<h3 id="day-2-sunday-march-9-12pm-8pm-et">Day 2 (Sunday, March 9, 12pm-8pm ET)</h3>
 <ol>
 <li><p><strong>Recap (12pm-1pm)</strong></p>
 <ul>
@@ -335,8 +335,8 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 </ul>
 </li>
 </ol>
-<h2>Rollback &amp; Emergency</h2>
-<h3>If Something Goes Wrong</h3>
+<h2 id="rollback-amp-emergency">Rollback &amp; Emergency</h2>
+<h3 id="if-something-goes-wrong">If Something Goes Wrong</h3>
 <p><strong>GitHub Down:</strong></p>
 <ul>
 <li>Monitor: <a href="https://www.githubstatus.com/">https://www.githubstatus.com/</a></li>
@@ -361,8 +361,8 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Bad commit: Use <code>git revert</code> (don&#39;t force push)</li>
 <li>Deleted branch: Can restore from GitHub&#39;s trash (within 90 days)</li>
 </ul>
-<h2>Compliance &amp; Audit</h2>
-<h3>What&#39;s Logged</h3>
+<h2 id="compliance-amp-audit">Compliance &amp; Audit</h2>
+<h3 id="what39s-logged">What&#39;s Logged</h3>
 <p>GitHub logs:</p>
 <ul>
 <li>All push events (who, what, when)</li>
@@ -375,7 +375,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>Repository settings &gt; Code security and analysis</li>
 <li>Organization settings &gt; Audit log</li>
 </ul>
-<h3>What&#39;s Audited</h3>
+<h3 id="what39s-audited">What&#39;s Audited</h3>
 <p>For safety:</p>
 <ul>
 <li>No one pushed to <code>main</code> directly (all via PR)</li>
@@ -383,7 +383,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>No one with admin access without reason</li>
 <li>GitHub Actions workflows only do what&#39;s documented</li>
 </ul>
-<h3>For Teaching</h3>
+<h3 id="for-teaching">For Teaching</h3>
 <p>We can show students:</p>
 <ul>
 <li>Their commit history on their branch</li>
@@ -391,7 +391,7 @@ gh api /orgs/Community-Access/members/[username] --jq .role
 <li>How the GitHub Actions bot validated their work</li>
 <li>Example of a properly merged PR</li>
 </ul>
-<h2>Contact &amp; Support</h2>
+<h2 id="contact-amp-support">Contact &amp; Support</h2>
 <p><strong>Workshop Coordinator:</strong> [Facilitator Name]
 <strong>Emergency Contact:</strong> [Phone/Email]
 <strong>GitHub Organization:</strong> <a href="https://github.com/Community-Access">https://github.com/Community-Access</a>

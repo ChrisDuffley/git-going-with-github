@@ -58,8 +58,8 @@
     </div>
   </header>
   <main id="main-content" class="markdown-body">
-    <h1>Security Policy</h1>
-<h2>Supported Versions</h2>
+    <h1 id="security-policy">Security Policy</h1>
+<h2 id="supported-versions">Supported Versions</h2>
 <p>This repository contains <strong>educational curriculum and documentation only</strong> - no production software, application servers, or APIs. There are no versioned software releases to patch.</p>
 <table>
 <thead>
@@ -85,9 +85,9 @@
 <td>Current main branch</td>
 </tr>
 </tbody></table>
-<h2>Reporting a Vulnerability</h2>
+<h2 id="reporting-a-vulnerability">Reporting a Vulnerability</h2>
 <p><strong>Please do not report security vulnerabilities as public GitHub Issues.</strong> Public issues are visible to everyone, including people who might exploit the vulnerability before it is fixed.</p>
-<h3>Preferred Method - Private Vulnerability Reporting</h3>
+<h3 id="preferred-method---private-vulnerability-reporting">Preferred Method - Private Vulnerability Reporting</h3>
 <p>This repository has <strong>Private Vulnerability Reporting</strong> enabled. To submit a report:</p>
 <ol>
 <li>Navigate to the <strong>Security tab</strong> of this repository</li>
@@ -101,7 +101,7 @@
 </li>
 <li>Submit - only the maintainers will see your report</li>
 </ol>
-<h3>What to Report</h3>
+<h3 id="what-to-report">What to Report</h3>
 <p>Even though this is an educational repository, the following are genuine security concerns:</p>
 <ul>
 <li><strong>Malicious content injected into curriculum files</strong> - documentation that contains links to phishing sites, malware downloads, or misleading instructions</li>
@@ -110,13 +110,13 @@
 <li><strong>Supply chain risks</strong> - compromised npm dependencies used by the build system</li>
 <li><strong>Prompt injection in agent files</strong> - AI agent prompts (<code>.prompt.md</code>, <code>.agent.md</code>) that could manipulate an LLM to produce harmful output</li>
 </ul>
-<h3>What Is Out of Scope</h3>
+<h3 id="what-is-out-of-scope">What Is Out of Scope</h3>
 <ul>
 <li>Theoretical attacks with no realistic exploitation path</li>
 <li>Vulnerabilities in GitHub&#39;s own infrastructure (report those to GitHub directly at the <a href="https://github.com/security">GitHub Security page</a>)</li>
 <li>Broken links or outdated documentation (open a regular issue for those)</li>
 </ul>
-<h2>Response Timeline</h2>
+<h2 id="response-timeline">Response Timeline</h2>
 <table>
 <thead>
 <tr>
@@ -141,14 +141,14 @@
 <td>After fix is deployed, or coordinated with reporter</td>
 </tr>
 </tbody></table>
-<h2>Scope and Impact</h2>
+<h2 id="scope-and-impact">Scope and Impact</h2>
 <p>This curriculum is designed to teach GitHub to workshop participants. The primary security risks are:</p>
 <ol>
 <li><strong>Documentation accuracy</strong> - incorrect instructions that could cause participants to configure their systems insecurely</li>
 <li><strong>Workflow integrity</strong> - GitHub Actions that run on pull requests from forks require careful scoping to prevent privilege escalation</li>
 <li><strong>Dependency security</strong> - the build system uses Node.js packages that must be kept up to date</li>
 </ol>
-<h2>Credit</h2>
+<h2 id="credit">Credit</h2>
 <p>Security researchers who responsibly disclose valid vulnerabilities will be credited in the repository&#39;s release notes (unless they prefer to remain anonymous).</p>
 <p><em>For general questions about the curriculum, open a regular issue. For security concerns, use private reporting above.</em></p>
 
