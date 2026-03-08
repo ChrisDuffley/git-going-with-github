@@ -25,14 +25,34 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Contributing to This Workshop Repository</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Contributing to This Workshop Repository</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Contributing to This Workshop Repository</h1>
 <p>Thank you for helping improve this workshop. Whether you are a participant who found a typo, someone who wants to add a new exercise, or an educator adapting these materials for your own community - your contribution is meaningful and welcome.</p>
 <p>This guide covers contributing to <strong>this workshop learning repository</strong>. For contributing to Accessibility Agents itself (the project you work on during Day 2), see <a href="https://github.com/community-access/accessibility-agents/blob/main/CONTRIBUTING.md">Accessibility Agents&#39; CONTRIBUTING.md</a>.</p>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-who-this-is-for">Who This Is For</a></li>
@@ -47,13 +67,11 @@
 <li><a href="#10-what-happens-after-you-submit">What Happens After You Submit</a></li>
 <li><a href="#11-questions-and-discussion">Questions and Discussion</a></li>
 </ol>
-<hr>
 <h2>1. Who This Is For</h2>
 <p><strong>Workshop participants:</strong> You have already completed the contribution workflow during the workshop. This repository is an excellent first contribution target for applying what you practiced.</p>
 <p><strong>Educators and facilitators:</strong> You are welcome to fork the entire repository and adapt the materials for your own workshop program. Attribution is required under the CC BY 4.0 license - please include a credit line and link to the original repository.</p>
 <p><strong>Accessibility practitioners:</strong> If you have domain expertise in a particular screen reader or assistive technology and notice something that is incorrect or incomplete, please open an issue or submit a correction. Your expertise is exactly what this documentation needs.</p>
 <p><strong>People who find bugs:</strong> A broken link, a command that has stopped working, an exercise that cannot be completed - all of these are legitimate bugs. Open an issue the same way you would for any software project.</p>
-<hr>
 <h2>2. What Kinds of Contributions Are Welcome</h2>
 <h3>Documentation Improvements</h3>
 <ul>
@@ -82,7 +100,6 @@
 <li>Adding content about tools or platforms not currently mentioned in the workshop</li>
 <li>Automated link-checking or content generation without human review</li>
 </ul>
-<hr>
 <h2>3. Before You Start - Fork and Clone</h2>
 <p>You learned this workflow during the workshop. Here it is again as a reference.</p>
 <h3>Account security</h3>
@@ -112,7 +129,6 @@
 origin    <span class="hljs-link">https://github.com/</span>[<span class="hljs-string">your-username</span>]/[workshop-repo-name].git (push)
 upstream  <span class="hljs-link">https://github.com/</span>[<span class="hljs-string">original-owner</span>]/[workshop-repo-name].git (fetch)
 upstream  <span class="hljs-link">https://github.com/</span>[<span class="hljs-string">original-owner</span>]/[workshop-repo-name].git (push)</code></pre>
-<hr>
 <h2>4. Contribution Workflow - Step by Step</h2>
 <p>This is the same workflow you practiced during the workshop, applied to a real contribution.</p>
 <h3>Step 1 - Sync with Upstream</h3>
@@ -165,7 +181,6 @@ changed. What problem does this solve? What was wrong <span class="hljs-keyword"
 <li>Fill in the PR template (see below)</li>
 <li>Submit</li>
 </ol>
-<hr>
 <h2>5. Writing and Style Guidelines</h2>
 <h3>Voice</h3>
 <ul>
@@ -207,7 +222,6 @@ changed. What problem does this solve? What was wrong <span class="hljs-keyword"
 <li>Good: <code>[NVDA User Guide](https://www.nvaccess.org/files/nvda/documentation/userGuide.html)</code></li>
 <li>Bad: <code>[click here](https://www.nvaccess.org/files/nvda/documentation/userGuide.html)</code></li>
 </ul>
-<hr>
 <h2>6. Accessibility Requirements</h2>
 <p>Every document in this repository is used by screen reader users. Accessibility is not a nice-to-have - it is the primary requirement. All contributions must meet the following:</p>
 <h3>Heading Structure</h3>
@@ -240,7 +254,6 @@ changed. What problem does this solve? What was wrong <span class="hljs-keyword"
 <li>Inline code for short references uses single backticks</li>
 <li>Commands that produce output should show the expected output separately, labeled</li>
 </ul>
-<hr>
 <h2>7. HTML Documentation Build System</h2>
 <p>This repository maintains HTML versions of all Markdown files. The HTML is built locally and committed alongside the Markdown source, so both formats are always in sync.</p>
 <h3>How It Works</h3>
@@ -310,7 +323,6 @@ You need to install Node.js first. Download from the <a href="https://nodejs.org
 <li>Check that code blocks use proper fence syntax (<code>```</code>)</li>
 <li>Look for unclosed brackets or parentheses in links</li>
 </ul>
-<hr>
 <h2>8. Screen Reader Guidance for Commands in This Document</h2>
 <p>If you are reviewing this repository using a screen reader, here are the relevant reading patterns.</p>
 <h3>NVDA</h3>
@@ -331,7 +343,6 @@ You need to install Node.js first. Download from the <a href="https://nodejs.org
 <li><strong>Code blocks</strong> in Markdown renderers on GitHub: navigate with <code>VO+Right Arrow</code>; activate &quot;Select All&quot; (<code>Cmd+A</code>) then &quot;Copy&quot; (<code>Cmd+C</code>) to copy a block</li>
 <li><strong>Heading navigation with Rotor:</strong> <code>VO+U</code>, then left-right to select &quot;Headings&quot;, then up-down to navigate</li>
 </ul>
-<hr>
 <h2>9. Submitting Your Pull Request</h2>
 <h3>PR Template</h3>
 <p>When you open a pull request, fill in the template that appears. If no template appears, include:</p>
@@ -360,7 +371,6 @@ You need to install Node.js first. Download from the <a href="https://nodejs.org
 <span class="hljs-symbol">exercise:</span> <span class="hljs-keyword">add</span> bonus challenge for notifications day <span class="hljs-number">2</span></code></pre>
 <h3>Size Guideline</h3>
 <p>Small, focused pull requests are reviewed faster and merged sooner. If you have multiple unrelated improvements, submit them as separate pull requests.</p>
-<hr>
 <h2>10. What Happens After You Submit</h2>
 <ol>
 <li><strong>A maintainer reviews your PR</strong> - typically within a few days for documentation changes</li>
@@ -370,13 +380,11 @@ You need to install Node.js first. Download from the <a href="https://nodejs.org
 <li><strong>Your name is in the commit history</strong> of the repository - that is the permanent record of your contribution</li>
 </ol>
 <p>If two weeks pass with no response, feel free to leave a comment on the PR to check in.</p>
-<hr>
 <h2>11. Questions and Discussion</h2>
 <p><strong>Before opening an issue:</strong> Search existing issues and discussions to see whether the question has already been raised.</p>
 <p><strong>For documentation discussions:</strong> Open a GitHub Discussion (if enabled) or an Issue labeled <code>question</code></p>
 <p><strong>For urgent issues with the workshop materials during a live event:</strong> Contact the facilitator directly</p>
 <p><strong>For accessibility concerns:</strong> Tag your issue or comment with the <code>accessibility</code> label</p>
-<hr>
 <p><em>Workshops run better when participants contribute back. Every correction, every clarification, every additional exercise makes this material stronger for everyone who comes after you. Your name in the commit history is not the end of your participation - it is the beginning.</em></p>
 <p><em><a href="README.html">Back to README →</a> | <a href="docs/appendix-u-resources.html">Resources →</a> | <a href="CODE_OF_CONDUCT.html">Code of Conduct →</a></em></p>
 

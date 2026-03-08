@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>GitHub Copilot - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Copilot</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Copilot</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>GitHub Copilot</h1>
 <blockquote>
@@ -40,10 +61,9 @@
 <p><strong>Prerequisites:</strong> <a href="10-vscode-basics.html">VS Code Setup &amp; Accessibility Basics</a>, <a href="11-git-source-control.html">Git &amp; Source Control in VS Code</a></p>
 <p><strong>Mac keyboard shortcuts:</strong> Throughout this chapter, all <code>Ctrl+</code> shortcuts use <code>Cmd+</code> on Mac, and <code>Alt+</code> shortcuts use <code>Option+</code> on Mac. Key equivalents: <code>Ctrl+Shift+I</code> → <code>Cmd+Shift+I</code> (Chat), <code>Ctrl+I</code> → <code>Cmd+I</code> (inline chat), <code>Alt+F2</code> → <code>Option+F2</code> (Accessible View), <code>Ctrl+/</code> → <code>Cmd+/</code> (insert suggestion). See the <a href="#8-keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a> at the end of this chapter for the complete list.</p>
 </blockquote>
-<hr>
 <h2>Workshop Recommendation (Chapter 13)</h2>
 <blockquote>
-<p><strong>✅ Free to Use:</strong> GitHub Copilot Free tier is included with all GitHub accounts at no cost. This workshop uses only the free tier. If you&#39;re on an organization with GitHub Enterprise, you may have Copilot Pro included—either way, you&#39;re covered.</p>
+<p>** Free to Use:** GitHub Copilot Free tier is included with all GitHub accounts at no cost. This workshop uses only the free tier. If you&#39;re on an organization with GitHub Enterprise, you may have Copilot Pro included—either way, you&#39;re covered.</p>
 </blockquote>
 <p>Chapter 13 introduces <strong>GitHub Copilot</strong> for AI-assisted documentation and writing.</p>
 <ul>
@@ -93,7 +113,6 @@
 </ol>
 <h3>Learning Moment</h3>
 <p>AI assistance amplifies clarity. Using Copilot as a brainstorming partner helps you write documentation that others can actually understand.</p>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-what-is-github-copilot">What is GitHub Copilot</a></li>
@@ -105,7 +124,6 @@
 <li><a href="#7-using-accessible-view-with-copilot-responses">Using Accessible View with Copilot Responses</a></li>
 <li><a href="#8-keyboard-shortcuts-reference">Keyboard Shortcuts Reference</a></li>
 </ol>
-<hr>
 <h2>1. What is GitHub Copilot</h2>
 <p>GitHub Copilot is an AI pair programmer that suggests code and text completions as you type. It can:</p>
 <ul>
@@ -119,7 +137,6 @@
 <p><strong>For this workshop:</strong> Copilot helps with Markdown documentation, issue triage, PR descriptions, and commit messages - not just code.</p>
 <p><strong>Copilot Free tier:</strong> Available for all GitHub users. Provides access to inline suggestions and Copilot Chat with usage limits. No payment required for this workshop.</p>
 <p><strong>Screen reader support:</strong> Copilot is fully accessible with screen readers. Suggestions are announced via ARIA live regions, and Accessible View provides complete access to Chat responses.</p>
-<hr>
 <h2>2. Installing GitHub Copilot</h2>
 <h3>Installation Steps</h3>
 <ol>
@@ -160,7 +177,6 @@
 <li>Copilot Chat</li>
 <li>Limited monthly usage (usually sufficient for documentation work)</li>
 </ul>
-<hr>
 <h2>3. Inline Suggestions - Ghost Text Completions</h2>
 <p>Copilot suggests completions as you type, displayed as gray &quot;ghost text&quot; after your cursor. In screen reader mode, VS Code announces suggestions rather than showing them visually.</p>
 <h3>How Inline Suggestions Work</h3>
@@ -313,7 +329,7 @@
 </ul>
 </details>
 
-<hr>
+
 <h2>4. GitHub Copilot Chat - Conversational Assistance</h2>
 <p>Copilot Chat is a full conversation interface where you ask questions, request explanations, and have content drafted.</p>
 <h3>Opening Copilot Chat</h3>
@@ -544,7 +560,6 @@ What does this error mean? #terminalLastCommand</code></pre>
 <li>Type <code>/explain</code></li>
 <li>Copilot explains the structure and purpose</li>
 </ol>
-<hr>
 <h2>5. Effective Prompting for Documentation Work</h2>
 <p>Copilot works best with clear, specific prompts. The more context you provide, the better the response.</p>
 <h3>Anatomy of a Good Prompt</h3>
@@ -613,7 +628,6 @@ Add a &quot;Common Mistakes&quot; section at the end
 
 Format this as a table instead of a bulleted list</code></pre>
 <p>Copilot remembers the conversation context - just say what to change.</p>
-<hr>
 <h2>6. Custom Instructions vs Custom Agents</h2>
 <p>Two distinct tools shape how Copilot behaves. Understanding the difference is critical for working with Accessibility Agents (see <a href="16-accessibility-agents.html">Chapter 16: Accessibility Agents</a>).</p>
 <h3>Custom Instructions</h3>
@@ -718,7 +732,6 @@ Format this as a table instead of a bulleted list</code></pre>
 <li>Copilot&#39;s fix follows your custom instructions (uses semantic HTML, adds ARIA where needed)</li>
 </ol>
 <h4>Both work together - instructions guide every response, agents automate specific workflows</h4>
-<hr>
 <h3>Writing Accessibility-Focused Custom Instructions</h3>
 <blockquote>
 <p>Source: <a href="https://accessibility.github.com/documentation/guide/copilot-instructions/">accessibility.github.com/documentation/guide/copilot-instructions/</a></p>
@@ -783,7 +796,6 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <p>Be specific about skills and responsibilities; avoid broad personas that may introduce unintended assumptions.</p>
 <p><strong>Keep instructions concise.</strong> There is no hard character limit, but overly long instructions reduce precision. Summarize the most important, actionable rules rather than listing every possible guideline.</p>
 <p><strong>Contribute effective instructions</strong> to <a href="https://github.com/github/awesome-copilot">github.com/github/awesome-copilot</a> so others benefit from your organization&#39;s work.</p>
-<hr>
 <h2>7. Using Accessible View with Copilot Responses</h2>
 <p>Copilot Chat responses stream in token by token. This is visually nice but can fragment screen reader announcements. <strong>Accessible View</strong> provides complete, structured access to generated content.</p>
 <h3>Why Use Accessible View for Copilot</h3>
@@ -845,7 +857,6 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 </ul>
 <p><strong>NVDA/JAWS:</strong> Use <code>Arrow</code> keys to read line by line. Use <code>Ctrl+Home</code> to jump to the start.</p>
 <p><strong>VoiceOver:</strong> Interact with the code block (<code>VO+Shift+Down</code>) to read each line with proper structure.</p>
-<hr>
 <h2>8. Keyboard Shortcuts Reference</h2>
 <h3>Copilot Inline Suggestions</h3>
 <table>
@@ -1003,7 +1014,6 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 </tr>
 </tbody></table>
 <p><strong>Complete keyboard reference:</strong> See <a href="appendix-m-vscode-accessibility-reference.html">Appendix M: VS Code Accessibility Reference</a></p>
-<hr>
 <h2>Troubleshooting</h2>
 <h3>Copilot Not Suggesting Anything</h3>
 <p><strong>Issue:</strong> No suggestions appear as you type.</p>
@@ -1042,7 +1052,6 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <li>Check <a href="https://github.com/settings/copilot">github.com/settings/copilot</a> for subscription status</li>
 <li>Free tier users: ensure you haven&#39;t exceeded monthly limits</li>
 </ol>
-<hr>
 <h2>Try It: Your First Copilot Conversation</h2>
 <p><strong>Time:</strong> 3 minutes | <strong>What you need:</strong> VS Code with Copilot Chat extension installed</p>
 <ol>
@@ -1055,7 +1064,6 @@ all UI is accessible by default, relying on semantic HTML before ARIA attributes
 <blockquote>
 <p><strong>What success feels like:</strong> Copilot answered a real question about real files in your repository. You can use this same pattern to ask about code, documentation, or anything else in the project - and the Accessible View ensures you can always read the response.</p>
 </blockquote>
-<hr>
 <p><em>Next: <a href="14-accessible-code-review.html">Accessible Code Review</a></em>
 <em>Back: <a href="12-github-pull-requests-extension.html">GitHub Pull Requests Extension</a></em>
 <em>Related: <a href="10-vscode-basics.html">VS Code Setup &amp; Accessibility Basics</a> | <a href="appendix-m-vscode-accessibility-reference.html">Appendix M: VS Code Accessibility Reference</a> | <a href="appendix-w-github-copilot-reference.html">Appendix W: GitHub Copilot Reference</a> | <a href="appendix-x-copilot-models.html">Appendix X: AI Models Reference</a></em></p>

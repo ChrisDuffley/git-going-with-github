@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Keyboard Shortcut Reference - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,14 +25,34 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Keyboard Shortcut Reference</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Keyboard Shortcut Reference</span>
+      </nav>
+      <form role="search" class="search-form" action="../../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Keyboard Shortcut Reference</h1>
 <h2>GitHub Navigation with Assistive Technology</h2>
 <p>This reference lists keyboard shortcuts for navigating GitHub with a screen reader. It covers three screen readers: NVDA, JAWS, and VoiceOver.</p>
-<hr>
 <h4>NVDA (Windows)</h4>
 <p>NVDA is a free, open source screen reader for Windows. Download it from <a href="htps://nvaccess.org">nvaccess.org</a>.</p>
 <h4>Single-Key Navigation (Browse Mode)</h4>
@@ -123,7 +143,6 @@
 <td>Stop reading</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>JAWS (Windows)</h2>
 <p>JAWS (Job Access With Speech) is a professional screen reader for Windows made by Freedom Scientific.</p>
 <h3>Single-Key Navigation (Virtual Cursor)</h3>
@@ -213,7 +232,6 @@
 <td>Stop reading</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>VoiceOver (macOS)</h2>
 <p>VoiceOver is the built-in screen reader on macOS. Activate it with Command+F5.</p>
 <p>The VoiceOver modifier key (VO key) is Control+Option.</p>
@@ -261,7 +279,6 @@
 <td>Stop reading</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Screen-Reader-Neutral Shortcuts (All Screen Readers)</h2>
 <p>These shortcuts work in GitHub regardless of screen reader, because they are browser or operating system shortcuts.</p>
 <h3>GitHub Page Shortcuts</h3>
@@ -322,7 +339,6 @@
 <td>Navigate within a radio group, tab bar, or menu</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Common Issues and Workarounds</h2>
 <p><strong>NVDA reads the GitHub page too slowly:</strong>
 In NVDA Settings → Browse Mode → increase Maximum number of characters on one line to 10000.</p>

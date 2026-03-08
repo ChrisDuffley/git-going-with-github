@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix W: GitHub Copilot & Agentic Reference - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix W: GitHub Copilot & Agentic Reference</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix W: GitHub Copilot & Agentic Reference</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix W: GitHub Copilot &amp; Agentic Reference</h1>
 <blockquote>
@@ -37,7 +58,6 @@
 <blockquote>
 <p>Quick-reference card for GitHub Copilot in VS Code and the broader agentic ecosystem - plugins, MCP servers, and cloud-based automation. For the Copilot lesson, see <a href="13-github-copilot.html">Chapter 13: GitHub Copilot</a>. For Accessibility Agents specifically, see <a href="appendix-v-accessibility-agents-reference.html">Appendix V: Accessibility Agents Reference</a>.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-keyboard-shortcuts">Keyboard Shortcuts</a></li>
@@ -55,7 +75,6 @@
 <li><a href="#13-awesome-copilot---plugin-ecosystem">awesome-copilot - Plugin Ecosystem</a></li>
 <li><a href="#14-github-agentic-workflows---agents-in-the-cloud">GitHub Agentic Workflows - Agents in the Cloud</a></li>
 </ol>
-<hr>
 <h2>1. Keyboard Shortcuts</h2>
 <h3>Inline Suggestions (Ghost Text)</h3>
 <table>
@@ -170,7 +189,6 @@
 </tr>
 </tbody></table>
 <p><strong>Use Accessible View (<code>Alt+F2</code>) every time Copilot responds.</strong> It provides the complete response in a readable pane - no streaming, no live region noise, proper heading structure.</p>
-<hr>
 <h2>2. Chat Participants</h2>
 <p>Type these in the Copilot Chat input to give Copilot context from a specific source.</p>
 <h3><code>@</code> Participants - Scope Context</h3>
@@ -233,7 +251,6 @@ Explain what #file does (then pick a file from the picker)
 What does this error mean? #terminalLastCommand
 
 Search #codebase for all screen reader navigation instructions</code></pre>
-<hr>
 <h2>3. Chat Slash Commands</h2>
 <p>Type <code>/</code> in Copilot Chat to see the available built-in commands.</p>
 <table>
@@ -310,7 +327,6 @@ Select a complex code example → /explain
 
 Select a broken YAML template → /fix
 → Copilot suggests what is wrong and how to correct it</code></pre>
-<hr>
 <h2>4. Chat Modes</h2>
 <p>Copilot Chat has four modes. Select the current mode from the dropdown at the bottom of the Chat input area.</p>
 <table>
@@ -344,10 +360,8 @@ Select a broken YAML template → /fix
 </tbody></table>
 <p><strong>Screen reader note:</strong> The mode selector is in the Chat panel toolbar at the bottom. Tab through the bottom of the Chat view to find it. The current mode name is its accessible label. Press <code>Space</code> or <code>Enter</code> to open the dropdown.</p>
 <p><strong>Model selection</strong> is a separate control, also at the bottom of the Chat input. See <a href="appendix-x-copilot-models.html">Appendix X: AI Models Reference</a> for a complete guide to choosing models.</p>
-<hr>
 <h2>5. Custom Instructions - All Levels</h2>
 <p>GitHub Copilot supports multiple ways to provide custom instructions. They differ by scope, priority, trigger mechanism, and which tools recognize them. This section documents every supported approach.</p>
-<hr>
 <h3>4A. Always-On Instructions - <code>.github/copilot-instructions.md</code></h3>
 <p><strong>What it is:</strong> The primary VS Code Copilot instruction file. Content is automatically included in every chat request and inline suggestion context - you never need to invoke it.</p>
 <p><strong>When to use:</strong> Project-wide conventions everyone on the team should follow: coding standards, documentation style, commit message format, tone, accessibility requirements.</p>
@@ -381,7 +395,6 @@ Select a broken YAML template → /fix
 <li>VS Code analyzes your workspace and generates a tailored <code>copilot-instructions.md</code></li>
 <li>Review and edit the result before committing</li>
 </ol>
-<hr>
 <h3>4B. Always-On Instructions - <code>AGENTS.md</code> (Multi-Tool / Monorepo)</h3>
 <p><strong>What it is:</strong> An open standard instruction file recognized by multiple AI tools - GitHub Copilot, Claude Code, Gemini CLI, and others. Use this instead of <code>copilot-instructions.md</code> when you want one instruction file that works across all AI coding assistants.</p>
 <p><strong>When to use:</strong> Multi-tool teams, or when you want monorepo-level granularity where different subdirectories have different rules.</p>
@@ -396,7 +409,6 @@ Select a broken YAML template → /fix
 <p><strong>Enable/disable AGENTS.md:</strong> Set <code>chat.useAgentsMdFile: true</code> (default: on).</p>
 <p><strong>Format:</strong> Identical to <code>copilot-instructions.md</code> - plain Markdown, no frontmatter.</p>
 <p><strong>Rule:</strong> Choose either <code>copilot-instructions.md</code> OR <code>AGENTS.md</code> for your project - not both.</p>
-<hr>
 <h3>4C. Always-On Instructions - <code>CLAUDE.md</code> (Cross-Tool Compatibility)</h3>
 <p><strong>What it is:</strong> Instructions file originally from Claude Code that VS Code Copilot also recognizes. Useful when your team uses both.</p>
 <p><strong>When to use:</strong> Mixed AI tool environments where Claude Code and VS Code Copilot are both used. Uses the same format as the other always-on files.</p>
@@ -433,14 +445,11 @@ Select a broken YAML template → /fix
 <p><strong>Enable/disable:</strong> Set <code>chat.useClaudeMdFile: true</code> (default: on).</p>
 <p><strong>Claude Rules format</strong> (for <code>.claude/rules/</code> and <code>~/.claude/rules/</code>):</p>
 <p>Use <code>.instructions.md</code> files under <code>.claude/rules/</code> using <code>paths:</code> instead of <code>applyTo:</code> for glob matching:</p>
-<pre><code class="hljs language-markdown">---
-description: &quot;Python coding standards&quot;
-<span class="hljs-section">paths: [&quot;<span class="hljs-strong">**/<span class="hljs-emphasis">*.py&quot;]
----
+<pre><code class="hljs language-markdown">description: &quot;Python coding standards&quot;
+paths: [&quot;<span class="hljs-strong">**/<span class="hljs-emphasis">*.py&quot;]
 
 Follow PEP 8. Use type hints on all function signatures.
-Write docstrings for all public functions and classes.</span></span></span></code></pre>
-<hr>
+Write docstrings for all public functions and classes.</span></span></code></pre>
 <h3>4D. Conditional / Scoped Instructions - <code>.instructions.md</code></h3>
 <p><strong>What it is:</strong> Instructions that apply only when specific file types or folders are involved in the chat. More targeted than always-on instructions.</p>
 <p><strong>When to use:</strong> Language-specific rules (Python style, TypeScript patterns), framework conventions, folder-specific standards (docs/, tests/, src/api/).</p>
@@ -466,11 +475,9 @@ Write docstrings for all public functions and classes.</span></span></span></cod
 </tr>
 </tbody></table>
 <h4>Frontmatter</h4>
-<pre><code class="hljs language-yaml"><span class="hljs-meta">---</span>
-<span class="hljs-attr">name:</span> <span class="hljs-string">&quot;Display Name&quot;</span>          <span class="hljs-comment"># Optional - shown in UI and diagnostics; defaults to filename</span>
+<pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">&quot;Display Name&quot;</span>          <span class="hljs-comment"># Optional - shown in UI and diagnostics; defaults to filename</span>
 <span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Use when...&quot;</span>    <span class="hljs-comment"># Optional - enables on-demand matching; make keyword-rich</span>
-<span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.py&quot;</span>            <span class="hljs-comment"># Optional glob - auto-attach when matching files are in context</span>
-<span class="hljs-meta">---</span></code></pre>
+<span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.py&quot;</span>            <span class="hljs-comment"># Optional glob - auto-attach when matching files are in context</span></code></pre>
 <h4><code>applyTo</code> glob patterns</h4>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**&quot;</span>                            <span class="hljs-comment"># Always included (careful - applies to everything)</span>
 <span class="hljs-attr">applyTo:</span> <span class="hljs-string">&quot;**/*.py&quot;</span>                       <span class="hljs-comment"># All Python files</span>
@@ -501,11 +508,9 @@ Write docstrings for all public functions and classes.</span></span></span></cod
 </tr>
 </tbody></table>
 <h4>Example - test file conventions</h4>
-<pre><code class="hljs language-markdown">---
-name: &quot;Test File Standards&quot;
+<pre><code class="hljs language-markdown">name: &quot;Test File Standards&quot;
 description: &quot;Use when writing, generating, or reviewing test files. Covers test structure, naming, and coverage expectations.&quot;
-<span class="hljs-section">applyTo: &quot;<span class="hljs-strong">**/<span class="hljs-emphasis">*.test.{js,ts}&quot;
----
+applyTo: &quot;<span class="hljs-strong">**/<span class="hljs-emphasis">*.test.{js,ts}&quot;
 
 # Test Standards
 
@@ -514,13 +519,12 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 - Each `it` tests exactly one behavior
 - Include at least one edge case and one error case per function
 - Avoid snapshot tests for logic; use explicit assertions
-- Mock external dependencies; do not test third-party libraries</span></span></span></code></pre>
+- Mock external dependencies; do not test third-party libraries</span></span></code></pre>
 <h2>Create an instructions file</h2>
 <ul>
 <li><code>Ctrl+Shift+P</code> → &quot;Chat: New Instructions File&quot; → choose scope (Workspace or User)</li>
 <li>Or create the file manually in <code>.github/instructions/</code></li>
 </ul>
-<hr>
 <h3>4E. Organization-Level Instructions (GitHub Enterprise and Teams)</h3>
 <p><strong>What it is:</strong> Organization administrators define custom instructions that apply to all repositories in the organization. Every team member automatically gets these instructions added to their Copilot context.</p>
 <p><strong>Priority:</strong> Lowest - workspace and user instructions both override these. However, they are additive - they are appended to, not replacing, other instructions.</p>
@@ -535,7 +539,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
   <span class="hljs-attr">&quot;github.copilot.chat.organizationInstructions.enabled&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span>
 <span class="hljs-punctuation">}</span></code></pre>
 <p><strong>Use for:</strong> Organization-wide coding standards, security policies, legal disclaimers (open source license obligations), toolchain conventions.</p>
-<hr>
 <h3>4F. Settings-Based Instructions (Deprecated - Use Files Instead)</h3>
 <blockquote>
 <p><strong>Note:</strong> These settings-based instructions are deprecated and may be removed in a future VS Code release. For new work, use <code>copilot-instructions.md</code> or <code>.instructions.md</code> files.</p>
@@ -558,7 +561,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
   <span class="hljs-punctuation">]</span>
 <span class="hljs-punctuation">}</span></code></pre>
 <p>Each setting accepts an array of <code>{ text: &quot;...&quot; }</code> (inline) or <code>{ file: &quot;relative/path.md&quot; }</code> (from file).</p>
-<hr>
 <h3>4G. Comparison - When to Use Each Approach</h3>
 <table>
 <thead>
@@ -613,7 +615,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <td>Deprecated - avoid for new work</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>6. Accessible View Workflow</h2>
 <p>Copilot Chat responses stream in token by token, which can fragment screen reader announcements. <strong>Accessible View</strong> (<code>Alt+F2</code>) gives you a complete, static, properly structured version of the response.</p>
 <h3>Recommended Workflow - Every Copilot Interaction</h3>
@@ -687,7 +688,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <li>Each line is on its own line (not run together)</li>
 <li>Indentation is preserved</li>
 </ul>
-<hr>
 <h2>7. Configuration Scope Reference</h2>
 <p>Every Copilot customization file lives at one of three scopes. VS Code <strong>combines all</strong> matching files from all scopes - it is additive, not winner-takes-all.</p>
 <h3>Workspace (Repository) - Team-Shared</h3>
@@ -794,7 +794,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <li>Enable discovery: <code>github.copilot.chat.organizationInstructions.enabled: true</code></li>
 <li>Lowest priority - workspace and user instructions override when there is a conflict</li>
 </ul>
-<hr>
 <h2>8. Instruction Priority and Conflicts</h2>
 <p>When multiple instruction sources give conflicting guidance, VS Code uses this priority order:</p>
 <pre><code class="hljs language-text">1. Personal / User-level    - HIGHEST - overrides all others
@@ -811,7 +810,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <p>Result: Copilot follows TypeScript strict mode (from workspace), British English (from org), AND the Z-spelling override (from user, which overrides the org instruction on that specific point).</p>
 <h3>Priority Within the Same Scope</h3>
 <p>Within a single scope (e.g., workspace), all matching instructions files are combined with no inherent priority. If two workspace-level <code>.instructions.md</code> files contradict each other, the behavior is undefined - avoid conflicting workspace instructions.</p>
-<hr>
 <h2>9. All File Types Quick Reference</h2>
 <table>
 <thead>
@@ -885,7 +883,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 </tbody></table>
 <h3>Create any new customization file</h3>
 <p><code>Ctrl+Shift+P</code> → &quot;Chat: New Instructions File&quot; (or &quot;New Prompt File&quot;, &quot;New Agent File&quot;)</p>
-<hr>
 <h2>10. VS Code Settings Reference</h2>
 <p>All Copilot customization-related settings. Set in VS Code Settings (<code>Ctrl+,</code>) or <code>settings.json</code>.</p>
 <h3>Core Instruction Settings</h3>
@@ -990,7 +987,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <li>Check <strong>&quot;Prompts and Instructions&quot;</strong></li>
 </ol>
 <p>Your personal <code>*.instructions.md</code>, <code>*.agent.md</code>, and <code>*.prompt.md</code> files will sync to all signed-in VS Code instances.</p>
-<hr>
 <h2>11. Diagnostics and Troubleshooting</h2>
 <h3>View All Loaded Customizations</h3>
 <p>To see which instruction files, agents, prompts, and skills are currently loaded - and check for errors:</p>
@@ -1045,7 +1041,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <li>Use forward slashes or escaped backslashes</li>
 <li>Relative paths are relative to the workspace root</li>
 </ul>
-<hr>
 <h2>Quick Reference Card</h2>
 <h3>Opening Copilot</h3>
 <table>
@@ -1172,8 +1167,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <td>Chat gear → Diagnostics</td>
 </tr>
 </tbody></table>
-<hr>
-<hr>
 <h2>12. Screen Reader Workflow - Official Guide</h2>
 <blockquote>
 <p>Source: <a href="https://accessibility.github.com/documentation/guide/github-copilot-vsc/">accessibility.github.com/documentation/guide/github-copilot-vsc/</a></p>
@@ -1335,7 +1328,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <td><a href="https://accessibility.github.com/documentation/guide/getting-started-with-agents/">accessibility.github.com/documentation/guide/getting-started-with-agents/</a></td>
 </tr>
 </tbody></table>
-<hr>
 <h2>13. awesome-copilot - Plugin Ecosystem</h2>
 <p><strong>awesome-copilot</strong> is a GitHub repository (<code>github/awesome-copilot</code>) - not a VS Code Marketplace extension. It is GitHub&#39;s curated ecosystem of Copilot plugins, prompts, instructions, agents, skills, and hooks that can be shared and discovered by anyone.</p>
 <blockquote>
@@ -1379,7 +1371,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 </tr>
 </tbody></table>
 <p><strong>LLM discovery:</strong> <code>https://github.github.io/awesome-copilot/llms.txt</code> - a machine-readable index of all available resources.</p>
-<hr>
 <h3>The <code>/plugin</code> Command - Browse and Install from Chat</h3>
 <p>The easiest way to explore awesome-copilot from VS Code:</p>
 <ol>
@@ -1409,7 +1400,6 @@ description: &quot;Use when writing, generating, or reviewing test files. Covers
 <td>20+ partner agents from Azure, JetBrains, MongoDB, and others</td>
 </tr>
 </tbody></table>
-<hr>
 <h3>CLI Plugin Installation</h3>
 <p>From any terminal with GitHub CLI (<code>gh</code>) installed:</p>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Browse the marketplace</span>
@@ -1423,7 +1413,6 @@ gh copilot plugin install @awesome-copilot/accessibility-toolkit
 
 <span class="hljs-comment"># List what you have installed</span>
 gh copilot plugin list</code></pre>
-<hr>
 <h3>MCP Server Integration (Docker required)</h3>
 <p>awesome-copilot also ships as an <strong>MCP (Model Context Protocol) Server</strong> - a Docker-based tool server that extends Copilot with additional capabilities beyond file-based customizations.</p>
 <p>Install in VS Code by clicking the button at <code>https://aka.ms/awesome-copilot/mcp/vscode</code>, or add manually to <code>settings.json</code>:</p>
@@ -1445,7 +1434,6 @@ gh copilot plugin list</code></pre>
 <blockquote>
 <p><strong>Screen reader note:</strong> The install buttons on the awesome-copilot page are standard links. Navigate with <code>K</code> in Browse Mode to find them. Each is labeled with the target IDE.</p>
 </blockquote>
-<hr>
 <h3>awesome-copilot vs. Accessibility Agents</h3>
 <table>
 <thead>
@@ -1481,7 +1469,6 @@ gh copilot plugin list</code></pre>
 <td>Reusable templates and cross-project tools</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>14. GitHub Agentic Workflows - Agents in the Cloud</h2>
 <blockquote>
 <p><strong>Status: Technical Preview</strong> - GitHub Agentic Workflows entered technical preview on <strong>February 13, 2026</strong>. The feature is in early development and may change significantly. Use with careful human supervision. See the <a href="https://github.github.com/gh-aw/">official documentation</a> and <a href="https://github.com/github/gh-aw">source repository</a> (open source, MIT).</p>
@@ -1536,8 +1523,7 @@ gh copilot plugin list</code></pre>
 <p>The AI agent (GitHub Copilot, Claude, or OpenAI Codex) reads your repository context and the natural language instructions, then performs the task using the GitHub MCP Server and other available tools.</p>
 <h3>Workflow Format - Markdown with Frontmatter</h3>
 <p>Unlike standard GitHub Actions (YAML), agentic workflows are Markdown files:</p>
-<pre><code class="hljs language-markdown">---
-on:
+<pre><code class="hljs language-markdown">on:
   schedule: daily
 permissions:
   contents: read
@@ -1548,7 +1534,6 @@ safe-outputs:
 <span class="hljs-code">    title-prefix: &quot;[team-status] &quot;
     labels: [report, daily-status]
     close-older-issues: true
----
 </span>
 <span class="hljs-section">## Daily Issues Report</span>
 
@@ -1668,7 +1653,6 @@ gh aw compile .github/workflows/daily-report.md
 <blockquote>
 <p><strong>Relationship to Accessibility Agents:</strong> Accessibility Agents agents (<code>.agent.md</code> files) are designed for interactive use inside VS Code. GitHub Agentic Workflows are a separate, cloud-native system that uses its own Markdown workflow format and the <code>gh aw</code> CLI - they are complementary tools, not the same mechanism. See <a href="appendix-v-accessibility-agents-reference.html">Appendix V</a> for the full Accessibility Agents reference.</p>
 </blockquote>
-<hr>
 <p><em>Chapter: <a href="13-github-copilot.html">GitHub Copilot</a></em>
 <em>Related: <a href="appendix-v-accessibility-agents-reference.html">Appendix V: Accessibility Agents Reference</a> | <a href="appendix-m-vscode-accessibility-reference.html">Appendix M: VS Code Accessibility Reference</a> | <a href="appendix-x-copilot-models.html">Appendix X: AI Models Reference</a></em></p>
 

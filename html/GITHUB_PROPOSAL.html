@@ -25,16 +25,35 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Learning Curriculum</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">GitHub Learning Curriculum</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>GitHub Learning Curriculum</h1>
 <h2>Executive Summary &amp; Proposal to GitHub</h2>
-<hr>
 <h2>Project Overview</h2>
 <p><strong>Title:</strong> Comprehensive, Accessible GitHub Workshop Curriculum with AI Agent Integration<br><strong>Scope:</strong> 17-chapter structured learning path + interactive AI agents + accessibility-first design<br><strong>Audience:</strong> Developers, open-source contributors, maintainers, and facilitators<br><strong>Status:</strong> Complete curriculum ready for deployment<br><strong>Note:</strong> 2 additional agenda files (Day 1 &amp; Day 2) provided for workshop facilitators (not part of learner sequence)  </p>
-<hr>
 <h2>Problem Statement</h2>
 <h3>Current Gap</h3>
 <p>GitHub is powerful but intimidating for newcomers. Standard onboarding approaches:</p>
@@ -59,7 +78,6 @@
 <li><strong>Accessibility advocates</strong> have no GitHub-specific guidance</li>
 <li><strong>Facilitators</strong> must recreate training materials from scratch</li>
 </ul>
-<hr>
 <h2>Solution: Complete Learning Curriculum</h2>
 <h3>Architecture</h3>
 <p><strong>Three-Part Modular Design:</strong></p>
@@ -211,7 +229,6 @@
 <li><strong>Template Builder:</strong> Interactive wizard for guided template creation</li>
 </ul>
 <p><strong>Outcome:</strong> Teams can design accessible workflows and automate GitHub processes with confidence.</p>
-<hr>
 <h2>Curriculum Highlights</h2>
 <h3>1. Accessibility-First Design</h3>
 <ul>
@@ -400,7 +417,6 @@
 <li><strong>ACCESSIBILITY_TESTING.md</strong> (checklist for testing templates &amp; workflows)</li>
 </ul>
 <p><strong>Why:</strong> Users have context-specific help at their fingertips; facilitators have reference guides.</p>
-<hr>
 <h2>Pedagogical Approach</h2>
 <h3>Three Core Principles</h3>
 <h4>1. Skill First, Agent Second</h4>
@@ -436,7 +452,6 @@ Mastered (<span class="hljs-keyword">User</span> <span class="hljs-title">review
 <li>Every exercise includes screen reader instructions</li>
 </ul>
 <p><strong>Why:</strong> Builds inclusive habits from day one; not a retrofit.</p>
-<hr>
 <h2>Implementation &amp; Deployment</h2>
 <h3>Current Assets</h3>
 <ul>
@@ -556,7 +571,6 @@ Root/
 <td>Ready to lead 2-day workshop</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Success Criteria &amp; Metrics</h2>
 <h3>Learner Outcomes (Measurable)</h3>
 <ul>
@@ -580,7 +594,6 @@ Root/
 <li><input aria-label="Keyboard-only functionality tested on all exercises" disabled="" type="checkbox"> Keyboard-only functionality tested on all exercises</li>
 <li><input aria-label="Color contrast verified (4.5:1 minimum for all text)" disabled="" type="checkbox"> Color contrast verified (4.5:1 minimum for all text)</li>
 </ul>
-<hr>
 <h2>Recommended Next Steps</h2>
 <h3>Phase 1: Finalize &amp; Polish (1 week)</h3>
 <ul>
@@ -610,7 +623,6 @@ Root/
 <li><input aria-label="Rotate facilitators for fresh perspectives" disabled="" type="checkbox"> Rotate facilitators for fresh perspectives</li>
 <li><input aria-label="Expand to additional topics (GitHub Security, GitHub Actions deep dive, etc.)" disabled="" type="checkbox"> Expand to additional topics (GitHub Security, GitHub Actions deep dive, etc.)</li>
 </ul>
-<hr>
 <h2>Why GitHub Should Support This</h2>
 <h3>1. Education Mission</h3>
 <p>GitHub&#39;s mission is to build the all-inclusive home for developers. This curriculum:</p>
@@ -647,7 +659,6 @@ Root/
 <li>Community suggests improvements and translations</li>
 <li>Becomes standard reference (like &quot;Pro Git&quot; book)</li>
 </ul>
-<hr>
 <h2>Risks &amp; Mitigations</h2>
 <table>
 <thead>
@@ -678,7 +689,6 @@ Root/
 <td>Partner with GitHub team to promote; integrate with GitHub Skills program</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Budget &amp; Resources</h2>
 <h3>Current Assets (Complete)</h3>
 <ul>
@@ -747,7 +757,6 @@ Root/
 <li><strong>Community support:</strong> 3 hrs/week (respond to feedback)</li>
 <li><strong>Annual curriculum review:</strong> 20 hrs (comprehensive update)</li>
 </ul>
-<hr>
 <h2>Alignment with GitHub Strategic Goals</h2>
 <table>
 <thead>
@@ -783,7 +792,6 @@ Root/
 <td>Works with VS Code, GitHub CLI, Copilot, Actions</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Call to Action</h2>
 <p>This curriculum is <strong>ready for deployment</strong>. The required next step is:</p>
 <ol>
@@ -793,7 +801,6 @@ Root/
 </ol>
 <h3>Success Metric</h3>
 <p><strong>If this curriculum launches:</strong> We expect 10,000+ learners in year one, 50,000+ by year two.</p>
-<hr>
 <h2>Appendices</h2>
 <h3>A. Curriculum Overview</h3>
 <p>See <code>README.md</code> for full chapter list and quick links.</p>
@@ -827,10 +834,8 @@ Root/
 <li><strong>Accessibility Lead:</strong> [A11y Champion]</li>
 <li><strong>GitHub Contact:</strong> [Product Manager]</li>
 </ul>
-<hr>
 <h2>Signature &amp; Approval</h2>
 <p><strong>Prepared by:</strong> GitHub Learning Curriculum Team<br><strong>Date:</strong> February 2026<br><strong>Status:</strong> Ready for Phase 1 Finalization</p>
-<hr>
 <p><em>This proposal demonstrates a complete, accessible, AI-integrated learning system designed to onboard users into GitHub, emphasize inclusive practices, and amplify human expertise with AI agents. We&#39;re ready to launch.</em></p>
 <p><em>Questions? Comments? Open an issue on GitHub or contact the curriculum team.</em></p>
 

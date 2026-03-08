@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>The Learning Room: Shared Practice Repository - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">The Learning Room: Shared Practice Repository</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">The Learning Room: Shared Practice Repository</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>The Learning Room: Shared Practice Repository</h1>
 <blockquote>
@@ -35,7 +56,6 @@
 </blockquote>
 <h2>What Is the Learning Room?</h2>
 <p>The <strong>Learning Room</strong> is a single, shared GitHub repository where all workshop participants collaborate together. It is not your personal fork. It is not your individual repository. It is one repo with many students, many branches, and many pull requests.</p>
-<hr>
 <h2>Workshop Recommendation (Chapter 3)</h2>
 <p>Chapter 3 is a <strong>system orientation chapter</strong>.</p>
 <ul>
@@ -50,13 +70,9 @@
 <li>Explain issue -&gt; branch -&gt; PR -&gt; review -&gt; merge.</li>
 <li>Identify where bot feedback appears on PRs.</li>
 </ol>
-<pre><code class="hljs language-text">learning-room (SHARED)
-├── main branch (protected)
-├── Student A&#x27;s PR #12 (open, assigned to Student B for review)
-├── Student B&#x27;s PR #13 (open, assigned to Student C for review)
-├── Student C&#x27;s PR #14 (open, assigned to Student A for review)
-├── Student A&#x27;s PR #11 (merged, closed)
-└── [More PRs as students contribute]</code></pre>
+<p><img src="images/learning-room-tree.svg" alt=""></p>
+<h4>Description</h4>
+<p>The learning-room is a single shared repository. It has a protected main branch, and each student opens pull requests against it. For example: Student A&#39;s PR #12 is open and assigned to Student B for review, Student B&#39;s PR #13 is assigned to Student C, Student C&#39;s PR #14 is assigned to Student A, and Student A&#39;s earlier PR #11 has already been merged. More PRs appear as students contribute.</p>
 <h3>Why one shared repo?</h3>
 <ul>
 <li><strong>Realistic</strong> - Open source projects are shared spaces</li>
@@ -64,7 +80,6 @@
 <li><strong>Peer review</strong> - You review the people sitting next to you</li>
 <li><strong>Automation</strong> - The bot serves one repo, coordinating all contributions</li>
 </ul>
-<hr>
 <h2>Two Tracks, One Repository</h2>
 <p>Throughout Day 1, you work on <strong>two parallel learning tracks</strong>:</p>
 <h3>Track 1: GitHub Skills Modules (Your Account)</h3>
@@ -81,43 +96,78 @@
 </ul>
 <p><strong>Scope:</strong> The shared <code>learning-room</code> repository (one repo, visible to everyone)<br><strong>Bot:</strong> The Learning Room automation bot validates PRs and tracks progress<br><strong>Pace:</strong> Structured by facilitator; synchronized with workshop schedule<br><strong>Purpose:</strong> Collaborative practice of the full workflow (issue → branch → PR → review → merge)</p>
 <h4>The Two Tracks Reinforce Each Other</h4>
-<pre><code class="hljs language-text">Skills Module (individual)      Learning Room (group)
-     ↓                               ↓
-Create a branch                 Create a branch (together)
-     ↓                               ↓
-Open a PR                       Open a PR (see others&#x27; too)
-     ↓                               ↓
-Get instant bot feedback        Get bot feedback + human review
-     ↓                               ↓
-Mona verifies your step         Human peer reviewer approves
-     ↓                               ↓
-Next step unlocked             Ready to merge</code></pre>
-<hr>
+<table>
+<thead>
+<tr>
+<th scope="col">Step</th>
+<th scope="col">Skills Module (individual)</th>
+<th scope="col">Learning Room (group)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>Create a branch</td>
+<td>Create a branch (together)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Open a PR</td>
+<td>Open a PR (see others&#39; too)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Get instant bot feedback</td>
+<td>Get bot feedback + human review</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Mona verifies your step</td>
+<td>Human peer reviewer approves</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Next step unlocked</td>
+<td>Ready to merge</td>
+</tr>
+</tbody></table>
 <h2>Learning Room Folder Structure</h2>
-<pre><code class="hljs language-text">learning-room/
-├── README.md                           ← Getting started guide
-├── AUTOMATION.md                       ← How the bot works
-├── .github/
-│   ├── workflows/                      ← 3 automation workflows
-│   │   ├── learning-room-pr-bot.yml            (PR validation)
-│   │   ├── skills-progression.yml              (progress tracking)
-│   │   └── student-grouping.yml                (peer pairing)
-│   ├── scripts/
-│   │   └── validate-pr.js                      (validation logic)
-│   ├── data/
-│   │   ├── student-roster.json                 (your cohort info)
-│   │   └── challenge-progression.json          (levels, badges)
-│   └── docs/
-│       ├── LEARNING_PATHS.md                   (skill progression guide)
-│       └── IMPLEMENTATION_GUIDE.md             (facilitator setup)
-├── docs/
-│   ├── CHALLENGES.md                   ← 12 challenges (Beginner → Expert)
-│   ├── GROUP_CHALLENGES.md             ← 7 collaborative exercises
-│   ├── welcome.md                      ← Has [TODO] to complete
-│   ├── keyboard-shortcuts.md           ← Has intentional errors
-│   └── setup-guide.md                  ← Has broken links
-└── [other files for practice]</code></pre>
-<hr>
+<p>The learning-room repository contains these files and folders:</p>
+<ul>
+<li><strong>README.md</strong> -- Getting started guide</li>
+<li><strong>AUTOMATION.md</strong> -- How the bot works</li>
+<li><strong>.github/</strong><ul>
+<li><strong>workflows/</strong> -- 3 automation workflows<ul>
+<li>learning-room-pr-bot.yml (PR validation)</li>
+<li>skills-progression.yml (progress tracking)</li>
+<li>student-grouping.yml (peer pairing)</li>
+</ul>
+</li>
+<li><strong>scripts/</strong><ul>
+<li>validate-pr.js (validation logic)</li>
+</ul>
+</li>
+<li><strong>data/</strong><ul>
+<li>student-roster.json (your cohort info)</li>
+<li>challenge-progression.json (levels, badges)</li>
+</ul>
+</li>
+<li><strong>docs/</strong><ul>
+<li>LEARNING_PATHS.md (skill progression guide)</li>
+<li>IMPLEMENTATION_GUIDE.md (facilitator setup)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>docs/</strong><ul>
+<li>CHALLENGES.md -- 12 challenges (Beginner to Expert)</li>
+<li>GROUP_CHALLENGES.md -- 7 collaborative exercises</li>
+<li>welcome.md -- Has a TODO to complete</li>
+<li>keyboard-shortcuts.md -- Has intentional errors</li>
+<li>setup-guide.md -- Has broken links</li>
+</ul>
+</li>
+<li>Other files for practice</li>
+</ul>
 <h2>Your Practice Branch</h2>
 <p>When you join the workshop, the facilitator creates a <strong>personal practice branch</strong> for you in the Learning Room repository. This branch is automatically created using your GitHub username with <code>-practice</code> appended:</p>
 <blockquote>
@@ -145,9 +195,38 @@ Next step unlocked             Ready to merge</code></pre>
 <li>Open a pull request from your practice branch → <code>main</code></li>
 </ol>
 <blockquote>
-<p><strong>Note:</strong> For GitHub web-based editing (Chapters 4-5), you can create temporary feature branches with descriptive names like <code>fix/welcome-todos</code> or <code>add/keyboard-shortcuts</code>. Your practice branch becomes essential when you start working locally with Git in Chapter 11.</p>
+<p><strong>Which branch do I use and when?</strong></p>
+<table>
+<thead>
+<tr>
+<th scope="col">Chapter</th>
+<th scope="col">Branch needed?</th>
+<th scope="col">What to use</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chapter 4 (Issues)</td>
+<td>No</td>
+<td>Work happens in issue threads directly. No branch or file editing required.</td>
+</tr>
+<tr>
+<td>Chapter 5 (PRs, web editor)</td>
+<td>Yes, auto-created</td>
+<td>GitHub creates a branch when you click &quot;Propose changes.&quot; Name it <code>fix/yourname-issueXX</code>.</td>
+</tr>
+<tr>
+<td>Chapter 5 (PRs, local clone)</td>
+<td>Yes, create manually</td>
+<td><code>git checkout -b fix/yourname-issueXX</code> from <code>main</code>.</td>
+</tr>
+<tr>
+<td>Chapter 11+ (Local Git)</td>
+<td>Yes</td>
+<td>Use your <code>username-practice</code> branch or create <code>fix/yourname-issueXX</code> branches from <code>main</code>.</td>
+</tr>
+</tbody></table>
+<p><strong>Summary:</strong> Chapter 4 needs no branch. Chapters 5-10 use short-lived <code>fix/</code> branches. Your <code>username-practice</code> branch becomes essential starting in Chapter 11 when you work locally with Git and VS Code.</p>
 </blockquote>
-<hr>
 <h2>The Practice Files: What You Will Work On</h2>
 <p>The <code>docs/</code> folder contains three practice files with intentional issues. These are the files you will edit, fix, and submit pull requests for during the contribution sprint. Here is exactly what you will encounter in each file.</p>
 <h3>docs/welcome.md - Introduction to Open Source Contribution</h3>
@@ -218,7 +297,6 @@ Next step unlocked             Ready to merge</code></pre>
 <p>Each challenge lists the file(s) to edit, estimated time, skills practiced, success criteria, and a link to detailed instructions.</p>
 <h3>docs/GROUP_CHALLENGES.md - Collaborative Exercises</h3>
 <p>Seven group exercises for study groups, ranging from a Documentation Sprint (divide <code>docs/welcome.md</code> among group members) to a Full Repository Audit (each person audits a section of the workshop documentation). Groups of 2-6 students work together with coordinated PRs and cross-review.</p>
-<hr>
 <h2>How PR Sharing Works</h2>
 <h3>Step 1: Student Opens a PR</h3>
 <h4>Student A (working on Challenge 3: Complete Welcome Guide)</h4>
@@ -351,7 +429,6 @@ This is a great opportunity to practice code review skills! Here&#x27;s what to 
 <li>Achievement comment is public</li>
 <li>Progress reflected in Learning Paths documentation</li>
 </ul>
-<hr>
 <h2>What All Students See</h2>
 <table>
 <thead>
@@ -402,7 +479,6 @@ This is a great opportunity to practice code review skills! Here&#x27;s what to 
 <td>You + PR author</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>The Learning Automation System</h2>
 <p>When you open a PR in the Learning Room, you get <strong>three types of feedback</strong>:</p>
 <h3>Type 1: Automated Bot Feedback (30 seconds)</h3>
@@ -429,7 +505,6 @@ This is a great opportunity to practice code review skills! Here&#x27;s what to 
 <li>Motivational comments</li>
 </ul>
 <p><strong>Together:</strong> Instant technical feedback + human mentorship + visible progress</p>
-<hr>
 <h2>Study Groups (Optional)</h2>
 <p>If your facilitator creates study groups, you&#39;ll be assigned with 2-3 other students:</p>
 <ol>
@@ -446,7 +521,6 @@ This is your collaboration space!
 - Share tips and resources
 - Support each other through challenges
 - Celebrate each other&#x27;s achievements</code></pre>
-<hr>
 <h2>Key Differences: Skills Module vs. Learning Room</h2>
 <table>
 <thead>
@@ -502,7 +576,6 @@ This is your collaboration space!
 <td>All students together</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Tips for PR Sharing</h2>
 <h3>Finding PRs to Review</h3>
 <details>
@@ -558,7 +631,7 @@ This is your collaboration space!
   3. Your name appears as reviewer
   4. Read bot comment
   5. Read peer feedback
-  
+
 Files Changed Tab (what actually changed):
   1. Press H to navigate files
   2. Press T to explore file tree
@@ -574,7 +647,7 @@ Files Changed Tab (what actually changed):
   2. Listen for &quot;Reviewers&quot; heading
   3. Your name appears as reviewer
   4. VO+Down to read bot comment and peer feedback
-  
+
 Files Changed Tab (what actually changed):
   1. Quick Nav H to navigate file headings
   2. VO+U → Landmarks → &quot;File tree&quot; to explore files
@@ -661,7 +734,7 @@ Files Changed Tab (what actually changed):
 7. Comment: &quot;Updates pushed, ready for review&quot;</code></pre>
 </details>
 
-<hr>
+
 <h2>FAQ: PR Sharing in Learning Room</h2>
 <h3>&quot;Can I see other students&#39; PRs?&quot;</h3>
 <p><strong>Yes!</strong> All PRs in the shared repo are visible. This is intentional - you learn by seeing how others approach problems.</p>
@@ -681,13 +754,11 @@ Files Changed Tab (what actually changed):
 <p>Comment explaining why. Request human review. The bot isn&#39;t perfect - that&#39;s why you have humans too.</p>
 <h3>&quot;Do I need to complete every challenge?&quot;</h3>
 <p>No! The Learning Room has challenges for all skill levels. You can pick what interests you, complete at your pace, and continue after the workshop.</p>
-<hr>
 <h2>Celebration: You&#39;re Contributing</h2>
 <p>Every PR you open and merge in the Learning Room is a <strong>real contribution</strong>:</p>
 <p>You found something to improve<br>You made a meaningful change<br>You received feedback (technical + human)<br>You incorporated suggestions<br>You merged your work  </p>
 <p><strong>That is open source contribution.</strong> Your facilitator has a record. The GitHub repo has a record. You have a merged commit in your history.</p>
 <p>This is not hypothetical. This is not simulation. This is real.</p>
-<hr>
 <p><em>Next: <a href="04-working-with-issues.html">Working with Issues</a></em>
 <em>Back: <a href="02-navigating-repositories.html">Navigating Repositories</a></em>
 <em>Reference: <a href="../learning-room/AUTOMATION.html">Automation Guide</a> | <a href="../learning-room/docs/CHALLENGES.html">Available Challenges</a></em></p>

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+      </nav>
+      <form role="search" class="search-form" action="../../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Git Going with GitHub - Audio Series</h1>
 <h2>Episode 10: Notifications and Mentions</h2>
@@ -35,7 +56,6 @@
 <strong>Episode:</strong> 10 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 10-12 min</p>
-<hr>
 <h3>Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
@@ -61,7 +81,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Email notifications versus web notifications</li>
 <li>Strategies for staying informed without being overwhelmed</li>
 </ul>
-<hr>
 <h3>Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
@@ -94,7 +113,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <blockquote>
 <p>GitHub notifications are how GitHub tells you when something needs your attention. This guide teaches you to keep the inbox useful - not overwhelming - using only your keyboard and screen reader.</p>
 </blockquote>
-<hr>
 <h2>What Generates a Notification?</h2>
 <p>GitHub sends you a notification when:</p>
 <table>
@@ -129,7 +147,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <td>You are watching the repo for all activity</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Notification Subscription Levels</h2>
 <p>For each repository, you choose how many notifications to receive:</p>
 <table>
@@ -188,7 +205,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 </details>
 
 <p><strong>Recommended setting for most repos:</strong> “Participating and @mentions only” - you stay in the loop on what involves you without noise.</p>
-<hr>
 <h2>The Notifications Inbox</h2>
 <p>Navigate to your inbox: <code>https://github.com/notifications</code> or press <code>G</code> then <code>N</code> (GitHub keyboard shortcut).</p>
 <p><strong>Screen reader note:</strong> The <code>G N</code> shortcut uses two sequential key presses (not simultaneous). Press <code>G</code>, release it, then press <code>N</code>. This works in Browse Mode.</p>
@@ -247,7 +263,6 @@ gh <span class="hljs-built_in">pr</span> view 42 --repo owner/repo</code></pre>
 <p>&quot;microsoft/vscode - Add keyboard shortcut for accessible view - @username mentioned you - 2 hours ago&quot;</p>
 </blockquote>
 <p>Components: <strong>repo/org</strong> | <strong>thread title</strong> | <strong>event type</strong> | <strong>timestamp</strong></p>
-<hr>
 <h2>Inbox Actions - Keyboard Shortcuts</h2>
 <p>These shortcuts work when a notification is focused in the inbox:</p>
 <table>
@@ -285,7 +300,6 @@ gh <span class="hljs-built_in">pr</span> view 42 --repo owner/repo</code></pre>
 <blockquote>
 <p><strong>Screen reader note:</strong> These are GitHub&#39;s own keyboard shortcuts. In Browse Mode, some of these letters are also navigation keys. To use these shortcuts reliably, make sure focus is on the notification row (tab to it) rather than in browse/reading mode.</p>
 </blockquote>
-<hr>
 <h2>Filtering the Inbox</h2>
 <p>The left sidebar has quick filters. Use <code>Tab</code> or <code>K</code> to navigate to them:</p>
 <table>
@@ -358,7 +372,7 @@ gh <span class="hljs-built_in">pr</span> view 42 --repo owner/repo</code></pre>
 </ol>
 </details>
 
-<hr>
+
 <h2>Managing Notifications at Scale</h2>
 <h3>The &quot;mark all as done&quot; workflow</h3>
 <p>After a busy day or coming back from time away, clear your inbox methodically:</p>
@@ -409,7 +423,6 @@ gh <span class="hljs-built_in">pr</span> view 42 --repo owner/repo</code></pre>
 <li>If it seems like a mistake, a simple &quot;I don&#39;t think this mention was meant for me - feel free to remove it!&quot; is enough</li>
 <li>Unsubscribe after reading if you don&#39;t need to stay in the loop</li>
 </ol>
-<hr>
 <h2>Notification Settings - Per Your Account</h2>
 <p>Global notification preferences are at <code>https://github.com/settings/notifications</code>.</p>
 <p>Key settings to review:</p>
@@ -441,7 +454,6 @@ gh <span class="hljs-built_in">pr</span> view 42 --repo owner/repo</code></pre>
 <pre><code class="hljs">H → navigate <span class="hljs-keyword">to</span> <span class="hljs-keyword">each</span> settings section heading
 F <span class="hljs-keyword">or</span> E → navigate form fields <span class="hljs-keyword">within</span> <span class="hljs-keyword">each</span> section
 Tab → <span class="hljs-keyword">move</span> <span class="hljs-keyword">between</span> <span class="hljs-keyword">options</span> <span class="hljs-keyword">within</span> a form <span class="hljs-keyword">group</span></code></pre>
-<hr>
 <h2>Starring vs. Watching - What Is the Difference?</h2>
 <p>New contributors often confuse these two. They appear next to each other on every repository page and do completely different things.</p>
 <h3>Starring a Repository</h3>
@@ -536,7 +548,6 @@ Tab → <span class="hljs-keyword">move</span> <span class="hljs-keyword">betwee
 <td><strong>Star only</strong> - save without subscribing</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Screen Reader Tips for the Notification Inbox</h2>
 <h3>NVDA</h3>
 <ul>
@@ -556,7 +567,6 @@ Tab → <span class="hljs-keyword">move</span> <span class="hljs-keyword">betwee
 <li><code>VO+Space</code> to activate a row, <code>VO+Escape</code> to return to the list</li>
 <li>With Quick Nav on, <code>H</code> navigates the date group headings</li>
 </ul>
-<hr>
 <h2>The GitHub Mobile App - A Reference Note</h2>
 <p>GitHub has an iOS and Android app that supports push notifications. While the app itself is not covered as a primary tool in this workshop, it is worth knowing:</p>
 <ul>
@@ -564,7 +574,6 @@ Tab → <span class="hljs-keyword">move</span> <span class="hljs-keyword">betwee
 <li>The mobile app does work with iOS VoiceOver and Android TalkBack</li>
 <li>For primary contribution work, the desktop browser experience remains more fully featured</li>
 </ul>
-<hr>
 <h2>Try It: Tame Your Inbox</h2>
 <p><strong>Time:</strong> 2 minutes | <strong>What you need:</strong> Browser, signed in to GitHub</p>
 <p>Go to <a href="https://github.com/notifications">github.com/notifications</a> and practice:</p>
@@ -577,7 +586,6 @@ Tab → <span class="hljs-keyword">move</span> <span class="hljs-keyword">betwee
 <blockquote>
 <p><strong>What success feels like:</strong> Your inbox has fewer items, and you chose what to watch. Notifications work <em>for</em> you now, not against you.</p>
 </blockquote>
-<hr>
 <blockquote>
 <h3>Day 2 Amplifier - Accessibility Agents: <code>@daily-briefing</code></h3>
 <p><strong>Manage your notification inbox manually before using any agent.</strong> The signal-versus-noise judgment you develop - what to act on, what to watch, what to mute - is the same judgment the agent applies when prioritizing its output. Without that judgment, you cannot evaluate whether the agent&#39;s prioritization is correct or whether it surfaced the things that actually matter to you.</p>
@@ -589,7 +597,6 @@ Tab → <span class="hljs-keyword">move</span> <span class="hljs-keyword">betwee
 </ul>
 <p><em>Your notification discipline today becomes the standard the agent enforces at scale tomorrow.</em></p>
 </blockquote>
-<hr>
 <p><em>Next: <a href="../DAY2_AGENDA.html">Day 2 Agenda</a></em>
 <em>Back: <a href="08-labels-milestones-projects.html">Labels, Milestones, and Projects</a></em>
 <em>Related: <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a> | <a href="04-working-with-issues.html">Working with Issues</a></em></p>

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+      </nav>
+      <form role="search" class="search-form" action="../../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Git Going with GitHub - Audio Series</h1>
 <h2>Episode 21: Git Authentication</h2>
@@ -35,7 +56,6 @@
 <strong>Episode:</strong> 21 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 12-15 min</p>
-<hr>
 <h3>Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
@@ -60,7 +80,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Commit signing with GPG or SSH keys</li>
 <li>Troubleshooting authentication failures</li>
 </ul>
-<hr>
 <h3>Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
@@ -88,7 +107,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <blockquote>
 <p><strong>Audience:</strong> This appendix is for contributors who need to configure Git authentication for push access. If you&#39;re working entirely through the GitHub web interface or GitHub Desktop, you can skip this. If you&#39;re using VS Code with Git command line, this becomes relevant when you want to push commits to your fork.</p>
 </blockquote>
-<hr>
 <h2>When You Need Authentication</h2>
 <p>GitHub requires authentication when you:</p>
 <ul>
@@ -102,7 +120,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>View public repositories on GitHub.com</li>
 <li>Read issues and pull requests</li>
 </ul>
-<hr>
 <h2>Two Authentication Methods</h2>
 <h3>Personal Access Token (PAT)</h3>
 <p>A Personal Access Token is a password-like string you generate on GitHub and use instead of your account password when Git asks for credentials.</p>
@@ -131,7 +148,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li>Requires command-line setup (less accessible for some screen reader users)</li>
 <li>Slightly more complex initial configuration</li>
 </ul>
-<hr>
 <h2>Creating a Personal Access Token (Recommended for This Workshop)</h2>
 <p><strong>Why this method:</strong> It&#39;s screen reader accessible through the GitHub web interface, and you can complete it without command-line Git configuration.</p>
 <h3>Step 1: Generate the Token</h3>
@@ -171,7 +187,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <p><strong>macOS Keychain:</strong> macOS will offer to save it to Keychain. Select &quot;Always Allow.&quot;</p>
 <p><strong>Linux:</strong> You can configure Git to cache credentials:</p>
 <pre><code class="hljs language-bash">git config --global credential.helper cache</code></pre>
-<hr>
 <h2>Setting Up SSH Keys (Alternative Method)</h2>
 <p>If you prefer SSH and are comfortable with terminal commands:</p>
 <h3>Step 1: Check If You Already Have a Key</h3>
@@ -213,7 +228,6 @@ git@github.com:owner/repo.git
 
 <span class="hljs-comment"># Instead of HTTPS:</span>
 https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/owner/</span>repo.git</code></pre>
-<hr>
 <h2>Switching Between HTTPS and SSH</h2>
 <p>If you cloned with HTTPS but want to use SSH (or vice versa), update the remote:</p>
 <p><strong>Check your current remote:</strong></p>
@@ -222,7 +236,6 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <pre><code class="hljs language-bash">git remote set-url origin git@github.com:your-username/repo.git</code></pre>
 <p><strong>Switch to HTTPS:</strong></p>
 <pre><code class="hljs language-bash">git remote set-url origin https://github.com/your-username/repo.git</code></pre>
-<hr>
 <h2>Troubleshooting</h2>
 <h3>&quot;Authentication failed&quot; when pushing</h3>
 <p><strong>Problem:</strong> Your token expired or is incorrect.</p>
@@ -244,7 +257,6 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <p><strong>Problem:</strong> SSH doesn&#39;t recognize GitHub&#39;s host key.</p>
 <p><strong>Solution:</strong></p>
 <pre><code class="hljs language-bash">ssh-keyscan github.com &gt;&gt; ~/.ssh/known_hosts</code></pre>
-<hr>
 <h2>Security Best Practices</h2>
 <ol>
 <li><strong>Never share your private key or PAT</strong> - treat them like passwords</li>
@@ -254,7 +266,6 @@ https:<span class="hljs-regexp">//gi</span>thub.com<span class="hljs-regexp">/ow
 <li><strong>Revoke old tokens</strong> when you&#39;re done with a project or device</li>
 <li><strong>Don&#39;t commit tokens or keys to Git</strong> - use <code>.gitignore</code> for config files</li>
 </ol>
-<hr>
 <h2>Commit Signing - Verified Badges and Vigilant Mode</h2>
 <p>When you push commits to GitHub, each commit shows a small badge: <strong>Verified</strong> or <strong>Unverified</strong>. This badge tells anyone viewing the commit history whether the commit was cryptographically signed - proving it came from you and was not tampered with.</p>
 <h3>Why It Matters</h3>
@@ -314,7 +325,6 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <li>VoiceOver: use <code>VO+Right</code> through the commit row; the badge is read as a button with the text &quot;Verified&quot; (clicking it shows the certificate)</li>
 </ul>
 <p><strong>Workshop recommendation:</strong> SSH signing is simpler to set up than GPG and reuses your existing key. If you have 10 minutes, configure it before Day 2 - every commit you push to accessibility-agents will show as Verified.</p>
-<hr>
 <h2>For This Workshop</h2>
 <p><strong>Recommended approach:</strong></p>
 <ol>
@@ -324,7 +334,6 @@ git config --global commit.gpgsign <span class="hljs-literal">true</span></code>
 <li>Use it when VS Code or Git asks for a password</li>
 </ol>
 <p>SSH keys are great for long-term use, but PATs are faster to set up and more accessible for screen reader users during a time-constrained workshop.</p>
-<hr>
 <p><em>Return to: <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a> | <a href="appendix-u-resources.html">Resources</a></em></p>
 
   </main>

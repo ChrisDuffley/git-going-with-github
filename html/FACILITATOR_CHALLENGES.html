@@ -25,14 +25,34 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Operations Guide</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Operations Guide</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Facilitator Operations Guide</h1>
 <p>This section is for facilitators and administrators managing the workshop challenge system.</p>
-<hr>
-<h2>🎓 Pre-Workshop Setup (Facilitator Only)</h2>
+<h2>Pre-Workshop Setup (Facilitator Only)</h2>
 <h3>Step 1: Prepare the Student List</h3>
 <p>Get a CSV or list of GitHub usernames for all workshop participants:</p>
 <pre><code class="hljs">accesswatch
@@ -65,11 +85,11 @@ gh issue list --label challenge --<span class="hljs-built_in">limit</span> 100
 gh issue list --label challenge --label <span class="hljs-string">&quot;skill: github-issues&quot;</span> --<span class="hljs-built_in">limit</span> 100</code></pre>
 <p>Each issue should:</p>
 <ul>
-<li>✅ Have the student&#39;s <code>@username</code> in the title</li>
-<li>✅ Be assigned to that student</li>
-<li>✅ Have labels: <code>challenge</code>, level label, skill label, day label</li>
-<li>✅ Have a clear, complete description with links to this hub and the chapter docs</li>
-<li>✅ Have a link to the full Challenge Hub</li>
+<li>Have the student&#39;s <code>@username</code> in the title</li>
+<li>Be assigned to that student</li>
+<li>Have labels: <code>challenge</code>, level label, skill label, day label</li>
+<li>Have a clear, complete description with links to this hub and the chapter docs</li>
+<li>Have a link to the full Challenge Hub</li>
 </ul>
 <h3>Step 4: Set Up Bot Validation (Optional)</h3>
 <p>If using PR bot validation for Chapters 4, 5, 6, 11:</p>
@@ -85,8 +105,7 @@ gh issue list --label challenge --label <span class="hljs-string">&quot;skill: g
 <p>&quot;You have 30+ challenges pre-assigned to you. Go to the <strong>Issues</strong> tab, filter by your username, and your challenges appear. Click any issue to read the full instructions. Complete the challenge, open a PR that says <code>Closes #XX</code>, and watch the bot validate your work. When it passes, merge and move to the next challenge.&quot;</p>
 </blockquote>
 <p><strong>That&#39;s it.</strong> Instructions are self-contained in the issues and the Challenge Hub.</p>
-<hr>
-<h2>📋 Managing Challenges During the Workshop</h2>
+<h2>Managing Challenges During the Workshop</h2>
 <h3>Monitoring Student Progress</h3>
 <p><strong>Real-time dashboard:</strong></p>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># See all open challenges by chapter</span>
@@ -111,7 +130,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <ol>
 <li>Review the student&#39;s PR or issue comment</li>
 <li>Look for: clear evidence, correct steps, good explanation</li>
-<li>Comment: &quot;Great work! Your [X] shows you understand [concept]. ✅ Moving you to the next challenge.&quot;</li>
+<li>Comment: &quot;Great work! Your [X] shows you understand [concept].  Moving you to the next challenge.&quot;</li>
 <li>Leave the PR open or issue open - don&#39;t auto-merge/close until you&#39;ve reviewed</li>
 </ol>
 <h3>Troubleshooting Failed Bot Validation</h3>
@@ -122,8 +141,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <li>Have them push again - bot re-validates automatically</li>
 <li>If it&#39;s a real bot bug, flag it for later and manually approve the PR</li>
 </ol>
-<hr>
-<h2>🔄 Post-Workshop Cleanup</h2>
+<h2>Post-Workshop Cleanup</h2>
 <h3>Step 1: Archive Old Issues</h3>
 <p>After the workshop ends:</p>
 <pre><code class="hljs language-bash"><span class="hljs-comment"># Close all challenge issues for this cohort</span>
@@ -146,8 +164,7 @@ gh issue list --label challenge --state open \
 <span class="hljs-comment"># Update if chapter content changed</span>
 git pull origin main</code></pre>
 <p>The templates pull from the chapter documentation, so they&#39;re always fresh.</p>
-<hr>
-<h2>📊 Challenge Metadata</h2>
+<h2>Challenge Metadata</h2>
 <h3>Issue Labels (Standard Across All Challenges)</h3>
 <table>
 <thead>
@@ -185,8 +202,7 @@ git pull origin main</code></pre>
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">5.2</span>: <span class="hljs-selector-tag">Open</span> <span class="hljs-selector-tag">Your</span> <span class="hljs-selector-tag">First</span> <span class="hljs-selector-tag">Pull</span> <span class="hljs-selector-tag">Request</span> (<span class="hljs-variable">@amandarush</span>)
 <span class="hljs-selector-tag">Chapter</span> <span class="hljs-number">11.3</span>: <span class="hljs-selector-tag">Push</span> <span class="hljs-selector-tag">to</span> <span class="hljs-selector-tag">GitHub</span> (<span class="hljs-variable">@andysq62</span>)</code></pre>
 <p>This makes it <strong>instantly clear</strong> which challenge, which chapter, which student.</p>
-<hr>
-<h2>🤖 Automation &amp; Bot Validation</h2>
+<h2>Automation &amp; Bot Validation</h2>
 <h3>Challenges with Automatic Validation</h3>
 <p>These chapters have PR bot validation:</p>
 <table>
@@ -199,22 +215,22 @@ git pull origin main</code></pre>
 </thead>
 <tbody><tr>
 <td><strong>4: Issues</strong></td>
-<td>✅ PR bot</td>
+<td>PR bot</td>
 <td><code>Closes #XX</code>, evidence issue reference, created issue quality</td>
 </tr>
 <tr>
 <td><strong>5: Pull Requests</strong></td>
-<td>✅ PR bot</td>
+<td>PR bot</td>
 <td><code>Closes #XX</code> syntax, Markdown, accessibility</td>
 </tr>
 <tr>
 <td><strong>6: Merge Conflicts</strong></td>
-<td>✅ PR bot</td>
+<td>PR bot</td>
 <td>Clean conflict resolution, commit message</td>
 </tr>
 <tr>
 <td><strong>11: Git &amp; Source Control</strong></td>
-<td>✅ PR bot</td>
+<td>PR bot</td>
 <td>Branch name, commit presence, push success</td>
 </tr>
 <tr>
@@ -228,10 +244,10 @@ git pull origin main</code></pre>
 <li>Student opens PR with <code>Closes #ISSUE_NUMBER</code></li>
 <li>GitHub workflow (<code>.github/workflows/learning-room-pr-bot.yml</code>) triggers</li>
 <li>Bot script (<code>.github/scripts/validate-pr.js</code>) checks:<ul>
-<li>✅ PR references an issue with <code>Closes #</code></li>
-<li>✅ Changed files are in appropriate folder (<code>learning-room/docs/</code>)</li>
-<li>✅ Markdown syntax is valid</li>
-<li>✅ No major accessibility violations (heading hierarchy, link text, alt text)</li>
+<li>PR references an issue with <code>Closes #</code></li>
+<li>Changed files are in appropriate folder (<code>learning-room/docs/</code>)</li>
+<li>Markdown syntax is valid</li>
+<li>No major accessibility violations (heading hierarchy, link text, alt text)</li>
 </ul>
 </li>
 <li>Bot posts a comment with pass/fail status and specific fixes</li>
@@ -246,8 +262,7 @@ gh workflow <span class="hljs-built_in">disable</span> learning-room-pr-bot
 <span class="hljs-comment"># After manual review, re-enable</span>
 gh workflow <span class="hljs-built_in">enable</span> learning-room-pr-bot</code></pre>
 <p>Then manually approve the PR.</p>
-<hr>
-<h2>🎯 Success Metrics</h2>
+<h2>Success Metrics</h2>
 <h3>Track These During the Workshop</h3>
 <p><strong>Participation:</strong></p>
 <ul>
@@ -271,8 +286,7 @@ gh workflow <span class="hljs-built_in">enable</span> learning-room-pr-bot</code
 gh issue list --label challenge --state closed --<span class="hljs-built_in">limit</span> 50 | \
   jq <span class="hljs-string">&#x27;.[] | .pull_request&#x27;</span> | \
   xargs -I {} gh <span class="hljs-built_in">pr</span> view {} --json statusCheckRollup</code></pre>
-<hr>
-<h2>🔗 File References</h2>
+<h2>File References</h2>
 <h3>Templates Used by Batch Script</h3>
 <ul>
 <li><code>.github/ISSUE_TEMPLATE/challenge-chapter-4.md</code> - Chapter 4 issues</li>
@@ -293,8 +307,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <li><code>docs/05-working-with-pull-requests.md</code> - Chapter 5 detailed guide</li>
 <li><code>docs/11-git-source-control.md</code> - Chapter 11 detailed guide</li>
 </ul>
-<hr>
-<h2>❓ FAQ - Facilitators</h2>
+<h2>FAQ - Facilitators</h2>
 <h3>&quot;A student claims they completed a challenge but I don&#39;t see evidence&quot;</h3>
 <p>Check the PR that references their issue:</p>
 <pre><code class="hljs language-bash">gh <span class="hljs-built_in">pr</span> list --assignee @STUDENT_USERNAME --state merged</code></pre>
@@ -320,8 +333,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <h3>&quot;How do I know if my bot configuration is too strict?&quot;</h3>
 <p>Track daily: &quot;How many students needed bot help and retries?&quot;</p>
 <p>If &gt;80% of students need retries → bot might be too strict. Relax rules or add exceptions.</p>
-<hr>
-<h2>🚀 Final Checklist (Pre-Workshop)</h2>
+<h2>Final Checklist (Pre-Workshop)</h2>
 <ul>
 <li><input aria-label="" disabled="" type="checkbox"> <code>student-usernames.txt</code> committed and updated</li>
 <li><input aria-label="Batch script runs without errors:" disabled="" type="checkbox"> Batch script runs without errors: <code>python scripts/batch_create_challenges.py --dry-run</code></li>
@@ -335,7 +347,7 @@ gh issue list --label challenge --state closed --<span class="hljs-built_in">lim
 <li><input aria-label="Facilitators understand the &quot;How to Monitor Progress&quot; section" disabled="" type="checkbox"> Facilitators understand the &quot;How to Monitor Progress&quot; section</li>
 <li><input aria-label="Dry run: one facilitator completes one challenge end-to-end as a test" disabled="" type="checkbox"> Dry run: one facilitator completes one challenge end-to-end as a test</li>
 </ul>
-<p><strong>This checklist ready? You&#39;re go for launch.</strong> 🚀</p>
+<p><strong>This checklist ready? You&#39;re go for launch.</strong> </p>
 
   </main>
   <footer role="contentinfo" class="site-footer">

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+      </nav>
+      <form role="search" class="search-form" action="../../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Git Going with GitHub - Audio Series</h1>
 <h2>Episode 5: Working with Issues</h2>
@@ -35,7 +56,6 @@
 <strong>Episode:</strong> 5 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 15-18 min</p>
-<hr>
 <h3>Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
@@ -61,7 +81,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Managing issues: assigning, labeling, closing, reopening</li>
 <li>How issues connect to pull requests and project planning</li>
 </ul>
-<hr>
 <h3>Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
@@ -114,7 +133,6 @@ but keep the main narrative focused on the primary chapter.</p>
 <p>Full step-by-step instructions with per-screen-reader commands are in <a href="00-pre-workshop-setup.html#step-4-check-github-feature-preview-settings">Pre-Workshop Setup, Step 4</a>.</p>
 <p><strong>Browse vs Focus Mode (NVDA):</strong> Toggle between modes with <code>NVDA+Space</code> (NVDA key = <code>Insert</code> or <code>Caps Lock</code>). Use <strong>Browse Mode</strong> (the default) for reading lists, headings, and issue content. Switch to <strong>Focus Mode</strong> when typing in text fields and search boxes. Use <code>NVDA+F7</code> at any time to open a list of all headings, links, form fields, buttons, and landmarks on the page - this is your orientation tool.</p>
 </blockquote>
-<hr>
 <h2>What Is a GitHub Issue?</h2>
 <p>An issue is a discussion thread attached to a repository. Issues are used for:</p>
 <ul>
@@ -128,7 +146,6 @@ but keep the main narrative focused on the primary chapter.</p>
 <blockquote>
 <p><strong>Learning Room connection:</strong> In the <code>learning-room</code> repo, every challenge from <code>docs/CHALLENGES.md</code> becomes an issue. For example, Challenge 1 (&quot;Fix Broken Link&quot;) is filed as an issue pointing to <code>docs/welcome.md</code>, describing the broken link and linking to the challenge success criteria. When you open a PR to fix it, you reference the issue with <code>Closes #XX</code> to automatically close it on merge.</p>
 </blockquote>
-<hr>
 <h2>Navigating to the Issues List</h2>
 <h3>From a repository page</h3>
 <details>
@@ -173,7 +190,6 @@ gh issue list --state closed</code></pre>
 
 <h3>Direct URL</h3>
 <p>Navigate directly: <code>https://github.com/[owner]/[repo]/issues</code></p>
-<hr>
 <h2>The Issues List Page</h2>
 <h3>Page structure</h3>
 <pre><code class="hljs">[<span class="hljs-keyword">Search</span> / filter bar]          ← controls <span class="hljs-built_in">at</span> the <span class="hljs-built_in">top</span>
@@ -217,7 +233,6 @@ gh issue list --state closed</code></pre>
 <li>Who opened it and when (&quot;Opened 3 days ago by username&quot;)</li>
 <li>Number of comments (&quot;5 comments&quot;)</li>
 </ul>
-<hr>
 <h2>Filtering and Searching Issues</h2>
 <p>Filtering lets you narrow the list to find the right issue quickly.</p>
 <h3>Using the search/filter bar</h3>
@@ -288,7 +303,6 @@ gh issue list --search <span class="hljs-string">&quot;screen reader&quot;</span
 
 <h3>Open vs Closed filter</h3>
 <p>The two state links &quot;Open&quot; and &quot;Closed&quot; appear near the top of the issue list. Press <code>K</code> to navigate links until you find them, or look for them as buttons near the search bar.</p>
-<hr>
 <h2>Reading an Issue</h2>
 <h3>Landing on an issue page</h3>
 <p>When you open an issue, the page structure is:</p>
@@ -376,7 +390,6 @@ gh issue view 42 --comments</code></pre>
 <li>A &quot;Reply&quot; link</li>
 </ul>
 <p>Other timeline events (label added, PR linked, issue closed) appear between comments in the activity stream. They are typically announced as text paragraphs.</p>
-<hr>
 <h2>Leaving a Comment</h2>
 <h3>Step-by-step</h3>
 <details>
@@ -544,7 +557,6 @@ gh issue comment 42 --body <span class="hljs-string">&quot;Thanks for reporting 
 <li>Make your changes</li>
 <li>Tab to &quot;Update comment&quot; button → Enter</li>
 </ol>
-<hr>
 <h2>Filing a New Issue</h2>
 <h3>Navigating to New Issue</h3>
 <details>
@@ -671,7 +683,7 @@ gh issue create --template <span class="hljs-string">&quot;bug_report.md&quot;</
 <p>The interactive mode walks you step-by-step through title, body (opens your editor), labels, and assignees - fully usable from a terminal with a screen reader.</p>
 </details>
 
-<hr>
+
 <h2>Cross-Referencing Issues</h2>
 <p>Linking issues and PRs to each other creates a trail of context that helps everyone understand the project&#39;s history.</p>
 <h3>Closing keywords in PR descriptions or issue comments</h3>
@@ -712,7 +724,6 @@ gh issue create --template <span class="hljs-string">&quot;bug_report.md&quot;</
 <span class="hljs-keyword">Step</span> <span class="hljs-number">4</span>: Enter <span class="hljs-keyword">to</span> <span class="hljs-built_in">insert</span> the reference</code></pre>
 <h3>Cross-repo references</h3>
 <p><code>owner/repo#42</code> - references issue #42 in a different repository.</p>
-<hr>
 <h2>Sub-Issues - Parent and Child Relationships</h2>
 <p><strong>Sub-issues</strong> (released 2025) let you nest issues inside a parent issue to break large work into tracked pieces. A &quot;parent&quot; issue contains a list of child issues; each child is a full issue with its own discussion, labels, and assignees.</p>
 <h3>When to Use Sub-Issues</h3>
@@ -791,7 +802,6 @@ Tab → <span class="hljs-string">&quot;Add sub-issue&quot;</span> button (if yo
 <blockquote>
 <p><strong>Workshop tip:</strong> If you are working on a feature that requires multiple PRs or involves several team members, ask the maintainer to create a parent issue. You can then claim individual child issues without one person owning the whole feature.</p>
 </blockquote>
-<hr>
 <h2>Managing Issues (for Maintainers and Triagers)</h2>
 <h3>Closing an issue</h3>
 <details>
@@ -875,7 +885,6 @@ gh issue edit 42 --milestone <span class="hljs-string">&quot;Hackathon Day 1&quo
 </ol>
 <h3>Transferring or deleting an issue</h3>
 <p>Available from the &quot;...&quot; (ellipsis) button at the top of the issue - navigate buttons with <code>B</code> to find it.</p>
-<hr>
 <h2>The &quot;good first issue&quot; Label - Your Entry Point</h2>
 <p>When looking for your first open source contribution:</p>
 <ol>
@@ -886,7 +895,6 @@ gh issue edit 42 --milestone <span class="hljs-string">&quot;Hackathon Day 1&quo
 <li>Wait for a maintainer to respond and assign you before starting work</li>
 </ol>
 <p><strong>Remember:</strong> It&#39;s respectful to ask before starting. Maintainers juggle many discussions and need to know who is working on what to avoid duplicated effort.</p>
-<hr>
 <h2>Accessibility-Specific Issue Writing Tips</h2>
 <p>When filing accessibility bugs, these details help maintainers reproduce and fix the problem:</p>
 <ol>
@@ -931,7 +939,6 @@ update indicating <span class="hljs-keyword">the</span> results changed.
 JAWS <span class="hljs-number">2026</span> also <span class="hljs-keyword">does</span> <span class="hljs-keyword">not</span> announce. VoiceOver <span class="hljs-keyword">on</span> macOS Sonoma <span class="hljs-keyword">with</span>
 Safari <span class="hljs-number">17</span> <span class="hljs-keyword">does</span> announce <span class="hljs-string">&quot;List updated&quot;</span> when filtering <span class="hljs-keyword">is</span> applied,
 so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code></pre>
-<hr>
 <h2>Try It: File Your First Issue</h2>
 <p><strong>Time:</strong> 3 minutes | <strong>What you need:</strong> Browser, signed in to GitHub</p>
 <p>Go to the Learning Room repository and file a real issue:</p>
@@ -946,7 +953,6 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 <blockquote>
 <p><strong>What success feels like:</strong> Your issue is live. Other participants can see it. You just contributed to a real repository - and it took less than three minutes.</p>
 </blockquote>
-<hr>
 <blockquote>
 <h3>Day 2 Amplifier - Accessibility Agents: <code>@issue-tracker</code></h3>
 <p><strong>File, read, comment on, and triage real issues manually before using any agent.</strong> If you have not done the triage work yourself - reading descriptions, assigning labels, identifying duplicates - you cannot evaluate whether an agent&#39;s priority scoring is correct. The skill must exist before the amplifier is useful.</p>
@@ -958,11 +964,9 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 </ul>
 <p><em>Today you are the triage engine. On Day 2, you understand the engine well enough to direct it.</em></p>
 </blockquote>
-<hr>
 <p><em>Next: <a href="05-working-with-pull-requests.html">Working with Pull Requests</a></em>
 <em>Back: <a href="03-the-learning-room.html">The Learning Room</a></em>
 <em>Related: <a href="15-issue-templates.html">Issue Templates Guide</a> | <a href="08-labels-milestones-projects.html">Labels &amp; Milestones</a> | <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a></em></p>
-<hr>
 <h3>Supplementary: Labels, Milestones, Projects - issue organization</h3>
 <h1>Appendix I: GitHub Projects Deep Dive</h1>
 <blockquote>
@@ -972,7 +976,6 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 <blockquote>
 <p>GitHub Projects is GitHub&#39;s built-in project management system. It connects issues and pull requests from one or more repositories into a living, filterable view that your whole team can see and act on. This appendix covers everything beyond the basics introduced in <a href="08-labels-milestones-projects.html">Chapter 08: Labels, Milestones, and Projects</a>.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-projects-v2-what-changed">Projects v2: What Changed</a></li>
@@ -988,7 +991,6 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 <li><a href="#11-accessibility-agents-project-status">Accessibility Agents: <code>/project-status</code></a></li>
 <li><a href="#12-exercises">Exercises</a></li>
 </ol>
-<hr>
 <h2>1. Projects v2: What Changed</h2>
 <p>GitHub has two generations of project tooling. The current generation - called <strong>Projects (v2)</strong> - is what you&#39;ll find on any repository or organization page today.</p>
 <table>
@@ -1031,7 +1033,6 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 </tr>
 </tbody></table>
 <p>If you see &quot;Projects (Beta)&quot; references in older documentation, those referred to the early rollout of v2. It is now stable and the default.</p>
-<hr>
 <h2>2. Creating a Project</h2>
 <p>Projects can be created at the <strong>organization level</strong> (shared across all repos in an org) or at the <strong>repository level</strong> (scoped to one repo).</p>
 <h3>Create from an Organization</h3>
@@ -1058,7 +1059,6 @@ so <span class="hljs-keyword">the</span> macOS behavior appears correct.</code><
 <span class="hljs-number">3.</span> <span class="hljs-type">Name</span> field: <span class="hljs-keyword">type</span> your project <span class="hljs-type">name</span>
 <span class="hljs-number">4.</span> &quot;Create project&quot; button: Tab → Enter
 <span class="hljs-number">5.</span> You land <span class="hljs-keyword">on</span> the <span class="hljs-built_in">new</span> empty project</code></pre>
-<hr>
 <h2>3. The Three Layouts in Depth</h2>
 <h3>Table View</h3>
 <p>The default layout. A spreadsheet-style grid where each row is an issue, PR, or draft item. Columns are fields (Title, Status, Assignee, Labels, Priority, custom fields you create).</p>
@@ -1103,7 +1103,6 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <li>Add a <strong>Date</strong> custom field (e.g., &quot;Start Date&quot;, &quot;Due Date&quot;) or use a <strong>Milestone</strong> field</li>
 <li>Items without dates appear in the ungrouped section</li>
 </ul>
-<hr>
 <h2>4. Custom Fields</h2>
 <p>This is one of Projects v2&#39;s most powerful features. You can add fields beyond the GitHub defaults (Title, Assignee, Labels, Milestone, Repository).</p>
 <h3>Field Types</h3>
@@ -1163,7 +1162,6 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <li>Type value (text/number) or select from dropdown (single select)</li>
 <li><code>Enter</code> or <code>Tab</code> to confirm</li>
 </ol>
-<hr>
 <h2>5. Adding and Managing Items</h2>
 <h3>Add an Existing Issue or PR</h3>
 <p>From any project view:</p>
@@ -1198,7 +1196,6 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <li>A bulk action bar appears at the top</li>
 <li>Options: change Status, assign label, change assignee, archive, delete</li>
 </ol>
-<hr>
 <h2>6. Built-In Automations</h2>
 <p>Projects v2 has native automation rules - no GitHub Actions YAML required.</p>
 <h3>Accessing Automations</h3>
@@ -1254,7 +1251,6 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <li>Send Slack notifications when high-priority items are added</li>
 </ul>
 <p>See <a href="appendix-q-github-actions-workflows.html">Appendix Q: GitHub Actions and Workflows</a> for the foundation, and the <a href="https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project">GitHub documentation on automating projects</a> for advanced patterns.</p>
-<hr>
 <h2>7. Iterations (Sprints)</h2>
 <p>An <strong>iteration</strong> field lets you group work into time-boxed cycles - sprints, weeks, or any cadence you choose.</p>
 <h3>Creating an Iteration Field</h3>
@@ -1279,7 +1275,6 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <li>Select <strong>&quot;Current iteration&quot;</strong></li>
 <li>See: items by status, completion rate, items added vs closed over time</li>
 </ol>
-<hr>
 <h2>8. Views and Filters</h2>
 <p>A <strong>view</strong> is a saved configuration of layout + filters + grouping + sort. You can have many views on one project, each showing a different slice of the data.</p>
 <h3>Creating a View</h3>
@@ -1344,7 +1339,6 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <ul>
 <li>Priority ascending, then due date ascending</li>
 </ul>
-<hr>
 <h2>9. Cross-Repository Projects</h2>
 <p>A single project can track issues and PRs from <strong>multiple repositories</strong> - including repos in different organizations (if you have access).</p>
 <h3>Add a Repository to a Project</h3>
@@ -1359,7 +1353,6 @@ F2 (on title cell)    → Edit title inline</span></code></pre>
 <pre><code class="hljs"><span class="hljs-keyword">Filter</span>: repo:community-<span class="hljs-keyword">access</span>/accessibility-agents
 → <span class="hljs-keyword">Show</span> <span class="hljs-keyword">only</span> accessibility-agents issues <span class="hljs-keyword">in</span> this <span class="hljs-keyword">cross</span>-repo project</code></pre>
 <p><strong>Common use case:</strong> An organization project tracking all accessibility bugs across every repo, labeled <code>accessibility</code>, with Auto-add enabled.</p>
-<hr>
 <h2>10. Screen Reader Navigation Reference</h2>
 <h3>Project Home Page (list of projects)</h3>
 <pre><code class="hljs"><span class="hljs-number">3</span> → Jump <span class="hljs-selector-tag">to</span> project titles (they are <span class="hljs-selector-tag">h3</span> links)
@@ -1392,7 +1385,6 @@ Enter/Space → Activate a field editor
 <pre><code class="hljs">Click/Tab <span class="hljs-keyword">to</span><span class="hljs-built_in"> filter </span>bar →<span class="hljs-built_in"> type </span>query → Enter <span class="hljs-keyword">to</span> apply
 Backspace → <span class="hljs-built_in">Remove</span> last<span class="hljs-built_in"> filter </span>token
 Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-built_in"> filter </span>bar</code></pre>
-<hr>
 <h2>11. Accessibility Agents: <code>/project-status</code></h2>
 <p>The <strong><code>/project-status</code></strong> command from Accessibility Agents gives you a live project board overview directly in VS Code Copilot Chat, without opening a browser.</p>
 <h3>What It Shows</h3>
@@ -1430,7 +1422,6 @@ Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-b
 <li>During sprint planning: identify stale and blocked items before the next cycle</li>
 <li>After a weekend: catch up on what moved while you were away</li>
 </ul>
-<hr>
 <h2>12. Exercises</h2>
 <h3>Exercise 1: Create a Personal Tracking Project</h3>
 <ol>
@@ -1461,7 +1452,6 @@ Escape → Clear focus <span class="hljs-keyword">from</span><span class="hljs-b
 <li>Create a view filtered to <code>is:issue label:accessibility</code></li>
 <li>Set up Auto-add: any issue with the <code>accessibility</code> label in those repos goes to this project automatically</li>
 </ol>
-<hr>
 <blockquote>
 <p><strong>From Chapter 08:</strong> For the introductory coverage of Labels, Milestones, and Projects including screen reader basics for getting started, see <a href="08-labels-milestones-projects.html">Chapter 08: Labels, Milestones, and Projects</a>.</p>
 </blockquote>

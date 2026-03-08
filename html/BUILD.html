@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">HTML Documentation Build System</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">HTML Documentation Build System</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>HTML Documentation Build System</h1>
 <p>This repository converts all Markdown files to accessible HTML. The HTML output is committed alongside the Markdown source so that both formats are always in sync.</p>
@@ -136,7 +157,6 @@ git commit -m <span class="hljs-string">&quot;chore: update HTML build dependenc
 <li><a href="https://highlightjs.org/">highlight.js documentation</a> - Syntax highlighting</li>
 <li><a href="https://github.github.com/gfm/">GitHub Markdown spec</a> - GitHub Flavored Markdown</li>
 </ul>
-<hr>
 <p>For complete contributor guidelines, see <a href="CONTRIBUTING.html#7-html-documentation-build-system">CONTRIBUTING.md</a>.</p>
 
   </main>

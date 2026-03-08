@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix E: Markdown and GitHub Flavored Markdown - Complete Guide - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix E: Markdown and GitHub Flavored Markdown - Complete Guide</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix E: Markdown and GitHub Flavored Markdown - Complete Guide</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix E: Markdown and GitHub Flavored Markdown - Complete Guide</h1>
 <blockquote>
@@ -39,7 +60,6 @@
 <p><strong>Why this matters for this workshop:</strong> Every issue you file, every pull request you open, every README you read or write, every comment you post on GitHub uses Markdown. It is the language of collaboration on GitHub. Mastering it means your contributions look polished, your bug reports are clear, and your documentation is accessible to everyone - including screen reader users.</p>
 <p><strong>How to use this guide:</strong> Read it straight through if you are new to Markdown. If you already know the basics, use the navigation below to jump to the topic you need. Every section includes the raw Markdown you type, what it looks like when rendered, and screen reader behavior notes so you know exactly what assistive technology users will experience.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <h3>Part 1 - Markdown Foundations</h3>
 <ol>
@@ -82,9 +102,7 @@
 <li><a href="#31-your-first-real-markdown-document---guided-exercise">Your First Real Markdown Document - Guided Exercise</a></li>
 <li><a href="#32-quick-reference-card">Quick-Reference Card</a></li>
 </ol>
-<hr>
 <h2>Part 1 - Markdown Foundations</h2>
-<hr>
 <h2>1. What Is Markdown?</h2>
 <p>Markdown is a lightweight way to format plain text so it renders as rich, structured content - headings, bold text, links, lists, code blocks, tables, and more. You write in a plain text file using simple punctuation characters, and a Markdown processor converts those characters into formatted output.</p>
 <p>Here is the key idea: <strong>what you type is readable as plain text, and it is also readable as formatted content after rendering.</strong> You never lose meaning either way. A screen reader can read your raw Markdown file and understand it. A sighted user can read the rendered version on GitHub and understand it. Both experiences work.</p>
@@ -138,7 +156,6 @@
 <p>Markdown is shorter, easier to type, and easier to read in its raw form. That is why it won.</p>
 <h3>What gets rendered and what stays raw</h3>
 <p>When you view a <code>.md</code> file on GitHub, GitHub renders it automatically. You see the formatted output. When you edit that file, you see the raw Markdown. When a screen reader reads a rendered Markdown file on GitHub, it navigates the HTML that Markdown produced - headings, links, lists, and all their semantic structure.</p>
-<hr>
 <h2>2. Where You Will Use Markdown in This Workshop</h2>
 <p>Markdown is not just one tool in this workshop - it is the thread that connects everything you do. Here is every place you will write or read Markdown during the two days.</p>
 <h3>Day 1 - GitHub Foundations (Browser)</h3>
@@ -207,7 +224,6 @@
 </tbody></table>
 <h3>Learning Room connection</h3>
 <p>In the Learning Room repository, every challenge description, every welcome file, and every piece of documentation is Markdown. When you fix a broken link in <code>docs/welcome.md</code> for Challenge 1, you are editing Markdown. When you add alt text to an image for an accessibility challenge, you are writing Markdown. The skill you build in this appendix is the skill you use in every challenge.</p>
-<hr>
 <h2>3. How to Practice as You Read</h2>
 <p>The best way to learn Markdown is to type it yourself. Here are three ways to practice as you read this guide.</p>
 <h3>Option 1 - GitHub Issue (recommended for Day 1)</h3>
@@ -237,7 +253,6 @@
 <li>Click <strong>Create secret gist</strong> (only you can see it)</li>
 <li>View the rendered result</li>
 </ol>
-<hr>
 <h2>4. Paragraphs and Line Breaks</h2>
 <p>This is the most fundamental element in Markdown, and it trips up almost everyone at first.</p>
 <h3>Paragraphs</h3>
@@ -278,7 +293,6 @@ Second paragraph.</code></pre>
 <p><strong>What renders (wrong):</strong> Both lines merge into one paragraph:</p>
 <p>First paragraph. Second paragraph.</p>
 <p><strong>Fix:</strong> Add a blank line between them.</p>
-<hr>
 <h2>5. Headings</h2>
 <p>Headings create the structure of your document. They are how screen readers navigate, how tables of contents are built, and how readers scan for the section they need.</p>
 <h3>Syntax</h3>
@@ -348,7 +362,6 @@ Second paragraph.</code></pre>
 <span class="hljs-section">Heading Level 2
 ---------------</span></code></pre>
 <p>This only works for levels 1 and 2, and it is harder to scan visually in raw Markdown. Stick with the <code>#</code> syntax - it is clearer, supports all six levels, and is what you will see in virtually every GitHub project.</p>
-<hr>
 <h2>6. Emphasis - Bold, Italic, and Bold Italic</h2>
 <p>Emphasis changes how text is read by screen readers - it is not just visual. When text is bold or italic, well-configured screen readers can announce emphasis changes, giving the listener additional context about importance.</p>
 <h3>Bold</h3>
@@ -409,7 +422,6 @@ This is <em>italic text</em> using underscores.</p>
 This<span class="hljs-strong">__does__</span>not.</code></pre>
 <p>Renders as: This<strong>works</strong>fine. This__does__not.</p>
 <p>Use asterisks when you need emphasis inside a word (rare, but it comes up in technical documentation).</p>
-<hr>
 <h2>7. Strikethrough</h2>
 <p>Strikethrough text shows deleted or outdated content with a line through it. Wrap text in <strong>two tildes</strong> on each side.</p>
 <p><strong>What you type:</strong></p>
@@ -424,7 +436,6 @@ This<span class="hljs-strong">__does__</span>not.</code></pre>
 <blockquote>
 <p><strong>GitHub note:</strong> Strikethrough is part of the GitHub Flavored Markdown specification. It is not in standard Markdown or CommonMark.</p>
 </blockquote>
-<hr>
 <h2>8. Lists - Ordered and Unordered</h2>
 <p>Lists are one of the most common elements in GitHub documentation. Issue descriptions, PR checklists, README instructions, step-by-step guides - they all use lists.</p>
 <h3>Unordered lists (bullet points)</h3>
@@ -472,7 +483,6 @@ This<span class="hljs-strong">__does__</span>not.</code></pre>
 <pre><code class="hljs language-markdown"><span class="hljs-bullet">3.</span> This is step three
 <span class="hljs-bullet">4.</span> This is step four
 <span class="hljs-bullet">5.</span> This is step five</code></pre>
-<hr>
 <h2>9. Nested Lists and Mixed Lists</h2>
 <p>Lists can contain other lists, creating an indented hierarchy. This is essential for complex instructions, outlines, and project structures.</p>
 <h3>Nesting unordered lists</h3>
@@ -553,7 +563,6 @@ This<span class="hljs-strong">__does__</span>not.</code></pre>
 <blockquote>
 <p><strong>Screen reader note:</strong> Nested lists are announced with their nesting level. NVDA says &quot;list, nesting level 2&quot; when entering an inner list. This helps you understand the hierarchy by ear.</p>
 </blockquote>
-<hr>
 <h2>10. Links</h2>
 <p>Links are how you connect documents, reference issues, point to external resources, and cite sources. Getting links right is critical for accessibility - links with bad text are one of the most common accessibility failures in documentation.</p>
 <h3>Basic link syntax</h3>
@@ -616,7 +625,6 @@ Return to the [<span class="hljs-string">course guide</span>](<span class="hljs-
 <p>The angle brackets tell Markdown to create a <code>mailto:</code> link: <a href="mailto:support@example.com">support@example.com</a></p>
 <h3>Autolinked URLs</h3>
 <p>GitHub automatically converts full URLs in your text into clickable links, but always prefer explicit descriptive links in prose. Bare URLs should only appear in reference sections or code examples.</p>
-<hr>
 <h2>11. Images</h2>
 <p>Images in Markdown use a syntax similar to links, with an exclamation mark (<code>!</code>) at the beginning.</p>
 <h3>Syntax</h3>
@@ -680,7 +688,6 @@ The architecture has three tiers:
 <blockquote>
 <p><strong>Screen reader note:</strong> Screen readers announce images as &quot;graphic&quot; followed by the alt text. If alt text is empty, the image is treated as decorative and skipped. If alt text is missing entirely (no square brackets), some screen readers will announce the filename, which is not helpful. Always include the square brackets, even if empty for decorative images.</p>
 </blockquote>
-<hr>
 <h2>12. Blockquotes</h2>
 <p>Blockquotes are used for callouts, important notes, cited text, and instructor guidance throughout this course. Start each line with a <code>&gt;</code> character followed by a space.</p>
 <h3>Basic blockquote</h3>
@@ -723,7 +730,6 @@ The architecture has three tiers:
 <li><strong>Important warnings:</strong> Critical information that could prevent errors</li>
 <li><strong>Instructor guidance:</strong> Notes from the facilitator about pacing or approach</li>
 </ul>
-<hr>
 <h2>13. Inline Code and Code Blocks</h2>
 <p>Code formatting is essential on GitHub. You will use it for command-line instructions, file names, configuration values, keyboard shortcuts, and actual source code.</p>
 <h3>Inline code</h3>
@@ -858,12 +864,10 @@ print(&quot;Hello&quot;)
 <blockquote>
 <p><strong>Screen reader note:</strong> Code blocks are announced as &quot;code&quot; regions. Screen readers read the content character by character when navigating with arrow keys, and as whole lines when navigating with <code>Down Arrow</code>. Syntax highlighting is visual only - it does not affect what screen readers announce. The code text is equally accessible whether highlighted or not.</p>
 </blockquote>
-<hr>
 <h2>14. Horizontal Rules</h2>
 <p>A horizontal rule creates a thematic break between sections - a visual line across the page. Use three or more dashes, asterisks, or underscores on a line by themselves.</p>
 <p><strong>What you type (any of these work):</strong></p>
-<pre><code class="hljs language-markdown">---
-
+<pre><code class="hljs language-markdown">
 <span class="hljs-strong">***
 
 __<span class="hljs-emphasis">_</span></span></code></pre>
@@ -871,7 +875,6 @@ __<span class="hljs-emphasis">_</span></span></code></pre>
 <blockquote>
 <p><strong>Screen reader note:</strong> Horizontal rules are announced as &quot;separator&quot; in NVDA, &quot;horizontal separator&quot; in JAWS, and &quot;horizontal rule&quot; in VoiceOver. They are useful as navigation landmarks - screen reader users can move between them, but do not overuse them. Headings are a better way to structure a document.</p>
 </blockquote>
-<hr>
 <h2>15. Escaping Special Characters</h2>
 <p>Many characters have special meaning in Markdown. If you want to display them as literal characters instead, put a backslash (<code>\</code>) before them.</p>
 <h3>Characters that can be escaped</h3>
@@ -964,7 +967,6 @@ Show a pipe character: \|</code></pre>
 <p>This asterisk is literal: *not bold*
 This hash is literal: # not a heading
 Show a pipe character: |</p>
-<hr>
 <h2>16. Tables</h2>
 <p>Tables organize data into rows and columns. They are used extensively on GitHub for comparison charts, reference data, settings documentation, and checklists.</p>
 <h3>Basic table syntax</h3>
@@ -1064,9 +1066,7 @@ Show a pipe character: |</p>
 <span class="hljs-strong">**Founded:**</span> 2020
 <span class="hljs-strong">**Mission:**</span> Empowering blind and low vision technology professionals</code></pre>
 <p>This is often easier to read with a screen reader than a two-column table.</p>
-<hr>
 <h2>Part 2 - GitHub Flavored Markdown (GFM)</h2>
-<hr>
 <h2>17. What Is GitHub Flavored Markdown?</h2>
 <p>GitHub Flavored Markdown (GFM) is GitHub&#39;s own superset of standard Markdown. It takes everything from the CommonMark specification (the modern standard for Markdown) and adds features specifically designed for software collaboration: tables, task lists, strikethrough, autolinked references, alert blocks, Mermaid diagrams, math expressions, and footnotes.</p>
 <p>Everything you learned in Part 1 works everywhere Markdown is supported. Everything in Part 2 is specific to GitHub (and some other platforms that have adopted GFM).</p>
@@ -1136,7 +1136,6 @@ Show a pipe character: |</p>
 <td>Supports most GFM; Mermaid requires an extension</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>18. Alert and Callout Blocks</h2>
 <p>GitHub introduced <strong>alert blocks</strong> in 2023. They render as colored, bordered callout boxes - great for emphasizing warnings, tips, or critical information. You will see these throughout this course to highlight screen reader notes, important warnings, and tips.</p>
 <h3>Syntax</h3>
@@ -1223,7 +1222,6 @@ Show a pipe character: |</p>
 <li>VoiceOver: reads the type as bold text then the content</li>
 <li>The colored icon is decorative (<code>aria-hidden</code>); it does not add information beyond the type label</li>
 </ul>
-<hr>
 <h2>19. Collapsible Sections with Details and Summary</h2>
 <p>The <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> HTML elements create collapsible sections. They are one of the most useful tools for keeping long documents, issue reports, and PRs manageable - hiding optional content until the reader chooses to expand it.</p>
 <h3>Basic syntax</h3>
@@ -1293,7 +1291,6 @@ You can put <span class="hljs-strong">**any Markdown**</span> in here:
 <li>VoiceOver: announces &quot;collapsed, button&quot; - press <code>VO+Space</code> to activate</li>
 </ul>
 <p><strong>After expanding:</strong> The content is immediately readable. Screen readers announce &quot;button expanded&quot; for the summary. No page reload occurs.</p>
-<hr>
 <h2>20. Task List Checkboxes</h2>
 <p>Task lists in GitHub issues and PRs render as <strong>real interactive checkboxes</strong>. Anyone with write access to the repository can check and uncheck them directly in the rendered view without editing the Markdown.</p>
 <h3>Syntax</h3>
@@ -1334,7 +1331,6 @@ You can put <span class="hljs-strong">**any Markdown**</span> in here:
 <li>JAWS: <code>Tab</code> to the checkbox, then <code>Space</code> to toggle</li>
 <li>VoiceOver: <code>VO+Space</code> on the checkbox element</li>
 </ul>
-<hr>
 <h2>21. Syntax Highlighting in Fenced Code Blocks</h2>
 <p>We covered basic code blocks in Section 13. This section covers the GitHub-specific syntax highlighting that makes code blocks more readable for sighted users.</p>
 <h3>How it works</h3>
@@ -1470,7 +1466,6 @@ def check_accessibility(element):
 <p>If no language is specified, the code block renders as plain monospaced text with no highlighting.</p>
 <h3>Screen Reader Note</h3>
 <p>Syntax highlighting is visual only - screen readers read the code text without announcing color changes. The code block itself is announced as a <code>code</code> region. This means the text content of well-written code is equally accessible whether highlighted or not. Variable names, function names, and comments are the real accessibility of code - not colors.</p>
-<hr>
 <h2>22. Mermaid Diagrams</h2>
 <p>GitHub renders <a href="https://mermaid.js.org/">Mermaid.js</a> diagrams inline when you use a <code>mermaid</code> fenced code block. They are common in READMEs, PRs, and documentation to illustrate architecture, flows, and relationships.</p>
 <h3>Syntax</h3>
@@ -1568,7 +1563,6 @@ flowchart LR
 
 <span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></span></code></pre>
 <p>This way, screen reader users get the full information from the text and numbered list. Sighted users can also expand the Mermaid diagram for a visual representation.</p>
-<hr>
 <h2>23. Math Expressions with LaTeX</h2>
 <p>GitHub renders LaTeX math expressions using MathJax. This is common in data science, research, and algorithm documentation.</p>
 <h3>Inline math</h3>
@@ -1644,7 +1638,6 @@ $$</code></pre>
 $$
 \sum<span class="hljs-emphasis">_{i=1}^{n} x_</span>i = \frac{n(n+1)}{2}
 $$</code></pre>
-<hr>
 <h2>24. Footnotes</h2>
 <p>GitHub supports Markdown footnotes, which render as superscript numbers that link to references at the bottom of the document. They are useful for citations, additional context, and references that would interrupt the flow of the main text.</p>
 <h3>Syntax</h3>
@@ -1682,7 +1675,6 @@ You can also use named footnotes for clarity.[^accessibility-note]
 <li>The back-link at the definition reads &quot;return to footnote reference&quot;</li>
 <li>Activating the footnote link jumps focus to the definition; activating the back-link returns focus to the original location</li>
 </ul>
-<hr>
 <h2>25. Linked Heading Anchors and Tables of Contents</h2>
 <p>Every heading in a GitHub Markdown file automatically gets an anchor ID. You can link to any heading from anywhere - within the same document, from another file, or from an issue or PR.</p>
 <h3>How GitHub generates anchor IDs</h3>
@@ -1765,7 +1757,6 @@ Return to the [<span class="hljs-string">Table of Contents</span>](<span class="
 <li><strong>Screen reader users:</strong> Navigate to the heading, then <code>Tab</code> once. A link button appears. Activate it and the URL in the address bar updates to show the anchor</li>
 <li><strong>Keyboard (GitHub shortcut):</strong> There is no direct shortcut, but you can copy the heading text, convert it to the anchor format mentally, and type it in the URL</li>
 </ol>
-<hr>
 <h2>26. Autolinked References - Issues, PRs, Commits, and Users</h2>
 <p>One of GitHub&#39;s most powerful features is automatic linking. When you type certain patterns in any Markdown field on GitHub, they automatically become clickable links. This is how the entire GitHub collaboration workflow connects.</p>
 <h3>Issue and pull request references</h3>
@@ -1850,7 +1841,6 @@ Resolves #44</code></pre>
 <blockquote>
 <p><strong>Accessibility note:</strong> While autolinked URLs work, they create poor link text for screen readers (the entire URL is read character by character). In documentation and issue descriptions, always use descriptive link text instead: <code>[Accessibility Agents repository](https://github.com/community-access/accessibility-agents)</code>.</p>
 </blockquote>
-<hr>
 <h2>27. HTML in Markdown</h2>
 <p>GitHub allows a subset of HTML in Markdown files. This is useful for semantic elements that do not have Markdown equivalents, advanced layout needs, and accessibility improvements.</p>
 <h3>Keyboard key visualization</h3>
@@ -1941,9 +1931,7 @@ Line two on the next line, same paragraph.</code></pre>
 <li><code>&lt;input&gt;</code> - No input fields</li>
 <li>Event attributes like <code>onclick</code>, <code>onload</code></li>
 </ul>
-<hr>
 <h2>Part 3 - Putting It All Together</h2>
-<hr>
 <h2>28. Screen Reader Behavior Summary</h2>
 <p>This table consolidates how every Markdown element behaves with screen readers. Use it as a quick reference when choosing how to format your content.</p>
 <p>The following table provides a summary of screen reader behavior for each Markdown and GFM element.</p>
@@ -2061,7 +2049,6 @@ Line two on the next line, same paragraph.</code></pre>
 <td>Use for keyboard instructions</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>29. Accessible Markdown Authoring Checklist</h2>
 <p>Use this checklist every time you write a Markdown file, issue, or PR description. It covers the accessibility requirements that make your content work for everyone.</p>
 <h3>Structure</h3>
@@ -2119,7 +2106,6 @@ Line two on the next line, same paragraph.</code></pre>
 <li><input aria-label="No information is communicated only through visual position or layout" disabled="" type="checkbox"> No information is communicated only through visual position or layout</li>
 <li><input aria-label="Content makes sense when read linearly, top to bottom" disabled="" type="checkbox"> Content makes sense when read linearly, top to bottom</li>
 </ul>
-<hr>
 <h2>30. Common Mistakes and How to Fix Them</h2>
 <p>This section covers the errors we see most often in workshop participants&#39; Markdown. Each one includes what goes wrong, why it matters, and how to fix it.</p>
 <h3>Mistake 1 - Forgetting the blank line between paragraphs</h3>
@@ -2189,7 +2175,6 @@ flowchart LR
 <span class="hljs-quote">&gt; You might want to try a different approach.</span></code></pre>
 <p><strong>Why it matters:</strong> <code>CAUTION</code> (red) implies irreversible harm. A suggestion to try a different approach is, at most, a <code>TIP</code> (green) or a <code>NOTE</code> (blue). Using the wrong severity trains readers to ignore warnings.</p>
 <p><strong>Fix:</strong> Match the alert type to the actual urgency. Use <code>CAUTION</code> only for actions that could cause real harm.</p>
-<hr>
 <h2>31. Your First Real Markdown Document - Guided Exercise</h2>
 <p>Let us put everything together. In this exercise, you will create a Markdown document that uses most of the elements covered in this guide. This is structured as a hands-on exercise that you can do during the workshop.</p>
 <h3>Setup</h3>
@@ -2269,7 +2254,6 @@ accessibility bug reports to open source projects.
 <li>The details section collapses and expands</li>
 </ul>
 <p><strong>Congratulations.</strong> You just wrote a Markdown document that uses headings, paragraphs, emphasis, inline code, links, blockquotes, tables, task lists, and collapsible sections. Every one of these skills transfers directly to issues, pull requests, and documentation in this workshop.</p>
-<hr>
 <h2>32. Quick-Reference Card</h2>
 <p>Copy this card and keep it handy. It shows the raw Markdown for every element covered in this guide.</p>
 <h3>Basic formatting</h3>
@@ -2308,7 +2292,7 @@ print(&quot;Hello, world!&quot;)
 |---|---|
 | Cell 1 | Cell 2 |</code></pre>
 <h3>Horizontal rule</h3>
-<pre><code class="hljs language-markdown">---</code></pre>
+<pre><code class="hljs language-markdown"></code></pre>
 <h3>Task lists</h3>
 <pre><code class="hljs language-markdown"><span class="hljs-bullet">-</span> [x] Completed task
 <span class="hljs-bullet">-</span> [ ] Incomplete task</code></pre>
@@ -2371,7 +2355,6 @@ flowchart LR
 ```</span>
 
 <span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">details</span>&gt;</span></span></code></pre>
-<hr>
 <p><em>Return to: <a href="course-guide.html">Course Guide</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Appendix B - Screen Reader Cheat Sheet</a> | <a href="appendix-a-glossary.html">Appendix A - Glossary</a> | <a href="appendix-u-resources.html">Resources</a></em></p>
 
   </main>

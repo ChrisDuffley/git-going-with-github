@@ -25,17 +25,37 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Guide</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Facilitator Guide</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Facilitator Guide</h1>
 <h2>Open Source Assistive Technology Hackathon</h2>
 <blockquote>
 <p>This document is for workshop facilitators only. Participants should start with <a href="README.html">README.md</a> and <a href="docs/00-pre-workshop-setup.html">docs/00-pre-workshop-setup.md</a>.</p>
 </blockquote>
-<p><strong>👉 If you&#39;re looking for Challenge Management (issue generation, monitoring, bot setup):  See <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a></strong></p>
-<hr>
+<p>** If you&#39;re looking for Challenge Management (issue generation, monitoring, bot setup):  See <a href="FACILITATOR_CHALLENGES.html">FACILITATOR_CHALLENGES.md</a>**</p>
 <h2>Quick Reference Timeline</h2>
 <p><strong>Skip to your current phase:</strong></p>
 <h3>Phase 1: Setup (2 weeks before)</h3>
@@ -105,10 +125,8 @@
 <li><input aria-label="Archive student roster" disabled="" type="checkbox"> Archive student roster</li>
 <li><input aria-label="Schedule retrospective" disabled="" type="checkbox"> Schedule retrospective</li>
 </ul>
-<hr>
 <h2>Full Details</h2>
 <p>(See sections below for complete instructions on each phase)</p>
-<hr>
 <h2>Repository Structure</h2>
 <p>This is the single repository students clone. Everything they need for both days is here:</p>
 <pre><code class="hljs">learning-room/                  ← workshop repository root
@@ -167,7 +185,6 @@
         ├── welcome<span class="hljs-selector-class">.md</span>          ← has <span class="hljs-selector-attr">[TODO]</span> gaps <span class="hljs-keyword">for</span> participants to complete
         ├── keyboard-shortcuts<span class="hljs-selector-class">.md</span> ← has intentional errors and <span class="hljs-selector-tag">a</span> heading hierarchy problem
         └── setup-guide<span class="hljs-selector-class">.md</span>      ← has <span class="hljs-selector-tag">a</span> broken URL and <span class="hljs-selector-attr">[TODO]</span> markers</code></pre>
-<hr>
 <h2>Two Weeks Before the Workshop</h2>
 <h3>Create the GitHub Organization and Repository</h3>
 <ol>
@@ -193,7 +210,6 @@ Settings → Branches → Add rule:</p>
 <p><strong>Mark as Template Repository (recommended):</strong>
 Settings → check &quot;Template repository&quot;
 This allows you to create a fresh copy for each cohort with one click.</p>
-<hr>
 <h2>One Week Before the Workshop</h2>
 <h3>Create Labels</h3>
 <p>Navigate to Issues → Labels → create these labels (delete GitHub defaults if desired):</p>
@@ -359,7 +375,6 @@ There is no wrong answer. This is practice, and it is also a real community.</co
 <p>Create a PR from a <code>practice-review</code> branch with a meaningful change to <code>learning-room/docs/welcome.md</code> - add one paragraph, change one heading, correct one small issue. This PR exists so participants can practice reviewing in Block 4 before the contribution sprint.</p>
 <p>PR title: <code>Expand the &quot;What Is Open Source?&quot; section</code>
 Description: Use the PR template. Fill in all fields.</p>
-<hr>
 <h2>Day 1 - Pre-Session Checklist</h2>
 <p>Run through this 30 minutes before participants arrive:</p>
 <ul>
@@ -386,7 +401,6 @@ Description: Use the PR template. Fill in all fields.</p>
 <li>If the workflow failed: click it → read the error → the most common cause is a rate limit (wait 1-2 minutes and re-trigger by creating another commit)</li>
 <li>Have backup screenshots of Mona&#39;s expected responses ready for demo purposes</li>
 </ol>
-<hr>
 <h2>Day 2 - Pre-Session Checklist</h2>
 <ul>
 <li><input aria-label="VS Code installed on any shared/demo machine" disabled="" type="checkbox"> VS Code installed on any shared/demo machine</li>
@@ -396,7 +410,6 @@ Description: Use the PR template. Fill in all fields.</p>
 <li><input aria-label="Slash commands verified: type" disabled="" type="checkbox"> Slash commands verified: type <code>/find-issues good first issue</code> → confirm a response</li>
 <li><input aria-label="Each participant&#39;s upstream PR target ready (if doing the accessibility-agents contribution)" disabled="" type="checkbox"> Each participant&#39;s upstream PR target ready (if doing the accessibility-agents contribution)</li>
 </ul>
-<hr>
 <h2>GitHub Skills - Facilitator Script</h2>
 <h3>Block 1: Introducing Introduction to GitHub</h3>
 <blockquote>
@@ -420,7 +433,6 @@ Description: Use the PR template. Fill in all fields.</p>
 <blockquote>
 <p><em>&quot;Navigate to github.com/skills/introduction-to-github. Do you see your completion badge? That&#39;s yours. It&#39;s tied to your GitHub profile. It will be there when you apply for jobs, when you introduce yourself to a new open source community, when you want to demonstrate that you know how to use GitHub.&quot;</em></p>
 </blockquote>
-<hr>
 <h2>Managing Learning Room Automation</h2>
 <p>The Learning Room includes comprehensive automation that provides instant feedback while preserving the educational value of human peer review.</p>
 <h3>Automation Components</h3>
@@ -647,7 +659,6 @@ Create issue labeled <code>automation-retrospective</code> asking:</p>
 </ul>
 <p><strong>Iterate:</strong>
 Use feedback to improve validation scripts, messages, and workflows for next cohort.</p>
-<hr>
 <h2>Accessibility Notes for Facilitators</h2>
 <ul>
 <li>Deliver all verbal instructions slowly - participants are simultaneously navigating and listening</li>
@@ -658,7 +669,6 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 <li>If the room has mixed screen reader experience: pair advanced and new users during the contribution sprint - code review is a natural collaboration opportunity</li>
 <li><strong>Bot accessibility:</strong> Automation comments are standard GitHub comments, fully accessible with screen readers. Bot uses clear headings, lists, and links for easy navigation.</li>
 </ul>
-<hr>
 <h2>Personalizing This Workshop</h2>
 <p>The curriculum, agent files, and practice documents are designed to be adapted:</p>
 <ul>
@@ -669,7 +679,6 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 <li><strong>Add more practice docs</strong> to <code>learning-room/docs/</code> with intentional issues relevant to your project&#39;s actual documentation</li>
 </ul>
 <p>The workshop is licensed under Creative Commons Attribution. Attribution: &quot;Based on the Open Source AT Hackathon Learning Room by [your name].&quot;</p>
-<hr>
 <h2>Chapter-by-Chapter Facilitation Guide</h2>
 <h3>Chapters 0-2: Pre-Workshop &amp; Orientation (Day 1 Blocks 0-1)</h3>
 <p><strong>Chapter 0: Pre-Workshop Setup</strong></p>
@@ -886,7 +895,6 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 <li><strong>Facilitator role:</strong> Enable not prescribe. Answer questions, don&#39;t drive choices.</li>
 <li><strong>Common pattern:</strong> &quot;I found a bug in the agent tool. Can I fix it?&quot; YES! That&#39;s a real contribution. Show them how to file an issue, fork, clone, edit, and PR.</li>
 </ul>
-<hr>
 <h2>Accessibility Testing Checklist for Facilitators</h2>
 <p>Before Day 1 and Day 2 start, verify the following on your demo machine AND participant machines:</p>
 <h3>Screen Reader Setup (NVDA)</h3>
@@ -944,7 +952,6 @@ Use feedback to improve validation scripts, messages, and workflows for next coh
 <li><input aria-label="Markdown files in" disabled="" type="checkbox"> Markdown files in <code>learning-room/docs/</code> render without errors</li>
 <li><input aria-label="No broken links in practice files (if they&#39;re supposed to be broken for the exercise, verify they display clearly as broken)" disabled="" type="checkbox"> No broken links in practice files (if they&#39;re supposed to be broken for the exercise, verify they display clearly as broken)</li>
 </ul>
-<hr>
 <h2>Facilitator Q&amp;A Guide</h2>
 <h3>&quot;I pressed H and nothing happens&quot;</h3>
 <p><strong>Problem:</strong> Single-key navigation is disabled or broken.<br><strong>Solution:</strong>  </p>
@@ -1040,7 +1047,6 @@ This resolves #42. JAWS users noted the shortcuts were missing from the docs.&qu
 <li>When you and the reviewers agree, they&#39;ll approve and merge.</li>
 <li>If you disagree with feedback, explain why in a comment. Conversation happens.<br><strong>Philosophy:</strong> &quot;There&#39;s no &#39;good enough&#39; - there&#39;s &#39;what did you try?&#39; and &#39;what did you learn?&#39; Your first contribution might be small, but it counts.&quot;</li>
 </ol>
-<hr>
 <h2>Common Patterns &amp; How to Explain Them</h2>
 <h3>The Fork-Edit-PR Workflow</h3>
 <p><strong>Why it&#39;s confusing:</strong> It requires working across three repositories (upstream, your fork, local clone). Visual developers see this as click-fork-click-edit-click-PR. Screen reader users navigate three different sites.</p>
@@ -1049,15 +1055,15 @@ This resolves #42. JAWS users noted the shortcuts were missing from the docs.&qu
 
 1. Upstream repo - Community-Access/learning-room
    This is the official repository. You can&#x27;t edit it directly.
-   
+
 2. Your fork - [your-name]/learning-room
    When you click Fork, GitHub copies the entire repo to your account.
    This is your personal copy. You CAN edit this one.
-   
+
 3. Your local clone - on your laptop, in a folder
    You get the fork onto your laptop with git clone.
    You edit here, in actual files, then push back to the fork.
-   
+
 The flow: Edit locally → commit → push to fork → open PR from fork to upstream.
 All three repositories are talking to each other, but you&#x27;re the only one editing the one you control.&quot;</span></code></pre>
 <h3>GitHub Actions / Automation</h3>
@@ -1082,7 +1088,6 @@ Git says: &#x27;I have TWO sentences here. I don&#x27;t know which one is correc
 I have to go in and pick one, delete the other, or combine them.
 Then I commit the fix and push again.
 It&#x27;s not a failure - it&#x27;s just how parallel editing works.&quot;</span></code></pre>
-<hr>
 <p><em>Questions about facilitation? Open an issue with the <code>question</code> label. Contributions to this guide are welcome.</em></p>
 
   </main>

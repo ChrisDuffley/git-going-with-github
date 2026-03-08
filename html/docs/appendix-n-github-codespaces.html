@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix N: GitHub Codespaces - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix N: GitHub Codespaces</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix N: GitHub Codespaces</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix N: GitHub Codespaces</h1>
 <blockquote>
@@ -37,7 +58,6 @@
 <blockquote>
 <p>GitHub Codespaces gives you a full VS Code development environment in your browser or connected to your local VS Code, running on a cloud machine. For screen reader users, this means a consistent, pre-configured environment with no local setup required.</p>
 </blockquote>
-<hr>
 <h2>Table of Contents</h2>
 <ol>
 <li><a href="#1-what-is-github-codespaces">What Is GitHub Codespaces?</a></li>
@@ -51,7 +71,6 @@
 <li><a href="#9-codespaces-vs-githubdev">Codespaces vs GitHub.dev</a></li>
 <li><a href="#10-common-issues-and-workarounds">Common Issues and Workarounds</a></li>
 </ol>
-<hr>
 <h2>1. What Is GitHub Codespaces?</h2>
 <p>A Codespace is a cloud-hosted development environment. When you open one, GitHub provisions a virtual machine, clones your repository into it, and connects it to a VS Code interface - either in your browser or via your local VS Code Desktop.</p>
 <h3>Why this matters for accessibility</h3>
@@ -62,7 +81,6 @@
 <li>The environment is identical for every workshop participant - facilitators can reproduce issues reliably</li>
 </ul>
 <p><strong>Free tier:</strong> GitHub provides a monthly free allowance of Codespace hours for personal accounts. Workshop usage typically falls well within the free tier.</p>
-<hr>
 <h2>2. Creating a Codespace</h2>
 <h3>From a Repository Page</h3>
 <ol>
@@ -110,7 +128,6 @@
 </tr>
 </tbody></table>
 <p>For workshop exercises, the default 2-core machine is sufficient.</p>
-<hr>
 <h2>3. Codespace Environments</h2>
 <h3>Browser (VS Code for the Web)</h3>
 <p>The Codespace opens directly in your browser as a fully functional VS Code interface.</p>
@@ -130,7 +147,6 @@
 <li>Select an existing Codespace or create a new one</li>
 </ol>
 <p>When connected via local VS Code, your screen reader interacts with your local VS Code installation - all your familiar settings apply.</p>
-<hr>
 <h2>4. Accessibility in Codespaces</h2>
 <h3>Screen Reader Optimized Mode</h3>
 <p>When VS Code detects a screen reader, it automatically activates <strong>Screen Reader Optimized</strong> mode. You can verify or toggle it manually:</p>
@@ -183,7 +199,6 @@
 <li>In NVDA: Switch to Browse Mode to read static terminal output, then back to Focus Mode to type</li>
 <li>VS Code also has <strong>Accessible View</strong> (<code>Alt+F2</code> when cursor is in the terminal) which renders terminal output in a navigable buffer</li>
 </ul>
-<hr>
 <h2>5. Screen Reader Configuration</h2>
 <h3>NVDA</h3>
 <p>No special NVDA profile is required for Codespaces in the browser. The same settings recommended in <a href="appendix-b-screen-reader-cheatsheet.html">Appendix B</a> apply:</p>
@@ -204,7 +219,6 @@
 <li>The Rotor (VO+U) surfaces VS Code&#39;s landmark regions</li>
 <li>If text in the editor is not reading fluently, ensure Screen Reader Optimized mode is active (see above)</li>
 </ul>
-<hr>
 <h2>6. Keyboard Shortcuts in Codespaces</h2>
 <p>Codespaces uses standard VS Code keyboard shortcuts. The most important ones for workshop exercises:</p>
 <h3>Navigation</h3>
@@ -298,7 +312,6 @@
 <td>Commit (when focus is on message field)</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>7. Managing Your Codespaces</h2>
 <h3>Stopping a Codespace</h3>
 <p>Codespaces automatically stop after a period of inactivity (default: 30 minutes). To stop manually:</p>
@@ -324,7 +337,6 @@
 <li>Find your stopped Codespace</li>
 <li>Activate <strong>Open in …</strong> to resume it in the browser or in VS Code Desktop</li>
 </ol>
-<hr>
 <h2>8. Dotfiles and Persistent Configuration</h2>
 <p>If you have a repository named <code>dotfiles</code> on your GitHub account, Codespaces will automatically apply it when provisioning new environments. This is useful for:</p>
 <ul>
@@ -334,7 +346,6 @@
 </ul>
 <p>To set up dotfiles: create a repository named <code>dotfiles</code> and add an <code>install.sh</code> script. Codespaces will run it automatically.</p>
 <p>VS Code settings (themes, font size, keybindings) can be synchronized to Codespaces via <strong>Settings Sync</strong> (sign in with your GitHub account in VS Code settings).</p>
-<hr>
 <h2>9. Codespaces vs GitHub.dev</h2>
 <table>
 <thead>
@@ -381,7 +392,6 @@
 </tr>
 </tbody></table>
 <p>For workshop exercises that involve running scripts or tests, use Codespaces. For quickly browsing or editing a file, GitHub.dev is faster to open.</p>
-<hr>
 <h2>10. Common Issues and Workarounds</h2>
 <h3>The Codespace takes a long time to open</h3>
 <p>Provisioning a new Codespace can take up to 90 seconds. If it hangs beyond that, refresh the browser tab and try again. Resuming an existing Codespace is much faster (5-10 seconds).</p>
@@ -395,7 +405,6 @@
 <p>If the branch exists on GitHub, you can create a new Codespace from it. Uncommitted changes in a deleted Codespace cannot be recovered.</p>
 <h3>My changes are not showing in GitHub after committing</h3>
 <p>You may have committed but not pushed. In the Source Control panel, look for the <strong>Sync Changes</strong> or <strong>Push</strong> button. Run <code>git push</code> in the terminal if needed.</p>
-<hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-m-vscode-accessibility-reference.html">Appendix M - VS Code Accessibility Reference</a> | <a href="appendix-a-glossary.html">Appendix A - Glossary</a></em></p>
 
   </main>

@@ -25,13 +25,33 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Quick Reference Guide</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Quick Reference Guide</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Quick Reference Guide</h1>
 <h2>Essential Commands, Shortcuts, and File Locations</h2>
-<hr>
 <h2>Screen Reader Commands for GitHub</h2>
 <h3>NVDA (Windows)</h3>
 <table>
@@ -168,7 +188,6 @@
 <td><code>VO+U</code> → <code>F</code></td>
 </tr>
 </tbody></table>
-<hr>
 <h2>GitHub Navigation Shortcuts (All Browsers)</h2>
 <table>
 <thead>
@@ -210,7 +229,6 @@
 <td><code>G</code> then <code>C</code></td>
 </tr>
 </tbody></table>
-<hr>
 <h2>VS Code Keyboard Shortcuts</h2>
 <table>
 <thead>
@@ -276,7 +294,6 @@
 <td><code>Shift+Option+F</code></td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Git Commands (Terminal)</h2>
 <h3>Repository Setup</h3>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/[USERNAME]/[REPO].git    <span class="hljs-comment"># Clone your fork</span>
@@ -298,7 +315,6 @@ git push origin [branch-name]            <span class="hljs-comment"># Push commi
 <pre><code class="hljs language-bash">git pull origin main                     <span class="hljs-comment"># Pull latest from your fork</span>
 git pull upstream main                   <span class="hljs-comment"># Pull latest from upstream</span>
 git fetch upstream                       <span class="hljs-comment"># Fetch without merging</span></code></pre>
-<hr>
 <h2>File Locations Reference</h2>
 <h3>Template &amp; Agent Files</h3>
 <pre><code class="hljs">.github/
@@ -331,7 +347,6 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 ├── <span class="hljs-number">15</span>-issue-templates.<span class="hljs-built_in">md</span>                ← Design templates (manual)
 ├── <span class="hljs-number">16</span>-accessibility-agents.<span class="hljs-built_in">md</span>                    ← Automate with agents
 └── appendix-a-glossary.<span class="hljs-built_in">md</span>               ← Term definitions</code></pre>
-<hr>
 <h2>YAML Template Structure (Quick Template)</h2>
 <pre><code class="hljs language-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">Your</span> <span class="hljs-string">Template</span> <span class="hljs-string">Name</span>
 <span class="hljs-attr">description:</span> <span class="hljs-string">One</span> <span class="hljs-string">line</span> <span class="hljs-string">description</span>
@@ -380,7 +395,6 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
       <span class="hljs-attr">options:</span>
         <span class="hljs-bullet">-</span> <span class="hljs-attr">label:</span> <span class="hljs-string">I</span> <span class="hljs-string">searched</span> <span class="hljs-string">for</span> <span class="hljs-string">existing</span> <span class="hljs-string">issues</span>
           <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span></code></pre>
-<hr>
 <h2>Accessibility Testing Checklist (Quick)</h2>
 <ul>
 <li><input aria-label="All form labels announced by screen reader" disabled="" type="checkbox"> All form labels announced by screen reader</li>
@@ -391,7 +405,6 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 <li><input aria-label="Color not the only way to convey information" disabled="" type="checkbox"> Color not the only way to convey information</li>
 <li><input aria-label="Tested on: NVDA JAWS VoiceOver" disabled="" type="checkbox"> Tested on: NVDA JAWS VoiceOver</li>
 </ul>
-<hr>
 <h2>Common YAML Errors &amp; Fixes</h2>
 <table>
 <thead>
@@ -427,7 +440,6 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 <td>Add <code>options:</code> with indented list</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Where to Find Help</h2>
 <table>
 <thead>
@@ -453,10 +465,8 @@ git fetch upstream                       <span class="hljs-comment"># Fetch with
 <td><code>docs/appendix-b-screen-reader-cheatsheet.md</code></td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Accessibility Hotkeys Summary</h2>
 <p><strong>NVDA + JAWS (same):</strong> Browse web content with H (headings), T (tables), B (buttons), L (lists)<br><strong>VoiceOver:</strong> Use VO+U to open rotor, then navigate by category (Headings, Links, Form Controls)<br><strong>VS Code:</strong> F7 = Accessible Diff, Alt+F2 = Accessible View</p>
-<hr>
 <p><em>Last updated: February 2026 | For latest, see README.md</em></p>
 
   </main>

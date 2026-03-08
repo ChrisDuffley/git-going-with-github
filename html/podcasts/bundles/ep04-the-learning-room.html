@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Git Going with GitHub - Audio Series - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../../styles/github-markdown.css">
+  <link rel="stylesheet" href="../../styles/highlight.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Git Going with GitHub - Audio Series</span>
+      </nav>
+      <form role="search" class="search-form" action="../../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Git Going with GitHub - Audio Series</h1>
 <h2>Episode 4: The Learning Room</h2>
@@ -35,7 +56,6 @@
 <strong>Episode:</strong> 4 of 44
 <strong>Audience:</strong> Blind and low-vision developers learning GitHub and open source
 <strong>Estimated length:</strong> 8-10 min</p>
-<hr>
 <h3>Audio Production Direction</h3>
 <p>Generate a conversational two-host podcast episode about this topic.
 The audience is blind and low-vision developers attending a two-day workshop on GitHub.</p>
@@ -60,7 +80,6 @@ The audience is blind and low-vision developers attending a two-day workshop on 
 <li>Peer review: how students review each other&#39;s work</li>
 <li>Building confidence through low-stakes practice</li>
 </ul>
-<hr>
 <h3>Concept Coverage Checklist</h3>
 <p>Every concept below MUST be explained during the episode. Do not skip any.
 When a concept is complex, use an analogy or real-world comparison to make it concrete.</p>
@@ -99,7 +118,6 @@ When a concept is complex, use an analogy or real-world comparison to make it co
 <li><strong>Peer review</strong> - You review the people sitting next to you</li>
 <li><strong>Automation</strong> - The bot serves one repo, coordinating all contributions</li>
 </ul>
-<hr>
 <h2>Two Tracks, One Repository</h2>
 <p>Throughout Day 1, you work on <strong>two parallel learning tracks</strong>:</p>
 <h3>Track 1: GitHub Skills Modules (Your Account)</h3>
@@ -127,7 +145,6 @@ Open a PR                       Open a PR (see others<span class="hljs-comment">
 Mona verifies your <span class="hljs-keyword">step</span>         Human peer reviewer approves
      ↓                               ↓
 <span class="hljs-keyword">Next</span> <span class="hljs-keyword">step</span> unlocked             Ready <span class="hljs-keyword">to</span> merge</code></pre>
-<hr>
 <h2>Learning Room Folder Structure</h2>
 <pre><code class="hljs">learning-room/
 ├── README<span class="hljs-selector-class">.md</span>                           ← Getting started guide
@@ -152,7 +169,6 @@ Mona verifies your <span class="hljs-keyword">step</span>         Human peer rev
 │   ├── keyboard-shortcuts<span class="hljs-selector-class">.md</span>           ← Has intentional errors
 │   └── setup-guide<span class="hljs-selector-class">.md</span>                  ← Has broken links
 └── <span class="hljs-selector-attr">[other files for practice]</span></code></pre>
-<hr>
 <h2>The Practice Files: What You Will Work On</h2>
 <p>The <code>docs/</code> folder contains three practice files with intentional issues. These are the files you will edit, fix, and submit pull requests for during the contribution sprint. Here is exactly what you will encounter in each file.</p>
 <h3>docs/welcome.md - Introduction to Open Source Contribution</h3>
@@ -223,7 +239,6 @@ Mona verifies your <span class="hljs-keyword">step</span>         Human peer rev
 <p>Each challenge lists the file(s) to edit, estimated time, skills practiced, success criteria, and a link to detailed instructions.</p>
 <h3>docs/GROUP_CHALLENGES.md - Collaborative Exercises</h3>
 <p>Seven group exercises for study groups, ranging from a Documentation Sprint (divide <code>docs/welcome.md</code> among group members) to a Full Repository Audit (each person audits a section of the workshop documentation). Groups of 2-6 students work together with coordinated PRs and cross-review.</p>
-<hr>
 <h2>How PR Sharing Works</h2>
 <h3>Step 1: Student Opens a PR</h3>
 <p><strong>Student A (working on Challenge 3: Complete Welcome Guide):</strong></p>
@@ -347,7 +362,6 @@ This is a great opportunity to practice code review skills! Here&#x27;s what to 
 <li>Achievement comment is public</li>
 <li>Progress reflected in Learning Paths documentation</li>
 </ul>
-<hr>
 <h2>What All Students See</h2>
 <table>
 <thead>
@@ -398,7 +412,6 @@ This is a great opportunity to practice code review skills! Here&#x27;s what to 
 <td>You + PR author</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>The Learning Automation System</h2>
 <p>When you open a PR in the Learning Room, you get <strong>three types of feedback</strong>:</p>
 <h3>Type 1: Automated Bot Feedback (30 seconds)</h3>
@@ -425,7 +438,6 @@ This is a great opportunity to practice code review skills! Here&#x27;s what to 
 <li>Motivational comments</li>
 </ul>
 <p><strong>Together:</strong> Instant technical feedback + human mentorship + visible progress</p>
-<hr>
 <h2>Study Groups (Optional)</h2>
 <p>If your facilitator creates study groups, you&#39;ll be assigned with 2-3 other students:</p>
 <ol>
@@ -442,7 +454,6 @@ This <span class="hljs-keyword">is</span> your collaboration space!
 - Share tips and resources
 - Support each other through challenges
 - Celebrate each other&#x27;</span>s achievements</code></pre>
-<hr>
 <h2>Key Differences: Skills Module vs. Learning Room</h2>
 <table>
 <thead>
@@ -498,7 +509,6 @@ This <span class="hljs-keyword">is</span> your collaboration space!
 <td>All students together</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Tips for PR Sharing</h2>
 <h3>Finding PRs to Review</h3>
 <details>
@@ -554,7 +564,7 @@ This <span class="hljs-keyword">is</span> your collaboration space!
   <span class="hljs-number">3.</span> Your <span class="hljs-type">name</span> appears <span class="hljs-keyword">as</span> reviewer
   <span class="hljs-number">4.</span> <span class="hljs-keyword">Read</span> bot <span class="hljs-keyword">comment</span>
   <span class="hljs-number">5.</span> <span class="hljs-keyword">Read</span> peer feedback
-  
+
 Files Changed Tab (what actually changed):
   <span class="hljs-number">1.</span> Press H <span class="hljs-keyword">to</span> navigate files
   <span class="hljs-number">2.</span> Press T <span class="hljs-keyword">to</span> explore file tree
@@ -570,7 +580,7 @@ Files Changed Tab (what actually changed):
   <span class="hljs-number">2.</span> Listen <span class="hljs-keyword">for</span> <span class="hljs-string">&quot;Reviewers&quot;</span> heading
   <span class="hljs-number">3.</span> Your name appears <span class="hljs-keyword">as</span> reviewer
   <span class="hljs-number">4.</span> VO+Down <span class="hljs-built_in">to</span> <span class="hljs-built_in">read</span> bot comment <span class="hljs-keyword">and</span> peer feedback
-  
+
 Files Changed Tab (what actually changed):
   <span class="hljs-number">1.</span> Quick Nav H <span class="hljs-built_in">to</span> navigate <span class="hljs-built_in">file</span> headings
   <span class="hljs-number">2.</span> VO+U → Landmarks → <span class="hljs-string">&quot;File tree&quot;</span> <span class="hljs-built_in">to</span> explore <span class="hljs-built_in">files</span>
@@ -657,7 +667,7 @@ Files Changed Tab (what actually changed):
 <span class="hljs-number">7.</span> <span class="hljs-keyword">Comment</span>: &quot;Updates pushed, ready for review&quot;</code></pre>
 </details>
 
-<hr>
+
 <h2>FAQ: PR Sharing in Learning Room</h2>
 <h3>&quot;Can I see other students&#39; PRs?&quot;</h3>
 <p><strong>Yes!</strong> All PRs in the shared repo are visible. This is intentional - you learn by seeing how others approach problems.</p>
@@ -677,13 +687,11 @@ Files Changed Tab (what actually changed):
 <p>Comment explaining why. Request human review. The bot isn&#39;t perfect - that&#39;s why you have humans too.</p>
 <h3>&quot;Do I need to complete every challenge?&quot;</h3>
 <p>No! The Learning Room has challenges for all skill levels. You can pick what interests you, complete at your pace, and continue after the workshop.</p>
-<hr>
 <h2>Celebration: You&#39;re Contributing</h2>
 <p>Every PR you open and merge in the Learning Room is a <strong>real contribution</strong>:</p>
 <p>You found something to improve<br>You made a meaningful change<br>You received feedback (technical + human)<br>You incorporated suggestions<br>You merged your work  </p>
 <p><strong>That is open source contribution.</strong> Your facilitator has a record. The GitHub repo has a record. You have a merged commit in your history.</p>
 <p>This is not hypothetical. This is not simulation. This is real.</p>
-<hr>
 <p><em>Next: <a href="04-working-with-issues.html">Working with Issues</a></em>
 <em>Back: <a href="02-navigating-repositories.html">Navigating Repositories</a></em>
 <em>Reference: <a href="../learning-room/AUTOMATION.html">Automation Guide</a> | <a href="../learning-room/docs/CHALLENGES.html">Available Challenges</a></em></p>

@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Day 1 Agenda</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Day 1 Agenda</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Day 1 Agenda</h1>
 <h2>Open Source Assistive Technology Hackathon - GitHub Learning Lab</h2>
@@ -35,7 +56,6 @@
 <p><strong>Day 1 Focus:</strong> The GitHub web interface - navigating repositories, filing and responding to issues, understanding pull requests, and contributing through the browser using only your keyboard and screen reader.</p>
 <p><strong>How learning works today:</strong> Each participant works through two tracks in parallel. GitHub Skills modules give you a real repository in your own GitHub account, with a bot called Mona that responds to your actions automatically and guides you through each step. The shared <code>learning-room</code> repo is for group exercises and the collaborative contribution sprint. The two tracks reinforce exactly the same skills.</p>
 </blockquote>
-<hr>
 <h2>GitHub Skills Modules Used Today</h2>
 <p>Three modules run across Day 1. You will set each one up during the block where it is introduced - no pre-work required.</p>
 <table>
@@ -70,10 +90,8 @@
 <li>Repeat until completion. You receive a course completion badge on your profile.</li>
 </ol>
 <p><strong>Why this is different from a tutorial:</strong> You are not reading about GitHub. You are doing GitHub, in your own repository, and an automated system is verifying each step and giving you feedback. The mechanics are identical to what happens when you contribute to any real open source project.</p>
-<hr>
 <h2>Read This BEFORE Day 1 Starts</h2>
 <p><strong><a href="docs/03-the-learning-room.html">Chapter 3: The Learning Room</a></strong> - Your complete guide to the shared repo, PR sharing workflow, and how the automation system works. Read this before Block 0 to understand the environment where you&#39;ll be making real contributions.</p>
-<hr>
 <h2>At a Glance</h2>
 <table>
 <thead>
@@ -152,11 +170,9 @@
 </tr>
 </tbody></table>
 <p><strong>Total:</strong> ~7.5 hours of structured time</p>
-<hr>
 <h2>Pre-Day Checklist</h2>
 <p>Before entering the room (or joining the call), participants should have completed everything in <a href="docs/00-pre-workshop-setup.html">Pre-Workshop Setup</a>. The facilitator will do a quick verification at the start.</p>
 <p>GitHub Skills modules require no pre-work - they are set up together, in-session, during the blocks where they are used.</p>
-<hr>
 <h2>Block 0 - Welcome and Orientation (9:00 AM, 45 min)</h2>
 <h3>Date &amp; Location</h3>
 <p><strong>Saturday, March 7, 2026</strong> | 9:00 AM - 5:00 PM<br><strong>Sunday, March 8, 2026</strong> | 9:00 AM - 5:00 PM</p>
@@ -192,7 +208,6 @@ Everyone will work in the shared <code>learning-room</code> repository today. Cl
 <ul>
 <li>Each participant: your name, your screen reader and OS, what brings you here</li>
 </ul>
-<hr>
 <h2>Block 1 - Screen Reader Orientation to GitHub (9:30 AM, 40 min)</h2>
 <h3>Purpose</h3>
 <p>Establish a shared navigation foundation AND set up the Introduction to GitHub Skills module. Every participant leaves this block with a real repository in their own account and a message from Mona waiting for them.</p>
@@ -281,7 +296,6 @@ The <code>docs/</code> folder contains three files with intentional issues that 
 </blockquote>
 <h3>Reference Document</h3>
 <p><a href="docs/appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a></p>
-<hr>
 <h2>Block 2 - Navigating Repositories (10:10 AM, 50 min)</h2>
 <h3>Purpose</h3>
 <p>Participants can confidently explore any GitHub repository using only their screen reader and keyboard - both your own (Skills repo) and others.</p>
@@ -359,10 +373,8 @@ Find the answers to these questions using keyboard navigation in <code>learning-
 <p>You will work through each Markdown step during the natural pauses in Blocks 3 and 4. Your facilitator will call out when to switch.</p>
 <h3>Reference Document</h3>
 <p><a href="docs/02-navigating-repositories.html">Navigating Repositories</a></p>
-<hr>
 <h2>Break (11:00 AM, 15 min)</h2>
 <p>Encourage participants to stand, stretch, and rest their ears. Screen reader listening is cognitively demanding work.</p>
-<hr>
 <h2>Block 3 - Working with Issues and Pull Requests (11:15 AM, 55 min)</h2>
 <h3>Purpose</h3>
 <p>Participants can file, read, respond to, and navigate issues - and open their first pull request.</p>
@@ -454,7 +466,6 @@ Challenge 1: Update [DATE] Placeholder (from CHALLENGES.md)</code></pre>
 </ol>
 <h3>Reference Document</h3>
 <p><a href="docs/04-working-with-issues.html">Working with Issues</a> | <a href="docs/appendix-a-glossary.html">GitHub Concepts Glossary</a></p>
-<hr>
 <h2>Block 4 - Understanding Pull Requests (12:10 PM, 50 min)</h2>
 <h3>Purpose</h3>
 <p>Participants understand what pull requests are, how to read one, and how to participate in a review - by reviewing a PR that Mona creates specifically for them.</p>
@@ -518,9 +529,7 @@ Challenge 1: Update [DATE] Placeholder (from CHALLENGES.md)</code></pre>
 </blockquote>
 <h3>Reference Document</h3>
 <p><a href="docs/05-working-with-pull-requests.html">Working with Pull Requests</a></p>
-<hr>
 <h2>Lunch (1:00 PM, 60 min)</h2>
-<hr>
 <h2>Block 5 - Your First Real Contribution Sprint (2:00 PM, 60 min)</h2>
 <h3>Purpose</h3>
 <p>Every participant makes at least one real contribution to the <code>learning-room</code> repo. This block is where the mechanics practiced in the Skills modules get applied to a collaborative, real-world contribution - with both automated bot feedback AND another human reviewer on the other end.</p>
@@ -640,10 +649,10 @@ Step <span class="hljs-number">5</span>: Open <span class="hljs-keyword">the</sp
   Fill <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> PR description using <span class="hljs-keyword">the</span> template:
     <span class="hljs-comment">## What Changed</span>
     Completed <span class="hljs-keyword">the</span> three [TODO] sections <span class="hljs-keyword">in</span> docs/welcome.md
-    
+
     <span class="hljs-comment">## Related Issue</span>
     Closes <span class="hljs-comment">#[your-issue-number]</span>
-    
+
     <span class="hljs-comment">## Checklist</span>
     - [x] All [TODO] markers removed
     - [x] Content matches <span class="hljs-keyword">the</span> style <span class="hljs-keyword">of</span> existing sections
@@ -718,10 +727,8 @@ Step <span class="hljs-number">8</span>: Review someone <span class="hljs-keywor
 </ul>
 <p><strong><code>docs/CHALLENGES.md</code></strong> lists all 12 challenges with success criteria for each. When reviewing a peer&#39;s PR, check their work against the success criteria listed for their challenge.</p>
 <p><strong><code>docs/GROUP_CHALLENGES.md</code></strong> has 7 collaborative exercises if your study group wants to tackle something together after individual challenges.</p>
-<hr>
 <h2>Break (3:00 PM, 15 min)</h2>
 <p>Stand, stretch, and rest your ears. The contribution sprint demands focus. The final block is discussion-centered and lower intensity.</p>
-<hr>
 <h2>Block 6 - Community: Culture, Etiquette, Labels, and Notifications (3:15 PM, 75 min)</h2>
 <h3>Purpose</h3>
 <p>Participants understand the human side of open source: how to communicate well, how to stay organized, and how to manage their GitHub notification experience.</p>
@@ -806,7 +813,6 @@ Step <span class="hljs-number">8</span>: Review someone <span class="hljs-keywor
 <li>Mark it as Done</li>
 <li>Change <code>learning-room</code> Watch settings to &quot;Participating and @mentions only&quot;</li>
 </ol>
-<hr>
 <h2>Wrap-Up and Day 2 Preview (4:30 PM, 30 min)</h2>
 <h3>Skills Module Completion Check (10 min)</h3>
 <blockquote>
@@ -849,7 +855,6 @@ Step <span class="hljs-number">8</span>: Review someone <span class="hljs-keywor
 <li>Fork <a href="https://github.com/community-access/accessibility-agents">accessibility-agents</a> - it will be ready and waiting when you open VS Code tomorrow</li>
 <li>Browse the <a href="docs/16-accessibility-agents.html#3-the-ecosystem-55-agents-3-teams-5-platforms">55 agents by team</a> - which ones spark ideas for you?</li>
 </ul>
-<hr>
 <h2>Facilitator Notes</h2>
 <h3>Sandbox Repo Setup Required Before Day 1</h3>
 <p>Create the <code>learning-room</code> repo in your org with the following:</p>
@@ -904,7 +909,6 @@ Step <span class="hljs-number">8</span>: Review someone <span class="hljs-keywor
 <li><strong>If a Skills module step gets stuck:</strong> Do not spend more than 5 minutes unblocking one participant&#39;s bot issue. Have them watch your screen while you continue with the group, and revisit during activity periods.</li>
 <li><strong>Completion badges:</strong> Not all participants will complete every module in-session. This is fine - the repos are theirs, Mona is waiting, and they can finish on their own time.</li>
 </ul>
-<hr>
 <p><em>Day 2: <a href="DAY2_AGENDA.html">Day 2 Agenda</a></em>
 <em>Related: <a href="docs/02-navigating-repositories.html">Navigating Repositories</a> | <a href="docs/04-working-with-issues.html">Working with Issues</a> | <a href="docs/05-working-with-pull-requests.html">Working with Pull Requests</a></em></p>
 

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix R: GitHub Profile, Sponsors, and Wikis - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix R: GitHub Profile, Sponsors, and Wikis</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix R: GitHub Profile, Sponsors, and Wikis</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix R: GitHub Profile, Sponsors, and Wikis</h1>
 <blockquote>
@@ -37,7 +58,6 @@
 <blockquote>
 <p>This appendix covers three community-facing GitHub features: your profile README (how the world sees you), GitHub Sponsors (financially supporting the people whose work you depend on), and GitHub Wikis (community-editable documentation inside a repository).</p>
 </blockquote>
-<hr>
 <h2>Profile Customization</h2>
 <h3>The Special Profile README</h3>
 <p>GitHub has a hidden feature: if you create a repository named exactly <strong>your-username/your-username</strong> (e.g., <code>janesmith/janesmith</code>), the README in that repo appears on your GitHub profile page.</p>
@@ -107,7 +127,6 @@ I&#x27;ve been using screen readers for 8 years and believe accessible design is
 <li>Set a temporary status message (e.g., &quot;On vacation until March 15&quot;)</li>
 <li>Navigate to your profile → Select the smile icon → Set status</li>
 </ul>
-<hr>
 <h2>GitHub Sponsors (Supporting Open Source)</h2>
 <h3>What Is GitHub Sponsors?</h3>
 <p>GitHub Sponsors lets you financially support developers and projects you depend on. It&#39;s like Patreon for open source.</p>
@@ -146,7 +165,6 @@ I&#x27;ve been using screen readers for 8 years and believe accessible design is
 <li>Promote your Sponsors page to your audience</li>
 </ol>
 <p>Many accessibility advocates successfully use Sponsors to fund their work improving assistive technology and inclusive design.</p>
-<hr>
 <h2>GitHub Wikis</h2>
 <h3>What Is a GitHub Wiki?</h3>
 <p>Every repository can have a wiki - a space for documentation separate from the code. It&#39;s lightweight and Markdown-based.</p>
@@ -184,7 +202,6 @@ I&#x27;ve been using screen readers for 8 years and believe accessible design is
 <li>Link between wiki pages: <code>[[Page Title]]</code></li>
 <li><strong>Screen reader caveat:</strong> Wiki pages are a separate Git repository. Any changes pushed directly to the wiki&#39;s git remote are not tracked by the main repository&#39;s branch protection - meaning no PR review process applies. Treat wikis as community-editable supplementary docs, not your primary critical documentation source.</li>
 </ul>
-<hr>
 <p><em>Return to: <a href="appendix-u-resources.html">Resources</a> | <a href="appendix-s-github-organizations-templates.html">Appendix S - Organizations and Templates</a> | <a href="appendix-g-github-discussions.html">Appendix G - GitHub Discussions</a> | <a href="appendix-t-contributing-to-open-source.html">Appendix T - Contributing to Open Source</a> | <a href="appendix-a-glossary.html">Appendix A - Glossary</a></em></p>
 
   </main>

@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Appendix A: GitHub Concepts & Glossary - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix A: GitHub Concepts & Glossary</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Appendix A: GitHub Concepts & Glossary</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Appendix A: GitHub Concepts &amp; Glossary</h1>
 <blockquote>
@@ -37,20 +58,16 @@
 <blockquote>
 <p>This glossary is your reference for the entire two-day workshop. When you hear a term you don&#39;t recognize - check here first. Terms are grouped by category and also sorted alphabetically at the end.</p>
 </blockquote>
-<hr>
 <h2>Part 1: The Building Blocks</h2>
 <h3>Repository (Repo)</h3>
 <p>A repository is the container for an entire project. It holds all the project&#39;s files, folders, documentation, and the complete history of every change ever made. Think of it as a project folder that has a time machine built in - you can see every version of every file going back to the beginning.</p>
 <p>A repository lives on GitHub at an address like: <code>https://github.com/owner/repo-name</code></p>
 <p><strong>Related terms:</strong> remote repository (the one on GitHub), local repository (a copy on your computer), upstream (the original repo), fork (your personal copy)</p>
-<hr>
 <h3>Organization (Org)</h3>
 <p>An organization is a group account on GitHub that multiple people can belong to. Open source projects typically live inside an organization rather than under a personal account. For example: <code>https://github.com/microsoft/vscode</code> - here <code>microsoft</code> is the organization and <code>vscode</code> is the repository.</p>
-<hr>
 <h3>Fork</h3>
 <p>A fork is a personal copy of someone else&#39;s repository, living in your own GitHub account. When you fork a repo, you get all its files and history. Changes you make to your fork do not automatically affect the original. To propose your changes to the original project, you submit a pull request.</p>
 <p><strong>Why fork?</strong> You do not have write access to most open source repos. Forking lets you work freely and then propose changes.</p>
-<hr>
 <h3>Remote</h3>
 <p>A remote is a connection to a repository hosted elsewhere (usually on GitHub). Your local Git repository can have multiple remotes. The most common remotes are:</p>
 <ul>
@@ -62,11 +79,9 @@
 <pre><code class="hljs language-bash">git remote -v</code></pre>
 <h4>To add a remote</h4>
 <pre><code class="hljs language-bash">git remote add upstream https://github.com/original-owner/repo.git</code></pre>
-<hr>
 <h3>Origin</h3>
 <p><code>origin</code> is the default name Git gives to the remote repository you cloned from. When you clone your fork, <code>origin</code> points to your fork on GitHub.</p>
 <p>Commands like <code>git push</code> and <code>git pull</code> default to using <code>origin</code> unless you specify otherwise.</p>
-<hr>
 <h3>.gitignore</h3>
 <p><code>.gitignore</code> is a special file in the root of your repository that tells Git which files or folders to ignore - meaning Git will not track or commit them.</p>
 <h4>Why use .gitignore?</h4>
@@ -100,12 +115,10 @@ Thumbs.db
 <p><strong>Important:</strong> <code>.gitignore</code> only ignores <strong>untracked</strong> files. If you already committed a file, you must remove it from Git&#39;s tracking first:</p>
 <pre><code class="hljs language-bash">git <span class="hljs-built_in">rm</span> --cached filename</code></pre>
 <p>Then add it to <code>.gitignore</code> and commit the change.</p>
-<hr>
 <h3>Clone</h3>
 <p>Cloning copies a repository from GitHub to your local computer so you can work with it in VS Code or your preferred editor. When you clone, you get all the files and the complete history.</p>
 <pre><code class="hljs language-text">git clone https://github.com/your-username/repo-name.git</code></pre>
 <p><strong>Fork vs Clone:</strong> Fork = your copy on GitHub. Clone = a copy on your computer. You usually clone your fork.</p>
-<hr>
 <h3>Branch</h3>
 <p>A branch is a separate line of development inside a repository. The main branch (often called <code>main</code> or <code>master</code>) holds the stable, released version of the project. When you want to add a feature or fix a bug, you create a new branch so your work doesn&#39;t affect <code>main</code> until it&#39;s ready.</p>
 <p>Think of branches like parallel timelines - each branch is its own version of the project that can evolve independently and be merged back together later.</p>
@@ -117,7 +130,6 @@ Thumbs.db
 <li><code>fix/broken-button</code> - convention for bug fix branches</li>
 <li><code>docs/update-readme</code> - convention for documentation-only branches</li>
 </ul>
-<hr>
 <h3>Commit</h3>
 <p>A commit is a saved snapshot of your changes at a moment in time. Every commit has:</p>
 <ul>
@@ -134,11 +146,9 @@ The link to the NVDA download page was using an outdated URL.
 Updated to the current direct download page.
 
 Fixes #42</code></pre>
-<hr>
 <h3>Diff</h3>
 <p>A diff (short for difference) shows what changed between two versions of a file. Lines that were <strong>added</strong> are shown in green (with a <code>+</code> prefix). Lines that were <strong>removed</strong> are shown in red (with a <code>-</code> prefix). Lines that are unchanged are shown in grey for context.</p>
 <p>Reading diffs is one of the core skills for code review. When you view a Pull Request&#39;s &quot;Files Changed&quot; tab, you are reading a diff.</p>
-<hr>
 <h2>Part 2: Collaboration Workflow</h2>
 <h3>Issue</h3>
 <p>An issue is a discussion item in a GitHub repository. Issues are used for:</p>
@@ -150,7 +160,6 @@ Fixes #42</code></pre>
 <li>Tracking work items</li>
 </ul>
 <p>Every issue gets a sequential number (like <code>#42</code>) and can have labels, assignees, milestones, and comments. Issues are the starting point for most contributions - it&#39;s best practice to open or find an issue before making code changes.</p>
-<hr>
 <h3>Pull Request (PR)</h3>
 <p>A pull request is a proposal to merge changes from one branch into another. When you have finished working on your fork or feature branch, you open a PR to say &quot;here is my work - please review it and consider merging it.&quot;</p>
 <p>A PR shows:</p>
@@ -161,7 +170,6 @@ Fixes #42</code></pre>
 <li>Discussion threads and reviews from others</li>
 </ul>
 <p>The name &quot;pull request&quot; means you are requesting that the maintainers pull your changes into their project.</p>
-<hr>
 <h3>Code Review</h3>
 <p>Code review is the process of one or more collaborators reading and providing feedback on a PR before it is merged. Reviewers can:</p>
 <ul>
@@ -170,7 +178,6 @@ Fixes #42</code></pre>
 <li><strong>Request Changes</strong> - indicate that specific things need to be addressed before merging</li>
 </ul>
 <p>Good code reviews are kind, specific, and constructive.</p>
-<hr>
 <h3>Merge</h3>
 <p>Merging is combining changes from one branch into another. When a PR is approved, a maintainer merges it. There are three merge strategies:</p>
 <table>
@@ -197,7 +204,6 @@ Fixes #42</code></pre>
 <td>Linear history projects</td>
 </tr>
 </tbody></table>
-<hr>
 <h3>Merge Conflict</h3>
 <p>A merge conflict happens when two branches have both changed the same part of the same file in different ways. Git doesn&#39;t know which version to keep, so it pauses and asks you to resolve it manually.</p>
 <p>Conflict markers look like this in a file:</p>
@@ -208,12 +214,10 @@ The incoming content from the other branch
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/other-branch</code></pre>
 <p>You resolve a conflict by editing the file to have the correct final content, removing the conflict markers, and then committing.</p>
 <p>See <a href="06-merge-conflicts.html">Merge Conflicts Guide</a> for step-by-step instructions.</p>
-<hr>
 <h3>Upstream</h3>
 <p>Upstream refers to the original repository that you forked from. When the upstream project has new changes that you want to bring into your fork, you &quot;sync&quot; your fork with upstream.</p>
 <pre><code class="hljs language-text">Your Fork → upstream → Original Repo
 Your changes flow this way: Original Repo ← Pull Request ← Your Fork</code></pre>
-<hr>
 <h3>Label</h3>
 <p>Labels are colored tags applied to issues and PRs to categorize them. Common labels:</p>
 <ul>
@@ -224,26 +228,19 @@ Your changes flow this way: Original Repo ← Pull Request ← Your Fork</code><
 <li><code>help wanted</code> - maintainers want community help</li>
 <li><code>accessibility</code> - accessibility-related</li>
 </ul>
-<hr>
 <h3>Milestone</h3>
 <p>A milestone groups issues and PRs toward a goal or deadline. For example: &quot;v2.0 Release&quot; or &quot;Hackathon Day 1.&quot; Milestones show progress as a percentage of closed versus open items.</p>
-<hr>
 <h3>Project (GitHub Projects)</h3>
 <p>A GitHub Project is a flexible board for tracking work. It can show issues and PRs in table view, board view (kanban), or roadmap view. Projects are especially useful for hackathon-style coordination.</p>
-<hr>
 <h2>Part 3: People and Roles</h2>
 <h3>Maintainer</h3>
 <p>A maintainer is someone with write or admin access to a repository. Maintainers review PRs, triage issues, manage releases, and make decisions about the project&#39;s direction. Most open source projects have between one and five core maintainers.</p>
-<hr>
 <h3>Contributor</h3>
 <p>Anyone who contributes to an open source project is a contributor. Contributing includes code, documentation, design, testing, translation, issue triage, and community support. You do not need commit access to contribute.</p>
-<hr>
 <h3>Triage</h3>
 <p>Triaging issues means reviewing new issues to categorize them, add labels, assign them, close duplicates, and communicate with the reporter. Triage is an important contribution that doesn&#39;t require coding skills.</p>
-<hr>
 <h3>Collaborator</h3>
 <p>A collaborator is someone who has been explicitly granted write access to a repository. Collaborators can commit directly to the repo without forking (though good practice is still to use branches and PRs).</p>
-<hr>
 <h2>Part 4: Common Abbreviations and Slang</h2>
 <p>These abbreviations appear frequently in GitHub comments, PR descriptions, and commit messages:</p>
 <table>
@@ -360,7 +357,6 @@ Your changes flow this way: Original Repo ← Pull Request ← Your Fork</code><
 <td>A change that will break existing functionality for users</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Part 5: Technical GitHub Concepts</h2>
 <h3>HEAD</h3>
 <p><code>HEAD</code> is Git&#39;s way of saying &quot;where you are right now.&quot; It&#39;s a pointer to the current commit on the current branch.</p>
@@ -372,7 +368,6 @@ Your changes flow this way: Original Repo ← Pull Request ← Your Fork</code><
 <p>You&#39;ll see HEAD referenced in commands like:</p>
 <pre><code class="hljs language-bash">git reset HEAD~1  <span class="hljs-comment"># Undo the last commit</span>
 git diff HEAD     <span class="hljs-comment"># Show uncommitted changes</span></code></pre>
-<hr>
 <h3>Detached HEAD</h3>
 <p>A &quot;detached HEAD&quot; occurs when you check out a specific commit instead of a branch. You&#39;re no longer &quot;on&quot; a branch - just looking at a snapshot in time.</p>
 <h4>Why it happens</h4>
@@ -387,7 +382,6 @@ git diff HEAD     <span class="hljs-comment"># Show uncommitted changes</span></
 <pre><code class="hljs language-bash">git branch new-branch-name  <span class="hljs-comment"># Creates a branch from your current position</span>
 git checkout new-branch-name</code></pre>
 <p><strong>Screen reader note:</strong> Git will warn you verbosely when entering detached HEAD state. Read the guidance carefully.</p>
-<hr>
 <h3>Stash</h3>
 <p><code>git stash</code> temporarily saves your uncommitted changes and reverts your working directory to a clean state. It&#39;s useful when you need to switch branches but aren&#39;t ready to commit.</p>
 <h4>Common workflow</h4>
@@ -406,7 +400,6 @@ git stash pop  <span class="hljs-comment"># Restore your changes</span></code></
 <li><code>git stash drop</code> - delete a stash</li>
 </ul>
 <p><strong>Use case:</strong> &quot;I need to quickly switch branches to check something, but I&#39;m in the middle of work I&#39;m not ready to commit.&quot;</p>
-<hr>
 <h3>Rebase</h3>
 <p>Rebasing is an alternative to merging. Instead of creating a merge commit, rebase moves (replays) your commits on top of another branch.</p>
 <h4>Merge</h4>
@@ -435,7 +428,6 @@ git rebase main
 <span class="hljs-comment"># Fix any conflicts</span>
 git push --force-with-lease  <span class="hljs-comment"># See Force Push below</span></code></pre>
 <p><strong>Screen reader note:</strong> Rebase conflicts are resolved the same way as merge conflicts (edit file, remove markers, <code>git add</code>, <code>git rebase --continue</code>).</p>
-<hr>
 <h3>Cherry-Pick</h3>
 <p>Cherry-picking applies a single commit from one branch onto another. It&#39;s like copy-pasting a commit.</p>
 <p><strong>Use case:</strong> You made a bug fix on the wrong branch and want to apply it to <code>main</code> without merging the whole branch.</p>
@@ -448,7 +440,6 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <li>Undo a commit on one branch but keep it on another</li>
 </ul>
 <p><strong>Warning:</strong> Cherry-picking duplicates commits (creates a new commit with the same changes). Avoid cherry-picking commits that are part of an active feature branch - it causes confusion.</p>
-<hr>
 <h3>Fetch vs Pull</h3>
 <p><strong><code>git fetch</code></strong> downloads changes from a remote repository but doesn&#39;t merge them into your current branch. It updates your local copy of remote branches (like <code>origin/main</code> or <code>upstream/main</code>) without touching your working files.</p>
 <pre><code class="hljs language-bash">git fetch origin  <span class="hljs-comment"># Download updates from origin</span></code></pre>
@@ -466,7 +457,6 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <li>You&#39;re working alone on a branch</li>
 </ul>
 <p><strong>Best practice for collaboration:</strong> Use <code>fetch</code> first, review with <code>git log origin/main</code>, then decide to merge or rebase.</p>
-<hr>
 <h3>Force Push</h3>
 <p>Force pushing (<code>git push --force</code> or <code>git push -f</code>) overwrites the remote branch with your local version, replacing its history. This is <strong>dangerous</strong> because it can delete commits that others have based work on.</p>
 <h4>When force push is okay</h4>
@@ -486,17 +476,13 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <h4>Why force push is needed after rebase</h4>
 <p>When you rebase, Git rewrites commit history. The remote branch and your local branch now have conflicting histories. A normal <code>git push</code> fails. Force pushing resolves this by saying &quot;trust my version.&quot;</p>
 <p><strong>Rule of thumb:</strong> If you&#39;re not sure whether you need to force push, you probably shouldn&#39;t.</p>
-<hr>
 <h3>SHA / Hash</h3>
 <p>Every commit, file, and tree in Git is identified by a SHA hash - a 40-character string of letters and numbers (e.g., <code>a1b2c3d4e5f6...</code>). You will see shortened versions like <code>a1b2c3d</code> in the GitHub UI. These are unique fingerprints.</p>
-<hr>
 <h3>Tag / Release</h3>
 <p>A tag marks a specific commit as significant - usually a version release like <code>v1.0.0</code>. Tags are permanent references (unlike branches, which move with each new commit). GitHub Releases are built on top of tags and can include release notes and downloadable files.</p>
-<hr>
 <h3>Actions / Workflow / CI/CD</h3>
 <p>GitHub Actions is an automation platform built into GitHub. Workflows are automated scripts (written in YAML) that run in response to events - like a PR being opened or code being pushed. CI/CD stands for Continuous Integration / Continuous Deployment.</p>
 <p>In practice: when you open a PR, you will often see automated checks run (tests, linting, accessibility checks). These are GitHub Actions. See <a href="appendix-q-github-actions-workflows.html">GitHub Actions &amp; Workflows</a> for a full explanation.</p>
-<hr>
 <h3>Status Check</h3>
 <p>A status check is the result of an automated test or workflow run on a PR. Status checks show as:</p>
 <ul>
@@ -505,19 +491,14 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <li>Yellow dot - checks are still running</li>
 </ul>
 <p>Maintainers often require status checks to pass before merging.</p>
-<hr>
 <h3>Webhook</h3>
 <p>A webhook is an automated notification that GitHub sends to another service when something happens (a push, a PR opened, etc.). Webhooks power integrations with tools like Slack, project management systems, and CI services. As a contributor, you typically don&#39;t configure webhooks - they are set up by maintainers.</p>
-<hr>
 <h3>GitHub Discussions</h3>
 <p>Discussions are a threaded forum built into GitHub, separate from Issues. They are used for open-ended conversation, Q&amp;A, and community announcements. Not all projects use Discussions - some prefer issues or external forums.</p>
-<hr>
 <h3>Profile</h3>
 <p>Your GitHub profile is your public identity. It shows your name, bio, location, repositories, contribution activity (the green squares), and pinned projects. Your profile URL is <code>https://github.com/your-username</code>.</p>
-<hr>
 <h3>GitHub Copilot</h3>
 <p>GitHub Copilot is an AI-powered coding assistant. It suggests code, documentation, and commit messages. In this workshop, we use Copilot to help write issue descriptions, PR descriptions, documentation, and code. See <a href="13-github-copilot.html">GitHub Copilot</a> for the full walkthrough.</p>
-<hr>
 <h2>Part 6: Community Files</h2>
 <p>Every healthy open source project has these files in the root of the repository:</p>
 <table>
@@ -560,7 +541,6 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <td>Template for PR descriptions</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Alphabetical Quick Reference</h2>
 <table>
 <thead>
@@ -794,7 +774,6 @@ git cherry-pick a1b2c3d  <span class="hljs-comment"># Apply commit a1b2c3d to ma
 <td>The original repo you forked from</td>
 </tr>
 </tbody></table>
-<hr>
 <p><em>Appendix B - look up any term here at any point during the workshop.</em>
 <em>Return to: <a href="02-day1-agenda.html">Day 1 Agenda</a> | <a href="01-understanding-github-web-structure.html">Understanding GitHub&#39;s Web Structure</a></em>
 <em>See also: <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a></em></p>

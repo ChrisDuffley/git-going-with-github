@@ -25,12 +25,32 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">FAQ: Frequently Asked Questions</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">FAQ: Frequently Asked Questions</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>FAQ: Frequently Asked Questions</h1>
-<hr>
 <h2>Table of Contents</h2>
 <ul>
 <li><a href="#about-this-workshop">About This Workshop</a></li>
@@ -58,7 +78,6 @@
 <li><a href="#concepts-and-terminology">Concepts and Terminology</a></li>
 <li><a href="#still-stuck">Still Stuck?</a></li>
 </ul>
-<hr>
 <h2>About This Workshop</h2>
 <h3>Q: Is this guide only for programmers?</h3>
 <p><strong>A:</strong> No. While it focuses on GitHub (a platform developers use), the concepts apply to anyone collaborating on projects. Documentation improvements, issue filing, accessibility testing, and code reviews are all valuable contributions that require no coding. <strong>Start:</strong> <a href="docs/01-understanding-github-web-structure.html">Chapter 1</a> - no coding required.</p>
@@ -80,7 +99,6 @@
 <p><strong>A:</strong> The GitHub Skills modules (used during Day 1) award completion badges on your GitHub profile. These are visible to anyone who visits your profile. The workshop itself does not issue a separate certificate, but your merged PR to <code>community-access/accessibility-agents</code> on Day 2 is permanent proof of contribution.</p>
 <h3>Q: Where can I find the course outline and table of contents?</h3>
 <p><strong>A:</strong> See the <a href="docs/course-guide.html">Course Guide</a> for the full table of contents, chapter sequence, timing, and exercises at a glance.</p>
-<hr>
 <h2>Is This For Me?</h2>
 <h3>Q: I am a complete beginner to GitHub. Where do I start?</h3>
 <p><strong>A:</strong> Start with <a href="docs/00-pre-workshop-setup.html">Chapter 0 (Pre-Workshop Setup)</a> to install tools, then <a href="docs/01-understanding-github-web-structure.html">Chapter 1 (Understanding GitHub Web Structure)</a>. Both assume zero prior knowledge.</p>
@@ -98,7 +116,6 @@
 <p><strong>A:</strong> All technical terms are defined in <a href="docs/appendix-a-glossary.html">Appendix A (Glossary)</a>. The language is intentionally simple and direct. If anything is unclear, open an issue on GitHub or check <a href="QUICK_REFERENCE.html">QUICK_REFERENCE.md</a>.</p>
 <h3>Q: I only have a few hours. What is the minimum I should read?</h3>
 <p><strong>A:</strong> Read Chapters 0, 1, 4, and 5. That covers setup, GitHub structure, issues, and pull requests - enough to start contributing to any project.</p>
-<hr>
 <h2>Getting Started</h2>
 <h3>Q: I installed Git, but I am getting &quot;git: command not found&quot;. What do I do?</h3>
 <p><strong>A:</strong> See <a href="TROUBLESHOOTING.html">TROUBLESHOOTING.md</a> → &quot;Problem: Git is not installed&quot;. It has platform-specific steps for Windows, macOS, and Linux.</p>
@@ -131,7 +148,6 @@
 <p><strong>A:</strong> No. A free GitHub account is sufficient for everything in this workshop, including creating repositories, filing issues, opening pull requests, and participating in discussions. GitHub Copilot has a free tier with limited usage, but a paid subscription (~$10/month) provides full access for Day 2 content.</p>
 <h3>Q: Can I use a Chromebook or tablet?</h3>
 <p><strong>A:</strong> Day 1 (browser-based) works on any device with a modern browser and a keyboard. Day 2 requires Visual Studio Code, which runs on Windows, macOS, and Linux desktops. If you have a Chromebook, consider <a href="docs/appendix-n-github-codespaces.html">GitHub Codespaces</a> as an alternative to a local VS Code install.</p>
-<hr>
 <h2>Screen Readers and Accessibility</h2>
 <h3>Q: Which screen readers are supported?</h3>
 <p><strong>A:</strong> The workshop is tested with:</p>
@@ -189,7 +205,6 @@
 <p><strong>A:</strong> Yes. GitHub&#39;s web interface is responsive. Use <code>Ctrl++</code> (or <code>Cmd++</code> on Mac) to zoom in. The HTML versions of workshop documents (in the <code>html/</code> folder) are also responsive and work at any zoom level.</p>
 <h3>Q: How do I know if a page element is interactive?</h3>
 <p><strong>A:</strong> Your screen reader announces the role of each element - &quot;button,&quot; &quot;link,&quot; &quot;edit text,&quot; &quot;checkbox,&quot; etc. If it announces &quot;clickable&quot; without a more specific role, it may not be fully accessible. In that case, try <code>Enter</code> or <code>Space</code> to activate it.</p>
-<hr>
 <h2>GitHub Accounts and Authentication</h2>
 <h3>Q: I forgot my GitHub password. How do I reset it?</h3>
 <p><strong>A:</strong> Go to <a href="https://github.com/password_reset">https://github.com/password_reset</a>, enter your email, and follow the reset link. If you use two-factor authentication (2FA) and lost access to your second factor, see GitHub&#39;s <a href="https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/recovering-your-account-if-you-lose-your-2fa-credentials">account recovery documentation</a>.</p>
@@ -215,7 +230,6 @@
 <p>Security note: We strongly recommend enabling 2FA on your GitHub account. If you cannot enable 2FA, you may still participate by adding an SSH key or creating a Personal Access Token (PAT) with <code>repo</code> scope for Git operations. Contact the workshop organizers if you need help.</p>
 <h3>Q: My organization uses SSO (Single Sign-On). Does that affect anything?</h3>
 <p><strong>A:</strong> Yes. After authenticating with SSO, you may need to authorize your SSH key or PAT for that organization. Go to <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a> → find your token → click &quot;Configure SSO&quot; → authorize for your org.</p>
-<hr>
 <h2>Navigating GitHub on the Web</h2>
 <h3>Q: What are the main sections of a GitHub repository page?</h3>
 <p><strong>A:</strong> Every repository has these tabs:</p>
@@ -254,7 +268,6 @@
 <li><code>language:python stars:&gt;100</code> - Find popular Python repositories</li>
 </ul>
 <p>Full reference: <a href="docs/appendix-j-advanced-search.html">Appendix J (Advanced Search)</a></p>
-<hr>
 <h2>Issues</h2>
 <h3>Q: What is the difference between an issue and a pull request?</h3>
 <p><strong>A:</strong></p>
@@ -296,7 +309,6 @@
 <p><strong>A:</strong> Yes. Navigate to the closed issue and click &quot;Reopen issue.&quot; Only people with write access to the repository can reopen issues filed by others.</p>
 <h3>Q: How do I subscribe to or unsubscribe from an issue?</h3>
 <p><strong>A:</strong> On the issue sidebar, find the &quot;Notifications&quot; section. Click &quot;Subscribe&quot; to get notified of all comments, or &quot;Unsubscribe&quot; to stop notifications. You are automatically subscribed to issues you create or comment on.</p>
-<hr>
 <h2>Pull Requests</h2>
 <h3>Q: What is a pull request, and why is it called that?</h3>
 <p><strong>A:</strong></p>
@@ -348,7 +360,6 @@
 <p><strong>A:</strong> A draft PR signals that your work is not ready for review yet. Reviewers can still look at it, but it cannot be merged. When ready, click &quot;Ready for review&quot; to convert it. Use drafts for work-in-progress when you want early feedback.</p>
 <h3>Q: Can I edit someone else&#39;s PR?</h3>
 <p><strong>A:</strong> Only if the PR author checked &quot;Allow edits from maintainers&quot; and you have write access to the target repository. Otherwise, you can suggest changes in a review comment using the suggestion feature.</p>
-<hr>
 <h2>Merge Conflicts</h2>
 <h3>Q: What is a merge conflict?</h3>
 <p><strong>A:</strong> A merge conflict happens when two people edit the same lines of the same file on different branches. Git cannot decide which version to keep, so it asks you to choose. It is not an error - it is a normal part of collaboration.</p>
@@ -378,7 +389,6 @@ Their changes
 <li>Communicate with your team about which files you are editing</li>
 <li>Avoid editing the same lines as someone else</li>
 </ul>
-<hr>
 <h2>Branches and Forks</h2>
 <h3>Q: What is the difference between a fork and a branch?</h3>
 <p><strong>A:</strong></p>
@@ -406,7 +416,6 @@ Their changes
 <li><strong>On GitHub:</strong> After merging, GitHub shows a &quot;Delete branch&quot; button on the PR page</li>
 <li><strong>Locally:</strong> <code>git branch -d branch-name</code> (safe delete - only works if merged) or <code>git branch -D branch-name</code> (force delete)</li>
 </ul>
-<hr>
 <h2>Markdown</h2>
 <h3>Q: What is Markdown?</h3>
 <p><strong>A:</strong> A lightweight text formatting language. You write plain text with symbols (<code>#</code> for headings, <code>**</code> for bold, <code>- </code> for lists), and GitHub renders it as formatted HTML. Every issue, PR, comment, and documentation file on GitHub uses Markdown.</p>
@@ -477,7 +486,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> GitHub&#39;s extended version of Markdown that adds features like task lists (<code>- [ ]</code>), tables, strikethrough (<code>~~text~~</code>), autolinked URLs, emoji (<code>:smile:</code>), alert blocks, Mermaid diagrams, and math expressions. See <a href="docs/appendix-e-github-flavored-markdown.html">Appendix E</a>.</p>
 <h3>Q: How do I preview Markdown before submitting?</h3>
 <p><strong>A:</strong> On GitHub, click the &quot;Preview&quot; tab above any text input area. In VS Code, press <code>Ctrl+Shift+V</code> to open Markdown preview in a new tab, or <code>Ctrl+K V</code> for a side-by-side preview.</p>
-<hr>
 <h2>Labels, Milestones, and Projects</h2>
 <h3>Q: What are labels for?</h3>
 <p><strong>A:</strong> Labels categorize issues and PRs. Common labels: <code>bug</code>, <code>enhancement</code>, <code>documentation</code>, <code>good first issue</code>, <code>accessibility</code>, <code>help wanted</code>. They help maintainers prioritize and contributors find work. See <a href="docs/08-labels-milestones-projects.html">Chapter 8</a>.</p>
@@ -487,7 +495,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> A grouping of issues and PRs that represent a goal or deadline (e.g., &quot;v2.0 Release&quot; or &quot;Hackathon Day 1&quot;). Milestones show a progress bar indicating how many items are complete.</p>
 <h3>Q: What is a GitHub Project?</h3>
 <p><strong>A:</strong> A flexible planning tool with boards (Kanban-style columns), tables, and roadmaps. You can add issues and PRs from multiple repositories. See <a href="docs/appendix-i-github-projects.html">Appendix I (GitHub Projects Deep Dive)</a>.</p>
-<hr>
 <h2>Notifications</h2>
 <h3>Q: How do I manage GitHub notifications without being overwhelmed?</h3>
 <p><strong>A:</strong></p>
@@ -517,7 +524,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <li><code>Shift+I</code> to mark as Read</li>
 <li><code>Enter</code> to open the linked issue or PR</li>
 </ul>
-<hr>
 <h2>VS Code</h2>
 <h3>Q: Why do we use VS Code instead of another editor?</h3>
 <p><strong>A:</strong> VS Code has the best built-in accessibility support of any mainstream code editor: dedicated screen reader mode, Accessible Help dialog, Accessible View, Accessible Diff Viewer, and audio cues for editor events. It also has first-party GitHub and Copilot integration.</p>
@@ -592,7 +598,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> Press <code>Alt+F2</code> to open the Accessible View. It renders any VS Code content (Copilot Chat responses, hover tooltips, notifications) as a plain text document that your screen reader can read naturally. Use it whenever VS Code&#39;s default rendering is hard to navigate.</p>
 <h3>Q: What are audio cues (accessibility signals) in VS Code?</h3>
 <p><strong>A:</strong> VS Code can play short sounds for events like errors, warnings, breakpoints, and diff changes. Configure them at Settings → search <code>accessibility.signals</code>. Each signal can be set to &quot;on,&quot; &quot;off,&quot; or &quot;auto&quot; (only when a screen reader is detected). See <a href="docs/appendix-m-vscode-accessibility-reference.html">Appendix M</a>.</p>
-<hr>
 <h2>Git and Source Control in VS Code</h2>
 <h3>Q: How do I clone a repository in VS Code?</h3>
 <p><strong>A:</strong> <code>Ctrl+Shift+P</code> → type &quot;Git: Clone&quot; → paste the repository URL → choose a local folder → VS Code opens the cloned repo.</p>
@@ -621,7 +626,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 </ul>
 <h3>Q: How do I view a diff in VS Code?</h3>
 <p><strong>A:</strong> In the Source Control panel, click any changed file. VS Code opens a side-by-side diff view. For accessible navigation, press <code>F7</code> to open the Accessible Diff Viewer, which reads changes sequentially.</p>
-<hr>
 <h2>GitHub Copilot</h2>
 <h3>Q: What is GitHub Copilot?</h3>
 <p><strong>A:</strong> An AI-powered coding assistant that runs inside VS Code. It offers two main features:</p>
@@ -665,7 +669,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> See <a href="TROUBLESHOOTING.html">TROUBLESHOOTING.md</a> → &quot;Copilot Chat freezes or stops responding.&quot; Quick fix: Close the chat panel, reopen with <code>Ctrl+Shift+I</code>. Check your internet connection and Copilot subscription status.</p>
 <h3>Q: Can I choose which AI model Copilot uses?</h3>
 <p><strong>A:</strong> Yes. In Copilot Chat, click the model selector (announced by your screen reader near the input field) to choose from available models. Different models have different strengths. See <a href="docs/appendix-x-copilot-models.html">Appendix X (Copilot AI Models)</a>.</p>
-<hr>
 <h2>Accessibility Agents</h2>
 <h3>Q: What is Accessibility Agents?</h3>
 <p><strong>A:</strong> An ecosystem of <strong>55 AI-powered agents</strong> organized into three teams (Accessibility, GitHub Workflow, Developer Tools), running on five platforms. It includes 54+ slash commands and is an MIT-licensed open-source project at <code>community-access/accessibility-agents</code> that you will fork, use, and contribute to during the workshop. See <a href="docs/16-accessibility-agents.html">Chapter 16 (Accessibility Agents)</a>.</p>
@@ -704,7 +707,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> Copy <code>.github/agents/preferences.example.md</code> to <code>.github/agents/preferences.md</code> and edit it with your GitHub username, preferred repositories, and output format preferences.</p>
 <h3>Q: Can I create my own agents?</h3>
 <p><strong>A:</strong> Yes. Create a new <code>.agent.md</code> file in <code>.github/agents/</code> following the existing file format. The file is plain Markdown with YAML frontmatter. See <a href="docs/appendix-v-accessibility-agents-reference.html">Appendix V (Accessibility Agents Reference)</a>.</p>
-<hr>
 <h2>Issue Templates</h2>
 <h3>Q: What is an issue template and why should I care?</h3>
 <p><strong>A:</strong> Templates guide people to provide the right information when filing issues. Well-structured templates save time for maintainers and help screen reader users navigate the form. See <a href="docs/15-issue-templates.html">Chapter 15 (Issue Templates)</a>.</p>
@@ -721,7 +723,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> YAML is a simple format for writing structured data - easier to read than JSON or XML. GitHub uses it for issue form templates because it is human-readable and supports validation. You do not need to be an expert - <a href="docs/15-issue-templates.html">Chapter 15</a> teaches you everything you need.</p>
 <h3>Q: Can I use the @template-builder agent to create templates?</h3>
 <p><strong>A:</strong> Yes. The <code>@template-builder</code> agent in Copilot Chat walks you through creating templates interactively. It asks questions and generates the YAML for you. See <a href="docs/16-accessibility-agents.html">Chapter 16 (Accessibility Agents)</a>.</p>
-<hr>
 <h2>Code Review</h2>
 <h3>Q: What makes code review &quot;accessible&quot;?</h3>
 <p><strong>A:</strong> Accessible code review means:</p>
@@ -755,7 +756,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <li><strong>Approve:</strong> You are satisfied the changes are ready to merge</li>
 <li><strong>Request Changes:</strong> You have identified issues that must be fixed before merging</li>
 </ul>
-<hr>
 <h2>The Learning Room</h2>
 <h3>Q: What is the Learning Room?</h3>
 <p><strong>A:</strong> A shared practice repository (<code>learning-room/</code>) where participants make their first real contributions during the workshop. It contains intentionally incomplete documents and accessibility issues for you to find and fix. See <a href="docs/03-the-learning-room.html">Chapter 3 (The Learning Room)</a>.</p>
@@ -770,7 +770,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> When you open a PR in the Learning Room, an automated bot reviews your changes within about 30 seconds. It checks for broken links, heading hierarchy, image descriptions, link text quality, and formatting. Every issue includes an explanation of why it matters and how to fix it.</p>
 <h3>Q: Can I practice in the Learning Room on my own?</h3>
 <p><strong>A:</strong> Yes. Fork the repository, and the individual challenges work in your fork. Group challenges are designed for a live session but you can still practice the technical steps solo.</p>
-<hr>
 <h2>Workshop Logistics</h2>
 <h3>Q: What if I fall behind the group?</h3>
 <p><strong>A:</strong> This is completely normal. Each chapter is self-contained - you can continue at your own pace. The facilitator will provide catch-up guidance during breaks. The GitHub Skills modules (Day 1) are yours permanently - Mona is always waiting for you.</p>
@@ -784,7 +783,6 @@ print(<span class="hljs-string">&quot;Hello, world!&quot;</span>)
 <p><strong>A:</strong> Yes. All materials are in the repository and can be read at any time. The GitHub Skills modules are available indefinitely. The only thing you miss is live interaction and facilitated group exercises.</p>
 <h3>Q: What if I have accessibility needs not covered by the workshop setup?</h3>
 <p><strong>A:</strong> Contact the facilitator. This workshop is designed for flexibility - if you need a specific accommodation (higher contrast, different font size, alternative input method, longer break time), ask.</p>
-<hr>
 <h2>After the Workshop</h2>
 <h3>Q: Can I contribute to this curriculum?</h3>
 <p><strong>A:</strong> Yes. See <a href="CONTRIBUTING.html">CONTRIBUTING.md</a> for how to submit improvements, suggest new topics, or fix issues.</p>
@@ -810,7 +808,6 @@ git push origin main</code></pre>
 </ul>
 <h3>Q: How do I download all the workshop materials for offline reading?</h3>
 <p><strong>A:</strong> See <a href="docs/appendix-y-accessing-workshop-materials.html">Appendix Y (Accessing Workshop Materials)</a> for complete instructions - clone via Git, download as ZIP, or read individual files on GitHub.com.</p>
-<hr>
 <h2>Concepts and Terminology</h2>
 <h3>Q: What is the difference between a fork and a branch?</h3>
 <p><strong>A:</strong></p>
@@ -842,7 +839,6 @@ git push origin main</code></pre>
 <p><strong>A:</strong> <strong>Web Content Accessibility Guidelines</strong> - the international standard for web accessibility. WCAG 2.2 defines criteria in three levels: A (minimum), AA (recommended), and AAA (highest). See <a href="docs/appendix-c-accessibility-standards.html">Appendix C (Accessibility Standards Reference)</a>.</p>
 <h3>Q: What is ARIA?</h3>
 <p><strong>A:</strong> <strong>Accessible Rich Internet Applications</strong> - A set of HTML attributes that add accessibility information to web elements. For example, <code>aria-label</code> provides a text description for screen readers, and <code>role</code> identifies the purpose of an element (button, navigation, main content, etc.).</p>
-<hr>
 <h2>Still Stuck?</h2>
 <p>This FAQ does not cover your question? Try these resources in order:</p>
 <ol>
@@ -854,7 +850,6 @@ git push origin main</code></pre>
 <li><strong>GitHub Issues</strong> - Search existing issues or <a href="../../issues">open a new one</a></li>
 <li><a href="FACILITATOR.html"><strong>FACILITATOR.md</strong></a> - If you are leading a workshop</li>
 </ol>
-<hr>
 <p><em>Last updated: February 2026</em><br><em>Have more questions? Open an issue or discussion on GitHub!</em></p>
 
   </main>

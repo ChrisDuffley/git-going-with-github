@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="GIT Going with GitHub - A two-day accessible open source workshop by Community Access">
   <title>Working with Pull Requests - GIT Going with GitHub</title>
-  <link rel="stylesheet" href="./styles/github-markdown.css">
-  <link rel="stylesheet" href="./styles/highlight.css">
-  <link rel="stylesheet" href="./styles/custom.css">
+  <link rel="stylesheet" href="../styles/github-markdown.css">
+  <link rel="stylesheet" href="../styles/highlight.css">
+  <link rel="stylesheet" href="../styles/custom.css">
   <style>
     .markdown-body {
       box-sizing: border-box;
@@ -25,9 +25,30 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Working with Pull Requests</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="../index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Working with Pull Requests</span>
+      </nav>
+      <form role="search" class="search-form" action="../search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Working with Pull Requests</h1>
 <blockquote>
@@ -46,7 +67,6 @@
 <p>Full step-by-step instructions with per-screen-reader commands are in <a href="00-pre-workshop-setup.html#step-4---check-github-feature-preview-settings">Pre-Workshop Setup, Step 4</a>.</p>
 <p><strong>Browse vs Focus Mode (NVDA):</strong> Use <strong>Browse Mode</strong> (the default) for reading PR conversations, navigating headings, and reviewing diffs. Switch to <strong>Focus Mode</strong> (<code>NVDA+Space</code>) only when you need to type in comment boxes or search fields. Switch back to Browse Mode to resume navigation. Maximize your browser window for consistent landmark layout.</p>
 </blockquote>
-<hr>
 <h2>Workshop Recommendation (Chapter 5)</h2>
 <p>Chapter 5 is the first <strong>PR-validated chapter</strong> where students convert issue work into merge-ready contributions.</p>
 <ul>
@@ -57,19 +77,114 @@
 </ul>
 <h3>Chapter 5 Challenge Set</h3>
 <ol>
-<li><strong>Create one small branch change</strong><ul>
-<li>Edit only the file required by your claimed issue.</li>
-</ul>
-</li>
-<li><strong>Open a linked PR</strong><ul>
-<li>Use PR template and include <code>Closes #XX</code>.</li>
-</ul>
-</li>
-<li><strong>Pass required checks</strong><ul>
-<li>Respond to bot feedback until required checks pass.</li>
-</ul>
-</li>
+<li><strong>Create one small branch change</strong> - edit the file specified in your claimed issue.</li>
+<li><strong>Open a linked PR</strong> - use the PR template and include <code>Closes #XX</code>.</li>
+<li><strong>Pass required checks</strong> - respond to bot feedback until all required checks pass.</li>
 </ol>
+<blockquote>
+<p><strong>Branch guidance for Chapter 5:</strong> This is the first chapter where you edit files and create branches. Use one of these two paths:</p>
+<ul>
+<li><strong>Web editor (recommended for beginners):</strong> When you edit a file on GitHub.com and click &quot;Propose changes,&quot; GitHub creates a branch for you automatically. Name it <code>fix/yourname-issueXX</code> (for example, <code>fix/maria-issue42</code>).</li>
+<li><strong>Local Git (if you cloned in Block 0):</strong> Create a feature branch with <code>git checkout -b fix/yourname-issueXX</code> from <code>main</code>. See the &quot;Local Git Alternative&quot; section below for the full command sequence.</li>
+</ul>
+<p><strong>Do NOT use your <code>username-practice</code> branch yet.</strong> The practice branch is for Chapter 11 and beyond when you work locally with Git and VS Code. For Chapter 5, use a short-lived feature branch as described above.</p>
+</blockquote>
+<h3>Challenge 5.1 Step-by-Step: Create One Small Branch Change</h3>
+<p><strong>Goal:</strong> Edit the file referenced in the issue you claimed in Chapter 4 (Challenge 4.2).</p>
+<p><strong>Where you are working:</strong> the <code>learning-room</code> repository on GitHub.com, using the web editor.</p>
+<p><strong>Before you start:</strong> Open the issue you claimed in Chapter 4.2 and note which file needs editing. The issue description tells you the file path and what to fix. The practice files are:</p>
+<p>The following table summarizes the practice files in the learning-room, what each file contains, and the type of issues to look for.</p>
+<table>
+<thead>
+<tr>
+<th scope="col">File</th>
+<th scope="col">What it contains</th>
+<th scope="col">What to fix</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>docs/welcome.md</code></td>
+<td>Introduction to open source contribution</td>
+<td>Three <code>[TODO]</code> sections where content is missing</td>
+</tr>
+<tr>
+<td><code>docs/keyboard-shortcuts.md</code></td>
+<td>Screen reader shortcut reference tables</td>
+<td>Intentional errors in shortcut references</td>
+</tr>
+<tr>
+<td><code>docs/setup-guide.md</code></td>
+<td>Getting-started instructions</td>
+<td>Broken links and incomplete steps</td>
+</tr>
+</tbody></table>
+<p><strong>Steps using the web editor:</strong></p>
+<ol>
+<li>In the <code>learning-room</code> repository, navigate to the file specified in your issue. Use the file tree or the &quot;Go to file&quot; button (<code>T</code> keyboard shortcut).</li>
+<li>Open the file and activate the <strong>pencil icon</strong> (Edit this file) button.<ul>
+<li>Screen reader users (NVDA/JAWS): Press <code>B</code> to navigate buttons, find &quot;Edit this file,&quot; and press <code>Enter</code>.</li>
+<li>VoiceOver users: Press <code>VO+U</code>, open Buttons rotor, find &quot;Edit this file,&quot; and press <code>VO+Space</code>.</li>
+</ul>
+</li>
+<li>The file opens in the web editor. Make your change. For example:<ul>
+<li>If your issue is about a <code>[TODO]</code> section: replace the <code>[TODO]</code> placeholder with the requested content (one to three sentences).</li>
+<li>If your issue is about a broken link: find and correct the URL.</li>
+<li>If your issue is about a shortcut error: find and fix the incorrect value in the table.</li>
+</ul>
+</li>
+<li>Keep your change small and focused. Edit only what the issue asks for.</li>
+</ol>
+<p><strong>Proposing your changes (this creates your branch):</strong></p>
+<ol start="5">
+<li>After editing, activate the <strong>Commit changes</strong> button (green button above the editor).</li>
+<li>A dialog appears. In the <strong>Branch name</strong> field, type: <code>fix/yourname-issueXX</code> (replace <code>yourname</code> with your GitHub username, and <code>XX</code> with the issue number).</li>
+<li>Select <strong>Create a new branch for this commit and start a pull request</strong>.</li>
+<li>Activate <strong>Propose changes</strong>.</li>
+</ol>
+<p><strong>You are done when:</strong> GitHub shows the &quot;Open a pull request&quot; page. Your file change is saved on a new branch. Continue to Challenge 5.2.</p>
+<h3>Challenge 5.2 Step-by-Step: Open a Linked PR</h3>
+<p><strong>Goal:</strong> Open a pull request that links to your challenge issue so it closes automatically on merge.</p>
+<p><strong>Where you are working:</strong> the &quot;Open a pull request&quot; page that appeared after Challenge 5.1 (or navigate to Pull Requests tab and select &quot;Compare and pull request&quot;).</p>
+<ol>
+<li>In the <strong>Title</strong> field, write a short description of your change. Examples:<ul>
+<li>&quot;Complete the Who Can Contribute section in welcome.md&quot;</li>
+<li>&quot;Fix broken accessibility settings link in setup-guide.md&quot;</li>
+<li>&quot;Correct NVDA modifier key in keyboard-shortcuts.md&quot;</li>
+</ul>
+</li>
+<li>In the <strong>Body</strong> field, use the PR template if one is provided. Make sure to include:<ul>
+<li>A summary of what you changed and why (at least 50 characters).</li>
+<li>The line <code>Closes #XX</code> where <code>XX</code> is the number of your <strong>assigned Chapter 5 challenge issue</strong> (not the issue you claimed in Chapter 4, unless they are the same).</li>
+<li>If you are also closing the issue you claimed in Chapter 4, add that reference too: <code>Also addresses #YY</code>.</li>
+</ul>
+</li>
+<li>Verify the <strong>base branch</strong> is <code>main</code> and the <strong>compare branch</strong> is your <code>fix/yourname-issueXX</code> branch.</li>
+<li>Activate the <strong>Create pull request</strong> button.</li>
+</ol>
+<p><strong>You are done when:</strong> Your PR appears in the Pull Requests list. The bot will begin running checks within about 30 seconds. Continue to Challenge 5.3.</p>
+<h3>Challenge 5.3 Step-by-Step: Pass Required Checks</h3>
+<p><strong>Goal:</strong> Read bot feedback, fix any issues it finds, and get all required checks to pass.</p>
+<p><strong>Where you are working:</strong> the Conversation tab of your open pull request.</p>
+<ol>
+<li>Wait approximately 30 seconds after opening the PR. The bot posts a validation comment.</li>
+<li>Read the bot comment carefully. It checks:<ul>
+<li>That your PR references an issue with <code>Closes #XX</code>.</li>
+<li>That your PR description is detailed enough (50+ characters).</li>
+<li>That your changed files are in the <code>learning-room/</code> folder.</li>
+<li>Accessibility checks: heading hierarchy, descriptive link text, valid alt text.</li>
+</ul>
+</li>
+<li>If the bot reports failures:<ul>
+<li>Open the changed file from the <strong>Files changed</strong> tab.</li>
+<li>Activate the pencil icon to edit the file again (directly on your branch).</li>
+<li>Fix the issue the bot identified.</li>
+<li>Commit the fix to the <strong>same branch</strong> (the bot re-runs automatically on each push).</li>
+</ul>
+</li>
+<li>Repeat step 3 until all required checks show a green checkmark.</li>
+<li>When all checks pass, request a review from a peer or the facilitator.</li>
+</ol>
+<p><strong>You are done when:</strong> The bot comment shows all required checks passed (green checkmarks). Your PR is ready for human review and merge.</p>
 <h3>Expected Outcomes</h3>
 <ul>
 <li>Student opens a focused PR that maps to one issue.</li>
@@ -91,7 +206,6 @@
 <li>Feedback is immediate and specific.</li>
 <li>Success is visible (green checks + closed issue).</li>
 </ul>
-<hr>
 <h2>Local Git Alternative: The Full Branch-Edit-PR Workflow</h2>
 <details>
 <summary>If you cloned the learning-room in Block 0 and prefer working locally</summary>
@@ -122,7 +236,7 @@ git push -u origin fix/welcome-todos</code></pre>
 </blockquote>
 </details>
 
-<hr>
+
 <h2>What Is a Pull Request?</h2>
 <p>A pull request (PR) is a proposal to merge changes from one branch into another. When you have:</p>
 <ul>
@@ -141,7 +255,6 @@ git push -u origin fix/welcome-todos</code></pre>
 <blockquote>
 <p><strong>Learning Room connection:</strong> In the Learning Room repository, every hands-on contribution follows this pattern. For example, when you complete Challenge 3 (filling the <code>[TODO]</code> sections in <code>docs/welcome.md</code>), you open a PR that shows your added content as green <code>+</code> lines in the diff, your description explains which TODOs you completed and why, and the validation bot posts automated check results. The scenarios in this chapter use Learning Room files so you can follow along with real content.</p>
 </blockquote>
-<hr>
 <h2>Navigating to Pull Requests</h2>
 <details>
 <summary>Visual / mouse users</summary>
@@ -189,7 +302,7 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 <p><strong>Setup:</strong> Install the GitHub CLI from <a href="https://cli.github.com">cli.github.com</a> and authenticate with <code>gh auth login</code>. See <a href="appendix-d-git-authentication.html">Appendix D</a> for details.</p>
 </details>
 
-<hr>
+
 <h2>The Pull Request List Page</h2>
 <p>The PR list works identically to the Issues list:</p>
 <ul>
@@ -202,7 +315,6 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 <p><strong>Screen reader note - PR list semantics:</strong> The PR list does <strong>not</strong> have individual ARIA item containers with per-item semantics. To read a PR&#39;s full detail (title, author, labels, status), you must navigate sequentially with <code>Tab</code> or arrow keys through the elements for each item. Starting from a PR title link, <code>Tab</code> forward to find the author, labels, and review status for that same PR before moving to the next title.</p>
 <p><strong>Hovercards:</strong> Hovercards appear when you hover over usernames and links in the PR list, adding extra verbosity. To reduce this noise: go to your GitHub Profile → Accessibility settings → disable &quot;Show link previews&quot; and similar hover triggers. This makes sequential navigation significantly less cluttered.</p>
 </blockquote>
-<hr>
 <h2>Anatomy of a Pull Request Page</h2>
 <p>A PR page has three main tabs:</p>
 <pre><code class="hljs language-text">[PR title - h1]
@@ -230,7 +342,6 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 [File tree (left panel)]
 [Diff for each file - each file is a heading]
 [Line-level comment threads within diffs]</code></pre>
-<hr>
 <h2>Navigating the PR Tab Bar</h2>
 <p>The Conversation, Commits, and Files changed tabs are in a “Pull request navigation tabs” landmark.</p>
 <details>
@@ -260,7 +371,6 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 </details>
 
 <p>Each tab link reads with its name and the count: &quot;Files changed, 3 files changed.&quot;</p>
-<hr>
 <h2>Reading the Conversation Tab</h2>
 <h3>PR Description</h3>
 <ol>
@@ -313,14 +423,12 @@ gh <span class="hljs-built_in">pr</span> view 42 --web</code></pre>
 Step 2: Tab to &quot;Reply…&quot; link/button
 Step 3: The reply text area appears - Focus Mode → type your reply
 Step 4: Ctrl+Enter to submit</code></pre>
-<hr>
 <h2>Reading the Commits Tab</h2>
 <pre><code class="hljs language-text">Step 1: Navigate to Commits tab (D → PR tabs → Enter)
 Step 2: 3 to navigate date group headings (&quot;Commits on April 20&quot;)
 Step 3: I to navigate individual commits within a date group
 Step 4: Each commit: SHA link, message, author, [Verified] badge if signed
 Step 5: Enter on a commit to open its diff</code></pre>
-<hr>
 <h2>Reading the Files Changed Tab</h2>
 <p>This is the core of a code review. You will read diffs - the before/after state of every file that changed.</p>
 <blockquote>
@@ -442,7 +550,6 @@ Step 5: Enter on a commit to open its diff</code></pre>
 
 <h3>Viewing comments within the diff</h3>
 <p>Inline comments appear as expandable threads within the diff table. Navigate to them with <code>3</code> (they are h3 headings). Each thread shows the comment, any replies, and a &quot;Reply&quot; button.</p>
-<hr>
 <h2>Opening a Pull Request</h2>
 <h3>From the web editor workflow (editing a file on GitHub)</h3>
 <ol>
@@ -612,7 +719,6 @@ gh <span class="hljs-built_in">pr</span> list --draft</code></pre>
 <blockquote>
 <p><strong>Why some reviews are requested automatically:</strong> A file called <code>CODEOWNERS</code> in many repositories maps file paths to specific people or teams. When your PR touches a file covered by a CODEOWNERS rule, GitHub automatically adds those people as required reviewers - you&#39;ll see them appear in the Reviewers sidebar without you adding them. You cannot remove a CODEOWNERS-required reviewer. If a required reviewer hasn&#39;t responded, reach out to them directly or leave a comment on the PR.</p>
 </blockquote>
-<hr>
 <h2>Submitting a Review</h2>
 <p>When you are asked to review a PR, you have three options:</p>
 <ul>
@@ -847,7 +953,6 @@ your proposed text here
 <li>Navigate to the radio buttons with arrow keys → select your verdict</li>
 <li>Tab to &quot;Submit review&quot; button → Enter</li>
 </ol>
-<hr>
 <h2>Understanding Merge Options (for Maintainers)</h2>
 <p>When a PR is approved and checks pass, a maintainer can merge it. The merge button section appears at the bottom of the Conversation tab.</p>
 <pre><code class="hljs language-text">
@@ -887,7 +992,6 @@ gh <span class="hljs-built_in">pr</span> merge 42 --auto --squash</code></pre>
 <li>The source branch can be deleted - a &quot;Delete branch&quot; button appears</li>
 <li>Any linked issues with <code>Closes #N</code> in the description are automatically closed</li>
 </ul>
-<hr>
 <h2>Auto-Merge - Merging When You Can&#39;t Wait Around</h2>
 <p><strong>Auto-merge</strong> lets you pre-authorize a PR to merge automatically the moment all branch protection requirements are satisfied - required reviews approved, all status checks passing, and the branch up to date.</p>
 <p>This is especially useful when:</p>
@@ -919,7 +1023,6 @@ Dialog: Tab → confirm button → Enter</code></pre>
 <blockquote>
 <p><strong>Note:</strong> Auto-merge is only available if the repository administrator has enabled it in Settings → General. Many open source repos have it on; some do not.</p>
 </blockquote>
-<hr>
 <h2>Practical Scenarios</h2>
 <h3>Scenario A: &quot;I want to review an assigned PR&quot;</h3>
 <p><strong>Example:</strong> You are assigned to review a PR titled &quot;Add missing NVDA shortcut to keyboard-shortcuts.md.&quot; The PR modifies <code>docs/keyboard-shortcuts.md</code> in the Learning Room repository and references Challenge 2.</p>
@@ -942,7 +1045,6 @@ Dialog: Tab → confirm button → Enter</code></pre>
 2. Tab to &quot;Resolve conflicts&quot; button → GitHub opens a web conflict editor
 3. The editor shows conflict markers - see Merge Conflicts guide (06-merge-conflicts.md)
 4. Edit the file to resolve → Mark as resolved → Commit merge</code></pre>
-<hr>
 <h2>Common PR Mistakes to Avoid</h2>
 <table>
 <thead>
@@ -976,7 +1078,6 @@ Dialog: Tab → confirm button → Enter</code></pre>
 <td>Acknowledge all comments, even if you disagree</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Try It: Read a Real Pull Request</h2>
 <p><strong>Time:</strong> 3 minutes | <strong>What you need:</strong> Browser, signed in to GitHub</p>
 <p>Go to the Learning Room repository&#39;s Pull Requests tab and find any open or recently closed PR:</p>
@@ -991,7 +1092,6 @@ Dialog: Tab → confirm button → Enter</code></pre>
 <blockquote>
 <p><strong>What success feels like:</strong> You followed a PR from description to diff using only headings and landmarks. The next time you open a PR - yours or someone else&#39;s - you&#39;ll know exactly where everything is.</p>
 </blockquote>
-<hr>
 <blockquote>
 <h3>Day 2 Amplifier - Accessibility Agents: <code>@pr-review</code></h3>
 <p><strong>Review at least two pull requests manually before using any agent.</strong> A review generated by <code>@pr-review</code> is only as useful as your ability to read, edit, and challenge it. The agent writes a first draft - you supply the context, the history, and the final judgment that no diff can contain.</p>
@@ -1003,7 +1103,6 @@ Dialog: Tab → confirm button → Enter</code></pre>
 </ul>
 <p><em>The agent documents the diff. You bring the context that no diff can contain.</em></p>
 </blockquote>
-<hr>
 <p><em>Next: <a href="06-merge-conflicts.html">Merge Conflicts</a></em>
 <em>Back: <a href="04-working-with-issues.html">Working with Issues</a></em>
 <em>Related: <a href="14-accessible-code-review.html">Accessible Code Review</a> | <a href="appendix-b-screen-reader-cheatsheet.html">Screen Reader Cheat Sheet</a> | <a href="07-culture-etiquette.html">Culture &amp; Etiquette</a> | <a href="appendix-q-github-actions-workflows.html">GitHub Actions</a></em></p>

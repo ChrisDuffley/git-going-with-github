@@ -25,13 +25,33 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Comprehensive Validation Audit: Chapters 4-16 Student Challenges</span>
-  </nav>
+  <header class="site-header" role="banner">
+    <div class="site-header-inner">
+      <nav aria-label="Breadcrumb" class="breadcrumb">
+        <a href="./index.html">Home</a> <span aria-hidden="true">›</span> <span aria-current="page">Comprehensive Validation Audit: Chapters 4-16 Student Challenges</span>
+      </nav>
+      <form role="search" class="search-form" action="./search.html" method="get">
+        <label for="site-search" class="search-label">Search docs</label>
+        <input
+          type="search"
+          id="site-search"
+          class="search-input"
+          name="q"
+          placeholder="Search docs…"
+          autocomplete="off"
+          aria-label="Search documentation"
+        >
+        <button type="submit" class="search-button" aria-label="Submit search">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M10.68 11.74a6 6 0 0 1-7.922-8.982 6 6 0 0 1 8.982 7.922l3.04 3.04a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215ZM11.5 7a4.499 4.499 0 1 0-8.997 0A4.499 4.499 0 0 0 11.5 7Z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </header>
   <main id="main-content" class="markdown-body">
     <h1>Comprehensive Validation Audit: Chapters 4-16 Student Challenges</h1>
 <p><strong>Date:</strong> March 5, 2026<br><strong>Scope:</strong> Chapters 4-16 challenge definitions, documentation, templates, and associated files<br><strong>Auditor:</strong> GitHub Copilot<br><strong>Status:</strong> Complete audit with critical findings</p>
-<hr>
 <h2>Executive Summary</h2>
 <p>All 13 chapters (4-16) have challenge content defined with generally clear instructions, accessible documentation, and appropriate difficulty progression. However, <strong>several critical and medium-priority issues</strong> require remediation before student deployment.</p>
 <h3>Overall Status by Chapter</h3>
@@ -47,89 +67,87 @@
 <tbody><tr>
 <td>Ch 4</td>
 <td>Working with Issues</td>
-<td>✅ PASS</td>
+<td>PASS</td>
 <td>No issues found</td>
 </tr>
 <tr>
 <td>Ch 5</td>
 <td>Working with Pull Requests</td>
-<td>✅ PASS</td>
+<td>PASS</td>
 <td>No issues found</td>
 </tr>
 <tr>
 <td>Ch 6</td>
 <td>Merge Conflicts</td>
-<td>✅ PASS</td>
+<td>PASS</td>
 <td>No issues found</td>
 </tr>
 <tr>
 <td>Ch 7</td>
 <td>Culture &amp; Etiquette</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Optional challenge lacks clarity on evaluation</td>
 </tr>
 <tr>
 <td>Ch 8</td>
 <td>Labels/Milestones/Projects</td>
-<td>✅ PASS</td>
+<td>PASS</td>
 <td>No critical issues</td>
 </tr>
 <tr>
 <td>Ch 9</td>
 <td>Notifications</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Time estimate may be optimistic; screen reader testing needed</td>
 </tr>
 <tr>
 <td>Ch 10</td>
 <td>VS Code Basics</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Keyboard shortcut consistency; VoiceOver parity</td>
 </tr>
 <tr>
 <td>Ch 11</td>
 <td>Git &amp; Source Control</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Time estimates may be low for beginners; repository complexity</td>
 </tr>
 <tr>
 <td>Ch 12</td>
 <td>GitHub PR Extension</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Write access assumption; authentication flow clarity</td>
 </tr>
 <tr>
 <td>Ch 13</td>
 <td>GitHub Copilot</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Copilot subscription assumption not flagged upfront</td>
 </tr>
 <tr>
 <td>Ch 14</td>
 <td>Accessible Code Review</td>
-<td>✅ PASS</td>
+<td>PASS</td>
 <td>Wells structured with good &quot;If You Get Stuck&quot; guidance</td>
 </tr>
 <tr>
 <td>Ch 15</td>
 <td>Issue Templates</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Prerequisites scattered; YAML syntax complexity underestimated</td>
 </tr>
 <tr>
 <td>Ch 16</td>
 <td>Accessibility Agents</td>
-<td>⚠️ WARN</td>
+<td>WARN</td>
 <td>Agent count (55) unprepared for; unclear agent discovery method</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Detailed Chapter Analysis</h2>
-<hr>
 <h3>Chapter 4: Working with Issues</h3>
 <p><strong>[PASS]</strong> — Challenge is well-designed and achievable.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Chapter 4 appears first in challenge work (after Chapter 2-3 orientation)</li>
 <li>Prerequisites explicitly listed in documentation: &quot;Complete Pre-Workshop Setup&quot;</li>
@@ -137,7 +155,7 @@
 <li>All prerequisites realistic for absolute beginners</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Challenge set is small: 3 micro-challenges<ul>
 <li>Create your first issue</li>
@@ -149,16 +167,16 @@
 <li>Language is beginner-friendly with examples provided</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>All files and references verified:</strong></p>
+<p> <strong>All files and references verified:</strong></p>
 <ul>
-<li><code>learning-room/docs/CHALLENGES.md</code> exists ✓</li>
-<li><code>.github/ISSUE_TEMPLATE/challenge-hub.md</code> exists ✓</li>
-<li>Guide links to Chapter 4 section in CHALLENGES.md ✓</li>
-<li>Cross-reference to podcasts working (Episode 5) ✓</li>
-<li>Screen reader cheatsheet reference (appendix-b) exists ✓</li>
+<li><code>learning-room/docs/CHALLENGES.md</code> exists </li>
+<li><code>.github/ISSUE_TEMPLATE/challenge-hub.md</code> exists </li>
+<li>Guide links to Chapter 4 section in CHALLENGES.md </li>
+<li>Cross-reference to podcasts working (Episode 5) </li>
+<li>Screen reader cheatsheet reference (appendix-b) exists</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>✅ <strong>Verified:</strong> </p>
+<p> <strong>Verified:</strong> </p>
 <ul>
 <li>Stated: &quot;Under 10 minutes each challenge&quot;</li>
 <li>Assessment: <strong>ACCURATE</strong><ul>
@@ -170,7 +188,7 @@
 <li>Total: ~8 minutes is realistic</li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>4 specific remediation steps provided</li>
 <li>Escalation path: re-read hub → search filter → retry → ask facilitator</li>
@@ -178,7 +196,7 @@
 <li>No vague instructions (&quot;just try again&quot;)</li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Documentation tested with screen reader perspective</li>
 <li>Search filters are keyboard-navigable following GitHub&#39;s standards</li>
@@ -187,12 +205,11 @@
 <li>Link text is descriptive</li>
 </ul>
 <h4>Recommendations</h4>
-<p>✅ <strong>No changes needed</strong> — Chapter 4 is a model for other chapters.</p>
-<hr>
+<p> <strong>No changes needed</strong> — Chapter 4 is a model for other chapters.</p>
 <h3>Chapter 5: Working with Pull Requests</h3>
 <p><strong>[PASS]</strong> — Challenge progression builds naturally on Chapter 4.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Explicit: &quot;Complete Chapter 4 first&quot;</li>
 <li>All concepts from Chapter 4 (creating issues, understanding GitHub) carry forward</li>
@@ -200,7 +217,7 @@
 <li>Realistic progression: small markdown fixes before tackling merge conflicts</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Challenge set is focused: 3 steps (create branch change, open linked PR, pass checks)</li>
 <li>Bot validation is clearly explained: &quot;Watch bot feedback until required checks pass&quot;</li>
@@ -208,15 +225,15 @@
 <li>Examples provided in documentation with file paths and expected outcomes</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>All files verified:</strong></p>
+<p> <strong>All files verified:</strong></p>
 <ul>
-<li>Reference to Chapter 5 docs (<code>docs/05-working-with-pull-requests.md</code>) ✓</li>
-<li>Learning Room repo structure exists and is accessible ✓</li>
-<li>Bot validation workflow references clear ✓</li>
-<li>Template reference (PR template in <code>.github/</code>) exists ✓</li>
+<li>Reference to Chapter 5 docs (<code>docs/05-working-with-pull-requests.md</code>) </li>
+<li>Learning Room repo structure exists and is accessible </li>
+<li>Bot validation workflow references clear </li>
+<li>Template reference (PR template in <code>.github/</code>) exists</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Stated: &quot;Under 10 minutes each&quot;</li>
 <li>Assessment: <strong>ACCURATE for experienced users; OPTIMISTIC for complete beginners</strong><ul>
@@ -229,7 +246,7 @@
 <li><strong>Reality check:</strong> First-time PR authors may spend 8-12 minutes</li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Specific troubleshooting steps provided</li>
 <li>&quot;Check that changed files are only in learning-room/&quot; — excellent specificity</li>
@@ -237,7 +254,7 @@
 <li>Escalation: &quot;ask for peer or facilitator review with exact error message&quot;</li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>PR diff reading instructions are well-documented in main chapter text</li>
 <li>&quot;Files Changed&quot; tab navigation covered thoroughly</li>
@@ -245,19 +262,18 @@
 <li>No accessibility gaps noted</li>
 </ul>
 <h4>Recommendations</h4>
-<p>✅ <strong>No changes needed</strong> — Chapter 5 maintains quality standard set by Chapter 4.</p>
-<hr>
+<p> <strong>No changes needed</strong> — Chapter 5 maintains quality standard set by Chapter 4.</p>
 <h3>Chapter 6: Merge Conflicts</h3>
 <p><strong>[PASS]</strong> — Single controlled challenge with appropriate scoping.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Prerequisites: Ch 4, Ch 5, Ch 11 (Git basics)</li>
 <li>Prerequisite documentation states: &quot;Understand branch creation and PR workflow&quot;</li>
 <li>All prerequisites realistic and well-ordered</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li><strong>Single challenge with clear scope</strong>: &quot;Resolve conflict markers&quot;</li>
 <li><strong>Step-by-step process documented</strong>:<ol>
@@ -270,7 +286,7 @@
 <li><strong>Clear learning goal</strong>: Distinguish between conflict marker lines and content</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Reference to &quot;designated practice file/section&quot; is created as part of challenge setup</li>
 <li>Examples of conflict marker syntax provided: <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt;&gt;</code></li>
@@ -278,7 +294,7 @@
 <li>Links to other chapters (Ch 4, 5, 11) all exist</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Stated: &quot;Under 10 minutes&quot;</li>
 <li>Assessment: <strong>ACCURATE</strong><ul>
@@ -291,7 +307,7 @@
 <li><strong>Reality check:</strong> Conflict resolution is cognitively simple but requires focus; 8-10 minutes realistic</li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Excellent specific steps:<ol>
 <li>&quot;Pause and read marker blocks line by line before editing&quot; — prevents rushing</li>
@@ -302,26 +318,25 @@
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Conflict marker documentation uses monospace formatting for clarity</li>
 <li>Learning moment explains value of conflicts (not failure)</li>
 <li>Screen reader navigation through markers is straightforward (text-based)</li>
 </ul>
 <h4>Recommendations</h4>
-<p>✅ <strong>No changes needed</strong> — Chapter 6 provides good model for teaching high-stakes tasks through controlled practice.</p>
-<hr>
+<p> <strong>No changes needed</strong> — Chapter 6 provides good model for teaching high-stakes tasks through controlled practice.</p>
 <h3>Chapter 7: Culture, Etiquette, and Community Standards</h3>
 <p><strong>[WARN]</strong> — Guidance is clear but optional challenge needs evaluation criteria clarification.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>No hard prerequisites stated; appears after PR workflow chapters</li>
 <li>Implied: Students have read Chapters 4-6</li>
 <li>Timing is appropriate (after technical practices, before code review)</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>⚠️ <strong>ISSUE FOUND:</strong></p>
+<p> <strong>ISSUE FOUND:</strong></p>
 <ul>
 <li>Challenge is <strong>explicitly optional</strong> with provided reflection template</li>
 <li>Template asks for 3 items:<pre><code class="hljs">- <span class="hljs-keyword">One</span> respectful review habit I will <span class="hljs-keyword">use</span>:
@@ -332,14 +347,14 @@
 <li><strong>Impact:</strong> Students may not know if they&#39;ve met expectations</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Chapter 7 documentation (<code>docs/07-culture-etiquette.md</code>) exists</li>
 <li>Podcast reference (Episode 8) links correctly</li>
 <li>Learning moment is well-written</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>⚠️ <strong>ISSUE FOUND:</strong></p>
+<p> <strong>ISSUE FOUND:</strong></p>
 <ul>
 <li>Stated: &quot;No bot-graded challenge&quot;</li>
 <li>Estimated time: Implied 5-10 minutes</li>
@@ -348,7 +363,7 @@
 <li><strong>Risk:</strong> Students may rush if they perceive it as quick</li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>4 specific steps provided:<ol>
 <li>&quot;Use one simple sentence per prompt&quot;</li>
@@ -359,31 +374,30 @@
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Reflection template is unambiguous</li>
 <li>Non-visual learners can engage with prompts</li>
 <li>No accessibility barriers identified</li>
 </ul>
 <h4>Recommendations</h4>
-<p>🔴 <strong>CHANGE REQUIRED:</strong></p>
+<p> <strong>CHANGE REQUIRED:</strong></p>
 <ol>
 <li><strong>Add explicit evaluation criteria:</strong> &quot;Your reflection is complete when you have posted one sentence for each of the three prompts. We will not judge your answers—honest reflection is the goal.&quot;</li>
 <li><strong>Add time estimate:</strong> &quot;Estimated time: 10-15 minutes&quot;</li>
 <li><strong>Add clarity on optional nature:</strong> Change &quot;Optional&quot; to &quot;<strong>Strongly Encouraged</strong>&quot; (optional implies students can skip; encouraged signals importance without making it required)</li>
 </ol>
-<hr>
 <h3>Chapter 8: Labels, Milestones, and Projects</h3>
 <p><strong>[PASS]</strong> — Triage recommendation challenge is well-scoped and clear.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Implicit: Complete Chapters 4-5 first (understand issues and PRs)</li>
 <li>Triage context explained in main chapter documentation</li>
 <li>Realistic for students who have filed and reviewed issues</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Challenge is specific: &quot;Post a triage recommendation comment&quot;</li>
 <li>Template provided with 4 fields:<pre><code class="hljs"><span class="hljs-bullet">- </span>Suggested labels:
@@ -394,7 +408,7 @@
 <li>Clear guidance for students <strong>without write access</strong>: &quot;Write triage recommendation even if you can&#39;t apply labels&quot;</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li><code>.github/ISSUE_TEMPLATE/</code> folder exists</li>
 <li>Label, milestone, and project references are GitHub standard features</li>
@@ -402,14 +416,14 @@
 <li>Podcast reference (Episode 9) exists</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Stated: &quot;1 guided challenge&quot; with no specific time estimate visible in challenge summary</li>
 <li><strong>Caveat:</strong> Main chapter documentation should state time explicitly</li>
 <li>Estimated actual time: 5-10 minutes (read issue, recommend, post comment)</li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>4 well-structured steps:<ol>
 <li>&quot;Start with one label only&quot; — doesn&#39;t require mastery of all labels</li>
@@ -420,28 +434,27 @@
 </li>
 </ul>
 <h4>Learning Moment</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>&quot;Triage is about clarity, not authority&quot; — reframes triage as collaborative</li>
 <li>Supports students who fear making wrong decisions</li>
 </ul>
 <h4>Recommendations</h4>
-<p>✅ <strong>Minor improvement only:</strong></p>
+<p> <strong>Minor improvement only:</strong></p>
 <ol>
 <li>Add explicit time estimate in challenge overview: &quot;Estimated time: 5-10 minutes&quot;</li>
 </ol>
-<hr>
 <h3>Chapter 9: Notifications</h3>
 <p><strong>[WARN]</strong> — Carefully designed but time estimate and screen reader testing may reveal gaps.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>No hard prerequisites; can be taken standalone</li>
 <li>Assumes: GitHub account, browser, basic GitHub familiarity</li>
 <li>Timing: Good placement after PR workflow chapters (students know what notifications they&#39;ll receive)</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>⚠️ <strong>ISSUE FOUND - Workflow clarity:</strong></p>
+<p> <strong>ISSUE FOUND - Workflow clarity:</strong></p>
 <ul>
 <li>Challenge explicitly states: &quot;No bot-graded challenge&quot; and &quot;No Actions-based validation&quot;</li>
 <li><strong>Problem:</strong> Students may wonder if they&#39;ve completed it correctly</li>
@@ -449,7 +462,7 @@
 <li><strong>Ambiguity:</strong> Is posting a completion comment required, or only the actions?</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li><code>.github/</code> templates reference correct</li>
 <li>PODCASTS.md link (Episode 10) verified</li>
@@ -457,7 +470,7 @@
 <li>Main chapter documentation (<code>docs/09-notifications.md</code>) exists</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>⚠️ <strong>ISSUE FOUND - Estimate optimism:</strong></p>
+<p> <strong>ISSUE FOUND - Estimate optimism:</strong></p>
 <ul>
 <li>Stated: &quot;5-8 minutes&quot;</li>
 <li><strong>Reality assessment:</strong><ul>
@@ -469,12 +482,12 @@
 <li>Perform one inbox action: 1 minute</li>
 </ul>
 </li>
-<li><strong>Subtotal: 6-9 minutes</strong> — consistent with estimate ✓</li>
+<li><strong>Subtotal: 6-9 minutes</strong> — consistent with estimate </li>
 <li><strong>BUT:</strong> First-time users discovering filters might take 10-15 minutes</li>
 <li><strong>CAVEAT:</strong> If student has no notifications, exploring becomes slower</li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Strong guidance provided:</strong></p>
+<p> <strong>Strong guidance provided:</strong></p>
 <ol>
 <li>&quot;Reload the notifications page and reapply one filter at a time&quot; — specific recovery</li>
 <li>&quot;If inbox is empty, switch to <code>Done</code> and practice action flow there&quot; — workaround for sparse notifications</li>
@@ -482,7 +495,7 @@
 <li>&quot;Ask facilitator to model one inbox action live, then repeat&quot; — hands-on escalation</li>
 </ol>
 <h4>Accessibility Assessment</h4>
-<p>⚠️ <strong>ISSUE FOUND - Screen reader variability:</strong></p>
+<p> <strong>ISSUE FOUND - Screen reader variability:</strong></p>
 <ul>
 <li>Guidance assumes students know notification keyboard shortcuts</li>
 <li><strong>Problem:</strong> Shortcuts vary between screen readers (M = mute, E = mark done)</li>
@@ -490,24 +503,23 @@
 <li><strong>Needs verification:</strong> Testing with NVDA, JAWS, and VoiceOver on GitHub&#39;s notification UI</li>
 </ul>
 <h4>Recommendations</h4>
-<p>🟡 <strong>Changes strongly recommended:</strong></p>
+<p> <strong>Changes strongly recommended:</strong></p>
 <ol>
 <li><strong>Add completion evidence requirement:</strong> &quot;After completing the walkthrough, post an issue comment saying: <code>Has completed Chapter 9 notification setup (Watch level set, filters applied, one action tested).</code>&quot;</li>
 <li><strong>Add screen reader testing note:</strong> &quot;If keyboard shortcuts don&#39;t work with your screen reader, use the mouse/trackpad to perform actions. We&#39;re working to improve shortcut coverage.&quot;</li>
 <li><strong>Add time note:</strong> &quot;Note: Estimate assumes notifications exist. If your inbox is empty, use the Done or All tabs as shown in the &#39;If You Get Stuck&#39; section.&quot;</li>
 </ol>
-<hr>
 <h3>Chapter 10: VS Code Basics</h3>
 <p><strong>[WARN]</strong> — Platform accessibility varies; parity issues need flagging.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Explicit: Complete <a href="00-pre-workshop-setup.html">Pre-Workshop Setup</a> first</li>
 <li>Assumes: GitHub account, browser, screen reader (implied)</li>
 <li>Realistic progression: happens after GitHub web skills</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>⚠️ <strong>ISSUE FOUND - Platform assumption:</strong></p>
+<p> <strong>ISSUE FOUND - Platform assumption:</strong></p>
 <ul>
 <li>Challenge explicitly uses <strong>github.dev</strong> (web-based VS Code)</li>
 <li><strong>Issue:</strong> Desktop VS Code installation is mentioned as alternative but not integrated into challenge steps</li>
@@ -515,7 +527,7 @@
 <li><strong>Text says:</strong> &quot;Open github.dev with <code>.</code> (period key)&quot; — but only works on GitHub.com</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Reference to Accessible Help in VS Code (product feature) exists</li>
 <li>Reference to Accessible View exists in VS Code Help</li>
@@ -523,13 +535,13 @@
 <li>Podcast reference (Episode 11) verified</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>⚠️ <strong>ISSUE FOUND - Competitive estimate:</strong></p>
+<p> <strong>ISSUE FOUND - Competitive estimate:</strong></p>
 <ul>
 <li>Stated: &quot;8-10 minutes&quot;</li>
 <li><strong>Reality assessment:</strong><ul>
 <li>Open github.dev with period key: 1 minute</li>
 <li>Enable screen reader mode (Shift+Alt+F1): 1 minute</li>
-<li><strong>Verification/troubleshooting if not already enabled: 1-3 minutes</strong> ⚠️</li>
+<li><strong>Verification/troubleshooting if not already enabled: 1-3 minutes</strong> </li>
 <li>Open Explorer (Ctrl+Shift+E or menu): 1-2 minutes</li>
 <li>Open README.md: 1 minute</li>
 <li>Open Symbols (Ctrl+Shift+O): 1-2 minutes</li>
@@ -541,7 +553,7 @@
 <li><strong>Risk:</strong> Keyboard shortcut discovery time can extend this significantly</li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>4 steps provided:<ol>
 <li>&quot;Confirm you are in a repository page before pressing <code>.</code>&quot; — targets root cause</li>
@@ -552,7 +564,7 @@
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>⚠️ <strong>ISSUES FOUND:</strong></p>
+<p> <strong>ISSUES FOUND:</strong></p>
 <ol>
 <li><p><strong>Screen reader mode availability varies:</strong></p>
 <ul>
@@ -571,7 +583,7 @@
 </li>
 </ol>
 <h4>Recommendations</h4>
-<p>🔴 <strong>Changes required:</strong></p>
+<p> <strong>Changes required:</strong></p>
 <ol>
 <li><p><strong>Clarify screen reader mode steps for Mac + VoiceOver:</strong></p>
 <pre><code class="hljs"><span class="hljs-keyword">If</span> you use VoiceOver <span class="hljs-keyword">on</span> Mac, <span class="hljs-keyword">skip</span> the Shift+<span class="hljs-keyword">Option</span>+F1 <span class="hljs-keyword">step</span>. 
@@ -590,11 +602,10 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 <strong>Add footnote:</strong> &quot;This challenge uses github.dev (browser-based). You can also complete it with VS Code Desktop following the same steps. See <a href="___">VS Code Desktop Guide</a> for setup.&quot;</p>
 </li>
 </ol>
-<hr>
 <h3>Chapter 11: Git &amp; Source Control</h3>
 <p><strong>[WARN]</strong> — Important prerequisites and time estimates need review.</p>
 <h4>Prerequisites Check</h4>
-<p>⚠️ <strong>ISSUE FOUND - Prerequisites incomplete:</strong></p>
+<p> <strong>ISSUE FOUND - Prerequisites incomplete:</strong></p>
 <ul>
 <li>Challenge states prerequisites in chapter header but <strong>not in challenge hub summary</strong></li>
 <li><strong>Missing from CHALLENGES.md Hub:</strong> Explicit statement: &quot;Must have completed Chapter 10 first&quot;</li>
@@ -603,7 +614,7 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 <li><strong>Risk:</strong> Students attempt challenge without proper environment configured</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Challenge set is clear: Clone → Commit → Push/PR</li>
 <li>Examples provided with specific repository URL: <code>https://github.com/community-access/vscode-sci-fi-themes.git</code></li>
@@ -611,7 +622,7 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 <li>Command examples clear and well-formatted</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Reference to sci-fi themes repository is a real, public repository</li>
 <li>Command examples reference real git commands</li>
@@ -620,7 +631,7 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 <li>Cross-references to Chapter 5, 6, 10 all exist</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>🔴 <strong>ISSUE FOUND - Estimate is aggressive:</strong></p>
+<p> <strong>ISSUE FOUND - Estimate is aggressive:</strong></p>
 <ul>
 <li><p>Stated: &quot;Under 10 minutes each challenge&quot;</p>
 </li>
@@ -634,7 +645,7 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 <li>Choose folder: 1-2 minutes (folder picker interaction)</li>
 <li>Wait for clone: 1-3 minutes (network dependent)</li>
 <li>Open folder when prompted: 1 minute</li>
-<li><strong>Subtotal: 6-10 minutes</strong> ⚠️ at the edge</li>
+<li><strong>Subtotal: 6-10 minutes</strong>  at the edge</li>
 </ul>
 </li>
 <li><p><strong>Challenge 2: Make one small commit</strong></p>
@@ -654,16 +665,16 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 <li>Create PR title and description: 2-3 minutes</li>
 <li>Reference issue with <code>Closes #XX</code>: 1 minute</li>
 <li>Submit: 1 minute</li>
-<li><strong>Subtotal: 6-8 minutes</strong> ✓</li>
+<li><strong>Subtotal: 6-8 minutes</strong></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><strong>Total estimate: 19-30 minutes for all 3 challenges</strong> vs. stated &quot;Under 10 minutes each&quot; ✓ (each is under 10, but barely)</p>
+<li><p><strong>Total estimate: 19-30 minutes for all 3 challenges</strong> vs. stated &quot;Under 10 minutes each&quot;  (each is under 10, but barely)</p>
 </li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>5-step recovery plan provided:<ol>
 <li>Confirm Command Palette works (<code>Ctrl+Shift+P</code>)</li>
@@ -675,7 +686,7 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>All keyboard shortcuts provided with Windows and Mac variants</li>
 <li>Source Control panel navigation explained for screen readers (uses tree structure)</li>
@@ -683,9 +694,9 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 <li>File navigation accessible with keyboard</li>
 </ul>
 <h4>Learning Moment</h4>
-<p>✅ <strong>Well-written:</strong> &quot;Local Git operations give you full control and immediate feedback.&quot;</p>
+<p> <strong>Well-written:</strong> &quot;Local Git operations give you full control and immediate feedback.&quot;</p>
 <h4>Recommendations</h4>
-<p>🔴 <strong>CHANGES REQUIRED:</strong></p>
+<p> <strong>CHANGES REQUIRED:</strong></p>
 <ol>
 <li><p><strong>Emphasize prerequisites in CHALLENGES.md hub:</strong></p>
 <pre><code class="hljs">**Prerequisites:** Complete Chapter <span class="hljs-number">10</span> (VS <span class="hljs-meta">Code</span> Basics) <span class="hljs-keyword">and</span> have github.dev or VS <span class="hljs-meta">Code</span> Desktop open.</code></pre>
@@ -700,11 +711,10 @@ the VS Code UI <span class="hljs-keyword">to</span> find these features. That<sp
 If download seems slow (&gt;3 minutes),<span class="hljs-built_in"> check </span>your connection<span class="hljs-built_in"> and </span>resubmit the clone command.</code></pre>
 </li>
 </ol>
-<hr>
 <h3>Chapter 12: GitHub Pull Requests Extension</h3>
 <p><strong>[WARN]</strong> — Critical assumption about write access not addressed upfront.</p>
 <h4>Prerequisites Check</h4>
-<p>⚠️ <strong>ISSUE FOUND - Write access assumption:</strong></p>
+<p> <strong>ISSUE FOUND - Write access assumption:</strong></p>
 <ul>
 <li>Challenge states: &quot;Install the GitHub Pull Requests extension&quot; and &quot;Check out a challenge PR&quot;</li>
 <li><strong>Implicit assumption:</strong> Students have write access to at least one repository to &quot;check out&quot; a PR branch</li>
@@ -712,14 +722,14 @@ If download seems slow (&gt;3 minutes),<span class="hljs-built_in"> check </span
 <li><strong>Risk:</strong> Challenge becomes unachievable without remediation</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Challenge set is clear: Install → Authenticate → Check out PR → Review → Post feedback</li>
 <li>Steps are in logical order</li>
 <li>Expected outcomes are specific</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Main chapter documentation (<code>docs/12-github-pull-requests-extension.md</code>) exists</li>
 <li>Podcast reference (Episode 13) verified</li>
@@ -727,7 +737,7 @@ If download seems slow (&gt;3 minutes),<span class="hljs-built_in"> check </span
 <li>Extension reference is to official Microsoft/GitHub extension</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>⚠️ <strong>ISSUE FOUND - Setup time underestimated:</strong></p>
+<p> <strong>ISSUE FOUND - Setup time underestimated:</strong></p>
 <ul>
 <li><p>Stated: &quot;2 guided challenges&quot; with no time estimate visible in hub</p>
 </li>
@@ -739,7 +749,7 @@ If download seems slow (&gt;3 minutes),<span class="hljs-built_in"> check </span
 <li>Search for &quot;GitHub Pull Requests&quot;: 1-2 minutes</li>
 <li>Install: 1-2 minutes (wait for download)</li>
 <li>Reload VS Code if prompted: 1 minute</li>
-<li><strong>Subtotal: 4-6 minutes</strong> ✓</li>
+<li><strong>Subtotal: 4-6 minutes</strong></li>
 </ul>
 </li>
 <li><p><strong>Challenge 2: Auth + check out + review</strong></p>
@@ -760,7 +770,7 @@ If download seems slow (&gt;3 minutes),<span class="hljs-built_in"> check </span
 </li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>5-step recovery plan:<ol>
 <li>Reload VS Code if install doesn&#39;t work</li>
@@ -772,7 +782,7 @@ If download seems slow (&gt;3 minutes),<span class="hljs-built_in"> check </span
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>⚠️ <strong>ISSUE FOUND - Screen reader testing needed:</strong></p>
+<p> <strong>ISSUE FOUND - Screen reader testing needed:</strong></p>
 <ul>
 <li>Extension is developed by Microsoft/GitHub and integrates VS Code UI</li>
 <li><strong>Question:</strong> Is PR list navigation accessible with screen readers?</li>
@@ -780,9 +790,9 @@ If download seems slow (&gt;3 minutes),<span class="hljs-built_in"> check </span
 <li><strong>Needs verification:</strong> Test with NVDA, JAWS, VoiceOver before deployment</li>
 </ul>
 <h4>Learning Moment</h4>
-<p>✅ <strong>Well-written:</strong> &quot;PR tooling multiplies your impact. Reviewing others&#39; work refines your own standards and builds community trust.&quot;</p>
+<p> <strong>Well-written:</strong> &quot;PR tooling multiplies your impact. Reviewing others&#39; work refines your own standards and builds community trust.&quot;</p>
 <h4>Recommendations</h4>
-<p>🔴 <strong>CHANGES REQUIRED:</strong></p>
+<p> <strong>CHANGES REQUIRED:</strong></p>
 <ol>
 <li><p><strong>Add explicit write-access note:</strong></p>
 <pre><code class="hljs">**Write Access Note:** You can<span class="hljs-built_in"> check </span>out PR branches only<span class="hljs-built_in"> if </span>you have write access to the repository. 
@@ -797,11 +807,10 @@ If the PR list doesn&#x27;</span>t appear <span class="hljs-keyword">in</span> E
 Authentication setup <span class="hljs-keyword">and</span> discovering <span class="hljs-keyword">the</span> PR list <span class="hljs-keyword">in</span> VS Code are learning experiences.</code></pre>
 </li>
 </ol>
-<hr>
 <h3>Chapter 13: GitHub Copilot</h3>
 <p><strong>[WARN]</strong> — Subscription prerequisite not clearly flagged; sci-fi theme is engaging but adds scope.</p>
 <h4>Prerequisites Check</h4>
-<p>⚠️ <strong>ISSUE FOUND - Subscription requirement buried:</strong></p>
+<p> <strong>ISSUE FOUND - Subscription requirement buried:</strong></p>
 <ul>
 <li>Challenge assumes: &quot;GitHub Copilot Chat extension installed and authenticated&quot;</li>
 <li><strong>Problem:</strong> GitHub Copilot requires a paid subscription ($20/month) OR organization access</li>
@@ -809,7 +818,7 @@ Authentication setup <span class="hljs-keyword">and</span> discovering <span cla
 <li><strong>Impact:</strong> This is a major blocker not flagged in CHALLENGES.md hub</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Challenge set is clear: Install → Configure → Use</li>
 <li>Sci-fi theme context (vscode-sci-fi-themes repo) is fun and motivating</li>
@@ -817,7 +826,7 @@ Authentication setup <span class="hljs-keyword">and</span> discovering <span cla
 <li>Settings.json customization is explained (but assumes YAML familiarity)</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Reference to vscode-sci-fi-themes repository is real and public</li>
 <li>Main chapter documentation (<code>docs/13-github-copilot.md</code>) exists</li>
@@ -825,7 +834,7 @@ Authentication setup <span class="hljs-keyword">and</span> discovering <span cla
 <li>Cross-references to Chapter 10, 11 exist</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>⚠️ <strong>ISSUE FOUND - Reality testing needed:</strong></p>
+<p> <strong>ISSUE FOUND - Reality testing needed:</strong></p>
 <ul>
 <li><p>Stated: &quot;3 guided challenges&quot; with no time estimate in hub</p>
 </li>
@@ -837,7 +846,7 @@ Authentication setup <span class="hljs-keyword">and</span> discovering <span cla
 <li>Search &quot;GitHub Copilot Chat&quot;: 1-2 minutes</li>
 <li>Install: 1-2 minutes</li>
 <li>Authenticate: 1-2 minutes (may open browser)</li>
-<li><strong>Subtotal: 4-7 minutes</strong> ✓</li>
+<li><strong>Subtotal: 4-7 minutes</strong></li>
 </ul>
 </li>
 <li><p><strong>Challenge 2: Clone repo + ask Copilot</strong></p>
@@ -869,7 +878,7 @@ Authentication setup <span class="hljs-keyword">and</span> discovering <span cla
 </li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>5-step recovery:<ol>
 <li>Reload VS Code if install fails</li>
@@ -881,7 +890,7 @@ Authentication setup <span class="hljs-keyword">and</span> discovering <span cla
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Copilot Chat requires Accessible View (<code>Alt+F2</code> / <code>Option+F2</code>) for screen reader users to read responses</li>
 <li>This is documented in main chapter text (lines discussing Accessible View)</li>
@@ -889,12 +898,12 @@ Authentication setup <span class="hljs-keyword">and</span> discovering <span cla
 <li>No emoji in challenge instructions themselves</li>
 </ul>
 <h4>Learning Moment</h4>
-<p>✅ <strong>Excellent:</strong> &quot;AI assistance amplifies clarity... May your code always load with cosmic flair! ✨&quot;</p>
+<p> <strong>Excellent:</strong> &quot;AI assistance amplifies clarity... May your code always load with cosmic flair! &quot;</p>
 <h4>Recommendations</h4>
-<p>🔴 <strong>CHANGES REQUIRED:</strong></p>
+<p> <strong>CHANGES REQUIRED:</strong></p>
 <ol>
 <li><p><strong>Add subscription warning at top of CHALLENGES.md Chapter 13 section:</strong></p>
-<pre><code class="hljs">⚠️ <span class="hljs-comment">**Prerequisite: GitHub Copilot Subscription**
+<pre><code class="hljs"> <span class="hljs-comment">**Prerequisite: GitHub Copilot Subscription**
 
 GitHub Copilot Chat requires either:
 - An active GitHub Copilot subscription ($20/month), OR
@@ -920,18 +929,17 @@ When you copy Copilot&#x27;</span>s generated settings:
 This includes waiting <span class="hljs-keyword">for</span> API responses <span class="hljs-keyword">and</span> learning settings.json syntax.</code></pre>
 </li>
 </ol>
-<hr>
 <h3>Chapter 14: Accessible Code Review</h3>
 <p><strong>[PASS]</strong> — Well-structured review practice with excellent accessibility focus.</p>
 <h4>Prerequisites Check</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Explicit: Complete Chapter 5 (PRs) and Chapter 12 (PR extension)</li>
 <li>Stated prerequisites: &quot;Complete Ch 5 and Ch 12&quot;</li>
 <li>Accessible progression: move from opening PRs (Ch 5) to reviewing them (Ch 14)</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>Challenge set is clear: Review PR → Leave 2-3 comments → Submit verdict (approve/request-changes/comment)</li>
 <li>Expected outcomes are specific:<ul>
@@ -943,7 +951,7 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 <li>Learning Room examples explained (files from learning-room docs)</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li>References to chapter documentation files exist:<ul>
 <li><code>docs/keyboard-shortcuts.md</code> (shortcut tables with intentional errors)</li>
@@ -956,7 +964,7 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 <li>Podcast reference (Episode 15) exists</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
 <li><p>Stated: &quot;2 guided challenges&quot; with no explicit time in hub</p>
 </li>
@@ -987,7 +995,7 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 </li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>EXCELLENT guidance provided:</strong></p>
+<p> <strong>EXCELLENT guidance provided:</strong></p>
 <ol>
 <li>&quot;If Files Changed tab won&#39;t open, reload the PR page and retry&quot; — specific recovery</li>
 <li>&quot;If inline comment button is hard to find, use the file tree to jump between files (<code>Press 3</code> in NVDA/JAWS)&quot; — screen reader–specific workaround</li>
@@ -996,7 +1004,7 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 <li>&quot;Ask facilitator to help you navigate one diff and model one constructive comment&quot; — hands-on escalation</li>
 </ol>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>EXCEPTIONAL:</strong></p>
+<p> <strong>EXCEPTIONAL:</strong></p>
 <ul>
 <li>Files Changed tab navigation for screen readers is thoroughly documented in main chapter</li>
 <li>Inline comment button locations explained specifically for NVDA/JAWS (Press 3 in file tree)</li>
@@ -1005,12 +1013,11 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 <li>Learning moment connects review to community building (not just technical quality)</li>
 </ul>
 <h4>Recommendations</h4>
-<p>✅ <strong>No changes required</strong> — Chapter 14 is a strong model for teaching accessible workflows. The &quot;If You Get Stuck&quot; section is particularly well-written.</p>
-<hr>
+<p> <strong>No changes required</strong> — Chapter 14 is a strong model for teaching accessible workflows. The &quot;If You Get Stuck&quot; section is particularly well-written.</p>
 <h3>Chapter 15: Issue Templates</h3>
 <p><strong>[WARN]</strong> — Prerequisites scattered; YAML complexity underestimated; guidance clarity needs improvement.</p>
 <h4>Prerequisites Check</h4>
-<p>⚠️ <strong>ISSUE FOUND - Prerequisites are fragmented:</strong></p>
+<p> <strong>ISSUE FOUND - Prerequisites are fragmented:</strong></p>
 <ul>
 <li>Challenge mentions prerequisites in chapter header:<ul>
 <li>Chapter 4  (understand issues)</li>
@@ -1024,10 +1031,10 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 <li><strong>Risk:</strong> Students may not realize they need write access to their own repo BEFORE starting challenges</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>⚠️ <strong>ISSUE FOUND - Complexity underestimated:</strong></p>
+<p> <strong>ISSUE FOUND - Complexity underestimated:</strong></p>
 <ul>
-<li>Challenge Set 1 (Analyze): &quot;Read the registration template&quot; — straightforward ✓</li>
-<li>Challenge Set 2 (Remix): &quot;Adapt registration template for new context&quot; — <strong>vague</strong> ⚠️<ul>
+<li>Challenge Set 1 (Analyze): &quot;Read the registration template&quot; — straightforward </li>
+<li>Challenge Set 2 (Remix): &quot;Adapt registration template for new context&quot; — <strong>vague</strong> <ul>
 <li>Says &quot;Update field names, labels, descriptions, and dropdown options&quot;</li>
 <li>But doesn&#39;t show what a remixed template looks like</li>
 <li>YAML syntax complexity not visualized upfront</li>
@@ -1036,16 +1043,16 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 <li>Challenge Set 3 (Create): &quot;Create a Markdown template&quot; — <strong>optional but needs syntax example</strong></li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>✅ <strong>Verified:</strong></p>
+<p> <strong>Verified:</strong></p>
 <ul>
-<li><code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code> exists and is readable ✓</li>
+<li><code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code> exists and is readable </li>
 <li>Main chapter documentation (<code>docs/15-issue-templates.md</code>) exists</li>
 <li>Podcast reference (Episode 16) verified</li>
 <li>Cross-reference to Chapter 16 provided</li>
 <li>Appendix C (Accessibility Standards) referenced</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>🔴 <strong>ISSUE FOUND - Time may be significantly high:</strong></p>
+<p> <strong>ISSUE FOUND - Time may be significantly high:</strong></p>
 <ul>
 <li><p>Stated: In chapter header: &quot;1.5 hours&quot;</p>
 </li>
@@ -1088,7 +1095,7 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 </li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Adequate coverage:</strong></p>
+<p> <strong>Adequate coverage:</strong></p>
 <ul>
 <li>6-step recovery plan provided:<ol>
 <li>Can&#39;t find registration template → direct path: <code>.github/ISSUE_TEMPLATE/workshop-registration.yml</code></li>
@@ -1101,7 +1108,7 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>⚠️ <strong>ISSUE FOUND - YAML syntax complexity:</strong></p>
+<p> <strong>ISSUE FOUND - YAML syntax complexity:</strong></p>
 <ul>
 <li>YAML is inherently less accessible than Markdown due to whitespace sensitivity</li>
 <li><strong>Problem:</strong> Indentation errors are hard to catch with screen readers (spaces vs tabs)</li>
@@ -1109,9 +1116,9 @@ This includes waiting <span class="hljs-keyword">for</span> API responses <span 
 <li><strong>Solution needed:</strong> Show students how to validate YAML (VS Code linter, or online validator)</li>
 </ul>
 <h4>Learning Moment</h4>
-<p>✅ <strong>Excellent:</strong> Explains why professional templates exist and how students&#39; remix becomes a teaching example.</p>
+<p> <strong>Excellent:</strong> Explains why professional templates exist and how students&#39; remix becomes a teaching example.</p>
 <h4>Recommendations</h4>
-<p>🔴 <strong>CHANGES REQUIRED:</strong></p>
+<p> <strong>CHANGES REQUIRED:</strong></p>
 <ol>
 <li><p><strong>Add consolidated prerequisites block at top of CHALLENGES.md Chapter 15:</strong></p>
 <pre><code class="hljs"><span class="hljs-strong">**Prerequisites:**</span>
@@ -1152,11 +1159,10 @@ This <span class="hljs-built_in">is</span> normal! The <span class="hljs-string"
 Don<span class="hljs-comment">&#x27;t hesitate to ask your facilitator if YAML indentation confuses you—this is a common question.</span></code></pre>
 </li>
 </ol>
-<hr>
 <h3>Chapter 16: Accessibility Agents</h3>
 <p><strong>[WARN]</strong> — Unfocused scope (55 agents); discovery method unclear; prerequisite &quot;Skill First&quot; principle needs reinforcement.</p>
 <h4>Prerequisites Check</h4>
-<p>⚠️ <strong>ISSUE FOUND - Skill-first prerequisite needs upfront validation:</strong></p>
+<p> <strong>ISSUE FOUND - Skill-first prerequisite needs upfront validation:</strong></p>
 <ul>
 <li>Challenge states: &quot;Verify you have completed manual skill before using agent&quot;</li>
 <li>Provides prerequisite table mapping agents to skills</li>
@@ -1165,7 +1171,7 @@ Don<span class="hljs-comment">&#x27;t hesitate to ask your facilitator if YAML i
 <li><strong>Risk:</strong> Students use agents without understanding their limitations</li>
 </ul>
 <h4>Instructions Clarity</h4>
-<p>⚠️ <strong>ISSUE FOUND - Discovery method is unclear:</strong></p>
+<p> <strong>ISSUE FOUND - Discovery method is unclear:</strong></p>
 <ul>
 <li>Challenge describes 3 main activities:<ol>
 <li>Agent Discovery Mapping (match agents to skills)</li>
@@ -1178,7 +1184,7 @@ Don<span class="hljs-comment">&#x27;t hesitate to ask your facilitator if YAML i
 <li><strong>Problem:</strong> 55 agents is overwhelming with no taxonomy or recommended starting points</li>
 </ul>
 <h4>File/Link Validation</h4>
-<p>⚠️ <strong>ISSUE FOUND - External repo link:</strong></p>
+<p> <strong>ISSUE FOUND - External repo link:</strong></p>
 <ul>
 <li>Challenge references: <code>https://github.com/community-access/accessibility-agents</code></li>
 <li><strong>Problem:</strong> This is external to git-going-with-github repo</li>
@@ -1186,7 +1192,7 @@ Don<span class="hljs-comment">&#x27;t hesitate to ask your facilitator if YAML i
 <li><strong>Risk:</strong> Challenge becomes inaccessible if upstream project changes structure</li>
 </ul>
 <h4>Time Estimate Accuracy</h4>
-<p>⚠️ <strong>ISSUE FOUND - Highly variable scope:</strong></p>
+<p> <strong>ISSUE FOUND - Highly variable scope:</strong></p>
 <ul>
 <li><p>Stated time in chapter header: &quot;1.5 hours&quot;</p>
 </li>
@@ -1227,7 +1233,7 @@ Don<span class="hljs-comment">&#x27;t hesitate to ask your facilitator if YAML i
 </li>
 </ul>
 <h4>&quot;If You Get Stuck&quot; Guidance</h4>
-<p>✅ <strong>Adequate coverage:</strong></p>
+<p> <strong>Adequate coverage:</strong></p>
 <ul>
 <li>6-step recovery:<ol>
 <li>Can&#39;t find agents → examples: <code>@daily-briefing</code>, <code>@issue-tracker</code></li>
@@ -1240,7 +1246,7 @@ Don<span class="hljs-comment">&#x27;t hesitate to ask your facilitator if YAML i
 </li>
 </ul>
 <h4>Accessibility Assessment</h4>
-<p>✅ <strong>Generally accessible:</strong></p>
+<p> <strong>Generally accessible:</strong></p>
 <ul>
 <li>Agents run in Copilot Chat (requires Accessible View for screen reader users)</li>
 <li>Agent instructions are text-based (accessible)</li>
@@ -1248,9 +1254,9 @@ Don<span class="hljs-comment">&#x27;t hesitate to ask your facilitator if YAML i
 <li>No specific accessibility concerns</li>
 </ul>
 <h4>Learning Moment</h4>
-<p>✅ <strong>Excellent:</strong> Explains &quot;Skill First, Agent Second&quot; principle and connects agents to manual expertise.</p>
+<p> <strong>Excellent:</strong> Explains &quot;Skill First, Agent Second&quot; principle and connects agents to manual expertise.</p>
 <h4>Recommendations</h4>
-<p>🔴 <strong>CHANGES REQUIRED:</strong></p>
+<p> <strong>CHANGES REQUIRED:</strong></p>
 <ol>
 <li><p><strong>Add Agent Discovery Framework:</strong></p>
 <pre><code class="hljs">**How <span class="hljs-keyword">to</span> Find <span class="hljs-literal">and</span> Explore Agents:**
@@ -1320,7 +1326,6 @@ is the most valuable data we can collect.
 Any feedback is better than none.</span></code></pre>
 </li>
 </ol>
-<hr>
 <h2>Summary Table: Issue Severity &amp; Priority</h2>
 <table>
 <thead>
@@ -1335,98 +1340,97 @@ Any feedback is better than none.</span></code></pre>
 <tbody><tr>
 <td>4</td>
 <td>None</td>
-<td>✅</td>
+<td></td>
 <td>Deploy as-is</td>
 <td>-</td>
 </tr>
 <tr>
 <td>5</td>
 <td>None</td>
-<td>✅</td>
+<td></td>
 <td>Deploy as-is</td>
 <td>-</td>
 </tr>
 <tr>
 <td>6</td>
 <td>None</td>
-<td>✅</td>
+<td></td>
 <td>Deploy as-is</td>
 <td>-</td>
 </tr>
 <tr>
 <td>7</td>
 <td>Evaluation criteria clarity</td>
-<td>🟡 Medium</td>
+<td>Medium</td>
 <td>Add eval criteria + time estimate</td>
 <td>Before Day 2</td>
 </tr>
 <tr>
 <td>8</td>
 <td>Time estimate missing</td>
-<td>🟡 Minor</td>
+<td>Minor</td>
 <td>Add time estimate</td>
 <td>Before Day 2</td>
 </tr>
 <tr>
 <td>9</td>
 <td>Time estimate + screen reader testing</td>
-<td>🟡 Medium</td>
+<td>Medium</td>
 <td>Add completion evidence, test with AT</td>
 <td>Before Day 2</td>
 </tr>
 <tr>
 <td>10</td>
 <td>Platform + AT parity gaps</td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Test Mac/VoiceOver; clarify github.dev vs desktop</td>
 <td>Before Day 2</td>
 </tr>
 <tr>
 <td>11</td>
 <td>Prerequisites + time estimate</td>
-<td>🟡 Medium</td>
+<td>Medium</td>
 <td>Emphasize prereqs; revise time</td>
 <td>Before Day 2</td>
 </tr>
 <tr>
 <td>12</td>
 <td>Write access assumption + AT testing</td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Add access note; test extension with screen readers</td>
 <td>Before Day 2</td>
 </tr>
 <tr>
 <td>13</td>
 <td>Subscription requirement buried</td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Flag upfront; add warning; add time estimate</td>
 <td><strong>Before Day 2</strong></td>
 </tr>
 <tr>
 <td>14</td>
 <td>None</td>
-<td>✅</td>
+<td></td>
 <td>Deploy as-is (model chapter)</td>
 <td>-</td>
 </tr>
 <tr>
 <td>15</td>
 <td>Prerequisites scattered + complexity underestimated</td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Consolidate prereqs; add YAML validation; show example</td>
 <td>Before Day 2</td>
 </tr>
 <tr>
 <td>16</td>
 <td>Overwhelm (55 agents) + discovery unclear + skill validation</td>
-<td>🔴 High</td>
+<td>High</td>
 <td>Add discovery framework; reduce scope guidance; emphasize capstone</td>
 <td>Before Day 2</td>
 </tr>
 </tbody></table>
-<hr>
 <h2>Critical Issues Requiring Immediate Action</h2>
-<h3>🔴 Before Students Begin Day 2:</h3>
+<h3>Before Students Begin Day 2:</h3>
 <ol>
 <li><p><strong>Chapter 13 (Copilot):</strong> Add Subscription Requirement Warning</p>
 <ul>
@@ -1453,13 +1457,12 @@ Any feedback is better than none.</span></code></pre>
 </ul>
 </li>
 </ol>
-<h3>🟡 Before Students Begin (or Early Day 1 Follow-up):</h3>
+<h3>Before Students Begin (or Early Day 1 Follow-up):</h3>
 <ol start="5">
 <li><strong>Chapter 9:</strong> Add completion evidence requirement + test notifications UI with screen readers</li>
 <li><strong>Chapter 11:</strong> Emphasize prerequisites; test git clone UI accessibility</li>
 <li><strong>Chapters 7, 8:</strong> Add missing time estimates</li>
 </ol>
-<hr>
 <h2>Files Requiring Updates</h2>
 <h3>CHALLENGES.md (learning-room/docs/)</h3>
 <ul>
@@ -1484,7 +1487,6 @@ Any feedback is better than none.</span></code></pre>
 <ul>
 <li><input aria-label="" disabled="" type="checkbox"> <code>.github/ISSUE_TEMPLATE/challenge-hub.md</code>: May need template variables for Chapter 13 subscription callout</li>
 </ul>
-<hr>
 <h2>Testing &amp;Validation Checklist</h2>
 <p>Before deploying challenges to students:</p>
 <h3>Screen Reader Testing (NVDA, JAWS, VoiceOver)</h3>
@@ -1507,11 +1509,9 @@ Any feedback is better than none.</span></code></pre>
 <li><input aria-label="Students can complete Chapter N without having completed Chapter N-1 (if claimed as standalone)" disabled="" type="checkbox"> Students can complete Chapter N without having completed Chapter N-1 (if claimed as standalone)</li>
 <li><input aria-label="Time estimates hold true for 3-5 real students of varying backgrounds" disabled="" type="checkbox"> Time estimates hold true for 3-5 real students of varying backgrounds</li>
 </ul>
-<hr>
 <h2>Conclusion</h2>
 <p>The challenges are <strong>well-intentioned and generally well-designed</strong>, with strong pedagogical progression and accessibility-focused documentation. However, <strong>four chapters (10, 12, 13, 15, 16) require significant revisions before student deployment</strong> to avoid frustration and blockers.</p>
-<p><strong>Recommended action:</strong> Prioritize the 🔴 High-severity issues (Chapters 13, 15, 16) for immediate fixes, then conduct screen reader testing on Chapters 10 and 12. All changes can be completed in 4-6 hours.</p>
-<hr>
+<p><strong>Recommended action:</strong> Prioritize the  High-severity issues (Chapters 13, 15, 16) for immediate fixes, then conduct screen reader testing on Chapters 10 and 12. All changes can be completed in 4-6 hours.</p>
 <p><strong>Audit Prepared:</strong> March 5, 2026<br><strong>Audit Performed By:</strong> GitHub Copilot (Validation Agent)<br><strong>Next Review:</strong> Post-deployment feedback incorporation (recommended after Day 2)</p>
 
   </main>
