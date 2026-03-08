@@ -1,4 +1,4 @@
-name: Build EPUB, Word, DAISY, and BRF
+name: Build EPUB, Word, and BRF
 
 on:
   push:
@@ -53,23 +53,14 @@ jobs:
             sleep 2
           done
 
-      - name: Convert EPUB to DAISY 2.02 (text-only, no TTS required)
-        continue-on-error: true
-        run: |
-          mkdir -p epub/daisy
-          pipeline2/daisy-pipeline/cli/dp2 epub3-to-daisy202 \
-            --source "$(pwd)/epub/git-going-with-github.epub" \
-            --output "$(pwd)/epub/daisy/" || echo "DAISY conversion failed - check dp2 logs above"
-          ls epub/daisy/ || echo "No DAISY output produced"
-
-      - name: Convert EPUB to BRF (Braille, no TTS required)
+      - name: Convert EPUB to BRF (Braille — no TTS required)
         continue-on-error: true
         run: |
           mkdir -p epub/brf
           pipeline2/daisy-pipeline/cli/dp2 epub3-to-pef \
             --source "$(pwd)/epub/git-going-with-github.epub" \
             --output "$(pwd)/epub/brf/" \
-            --output-format brf || echo "BRF conversion failed - check dp2 logs above"
+            --output-file-format "(-daisy-locale: en-US)" || echo "BRF conversion failed - check dp2 logs above"
           ls epub/brf/ || echo "No BRF output produced"
 
       - name: Upload EPUB artifact
@@ -84,14 +75,6 @@ jobs:
         with:
           name: git-going-with-github-word
           path: epub/git-going-with-github.docx
-          retention-days: 90
-
-      - name: Upload DAISY artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: git-going-with-github-daisy
-          path: epub/daisy/
-          if-no-files-found: warn
           retention-days: 90
 
       - name: Upload BRF artifact
