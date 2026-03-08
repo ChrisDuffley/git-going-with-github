@@ -241,8 +241,6 @@ Without this context, maintainers ask follow-up questions - which delays the fix
 
 Templates live in a specific folder in your repository:
 
-![](images/template-folder-tree.svg)
-
 ### Description
 
 Templates live inside your-repo/.github/. The ISSUE_TEMPLATE/ subfolder contains: bug_report.md (Markdown template), feature_request.md (Markdown template), accessibility-bug.yml (YAML form template), and config.yml (template chooser configuration). The pull_request_template.md file sits directly in .github/, not inside ISSUE_TEMPLATE/.

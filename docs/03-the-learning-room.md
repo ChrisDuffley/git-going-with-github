@@ -23,8 +23,6 @@ Before starting Chapter 4 challenges, students should be able to:
 2. Explain issue -> branch -> PR -> review -> merge.
 3. Identify where bot feedback appears on PRs.
 
-![](images/learning-room-tree.svg)
-
 #### Description
 
 The learning-room is a single shared repository. It has a protected main branch, and each student opens pull requests against it. For example: Student A's PR #12 is open and assigned to Student B for review, Student B's PR #13 is assigned to Student C, Student C's PR #14 is assigned to Student A, and Student A's earlier PR #11 has already been merged. More PRs appear as students contribute.
