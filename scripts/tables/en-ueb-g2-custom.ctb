@@ -1,0 +1,8 @@
+# Custom UEB Grade 2 Braille table overlay.
+# Inherit the base contractions directly from liblouis.
+
+include en-ueb-g2.ctb
+
+# Local overrides requested for this project.
+always er 12456
+always ow 246

@@ -15,7 +15,10 @@ import louis
 NABCC = " A1B'K2L@CIF/MSP\"E3H9O6R^DJG>NTQ,*5<-U8V.%[$+X!&;:4\\0Z7(_?W]#Y)="
 
 # Non-UEB US English Grade 2 table.
-US_ENGLISH_TABLE = ["en-us-g2.ctb"]
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+custom_table = os.path.join(script_dir, "tables", "en-us-g2-custom.ctb")
+US_ENGLISH_TABLE = [custom_table]
 
 
 def unicode_braille_to_brf(text):

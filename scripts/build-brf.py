@@ -32,6 +32,11 @@ def main():
     input_file = sys.argv[1] if len(sys.argv) > 1 else "/tmp/book.txt"
     output_file = sys.argv[2] if len(sys.argv) > 2 else "output.brf"
 
+    # Use custom UEB table with corrected contractions
+    import os
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    custom_table = os.path.join(script_dir, "tables", "en-ueb-g2-custom.ctb")
+    
     with open(input_file, encoding="utf-8", errors="replace") as f:
         lines = f.read().split("\n")
 
@@ -39,7 +44,7 @@ def main():
     for line in lines:
         if line.strip():
             try:
-                braille = louis.translateString(["en-ueb-g2.ctb"], line)
+                braille = louis.translateString([custom_table], line)
                 brf_lines.append(unicode_braille_to_brf(braille))
             except Exception:
                 brf_lines.append(line[:80])
