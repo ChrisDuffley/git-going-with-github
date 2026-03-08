@@ -140,7 +140,7 @@
             // Highlight matching words in snippet
             words.forEach(function (w) {
               if (!w) return;
-              var escaped = w.replace(/[-[]/{}()*+?.\^$|]/g, '');
+              var escaped = w.replace(/[^a-zA-Z0-9]/g, '');
               if (!escaped) return;
               var re = new RegExp('(' + escaped + ')', 'gi');
               snippet = snippet.replace(re, '<mark>$1</mark>');
