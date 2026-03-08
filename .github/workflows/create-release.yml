@@ -40,10 +40,12 @@ jobs:
       - name: Install liblouis (braille translator)
         run: sudo apt-get install -y liblouis-bin python3-louis
 
-      - name: Build BRF
+      - name: Build BRF variants
         run: |
+          mkdir -p epub/brf
           pandoc epub/git-going-with-github.epub -f epub -t plain -o /tmp/book.txt
-          python3 scripts/build-brf.py /tmp/book.txt epub/git-going-with-github.brf
+          python3 scripts/build-brf.py /tmp/book.txt epub/brf/git-going-with-github.ueb-g2.brf
+          python3 scripts/build-brf-us.py /tmp/book.txt epub/brf/git-going-with-github.us-g2.brf
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -60,8 +62,10 @@ jobs:
             |--------|----------|
             | **EPUB** | E-readers, Apple Books, Voice Dream, DAISY players |
             | **Word (.docx)** | Windows screen readers (JAWS, NVDA), Microsoft Word |
-            | **BRF** | Braille displays and embossers (UEB Grade 2) |
+            | **BRF (UEB Grade 2)** | Braille displays and embossers using UEB contractions |
+            | **BRF (US English Grade 2, non-UEB)** | Braille displays and embossers using US English Grade 2 table |
           files: |
             epub/git-going-with-github.epub
             epub/git-going-with-github.docx
-            epub/git-going-with-github.brf
+            epub/brf/git-going-with-github.ueb-g2.brf
+            epub/brf/git-going-with-github.us-g2.brf

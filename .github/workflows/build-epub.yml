@@ -9,6 +9,8 @@ on:
       - 'epub/epub.css'
       - 'epub/pdf.css'
       - 'scripts/build-epub.js'
+      - 'scripts/build-brf.py'
+      - 'scripts/build-brf-us.py'
   workflow_dispatch:
 
 permissions:
@@ -19,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+      uses: actions/checkout@v4
 
       - name: Install Pandoc
         run: |
@@ -37,12 +39,13 @@ jobs:
       - name: Install liblouis (braille translator — no TTS needed)
         run: sudo apt-get install -y liblouis-bin python3-louis
 
-      - name: Convert EPUB to BRF (Braille — no TTS required)
+      - name: Convert EPUB to BRF variants (Braille — no TTS required)
         continue-on-error: true
         run: |
           mkdir -p epub/brf
           pandoc epub/git-going-with-github.epub -f epub -t plain -o /tmp/book.txt
-          python3 scripts/build-brf.py /tmp/book.txt epub/brf/git-going-with-github.brf
+          python3 scripts/build-brf.py /tmp/book.txt epub/brf/git-going-with-github.ueb-g2.brf
+          python3 scripts/build-brf-us.py /tmp/book.txt epub/brf/git-going-with-github.us-g2.brf
           ls -lh epub/brf/
 
       - name: Upload EPUB artifact
