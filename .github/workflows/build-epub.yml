@@ -57,14 +57,15 @@ jobs:
         run: |
           mkdir -p epub/daisy
           pipeline2/daisy-pipeline/cli/dp2 epub3-to-daisy3 \
-            --epub epub/git-going-with-github.epub \
+            --source epub/git-going-with-github.epub \
             --output epub/daisy/
 
       - name: Convert EPUB to BRF (Braille)
         run: |
+          mkdir -p epub/brf
           pipeline2/daisy-pipeline/cli/dp2 epub3-to-pef \
-            --epub epub/git-going-with-github.epub \
-            --output epub/ \
+            --source epub/git-going-with-github.epub \
+            --output epub/brf/ \
             --output-format brf
 
       - name: Upload EPUB artifact
@@ -92,7 +93,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: git-going-with-github-brf
-          path: epub/git-going-with-github.brf
+          path: epub/brf/
           retention-days: 90
 
       - name: Commit outputs to repository
