@@ -81,62 +81,62 @@
 This is the single repository students clone. Everything they need for both days is here:
 
 ```
-learning-room/                  ← workshop repository root
-├── README.md                   ← participant-facing start page
-├── CONTRIBUTING.md             ← contribution guide
-├── CODE_OF_CONDUCT.md          ← community standards
-├── FACILITATOR.md              ← this file
-├── .gitignore
-├── .github/
-│   ├── ISSUE_TEMPLATE/
-│   │   ├── config.yml          ← disables blank issues, links to Skills modules
-│   │   ├── accessibility-bug.yml ← accessibility bug report YAML form
-│   │   └── feature-request.yml ← feature/improvement request YAML form
-│   ├── PULL_REQUEST_TEMPLATE.md ← PR template with accessibility checklist
-│   ├── agents/                 ← Accessibility Agents - 55 Copilot agents across 3 teams
-│   │   ├── daily-briefing.agent.md
-│   │   ├── issue-tracker.agent.md
-│   │   ├── pr-review.agent.md
-│   │   ├── analytics.agent.md
-│   │   ├── insiders-a11y-tracker.agent.md
-│   │   ├── template-builder.agent.md
-│   │   └── preferences.example.md
-│   └── prompts/                ← 54+ slash commands for Copilot Chat
-│       ├── a11y-update.prompt.md
-│       ├── create-issue.prompt.md
-│       ├── daily-briefing.prompt.md
-│       ├── explain-code.prompt.md
-│       ├── review-pr.prompt.md
-│       ├── triage.prompt.md
-│       └── ... (48 more - see docs/appendix-v-accessibility-agents-reference.md)
-├── docs/                       ← full workshop curriculum (16 chapters + appendices A-X)
-│   ├── 00-pre-workshop-setup.md
-│   ├── 01-understanding-github-web-structure.md
-│   ├── 02-navigating-repositories.md
-│   ├── 03-the-learning-room.md
-│   ├── 04-working-with-issues.md
-│   ├── 05-working-with-pull-requests.md
-│   ├── 06-merge-conflicts.md
-│   ├── 07-culture-etiquette.md
-│   ├── 08-labels-milestones-projects.md
-│   ├── 09-notifications.md
-│   ├── 10-vscode-basics.md
-│   ├── 11-git-source-control.md
-│   ├── 12-github-pull-requests-extension.md
-│   ├── 13-github-copilot.md
-│   ├── 14-accessible-code-review.md
-│   ├── 15-issue-templates.md
-│   ├── 16-accessibility-agents.md
-│   ├── appendix-a-glossary.md              ← every term explained
-│   ├── appendix-b-screen-reader-cheatsheet.md ← full shortcut reference
-│   ├── appendix-c through appendix-x      ← deep-dive references (C-X)
-│   └── (see appendix-u-resources.md for complete file listing)
-└── learning-room/              ← practice content (contribution sprint targets)
-    ├── README.md
-    └── docs/
-        ├── welcome.md          ← has [TODO] gaps for participants to complete
-        ├── keyboard-shortcuts.md ← has intentional errors and a heading hierarchy problem
-        └── setup-guide.md      ← has a broken URL and [TODO] markers
+learning-room/                  <- workshop repository root
++-- README.md                   <- participant-facing start page
++-- CONTRIBUTING.md             <- contribution guide
++-- CODE_OF_CONDUCT.md          <- community standards
++-- FACILITATOR.md              <- this file
++-- .gitignore
++-- .github/
+|   +-- ISSUE_TEMPLATE/
+|   |   +-- config.yml          <- disables blank issues, links to Skills modules
+|   |   +-- accessibility-bug.yml <- accessibility bug report YAML form
+|   |   +-- feature-request.yml <- feature/improvement request YAML form
+|   +-- PULL_REQUEST_TEMPLATE.md <- PR template with accessibility checklist
+|   +-- agents/                 <- Accessibility Agents - 55 Copilot agents across 3 teams
+|   |   +-- daily-briefing.agent.md
+|   |   +-- issue-tracker.agent.md
+|   |   +-- pr-review.agent.md
+|   |   +-- analytics.agent.md
+|   |   +-- insiders-a11y-tracker.agent.md
+|   |   +-- template-builder.agent.md
+|   |   +-- preferences.example.md
+|   +-- prompts/                <- 54+ slash commands for Copilot Chat
+|       +-- a11y-update.prompt.md
+|       +-- create-issue.prompt.md
+|       +-- daily-briefing.prompt.md
+|       +-- explain-code.prompt.md
+|       +-- review-pr.prompt.md
+|       +-- triage.prompt.md
+|       +-- ... (48 more - see docs/appendix-v-accessibility-agents-reference.md)
++-- docs/                       <- full workshop curriculum (16 chapters + appendices A-X)
+|   +-- 00-pre-workshop-setup.md
+|   +-- 01-understanding-github-web-structure.md
+|   +-- 02-navigating-repositories.md
+|   +-- 03-the-learning-room.md
+|   +-- 04-working-with-issues.md
+|   +-- 05-working-with-pull-requests.md
+|   +-- 06-merge-conflicts.md
+|   +-- 07-culture-etiquette.md
+|   +-- 08-labels-milestones-projects.md
+|   +-- 09-notifications.md
+|   +-- 10-vscode-basics.md
+|   +-- 11-git-source-control.md
+|   +-- 12-github-pull-requests-extension.md
+|   +-- 13-github-copilot.md
+|   +-- 14-accessible-code-review.md
+|   +-- 15-issue-templates.md
+|   +-- 16-accessibility-agents.md
+|   +-- appendix-a-glossary.md              <- every term explained
+|   +-- appendix-b-screen-reader-cheatsheet.md <- full shortcut reference
+|   +-- appendix-c through appendix-x      <- deep-dive references (C-X)
+|   +-- (see appendix-u-resources.md for complete file listing)
++-- learning-room/              <- practice content (contribution sprint targets)
+    +-- README.md
+    +-- docs/
+        +-- welcome.md          <- has [TODO] gaps for participants to complete
+        +-- keyboard-shortcuts.md <- has intentional errors and a heading hierarchy problem
+        +-- setup-guide.md      <- has a broken URL and [TODO] markers
 ```
 
 
