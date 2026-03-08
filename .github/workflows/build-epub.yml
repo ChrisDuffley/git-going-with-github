@@ -41,8 +41,8 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p epub/brf
-          # Extract HTML from EPUB, then translate to BRF using liblouis (pure text→braille, zero TTS)
-          pandoc epub/git-going-with-github.epub -f epub -t html5 -o /tmp/book.html
+          # --standalone produces a single well-formed HTML doc; file2brl requires valid XML
+          pandoc epub/git-going-with-github.epub -f epub -t html --standalone -o /tmp/book.html
           file2brl /tmp/book.html epub/brf/git-going-with-github.brf || echo "BRF conversion failed"
           ls -lh epub/brf/ || echo "No BRF output produced"
 
